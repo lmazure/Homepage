@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE>generalities</TITLE>
@@ -225,7 +225,7 @@
         <ITEM><ARTICLE><X><T>GTAC 2008: Taming the Beast - How to Test an AJAX Application</T><A>http://www.youtube.com/watch?v=5jjrTBFZWgk</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>1</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR>Markus Clermont</AUTHOR><AUTHOR>John Thomas</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE><COMMENT>Markus and John suggest testing each layer independently, then testing layer pairs, and at last doing a few tests on the whole system. The quick informal survey of the audience is also interesting.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GTAC 2008: Practicing Testability in the Real World</T><A>http://www.youtube.com/watch?v=hL829wNaF78</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>7</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR>Vishal Chowdhary</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>24</DAY></DATE><COMMENT>Vishal arguments why testability should be taken into account when designing software. He also describes the SOCK principle: Simplicity, Observability, Control, and Knowledge.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>  
-      <ITEM><BLIST><TITLE><X><T>2009</T><A>http://www.gtac.biz/Gtac-2009</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><BLIST><TITLE>2009</TITLE>
         <ITEM><ARTICLE><X><T>GTAC 2009 - Precondition Satisfaction by Smart Object Select</T><A>http://www.youtube.com/watch?v=HjVdmXGP84s</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>56</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR>Yi Wei</AUTHOR><AUTHOR>Serge Gebhardt</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE><COMMENT>Trying to get better random tests by selecting only the inputs objects that fulfil the preconditions.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality='1'><T>GTAC 2009 - Fighting Layout Bugs</T><A>http://www.youtube.com/watch?v=WY3C6FHqSqQ</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>56</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR>Michael Tamm</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE><COMMENT>Michael Tamm presents three ways to find some layout bugs: validating the HTML, validating the CSS, and, his real novelty, writing some heuristics to analyze the page.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GTAC 2009 - Achieving Web Test Automation with a Mixed-Skill</T><A>http://www.youtube.com/watch?v=kCpDskZpA3I</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>58</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR>Mark Micallef</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE><COMMENT>Mark Micallef explains how he has started to use cucumber to allow different types of profiles (analysts vs enginers) to test web sites and .NET applications.</COMMENT></ARTICLE></ITEM>
@@ -259,6 +259,9 @@
         <ITEM><ARTICLE><X quality ='-1'><T>GTAC 2011: The Latest in Google Test Tools</T><A>http://www.youtube.com/watch?v=fQtBrmUU8Uk</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>57</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR>Ibrahim El Far</AUTHOR><AUTHOR>Jason Arbon</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE><COMMENT>A presentation of BITE (the "head up display" bug reporting system that James Whittaker described in the past) and of some quality bots.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GTAC 2011: Closing Keynote - Secrets of World Class Software Organizations</T><A>http://www.youtube.com/watch?v=EE-t5J7hnHE</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>42</SECOND></DURATION></X><AUTHOR>Steve McConnell</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE><COMMENT>The common traits of the best software companies: hiring the best talents, strong sense of mission, business accountability, commitment to quality, frequent introspection, practices adapted to teams, all of these resulting into a high commitment of the staff.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>  
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Leah Stockley</TITLE>
+      <ITEM><ARTICLE><X><T>Visual Test Models</T><A>http://www.inspiredtester.com/1/post/2013/04/visual-test-models.html</A><L>en</L><F>HTML</F></X><AUTHOR> Leah Stockley </AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE><COMMENT>Using a Visual Test Model, i.e. a mindmap representing the test coverage.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Roy Osherove</TITLE>
       <ITEM><ARTICLE><X><T>Naming standards for unit tests</T><A>http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html</A><L>en</L><F>HTML</F></X><AUTHOR>Roy Osherove</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>4</MONTH><DAY>3</DAY></DATE><COMMENT>Roy describes the MethodName_StateUnderTest_ExpectedBehavior naming convention for unit tests.</COMMENT></ARTICLE></ITEM>
