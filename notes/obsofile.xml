@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Finding obsolete filenames in an executable</TITLE>
+<PATH>notes/obsofile.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+Obsolete stuff tends to aggregate in code. This stupid script is trying to find filenames in an executable that do not exist on the current filesystem. This is very stupid, but I have been able to dig out several chunks of dead code by analyzing the reported filename list.
+<CODESAMPLE>
+#!/bin/ksh<BR/>
+<BR/>
+inputfile=$1<BR/>
+dirlist="/usr /etc /export"<BR/>
+<BR/>
+for dir in $dirlist<BR/>
+do<BR/>
+<TAB/>strings $inputfile | grep $dir | while read line<BR/>
+<TAB/>do<BR/>
+<TAB/><TAB/>f=`echo $line | sed "s=.*\($dir[^ ]*\).*=\1="`<BR/>
+<TAB/><TAB/>if [ ! -e $f ]<BR/>
+<TAB/><TAB/>then<BR/>
+<TAB/><TAB/><TAB/>echo $f<BR/>
+<TAB/><TAB/>fi<BR/>
+<TAB/>done<BR/>
+done
+</CODESAMPLE>
+</CONTENT>
+<X><T>ksh</T><A>ksh.htm</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

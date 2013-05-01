@@ -1,0 +1,241 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Java data</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+</head>
+<body>
+<b><u>primitives types</u></b>
+<br>
+&nbsp;
+<table border="1" cols="5" width="100%">
+  <tbody>
+    <tr align="center">
+      <td><b>Primitive type</b></td>
+      <td><b>Size</b></td>
+      <td><b>Minimum</b></td>
+      <td><b>Maximum</b></td>
+      <td><b>Wrapper type</b></td>
+    </tr>
+    <tr align="right">
+      <td>boolean</td>
+      <td>1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Boolean</td>
+    </tr>
+    <tr align="right">
+      <td>char</td>
+      <td>16</td>
+      <td>Unicode 0</td>
+      <td>Unicode 2<sup>16</sup>-1</td>
+      <td>Character</td>
+    </tr>
+    <tr align="right">
+      <td>byte</td>
+      <td>8</td>
+      <td>-128</td>
+      <td>127</td>
+      <td>Byte</td>
+    </tr>
+    <tr align="right">
+      <td>short</td>
+      <td>16</td>
+      <td>-2<sup>15</sup></td>
+      <td>2<sup>15</sup>-1</td>
+      <td>Short</td>
+    </tr>
+    <tr align="right">
+      <td>int</td>
+      <td>32</td>
+      <td>-2<sup>32</sup></td>
+      <td>2<sup>32</sup>-1</td>
+      <td>Integer</td>
+    </tr>
+    <tr align="right">
+      <td>long</td>
+      <td>64</td>
+      <td>-2<sup>64</sup></td>
+      <td>2<sup>64</sup>-1</td>
+      <td>Long</td>
+    </tr>
+    <tr align="right">
+      <td>float</td>
+      <td>32</td>
+      <td>IEEE754</td>
+      <td>IEEE754</td>
+      <td>Float</td>
+    </tr>
+    <tr align="right">
+      <td>double</td>
+      <td>64</td>
+      <td>IEEE754</td>
+      <td>IEEE754</td>
+      <td>Double</td>
+    </tr>
+    <tr align="right">
+      <td>void</td>
+      <td>-</td>
+      <td>-</td>
+      <td>-</td>
+      <td>Void</td>
+    </tr>
+  </tbody>
+</table>
+There is no unsigned type.
+<p><tt>3.0</tt> or <tt>3.0f</tt> is a float.
+<br>
+<tt>3.0d</tt> is a double.
+</p>
+<p><b><u>high-precision number classes</u></b>
+<br>
+<tt>BigInteger</tt> to compute arbitrary sized integers.
+<br>
+<tt>BigDecimal</tt> to compute arbitrary sized fixed-point numbers.
+</p>
+<p>Do not use the float constructor of BigDecimal: <tt>new
+BigDecimal(0.1)</tt>
+will result in a number with a large scale value. Use <tt>new
+BigDecinal("0.01")</tt>
+or <tt>new BigDecimal(1,2)</tt>.
+</p>
+<p><b><u>arrays</u></b>
+</p>
+<ul>
+  <li>declaration</li>
+  <tt>int[] ar;</tt> <br>
+or <br>
+  <tt>int ar[];</tt> <br>
+&nbsp; <li>length of an array</li>
+  <tt>ar.length</tt> <br>
+&nbsp; <li><tt>FooBar[] a;</tt></li>
+create a null array handle
+</ul>
+<ul>
+  <li> <tt>FooBar[] a = new Weeble[105];</tt></li>
+create an array of null object handles <br>
+an array of primitives is automatically initialized to zero for numeric
+types, null for char and false for boolean
+</ul>
+<ul>
+  <li>initialization</li>
+  <tt>FooBar[] a = {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; new FooBar(),</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; new FooBar(),</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; new FooBar()</tt> <br>
+  <tt>};</tt> <br>
+  <tt>FooBar[] b;</tt> <br>
+  <tt>b = {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; new FooBar(),</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; new FooBar(),</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; new FooBar(),</tt> <br>
+  <tt>};</tt> <br>
+(in Java 1.0, only the first syntax is possible: the initialization
+must be done at the definition) <br>
+the last comma is optional <br>
+(the second syntax is useful to create varargs functions calls: <br>
+  <tt>f(new Object[] {new Integer(56), new Float(3.14) });</tt> <br>
+  <tt>f(new Object[] {"one", "two", "three" });</tt> <br>
+)
+</ul>
+<b><u>multidimensional arrays</u></b>
+<ul>
+  <li>initialization by value</li>
+  <tt>int[][] ar = { { 1, 2, 3, }, { 4, 5, 6, }, };</tt> <br>
+  <tt>int [][] ar = { { new Integer(1), new Integer(2), }, { new
+Integer(3),
+new Integer(4), }, };</tt>
+</ul>
+<ul>
+  <li>initialization by <tt>new</tt></li>
+  <tt>int[][][] ar = new int[2][2][4];</tt> <br>
+or <br>
+  <tt>int[][][] a3 = new int[7][][];</tt> <br>
+  <tt>for(int i = 0; i &lt; a3.length; i++) {</tt> <br>
+  <tt>&nbsp; a3[i] = new int[pRand(5)][];</tt> <br>
+  <tt>&nbsp; for(int j = 0; j &lt; a3[i].length; j++)</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; a3[i][j] = new int[5];</tt> <br>
+  <tt>&nbsp; }</tt>
+</ul>
+<b><u>Java 1.0 collections</u></b>
+<br>
+<tt><u>iterator</u></tt>
+<br>
+<tt>static void printAll(Enumeration e) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; while(e.hasMoreElements())</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+System.out.println(e.nextElement().toString());</tt>
+<br>
+<tt>}</tt>
+<br>
+&nbsp;
+<p><tt><u>Vector</u></tt>
+<br>
+<tt>void add(Object o)</tt>
+<br>
+<tt>void addElement(Object o)</tt>
+<br>
+add <tt>o</tt> to the end of the vector, increazing its size by one
+</p>
+<p><tt><u>BitSet</u></tt>
+</p>
+<p><tt><u>Stack</u></tt>
+<br>
+<tt>boolean empty()</tt>
+<br>
+test if this stack is empty
+<br>
+<tt>Object peek()</tt>
+<br>
+return the object at the top of this stack without removing it from
+the stack
+<br>
+<tt>Object pop()</tt>
+<br>
+remove the object at the top of this stack and return that object as
+the value of this function
+<br>
+<tt>Object push(Object item)</tt>
+<br>
+<tt>void addElement(Object o)</tt>
+<br>
+push an item onto the top of this stack.
+</p>
+<p><tt><u>Dictionary</u></tt>
+<br>
+abstract base class
+<br>
+now obsolete, use <tt>Map</tt> instead
+</p>
+<p><tt><u>Hashtable</u></tt>
+<br>
+to use your a class as keys, <tt>hashCode( )</tt> and <tt>equals( )</tt>
+must be overridden
+<br>
+&nbsp;
+</p>
+<p><b><u>Java 1.2 collections</u></b>
+<br>
+The new collections are not synchronized by default.
+<br>
+&nbsp;
+</p>
+<p></p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: March 21</font><sup><font size="-2">st</font></sup><font
+ size="-1">,
+2003 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+</body>
+</html>

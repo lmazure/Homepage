@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Unix process utilities</TITLE>
+<PATH>notes/unixpu.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>pgrep</T><A>javascript:do_reference("man/linux/1/pgrep")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return the pid of a process given its name</DESC></ROW>
+<ROW><TERM><CODEROUTINE>pgrep -x browser</CODEROUTINE></TERM><DESC>return the pid of the process that matches exactly <CODEROUTINE>browser</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>pkill</T><A>javascript:do_reference("man/linux/1/pkill")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>send a signal to a process given its name</DESC></ROW>
+<ROW><TERM><CODEROUTINE>pkill -x browser</CODEROUTINE></TERM><DESC>send a signal to the process that matches exactly <CODEROUTINE>browser</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+
+</CONTENT>
+</PAGE>
+
+

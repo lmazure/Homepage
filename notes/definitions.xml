@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Definitions</TITLE>
+<PATH>notes/definitions.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<U>Assessment:</U> An action of applying specific documented assessment criteria to a specific software module, package or product for the purpose of determining acceptance or release of the software module, package or product. (ISO 9126: 1991, 3.1) <BR/>
+<BR/>
+<U>Customer:</U> Ultimate consumer, user, client, beneficiary or second party. (ISO 9004: 1987, 3.4) <BR/>
+<BR/>
+<U>Defect:</U> The nonfulfilment of intended usage requirements. (ISO 8402: 1986, 3.21) <BR/>
+<BR/>
+<U>Features:</U> Features are identified properties of a software product which can be related to the quality characteristics. (ISO 9126: 1991, 3.2) <BR/>
+<BR/>
+<U>Firmware:</U> Hardware that contains a computer program and data that cannot be changed in its user environment. The computer program and data contained in firmware are classified as software; the circuitry containing the computer program and data is classified as hardware. (ISO 9126: 1991, 3.3) <BR/>
+<BR/>
+<U>Inspection:</U> Activities such as measuring, examining, testing, gauging one or more characteristics of a product or service and comparing these with specified requirements to determine conformity. (ISO 8402: 1986, 3.14) <BR/>
+<BR/>
+<U>Level of performance:</U> The degree to which the needs are satisfied, represented by a specific set of values for the quality characteristics. (ISO 9126: 1991, 3.4) <BR/>
+<BR/>
+<U>Liability (product/service):</U> A generic term used to describe the onus on a producer or others to make restitution for loss related to personal injury, property damage or other harm caused by a product or service. (ISO 8402: 1986, 3.19) <BR/>
+<BR/>
+<U>Measurement:</U> The action of applying a software quality metric to a specific software product. (ISO 9126: 1991, 3.5) <BR/>
+<BR/>
+<U>Nonconformity:</U> The nonfulfilment of specified requirements. (ISO 8402: 1986, 3.20) <BR/>
+NOTE -- The basic difference between "nonconformity" and "defect" is that specified requirements may differ from the requirements for the intended use. (ISO 8402: 1986, 3.20) <BR/>
+<BR/>
+<U>Quality:</U> The totality of features and characteristics of a product or service that bear on its ability to satisfy stated or implied needs. (ISO 8402: 1986, 3.1) <BR/>
+<BR/>
+<U>Quality assurance:</U> All those planned and systematic actions necessary to provide adequate confidence that a product or service will satisfy given requirements for quality. (ISO 8402: 1986, 3.6) <BR/>
+<BR/>
+<U>Quality control:</U> The operational techniques and activities that are used to fulfill requirements for quality. (ISO 8402: 1986, 3.7) <BR/>
+<BR/>
+<U>Quality surveillance:</U> The continuing monitoring and verification of the status of procedures, methods, conditions, processes, products and services, and analysis of records in relation to stated references to ensure that specified requirements for quality are being met. (ISO 8402: 1986, 3.11) <BR/>
+<BR/>
+<U>Rating:</U> The action of mapping the measured value to the appropriate rating level. Used to determine the rating level associated with the software for a specific quality characteristic. (ISO 9126: 1991, 3.7) <BR/>
+<BR/>
+<U>Rating level:</U> A range of values on a scale to allow software to be classified (rated) in accordance with the stated or implied needs. Appropriate rating levels may be associated with the different views of quality i.e. Users, Managers or Developers. These levels are called rating levels. (ISO 9126: 1991, 3.8) <BR/>
+<BR/>
+<U>Recoverability:</U> Attributes of software that bear on the capability to re-establish its level of performance and recover the data directly affected in case of a failure and on the time and effort needed for it. (ISO 9126: 1991, A.2.2.3) <BR/>
+<BR/>
+<U>Reliability:</U> The ability of an item to perform a required function under stated conditions for a stated period of time. The term `reliability' is also used as a reliability characteristic denoting a probability of success or a success ratio. (ISO 8402: 1986, 3.18) <BR/>
+<BR/>
+<U>Replaceability:</U> Attributes of software that bear on the opportunity and effort of using it in the place of specified other software in the environment of that software. (ISO 9126: 1991, A.2.6.4) <BR/>
+<BR/>
+<U>Resource behaviour:</U> Attributes of software that bear on the amount of resources used and the duration of such use in performing its function. (ISO 9126: 1991, A.2.4.2) <BR/>
+<BR/>
+<U>Security:</U> Attributes of software that bear on its ability to prevent unauthorized access, whether accidental or deliberate, to programs and data. (ISO 9126: 1991, A.2.1.5) <BR/>
+<BR/>
+<U>Software:</U> Intellectual creation comprising the programs, procedures, rules and any associated documentation pertaining to the operation of a data processing system. (ISO 9000-3: 1991, 3.1) <BR/>
+<BR/>
+<U>Software product:</U> Complete set of computer programs, procedures and associated documentation and data designated for delivery to a user. (ISO 9000-3: 1991, 3.2) <BR/>
+<BR/>
+<U>Software item:</U> Any identifiable part of a software product at an intermediate step or at the final step of development. (ISO 9000-3: 1991, 3.3) <BR/>
+<BR/>
+<U>Software quality:</U> The totality of features and characteristics of a software product that bear on its ability to satisfy stated or implied needs. (ISO 9126: 1991, 3.11) <BR/>
+<BR/>
+<U>Software quality assessment criteria:</U> The set of defined and documented rules and conditions which are used to decide whether the total quality of a specific software product is acceptable or not. The quality is represented by the set of rated levels associated with the software product. (ISO 9000-3: 1991, 3.12) <BR/>
+<BR/>
+<U>Software quality characteristics:</U> A set of attributes of a software product by which its quality is described and evaluated. A software quality characteristic may be refined into multiple levels of sub-characteristics. (ISO 9126: 1991, 3.13) <BR/>
+<BR/>
+<U>Software quality metric:</U> A quantitative scale and method which can be used to determine the value a feature takes for a specific software product. (ISO 9126: 1991, 3.14) <BR/>
+<BR/>
+<U>Specification:</U> The document that prescribes the requirements with which the product or service has to conform. (ISO 8402: 1986, 3.22) <BR/>
+<BR/>
+<U>Stability:</U> Attributes of software that bear on the risk of unexpected effect of modifications. (ISO 9126: 1991, A.2.5.3) <BR/>
+<BR/>
+<U>Suitability:</U> Attribute of software that bears on the presence and appropriateness of a set of functions for specified tasks. (ISO 9126: 1991, A.2.1.1) <BR/>
+<BR/>
+<U>Testability:</U> Attributes of software that bear on the effort needed for validating the modified software. (ISO 9126: 1991, A.2.5.4) <BR/>
+<BR/>
+<U>Time behaviour:</U> Attributes of software that bear on response and processing times and on throughput rates in performing its function. (ISO 9126: 1991, A.2.4.1) <BR/>
+<BR/>
+<U>Understandability:</U> Attributes of software that bear on the users' effort for recognizing the logical concept and its applicability. (ISO 9126: 1991, A.2.3.1) <BR/>
+<BR/>
+<U>Usability:</U> A set of attributes that bear on the effort needed for use, and on the individual assessment of such use, by a stated or implied set of users. (ISO 9126: 1991, 4.3) <BR/>
+<BR/>
+<U>Validation (for software):</U> The process of evaluating software to ensure compliance with specified requirements. (ISO 9000-3: 1991, 3.7) <BR/>
+<BR/>
+<U>Verification (for software):</U> The process of evaluating the products of a given phase to ensure correctness and consistency with respect to the products and standards provided as input to that phase. (ISO 9000-3: 1991, 3.6) <BR/>
+
+</CONTENT>
+</PAGE>
+

@@ -1,0 +1,211 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Unix</title>
+  <base target="_blank">
+  <script language="JavaScript" src="../css/tools"></script>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+</head>
+<body>
+<b><u>basics:</u></b>
+<ul>
+&nbsp; <li>delete the file <tt>-I<br>
+    </tt><span style="font-family: monospace;">#&gt; </span><a
+ href="http://2robots.com/man/index.php?rm"
+ style="font-family: monospace;">rm</a><span
+ style="font-family: monospace;"> -- -I</span><br>
+  </li>
+  <tt><br>
+  </tt><li>split a file sample into sampleaa, sampleab,...<br>
+    <span style="font-family: monospace;">#&gt; split -b 1000k sample
+sample</span></li>
+</ul>
+<b><u>keyboard:</u></b>
+<ul>
+  <li>define the keyboard</li>
+  <tt>#&gt; loadkeys /usr/share/lib/keytables/france_5</tt> (file
+location
+on Solaris)
+</ul>
+<p><br>
+<b><u>file modification times:</u></b>
+</p>
+<blockquote><li>
+time of last access (<tt>atime</tt>) is modified by:</li>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/creat.html">creat</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/mknod.html">mknod</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/pipe.html">pipe</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/utime.html">utime</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/read.html">read</a></tt>
+  <br>
+&nbsp; <li>time of last status change (<tt>ctime</tt>) is modified by:</li>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/chmod.html">chmod</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/chown.html">chown</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/creat.html">creat</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/link.html">link</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/mknod.html">mknod</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/pipe.html">pipe</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/unlink.html">unlink</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/utime.html">utime</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/getpwnam.html">write</a></tt>
+  <br>
+&nbsp; <li>time of last modification (<tt>mtime</tt>) is modified by:</li>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/creat.html">creat</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/mknod.html">mknod</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/pipe.html">pipe</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/utime.html">utime</a></tt>
+  <br>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/getpwnam.html">write</a></tt></blockquote>
+<b><u>configuration</u></b>
+<ul>
+  <li>list the configuration parameters of a machine</li>
+  <tt>#&gt; getconf -a</tt>
+</ul>
+<b><u>networking:<br>
+</u></b>
+<ul>
+  <li>execute remotely a command<br>
+    <span style="font-family: monospace;">#&gt; rexec [-d] -l
+utilisateur -p motdepasse ordinateur /bin/ls<br>
+-d</span> indicates to print out debug information<br>
+(the machine on which is logged utilisateur must appears in /etc/hosts
+of ordinateur)<span style="font-family: monospace;"><br>
+    </span></li>
+</ul>
+<b><u>API:</u></b>
+<ul>
+  <li>maximum number of bytes that is guaranteed to be atomic when
+writing to a pipe<br>
+    <span style="font-family: monospace;">PIPE_BUF</span><br>
+    <br>
+  </li>
+  <li>get the number of processors</li>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/sysconf.html">sysconf</a>(_SC_NPROCESSORS_ONLN);</tt>
+  <br>
+&nbsp; <li>test if another processs is alive</li>
+  <tt>if ( kill(pid, 0) &amp;&amp; errno==ESRCH ) {</tt> <br>
+  <tt>&nbsp; // process is dead</tt> <br>
+  <tt>}</tt> <br>
+&nbsp; <li>macro to define a millisecond sleep</li>
+  <tt>#define MILLI_SLEEP(n) <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/poll.html">poll</a>(NULL,0,n)</tt>
+  <br>
+&nbsp; <li>to detach a process from its parent</li>
+  <tt><a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/setsid.html">setsid</a>();</tt>
+  <br>
+&nbsp; <li>give a file to toto</li>
+  <tt>struct passwd* p=<a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/getpwnam.html">getpwnam</a>("toto");</tt>
+  <br>
+  <tt>if (p==NULL) {</tt> <br>
+  <tt>&nbsp; log("getpwnam failed");</tt> <br>
+  <tt>&nbsp; exit(EXIT_FAILURE);</tt> <br>
+  <tt>}</tt> <br>
+  <tt>if (<a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/chown.html">chown</a>(file,p-&gt;pw_uid,-1))
+{</tt> <br>
+  <tt>&nbsp; log("chown failed");</tt> <br>
+  <tt>&nbsp; exit(EXIT_FAILURE);</tt> <br>
+  <tt>}</tt>
+</ul>
+<p><br>
+<b><u>Multithreading:</u></b>
+</p>
+<ul>
+  <li> <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xsh/sched_yield.html">sched_yield</a>&nbsp;
+force the running thread to relinquish the processor</li>
+  <li>mutex:</li>
+  <ul>
+    <li>constructor</li>
+    <tt>pthread_mutex_init(&amp;lock,NULL);</tt> <li>destructor</li>
+    <tt>pthread_mutex_destroy(&amp;lock);</tt> <li>lock</li>
+    <tt>pthread_mutex_lock(lock);</tt> <li>unlock</li>
+    <tt>pthread_mutex_unlock(lock);</tt>
+  </ul>
+</ul>
+<b><tt><u>Memory map:</u></tt></b>
+<ul>
+  <li>generate a new file with a memory map</li>
+  <tt>void *mapNewFile(const char* filename, size_t filesize)</tt> <br>
+  <tt>{</tt> <br>
+  <tt>&nbsp; // create the new file</tt> <br>
+  <tt>&nbsp; int fd = open(filename, O_RDWR | O_CREAT | O_EXCL, 0666);</tt>
+  <br>
+  <tt>&nbsp; if (fd == -1) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; return (NULL);</tt> <br>
+  <tt>&nbsp; }</tt>
+  <p><tt>&nbsp; // extend its size</tt> <br>
+  <tt>&nbsp; if (lseek (fd, (filesize - 1), SEEK_SET) &lt; 0) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; close(fd);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; return (NULL);</tt> <br>
+  <tt>&nbsp; }</tt> <br>
+  <tt>&nbsp; if (write (fd, "", 1) != 1) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; close(fd);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; return (NULL);</tt> <br>
+  <tt>&nbsp; }</tt> </p>
+  <p><tt>&nbsp; // map the file in memory</tt> <br>
+  <tt>&nbsp; void *memory = mmap(0, filesize, PROT_WRITE, MAP_SHARED,
+fd, 0);</tt> <br>
+  <tt>&nbsp; if ( memory == MAP_ERROR ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; close(fd);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; return (NULL);</tt> <br>
+  <tt>&nbsp; }</tt> </p>
+  <p><tt>&nbsp; // close the file descriptor</tt> <br>
+  <tt>&nbsp; if ( close(fd) == -1 ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; munmap(memory);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; return (NULL);</tt> <br>
+  <tt>&nbsp; }</tt> </p>
+  <p><tt>&nbsp; return memory;</tt> <br>
+  <tt>}</tt> <br>
+&nbsp; <br>
+&nbsp;</p>
+</ul>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: December 29</font><sup><font
+ size="-2">th</font></sup><font size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

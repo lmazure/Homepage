@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>sed</TITLE>
+<PATH>notes/sed.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+
+<CONTENT>
+<BLIST>
+
+<ITEM><CODEROUTINE>=</CODEROUTINE> print out the current input line number (with a trailing newline)
+<CODESAMPLE>sed -n '/auto/=' foobar</CODESAMPLE>
+is the same as
+<CODESAMPLE>grep -n 'auto' foobar | awk -F: '{print $1}'</CODESAMPLE>
+</ITEM>
+
+</BLIST>
+
+</CONTENT>
+
+<X><T>links</T><A>../links/unix.html#sed</A><L>en</L><F>HTML</F></X>
+
+</PAGE>

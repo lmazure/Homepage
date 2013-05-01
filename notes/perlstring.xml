@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Perl - string handling</TITLE>
+<PATH>notes/perlstring.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>here documents</U></B></TITLE>
+<ITEM>Using double quotes around the tag allows variables to be interpolated<BR/>
+using single quotes doesn't<BR/>using the tag without either behaves like double quotes
+<CODESAMPLE>
+my $sender = "Buffy the Vampire Slayer";<BR/>
+my $recipient = "Spike";<BR/>
+<BR/>
+print &lt;&lt;"END";<BR/>
+<BR/>
+Dear $recipient,<BR/>
+<BR/>
+I wish you to leave Sunnydale and never return.<BR/>
+<BR/>
+Not Quite Love,<BR/>
+$sender<BR/>
+<BR/>
+END
+</CODESAMPLE>
+<CODESAMPLE>
+print &lt;&lt;'END';<BR/>
+Dear $recipient,<BR/>
+ <BR/>
+I wish you to leave Sunnydale and never return.<BR/>
+ <BR/>
+Not Quite Love,<BR/>
+$sender<BR/>
+END
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/perl.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><meta content="text/html; charset=UTF-8" http-equiv="content-type" /><head><link href="../css/common.css" type="text/css" rel="stylesheet" /><title>rpm</title><script src="../css/common.js" type="text/javascript">{}</script></head><body><div id="header"><h1>rpm</h1></div><div id="body">
+
+<u><b>install</b></u><ul><li>
+install a package<br />
+<table class="file"><tr><td><code>#&gt; rpm -i foobar.rpm [ toto.rpm ... ]</code></td></tr></table>
+</li><li>
+install a package only if a previous version is already present<br />
+<table class="file"><tr><td><code>#&gt; rpm -F foobar.rpm [ toto.rpm ... ]</code></td></tr></table>
+</li></ul>
+
+<u><b>uninstall</b></u><ul><li>
+uninstall the foobar package<br />
+<table class="file"><tr><td><code>#&gt; rpm -e foobar</code></td></tr></table>
+</li></ul>
+
+<u><b>extract a file</b></u><ul><li>
+extract a file from a RPM<br />
+<table class="file"><tr><td><code>#&gt; rpm2cpio foobar.rpm | cpio -iumd thefile</code></td></tr></table>
+</li></ul>
+
+<u><b>query on a package</b></u><ul><li>
+list the capabilities provided by a package<br />
+<table class="file"><tr><td><code>#&gt; rpm -q --provides foobar</code></td></tr></table>
+</li><li>
+list the packages on which this package depends<br />
+<table class="file"><tr><td><code>#&gt; rpm -q --requires foobar</code></td></tr></table>
+</li><li>
+display the package description<br />
+<table class="file"><tr><td><code>#&gt; rpm -qi foobar</code></td></tr></table>
+</li><li>
+list the files present in the package<br />
+<table class="file"><tr><td><code>#&gt; rpm -ql foobar</code></td></tr></table>
+</li><li>
+list the files with their lengths, owner groups...<br />
+<table class="file"><tr><td><code>#&gt; rpm -ql --dump foobar</code></td></tr></table>
+</li><li>
+the <code>-p</code> flag allows to query an uninstalled package, for example:
+<ul><li>
+display the uninstalled RPM package description<br />
+<table class="file"><tr><td><code>#&gt; rpm -qpi foobar.rpm</code></td></tr></table>
+</li><li>
+list the files present in the uninstalled RPM package<br />
+<table class="file"><tr><td><code>#&gt; rpm -qpl foobar.rpm</code></td></tr></table>
+</li></ul>
+</li></ul>
+
+<u><b>query on the machine</b></u><ul><li>
+return the list of all the installed packages <br />
+<table class="file"><tr><td><code>#&gt; rpm -qa</code></td></tr></table>
+</li><li>
+indicate from which package is a given file <br />
+<table class="file"><tr><td><code>#&gt; rpm -qf /usr/include/string.h </code></td></tr></table>
+</li></ul>
+
+</div><hr id="footerseparator" /><div id="footer"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="left">See also: <a href="../links/life.html#rpm" title="language: en | format: HTML " target="_self">links</a></td><td align="right"><a href="javascript:do_search()">search</a></td></tr><tr><td align="left">Pages above: <a href="../perso/main.html" target="_self">homepage</a>&gt;notes&gt;operating systems&gt;<a href="../notes/linux.htm" target="_self">Linux</a></td><td align="right"><a href="../hack/map.html" target="_self">map</a></td></tr><tr><td align="left">Pages below: </td><td align="right"><a href="javascript:do_email()" target="_self">contact me</a></td></tr><tr><td align="left">Last update: October 25<sup>th</sup>, 2010</td><td align="right"><a href="javascript:do_disclaimer()">disclaimer</a></td></tr><tr><td align="left">Version: <a href="../notes/rpm.xml">XML</a></td><td align="right"><a href="javascript:do_help()">help</a></td></tr></table></div></body></html>

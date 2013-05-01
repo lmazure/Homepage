@@ -1,0 +1,235 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Excel</TITLE>
+<PATH>notes/excel.xml</PATH>
+<DATE><YEAR>2013</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>User interface</U></B></TITLE>
+  <ITEM><BLIST><TITLE>using <KEY ID='Shift'/> key on menubars/toolbars</TITLE>
+    <ITEM>when holding down the <KEY ID='Shift'/> key to click on the <CODEMENU>File</CODEMENU> menu<BR/>
+      <CODEMENU>Close</CODEMENU> is replaced by <CODEMENU>Close All</CODEMENU>
+    </ITEM>
+    <ITEM>when holding down the <KEY ID='Shift'/> key to click on the <CODEMENU>Edit</CODEMENU> menu<BR/>
+      <CODEMENU>Copy</CODEMENU> is replaced by <CODEMENU>Copy Picture</CODEMENU><BR/>
+      <CODEMENU>Paste</CODEMENU> is replaced by <CODEMENU>Paste Picture</CODEMENU><BR/>
+      <CODEMENU>Paste Special</CODEMENU> is replaced by <CODEMENU>Paste Picture Link</CODEMENU>
+    </ITEM>
+    <ITEM>when holding down the <KEY ID='Shift'/> key to click on the standard toolbar<BR/>
+      <CODEMENU>Open</CODEMENU> is replaced by <CODEMENU>Save</CODEMENU><BR/>
+      <CODEMENU>Save</CODEMENU> is replaced by <CODEMENU>Open</CODEMENU>
+    </ITEM>
+  </BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>File</U></B></TITLE>
+  <ITEM>Excel opens correctly and with no comment (up tro 2003, 2007 displays a warning message) a HTML file which has the .xls extension.</ITEM>
+  <ITEM><BLIST><TITLE>Format of a tab separated text file (extension <CODEROUTINE>.txt</CODEROUTINE>)</TITLE>
+    <ITEM><BLIST><TITLE>when there is a newline in a cell:</TITLE>
+      <ITEM>the field value shall be between <CODEROUTINE>"</CODEROUTINE>...<CODEROUTINE>"</CODEROUTINE></ITEM>
+      <ITEM>the newline shall be written as <CODEROUTINE>\n</CODEROUTINE></ITEM>
+      <ITEM>the <CODEROUTINE>"</CODEROUTINE> should be doubled</ITEM>
+    </BLIST></ITEM>
+  <ITEM>the columns are separated by <CODEROUTINE>\t</CODEROUTINE></ITEM>
+  <ITEM>the lines are separated by <CODEROUTINE>\r\n</CODEROUTINE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>generated CSV files</TITLE>
+    <ITEM>The generated files are not UTF8.</ITEM>
+    <ITEM>The separator is defined by the regional setting (<CODEMENU>Start<CODEMENU>Control Panel<CODEMENU>Regional and Language Options<CODEMENU>Regional Options<CODEMENU>Customize<CODEMENU>List Separator</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>).</ITEM>
+  </BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Sheet</U></B></TITLE>
+<ITEM>A sheet name can have up to 32 characters.<BR/>
+The characters <CODEROUTINE>\</CODEROUTINE>, <CODEROUTINE>/</CODEROUTINE>, <CODEROUTINE>:</CODEROUTINE>, <CODEROUTINE>*</CODEROUTINE>, <CODEROUTINE>[</CODEROUTINE>, <CODEROUTINE>]</CODEROUTINE>, and <CODEROUTINE>?</CODEROUTINE> are illegal.<BR/>
+The character <CODEROUTINE>'</CODEROUTINE> is illegal as the first or last characters.</ITEM>
+<ITEM>To hide a sheet, perform a right click on the sheet name and select <CODEMENU>Hide</CODEMENU>.</ITEM>
+<ITEM>To unhide a sheet, perform a right click on a sheet name and select <CODEMENU>Unhide...</CODEMENU>.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Display</U></B></TITLE>
+<ITEM>(Excel 2002, French) switch between results and formulas display<BR/>
+<CODEMENU>Outils<CODEMENU>Audit de formules<CODEMENU>Mode Audit de formules</CODEMENU></CODEMENU></CODEMENU><BR/>
+or <MODIFIERKEY ID='Ctrl'/><KEY ID='"'/></ITEM>
+<ITEM>Excel use the Windows settings to display the date in a given language<BR/>
+<CODEMENU>Start<CODEMENU>Settings<CODEMENU>Control Panel<CODEMENU>Regional Options<CODEMENU>General<CODEMENU>Your locale</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
+It seems that, starting at Excel 2002, it is possible to change the locale in the <CODEMENU>date format</CODEMENU> dialog.</ITEM>
+<ITEM>(French) display a date with ISO 8160 format<BR/>
+<CODEMENU>Format<CODEMENU>Cellule...<CODEMENU>Nombre<CODEMENU>Personnalis&#xE9;e</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and type <CODEROUTINE>aaaa-mm-jj</CODEROUTINE>.</ITEM>
+<ITEM>(French) It is possible to have datetime format such as <CODEROUTINE>aaaa-mm-jj hh:mm:ss</CODEROUTINE>. In this case <CODEROUTINE>mm</CODEROUTINE> stands for the month, except if the previous element in the format is <CODEROUTINE>hh</CODEROUTINE> or <CODEROUTINE>ss</CODEROUTINE> in which case <CODEROUTINE>mm</CODEROUTINE> stands for the minutes.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Formula examples</U></B></TITLE>
+<ITEM>Excel accepts <CODEROUTINE>@</CODEROUTINE> before the function names: it automatically deletes it.<BR/>
+The first formula character can be <CODEROUTINE>@</CODEROUTINE> (followed by a function name). In this case, Execl will replace it by <CODEROUTINE>=</CODEROUTINE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Formula examples</U></B></TITLE>
+<ITEM>take care when comparing integers<BR/>
+<CODEROUTINE>=SI(K2="4";"3.3";"3.X")</CODEROUTINE> does not work<BR/>
+use <CODEROUTINE>=SI(K2=4;"3.3";"3.X")</CODEROUTINE> instead.</ITEM>
+<ITEM>when adding a column where some value are unvalued (flagged as "N"), to get a "sum/number" of valued cells string, use:<BR/>
+<CODESAMPLE>CONCATENATE(TEXT(SUM(B2:B34);"00");"/";TEXT(COUNTIF(B2:B34;"&lt;&gt;N");"00"))</CODESAMPLE></ITEM>
+<ITEM>translate a "n.m" format into a float value (e.g. for sorting)<BR/>
+<CODESAMPLE>=GAUCHE(A1;TROUVE(".";A1)-1)+STXT(A1;TROUVE(".";A1)+1;3)/1000</CODESAMPLE></ITEM>
+<ITEM>perform a lookup up of the value of A1 on the sheet Feuil3 (indexes in column A, values in column B)<BR/>
+<CODESAMPLE>=SI(ESTNA(RECHERCHEV(A1;Feuil3!A:B;2;FAUX));"not found";RECHERCHEV(A1;Feuil3!A:B;2;FAUX))</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Matrix computation</U></B></TITLE>
+<ITEM>Excel supports matrix computation, but formulas must be entered with <MODIFIERKEY ID='CTRL'/><MODIFIERKEY ID='Shift'/><KEY ID='Enter'/></ITEM>
+<ITEM><CODESAMPLE>=SUM(D2:O3^2)</CODESAMPLE> compute the sum of the square of the matrix elements</ITEM>
+<ITEM>select an area which has the same size as <CODEROUTINE>D2:O3</CODEROUTINE><BR/>
+type the formula <CODEROUTINE>=SUM(D2:O3*3)</CODEROUTINE><BR/>
+press <MODIFIERKEY ID='CTRL'/><MODIFIERKEY ID='Shift'/><KEY ID='Enter'/><BR/>
+the selected area is filled with the values of <CODEROUTINE>D2:O3</CODEROUTINE> multiplied by 3</ITEM>
+<ITEM><CODEROUTINE>MTRANSPOSE</CODEROUTINE>: transpose a matrix</ITEM>
+<ITEM><CODEROUTINE>MDETER</CODEROUTINE>: compute the determinant of a matrix</ITEM>
+<ITEM><CODEROUTINE>MINVERSE</CODEROUTINE>: inverse a matrix</ITEM>
+<ITEM><CODEROUTINE>MMULT</CODEROUTINE>: multiply two matrices</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>AutoFilter:</U></B></TITLE>
+<ITEM>A question mark (<CODEROUTINE>?</CODEROUTINE>) matches any single character.<BR/>
+An asterisk (<CODEROUTINE>*</CODEROUTINE>) matches any sequence of characters.<BR/>
+To find an actual question mark or asterisk, use a tilde (<CODEROUTINE>~</CODEROUTINE>) preceding the character.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Edit</U></B></TITLE>
+<ITEM>take care to the fact that, when several sheets are selected, a change (edition, paste...) on one cell of the currently displayed sheet is done in fact on all the sheets.</ITEM>
+<ITEM>if several cells are selected, when editing one of them and finishing the edition with <MODIFIERKEY ID='Ctrl'/><KEY ID='Return'/>, Excel will update the formula of all the selected cells</ITEM>
+<ITEM><BLIST><TITLE>creation of a multi-value field in Excel (this does not work when pasting a cell, the value is not checked)</TITLE>
+<ITEM>enter values in some cells (e.g. "alpha", "beta", "gamma", and "delta" in L1:L4)</ITEM>
+<ITEM>select the target cell</ITEM>
+<ITEM><CODEMENU>Donn&#xE9;es<CODEMENU>Validation...<CODEMENU>Options</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>choose <CODEMENU>Liste</CODEMENU> in <CODEMENU>Autoriser</CODEMENU> dropdown list</ITEM>
+<ITEM>choose cells containing authorised values in <CODEMENU>Source</CODEMENU> field</ITEM>
+<ITEM>click OK</ITEM></BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Find/Replace</U></B></TITLE>
+<ITEM>to find/replace a string in all sheets, right click on the sheet name (i.e. the sheet tab), select <CODEMENU>Select all sheets</CODEMENU>, then do the usual <CODEMENU>Edit<CODEMENU>Find...</CODEMENU></CODEMENU></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>References</U></B></TITLE>
+<ITEM>Columns are identified by letters (<CODEROUTINE>A</CODEROUTINE> through <CODEROUTINE>IV</CODEROUTINE>, for a total of 256 columns). Rows are identified by numbers (1 through 65536).<BR/>
+A cell is identified by the column letter followed by the row number, e.g. <CODEROUTINE>B4</CODEROUTINE>.<BR/>
+A rectangular region can be defined by reference of the upper-left corner cell, a colon, and the reference the lower-right corner cell, e.g. <CODEROUTINE>B4:E7</CODEROUTINE>.<BR/>
+Other examples:<BR/>
+All cells in row 5: <CODEROUTINE>5:5</CODEROUTINE><BR/>
+All cells in rows 5 through 10: <CODEROUTINE>5:10</CODEROUTINE><BR/>
+All cells in column H: <CODEROUTINE>H:H</CODEROUTINE><BR/>
+All cells in columns H through J: <CODEROUTINE>H:J</CODEROUTINE></ITEM>
+<ITEM>If a dollar sign precedes the letter and/or number, such as <CODEROUTINE>$A$1</CODEROUTINE>, the column and/or row reference is absolute instead of relative.</ITEM>
+<ITEM>It is possible to use labels of columns and rows on a worksheet to refer to the cells within those columns and rows.</ITEM>
+<ITEM>A 3-D reference includes the cell or range reference, preceded by a range of worksheet names. Excel uses any worksheets stored between the starting and ending names of the reference (e.g.<CODEROUTINE>=SUM(Sheet2:Sheet13!B5)</CODEROUTINE>).</ITEM>
+<ITEM>The reference can also use the R1C1 style: <CODEROUTINE>R</CODEROUTINE> followed by a row number and a <CODEROUTINE>C</CODEROUTINE> followed by a column number<BR/>
+<CODEROUTINE>[</CODEROUTINE>...<CODEROUTINE>]</CODEROUTINE> can be used to give relative references.<BR/>
+Some examples:<BR/>
+<CODEROUTINE>R[-2]C</CODEROUTINE> A relative reference to the cell two rows up and in the same column<BR/>
+<CODEROUTINE>R[2]C[2]</CODEROUTINE> A relative reference to the cell two rows down and two columns to the right<BR/>
+<CODEROUTINE>R2C2</CODEROUTINE> An absolute reference to the cell in the second row and in the second column<BR/>
+<CODEROUTINE>R[-1]</CODEROUTINE> A relative reference to the entire row above the active cell<BR/>
+<CODEROUTINE>R</CODEROUTINE> An absolute reference to the current row</ITEM>
+<ITEM><BLIST><TITLE>dynamical references<BR/>
+use <CODEROUTINE>INDIRECT</CODEROUTINE>.</TITLE>
+<ITEM>Use <CODEROUTINE>INDIRECT</CODEROUTINE><BR/>
+For example, we look up the value of the cell <CODEROUTINE>B3</CODEROUTINE> in a matrix whose name is defined in <CODEROUTINE>B2</CODEROUTINE>:
+<CODESAMPLE>=RECHERCHEV(B3,INDIRECT(B$2),2,FAUX)</CODESAMPLE></ITEM>
+<ITEM>Another solution is to build a string containing the reference.<BR/>
+For example, the second row contains the first data row of the column, the third row contains the last data row of the column, the sum of the data can be expressed as:
+<CODESAMPLE>=SUM(CONCATENATE("R";B$2;"C";COLUMN();":R";B$3;"C";COLUMN()))</CODESAMPLE>
+But this will not work with Excel in other languages, see below.
+</ITEM>
+</BLIST></ITEM>
+<ITEM>
+The R1C1 notation depends of the localization:
+<DEFINITIONTABLE>
+<ROW><TERM>R1C1</TERM><DESC>English</DESC></ROW>
+<ROW><TERM>L1C1</TERM><DESC>French</DESC></ROW>
+<ROW><TERM>R1K1</TERM><DESC>Dutch</DESC></ROW>
+<ROW><TERM>F1C1</TERM><DESC>Spanish</DESC></ROW>
+<ROW><TERM>Z1S1</TERM><DESC>German</DESC></ROW>
+</DEFINITIONTABLE>
+to get the row letter, you can use the expression
+<CODESAMPLE>MID(ADDRESS(1;1;1FALSE);1;1)</CODESAMPLE>
+to get the column letter, you can use the expression
+<CODESAMPLE>MID(ADDRESS(1;1;1FALSE);3;1)</CODESAMPLE>
+</ITEM>
+<ITEM>
+it is possible to link toward a cell in another Excel document<BR/>
+if the other document is not open, the syntax is
+<CODESAMPLE>=RECHERCHEV(A2;'D:\Docs\daily\[bug_tracking.xls]summary'!A:Z;7;FAUX)</CODESAMPLE>
+if the other document is open, the syntax is
+<CODESAMPLE>=RECHERCHEV(A2;[bug_tracking.xls]summary!A:Z;7;FAUX)</CODESAMPLE>
+</ITEM>
+</BLIST>
+<BR/>
+
+<BLIST><TITLE><B><U>Charts</U></B></TITLE>
+<ITEM>Create a temporal diagram<BR/>
+use the menu <CODEMENU>Insert<CODEMENU>Chart...</CODEMENU></CODEMENU><BR/>
+at the <CODEMENU>Source Data</CODEMENU> step of the Chart wizard:
+<BLIST>
+<ITEM>on the <CODEMENU>Data Range</CODEMENU> tab, select the values in the <CODEMENU>Data range</CODEMENU> field</ITEM>
+<ITEM>on the <CODEMENU>Series</CODEMENU> tab, select the dates in the <CODEMENU>Category (X) axis labels</CODEMENU> field</ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Drawing</U></B></TITLE>
+<ITEM>It is possible to define the text of a Text Box as a formula<BR/>
+<BLIST>
+<ITEM>select the text box</ITEM>
+<ITEM>type the formula in the formula bar</ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Pivot tables</U></B></TITLE>
+<ITEM>
+<BLIST><TITLE>create a Pivot Table to get the number of elements of a class given two columns: ID of the element, class of the element.</TITLE>
+<ITEM>put a title to the two columns if they do not have one</ITEM>
+<ITEM><CODEMENU>Data<CODEMENU>PivotTable and PivotChart report...</CODEMENU></CODEMENU></ITEM>
+<ITEM>select <CODEMENU>Microsoft Excel list or database</CODEMENU> and <CODEMENU>PivotTable</CODEMENU>, and click <CODEMENU>Next</CODEMENU></ITEM>
+<ITEM>select the two columns for the range and click <CODEMENU>Next</CODEMENU></ITEM>
+<ITEM>select <CODEMENU>Existing worksheet</CODEMENU> and select a location on the sheet</ITEM>
+<ITEM>click <CODEMENU>Layout...</CODEMENU>, drag 'n drop the class column title on <CODEMENU>ROW</CODEMENU>, drag 'n drop the ID column title on <CODEMENU>DATA</CODEMENU>, and click <CODEMENU>OK</CODEMENU></ITEM>
+<ITEM>click <CODEMENU>Finish</CODEMENU></ITEM>
+<ITEM>double click on the field setting (the cell above the class column title in the pivot table) and select <CODEMENU>Count</CODEMENU>, and click <CODEMENU>OK</CODEMENU></ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE>Pivot table to have the number of elements per element type and per author. The data should have two columns (author and element type) and a line per element.</TITLE>
+<ITEM>drag 'n drop the author on <CODEMENU>ROW</CODEMENU></ITEM>
+<ITEM>drag 'n drop the type on <CODEMENU>COLUMN</CODEMENU></ITEM>
+<ITEM>drag 'n drop the type on <CODEMENU>DATA</CODEMENU></ITEM>
+<ITEM>double click on the type in <CODEMENU>DATA</CODEMENU> and select number</ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE>Pivot table to have the sum of time per author. The data should have two columns (author and time) and a line per task.</TITLE>
+<ITEM>drag 'n drop the author on <CODEMENU>ROW</CODEMENU></ITEM>
+<ITEM>drag 'n drop the time on <CODEMENU>DATA</CODEMENU></ITEM>
+<ITEM>double click on the time in <CODEMENU>DATA</CODEMENU> and select sum</ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Regression</U></B></TITLE>
+<ITEM>
+one-dimensional linear regression:<BR/>
+<CODEROUTINE>INTERCEPT(known_y's,known_x's)</CODEROUTINE> is equal to <CODEROUTINE>=INDEX(LINEST(known_y's,known_x's),2)</CODEROUTINE><BR/>
+<CODEROUTINE>SLOPE(known_y's,known_x's)</CODEROUTINE> is equal to <CODEROUTINE>=INDEX(LINEST(known_y's,known_x's),1)</CODEROUTINE><BR/>
+except when data is undetermined and collinear
+</ITEM>
+<ITEM>
+multidimensional linear regression:<BR/>
+let's say that we have 51 measurements depending of 9 parameters<BR/>
+the first column contains the measurements<BR/>
+the next columns contains the parameters<BR/>
+the constant is <CODEROUTINE>INDEX(DROITEREG(A1:A51;B1:J51);10)</CODEROUTINE><BR/>
+the coefficient for the parameter in column B is <CODEROUTINE>INDEX(DROITEREG(A1:A51;B1:J51);9)</CODEROUTINE><BR/>
+...<BR/>
+the coefficient for the parameter in column J is <CODEROUTINE>INDEX(DROITEREG(A1:A51;B1:J51);1)</CODEROUTINE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/office.html#excel</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

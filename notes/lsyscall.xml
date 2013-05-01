@@ -1,0 +1,112 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Linux systems calls</TITLE>
+<PATH>notes/lsyscall.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>file</U></B></TITLE>
+<ITEM>create/open/close
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>open</T><A>javascript:do_reference("man/linux/2/open")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>open/create a file (given its name)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>creat</T><A>javascript:do_reference("man/linux/2/creat")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>create a file (given its name)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>umask</T><A>javascript:do_reference("man/linux/2/umask")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>set/get file creation mask</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>close</T><A>javascript:do_reference("man/linux/2/close")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>close a file (given its file descriptor)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>link</T><A>javascript:do_reference("man/linux/2/link")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>create a new hard link for a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>unlink</T><A>javascript:do_reference("man/linux/2/unlink")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>delete a hard link of a file, deleting the file for the last one</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>rename</T><A>javascript:do_reference("man/linux/2/rename")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>rename a file</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>directories
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>mkdir</T><A>javascript:do_reference("man/linux/2/mkdir")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>create a directory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>rmdir</T><A>javascript:do_reference("man/linux/2/rmdir")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>delete a directory</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>metadata
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>chmod</T><A>javascript:do_reference("man/linux/2/chmod")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change permissions of a file (given its name)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>fchmod</T><A>javascript:do_reference("man/linux/2/fchmod")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change permissions of a file (given its file handle)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>chown</T><A>javascript:do_reference("man/linux/2/chown")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change owner of a file (given its name)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>fchown</T><A>javascript:do_reference("man/linux/2/fchown")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change owner of a file (given its file handle)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>lchown</T><A>javascript:do_reference("man/linux/2/lchown")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change owner of symbolic link</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>flock</T><A>javascript:do_reference("man/linux/2/flock")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>advisory lock/unlock a file (given its file handle)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>stat</T><A>javascript:do_reference("man/linux/2/stat")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return information about a file (given its name)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>fstat</T><A>javascript:do_reference("man/linux/2/fstat")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return information about a file (given its file handle)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>lstat</T><A>javascript:do_reference("man/linux/2/lstat")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return information about a symbolic link</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>symbolic links
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>symlink</T><A>javascript:do_reference("man/linux/2/symlink")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>create a symbolic link</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>readlink</T><A>javascript:do_reference("man/linux/2/readlink")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>read the value of a symbolic link</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>read/write
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>read</T><A>javascript:do_reference("man/linux/2/read")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>read a file (given its file descriptor)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>write</T><A>javascript:do_reference("man/linux/2/write")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>write to a file (given its file descriptor)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>fsync</T><A>javascript:do_reference("man/linux/2/fsync")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>flush the file data and metadata on the disk</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>fdatasync</T><A>javascript:do_reference("man/linux/2/fdatasync")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>flush the file data on the disk (but not the metadadata)</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>socket
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>socket</T><A>javascript:do_reference("man/linux/2/socket")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>create a socket</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>connect</T><A>javascript:do_reference("man/linux/2/connect")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>connect to a socket</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>listen</T><A>javascript:do_reference("man/linux/2/listen")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>listen to connection to a socket</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>accept</T><A>javascript:do_reference("man/linux/2/accept")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>accept a connection on a socket</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>bind</T><A>javascript:do_reference("man/linux/2/bind")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>bind a name to a socket</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>getsocketname</T><A>javascript:do_reference("man/linux/2/getsocketname")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return the name of a socket</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>select
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>select</T><A>javascript:do_reference("man/linux/2/select")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>watch file handles for read/write/exception change status</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>pselect</T><A>javascript:do_reference("man/linux/2/pselect")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>watch signals and file handles for read/write/exception change status</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>environment</U></B></TITLE>
+<ITEM>current directory
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>chdir</T><A>javascript:do_reference("man/linux/2/chdir")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change the current directory (given its name)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>fchdir</T><A>javascript:do_reference("man/linux/2/fchdir")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change the current directory (given its file descriptor)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>getpwd</T><A>javascript:do_reference("man/linux/2/getpwd")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>get_current_dir_name</T><A>javascript:do_reference("man/linux/2/get_current_dir_name")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>getwd</T><A>javascript:do_reference("man/linux/2/getwd")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>get name of current directory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>chroot</T><A>javascript:do_reference("man/linux/2/chroot")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change the root directory (given its name)</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>memory</U></B></TITLE>
+<ITEM><DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>getpagesize</T><A>javascript:do_reference("man/linux/2/getpagesize")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return size (i.e. number of bytes) of a page</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>mmap</T><A>javascript:do_reference("man/linux/2/mmap")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>map a file in memory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>mremap</T><A>javascript:do_reference("man/linux/2/mremap")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>remap (expand or shrink) a file in memory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>munmap</T><A>javascript:do_reference("man/linux/2/munmap")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>unmap a file from memory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>msync</T><A>javascript:do_reference("man/linux/2/msync")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>synchronize a file with a memory map</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>mprotect</T><A>javascript:do_reference("man/linux/2/mprotect")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>control read/write/execute access to a memory region</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>mincore</T><A>javascript:do_reference("man/linux/2/mincore")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>test if some pages are currently loaded in core memory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>madvise</T><A>javascript:do_reference("man/linux/2/madvise")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>indicate to the kernel how memory will be used</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>mlock</T><A>javascript:do_reference("man/linux/2/mlock")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>lock some pages in core memory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>munlock</T><A>javascript:do_reference("man/linux/2/munlock")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>unlock some pages from core memory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>mlockall</T><A>javascript:do_reference("man/linux/2/mlockall")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>lock all process pages (pages of the code, data and stack segments, shared libraries, user space kernel data, shared memory and memory mapped files) in core memory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>munlockall</T><A>javascript:do_reference("man/linux/2/munlockall")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>unlock all process pages from core memory</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>process management</U></B></TITLE>
+<ITEM><DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>execve</T><A>javascript:do_reference("man/linux/2/execve")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execl</T><A>javascript:do_reference("man/linux/2/execl")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execlp</T><A>javascript:do_reference("man/linux/2/execlp")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execle</T><A>javascript:do_reference("man/linux/2/execle")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execv</T><A>javascript:do_reference("man/linux/2/execv")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execvp</T><A>javascript:do_reference("man/linux/2/execvp")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>execute a program</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>fork</T><A>javascript:do_reference("man/linux/2/fork")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>create a child process</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>ptrace</T><A>javascript:do_reference("man/linux/2/ptrace")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>observe and control the execution of another process</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>misc.</U></B></TITLE>
+<ITEM><DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>time</T><A>javascript:do_reference("man/linux/2/time")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>get time</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>gettimeofday</T><A>javascript:do_reference("man/linux/2/gettimeofday")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>get time and time zone</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>settimeofday</T><A>javascript:do_reference("man/linux/2/settimeofday")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>set time and time zone</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>adjtimex</T><A>javascript:do_reference("man/linux/2/adjtimex")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>set/get clock adjustement</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+</BLIST>
+
+</CONTENT>
+
+</PAGE>
+

@@ -1,0 +1,130 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>gcc</TITLE>
+<PATH>notes/gcc.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE>compilation stages</TITLE>
+
+<ITEM>display the compiler version and copyrights
+<CODESAMPLE><PROMPT/>g++ --version</CODESAMPLE></ITEM>
+
+<ITEM>return the compiler version number
+<CODESAMPLE><PROMPT/>g++ -dumpversion</CODESAMPLE></ITEM>
+
+<ITEM>use the <CODEROUTINE>-v</CODEROUTINE> flag to see the flags gcc/g++ uses when calling its subprocesses</ITEM>
+
+<ITEM><BLIST><TITLE>preprocessor</TITLE>
+<ITEM>get the list of predefined defines
+<CODESAMPLE><PROMPT/>cpp -dM /dev/null</CODESAMPLE></ITEM>
+<ITEM>use <CODEROUTINE>-Wp,-H</CODEROUTINE> to get the indented list of included header files
+<CODESAMPLE><PROMPT/>g++296 <U>-Wp,-H</U> -c -fPIC -DOPTIMAL -march=i686 -O2 -I/vobs-awa/AW4.3_src/src/include/stl -I/vobs-awa/AW4.3_src/src/include -I/usr/X11R6/include/ -I. -DLinux -D_XOPEN_SOURCE=600 -Wall -W -fmessage-length=0 -Wpointer-arith QueueRequest.c -o objects_i386_default/QueueRequest.o</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>__GNUC__</CODEROUTINE> is defined when compiling C<BR/>
+<CODEROUTINE>__GNUG__</CODEROUTINE>is defined when compiling C++</ITEM>
+<ITEM><CODEROUTINE>__FUNCTION__</CODEROUTINE> function name as it appears in the source code<BR/>
+<CODEROUTINE>__PRETTY_FUNCTION__</CODEROUTINE> pretty printed function name in a language specific fashion</ITEM>
+</BLIST></ITEM>
+
+<ITEM><BLIST><TITLE>compiler</TITLE>
+<ITEM>for AMD/Intel CPUs<BR/>
+compile in 32 bits mode (<CODEROUTINE>long</CODEROUTINE>s and pointers are 32 bits)
+<CODESAMPLE><PROMPT/>gcc -m32</CODESAMPLE>
+compile in 64 bits mode (<CODEROUTINE>long</CODEROUTINE>s and pointers are 64 bits)
+<CODESAMPLE><PROMPT/>gcc -m64</CODESAMPLE></ITEM>
+<ITEM>create a shared library
+<CODESAMPLE><PROMPT/>gcc -shared sample.c -o sample.so</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+<ITEM><BLIST><TITLE>linker</TITLE>
+<ITEM> pass <CODEROUTINE>option</CODEROUTINE> as an option to the linker
+<CODESAMPLE><PROMPT/>gcc -Xlinker option</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+</BLIST>
+
+<BLIST><TITLE>builts-ins</TITLE>
+<ITEM><CODEROUTINE>alloca</CODEROUTINE> allocates some memory on the stack (exists in many other implementations other than gcc)<BR/>
+It is faster that using <CODEROUTINE>malloc</CODEROUTINE>/<CODEROUTINE>free</CODEROUTINE>, but the limit on the stack size may be low on some machine (this is done in order to catch early infinite recrusions) and there is no way to test for a failed allocation (the program will simply crash when trying to write data in a too large address).</ITEM>
+<ITEM><CODEROUTINE>__buildin_constant_p</CODEROUTINE> this a compiler intrinsic routine testing if its parameter is a constant<BR/>
+It is useful to write macros optimized when one of their parameters is a hard coded constant.</ITEM>
+<ITEM><CODEROUTINE>__typeof__</CODEROUTINE> this is a macro returning the type of its argument<BR/>
+It is useful when writing macros which are generic for several data types. </ITEM>
+<ITEM><CODEROUTINE>__va_copy</CODEROUTINE> copy a <CODEROUTINE>va_list</CODEROUTINE> (there is no other way to portably walk though a variable parameter list twice) </ITEM>
+</BLIST>
+
+<BLIST><TITLE>warnings</TITLE>
+<ITEM>use <CODEROUTINE>-Wall -W</CODEROUTINE> to get most warning messages (<CODEROUTINE>-W</CODEROUTINE> has been deprecated by <CODEROUTINE>-Wextra</CODEROUTINE> with gcc3.x)</ITEM>
+<ITEM>use <CODEROUTINE>-fmessage-length=0</CODEROUTINE> to be able to parse easily the warning messages</ITEM>
+</BLIST>
+
+<BLIST><TITLE>attributes</TITLE>
+
+<ITEM><BLIST><TITLE>function attributes</TITLE>
+<ITEM><CODEROUTINE>constructor</CODEROUTINE><BR/>
+the function must be called before <CODEROUTINE>main</CODEROUTINE>
+<CODESAMPLE>static void initialize() __attribute__ ((constructor));</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>destructor</CODEROUTINE><BR/>
+the function must be called after <CODEROUTINE>exit</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>noreturn</CODEROUTINE><BR/>
+the function never returns (this allows some optimization, but also some code check: the compiler will warn if some code is present after calling this function) </ITEM>
+<ITEM><CODEROUTINE>pure</CODEROUTINE><BR/>
+pure function (no side effect, the function is simply computing a value from its parameter values and/or global variables) </ITEM>
+<ITEM><CODEROUTINE>const</CODEROUTINE><BR/>
+purer function (the function is computing a value from its parameter values) </ITEM>
+<ITEM><CODEROUTINE>stdcall</CODEROUTINE><BR/>
+the function itself will correct the stack when returning</ITEM>
+<ITEM><CODEROUTINE>regparm(n)</CODEROUTINE><BR/>
+number of parameters that shall be passed using registers (n &lt;=3)</ITEM>
+<ITEM><CODEROUTINE>no_instrument_function</CODEROUTINE><BR/>
+the function will no be instrumented when the code is compiled with <CODEROUTINE>-finstrument-functions</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>deprecated</CODEROUTINE><BR/>
+generates a deprecation warning every time this function is used</ITEM>
+</BLIST></ITEM>
+
+<ITEM><BLIST><TITLE>type attributes</TITLE>
+<ITEM><CODEROUTINE>unused</CODEROUTINE><BR/>
+avoid a warning indicating that a variable of this type is unused</ITEM>
+<ITEM><CODEROUTINE>deprecated</CODEROUTINE><BR/>
+generate a deprecation warning every time this type is used</ITEM>
+<ITEM><CODEROUTINE>packed</CODEROUTINE><BR/>
+attached to an <CODEROUTINE>enum</CODEROUTINE>, <CODEROUTINE>struct</CODEROUTINE>, or <CODEROUTINE>union</CODEROUTINE> type definition, specify that the minimum required memory be used to represent the type.
+<CODESAMPLE>typedef struct {<BR/>
+<TAB/>stamp_type stamp;<BR/>
+<TAB/>envelope_address_type address;<BR/>
+<TAB/>message_type message;<BR/>
+}<BR/>
+#if defined(Linux) // this is required to have the same layout in 32 and 64 bits<BR/>
+__attribute__  ((packed))<BR/>
+#endif //Linux<BR/>
+envelope_type;</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>aligned (alignment)</CODEROUTINE><BR/>
+specify a minimum alignment (in bytes) for variables of this type</ITEM>
+</BLIST></ITEM>
+
+<ITEM><BLIST><TITLE>variable attributes</TITLE>
+<ITEM><CODEROUTINE>unused</CODEROUTINE><BR/>
+avoid a warning indicating that the variable is unused
+<CODESAMPLE>static const char *foobar [4] <BR/>
+#if defined(__GNUG__)<BR/>
+__attribute__ ((unused)) <BR/>
+#endif // __GNUG__<BR/>
+= {<BR/>
+<TAB/>"a",<BR/>
+<TAB/>"b",<BR/>
+<TAB/>"c",<BR/>
+<TAB/>"d"<BR/>
+};</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>deprecated</CODEROUTINE><BR/>
+generates a deprecation warning every time this variable is used</ITEM>
+</BLIST></ITEM>
+
+
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/coding.html#gcc</A><L>en</L><F>HTML</F></X>
+</PAGE>
+
+

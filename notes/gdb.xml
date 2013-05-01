@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>gdb</TITLE>
+<PATH>notes/gdb.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<U><B>run</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>file &lt;prog&gt;</CODEROUTINE></TERM>
+<DESC>use <CODEROUTINE>prog</CODEROUTINE> as the program to be debugged</DESC></ROW>
+<ROW><TERM><CODEROUTINE>run &lt;arg1&gt; &lt;arg2&gt;</CODEROUTINE></TERM>
+<DESC>run the process with the specified arguments</DESC></ROW>
+<ROW><TERM><CODEROUTINE>run</CODEROUTINE></TERM>
+<DESC>run the process with the last specified arguments<BR/>
+to run the process without the last specified arguments, use before <CODEROUTINE>set args</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>set args &lt;arg1&gt; &lt;arg2&gt;</CODEROUTINE></TERM>
+<DESC>set the run arguments</DESC></ROW>
+<ROW><TERM><CODEROUTINE>show args</CODEROUTINE></TERM>
+<DESC>display the run arguments</DESC></ROW>
+<ROW><TERM><CODEROUTINE>kill</CODEROUTINE></TERM>
+<DESC>kill the process being debugged</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cont</CODEROUTINE></TERM>
+<DESC>continue to run the debugged process</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cont &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>when stopped at a breakpoint, continue to run until the same breakpoint is reached for the n<SUP>th</SUP> time</DESC></ROW>
+<ROW><TERM><CODEROUTINE>step</CODEROUTINE></TERM>
+<DESC>continue to run the debugged process until it reaches a different line of code including subroutine calls (i.e. goes in subroutines)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>step &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>perform n <CODEROUTINE>step</CODEROUTINE>s</DESC></ROW>
+<ROW><TERM><CODEROUTINE>stepi</CODEROUTINE></TERM>
+<DESC>continue to run the debugged process up to the next instruction (i.e. goes in subroutines)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>stepi &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>perform n <CODEROUTINE>stepti</CODEROUTINE>s</DESC></ROW>
+<ROW><TERM><CODEROUTINE>next</CODEROUTINE></TERM>
+<DESC>continue to run the debugged process until it reaches a different line of code in the same routine (i.e. does not go in subroutines)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>next &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>perform n <CODEROUTINE>next</CODEROUTINE>s</DESC></ROW>
+<ROW><TERM><CODEROUTINE>nexti</CODEROUTINE></TERM>
+<DESC>continue to run the debugged process up to the next instruction of the routine (i.e. does not go in subroutines)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>nexti &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>perform n <CODEROUTINE>nexti</CODEROUTINE>s</DESC></ROW>
+<ROW><TERM><CODEROUTINE>return</CODEROUTINE></TERM>
+<DESC>continue to run the debugged process until it reaches the calling routine</DESC></ROW>
+<ROW><TERM><CODEROUTINE>return &lt;value&gt;</CODEROUTINE></TERM>
+<DESC>continue to run the debugged process until it reaches the calling routine, <CODEROUTINE>value</CODEROUTINE> is the returned value</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+
+<U><B>stack</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>bt</CODEROUTINE><BR/>
+<CODEROUTINE>where</CODEROUTINE><BR/>
+<CODEROUTINE>info stack</CODEROUTINE></TERM>
+<DESC>print stack trace</DESC></ROW>
+<ROW><TERM><CODEROUTINE>up</CODEROUTINE></TERM>
+<DESC>select and display stack frame of calling routine</DESC></ROW>
+<ROW><TERM><CODEROUTINE>up &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>select and display n<SUP>th</SUP> upper stack frame</DESC></ROW>
+<ROW><TERM><CODEROUTINE>down</CODEROUTINE></TERM>
+<DESC>select and display stack frame of called routine</DESC></ROW>
+<ROW><TERM><CODEROUTINE>down &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>select and display n<SUP>th</SUP> lower stack frame</DESC></ROW>
+<ROW><TERM><CODEROUTINE>frame</CODEROUTINE></TERM>
+<DESC>display current stack frame</DESC></ROW>
+<ROW><TERM><CODEROUTINE>frame &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>select and display stack frame number n</DESC></ROW>
+<ROW><TERM><CODEROUTINE>select-frame &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>select stack frame number n (there is no display)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>list &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>display 10 lines around line number n</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>examination</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>info stack</CODEROUTINE></TERM>
+<DESC>display the addresses of frame, called frame, calling frame, frame arguments, frame local variables and also the language, program counter and saved register values</DESC></ROW>
+<ROW><TERM><CODEROUTINE>info args</CODEROUTINE></TERM>
+<DESC>display the arguments</DESC></ROW>
+<ROW><TERM><CODEROUTINE>info locals</CODEROUTINE></TERM>
+<DESC>display the local variables</DESC></ROW>
+<ROW><TERM><CODEROUTINE>whatis &lt;expr&gt;</CODEROUTINE></TERM>
+<DESC>print the type of expression <CODEROUTINE>expr</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>ptype &lt;expr&gt;</CODEROUTINE></TERM>
+<DESC>print a description of the type of expression <CODEROUTINE>expr</CODEROUTINE><BR/>
+<CODEROUTINE>ptype</CODEROUTINE> differs from <CODEROUTINE>whatis</CODEROUTINE> by printing a detailed description, instead of just the name of the type</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ptype &lt;type&gt;</CODEROUTINE></TERM>
+<DESC>print a description of <CODEROUTINE>type</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>print [/&lt;fmt&gt;] &lt;expr&gt;</CODEROUTINE></TERM>
+<DESC>print the value of expression <CODEROUTINE>expr</CODEROUTINE> with format <CODEROUTINE>fmt</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>display [/&lt;fmt&gt;] &lt;expr&gt;</CODEROUTINE></TERM>
+<DESC>print the value of expression <CODEROUTINE>expr</CODEROUTINE> with format <CODEROUTINE>fmt</CODEROUTINE> each time the program stops</DESC></ROW>
+<ROW><TERM><CODEROUTINE>display</CODEROUTINE></TERM>
+<DESC>print the values of the expressions to be displayed</DESC></ROW>
+<ROW><TERM><CODEROUTINE>undisplay &lt;expr&gt;</CODEROUTINE></TERM>
+<DESC>stop to display the expression <CODEROUTINE>expr</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>source</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>dir &lt;path&gt;</CODEROUTINE></TERM>
+<DESC>add <CODEROUTINE>path</CODEROUTINE> at the beginning of the source path<BR/>
+the directories must be separated by <CODEROUTINE>:</CODEROUTINE> (<CODEROUTINE>;</CODEROUTINE> on Windows)<BR/>
+adding a directory already present in the source path moves it at the beginning<BR/>
+<CODEROUTINE>$cdir</CODEROUTINE> is the compilation directory<BR/>
+<CODEROUTINE>$cwd</CODEROUTINE> is the current working directory</DESC></ROW>
+<ROW><TERM><CODEROUTINE>show directories</CODEROUTINE></TERM>
+<DESC>print the source path</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>breakpoints</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>break file.c:105</CODEROUTINE></TERM>
+<DESC>set a breakpoint at the line 105 of file <CODEROUTINE>file.c</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>break foobar</CODEROUTINE></TERM>
+<DESC>set a breakpoint at the beginning of routine <CODEROUTINE>foobar</CODEROUTINE><BR/>
+but, in order to get access to the list of all symbols, we have to start the program (<CODEROUTINE>break main</CODEROUTINE> then <CODEROUTINE>run</CODEROUTINE>) before</DESC></ROW>
+<ROW><TERM><CODEROUTINE>break 'ValueHandler2::getSt </CODEROUTINE><KEY ID="Tab"/></TERM>
+<DESC>autocompletion of the routine name</DESC></ROW>
+<ROW><TERM><CODEROUTINE>info breakpoints</CODEROUTINE></TERM>
+<DESC>list the breakpoints</DESC></ROW>
+<ROW><TERM><CODEROUTINE>info watchpoints</CODEROUTINE></TERM>
+<DESC>list the watchpoints</DESC></ROW>
+<ROW><TERM><CODEROUTINE>delete</CODEROUTINE></TERM>
+<DESC>remove all the breakpoints and watchpoints</DESC></ROW>
+<ROW><TERM><CODEROUTINE>delete &lt;n&gt;</CODEROUTINE></TERM>
+<DESC>remove the breakpoint/watchpoint number <CODEROUTINE>n</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>info</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>list</CODEROUTINE></TERM>
+<DESC>display ten lines around the current line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>disassemble &lt;routine&gt;</CODEROUTINE></TERM>
+<DESC>disassemble a routine</DESC></ROW>
+<ROW><TERM><CODEROUTINE>info source</CODEROUTINE></TERM>
+<DESC>show the name of the current source file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>info sources</CODEROUTINE></TERM>
+<DESC>show all the source files which have debugging information</DESC></ROW>
+<ROW><TERM><CODEROUTINE>info functions</CODEROUTINE></TERM>
+<DESC>show signatures of all functions</DESC></ROW>
+<ROW><TERM><CODEROUTINE>info function &lt;regexp&gt;</CODEROUTINE></TERM>
+<DESC>show the signatures of functions whose name matches a regexp</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>interaction with the shell</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>pwd</CODEROUTINE></TERM>
+<DESC>print working directory</DESC></ROW>
+<ROW><TERM><CODEROUTINE>shell &lt;command&gt;</CODEROUTINE></TERM>
+<DESC>execute a shell command</DESC></ROW>
+<ROW><TERM><CODEROUTINE>set environment &lt;var&gt; &lt;value&gt;</CODEROUTINE></TERM>
+<DESC>set an environment variable for the next run of the application</DESC></ROW>
+<ROW><TERM><CODEROUTINE>unset environment &lt;var&gt;</CODEROUTINE></TERM>
+<DESC>remove a variable from the environment</DESC></ROW>
+<ROW><TERM><CODEROUTINE>show environment</CODEROUTINE></TERM>
+<DESC>show the environment given to the next run of the application</DESC></ROW>
+<ROW><TERM><CODEROUTINE>show environment &lt;var&gt;</CODEROUTINE></TERM>
+<DESC>show the value of the environment variable for the next run of the application</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>misceallaneous</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>quit</CODEROUTINE></TERM>
+<DESC>exit</DESC></ROW>
+<ROW><TERM><CODEROUTINE>source &lt;file&gt;</CODEROUTINE></TERM>
+<DESC>execute the commands of file <CODEROUTINE>file</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>automated launching</B></U><BR/>
+When debugging a process forked from another, the usual solution is to
+<BLIST>
+<ITEM>add an infinite loop <CODEROUTINE>volatile int i=0; while (i==0);</CODEROUTINE> in the code,</ITEM>
+<ITEM>recompile,</ITEM>
+<ITEM>start the parent process,</ITEM>
+<ITEM>wait for the <CODEROUTINE>fork</CODEROUTINE>,</ITEM>
+<ITEM>attach gdb/ddd to it,</ITEM>
+<ITEM>change the value of <CODEROUTINE>i</CODEROUTINE>, and</ITEM>
+<ITEM>continue the process.</ITEM>
+</BLIST>
+A much easier solution is to
+<BLIST>
+<ITEM>add the following code just before the line where you want to start the debug of the child process,
+<CODESAMPLE>
+char buffer[128];<BR/>
+long pid = getpid();<BR/>
+sprintf(buffer,"echo break %s:%d &gt; /tmp/ddd_cmd_%ld; echo cont &gt;&gt; /tmp/ddd_cmd_%ld; ddd -pid=%ld --command=/tmp/ddd_cmd_%ld &amp;",__FILE__,__LINE__+3,pid,pid,pid,pid); <BR/>
+system(buffer); <BR/>
+sleep(3);
+</CODESAMPLE></ITEM>
+<ITEM>recompile, and</ITEM>
+<ITEM>start the parent process.</ITEM>
+</BLIST>
+The debugger will automatically start on the child process.
+
+
+</CONTENT>
+<X><T>Links</T><A>../links/coding.html#gdb</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

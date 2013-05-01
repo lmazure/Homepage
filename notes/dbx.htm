@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>dbx</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<ul>
+  <li>change the current file</li>
+  <tt>file foobar.c</tt> <br>
+&nbsp; <li>return the name of the current file</li>
+  <tt>file</tt> <br>
+&nbsp; <li>display a value in hexadecimal</li>
+  <tt>display -f "%x" foobar</tt> <br>
+&nbsp; <li>display declaration of type foobar</li>
+  <tt>whatis foobar</tt> <br>
+&nbsp; <li>display declaration of variable <tt>foobar</tt></li>
+  <tt>whatis foobar</tt> <br>
+&nbsp; <li>list the <tt>GetColors</tt> routines</li>
+  <tt>whereis GetColors</tt> <br>
+&nbsp; <li>return the name and source file a routine given its address</li>
+  <tt>whereis -a 0xfd9f0c18</tt> <br>
+&nbsp; <li>authorize watchpoints in a multithreaded environment</li>
+  <tt>dbxenv mt_watchpoints on</tt> <br>
+(but the application can deadlock if a semaphore is on the watched
+page) <br>
+&nbsp; <li>watch a variable modification</li>
+  <tt>stop modify &amp;var</tt> <br>
+&nbsp; <li>stop if <tt>var</tt> is modified</li>
+  <tt>stop access w &amp;var, sizeof(var)</tt>
+</ul>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: August 20</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2002 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

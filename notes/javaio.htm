@@ -1,0 +1,361 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Java IO</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><tt><u>types of streams:</u></tt></b>
+<br>
+<tt><a href="#reader">Reader</a></tt> and its derived classes read
+16 bits streams.
+<br>
+<tt><a href="#writer">Writer</a></tt> and its derived classes write
+16 bits streams.
+<br>
+<tt><a href="#inputstream">InputStream</a></tt> and its derived classes
+read 8 bits streams.
+<br>
+<tt><a href="#outputstream">OutputStream</a></tt> and its derived
+classes
+write 8 bits streams.
+<br>
+&nbsp;
+<p><a name="reader"></a><b><u>Types of <tt>Reader</tt>'s:</u></b>
+</p>
+<blockquote><li> <tt>CharArrayReader</tt>: data comes from an array of
+characters in
+memory.</li>
+  <li> <tt>StringReader</tt>: data comes from a string in memory.</li>
+  <li> <tt>PipedReader</tt>: data comes from the associated <tt>PipedWriter</tt>.</li>
+  <li> <tt>FilteredReader</tt>:</li>
+  <blockquote> <li><tt>PushbackReader</tt>: enables to push back some
+read
+characters</li>
+  </blockquote>
+  <li> <tt><a href="#bufferedreader">BufferedReader</a></tt>: buffers
+readings</li>
+  <blockquote> <li><tt>LineNumberReader</tt>: keeps track of the
+number of read
+lines</li>
+  </blockquote>
+  <li> <tt>InputStreamReader</tt>: bridges to an <tt>InputStream</tt></li>
+  <ul>
+    <li> <tt>FileReader</tt>: data comes from a file.</li>
+  </ul>
+</blockquote>
+<a name="writer"></a><b><u>Types of <tt>Writer</tt>'s:</u></b>
+<ul>
+  <li> <tt>CharArrayWriter</tt>: data goes in an array of characters
+in
+memory.</li>
+  <li> <tt>StringWriter</tt>: data goes in a string in memory.</li>
+  <li> <tt>PipedWriter</tt>: data goes in the associated <tt>PipedReader</tt>.</li>
+  <li> <tt><a href="#printwriter">PrintWriter</a></tt>: generates
+humans readable output</li>
+  <li> <tt>BufferedWriter</tt>: buffers writings</li>
+  <li> <tt>OutputStreamReader</tt>: bridges to an <tt>OutputStream</tt></li>
+  <ul>
+    <li> <tt>FileWriter</tt>: sends data in a file.</li>
+  </ul>
+</ul>
+<a name="inputstream"></a><b><u>Types of <tt>InputStream</tt>'s:</u></b>
+<ul>
+  <li> <tt>ByteArrayInputStream</tt>: data comes from an array of
+bytes in
+memory.</li>
+  <li> <tt>StringBufferInputStream</tt>: data comes from a string in
+memory.</li>
+  <li> <tt>FileInputStream</tt>: data comes from a file.</li>
+  <li> <tt>PipedInputStream</tt>: data comes from the associated <tt>PipedOutputStream</tt>.</li>
+  <li> <tt>SequenceInputStream</tt>: converts two or more <tt>InputStream</tt>
+in a single one.</li>
+  <li> <tt>ObjectInputStream</tt>: serializes objects</li>
+  <li> <tt>FilterInputStream</tt>: abstract class which is an
+interface
+for decorators
+handling the real work.</li>
+  <ul>
+    <li> <tt>BufferedInputStream</tt>: buffers readings</li>
+    <li> <tt>DataInputStream</tt></li>
+    <li> <tt>LineNumberInputStream</tt></li>
+    <li> <tt>PushbackInputStream</tt></li>
+  </ul>
+</ul>
+<a name="outputstream"></a><b><u>Types of <tt>OuputStream</tt>'s:</u></b>
+<ul>
+  <li> <tt>ByteArrayOutputStream</tt>: data goes in an array of bytes
+in
+memory.</li>
+  <li> <tt>FileOutputStream</tt>: sends data in a file.</li>
+  <li> <tt>PipedOutputStream</tt>: sends data in a <tt>PipedInputStream</tt>.</li>
+  <li> <tt>ObjectOutputStream</tt>: serializes objects</li>
+  <li> <tt>FilterOuputStream</tt>: abstract class which is an
+interface
+for decorators
+handling the real work.</li>
+  <ul>
+    <li> <tt>BufferedOutputStream</tt>: buffers writings</li>
+    <li> <tt>DataOutputStream</tt>: binary format</li>
+    <li> <tt>PrintStream</tt>: for human readable format (no
+equivalent
+for input)</li>
+  </ul>
+</ul>
+<a name="bufferedreader"></a><b><tt><u>BufferedReader:</u></tt></b>
+<ul>
+  <li> <tt>readline()</tt> returns a line (without the termination
+character)
+or null if the end of the line is reached</li>
+</ul>
+<p><br>
+</p>
+<p><br>
+<b><u><tt><a name="printwriter">PrintWriter</a></tt>:</u></b>
+<br>
+this class does not throw IO exceptions, errors must be tested by <span
+ style="font-family: monospace;">checkError()</span><br>
+to not forget to call <span style="font-family: monospace;">flush()</span>
+(<span style="font-family: monospace;">checkError()</span>) to
+effectively write the data<br>
+</p>
+<ul>
+  <li> <tt>void print(boolean b)</tt> flush the stream if it's not
+closed
+and
+return its error state.</li>
+  <li> <tt>void println(boolean b)</tt></li>
+  <li> <tt>void print(char c)</tt></li>
+  <li> <tt>void println(char c)</tt></li>
+  <li> <tt>void print(char[] s)</tt></li>
+  <li> <tt>void println(char[] s)</tt></li>
+  <li> <tt>void print(double d)</tt></li>
+  <li> <tt>void println(double d)</tt></li>
+  <li> <tt>void print(float f)</tt></li>
+  <li> <tt>void println(float f)</tt></li>
+  <li> <tt>void print(int i)</tt></li>
+  <li> <tt>void println(int i)</tt></li>
+  <li> <tt>void print(long l)</tt></li>
+  <li> <tt>void println(long l)</tt></li>
+  <li> <tt>void print(Object obj)</tt> prints <tt>String.valueOf(Object)</tt></li>
+  <li> <tt>void println(Object obj)</tt></li>
+  <li> <tt>void print(String s)</tt></li>
+  <li> <tt>void println(String s)</tt></li>
+  <li> <tt>void println()</tt></li>
+</ul>
+<b><u><tt>RandomAccessFile</tt>:</u></b>
+<br>
+independent class managing random access file.
+<p></p>
+<ul>
+  <li> <tt>getFilePointer()</tt> returns position in the file</li>
+  <li> <tt>seek()</tt> moves in the file</li>
+  <li> <tt>length()</tt> returns the size of the file</li>
+</ul>
+<p><br>
+<b><u><tt>File</tt>:</u></b>
+<br>
+class representing a file or a directory
+</p>
+<ul>
+  <li> <tt>list()</tt> returns the content of the directory</li>
+  <li> <tt>list(FilenameFilter)</tt> returns the file of the directory
+matching
+a criteria checked by the <tt>FilenameFilter</tt></li>
+  <li> <tt>getAbsolutePath()</tt></li>
+  <li> <tt>getPath()</tt></li>
+  <li> <tt>getName()</tt> returns the name of the file without its
+path
+(this
+is OS dependent)</li>
+  <li> <tt>getParent()</tt></li>
+  <li> <tt>canRead()</tt></li>
+  <li> <tt>canWrite()</tt></li>
+  <li> <tt>length()</tt></li>
+  <li> <tt>lastModified()</tt></li>
+  <li> <tt>isFile()</tt></li>
+  <li> <tt>isDirectory()</tt></li>
+  <li> <tt>exist()</tt></li>
+  <li> <tt>mkdirs()</tt></li>
+  <li> <tt>renameTo()</tt> renames or moves a file
+    <table bgcolor="#cccccc">
+      <tbody>
+        <tr>
+          <td><tt>// File (or directory) with old name<br>
+File file = new File("oldname");<br>
+          <br>
+// File (or directory) with new name<br>
+File file2 = new File("newname");<br>
+          <br>
+// Rename file (or directory)<br>
+boolean success = file.renameTo(file2)<br>
+if (!success) {<br>
+&nbsp;&nbsp;// File was not successfully renamed<br>
+&nbsp;&nbsp;...<br>
+}</tt></td>
+        </tr>
+      </tbody>
+    </table>
+  </li>
+</ul>
+<p><br>
+<b><u><tt>in</tt>, <tt>out</tt>, <tt>err</tt>:</u></b>
+<br>
+<tt>System.in</tt> is an InputStream
+<br>
+<tt>System.out</tt> and <tt>System.err</tt> are PrintStream's
+</p>
+<p><b><u>tokens:</u></b>
+<br>
+<tt>StreamTokenizer</tt> splits an input stream into tokens
+<br>
+<tt>StringTokenizer</tt> splits a string into tokens (less powerful
+than <tt>StreamTokenizer</tt>)
+<br>
+&nbsp;
+</p>
+<p><b><u>samples:</u></b>
+<br>
+Read a file:
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>File inputFile = new File("farrago.txt");</tt> <br>
+      <tt>FileReader in = new FileReader(inputFile);</tt></td>
+    </tr>
+  </tbody>
+</table>
+(The file encoding is defined by <tt>System.getProperty("file.encoding")</tt>.)
+</p>
+<p>Read from the command line:
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>try {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; BufferedReader in = new BufferedReader(new
+InputStreamReader(System.in));</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; String str = "";</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; while (str!=null) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+System.out.print("prompt&gt;");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; str =
+in.readLine();</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (str!=null)
+process(str);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+      <tt>} catch (IOException e) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+      <tt>}</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>Rename a file or directory
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>File file = new File("oldname");</tt> <br>
+      <tt>File file2 = new File("newname");</tt> <br>
+      <tt>boolean success = file.renameTo(file2);</tt> <br>
+      <tt>if (!success) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; // manage error</tt> <br>
+      <tt>}</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+memory map and extraction of a char buffer:<br>
+<table
+ style="text-align: left; font-family: monospace; background-color: rgb(204, 204, 204);"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">// memory map<br>
+java.io.FileInputStream input = new java.io.FileInputStream(filename);<br>
+java.nio.channels.FileChannel channel = input.getChannel();<br>
+long fileLength = channel.size();<br>
+java.nio.MappedByteBuffer buffer =
+channel.map(java.nio.channels.FileChannel.MapMode.READ_ONLY, 0,
+fileLength);<br>
+      <br>
+// char buffer<br>
+java.nio.charset.Charset charset =
+java.nio.charset.Charset.forName("ISO-8859-1");<br>
+java.nio.charset.CharsetDecoder decoder = charset.newDecoder();<br>
+java.nio.CharBuffer charBuffer = decoder.decode(buffer);<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+<b><u>regular expressions:</u></b>
+&nbsp;
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>import java.util.regex.Pattern;</tt> <br>
+      <tt>import java.util.regex.Matcher;</tt>
+      <p><tt>...</tt> </p>
+      <p><tt>final Pattern pattern =
+Pattern.compile("([-d])[-r][-w][-x][-r][-w][-x][-r][-w][-x]
+.{60} (.*)");</tt> <br>
+      <tt>String content[] = null;</tt> <br>
+      <tt>try {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; content = ftpClient.dir(pathName,true);</tt>
+      <br>
+      <tt>} catch (com.enterprisedt.net.ftp.FTPException e) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; System.err.println("failed to list remote
+directory
+"+pathName+" ["+e.toString()+"]");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; System.exit(-1);</tt> <br>
+      <tt>}</tt> </p>
+      <p><tt>for (int i=0; i&lt;content.length; i++) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; Matcher matcher =
+pattern.matcher(content[i]);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( !matcher.matches() ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+System.err.println("failed
+to parse "+content[i]);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; System.exit(-1);</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; String type = matcher.group(1);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; String name = matcher.group(2);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( type.equals("d") ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (
+!name.equals(".")
+&amp;&amp; !name.equals("..") ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+System.out.println("directory: "+pathName+"/"+name);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+parseRemoteDirectory(ftpClient,pathName+"/"+name);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; } else {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+System.out.println("file:
+"+name);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+      <tt>}</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p></p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: January 7</font><sup><font size="-2">st</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+</body>
+</html>

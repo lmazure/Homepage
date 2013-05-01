@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>HTML</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<p><b><u>links:</u></b>
+</p>
+<ul>
+  <li>to define the title display in the popup:<br>
+    <code>&lt;a href="http://www.uml.org" title="language: en | format:
+HTML"&nbsp; target="_blank"&gt;OMG&lt;/a&gt;<br>
+    </code><br>
+  </li>
+  <li>open the links of the page in new windows</li>
+  <tt>&lt;html&gt;</tt> <br>
+  <tt>&lt;head&gt;</tt> <br>
+  <tt>...</tt> <br>
+  <tt>&lt;base target="_blank"&gt;</tt> <br>
+  <tt>&lt;/head&gt;</tt> <br>
+  <tt>&lt;body&gt;</tt> <br>
+  <tt>...</tt> <br>
+  <tt>&lt;/body&gt;</tt> <br>
+  <tt>&lt;/html&gt;</tt>
+</ul>
+<b><u>table:<br>
+</u></b>
+<ul>
+  <li>to indicate that a cell is the fusion of several one, use the <span
+ style="font-family: monospace;">rowspan </span>and <span
+ style="font-family: monospace;">colspan </span>attributes of <span
+ style="font-family: monospace;">&lt;TD&gt;</span></li>
+  <span style="font-family: monospace;">&lt;TABLE border=1&gt;</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">&lt;TR&gt;&lt;TD rowspan=2
+colspan=2&gt;big
+cell&lt;/TD&gt;&lt;TD&gt;small cell&lt;/TD&gt;&lt;/TR&gt;</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">&lt;TR&gt;&lt;TD&gt;small
+cell&lt;/TD&gt;&lt;/TR&gt;</span><br style="font-family: monospace;">
+  <span style="font-family: monospace;">&lt;TR&gt;&lt;TD&gt;small
+cell&lt;/TD&gt;&lt;TD&gt;small cell&lt;/TD&gt;&lt;TD&gt;small
+cell&lt;/TD&gt;&lt;/TR&gt;</span><br style="font-family: monospace;">
+&lt;/TABLE&gt;
+</ul>
+<b><u><br>
+form:</u></b>
+<ul>
+  <li>entry of a file name</li>
+  <tt>&lt;input type="file"&gt;</tt>
+</ul>
+<b><u>style:</u></b>
+<ul>
+  <li> <tt>&lt;FONT STYLE='background-color: #ff00ff'&gt;errors are
+indicated in
+magenta&lt;/FONT&gt;</tt></li>
+  <tt>&lt;FONT STYLE='color: #0000ff'&gt;logs are reported in
+blue&lt;/FONT&gt;</tt>
+</ul>
+<p><br>
+<b><u>cookbook:</u></b>
+</p>
+<ul>
+  <li>write in green links if JavaScript is not supported</li>
+  <tt>&lt;font color="#008800"&gt;</tt> <br>
+  <tt>&lt;script&gt;</tt> <br>
+  <tt>&lt;!--</tt> <br>
+  <tt>document.write('&lt;/font&gt;&lt;a href="javascript:doAction();"
+CLASS="french"&gt;');</tt> <br>
+  <tt>// --&gt;</tt> <br>
+  <tt>&lt;/script&gt;</tt> <br>
+  <tt>Click here&lt;/font&gt;&lt;script&gt;</tt> <br>
+  <tt>&lt;!--</tt> <br>
+  <tt>document.write('&lt;/a&gt;&lt;font color="#008800"&gt;');</tt> <br>
+  <tt>// --&gt;</tt> <br>
+  <tt>&lt;/script&gt;</tt> <br>
+  <tt>&lt;/font&gt;</tt>
+</ul>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: December 1</font><sup><font size="-2">st</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Linux</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><u>kernel</u></b><br>
+<ul>
+  <li>display the kernel version</li>
+  <tt>#&gt; uname -r</tt> <br>
+  <tt>#&gt; cat /proc/version<br>
+  <br>
+  </tt><li>packages needed to recompile a nvidia driver (redHat 7.3):<br>
+    <ul>
+      <li>rpm_build</li>
+      <li>make</li>
+      <li>glibc-kernheaders</li>
+      <li>gcc</li>
+      <li>glibc-devel</li>
+      <li>kernel-source</li>
+    </ul>
+  </li>
+</ul>
+<p><br>
+<b><u>consoles</u></b>
+</p>
+<ul>
+  <li>in tty mode, use</li>
+</ul>
+<ul>
+  <ul>
+    <li> <tt>Alt+F1</tt>, <tt>Alt+F2</tt>,... <tt>Alt+F6</tt> to
+switch
+between
+virtual consoles</li>
+    <li> <tt>Alt+Right</tt> and <tt>Alt+Left</tt> to rotate through
+the
+virtual
+consoles</li>
+    <li> <tt>Alt+F7</tt> to be back to the X session</li>
+  </ul>
+</ul>
+<ul>
+  <li>in X mode, use<tt><br>
+Ctrl+Alt+F1</tt>, ... <tt>Ctrl+Alt+F6</tt> to switch
+between
+virtual
+consoles.</li>
+</ul>
+<br>
+&nbsp;
+<p><b><u>file system</u></b>
+</p>
+<ul>
+  <li>pour avoir la liste des montages</li>
+  <tt>mount</tt> ou <tt>/etc/mtab</tt> qui peut &ecirc;tre non
+&agrave;
+jour (si <tt>mount -n</tt> a &eacute;t&eacute; utilis&eacute;) <br>
+  <tt>/proc/mounts</tt> qui ne contient pas les options de montage <br>
+  <br>
+  <li><tt>/proc/filesystems</tt> lists the filesystem types
+configured
+in the
+kernel</li>
+&nbsp; <li>pour voir ou r&eacute;parer la table des partitions (ne par
+d&eacute;truire
+et recr&eacute;er la m&ecirc;me partition, son contenu sera perdu)</li>
+  <tt>#&gt; fdisk</tt> <br>
+&nbsp; <li>current partition</li>
+  <tt>/&nbsp;&nbsp;&nbsp;&nbsp; 192M</tt> <br>
+  <tt>/boot&nbsp; 23M</tt> <br>
+&nbsp; <li><tt>/etc/fstab</tt> defines where mount the file systems
+and if
+they must
+be automatically mounted during the boot</li>
+current file (<tt>user</tt> enables any user to mount): <br>
+  <tt>/dev/hda7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ext2&nbsp;&nbsp;&nbsp;
+defaults&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 1</tt> <br>
+  <tt>/dev/hda6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/boot&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ext2&nbsp;&nbsp;&nbsp;
+defaults&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+1 2</tt> <br>
+  <tt>/dev/hda8&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+swap&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+swap&nbsp;&nbsp;&nbsp;
+defaults&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0</tt> <br>
+  <tt>/dev/fd0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/mnt/floppy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; auto&nbsp;&nbsp;&nbsp;
+noauto,user&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0</tt> <br>
+  <tt>/dev/cdrom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/mnt/cdrom&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; iso9660
+noauto,user,ro,unhide&nbsp;
+0 0</tt> <br>
+  <tt>/dev/hda1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/mnt/dos_c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+vfat&nbsp;&nbsp;&nbsp;
+defaults&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0</tt> <br>
+  <tt>/dev/hda5&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/mnt/dos_d&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+vfat&nbsp;&nbsp;&nbsp;
+defaults&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0</tt> <br>
+  <tt>none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/proc&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+proc&nbsp;&nbsp;&nbsp;
+defaults&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0</tt> <br>
+  <tt>none&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/dev/pts&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+devpts&nbsp;
+mode=0622&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+0 0</tt> <br>
+&nbsp; <li>mount a DOS floppy if root</li>
+  <tt>#&gt; mount -o uid=500,gid=100 -t vfat /dev/fd0 /mnt/floppy</tt> <br>
+&nbsp; <li>mount a DOS zip if root</li>
+  <tt>#&gt; mount -o uid=500,gid=100 -t vfat /dev/hdd4 /mnt/zip</tt> <br>
+&nbsp; <li>mount the DOS partitions</li>
+  <tt>#&gt; mount -f vfat /dev/hda1 /mnt/dos_c</tt> <br>
+  <tt>#&gt; mount -f vfat /dev/hda5 /mnt/dos_d</tt> <br>
+&nbsp; <li>mount the CDROM</li>
+  <tt>#&gt; mount /mnt/cdrom</tt> <br>
+&nbsp; <br>
+  <li>mount a CD burnt with Roxy Easy Creator<br>
+    <code>#&gt; mount -t udf /dev/cdrom /mnt/cdrom<br>
+    </code><br>
+  </li>
+  <li>unmount the CDROM and eject it</li>
+  <tt>#&gt; umount /mnt/cdrom</tt> <br>
+  <tt>#&gt; eject /mnt/cdrom</tt> <br>
+  <br>
+  <li>when mounting a CDROM, use the -o exec option of mount to be able
+to execute files which are on the CDROM<br>
+    <br>
+  </li>
+  <li>return the file type</li>
+  <tt>#&gt; file foobar</tt> <br>
+&nbsp; <li>search for file names containing a string</li>
+  <tt>#&gt; locate foobar</tt> <br>
+the file database must have been created using <br>
+  <tt>#&gt; updatedb</tt> <br>
+&nbsp; <li>format a zip with <tt>ext2</tt></li>
+  <tt>#&gt; mkfs /dev/hdd4</tt> <br>
+  <tt>#&gt; mount /dev/hdd4 /mnt/zip</tt> <br>
+  <tt>#&gt; chmod -R 777 /mnt/zip</tt>
+</ul>
+<p><br>
+<b><u>network</u></b>
+</p>
+<ul>
+  <li>display the IP address<br>
+    <span style="font-family: monospace;">#&gt; ifconfig -a</span><br
+ style="font-family: monospace;">
+    <br>
+  </li>
+  <li>define the main parameters<br>
+    <ul>
+      <li>hostname definition<br>
+in /etc/sysconfig/network:<br>
+        <code>HOSTNAME=foobar </code><br>
+in /etc/hosts:<br>
+        <code>127.0.0.1 foobar localhost.localdomain localhost </code><br>
+      </li>
+      <li>IP address definition<br>
+in
+/etc/sysconfig/network-scripts/ifcfg-eth0:<br>
+IPADDR=12.34.56.78 </li>
+      <li>netmask definition <br>
+in /etc/sysconfig/network-scripts/ifcfg-eth0:<br>
+NETMASK=255.255.252.0 <br>
+      </li>
+      <li>activate the hostname:<br>
+        <code>#&gt; hostname foobar</code> <br>
+      </li>
+    </ul>
+  </li>
+  <li>set the netmask</li>
+  <tt>#&gt; ifconfig eth0 netmask 255.0.0.0</tt>
+</ul>
+<ul>
+  <li>add a default router</li>
+  <tt>#&gt; route add default gw 3.249.15.254</tt> <br>
+  <br>
+  <li><tt>/etc/resolv.conf</tt> indicates host to resolve
+hostnames</li>
+  <br>
+  <li>trace the route of the packets<br>
+    <span style="font-family: monospace;">#&gt; <a
+ href="http://2robots.com/man/index.php?traceroute">traceroute</a></span><br>
+    <br>
+  </li>
+  <li>to export a new directory via NFS<br>
+modify <span style="font-family: monospace;">/etc/exports</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">#&gt; exportfs -ra</span><br>
+  </li>
+</ul>
+<p><b><u>periph&eacute;riques</u></b>
+</p>
+<ul>
+  <li>list the SCSI devices currently attached<br>
+    <span style="font-family: monospace;">#&gt; cat /proc/scsi/scsi<br>
+    <br>
+    </span></li>
+  <li>install a new SCSI device<br>
+    <span style="font-family: monospace;">#&gt; echo "scsi
+add-single-device &lt;host&gt; &lt;bus (channel)&gt; &lt;target (scsi
+id)&gt; &lt;lub&gt;" &gt; /proc/scsi/scsi</span><br
+ style="font-family: monospace;">
+    <br>
+  </li>
+  <li>remove a SCSI device<br>
+    <span style="font-family: monospace;">#&gt; echo "scsi
+remove-single-device &lt;host&gt; &lt;bus (channel)&gt; &lt;target
+(scsi id)&gt; &lt;lub&gt;" &gt; /proc/scsi/scsi</span><br
+ style="font-family: monospace;">
+    <br>
+  </li>
+  <li>lists the PCI devices<br>
+    <span style="font-family: monospace;">#&gt; cat </span><tt
+ style="font-family: monospace;">/proc/pci</tt></li>
+&nbsp; <li>list of the frame buffers</li>
+  <span style="font-family: monospace;">#&gt; cat /proc/fb</span><br>
+&nbsp; <li>return the configuration of the serial ports<br>
+  </li>
+  <tt>#&gt; setserial -g /dev/ttyS*</tt> <br>
+&nbsp; &nbsp;<br>
+  <li>pour scanner et dumper les p&eacute;riph&eacute;riques PnP</li>
+  <tt>#&gt; pnpdump</tt> <br>
+&nbsp; <li>pour installer les p&eacute;riph&eacute;riques PnP (se sert
+de la
+configuration
+g&eacute;n&eacute;r&eacute;e par <tt>pnpdump</tt>)</li>
+  <tt>#&gt; isapnp</tt> <br>
+&nbsp; <li><tt>/proc/partitions</tt> contains de disk partition
+definition</li>
+&nbsp; <li><tt>/proc/ide/drivers</tt> contains the IDE driver list</li>
+&nbsp; &nbsp;<br>
+  <li>getting printing data with CUPS</li>
+  <tt>http://localhost:631/documentation.html</tt>
+</ul>
+<p><br>
+<b><u>reboot</u></b>
+</p>
+<ul>
+  <li>reboot the station</li>
+  <tt>#&gt; shutdown -r now</tt> <br>
+ou <br>
+  <tt>#&gt; /sbin/reboot</tt> <br>
+&nbsp; <li>shutdown the station</li>
+  <tt>#&gt; shutdown -h now</tt> <br>
+ou <br>
+  <tt>#&gt; /sbin/halt</tt> <br>
+&nbsp; <li>poweroff the station</li>
+  <tt>#&gt; /sbin/poweroff<br>
+  <br>
+  </tt><li>pour booter en mode single (au boot <tt>lilo</tt>)</li>
+  <tt>lilo: linux single</tt>
+</ul>
+<b><u>tar</u></b>
+<ul>
+  <li>pour d&eacute;compresser au vol un tar gzipp&eacute;</li>
+  <tt>#&gt; tar xvfz foobar.tgz</tt>
+</ul>
+<p><br>
+<b><u>gzip</u></b>
+</p>
+<ul>
+  <li>check that a gzip file is not corrupted</li>
+  <tt>#&gt; gzip -t foobar.gz</tt>
+</ul>
+<b><u><br>
+aide en ligne</u></b>
+<ul>
+  <li>pour chercher les man pages dont le r&eacute;sum&eacute; contient
+foobar
+(utilise la base de donn&eacute;es des man pages)</li>
+  <tt>#&gt; man -k foobar</tt> <br>
+ou <br>
+  <tt>#&gt; apropos foobar</tt> <br>
+&nbsp; <li>pour reg&eacute;n&eacute;rer la base de donn&eacute;es des
+man
+pages</li>
+  <tt>#&gt; makewhatis</tt> <br>
+&nbsp; <li>pour chercher les man pages contenant foobar</li>
+  <tt>#&gt; man -K foobar</tt> <br>
+&nbsp; <li>pour afficher le r&eacute;sum&eacute; de la page quux</li>
+  <tt>#&gt; man -f quux</tt> <br>
+ou <br>
+  <tt>#&gt; whatis quux</tt>
+</ul>
+<p><b><u><br>
+X11</u></b><br>
+<u>xdm</u>
+<br>
+The default xdm configuration file is <tt>/usr/X11R6/lib/X11/xdm/xdm-config</tt>.
+<br>
+(<tt>/usr/X11R6/lib/X11/xdm</tt> is a symbolic link toward <tt>/etc/X11/xdm</tt>)
+<br>
+This can be modified by the <tt>-config file</tt> option on the
+command
+line.
+<br>
+<tt>DisplayManager.servers</tt> contains the specification of the X
+server or the name of a file containing this specification (the default
+is <tt>/etc/X11/xdm/Xservers</tt>).
+</p>
+<p><u>gdm</u>
+<br>
+gdm seems to be the Gnome version of xdm.
+</p>
+<p><tt>/var/gdm/:0.log</tt> is the log file for display 0 (only root
+can
+access this).
+</p>
+<p><tt>/etc/X11/gdm/gdm.conf</tt> is the configuration file.
+<br>
+<tt>0=/usr/bin/X11/X -bpp 16</tt> o start the X server with 16 bits
+per pixels.
+</p>
+<p><u>XFree86</u>
+<br>
+XFree86 supports the following command line options:
+<br>
+<tt>-bpp n&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </tt>sets the
+number of bits per pixels
+<br>
+<tt>-showconfig&nbsp;&nbsp; </tt>shows the current configuration
+<br>
+and the following shortcuts
+<br>
+<tt>Ctrl+Alt+Backspace&nbsp;&nbsp;&nbsp; </tt>kills the X server
+<br>
+<tt>Ctrl+Alt+KeypadPlus&nbsp;&nbsp; </tt>switches to the next video
+mode (does not work #TBD#)
+<br>
+<tt>Ctrl+Alt+KeypadMinus&nbsp; </tt>switches to the previous video
+mode (does not work #TBD#)
+<br>
+the configuration file is <tt>/usr/X11R6/lib/X11/XF86Config</tt>
+(symbolic
+link to <tt>/etc/X11/XF86Config</tt>).
+</p>
+<p><tt>xvidtune</tt> can be used to switch to next next/previous video
+mode, but it does not work (#TBD#).<br>
+</p>
+<p>enable the Xinerama mode<br>
+<code>Section "ServerFlags"<br>
+&nbsp;&nbsp;&nbsp; Option "Xinerama" "True"<br>
+EndSection<br>
+</code></p>
+<p><u>Enlightment</u>
+<br>
+Enlightment shortcuts:
+<br>
+<tt>Alt+Ctrl+Up&nbsp;&nbsp; </tt>raise the window
+<br>
+<tt>Alt+Ctrl+Down </tt>lower the window
+<br>
+&nbsp;
+</p>
+<p><b><u>miscellaneous:</u></b>
+</p>
+<ul>
+  <li>the login definition (max password age...) is defined in <a
+ href="http://www.wlug.org.nz/login.defs%285%29"><span
+ style="font-family: monospace;">/etc/login.defs</span></a><br>
+    <br>
+  </li>
+  <li>create a window snapshot<br>
+    <span style="font-family: monospace;">#&gt; <a
+ href="http://linux.about.com/library/cmd/blcmdl1_import.htm">import</a>
+myImage.gif</span></li>
+</ul>
+<ul>
+  <li><a href="http://www.wlug.org.nz/iconv%281%29">iconv</a> convert a
+file from an encoding to another one<br>
+  </li>
+</ul>
+<p><b><u>Mozilla</u></b>
+</p>
+<ul>
+  <li>install Java plugin in Mozilla<br>
+as&nbsp; root: <code>cd /usr/lib/mozilla/plugin; ln -s
+/usr/java/j2re1.4.2_01/plugin/i386/ns610/libjavaplugin_oji.so</code><br>
+  </li>
+</ul>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: February 28</font><sup><font
+ size="-2">th</font></sup><font size="-1">,
+2005 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

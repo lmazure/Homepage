@@ -1,0 +1,335 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Eclipse</TITLE>
+<PATH>notes/eclipse.xml</PATH>
+<DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><U><B>Install and Update</B></U></TITLE>
+<ITEM>Set up the Proxy:<BR/>
+go in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Install/Update</CODEMENU></CODEMENU></CODEMENU><BR/>
+select <CODEMENU>Enable HTTP proxy connection</CODEMENU><BR/>
+fill <CODEMENU>HTTP proxy host address:</CODEMENU> and <CODEMENU>HTTP proxy host port:</CODEMENU>.
+</ITEM>
+<ITEM>Install new stuff:<BR/>
+go in <CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install...</CODEMENU></CODEMENU></CODEMENU><BR/>
+select <CODEMENU>Search for new features to install</CODEMENU> and click <CODEMENU>Next</CODEMENU><BR/>
+select the update site(s) and click <CODEMENU>Finish</CODEMENU><BR/>
+select the feature(s) and click <CODEMENU>Next</CODEMENU><BR/>
+select <CODEMENU>I accept the terms in the license agreement</CODEMENU> and click <CODEMENU>Next</CODEMENU><BR/>
+check that there is enough free disk space and click <CODEMENU>Finish</CODEMENU><BR/>
+wiat for <CODEMENU>Verification</CODEMENU> window and click <CODEMENU>Install All</CODEMENU>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Launch</B></U></TITLE>
+<ITEM>For a unknown reason <CODEROUTINE>-vmargs -Xmx&#x3B1;M</CODEROUTINE> does not work if &#x3B1; is greater than 1024.<BR/>
+But the following command line works:<BR/>
+<CODEROUTINE>eclipse -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODEROUTINE> (but the value <CODEROUTINE>1600</CODEROUTINE> seems to depends on some PC characteristics, which ones?)</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Project management</B></U></TITLE>
+<ITEM>create a project on an existing source hierarchy<BR/>
+<CODEMENU>File<CODEMENU>New<CODEMENU>Project...<CODEMENU>Java Project</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
+<CODESAMPLE>Project Name: foobar<BR/>
+Location: Create project a external location<BR/>
+<TAB/>Directory: D:\Docs\perso\develop\ptm</CODESAMPLE></ITEM>
+</BLIST>
+
+<U><B>Window navigation</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><KEY ID='F12'/></TERM>
+<DESC>editor</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F6'/></TERM>
+<DESC>next editor</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='F6'/></TERM>
+<DESC>previous editor</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/></TERM>
+<DESC>close current editor</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Q'/></TERM>
+<DESC>go to last edit location</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F7'/></TERM>
+<DESC>next view</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='F7'/></TERM>
+<DESC>previous view</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
+<DESC>next perspective</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
+<DESC>previous perspective</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Q'/><KEY ID='X'/></TERM>
+<DESC>display errors</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<U><B>Unit tests</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='X'/><KEY ID='T'/></TERM>
+<DESC>run all JUnit tests of the current source file</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
+<ITEM>define the Java version used by compiler <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Compiler</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select the Java version in <CODEMENU>Compiler compliance level</CODEMENU></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Edition</B></U></TITLE>
+<ITEM>in Editor window
+<DEFINITIONTABLE>
+<ROW><TERM><KEY ID='F2'/></TERM>
+<DESC>show tooltip</DESC></ROW>
+<ROW><TERM><KEY ID='F3'/></TERM>
+<DESC>display declaration (i.e. source code) of selected item</DESC></ROW>
+<ROW><TERM><KEY ID='F4'/></TERM>
+<DESC>display class hierarchy of selected item</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Ctrl'/><KEY ID='H'/></TERM>
+<DESC>display call hierarchy of selected item</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Up '/></TERM>
+<DESC>expand selection to enclosing element</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Right '/></TERM>
+<DESC>expand selection to next element</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Left '/></TERM>
+<DESC>expand selection to previous element</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Down '/></TERM>
+<DESC>restore last selection</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='S'/></TERM>
+<DESC>save</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='S'/></TERM>
+<DESC>save all</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='L'/></TERM>
+<DESC>goto line</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='O'/></TERM>
+<DESC>display Quick Outline</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='/'/><BR/><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
+<DESC>toggle comment</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='I'/></TERM>
+<DESC>correct indentation</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Num *'/></TERM>
+<DESC>expand all folded code</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Num /'/></TERM>
+<DESC>enable/disable code folding</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='Q'/></TERM>
+<DESC>enable/disable QuickDiff</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='O'/></TERM>
+<DESC>toggle mark occurrences</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>configure the folding with <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Editor<CODEMENU>Folding</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Bookmarks</B></U></TITLE>
+<ITEM>add a boomark on the current line:<BR/>
+right-click on the left margin of the Editor and select <CODEMENU>Add Bookmark...</CODEMENU> or<CODEMENU>Edit<CODEMENU>Add Bookmark...</CODEMENU></CODEMENU> in the menubar<BR/>
+and type the name of the bookmark</ITEM>
+<ITEM>display the Bookmark View: <BR/>
+in the menubar, select <CODEMENU>Windows<CODEMENU>Show view<CODEMENU>Other...</CODEMENU></CODEMENU></CODEMENU><BR/>
+select <CODEMENU>General<CODEMENU>Bookmarks</CODEMENU></CODEMENU></ITEM>
+<ITEM>delete a bookmark:<BR/>
+right-click on the left margin of the Editor and select <CODEMENU>Delete Bookmark</CODEMENU> or<BR/>
+select the boomark in the Bookmark View and type <KEY ID='Del'/></ITEM>
+</BLIST>
+
+<U><B>Search</B></U><BR/>
+in Editor window
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F'/></TERM>
+<DESC>find/replace</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/></TERM>
+<DESC>find next</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/></TERM>
+<DESC>find previous</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='J'/></TERM>
+<DESC>incremental find next</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='J'/></TERM>
+<DESC>incremental find previous</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='H'/></TERM>
+<DESC>search</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='G'/></TERM>
+<DESC>find occurrences of the selection in the workspace</DESC></ROW>
+</DEFINITIONTABLE>
+in Search window
+<DEFINITIONTABLE>
+<ROW><TERM><KEY ID='F5'/></TERM>
+<DESC>update the search</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>Code generation</B></U><BR/>
+<BLIST>
+<ITEM>set the field name prefixes in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Code Style</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>type the fields</ITEM>
+<ITEM>generate the constructor with <CODEMENU>Source<CODEMENU>Generate Constructor using Fields...</CODEMENU></CODEMENU></ITEM>
+<ITEM>generate the setters and/or getters <CODEMENU>Source<CODEMENU>Generate Getters and Setters...</CODEMENU></CODEMENU></ITEM>
+</BLIST>
+
+<U><B>Refactoring</B></U><BR/>
+in Editor window
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='T'/></TERM>
+<DESC>display refactoring menu</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='R'/></TERM>
+<DESC>rename</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
+<DESC>move</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='S'/></TERM>
+<DESC>change local variable into field</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='M'/></TERM>
+<DESC>extract method (transform the current selection into a new method)</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
+<DESC>change method signature</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
+<ITEM>define the Java version used by compiler<BR/>
+<CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Compiler</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select the Java version in <CODEMENU>Compiler compliance level</CODEMENU></ITEM>
+</BLIST>
+
+<U><B>Running/debugging applications</B></U><BR/>
+in Editor window
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/></TERM>
+<DESC>run last launched</DESC></ROW>
+<ROW><TERM><KEY ID='F11'/>
+</TERM><DESC>debug last launched</DESC></ROW>
+<ROW><TERM><KEY ID='F5'/></TERM>
+<DESC>step into</DESC></ROW>
+<ROW><TERM><KEY ID='F6'/>
+</TERM><DESC>step over</DESC></ROW>
+<ROW><TERM><KEY ID='F7'/></TERM>
+<DESC>return</DESC></ROW>
+<ROW><TERM><KEY ID='F8'/></TERM>
+<DESC>resume</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='D'/></TERM>
+<DESC>display variable</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I '/>
+</TERM><DESC>
+inspect expression
+</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='B'/></TERM>
+<DESC>toggle breakpoint</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+in Debug window
+<DEFINITIONTABLE>
+<ROW><TERM><CODEMENU>Drop to Frame</CODEMENU></TERM>
+<DESC>reenter the current stack frame in debug mode</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BLIST><TITLE>create a run configuration</TITLE>
+<ITEM><CODEMENU>Run<CODEMENU>Run...</CODEMENU></CODEMENU></ITEM>
+<ITEM>select <CODEMENU>Java application</CODEMENU> and click <CODEMENU>New</CODEMENU></ITEM>
+<ITEM>define its name in the <CODEMENU>Name</CODEMENU> field and fill all the necessary parameters</ITEM>
+</BLIST>
+<BR/>
+<BLIST><TITLE>run an application</TITLE>
+<ITEM><CODEMENU>Run<CODEMENU>Run...</CODEMENU></CODEMENU> and select the run configuration</ITEM>
+<ITEM>select the main class and <CODEMENU>Run<CODEMENU>Run As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/> run last launched</ITEM>
+<ITEM>in the "Java Browser > Types" view, select the main class and <CODEMENU>right click<CODEMENU>Run<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>in the "Debug > Debug" view, select process and <CODEMENU>right click<CODEMENU>Relaunch</CODEMENU></CODEMENU></ITEM>
+</BLIST>
+<BR/>
+<BLIST><TITLE>debug an application</TITLE>
+<ITEM><CODEMENU>Run<CODEMENU>Debug...</CODEMENU></CODEMENU></ITEM>
+<ITEM>select the main class and <CODEMENU>Run<CODEMENU>Debug As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM><KEY ID='F11'/> debug last launched</ITEM>
+<ITEM>in the "Java Browser > Types" view, select the main class and <CODEMENU>right click<CODEMENU>Debug<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
+</BLIST>
+<BR/>
+<BLIST><TITLE>solve a deadlock</TITLE>
+<ITEM>in the Debug View, select <CODEMENU>View menu<CODEMENU>Java<CODEMENU>Show Monitors</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>suspend the threads</ITEM>
+<ITEM>for each thread, look at the lock waited for and to who owns it</ITEM>
+</BLIST>
+<BR/>
+
+<BLIST><TITLE><U><B>Application creation</B></U></TITLE>
+<ITEM><BLIST><TITLE>create a JAR file</TITLE>
+<ITEM>Right click on the project name in the <CODEMENU>Project Explorer</CODEMENU> and select <CODEMENU>Export</CODEMENU>.</ITEM>
+<ITEM>Select <CODEMENU>Java<CODEMENU>JAR file</CODEMENU></CODEMENU> and click <CODEMENU>Next</CODEMENU>.</ITEM>
+<ITEM>Select the file to generate in the <CODEMENU>JAR file</CODEMENU> field and click <CODEMENU>Next</CODEMENU>.</ITEM>
+<ITEM>Click <CODEMENU>Next</CODEMENU>.</ITEM>
+<ITEM>Select the class containing the <CODEMENU>Main</CODEMENU> method to generate in the <CODEMENU>Main class</CODEMENU> field and click <CODEMENU>Finish</CODEMENU>.</ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Javadoc</B></U></TITLE>
+<ITEM>in Editor window
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></TERM>
+<DESC>open external Javadoc</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
+<DESC>insert Javadoc comment</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM><BLIST><TITLE>declare the Javadoc command</TITLE>
+<ITEM>Eclipse 3.0:<BR/>
+<CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Javadoc</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>Eclipse 3.1<BR/>
+Fill the field <CODEMENU>Javadoc command</CODEMENU> in <CODEMENU>Project<CODEMENU>Generate Javadoc...</CODEMENU></CODEMENU></ITEM>
+</BLIST></ITEM>
+<ITEM>generate the documentation<BR/>
+<CODEMENU>Project<CODEMENU>Generate Javadoc...</CODEMENU></CODEMENU></ITEM>
+<ITEM><BLIST><TITLE>define the location of the JDK Javadoc</TITLE>
+<ITEM>Eclipse 3.0:<BR/>
+<CODEMENU>Windows<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Installed JREs</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
+double click on a JRE<BR/>
+<CODEMENU>Javadoc URL: file:/D:/Docs/documentation/java/1.5.0/docs/api/</CODEMENU></ITEM>
+<ITEM>Eclipse 3.1:<BR/>
+<CODEMENU>Windows<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Installed JREs</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
+double click on a JRE<BR/>
+unselect <CODEMENU>Use default system libraries</CODEMENU><BR/>
+expand <CODEROUTINE>C:\Program Files\Java\jre1.5.0\lib\rt.jar</CODEROUTINE><BR/>
+double click on <CODEMENU>Source attachment</CODEMENU> and type <CODEROUTINE>C:/Program Files/Java/jdk1.5.0/src.zip</CODEROUTINE><BR/>
+double click on <CODEMENU>Javadoc location</CODEMENU> and type <CODEROUTINE>file://C:/Documents and Settings/Laurent/Mes documents/docs/JDK 1.5.0/api</CODEROUTINE></ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Customization</B></U></TITLE>
+<ITEM>key binding customization<BR/>
+<CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Workbench<CODEMENU>Keys</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Help</B></U></TITLE>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='L'/></TERM>
+<DESC>display the list of shortcuts</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>FindBugs</B></U></TITLE>
+<ITEM>
+<BLIST><TITLE>installing FindBugs</TITLE>
+<ITEM><CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install...</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>select  <CODEMENU>Search for new features to install</CODEMENU></ITEM>
+<ITEM>click on <CODEMENU>New Remote Site...</CODEMENU></ITEM>
+<ITEM>Name:  FindBugs update site<BR/>
+URL: http://findbugs.cs.umd.edu/eclipse</ITEM>
+<ITEM>select <CODEMENU>FindBugs update site</CODEMENU> and click <CODEMENU>Finish</CODEMENU></ITEM>
+<ITEM>in the Search Results Window, select <CODEMENU>FindBugs Feature</CODEMENU> and click <CODEMENU>Next</CODEMENU></ITEM>
+<ITEM>select <CODEMENU>I accept the terms of the license agreement</CODEMENU> and click <CODEMENU>Next</CODEMENU></ITEM>
+<ITEM>click <CODEMENU>Finish</CODEMENU></ITEM>
+<ITEM>in the Verification Window, click <CODEMENU>Install</CODEMENU></ITEM>
+<ITEM>restart Eclipse</ITEM>
+</BLIST></ITEM>
+<ITEM>
+<BLIST><TITLE>using FindBugs</TITLE>
+<ITEM>right click on a Java project and select <CODEMENU>Find Bugs<CODEMENU>Find Bugs</CODEMENU></CODEMENU></ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>MAT</B></U></TITLE>
+<ITEM>command line to start Eclipse/MAT in order to have enough memory to parse a 2GB heapdump:<BR/>
+<CODESAMPLE>MemoryAnalyzer.exe -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>JavaScript</B></U></TITLE>
+<ITEM><CODEMENU>Window<CODEMENU>Open Perspective<CODEMENU>JavaScript</CODEMENU></CODEMENU></CODEMENU><BR/>
+once the perspective is displayed, in the <CODEMENU>Script Explorer</CODEMENU> view, right-click on the project and select <CODEMENU>Configure<CODEMENU>Add JavaScript support...</CODEMENU></CODEMENU></ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>Links</T><A>../links/coding.html#eclipse</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

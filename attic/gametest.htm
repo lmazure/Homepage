@@ -1,0 +1,206 @@
+<HTML>
+<HEAD>
+	<TITLE>What's So Different About Game Testing</TITLE>
+</HEAD>
+
+<BODY bgcolor="white">
+
+<CENTER>
+<font size=5>What's So Different About Game Testing</font><BR>
+<font size=2>by Duri Price and Ilya Pearlman<br>
+<i>from the March/April 1997 <B>ST Labs Report</B></I></font></CENTER>
+
+<P><B>"Is that what you do all day?"</B> a friend asks
+on a tour through ST Labs Games Group, watching the eighteen testers
+intently manipulating flight simulators, role playing games, and
+war games, "Sit around and play? They pay you for that?"</p>
+
+<P>It's a familiar question. So much so that email has been circulated
+to make other testers aware that this group's members are not
+goofing off, but are doing their jobs. No, really.</p> 
+
+<P>Game testing. What's the big deal? You install the game, you click
+the icon or type in a command at the DOS prompt, and you play
+the game until it breaks. That's game testing, right?</p>
+
+<P>Wrong. Ask Duri Price and his team and you'll find that game testing
+is as complex as any other type of testing, sometimes more so,
+and presents its own particular challenges.</p>
+
+<P>So, how is game testing different from other types of software
+testing?</p>
+
+<p><B>In games, all information is purposely hidden from the
+users.</B><BR>
+This is where 90% of the difference between game testing and other
+application testing lies. In most applications, such as spreadsheets,
+data managers, Internet browsers, and even graphics programs,
+the software is designed to give the user as much access to the
+functions of the program as possible. With these applications,
+the developers want the users to be able to quickly identify exactly
+how to obtain the desired results. The most successful software
+then allows the user to load the program and understand how to
+create the end product, with as little searching and exploring
+of the application as possible.</p>
+
+<P>The exact opposite is true of games.</p> 
+
+<P>In games, the software is designed to give the user the least
+amount of access to the actions of the program as possible. Game
+designers want the player to have no choice but to take time to
+explore and discover what the game does. They want to preserve
+the mystery of the world, the quest, the fantasy. The harder it
+is, and the more time it takes for the user to obtain the 'desired
+results' (i.e. conquering the game), the better the game is (to
+a point, of course. Everyone wants to be able to win, eventually).</p>
+
+<P>A computer game is an enormous and highly complex database or
+series of databases, with a shell that is built to obfuscate its
+purpose from the user. Add to this a randomizer. It is designed
+to be unpredictable. Events don't function the same way twice.
+Add to that an 'Artificial Intelligence'. It will actively try
+to outwit you; to keep you from knowing what it is going to do
+next. </p>
+
+<P>Not only is how the database reacts hidden from the tester, but
+the input the tester is able to give is incredibly imprecise;
+joystick movements, mouse clicks - Where exactly are you flying?
+How many degrees to the left? Where are you firing? Each degree
+of difference affects the game's behavior and errors can occur
+at any point. </p>
+
+<P>As a game tester, you are interacting with an intentionally limiting
+interface that is constantly changing the way it functions, as
+well as the way it looks. It can be nearly impossible to know
+if what you see is what you're supposed to be seeing. A game tester
+must be able to keep track of enormous amounts of rapidly changing
+details.</p> 
+
+<P>These factors should be enough to give any non-game tester pause.</p>
+
+<P>Most games are made up of a group of essential components: The
+Shell, which organizes the rest of the components and gives the
+user play options; the Mission Editor, which allows the game or
+the user to direct the play and gives the resulting commands to
+other components; the Simulator, which creates the player's reality,
+and may have a lookup table database associated with it; the AI,
+that plays against the user; the Campaign Tracker, that keeps
+record of what the user is doing; the Interface, whether joystick,
+mouse or wheel; and an Other that is usually a database of objects
+that may have a video player associated with it. Any of these
+components can create or contain critical bugs. Each functions
+as a sub-component of one or more of the others. Understanding
+the function and interaction between each of these components
+is critical for a game tester. </p>
+
+<P>Game bugs tend to be problems in a component, within a component,
+within a component. For example: Based on behavior, a game bug
+may seem to be in the Artificial Intelligence (AI) component.
+As the layers of the game are pulled apart, however, the tester
+may find the bug is actually caused by the database. The database
+could be incorrectly recording how many items a character has
+collected, or how many planes have been shot down and what kind.
+Or, it could be a problem in how (or if) this information is communicated
+to yet another component, such as the Simulator. A game tester
+must be dogged in the pursuit of each error in order to find its
+actual cause.</p>
+
+<P>Furthermore, most non-game applications will react in the same
+way each time a user does a specific series of actions. Since
+these products are meant to perform the same action reliably,
+once a problem is found there is a high probability of recreating
+it. In a game's database, the same series of actions do not cause
+the same reaction. This makes recreating bugs extremely difficult.
+A serious bug that happened once may not occur in the next 100
+attempts at recreating it.</p>
+
+<P>But, games do have objects, and if it is the object that is broken
+(the plane won't fly, the tank doesn't fire) then the bug may
+be easily recreated. If the bug concerns an action, which more
+often than not it does, thousands of actions affecting multiple
+components may have taken place in a small series of movements
+and those movements may all be randomized. Because of this, in
+game testing only 30-50% of game bugs are likely to be recreated,
+and then only with the help of saved games. Saved games allow
+the tester to attempt to recreate the precise moment a failure
+occurs by isolating small incremental series of movements as separate
+saved games until the failure series is found again. For example,
+as a tester is playing a game, s/he will save the game every 15
+minutes. Once a bug is found, the tester will start with the saved
+game previous to the bug and begin playing again, saving every
+five minutes until the bug reappears. At this point, the save
+pattern begins again, this time saving at two minute intervals
+until the bug is isolated.</p> 
+
+<P><B>Games are developed for the next big innovations in hardware,
+so testers must always be aware of the latest, greatest sound
+and video cards, chip sets, game engines, online developments,
+and any other emerging technological advances.</B><BR>
+Games push the technology innovation envelope. They tend to drive
+the hardware market, while other software conforms to it. The
+newest versions of today's business software are released to be
+compatible with the standard issue in system configuration. Gamers
+are often technology wizards, and are looking for the next level
+of performance, speed, and visual quality in their game experience.
+Games are always being developed with an eye toward the newest,
+fastest, hottest hardware, so game testers must keep ahead of
+the trends. Testers must be educated in all new hardware and have
+it all available in the testing environment. This technological
+knowledge is critical in this industry because the game developer
+will most often take the blame if it the game doesn't function
+with the new hardware, and that failure can mean game death.</p>
+ 
+<P><B>Games often follow factual and historical rules, or an internal
+reality, that the tester must understand.</B><BR>
+A game tester is helped greatly by possessing a vast wealth of
+esoteric knowledge, a willingness to continually learn, and flexibility
+in their approach to testing. For example, when testing an historical
+simulation that touts itself as a 'totally accurate' representation
+of a particular World War II battle, the tester and test team
+will need to know something about the era and event. If this 'totally
+accurate' simulation has even minor errors, the grognards (war
+game fanatics) will be sure to let everyone know(via the Internet).
+If people testing such a game don't know that 1940's military
+technology had not created the Stealth Fighter, but this 'totally
+accurate' simulation has them in the air, then there is a problem.
+And what about a the strength of each army? Are explosives doing
+unrealistic amounts of damage? Are the numbers of troops accurate?
+The documentation may be of no help. The manual may say one thing,
+the program do another, and the developer's intention may have
+been something else - and all can be incorrect. On another project
+the tester may be required to suspend reality while working on
+a role playing, fantasy, or space game. The designer's reality
+and the game itself set expectations for the tester. It is very
+difficult to test playability issues when your mind is in the
+&quot;real&quot; world and your game is in a make-believe world.
+Suspension of reality is another key to effectively testing many
+games.</p>
+
+<P><B>Games are system hogs.</B> <BR>
+Games are more system demanding than most other software, so installation,
+setup, and compatibility testing is critical. Game function will
+be affected by video, sound, memory, and other issues more than
+any other type of software.</p>
+
+<P><B>There is very little game testing that can be automated.</B><br>
+If automation is "Snake Oil" for much software testing, for game testing, automation can be cyanide. Games are far too complex and variable to build any kind of a credible test suite for them. In the early alpha stages of development, automation
+can be of limited use in checking that the expected objects are
+at the expected places on the game grid, but above that, there
+is no help for a game tester. Finding and isolating game bugs
+is all about the tester's knowledge and savvy.</p>
+
+<P>Because of the attitude of folks like my friend, which can sometimes
+include game developers themselves, game testing is, in general,
+a job of unsung and untrained heroes. For some companies, a typical
+game testing strategy still consists of throwing sheer numbers
+of testers on a game as it nears release and hoping that they
+find the big problems. Understanding the games issues and technology
+and going about game testing in a systematic and thorough manner
+is still a new concept for most game development companies. At
+ST Labs, we have a limited time with each game, so the goal is
+to maximize our per hour effectiveness. Game testing must be approached
+as a highly specialized professional discipline critical to game
+development in order to achieve this goal.</p>
+<P>Copyright <A HREF="http://www.stlabs.com">ST Labs</A></P>
+</BODY>
+</HTML>

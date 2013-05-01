@@ -1,0 +1,5147 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Code review of system calls</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+In order to help code reviews, this script finds
+out all Unix 98 system calls and header files and will create a HTML
+link
+toward the <a href="http://www.opengroup.org/">OpenGroup</a> man
+pages.
+This last point is not as much useful as the simple fact to highlight
+system
+calls.
+<br>
+The new version (May 12, 2001) is much faster than the previous one.
+Slowness was the main problem. Now, I may or may not fix the issues
+described
+below.
+<p><u>Issues:</u>
+</p>
+<ol>
+  <li>
+Some entries have been forgotten on the OpenGroup index pages. Since I
+used them as a starting point, there are also missing here. Current
+known
+missing data is:</li>
+  <ul>
+    <li>
+all socket macros listed in <tt>xns/syssocket.h.html</tt></li>
+    <li>
+in fact all macros...</li>
+    <li>
+and all constants... (anyway, the current script will not be able to
+recognize
+them)</li>
+  </ul>
+  <li>
+Some entries (e.g. <tt>write</tt>) are present in both system
+interface
+and network interface.</li>
+  <li>
+routines preceded by ".", "::" or "-&gt;" (i.e. class/object methods)
+should
+be ignored</li>
+</ol>
+<u>Notes:</u>
+<br>
+This script is tuned for my&nbsp; personnal working environment: it
+assumes that Nestcape is available and running.
+<br>
+&nbsp;
+<br>
+&nbsp;
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#!/usr/bin/perl</tt>
+      <p><tt>use strict;</tt>
+      </p>
+      <p><tt>undef $/;</tt>
+      </p>
+      <p><tt>my $unix_root_doc =
+"http://www.opengroup.org/onlinepubs/007908799/";</tt>
+      </p>
+      <p><tt>my %unix_records_h = (</tt>
+      <br>
+      <tt>"fcntl.h" =&gt; "xns/fcntl.h.html",</tt>
+      <br>
+      <tt>"sys/socket.h" =&gt; "xns/syssocket.h.html",</tt>
+      <br>
+      <tt>"sys/stat.h" =&gt; "xns/sysstat.h.html",</tt>
+      <br>
+      <tt>"sys/uio.h" =&gt; "xns/sysuio.h.html",</tt>
+      <br>
+      <tt>"sys/un.h" =&gt; "xns/sysun.h.html",</tt>
+      <br>
+      <tt>"arpa/inet.h" =&gt; "xns/arpainet.h.html",</tt>
+      <br>
+      <tt>"netdb.h" =&gt; "xns/netdb.h.html",</tt>
+      <br>
+      <tt>"netinet/in.h" =&gt; "xns/netinetin.h.html",</tt>
+      <br>
+      <tt>"unistd.h" =&gt; "xns/unistd.h.html",</tt>
+      <br>
+      <tt>"xti.h" =&gt; "xns/xti.h.html",</tt>
+      <br>
+      <tt>"aio.h" =&gt; "xsh/aio.h.html",</tt>
+      <br>
+      <tt>"assert.h" =&gt; "xsh/assert.h.html",</tt>
+      <br>
+      <tt>"cpio.h" =&gt; "xsh/cpio.h.html",</tt>
+      <br>
+      <tt>"ctype.h" =&gt; "xsh/ctype.h.html",</tt>
+      <br>
+      <tt>"dirent.h" =&gt; "xsh/dirent.h.html",</tt>
+      <br>
+      <tt>"dlfcn.h" =&gt; "xsh/dlfcn.h.html",</tt>
+      <br>
+      <tt>"errno.h" =&gt; "xsh/errno.h.html",</tt>
+      <br>
+      <tt>"fcntl.h" =&gt; "xsh/fcntl.h.html",</tt>
+      <br>
+      <tt>"float.h" =&gt; "xsh/float.h.html",</tt>
+      <br>
+      <tt>"fmtmsg.h" =&gt; "xsh/fmtmsg.h.html",</tt>
+      <br>
+      <tt>"fnmatch.h" =&gt; "xsh/fnmatch.h.html",</tt>
+      <br>
+      <tt>"ftw.h" =&gt; "xsh/ftw.h.html",</tt>
+      <br>
+      <tt>"glob.h" =&gt; "xsh/glob.h.html",</tt>
+      <br>
+      <tt>"iconv.h" =&gt; "xsh/iconv.h.html",</tt>
+      <br>
+      <tt>"inttypes.h" =&gt; "xsh/inttypes.h.html",</tt>
+      <br>
+      <tt>"grp.h" =&gt; "xsh/grp.h.html",</tt>
+      <br>
+      <tt>"iso646.h" =&gt; "xsh/iso646.h.html",</tt>
+      <br>
+      <tt>"langinfo.h" =&gt; "xsh/langinfo.h.html",</tt>
+      <br>
+      <tt>"libgen.h" =&gt; "xsh/libgen.h.html",</tt>
+      <br>
+      <tt>"limits.h" =&gt; "xsh/limits.h.html",</tt>
+      <br>
+      <tt>"locale.h" =&gt; "xsh/locale.h.html",</tt>
+      <br>
+      <tt>"math.h" =&gt; "xsh/math.h.html",</tt>
+      <br>
+      <tt>"monetary.h" =&gt; "xsh/monetary.h.html",</tt>
+      <br>
+      <tt>"mqueue.h" =&gt; "xsh/mqueue.h.html",</tt>
+      <br>
+      <tt>"ndbm.h" =&gt; "xsh/ndbm.h.html",</tt>
+      <br>
+      <tt>"nl_types.h" =&gt; "xsh/nl_types.h.html",</tt>
+      <br>
+      <tt>"poll.h" =&gt; "xsh/poll.h.html",</tt>
+      <br>
+      <tt>"pthread.h" =&gt; "xsh/pthread.h.html",</tt>
+      <br>
+      <tt>"pwd.h" =&gt; "xsh/pwd.h.html",</tt>
+      <br>
+      <tt>"re_comp.h" =&gt; "xsh/re_comp.h.html",</tt>
+      <br>
+      <tt>"regex.h" =&gt; "xsh/regex.h.html",</tt>
+      <br>
+      <tt>"regexp.h" =&gt; "xsh/regexp.h.html",</tt>
+      <br>
+      <tt>"sched.h" =&gt; "xsh/sched.h.html",</tt>
+      <br>
+      <tt>"search.h" =&gt; "xsh/search.h.html",</tt>
+      <br>
+      <tt>"semaphore.h" =&gt; "xsh/semaphore.h.html",</tt>
+      <br>
+      <tt>"setjmp.h" =&gt; "xsh/setjmp.h.html",</tt>
+      <br>
+      <tt>"signal.h" =&gt; "xsh/signal.h.html",</tt>
+      <br>
+      <tt>"stdarg.h" =&gt; "xsh/stdarg.h.html",</tt>
+      <br>
+      <tt>"stddef.h" =&gt; "xsh/stddef.h.html",</tt>
+      <br>
+      <tt>"stdio.h" =&gt; "xsh/stdio.h.html",</tt>
+      <br>
+      <tt>"stdlib.h" =&gt; "xsh/stdlib.h.html",</tt>
+      <br>
+      <tt>"string.h" =&gt; "xsh/string.h.html",</tt>
+      <br>
+      <tt>"strings.h" =&gt; "xsh/strings.h.html",</tt>
+      <br>
+      <tt>"stropts.h" =&gt; "xsh/stropts.h.html",</tt>
+      <br>
+      <tt>"sys/ipc.h" =&gt; "xsh/sysipc.h.html",</tt>
+      <br>
+      <tt>"syslog.h" =&gt; "xsh/syslog.h.html",</tt>
+      <br>
+      <tt>"sys/mman.h" =&gt; "xsh/sysmman.h.html",</tt>
+      <br>
+      <tt>"sys/msg.h" =&gt; "xsh/sysmsg.h.html",</tt>
+      <br>
+      <tt>"sys/resource.h" =&gt; "xsh/sysresource.h.html",</tt>
+      <br>
+      <tt>"sys/sem.h" =&gt; "xsh/syssem.h.html",</tt>
+      <br>
+      <tt>"sys/shm.h" =&gt; "xsh/sysshm.h.html",</tt>
+      <br>
+      <tt>"sys/stat.h" =&gt; "xsh/sysstat.h.html",</tt>
+      <br>
+      <tt>"sys/statvfs.h" =&gt; "xsh/sysstatvfs.h.html",</tt>
+      <br>
+      <tt>"sys/time.h" =&gt; "xsh/systime.h.html",</tt>
+      <br>
+      <tt>"sys/timeb.h" =&gt; "xsh/systimeb.h.html",</tt>
+      <br>
+      <tt>"sys/times.h" =&gt; "xsh/systimes.h.html",</tt>
+      <br>
+      <tt>"sys/types.h" =&gt; "xsh/systypes.h.html",</tt>
+      <br>
+      <tt>"sys/uio.h" =&gt; "xsh/sysuio.h.html",</tt>
+      <br>
+      <tt>"sys/utsname.h" =&gt; "xsh/sysutsname.h.html",</tt>
+      <br>
+      <tt>"sys/wait.h" =&gt; "xsh/syswait.h.html",</tt>
+      <br>
+      <tt>"tar.h" =&gt; "xsh/tar.h.html",</tt>
+      <br>
+      <tt>"termios.h" =&gt; "xsh/termios.h.html",</tt>
+      <br>
+      <tt>"time.h" =&gt; "xsh/time.h.html",</tt>
+      <br>
+      <tt>"ucontext.h" =&gt; "xsh/ucontext.h.html",</tt>
+      <br>
+      <tt>"ulimit.h" =&gt; "xsh/ulimit.h.html",</tt>
+      <br>
+      <tt>"unistd.h" =&gt; "xsh/unistd.h.html",</tt>
+      <br>
+      <tt>"utime.h" =&gt; "xsh/utime.h.html",</tt>
+      <br>
+      <tt>"utmpx.h" =&gt; "xsh/utmpx.h.html",</tt>
+      <br>
+      <tt>"varargs.h" =&gt; "xsh/varargs.h.html",</tt>
+      <br>
+      <tt>"wchar.h" =&gt; "xsh/wchar.h.html",</tt>
+      <br>
+      <tt>"wctype.h" =&gt; "xsh/wctype.h.html",</tt>
+      <br>
+      <tt>"wordexp.h" =&gt; "xsh/wordexp.h.html",</tt>
+      <br>
+      <tt>);</tt>
+      </p>
+      <p><tt>my %unix_records_r = (</tt>
+      <br>
+      <tt>accept =&gt; "xns/accept.html",</tt>
+      <br>
+      <tt>bind =&gt; "xns/bind.html",</tt>
+      <br>
+      <tt>close =&gt; "xns/close.html",</tt>
+      <br>
+      <tt>connect =&gt; "xns/connect.html",</tt>
+      <br>
+      <tt>fcntl =&gt; "xns/fcntl.html",</tt>
+      <br>
+      <tt>fgetpos =&gt; "xns/fgetpos.html",</tt>
+      <br>
+      <tt>fsetpos =&gt; "xns/fsetpos.html",</tt>
+      <br>
+      <tt>ftell =&gt; "xns/ftell.html",</tt>
+      <br>
+      <tt>getpeername =&gt; "xns/getpeername.html",</tt>
+      <br>
+      <tt>getsockname =&gt; "xns/getsockname.html",</tt>
+      <br>
+      <tt>getsockopt =&gt; "xns/getsockopt.html",</tt>
+      <br>
+      <tt>listen =&gt; "xns/listen.html",</tt>
+      <br>
+      <tt>lseek =&gt; "xns/lseek.html",</tt>
+      <br>
+      <tt>poll =&gt; "xns/poll.html",</tt>
+      <br>
+      <tt>read =&gt; "xns/read.html",</tt>
+      <br>
+      <tt>recv =&gt; "xns/recv.html",</tt>
+      <br>
+      <tt>recvfrom =&gt; "xns/recvfrom.html",</tt>
+      <br>
+      <tt>recvmsg =&gt; "xns/recvmsg.html",</tt>
+      <br>
+      <tt>#select =&gt; "xns/select.html",</tt>
+      <br>
+      <tt>send =&gt; "xns/send.html",</tt>
+      <br>
+      <tt>sendmsg =&gt; "xns/sendmsg.html",</tt>
+      <br>
+      <tt>sendto =&gt; "xns/sendto.html",</tt>
+      <br>
+      <tt>setsockopt =&gt; "xns/setsockopt.html",</tt>
+      <br>
+      <tt>shutdown =&gt; "xns/shutdown.html",</tt>
+      <br>
+      <tt>socket =&gt; "xns/socket.html",</tt>
+      <br>
+      <tt>socketpair =&gt; "xns/socketpair.html",</tt>
+      <br>
+      <tt>write =&gt; "xns/write.html",</tt>
+      <br>
+      <tt>endhostent =&gt; "xns/endhostent.html",</tt>
+      <br>
+      <tt>endnetent =&gt; "xns/endnetent.html",</tt>
+      <br>
+      <tt>endprotoent =&gt; "xns/endprotoent.html",</tt>
+      <br>
+      <tt>endservent =&gt; "xns/endservent.html",</tt>
+      <br>
+      <tt>gethostbyaddr =&gt; "xns/gethostbyaddr.html",</tt>
+      <br>
+      <tt>gethostname =&gt; "xns/gethostname.html",</tt>
+      <br>
+      <tt>getnetbyaddr =&gt; "xns/getnetbyaddr.html",</tt>
+      <br>
+      <tt>getprotobynumber =&gt; "xns/getprotobynumber.html",</tt>
+      <br>
+      <tt>getservbyport =&gt; "xns/getservbyport.html",</tt>
+      <br>
+      <tt>h_errno =&gt; "xns/h_errno.html",</tt>
+      <br>
+      <tt>htonl =&gt; "xns/htonl.html",</tt>
+      <br>
+      <tt>inet_addr =&gt; "xns/inet_addr.html",</tt>
+      <br>
+      <tt>ntohl =&gt; "xns/ntohl.html",</tt>
+      <br>
+      <tt>sethostent =&gt; "xns/sethostent.html",</tt>
+      <br>
+      <tt>setnetent =&gt; "xns/setnetent.html",</tt>
+      <br>
+      <tt>setprotoent =&gt; "xns/setprotoent.html",</tt>
+      <br>
+      <tt>setservent =&gt; "xns/setservent.html",</tt>
+      <br>
+      <tt>t_accept =&gt; "xns/t_accept.html",</tt>
+      <br>
+      <tt>t_alloc =&gt; "xns/t_alloc.html",</tt>
+      <br>
+      <tt>t_bind =&gt; "xns/t_bind.html",</tt>
+      <br>
+      <tt>t_close =&gt; "xns/t_close.html",</tt>
+      <br>
+      <tt>t_connect =&gt; "xns/t_connect.html",</tt>
+      <br>
+      <tt>t_errno =&gt; "xns/t_errno.html",</tt>
+      <br>
+      <tt>t_error =&gt; "xns/t_error.html",</tt>
+      <br>
+      <tt>t_free =&gt; "xns/t_free.html",</tt>
+      <br>
+      <tt>t_getinfo =&gt; "xns/t_getinfo.html",</tt>
+      <br>
+      <tt>t_getprotaddr =&gt; "xns/t_getprotaddr.html",</tt>
+      <br>
+      <tt>t_getstate =&gt; "xns/t_getstate.html",</tt>
+      <br>
+      <tt>t_listen =&gt; "xns/t_listen.html",</tt>
+      <br>
+      <tt>t_look =&gt; "xns/t_look.html",</tt>
+      <br>
+      <tt>t_open =&gt; "xns/t_open.html",</tt>
+      <br>
+      <tt>t_optmgmt =&gt; "xns/t_optmgmt.html",</tt>
+      <br>
+      <tt>t_rcv =&gt; "xns/t_rcv.html",</tt>
+      <br>
+      <tt>t_rcvconnect =&gt; "xns/t_rcvconnect.html",</tt>
+      <br>
+      <tt>t_rcvdis =&gt; "xns/t_rcvdis.html",</tt>
+      <br>
+      <tt>t_rcvrel =&gt; "xns/t_rcvrel.html",</tt>
+      <br>
+      <tt>t_rcvreldata =&gt; "xns/t_rcvreldata.html",</tt>
+      <br>
+      <tt>t_rcvudata =&gt; "xns/t_rcvudata.html",</tt>
+      <br>
+      <tt>t_rcvuderr =&gt; "xns/t_rcvuderr.html",</tt>
+      <br>
+      <tt>t_rcvv =&gt; "xns/t_rcvv.html",</tt>
+      <br>
+      <tt>t_rcvvudata =&gt; "xns/t_rcvvudata.html",</tt>
+      <br>
+      <tt>t_snd =&gt; "xns/t_snd.html",</tt>
+      <br>
+      <tt>t_snddis =&gt; "xns/t_snddis.html",</tt>
+      <br>
+      <tt>t_sndrel =&gt; "xns/t_sndrel.html",</tt>
+      <br>
+      <tt>t_sndreldata =&gt; "xns/t_sndreldata.html",</tt>
+      <br>
+      <tt>t_sndudata =&gt; "xns/t_sndudata.html",</tt>
+      <br>
+      <tt>t_sndv =&gt; "xns/t_sndv.html",</tt>
+      <br>
+      <tt>t_sndvudata =&gt; "xns/t_sndvudata.html",</tt>
+      <br>
+      <tt>t_strerror =&gt; "xns/t_strerror.html",</tt>
+      <br>
+      <tt>t_sync =&gt; "xns/t_sync.html",</tt>
+      <br>
+      <tt>t_sysconf =&gt; "xns/t_sysconf.html",</tt>
+      <br>
+      <tt>t_unbind =&gt; "xns/t_unbind.html",</tt>
+      <br>
+      <tt>a64l =&gt; "xsh/a64l.html",</tt>
+      <br>
+      <tt>abort =&gt; "xsh/abort.html",</tt>
+      <br>
+      <tt>abs =&gt; "xsh/abs.html",</tt>
+      <br>
+      <tt>access =&gt; "xsh/access.html",</tt>
+      <br>
+      <tt>acos =&gt; "xsh/acos.html",</tt>
+      <br>
+      <tt>acosh =&gt; "xsh/acosh.html",</tt>
+      <br>
+      <tt>advance =&gt; "xsh/advance.html",</tt>
+      <br>
+      <tt>aio_cancel =&gt; "xsh/aio_cancel.html",</tt>
+      <br>
+      <tt>aio_error =&gt; "xsh/aio_error.html",</tt>
+      <br>
+      <tt>aio_fsync =&gt; "xsh/aio_fsync.html",</tt>
+      <br>
+      <tt>aio_read =&gt; "xsh/aio_read.html",</tt>
+      <br>
+      <tt>aio_return =&gt; "xsh/aio_return.html",</tt>
+      <br>
+      <tt>aio_suspend =&gt; "xsh/aio_suspend.html",</tt>
+      <br>
+      <tt>aio_write =&gt; "xsh/aio_write.html",</tt>
+      <br>
+      <tt>alarm =&gt; "xsh/alarm.html",</tt>
+      <br>
+      <tt>asctime =&gt; "xsh/asctime.html",</tt>
+      <br>
+      <tt>asin =&gt; "xsh/asin.html",</tt>
+      <br>
+      <tt>asinh =&gt; "xsh/asinh.html",</tt>
+      <br>
+      <tt>assert =&gt; "xsh/assert.html",</tt>
+      <br>
+      <tt>atan =&gt; "xsh/atan.html",</tt>
+      <br>
+      <tt>atan2 =&gt; "xsh/atan2.html",</tt>
+      <br>
+      <tt>atanh =&gt; "xsh/atanh.html",</tt>
+      <br>
+      <tt>atexit =&gt; "xsh/atexit.html",</tt>
+      <br>
+      <tt>atof =&gt; "xsh/atof.html",</tt>
+      <br>
+      <tt>atoi =&gt; "xsh/atoi.html",</tt>
+      <br>
+      <tt>atol =&gt; "xsh/atol.html",</tt>
+      <br>
+      <tt>basename =&gt; "xsh/basename.html",</tt>
+      <br>
+      <tt>bcmp =&gt; "xsh/bcmp.html",</tt>
+      <br>
+      <tt>bcopy =&gt; "xsh/bcopy.html",</tt>
+      <br>
+      <tt>brk =&gt; "xsh/brk.html",</tt>
+      <br>
+      <tt>bsd_signal =&gt; "xsh/bsd_signal.html",</tt>
+      <br>
+      <tt>bsearch =&gt; "xsh/bsearch.html",</tt>
+      <br>
+      <tt>btowc =&gt; "xsh/btowc.html",</tt>
+      <br>
+      <tt>bzero =&gt; "xsh/bzero.html",</tt>
+      <br>
+      <tt>calloc =&gt; "xsh/calloc.html",</tt>
+      <br>
+      <tt>catclose =&gt; "xsh/catclose.html",</tt>
+      <br>
+      <tt>catgets =&gt; "xsh/catgets.html",</tt>
+      <br>
+      <tt>catopen =&gt; "xsh/catopen.html",</tt>
+      <br>
+      <tt>cbrt =&gt; "xsh/cbrt.html",</tt>
+      <br>
+      <tt>ceil =&gt; "xsh/ceil.html",</tt>
+      <br>
+      <tt>cfgetispeed =&gt; "xsh/cfgetispeed.html",</tt>
+      <br>
+      <tt>cfgetospeed =&gt; "xsh/cfgetospeed.html",</tt>
+      <br>
+      <tt>cfsetispeed =&gt; "xsh/cfsetispeed.html",</tt>
+      <br>
+      <tt>cfsetospeed =&gt; "xsh/cfsetospeed.html",</tt>
+      <br>
+      <tt>chdir =&gt; "xsh/chdir.html",</tt>
+      <br>
+      <tt>chmod =&gt; "xsh/chmod.html",</tt>
+      <br>
+      <tt>chown =&gt; "xsh/chown.html",</tt>
+      <br>
+      <tt>chroot =&gt; "xsh/chroot.html",</tt>
+      <br>
+      <tt>clearerr =&gt; "xsh/clearerr.html",</tt>
+      <br>
+      <tt>clock =&gt; "xsh/clock.html",</tt>
+      <br>
+      <tt>clock_getres =&gt; "xsh/clock_getres.html",</tt>
+      <br>
+      <tt>clock_gettime =&gt; "xsh/clock_gettime.html",</tt>
+      <br>
+      <tt>clock_settime =&gt; "xsh/clock_settime.html",</tt>
+      <br>
+      <tt>close =&gt; "xsh/close.html",</tt>
+      <br>
+      <tt>closedir =&gt; "xsh/closedir.html",</tt>
+      <br>
+      <tt>closelog =&gt; "xsh/closelog.html",</tt>
+      <br>
+      <tt>compilation =&gt; "xsh/compilation.html",</tt>
+      <br>
+      <tt>compile =&gt; "xsh/compile.html",</tt>
+      <br>
+      <tt>confstr =&gt; "xsh/confstr.html",</tt>
+      <br>
+      <tt>cos =&gt; "xsh/cos.html",</tt>
+      <br>
+      <tt>cosh =&gt; "xsh/cosh.html",</tt>
+      <br>
+      <tt>creat =&gt; "xsh/creat.html",</tt>
+      <br>
+      <tt>crypt =&gt; "xsh/crypt.html",</tt>
+      <br>
+      <tt>ctermid =&gt; "xsh/ctermid.html",</tt>
+      <br>
+      <tt>ctime =&gt; "xsh/ctime.html",</tt>
+      <br>
+      <tt>cuserid =&gt; "xsh/cuserid.html",</tt>
+      <br>
+      <tt>datatypes =&gt; "xsh/datatypes.html",</tt>
+      <br>
+      <tt>daylight =&gt; "xsh/daylight.html",</tt>
+      <br>
+      <tt>dbm_clearerr =&gt; "xsh/dbm_clearerr.html",</tt>
+      <br>
+      <tt>dbm_close =&gt; "xsh/dbm_close.html",</tt>
+      <br>
+      <tt>dbm_delete =&gt; "xsh/dbm_delete.html",</tt>
+      <br>
+      <tt>dbm_error =&gt; "xsh/dbm_error.html",</tt>
+      <br>
+      <tt>dbm_fetch =&gt; "xsh/dbm_fetch.html",</tt>
+      <br>
+      <tt>dbm_firstkey =&gt; "xsh/dbm_firstkey.html",</tt>
+      <br>
+      <tt>dbm_nextkey =&gt; "xsh/dbm_nextkey.html",</tt>
+      <br>
+      <tt>dbm_open =&gt; "xsh/dbm_open.html",</tt>
+      <br>
+      <tt>dbm_store =&gt; "xsh/dbm_store.html",</tt>
+      <br>
+      <tt>difftime =&gt; "xsh/difftime.html",</tt>
+      <br>
+      <tt>dirname =&gt; "xsh/dirname.html",</tt>
+      <br>
+      <tt>div =&gt; "xsh/div.html",</tt>
+      <br>
+      <tt>dlclose =&gt; "xsh/dlclose.html",</tt>
+      <br>
+      <tt>dlerror =&gt; "xsh/dlerror.html",</tt>
+      <br>
+      <tt>dlopen =&gt; "xsh/dlopen.html",</tt>
+      <br>
+      <tt>dlsym =&gt; "xsh/dlsym.html",</tt>
+      <br>
+      <tt>drand48 =&gt; "xsh/drand48.html",</tt>
+      <br>
+      <tt>dup =&gt; "xsh/dup.html",</tt>
+      <br>
+      <tt>dup2 =&gt; "xsh/dup2.html",</tt>
+      <br>
+      <tt>_exit =&gt; "xsh/_exit.html",</tt>
+      <br>
+      <tt>ecvt =&gt; "xsh/ecvt.html",</tt>
+      <br>
+      <tt>encrypt&nbsp; =&gt; "xsh/encrypt.html",</tt>
+      <br>
+      <tt>endgrent =&gt; "xsh/endgrent.html",</tt>
+      <br>
+      <tt>endpwent =&gt; "xsh/endpwent.html",</tt>
+      <br>
+      <tt>endutxent =&gt; "xsh/endutxent.html",</tt>
+      <br>
+      <tt>environ =&gt; "xsh/environ.html",</tt>
+      <br>
+      <tt>erand48 =&gt; "xsh/erand48.html",</tt>
+      <br>
+      <tt>erf =&gt; "xsh/erf.html",</tt>
+      <br>
+      <tt>erfc =&gt; "xsh/erfc.html",</tt>
+      <br>
+      <tt>errno =&gt; "xsh/errno.html",</tt>
+      <br>
+      <tt>errors =&gt; "xsh/errors.html",</tt>
+      <br>
+      <tt>exec =&gt; "xsh/exec.html",</tt>
+      <br>
+      <tt>execl =&gt; "xsh/execl.html",</tt>
+      <br>
+      <tt>execle =&gt; "xsh/execle.html",</tt>
+      <br>
+      <tt>execlp =&gt; "xsh/execlp.html",</tt>
+      <br>
+      <tt>execv =&gt; "xsh/execv.html",</tt>
+      <br>
+      <tt>execve =&gt; "xsh/execve.html",</tt>
+      <br>
+      <tt>execvp =&gt; "xsh/execvp.html",</tt>
+      <br>
+      <tt>exit =&gt; "xsh/exit.html",</tt>
+      <br>
+      <tt>exp =&gt; "xsh/exp.html",</tt>
+      <br>
+      <tt>expm1 =&gt; "xsh/expm1.html",</tt>
+      <br>
+      <tt>FD_CLR =&gt; "xsh/FD_CLR.html",</tt>
+      <br>
+      <tt>FD_ISSET =&gt; "xsh/FD_CLR.html",</tt>
+      <br>
+      <tt>FD_SET =&gt; "xsh/FD_CLR.html",</tt>
+      <br>
+      <tt>FD_ZERO =&gt; "xsh/FD_CLR.html",</tt>
+      <br>
+      <tt>fabs =&gt; "xsh/fabs.html",</tt>
+      <br>
+      <tt>fattach =&gt; "xsh/fattach.html",</tt>
+      <br>
+      <tt>fchdir =&gt; "xsh/fchdir.html",</tt>
+      <br>
+      <tt>fchmod =&gt; "xsh/fchmod.html",</tt>
+      <br>
+      <tt>fchown =&gt; "xsh/fchown.html",</tt>
+      <br>
+      <tt>fclose =&gt; "xsh/fclose.html",</tt>
+      <br>
+      <tt>fcntl =&gt; "xsh/fcntl.html",</tt>
+      <br>
+      <tt>fcvt =&gt; "xsh/fcvt.html",</tt>
+      <br>
+      <tt>fdatasync =&gt; "xsh/fdatasync.html",</tt>
+      <br>
+      <tt>fdetach =&gt; "xsh/fdetach.html",</tt>
+      <br>
+      <tt>fdopen =&gt; "xsh/fdopen.html",</tt>
+      <br>
+      <tt>feature =&gt; "xsh/feature.html",</tt>
+      <br>
+      <tt>feof =&gt; "xsh/feof.html",</tt>
+      <br>
+      <tt>ferror =&gt; "xsh/ferror.html",</tt>
+      <br>
+      <tt>fflush =&gt; "xsh/fflush.html",</tt>
+      <br>
+      <tt>ffs =&gt; "xsh/ffs.html",</tt>
+      <br>
+      <tt>fgetc =&gt; "xsh/fgetc.html",</tt>
+      <br>
+      <tt>fgetpos =&gt; "xsh/fgetpos.html",</tt>
+      <br>
+      <tt>fgets =&gt; "xsh/fgets.html",</tt>
+      <br>
+      <tt>fgetwc =&gt; "xsh/fgetwc.html",</tt>
+      <br>
+      <tt>fgetws =&gt; "xsh/fgetws.html",</tt>
+      <br>
+      <tt>fileno =&gt; "xsh/fileno.html",</tt>
+      <br>
+      <tt>flockfile =&gt; "xsh/flockfile.html",</tt>
+      <br>
+      <tt>floor =&gt; "xsh/floor.html",</tt>
+      <br>
+      <tt>fmod =&gt; "xsh/fmod.html",</tt>
+      <br>
+      <tt>fmtmsg =&gt; "xsh/fmtmsg.html",</tt>
+      <br>
+      <tt>fnmatch =&gt; "xsh/fnmatch.html",</tt>
+      <br>
+      <tt>fopen =&gt; "xsh/fopen.html",</tt>
+      <br>
+      <tt>fork =&gt; "xsh/fork.html",</tt>
+      <br>
+      <tt>fpathconf =&gt; "xsh/fpathconf.html",</tt>
+      <br>
+      <tt>fprintf =&gt; "xsh/fprintf.html",</tt>
+      <br>
+      <tt>fputc =&gt; "xsh/fputc.html",</tt>
+      <br>
+      <tt>fputs =&gt; "xsh/fputs.html",</tt>
+      <br>
+      <tt>fputwc =&gt; "xsh/fputwc.html",</tt>
+      <br>
+      <tt>fputws =&gt; "xsh/fputws.html",</tt>
+      <br>
+      <tt>fread =&gt; "xsh/fread.html",</tt>
+      <br>
+      <tt>free =&gt; "xsh/free.html",</tt>
+      <br>
+      <tt>freopen =&gt; "xsh/freopen.html",</tt>
+      <br>
+      <tt>frexp =&gt; "xsh/frexp.html",</tt>
+      <br>
+      <tt>fscanf =&gt; "xsh/fscanf.html",</tt>
+      <br>
+      <tt>fseek =&gt; "xsh/fseek.html",</tt>
+      <br>
+      <tt>fseeko =&gt; "xsh/fseeko.html",</tt>
+      <br>
+      <tt>fsetpos =&gt; "xsh/fsetpos.html",</tt>
+      <br>
+      <tt>fstat =&gt; "xsh/fstat.html",</tt>
+      <br>
+      <tt>fstatvfs =&gt; "xsh/fstatvfs.html",</tt>
+      <br>
+      <tt>fsync =&gt; "xsh/fsync.html",</tt>
+      <br>
+      <tt>ftell =&gt; "xsh/ftell.html",</tt>
+      <br>
+      <tt>ftello =&gt; "xsh/ftello.html",</tt>
+      <br>
+      <tt>ftime =&gt; "xsh/ftime.html",</tt>
+      <br>
+      <tt>ftok =&gt; "xsh/ftok.html",</tt>
+      <br>
+      <tt>ftruncate =&gt; "xsh/ftruncate.html",</tt>
+      <br>
+      <tt>ftrylockfile =&gt; "xsh/ftrylockfile.html",</tt>
+      <br>
+      <tt>ftw =&gt; "xsh/ftw.html",</tt>
+      <br>
+      <tt>funlockfile =&gt; "xsh/funlockfile.html",</tt>
+      <br>
+      <tt>fwide =&gt; "xsh/fwide.html",</tt>
+      <br>
+      <tt>fwprintf =&gt; "xsh/fwprintf.html",</tt>
+      <br>
+      <tt>fwrite =&gt; "xsh/fwrite.html",</tt>
+      <br>
+      <tt>fwscanf =&gt; "xsh/fwscanf.html",</tt>
+      <br>
+      <tt>gamma =&gt; "xsh/gamma.html",</tt>
+      <br>
+      <tt>gcvt =&gt; "xsh/gcvt.html",</tt>
+      <br>
+      <tt>getc =&gt; "xsh/getc.html",</tt>
+      <br>
+      <tt>getc_unlocked =&gt; "xsh/getc_unlocked.html",</tt>
+      <br>
+      <tt>getchar =&gt; "xsh/getchar.html",</tt>
+      <br>
+      <tt>getchar_unlocked =&gt; "xsh/getchar_unlocked.html",</tt>
+      <br>
+      <tt>getcontext =&gt; "xsh/getcontext.html",</tt>
+      <br>
+      <tt>getcwd =&gt; "xsh/getcwd.html",</tt>
+      <br>
+      <tt>getdate =&gt; "xsh/getdate.html",</tt>
+      <br>
+      <tt>getdtablesize =&gt; "xsh/getdtablesize.html",</tt>
+      <br>
+      <tt>getegid =&gt; "xsh/getegid.html",</tt>
+      <br>
+      <tt>getenv =&gt; "xsh/getenv.html",</tt>
+      <br>
+      <tt>geteuid =&gt; "xsh/geteuid.html",</tt>
+      <br>
+      <tt>getgid =&gt; "xsh/getgid.html",</tt>
+      <br>
+      <tt>getgrent =&gt; "xsh/getgrent.html",</tt>
+      <br>
+      <tt>getgrgid =&gt; "xsh/getgrgid.html",</tt>
+      <br>
+      <tt>getgrnam =&gt; "xsh/getgrnam.html",</tt>
+      <br>
+      <tt>getgroups =&gt; "xsh/getgroups.html",</tt>
+      <br>
+      <tt>gethostid =&gt; "xsh/gethostid.html",</tt>
+      <br>
+      <tt>getitimer =&gt; "xsh/getitimer.html",</tt>
+      <br>
+      <tt>getlogin =&gt;&nbsp; =&gt; "xsh/getlogin.html",</tt>
+      <br>
+      <tt>getmsg =&gt; "xsh/getmsg.html",</tt>
+      <br>
+      <tt>getopt =&gt; "xsh/getopt.html",</tt>
+      <br>
+      <tt>getpagesize =&gt; "xsh/getpagesize.html",</tt>
+      <br>
+      <tt>getpass =&gt; "xsh/getpass.html",</tt>
+      <br>
+      <tt>getpgid =&gt; "xsh/getpgid.html",</tt>
+      <br>
+      <tt>getpgrp =&gt; "xsh/getpgrp.html",</tt>
+      <br>
+      <tt>getpid =&gt; "xsh/getpid.html",</tt>
+      <br>
+      <tt>getpmsg =&gt; "xsh/getpmsg.html",</tt>
+      <br>
+      <tt>getppid =&gt; "xsh/getppid.html",</tt>
+      <br>
+      <tt>getpriority =&gt; "xsh/getpriority.html",</tt>
+      <br>
+      <tt>getpwent =&gt; "xsh/getpwent.html",</tt>
+      <br>
+      <tt>getpwnam =&gt; "xsh/getpwnam.html",</tt>
+      <br>
+      <tt>getpwuid =&gt; "xsh/getpwuid.html",</tt>
+      <br>
+      <tt>getrlimit =&gt; "xsh/getrlimit.html",</tt>
+      <br>
+      <tt>getrusage =&gt; "xsh/getrusage.html",</tt>
+      <br>
+      <tt>gets =&gt; "xsh/gets.html",</tt>
+      <br>
+      <tt>getsid =&gt; "xsh/getsid.html",</tt>
+      <br>
+      <tt>getsubopt =&gt; "xsh/getsubopt.html",</tt>
+      <br>
+      <tt>gettimeofday =&gt; "xsh/gettimeofday.html",</tt>
+      <br>
+      <tt>getuid =&gt; "xsh/getuid.html",</tt>
+      <br>
+      <tt>getutxent =&gt; "xsh/getutxent.html",</tt>
+      <br>
+      <tt>getutxid =&gt; "xsh/getutxid.html",</tt>
+      <br>
+      <tt>getutxline =&gt; "xsh/getutxline.html",</tt>
+      <br>
+      <tt>getw =&gt; "xsh/getw.html",</tt>
+      <br>
+      <tt>getwc =&gt; "xsh/getwc.html",</tt>
+      <br>
+      <tt>getwchar =&gt; "xsh/getwchar.html",</tt>
+      <br>
+      <tt>getwd =&gt; "xsh/getwd.html",</tt>
+      <br>
+      <tt>glob =&gt; "xsh/glob.html",</tt>
+      <br>
+      <tt>globfree =&gt; "xsh/globfree.html",</tt>
+      <br>
+      <tt>gmtime =&gt; "xsh/gmtime.html",</tt>
+      <br>
+      <tt>grantpt =&gt; "xsh/grantpt.html",</tt>
+      <br>
+      <tt>hcreate =&gt; "xsh/hcreate.html",</tt>
+      <br>
+      <tt>hdestroy =&gt; "xsh/hdestroy.html",</tt>
+      <br>
+      <tt>hsearch =&gt; "xsh/hsearch.html",</tt>
+      <br>
+      <tt>hypot =&gt; "xsh/hypot.html",</tt>
+      <br>
+      <tt>iconv =&gt; "xsh/iconv.html",</tt>
+      <br>
+      <tt>iconv_close =&gt; "xsh/iconv_close.html",</tt>
+      <br>
+      <tt>iconv_open =&gt; "xsh/iconv_open.html",</tt>
+      <br>
+      <tt>ilogb =&gt; "xsh/ilogb.html",</tt>
+      <br>
+      <tt>index =&gt; "xsh/index.html",</tt>
+      <br>
+      <tt>initstate =&gt; "xsh/initstate.html",</tt>
+      <br>
+      <tt>insque =&gt; "xsh/insque.html",</tt>
+      <br>
+      <tt>interfaces =&gt; "xsh/interfaces.html",</tt>
+      <br>
+      <tt>ioctl =&gt; "xsh/ioctl.html",</tt>
+      <br>
+      <tt>ipc =&gt; "xsh/ipc.html",</tt>
+      <br>
+      <tt>isalnum =&gt; "xsh/isalnum.html",</tt>
+      <br>
+      <tt>isalpha =&gt; "xsh/isalpha.html",</tt>
+      <br>
+      <tt>isascii =&gt; "xsh/isascii.html",</tt>
+      <br>
+      <tt>isastream =&gt; "xsh/isastream.html",</tt>
+      <br>
+      <tt>isatty =&gt; "xsh/isatty.html",</tt>
+      <br>
+      <tt>iscntrl =&gt; "xsh/iscntrl.html",</tt>
+      <br>
+      <tt>isdigit =&gt; "xsh/isdigit.html",</tt>
+      <br>
+      <tt>isgraph =&gt; "xsh/isgraph.html",</tt>
+      <br>
+      <tt>islower =&gt; "xsh/islower.html",</tt>
+      <br>
+      <tt>isnan =&gt; "xsh/isnan.html",</tt>
+      <br>
+      <tt>isprint =&gt; "xsh/isprint.html",</tt>
+      <br>
+      <tt>ispunct =&gt; "xsh/ispunct.html",</tt>
+      <br>
+      <tt>isspace =&gt; "xsh/isspace.html",</tt>
+      <br>
+      <tt>isupper =&gt; "xsh/isupper.html",</tt>
+      <br>
+      <tt>iswalnum =&gt; "xsh/iswalnum.html",</tt>
+      <br>
+      <tt>iswalpha =&gt; "xsh/iswalpha.html",</tt>
+      <br>
+      <tt>iswcntrl =&gt; "xsh/iswcntrl.html",</tt>
+      <br>
+      <tt>iswctype =&gt; "xsh/iswctype.html",</tt>
+      <br>
+      <tt>iswdigit =&gt; "xsh/iswdigit.html",</tt>
+      <br>
+      <tt>iswgraph =&gt; "xsh/iswgraph.html",</tt>
+      <br>
+      <tt>iswlower =&gt; "xsh/iswlower.html",</tt>
+      <br>
+      <tt>iswprint =&gt; "xsh/iswprint.html",</tt>
+      <br>
+      <tt>iswpunct =&gt; "xsh/iswpunct.html",</tt>
+      <br>
+      <tt>iswspace =&gt; "xsh/iswspace.html",</tt>
+      <br>
+      <tt>iswupper =&gt; "xsh/iswupper.html",</tt>
+      <br>
+      <tt>iswxdigit =&gt; "xsh/iswxdigit.html",</tt>
+      <br>
+      <tt>isxdigit =&gt; "xsh/isxdigit.html",</tt>
+      <br>
+      <tt>j0 =&gt; "xsh/j0.html",</tt>
+      <br>
+      <tt>jrand48 =&gt; "xsh/jrand48.html",</tt>
+      <br>
+      <tt>kill =&gt; "xsh/kill.html",</tt>
+      <br>
+      <tt>killpg =&gt; "xsh/killpg.html",</tt>
+      <br>
+      <tt>_longjmp =&gt; "xsh/_longjmp.html",</tt>
+      <br>
+      <tt>l64a =&gt; "xsh/l64a.html",</tt>
+      <br>
+      <tt>labs =&gt; "xsh/labs.html",</tt>
+      <br>
+      <tt>lchown =&gt; "xsh/lchown.html",</tt>
+      <br>
+      <tt>lcong48 =&gt; "xsh/lcong48.html",</tt>
+      <br>
+      <tt>ldexp =&gt; "xsh/ldexp.html",</tt>
+      <br>
+      <tt>ldiv =&gt; "xsh/ldiv.html",</tt>
+      <br>
+      <tt>lfind =&gt; "xsh/lfind.html",</tt>
+      <br>
+      <tt>lgamma =&gt; "xsh/lgamma.html",</tt>
+      <br>
+      <tt>link =&gt; "xsh/link.html",</tt>
+      <br>
+      <tt>lio_listio =&gt; "xsh/lio_listio.html",</tt>
+      <br>
+      <tt>loc1 =&gt; "xsh/loc1.html",</tt>
+      <br>
+      <tt>localeconv =&gt; "xsh/localeconv.html",</tt>
+      <br>
+      <tt>localtime =&gt; "xsh/localtime.html",</tt>
+      <br>
+      <tt>lockf =&gt; "xsh/lockf.html",</tt>
+      <br>
+      <tt>locs =&gt; "xsh/locs.html",</tt>
+      <br>
+      <tt>log =&gt; "xsh/log.html",</tt>
+      <br>
+      <tt>log10 =&gt; "xsh/log10.html",</tt>
+      <br>
+      <tt>log1p =&gt; "xsh/log1p.html",</tt>
+      <br>
+      <tt>logb =&gt; "xsh/logb.html",</tt>
+      <br>
+      <tt>longjmp =&gt; "xsh/longjmp.html",</tt>
+      <br>
+      <tt>lrand48 =&gt; "xsh/lrand48.html",</tt>
+      <br>
+      <tt>lsearch =&gt; "xsh/lsearch.html",</tt>
+      <br>
+      <tt>lseek =&gt; "xsh/lseek.html",</tt>
+      <br>
+      <tt>lstat =&gt; "xsh/lstat.html",</tt>
+      <br>
+      <tt>makecontext =&gt; "xsh/makecontext.html",</tt>
+      <br>
+      <tt>malloc =&gt; "xsh/malloc.html",</tt>
+      <br>
+      <tt>mblen =&gt; "xsh/mblen.html",</tt>
+      <br>
+      <tt>mbrlen =&gt; "xsh/mbrlen.html",</tt>
+      <br>
+      <tt>mbrtowc =&gt; "xsh/mbrtowc.html",</tt>
+      <br>
+      <tt>mbsinit =&gt; "xsh/mbsinit.html",</tt>
+      <br>
+      <tt>mbsrtowcs =&gt; "xsh/mbsrtowcs.html",</tt>
+      <br>
+      <tt>mbstowcs =&gt; "xsh/mbstowcs.html",</tt>
+      <br>
+      <tt>mbtowc =&gt; "xsh/mbtowc.html",</tt>
+      <br>
+      <tt>memccpy =&gt; "xsh/memccpy.html",</tt>
+      <br>
+      <tt>memchr =&gt; "xsh/memchr.html",</tt>
+      <br>
+      <tt>memcmp =&gt; "xsh/memcmp.html",</tt>
+      <br>
+      <tt>memcpy =&gt; "xsh/memcpy.html",</tt>
+      <br>
+      <tt>memmove =&gt; "xsh/memmove.html",</tt>
+      <br>
+      <tt>memset =&gt; "xsh/memset.html",</tt>
+      <br>
+      <tt>mkdir =&gt; "xsh/mkdir.html",</tt>
+      <br>
+      <tt>mkfifo =&gt; "xsh/mkfifo.html",</tt>
+      <br>
+      <tt>mknod =&gt; "xsh/mknod.html",</tt>
+      <br>
+      <tt>mkstemp =&gt; "xsh/mkstemp.html",</tt>
+      <br>
+      <tt>mktemp =&gt; "xsh/mktemp.html",</tt>
+      <br>
+      <tt>mktime =&gt; "xsh/mktime.html",</tt>
+      <br>
+      <tt>mlock =&gt; "xsh/mlock.html",</tt>
+      <br>
+      <tt>mlockall =&gt; "xsh/mlockall.html",</tt>
+      <br>
+      <tt>mmap =&gt; "xsh/mmap.html",</tt>
+      <br>
+      <tt>modf =&gt; "xsh/modf.html",</tt>
+      <br>
+      <tt>mprotect =&gt; "xsh/mprotect.html",</tt>
+      <br>
+      <tt>mq_close =&gt; "xsh/mq_close.html",</tt>
+      <br>
+      <tt>mq_getattr =&gt; "xsh/mq_getattr.html",</tt>
+      <br>
+      <tt>mq_notify =&gt; "xsh/mq_notify.html",</tt>
+      <br>
+      <tt>mq_open =&gt; "xsh/mq_open.html",</tt>
+      <br>
+      <tt>mq_receive =&gt; "xsh/mq_receive.html",</tt>
+      <br>
+      <tt>mq_send =&gt; "xsh/mq_send.html",</tt>
+      <br>
+      <tt>mq_setattr =&gt; "xsh/mq_setattr.html",</tt>
+      <br>
+      <tt>mq_unlink =&gt; "xsh/mq_unlink.html",</tt>
+      <br>
+      <tt>mrand48 =&gt; "xsh/mrand48.html",</tt>
+      <br>
+      <tt>msgctl =&gt; "xsh/msgctl.html",</tt>
+      <br>
+      <tt>msgget =&gt; "xsh/msgget.html",</tt>
+      <br>
+      <tt>msgrcv =&gt; "xsh/msgrcv.html",</tt>
+      <br>
+      <tt>msgsnd =&gt; "xsh/msgsnd.html",</tt>
+      <br>
+      <tt>msync =&gt; "xsh/msync.html",</tt>
+      <br>
+      <tt>munlock =&gt; "xsh/munlock.html",</tt>
+      <br>
+      <tt>munlockall =&gt; "xsh/munlockall.html",</tt>
+      <br>
+      <tt>munmap =&gt; "xsh/munmap.html",</tt>
+      <br>
+      <tt>nanosleep =&gt; "xsh/nanosleep.html",</tt>
+      <br>
+      <tt>nextafter =&gt; "xsh/nextafter.html",</tt>
+      <br>
+      <tt>nftw =&gt; "xsh/nftw.html",</tt>
+      <br>
+      <tt>nice =&gt; "xsh/nice.html",</tt>
+      <br>
+      <tt>nl_langinfo =&gt; "xsh/nl_langinfo.html",</tt>
+      <br>
+      <tt>nrand48 =&gt; "xsh/nrand48.html",</tt>
+      <br>
+      <tt>open =&gt; "xsh/open.html",</tt>
+      <br>
+      <tt>opendir =&gt; "xsh/opendir.html",</tt>
+      <br>
+      <tt>openlog =&gt; "xsh/openlog.html",</tt>
+      <br>
+      <tt>optarg =&gt; "xsh/optarg.html",</tt>
+      <br>
+      <tt>pathconf =&gt; "xsh/pathconf.html",</tt>
+      <br>
+      <tt>pause =&gt; "xsh/pause.html",</tt>
+      <br>
+      <tt>pclose =&gt; "xsh/pclose.html",</tt>
+      <br>
+      <tt>perror =&gt; "xsh/perror.html",</tt>
+      <br>
+      <tt>pipe =&gt; "xsh/pipe.html",</tt>
+      <br>
+      <tt>poll =&gt; "xsh/poll.html",</tt>
+      <br>
+      <tt>popen =&gt; "xsh/popen.html",</tt>
+      <br>
+      <tt>pow =&gt; "xsh/pow.html",</tt>
+      <br>
+      <tt>pread =&gt; "xsh/pread.html",</tt>
+      <br>
+      <tt>printf =&gt; "xsh/printf.html",</tt>
+      <br>
+      <tt>pthread_atfork =&gt; "xsh/pthread_atfork.html",</tt>
+      <br>
+      <tt>pthread_attr_destroy =&gt; "xsh/pthread_attr_destroy.html",</tt>
+      <br>
+      <tt>pthread_attr_getdetachstate =&gt;
+"xsh/pthread_attr_getdetachstate.html",</tt>
+      <br>
+      <tt>pthread_attr_getguardsize =&gt;
+"xsh/pthread_attr_getguardsize.html",</tt>
+      <br>
+      <tt>pthread_attr_getinheritsched =&gt;
+"xsh/pthread_attr_getinheritsched.html",</tt>
+      <br>
+      <tt>pthread_attr_getschedparam =&gt;
+"xsh/pthread_attr_getschedparam.html",</tt>
+      <br>
+      <tt>pthread_attr_getschedpolicy =&gt;
+"xsh/pthread_attr_getschedpolicy.html",</tt>
+      <br>
+      <tt>pthread_attr_getscope =&gt; "xsh/pthread_attr_getscope.html",</tt>
+      <br>
+      <tt>pthread_attr_getstackaddr =&gt;
+"xsh/pthread_attr_getstackaddr.html",</tt>
+      <br>
+      <tt>pthread_attr_getstacksize =&gt;
+"xsh/pthread_attr_getstacksize.html",</tt>
+      <br>
+      <tt>pthread_attr_init =&gt; "xsh/pthread_attr_init.html",</tt>
+      <br>
+      <tt>pthread_attr_setdetachstate =&gt;
+"xsh/pthread_attr_setdetachstate.html",</tt>
+      <br>
+      <tt>pthread_attr_setguardsize =&gt;
+"xsh/pthread_attr_setguardsize.html",</tt>
+      <br>
+      <tt>pthread_attr_setinheritsched =&gt;
+"xsh/pthread_attr_setinheritsched.html",</tt>
+      <br>
+      <tt>pthread_attr_setschedparam =&gt;
+"xsh/pthread_attr_setschedparam.html",</tt>
+      <br>
+      <tt>pthread_attr_setschedpolicy =&gt;
+"xsh/pthread_attr_setschedpolicy.html",</tt>
+      <br>
+      <tt>pthread_attr_setscope =&gt; "xsh/pthread_attr_setscope.html",</tt>
+      <br>
+      <tt>pthread_attr_setstackaddr =&gt;
+"xsh/pthread_attr_setstackaddr.html",</tt>
+      <br>
+      <tt>pthread_attr_setstacksize =&gt;
+"xsh/pthread_attr_setstacksize.html",</tt>
+      <br>
+      <tt>pthread_cancel =&gt; "xsh/pthread_cancel.html",</tt>
+      <br>
+      <tt>pthread_cleanup_pop =&gt; "xsh/pthread_cleanup_pop.html",</tt>
+      <br>
+      <tt>pthread_cleanup_push =&gt; "xsh/pthread_cleanup_push.html",</tt>
+      <br>
+      <tt>pthread_cond_broadcast =&gt;
+"xsh/pthread_cond_broadcast.html",</tt>
+      <br>
+      <tt>pthread_cond_destroy =&gt; "xsh/pthread_cond_destroy.html",</tt>
+      <br>
+      <tt>pthread_cond_init =&gt; "xsh/pthread_cond_init.html",</tt>
+      <br>
+      <tt>pthread_cond_signal =&gt; "xsh/pthread_cond_signal.html",</tt>
+      <br>
+      <tt>pthread_cond_timedwait =&gt;
+"xsh/pthread_cond_timedwait.html",</tt>
+      <br>
+      <tt>pthread_cond_wait =&gt; "xsh/pthread_cond_wait.html",</tt>
+      <br>
+      <tt>pthread_condattr_destroy =&gt;
+"xsh/pthread_condattr_destroy.html",</tt>
+      <br>
+      <tt>pthread_condattr_getpshared =&gt;
+"xsh/pthread_condattr_getpshared.html",</tt>
+      <br>
+      <tt>pthread_condattr_init =&gt; "xsh/pthread_condattr_init.html",</tt>
+      <br>
+      <tt>pthread_condattr_setpshared =&gt;
+"xsh/pthread_condattr_setpshared.html",</tt>
+      <br>
+      <tt>pthread_create =&gt; "xsh/pthread_create.html",</tt>
+      <br>
+      <tt>pthread_detach =&gt; "xsh/pthread_detach.html",</tt>
+      <br>
+      <tt>pthread_equal =&gt; "xsh/pthread_equal.html",</tt>
+      <br>
+      <tt>pthread_exit =&gt; "xsh/pthread_exit.html",</tt>
+      <br>
+      <tt>pthread_getconcurrency =&gt;
+"xsh/pthread_getconcurrency.html",</tt>
+      <br>
+      <tt>pthread_getschedparam =&gt; "xsh/pthread_getschedparam.html",</tt>
+      <br>
+      <tt>pthread_getspecific =&gt; "xsh/pthread_getspecific.html",</tt>
+      <br>
+      <tt>pthread_join =&gt; "xsh/pthread_join.html",</tt>
+      <br>
+      <tt>pthread_key_create =&gt; "xsh/pthread_key_create.html",</tt>
+      <br>
+      <tt>pthread_key_delete =&gt; "xsh/pthread_key_delete.html",</tt>
+      <br>
+      <tt>pthread_kill =&gt; "xsh/pthread_kill.html",</tt>
+      <br>
+      <tt>pthread_mutex_destroy =&gt; "xsh/pthread_mutex_destroy.html",</tt>
+      <br>
+      <tt>pthread_mutex_getprioceiling =&gt;
+"xsh/pthread_mutex_getprioceiling.html",</tt>
+      <br>
+      <tt>pthread_mutex_init =&gt; "xsh/pthread_mutex_init.html",</tt>
+      <br>
+      <tt>pthread_mutex_lock =&gt; "xsh/pthread_mutex_lock.html",</tt>
+      <br>
+      <tt>pthread_mutex_setprioceiling =&gt;
+"xsh/pthread_mutex_setprioceiling.html",</tt>
+      <br>
+      <tt>pthread_mutex_trylock =&gt; "xsh/pthread_mutex_trylock.html",</tt>
+      <br>
+      <tt>pthread_mutex_unlock =&gt; "xsh/pthread_mutex_unlock.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_destroy =&gt;
+"xsh/pthread_mutexattr_destroy.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_getprioceiling =&gt;
+"xsh/pthread_mutexattr_getprioceiling.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_getprotocol =&gt;
+"xsh/pthread_mutexattr_getprotocol.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_getpshared =&gt;
+"xsh/pthread_mutexattr_getpshared.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_gettype =&gt;
+"xsh/pthread_mutexattr_gettype.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_init =&gt;
+"xsh/pthread_mutexattr_init.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_setprioceiling =&gt;
+"xsh/pthread_mutexattr_setprioceiling.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_setprotocol =&gt;
+"xsh/pthread_mutexattr_setprotocol.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_setpshared =&gt;
+"xsh/pthread_mutexattr_setpshared.html",</tt>
+      <br>
+      <tt>pthread_mutexattr_settype =&gt;
+"xsh/pthread_mutexattr_settype.html",</tt>
+      <br>
+      <tt>pthread_once =&gt; "xsh/pthread_once.html",</tt>
+      <br>
+      <tt>pthread_rwlock_destroy =&gt;
+"xsh/pthread_rwlock_destroy.html",</tt>
+      <br>
+      <tt>pthread_rwlock_init =&gt; "xsh/pthread_rwlock_init.html",</tt>
+      <br>
+      <tt>pthread_rwlock_rdlock =&gt; "xsh/pthread_rwlock_rdlock.html",</tt>
+      <br>
+      <tt>pthread_rwlock_tryrdlock =&gt;
+"xsh/pthread_rwlock_tryrdlock.html",</tt>
+      <br>
+      <tt>pthread_rwlock_trywrlock =&gt;
+"xsh/pthread_rwlock_trywrlock.html",</tt>
+      <br>
+      <tt>pthread_rwlock_unlock =&gt; "xsh/pthread_rwlock_unlock.html",</tt>
+      <br>
+      <tt>pthread_rwlock_wrlock =&gt; "xsh/pthread_rwlock_wrlock.html",</tt>
+      <br>
+      <tt>pthread_rwlockattr_destroy =&gt;
+"xsh/pthread_rwlockattr_destroy.html",</tt>
+      <br>
+      <tt>pthread_rwlockattr_getpshared =&gt;
+"xsh/pthread_rwlockattr_getpshared.html",</tt>
+      <br>
+      <tt>pthread_rwlockattr_init =&gt;
+"xsh/pthread_rwlockattr_init.html",</tt>
+      <br>
+      <tt>pthread_rwlockattr_setpshared =&gt;
+"xsh/pthread_rwlockattr_setpshared.html",</tt>
+      <br>
+      <tt>pthread_self =&gt; "xsh/pthread_self.html",</tt>
+      <br>
+      <tt>pthread_setcancelstate =&gt;
+"xsh/pthread_setcancelstate.html",</tt>
+      <br>
+      <tt>pthread_setcanceltype =&gt; "xsh/pthread_setcanceltype.html",</tt>
+      <br>
+      <tt>pthread_setconcurrency =&gt;
+"xsh/pthread_setconcurrency.html",</tt>
+      <br>
+      <tt>pthread_setschedparam =&gt; "xsh/pthread_setschedparam.html",</tt>
+      <br>
+      <tt>pthread_setspecific =&gt; "xsh/pthread_setspecific.html",</tt>
+      <br>
+      <tt>pthread_sigmask =&gt; "xsh/pthread_sigmask.html",</tt>
+      <br>
+      <tt>pthread_testcancel =&gt; "xsh/pthread_testcancel.html",</tt>
+      <br>
+      <tt>ptsname =&gt; "xsh/ptsname.html",</tt>
+      <br>
+      <tt>putc =&gt; "xsh/putc.html",</tt>
+      <br>
+      <tt>putc_unlocked =&gt; "xsh/putc_unlocked.html",</tt>
+      <br>
+      <tt>putchar =&gt; "xsh/putchar.html",</tt>
+      <br>
+      <tt>putchar_unlocked =&gt; "xsh/putchar_unlocked.html",</tt>
+      <br>
+      <tt>putenv =&gt; "xsh/putenv.html",</tt>
+      <br>
+      <tt>putmsg =&gt; "xsh/putmsg.html",</tt>
+      <br>
+      <tt>putpmsg =&gt; "xsh/putpmsg.html",</tt>
+      <br>
+      <tt>puts =&gt; "xsh/puts.html",</tt>
+      <br>
+      <tt>pututxline =&gt; "xsh/pututxline.html",</tt>
+      <br>
+      <tt>putw =&gt; "xsh/putw.html",</tt>
+      <br>
+      <tt>putwc =&gt; "xsh/putwc.html",</tt>
+      <br>
+      <tt>putwchar =&gt; "xsh/putwchar.html",</tt>
+      <br>
+      <tt>pwrite =&gt; "xsh/pwrite.html",</tt>
+      <br>
+      <tt>qsort =&gt; "xsh/qsort.html",</tt>
+      <br>
+      <tt>raise =&gt; "xsh/raise.html",</tt>
+      <br>
+      <tt>rand =&gt; "xsh/rand.html",</tt>
+      <br>
+      <tt>random =&gt; "xsh/random.html",</tt>
+      <br>
+      <tt>re_comp =&gt; "xsh/re_comp.html",</tt>
+      <br>
+      <tt>re_exec =&gt; "xsh/re_exec.html",</tt>
+      <br>
+      <tt>read =&gt; "xsh/read.html",</tt>
+      <br>
+      <tt>readdir =&gt; "xsh/readdir.html",</tt>
+      <br>
+      <tt>readlink =&gt; "xsh/readlink.html",</tt>
+      <br>
+      <tt>readv =&gt; "xsh/readv.html",</tt>
+      <br>
+      <tt>realloc =&gt; "xsh/realloc.html",</tt>
+      <br>
+      <tt>realpath =&gt; "xsh/realpath.html",</tt>
+      <br>
+      <tt>realtime =&gt; "xsh/realtime.html",</tt>
+      <br>
+      <tt>regcmp =&gt; "xsh/regcmp.html",</tt>
+      <br>
+      <tt>regcomp =&gt; "xsh/regcomp.html",</tt>
+      <br>
+      <tt>regerror =&gt; "xsh/regerror.html",</tt>
+      <br>
+      <tt>regex =&gt; "xsh/regex.html",</tt>
+      <br>
+      <tt>regexec =&gt; "xsh/regexec.html",</tt>
+      <br>
+      <tt>regexp =&gt; "xsh/regexp.html",</tt>
+      <br>
+      <tt>regfree =&gt; "xsh/regfree.html",</tt>
+      <br>
+      <tt>remainder =&gt; "xsh/remainder.html",</tt>
+      <br>
+      <tt>remove =&gt; "xsh/remove.html",</tt>
+      <br>
+      <tt>remque =&gt; "xsh/remque.html",</tt>
+      <br>
+      <tt>rename =&gt; "xsh/rename.html",</tt>
+      <br>
+      <tt>rewind =&gt; "xsh/rewind.html",</tt>
+      <br>
+      <tt>rewinddir =&gt; "xsh/rewinddir.html",</tt>
+      <br>
+      <tt>rindex =&gt; "xsh/rindex.html",</tt>
+      <br>
+      <tt>rint =&gt; "xsh/rint.html",</tt>
+      <br>
+      <tt>rmdir =&gt; "xsh/rmdir.html",</tt>
+      <br>
+      <tt>_setjmp =&gt; "xsh/_setjmp.html",</tt>
+      <br>
+      <tt>sbrk =&gt; "xsh/sbrk.html",</tt>
+      <br>
+      <tt>scalb =&gt; "xsh/scalb.html",</tt>
+      <br>
+      <tt>scanf =&gt; "xsh/scanf.html",</tt>
+      <br>
+      <tt>sched_get_priority_max =&gt;
+"xsh/sched_get_priority_max.html",</tt>
+      <br>
+      <tt>sched_get_priority_min =&gt;
+"xsh/sched_get_priority_min.html",</tt>
+      <br>
+      <tt>sched_getparam =&gt; "xsh/sched_getparam.html",</tt>
+      <br>
+      <tt>sched_getscheduler =&gt; "xsh/sched_getscheduler.html",</tt>
+      <br>
+      <tt>sched_rr_get_interval =&gt; "xsh/sched_rr_get_interval.html",</tt>
+      <br>
+      <tt>sched_setparam =&gt; "xsh/sched_setparam.html",</tt>
+      <br>
+      <tt>sched_setscheduler =&gt; "xsh/sched_setscheduler.html",</tt>
+      <br>
+      <tt>sched_yield =&gt; "xsh/sched_yield.html",</tt>
+      <br>
+      <tt>seed48 =&gt; "xsh/seed48.html",</tt>
+      <br>
+      <tt>seekdir =&gt; "xsh/seekdir.html",</tt>
+      <br>
+      <tt>select =&gt; "xsh/select.html",</tt>
+      <br>
+      <tt>sem_close =&gt; "xsh/sem_close.html",</tt>
+      <br>
+      <tt>sem_destroy =&gt; "xsh/sem_destroy.html",</tt>
+      <br>
+      <tt>sem_getvalue =&gt; "xsh/sem_getvalue.html",</tt>
+      <br>
+      <tt>sem_init =&gt; "xsh/sem_init.html",</tt>
+      <br>
+      <tt>sem_open =&gt; "xsh/sem_open.html",</tt>
+      <br>
+      <tt>sem_post =&gt; "xsh/sem_post.html",</tt>
+      <br>
+      <tt>sem_trywait =&gt; "xsh/sem_trywait.html",</tt>
+      <br>
+      <tt>sem_unlink =&gt; "xsh/sem_unlink.html",</tt>
+      <br>
+      <tt>sem_wait =&gt; "xsh/sem_wait.html",</tt>
+      <br>
+      <tt>semctl =&gt; "xsh/semctl.html",</tt>
+      <br>
+      <tt>semget =&gt; "xsh/semget.html",</tt>
+      <br>
+      <tt>semop =&gt; "xsh/semop.html",</tt>
+      <br>
+      <tt>setbuf =&gt; "xsh/setbuf.html",</tt>
+      <br>
+      <tt>setcontext =&gt; "xsh/setcontext.html",</tt>
+      <br>
+      <tt>setgid =&gt; "xsh/setgid.html",</tt>
+      <br>
+      <tt>setgrent =&gt; "xsh/setgrent.html",</tt>
+      <br>
+      <tt>setitimer =&gt; "xsh/setitimer.html",</tt>
+      <br>
+      <tt>setjmp =&gt; "xsh/setjmp.html",</tt>
+      <br>
+      <tt>setkey =&gt; "xsh/setkey.html",</tt>
+      <br>
+      <tt>setlocale =&gt; "xsh/setlocale.html",</tt>
+      <br>
+      <tt>setlogmask =&gt; "xsh/setlogmask.html",</tt>
+      <br>
+      <tt>setpgid =&gt; "xsh/setpgid.html",</tt>
+      <br>
+      <tt>setpgrp =&gt; "xsh/setpgrp.html",</tt>
+      <br>
+      <tt>setpriority =&gt; "xsh/setpriority.html",</tt>
+      <br>
+      <tt>setpwent =&gt; "xsh/setpwent.html",</tt>
+      <br>
+      <tt>setregid =&gt; "xsh/setregid.html",</tt>
+      <br>
+      <tt>setreuid =&gt; "xsh/setreuid.html",</tt>
+      <br>
+      <tt>setrlimit =&gt; "xsh/setrlimit.html",</tt>
+      <br>
+      <tt>setsid =&gt; "xsh/setsid.html",</tt>
+      <br>
+      <tt>setstate =&gt; "xsh/setstate.html",</tt>
+      <br>
+      <tt>setuid =&gt; "xsh/setuid.html",</tt>
+      <br>
+      <tt>setutxent =&gt; "xsh/setutxent.html",</tt>
+      <br>
+      <tt>setvbuf =&gt; "xsh/setvbuf.html",</tt>
+      <br>
+      <tt>shm_open =&gt; "xsh/shm_open.html",</tt>
+      <br>
+      <tt>shm_unlink =&gt; "xsh/shm_unlink.html",</tt>
+      <br>
+      <tt>shmat =&gt; "xsh/shmat.html",</tt>
+      <br>
+      <tt>shmctl =&gt; "xsh/shmctl.html",</tt>
+      <br>
+      <tt>shmdt =&gt; "xsh/shmdt.html",</tt>
+      <br>
+      <tt>shmget =&gt; "xsh/shmget.html",</tt>
+      <br>
+      <tt>sigaction =&gt; "xsh/sigaction.html",</tt>
+      <br>
+      <tt>sigaddset =&gt; "xsh/sigaddset.html",</tt>
+      <br>
+      <tt>sigaltstack =&gt; "xsh/sigaltstack.html",</tt>
+      <br>
+      <tt>sigdelset =&gt; "xsh/sigdelset.html",</tt>
+      <br>
+      <tt>sigemptyset =&gt; "xsh/sigemptyset.html",</tt>
+      <br>
+      <tt>sigfillset =&gt; "xsh/sigfillset.html",</tt>
+      <br>
+      <tt>sighold =&gt; "xsh/sighold.html",</tt>
+      <br>
+      <tt>sigignore =&gt; "xsh/sigignore.html",</tt>
+      <br>
+      <tt>siginterrupt =&gt; "xsh/siginterrupt.html",</tt>
+      <br>
+      <tt>sigismember =&gt; "xsh/sigismember.html",</tt>
+      <br>
+      <tt>siglongjmp =&gt; "xsh/siglongjmp.html",</tt>
+      <br>
+      <tt>signal =&gt; "xsh/signal.html",</tt>
+      <br>
+      <tt>signgam =&gt; "xsh/signgam.html",</tt>
+      <br>
+      <tt>sigpause =&gt; "xsh/sigpause.html",</tt>
+      <br>
+      <tt>sigpending =&gt; "xsh/sigpending.html",</tt>
+      <br>
+      <tt>sigprocmask =&gt; "xsh/sigprocmask.html",</tt>
+      <br>
+      <tt>sigqueue =&gt; "xsh/sigqueue.html",</tt>
+      <br>
+      <tt>sigrelse =&gt; "xsh/sigrelse.html",</tt>
+      <br>
+      <tt>sigset =&gt; "xsh/sigset.html",</tt>
+      <br>
+      <tt>sigsetjmp =&gt; "xsh/sigsetjmp.html",</tt>
+      <br>
+      <tt>sigstack =&gt; "xsh/sigstack.html",</tt>
+      <br>
+      <tt>sigsuspend =&gt; "xsh/sigsuspend.html",</tt>
+      <br>
+      <tt>sigtimedwait =&gt; "xsh/sigtimedwait.html",</tt>
+      <br>
+      <tt>sigwait =&gt; "xsh/sigwait.html",</tt>
+      <br>
+      <tt>sigwaitinfo =&gt; "xsh/sigwaitinfo.html",</tt>
+      <br>
+      <tt>sin =&gt; "xsh/sin.html",</tt>
+      <br>
+      <tt>sinh =&gt; "xsh/sinh.html",</tt>
+      <br>
+      <tt>sleep =&gt; "xsh/sleep.html",</tt>
+      <br>
+      <tt>snprintf =&gt; "xsh/snprintf.html",</tt>
+      <br>
+      <tt>sprintf =&gt; "xsh/sprintf.html",</tt>
+      <br>
+      <tt>sqrt =&gt; "xsh/sqrt.html",</tt>
+      <br>
+      <tt>srand =&gt; "xsh/srand.html",</tt>
+      <br>
+      <tt>srand48 =&gt; "xsh/srand48.html",</tt>
+      <br>
+      <tt>srandom =&gt; "xsh/srandom.html",</tt>
+      <br>
+      <tt>sscanf =&gt; "xsh/sscanf.html",</tt>
+      <br>
+      <tt>stat =&gt; "xsh/stat.html",</tt>
+      <br>
+      <tt>statvfs =&gt; "xsh/statvfs.html",</tt>
+      <br>
+      <tt>stderr =&gt; "xsh/stderr.html",</tt>
+      <br>
+      <tt>stdin =&gt; "xsh/stdin.html",</tt>
+      <br>
+      <tt>stdio =&gt; "xsh/stdio.html",</tt>
+      <br>
+      <tt>stdout =&gt; "xsh/stdout.html",</tt>
+      <br>
+      <tt>step =&gt; "xsh/step.html",</tt>
+      <br>
+      <tt>strcasecmp =&gt; "xsh/strcasecmp.html",</tt>
+      <br>
+      <tt>strcat =&gt; "xsh/strcat.html",</tt>
+      <br>
+      <tt>strchr =&gt; "xsh/strchr.html",</tt>
+      <br>
+      <tt>strcmp =&gt; "xsh/strcmp.html",</tt>
+      <br>
+      <tt>strcoll =&gt; "xsh/strcoll.html",</tt>
+      <br>
+      <tt>strcpy =&gt; "xsh/strcpy.html",</tt>
+      <br>
+      <tt>strcspn =&gt; "xsh/strcspn.html",</tt>
+      <br>
+      <tt>strdup =&gt; "xsh/strdup.html",</tt>
+      <br>
+      <tt>strerror =&gt; "xsh/strerror.html",</tt>
+      <br>
+      <tt>strfmon =&gt; "xsh/strfmon.html",</tt>
+      <br>
+      <tt>strftime =&gt; "xsh/strftime.html",</tt>
+      <br>
+      <tt>strlen =&gt; "xsh/strlen.html",</tt>
+      <br>
+      <tt>strncasecmp =&gt; "xsh/strncasecmp.html",</tt>
+      <br>
+      <tt>strncat =&gt; "xsh/strncat.html",</tt>
+      <br>
+      <tt>strncmp =&gt; "xsh/strncmp.html",</tt>
+      <br>
+      <tt>strncpy =&gt; "xsh/strncpy.html",</tt>
+      <br>
+      <tt>strpbrk =&gt; "xsh/strpbrk.html",</tt>
+      <br>
+      <tt>strptime =&gt; "xsh/strptime.html",</tt>
+      <br>
+      <tt>strrchr =&gt; "xsh/strrchr.html",</tt>
+      <br>
+      <tt>strspn =&gt; "xsh/strspn.html",</tt>
+      <br>
+      <tt>strstr =&gt; "xsh/strstr.html",</tt>
+      <br>
+      <tt>strtod =&gt; "xsh/strtod.html",</tt>
+      <br>
+      <tt>strtok =&gt; "xsh/strtok.html",</tt>
+      <br>
+      <tt>strtol =&gt; "xsh/strtol.html",</tt>
+      <br>
+      <tt>strtoul =&gt; "xsh/strtoul.html",</tt>
+      <br>
+      <tt>strxfrm =&gt; "xsh/strxfrm.html",</tt>
+      <br>
+      <tt>swab =&gt; "xsh/swab.html",</tt>
+      <br>
+      <tt>swapcontext =&gt; "xsh/swapcontext.html",</tt>
+      <br>
+      <tt>swprintf =&gt; "xsh/swprintf.html",</tt>
+      <br>
+      <tt>swscanf =&gt; "xsh/swscanf.html",</tt>
+      <br>
+      <tt>symlink =&gt; "xsh/symlink.html",</tt>
+      <br>
+      <tt>sync =&gt; "xsh/sync.html",</tt>
+      <br>
+      <tt>sysconf =&gt; "xsh/sysconf.html",</tt>
+      <br>
+      <tt>syslog =&gt; "xsh/syslog.html",</tt>
+      <br>
+      <tt>system =&gt; "xsh/system.html",</tt>
+      <br>
+      <tt>_tolower =&gt; "xsh/_tolower.html",</tt>
+      <br>
+      <tt>_toupper =&gt; "xsh/_toupper.html",</tt>
+      <br>
+      <tt>tan =&gt; "xsh/tan.html",</tt>
+      <br>
+      <tt>tanh =&gt; "xsh/tanh.html",</tt>
+      <br>
+      <tt>tcdrain =&gt; "xsh/tcdrain.html",</tt>
+      <br>
+      <tt>tcflow =&gt; "xsh/tcflow.html",</tt>
+      <br>
+      <tt>tcflush =&gt; "xsh/tcflush.html",</tt>
+      <br>
+      <tt>tcgetattr =&gt; "xsh/tcgetattr.html",</tt>
+      <br>
+      <tt>tcgetpgrp =&gt; "xsh/tcgetpgrp.html",</tt>
+      <br>
+      <tt>tcgetsid =&gt; "xsh/tcgetsid.html",</tt>
+      <br>
+      <tt>tcsendbreak =&gt; "xsh/tcsendbreak.html",</tt>
+      <br>
+      <tt>tcsetattr =&gt; "xsh/tcsetattr.html",</tt>
+      <br>
+      <tt>tcsetpgrp =&gt; "xsh/tcsetpgrp.html",</tt>
+      <br>
+      <tt>tdelete =&gt; "xsh/tdelete.html",</tt>
+      <br>
+      <tt>telldir =&gt; "xsh/telldir.html",</tt>
+      <br>
+      <tt>tempnam =&gt; "xsh/tempnam.html",</tt>
+      <br>
+      <tt>tfind =&gt; "xsh/tfind.html",</tt>
+      <br>
+      <tt>threads =&gt; "xsh/threads.html",</tt>
+      <br>
+      <tt>time =&gt; "xsh/time.html",</tt>
+      <br>
+      <tt>timer_create =&gt; "xsh/timer_create.html",</tt>
+      <br>
+      <tt>timer_delete =&gt; "xsh/timer_delete.html",</tt>
+      <br>
+      <tt>timer_getoverrun =&gt; "xsh/timer_getoverrun.html",</tt>
+      <br>
+      <tt>timer_gettime =&gt; "xsh/timer_gettime.html",</tt>
+      <br>
+      <tt>timer_settime =&gt; "xsh/timer_settime.html",</tt>
+      <br>
+      <tt>times =&gt; "xsh/times.html",</tt>
+      <br>
+      <tt>timezone =&gt; "xsh/timezone.html",</tt>
+      <br>
+      <tt>tmpfile =&gt; "xsh/tmpfile.html",</tt>
+      <br>
+      <tt>tmpnam =&gt; "xsh/tmpnam.html",</tt>
+      <br>
+      <tt>toascii =&gt; "xsh/toascii.html",</tt>
+      <br>
+      <tt>tolower =&gt; "xsh/tolower.html",</tt>
+      <br>
+      <tt>toupper =&gt; "xsh/toupper.html",</tt>
+      <br>
+      <tt>towctrans =&gt; "xsh/towctrans.html",</tt>
+      <br>
+      <tt>towlower =&gt; "xsh/towlower.html",</tt>
+      <br>
+      <tt>towupper =&gt; "xsh/towupper.html",</tt>
+      <br>
+      <tt>truncate =&gt; "xsh/truncate.html",</tt>
+      <br>
+      <tt>tsearch =&gt; "xsh/tsearch.html",</tt>
+      <br>
+      <tt>ttyname =&gt; "xsh/ttyname.html",</tt>
+      <br>
+      <tt>ttyname_r =&gt; "xsh/ttyname_r.html",</tt>
+      <br>
+      <tt>ttyslot =&gt; "xsh/ttyslot.html",</tt>
+      <br>
+      <tt>twalk =&gt; "xsh/twalk.html",</tt>
+      <br>
+      <tt>tzname =&gt; "xsh/tzname.html",</tt>
+      <br>
+      <tt>tzset =&gt; "xsh/tzset.html",</tt>
+      <br>
+      <tt>ualarm =&gt; "xsh/ualarm.html",</tt>
+      <br>
+      <tt>ulimit =&gt; "xsh/ulimit.html",</tt>
+      <br>
+      <tt>umask =&gt; "xsh/umask.html",</tt>
+      <br>
+      <tt>uname =&gt; "xsh/uname.html",</tt>
+      <br>
+      <tt>ungetc =&gt; "xsh/ungetc.html",</tt>
+      <br>
+      <tt>ungetwc =&gt; "xsh/ungetwc.html",</tt>
+      <br>
+      <tt>unlink =&gt; "xsh/unlink.html",</tt>
+      <br>
+      <tt>unlockpt =&gt; "xsh/unlockpt.html",</tt>
+      <br>
+      <tt>usleep =&gt; "xsh/usleep.html",</tt>
+      <br>
+      <tt>utime =&gt; "xsh/utime.html",</tt>
+      <br>
+      <tt>utimes =&gt; "xsh/utimes.html",</tt>
+      <br>
+      <tt>va_arg =&gt; "xsh/va_arg.html",</tt>
+      <br>
+      <tt>va_end =&gt; "xsh/va_end.html",</tt>
+      <br>
+      <tt>va_start =&gt; "xsh/va_start.html",</tt>
+      <br>
+      <tt>valloc =&gt; "xsh/valloc.html",</tt>
+      <br>
+      <tt>vfork =&gt; "xsh/vfork.html",</tt>
+      <br>
+      <tt>vfprintf =&gt; "xsh/vfprintf.html",</tt>
+      <br>
+      <tt>vfwprintf =&gt; "xsh/vfwprintf.html",</tt>
+      <br>
+      <tt>vprintf =&gt; "xsh/vprintf.html",</tt>
+      <br>
+      <tt>vsnprintf =&gt; "xsh/vsnprintf.html",</tt>
+      <br>
+      <tt>vsprintf =&gt; "xsh/vsprintf.html",</tt>
+      <br>
+      <tt>vswprintf =&gt; "xsh/vswprintf.html",</tt>
+      <br>
+      <tt>vwprintf =&gt; "xsh/vwprintf.html",</tt>
+      <br>
+      <tt>wait =&gt; "xsh/wait.html",</tt>
+      <br>
+      <tt>wait3 =&gt; "xsh/wait3.html",</tt>
+      <br>
+      <tt>waitid =&gt; "xsh/waitid.html",</tt>
+      <br>
+      <tt>waitpid =&gt; "xsh/waitpid.html",</tt>
+      <br>
+      <tt>wcrtomb =&gt; "xsh/wcrtomb.html",</tt>
+      <br>
+      <tt>wcscat =&gt; "xsh/wcscat.html",</tt>
+      <br>
+      <tt>wcschr =&gt; "xsh/wcschr.html",</tt>
+      <br>
+      <tt>wcscmp =&gt; "xsh/wcscmp.html",</tt>
+      <br>
+      <tt>wcscoll =&gt; "xsh/wcscoll.html",</tt>
+      <br>
+      <tt>wcscpy =&gt; "xsh/wcscpy.html",</tt>
+      <br>
+      <tt>wcscspn =&gt; "xsh/wcscspn.html",</tt>
+      <br>
+      <tt>wcsftime =&gt; "xsh/wcsftime.html",</tt>
+      <br>
+      <tt>wcslen =&gt; "xsh/wcslen.html",</tt>
+      <br>
+      <tt>wcsncat =&gt; "xsh/wcsncat.html",</tt>
+      <br>
+      <tt>wcsncmp =&gt; "xsh/wcsncmp.html",</tt>
+      <br>
+      <tt>wcsncpy =&gt; "xsh/wcsncpy.html",</tt>
+      <br>
+      <tt>wcspbrk =&gt; "xsh/wcspbrk.html",</tt>
+      <br>
+      <tt>wcsrchr =&gt; "xsh/wcsrchr.html",</tt>
+      <br>
+      <tt>wcsrtombs =&gt; "xsh/wcsrtombs.html",</tt>
+      <br>
+      <tt>wcsspn =&gt; "xsh/wcsspn.html",</tt>
+      <br>
+      <tt>wcsstr =&gt; "xsh/wcsstr.html",</tt>
+      <br>
+      <tt>wcstod =&gt; "xsh/wcstod.html",</tt>
+      <br>
+      <tt>wcstok =&gt; "xsh/wcstok.html",</tt>
+      <br>
+      <tt>wcstol =&gt; "xsh/wcstol.html",</tt>
+      <br>
+      <tt>wcstombs =&gt; "xsh/wcstombs.html",</tt>
+      <br>
+      <tt>wcstoul =&gt; "xsh/wcstoul.html",</tt>
+      <br>
+      <tt>wcswcs =&gt; "xsh/wcswcs.html",</tt>
+      <br>
+      <tt>wcswidth =&gt; "xsh/wcswidth.html",</tt>
+      <br>
+      <tt>wcsxfrm =&gt; "xsh/wcsxfrm.html",</tt>
+      <br>
+      <tt>wctob =&gt; "xsh/wctob.html",</tt>
+      <br>
+      <tt>wctomb =&gt; "xsh/wctomb.html",</tt>
+      <br>
+      <tt>wctrans =&gt; "xsh/wctrans.html",</tt>
+      <br>
+      <tt>wctype =&gt; "xsh/wctype.html",</tt>
+      <br>
+      <tt>wcwidth =&gt; "xsh/wcwidth.html",</tt>
+      <br>
+      <tt>wmemchr =&gt; "xsh/wmemchr.html",</tt>
+      <br>
+      <tt>wmemcmp =&gt; "xsh/wmemcmp.html",</tt>
+      <br>
+      <tt>wmemcpy =&gt; "xsh/wmemcpy.html",</tt>
+      <br>
+      <tt>wmemmove =&gt; "xsh/wmemmove.html",</tt>
+      <br>
+      <tt>wmemset =&gt; "xsh/wmemset.html",</tt>
+      <br>
+      <tt>wordexp =&gt; "xsh/wordexp.html",</tt>
+      <br>
+      <tt>wordfree =&gt; "xsh/wordfree.html",</tt>
+      <br>
+      <tt>wprintf =&gt; "xsh/wprintf.html",</tt>
+      <br>
+      <tt>write =&gt; "xsh/write.html",</tt>
+      <br>
+      <tt>writev =&gt; "xsh/writev.html",</tt>
+      <br>
+      <tt>wscanf =&gt; "xsh/wscanf.html",</tt>
+      <br>
+      <tt>y0 =&gt; "xsh/y0.html",</tt>
+      <br>
+      <tt>y1 =&gt; "xsh/y1.html",</tt>
+      <br>
+      <tt>yn =&gt; "xsh/yn.html",</tt>
+      <br>
+      <tt>);</tt>
+      </p>
+      <p><tt>my $x11_root_doc = "http://www.xfree86.org/4.2.0/";</tt>
+      </p>
+      <p><tt>my %x11_records_r = (</tt>
+      <br>
+      <tt>AllPlanes =&gt; "AllPlanes.3.html",</tt>
+      <br>
+      <tt>BitmapBitOrder =&gt; "BitmapBitOrder.3.html",</tt>
+      <br>
+      <tt>BitmapPad =&gt; "BitmapPad.3.html",</tt>
+      <br>
+      <tt>BitmapUnit =&gt; "BitmapUnit.3.html",</tt>
+      <br>
+      <tt>BlackPixel =&gt; "BlackPixel.3.html",</tt>
+      <br>
+      <tt>BlackPixelOfScreen =&gt; "BlackPixelOfScreen.3.html",</tt>
+      <br>
+      <tt>CellsOfScreen =&gt; "CellsOfScreen.3.html",</tt>
+      <br>
+      <tt>ClientWhitePointOfCCC =&gt; "ClientWhitePointOfCCC.3.html",</tt>
+      <br>
+      <tt>ConnectionNumber =&gt; "ConnectionNumber.3.html",</tt>
+      <br>
+      <tt>DefaultColormap =&gt; "DefaultColormap.3.html",</tt>
+      <br>
+      <tt>DefaultColormapOfScreen =&gt;
+"DefaultColormapOfScreen.3.html",</tt>
+      <br>
+      <tt>DefaultDepth =&gt; "DefaultDepth.3.html",</tt>
+      <br>
+      <tt>DefaultDepthOfScreen =&gt; "DefaultDepthOfScreen.3.html",</tt>
+      <br>
+      <tt>DefaultGC =&gt; "DefaultGC.3.html",</tt>
+      <br>
+      <tt>DefaultGCOfScreen =&gt; "DefaultGCOfScreen.3.html",</tt>
+      <br>
+      <tt>DefaultRootWindow =&gt; "DefaultRootWindow.3.html",</tt>
+      <br>
+      <tt>DefaultScreen =&gt; "DefaultScreen.3.html",</tt>
+      <br>
+      <tt>DefaultScreenOfDisplay =&gt; "DefaultScreenOfDisplay.3.html",</tt>
+      <br>
+      <tt>DefaultVisual =&gt; "DefaultVisual.3.html",</tt>
+      <br>
+      <tt>DefaultVisualOfScreen =&gt; "DefaultVisualOfScreen.3.html",</tt>
+      <br>
+      <tt>DisplayCells =&gt; "DisplayCells.3.html",</tt>
+      <br>
+      <tt>DisplayHeight =&gt; "DisplayHeight.3.html",</tt>
+      <br>
+      <tt>DisplayHeightMM =&gt; "DisplayHeightMM.3.html",</tt>
+      <br>
+      <tt>DisplayOfCCC =&gt; "DisplayOfCCC.3.html",</tt>
+      <br>
+      <tt>DisplayOfScreen =&gt; "DisplayOfScreen.3.html",</tt>
+      <br>
+      <tt>DisplayPlanes =&gt; "DisplayPlanes.3.html",</tt>
+      <br>
+      <tt>DisplayString =&gt; "DisplayString.3.html",</tt>
+      <br>
+      <tt>DisplayWidth =&gt; "DisplayWidth.3.html",</tt>
+      <br>
+      <tt>DisplayWidthMM =&gt; "DisplayWidthMM.3.html",</tt>
+      <br>
+      <tt>DoesBackingStore =&gt; "DoesBackingStore.3.html",</tt>
+      <br>
+      <tt>DoesSaveUnders =&gt; "DoesSaveUnders.3.html",</tt>
+      <br>
+      <tt>EventMaskOfScreen =&gt; "EventMaskOfScreen.3.html",</tt>
+      <br>
+      <tt>GLwCreateMDrawingArea =&gt; "GLwCreateMDrawingArea.3.html",</tt>
+      <br>
+      <tt>GLwDrawingArea =&gt; "GLwDrawingArea.3.html",</tt>
+      <br>
+      <tt>GLwDrawingAreaMakeCurrent =&gt;
+"GLwDrawingAreaMakeCurrent.3.html",</tt>
+      <br>
+      <tt>GLwDrawingAreaSwapBuffers =&gt;
+"GLwDrawingAreaSwapBuffers.3.html",</tt>
+      <br>
+      <tt>GLwMDrawingArea =&gt; "GLwMDrawingArea.3.html",</tt>
+      <br>
+      <tt>HeightMMOfScreen =&gt; "HeightMMOfScreen.3.html",</tt>
+      <br>
+      <tt>HeightOfScreen =&gt; "HeightOfScreen.3.html",</tt>
+      <br>
+      <tt>ImageByteOrder =&gt; "ImageByteOrder.3.html",</tt>
+      <br>
+      <tt>IsCursorKey =&gt; "IsCursorKey.3.html",</tt>
+      <br>
+      <tt>IsFunctionKey =&gt; "IsFunctionKey.3.html",</tt>
+      <br>
+      <tt>IsKeypadKey =&gt; "IsKeypadKey.3.html",</tt>
+      <br>
+      <tt>IsMiscFunctionKey =&gt; "IsMiscFunctionKey.3.html",</tt>
+      <br>
+      <tt>IsModiferKey =&gt; "IsModiferKey.3.html",</tt>
+      <br>
+      <tt>IsPFKey =&gt; "IsPFKey.3.html",</tt>
+      <br>
+      <tt>IsPrivateKeypadKey =&gt; "IsPrivateKeypadKey.3.html",</tt>
+      <br>
+      <tt>LastKnownRequestProcessed =&gt;
+"LastKnownRequestProcessed.3.html",</tt>
+      <br>
+      <tt>MaxCmapsOfScreen =&gt; "MaxCmapsOfScreen.3.html",</tt>
+      <br>
+      <tt>MenuPopdown =&gt; "MenuPopdown.3.html",</tt>
+      <br>
+      <tt>MenuPopup =&gt; "MenuPopup.3.html",</tt>
+      <br>
+      <tt>MinCmapsOfScreen =&gt; "MinCmapsOfScreen.3.html",</tt>
+      <br>
+      <tt>NextRequest =&gt; "NextRequest.3.html",</tt>
+      <br>
+      <tt>PlanesOfScreen =&gt; "PlanesOfScreen.3.html",</tt>
+      <br>
+      <tt>ProtocolRevision =&gt; "ProtocolRevision.3.html",</tt>
+      <br>
+      <tt>ProtocolVersion =&gt; "ProtocolVersion.3.html",</tt>
+      <br>
+      <tt>QLength =&gt; "QLength.3.html",</tt>
+      <br>
+      <tt>RootWindow =&gt; "RootWindow.3.html",</tt>
+      <br>
+      <tt>RootWindowOfScreen =&gt; "RootWindowOfScreen.3.html",</tt>
+      <br>
+      <tt>ScreenCount =&gt; "ScreenCount.3.html",</tt>
+      <br>
+      <tt>ScreenNumberOfCCC =&gt; "ScreenNumberOfCCC.3.html",</tt>
+      <br>
+      <tt>ScreenOfDisplay =&gt; "ScreenOfDisplay.3.html",</tt>
+      <br>
+      <tt>ScreenWhitePointOfCCC =&gt; "ScreenWhitePointOfCCC.3.html",</tt>
+      <br>
+      <tt>ServerVendor =&gt; "ServerVendor.3.html",</tt>
+      <br>
+      <tt>VendorRelease =&gt; "VendorRelease.3.html",</tt>
+      <br>
+      <tt>VisualOfCCC =&gt; "VisualOfCCC.3.html",</tt>
+      <br>
+      <tt>WhitePixel =&gt; "WhitePixel.3.html",</tt>
+      <br>
+      <tt>WhitePixelOfScreen =&gt; "WhitePixelOfScreen.3.html",</tt>
+      <br>
+      <tt>WidthMMOfScreen =&gt; "WidthMMOfScreen.3.html",</tt>
+      <br>
+      <tt>WidthOfScreen =&gt; "WidthOfScreen.3.html",</tt>
+      <br>
+      <tt>XActivateScreenSaver =&gt; "XActivateScreenSaver.3.html",</tt>
+      <br>
+      <tt>XAddConnectionWatch =&gt; "XAddConnectionWatch.3.html",</tt>
+      <br>
+      <tt>XAddHost =&gt; "XAddHost.3.html",</tt>
+      <br>
+      <tt>XAddHosts =&gt; "XAddHosts.3.html",</tt>
+      <br>
+      <tt>XAddPixel =&gt; "XAddPixel.3.html",</tt>
+      <br>
+      <tt>XAddToSaveSet =&gt; "XAddToSaveSet.3.html",</tt>
+      <br>
+      <tt>XAllocClassHint =&gt; "XAllocClassHint.3.html",</tt>
+      <br>
+      <tt>XAllocColor =&gt; "XAllocColor.3.html",</tt>
+      <br>
+      <tt>XAllocColorCells =&gt; "XAllocColorCells.3.html",</tt>
+      <br>
+      <tt>XAllocColorPlanes =&gt; "XAllocColorPlanes.3.html",</tt>
+      <br>
+      <tt>XAllocIconSize =&gt; "XAllocIconSize.3.html",</tt>
+      <br>
+      <tt>XAllocNamedColor =&gt; "XAllocNamedColor.3.html",</tt>
+      <br>
+      <tt>XAllocSizeHints =&gt; "XAllocSizeHints.3.html",</tt>
+      <br>
+      <tt>XAllocStandardColormap =&gt; "XAllocStandardColormap.3.html",</tt>
+      <br>
+      <tt>XAllocWMHints =&gt; "XAllocWMHints.3.html",</tt>
+      <br>
+      <tt>XAllowDeviceEvents =&gt; "XAllowDeviceEvents.3.html",</tt>
+      <br>
+      <tt>XAllowEvents =&gt; "XAllowEvents.3.html",</tt>
+      <br>
+      <tt>XAnyEvent =&gt; "XAnyEvent.3.html",</tt>
+      <br>
+      <tt>XArc =&gt; "XArc.3.html",</tt>
+      <br>
+      <tt>XAutoRepeatOff =&gt; "XAutoRepeatOff.3.html",</tt>
+      <br>
+      <tt>XAutoRepeatOn =&gt; "XAutoRepeatOn.3.html",</tt>
+      <br>
+      <tt>XBaseFontNameListOfFontSet =&gt;
+"XBaseFontNameListOfFontSet.3.html",</tt>
+      <br>
+      <tt>XBell =&gt; "XBell.3.html",</tt>
+      <br>
+      <tt>XButtonEvent =&gt; "XButtonEvent.3.html",</tt>
+      <br>
+      <tt>XChangeActivePointerGrab =&gt;
+"XChangeActivePointerGrab.3.html",</tt>
+      <br>
+      <tt>XChangeDeviceControl =&gt; "XChangeDeviceControl.3.html",</tt>
+      <br>
+      <tt>XChangeDeviceDontPropagateList =&gt;
+"XChangeDeviceDontPropagateList.3.html",</tt>
+      <br>
+      <tt>XChangeDeviceKeyMapping =&gt;
+"XChangeDeviceKeyMapping.3.html",</tt>
+      <br>
+      <tt>XChangeFeedbackControl =&gt; "XChangeFeedbackControl.3.html",</tt>
+      <br>
+      <tt>XChangeGC =&gt; "XChangeGC.3.html",</tt>
+      <br>
+      <tt>XChangeKeyboardControl =&gt; "XChangeKeyboardControl.3.html",</tt>
+      <br>
+      <tt>XChangeKeyboardDevice =&gt; "XChangeKeyboardDevice.3.html",</tt>
+      <br>
+      <tt>XChangeKeyboardMapping =&gt; "XChangeKeyboardMapping.3.html",</tt>
+      <br>
+      <tt>XChangePointerControl =&gt; "XChangePointerControl.3.html",</tt>
+      <br>
+      <tt>XChangePointerDevice =&gt; "XChangePointerDevice.3.html",</tt>
+      <br>
+      <tt>XChangeProperty =&gt; "XChangeProperty.3.html",</tt>
+      <br>
+      <tt>XChangeSaveSet =&gt; "XChangeSaveSet.3.html",</tt>
+      <br>
+      <tt>XChangeWindowAttributes =&gt;
+"XChangeWindowAttributes.3.html",</tt>
+      <br>
+      <tt>XChar2b =&gt; "XChar2b.3.html",</tt>
+      <br>
+      <tt>XCharStruct =&gt; "XCharStruct.3.html",</tt>
+      <br>
+      <tt>XCheckIfEvent =&gt; "XCheckIfEvent.3.html",</tt>
+      <br>
+      <tt>XCheckMaskEvent =&gt; "XCheckMaskEvent.3.html",</tt>
+      <br>
+      <tt>XCheckTypedEvent =&gt; "XCheckTypedEvent.3.html",</tt>
+      <br>
+      <tt>XCheckTypedWindowEvent =&gt; "XCheckTypedWindowEvent.3.html",</tt>
+      <br>
+      <tt>XCheckWindowEvent =&gt; "XCheckWindowEvent.3.html",</tt>
+      <br>
+      <tt>XCirculateEvent =&gt; "XCirculateEvent.3.html",</tt>
+      <br>
+      <tt>XCirculateRequestEvent =&gt; "XCirculateRequestEvent.3.html",</tt>
+      <br>
+      <tt>XCirculateSubwindows =&gt; "XCirculateSubwindows.3.html",</tt>
+      <br>
+      <tt>XCirculateSubwindowsDown =&gt;
+"XCirculateSubwindowsDown.3.html",</tt>
+      <br>
+      <tt>XCirculateSubwindowsUp =&gt; "XCirculateSubwindowsUp.3.html",</tt>
+      <br>
+      <tt>XClassHint =&gt; "XClassHint.3.html",</tt>
+      <br>
+      <tt>XClearArea =&gt; "XClearArea.3.html",</tt>
+      <br>
+      <tt>XClearWindow =&gt; "XClearWindow.3.html",</tt>
+      <br>
+      <tt>XClientMessageEvent =&gt; "XClientMessageEvent.3.html",</tt>
+      <br>
+      <tt>XClipBox =&gt; "XClipBox.3.html",</tt>
+      <br>
+      <tt>XCloseDevice =&gt; "XCloseDevice.3.html",</tt>
+      <br>
+      <tt>XCloseDisplay =&gt; "XCloseDisplay.3.html",</tt>
+      <br>
+      <tt>XCloseIM =&gt; "XCloseIM.3.html",</tt>
+      <br>
+      <tt>XCloseOM =&gt; "XCloseOM.3.html",</tt>
+      <br>
+      <tt>XColor =&gt; "XColor.3.html",</tt>
+      <br>
+      <tt>XColormapEvent =&gt; "XColormapEvent.3.html",</tt>
+      <br>
+      <tt>XConfigureEvent =&gt; "XConfigureEvent.3.html",</tt>
+      <br>
+      <tt>XConfigureRequestEvent =&gt; "XConfigureRequestEvent.3.html",</tt>
+      <br>
+      <tt>XConfigureWindow =&gt; "XConfigureWindow.3.html",</tt>
+      <br>
+      <tt>XContextDependentDrawing =&gt;
+"XContextDependentDrawing.3.html",</tt>
+      <br>
+      <tt>XContextualDrawing =&gt; "XContextualDrawing.3.html",</tt>
+      <br>
+      <tt>XConvertCase =&gt; "XConvertCase.3.html",</tt>
+      <br>
+      <tt>XConvertSelection =&gt; "XConvertSelection.3.html",</tt>
+      <br>
+      <tt>XCopyArea =&gt; "XCopyArea.3.html",</tt>
+      <br>
+      <tt>XCopyColormapAndFree =&gt; "XCopyColormapAndFree.3.html",</tt>
+      <br>
+      <tt>XCopyGC =&gt; "XCopyGC.3.html",</tt>
+      <br>
+      <tt>XCopyPlane =&gt; "XCopyPlane.3.html",</tt>
+      <br>
+      <tt>XCreateBitmapFromData =&gt; "XCreateBitmapFromData.3.html",</tt>
+      <br>
+      <tt>XCreateColormap =&gt; "XCreateColormap.3.html",</tt>
+      <br>
+      <tt>XCreateFontCursor =&gt; "XCreateFontCursor.3.html",</tt>
+      <br>
+      <tt>XCreateFontSet =&gt; "XCreateFontSet.3.html",</tt>
+      <br>
+      <tt>XCreateGC =&gt; "XCreateGC.3.html",</tt>
+      <br>
+      <tt>XCreateGlyphCursor =&gt; "XCreateGlyphCursor.3.html",</tt>
+      <br>
+      <tt>XCreateIC =&gt; "XCreateIC.3.html",</tt>
+      <br>
+      <tt>XCreateImage =&gt; "XCreateImage.3.html",</tt>
+      <br>
+      <tt>XCreateOC =&gt; "XCreateOC.3.html",</tt>
+      <br>
+      <tt>XCreatePixmap =&gt; "XCreatePixmap.3.html",</tt>
+      <br>
+      <tt>XCreatePixmapCursor =&gt; "XCreatePixmapCursor.3.html",</tt>
+      <br>
+      <tt>XCreatePixmapFromBitmapData =&gt;
+"XCreatePixmapFromBitmapData.3.html",</tt>
+      <br>
+      <tt>XCreateRegion =&gt; "XCreateRegion.3.html",</tt>
+      <br>
+      <tt>XCreateSimpleWindow =&gt; "XCreateSimpleWindow.3.html",</tt>
+      <br>
+      <tt>XCreateWindow =&gt; "XCreateWindow.3.html",</tt>
+      <br>
+      <tt>XCreateWindowEvent =&gt; "XCreateWindowEvent.3.html",</tt>
+      <br>
+      <tt>XCrossingEvent =&gt; "XCrossingEvent.3.html",</tt>
+      <br>
+      <tt>XDefaultString =&gt; "XDefaultString.3.html",</tt>
+      <br>
+      <tt>XDefineCursor =&gt; "XDefineCursor.3.html",</tt>
+      <br>
+      <tt>XDeleteContext =&gt; "XDeleteContext.3.html",</tt>
+      <br>
+      <tt>XDeleteModifiermapEntry =&gt;
+"XDeleteModifiermapEntry.3.html",</tt>
+      <br>
+      <tt>XDeleteProperty =&gt; "XDeleteProperty.3.html",</tt>
+      <br>
+      <tt>XDestroyIC =&gt; "XDestroyIC.3.html",</tt>
+      <br>
+      <tt>XDestroyImage =&gt; "XDestroyImage.3.html",</tt>
+      <br>
+      <tt>XDestroyOC =&gt; "XDestroyOC.3.html",</tt>
+      <br>
+      <tt>XDestroyRegion =&gt; "XDestroyRegion.3.html",</tt>
+      <br>
+      <tt>XDestroySubwindows =&gt; "XDestroySubwindows.3.html",</tt>
+      <br>
+      <tt>XDestroyWindow =&gt; "XDestroyWindow.3.html",</tt>
+      <br>
+      <tt>XDestroyWindowEvent =&gt; "XDestroyWindowEvent.3.html",</tt>
+      <br>
+      <tt>XDeviceBell =&gt; "XDeviceBell.3.html",</tt>
+      <br>
+      <tt>XDeviceTimeCoord =&gt; "XDeviceTimeCoord.3.html",</tt>
+      <br>
+      <tt>XDirectionalDependentDrawing =&gt;
+"XDirectionalDependentDrawing.3.html",</tt>
+      <br>
+      <tt>XDisableAccessControl =&gt; "XDisableAccessControl.3.html",</tt>
+      <br>
+      <tt>XDisplayKeycodes =&gt; "XDisplayKeycodes.3.html",</tt>
+      <br>
+      <tt>XDisplayMotionBufferSize =&gt;
+"XDisplayMotionBufferSize.3.html",</tt>
+      <br>
+      <tt>XDisplayName =&gt; "XDisplayName.3.html",</tt>
+      <br>
+      <tt>XDisplayOfIM =&gt; "XDisplayOfIM.3.html",</tt>
+      <br>
+      <tt>XDisplayOfOM =&gt; "XDisplayOfOM.3.html",</tt>
+      <br>
+      <tt>XDrawArc =&gt; "XDrawArc.3.html",</tt>
+      <br>
+      <tt>XDrawArcs =&gt; "XDrawArcs.3.html",</tt>
+      <br>
+      <tt>XDrawImageString =&gt; "XDrawImageString.3.html",</tt>
+      <br>
+      <tt>XDrawImageString16 =&gt; "XDrawImageString16.3.html",</tt>
+      <br>
+      <tt>XDrawLine =&gt; "XDrawLine.3.html",</tt>
+      <br>
+      <tt>XDrawLines =&gt; "XDrawLines.3.html",</tt>
+      <br>
+      <tt>XDrawPoint =&gt; "XDrawPoint.3.html",</tt>
+      <br>
+      <tt>XDrawPoints =&gt; "XDrawPoints.3.html",</tt>
+      <br>
+      <tt>XDrawRectangle =&gt; "XDrawRectangle.3.html",</tt>
+      <br>
+      <tt>XDrawRectangles =&gt; "XDrawRectangles.3.html",</tt>
+      <br>
+      <tt>XDrawSegments =&gt; "XDrawSegments.3.html",</tt>
+      <br>
+      <tt>XDrawString =&gt; "XDrawString.3.html",</tt>
+      <br>
+      <tt>XDrawString16 =&gt; "XDrawString16.3.html",</tt>
+      <br>
+      <tt>XDrawText =&gt; "XDrawText.3.html",</tt>
+      <br>
+      <tt>XDrawText16 =&gt; "XDrawText16.3.html",</tt>
+      <br>
+      <tt>XEmptyRegion =&gt; "XEmptyRegion.3.html",</tt>
+      <br>
+      <tt>XEnableAccessControl =&gt; "XEnableAccessControl.3.html",</tt>
+      <br>
+      <tt>XEqualRegion =&gt; "XEqualRegion.3.html",</tt>
+      <br>
+      <tt>XErrorEvent =&gt; "XErrorEvent.3.html",</tt>
+      <br>
+      <tt>XEvent =&gt; "XEvent.3.html",</tt>
+      <br>
+      <tt>XEventsQueued =&gt; "XEventsQueued.3.html",</tt>
+      <br>
+      <tt>XExposeEvent =&gt; "XExposeEvent.3.html",</tt>
+      <br>
+      <tt>XExtendedMaxRequestSize =&gt;
+"XExtendedMaxRequestSize.3.html",</tt>
+      <br>
+      <tt>XExtentsOfFontSet =&gt; "XExtentsOfFontSet.3.html",</tt>
+      <br>
+      <tt>XF86VidMode =&gt; "XF86VidMode.3.html",</tt>
+      <br>
+      <tt>XF86VidModeDeleteModeLine =&gt;
+"XF86VidModeDeleteModeLine.3.html",</tt>
+      <br>
+      <tt>XF86VidModeGetAllModeLines =&gt;
+"XF86VidModeGetAllModeLines.3.html",</tt>
+      <br>
+      <tt>XF86VidModeGetModeLine =&gt; "XF86VidModeGetModeLine.3.html",</tt>
+      <br>
+      <tt>XF86VidModeGetMonitor =&gt; "XF86VidModeGetMonitor.3.html",</tt>
+      <br>
+      <tt>XF86VidModeGetViewPort =&gt; "XF86VidModeGetViewPort.3.html",</tt>
+      <br>
+      <tt>XF86VidModeLockModeSwitch =&gt;
+"XF86VidModeLockModeSwitch.3.html",</tt>
+      <br>
+      <tt>XF86VidModeModModeLine =&gt; "XF86VidModeModModeLine.3.html",</tt>
+      <br>
+      <tt>XF86VidModeQueryExtension =&gt;
+"XF86VidModeQueryExtension.3.html",</tt>
+      <br>
+      <tt>XF86VidModeQueryVersion =&gt;
+"XF86VidModeQueryVersion.3.html",</tt>
+      <br>
+      <tt>XF86VidModeSetViewPort =&gt; "XF86VidModeSetViewPort.3.html",</tt>
+      <br>
+      <tt>XF86VidModeSwitchMode =&gt; "XF86VidModeSwitchMode.3.html",</tt>
+      <br>
+      <tt>XF86VidModeSwitchToMode =&gt;
+"XF86VidModeSwitchToMode.3.html",</tt>
+      <br>
+      <tt>XF86VidModeValidateModeLine =&gt;
+"XF86VidModeValidateModeLine.3.html",</tt>
+      <br>
+      <tt>XFetchBuffer =&gt; "XFetchBuffer.3.html",</tt>
+      <br>
+      <tt>XFetchBytes =&gt; "XFetchBytes.3.html",</tt>
+      <br>
+      <tt>XFetchName =&gt; "XFetchName.3.html",</tt>
+      <br>
+      <tt>XFillArc =&gt; "XFillArc.3.html",</tt>
+      <br>
+      <tt>XFillArcs =&gt; "XFillArcs.3.html",</tt>
+      <br>
+      <tt>XFillPolygon =&gt; "XFillPolygon.3.html",</tt>
+      <br>
+      <tt>XFillRectangle =&gt; "XFillRectangle.3.html",</tt>
+      <br>
+      <tt>XFillRectangles =&gt; "XFillRectangles.3.html",</tt>
+      <br>
+      <tt>XFilterEvent =&gt; "XFilterEvent.3.html",</tt>
+      <br>
+      <tt>XFindContext =&gt; "XFindContext.3.html",</tt>
+      <br>
+      <tt>XFlush =&gt; "XFlush.3.html",</tt>
+      <br>
+      <tt>XFocusChangeEvent =&gt; "XFocusChangeEvent.3.html",</tt>
+      <br>
+      <tt>XFontProp =&gt; "XFontProp.3.html",</tt>
+      <br>
+      <tt>XFontSetExtents =&gt; "XFontSetExtents.3.html",</tt>
+      <br>
+      <tt>XFontStruct =&gt; "XFontStruct.3.html",</tt>
+      <br>
+      <tt>XFontsOfFontSet =&gt; "XFontsOfFontSet.3.html",</tt>
+      <br>
+      <tt>XForceScreenSaver =&gt; "XForceScreenSaver.3.html",</tt>
+      <br>
+      <tt>XFree =&gt; "XFree.3.html",</tt>
+      <br>
+      <tt>XFreeColormap =&gt; "XFreeColormap.3.html",</tt>
+      <br>
+      <tt>XFreeColors =&gt; "XFreeColors.3.html",</tt>
+      <br>
+      <tt>XFreeCursor =&gt; "XFreeCursor.3.html",</tt>
+      <br>
+      <tt>XFreeDeviceList =&gt; "XFreeDeviceList.3.html",</tt>
+      <br>
+      <tt>XFreeFont =&gt; "XFreeFont.3.html",</tt>
+      <br>
+      <tt>XFreeFontInfo =&gt; "XFreeFontInfo.3.html",</tt>
+      <br>
+      <tt>XFreeFontNames =&gt; "XFreeFontNames.3.html",</tt>
+      <br>
+      <tt>XFreeFontPath =&gt; "XFreeFontPath.3.html",</tt>
+      <br>
+      <tt>XFreeFontSet =&gt; "XFreeFontSet.3.html",</tt>
+      <br>
+      <tt>XFreeGC =&gt; "XFreeGC.3.html",</tt>
+      <br>
+      <tt>XFreeModifierMap =&gt; "XFreeModifierMap.3.html",</tt>
+      <br>
+      <tt>XFreePixmap =&gt; "XFreePixmap.3.html",</tt>
+      <br>
+      <tt>XFreeStringList =&gt; "XFreeStringList.3.html",</tt>
+      <br>
+      <tt>XGCValues =&gt; "XGCValues.3.html",</tt>
+      <br>
+      <tt>XGContextFromGC =&gt; "XGContextFromGC.3.html",</tt>
+      <br>
+      <tt>XGetAtomName =&gt; "XGetAtomName.3.html",</tt>
+      <br>
+      <tt>XGetAtomNames =&gt; "XGetAtomNames.3.html",</tt>
+      <br>
+      <tt>XGetClassHint =&gt; "XGetClassHint.3.html",</tt>
+      <br>
+      <tt>XGetCommand =&gt; "XGetCommand.3.html",</tt>
+      <br>
+      <tt>XGetDeviceButtonMapping =&gt;
+"XGetDeviceButtonMapping.3.html",</tt>
+      <br>
+      <tt>XGetDeviceControl =&gt; "XGetDeviceControl.3.html",</tt>
+      <br>
+      <tt>XGetDeviceDontPropagateList =&gt;
+"XGetDeviceDontPropagateList.3.html",</tt>
+      <br>
+      <tt>XGetDeviceFocus =&gt; "XGetDeviceFocus.3.html",</tt>
+      <br>
+      <tt>XGetDeviceKeyMapping =&gt; "XGetDeviceKeyMapping.3.html",</tt>
+      <br>
+      <tt>XGetDeviceModifierMapping =&gt;
+"XGetDeviceModifierMapping.3.html",</tt>
+      <br>
+      <tt>XGetDeviceMotionEvents =&gt; "XGetDeviceMotionEvents.3.html",</tt>
+      <br>
+      <tt>XGetErrorDatabaseText =&gt; "XGetErrorDatabaseText.3.html",</tt>
+      <br>
+      <tt>XGetErrorText =&gt; "XGetErrorText.3.html",</tt>
+      <br>
+      <tt>XGetExtensionVersion =&gt; "XGetExtensionVersion.3.html",</tt>
+      <br>
+      <tt>XGetFeedbackControl =&gt; "XGetFeedbackControl.3.html",</tt>
+      <br>
+      <tt>XGetFontPath =&gt; "XGetFontPath.3.html",</tt>
+      <br>
+      <tt>XGetFontProperty =&gt; "XGetFontProperty.3.html",</tt>
+      <br>
+      <tt>XGetGCValues =&gt; "XGetGCValues.3.html",</tt>
+      <br>
+      <tt>XGetGeometry =&gt; "XGetGeometry.3.html",</tt>
+      <br>
+      <tt>XGetICValues =&gt; "XGetICValues.3.html",</tt>
+      <br>
+      <tt>XGetIMValues =&gt; "XGetIMValues.3.html",</tt>
+      <br>
+      <tt>XGetIconName =&gt; "XGetIconName.3.html",</tt>
+      <br>
+      <tt>XGetIconSizes =&gt; "XGetIconSizes.3.html",</tt>
+      <br>
+      <tt>XGetImage =&gt; "XGetImage.3.html",</tt>
+      <br>
+      <tt>XGetInputFocus =&gt; "XGetInputFocus.3.html",</tt>
+      <br>
+      <tt>XGetKeyboardControl =&gt; "XGetKeyboardControl.3.html",</tt>
+      <br>
+      <tt>XGetKeyboardMapping =&gt; "XGetKeyboardMapping.3.html",</tt>
+      <br>
+      <tt>XGetModifierMapping =&gt; "XGetModifierMapping.3.html",</tt>
+      <br>
+      <tt>XGetMotionEvents =&gt; "XGetMotionEvents.3.html",</tt>
+      <br>
+      <tt>XGetOCValues =&gt; "XGetOCValues.3.html",</tt>
+      <br>
+      <tt>XGetOMValues =&gt; "XGetOMValues.3.html",</tt>
+      <br>
+      <tt>XGetPixel =&gt; "XGetPixel.3.html",</tt>
+      <br>
+      <tt>XGetPointerControl =&gt; "XGetPointerControl.3.html",</tt>
+      <br>
+      <tt>XGetPointerMapping =&gt; "XGetPointerMapping.3.html",</tt>
+      <br>
+      <tt>XGetRGBColormaps =&gt; "XGetRGBColormaps.3.html",</tt>
+      <br>
+      <tt>XGetScreenSaver =&gt; "XGetScreenSaver.3.html",</tt>
+      <br>
+      <tt>XGetSelectedExtensionEvents =&gt;
+"XGetSelectedExtensionEvents.3.html",</tt>
+      <br>
+      <tt>XGetSelectionOwner =&gt; "XGetSelectionOwner.3.html",</tt>
+      <br>
+      <tt>XGetSubImage =&gt; "XGetSubImage.3.html",</tt>
+      <br>
+      <tt>XGetTextProperty =&gt; "XGetTextProperty.3.html",</tt>
+      <br>
+      <tt>XGetTransientForHint =&gt; "XGetTransientForHint.3.html",</tt>
+      <br>
+      <tt>XGetVisualInfo =&gt; "XGetVisualInfo.3.html",</tt>
+      <br>
+      <tt>XGetWMClientMachine =&gt; "XGetWMClientMachine.3.html",</tt>
+      <br>
+      <tt>XGetWMColormapWindows =&gt; "XGetWMColormapWindows.3.html",</tt>
+      <br>
+      <tt>XGetWMHints =&gt; "XGetWMHints.3.html",</tt>
+      <br>
+      <tt>XGetWMIconName =&gt; "XGetWMIconName.3.html",</tt>
+      <br>
+      <tt>XGetWMName =&gt; "XGetWMName.3.html",</tt>
+      <br>
+      <tt>XGetWMNormalHints =&gt; "XGetWMNormalHints.3.html",</tt>
+      <br>
+      <tt>XGetWMProtocols =&gt; "XGetWMProtocols.3.html",</tt>
+      <br>
+      <tt>XGetWMSizeHints =&gt; "XGetWMSizeHints.3.html",</tt>
+      <br>
+      <tt>XGetWindowAttributes =&gt; "XGetWindowAttributes.3.html",</tt>
+      <br>
+      <tt>XGetWindowProperty =&gt; "XGetWindowProperty.3.html",</tt>
+      <br>
+      <tt>XGrabButton =&gt; "XGrabButton.3.html",</tt>
+      <br>
+      <tt>XGrabDevice =&gt; "XGrabDevice.3.html",</tt>
+      <br>
+      <tt>XGrabDeviceButton =&gt; "XGrabDeviceButton.3.html",</tt>
+      <br>
+      <tt>XGrabDeviceKey =&gt; "XGrabDeviceKey.3.html",</tt>
+      <br>
+      <tt>XGrabKey =&gt; "XGrabKey.3.html",</tt>
+      <br>
+      <tt>XGrabKeyboard =&gt; "XGrabKeyboard.3.html",</tt>
+      <br>
+      <tt>XGrabPointer =&gt; "XGrabPointer.3.html",</tt>
+      <br>
+      <tt>XGrabServer =&gt; "XGrabServer.3.html",</tt>
+      <br>
+      <tt>XGraphicsExposeEvent =&gt; "XGraphicsExposeEvent.3.html",</tt>
+      <br>
+      <tt>XGravityEvent =&gt; "XGravityEvent.3.html",</tt>
+      <br>
+      <tt>XHostAddress =&gt; "XHostAddress.3.html",</tt>
+      <br>
+      <tt>XIMOfIC =&gt; "XIMOfIC.3.html",</tt>
+      <br>
+      <tt>XIconSize =&gt; "XIconSize.3.html",</tt>
+      <br>
+      <tt>XIconifyWindow =&gt; "XIconifyWindow.3.html",</tt>
+      <br>
+      <tt>XIfEvent =&gt; "XIfEvent.3.html",</tt>
+      <br>
+      <tt>XInitImage =&gt; "XInitImage.3.html",</tt>
+      <br>
+      <tt>XInitThreads =&gt; "XInitThreads.3.html",</tt>
+      <br>
+      <tt>XInsertModifiermapEntry =&gt;
+"XInsertModifiermapEntry.3.html",</tt>
+      <br>
+      <tt>XInstallColormap =&gt; "XInstallColormap.3.html",</tt>
+      <br>
+      <tt>XInternAtom =&gt; "XInternAtom.3.html",</tt>
+      <br>
+      <tt>XInternAtoms =&gt; "XInternAtoms.3.html",</tt>
+      <br>
+      <tt>XInternalConnectionNumbers =&gt;
+"XInternalConnectionNumbers.3.html",</tt>
+      <br>
+      <tt>XIntersectRegion =&gt; "XIntersectRegion.3.html",</tt>
+      <br>
+      <tt>XKeyEvent =&gt; "XKeyEvent.3.html",</tt>
+      <br>
+      <tt>XKeyboardControl =&gt; "XKeyboardControl.3.html",</tt>
+      <br>
+      <tt>XKeycodeToKeysym =&gt; "XKeycodeToKeysym.3.html",</tt>
+      <br>
+      <tt>XKeymapEvent =&gt; "XKeymapEvent.3.html",</tt>
+      <br>
+      <tt>XKeysymToKeycode =&gt; "XKeysymToKeycode.3.html",</tt>
+      <br>
+      <tt>XKeysymToString =&gt; "XKeysymToString.3.html",</tt>
+      <br>
+      <tt>XKillClient =&gt; "XKillClient.3.html",</tt>
+      <br>
+      <tt>XListDepths =&gt; "XListDepths.3.html",</tt>
+      <br>
+      <tt>XListFonts =&gt; "XListFonts.3.html",</tt>
+      <br>
+      <tt>XListFontsWithInfo =&gt; "XListFontsWithInfo.3.html",</tt>
+      <br>
+      <tt>XListHosts =&gt; "XListHosts.3.html",</tt>
+      <br>
+      <tt>XListInputDevices =&gt; "XListInputDevices.3.html",</tt>
+      <br>
+      <tt>XListInstalledColormaps =&gt;
+"XListInstalledColormaps.3.html",</tt>
+      <br>
+      <tt>XListPixmapFormats =&gt; "XListPixmapFormats.3.html",</tt>
+      <br>
+      <tt>XListProperties =&gt; "XListProperties.3.html",</tt>
+      <br>
+      <tt>XLoadFont =&gt; "XLoadFont.3.html",</tt>
+      <br>
+      <tt>XLoadQueryFont =&gt; "XLoadQueryFont.3.html",</tt>
+      <br>
+      <tt>XLocaleOfFontSet =&gt; "XLocaleOfFontSet.3.html",</tt>
+      <br>
+      <tt>XLocaleOfIM =&gt; "XLocaleOfIM.3.html",</tt>
+      <br>
+      <tt>XLocaleOfOM =&gt; "XLocaleOfOM.3.html",</tt>
+      <br>
+      <tt>XLockDisplay =&gt; "XLockDisplay.3.html",</tt>
+      <br>
+      <tt>XLookupColor =&gt; "XLookupColor.3.html",</tt>
+      <br>
+      <tt>XLookupKeysym =&gt; "XLookupKeysym.3.html",</tt>
+      <br>
+      <tt>XLookupString =&gt; "XLookupString.3.html",</tt>
+      <br>
+      <tt>XLowerWindow =&gt; "XLowerWindow.3.html",</tt>
+      <br>
+      <tt>XMapEvent =&gt; "XMapEvent.3.html",</tt>
+      <br>
+      <tt>XMapRaised =&gt; "XMapRaised.3.html",</tt>
+      <br>
+      <tt>XMapRequestEvent =&gt; "XMapRequestEvent.3.html",</tt>
+      <br>
+      <tt>XMapSubwindows =&gt; "XMapSubwindows.3.html",</tt>
+      <br>
+      <tt>XMapWindow =&gt; "XMapWindow.3.html",</tt>
+      <br>
+      <tt>XMappingEvent =&gt; "XMappingEvent.3.html",</tt>
+      <br>
+      <tt>XMaskEvent =&gt; "XMaskEvent.3.html",</tt>
+      <br>
+      <tt>XMatchVisualInfo =&gt; "XMatchVisualInfo.3.html",</tt>
+      <br>
+      <tt>XMaxRequestSize =&gt; "XMaxRequestSize.3.html",</tt>
+      <br>
+      <tt>XModifierKeymap =&gt; "XModifierKeymap.3.html",</tt>
+      <br>
+      <tt>XMotionEvent =&gt; "XMotionEvent.3.html",</tt>
+      <br>
+      <tt>XMoveResizeWindow =&gt; "XMoveResizeWindow.3.html",</tt>
+      <br>
+      <tt>XMoveWindow =&gt; "XMoveWindow.3.html",</tt>
+      <br>
+      <tt>XNewModifiermap =&gt; "XNewModifiermap.3.html",</tt>
+      <br>
+      <tt>XNextEvent =&gt; "XNextEvent.3.html",</tt>
+      <br>
+      <tt>XNoExposeEvent =&gt; "XNoExposeEvent.3.html",</tt>
+      <br>
+      <tt>XNoOp =&gt; "XNoOp.3.html",</tt>
+      <br>
+      <tt>XOMOfOC =&gt; "XOMOfOC.3.html",</tt>
+      <br>
+      <tt>XOffsetRegion =&gt; "XOffsetRegion.3.html",</tt>
+      <br>
+      <tt>XOpenDevice =&gt; "XOpenDevice.3.html",</tt>
+      <br>
+      <tt>XOpenDisplay =&gt; "XOpenDisplay.3.html",</tt>
+      <br>
+      <tt>XOpenIM =&gt; "XOpenIM.3.html",</tt>
+      <br>
+      <tt>XOpenOM =&gt; "XOpenOM.3.html",</tt>
+      <br>
+      <tt>XParseColor =&gt; "XParseColor.3.html",</tt>
+      <br>
+      <tt>XParseGeometry =&gt; "XParseGeometry.3.html",</tt>
+      <br>
+      <tt>XPeekEvent =&gt; "XPeekEvent.3.html",</tt>
+      <br>
+      <tt>XPeekIfEvent =&gt; "XPeekIfEvent.3.html",</tt>
+      <br>
+      <tt>XPending =&gt; "XPending.3.html",</tt>
+      <br>
+      <tt>XPixmapFormatValues =&gt; "XPixmapFormatValues.3.html",</tt>
+      <br>
+      <tt>XPoint =&gt; "XPoint.3.html",</tt>
+      <br>
+      <tt>XPointInRegion =&gt; "XPointInRegion.3.html",</tt>
+      <br>
+      <tt>XPolygonRegion =&gt; "XPolygonRegion.3.html",</tt>
+      <br>
+      <tt>XProcessInternalConnection =&gt;
+"XProcessInternalConnection.3.html",</tt>
+      <br>
+      <tt>XPropertyEvent =&gt; "XPropertyEvent.3.html",</tt>
+      <br>
+      <tt>XPutBackEvent =&gt; "XPutBackEvent.3.html",</tt>
+      <br>
+      <tt>XPutImage =&gt; "XPutImage.3.html",</tt>
+      <br>
+      <tt>XPutPixel =&gt; "XPutPixel.3.html",</tt>
+      <br>
+      <tt>XQueryBestCursor =&gt; "XQueryBestCursor.3.html",</tt>
+      <br>
+      <tt>XQueryBestSize =&gt; "XQueryBestSize.3.html",</tt>
+      <br>
+      <tt>XQueryBestStipple =&gt; "XQueryBestStipple.3.html",</tt>
+      <br>
+      <tt>XQueryBestTile =&gt; "XQueryBestTile.3.html",</tt>
+      <br>
+      <tt>XQueryColor =&gt; "XQueryColor.3.html",</tt>
+      <br>
+      <tt>XQueryColors =&gt; "XQueryColors.3.html",</tt>
+      <br>
+      <tt>XQueryDeviceState =&gt; "XQueryDeviceState.3.html",</tt>
+      <br>
+      <tt>XQueryFont =&gt; "XQueryFont.3.html",</tt>
+      <br>
+      <tt>XQueryKeymap =&gt; "XQueryKeymap.3.html",</tt>
+      <br>
+      <tt>XQueryPointer =&gt; "XQueryPointer.3.html",</tt>
+      <br>
+      <tt>XQueryTextExtents =&gt; "XQueryTextExtents.3.html",</tt>
+      <br>
+      <tt>XQueryTextExtents16 =&gt; "XQueryTextExtents16.3.html",</tt>
+      <br>
+      <tt>XQueryTree =&gt; "XQueryTree.3.html",</tt>
+      <br>
+      <tt>XRaiseWindow =&gt; "XRaiseWindow.3.html",</tt>
+      <br>
+      <tt>XReadBitmapFile =&gt; "XReadBitmapFile.3.html",</tt>
+      <br>
+      <tt>XReadBitmapFileData =&gt; "XReadBitmapFileData.3.html",</tt>
+      <br>
+      <tt>XRebindKeySym =&gt; "XRebindKeySym.3.html",</tt>
+      <br>
+      <tt>XRecolorCursor =&gt; "XRecolorCursor.3.html",</tt>
+      <br>
+      <tt>XReconfigureWMWindow =&gt; "XReconfigureWMWindow.3.html",</tt>
+      <br>
+      <tt>XRectInRegion =&gt; "XRectInRegion.3.html",</tt>
+      <br>
+      <tt>XRectangle =&gt; "XRectangle.3.html",</tt>
+      <br>
+      <tt>XRefreshKeyboardMapping =&gt;
+"XRefreshKeyboardMapping.3.html",</tt>
+      <br>
+      <tt>XRegisterIMInstantiateCallback =&gt;
+"XRegisterIMInstantiateCallback.3.html",</tt>
+      <br>
+      <tt>XRemoveConnectionWatch =&gt; "XRemoveConnectionWatch.3.html",</tt>
+      <br>
+      <tt>XRemoveFromSaveSet =&gt; "XRemoveFromSaveSet.3.html",</tt>
+      <br>
+      <tt>XRemoveHost =&gt; "XRemoveHost.3.html",</tt>
+      <br>
+      <tt>XRemoveHosts =&gt; "XRemoveHosts.3.html",</tt>
+      <br>
+      <tt>XReparentEvent =&gt; "XReparentEvent.3.html",</tt>
+      <br>
+      <tt>XReparentWindow =&gt; "XReparentWindow.3.html",</tt>
+      <br>
+      <tt>XResetScreenSaver =&gt; "XResetScreenSaver.3.html",</tt>
+      <br>
+      <tt>XResizeRequestEvent =&gt; "XResizeRequestEvent.3.html",</tt>
+      <br>
+      <tt>XResizeWindow =&gt; "XResizeWindow.3.html",</tt>
+      <br>
+      <tt>XResourceManagerString =&gt; "XResourceManagerString.3.html",</tt>
+      <br>
+      <tt>XRestackWindows =&gt; "XRestackWindows.3.html",</tt>
+      <br>
+      <tt>XRotateBuffers =&gt; "XRotateBuffers.3.html",</tt>
+      <br>
+      <tt>XRotateWindowProperties =&gt;
+"XRotateWindowProperties.3.html",</tt>
+      <br>
+      <tt>XSaveContext =&gt; "XSaveContext.3.html",</tt>
+      <br>
+      <tt>XScreenNumberOfScreen =&gt; "XScreenNumberOfScreen.3.html",</tt>
+      <br>
+      <tt>XScreenResourceString =&gt; "XScreenResourceString.3.html",</tt>
+      <br>
+      <tt>XSegment =&gt; "XSegment.3.html",</tt>
+      <br>
+      <tt>XSelectExtensionEvent =&gt; "XSelectExtensionEvent.3.html",</tt>
+      <br>
+      <tt>XSelectInput =&gt; "XSelectInput.3.html",</tt>
+      <br>
+      <tt>XSelectionClearEvent =&gt; "XSelectionClearEvent.3.html",</tt>
+      <br>
+      <tt>XSelectionEvent =&gt; "XSelectionEvent.3.html",</tt>
+      <br>
+      <tt>XSelectionRequestEvent =&gt; "XSelectionRequestEvent.3.html",</tt>
+      <br>
+      <tt>XSendEvent =&gt; "XSendEvent.3.html",</tt>
+      <br>
+      <tt>XSendExtensionEvent =&gt; "XSendExtensionEvent.3.html",</tt>
+      <br>
+      <tt>XSetAccessControl =&gt; "XSetAccessControl.3.html",</tt>
+      <br>
+      <tt>XSetAfterFunction =&gt; "XSetAfterFunction.3.html",</tt>
+      <br>
+      <tt>XSetArcMode =&gt; "XSetArcMode.3.html",</tt>
+      <br>
+      <tt>XSetBackground =&gt; "XSetBackground.3.html",</tt>
+      <br>
+      <tt>XSetClassHint =&gt; "XSetClassHint.3.html",</tt>
+      <br>
+      <tt>XSetClipMask =&gt; "XSetClipMask.3.html",</tt>
+      <br>
+      <tt>XSetClipOrigin =&gt; "XSetClipOrigin.3.html",</tt>
+      <br>
+      <tt>XSetClipRectangles =&gt; "XSetClipRectangles.3.html",</tt>
+      <br>
+      <tt>XSetCloseDownMode =&gt; "XSetCloseDownMode.3.html",</tt>
+      <br>
+      <tt>XSetCommand =&gt; "XSetCommand.3.html",</tt>
+      <br>
+      <tt>XSetDashes =&gt; "XSetDashes.3.html",</tt>
+      <br>
+      <tt>XSetDeviceButtonMapping =&gt;
+"XSetDeviceButtonMapping.3.html",</tt>
+      <br>
+      <tt>XSetDeviceFocus =&gt; "XSetDeviceFocus.3.html",</tt>
+      <br>
+      <tt>XSetDeviceMode =&gt; "XSetDeviceMode.3.html",</tt>
+      <br>
+      <tt>XSetDeviceModifierMapping =&gt;
+"XSetDeviceModifierMapping.3.html",</tt>
+      <br>
+      <tt>XSetDeviceValuators =&gt; "XSetDeviceValuators.3.html",</tt>
+      <br>
+      <tt>XSetErrorHandler =&gt; "XSetErrorHandler.3.html",</tt>
+      <br>
+      <tt>XSetFillRule =&gt; "XSetFillRule.3.html",</tt>
+      <br>
+      <tt>XSetFillStyle =&gt; "XSetFillStyle.3.html",</tt>
+      <br>
+      <tt>XSetFont =&gt; "XSetFont.3.html",</tt>
+      <br>
+      <tt>XSetFontPath =&gt; "XSetFontPath.3.html",</tt>
+      <br>
+      <tt>XSetForeground =&gt; "XSetForeground.3.html",</tt>
+      <br>
+      <tt>XSetFunction =&gt; "XSetFunction.3.html",</tt>
+      <br>
+      <tt>XSetGraphicsExposure =&gt; "XSetGraphicsExposure.3.html",</tt>
+      <br>
+      <tt>XSetICFocus =&gt; "XSetICFocus.3.html",</tt>
+      <br>
+      <tt>XSetICValues =&gt; "XSetICValues.3.html",</tt>
+      <br>
+      <tt>XSetIMValues =&gt; "XSetIMValues.3.html",</tt>
+      <br>
+      <tt>XSetIOErrorHandler =&gt; "XSetIOErrorHandler.3.html",</tt>
+      <br>
+      <tt>XSetIconName =&gt; "XSetIconName.3.html",</tt>
+      <br>
+      <tt>XSetIconSizes =&gt; "XSetIconSizes.3.html",</tt>
+      <br>
+      <tt>XSetInputFocus =&gt; "XSetInputFocus.3.html",</tt>
+      <br>
+      <tt>XSetLineAttributes =&gt; "XSetLineAttributes.3.html",</tt>
+      <br>
+      <tt>XSetLocaleModifiers =&gt; "XSetLocaleModifiers.3.html",</tt>
+      <br>
+      <tt>XSetModifierMapping =&gt; "XSetModifierMapping.3.html",</tt>
+      <br>
+      <tt>XSetOCValues =&gt; "XSetOCValues.3.html",</tt>
+      <br>
+      <tt>XSetOMValues =&gt; "XSetOMValues.3.html",</tt>
+      <br>
+      <tt>XSetPlaneMask =&gt; "XSetPlaneMask.3.html",</tt>
+      <br>
+      <tt>XSetPointerMapping =&gt; "XSetPointerMapping.3.html",</tt>
+      <br>
+      <tt>XSetRGBColormaps =&gt; "XSetRGBColormaps.3.html",</tt>
+      <br>
+      <tt>XSetRegion =&gt; "XSetRegion.3.html",</tt>
+      <br>
+      <tt>XSetScreenSaver =&gt; "XSetScreenSaver.3.html",</tt>
+      <br>
+      <tt>XSetSelectionOwner =&gt; "XSetSelectionOwner.3.html",</tt>
+      <br>
+      <tt>XSetState =&gt; "XSetState.3.html",</tt>
+      <br>
+      <tt>XSetStipple =&gt; "XSetStipple.3.html",</tt>
+      <br>
+      <tt>XSetSubwindowMode =&gt; "XSetSubwindowMode.3.html",</tt>
+      <br>
+      <tt>XSetTSOrigin =&gt; "XSetTSOrigin.3.html",</tt>
+      <br>
+      <tt>XSetTextProperty =&gt; "XSetTextProperty.3.html",</tt>
+      <br>
+      <tt>XSetTile =&gt; "XSetTile.3.html",</tt>
+      <br>
+      <tt>XSetTransientForHint =&gt; "XSetTransientForHint.3.html",</tt>
+      <br>
+      <tt>XSetWMClientMachine =&gt; "XSetWMClientMachine.3.html",</tt>
+      <br>
+      <tt>XSetWMColormapWindows =&gt; "XSetWMColormapWindows.3.html",</tt>
+      <br>
+      <tt>XSetWMHints =&gt; "XSetWMHints.3.html",</tt>
+      <br>
+      <tt>XSetWMIconName =&gt; "XSetWMIconName.3.html",</tt>
+      <br>
+      <tt>XSetWMName =&gt; "XSetWMName.3.html",</tt>
+      <br>
+      <tt>XSetWMNormalHints =&gt; "XSetWMNormalHints.3.html",</tt>
+      <br>
+      <tt>XSetWMProperties =&gt; "XSetWMProperties.3.html",</tt>
+      <br>
+      <tt>XSetWMProtocols =&gt; "XSetWMProtocols.3.html",</tt>
+      <br>
+      <tt>XSetWMSizeHints =&gt; "XSetWMSizeHints.3.html",</tt>
+      <br>
+      <tt>XSetWindowAttributes =&gt; "XSetWindowAttributes.3.html",</tt>
+      <br>
+      <tt>XSetWindowBackground =&gt; "XSetWindowBackground.3.html",</tt>
+      <br>
+      <tt>XSetWindowBackgroundPixmap =&gt;
+"XSetWindowBackgroundPixmap.3.html",</tt>
+      <br>
+      <tt>XSetWindowBorder =&gt; "XSetWindowBorder.3.html",</tt>
+      <br>
+      <tt>XSetWindowBorderPixmap =&gt; "XSetWindowBorderPixmap.3.html",</tt>
+      <br>
+      <tt>XSetWindowBorderWidth =&gt; "XSetWindowBorderWidth.3.html",</tt>
+      <br>
+      <tt>XSetWindowColormap =&gt; "XSetWindowColormap.3.html",</tt>
+      <br>
+      <tt>XShapeCombineMask =&gt; "XShapeCombineMask.3.html",</tt>
+      <br>
+      <tt>XShapeCombineRectangles =&gt;
+"XShapeCombineRectangles.3.html",</tt>
+      <br>
+      <tt>XShapeCombineRegion =&gt; "XShapeCombineRegion.3.html",</tt>
+      <br>
+      <tt>XShapeCombineShape =&gt; "XShapeCombineShape.3.html",</tt>
+      <br>
+      <tt>XShapeGetRectangles =&gt; "XShapeGetRectangles.3.html",</tt>
+      <br>
+      <tt>XShapeInputSelected =&gt; "XShapeInputSelected.3.html",</tt>
+      <br>
+      <tt>XShapeOffsetShape =&gt; "XShapeOffsetShape.3.html",</tt>
+      <br>
+      <tt>XShapeQueryExtension =&gt; "XShapeQueryExtension.3.html",</tt>
+      <br>
+      <tt>XShapeQueryExtents =&gt; "XShapeQueryExtents.3.html",</tt>
+      <br>
+      <tt>XShapeQueryVersion =&gt; "XShapeQueryVersion.3.html",</tt>
+      <br>
+      <tt>XShapeSelectInput =&gt; "XShapeSelectInput.3.html",</tt>
+      <br>
+      <tt>XShrinkRegion =&gt; "XShrinkRegion.3.html",</tt>
+      <br>
+      <tt>XSizeHints =&gt; "XSizeHints.3.html",</tt>
+      <br>
+      <tt>XStandardColormap =&gt; "XStandardColormap.3.html",</tt>
+      <br>
+      <tt>XStoreBuffer =&gt; "XStoreBuffer.3.html",</tt>
+      <br>
+      <tt>XStoreBytes =&gt; "XStoreBytes.3.html",</tt>
+      <br>
+      <tt>XStoreColor =&gt; "XStoreColor.3.html",</tt>
+      <br>
+      <tt>XStoreColors =&gt; "XStoreColors.3.html",</tt>
+      <br>
+      <tt>XStoreName =&gt; "XStoreName.3.html",</tt>
+      <br>
+      <tt>XStoreNamedColor =&gt; "XStoreNamedColor.3.html",</tt>
+      <br>
+      <tt>XStringListToTextProperty =&gt;
+"XStringListToTextProperty.3.html",</tt>
+      <br>
+      <tt>XStringToKeysym =&gt; "XStringToKeysym.3.html",</tt>
+      <br>
+      <tt>XSubImage =&gt; "XSubImage.3.html",</tt>
+      <br>
+      <tt>XSubtractRegion =&gt; "XSubtractRegion.3.html",</tt>
+      <br>
+      <tt>XSupportsLocale =&gt; "XSupportsLocale.3.html",</tt>
+      <br>
+      <tt>XSync =&gt; "XSync.3.html",</tt>
+      <br>
+      <tt>XSynchronize =&gt; "XSynchronize.3.html",</tt>
+      <br>
+      <tt>XTextExtents =&gt; "XTextExtents.3.html",</tt>
+      <br>
+      <tt>XTextExtents16 =&gt; "XTextExtents16.3.html",</tt>
+      <br>
+      <tt>XTextItem =&gt; "XTextItem.3.html",</tt>
+      <br>
+      <tt>XTextItem16 =&gt; "XTextItem16.3.html",</tt>
+      <br>
+      <tt>XTextProperty =&gt; "XTextProperty.3.html",</tt>
+      <br>
+      <tt>XTextPropertyToStringList =&gt;
+"XTextPropertyToStringList.3.html",</tt>
+      <br>
+      <tt>XTextWidth =&gt; "XTextWidth.3.html",</tt>
+      <br>
+      <tt>XTextWidth16 =&gt; "XTextWidth16.3.html",</tt>
+      <br>
+      <tt>XTimeCoord =&gt; "XTimeCoord.3.html",</tt>
+      <br>
+      <tt>XTranslateCoordinates =&gt; "XTranslateCoordinates.3.html",</tt>
+      <br>
+      <tt>XUndefineCursor =&gt; "XUndefineCursor.3.html",</tt>
+      <br>
+      <tt>XUngrabButton =&gt; "XUngrabButton.3.html",</tt>
+      <br>
+      <tt>XUngrabDevice =&gt; "XUngrabDevice.3.html",</tt>
+      <br>
+      <tt>XUngrabDeviceButton =&gt; "XUngrabDeviceButton.3.html",</tt>
+      <br>
+      <tt>XUngrabDeviceKey =&gt; "XUngrabDeviceKey.3.html",</tt>
+      <br>
+      <tt>XUngrabKey =&gt; "XUngrabKey.3.html",</tt>
+      <br>
+      <tt>XUngrabKeyboard =&gt; "XUngrabKeyboard.3.html",</tt>
+      <br>
+      <tt>XUngrabPointer =&gt; "XUngrabPointer.3.html",</tt>
+      <br>
+      <tt>XUngrabServer =&gt; "XUngrabServer.3.html",</tt>
+      <br>
+      <tt>XUninstallColormap =&gt; "XUninstallColormap.3.html",</tt>
+      <br>
+      <tt>XUnionRectWithRegion =&gt; "XUnionRectWithRegion.3.html",</tt>
+      <br>
+      <tt>XUnionRegion =&gt; "XUnionRegion.3.html",</tt>
+      <br>
+      <tt>XUniqueContext =&gt; "XUniqueContext.3.html",</tt>
+      <br>
+      <tt>XUnloadFont =&gt; "XUnloadFont.3.html",</tt>
+      <br>
+      <tt>XUnlockDisplay =&gt; "XUnlockDisplay.3.html",</tt>
+      <br>
+      <tt>XUnmapEvent =&gt; "XUnmapEvent.3.html",</tt>
+      <br>
+      <tt>XUnmapSubwindows =&gt; "XUnmapSubwindows.3.html",</tt>
+      <br>
+      <tt>XUnmapWindow =&gt; "XUnmapWindow.3.html",</tt>
+      <br>
+      <tt>XUnregisterIMInstantiateCallback =&gt;
+"XUnregisterIMInstantiateCallback.3.html",</tt>
+      <br>
+      <tt>XUnsetICFocus =&gt; "XUnsetICFocus.3.html",</tt>
+      <br>
+      <tt>XVaCreateNestedList =&gt; "XVaCreateNestedList.3.html",</tt>
+      <br>
+      <tt>XVisibilityEvent =&gt; "XVisibilityEvent.3.html",</tt>
+      <br>
+      <tt>XVisualIDFromVisual =&gt; "XVisualIDFromVisual.3.html",</tt>
+      <br>
+      <tt>XVisualInfo =&gt; "XVisualInfo.3.html",</tt>
+      <br>
+      <tt>XWMGeometry =&gt; "XWMGeometry.3.html",</tt>
+      <br>
+      <tt>XWMHints =&gt; "XWMHints.3.html",</tt>
+      <br>
+      <tt>XWarpPointer =&gt; "XWarpPointer.3.html",</tt>
+      <br>
+      <tt>XWindowAttributes =&gt; "XWindowAttributes.3.html",</tt>
+      <br>
+      <tt>XWindowChanges =&gt; "XWindowChanges.3.html",</tt>
+      <br>
+      <tt>XWindowEvent =&gt; "XWindowEvent.3.html",</tt>
+      <br>
+      <tt>XWithdrawWindow =&gt; "XWithdrawWindow.3.html",</tt>
+      <br>
+      <tt>XWriteBitmapFile =&gt; "XWriteBitmapFile.3.html",</tt>
+      <br>
+      <tt>XXorRegion =&gt; "XXorRegion.3.html",</tt>
+      <br>
+      <tt>Xau =&gt; "Xau.3.html",</tt>
+      <br>
+      <tt>XauDisposeAuth =&gt; "XauDisposeAuth.3.html",</tt>
+      <br>
+      <tt>XauFileName =&gt; "XauFileName.3.html",</tt>
+      <br>
+      <tt>XauGetAuthByAddr =&gt; "XauGetAuthByAddr.3.html",</tt>
+      <br>
+      <tt>XauGetBestAuthByAddr =&gt; "XauGetBestAuthByAddr.3.html",</tt>
+      <br>
+      <tt>XauLockAuth =&gt; "XauLockAuth.3.html",</tt>
+      <br>
+      <tt>XauReadAuth =&gt; "XauReadAuth.3.html",</tt>
+      <br>
+      <tt>XauUnlockAuth =&gt; "XauUnlockAuth.3.html",</tt>
+      <br>
+      <tt>XauWriteAuth =&gt; "XauWriteAuth.3.html",</tt>
+      <br>
+      <tt>Xaw =&gt; "Xaw.3.html",</tt>
+      <br>
+      <tt>XcmsAllocColor =&gt; "XcmsAllocColor.3.html",</tt>
+      <br>
+      <tt>XcmsAllocNamedColor =&gt; "XcmsAllocNamedColor.3.html",</tt>
+      <br>
+      <tt>XcmsCCCOfColormap =&gt; "XcmsCCCOfColormap.3.html",</tt>
+      <br>
+      <tt>XcmsCIELab =&gt; "XcmsCIELab.3.html",</tt>
+      <br>
+      <tt>XcmsCIELabQueryMaxC =&gt; "XcmsCIELabQueryMaxC.3.html",</tt>
+      <br>
+      <tt>XcmsCIELabQueryMaxL =&gt; "XcmsCIELabQueryMaxL.3.html",</tt>
+      <br>
+      <tt>XcmsCIELabQueryMaxLC =&gt; "XcmsCIELabQueryMaxLC.3.html",</tt>
+      <br>
+      <tt>XcmsCIELabQueryMinL =&gt; "XcmsCIELabQueryMinL.3.html",</tt>
+      <br>
+      <tt>XcmsCIELuv =&gt; "XcmsCIELuv.3.html",</tt>
+      <br>
+      <tt>XcmsCIELuvQueryMaxC =&gt; "XcmsCIELuvQueryMaxC.3.html",</tt>
+      <br>
+      <tt>XcmsCIELuvQueryMaxL =&gt; "XcmsCIELuvQueryMaxL.3.html",</tt>
+      <br>
+      <tt>XcmsCIELuvQueryMaxLC =&gt; "XcmsCIELuvQueryMaxLC.3.html",</tt>
+      <br>
+      <tt>XcmsCIELuvQueryMinL =&gt; "XcmsCIELuvQueryMinL.3.html",</tt>
+      <br>
+      <tt>XcmsCIEXYZ =&gt; "XcmsCIEXYZ.3.html",</tt>
+      <br>
+      <tt>XcmsCIEuvY =&gt; "XcmsCIEuvY.3.html",</tt>
+      <br>
+      <tt>XcmsCIExyY =&gt; "XcmsCIExyY.3.html",</tt>
+      <br>
+      <tt>XcmsColor =&gt; "XcmsColor.3.html",</tt>
+      <br>
+      <tt>XcmsConvertColors =&gt; "XcmsConvertColors.3.html",</tt>
+      <br>
+      <tt>XcmsCreateCCC =&gt; "XcmsCreateCCC.3.html",</tt>
+      <br>
+      <tt>XcmsDefaultCCC =&gt; "XcmsDefaultCCC.3.html",</tt>
+      <br>
+      <tt>XcmsFreeCCC =&gt; "XcmsFreeCCC.3.html",</tt>
+      <br>
+      <tt>XcmsLookupColor =&gt; "XcmsLookupColor.3.html",</tt>
+      <br>
+      <tt>XcmsPad =&gt; "XcmsPad.3.html",</tt>
+      <br>
+      <tt>XcmsQueryBlack =&gt; "XcmsQueryBlack.3.html",</tt>
+      <br>
+      <tt>XcmsQueryBlue =&gt; "XcmsQueryBlue.3.html",</tt>
+      <br>
+      <tt>XcmsQueryColor =&gt; "XcmsQueryColor.3.html",</tt>
+      <br>
+      <tt>XcmsQueryColors =&gt; "XcmsQueryColors.3.html",</tt>
+      <br>
+      <tt>XcmsQueryGreen =&gt; "XcmsQueryGreen.3.html",</tt>
+      <br>
+      <tt>XcmsQueryRed =&gt; "XcmsQueryRed.3.html",</tt>
+      <br>
+      <tt>XcmsQueryWhite =&gt; "XcmsQueryWhite.3.html",</tt>
+      <br>
+      <tt>XcmsRGB =&gt; "XcmsRGB.3.html",</tt>
+      <br>
+      <tt>XcmsRGBi =&gt; "XcmsRGBi.3.html",</tt>
+      <br>
+      <tt>XcmsSetCCCOfColormap =&gt; "XcmsSetCCCOfColormap.3.html",</tt>
+      <br>
+      <tt>XcmsSetWhiteAdjustProc =&gt; "XcmsSetWhiteAdjustProc.3.html",</tt>
+      <br>
+      <tt>XcmsSetWhitePoint =&gt; "XcmsSetWhitePoint.3.html",</tt>
+      <br>
+      <tt>XcmsStoreColor =&gt; "XcmsStoreColor.3.html",</tt>
+      <br>
+      <tt>XcmsStoreColors =&gt; "XcmsStoreColors.3.html",</tt>
+      <br>
+      <tt>XcmsTekHVC =&gt; "XcmsTekHVC.3.html",</tt>
+      <br>
+      <tt>XcmsTekHVCQueryMaxC =&gt; "XcmsTekHVCQueryMaxC.3.html",</tt>
+      <br>
+      <tt>XcmsTekHVCQueryMaxV =&gt; "XcmsTekHVCQueryMaxV.3.html",</tt>
+      <br>
+      <tt>XcmsTekHVCQueryMaxVC =&gt; "XcmsTekHVCQueryMaxVC.3.html",</tt>
+      <br>
+      <tt>XcmsTekHVCQueryMaxVSamples =&gt;
+"XcmsTekHVCQueryMaxVSamples.3.html",</tt>
+      <br>
+      <tt>XcmsTekHVCQueryMinV =&gt; "XcmsTekHVCQueryMinV.3.html",</tt>
+      <br>
+      <tt>XdbeAllocateBackBufferName =&gt;
+"XdbeAllocateBackBufferName.3.html",</tt>
+      <br>
+      <tt>XdbeBeginIdiom =&gt; "XdbeBeginIdiom.3.html",</tt>
+      <br>
+      <tt>XdbeDeallocateBackBufferName =&gt;
+"XdbeDeallocateBackBufferName.3.html",</tt>
+      <br>
+      <tt>XdbeEndIdiom =&gt; "XdbeEndIdiom.3.html",</tt>
+      <br>
+      <tt>XdbeFreeVisualInfo =&gt; "XdbeFreeVisualInfo.3.html",</tt>
+      <br>
+      <tt>XdbeGetBackBufferAttributes =&gt;
+"XdbeGetBackBufferAttributes.3.html",</tt>
+      <br>
+      <tt>XdbeGetVisualInfo =&gt; "XdbeGetVisualInfo.3.html",</tt>
+      <br>
+      <tt>XdbeQueryExtension =&gt; "XdbeQueryExtension.3.html",</tt>
+      <br>
+      <tt>XdbeSwapBuffers =&gt; "XdbeSwapBuffers.3.html",</tt>
+      <br>
+      <tt>XeviGetVisualInfo =&gt; "XeviGetVisualInfo.3.html",</tt>
+      <br>
+      <tt>XeviQueryExtension =&gt; "XeviQueryExtension.3.html",</tt>
+      <br>
+      <tt>XeviQueryVersion =&gt; "XeviQueryVersion.3.html",</tt>
+      <br>
+      <tt>Xft =&gt; "Xft.3.html",</tt>
+      <br>
+      <tt>XmbDrawImageString =&gt; "XmbDrawImageString.3.html",</tt>
+      <br>
+      <tt>XmbDrawString =&gt; "XmbDrawString.3.html",</tt>
+      <br>
+      <tt>XmbDrawText =&gt; "XmbDrawText.3.html",</tt>
+      <br>
+      <tt>XmbLookupString =&gt; "XmbLookupString.3.html",</tt>
+      <br>
+      <tt>XmbResetIC =&gt; "XmbResetIC.3.html",</tt>
+      <br>
+      <tt>XmbSetWMProperties =&gt; "XmbSetWMProperties.3.html",</tt>
+      <br>
+      <tt>XmbTextEscapement =&gt; "XmbTextEscapement.3.html",</tt>
+      <br>
+      <tt>XmbTextExtents =&gt; "XmbTextExtents.3.html",</tt>
+      <br>
+      <tt>XmbTextListToTextProperty =&gt;
+"XmbTextListToTextProperty.3.html",</tt>
+      <br>
+      <tt>XmbTextPerCharExtents =&gt; "XmbTextPerCharExtents.3.html",</tt>
+      <br>
+      <tt>XmbTextPropertyToTextList =&gt;
+"XmbTextPropertyToTextList.3.html",</tt>
+      <br>
+      <tt>XmbufChangeBufferAttributes =&gt;
+"XmbufChangeBufferAttributes.3.html",</tt>
+      <br>
+      <tt>XmbufChangeWindowAttributes =&gt;
+"XmbufChangeWindowAttributes.3.html",</tt>
+      <br>
+      <tt>XmbufCreateBuffers =&gt; "XmbufCreateBuffers.3.html",</tt>
+      <br>
+      <tt>XmbufCreateStereoWindow =&gt;
+"XmbufCreateStereoWindow.3.html",</tt>
+      <br>
+      <tt>XmbufDestroyBuffers =&gt; "XmbufDestroyBuffers.3.html",</tt>
+      <br>
+      <tt>XmbufDisplayBuffers =&gt; "XmbufDisplayBuffers.3.html",</tt>
+      <br>
+      <tt>XmbufGetBufferAttributes =&gt;
+"XmbufGetBufferAttributes.3.html",</tt>
+      <br>
+      <tt>XmbufGetScreenInfo =&gt; "XmbufGetScreenInfo.3.html",</tt>
+      <br>
+      <tt>XmbufGetVersion =&gt; "XmbufGetVersion.3.html",</tt>
+      <br>
+      <tt>XmbufGetWindowAttributes =&gt;
+"XmbufGetWindowAttributes.3.html",</tt>
+      <br>
+      <tt>XmbufQueryExtension =&gt; "XmbufQueryExtension.3.html",</tt>
+      <br>
+      <tt>XrmCombineDatabase =&gt; "XrmCombineDatabase.3.html",</tt>
+      <br>
+      <tt>XrmCombineFileDatabase =&gt; "XrmCombineFileDatabase.3.html",</tt>
+      <br>
+      <tt>XrmDestroyDatabase =&gt; "XrmDestroyDatabase.3.html",</tt>
+      <br>
+      <tt>XrmEnumerateDatabase =&gt; "XrmEnumerateDatabase.3.html",</tt>
+      <br>
+      <tt>XrmGetDatabase =&gt; "XrmGetDatabase.3.html",</tt>
+      <br>
+      <tt>XrmGetFileDatabase =&gt; "XrmGetFileDatabase.3.html",</tt>
+      <br>
+      <tt>XrmGetResource =&gt; "XrmGetResource.3.html",</tt>
+      <br>
+      <tt>XrmGetStringDatabase =&gt; "XrmGetStringDatabase.3.html",</tt>
+      <br>
+      <tt>XrmInitialize =&gt; "XrmInitialize.3.html",</tt>
+      <br>
+      <tt>XrmLocaleOfDatabase =&gt; "XrmLocaleOfDatabase.3.html",</tt>
+      <br>
+      <tt>XrmMergeDatabases =&gt; "XrmMergeDatabases.3.html",</tt>
+      <br>
+      <tt>XrmOptionDescRec =&gt; "XrmOptionDescRec.3.html",</tt>
+      <br>
+      <tt>XrmOptionKind =&gt; "XrmOptionKind.3.html",</tt>
+      <br>
+      <tt>XrmParseCommand =&gt; "XrmParseCommand.3.html",</tt>
+      <br>
+      <tt>XrmPermStringToQuark =&gt; "XrmPermStringToQuark.3.html",</tt>
+      <br>
+      <tt>XrmPutFileDatabase =&gt; "XrmPutFileDatabase.3.html",</tt>
+      <br>
+      <tt>XrmPutLineResource =&gt; "XrmPutLineResource.3.html",</tt>
+      <br>
+      <tt>XrmPutResource =&gt; "XrmPutResource.3.html",</tt>
+      <br>
+      <tt>XrmPutStringResource =&gt; "XrmPutStringResource.3.html",</tt>
+      <br>
+      <tt>XrmQGetResource =&gt; "XrmQGetResource.3.html",</tt>
+      <br>
+      <tt>XrmQGetSearchList =&gt; "XrmQGetSearchList.3.html",</tt>
+      <br>
+      <tt>XrmQGetSearchResource =&gt; "XrmQGetSearchResource.3.html",</tt>
+      <br>
+      <tt>XrmQPutResource =&gt; "XrmQPutResource.3.html",</tt>
+      <br>
+      <tt>XrmQPutStringResource =&gt; "XrmQPutStringResource.3.html",</tt>
+      <br>
+      <tt>XrmQuarkToString =&gt; "XrmQuarkToString.3.html",</tt>
+      <br>
+      <tt>XrmSetDatabase =&gt; "XrmSetDatabase.3.html",</tt>
+      <br>
+      <tt>XrmStringToBindingQuarkList =&gt;
+"XrmStringToBindingQuarkList.3.html",</tt>
+      <br>
+      <tt>XrmStringToQuark =&gt; "XrmStringToQuark.3.html",</tt>
+      <br>
+      <tt>XrmStringToQuarkList =&gt; "XrmStringToQuarkList.3.html",</tt>
+      <br>
+      <tt>XrmUniqueQuark =&gt; "XrmUniqueQuark.3.html",</tt>
+      <br>
+      <tt>XrmValue =&gt; "XrmValue.3.html",</tt>
+      <br>
+      <tt>XtAddActions =&gt; "XtAddActions.3.html",</tt>
+      <br>
+      <tt>XtAddCallback =&gt; "XtAddCallback.3.html",</tt>
+      <br>
+      <tt>XtAddCallbacks =&gt; "XtAddCallbacks.3.html",</tt>
+      <br>
+      <tt>XtAddConverter =&gt; "XtAddConverter.3.html",</tt>
+      <br>
+      <tt>XtAddEventHandler =&gt; "XtAddEventHandler.3.html",</tt>
+      <br>
+      <tt>XtAddExposureToRegion =&gt; "XtAddExposureToRegion.3.html",</tt>
+      <br>
+      <tt>XtAddGrab =&gt; "XtAddGrab.3.html",</tt>
+      <br>
+      <tt>XtAddInput =&gt; "XtAddInput.3.html",</tt>
+      <br>
+      <tt>XtAddRawEventHandler =&gt; "XtAddRawEventHandler.3.html",</tt>
+      <br>
+      <tt>XtAddTimeOut =&gt; "XtAddTimeOut.3.html",</tt>
+      <br>
+      <tt>XtAddTimeout =&gt; "XtAddTimeout.3.html",</tt>
+      <br>
+      <tt>XtAllocateGC =&gt; "XtAllocateGC.3.html",</tt>
+      <br>
+      <tt>XtAppAddActionHook =&gt; "XtAppAddActionHook.3.html",</tt>
+      <br>
+      <tt>XtAppAddActions =&gt; "XtAppAddActions.3.html",</tt>
+      <br>
+      <tt>XtAppAddBlockHook =&gt; "XtAppAddBlockHook.3.html",</tt>
+      <br>
+      <tt>XtAppAddConverter =&gt; "XtAppAddConverter.3.html",</tt>
+      <br>
+      <tt>XtAppAddInput =&gt; "XtAppAddInput.3.html",</tt>
+      <br>
+      <tt>XtAppAddSignal =&gt; "XtAppAddSignal.3.html",</tt>
+      <br>
+      <tt>XtAppAddTimeOut =&gt; "XtAppAddTimeOut.3.html",</tt>
+      <br>
+      <tt>XtAppAddTimeout =&gt; "XtAppAddTimeout.3.html",</tt>
+      <br>
+      <tt>XtAppAddWorkProc =&gt; "XtAppAddWorkProc.3.html",</tt>
+      <br>
+      <tt>XtAppCreateShell =&gt; "XtAppCreateShell.3.html",</tt>
+      <br>
+      <tt>XtAppError =&gt; "XtAppError.3.html",</tt>
+      <br>
+      <tt>XtAppErrorMsg =&gt; "XtAppErrorMsg.3.html",</tt>
+      <br>
+      <tt>XtAppGetErrorDatabase =&gt; "XtAppGetErrorDatabase.3.html",</tt>
+      <br>
+      <tt>XtAppGetErrorDatabaseText =&gt;
+"XtAppGetErrorDatabaseText.3.html",</tt>
+      <br>
+      <tt>XtAppGetExitFlag =&gt; "XtAppGetExitFlag.3.html",</tt>
+      <br>
+      <tt>XtAppGetSelectionTimeout =&gt;
+"XtAppGetSelectionTimeout.3.html",</tt>
+      <br>
+      <tt>XtAppInitialize =&gt; "XtAppInitialize.3.html",</tt>
+      <br>
+      <tt>XtAppLock =&gt; "XtAppLock.3.html",</tt>
+      <br>
+      <tt>XtAppMainLoop =&gt; "XtAppMainLoop.3.html",</tt>
+      <br>
+      <tt>XtAppNextEvent =&gt; "XtAppNextEvent.3.html",</tt>
+      <br>
+      <tt>XtAppPeekEvent =&gt; "XtAppPeekEvent.3.html",</tt>
+      <br>
+      <tt>XtAppPending =&gt; "XtAppPending.3.html",</tt>
+      <br>
+      <tt>XtAppProcessEvent =&gt; "XtAppProcessEvent.3.html",</tt>
+      <br>
+      <tt>XtAppReleaseCacheRefs =&gt; "XtAppReleaseCacheRefs.3.html",</tt>
+      <br>
+      <tt>XtAppSetErrorHandler =&gt; "XtAppSetErrorHandler.3.html",</tt>
+      <br>
+      <tt>XtAppSetErrorMsgHandler =&gt;
+"XtAppSetErrorMsgHandler.3.html",</tt>
+      <br>
+      <tt>XtAppSetExitFlag =&gt; "XtAppSetExitFlag.3.html",</tt>
+      <br>
+      <tt>XtAppSetFallbackResources =&gt;
+"XtAppSetFallbackResources.3.html",</tt>
+      <br>
+      <tt>XtAppSetSelectionTimeout =&gt;
+"XtAppSetSelectionTimeout.3.html",</tt>
+      <br>
+      <tt>XtAppSetTypeConverter =&gt; "XtAppSetTypeConverter.3.html",</tt>
+      <br>
+      <tt>XtAppSetWarningHandler =&gt; "XtAppSetWarningHandler.3.html",</tt>
+      <br>
+      <tt>XtAppSetWarningMsgHandler =&gt;
+"XtAppSetWarningMsgHandler.3.html",</tt>
+      <br>
+      <tt>XtAppUnlock =&gt; "XtAppUnlock.3.html",</tt>
+      <br>
+      <tt>XtAppWarning =&gt; "XtAppWarning.3.html",</tt>
+      <br>
+      <tt>XtAppWarningMsg =&gt; "XtAppWarningMsg.3.html",</tt>
+      <br>
+      <tt>XtAugmentTranslations =&gt; "XtAugmentTranslations.3.html",</tt>
+      <br>
+      <tt>XtBuildEventMask =&gt; "XtBuildEventMask.3.html",</tt>
+      <br>
+      <tt>XtCallAcceptFocus =&gt; "XtCallAcceptFocus.3.html",</tt>
+      <br>
+      <tt>XtCallActionProc =&gt; "XtCallActionProc.3.html",</tt>
+      <br>
+      <tt>XtCallCallbackList =&gt; "XtCallCallbackList.3.html",</tt>
+      <br>
+      <tt>XtCallCallbacks =&gt; "XtCallCallbacks.3.html",</tt>
+      <br>
+      <tt>XtCallConverter =&gt; "XtCallConverter.3.html",</tt>
+      <br>
+      <tt>XtCallbackExclusive =&gt; "XtCallbackExclusive.3.html",</tt>
+      <br>
+      <tt>XtCallbackNone =&gt; "XtCallbackNone.3.html",</tt>
+      <br>
+      <tt>XtCallbackNonexclusive =&gt; "XtCallbackNonexclusive.3.html",</tt>
+      <br>
+      <tt>XtCallbackPopdown =&gt; "XtCallbackPopdown.3.html",</tt>
+      <br>
+      <tt>XtCalloc =&gt; "XtCalloc.3.html",</tt>
+      <br>
+      <tt>XtCancelSelectionRequest =&gt;
+"XtCancelSelectionRequest.3.html",</tt>
+      <br>
+      <tt>XtChangeManagedSet =&gt; "XtChangeManagedSet.3.html",</tt>
+      <br>
+      <tt>XtCheckSubclass =&gt; "XtCheckSubclass.3.html",</tt>
+      <br>
+      <tt>XtClass =&gt; "XtClass.3.html",</tt>
+      <br>
+      <tt>XtCloseDisplay =&gt; "XtCloseDisplay.3.html",</tt>
+      <br>
+      <tt>XtConfigureWidget =&gt; "XtConfigureWidget.3.html",</tt>
+      <br>
+      <tt>XtConvert =&gt; "XtConvert.3.html",</tt>
+      <br>
+      <tt>XtConvertAndStore =&gt; "XtConvertAndStore.3.html",</tt>
+      <br>
+      <tt>XtConvertCase =&gt; "XtConvertCase.3.html",</tt>
+      <br>
+      <tt>XtCreateApplicationContext =&gt;
+"XtCreateApplicationContext.3.html",</tt>
+      <br>
+      <tt>XtCreateApplicationShell =&gt;
+"XtCreateApplicationShell.3.html",</tt>
+      <br>
+      <tt>XtCreateManagedWidget =&gt; "XtCreateManagedWidget.3.html",</tt>
+      <br>
+      <tt>XtCreatePopupShell =&gt; "XtCreatePopupShell.3.html",</tt>
+      <br>
+      <tt>XtCreateSelectionRequest =&gt;
+"XtCreateSelectionRequest.3.html",</tt>
+      <br>
+      <tt>XtCreateWidget =&gt; "XtCreateWidget.3.html",</tt>
+      <br>
+      <tt>XtCreateWindow =&gt; "XtCreateWindow.3.html",</tt>
+      <br>
+      <tt>XtDatabase =&gt; "XtDatabase.3.html",</tt>
+      <br>
+      <tt>XtDestroyApplicationContext =&gt;
+"XtDestroyApplicationContext.3.html",</tt>
+      <br>
+      <tt>XtDestroyWidget =&gt; "XtDestroyWidget.3.html",</tt>
+      <br>
+      <tt>XtDirectConvert =&gt; "XtDirectConvert.3.html",</tt>
+      <br>
+      <tt>XtDisownSelection =&gt; "XtDisownSelection.3.html",</tt>
+      <br>
+      <tt>XtDispatchEvent =&gt; "XtDispatchEvent.3.html",</tt>
+      <br>
+      <tt>XtDispatchEventToWidget =&gt;
+"XtDispatchEventToWidget.3.html",</tt>
+      <br>
+      <tt>XtDisplay =&gt; "XtDisplay.3.html",</tt>
+      <br>
+      <tt>XtDisplayInitialize =&gt; "XtDisplayInitialize.3.html",</tt>
+      <br>
+      <tt>XtDisplayOfObject =&gt; "XtDisplayOfObject.3.html",</tt>
+      <br>
+      <tt>XtDisplayStringConversionWarning =&gt;
+"XtDisplayStringConversionWarning.3.html",</tt>
+      <br>
+      <tt>XtDisplayToApplicationContext =&gt;
+"XtDisplayToApplicationContext.3.html",</tt>
+      <br>
+      <tt>XtError =&gt; "XtError.3.html",</tt>
+      <br>
+      <tt>XtErrorMsg =&gt; "XtErrorMsg.3.html",</tt>
+      <br>
+      <tt>XtFindFile =&gt; "XtFindFile.3.html",</tt>
+      <br>
+      <tt>XtFree =&gt; "XtFree.3.html",</tt>
+      <br>
+      <tt>XtGetActionKeysym =&gt; "XtGetActionKeysym.3.html",</tt>
+      <br>
+      <tt>XtGetActionList =&gt; "XtGetActionList.3.html",</tt>
+      <br>
+      <tt>XtGetApplicationNameAndClass =&gt;
+"XtGetApplicationNameAndClass.3.html",</tt>
+      <br>
+      <tt>XtGetApplicationResources =&gt;
+"XtGetApplicationResources.3.html",</tt>
+      <br>
+      <tt>XtGetClassExtension =&gt; "XtGetClassExtension.3.html",</tt>
+      <br>
+      <tt>XtGetConstraintResourceList =&gt;
+"XtGetConstraintResourceList.3.html",</tt>
+      <br>
+      <tt>XtGetDisplays =&gt; "XtGetDisplays.3.html",</tt>
+      <br>
+      <tt>XtGetErrorDatabase =&gt; "XtGetErrorDatabase.3.html",</tt>
+      <br>
+      <tt>XtGetErrorDatabaseText =&gt; "XtGetErrorDatabaseText.3.html",</tt>
+      <br>
+      <tt>XtGetGC =&gt; "XtGetGC.3.html",</tt>
+      <br>
+      <tt>XtGetKeyboardFocusWidget =&gt;
+"XtGetKeyboardFocusWidget.3.html",</tt>
+      <br>
+      <tt>XtGetKeysymTable =&gt; "XtGetKeysymTable.3.html",</tt>
+      <br>
+      <tt>XtGetMultiClickTime =&gt; "XtGetMultiClickTime.3.html",</tt>
+      <br>
+      <tt>XtGetResourceList =&gt; "XtGetResourceList.3.html",</tt>
+      <br>
+      <tt>XtGetSelectionParameters =&gt;
+"XtGetSelectionParameters.3.html",</tt>
+      <br>
+      <tt>XtGetSelectionRequest =&gt; "XtGetSelectionRequest.3.html",</tt>
+      <br>
+      <tt>XtGetSelectionTimeout =&gt; "XtGetSelectionTimeout.3.html",</tt>
+      <br>
+      <tt>XtGetSelectionValue =&gt; "XtGetSelectionValue.3.html",</tt>
+      <br>
+      <tt>XtGetSelectionValueIncremental =&gt;
+"XtGetSelectionValueIncremental.3.html",</tt>
+      <br>
+      <tt>XtGetSelectionValues =&gt; "XtGetSelectionValues.3.html",</tt>
+      <br>
+      <tt>XtGetSelectionValuesIncremental =&gt;
+"XtGetSelectionValuesIncremental.3.html",</tt>
+      <br>
+      <tt>XtGetSubresources =&gt; "XtGetSubresources.3.html",</tt>
+      <br>
+      <tt>XtGetSubvalues =&gt; "XtGetSubvalues.3.html",</tt>
+      <br>
+      <tt>XtGetValues =&gt; "XtGetValues.3.html",</tt>
+      <br>
+      <tt>XtGrabButton =&gt; "XtGrabButton.3.html",</tt>
+      <br>
+      <tt>XtGrabKey =&gt; "XtGrabKey.3.html",</tt>
+      <br>
+      <tt>XtGrabKeyboard =&gt; "XtGrabKeyboard.3.html",</tt>
+      <br>
+      <tt>XtGrabPointer =&gt; "XtGrabPointer.3.html",</tt>
+      <br>
+      <tt>XtHasCallbacks =&gt; "XtHasCallbacks.3.html",</tt>
+      <br>
+      <tt>XtHooksOfDisplay =&gt; "XtHooksOfDisplay.3.html",</tt>
+      <br>
+      <tt>XtInitialize =&gt; "XtInitialize.3.html",</tt>
+      <br>
+      <tt>XtInitializeWidgetClass =&gt;
+"XtInitializeWidgetClass.3.html",</tt>
+      <br>
+      <tt>XtInsertEventHandler =&gt; "XtInsertEventHandler.3.html",</tt>
+      <br>
+      <tt>XtInsertEventTypeHandler =&gt;
+"XtInsertEventTypeHandler.3.html",</tt>
+      <br>
+      <tt>XtInsertRawEventHandler =&gt;
+"XtInsertRawEventHandler.3.html",</tt>
+      <br>
+      <tt>XtInstallAccelerators =&gt; "XtInstallAccelerators.3.html",</tt>
+      <br>
+      <tt>XtInstallAllAccelerators =&gt;
+"XtInstallAllAccelerators.3.html",</tt>
+      <br>
+      <tt>XtIsApplicationShell =&gt; "XtIsApplicationShell.3.html",</tt>
+      <br>
+      <tt>XtIsComposite =&gt; "XtIsComposite.3.html",</tt>
+      <br>
+      <tt>XtIsConstraint =&gt; "XtIsConstraint.3.html",</tt>
+      <br>
+      <tt>XtIsManaged =&gt; "XtIsManaged.3.html",</tt>
+      <br>
+      <tt>XtIsObject =&gt; "XtIsObject.3.html",</tt>
+      <br>
+      <tt>XtIsOverrideShell =&gt; "XtIsOverrideShell.3.html",</tt>
+      <br>
+      <tt>XtIsRealized =&gt; "XtIsRealized.3.html",</tt>
+      <br>
+      <tt>XtIsRectObj =&gt; "XtIsRectObj.3.html",</tt>
+      <br>
+      <tt>XtIsSensitive =&gt; "XtIsSensitive.3.html",</tt>
+      <br>
+      <tt>XtIsSessionShell =&gt; "XtIsSessionShell.3.html",</tt>
+      <br>
+      <tt>XtIsShell =&gt; "XtIsShell.3.html",</tt>
+      <br>
+      <tt>XtIsSubclass =&gt; "XtIsSubclass.3.html",</tt>
+      <br>
+      <tt>XtIsTopLevelShell =&gt; "XtIsTopLevelShell.3.html",</tt>
+      <br>
+      <tt>XtIsTransientShell =&gt; "XtIsTransientShell.3.html",</tt>
+      <br>
+      <tt>XtIsVendorShell =&gt; "XtIsVendorShell.3.html",</tt>
+      <br>
+      <tt>XtIsWMShell =&gt; "XtIsWMShell.3.html",</tt>
+      <br>
+      <tt>XtIsWidget =&gt; "XtIsWidget.3.html",</tt>
+      <br>
+      <tt>XtKeysymToKeycodeList =&gt; "XtKeysymToKeycodeList.3.html",</tt>
+      <br>
+      <tt>XtLastEventProcessed =&gt; "XtLastEventProcessed.3.html",</tt>
+      <br>
+      <tt>XtLastTimestampProcessed =&gt;
+"XtLastTimestampProcessed.3.html",</tt>
+      <br>
+      <tt>XtMainLoop =&gt; "XtMainLoop.3.html",</tt>
+      <br>
+      <tt>XtMakeGeometryRequest =&gt; "XtMakeGeometryRequest.3.html",</tt>
+      <br>
+      <tt>XtMakeResizeRequest =&gt; "XtMakeResizeRequest.3.html",</tt>
+      <br>
+      <tt>XtMalloc =&gt; "XtMalloc.3.html",</tt>
+      <br>
+      <tt>XtManageChild =&gt; "XtManageChild.3.html",</tt>
+      <br>
+      <tt>XtManageChildren =&gt; "XtManageChildren.3.html",</tt>
+      <br>
+      <tt>XtMapWidget =&gt; "XtMapWidget.3.html",</tt>
+      <br>
+      <tt>XtMergeArgLists =&gt; "XtMergeArgLists.3.html",</tt>
+      <br>
+      <tt>XtMoveWidget =&gt; "XtMoveWidget.3.html",</tt>
+      <br>
+      <tt>XtName =&gt; "XtName.3.html",</tt>
+      <br>
+      <tt>XtNameToWidget =&gt; "XtNameToWidget.3.html",</tt>
+      <br>
+      <tt>XtNew =&gt; "XtNew.3.html",</tt>
+      <br>
+      <tt>XtNewString =&gt; "XtNewString.3.html",</tt>
+      <br>
+      <tt>XtNextEvent =&gt; "XtNextEvent.3.html",</tt>
+      <br>
+      <tt>XtNoticeSignal =&gt; "XtNoticeSignal.3.html",</tt>
+      <br>
+      <tt>XtNumber =&gt; "XtNumber.3.html",</tt>
+      <br>
+      <tt>XtOffset =&gt; "XtOffset.3.html",</tt>
+      <br>
+      <tt>XtOffsetOf =&gt; "XtOffsetOf.3.html",</tt>
+      <br>
+      <tt>XtOpenApplication =&gt; "XtOpenApplication.3.html",</tt>
+      <br>
+      <tt>XtOpenDisplay =&gt; "XtOpenDisplay.3.html",</tt>
+      <br>
+      <tt>XtOverrideTranslations =&gt; "XtOverrideTranslations.3.html",</tt>
+      <br>
+      <tt>XtOwnSelection =&gt; "XtOwnSelection.3.html",</tt>
+      <br>
+      <tt>XtOwnSelectionIncremental =&gt;
+"XtOwnSelectionIncremental.3.html",</tt>
+      <br>
+      <tt>XtParent =&gt; "XtParent.3.html",</tt>
+      <br>
+      <tt>XtParseAcceleratorTable =&gt;
+"XtParseAcceleratorTable.3.html",</tt>
+      <br>
+      <tt>XtParseTranslationTable =&gt;
+"XtParseTranslationTable.3.html",</tt>
+      <br>
+      <tt>XtPeekEvent =&gt; "XtPeekEvent.3.html",</tt>
+      <br>
+      <tt>XtPending =&gt; "XtPending.3.html",</tt>
+      <br>
+      <tt>XtPopdown =&gt; "XtPopdown.3.html",</tt>
+      <br>
+      <tt>XtPopup =&gt; "XtPopup.3.html",</tt>
+      <br>
+      <tt>XtPopupSpringLoaded =&gt; "XtPopupSpringLoaded.3.html",</tt>
+      <br>
+      <tt>XtProcessEvent =&gt; "XtProcessEvent.3.html",</tt>
+      <br>
+      <tt>XtProcessLock =&gt; "XtProcessLock.3.html",</tt>
+      <br>
+      <tt>XtProcessUnlock =&gt; "XtProcessUnlock.3.html",</tt>
+      <br>
+      <tt>XtQueryGeometry =&gt; "XtQueryGeometry.3.html",</tt>
+      <br>
+      <tt>XtRealizeWidget =&gt; "XtRealizeWidget.3.html",</tt>
+      <br>
+      <tt>XtRealloc =&gt; "XtRealloc.3.html",</tt>
+      <br>
+      <tt>XtRegisterCaseConverter =&gt;
+"XtRegisterCaseConverter.3.html",</tt>
+      <br>
+      <tt>XtRegisterDrawable =&gt; "XtRegisterDrawable.3.html",</tt>
+      <br>
+      <tt>XtRegisterExtensionSelector =&gt;
+"XtRegisterExtensionSelector.3.html",</tt>
+      <br>
+      <tt>XtRegisterGrabAction =&gt; "XtRegisterGrabAction.3.html",</tt>
+      <br>
+      <tt>XtReleaseGC =&gt; "XtReleaseGC.3.html",</tt>
+      <br>
+      <tt>XtReleasePropertyAtom =&gt; "XtReleasePropertyAtom.3.html",</tt>
+      <br>
+      <tt>XtRemoveActionHook =&gt; "XtRemoveActionHook.3.html",</tt>
+      <br>
+      <tt>XtRemoveAllCallbacks =&gt; "XtRemoveAllCallbacks.3.html",</tt>
+      <br>
+      <tt>XtRemoveBlockHook =&gt; "XtRemoveBlockHook.3.html",</tt>
+      <br>
+      <tt>XtRemoveCallback =&gt; "XtRemoveCallback.3.html",</tt>
+      <br>
+      <tt>XtRemoveCallbacks =&gt; "XtRemoveCallbacks.3.html",</tt>
+      <br>
+      <tt>XtRemoveEventHandler =&gt; "XtRemoveEventHandler.3.html",</tt>
+      <br>
+      <tt>XtRemoveEventTypeHandler =&gt;
+"XtRemoveEventTypeHandler.3.html",</tt>
+      <br>
+      <tt>XtRemoveGrab =&gt; "XtRemoveGrab.3.html",</tt>
+      <br>
+      <tt>XtRemoveInput =&gt; "XtRemoveInput.3.html",</tt>
+      <br>
+      <tt>XtRemoveRawEventHandler =&gt;
+"XtRemoveRawEventHandler.3.html",</tt>
+      <br>
+      <tt>XtRemoveSignal =&gt; "XtRemoveSignal.3.html",</tt>
+      <br>
+      <tt>XtRemoveTimeOut =&gt; "XtRemoveTimeOut.3.html",</tt>
+      <br>
+      <tt>XtRemoveWorkProc =&gt; "XtRemoveWorkProc.3.html",</tt>
+      <br>
+      <tt>XtReservePropertyAtom =&gt; "XtReservePropertyAtom.3.html",</tt>
+      <br>
+      <tt>XtResizeWidget =&gt; "XtResizeWidget.3.html",</tt>
+      <br>
+      <tt>XtResolvePathname =&gt; "XtResolvePathname.3.html",</tt>
+      <br>
+      <tt>XtScreen =&gt; "XtScreen.3.html",</tt>
+      <br>
+      <tt>XtScreenDatabase =&gt; "XtScreenDatabase.3.html",</tt>
+      <br>
+      <tt>XtScreenOfObject =&gt; "XtScreenOfObject.3.html",</tt>
+      <br>
+      <tt>XtSendSelectionRequest =&gt; "XtSendSelectionRequest.3.html",</tt>
+      <br>
+      <tt>XtSessionGetToken =&gt; "XtSessionGetToken.3.html",</tt>
+      <br>
+      <tt>XtSessionReturnToken =&gt; "XtSessionReturnToken.3.html",</tt>
+      <br>
+      <tt>XtSetArg =&gt; "XtSetArg.3.html",</tt>
+      <br>
+      <tt>XtSetErrorHandler =&gt; "XtSetErrorHandler.3.html",</tt>
+      <br>
+      <tt>XtSetErrorMsgHandler =&gt; "XtSetErrorMsgHandler.3.html",</tt>
+      <br>
+      <tt>XtSetEventDispatcher =&gt; "XtSetEventDispatcher.3.html",</tt>
+      <br>
+      <tt>XtSetKeyTranslator =&gt; "XtSetKeyTranslator.3.html",</tt>
+      <br>
+      <tt>XtSetKeyboardFocus =&gt; "XtSetKeyboardFocus.3.html",</tt>
+      <br>
+      <tt>XtSetLanguageProc =&gt; "XtSetLanguageProc.3.html",</tt>
+      <br>
+      <tt>XtSetMappedWhenManaged =&gt; "XtSetMappedWhenManaged.3.html",</tt>
+      <br>
+      <tt>XtSetMultiClickTime =&gt; "XtSetMultiClickTime.3.html",</tt>
+      <br>
+      <tt>XtSetSelectionParameters =&gt;
+"XtSetSelectionParameters.3.html",</tt>
+      <br>
+      <tt>XtSetSelectionTimeout =&gt; "XtSetSelectionTimeout.3.html",</tt>
+      <br>
+      <tt>XtSetSensitive =&gt; "XtSetSensitive.3.html",</tt>
+      <br>
+      <tt>XtSetSubvalues =&gt; "XtSetSubvalues.3.html",</tt>
+      <br>
+      <tt>XtSetTypeConverter =&gt; "XtSetTypeConverter.3.html",</tt>
+      <br>
+      <tt>XtSetValues =&gt; "XtSetValues.3.html",</tt>
+      <br>
+      <tt>XtSetWMColormapWindows =&gt; "XtSetWMColormapWindows.3.html",</tt>
+      <br>
+      <tt>XtSetWarningHandler =&gt; "XtSetWarningHandler.3.html",</tt>
+      <br>
+      <tt>XtSetWarningMsgHandler =&gt; "XtSetWarningMsgHandler.3.html",</tt>
+      <br>
+      <tt>XtStringConversionWarning =&gt;
+"XtStringConversionWarning.3.html",</tt>
+      <br>
+      <tt>XtSuperclass =&gt; "XtSuperclass.3.html",</tt>
+      <br>
+      <tt>XtToolkitInitialize =&gt; "XtToolkitInitialize.3.html",</tt>
+      <br>
+      <tt>XtToolkitThreadInitialize =&gt;
+"XtToolkitThreadInitialize.3.html",</tt>
+      <br>
+      <tt>XtTranslateCoords =&gt; "XtTranslateCoords.3.html",</tt>
+      <br>
+      <tt>XtTranslateKeycode =&gt; "XtTranslateKeycode.3.html",</tt>
+      <br>
+      <tt>XtUngrabButton =&gt; "XtUngrabButton.3.html",</tt>
+      <br>
+      <tt>XtUngrabKey =&gt; "XtUngrabKey.3.html",</tt>
+      <br>
+      <tt>XtUngrabKeyboard =&gt; "XtUngrabKeyboard.3.html",</tt>
+      <br>
+      <tt>XtUngrabPointer =&gt; "XtUngrabPointer.3.html",</tt>
+      <br>
+      <tt>XtUninstallTranslations =&gt;
+"XtUninstallTranslations.3.html",</tt>
+      <br>
+      <tt>XtUnmanageChild =&gt; "XtUnmanageChild.3.html",</tt>
+      <br>
+      <tt>XtUnmanageChildren =&gt; "XtUnmanageChildren.3.html",</tt>
+      <br>
+      <tt>XtUnmapWidget =&gt; "XtUnmapWidget.3.html",</tt>
+      <br>
+      <tt>XtUnrealizeWidget =&gt; "XtUnrealizeWidget.3.html",</tt>
+      <br>
+      <tt>XtUnregisterDrawable =&gt; "XtUnregisterDrawable.3.html",</tt>
+      <br>
+      <tt>XtVaAppCreateShell =&gt; "XtVaAppCreateShell.3.html",</tt>
+      <br>
+      <tt>XtVaAppInitialize =&gt; "XtVaAppInitialize.3.html",</tt>
+      <br>
+      <tt>XtVaCreateArgsList =&gt; "XtVaCreateArgsList.3.html",</tt>
+      <br>
+      <tt>XtVaCreateManagedWidget =&gt;
+"XtVaCreateManagedWidget.3.html",</tt>
+      <br>
+      <tt>XtVaCreatePopupShell =&gt; "XtVaCreatePopupShell.3.html",</tt>
+      <br>
+      <tt>XtVaCreateWidget =&gt; "XtVaCreateWidget.3.html",</tt>
+      <br>
+      <tt>XtVaGetApplicationResources =&gt;
+"XtVaGetApplicationResources.3.html",</tt>
+      <br>
+      <tt>XtVaGetSubresources =&gt; "XtVaGetSubresources.3.html",</tt>
+      <br>
+      <tt>XtVaGetSubvalues =&gt; "XtVaGetSubvalues.3.html",</tt>
+      <br>
+      <tt>XtVaGetValues =&gt; "XtVaGetValues.3.html",</tt>
+      <br>
+      <tt>XtVaOpenApplication =&gt; "XtVaOpenApplication.3.html",</tt>
+      <br>
+      <tt>XtVaSetSubvalues =&gt; "XtVaSetSubvalues.3.html",</tt>
+      <br>
+      <tt>XtVaSetValues =&gt; "XtVaSetValues.3.html",</tt>
+      <br>
+      <tt>XtWarning =&gt; "XtWarning.3.html",</tt>
+      <br>
+      <tt>XtWarningMsg =&gt; "XtWarningMsg.3.html",</tt>
+      <br>
+      <tt>XtWidgetToApplicationContext =&gt;
+"XtWidgetToApplicationContext.3.html",</tt>
+      <br>
+      <tt>XtWindow =&gt; "XtWindow.3.html",</tt>
+      <br>
+      <tt>XtWindowOfObject =&gt; "XtWindowOfObject.3.html",</tt>
+      <br>
+      <tt>XtWindowToWidget =&gt; "XtWindowToWidget.3.html",</tt>
+      <br>
+      <tt>Xutf8DrawImageString =&gt; "Xutf8DrawImageString.3.html",</tt>
+      <br>
+      <tt>Xutf8DrawString =&gt; "Xutf8DrawString.3.html",</tt>
+      <br>
+      <tt>Xutf8DrawText =&gt; "Xutf8DrawText.3.html",</tt>
+      <br>
+      <tt>Xutf8LookupString =&gt; "Xutf8LookupString.3.html",</tt>
+      <br>
+      <tt>Xutf8ResetIC =&gt; "Xutf8ResetIC.3.html",</tt>
+      <br>
+      <tt>Xutf8SetWMProperties =&gt; "Xutf8SetWMProperties.3.html",</tt>
+      <br>
+      <tt>Xutf8TextEscapement =&gt; "Xutf8TextEscapement.3.html",</tt>
+      <br>
+      <tt>Xutf8TextExtents =&gt; "Xutf8TextExtents.3.html",</tt>
+      <br>
+      <tt>Xutf8TextListToTextProperty =&gt;
+"Xutf8TextListToTextProperty.3.html",</tt>
+      <br>
+      <tt>Xutf8TextPerCharExtents =&gt;
+"Xutf8TextPerCharExtents.3.html",</tt>
+      <br>
+      <tt>Xutf8TextPropertyToTextList =&gt;
+"Xutf8TextPropertyToTextList.3.html",</tt>
+      <br>
+      <tt>Xv =&gt; "Xv.3.html",</tt>
+      <br>
+      <tt>XvFreeAdaptorInfo =&gt; "XvFreeAdaptorInfo.3.html",</tt>
+      <br>
+      <tt>XvFreeEncodingInfo =&gt; "XvFreeEncodingInfo.3.html",</tt>
+      <br>
+      <tt>XvGetPortAttribute =&gt; "XvGetPortAttribute.3.html",</tt>
+      <br>
+      <tt>XvGetStill =&gt; "XvGetStill.3.html",</tt>
+      <br>
+      <tt>XvGetVideo =&gt; "XvGetVideo.3.html",</tt>
+      <br>
+      <tt>XvGrabPort =&gt; "XvGrabPort.3.html",</tt>
+      <br>
+      <tt>XvPortNotify =&gt; "XvPortNotify.3.html",</tt>
+      <br>
+      <tt>XvPutStill =&gt; "XvPutStill.3.html",</tt>
+      <br>
+      <tt>XvPutVideo =&gt; "XvPutVideo.3.html",</tt>
+      <br>
+      <tt>XvQueryAdaptors =&gt; "XvQueryAdaptors.3.html",</tt>
+      <br>
+      <tt>XvQueryBestSize =&gt; "XvQueryBestSize.3.html",</tt>
+      <br>
+      <tt>XvQueryEncodings =&gt; "XvQueryEncodings.3.html",</tt>
+      <br>
+      <tt>XvQueryExtension =&gt; "XvQueryExtension.3.html",</tt>
+      <br>
+      <tt>XvSelectPortNotify =&gt; "XvSelectPortNotify.3.html",</tt>
+      <br>
+      <tt>XvSelectVideoNotify =&gt; "XvSelectVideoNotify.3.html",</tt>
+      <br>
+      <tt>XvSetPortAttribute =&gt; "XvSetPortAttribute.3.html",</tt>
+      <br>
+      <tt>XvStopVideo =&gt; "XvStopVideo.3.html",</tt>
+      <br>
+      <tt>XvUngrabPort =&gt; "XvUngrabPort.3.html",</tt>
+      <br>
+      <tt>XvVideoNotify =&gt; "XvVideoNotify.3.html",</tt>
+      <br>
+      <tt>XwcDrawImageString =&gt; "XwcDrawImageString.3.html",</tt>
+      <br>
+      <tt>XwcDrawString =&gt; "XwcDrawString.3.html",</tt>
+      <br>
+      <tt>XwcDrawText =&gt; "XwcDrawText.3.html",</tt>
+      <br>
+      <tt>XwcFreeStringList =&gt; "XwcFreeStringList.3.html",</tt>
+      <br>
+      <tt>XwcLookupString =&gt; "XwcLookupString.3.html",</tt>
+      <br>
+      <tt>XwcResetIC =&gt; "XwcResetIC.3.html",</tt>
+      <br>
+      <tt>XwcTextEscapement =&gt; "XwcTextEscapement.3.html",</tt>
+      <br>
+      <tt>XwcTextExtents =&gt; "XwcTextExtents.3.html",</tt>
+      <br>
+      <tt>XwcTextListToTextProperty =&gt;
+"XwcTextListToTextProperty.3.html",</tt>
+      <br>
+      <tt>XwcTextPerCharExtents =&gt; "XwcTextPerCharExtents.3.html",</tt>
+      <br>
+      <tt>XwcTextPropertyToTextList =&gt;
+"XwcTextPropertyToTextList.3.html",</tt>
+      <br>
+      <tt>glAccum =&gt; "glAccum.3.html",</tt>
+      <br>
+      <tt>glActiveTextureARB =&gt; "glActiveTextureARB.3.html",</tt>
+      <br>
+      <tt>glAlphaFunc =&gt; "glAlphaFunc.3.html",</tt>
+      <br>
+      <tt>glAreTexturesResident =&gt; "glAreTexturesResident.3.html",</tt>
+      <br>
+      <tt>glArrayElement =&gt; "glArrayElement.3.html",</tt>
+      <br>
+      <tt>glBegin =&gt; "glBegin.3.html",</tt>
+      <br>
+      <tt>glBindTexture =&gt; "glBindTexture.3.html",</tt>
+      <br>
+      <tt>glBitmap =&gt; "glBitmap.3.html",</tt>
+      <br>
+      <tt>glBlendColor =&gt; "glBlendColor.3.html",</tt>
+      <br>
+      <tt>glBlendEquation =&gt; "glBlendEquation.3.html",</tt>
+      <br>
+      <tt>glBlendFunc =&gt; "glBlendFunc.3.html",</tt>
+      <br>
+      <tt>glCallList =&gt; "glCallList.3.html",</tt>
+      <br>
+      <tt>glCallLists =&gt; "glCallLists.3.html",</tt>
+      <br>
+      <tt>glClear =&gt; "glClear.3.html",</tt>
+      <br>
+      <tt>glClearAccum =&gt; "glClearAccum.3.html",</tt>
+      <br>
+      <tt>glClearColor =&gt; "glClearColor.3.html",</tt>
+      <br>
+      <tt>glClearDepth =&gt; "glClearDepth.3.html",</tt>
+      <br>
+      <tt>glClearIndex =&gt; "glClearIndex.3.html",</tt>
+      <br>
+      <tt>glClearStencil =&gt; "glClearStencil.3.html",</tt>
+      <br>
+      <tt>glClientActiveTextureARB =&gt;
+"glClientActiveTextureARB.3.html",</tt>
+      <br>
+      <tt>glClipPlane =&gt; "glClipPlane.3.html",</tt>
+      <br>
+      <tt>glColor =&gt; "glColor.3.html",</tt>
+      <br>
+      <tt>glColor3b =&gt; "glColor3b.3.html",</tt>
+      <br>
+      <tt>glColor3bv =&gt; "glColor3bv.3.html",</tt>
+      <br>
+      <tt>glColor3d =&gt; "glColor3d.3.html",</tt>
+      <br>
+      <tt>glColor3dv =&gt; "glColor3dv.3.html",</tt>
+      <br>
+      <tt>glColor3f =&gt; "glColor3f.3.html",</tt>
+      <br>
+      <tt>glColor3fv =&gt; "glColor3fv.3.html",</tt>
+      <br>
+      <tt>glColor3i =&gt; "glColor3i.3.html",</tt>
+      <br>
+      <tt>glColor3iv =&gt; "glColor3iv.3.html",</tt>
+      <br>
+      <tt>glColor3s =&gt; "glColor3s.3.html",</tt>
+      <br>
+      <tt>glColor3sv =&gt; "glColor3sv.3.html",</tt>
+      <br>
+      <tt>glColor3ub =&gt; "glColor3ub.3.html",</tt>
+      <br>
+      <tt>glColor3ubv =&gt; "glColor3ubv.3.html",</tt>
+      <br>
+      <tt>glColor3ui =&gt; "glColor3ui.3.html",</tt>
+      <br>
+      <tt>glColor3uiv =&gt; "glColor3uiv.3.html",</tt>
+      <br>
+      <tt>glColor3us =&gt; "glColor3us.3.html",</tt>
+      <br>
+      <tt>glColor3usv =&gt; "glColor3usv.3.html",</tt>
+      <br>
+      <tt>glColor4b =&gt; "glColor4b.3.html",</tt>
+      <br>
+      <tt>glColor4bv =&gt; "glColor4bv.3.html",</tt>
+      <br>
+      <tt>glColor4d =&gt; "glColor4d.3.html",</tt>
+      <br>
+      <tt>glColor4dv =&gt; "glColor4dv.3.html",</tt>
+      <br>
+      <tt>glColor4f =&gt; "glColor4f.3.html",</tt>
+      <br>
+      <tt>glColor4fv =&gt; "glColor4fv.3.html",</tt>
+      <br>
+      <tt>glColor4i =&gt; "glColor4i.3.html",</tt>
+      <br>
+      <tt>glColor4iv =&gt; "glColor4iv.3.html",</tt>
+      <br>
+      <tt>glColor4s =&gt; "glColor4s.3.html",</tt>
+      <br>
+      <tt>glColor4sv =&gt; "glColor4sv.3.html",</tt>
+      <br>
+      <tt>glColor4ub =&gt; "glColor4ub.3.html",</tt>
+      <br>
+      <tt>glColor4ubv =&gt; "glColor4ubv.3.html",</tt>
+      <br>
+      <tt>glColor4ui =&gt; "glColor4ui.3.html",</tt>
+      <br>
+      <tt>glColor4uiv =&gt; "glColor4uiv.3.html",</tt>
+      <br>
+      <tt>glColor4us =&gt; "glColor4us.3.html",</tt>
+      <br>
+      <tt>glColor4usv =&gt; "glColor4usv.3.html",</tt>
+      <br>
+      <tt>glColorMask =&gt; "glColorMask.3.html",</tt>
+      <br>
+      <tt>glColorMaterial =&gt; "glColorMaterial.3.html",</tt>
+      <br>
+      <tt>glColorPointer =&gt; "glColorPointer.3.html",</tt>
+      <br>
+      <tt>glColorSubTable =&gt; "glColorSubTable.3.html",</tt>
+      <br>
+      <tt>glColorTable =&gt; "glColorTable.3.html",</tt>
+      <br>
+      <tt>glColorTableParameter =&gt; "glColorTableParameter.3.html",</tt>
+      <br>
+      <tt>glColorTableParameterfv =&gt;
+"glColorTableParameterfv.3.html",</tt>
+      <br>
+      <tt>glColorTableParameteriv =&gt;
+"glColorTableParameteriv.3.html",</tt>
+      <br>
+      <tt>glConvolutionFilter1D =&gt; "glConvolutionFilter1D.3.html",</tt>
+      <br>
+      <tt>glConvolutionFilter2D =&gt; "glConvolutionFilter2D.3.html",</tt>
+      <br>
+      <tt>glConvolutionParameter =&gt; "glConvolutionParameter.3.html",</tt>
+      <br>
+      <tt>glCopyColorSubTable =&gt; "glCopyColorSubTable.3.html",</tt>
+      <br>
+      <tt>glCopyColorTable =&gt; "glCopyColorTable.3.html",</tt>
+      <br>
+      <tt>glCopyConvolutionFilter1D =&gt;
+"glCopyConvolutionFilter1D.3.html",</tt>
+      <br>
+      <tt>glCopyConvolutionFilter2D =&gt;
+"glCopyConvolutionFilter2D.3.html",</tt>
+      <br>
+      <tt>glCopyPixels =&gt; "glCopyPixels.3.html",</tt>
+      <br>
+      <tt>glCopyTexImage1D =&gt; "glCopyTexImage1D.3.html",</tt>
+      <br>
+      <tt>glCopyTexImage2D =&gt; "glCopyTexImage2D.3.html",</tt>
+      <br>
+      <tt>glCopyTexSubImage1D =&gt; "glCopyTexSubImage1D.3.html",</tt>
+      <br>
+      <tt>glCopyTexSubImage2D =&gt; "glCopyTexSubImage2D.3.html",</tt>
+      <br>
+      <tt>glCopyTexSubImage3D =&gt; "glCopyTexSubImage3D.3.html",</tt>
+      <br>
+      <tt>glCullFace =&gt; "glCullFace.3.html",</tt>
+      <br>
+      <tt>glDeleteLists =&gt; "glDeleteLists.3.html",</tt>
+      <br>
+      <tt>glDeleteTextures =&gt; "glDeleteTextures.3.html",</tt>
+      <br>
+      <tt>glDepthFunc =&gt; "glDepthFunc.3.html",</tt>
+      <br>
+      <tt>glDepthMask =&gt; "glDepthMask.3.html",</tt>
+      <br>
+      <tt>glDepthRange =&gt; "glDepthRange.3.html",</tt>
+      <br>
+      <tt>glDisable =&gt; "glDisable.3.html",</tt>
+      <br>
+      <tt>glDisableClientState =&gt; "glDisableClientState.3.html",</tt>
+      <br>
+      <tt>glDrawArrays =&gt; "glDrawArrays.3.html",</tt>
+      <br>
+      <tt>glDrawBuffer =&gt; "glDrawBuffer.3.html",</tt>
+      <br>
+      <tt>glDrawElements =&gt; "glDrawElements.3.html",</tt>
+      <br>
+      <tt>glDrawPixels =&gt; "glDrawPixels.3.html",</tt>
+      <br>
+      <tt>glDrawRangeElements =&gt; "glDrawRangeElements.3.html",</tt>
+      <br>
+      <tt>glEdgeFlag =&gt; "glEdgeFlag.3.html",</tt>
+      <br>
+      <tt>glEdgeFlagPointer =&gt; "glEdgeFlagPointer.3.html",</tt>
+      <br>
+      <tt>glEdgeFlagv =&gt; "glEdgeFlagv.3.html",</tt>
+      <br>
+      <tt>glEnable =&gt; "glEnable.3.html",</tt>
+      <br>
+      <tt>glEnableClientState =&gt; "glEnableClientState.3.html",</tt>
+      <br>
+      <tt>glEnd =&gt; "glEnd.3.html",</tt>
+      <br>
+      <tt>glEndList =&gt; "glEndList.3.html",</tt>
+      <br>
+      <tt>glEvalCoord =&gt; "glEvalCoord.3.html",</tt>
+      <br>
+      <tt>glEvalCoord1d =&gt; "glEvalCoord1d.3.html",</tt>
+      <br>
+      <tt>glEvalCoord1dv =&gt; "glEvalCoord1dv.3.html",</tt>
+      <br>
+      <tt>glEvalCoord1fv =&gt; "glEvalCoord1fv.3.html",</tt>
+      <br>
+      <tt>glEvalCoord2d =&gt; "glEvalCoord2d.3.html",</tt>
+      <br>
+      <tt>glEvalCoord2dv =&gt; "glEvalCoord2dv.3.html",</tt>
+      <br>
+      <tt>glEvalCoord2f =&gt; "glEvalCoord2f.3.html",</tt>
+      <br>
+      <tt>glEvalCoord2fv =&gt; "glEvalCoord2fv.3.html",</tt>
+      <br>
+      <tt>glEvalMesh =&gt; "glEvalMesh.3.html",</tt>
+      <br>
+      <tt>glEvalMesh1 =&gt; "glEvalMesh1.3.html",</tt>
+      <br>
+      <tt>glEvalMesh2 =&gt; "glEvalMesh2.3.html",</tt>
+      <br>
+      <tt>glEvalPoint =&gt; "glEvalPoint.3.html",</tt>
+      <br>
+      <tt>glEvalPoint1 =&gt; "glEvalPoint1.3.html",</tt>
+      <br>
+      <tt>glEvalPoint2 =&gt; "glEvalPoint2.3.html",</tt>
+      <br>
+      <tt>glFeedbackBuffer =&gt; "glFeedbackBuffer.3.html",</tt>
+      <br>
+      <tt>glFinish =&gt; "glFinish.3.html",</tt>
+      <br>
+      <tt>glFlush =&gt; "glFlush.3.html",</tt>
+      <br>
+      <tt>glFog =&gt; "glFog.3.html",</tt>
+      <br>
+      <tt>glFogf =&gt; "glFogf.3.html",</tt>
+      <br>
+      <tt>glFogfv =&gt; "glFogfv.3.html",</tt>
+      <br>
+      <tt>glFogi =&gt; "glFogi.3.html",</tt>
+      <br>
+      <tt>glFogiv =&gt; "glFogiv.3.html",</tt>
+      <br>
+      <tt>glFrontFace =&gt; "glFrontFace.3.html",</tt>
+      <br>
+      <tt>glFrustum =&gt; "glFrustum.3.html",</tt>
+      <br>
+      <tt>glGenLists =&gt; "glGenLists.3.html",</tt>
+      <br>
+      <tt>glGenTextures =&gt; "glGenTextures.3.html",</tt>
+      <br>
+      <tt>glGet =&gt; "glGet.3.html",</tt>
+      <br>
+      <tt>glGetBooleanv =&gt; "glGetBooleanv.3.html",</tt>
+      <br>
+      <tt>glGetClipPlane =&gt; "glGetClipPlane.3.html",</tt>
+      <br>
+      <tt>glGetColorTable =&gt; "glGetColorTable.3.html",</tt>
+      <br>
+      <tt>glGetColorTableParameter =&gt;
+"glGetColorTableParameter.3.html",</tt>
+      <br>
+      <tt>glGetColorTableParameterfv =&gt;
+"glGetColorTableParameterfv.3.html",</tt>
+      <br>
+      <tt>glGetColorTableParameteriv =&gt;
+"glGetColorTableParameteriv.3.html",</tt>
+      <br>
+      <tt>glGetConvolutionFilter =&gt; "glGetConvolutionFilter.3.html",</tt>
+      <br>
+      <tt>glGetConvolutionParameter =&gt;
+"glGetConvolutionParameter.3.html",</tt>
+      <br>
+      <tt>glGetDoublev =&gt; "glGetDoublev.3.html",</tt>
+      <br>
+      <tt>glGetError =&gt; "glGetError.3.html",</tt>
+      <br>
+      <tt>glGetFloatv =&gt; "glGetFloatv.3.html",</tt>
+      <br>
+      <tt>glGetHistogram =&gt; "glGetHistogram.3.html",</tt>
+      <br>
+      <tt>glGetHistogramParameter =&gt;
+"glGetHistogramParameter.3.html",</tt>
+      <br>
+      <tt>glGetIntegerv =&gt; "glGetIntegerv.3.html",</tt>
+      <br>
+      <tt>glGetLight =&gt; "glGetLight.3.html",</tt>
+      <br>
+      <tt>glGetLightfv =&gt; "glGetLightfv.3.html",</tt>
+      <br>
+      <tt>glGetLightiv =&gt; "glGetLightiv.3.html",</tt>
+      <br>
+      <tt>glGetMap =&gt; "glGetMap.3.html",</tt>
+      <br>
+      <tt>glGetMapdv =&gt; "glGetMapdv.3.html",</tt>
+      <br>
+      <tt>glGetMapfv =&gt; "glGetMapfv.3.html",</tt>
+      <br>
+      <tt>glGetMapiv =&gt; "glGetMapiv.3.html",</tt>
+      <br>
+      <tt>glGetMaterial =&gt; "glGetMaterial.3.html",</tt>
+      <br>
+      <tt>glGetMaterialfv =&gt; "glGetMaterialfv.3.html",</tt>
+      <br>
+      <tt>glGetMaterialiv =&gt; "glGetMaterialiv.3.html",</tt>
+      <br>
+      <tt>glGetMinmax =&gt; "glGetMinmax.3.html",</tt>
+      <br>
+      <tt>glGetMinmaxParameter =&gt; "glGetMinmaxParameter.3.html",</tt>
+      <br>
+      <tt>glGetPixelMap =&gt; "glGetPixelMap.3.html",</tt>
+      <br>
+      <tt>glGetPixelMapfv =&gt; "glGetPixelMapfv.3.html",</tt>
+      <br>
+      <tt>glGetPixelMapuiv =&gt; "glGetPixelMapuiv.3.html",</tt>
+      <br>
+      <tt>glGetPixelMapusv =&gt; "glGetPixelMapusv.3.html",</tt>
+      <br>
+      <tt>glGetPointerv =&gt; "glGetPointerv.3.html",</tt>
+      <br>
+      <tt>glGetPolygonStipple =&gt; "glGetPolygonStipple.3.html",</tt>
+      <br>
+      <tt>glGetSeparableFilter =&gt; "glGetSeparableFilter.3.html",</tt>
+      <br>
+      <tt>glGetString =&gt; "glGetString.3.html",</tt>
+      <br>
+      <tt>glGetTexEnv =&gt; "glGetTexEnv.3.html",</tt>
+      <br>
+      <tt>glGetTexEnvfv =&gt; "glGetTexEnvfv.3.html",</tt>
+      <br>
+      <tt>glGetTexEnviv =&gt; "glGetTexEnviv.3.html",</tt>
+      <br>
+      <tt>glGetTexGen =&gt; "glGetTexGen.3.html",</tt>
+      <br>
+      <tt>glGetTexGendv =&gt; "glGetTexGendv.3.html",</tt>
+      <br>
+      <tt>glGetTexGenfv =&gt; "glGetTexGenfv.3.html",</tt>
+      <br>
+      <tt>glGetTexGeniv =&gt; "glGetTexGeniv.3.html",</tt>
+      <br>
+      <tt>glGetTexImage =&gt; "glGetTexImage.3.html",</tt>
+      <br>
+      <tt>glGetTexLevelParameter =&gt; "glGetTexLevelParameter.3.html",</tt>
+      <br>
+      <tt>glGetTexLevelParameterfv =&gt;
+"glGetTexLevelParameterfv.3.html",</tt>
+      <br>
+      <tt>glGetTexLevelParameteriv =&gt;
+"glGetTexLevelParameteriv.3.html",</tt>
+      <br>
+      <tt>glGetTexParameter =&gt; "glGetTexParameter.3.html",</tt>
+      <br>
+      <tt>glGetTexParameterfv =&gt; "glGetTexParameterfv.3.html",</tt>
+      <br>
+      <tt>glGetTexParameteriv =&gt; "glGetTexParameteriv.3.html",</tt>
+      <br>
+      <tt>glHint =&gt; "glHint.3.html",</tt>
+      <br>
+      <tt>glHistogram =&gt; "glHistogram.3.html",</tt>
+      <br>
+      <tt>glIndex =&gt; "glIndex.3.html",</tt>
+      <br>
+      <tt>glIndexMask =&gt; "glIndexMask.3.html",</tt>
+      <br>
+      <tt>glIndexPointer =&gt; "glIndexPointer.3.html",</tt>
+      <br>
+      <tt>glIndexd =&gt; "glIndexd.3.html",</tt>
+      <br>
+      <tt>glIndexdv =&gt; "glIndexdv.3.html",</tt>
+      <br>
+      <tt>glIndexf =&gt; "glIndexf.3.html",</tt>
+      <br>
+      <tt>glIndexfv =&gt; "glIndexfv.3.html",</tt>
+      <br>
+      <tt>glIndexi =&gt; "glIndexi.3.html",</tt>
+      <br>
+      <tt>glIndexiv =&gt; "glIndexiv.3.html",</tt>
+      <br>
+      <tt>glIndexs =&gt; "glIndexs.3.html",</tt>
+      <br>
+      <tt>glIndexsv =&gt; "glIndexsv.3.html",</tt>
+      <br>
+      <tt>glIndexub =&gt; "glIndexub.3.html",</tt>
+      <br>
+      <tt>glIndexubv =&gt; "glIndexubv.3.html",</tt>
+      <br>
+      <tt>glInitNames =&gt; "glInitNames.3.html",</tt>
+      <br>
+      <tt>glInterleavedArrays =&gt; "glInterleavedArrays.3.html",</tt>
+      <br>
+      <tt>glIsEnabled =&gt; "glIsEnabled.3.html",</tt>
+      <br>
+      <tt>glIsTexture =&gt; "glIsTexture.3.html",</tt>
+      <br>
+      <tt>glIslist =&gt; "glIslist.3.html",</tt>
+      <br>
+      <tt>glLight =&gt; "glLight.3.html",</tt>
+      <br>
+      <tt>glLightModel =&gt; "glLightModel.3.html",</tt>
+      <br>
+      <tt>glLightModelf =&gt; "glLightModelf.3.html",</tt>
+      <br>
+      <tt>glLightModelfv =&gt; "glLightModelfv.3.html",</tt>
+      <br>
+      <tt>glLightModeli =&gt; "glLightModeli.3.html",</tt>
+      <br>
+      <tt>glLightModeliv =&gt; "glLightModeliv.3.html",</tt>
+      <br>
+      <tt>glLightf =&gt; "glLightf.3.html",</tt>
+      <br>
+      <tt>glLightfv =&gt; "glLightfv.3.html",</tt>
+      <br>
+      <tt>glLighti =&gt; "glLighti.3.html",</tt>
+      <br>
+      <tt>glLightiv =&gt; "glLightiv.3.html",</tt>
+      <br>
+      <tt>glLineStipple =&gt; "glLineStipple.3.html",</tt>
+      <br>
+      <tt>glLineWidth =&gt; "glLineWidth.3.html",</tt>
+      <br>
+      <tt>glListBase =&gt; "glListBase.3.html",</tt>
+      <br>
+      <tt>glLoadIdentity =&gt; "glLoadIdentity.3.html",</tt>
+      <br>
+      <tt>glLoadMatrix =&gt; "glLoadMatrix.3.html",</tt>
+      <br>
+      <tt>glLoadMatrixd =&gt; "glLoadMatrixd.3.html",</tt>
+      <br>
+      <tt>glLoadMatrixf =&gt; "glLoadMatrixf.3.html",</tt>
+      <br>
+      <tt>glLoadName =&gt; "glLoadName.3.html",</tt>
+      <br>
+      <tt>glLogicOp =&gt; "glLogicOp.3.html",</tt>
+      <br>
+      <tt>glMap1 =&gt; "glMap1.3.html",</tt>
+      <br>
+      <tt>glMap1d =&gt; "glMap1d.3.html",</tt>
+      <br>
+      <tt>glMap1f =&gt; "glMap1f.3.html",</tt>
+      <br>
+      <tt>glMap2 =&gt; "glMap2.3.html",</tt>
+      <br>
+      <tt>glMap2d =&gt; "glMap2d.3.html",</tt>
+      <br>
+      <tt>glMap2f =&gt; "glMap2f.3.html",</tt>
+      <br>
+      <tt>glMapGrid =&gt; "glMapGrid.3.html",</tt>
+      <br>
+      <tt>glMapGrid1d =&gt; "glMapGrid1d.3.html",</tt>
+      <br>
+      <tt>glMapGrid1f =&gt; "glMapGrid1f.3.html",</tt>
+      <br>
+      <tt>glMapGrid2d =&gt; "glMapGrid2d.3.html",</tt>
+      <br>
+      <tt>glMapGrid2f =&gt; "glMapGrid2f.3.html",</tt>
+      <br>
+      <tt>glMaterial =&gt; "glMaterial.3.html",</tt>
+      <br>
+      <tt>glMaterialf =&gt; "glMaterialf.3.html",</tt>
+      <br>
+      <tt>glMaterialfv =&gt; "glMaterialfv.3.html",</tt>
+      <br>
+      <tt>glMateriali =&gt; "glMateriali.3.html",</tt>
+      <br>
+      <tt>glMaterialiv =&gt; "glMaterialiv.3.html",</tt>
+      <br>
+      <tt>glMatrixMode =&gt; "glMatrixMode.3.html",</tt>
+      <br>
+      <tt>glMinmax =&gt; "glMinmax.3.html",</tt>
+      <br>
+      <tt>glMultMatrix =&gt; "glMultMatrix.3.html",</tt>
+      <br>
+      <tt>glMultMatrixd =&gt; "glMultMatrixd.3.html",</tt>
+      <br>
+      <tt>glMultMatrixf =&gt; "glMultMatrixf.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord1dARB =&gt; "glMultiTexCoord1dARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord1dvARB =&gt; "glMultiTexCoord1dvARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord1fARB =&gt; "glMultiTexCoord1fARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord1fvARB =&gt; "glMultiTexCoord1fvARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord1iARB =&gt; "glMultiTexCoord1iARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord1ivARB =&gt; "glMultiTexCoord1ivARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord1sARB =&gt; "glMultiTexCoord1sARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord1svARB =&gt; "glMultiTexCoord1svARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord2dARB =&gt; "glMultiTexCoord2dARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord2dvARB =&gt; "glMultiTexCoord2dvARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord2fARB =&gt; "glMultiTexCoord2fARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord2fvARB =&gt; "glMultiTexCoord2fvARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord2iARB =&gt; "glMultiTexCoord2iARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord2ivARB =&gt; "glMultiTexCoord2ivARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord2sARB =&gt; "glMultiTexCoord2sARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord2svARB =&gt; "glMultiTexCoord2svARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord3dARB =&gt; "glMultiTexCoord3dARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord3dvARB =&gt; "glMultiTexCoord3dvARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord3fARB =&gt; "glMultiTexCoord3fARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord3fvARB =&gt; "glMultiTexCoord3fvARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord3iARB =&gt; "glMultiTexCoord3iARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord3ivARB =&gt; "glMultiTexCoord3ivARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord3sARB =&gt; "glMultiTexCoord3sARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord3svARB =&gt; "glMultiTexCoord3svARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord4dARB =&gt; "glMultiTexCoord4dARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord4dvARB =&gt; "glMultiTexCoord4dvARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord4fARB =&gt; "glMultiTexCoord4fARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord4fvARB =&gt; "glMultiTexCoord4fvARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord4iARB =&gt; "glMultiTexCoord4iARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord4ivARB =&gt; "glMultiTexCoord4ivARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord4sARB =&gt; "glMultiTexCoord4sARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoord4svARB =&gt; "glMultiTexCoord4svARB.3.html",</tt>
+      <br>
+      <tt>glMultiTexCoordARB =&gt; "glMultiTexCoordARB.3.html",</tt>
+      <br>
+      <tt>glNewList =&gt; "glNewList.3.html",</tt>
+      <br>
+      <tt>glNormal =&gt; "glNormal.3.html",</tt>
+      <br>
+      <tt>glNormal3b =&gt; "glNormal3b.3.html",</tt>
+      <br>
+      <tt>glNormal3bv =&gt; "glNormal3bv.3.html",</tt>
+      <br>
+      <tt>glNormal3d =&gt; "glNormal3d.3.html",</tt>
+      <br>
+      <tt>glNormal3dv =&gt; "glNormal3dv.3.html",</tt>
+      <br>
+      <tt>glNormal3f =&gt; "glNormal3f.3.html",</tt>
+      <br>
+      <tt>glNormal3fv =&gt; "glNormal3fv.3.html",</tt>
+      <br>
+      <tt>glNormal3i =&gt; "glNormal3i.3.html",</tt>
+      <br>
+      <tt>glNormal3iv =&gt; "glNormal3iv.3.html",</tt>
+      <br>
+      <tt>glNormal3s =&gt; "glNormal3s.3.html",</tt>
+      <br>
+      <tt>glNormal3sv =&gt; "glNormal3sv.3.html",</tt>
+      <br>
+      <tt>glNormalPointer =&gt; "glNormalPointer.3.html",</tt>
+      <br>
+      <tt>glOrtho =&gt; "glOrtho.3.html",</tt>
+      <br>
+      <tt>glPassThrough =&gt; "glPassThrough.3.html",</tt>
+      <br>
+      <tt>glPixelMap =&gt; "glPixelMap.3.html",</tt>
+      <br>
+      <tt>glPixelMapfv =&gt; "glPixelMapfv.3.html",</tt>
+      <br>
+      <tt>glPixelMapuiv =&gt; "glPixelMapuiv.3.html",</tt>
+      <br>
+      <tt>glPixelMapusv =&gt; "glPixelMapusv.3.html",</tt>
+      <br>
+      <tt>glPixelStore =&gt; "glPixelStore.3.html",</tt>
+      <br>
+      <tt>glPixelStoref =&gt; "glPixelStoref.3.html",</tt>
+      <br>
+      <tt>glPixelStorei =&gt; "glPixelStorei.3.html",</tt>
+      <br>
+      <tt>glPixelTransfer =&gt; "glPixelTransfer.3.html",</tt>
+      <br>
+      <tt>glPixelTransferf =&gt; "glPixelTransferf.3.html",</tt>
+      <br>
+      <tt>glPixelTransferi =&gt; "glPixelTransferi.3.html",</tt>
+      <br>
+      <tt>glPixelZoom =&gt; "glPixelZoom.3.html",</tt>
+      <br>
+      <tt>glPointSize =&gt; "glPointSize.3.html",</tt>
+      <br>
+      <tt>glPolygonMode =&gt; "glPolygonMode.3.html",</tt>
+      <br>
+      <tt>glPolygonOffset =&gt; "glPolygonOffset.3.html",</tt>
+      <br>
+      <tt>glPolygonStipple =&gt; "glPolygonStipple.3.html",</tt>
+      <br>
+      <tt>glPopAttrib =&gt; "glPopAttrib.3.html",</tt>
+      <br>
+      <tt>glPopClientAttrib =&gt; "glPopClientAttrib.3.html",</tt>
+      <br>
+      <tt>glPopMatrix =&gt; "glPopMatrix.3.html",</tt>
+      <br>
+      <tt>glPopName =&gt; "glPopName.3.html",</tt>
+      <br>
+      <tt>glPrioritizeTextures =&gt; "glPrioritizeTextures.3.html",</tt>
+      <br>
+      <tt>glPushAttrib =&gt; "glPushAttrib.3.html",</tt>
+      <br>
+      <tt>glPushClientAttrib =&gt; "glPushClientAttrib.3.html",</tt>
+      <br>
+      <tt>glPushMatrix =&gt; "glPushMatrix.3.html",</tt>
+      <br>
+      <tt>glPushName =&gt; "glPushName.3.html",</tt>
+      <br>
+      <tt>glRasterPos =&gt; "glRasterPos.3.html",</tt>
+      <br>
+      <tt>glRasterPos2d =&gt; "glRasterPos2d.3.html",</tt>
+      <br>
+      <tt>glRasterPos2dv =&gt; "glRasterPos2dv.3.html",</tt>
+      <br>
+      <tt>glRasterPos2f =&gt; "glRasterPos2f.3.html",</tt>
+      <br>
+      <tt>glRasterPos2fv =&gt; "glRasterPos2fv.3.html",</tt>
+      <br>
+      <tt>glRasterPos2i =&gt; "glRasterPos2i.3.html",</tt>
+      <br>
+      <tt>glRasterPos2iv =&gt; "glRasterPos2iv.3.html",</tt>
+      <br>
+      <tt>glRasterPos2s =&gt; "glRasterPos2s.3.html",</tt>
+      <br>
+      <tt>glRasterPos2sv =&gt; "glRasterPos2sv.3.html",</tt>
+      <br>
+      <tt>glRasterPos3d =&gt; "glRasterPos3d.3.html",</tt>
+      <br>
+      <tt>glRasterPos3dv =&gt; "glRasterPos3dv.3.html",</tt>
+      <br>
+      <tt>glRasterPos3f =&gt; "glRasterPos3f.3.html",</tt>
+      <br>
+      <tt>glRasterPos3fv =&gt; "glRasterPos3fv.3.html",</tt>
+      <br>
+      <tt>glRasterPos3i =&gt; "glRasterPos3i.3.html",</tt>
+      <br>
+      <tt>glRasterPos3iv =&gt; "glRasterPos3iv.3.html",</tt>
+      <br>
+      <tt>glRasterPos3s =&gt; "glRasterPos3s.3.html",</tt>
+      <br>
+      <tt>glRasterPos3sv =&gt; "glRasterPos3sv.3.html",</tt>
+      <br>
+      <tt>glRasterPos4d =&gt; "glRasterPos4d.3.html",</tt>
+      <br>
+      <tt>glRasterPos4dv =&gt; "glRasterPos4dv.3.html",</tt>
+      <br>
+      <tt>glRasterPos4f =&gt; "glRasterPos4f.3.html",</tt>
+      <br>
+      <tt>glRasterPos4fv =&gt; "glRasterPos4fv.3.html",</tt>
+      <br>
+      <tt>glRasterPos4i =&gt; "glRasterPos4i.3.html",</tt>
+      <br>
+      <tt>glRasterPos4iv =&gt; "glRasterPos4iv.3.html",</tt>
+      <br>
+      <tt>glRasterPos4s =&gt; "glRasterPos4s.3.html",</tt>
+      <br>
+      <tt>glRasterPos4sv =&gt; "glRasterPos4sv.3.html",</tt>
+      <br>
+      <tt>glReadBuffer =&gt; "glReadBuffer.3.html",</tt>
+      <br>
+      <tt>glReadPixels =&gt; "glReadPixels.3.html",</tt>
+      <br>
+      <tt>glRect =&gt; "glRect.3.html",</tt>
+      <br>
+      <tt>glRectd =&gt; "glRectd.3.html",</tt>
+      <br>
+      <tt>glRectdv =&gt; "glRectdv.3.html",</tt>
+      <br>
+      <tt>glRectf =&gt; "glRectf.3.html",</tt>
+      <br>
+      <tt>glRectfv =&gt; "glRectfv.3.html",</tt>
+      <br>
+      <tt>glRecti =&gt; "glRecti.3.html",</tt>
+      <br>
+      <tt>glRectiv =&gt; "glRectiv.3.html",</tt>
+      <br>
+      <tt>glRects =&gt; "glRects.3.html",</tt>
+      <br>
+      <tt>glRectsv =&gt; "glRectsv.3.html",</tt>
+      <br>
+      <tt>glRenderMode =&gt; "glRenderMode.3.html",</tt>
+      <br>
+      <tt>glResetHistogram =&gt; "glResetHistogram.3.html",</tt>
+      <br>
+      <tt>glResetMinmax =&gt; "glResetMinmax.3.html",</tt>
+      <br>
+      <tt>glRotate =&gt; "glRotate.3.html",</tt>
+      <br>
+      <tt>glRotated =&gt; "glRotated.3.html",</tt>
+      <br>
+      <tt>glRotatef =&gt; "glRotatef.3.html",</tt>
+      <br>
+      <tt>glScale =&gt; "glScale.3.html",</tt>
+      <br>
+      <tt>glScaled =&gt; "glScaled.3.html",</tt>
+      <br>
+      <tt>glScalef =&gt; "glScalef.3.html",</tt>
+      <br>
+      <tt>glScissor =&gt; "glScissor.3.html",</tt>
+      <br>
+      <tt>glSelectBuffer =&gt; "glSelectBuffer.3.html",</tt>
+      <br>
+      <tt>glSeparableFilter2D =&gt; "glSeparableFilter2D.3.html",</tt>
+      <br>
+      <tt>glShadeModel =&gt; "glShadeModel.3.html",</tt>
+      <br>
+      <tt>glStencilFunc =&gt; "glStencilFunc.3.html",</tt>
+      <br>
+      <tt>glStencilMask =&gt; "glStencilMask.3.html",</tt>
+      <br>
+      <tt>glStencilOp =&gt; "glStencilOp.3.html",</tt>
+      <br>
+      <tt>glTexCoord =&gt; "glTexCoord.3.html",</tt>
+      <br>
+      <tt>glTexCoord1d =&gt; "glTexCoord1d.3.html",</tt>
+      <br>
+      <tt>glTexCoord1dv =&gt; "glTexCoord1dv.3.html",</tt>
+      <br>
+      <tt>glTexCoord1f =&gt; "glTexCoord1f.3.html",</tt>
+      <br>
+      <tt>glTexCoord1fv =&gt; "glTexCoord1fv.3.html",</tt>
+      <br>
+      <tt>glTexCoord1i =&gt; "glTexCoord1i.3.html",</tt>
+      <br>
+      <tt>glTexCoord1iv =&gt; "glTexCoord1iv.3.html",</tt>
+      <br>
+      <tt>glTexCoord1s =&gt; "glTexCoord1s.3.html",</tt>
+      <br>
+      <tt>glTexCoord1sv =&gt; "glTexCoord1sv.3.html",</tt>
+      <br>
+      <tt>glTexCoord2d =&gt; "glTexCoord2d.3.html",</tt>
+      <br>
+      <tt>glTexCoord2dv =&gt; "glTexCoord2dv.3.html",</tt>
+      <br>
+      <tt>glTexCoord2f =&gt; "glTexCoord2f.3.html",</tt>
+      <br>
+      <tt>glTexCoord2fv =&gt; "glTexCoord2fv.3.html",</tt>
+      <br>
+      <tt>glTexCoord2i =&gt; "glTexCoord2i.3.html",</tt>
+      <br>
+      <tt>glTexCoord2iv =&gt; "glTexCoord2iv.3.html",</tt>
+      <br>
+      <tt>glTexCoord2s =&gt; "glTexCoord2s.3.html",</tt>
+      <br>
+      <tt>glTexCoord2sv =&gt; "glTexCoord2sv.3.html",</tt>
+      <br>
+      <tt>glTexCoord3d =&gt; "glTexCoord3d.3.html",</tt>
+      <br>
+      <tt>glTexCoord3dv =&gt; "glTexCoord3dv.3.html",</tt>
+      <br>
+      <tt>glTexCoord3f =&gt; "glTexCoord3f.3.html",</tt>
+      <br>
+      <tt>glTexCoord3fv =&gt; "glTexCoord3fv.3.html",</tt>
+      <br>
+      <tt>glTexCoord3i =&gt; "glTexCoord3i.3.html",</tt>
+      <br>
+      <tt>glTexCoord3iv =&gt; "glTexCoord3iv.3.html",</tt>
+      <br>
+      <tt>glTexCoord3s =&gt; "glTexCoord3s.3.html",</tt>
+      <br>
+      <tt>glTexCoord3sv =&gt; "glTexCoord3sv.3.html",</tt>
+      <br>
+      <tt>glTexCoord4d =&gt; "glTexCoord4d.3.html",</tt>
+      <br>
+      <tt>glTexCoord4dv =&gt; "glTexCoord4dv.3.html",</tt>
+      <br>
+      <tt>glTexCoord4f =&gt; "glTexCoord4f.3.html",</tt>
+      <br>
+      <tt>glTexCoord4fv =&gt; "glTexCoord4fv.3.html",</tt>
+      <br>
+      <tt>glTexCoord4i =&gt; "glTexCoord4i.3.html",</tt>
+      <br>
+      <tt>glTexCoord4iv =&gt; "glTexCoord4iv.3.html",</tt>
+      <br>
+      <tt>glTexCoord4s =&gt; "glTexCoord4s.3.html",</tt>
+      <br>
+      <tt>glTexCoord4sv =&gt; "glTexCoord4sv.3.html",</tt>
+      <br>
+      <tt>glTexCoordPointer =&gt; "glTexCoordPointer.3.html",</tt>
+      <br>
+      <tt>glTexEnv =&gt; "glTexEnv.3.html",</tt>
+      <br>
+      <tt>glTexEnvf =&gt; "glTexEnvf.3.html",</tt>
+      <br>
+      <tt>glTexEnvfv =&gt; "glTexEnvfv.3.html",</tt>
+      <br>
+      <tt>glTexEnvi =&gt; "glTexEnvi.3.html",</tt>
+      <br>
+      <tt>glTexEnviv =&gt; "glTexEnviv.3.html",</tt>
+      <br>
+      <tt>glTexGen =&gt; "glTexGen.3.html",</tt>
+      <br>
+      <tt>glTexGend =&gt; "glTexGend.3.html",</tt>
+      <br>
+      <tt>glTexGendv =&gt; "glTexGendv.3.html",</tt>
+      <br>
+      <tt>glTexGenf =&gt; "glTexGenf.3.html",</tt>
+      <br>
+      <tt>glTexGenfv =&gt; "glTexGenfv.3.html",</tt>
+      <br>
+      <tt>glTexGeni =&gt; "glTexGeni.3.html",</tt>
+      <br>
+      <tt>glTexGeniv =&gt; "glTexGeniv.3.html",</tt>
+      <br>
+      <tt>glTexImage1D =&gt; "glTexImage1D.3.html",</tt>
+      <br>
+      <tt>glTexImage2D =&gt; "glTexImage2D.3.html",</tt>
+      <br>
+      <tt>glTexImage3D =&gt; "glTexImage3D.3.html",</tt>
+      <br>
+      <tt>glTexParameter =&gt; "glTexParameter.3.html",</tt>
+      <br>
+      <tt>glTexParameterf =&gt; "glTexParameterf.3.html",</tt>
+      <br>
+      <tt>glTexParameterfv =&gt; "glTexParameterfv.3.html",</tt>
+      <br>
+      <tt>glTexParameteri =&gt; "glTexParameteri.3.html",</tt>
+      <br>
+      <tt>glTexParameteriv =&gt; "glTexParameteriv.3.html",</tt>
+      <br>
+      <tt>glTexSubImage1D =&gt; "glTexSubImage1D.3.html",</tt>
+      <br>
+      <tt>glTexSubImage2D =&gt; "glTexSubImage2D.3.html",</tt>
+      <br>
+      <tt>glTexSubImage3D =&gt; "glTexSubImage3D.3.html",</tt>
+      <br>
+      <tt>glTranslate =&gt; "glTranslate.3.html",</tt>
+      <br>
+      <tt>glTranslated =&gt; "glTranslated.3.html",</tt>
+      <br>
+      <tt>glTranslatef =&gt; "glTranslatef.3.html",</tt>
+      <br>
+      <tt>glVertex =&gt; "glVertex.3.html",</tt>
+      <br>
+      <tt>glVertex2d =&gt; "glVertex2d.3.html",</tt>
+      <br>
+      <tt>glVertex2dv =&gt; "glVertex2dv.3.html",</tt>
+      <br>
+      <tt>glVertex2f =&gt; "glVertex2f.3.html",</tt>
+      <br>
+      <tt>glVertex2fv =&gt; "glVertex2fv.3.html",</tt>
+      <br>
+      <tt>glVertex2i =&gt; "glVertex2i.3.html",</tt>
+      <br>
+      <tt>glVertex2iv =&gt; "glVertex2iv.3.html",</tt>
+      <br>
+      <tt>glVertex2s =&gt; "glVertex2s.3.html",</tt>
+      <br>
+      <tt>glVertex2sv =&gt; "glVertex2sv.3.html",</tt>
+      <br>
+      <tt>glVertex3d =&gt; "glVertex3d.3.html",</tt>
+      <br>
+      <tt>glVertex3dv =&gt; "glVertex3dv.3.html",</tt>
+      <br>
+      <tt>glVertex3f =&gt; "glVertex3f.3.html",</tt>
+      <br>
+      <tt>glVertex3fv =&gt; "glVertex3fv.3.html",</tt>
+      <br>
+      <tt>glVertex3i =&gt; "glVertex3i.3.html",</tt>
+      <br>
+      <tt>glVertex3iv =&gt; "glVertex3iv.3.html",</tt>
+      <br>
+      <tt>glVertex3s =&gt; "glVertex3s.3.html",</tt>
+      <br>
+      <tt>glVertex3sv =&gt; "glVertex3sv.3.html",</tt>
+      <br>
+      <tt>glVertex4d =&gt; "glVertex4d.3.html",</tt>
+      <br>
+      <tt>glVertex4dv =&gt; "glVertex4dv.3.html",</tt>
+      <br>
+      <tt>glVertex4f =&gt; "glVertex4f.3.html",</tt>
+      <br>
+      <tt>glVertex4fv =&gt; "glVertex4fv.3.html",</tt>
+      <br>
+      <tt>glVertex4i =&gt; "glVertex4i.3.html",</tt>
+      <br>
+      <tt>glVertex4iv =&gt; "glVertex4iv.3.html",</tt>
+      <br>
+      <tt>glVertex4s =&gt; "glVertex4s.3.html",</tt>
+      <br>
+      <tt>glVertex4sv =&gt; "glVertex4sv.3.html",</tt>
+      <br>
+      <tt>glVertexPointer =&gt; "glVertexPointer.3.html",</tt>
+      <br>
+      <tt>glViewport =&gt; "glViewport.3.html",</tt>
+      <br>
+      <tt>glXChooseVisual =&gt; "glXChooseVisual.3.html",</tt>
+      <br>
+      <tt>glXCopyContext =&gt; "glXCopyContext.3.html",</tt>
+      <br>
+      <tt>glXCreateContext =&gt; "glXCreateContext.3.html",</tt>
+      <br>
+      <tt>glXCreateGLXPixmap =&gt; "glXCreateGLXPixmap.3.html",</tt>
+      <br>
+      <tt>glXDestroyContext =&gt; "glXDestroyContext.3.html",</tt>
+      <br>
+      <tt>glXDestroyGLXPixmap =&gt; "glXDestroyGLXPixmap.3.html",</tt>
+      <br>
+      <tt>glXFreeContextEXT =&gt; "glXFreeContextEXT.3.html",</tt>
+      <br>
+      <tt>glXGetClientString =&gt; "glXGetClientString.3.html",</tt>
+      <br>
+      <tt>glXGetConfig =&gt; "glXGetConfig.3.html",</tt>
+      <br>
+      <tt>glXGetContextIDEXT =&gt; "glXGetContextIDEXT.3.html",</tt>
+      <br>
+      <tt>glXGetCurrentContext =&gt; "glXGetCurrentContext.3.html",</tt>
+      <br>
+      <tt>glXGetCurrentDisplay =&gt; "glXGetCurrentDisplay.3.html",</tt>
+      <br>
+      <tt>glXGetCurrentDrawable =&gt; "glXGetCurrentDrawable.3.html",</tt>
+      <br>
+      <tt>glXImportContextEXT =&gt; "glXImportContextEXT.3.html",</tt>
+      <br>
+      <tt>glXIntro =&gt; "glXIntro.3.html",</tt>
+      <br>
+      <tt>glXIsDirect =&gt; "glXIsDirect.3.html",</tt>
+      <br>
+      <tt>glXMakeCurrent =&gt; "glXMakeCurrent.3.html",</tt>
+      <br>
+      <tt>glXQueryContextInfoEXT =&gt; "glXQueryContextInfoEXT.3.html",</tt>
+      <br>
+      <tt>glXQueryExtension =&gt; "glXQueryExtension.3.html",</tt>
+      <br>
+      <tt>glXQueryExtensionsString =&gt;
+"glXQueryExtensionsString.3.html",</tt>
+      <br>
+      <tt>glXQueryServerString =&gt; "glXQueryServerString.3.html",</tt>
+      <br>
+      <tt>glXQueryVersion =&gt; "glXQueryVersion.3.html",</tt>
+      <br>
+      <tt>glXSwapBuffers =&gt; "glXSwapBuffers.3.html",</tt>
+      <br>
+      <tt>glXUseXFont =&gt; "glXUseXFont.3.html",</tt>
+      <br>
+      <tt>glXWaitGL =&gt; "glXWaitGL.3.html",</tt>
+      <br>
+      <tt>glXWaitX =&gt; "glXWaitX.3.html",</tt>
+      <br>
+      <tt>gluBeginCurve =&gt; "gluBeginCurve.3.html",</tt>
+      <br>
+      <tt>gluBeginPolygon =&gt; "gluBeginPolygon.3.html",</tt>
+      <br>
+      <tt>gluBeginSurface =&gt; "gluBeginSurface.3.html",</tt>
+      <br>
+      <tt>gluBeginTrim =&gt; "gluBeginTrim.3.html",</tt>
+      <br>
+      <tt>gluBuild1DMipmaps =&gt; "gluBuild1DMipmaps.3.html",</tt>
+      <br>
+      <tt>gluBuild2DMipmaps =&gt; "gluBuild2DMipmaps.3.html",</tt>
+      <br>
+      <tt>gluCylinder =&gt; "gluCylinder.3.html",</tt>
+      <br>
+      <tt>gluDeleteNurbsRenderer =&gt; "gluDeleteNurbsRenderer.3.html",</tt>
+      <br>
+      <tt>gluDeleteQuadric =&gt; "gluDeleteQuadric.3.html",</tt>
+      <br>
+      <tt>gluDeleteTess =&gt; "gluDeleteTess.3.html",</tt>
+      <br>
+      <tt>gluDisk =&gt; "gluDisk.3.html",</tt>
+      <br>
+      <tt>gluEndCurve =&gt; "gluEndCurve.3.html",</tt>
+      <br>
+      <tt>gluEndPolygon =&gt; "gluEndPolygon.3.html",</tt>
+      <br>
+      <tt>gluEndSurface =&gt; "gluEndSurface.3.html",</tt>
+      <br>
+      <tt>gluEndTrim =&gt; "gluEndTrim.3.html",</tt>
+      <br>
+      <tt>gluErrorString =&gt; "gluErrorString.3.html",</tt>
+      <br>
+      <tt>gluGetNurbsProperty =&gt; "gluGetNurbsProperty.3.html",</tt>
+      <br>
+      <tt>gluGetString =&gt; "gluGetString.3.html",</tt>
+      <br>
+      <tt>gluGetTessProperty =&gt; "gluGetTessProperty.3.html",</tt>
+      <br>
+      <tt>gluLoadSamplingMatrices =&gt;
+"gluLoadSamplingMatrices.3.html",</tt>
+      <br>
+      <tt>gluLookAt =&gt; "gluLookAt.3.html",</tt>
+      <br>
+      <tt>gluNewNurbsRenderer =&gt; "gluNewNurbsRenderer.3.html",</tt>
+      <br>
+      <tt>gluNewQuadric =&gt; "gluNewQuadric.3.html",</tt>
+      <br>
+      <tt>gluNewTess =&gt; "gluNewTess.3.html",</tt>
+      <br>
+      <tt>gluNextContour =&gt; "gluNextContour.3.html",</tt>
+      <br>
+      <tt>gluNurbsCallback =&gt; "gluNurbsCallback.3.html",</tt>
+      <br>
+      <tt>gluNurbsCallbackDataEXT =&gt;
+"gluNurbsCallbackDataEXT.3.html",</tt>
+      <br>
+      <tt>gluNurbsCurve =&gt; "gluNurbsCurve.3.html",</tt>
+      <br>
+      <tt>gluNurbsProperty =&gt; "gluNurbsProperty.3.html",</tt>
+      <br>
+      <tt>gluNurbsSurface =&gt; "gluNurbsSurface.3.html",</tt>
+      <br>
+      <tt>gluOrtho2D =&gt; "gluOrtho2D.3.html",</tt>
+      <br>
+      <tt>gluPartialDisk =&gt; "gluPartialDisk.3.html",</tt>
+      <br>
+      <tt>gluPerspective =&gt; "gluPerspective.3.html",</tt>
+      <br>
+      <tt>gluPickMatrix =&gt; "gluPickMatrix.3.html",</tt>
+      <br>
+      <tt>gluProject =&gt; "gluProject.3.html",</tt>
+      <br>
+      <tt>gluPwlCurve =&gt; "gluPwlCurve.3.html",</tt>
+      <br>
+      <tt>gluQuadricCallback =&gt; "gluQuadricCallback.3.html",</tt>
+      <br>
+      <tt>gluQuadricDrawStyle =&gt; "gluQuadricDrawStyle.3.html",</tt>
+      <br>
+      <tt>gluQuadricNormals =&gt; "gluQuadricNormals.3.html",</tt>
+      <br>
+      <tt>gluQuadricOrientation =&gt; "gluQuadricOrientation.3.html",</tt>
+      <br>
+      <tt>gluQuadricTexture =&gt; "gluQuadricTexture.3.html",</tt>
+      <br>
+      <tt>gluScaleImage =&gt; "gluScaleImage.3.html",</tt>
+      <br>
+      <tt>gluSphere =&gt; "gluSphere.3.html",</tt>
+      <br>
+      <tt>gluTessBeginContour =&gt; "gluTessBeginContour.3.html",</tt>
+      <br>
+      <tt>gluTessBeginPolygon =&gt; "gluTessBeginPolygon.3.html",</tt>
+      <br>
+      <tt>gluTessCallback =&gt; "gluTessCallback.3.html",</tt>
+      <br>
+      <tt>gluTessEndContour =&gt; "gluTessEndContour.3.html",</tt>
+      <br>
+      <tt>gluTessEndPolygon =&gt; "gluTessEndPolygon.3.html",</tt>
+      <br>
+      <tt>gluTessNormal =&gt; "gluTessNormal.3.html",</tt>
+      <br>
+      <tt>gluTessProperty =&gt; "gluTessProperty.3.html",</tt>
+      <br>
+      <tt>gluTessVertex =&gt; "gluTessVertex.3.html",</tt>
+      <br>
+      <tt>gluUnProject =&gt; "gluUnProject.3.html"</tt>
+      <br>
+      <tt>);</tt>
+      </p>
+      <p><tt>my %records_r;</tt>
+      <br>
+      <tt>while ( my ($k, $v) = each %unix_records_r ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; $records_r{$k} = $unix_root_doc.$v;</tt>
+      <br>
+      <tt>}</tt>
+      <br>
+      <tt>while ( my ($k, $v) = each %x11_records_r ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; $records_r{$k} = $x11_root_doc.$v;</tt>
+      <br>
+      <tt>}</tt>
+      </p>
+      <p><tt>my %records_h;</tt>
+      <br>
+      <tt>while ( my ($k, $v) = each %unix_records_h ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; $records_r{$k} = $unix_root_doc.$v;</tt>
+      <br>
+      <tt>}</tt>
+      </p>
+      <p><tt>while (defined $ARGV[0]) {</tt>
+      </p>
+      <p><tt>&nbsp; my $datafile = $ARGV[0];</tt>
+      <br>
+      <tt>&nbsp; my $htmlfile = $datafile;</tt>
+      <br>
+      <tt>&nbsp; $htmlfile =~ s+^.*/(.*)$+$1+o;</tt>
+      <br>
+      <tt>&nbsp; $htmlfile = "/tmp/".$htmlfile.".html";</tt>
+      </p>
+      <p><tt>&nbsp; open(DATA,"&lt; ".$datafile) or die("cannot open
+file $datafile
+($!) --");</tt>
+      <br>
+      <tt>&nbsp; open(HTML,"&gt; ".$htmlfile) or die("cannot open file
+$htmlfile
+($!) --");</tt>
+      </p>
+      <p><tt>&nbsp; my $line = &lt;DATA&gt;;</tt>
+      <br>
+      <tt>&nbsp; $line =~ s/&lt;/\&amp;lt;/go;</tt>
+      <br>
+      <tt>&nbsp; $line =~ s/&gt;/\&amp;gt;/go;</tt>
+      <br>
+      <tt>&nbsp; $line =~
+s/\t/&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+/go;</tt>
+      <br>
+      <tt>&nbsp; $line =~ s!^( *# *include
+*)&amp;lt;([a-z/]+\.h)&amp;gt;!$1\&amp;lt;&lt;A
+HREF="$records_h{$2}"&gt;$2&lt;/A&gt;\&amp;gt;!gmo;</tt>
+      <br>
+      <tt>&nbsp; $line =~ s!(\b[a-zA-Z]\w*)( *\()!&lt;A
+HREF="$records_r{$1}"&gt;$1&lt;/A&gt;$2!go;</tt>
+      <br>
+      <tt>&nbsp; $line =~ s!&lt;A HREF=""&gt;([^ ]*)&lt;/A&gt;!$1!go;</tt>
+      </p>
+      <p><tt>&nbsp; print HTML "&lt;HTML&gt;&lt;HEAD&gt;&lt;TITLE&gt;",</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$datafile,</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"&lt;/TITLE&gt;&lt;BASE TARGET='_blank'&gt;&lt;/HEAD&gt;&lt;BODY
+BGCOLOR='white'&gt;&lt;PRE&gt;",</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$line,</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"&lt;/PRE&gt;&lt;/BODY&gt;&lt;/HTML&gt;";</tt>
+      </p>
+      <p><tt>&nbsp; close(DATA);</tt>
+      <br>
+      <tt>&nbsp; close(HTML);</tt>
+      </p>
+      <p><tt>&nbsp; my @cmds = ("netscape", "-remote",
+"file:".$htmlfile);</tt>
+      <br>
+      <tt>&nbsp; system(@cmds) == 0 or die("failed to communicate with
+Netscape
+--");</tt>
+      </p>
+      <p><tt>&nbsp; shift @ARGV</tt>
+      <br>
+      <tt>}</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+</p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: January 22</font><sup><font size="-2">nd</font></sup><font
+ size="-1">,
+2003 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+&nbsp;
+</p>
+</body>
+</html>

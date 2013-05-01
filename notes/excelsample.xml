@@ -1,0 +1,343 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Excel macro samples</TITLE>
+<PATH>notes/excelsample.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<CONTENT>
+
+fix the URLs incorrectly handled by Excel 2002
+<CODESAMPLE>
+Sub fix_url()<BR/>
+<TAB/>Selection.Hyperlinks(1).Address = Replace(Selection.Hyperlinks(1).Address, "/", "\\")<BR/>
+End Sub<BR/>
+</CODESAMPLE><BR/>
+
+add hyperlinks toward indexed photos
+<CODESAMPLE>
+Sub hyperlinkPhoto()<BR/>
+<TAB/>For i = 1 To ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Row<BR/>
+<TAB/><TAB/>ActiveSheet.Hyperlinks.Add Anchor:=Cells(i, 2), Address:="file://" &amp; ActiveWorkbook.Path &amp; "/" &amp; Cells(i, 1).Text &amp; "/" &amp; Cells(i, 2).Text<BR/>
+<TAB/>Next i<BR/>
+End Sub<BR/>
+</CODESAMPLE><BR/>
+
+hyperlink the SPRs
+<CODESAMPLE>
+Option Explicit<BR/>
+Private Function isSPRIdentifier(txt As String) As Boolean<BR/>
+<TAB/>isSPRIdentifier = False<BR/>
+<TAB/>If (Len(txt) &lt;&gt; 10) Then<BR/>
+<TAB/><TAB/>Exit Function<BR/>
+<TAB/>End If<BR/>
+<TAB/>Dim t As String<BR/>
+<TAB/>t = Mid(txt, 4, 2) <BR/>
+<TAB/>If (t &lt;&gt; "ge") Then<BR/>
+<TAB/><TAB/>Exit Function<BR/>
+<TAB/>End If<BR/>
+<TAB/>Dim i As Integer<BR/>
+<TAB/>For i = 6 To 10<BR/>
+<TAB/><TAB/>t = Mid(txt, i, 1) <BR/>
+<TAB/><TAB/>If (t &lt; "0" Or t &gt; "9") Then<BR/>
+<TAB/><TAB/><TAB/>Exit Function<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/>Next i<BR/>
+<TAB/>isSPRIdentifier = True<BR/>
+End Function<BR/>
+Sub hyperlinkDDTS()<BR/>
+<TAB/>Dim i, j As Integer<BR/>
+<TAB/>For i = 1 To ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Row<BR/>
+<TAB/><TAB/>For j = 1 To ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Column<BR/>
+<TAB/><TAB/>Dim txt As String<BR/>
+<TAB/><TAB/><TAB/>txt = Trim(Cells(i, j).Text) <BR/>
+<TAB/><TAB/><TAB/>If (isSPRIdentifier(txt)) Then<BR/>
+<TAB/><TAB/><TAB/><TAB/>ActiveSheet.Hyperlinks.Add Anchor:=Cells(i, j), Address:="http://frbucdts01medge.euro.med.ge.com/ddts/ddts_main?LastForm=DumpBug&amp;bug_id=" &amp; txt<BR/>
+<TAB/><TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>Next j<BR/>
+<TAB/>Next i<BR/>
+End Sub<BR/>
+</CODESAMPLE><BR/>
+
+hyperlink the requests in JIRA
+<CODESAMPLE>
+Option Explicit<BR/>
+Private Function isJIRAIdentifier(txt As String) As Boolean<BR/>
+<TAB/>isJIRAIdentifier = False<BR/>
+<TAB/>If ((Mid(txt, 1, 4) &lt;&gt; "VER-") Or (Len(txt) = 4)) Then<BR/>
+<TAB/><TAB/>Exit Function<BR/>
+<TAB/>End If<BR/>
+<TAB/>Dim i As Integer<BR/>
+<TAB/>For i = 5 To Len(txt)<BR/>
+<TAB/><TAB/>Dim t As String<BR/>
+<TAB/><TAB/>t = Mid(txt, i, 1)<BR/>
+<TAB/><TAB/>If (t &lt; "0" Or t &gt; "9") Then<BR/>
+<TAB/><TAB/><TAB/>Exit Function<BR/>
+<TAB/>End If<BR/>
+<TAB/>Next i<BR/>
+<TAB/>isJIRAIdentifier = True<BR/>
+End Function<BR/>
+Sub hyperlinkJIRA()<BR/>
+<TAB/>Dim i, j As Integer<BR/>
+<TAB/>For i = 1 To ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Row<BR/>
+<TAB/><TAB/>For j = 1 To ActiveSheet.Cells.SpecialCells(xlCellTypeLastCell).Column<BR/>
+<TAB/><TAB/><TAB/>Dim txt As String<BR/>
+<TAB/><TAB/><TAB/>txt = Trim(Cells(i, j).Text)<BR/>
+<TAB/><TAB/><TAB/>If (isJIRAIdentifier(txt)) Then<BR/>
+<TAB/><TAB/><TAB/><TAB/>ActiveSheet.Hyperlinks.Add Anchor:=Cells(i, j), Address:="https://jira.kikamedical.net/browse/" &amp; txt<BR/>
+<TAB/><TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>Next j<BR/>
+<TAB/>Next i<BR/>
+End Sub
+</CODESAMPLE><BR/>
+
+compare two sheets in two different files
+<CODESAMPLE>
+Option Explicit<BR/>
+<BR/>
+Sub compare()<BR/>
+<BR/>
+<TAB/>Dim file(2), shet(2) As String<BR/>
+<TAB/>file(0) = "bug4.csv" ' name of first file<BR/>
+<TAB/>file(1) = "bug5.csv" ' name of second file<BR/>
+<TAB/>shet(0) = "bug4" ' name of sheet in first file<BR/>
+<TAB/>shet(1) = "bug5" ' name of sheet in second file<BR/>
+<BR/>
+<TAB/>Dim sht(2) As Excel.Worksheet<BR/>
+<TAB/>Windows(file(0)).Activate<BR/>
+<TAB/>Set sht(0) = Application.Sheets(shet(0))<BR/>
+<TAB/>sht(0).Select<BR/>
+<TAB/>ActiveSheet.UsedRange<BR/>
+<TAB/>Windows(file(1)).Activate<BR/>
+<TAB/>Set sht(1) = Application.Sheets(shet(1))<BR/>
+<TAB/>sht(1).Select<BR/>
+<TAB/>ActiveSheet.UsedRange<BR/>
+<BR/>
+<TAB/>If sht(0).Cells.SpecialCells(xlCellTypeLastCell).Row &lt;&gt; sht(1).Cells.SpecialCells(xlCellTypeLastCell).Row Then<BR/>
+<TAB/><TAB/>MsgBox "the two sheets do not have the same number of rows"<BR/>
+<TAB/><TAB/>Exit Sub<BR/>
+<TAB/>End If<BR/>
+<BR/>
+<TAB/>If sht(0).Cells.SpecialCells(xlCellTypeLastCell).Column &lt;&gt; sht(1).Cells.SpecialCells(xlCellTypeLastCell).Column Then<BR/>
+<TAB/><TAB/>MsgBox "the two sheets do not have the same number of columns"<BR/>
+<TAB/><TAB/>Exit Sub<BR/>
+<TAB/>End If<BR/>
+<BR/>
+<TAB/>Dim i, j, k As Integer<BR/>
+<TAB/>k = 0<BR/>
+<TAB/>For i = 1 To sht(0).Cells.SpecialCells(xlCellTypeLastCell).Row<BR/>
+<TAB/><TAB/>For j = 1 To sht(0).Cells.SpecialCells(xlCellTypeLastCell).Column<BR/>
+<TAB/><TAB/><TAB/>If sht(0).Cells(i, j).Value &lt;&gt; sht(1).Cells(i, j).Value Then<BR/>
+<TAB/><TAB/><TAB/><TAB/>k = 1<BR/>
+<TAB/><TAB/><TAB/><TAB/>sht(0).Cells(i, j).Interior.ColorIndex = 6<BR/>
+<TAB/><TAB/><TAB/><TAB/>sht(1).Cells(i, j).Interior.ColorIndex = 6<BR/>
+<TAB/><TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>Next j<BR/>
+<TAB/>Next i<BR/>
+<BR/>
+<TAB/>If k = 1 Then<BR/>
+<TAB/><TAB/>MsgBox "there are some differences"<BR/>
+<TAB/>End If<BR/>
+End Sub
+</CODESAMPLE><BR/>
+
+merge two sheets according to a key present on both of them
+<CODESAMPLE>Option Explicit<BR/>
+<BR/>
+Private Function ConvertColumnNumberToLetter(ByVal ColumnNumber As Integer)<BR/>
+<TAB/>Dim IntegerResult As Integer<BR/>
+<TAB/>Dim FractionalResult As Integer<BR/>
+<TAB/>Dim Remainder As Integer<BR/>
+<TAB/>Dim FirstLetter As String<BR/>
+<TAB/>Dim SecondLetter As String<BR/>
+<TAB/>IntegerResult = ColumnNumber \ 26<BR/>
+<TAB/>FractionalResult = (ColumnNumber / 26) - IntegerResult<BR/>
+<TAB/>Remainder = ColumnNumber Mod 26<BR/>
+<TAB/>If IntegerResult = 0 Then<BR/>
+<TAB/><TAB/>FirstLetter = ""<BR/>
+<TAB/>ElseIf IntegerResult = 1 And FractionalResult = 0 Then<BR/>
+<TAB/><TAB/>FirstLetter = ""<BR/>
+<TAB/><TAB/>ConvertColumnNumberToLetter = "Z"<BR/>
+<TAB/><TAB/>Exit Function<BR/>
+<TAB/>ElseIf IntegerResult &gt; 1 And FractionalResult = 0 Then<BR/>
+<TAB/><TAB/>FirstLetter = Chr(64 + (IntegerResult - 1))<BR/>
+<TAB/><TAB/>ConvertColumnNumberToLetter = FirstLetter &amp; "Z"<BR/>
+<TAB/><TAB/>Exit Function<BR/>
+<TAB/>Else<BR/>
+<TAB/><TAB/>FirstLetter = Chr(64 + IntegerResult)<BR/>
+<TAB/>End If<BR/>
+<TAB/>SecondLetter = Chr(64 + Remainder)<BR/>
+<TAB/>ConvertColumnNumberToLetter = FirstLetter &amp; SecondLetter<BR/>
+End Function<BR/>
+<BR/>
+Sub merge()<BR/>
+<TAB/>Dim source(2) As Variant<BR/>
+<TAB/>Dim keyColumns(2) As String<BR/>
+<TAB/>Set source(0) = Sheets("Sheet2") ' name of the SRS sheet<BR/>
+<TAB/>Set source(1) = Sheets("Sheet1") ' name of the VP sheet<BR/>
+<TAB/>keyColumns(0) = "A"<TAB/><TAB/><TAB/>  ' column containing the Requirement ID in the SRS sheet<BR/>
+<TAB/>keyColumns(1) = "B"<TAB/><TAB/><TAB/>  ' column containing the Requirement ID in the VP sheet<BR/>
+<TAB/><BR/>
+<TAB/><BR/>
+<TAB/>' -------------------------------------<BR/>
+<TAB/><BR/>
+<TAB/>Dim i As Integer<BR/>
+<TAB/>Application.ScreenUpdating = False<BR/>
+<TAB/>Dim newSheet As Variant<BR/>
+<TAB/>Dim numberOfRows(2) As Integer, numberOfColumns(2) As Integer<BR/>
+<TAB/>For i = 0 To 1<BR/>
+<TAB/><TAB/>Dim x As Long<BR/>
+<TAB/><TAB/>x = source(i).UsedRange.Rows.Count 'Attempt to fix the lastcell on the worksheet<BR/>
+<TAB/><TAB/>numberOfRows(i) = source(i).Cells.SpecialCells(xlLastCell).Row<BR/>
+<TAB/><TAB/>numberOfColumns(i) = source(i).Cells.SpecialCells(xlLastCell).Column<BR/>
+<TAB/>Next i<BR/>
+<TAB/><BR/>
+<TAB/>' copy first sheet and sort it<BR/>
+<TAB/>source(0).Cells.copy<BR/>
+<TAB/>Set newSheet = Worksheets.Add<BR/>
+<TAB/>newSheet.Paste<BR/>
+<TAB/>newSheet.Cells.Sort Key1:=Range(keyColumns(0) &amp; "2"), Order1:=xlAscending, Header:=xlYes, OrderCustom:=1, MatchCase:=False, Orientation:=xlTopToBottom<BR/>
+<TAB/><BR/>
+<TAB/>' copy titles<BR/>
+<TAB/>source(1).Range("A1:" &amp; ConvertColumnNumberToLetter(numberOfColumns(1)) &amp; "1").copy<BR/>
+<TAB/>Range(ConvertColumnNumberToLetter(numberOfColumns(0) + 1) &amp; "1").Select<BR/>
+<TAB/>newSheet.Paste<BR/>
+<TAB/><BR/>
+<TAB/>For i = 2 To numberOfRows(1)<BR/>
+<TAB/><TAB/>Dim key(2) As Variant<BR/>
+<TAB/><TAB/>key(1) = source(1).Range(keyColumns(1) &amp; i).Text<BR/>
+<TAB/><TAB/>Dim j As Integer<BR/>
+<TAB/><TAB/>Dim found As Boolean<BR/>
+<TAB/><TAB/>j = 2<BR/>
+<TAB/><TAB/>found = False<BR/>
+<TAB/><TAB/>Do While ((j &lt;= numberOfRows(0)) And (Not found))<BR/>
+<TAB/><TAB/><TAB/>key(0) = Range(keyColumns(0) &amp; j).Text<BR/>
+<TAB/><TAB/><TAB/>If (key(1) = key(0)) Then<BR/>
+<TAB/><TAB/><TAB/><TAB/>found = True<BR/>
+<TAB/><TAB/><TAB/>Else<BR/>
+<TAB/><TAB/><TAB/><TAB/>j = j + 1<BR/>
+<TAB/><TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>Loop<BR/>
+<TAB/><TAB/>If (found) Then<BR/>
+<TAB/><TAB/><TAB/>If (newSheet.Range(ConvertColumnNumberToLetter(numberOfColumns(0) + 1) &amp; j).Text = "") Then<BR/>
+<TAB/><TAB/><TAB/><TAB/>' we add data on the matching line<BR/>
+<TAB/><TAB/><TAB/><TAB/>newSheet.Range(ConvertColumnNumberToLetter(numberOfColumns(0) + 1) &amp; j).Select<BR/>
+<TAB/><TAB/><TAB/>Else<BR/>
+<TAB/><TAB/><TAB/><TAB/>' the machine line already contains data, we insert a new line<BR/>
+<TAB/><TAB/><TAB/><TAB/>Application.CutCopyMode = False<BR/>
+<TAB/><TAB/><TAB/><TAB/>newSheet.Rows((j + 1) &amp; ":" &amp; (j + 1)).Insert Shift:=xlDown<BR/>
+<TAB/><TAB/><TAB/><TAB/>Dim k As Integer<BR/>
+<TAB/><TAB/><TAB/><TAB/>For k = 1 To numberOfColumns(0)<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>Dim l As String<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>l = ConvertColumnNumberToLetter(k)<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>If (l = keyColumns(0)) Then<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>Range(l &amp; j &amp; ":" &amp; l &amp; (j + 1)).MergeCells = True<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>Else<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>Range(l &amp; (j + 1) &amp; ":" &amp; l &amp; (j + 1)).Value = Range(l &amp; j &amp; ":" &amp; l &amp; j).Value<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>End If<BR/>
+<TAB/><TAB/><TAB/><TAB/>Next k<BR/>
+<TAB/><TAB/><TAB/><TAB/>numberOfRows(0) = numberOfRows(0) + 1<BR/>
+<TAB/><TAB/><TAB/><TAB/>newSheet.Range(ConvertColumnNumberToLetter(numberOfColumns(0) + 1) &amp; (j + 1)).Select<BR/>
+<TAB/><TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>Else<BR/>
+<TAB/><TAB/><TAB/>' there is no matching line, we insert at the end of the sheet<BR/>
+<TAB/><TAB/><TAB/>numberOfRows(0) = numberOfRows(0) + 1<BR/>
+<TAB/><TAB/><TAB/>newSheet.Range(ConvertColumnNumberToLetter(numberOfColumns(0) + 1) &amp; numberOfRows(0)).Select<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>source(1).Range("A" &amp; i &amp; ":" &amp; ConvertColumnNumberToLetter(numberOfColumns(1)) &amp; i).copy<BR/>
+<TAB/><TAB/>newSheet.Paste<BR/>
+<TAB/>Next i<BR/>
+<BR/>
+<TAB/>newSheet.Columns.WrapText = False<BR/>
+<TAB/>newSheet.Columns.AutoFit<BR/>
+<TAB/>Rows("1:1").HorizontalAlignment = xlCenter<BR/>
+<TAB/>Rows("1:1").Font.Bold = True<BR/>
+<BR/>
+<TAB/>Application.ScreenUpdating = True<BR/>
+End Sub
+</CODESAMPLE><BR/>
+
+create a graph of frequencies from an Excel database
+<CODESAMPLE> Option Explicit<BR/>
+<BR/>
+Sub CreateRootCauseGraph()<BR/>
+<BR/>
+<TAB/>Dim source As Variant<BR/>
+<TAB/>Dim newSheet As Variant<BR/>
+<TAB/>Dim reportNumberColumn As String<BR/>
+<TAB/>Dim rootCauseColumn As String<BR/>
+<TAB/>Dim closureCodeColumn As String<BR/>
+<TAB/>Dim statusColumn As String<BR/>
+<TAB/><BR/>
+<TAB/>Set source = Sheets("PQR_list") ' name of the sheet containing the PQR list<BR/>
+<TAB/>reportNumberColumn = "A         ' column containing the report number<BR/>
+<TAB/>rootCauseColumn = "E"           ' column containing the Root Cause / analyze<BR/>
+<TAB/>closureCodeColumn = "H"         ' column containing the Closure Code<BR/>
+<TAB/>statusColumn = "D"              ' column containing the Status<BR/>
+<TAB/><BR/>
+<TAB/>Dim totalNumber As Integer<BR/>
+<TAB/>Dim incrNumber As Integer<BR/>
+<TAB/>totalNumber = source.UsedRange.Rows.Count<BR/>
+<TAB/>incrNumber = 1<BR/>
+<TAB/><BR/>
+<TAB/>Application.ScreenUpdating = False<BR/>
+<TAB/><BR/>
+<TAB/>' --- --- --- create new sheet to record root cause of each PQR ---<BR/>
+<TAB/>Set newSheet = Worksheets.Add<BR/>
+<TAB/>newSheet.Name = "Root Cause Analysis"<BR/>
+<TAB/>newSheet.Cells(incrNumber, 1) = "identifier"<BR/>
+<TAB/>newSheet.Cells(incrNumber, 2) = "root cause"<BR/>
+<TAB/><BR/>
+<TAB/>' --- --- --- extract root cause of each PQR ---<BR/>
+<TAB/>Dim i As Integer<BR/>
+<TAB/>Dim text As String<BR/>
+<TAB/>Dim pos As Integer<BR/>
+<TAB/>For i = 1 To totalNumber<BR/>
+<TAB/><TAB/>If (source.Cells(i, closureCodeColumn) = "CA taken" And _<BR/>
+<TAB/><TAB/><TAB/> (source.Cells(i, statusColumn) = "Resolved" Or _<BR/>
+<TAB/><TAB/><TAB/>  source.Cells(i, statusColumn) = "Verified" Or _<BR/>
+<TAB/><TAB/><TAB/>  source.Cells(i, statusColumn) = "Closed")) Then<BR/>
+<TAB/><TAB/><TAB/>incrNumber = incrNumber + 1<BR/>
+<TAB/><TAB/><TAB/>text = source.Cells(i, rootCauseColumn)<BR/>
+<TAB/><TAB/><TAB/>pos = InStr(text, "]")<BR/>
+<TAB/><TAB/><TAB/>If ((Left(text, 1) = "[") And (pos &amp;gt; 1)) Then<BR/>
+<TAB/><TAB/><TAB/><TAB/>text = Mid(text, 2, pos - 2)<BR/>
+<TAB/><TAB/><TAB/>Else<BR/>
+<TAB/><TAB/><TAB/><TAB/>text = "?"<BR/>
+<TAB/><TAB/><TAB/>End If<BR/>
+<TAB/><TAB/><TAB/>newSheet.Cells(incrNumber, 1) = source.Cells(i, reportNumberColumn)<BR/>
+<TAB/><TAB/><TAB/>newSheet.Cells(incrNumber, 2) = text<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/>Next i<BR/>
+<TAB/><BR/>
+<TAB/>' --- --- --- create pivot table ---<BR/>
+<TAB/>Dim table As Variant<BR/>
+<TAB/>Set table = ActiveWorkbook.PivotCaches.Add(SourceType:=xlDatabase, SourceData:="'Root Cause Analysis'!A:B").CreatePivotTable(Range("D1"))<BR/>
+<TAB/>table.AddFields RowFields:="root cause"<BR/>
+<TAB/>table.PivotFields("identifier").Orientation = xlDataField<BR/>
+<TAB/>table.DataFields(1).Function = xlCount<BR/>
+<TAB/><BR/>
+<TAB/>Dim numberOfValues As Integer<BR/>
+<TAB/>numberOfValues = table.DataBodyRange.Rows.Count<BR/>
+<BR/>
+<TAB/>' --- --- --- create chart ---<BR/>
+<TAB/>Dim chart As Variant<BR/>
+<TAB/>Set chart = Charts.Add<BR/>
+<TAB/>chart.ChartType = xlColumnClustered<BR/>
+<TAB/>chart.SetSourceData source:=Sheets("Root Cause Analysis").Range("A1:B" &amp; incrNumber), PlotBy:=xlRows<BR/>
+<TAB/>chart.SeriesCollection(1).XValues = "='Root Cause Analysis'!R3C4:R" &amp; numberOfValues &amp; "C4"<BR/>
+<TAB/>chart.SeriesCollection(1).Values = "='Root Cause Analysis'!R3C5:R" &amp; numberOfValues &amp; "C5"<BR/>
+<TAB/>chart.HasLegend = False<BR/>
+<TAB/>chart.HasDataTable = False<BR/>
+<TAB/>chart.HasTitle = False<BR/>
+<TAB/>chart.Location Where:=xlLocationAsObject, Name:="Root Cause Analysis"<BR/>
+<BR/>
+<TAB/>Application.ScreenUpdating = True<BR/>
+<TAB/><BR/>
+End Sub</CODESAMPLE>
+
+</CONTENT>
+<X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>
+<X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>
+<X><T>Visual Basic in Excel</T><A>excelvb.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

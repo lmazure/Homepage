@@ -1,0 +1,306 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>DICOM</TITLE>
+<PATH>notes/dicom.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE>When analyzing DICOM changes:</TITLE>
+<ITEM>look at the changes described on <X><T>David Clunie's site</T><A>http://www.dclunie.com/dicom-status/status.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM>when you have found between which DICOM versions the change occurred, navigate in the <X><T>NEMA FTP site</T><A>ftp://medical.nema.org/medical/dicom/</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM>read the readme file for the year the change has been performed (this readme file describes the supplements and correction proposals applied part per part, but it seems to be absent after 2003)</ITEM>
+</BLIST>
+
+<U><B>Organization of the standard (2004)</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM>1</TERM><DESC>Introduction and Overview</DESC></ROW>
+<ROW><TERM>2</TERM><DESC>Conformance</DESC></ROW>
+<ROW><TERM>3</TERM><DESC>Information Object Definitions</DESC></ROW>
+<ROW><TERM>4</TERM><DESC>Service Class Specifications</DESC></ROW>
+<ROW><TERM>5</TERM><DESC>Data Structures and Encoding</DESC></ROW>
+<ROW><TERM>6</TERM><DESC>Data Dictionary</DESC></ROW>
+<ROW><TERM>7</TERM><DESC>Message Exchange</DESC></ROW>
+<ROW><TERM>8</TERM><DESC>Network Communication Support for Message Exchange</DESC></ROW>
+<ROW><TERM>10</TERM><DESC>Media Storage and File Format for Data Interchange</DESC></ROW>
+<ROW><TERM>11</TERM><DESC>Media Storage Application Profiles</DESC></ROW>
+<ROW><TERM>12</TERM><DESC>Media Formats and Physical Media for Data Interchange</DESC></ROW>
+<ROW><TERM>14</TERM><DESC>Grayscale Standard Display Function</DESC></ROW>
+<ROW><TERM>15</TERM><DESC>Security Profiles</DESC></ROW>
+<ROW><TERM>16</TERM><DESC>Content Mapping Resource</DESC></ROW>
+<ROW><TERM>17</TERM><DESC>Explanatory Information</DESC></ROW>
+<ROW><TERM>18</TERM><DESC>Web Access to DICOM Persistent Objects (WADO)</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+A DICOM file is a list of fields.
+<BLIST><TITLE>Each field is composed by:</TITLE>
+<ITEM><BLIST><TITLE>for explicit encodings</TITLE>
+<ITEM>tag</ITEM>
+<ITEM>VR (Value Representation) </ITEM>
+<ITEM>length</ITEM>
+<ITEM>value</ITEM></BLIST></ITEM>
+<ITEM><BLIST><TITLE>for implicit encodings</TITLE>
+<ITEM>tag</ITEM>
+<ITEM>length</ITEM>
+<ITEM>value</ITEM></BLIST></ITEM>
+</BLIST>
+<BLIST><TITLE>A tag is composed by</TITLE>
+<ITEM>a group number (two bytes)</ITEM>
+<ITEM>an element number (two bytes)</ITEM>
+</BLIST>
+
+Value Representations (defined in part 5 of the standard)
+<DEFINITIONTABLE>
+<ROW><TERM>AE</TERM><DESC>Application Entity</DESC></ROW>
+<ROW><TERM>AS</TERM><DESC>Age String</DESC></ROW>
+<ROW><TERM>AT</TERM><DESC>Attribute Tag</DESC></ROW>
+<ROW><TERM>CS</TERM><DESC>Code String</DESC></ROW>
+<ROW><TERM>DA</TERM><DESC>Date</DESC></ROW>
+<ROW><TERM>DS</TERM><DESC>Decimal String</DESC></ROW>
+<ROW><TERM>DT</TERM><DESC>Date Time</DESC></ROW>
+<ROW><TERM>FL</TERM><DESC>Floating Point Single</DESC></ROW>
+<ROW><TERM>FD</TERM><DESC>Floating Point Double</DESC></ROW>
+<ROW><TERM>IS</TERM><DESC>Integer String</DESC></ROW>
+<ROW><TERM>LO</TERM><DESC>Long String</DESC></ROW>
+<ROW><TERM>LT</TERM><DESC>Long Text</DESC></ROW>
+<ROW><TERM>OB</TERM><DESC>Other Byte String</DESC></ROW>
+<ROW><TERM>OF</TERM><DESC>Other Float String</DESC></ROW>
+<ROW><TERM>OW</TERM><DESC>Other Word String</DESC></ROW>
+<ROW><TERM>PN</TERM><DESC>Person Name</DESC></ROW>
+<ROW><TERM>SH</TERM><DESC>Short String</DESC></ROW>
+<ROW><TERM>SL</TERM><DESC>Signed Long</DESC></ROW>
+<ROW><TERM>SQ</TERM><DESC>Sequence of Items</DESC></ROW>
+<ROW><TERM>SS</TERM><DESC>Signed Short</DESC></ROW>
+<ROW><TERM>ST</TERM><DESC>Short Text</DESC></ROW>
+<ROW><TERM>TM</TERM><DESC>Time</DESC></ROW>
+<ROW><TERM>UI</TERM><DESC>Unique Identifier (UID)</DESC></ROW>
+<ROW><TERM>UL</TERM><DESC>Unsigned Long</DESC></ROW>
+<ROW><TERM>UN</TERM><DESC>Unknown</DESC></ROW>
+<ROW><TERM>US</TERM><DESC>Unsigned Short</DESC></ROW>
+<ROW><TERM>UT</TERM><DESC>Unlimited Text</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+Some common fields (the whole list constitutes the part 6 of the standard)
+<DEFINITION2TABLE>
+<ROW><TERM1>(0008,0008)</TERM1><TERM2>CS</TERM2><DESC>Image Type</DESC></ROW>
+<ROW><TERM1>(0008,0016)</TERM1><TERM2>UI</TERM2><DESC>SOP Class UID</DESC></ROW>
+<ROW><TERM1>(0008,0018)</TERM1><TERM2>UI</TERM2><DESC>SOP Instance UID</DESC></ROW>
+<ROW><TERM1>(0008,0060)</TERM1><TERM2>CS</TERM2><DESC>Modality</DESC></ROW>
+<ROW><TERM1>(0008,0021)</TERM1><TERM2>DA</TERM2><DESC>Series Date</DESC></ROW>
+<ROW><TERM1>(0008,0022)</TERM1><TERM2>DA</TERM2><DESC>Acquisition Date</DESC></ROW>
+<ROW><TERM1>(0008,0030)</TERM1><TERM2>TM</TERM2><DESC>Study Time</DESC></ROW>
+<ROW><TERM1>(0008,0031)</TERM1><TERM2>TM</TERM2><DESC>Series Time</DESC></ROW>
+<ROW><TERM1>(0008,0032)</TERM1><TERM2>TM</TERM2><DESC>Acquisition Time</DESC></ROW>
+<ROW><TERM1>(0008,0060)</TERM1><TERM2>CS</TERM2><DESC>Modality</DESC></ROW>
+<ROW><TERM1>(0010,0010)</TERM1><TERM2>PN</TERM2><DESC>Patient's Name</DESC></ROW>
+<ROW><TERM1>(0010,0020)</TERM1><TERM2>LO</TERM2><DESC>Patient ID</DESC></ROW>
+<ROW><TERM1>(0010,0030)</TERM1><TERM2>DA</TERM2><DESC>Patient's Birth Date</DESC></ROW>
+<ROW><TERM1>(0010,0032)</TERM1><TERM2>TM</TERM2><DESC>Patient's Birth Time</DESC></ROW>
+<ROW><TERM1>(0008,0020)</TERM1><TERM2>DA</TERM2><DESC>Study Date</DESC></ROW>
+<ROW><TERM1>(0028,0008)</TERM1><TERM2>IS</TERM2><DESC>Number of Frames</DESC></ROW>
+<ROW><TERM1>(0028,0010)</TERM1><TERM2>US</TERM2><DESC>Rows</DESC></ROW>
+<ROW><TERM1>(0028,0011)</TERM1><TERM2>US</TERM2><DESC>Columns</DESC></ROW>
+<ROW><TERM1>(0028,0100)</TERM1><TERM2>US</TERM2><DESC>Bits Allocated</DESC></ROW>
+<ROW><TERM1>(0028,0101)</TERM1><TERM2>US</TERM2><DESC>Bits Stored</DESC></ROW>
+<ROW><TERM1>(0028,0102)</TERM1><TERM2>US</TERM2><DESC>High Bit</DESC></ROW>
+<ROW><TERM1>(0028,0103)</TERM1><TERM2>US</TERM2><DESC>Pixel Representation</DESC></ROW>
+<ROW><TERM1>(0028,0301)</TERM1><TERM2>CS</TERM2><DESC>Burned in Annotation</DESC></ROW>
+</DEFINITION2TABLE>
+<BR/>
+
+<U><B>List of modalities (&#xA7;C.7.3.1.1.1 in PS 3.3 2004)</B></U><BR/>
+(stored in (0008,0060))
+<DEFINITIONTABLE>
+<ROW><TERM>AS</TERM><DESC>Angioscopy (retired)</DESC></ROW>
+<ROW><TERM>AU</TERM><DESC>Audio</DESC></ROW>
+<ROW><TERM>BI</TERM><DESC>Biomagnetic imaging</DESC></ROW>
+<ROW><TERM>CD</TERM><DESC>Color flow Doppler</DESC></ROW>
+<ROW><TERM>CF</TERM><DESC>Cinefluorography (retired, now in RF)</DESC></ROW>
+<ROW><TERM>CP</TERM><DESC>Culposcopy (retired)</DESC></ROW>
+<ROW><TERM>CR</TERM><DESC>Computed Radiography</DESC></ROW>
+<ROW><TERM>CS</TERM><DESC>Cystoscopy (retired)</DESC></ROW>
+<ROW><TERM>CT</TERM><DESC>Computed Tomography</DESC></ROW>
+<ROW><TERM>DD</TERM><DESC>Duplex Doppler</DESC></ROW>
+<ROW><TERM>DF</TERM><DESC>Digital fluoroscopy (retired, now in RF)</DESC></ROW>
+<ROW><TERM>DG</TERM><DESC>Diaphanography</DESC></ROW>
+<ROW><TERM>DM</TERM><DESC>Digital microscopy (retired)</DESC></ROW>
+<ROW><TERM>DS</TERM><DESC>Digital Subtraction Angiography (retired, now in XA)</DESC></ROW>
+<ROW><TERM>DX</TERM><DESC>Digital Radiography</DESC></ROW>
+<ROW><TERM>EC</TERM><DESC>Echocardiography (retired)</DESC></ROW>
+<ROW><TERM>ECG</TERM><DESC>Electrocardiography</DESC></ROW>
+<ROW><TERM>EPS</TERM><DESC>Cardiac Electrophysiology</DESC></ROW>
+<ROW><TERM>ES</TERM><DESC>Endoscopy</DESC></ROW>
+<ROW><TERM>FA</TERM><DESC>Fluorescein angiography (retired)</DESC></ROW>
+<ROW><TERM>FS</TERM><DESC>Fundoscopy (retired)</DESC></ROW>
+<ROW><TERM>GM</TERM><DESC>General Microscopy</DESC></ROW>
+<ROW><TERM>HC</TERM><DESC>Hard Copy</DESC></ROW>
+<ROW><TERM>HD</TERM><DESC>Hemodynamic Waveform</DESC></ROW>
+<ROW><TERM>IO</TERM><DESC>Intra-oral Radiography</DESC></ROW>
+<ROW><TERM>IVUS</TERM><DESC>Intravascular Ultrasound</DESC></ROW>
+<ROW><TERM>LP</TERM><DESC>Laparoscopy (retired)</DESC></ROW>
+<ROW><TERM>LS</TERM><DESC>Laser surface scan</DESC></ROW>
+<ROW><TERM>MA</TERM><DESC>Magnetic resonance angiography (retired)</DESC></ROW>
+<ROW><TERM>MG</TERM><DESC>Mammography</DESC></ROW>
+<ROW><TERM>MR</TERM><DESC>Magnetic Resonance</DESC></ROW>
+<ROW><TERM>MS</TERM><DESC>Magnetic resonance spectroscopy (retired)</DESC></ROW>
+<ROW><TERM>NM</TERM><DESC>Nuclear Medicine</DESC></ROW>
+<ROW><TERM>OP</TERM><DESC>Ophthalmic Photography</DESC></ROW>
+<ROW><TERM>OT</TERM><DESC>Other</DESC></ROW>
+<ROW><TERM>PR</TERM><DESC>Presentation State</DESC></ROW>
+<ROW><TERM>PT</TERM><DESC>Positron emission tomography (PET)</DESC></ROW>
+<ROW><TERM>PX</TERM><DESC>Panoramic X-Ray</DESC></ROW>
+<ROW><TERM>RF</TERM><DESC>Radio Fluoroscopy</DESC></ROW>
+<ROW><TERM>RG</TERM><DESC>Radiographic imaging (conventional film/screen)</DESC></ROW>
+<ROW><TERM>RTDOSE</TERM><DESC>Radiotherapy Dose</DESC></ROW>
+<ROW><TERM>RTIMAGE</TERM><DESC>Radiotherapy Image</DESC></ROW>
+<ROW><TERM>RTPLAN</TERM><DESC>Radiotherapy Plan</DESC></ROW>
+<ROW><TERM>RTRECORD</TERM><DESC>RT Treatment Record</DESC></ROW>
+<ROW><TERM>RTSTRUCT</TERM><DESC>Radiotherapy Structure Set</DESC></ROW>
+<ROW><TERM>SM</TERM><DESC>Slide Microscopy</DESC></ROW>
+<ROW><TERM>SMR</TERM><DESC>Stereometric Relationship</DESC></ROW>
+<ROW><TERM>SR</TERM><DESC>SR Document</DESC></ROW>
+<ROW><TERM>ST</TERM><DESC>Single-photon emission computed tomography (SPECT)</DESC></ROW>
+<ROW><TERM>TG</TERM><DESC>Thermography</DESC></ROW>
+<ROW><TERM>US</TERM><DESC>Ultrasound</DESC></ROW>
+<ROW><TERM>VF</TERM><DESC>Videofluorography (retired, now in RF)</DESC></ROW>
+<ROW><TERM>XA</TERM><DESC>X-Ray Angiography</DESC></ROW>
+<ROW><TERM>XC</TERM><DESC>External-camera Photography</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+Standard SOP classes (&#xA7;B5 in PS3.3 2003)
+<DEFINITIONTABLE>
+<ROW><TERM>1.2.840.10008.5.1.1.27</TERM><DESC>Stored Print Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.1.29</TERM><DESC>Hardcopy Grayscale Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.1.30</TERM><DESC>Hardcopy Color Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.1</TERM><DESC>Computed Radiography Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.1.1</TERM><DESC>Digital X-Ray Image Storage - For Presentation</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.1.1.1</TERM><DESC>Digital X-Ray Image Storage - For Processing</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.1.2</TERM><DESC>Digital Mammography Image Storage - For Presentation</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.1.2.1</TERM><DESC>Digital Mammography Image Storage - For Processing</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.1.3</TERM><DESC>Digital Intra-oral X-Ray Image Storage - For Presentation</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.1.3.1</TERM><DESC>Digital Intra-oral X-Ray Image Storage - For Processing</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.2</TERM><DESC>CT Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.2.1</TERM><DESC>Enhanced CT Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.3.1</TERM><DESC>Ultrasound Multi-frame Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.4</TERM><DESC>MR Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.4.1</TERM><DESC>Enhanced MR Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.4.2</TERM><DESC>MR Spectroscopy Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.6.1</TERM><DESC>Ultrasound Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.7</TERM><DESC>Secondary Capture Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.7.1</TERM><DESC>Multi-frame Single Bit Secondary Capture Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.7.2</TERM><DESC>Multi-frame Grayscale Byte Secondary Capture Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.7.3</TERM><DESC>Multi-frame Grayscale Word Secondary Capture Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.7.4</TERM><DESC>Multi-frame True Color Secondary Capture Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.8</TERM><DESC>Stand-alone Overlay Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.9</TERM><DESC>Stand-alone Curve Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.9.1.1 12</TERM><DESC>12-lead ECG Waveform Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.9.1.2</TERM><DESC>General ECG Waveform Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.9.1.3</TERM><DESC>Ambulatory ECG Waveform Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.9.2.1</TERM><DESC>Hemodynamic Waveform Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.9.3.1</TERM><DESC>Cardiac Electrophysiology Waveform Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.9.4.1</TERM><DESC>Basic Voice Audio Waveform Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.10</TERM><DESC>Stand-alone Modality LUT Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.11</TERM><DESC>Stand-alone VOI LUT Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.11.1</TERM><DESC>Grayscale Softcopy Presentation State Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.12.1</TERM><DESC>X-Ray Angiographic Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.12.2</TERM><DESC>X-Ray Radiofluoroscopic Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.20</TERM><DESC>Nuclear Medicine Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.66</TERM><DESC>Raw Data Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.66.1</TERM><DESC>Spatial Registration Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.66.2</TERM><DESC>Spatial Fiducials Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.1</TERM><DESC>VL Endoscopic Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.1.1</TERM><DESC>Video Endoscopic Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.2</TERM><DESC>VL Microscopic Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.2.1</TERM><DESC>Video Microscopic Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.3</TERM><DESC>VL Slide-Coordinates Microscopic Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.4</TERM><DESC>VL Photographic Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.4.1</TERM><DESC>Video Photographic Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.5.1</TERM><DESC>Ophthalmic Photography 8 Bit Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.5.2</TERM><DESC>Ophthalmic Photography 16 Bit Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.77.1.5.3</TERM><DESC>Stereometric Relationship Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.88.11</TERM><DESC>Basic Text SR</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.88.22</TERM><DESC>Enhanced SR</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.88.33</TERM><DESC>Comprehensive SR</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.88.40</TERM><DESC>Procedure Log</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.88.50</TERM><DESC>Mammography CAD SR</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.88.59</TERM><DESC>Key Object Selection</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.88.65</TERM><DESC>Chest CAD SR</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.128</TERM><DESC>Positron Emission Tomography Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.129</TERM><DESC>Standalone PET Curve Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.481.1</TERM><DESC>RT Image Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.481.2</TERM><DESC>RT Dose Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.481.3</TERM><DESC>RT Structure Set Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.481.4</TERM><DESC>RT Beams Treatment Record Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.481.5</TERM><DESC>RT Plan Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.481.6</TERM><DESC>RT Brachy Treatment Record Storage</DESC></ROW>
+<ROW><TERM>1.2.840.10008.5.1.4.1.1.481.7</TERM><DESC>RT Treatment Summary Record Storage</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+Transfer syntaxes (Annex A in PS3.6 2003)
+<DEFINITIONTABLE>
+<ROW><TERM>1.2.840.10008.1.2</TERM><DESC>Implicit VR Little Endian: Default Transfer Syntax for DICOM</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.1</TERM><DESC>Explicit VR Little Endian</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.1.99</TERM><DESC>Deflated Explicit VR Little Endian</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.2</TERM><DESC>Explicit VR Big Endian</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.50</TERM><DESC>JPEG Baseline (Process 1): Default Transfer Syntax for Lossy JPEG 8 Bit Image Compression</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.51</TERM><DESC>JPEG Extended (Process 2 &amp; 4): Default Transfer Syntax for Lossy JPEG 12 Bit Image Compression (Process 4 only)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.52</TERM><DESC>JPEG Extended (Process 3 &amp; 5) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.53</TERM><DESC>JPEG Spectral Selection, Non-Hierarchical (Process 6 &amp; 8) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.54</TERM><DESC>JPEG Spectral Selection, Non-Hierarchical (Process 7 &amp; 9 )(Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.55</TERM><DESC>JPEG Full Progression, Non-Hierarchical (Process 10 &amp; 12)  (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.56</TERM><DESC>JPEG Full Progression, Non-Hierarchical (Process 11 &amp; 13) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.57</TERM><DESC>JPEG Lossless, Non-Hierarchical (Process 14)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.58</TERM><DESC>JPEG Lossless, Non-Hierarchical (Process 15) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.59</TERM><DESC>JPEG Extended, Hierarchical (Process 16 &amp; 18) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.60</TERM><DESC>JPEG Extended, Hierarchical (Process 17 &amp; 19) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.61</TERM><DESC>JPEG Spectral Selection, Hierarchical (Process 20 &amp; 22) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.62</TERM><DESC>JPEG Spectral Selection, Hierarchical (Process 21 &amp; 23) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.63</TERM><DESC>JPEG Full Progression, Hierarchical (Process 24 &amp; 26) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.64</TERM><DESC>JPEG Full Progression, Hierarchical (Process 25 &amp; 27) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.65</TERM><DESC>JPEG Lossless, Hierarchical (Process 28) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.66</TERM><DESC>JPEG Lossless, Hierarchical (Process 29) (Retired)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.70</TERM><DESC>JPEG Lossless, Non-Hierarchical, First-Order Prediction (Process 14 [Selection Value 1]): Default Transfer Syntax for Lossless JPEG Image Compression</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.80</TERM><DESC>JPEG-LS Lossless Image Compression</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.81</TERM><DESC>JPEG-LS Lossy (Near-Lossless) Image Compression</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.90</TERM><DESC>JPEG 2000 Image Compression (Lossless Only)</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.91</TERM><DESC>JPEG 2000 Image Compression</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.4.100</TERM><DESC>MPEG2 Main Profile @ Main Level</DESC></ROW>
+<ROW><TERM>1.2.840.10008.1.2.5</TERM><DESC>RLE Lossless </DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+Pixel pipeline
+<TABLE>
+<ROW><CELL>manufacturer dependant pixel values</CELL><CELL></CELL></ROW>
+<ROW><CELL></CELL><CELL><B>modality LUT</B><BR/>
+(0028,1053) rescale slope<BR/>
+(0028,1052) rescale intercept<BR/>
+or<BR/>
+(0028,3000) modality LUT</CELL></ROW>
+<ROW><CELL>modality pixels<BR/>
+pixel values which are meaningful for the modality and which are manufacturer independent</CELL><CELL></CELL></ROW>
+<ROW><CELL></CELL><CELL><B>VOI LUT</B><BR/>
+(0028,1050) window center<BR/>
+(0028,1051) window width<BR/>
+or<BR/>
+(0028,3010) VOI LUT</CELL></ROW>
+<ROW><CELL>display pixels<BR/>
+pixel values which are meaningful for the user or the application</CELL><CELL></CELL></ROW>
+<ROW><CELL></CELL><CELL><B>presentation LUT</B><BR/>
+(2050,0020) presentation LUT shape<BR/>
+can be IDENTITY or INVERSE<BR/>
+or<BR/>
+(2050,0010) presentation LUT sequence</CELL></ROW>
+<ROW><CELL>p-values<BR/>
+device independent perceptually linear space</CELL><CELL></CELL></ROW>
+</TABLE><BR/>
+
+Overlay planes are embedded when the value of (60xx,0102) is strictly positive. This feature has been dropped from DICOM 2006.<BR/>
+
+</CONTENT>
+<X><T>links</T><A>../links/dicom.html</A><L>en</L><F>HTML</F></X>
+</PAGE>

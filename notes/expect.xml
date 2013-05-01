@@ -1,0 +1,141 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Expect</TITLE>
+<PATH>notes/expect.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<CONTENT>
+<BLIST>
+<ITEM>
+<CODESAMPLE><PROMPT/>expect -d</CODESAMPLE>
+run expect in debug mode
+</ITEM>
+<ITEM>
+it is possible to set the timeout with the <CODEROUTINE>timeout</CODEROUTINE> variable
+<CODESAMPLE>set timeout 30</CODESAMPLE>
+or with the <CODEROUTINE>timeout</CODEROUTINE> flag of the <CODEROUTINE>expect</CODEROUTINE> command.<BR/>
+A timeout of -1 is an infinite timeout.
+</ITEM>
+<ITEM>
+execute a command as root
+<CODESAMPLE>
+#!/bin/ksh<BR/>
+...<BR/>
+expect<TAB/>&lt;&lt; EOF<BR/>
+<TAB/>spawn "su" "-"<BR/>
+<TAB/>expect -re "Password:\$"<BR/>
+<TAB/>send "foobar\r"<BR/>
+<TAB/>expect -re "#\$"<BR/>
+<TAB/>send "my_script_for_root\r"<BR/>
+<TAB/>expect -re "#\$"<BR/>
+EOF<BR/>
+...<BR/>
+</CODESAMPLE>
+</ITEM>
+<ITEM>
+push a binary on a remote host, execute it and get its results
+<CODESAMPLE>
+#!/bin/ksh<BR/>
+<BR/>
+machine=$1<BR/>
+user=$2<BR/>
+password=$3<BR/>
+<BR/>
+expect &lt;&lt; EOF<BR/>
+<TAB/>spawn "ftp" "$machine"<BR/>
+<TAB/>expect -re "Name.*: \$"<BR/>
+<TAB/>send "$user\r"<BR/>
+<TAB/>expect -re "Password:\$"<BR/>
+<TAB/>send "$password\r"<BR/>
+<TAB/>expect -re "230 Login successful."<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "cd /tmp\r"<BR/>
+<TAB/>expect -re "250 Directory successfully changed.\r\n\$"<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "lcd /tmp\r"<BR/>
+<TAB/>expect -re "Local directory now /tmp\r\n\$"<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "bin\r"<BR/>
+<TAB/>expect -re "200 Switching to Binary mode.\r\n\$"<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "put corruptionFinder\r"<BR/>
+<TAB/>expect -re "226 File receive OK.\r\n\$"<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "bye\r"<BR/>
+EOF<BR/>
+<BR/>
+expect &lt;&lt; EOF<BR/>
+<TAB/>spawn "telnet" "$machine"<BR/>
+<TAB/>expect -re "login: \$"<BR/>
+<TAB/>send "$user\r"<BR/>
+<TAB/>expect -re "Password: \$"<BR/>
+<TAB/>send "$password\r"<BR/>
+<TAB/>expect -re {\[1\] \$}<BR/>
+<TAB/>send "hostname &gt;&amp; /tmp/corruptionFinderLog_$machine\r"<BR/>
+<TAB/>expect -re {\[2\] \$}<BR/>
+<TAB/>send "date &gt;&gt;&amp; /tmp/corruptionFinderLog_$machine\r"<BR/>
+<TAB/>expect -re {\[3\] \$}<BR/>
+<TAB/>send "chmod u+x /tmp/corruptionFinder\r"<BR/>
+<TAB/>expect -re {\[4\] \$}<BR/>
+<TAB/>send "/tmp/corruptionFinder \\\$ROOT_IMAGE_DIR &gt;&gt;&amp; /tmp/corruptionFinderLog_$machine\r"<BR/>
+<TAB/>expect -timeout -1 -re {\[5\] \$}<BR/>
+<TAB/>send "exit\r"<BR/>
+EOF<BR/>
+<BR/>
+expect &lt;&lt; EOF<BR/>
+<TAB/>spawn "ftp" "$machine"<BR/>
+<TAB/>expect -re "Name.*: \$"<BR/>
+<TAB/>send "$user\r"<BR/>
+<TAB/>expect -re "Password:\$"<BR/>
+<TAB/>send "$password\r"<BR/>
+<TAB/>expect -re "230 Login successful."<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "cd /tmp\r"<BR/>
+<TAB/>expect -re "250 Directory successfully changed.\r\n\$"<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "lcd /tmp\r"<BR/>
+<TAB/>expect -re "Local directory now /tmp\r\n\$"<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "bin\r"<BR/>
+<TAB/>expect -re "200 Switching to Binary mode.\r\n\$"<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "get corruptionFinderLog_$machine\r"<BR/>
+<TAB/>expect -re "226 File send OK.\r\n\$"<BR/>
+<TAB/>expect -re "ftp&gt; \$"<BR/>
+<TAB/>send "bye\r"<BR/>
+EOF<BR/>
+</CODESAMPLE>
+</ITEM>
+<ITEM>
+remotely log to the machine despite <CODEROUTINE>xdm</CODEROUTINE> (this is very dirty... <X><T>this solution</T><A>bypassxdm.html</A><L>en</L><F>HTML</F></X> is probably cleaner)
+<CODESAMPLE>
+#!/bin/ksh<BR/>
+<BR/>
+expect &lt;&lt; EOF<BR/>
+spawn "su" "-"<BR/>
+expect -timeout -1 -re "Password: \$"<BR/>
+sleep 1<BR/>
+send "operator\r"<BR/>
+expect -timeout -1 -re "# \$"<BR/>
+for {} 1 {} {<BR/>
+<TAB/>send "killall -11 X xdm\r"<BR/>
+<TAB/>expect -timeout -1 -re "# \$"<BR/>
+<TAB/>send "X\r"<BR/>
+<TAB/>expect -timeout -1 "Initializing extension GLX" {break} "# \$"<BR/>
+}<BR/>
+EOF<BR/>
+<BR/>
+sleep 30<BR/>
+export DISPLAY=:0.0<BR/>
+/etc/X11/xdm/Xsession &amp;<BR/>
+sleep 30<BR/>
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/tcltk.html#expect</A><L>en</L><F>HTML</F></X>
+</PAGE>
+
+
+

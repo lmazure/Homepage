@@ -1,0 +1,67 @@
+<HTML><HEAD>
+<TITLE>Search</TITLE>
+<script language="JavaScript">
+function sf(){
+  document.search.terms.focus();
+}
+function go(s)
+{
+  var request=s;
+  var terms = document.search.terms.value.split(" ");
+  for (i=0; i<terms.length; i++)
+  {
+    if (terms[i]!="") { // to avoid additional space characters
+      if (i>0) request += "+";
+      request += terms[i];
+    }
+  }
+  window.open(request,"_blank");
+}
+function search_google()
+{
+  go("http://www.google.com/search?q=");
+}
+function search_google_site()
+{
+  go("http://www.google.com/search?as_sitesearch=lmzr.perso.neuf.fr&q=");
+}
+function search_google_french()
+{
+  go("http://www.google.com/search?lr=lang_fr&q=");
+}
+function search_cambridge()
+{
+  go("http://dictionary.cambridge.org/results.asp?searchword=");
+}
+function search_dictionary()
+{
+  go("http://dictionary.reference.com/search?q=");
+}
+function search_wikipedia()
+{
+  go("http://en.wikipedia.org/wiki/Special:Search/");
+}
+</SCRIPT></HEAD>
+<BODY bgcolor="#E2FFE2" onload="sf()">
+<FORM name="search" onsubmit="window.search_google()">
+<TABLE width="100%">
+<COLGROUP><COL width="33.33%"><COL width="33.33%"><COL width="33.33%"></COLGROUP>
+<TBODY>
+<TR>
+<TD colspan=3 align=center><input size="64" name="terms" type="text"></TD>
+</TR>
+<TR>
+<TD align=center><input value="Google - all Internet" onclick="window.search_google();" type="button"></TD>
+<TD align=center><input value="Google - French Internet" onclick="window.search_google_french();" type="button"></TD>
+<TD align=center><input value="Google - this site" onclick="window.search_google_site();" type="button"></TD>
+</TR>
+<TR>
+<TD align=center><input value="Cambridge dictionary" onclick="window.search_cambridge();" type="button"></TD>
+<TD align=center><input value="Dictionary.com" onclick="window.search_dictionary();" type="button"></TD>
+<TD align=center><input value="Wikipedia" onclick="window.search_wikipedia();" type="button"></TD>
+</TR>
+</TBODY>
+</FORM>
+</TABLE>
+<BR/><CENTER><INPUT TYPE="button" VALUE="Close" ONCLICK="window.close(self)"></CENTER>
+</BODY></HTML>

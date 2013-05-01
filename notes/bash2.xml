@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>bash</TITLE>
+<PATH>notes/bash2.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><U><B>functions</B></U></TITLE>
+<ITEM>
+The declaration of a function is
+<CODESAMPLE>function foobar() { command-list; }</CODESAMPLE>
+The <CODEROUTINE>function</CODEROUTINE> keyword is optional. The curly braces around the function body must be separated from the body by blanks or newlines. The command list must be terminated with a semicolon or a newline.
+</ITEM>
+<ITEM>
+The exit status of a function is the exit status of the last command executed in the body. If the <CODEROUTINE>return</CODEROUTINE> keyword is used: with a numeric argument, this one is the function's return status; with no argument, the function's return status is the exit status of the last command executed before the <CODEROUTINE>return</CODEROUTINE>.
+</ITEM>
+<ITEM>
+The function can return a value just by using <CODEROUTINE>echo</CODEROUTINE>.
+<CODESAMPLE>
+#!/bin/bash<BR/>
+<BR/>
+function encode() {<BR/>
+<TAB/>command=`echo $1 | sed 's/./&lt;Key&gt;&amp; /g'`<BR/>
+<TAB/>echo "$command"<BR/>
+}<BR/>
+<BR/>
+e=`encode $1`<BR/>
+xse -window $win -display :0.0 $e "&lt;Key&gt;Return"<BR/>
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/shell.html#bash</A><L>en</L><F>HTML</F></X>
+</PAGE>

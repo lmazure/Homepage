@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE status="unmaintained" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Python</TITLE>
+<PATH>links/python.xml</PATH>
+<DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE>
+<CONTENT>
+
+<X><T>Cetus</T><A>http://www.sente.ch/cetus/oo_python.html</A><L>en</L><F>HTML</F></X>
+(<X><T>M</T><A>http://mirror.it.swin.edu.au/cetus/oo_python.html</A><L>en</L><F>HTML</F></X>,
+<X><T>M</T><A>http://www.objenv.com/cetus/oo_python.html</A><L>en</L><F>HTML</F></X>),
+<X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Languages/Python/</A><L>en</L><F>HTML</F></X><BR/>
+
+<X><T>python.org</T><A>http://www.python.org/</A><L>en</L><F>HTML</F></X><BR/>
+
+<X><T>FAQ</T><A>http://www.python.org/doc/FAQ.html</A><L>en</L><F>HTML</F></X>,
+<X><T>Cookbook</T><A>http://aspn.activestate.com/ASPN/Cookbook/Python</A><L>en</L><F>HTML</F></X>,
+<X><T>IAQ</T><A>http://www.norvig.com/python-iaq.html</A><L>en</L><F>HTML</F></X><BR/>
+
+<X><T>Jython</T><A>http://www.jython.org</A><L>en</L><F>HTML</F></X><BR/>
+
+<X><T>IronPython</T><A>http://ironpython.net</A><L>en</L><F>HTML</F></X><BR/>
+
+tools:
+<X><T>PyChecker</T><A>http://sourceforge.net/projects/pychecker</A><L>en</L><F>HTML</F></X><BR/>
+
+<X><T>personal notes</T><A>../notes/python.htm</A><L>en</L><F>HTML</F></X><BR/>
+
+<LINE/>
+
+<BLIST><TITLE><B>articles:</B></TITLE>
+  <ITEM><BLIST><TITLE>books</TITLE>
+    <ITEM><ARTICLE><X><T>Thinking in Python</T><A>http://www.mindview.net/Books/TIPython</A><L>en</L><F>HTML</F></X><AUTHOR><X><T>Bruce Eckel</T><A>http://www.BruceEckel.com/</A><L>en</L><F>HTML</F></X></AUTHOR><DATE><YEAR>2001</YEAR></DATE><COMMENT>Design patterns applied to Python.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Dive Into Python</T><A>http://diveintopython.org/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Mark Pilgrim</AUTHOR><DATE><YEAR>2001</YEAR></DATE><COMMENT>A free book to learn Python.</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><ARTICLE><X><T>Comparison of Tcl and Python</T><A>http://homepages.cwi.nl/%7Esjoerd/PythonVsTcl-old.html</A><L>en</L><F>HTML</F></X><AUTHOR><X><T>Sjoerd Mullender</T><A>http://www.cwi.nl/%7Esjoerd</A><L>en</L><F>HTML</F></X></AUTHOR><DATE><YEAR>1995</YEAR></DATE><COMMENT>This is a short comparison of the two languages, but some details are out of date.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>A Perl Hacker in the Land of Python</T><A>http://www.mail-archive.com/penguin@my.enemy.org/msg00886.html</A><L>en</L><F>HTML</F></X><AUTHOR>Jon Udell</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>2</MONTH><DAY>07</DAY></DATE><COMMENT>This is yet another Perl/Python comparison, with a final keynote about Zope.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Java and Python: a perfect couple</T><A>http://www.developer.com/tech/article.php/604041</A><L>en</L><F>HTML</F></X><AUTHOR>Guido van Rossum</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This article describes the Java implementation of Python.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Python Warts</T><A>http://web.archive.org/web/20031002184114/www.amk.ca/python/writing/warts.html</A><L>en</L><F>HTML</F></X><AUTHOR>Andrew M. Kuchling</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>8</MONTH><DAY>16</DAY></DATE><COMMENT>A list of the main issues with Python.</COMMENT></ARTICLE></ITEM>
+  <ITEM><BLIST><TITLE>history</TITLE>
+    <ITEM><ARTICLE><X><T>What's New in Python 2.0</T><A>http://www.amk.ca/python/2.0/</A><L>en</L><F>HTML</F></X><AUTHOR>A.M. Kuchling</AUTHOR><AUTHOR>Moshe Zadka</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>Python is now managed on SourceForge, Unicode support, list comprehension, augmented assignment, Distuilts, XML support...</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>What's New in Python 2.1</T><A>http://www.amk.ca/python/2.1/</A><L>en</L><F>HTML</F></X><AUTHOR>A.M. Kuchling</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>1</MONTH></DATE><COMMENT>Nested scope, function attributes, rich comparisons...</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>What's New in Python 2.2</T><A>http://www.python.org/doc/2.2.3/whatsnew/whatsnew22.html</A><L>en</L><F>HTML</F></X><AUTHOR>A.M. Kuchling</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>7</MONTH></DATE><COMMENT>Iterators, generators, division operators...</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X status='dead'><T>What's So Special About Python 2.2?</T><A>http://www.unixreview.com/documents/s=1356/urm0109h/0109h.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Cameron Laird</AUTHOR><AUTHOR>Kathryn Soraiz</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>9</MONTH></DATE><COMMENT>An introductory presentation of Python 2.2, much less detailed than the previous article.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>What's New in Python 2.3</T><A>http://www.python.org/doc/2.3/whatsnew/whatsnew23.html</A><L>en</L><F>HTML</F></X><AUTHOR>A.M. Kuchling</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>7</MONTH></DATE><COMMENT>Sets, Boolean type, zip archive...</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Python 3000</T><A>http://www.youtube.com/watch?v=66NThkgfc1U</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>6</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR>Guido van Rossum</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>7</MONTH><DAY>21</DAY></DATE><COMMENT>Guido explains the philosophy of Python 3, what will be added, what will be removed...</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Python 3 primer, Part 1: What's new -- Cleaner syntax for better code</T><A>http://www.ibm.com/developerworks/linux/library/l-python3-1/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Cesar Otero</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE><COMMENT><CODEROUTINE>print()</CODEROUTINE>, <CODEROUTINE>input()</CODEROUTINE>, <CODEROUTINE>bytes()</CODEROUTINE>, string formatting, <CODEROUTINE>dict</CODEROUTINE>, and the new I/O.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Python 3 primer, Part 2: Advanced topics -- Metaclasses, decorators, and other strange creatures</T><A>http://www.ibm.com/developerworks/linux/library/l-python3-2/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Cesar Otero</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>1</MONTH><DAY>30</DAY></DATE><COMMENT>Class decorators, abstract base classes, exceptions, and function annotations.</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><ARTICLE><X><T>Combining Python and C++</T><A>http://www.onlamp.com/pub/a/python/2001/07/19/pythonnews.html</A><L>en</L><F>HTML</F></X><AUTHOR>Stephen Figgins</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>7</MONTH><DAY>19</DAY></DATE><COMMENT>The current status of the tools available to use C++ from Python.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Editor Configuration for Python</T><A>http://styx.livinglogic.de/~walter/www.python.org-xhtmlified/editors/config.html</A><L>en</L><F>HTML</F></X><X><T>Editor Configuration for Python</T><A>http://doc.uh.cz/Python/HowTo/editor/</A><L>en</L><F>HTML</F></X><AUTHOR>Andr&#xE9;s Corrada-Emmanuel Mamey</AUTHOR><COMMENT>A list of resources to configure several text editors for Python.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Idioms and Anti-Idioms in Python</T><A>http://kaul.inf.fh-bonn-rhein-sieg.de/home/python/howto/doanddont/doanddont.html</A><L>en</L><F>HTML</F></X><AUTHOR>Moshe Zadka</AUTHOR><COMMENT>Short list of tips for coding in Python. Not of particular interest.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Python Patterns - Implementing Graphs</T><A>http://www.python.org/doc/essays/graphs.html</A><L>en</L><F>HTML</F></X><AUTHOR>Guido van Rossum</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>Some small example of graph algorithms.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Regular Expression HOWTO</T><A>http://docs.python.org/howto/regex.html</A><L>en</L><F>HTML</F></X><AUTHOR>A.M. Kuchling</AUTHOR><COMMENT>A tutorial to <CODEROUTINE>regexp</CODEROUTINE>s in Python (they are the same as in perl).</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Sorting Mini-HOWTO</T><A>http://old.tltsu.ru/archive/doc/programming/python/All/sorting.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Andrew Dalke</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>4</MONTH><DAY>17</DAY></DATE><COMMENT>An overview of how to sort lists.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Charming Python: Make Python run as fast as C with Psyco</T><A>http://www.ibm.com/developerworks/library/l-psyco.html</A><L>en</L><F>HTML</F></X><AUTHOR>David Mertz</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>10</MONTH></DATE><COMMENT>A quick presentation of Psycho which performs runtime optimization of some given functions.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Python persistence management - Use serialization to store Python objects</T><A>http://www.ibm.com/developerworks/linux/library/l-pypers.html</A><L>en</L><F>HTML</F></X><AUTHOR>Patrick K. O'Brien</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>11</MONTH></DATE><COMMENT>An introduction to pickling.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Guide to Python introspection - How to spy on your Python objects</T><A>http://www.ibm.com/developerworks/library/l-pyint.html</A><L>en</L><F>HTML</F></X><AUTHOR>Patrick K. O'Brien</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>The <CODEROUTINE>dir</CODEROUTINE>, <CODEROUTINE>id</CODEROUTINE>, <CODEROUTINE>hasattr</CODEROUTINE>, <CODEROUTINE>getattr</CODEROUTINE>, <CODEROUTINE>type</CODEROUTINE>... functions.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Qt and PyQt - An advanced GUI library for Python</T><A>http://www.ibm.com/developerworks/linux/library/l-qt/</A><L>en</L><F>HTML</F></X><AUTHOR>Boudewijn Rempt</AUTHOR><AUTHOR>David Mertz</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>A presentation of the Python binding of Qt. The authors also list the other language bindings of Q and other GUI toolkits for Python.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Wrap GObjects in Python - You don't have to be a C guru to wrap modules for Python</T><A>http://www.ibm.com/developerworks/linux/library/l-wrap/</A><L>en</L><F>HTML</F></X><AUTHOR>Ross Burton</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>3</MONTH><DAY>11</DAY></DATE><COMMENT>How to encapsulate GTK+ widgets into a Python (native) module.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Charming Python: Multiple dispatch - Generalizing polymorphism with multimethods</T><A>http://www.ibm.com/developerworks/linux/library/l-pydisp.html</A><L>en</L><F>HTML</F></X><AUTHOR>David Mertz</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE><COMMENT>The author describes the multimethods module he has created to support method dispatching depending on the classes of the parameters (instead of only the class of the current object as usual).</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Metaclass programming in Python - Pushing object-oriented programming to the next level</T><A>http://www.ibm.com/developerworks/linux/library/l-pymeta.html</A><L>en</L><F>HTML</F></X><AUTHOR>David Mertz</AUTHOR><AUTHOR>Michele Simionato</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>2</MONTH><DAY>26</DAY></DATE><COMMENT>The title says everything</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Charming Jython - Learn how the Java implementation of Python can aid your development efforts</T><A>http://www.ibm.com/developerworks/java/library/j-jython.html</A><L>en</L><F>HTML</F></X><AUTHOR>Uche Ogbuji</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE><COMMENT>A simple introduction to Jython.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Django: The First Five Years</T><A>http://www.youtube.com/watch?v=aJ_7KtjIVLQ</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>5</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR>Jacob Kaplan-Moss</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>A detailed and technical archaeology of Django. This would be of interest only for those who are interested by the history of this framework.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X quality='-1'><T>Porting Perl To Python -- Techniques for migrating legacy, untested Perl to Python</T><A>http://www.ibm.com/developerworks/linux/library/l-perl-2-python</A><L>en</L><F>HTML</F></X><AUTHOR>Noah Gift</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE><COMMENT>The author simply suggests to write tests corresponding to what the Perl code should to, then to write the Python code to pass successfully these tests. This is simply TDD...</COMMENT></ARTICLE></ITEM>
+</BLIST>
+
+</CONTENT>
+</PAGE>
+

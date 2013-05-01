@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>2D/3D graphics</TITLE>
+<PATH>links/3d.xml</PATH>
+<DATE><YEAR>2011</YEAR><MONTH>6</MONTH><DAY>22</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE>tools, libraries source repositories:</TITLE>
+  <ITEM><X><T>Computer Vision Source Code</T><A>http://www.cs.cmu.edu/afs/cs/project/cil/ftp/html/v-source.html</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+
+<BLIST><TITLE>libraries:</TITLE>
+  <ITEM>OpenGL:
+    <X><T>OpenGL.org</T><A>http://www.opengl.org/</A><L>en</L><F>HTML</F></X>,
+    <X><T>Mesa</T><A>http://www.mesa3d.org/</A><L>en</L><F>HTML</F></X>,
+    <X><T>OpenGL Volumizer</T><A>http://www-europe.sgi.com/software/volumizer/</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>vtk</T><A>http://www.vtk.org/</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+
+<BLIST><TITLE>tools:</TITLE>
+  <ITEM><X><T>xv</T><A>http://www.trilon.com/xv/</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>ImageMagick</T><A>http://www.imagemagick.org/</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><BLIST><TITLE><X><T>gimp</T><A>http://www.gimp.org/</A><L>en</L><F>HTML</F></X></TITLE>
+    <ITEM><X><T>Grokking the GIMP</T><A>http://gimp-savvy.com/BOOK/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>GIMP Developper FAQ</T><A>http://www.rru.com/%7Emeo/gimp/faq-dev.html</A><L>en</L><F>HTML</F></X></ITEM>
+  </BLIST></ITEM>
+  <ITEM><X><T>PTAssembler</T><A>http://www.tawbaware.com/ptasmblr.htm</A><L>en</L><F>HTML</F></X>: a software to stitch pictures together</ITEM>
+</BLIST>
+
+<BLIST><TITLE>formats:</TITLE>
+  <ITEM><X><T>EXIF</T><A>http://www.exif.org/</A><L>en</L><F>HTML</F></X>:
+    <X><T>drewnoakes.com</T><A>http://www.drewnoakes.com/code/exif/</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><ANCHOR>SVG</ANCHOR><X><T>SVG</T><A>http://www.w3.org/TR/SVG/</A><L>en</L><F>HTML</F></X>:
+    <X><T>Batik</T><A>http://xml.apache.org/batik/</A><L>en</L><F>HTML</F></X> </ITEM>
+  <ITEM><ANCHOR>PGML</ANCHOR><X><T>PGML</T><A>http://www.w3.org/TR/1998/NOTE-PGML</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+
+<BLIST><TITLE>segmentation:</TITLE>
+  <ITEM><X><T>ITK</T><A>http://www.itk.org</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+
+<BLIST><TITLE>galeries:</TITLE>
+  <ITEM><X><T>Digital Blasphemy</T><A>http://www.digitalblasphemy.com/</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>sub88</T><A>http://sub88.com/</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+
+<BLIST><TITLE>fonts:</TITLE>
+  <ITEM><X><T>FAQ</T><A>http://nwalsh.com/comp.fonts/FAQ/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+
+<LINE/>
+
+<BLIST><TITLE><B>articles:</B></TITLE>
+  <ITEM><BLIST><TITLE>OpenGL:</TITLE>
+    <ITEM><ARTICLE><X><T>OpenGL Optimizer White Paper</T><A>http://www.sgi.co.jp/software/optimizer/whitepaper.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>1997</YEAR></DATE><COMMENT>This paper lists and desribes the modules of OpenGL Optimizer: high order representations, tesellation simplifiers, multiprocessing harness, scene graph...</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>SVG:</TITLE>
+    <ITEM><ARTICLE><X><T>An Introduction to Scalable Vector Graphics</T><A>http://www.xml.com/pub/a/2001/03/21/svg.html</A><L>en</L><F>HTML</F></X><AUTHOR>J. David Eisenberg</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>3</MONTH><DAY>21</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Hot and Fresh Technology for the Enterprise</T><A>http://www.xml.com/pub/a/2002/04/17/svg.html</A><L>en</L><F>HTML</F></X><AUTHOR>Antoine Quint</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>4</MONTH><DAY>17</DAY></DATE><COMMENT>The current status of SVG in enterprise applications.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Going Mobile With SVG: Standards</T><A>http://www.xml.com/pub/a/2004/06/16/mobilesvg.html</A><L>en</L><F>HTML</F></X><AUTHOR>Antoine Quint</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>16</DAY></DATE><COMMENT>SVG defines now three tiers: tiny, basic and full.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Wherefore art thou, SVG?</T><A>http://www.oreillynet.com/xml/blog/2006/09/wherefore_art_thou_svg.html</A><L>en</L><F>HTML</F></X><AUTHOR>Kurt Cagle</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The current status of SVG: is this format still relevant in the software landscape?</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>SVG in Internet Explorer and at Google</T><A>http://www.youtube.com/watch?v=AT0zgcNczFY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>45</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR>Brad Neuberg</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>Some SVG demos and an introduction to SVG Web, a JavaScript library enabling the support of SVG on many Browsers.</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><ARTICLE><X><T>Interactive Ray Tracing: A Better Way to Program 3D</T><A>http://www.youtube.com/watch?v=rfgz90Y93c0</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>29</SECOND></DURATION></X><AUTHOR>James A. McCombe</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>A demo and a few explanations on Caustic's accelerator card and software: an optimized ray database.</COMMENT></ARTICLE></ITEM>
+
+</BLIST>
+
+</CONTENT>
+</PAGE>
+

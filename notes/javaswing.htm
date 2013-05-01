@@ -1,0 +1,356 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Java Swing</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<u><b>Containment hierarchy</b></u>
+<ul>
+  <li>There are 3 top-levels containers:
+    <ul>
+      <li><code>JFrame</code>: main window</li>
+      <li><code>JDialog</code>: secondary window</li>
+      <li><code>JApplet</code>: applet</li>
+    </ul>
+Each top-level container contains an intermediate container (the
+content pane) which contains all the elements of the GUI except the
+menu bar. </li>
+  <li>intermediate containers, e.g. <code>JPanel</code>, <code>JTabbedPane</code>,
+    <code>JScrollPane</code>... </li>
+  <li>atomic components: <code>JComboBox</code>, <code>JTextField</code>,
+    <code>JTable</code>... </li>
+  <li>typing Control+Shift+F1 on the border of any frame or dialog will
+dump
+the containment hierarchy to the standard output </li>
+</ul>
+<p><br>
+</p>
+<p><u><b>Events</b></u><br>
+</p>
+<ul>
+  <li>
+    <table>
+      <tbody>
+        <tr>
+          <td>ActionListener</td>
+          <td>User clicks a button, presses Return while typing in a
+text field, or chooses a menu item</td>
+        </tr>
+        <tr>
+          <td>WindowListener</td>
+          <td>User closes a frame (main window)</td>
+        </tr>
+        <tr>
+          <td>MouseListener</td>
+          <td>User presses a mouse button while the cursor is over a
+component</td>
+        </tr>
+        <tr>
+          <td>MouseMotionListener</td>
+          <td>User moves the mouse over a component</td>
+        </tr>
+        <tr>
+          <td>ComponentListener</td>
+          <td>Component becomes visible</td>
+        </tr>
+        <tr>
+          <td>FocusListener</td>
+          <td>Component gets the keyboard focus</td>
+        </tr>
+        <tr>
+          <td>ListSelectionListener</td>
+          <td>Table or list selection changes</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </li>
+  <li>use <span style="font-family: monospace;">EventListenerList </span>to
+easily manager listener lists:<br>
+    <table
+ style="text-align: left; width: 100%; background-color: rgb(204, 204, 204);"
+ border="0" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;"><span
+ style="font-family: monospace;">public class ResultRecorder implements
+javax.swing.table.TableModel {</span><br style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+private javax.swing.event.EventListenerList a_listenerList;<br>
+&nbsp;&nbsp;&nbsp; ...<br>
+          </span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public ResultRecorder() {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_data = new java.util.Vector();</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_listenerList = new javax.swing.event.EventListenerList();</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; void
+record(String testName,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+String testDescription,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int&nbsp;&nbsp;&nbsp; resultStatus,</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+String resultDescription) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_data.add( new ResultRecord(testName, testDescription, resultStatus,
+resultDescription) );</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+javax.swing.event.TableModelEvent e;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int n = a_data.size();</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+e = new javax.swing.event.TableModelEvent(this,</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+n, n,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+javax.swing.event.TableModelEvent.ALL_COLUMNS, </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+javax.swing.event.TableModelEvent.INSERT);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+java.util.EventListener[] list =
+a_listenerList.getListeners(javax.swing.event.TableModelListener.class);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+for (int i = list.length-1; i&gt;=0; i--) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+((javax.swing.event.TableModelListener)list[i]).tableChanged(e);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }<br>
+          <br>
+&nbsp;&nbsp;&nbsp; ...<br style="font-family: monospace;">
+          </span> <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public void addTableModelListener(javax.swing.event.TableModelListener
+l) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_listenerList.add(javax.swing.event.TableModelListener.class, l);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public void
+removeTableModelListener(javax.swing.event.TableModelListener l) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_listenerList.remove(javax.swing.event.TableModelListener.class, l);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">}</span><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </li>
+</ul>
+<p>
+</p>
+<span style="text-decoration: underline;"><span
+ style="font-weight: bold;">text components:<br>
+</span></span>hierarchy of the text component classes:<br>
+<ul style="font-family: monospace;">
+  <li>JTextComponent</li>
+</ul>
+<ul style="margin-left: 40px;">
+  <li><span style="font-family: monospace;">JTextField</span>: text
+controls<br>
+used to display and edit a line of text<br>
+they are action based<br>
+  </li>
+</ul>
+<ul style="margin-left: 40px;">
+  <ul>
+    <li><span style="font-family: monospace;">JPasswordField</span><br
+ style="font-family: monospace;">
+used to enter passwords<br>
+      <code><br>
+      </code></li>
+    <li><code>FFormattedTextField<br>
+a_startPriority = new JFormattedTextField(new Integer(0));</code></li>
+    <code>...<br>
+int v = ((Number)a_startPriority.getValue()).intValue();</code><br>
+  </ul>
+</ul>
+<ul style="margin-left: 40px;">
+  <li><span style="font-family: monospace;">JTextArea</span>: plain
+text area<br>
+used to display and edit unformatted text<br>
+  </li>
+</ul>
+<ul style="margin-left: 40px;">
+  <li><span style="font-family: monospace;">JEditorPane</span>: styled
+text area<br>
+used to display and edit text containing&nbsp; more than one font<br>
+some styled text areas allow some embedded components (images,...)<br>
+a <span style="font-family: monospace;">JEditorPane </span>can also
+be used to simply display a plain text, HTML or RTF document defined by
+a URL<br>
+  </li>
+</ul>
+<ul style="font-family: monospace; margin-left: 80px;">
+  <li>JTextPane</li>
+</ul>
+<br>
+text components use the usual MVC design pattern<br>
+<ul>
+  <li><span style="font-family: monospace;">Document </span>is the
+data model</li>
+  <li><span style="font-family: monospace;">JtextComponent </span>is
+the view</li>
+  <li><span style="font-family: monospace;">EditorKit </span>is the
+controller</li>
+</ul>
+<br>
+hierarchy of the <span style="font-family: monospace;">Document </span>interfaces:<br>
+<ul>
+  <li><span style="font-family: monospace;">Document</span>: the text
+is structured as a hierarchy of Elements</li>
+  <ul>
+    <li><span style="font-family: monospace;">StyledDocument</span>:
+supports styled text</li>
+  </ul>
+</ul>
+<br>
+hierarchy of default <span style="font-family: monospace;">Document </span>interfaces
+implementations:<br>
+<ul>
+  <li><span style="font-family: monospace;">AbstractDocument</span>:
+implement the <span style="font-family: monospace;">Document </span>interface</li>
+  <ul>
+    <li><span style="font-family: monospace;">PlainDocument</span></li>
+    <li><span style="font-family: monospace;">DefaultStyledDocument</span>:
+implement the <span style="font-family: monospace;">StyledDocument </span>interface</li>
+    <ul>
+      <li><span style="font-family: monospace;">HTMLDocument</span></li>
+    </ul>
+  </ul>
+</ul>
+<br>
+<span style="font-family: monospace;">DocumentListener </span>must
+have three methods:<br>
+<ul>
+  <li><span style="font-family: monospace;">insertUpdate</span>: some
+text has been added</li>
+  <li><span style="font-family: monospace;">removeUpdate</span>: some
+text has been removed</li>
+  <li><span style="font-family: monospace;">changeUpdate</span>: the
+style of some text has been changed</li>
+</ul>
+The document must not be modified from the listener.<br>
+<br>
+hierarchy of the <span style="font-family: monospace;">EditorKit </span>classes:<br>
+<ul>
+  <li><span style="font-family: monospace;">EditorKit</span></li>
+  <ul>
+    <li><span style="font-family: monospace;">DefaultEditorKit</span></li>
+    <ul>
+      <li><span style="font-family: monospace;">StyledEditorKit</span></li>
+      <ul>
+        <li><span style="font-family: monospace;">HTMLEditorKit</span></li>
+        <li><span style="font-family: monospace;">RTFEditorKit</span></li>
+      </ul>
+    </ul>
+  </ul>
+</ul>
+<p><br>
+<b><u><a href="jlist.htm">JList</a></u></b><br>
+<br>
+<b><u><a href="jtree.htm">JTree</a></u></b><br>
+<br>
+<b><u><a href="jtable.htm">JTable</a></u></b><br>
+<br>
+<b><u>layout managers</u></b><br>
+</p>
+<ul>
+  <li> <tt>BorderLayout</tt>: contained in five areas (north, east,
+south,
+west,
+center)</li>
+  <li> <tt>BoxLayout</tt>: all components are in a single row or
+column</li>
+  <li><span style="font-family: monospace;">SpringLayout</span>:
+components are positioned by defining relationships between their edges</li>
+  <li><span style="font-family: monospace;">CardLayout</span>:
+components are positionned on different cards (this is also
+implementable with a JTabedPane)<br>
+  </li>
+  <li> <tt>FlowLayout</tt>: components are layed out from left to
+right,
+on new
+rows when necessary</li>
+  <li> <tt>GridLayout</tt>: components are layed out on a grid whose
+all
+cells
+have the same height and width</li>
+  <li> <tt>GridBagLayout</tt>: components are layed out of a grid, a
+component
+can span several cells, the grid rows (resp. columns) can have
+different
+heights (resp. width)</li>
+</ul>
+<b><u>look 'n feel</u></b>
+<ul>
+  <li>use the default platform look 'n fell</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>try {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;
+UIManager.setLookAndFeel(UIManager.getCrossPlatformLookAndFeelClassName());</tt>
+        <br>
+        <tt>} catch (Exception e) { }</tt></td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<b><u>Threads</u></b>
+<ul>
+  <li>Once a Swing component has been realized (<code>setVisible(true)</code>,
+    <code>show</code> or <code>pack</code> has been called), all the
+code that might affect it state or that might depend on its state must
+be executed in the event-dispatching thread. </li>
+  <li> <a
+ href="http://java.sun.com/products/jfc/tsc/articles/threads/update.html"
+ target="_blank"><code>SwingWorker</code></a>
+is a helper class to launch lengthly background computation from the
+event-dispatcher thread. </li>
+  <li> <code>SwingUtilities.invokeLater</code> allows a thread to
+request
+the event-dispatching thread a given task.<br>
+    <code>SwingUtilities.invokeAndWait</code> does the same, but
+returns only when the task has been executed. </li>
+</ul>
+<br>
+<hr noshade="noshade" width="80%"><br>
+<i><font size="-1">Last update: May 6</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+</body>
+</html>

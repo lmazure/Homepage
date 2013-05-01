@@ -1,0 +1,403 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>X11</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools">
+
+ 
+
+  </script>
+</head>
+<body>
+<b><u>CDE:</u></b>
+<ul>
+  <li>avoid CDE to overwrite the application color settings in order to
+apply
+the current color scheme</li>
+  <tt>*useColorObj: False</tt> <br>
+&nbsp; <li>on Solaris, the OpenWindows Desktop access can be disabled
+from
+dtlogin
+by creating an empty <tt>/etc/dt/config/C/Xresources.d/Xresources.ow</tt>
+file.</li>
+</ul>
+<b><u>X11 version</u></b>
+<ul>
+  <li>retrieve Xlib version (in Xlib.h)</li>
+  <tt>#define XlibSpecificationRelease 6</tt> <br>
+&nbsp; <li>retrieve Xt version (in Intrinsic.h)</li>
+  <tt>#define XtSpecificationRelease 6</tt>
+</ul>
+<b><u>Motif&nbsp; version:</u></b>
+<ul>
+  <li>retrieve Motif version (in Xm.h)</li>
+  <tt>#define XmVERSION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2</tt> <br>
+  <tt>#define XmREVISION&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1</tt> <br>
+  <tt>#define XmUPDATE_LEVEL&nbsp; 0</tt> <br>
+  <tt>#define XmVersion&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (XmVERSION
+* 1000 + XmREVISION)</tt> <br>
+  <tt>#define XmVERSION_STRING "@(#)Motif Version 2.1.0"</tt>
+</ul>
+<b><u>X11 keyboard:</u></b>
+<br>
+&nbsp;
+<ul>
+  <li>the keysym list can be found in</li>
+  <tt>/usr/X11R6/include/X11/keysymdef.h</tt> <br>
+the symbols are in <br>
+  <tt>/usr/X11R6/lib/X11/XKeysymDB</tt>
+</ul>
+<ul>
+  <li>to fix incorrect keys</li>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-pk</tt> <br>
+find the incorrect keycode's and fix them by (for example) <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 16 = egrave 7 grave"</tt> <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 18 = ccedilla 9 asciicircum"</tt> <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 19 = agrave 0 at"</tt> <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 20 = parenright degree bracketright"</tt> <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 34 = dead_circumflex dead_diaeresis"</tt> <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 35 = dollar sterling paragraph"</tt> <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 48 = ugrave percent"</tt> <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 49 = twosuperior"</tt> <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 51 = asterisk mu"</tt> <br>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xmodmap.1.html">xmodmap</a>
+-e "keycode 61 = exclam section"</tt> <br>
+(put these commands in <tt>~/.xinitrc</tt>)
+</ul>
+<ul>
+  <li>to find the keycode of a key</li>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xev.1.html">xev</a></tt>
+  <br>
+put the cursor in the <tt><a
+ href="http://www.xfree86.org/4.2.0/xev.1.html">xev</a></tt>
+window and type the key <br>
+&nbsp; <li>key compositions are defined in</li>
+  <tt>/usr/X11R6/lib/X11/locale/iso8859-1/Compose</tt>
+</ul>
+<ul>
+  <li>RGB values for the named colors</li>
+  <tt>/usr/X11R6/lib/X11/rgb.txt</tt> <br>
+&nbsp; <li>set the default visual to 24 bits on both screen (CDE on
+Solaris), in <tt>/etc/dt/config/Xservers</tt>:</li>
+  <tt>&nbsp; :0 Local local_uid@console root /usr/openwin/bin/Xsun -dev
+/dev/fbs/ffb0 defclass TrueColor defdepth 24 -dev /dev/fbs/ffb1
+defclass
+TrueColor defdepth 24</tt>
+</ul>
+<b><u>Fonts:</u></b>
+<ul>
+  <li> <tt><a href="http://www.xfree86.org/4.2.0/xfs.1.html">xfs</a></tt>:
+font
+server</li>
+&nbsp; <li><tt><a href="http://www.xfree86.org/4.2.0/xfsinfo.1.html">xfsinfo</a></tt>
+(XFree86) / <a
+ href="http://w3.pppl.gov/cgi-bin/man?page=fsinfo&amp;section=1">fsinfo</a>
+(Solaris):
+display information about the font server</li>
+&nbsp; <li><tt><a href="http://www.xfree86.org/4.2.0/fslsfonts.1.html">fslsfonts</a></tt>:
+list the fonts available on a font server</li>
+&nbsp; <li><tt><a
+ href="http://w3.pppl.gov/cgi-bin/man?page=fsadmin&amp;section=1">fsadmin</a></tt>:
+enable/disable inetd to start the font server (on Solaris)<br>
+  </li>
+&nbsp; <li><tt><a href="http://www.xfree86.org/4.2.0/showfont.1.html">showfont</a></tt>:
+display information about a font available on a font server</li>
+&nbsp; <li><tt><a href="http://www.xfree86.org/4.2.0/xfd.1.html">xfd</a></tt>:
+display
+a font</li>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xfd.1.html">xfd</a>
+-fn
+fixed</tt> <br>
+&nbsp; <li><tt><a href="http://www.xfree86.org/4.2.0/xlsfonts.1.html">xlsfonts</a></tt>:
+list the font available to the X server</li>
+&nbsp; <li><tt><a href="http://www.xfree86.org/4.2.0/xfontsel.1.html">xfontsel</a></tt>:
+graphical font selector</li>
+&nbsp; <li>a client wanting to connect to a font server must define
+the
+environment
+variable <tt>FONTSERVER</tt></li>
+  <tt>#&gt; setenv FONTSERVER tcp/fontservername:port</tt> <br>
+&nbsp; <li>add the font server to the font path</li>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xset.1.html">xset</a>
+fp+ tcp/fontservername:port</tt>
+</ul>
+<p><br>
+<b><u>Resources:</u></b>
+</p>
+<ul>
+  <li>add a resource to the X server</li>
+  <tt>echo '*useColorObj:False' | <a
+ href="http://www.xfree86.org/4.2.0/xrdb.1.html">xrdb</a>
+-merge</tt> <br>
+&nbsp; <li>remove some resources from the X server</li>
+  <tt>#&gt; <a href="http://www.xfree86.org/4.2.0/xrdb.1.html">xrdb</a>
+-query | egrep -v '^\*.*Preset(Lab|WL|WW)[1-6]:.*$' | <a
+ href="http://www.xfree86.org/4.2.0/xrdb.1.html">xrdb</a>
+-load</tt>
+</ul>
+<p><br>
+<b><u>Overlays:</u></b>
+</p>
+<ul>
+  <li>overlay visual information is stored in the <tt>SERVER_OVERLAY_VISUALS</tt>
+property of the root window</li>
+</ul>
+<b><u>Compilation:</u></b>
+<ul>
+  <li>Motif on Solaris</li>
+  <tt>CC foo.c -I/usr/dt/include -I/usr/openwin/include -L/usr/dt/lib
+-lXm -L/usr/openwin/lib -lXmu -lXt -lXext -lX11</tt>
+</ul>
+<b><u>Performance<br>
+</u></b>
+<ul>
+  <li><a href="http://www.xfree86.org/4.2.0/x11perf.1.html">x11perf</a><br>
+  </li>
+</ul>
+<b><u>Miscellaneous:</u></b>
+<ul>
+  <li> <tt>xterm</tt> sets the environment variable <tt>$WINDOWID</tt>
+to
+the
+id of its X window</li>
+&nbsp; <li><a
+ href="http://www.xfree86.org/4.2.0/ConnectionNumber.3.html">ConnectionNumber</a>
+returns the file descriptors of the server/client X socket.</li>
+  <a
+ href="http://www.xfree86.org/4.2.0/XInternalConnectionNumbers.3.html">XInternalConnectionNumbers</a>
+returns the file numbers of other internal connections. <br>
+&nbsp; <li>maximum request sizes</li>
+long n=XMaxRequestSize(display);
+  <table border="1">
+    <tbody>
+      <tr>
+        <td>max nb of points</td>
+        <td><tt>XDrawLines</tt></td>
+        <td><tt>n-3</tt></td>
+      </tr>
+      <tr>
+        <td><br>
+        </td>
+        <td><tt>XFillPolygon</tt></td>
+        <td><tt>n-4</tt></td>
+      </tr>
+      <tr>
+        <td>max nb of lines</td>
+        <td><br>
+        </td>
+        <td><br>
+        </td>
+      </tr>
+      <tr>
+        <td>max nb of segments</td>
+        <td><tt>XDrawSegments</tt></td>
+        <td><tt>(n-3)/2</tt></td>
+      </tr>
+      <tr>
+        <td>max nb of rectangles</td>
+        <td><tt>XFillRectangles</tt> <br>
+        <tt>XDrawRectangles</tt></td>
+        <td><tt>(n-3)/2</tt></td>
+      </tr>
+      <tr>
+        <td>max nb of arcs</td>
+        <td><tt>XFillArcs</tt> <br>
+        <tt>XDrawArcs</tt></td>
+        <td><tt>(n-3)/3</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  <p>retrieve an application context <br>
+  <tt>XtAppContext XtWidgetToApplicationContext(Widget w)</tt> <br>
+  <tt>XtAppContext XtDisplayToApplicationContext(Display *display)</tt>
+  </p>
+  <p>retrieve a display
+  <table border="1">
+    <tbody>
+      <tr>
+        <td><tt>Display *DisplayOfScreen(Screen *screen)</tt></td>
+        <td>macro</td>
+      </tr>
+      <tr>
+        <td><tt>Display *XDisplayOfScreen(Screen *screen)</tt></td>
+        <td>routine</td>
+      </tr>
+      <tr>
+        <td><tt>Display *XtDisplay(Widget w)</tt></td>
+        <td>macro for widgets</td>
+      </tr>
+      <tr>
+        <td><tt>Display *XtDisplayOfObject(Widget w)</tt></td>
+        <td>routine for widgets or gadgets (in this case, go up the
+widget hierarchy
+up to a widget and return its display)</td>
+      </tr>
+    </tbody>
+  </table>
+  </p>
+  <p>retrieve a window
+  <table border="1">
+    <tbody>
+      <tr>
+        <td><tt>Window XtWindow(Widget w)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Window XtWindowOfObject(Widget w)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Window RootWindow(Display *display, int screen_number)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Window XRootWindow(Display *display, int screen_number)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Window DefaultRootWindow(Display *display)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Window XDefaultRootWindow(Display *display)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Window RootWindowOfScreen(Screen *screen)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Window XRootWindowOfScreen(Screen *screen)</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  </p>
+  <p>retrieve a screen
+  <table border="1">
+    <tbody>
+      <tr>
+        <td><tt>Screen *XtScreen(Widget w)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Screen *XtScreenofObject(Widget w)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Screen *ScreenOfDisplay(Display *display, int
+screen_number)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Screen *XScreenOfDisplay(Display *display, int
+screen_number)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Screen *DefaultScreenOfDisplay(Display *display)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Screen *XDefaultScreenOfDisplay(Display *display)</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  </p>
+  <p>retrieve a widget
+  <table border="1">
+    <tbody>
+      <tr>
+        <td><tt>Widget XtNameToWidget(Widget root, String name)</tt></td>
+      </tr>
+      <tr>
+        <td><tt>Widget XtWindowToWidget(Display *display, Window window)</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  </p>
+</ul>
+<b><u>Multithreading:</u></b>
+<ul>
+  <li>in X:</li>
+  <ul>
+    <li> <tt><a href="http://www.xfree86.org/4.2.0/XInitThreads.3.html">XInitThreads</a></tt>
+initializes Xlib support for concurrent threads. It must be the first
+called
+Xlib routine.</li>
+    <li> <tt><a href="http://www.xfree86.org/4.2.0/XLockDisplay.3.html">XLockDisplay</a></tt>
+locks the display access for the other threads. The lock is a counter (<tt><a
+ href="http://www.xfree86.org/4.2.0/XLockDisplay.3.html">XLockDisplay</a></tt>
+can be called several times, <a
+ href="http://www.xfree86.org/4.2.0/XUnlockDisplay.3.html">XUnlockDisplay</a>
+must be called the same numbers of times to unlock the access to the
+display).</li>
+  </ul>
+  <li>in Xt:</li>
+  <ul>
+    <li> <tt>XtToolkitThreadInitialize</tt> must be called before <tt>XtAppInitialize</tt>,
+      <tt>XtSetLanguageProc</tt>, <tt>XtOpenApplication</tt>
+or <tt>XtCreateApplicationContext</tt>. It may be called before of
+after <tt>XtToolkitInitialize</tt>.
+It may be called several times, but not concurrently from several
+threads.</li>
+    <li> <tt>XtAppLock</tt> locks the application context. It is
+implicitly called
+by Motif and Xt functions that take an application context, a widget or
+a display as a parameter. But it may be necessary to call it when
+several
+operations must be done attomically (e.g. getting the value of a
+resource,
+testing it and modifying it if necessary; or getting the <tt>XmNchildren</tt>,
+      <tt>XnMselectedItems</tt>, <tt>XmNsource</tt>...
+of a widget and manipulating them).</li>
+    <li> <tt>XtProcessLock</tt> locks the global data structures.</li>
+    <li> <tt>XtAppLock</tt> and <tt>XtProcessLock</tt> may be called
+several times, <tt>XtAppUnlock</tt>
+and <tt>XtProcessUnlock</tt> must be called the same number of times
+to
+unlock.</li>
+    <li>To lock the application context and global data at the same
+time:</li>
+    <tt>XtAppLock</tt> <br>
+    <tt>XtProcessLock</tt> <br>
+    <tt>... code ...</tt> <br>
+    <tt>XtProcessUnlock</tt> <br>
+    <tt>XtAppUnlock</tt> <li>When multiple threads call into event
+management functions
+concurrently,
+they return from these functions in FIFO order.</li>
+This enables a thread which is not the input processing thread to popup
+and manage an error message: <br>
+    <tt>XtAppContext app;</tt> <br>
+    <tt>Widget error_dialog;</tt> <br>
+    <tt>XEvent event;</tt> <br>
+    <tt>XtAppLock(app); /* Lock the AppContext */</tt> <br>
+    <tt>XtPopup(error_dialog, XtGrabExclusive); /* popup error dialog */</tt>
+    <br>
+    <tt>do {/* Take over input processing */</tt> <br>
+    <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; XtAppNextEvent(app,
+&amp;event);</tt> <br>
+    <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if(/* some boolean
+condition
+involving event */)</tt> <br>
+    <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+XtDispatchEvent(&amp;event);</tt> <br>
+    <tt>} while(/* some boolean condition */)</tt> <br>
+    <tt>XtAppUnlock(app);</tt>
+  </ul>
+</ul>
+<p><br>
+</p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: December 22</font><sup><font
+ size="-2">nd</font></sup><font size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+</p>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>CVS</TITLE>
+<PATH>notes/cvs.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST>
+
+<ITEM><BLIST><TITLE>access a new repository</TITLE>
+<ITEM>local repository
+<CODESAMPLE><PROMPT/>cvs -d /usr/local/cvs command</CODESAMPLE></ITEM>
+<ITEM>password-authenticated server
+<CODESAMPLE><PROMPT/>cvs -d :pserver:jrandom@cvs.foobar.com:/usr/local/cvs command</CODESAMPLE>
+the password can be stored in <CODEFILENAME>~/.cvspass</CODEFILENAME> with
+<CODESAMPLE><PROMPT/>cvs -d :pserver:jrandom@cvs.foobar.com:/usr/local/cvs login</CODESAMPLE>
+and can be removed from <CODEFILENAME>~/.cvspass</CODEFILENAME> with
+<CODESAMPLE><PROMPT/>cvs -d :pserver:jrandom@cvs.foobar.com:/usr/local/cvs logout</CODESAMPLE>
+</ITEM>
+<ITEM>external connection program
+<CODESAMPLE><PROMPT/>CVS_RSH=rsh; export CVS_RSH<BR/>
+<PROMPT/>cvs -d :ext:jrandom@cvs.foobar.com:/usr/local/cvs command</CODESAMPLE></ITEM>
+<ITEM>the other protocols are kserver (Kerberos) and gserver (Generic Security Services API)</ITEM>
+<ITEM>the <CODEROUTINE>-d</CODEROUTINE> flag can be replaced by defining the environment variable <CODEROUTINE>CVSROOT</CODEROUTINE>
+<CODESAMPLE><PROMPT/>CVSROOT=:pserver:jrandom@cvs.foobar.com:/usr/local/cvs; export CVSROOT</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+<ITEM>create a project
+<CODESAMPLE><PROMPT/>cvs import -m "log msg" projname vendortag releasetag</CODESAMPLE></ITEM>
+
+<ITEM><BLIST><TITLE>checking out a working copy</TITLE>
+<ITEM><CODESAMPLE><PROMPT/>cvs checkout myproj</CODESAMPLE>
+or
+<CODESAMPLE><PROMPT/>cvs co myproj</CODESAMPLE></ITEM>
+<ITEM>specifying the revision
+<CODESAMPLE><PROMPT/>cvs checkout -r 1.3 myproj</CODESAMPLE></ITEM>
+<ITEM>specifying the tag
+<CODESAMPLE><PROMPT/>cvs checkout -r MyTag myproj</CODESAMPLE></ITEM>
+<ITEM>list all the modukes
+<CODESAMPLE><PROMPT/>cvs co -c</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+<ITEM><BLIST><TITLE>creating/removing elements</TITLE>
+<ITEM>creating a file requires two steps: first the <CODEROUTINE>add</CODEROUTINE> command on it, then <CODEROUTINE>commit</CODEROUTINE>:
+<CODESAMPLE><PROMPT/>cvs add newfile.c<BR/>
+<PROMPT/>cvs ci -m "added newfile.c" newfile.c</CODESAMPLE></ITEM>
+<ITEM>keyword expansion and line-ending conversion must be turned off to add binary files:
+<CODESAMPLE><PROMPT/>cvs add -kb newfile.c</CODESAMPLE></ITEM>
+<ITEM>it is also possible to remove keyword expansion for some files:
+<CODESAMPLE><PROMPT/>cvs add -ko newfile.c</CODESAMPLE></ITEM>
+<ITEM>removing a file requires first to remove the file from the working directory:
+<CODESAMPLE><PROMPT/>rm newfile.c<BR/>
+<PROMPT/>cvs remove newfile.c<BR/>
+<PROMPT/>cvs ci -m "removed newfile.c" newfile.c</CODESAMPLE></ITEM>
+<ITEM>creating a directory requires just the <CODEROUTINE>add</CODEROUTINE> command:
+<CODESAMPLE><PROMPT/>mkdir newdir<BR/>
+<PROMPT/>cvs add newdir</CODESAMPLE></ITEM>
+<ITEM>to remove a directory from a project, first remove all the files in it
+<CODESAMPLE><PROMPT/>cd newdir<BR/>
+<PROMPT/>rm file1 file2 file3<BR/>
+<PROMPT/>cvs remove file1 file2 file3<BR/>
+<PROMPT/>cvs ci -m "removed all files" file1 file2 file3<BR/>
+<PROMPT/>cd ..<BR/>
+<PROMPT/>cvs update -P</CODESAMPLE>
+the <CODEROUTINE>-P</CODEROUTINE> option tells update to prune all empty directories</ITEM>
+<ITEM>rename a file
+<CODESAMPLE><PROMPT/>mv oldname newname<BR/>
+<PROMPT/>cvs remove oldname<BR/>
+<PROMPT/>cvs add newname<BR/>
+<PROMPT/>cvs ci -m "renamed oldname to newname" oldname newname</CODESAMPLE></ITEM>
+<ITEM>rename a directory
+<CODESAMPLE><PROMPT/>mkdir newdir<BR/>
+<PROMPT/>cvs add newdir<BR/>
+<PROMPT/>mv olddir/* newdir<BR/>
+mv: newdir/CVS: cannot overwrite directory <I>(this is not a problem)</I><BR/>
+<PROMPT/>cd olddir<BR/>
+<PROMPT/>cvs rm foo.c bar.txt<BR/>
+<PROMPT/>cd ../newdir<BR/>
+<PROMPT/>cvs add foo.c bar.txt<BR/>
+<PROMPT/>cd .. <BR/>
+<PROMPT/>cvs commit -m "moved foo.c and bar.txt from olddir to newdir"<BR/>
+<PROMPT/>cvs update -P</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+<ITEM>status 
+<CODESAMPLE><PROMPT/>cvs status hello.c</CODESAMPLE></ITEM>
+
+<ITEM><BLIST><TITLE>history</TITLE>
+<ITEM>dump the log of the file
+<CODESAMPLE><PROMPT/>cvs log hello.c</CODESAMPLE></ITEM>
+<ITEM>for each file of the file, indicate whan, who and on which revision the change has been done 
+<CODESAMPLE><PROMPT/>cvs annotate hello.c</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+<ITEM><BLIST><TITLE>update</TITLE>
+<ITEM><CODESAMPLE><PROMPT/>cvs update</CODESAMPLE></ITEM>
+<ITEM>to a given revision
+<CODESAMPLE><PROMPT/>cvs update -r 1.2</CODESAMPLE></ITEM>
+<ITEM>to a given tag
+<CODESAMPLE><PROMPT/>cvs update -r MyTag</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+<ITEM><BLIST><TITLE>diff</TITLE>
+<ITEM><CODESAMPLE><PROMPT/>cvs diff</CODESAMPLE></ITEM>
+<ITEM>use <CODESAMPLE>-c</CODESAMPLE> to perform a context diff
+<CODESAMPLE><PROMPT/>cvs diff -c foobar.c</CODESAMPLE></ITEM>
+<ITEM>use <CODESAMPLE>-r</CODESAMPLE> to specify the version to use as the reference to be compared with the working copy
+<CODESAMPLE><PROMPT/>cvs diff -r 1.218.2.14 toto.c</CODESAMPLE> or both versions
+<CODESAMPLE><PROMPT/>cvs diff -r 1.218.2.14 -r 1.218.2.13 toto.c</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+<ITEM><BLIST><TITLE>tkdiff</TITLE>
+<ITEM>compare a file with its repository revision
+<CODESAMPLE><PROMPT/>tkdiff hello.c</CODESAMPLE></ITEM>
+<ITEM>compare two text files
+<CODESAMPLE><PROMPT/>tkdiff foo bar</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+<ITEM>commit 
+<CODESAMPLE><PROMPT/>cvs commit -m "print goodbye too" hello.c</CODESAMPLE>
+or
+<CODESAMPLE><PROMPT/>cvs ci -m "print goodbye too" hello.c</CODESAMPLE></ITEM>
+
+<ITEM><BLIST><TITLE>tag</TITLE>
+<ITEM>a tag name starts with a letter and contain letters, digits, hyphens (<CODEROUTINE>-</CODEROUTINE>), and underscores (<CODEROUTINE>_</CODEROUTINE>).</ITEM>
+<ITEM>CVS has two different kinds of tags:<BR/>
+<B>Sticky</B> tags which are tightly bound to one particular revision number for a given file<BR/>
+<B>Branch</B> tags that allow you to check in new revisions.</ITEM>
+<ITEM><CODEROUTINE>cvs tag</CODEROUTINE> uses a file system hierarchy determine which revisions to associate with the label<BR/>
+<CODEROUTINE>cvs rtag</CODEROUTINE> works directly on the repository.</ITEM>
+<ITEM>create a sticky tag from an existing hierarchy
+<CODESAMPLE><PROMPT/>cvs tag MyTag</CODESAMPLE></ITEM>
+<ITEM>create a branch tag from an existing hierarchy
+<CODESAMPLE><PROMPT/>cvs tag -R -b MyTag</CODESAMPLE></ITEM>
+<ITEM>create a branch tag from an existing tag
+<CODESAMPLE><PROMPT/>cvs tag -r ExistingTag -b MyTag</CODESAMPLE></ITEM>
+<ITEM>move the tag <CODEROUTINE>MyTag</CODEROUTINE> to version 1.11 for the <CODEROUTINE>foobar.c</CODEROUTINE> file
+<CODESAMPLE><PROMPT/>cvs tag -r 1.11 -F MyTag foobar.c</CODESAMPLE></ITEM>
+<ITEM>delete a tag
+<CODESAMPLE><PROMPT/>cvs rtag -d MyTag MyProject</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+<ITEM><BLIST><TITLE>help</TITLE>
+<ITEM>return the version of the client and of the server 
+<CODESAMPLE><PROMPT/>cvs version </CODESAMPLE></ITEM>
+<ITEM>return the list of synonyms
+<CODESAMPLE><PROMPT/>cvs --help-synonyms</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+
+</BLIST>
+
+</CONTENT>
+
+<X><T>Links</T><A>../links/coding.html#cvs</A><L>en</L><F>HTML</F></X>
+
+</PAGE>
+

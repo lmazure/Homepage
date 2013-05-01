@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Finding obsolete X resources</TITLE>
+<PATH>notes/obsox.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+Yet another stupid script to find obsolete code. This one looks at the file defining the structure recording the values of the X resources, at the file defining the XtResource structure and at all the C/C++ files, and tries to find some unused code. (By the way, the script could be improved by also looking at the X resource files to find uninitalized resources.)
+<CODESAMPLE>
+#!/bin/ksh<BR/>
+<BR/>
+# file defining the structure<BR/>
+#structfile=resType.h<BR/>
+structfile="ComposerPanelResources.h PrefPanel.c"<BR/>
+<BR/>
+# file defining the XtResource<BR/>
+#xtresourcefile=xresource.h<BR/>
+xtresourcefile="ComposerPanelResources.h PrefPanel.c"<BR/>
+<BR/>
+<BR/>
+egrep -h '^ *(String|long|int) +' $structfile | sed 's/^ *[^ ]*  *\([^ ]*\); */\1/' &gt; l1<BR/>
+egrep -h 'XtOffsetOf' $xtresourcefile | sed 's/[ <TABCHAR/>]*XtOffsetOf(.*, *\([^ ]*\) *), */\1/' &gt; l2<BR/>
+sdiff l1 l2 <BR/>
+<BR/>
+for x in ` sort -u l1 l2 `<BR/>
+do<BR/>
+<TAB/>if ( ! egrep  -l "(\.$x[^a-zA-Z0-9_]|\.$x$)" *.c &gt; /dev/null )<BR/>
+<TAB/>then<BR/>
+<TAB/><TAB/>echo "$x not used"<BR/>
+<TAB/>fi<BR/>
+<TAB/>if ( ! grep -w -l "$x" *.master &gt; /dev/null ) <BR/>
+<TAB/>then<BR/>
+<TAB/><TAB/>echo "$x not set"<BR/>
+<TAB/>fi<BR/>
+done<BR/>
+<BR/>
+/bin/rm l1 l2
+</CODESAMPLE>
+</CONTENT>
+</PAGE>
+

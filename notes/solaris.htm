@@ -1,0 +1,250 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Solaris</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><u>printing</u></b>
+<ul>
+  <li> <tt><a href="http://www.visi.com/cgi-bin/man?printers.conf+4">/etc/printers.conf</a></tt>
+contains the printer definitions</li>
+&nbsp; <li>C++ code printing</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?vgrind+1">vgrind</a>
+-lc++ foobar.cc | /usr/lib/lp/postscript/<a
+ href="http://www.visi.com/cgi-bin/man?dpost+1">dpost</a>&nbsp;
+| <a href="http://www.visi.com/cgi-bin/man?lp+1">lp</a> -dmy_printer</tt>
+  <br>
+&nbsp; <li>translation of a text file into a PostScript file</li>
+  <tt>#&gt; /usr/lib/lp/postscript/<a
+ href="http://www.visi.com/cgi-bin/man?postprint+1">postprint</a>
+-l 60 foo &gt; foo.ps</tt> <br>
+&nbsp; <li>print in landscape mode</li>
+  <tt>#&gt; /usr/lib/lp/postscript/<a
+ href="http://www.visi.com/cgi-bin/man?postprint+1">postprint</a>
+-pl -l 40 /tmp/l | <a href="http://www.visi.com/cgi-bin/man?lp+1">lp</a>
+-dmy_printer</tt>
+</ul>
+<p><br>
+<b><u>security</u></b>
+</p>
+<blockquote><li>
+log of all the performed <tt>su</tt> commands</li>
+  <tt>/var/adm/<a href="http://www.visi.com/cgi-bin/man?sulog+4">sulog</a></tt>
+  <br>
+&nbsp; <li>log of the failed logins</li>
+  <tt>/var/adm/<a href="http://www.visi.com/cgi-bin/man?loginlog+4">loginlog</a></tt>
+  <br>
+&nbsp; <li><tt>/etc/ftpusers</tt></li>
+lists the accounts for which <tt>ftp</tt> loggin is unauthorized <br>
+&nbsp; <li>change the accessible ports</li>
+  <tt>#&gt; vi /etc/services</tt> <br>
+  <tt>#&gt; pkill inetd</tt> <br>
+  <tt>#&gt; /usr/sbin/inetd -s</tt> <br>
+or, probably cleaner: <br>
+  <tt>#&gt; /etc/inet.d/inetsvc stop</tt> <br>
+  <tt>#&gt; /etc/inet.d/inetsvc start</tt> <br>
+&nbsp; <li>restrict the ability to login as root to the console only</li>
+  <tt>CONSOLE=/dev/console</tt> in <tt>/etc/default/login</tt> <br>
+&nbsp; <li>to restrict <tt>chown</tt>: <tt>set rstchown = 1</tt> in <tt>/etc/system</tt>
+(this is the default)</li>
+to allow <tt>chown</tt>: <tt>set rstchown = 0</tt> <br>
+&nbsp; <li>for a process with setuid root, <tt><a
+ href="http://www.visi.com/cgi-bin/man?catopen+3c">catopen</a></tt>
+will fail except if the catalog is owned by root, readable</li>
+only by root and the full path is given (starting with patched Solaris
+7)</blockquote>
+<p><br>
+<b><u>system administration</u></b>
+</p>
+<ul>
+  <li>restore the system's configuration to an "as-manufactured" state<br>
+    <tt>#&gt; <a
+ href="http://ist-socrates.berkeley.edu/cgi-bin/man.cgi?section=1M&amp;topic=sys-unconfig">sys-unconfig</a></tt></li>
+&nbsp; <li>reset the nvram variables to their default values, in OPB
+mode</li>
+  <tt>set-defaults</tt> <br>
+&nbsp; <li>autoboot configuration</li>
+  <ul>
+    <li>in multiuser mode:</li>
+to disable autoboot <br>
+    <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?eeprom+1m">eeprom</a>
+"auto-boot?"=false</tt> <br>
+to enable autoboot <br>
+    <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?eeprom+1m">eeprom</a>
+"auto-boot?"=true</tt> <br>
+to check autoboot configuration <br>
+    <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?eeprom+1m">eeprom</a>
+| grep i auto-boot</tt> <li>in OPB mode:</li>
+disable autoboot <br>
+    <tt>#&gt; setenv auto-boot? false</tt> <br>
+enable autoboot <br>
+    <tt>#&gt; setenv auto-boot? true<br>
+    <br>
+    </tt>
+  </ul>
+  <li>configuration of creator cards</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?ffbconfig+1m">ffbconfig</a>
+-prconf </tt>print the hardware configuration <br>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?ffbconfig+1m">ffbconfig</a>
+-propt&nbsp; </tt>print the option settings <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-dev /dev/fbs/ffb0 </tt>for the frist screen <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-dev /dev/fbs/ffb1 </tt>for the second screen <br>
+enable/disable the overlay visuals support <br>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?ffbconfig+1m">ffbconfig</a>
+-sov enable</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+disaale</tt>
+  <p>overlay visual information is stored in the <tt>SERVER_OVERLAY_VISUALS
+  </tt>property
+of the root window <br>
+&nbsp; </p>
+  <li>display for how long the system is running</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?uptime+1">uptime</a></tt>
+  <br>
+&nbsp; <li>indicate who is doing what</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?whodo+1m">whodo</a></tt>
+  <br>
+&nbsp; <li>return the list of users (including NIS)</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?listusers+1">listusers</a></tt>
+  <br>
+&nbsp; <li>add a user</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?useradd+1m">useradd</a></tt>
+  <br>
+&nbsp; <li>remove a user</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?userdel+1m">userdel</a></tt>
+  <br>
+&nbsp; <li>modity a user</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?usermod+1m">usermod</a></tt>
+  <br>
+&nbsp; <li>to know if the kernel is running in 32 or 64 bits mode</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?isainfo+1">isainfo</a>
+-vk</tt> <br>
+&nbsp; <li>list the installed patches</li>
+  <tt>#&gt; /usr/bin/<a
+ href="http://www.visi.com/cgi-bin/man?showrev+1m">showrev</a>
+-p</tt> <br>
+&nbsp; <li>list the shared filesystems</li>
+  <tt>#&gt; cat /etc/dfs/<a
+ href="http://www.visi.com/cgi-bin/man?sharetab+4">sharetab</a></tt> <br>
+&nbsp; <li>share a filesystem</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?share+1m">share</a>
+-F nfs -o ro /usr/local</tt> <br>
+&nbsp; <li>list the mounted filesystems</li>
+  <tt>#&gt; cat /etc/<a href="http://www.visi.com/cgi-bin/man?mnttab+4">mnttab</a></tt>
+  <br>
+&nbsp; <li>mount a NFS filesystem</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?mkdir+1">mkdir</a>
+/tmp/picasso</tt> <br>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?mount">mount</a>
+picasso:/usr/local /tmp/picasso</tt> <br>
+&nbsp; <li>format a floppy</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?fdformat+1">fdformat</a></tt>
+  <br>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?newfs+1m">newfs</a>
+-m 0 /dev/rfd0c</tt> <br>
+&nbsp; <li>mount the floppy</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?mount+1m">mount</a>
+-F pcfs /dev/diskette /floppy</tt> <br>
+&nbsp; <li>description of the operating system</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?cat+1">cat</a>
+/etc/release<br>
+  <br>
+  </tt><li>list the install packages<br>
+    <tt>#&gt; </tt><a href="http://www.visi.com/cgi-bin/man?pkginfo"><span
+ style="font-family: monospace;">pkginfo</span></a><br
+ style="font-family: monospace;">
+  </li>
+  <br>
+  <li>display information about a package<br>
+    <tt>#&gt; </tt><span style="font-family: monospace;"><a
+ href="http://www.visi.com/cgi-bin/man?pkginfo">pkginfo</a> -l SPROl77s</span><br
+ style="font-family: monospace;">
+  </li>
+  <br>
+  <li>install a new package (e.g. Perl)<br>
+    <tt>#&gt; </tt><span style="font-family: monospace;">gzip -d
+~/ActivePerl-5.8.4.810-sun4-solaris.pkg.gz</span><br
+ style="font-family: monospace;">
+    <tt>#&gt; </tt><span style="font-family: monospace;">chmod a+r
+~/ActivePerl-5.8.4.810-sun4-solaris.pkg</span><br
+ style="font-family: monospace;">
+    <tt>#&gt; </tt><span style="font-family: monospace;">su -</span><br
+ style="font-family: monospace;">
+    <tt>#&gt; </tt><span style="font-family: monospace;"><a
+ href="http://www.visi.com/cgi-bin/man?pkgadd">pkgadd</a> -d
+~foobar/ActivePerl-5.8.4.810-sun4-solaris.pkg</span><br
+ style="font-family: monospace;">
+  </li>
+  <br>
+  <li>remove packages<br>
+    <tt>#&gt; </tt><span style="font-family: monospace;"><a
+ href="http://www.visi.com/cgi-bin/man?pkgrm">pkgrm</a> SPROf77 SPROf90
+SPROftool</span><br style="font-family: monospace;">
+  </li>
+  <br>
+</ul>
+<b><u>NIS</u></b>
+<ul>
+  <li>dump the hosts file</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?ypcat+1">ypcat</a>
+hosts</tt>
+</ul>
+<b><u>DNS</u></b>
+<ul>
+  <li>get the IP address of foobar</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?nslookup">nslookup</a>
+foobar</tt>
+</ul>
+<b><u>compiler</u></b>
+<ul>
+  <li>use the <tt>-H</tt> compiler flag to get the list of included
+files</li>
+</ul>
+<p><br>
+<b><u>misc.:</u></b>
+</p>
+<ul>
+  <li>use <tt><a href="http://www.visi.com/cgi-bin/man?ldapsearch+1">ldapsearch</a></tt>
+to perform a LDAP request</li>
+&nbsp; <li>create a 1Mb file</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?mkfile+1m">mkfile</a>
+1m foobar</tt> <br>
+&nbsp; <li><tt>xv</tt> and <tt>snapshot</tt> have issues with mix of
+8/24
+bits widgets, <tt><a href="http://www.visi.com/cgi-bin/man?xwd+1">xwd</a></tt>
+must be used instead.</li>
+&nbsp; <li>display an image file</li>
+  <tt>#&gt; /usr/dt/bin/<a
+ href="http://www.visi.com/cgi-bin/man?sdtimage+1">sdtimage</a></tt> <br>
+&nbsp; <li>display a PostScript file</li>
+  <tt>#&gt; /usr/openwin/bin/xview/<a
+ href="http://www.visi.com/cgi-bin/man?pageview+1">pageview</a>
+foobar.ps<br>
+  </tt>display the page with an initial orientation of -90&deg;<tt><br>
+#&gt; <a href="http://www.visi.com/cgi-bin/man?pageview+1">pageview</a>
+-right toto.ps </tt>
+</ul>
+<p><tt><br>
+<b><u>X11</u></b>
+</tt></p>
+<ul>
+  <tt> <li>the server modules are in:</li>
+  <tt>/usr/openwin/server/modules</tt> </tt>
+</ul>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: December 17</font><sup><font
+ size="-2">th</font></sup><font size="-1">,
+2004 - <a href="javascript:do_email()" target="_self">Laurent</a></font></i>
+</p>
+</body>
+</html>

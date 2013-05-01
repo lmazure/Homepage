@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Chrome</TITLE>
+<PATH>notes/chrome.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>9</DAY></DATE>
+<CONTENT>
+
+<U>shortcuts</U>
+<DEFINITIONTABLE>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='N'/>
+</TERM><DESC>
+open a new window
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='T'/>
+</TERM><DESC>
+open a new tab
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='J'/>
+</TERM><DESC>
+display the downloads
+</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<U>Extensions</U>
+<TABLE>
+<ROW>
+<CELL>
+<X><T>Daily Links</T><A>https://chrome.google.com/extensions/detail/keepgbcgekdilbnpklfknmkfmehppaag</A><L>en</L><F>HTML</F></X>
+</CELL>
+<CELL>
+open a set of links depending on the day of the week
+</CELL>
+</ROW>
+<ROW>
+<CELL>
+<X status='obsolete'><T>Popchrom</T><A>https://chrome.google.com/extensions/detail/iinhokidgfoomcighckbjmlcndbjmomp</A><L>en</L><F>HTML</F></X>
+</CELL>
+<CELL>
+auto-complete text fields by using a customized lookup table<BR/>
+<I>broken on Chrome 7</I>
+</CELL>
+</ROW>
+<ROW>
+<CELL>
+<X status='obsolete'><T>Chrome flags</T><A>https://chrome.google.com/extensions/detail/jhejngphiacapbgllhagbpdkkdieeaej</A><L>en</L><F>HTML</F></X>
+</CELL>
+<CELL>
+display location of the server
+</CELL>
+</ROW>
+</TABLE>
+
+</CONTENT>
+<X><T>links</T><A>../links/browsers.html#chrome</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

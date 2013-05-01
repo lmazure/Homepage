@@ -1,0 +1,166 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Together</TITLE>
+<PATH>notes/together.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+shortcuts
+<DEFINITIONTABLE>
+<ROW><TERM>
+<KEY ID='F12'/>
+</TERM><DESC>
+toggle full screen
+</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<BLIST>
+<ITEM>
+reverse engineering of some C++ code:
+</ITEM>
+<ITEM>
+create the directory ~together/kernel
+</ITEM>
+<ITEM>
+<CODEMENU>File<CODEMENU>New Project Expert...</CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+<BLIST>
+  <ITEM>Project Name: kernel</ITEM>
+  <ITEM>Location: ~/together/kernel/kernel.tpr</ITEM>
+  <ITEM>Default language: C++</ITEM>
+  <ITEM>Creation scenario: New project</ITEM>
+  <ITEM>Select the path where the C++ header files should be placed: ~/together/kernel</ITEM>
+  <ITEM>Do you want to place C++ source files in the same folder as the project file?: No, I want to separate them</ITEM>
+  <ITEM>Select the path where the C++ source files should be placed: /vobs-awa/AW4.2_src/src/lib/kernel</ITEM>
+  <ITEM>Select the path where the diagram files should be placed as the source files? : No, I want to separate them</ITEM>
+  <ITEM>Select the path where the diagram files should be placed: ~/together/kernel</ITEM>
+  <ITEM>Choose the initial diagram type: Class</ITEM>
+  <ITEM>Show package dependencies: Yes</ITEM>
+  <ITEM>Add include paths if your project uses files in additional directories: /vobs-awa/AW4.2_src/src/include /vobs-awa/AW4.2_src/src/include/AiM++</ITEM>
+</BLIST>
+</ITEM>
+</BLIST>
+
+perform an audit in batch mode
+<CODESAMPLE><PROMPT/>/usr/local/TogetherSoft/Together6.0.1/bin/Together.sh -script:com.togethersoft.modules.qa.QA -audit out:/tmp/titi.txt ~/together/browser/browser.tpr</CODESAMPLE><BR/>
+
+Available audits in version 6.0:
+<DEFINITIONTABLE>
+<ROW><TERM>
+AUVK
+</TERM><DESC>
+Always Use .Virtual. Keyword
+</DESC></ROW><ROW><TERM>
+CA
+</TERM><DESC>
+Complex Assignments
+</DESC></ROW><ROW><TERM>
+CDPMD
+</TERM><DESC>
+Call Delete on Pointer Members in Destructors
+</DESC></ROW><ROW><TERM>
+CIUCFL
+</TERM><DESC>
+Complex Initialization or Update Clauses in .for. Loops
+</DESC></ROW><ROW><TERM>
+CFPT
+</TERM><DESC>
+Comparing Floating Point Types
+</DESC></ROW><ROW><TERM>
+CLE
+</TERM><DESC>
+Complex Loop Expressions
+</DESC></ROW><ROW><TERM>
+CSC
+</TERM><DESC>
+C-Style Casting
+</DESC></ROW><ROW><TERM>
+CVFCD
+</TERM><DESC>
+Calling Virtual Functions from Constructors and Destructors
+</DESC></ROW><ROW><TERM>
+DOCE
+</TERM><DESC>
+Declare One-argument Constructors Explicit
+</DESC></ROW><ROW><TERM>
+EBWB
+</TERM><DESC>
+Enclosing Body Within a Block
+</DESC></ROW><ROW><TERM>
+ECB
+</TERM><DESC>
+Empty Catch Blocks
+</DESC></ROW><ROW><TERM>
+FVAL
+</TERM><DESC>
+Functions with Variable Argument Lists
+</DESC></ROW><ROW><TERM>
+HIA
+</TERM><DESC>
+Hiding Inherited Attributes
+</DESC></ROW><ROW><TERM>
+HISM
+</TERM><DESC>
+Hiding Inherited Static Methods
+</DESC></ROW><ROW><TERM>
+HN
+</TERM><DESC>
+Hiding Names
+</DESC></ROW><ROW><TERM>
+LF
+</TERM><DESC>
+Long Files
+</DESC></ROW><ROW><TERM>
+LL
+</TERM><DESC>
+Long Lines
+</DESC></ROW><ROW><TERM>
+MA
+</TERM><DESC>
+Memory Allocation
+</DESC></ROW><ROW><TERM>
+MVDWSN
+</TERM><DESC>
+Multiple Visible Declarations With Same Name
+</DESC></ROW><ROW><TERM>
+NC
+</TERM><DESC>
+Naming Conventions
+</DESC></ROW><ROW><TERM>
+ONAMAM
+</TERM><DESC>
+Overriding a Non-Abstract Method with an Abstract Method
+</DESC></ROW><ROW><TERM>
+RO
+</TERM><DESC>
+Related Operators
+</DESC></ROW><ROW><TERM>
+OWS
+</TERM><DESC>
+Overloading with a Subclass
+</DESC></ROW><ROW><TERM>
+PPA
+</TERM><DESC>
+Public and Package Attributes
+</DESC></ROW><ROW><TERM>
+RINF
+</TERM><DESC>
+Redefining an Inherited Nonvirtual Function
+</DESC></ROW><ROW><TERM>
+UVBC
+</TERM><DESC>
+Using Virtual Base Class
+</DESC></ROW><ROW><TERM>
+UVD
+</TERM><DESC>
+Use Virtual Destructor
+</DESC></ROW>
+</DEFINITIONTABLE>
+</CONTENT>
+
+<X><T>Links</T><A>../links/coding.html#together</A><L>en</L><F>HTML</F></X>
+
+</PAGE>
+

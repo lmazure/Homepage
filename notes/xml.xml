@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>XML</TITLE>
+<PATH>notes/xml.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+<B>eXtensible Markup Language</B><BR/>
+<BR/>
+The document is constituted by a single element called the root or document element.<BR/>
+<BR/>
+An element is bounded by a start-tag and an end-tag which must have the same name (including the case). The text between the start-tag and end-tag is called the element's content.<BR/>
+<CODEROUTINE>&lt;element&gt;content&lt;/element&gt;</CODEROUTINE><BR/>
+If the start-tag of an element is in the content of another element, the end-tag is in the content of the same element, i.e. element nest properly within each other.<BR/>
+<BR/>
+An element without content can take a special syntax:<BR/>
+<CODEROUTINE>&lt;element/&gt;</CODEROUTINE><BR/>
+<BR/>
+Element names can contain letters, digits, hyphens, underscores, colons or dots. A colon can be used only in a special case where it separates so called namespace. Names must not start with a number or punctuation character. Element names starting with xml, XML or other combination of cases of this string are reserved for the standard.<BR/>
+<BR/>
+An element can have none, one or several attributes. Permitted characters are the same as for element names. The name of attribute is separated from its value by <CODEROUTINE>=</CODEROUTINE>. There can be spaces around the <CODEROUTINE>=</CODEROUTINE>.The attribute value must be given inside single-quotes <CODEROUTINE>'...'</CODEROUTINE> or double-quotes <CODEROUTINE>"..."</CODEROUTINE>.<BR/>
+<BR/>
+Characters <CODEROUTINE>&lt;</CODEROUTINE> and <CODEROUTINE>&amp;</CODEROUTINE> cannot be used in text as they are used in markup. There must be replaced by <CODEROUTINE>&amp;lt;</CODEROUTINE> and <CODEROUTINE>&amp;amp;</CODEROUTINE>.<BR/>
+Characters <CODEROUTINE>&gt;</CODEROUTINE>, <CODEROUTINE>"</CODEROUTINE>, and <CODEROUTINE>'</CODEROUTINE> can be also substituted by <CODEROUTINE>&amp;gt;</CODEROUTINE>, <CODEROUTINE>&amp;quot;</CODEROUTINE> and <CODEROUTINE>&amp;apos;</CODEROUTINE>.<BR/>
+<BR/>
+Comments are using the syntax:<BR/>
+<CODEROUTINE>&lt;!-- comment --&gt;</CODEROUTINE><BR/>
+Comments may appear anywhere in a document outside other markup. An XML processor may, but need not, make it possible for an application to retrieve the text of comments. The string <CODEROUTINE>--</CODEROUTINE> must not occur within comments.<BR/>
+<BR/>
+Processing instructions (PIs) allow documents to contain instructions for applications. They are using the syntax:<BR/>
+<CODEROUTINE>&lt;?processing instruction?&gt;</CODEROUTINE><BR/>
+<BR/>
+CDATA sections are used to escape blocks of text containing characters which would otherwise be recognized as markup. CDATA sections begin with the string <CODEROUTINE>&lt;![CDATA[</CODEROUTINE> and end with the string <CODEROUTINE>]]&gt;</CODEROUTINE>. The string <CODEROUTINE>]]&gt;</CODEROUTINE> must not occur inside CDATA section.<BR/>
+<BR/>
+XML documents should (but this is not compulsory) begin with an XML declaration which specifies the version of XML being used:<BR/>
+<CODESAMPLE>&lt;?xml version="1.0"?&gt;<BR/>
+&lt;text&gt;This document conforms to the XML 1.0 specification.&lt;/text&gt;</CODESAMPLE><BR/>
+Encoding may also be specified:<BR/>
+<CODESAMPLE>&lt;?xml version="1.0" encoding="ISO-8859-2"?&gt;<BR/>
+&lt;text&gt;If encoding is not given UTF-8 is assumed&lt;/text&gt;</CODESAMPLE>
+<BR/>
+If the character reference begins with <CODEROUTINE>&amp;#x</CODEROUTINE>, it defines the hexadecimal representation of the character's code point in ISO/IEC 10646.<BR/>
+If it begins just with <CODEROUTINE>&amp;#</CODEROUTINE>, it defines the decimal representation of the character's code point.
+
+</CONTENT>
+<X><T>links</T><A>../links/xml.html</A><L>en</L><F>HTML</F></X>
+</PAGE>

@@ -1,0 +1,319 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Visual Basic in Excel</TITLE>
+<PATH>notes/excelvb.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>file</U></B></TITLE>
+<ITEM>open a file in read only mode
+<CODESAMPLE>
+Dim sourceWorkbook As Workbook<BR/>
+Workbooks.Open ("..."), ReadOnly:=True<BR/>
+Set sourceWorkbook = ActiveWorkbook</CODESAMPLE></ITEM>
+<ITEM>close a file
+<CODESAMPLE>sourceWorkbook.Close</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>display</U></B></TITLE>
+<ITEM>hide a column
+<CODESAMPLE>
+Columns("B:B").Hidden = True
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>cut 'n paste</U></B></TITLE>
+<ITEM>to get the cut 'n paste status, test the value of <CODEROUTINE>Application.CutCopyMode</CODEROUTINE>:<BR/>
+<CODEROUTINE>False</CODEROUTINE>: not in Cut or Copy mode<BR/>
+<CODEROUTINE>xlCopy</CODEROUTINE>: in Copy mode<BR/>
+<CODEROUTINE>xlCut</CODEROUTINE>: in Cut mode</ITEM>
+<ITEM>set <CODEROUTINE>Application.CutCopyMode</CODEROUTINE> to <CODEROUTINE>False</CODEROUTINE> or <CODEROUTINE>True</CODEROUTINE> to cancel the Cut or Copy mode and to suppress the selection mark</ITEM>
+<ITEM>to paste only the values<BR/>
+<CODEROUTINE>masterSheet.Range("B1").PasteSpecial xlPasteValues</CODEROUTINE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>filter</U></B></TITLE>
+<ITEM><CODEROUTINE>ShowAllData</CODEROUTINE> works only when there is currently some filtering
+<CODESAMPLE>
+If ActiveSheet.FilterMode Then<BR/>
+<TAB/>ActiveSheet.ShowAllData<BR/>
+End If</CODESAMPLE>
+</ITEM>
+<ITEM>filter according to the values in column 10 (equal to 0) and 12 (equal to 1)
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="0"<BR/>
+Range("A1:A1").AutoFilter Field:=12, Criteria1:="1"
+</CODESAMPLE>
+</ITEM>
+<ITEM>filter empty values
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="=" 
+</CODESAMPLE>
+</ITEM>
+<ITEM>filter non-empty values
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="&lt;&gt;" 
+</CODESAMPLE>
+</ITEM>
+<ITEM>filter values equal "foobar"
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="=foobar" 
+</CODESAMPLE>
+</ITEM>
+<ITEM>filter values non equal to "foobar"
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="&lt;&gt;foobar"
+</CODESAMPLE>
+There is a bug with <CODEROUTINE>Criteria1:="&lt;&gt;3.2"</CODEROUTINE> which results into a filter which is <CODEROUTINE>"&lt;&gt;3,2"</CODEROUTINE> on a French Excel.
+</ITEM>
+<ITEM>filter values containing "foobar"
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="=*foobar*" 
+</CODESAMPLE>
+</ITEM>
+<ITEM>filter values beginning with "foobar"
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="=foobar*" 
+</CODESAMPLE>
+</ITEM>
+<ITEM>filter values ending with "foobar"
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="=*foobar" 
+</CODESAMPLE>
+</ITEM>
+<ITEM>when filtering on a column containing a boolean expression, the macro recorder generates
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="VRAI"
+</CODESAMPLE>
+but this is incorrect<BR/>
+the correct code is
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10, Criteria1:=True
+</CODESAMPLE>
+</ITEM>
+<ITEM>remove the filter
+<CODESAMPLE>
+Range("A1:A1").AutoFilter Field:=10
+</CODESAMPLE>
+</ITEM>
+<ITEM>combination of two filters
+<CODESAMPLE>Range("A1:A1").AutoFilter Field:=22, Criteria1:="&gt;=12/09/2005", Operator:=xlAnd, Criteria2:="&lt;=25/10/2005"</CODESAMPLE>
+</ITEM>
+<ITEM>loop on the filtered data
+<CODESAMPLE>
+For Each r In Sheets("summary").AutoFilter.Range.SpecialCells(xlCellTypeVisible).Rows<BR/>
+<TAB/>Print #1, r.Cells(1, 1) &amp; "-" &amp; r.Cells(1, 8) <BR/>
+Next r
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>sort</U></B></TITLE>
+<ITEM>a simple example
+<CODESAMPLE>Dim l_status, l_priority As Integer<BR/>
+l_status = 4<BR/>
+l_priority = 5<BR/>
+... <BR/>
+Range("A:BA").Sort Key1:=Cells(1, l_priority), Order1:=xlAscending, _<BR/>
+<TAB/>Key2:=Cells(1, l_status), Order2:=xlDescending, _<BR/>
+<TAB/>Header:=xlYes</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>navigation</U></B></TITLE>
+<ITEM><CODEROUTINE>SpecialCells(xlLastCell)</CODEROUTINE> returns sometimes an incorrect value (larger that the real last cell), use <CODEROUTINE>UsedRange</CODEROUTINE> to force a recomputation and get the right value.
+<CODESAMPLE>
+ActiveSheet.UsedRange<BR/>
+n = ActiveSheet.Cells.SpecialCells(xlLastCell).Row
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>sheets</U></B></TITLE>
+<ITEM>create a temporary sheet and delete it without a confirmation message
+<CODESAMPLE>
+Dim tempo As Worksheet<BR/>
+Set tempo = Sheets.Add<BR/>
+... <BR/>
+Application.DisplayAlerts = False<BR/>
+tempo.Delete<BR/>
+Application.DisplayAlerts = True</CODESAMPLE>
+</ITEM>
+<ITEM>delete a sheet without an error if this one does not exist
+<CODESAMPLE>
+Application.DisplayAlerts = False<BR/>
+On Error Resume Next<BR/>
+Sheets("foobar").Delete<BR/>
+On Error GoTo 0<BR/>
+Application.DisplayAlerts = True</CODESAMPLE>
+</ITEM>
+<ITEM>change the name of the active sheet
+<CODESAMPLE>ActiveSheet.Name = "foobar"</CODESAMPLE>
+</ITEM>
+<ITEM>move a sheet to the first position
+<CODESAMPLE>masterSheet.Move Before:=Sheets(1)</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>format</U></B></TITLE>
+<ITEM>row height
+<CODESAMPLE>For i = 2 To Sheets("summary").Cells.SpecialCells(xlCellTypeLastCell).Row<BR/>
+<TAB/>Sheets("summary").Rows(i).RowHeight = 13<BR/>
+Next i</CODESAMPLE></ITEM>
+<ITEM>column width
+<CODESAMPLE>Columns("R:R").ColumnWidth = 10</CODESAMPLE></ITEM>
+<ITEM>text format
+<CODESAMPLE>Rows("1:1").Orientation = 90<BR/>
+Rows("1:1").HorizontalAlignment = xlLeft<BR/>
+Rows("1:1").VerticalAlignment = xlBottom<BR/>
+Rows("1:1").WrapText = True</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>filter</U></B></TITLE>
+<ITEM>autofilter
+<CODESAMPLE>Range("A1:P1").AutoFilter</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>values/formulas</U></B></TITLE>
+<ITEM>use the <CODEROUTINE>Value</CODEROUTINE> property of a <CODEROUTINE>Range</CODEROUTINE> to define the values of some cells
+<CODESAMPLE>For i = 2 To Sheets("imp").Cells.SpecialCells(xlCellTypeLastCell).Row<BR/>
+<TAB/>Sheets("imp").Cells(i, 1).Value = "imp" &amp; Sheets("imp").Cells(i, 2).Value<BR/>
+Next i</CODESAMPLE>
+<CODESAMPLE>For Each c in Worksheets("Sheet1").Range("A1:D10")<BR/>
+<TAB/>If c.Value &lt; .001 Then<BR/>
+<TAB/><TAB/>c.Value = 0<BR/>
+<TAB/>End If<BR/>
+Next c</CODESAMPLE></ITEM>
+<ITEM>When the cell contains multiple lines, these ones are separated by line feeds
+<CODESAMPLE>
+Dim str() As String<BR/>
+Dim i As Integer<BR/>
+str = Split(report.Cells(line, col).Value, vbLf)<BR/>
+For i = 0 To UBound(str)<BR/>
+<TAB/>...<BR/>
+Next i
+</CODESAMPLE>
+</ITEM>
+<ITEM>
+Test if a cell is not empty
+<CODESAMPLE>
+If (Not IsEmpty(stats.Cells(line, col).Value)) Then<BR/>
+<TAB/>...<BR/>
+End If
+</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODEROUTINE>Text</CODEROUTINE> is a read-only property containing the value of the cell has a <CODEROUTINE>String</CODEROUTINE>.
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>Formula</CODEROUTINE></TERM><DESC>define the formula of a cell</DESC></ROW>
+<ROW><TERM><CODEROUTINE>FormulaLocal</CODEROUTINE></TERM><DESC>define the formula of a cell in the language of the user</DESC></ROW>
+<ROW><TERM><CODEROUTINE>FormulaR1C1</CODEROUTINE></TERM><DESC>define the formula of a cell using R1C1 notation</DESC></ROW>
+<ROW><TERM><CODEROUTINE>FormulaR1C1Local</CODEROUTINE></TERM><DESC>define the formula of a cell using R1C1 notation in the language of the user</DESC></ROW>
+</DEFINITIONTABLE>
+<CODESAMPLE>Range("E18").FormulaR1C1 = "=OFFSET(R1C3,MATCH(16,R1C1:R20C1,0)-1,0)"</CODESAMPLE>
+<CODESAMPLE>Range("E18").FormulaR1C1Local = "=DECALER(L1C3;EQUIV(16;L1C1:L20C1;0)-1;0)"</CODESAMPLE></ITEM>
+<ITEM>
+With a French Excel
+<CODESAMPLE>Range("A1").FormulaR1C1 = "3.1"</CODESAMPLE>
+set the cell's content to <CODEROUTINE>3,1</CODEROUTINE><BR/>
+use instead
+<CODESAMPLE>Range("A1").FormulaR1C1Local = "3.1"</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>comment</U></B></TITLE>
+<ITEM>macro to add or complete the comment of a cell
+<CODESAMPLE>Private Sub addComment(rng As Range, str As String)<BR/>
+<BR/>
+<TAB/>If rng.Comment Is Nothing Then<BR/>
+<TAB/><TAB/>rng.addComment<BR/>
+<TAB/>Else<BR/>
+<TAB/><TAB/>rng.Comment.Text rng.Comment.Text &amp; vbLf<BR/>
+<TAB/>End If<BR/>
+<TAB/>rng.Comment.Text rng.Comment.Text &amp; str<BR/>
+<BR/>
+End Sub</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>screen refresh</U></B></TITLE>
+<ITEM>stop the automatic refresh of the screen
+<CODESAMPLE>Application.ScreenUpdating = False</CODESAMPLE></ITEM>
+<ITEM>restart the automatic refresh of the screen
+<CODESAMPLE>Application.ScreenUpdating = True</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>Application.ScreenRefresh</CODEROUTINE> does not exist (as in Word)</ITEM>
+<ITEM>to have a faster macro execution, disable the formula updates (if adequate) during the macro run
+<CODESAMPLE>Application.Calculation = xlCalculationManual<BR/>
+...<BR/>
+Application.Calculation = xlCalculationAutomatic</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>graphs</U></B></TITLE>
+<ITEM>It seems that graphs must be fully set up before displaying them (by setting their <CODEROUTINE>Location</CODEROUTINE>), this should be verified...
+<CODESAMPLE>Dim chart As Variant<BR/>
+Set chart = Charts.Add<BR/>
+chart.ChartType = xlColumnClustered<BR/>
+chart.SetSourceData source:=Sheets("Root Cause Analysis").Range("A1:B13"), PlotBy:=xlRows<BR/>
+chart.SeriesCollection(1).XValues = "='Root Cause Analysis'!R3C4:R7C4"<BR/>
+chart.SeriesCollection(1).Values = "='Root Cause Analysis'!R3C5:R7C5"<BR/>
+chart.HasLegend = False<BR/>
+chart.HasDataTable = False<BR/>
+chart.HasTitle = False<BR/>
+chart.Location Where:=xlLocationAsObject, Name:="Root Cause Analysis"</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>pivot tables</U></B></TITLE>
+<ITEM>use autofilter to filter the data (this one - 31 columns in sheet "summary" - must be copied in a new sheet in order to the pivot table to give the right results), then generate a pivot table of the number of bugs per bug types
+<CODESAMPLE>Selection.AutoFilter Field:=11, Criteria1:="0"<BR/>
+Selection.AutoFilter Field:=13, Criteria1:="1"<BR/>
+<BR/>
+Dim tempo As Worksheet<BR/>
+Set tempo = Sheets.Add<BR/>
+tempo.Name = "temp_extract"<BR/>
+Sheets("summary").Range("A1").CurrentRegion.Copy<BR/>
+Sheets("temp_extract").Paste<BR/>
+Sheets("temp_extract").UsedRange<BR/>
+<BR/>
+Set tempo = Sheets.Add<BR/>
+tempo.Name = "temp_table"<BR/>
+<BR/>
+Dim pcache As PivotCache<BR/>
+Dim ptable As PivotTable<BR/>
+Set pcache = ActiveWorkbook.PivotCaches.Add(SourceType:=xlDatabase, SourceData:="temp_extract!R1C1:R" &amp; Sheets("temp_extract").Cells.SpecialCells(xlLastCell).Row &amp; "C31")<BR/>
+Set ptable = pcache.CreatePivotTable(TableDestination:="temp_table!R1C1", DefaultVersion:=xlPivotTableVersion10) <BR/>
+ptable.AddFields RowFields:="Tester"<BR/>
+ptable.PivotFields("Tester").Orientation = xlDataField</CODESAMPLE></ITEM>
+<ITEM>another example with the same data, but here we are using also the columns and we order the rows and columns
+<CODESAMPLE>Set pcache = ActiveWorkbook.PivotCaches.Add(SourceType:=xlDatabase, SourceData:="temp_extract!R1C1:R" &amp; tempo1.Cells.SpecialCells(xlLastCell).Row &amp; "C31")<BR/>
+Set ptable = pcache.CreatePivotTable(TableDestination:=tempo2.Name &amp; "!R1C1", DefaultVersion:=xlPivotTableVersion10)<BR/>
+ptable.AddFields RowFields:="Severity", ColumnFields:="type"<BR/>
+ptable.PivotFields("#").Orientation = xlDataField<BR/>
+ptable.PivotFields("Severity").PivotItems("5").Position = 1<BR/>
+ptable.PivotFields("Severity").PivotItems("4").Position = 2<BR/>
+ptable.PivotFields("Severity").PivotItems("3").Position = 3<BR/>
+ptable.PivotFields("Severity").PivotItems("2").Position = 4<BR/>
+ptable.PivotFields("Severity").PivotItems("1").Position = 5<BR/>
+ptable.PivotFields("type").PivotItems("soft").Position = 1<BR/>
+ptable.PivotFields("type").PivotItems("template").Position = 2<BR/>
+ptable.PivotFields("type").PivotItems("it").Position = 3<BR/>
+ptable.PivotFields("type").PivotItems("doc").Position = 4</CODESAMPLE></ITEM>
+<ITEM>dump a pivot table in a HTML file
+<CODESAMPLE>Print #1, "&lt;TABLE border ='1'&gt;"<BR/>
+For n = ptable.TableRange1.Row To ptable.TableRange1.Rows.Count<BR/>
+<TAB/>Print #1, "&lt;TR&gt;"<BR/>
+<TAB/>For i = ptable.TableRange1.Column To ptable.TableRange1.Columns.Count<BR/>
+<TAB/><TAB/>Print #1, "&lt;TD align='center' width='70'&gt; &amp; to_html(ActiveSheet.Cells(n, i)) &amp; "&lt;/TD&gt;"<BR/>
+<TAB/>Next i<BR/>
+<TAB/>Print #1, "&lt;/TR&gt;"<BR/>
+Next n<BR/>
+Print #1, "&lt;/TABLE&gt;"</CODESAMPLE></ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>
+<X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>
+<X><T>macro samples</T><A>excelsample.html</A><L>en</L><F>HTML</F></X>
+</PAGE>

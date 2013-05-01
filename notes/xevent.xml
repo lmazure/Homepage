@@ -1,0 +1,146 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE status="unmaintained" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>X11 event routines</TITLE>
+<PATH>notes/xevent.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+Up to X11R6, <CODEROUTINE><X><T>XtAppMainLoop</T><A>http://www.xfree86.org/4.2.0/XtAppMainLoop.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> was:
+<CODESAMPLE>XtAppContext app;<BR/>
+while(TRUE)    {<BR/>
+<TAB/><X><T>XEvent</T><A>http://www.xfree86.org/4.2.0/XEvent.3.html</A><L>en</L><F>HTML</F></X> event;<BR/>
+<TAB/><X><T>XtAppNextEvent</T><A>http://www.xfree86.org/4.2.0/XtAppNextEvent.3.html</A><L>en</L><F>HTML</F></X>(app, &amp;event);<BR/>
+<TAB/><X><T>XtDispatchEvent</T><A>http://www.xfree86.org/4.2.0/XtDispatchEvent.3.html</A><L>en</L><F>HTML</F></X>(&amp;event);<BR/>
+}</CODESAMPLE>
+starting at X11R6, <CODEROUTINE><X><T>XtAppMainLoop</T><A>http://www.xfree86.org/4.2.0/XtAppMainLoop.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> is now: <CODESAMPLE>XtAppContext app;<BR/>
+do {<BR/>
+<TAB/><X><T>XEvent</T><A>http://www.xfree86.org/4.2.0/XEvent.3.html</A><L>en</L><F>HTML</F></X> event;<BR/>
+<TAB/><X><T>XtAppNextEvent</T><A>http://www.xfree86.org/4.2.0/XtAppNextEvent.3.html</A><L>en</L><F>HTML</F></X>(app, &amp;event);<BR/>
+<TAB/><X><T>XtDispatchEvent</T><A>http://www.xfree86.org/4.2.0/XtDispatchEvent.3.html</A><L>en</L><F>HTML</F></X>(&amp;event);<BR/>
+} while(<X><T>XtAppGetExitFlag</T><A>http://www.xfree86.org/4.2.0/XtAppGetExitFlag.3.html</A><L>en</L><F>HTML</F></X>(app) == FALSE);</CODESAMPLE>
+when the exit flag is set with <CODEROUTINE><X><T>XtAppSetExitFlag</T><A>http://www.xfree86.org/4.2.0/XtAppSetExitFlag.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE>. <BR/>
+<BR/>
+The workproc are called through the following stacks:
+<BLIST>
+<ITEM><CODEROUTINE><X><T>XtAppMainLoop</T><A>http://www.xfree86.org/4.2.0/XtAppMainLoop.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE>&gt; <CODEROUTINE><X><T>XtAppNextEvent</T><A>http://www.xfree86.org/4.2.0/XtAppNextEvent.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE>&gt;<CODEROUTINE>_XtRemoveInputs</CODEROUTINE>&gt;workproc</ITEM>
+<ITEM><CODEROUTINE><X><T>XtAppProcessEvent</T><A>http://www.xfree86.org/4.2.0/XtAppProcessEvent.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE>&gt;<CODEROUTINE>_XtRemoveInputs</CODEROUTINE>&gt;workproc</ITEM>
+<ITEM>there is probably also <X><T>XtAppPeekEvent</T><A>http://www.xfree86.org/4.2.0/XtAppPeekEvent.3.html</A><L>en</L><F>HTML</F></X>, but I have not checked</ITEM>
+</BLIST>
+<BR/>
+<BR/>
+Install an event handler 
+<CODESAMPLE>static void<BR/>
+exposeCB(Widget w, <BR/>
+<TAB/>XtPointer clientData, <BR/>
+<TAB/><X><T>XEvent</T><A>http://www.xfree86.org/4.2.0/XEvent.3.html</A><L>en</L><F>HTML</F></X> *,<BR/>
+<TAB/>Boolean *)<BR/>
+{<BR/>
+<TAB/>DrawingParameters *dp = (DrawingParameters*)clientData;<BR/>
+<BR/>
+<TAB/>// Display Pixmap<BR/>
+<TAB/>fprintf(stderr, "---&gt; Display Pixmap...\n");<BR/>
+<TAB/><X><T>XCopyArea</T><A>http://www.xfree86.org/4.2.0/XCopyArea.3.html</A><L>en</L><F>HTML</F></X>(XtDisplay(w), dp-&gt;id, XtWindow(w), dp-&gt;gc, <BR/>
+<TAB/><TAB/>0, 0, dp-&gt;width, dp-&gt;height, 0, 0) ; <BR/>
+}<BR/>
+<BR/>
+{<BR/>
+<TAB/>...<BR/>
+<TAB/><X><T>XtAddEventHandler</T><A>http://www.xfree86.org/4.2.0/XtAddEventHandler.3.html</A><L>en</L><F>HTML</F></X>(shell,<BR/>
+<TAB/><TAB/>ExposureMask, <BR/>
+<TAB/><TAB/>False, <BR/>
+<TAB/><TAB/>exposeCB, <BR/>
+<TAB/><TAB/>XtPointer(&amp;dp)); <BR/>
+<TAB/>...<BR/>
+}</CODESAMPLE>
+<BR/>
+Get an event in the event queue without remove it <BR/>
+event selection is done by an event mask
+<CODESAMPLE>static Boolean checkTypedEventWithoutRemovingFlag;<BR/>
+static <X><T>XEvent</T><A>http://www.xfree86.org/4.2.0/XEvent.3.html</A><L>en</L><F>HTML</F></X>  checkTypedEventWithoutRemovingEvent;<BR/>
+<BR/>
+static Bool<BR/>
+checkTypedEventWithoutRemovingPredicate(Display * /*display*/,<BR/>
+<TAB/><X><T>XEvent</T><A>http://www.xfree86.org/4.2.0/XEvent.3.html</A><L>en</L><F>HTML</F></X> *event,<BR/>
+<TAB/>XPointer arg)<BR/>
+{<BR/>
+<TAB/>int eventType = *(long*)arg;<BR/>
+<TAB/>if ( (event-&gt;type == eventType) &amp;&amp;<BR/>
+<TAB/><TAB/>!checkTypedEventWithoutRemovingFlag )<BR/>
+<TAB/>{<BR/>
+<TAB/><TAB/>checkTypedEventWithoutRemovingFlag=True;<BR/>
+<TAB/><TAB/>memcpy(&amp;checkTypedEventWithoutRemovingEvent, event, sizeof(<X><T>XEvent</T><A>http://www.xfree86.org/4.2.0/XEvent.3.html</A><L>en</L><F>HTML</F></X>));<BR/>
+<TAB/>}<BR/>
+<TAB/>return(False);<BR/>
+}<BR/>
+<BR/>
+Boolean<BR/>
+<B>checkTypedEventWithoutRemoving</B>(Display *display,<BR/>
+<TAB/>int eventType,<BR/>
+<TAB/><X><T>XEvent</T><A>http://www.xfree86.org/4.2.0/XEvent.3.html</A><L>en</L><F>HTML</F></X> *eventReturn)<BR/>
+{<BR/>
+<TAB/><X><T>XEvent</T><A>http://www.xfree86.org/4.2.0/XEvent.3.html</A><L>en</L><F>HTML</F></X> dummyEvent;<BR/>
+<TAB/>checkTypedEventWithoutRemovingFlag = False;<BR/>
+<TAB/><X><T>XCheckIfEvent</T><A>http://www.xfree86.org/4.2.0/XCheckIfEvent.3.html</A><L>en</L><F>HTML</F></X>(display,<BR/>
+<TAB/><TAB/>&amp;dummyEvent,<BR/>
+<TAB/><TAB/>checkTypedEventWithoutRemovingPredicate,<BR/>
+<TAB/><TAB/>XPointer(&amp;eventType));<BR/>
+<TAB/>if (checkTypedEventWithoutRemovingFlag)<BR/>
+<TAB/>{<BR/>
+<TAB/><TAB/>memcpy(eventReturn, &amp;checkTypedEventWithoutRemovingEvent, sizeof(<X><T>XEvent</T><A>http://www.xfree86.org/4.2.0/XEvent.3.html</A><L>en</L><F>HTML</F></X>));<BR/>
+<TAB/>}<BR/>
+<TAB/>return(checkTypedEventWithoutRemovingFlag);<BR/>
+}</CODESAMPLE><BR/>
+<BR/>
+Send an event to a window which may not exists (this avoids a <CODEROUTINE>BadWindow</CODEROUTINE> error)
+<CODESAMPLE>static int XSafeSendEvent_error;<BR/>
+<BR/>
+static int XSafeSendEvent_errorHandler(Display * /*display*/,<BR/>
+<TAB/>XErrorEvent *event)<BR/>
+{<BR/>
+<TAB/>XSafeSendEvent_error = event-&gt;error_code;<BR/>
+<TAB/>return(0);<BR/>
+}<BR/>
+<BR/>
+int <B>feSendEvent</B>(Display *display,<BR/>
+<TAB/>Window w,<BR/>
+<TAB/>Bool propagate,<BR/>
+<TAB/>long event_mask,<BR/>
+<TAB/>XEvent *event_send)<BR/>
+{<BR/>
+<TAB/>int status;<BR/>
+<TAB/>XErrorHandler oldHandler;<BR/>
+<TAB/>/* synchronise to avoid possible previous error */<BR/>
+<TAB/><X><T>XSync</T><A>http://www.xfree86.org/4.2.0/XSync.3.html</A><L>en</L><F>HTML</F></X>(display,False);<BR/>
+<BR/>
+<TAB/>/* init the error */<BR/>
+<TAB/>XSafeSendEvent_error = 0;<BR/>
+<BR/>
+<TAB/>/* replace error handler by flag setter */<BR/>
+<TAB/>oldHandler = <X><T>XSetErrorHandler</T><A>http://www.xfree86.org/4.2.0/XSetErrorHandler.3.html</A><L>en</L><F>HTML</F></X>(XSafeSendEvent_errorHandler);<BR/>
+<BR/>
+<TAB/>/* try to sned the event */<BR/>
+<TAB/>status = <X><T>XSendEvent</T><A>http://www.xfree86.org/4.2.0/XSendEvent.3.html</A><L>en</L><F>HTML</F></X>(display, w, propagate, event_mask, event_send);<BR/>
+<BR/>
+<TAB/>/* synchronise to generate possible current error */<BR/>
+<TAB/><X><T>XSync</T><A>http://www.xfree86.org/4.2.0/XSync.3.html</A><L>en</L><F>HTML</F></X>(display,False);<BR/>
+<BR/>
+<TAB/>/* restore error handler */<BR/>
+<TAB/><X><T>XSetErrorHandler</T><A>http://www.xfree86.org/4.2.0/XSetErrorHandler.3.html</A><L>en</L><F>HTML</F></X>(oldHandler);<BR/>
+<BR/>
+<TAB/>/* return flag */<BR/>
+<TAB/>if (XSafeSendEvent_error) return(XSafeSendEvent_error);<BR/>
+<BR/>
+<TAB/>if (!status) return(-1);<BR/>
+<BR/>
+<TAB/>return(0);<BR/>
+}</CODESAMPLE>
+<BR/>
+The autorepeat is managed by the X server which generates <CODEROUTINE>KeyPressed</CODEROUTINE> and <CODEROUTINE>KeyReleased</CODEROUTINE> automatically, there are two ways to detect the autorepeat:
+<BLIST>
+<ITEM> <CODEROUTINE>XkbSetDetectableAutoRepeat</CODEROUTINE> in the XKEYBOARD extension</ITEM>
+<ITEM> the fact that the time of the <CODEROUTINE>KeyPressed</CODEROUTINE> event is equal to the time of the previous <CODEROUTINE>KeyReleased</CODEROUTINE> event</ITEM>
+</BLIST>
+</CONTENT>
+</PAGE>
+

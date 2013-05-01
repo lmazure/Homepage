@@ -1,0 +1,2781 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Emacs</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+general
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="10%"><col width="5%"><col width="15%"><col
+ width="70%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x C-c</td>
+      <td align="center">save-buffers-kill-emacs</td>
+      <td>ask for saving the buffers and quit emacs (with a prefix, the
+saves
+are automatically done)</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-_ <br>
+C-x u</center>
+      </td>
+      <td>
+      <center>undo <br>
+advertised-undo</center>
+      </td>
+      <td>undo</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x z</center>
+      </td>
+      <td>
+      <center>repeat</center>
+      </td>
+      <td>repeat the last modification (simply type z to repeat once
+again)</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-z</center>
+      </td>
+      <td>
+      <center>iconify-or-deiconify-frame</center>
+      </td>
+      <td>iconify the window</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>set-variable</center>
+      </td>
+      <td>set a variable</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>truncate-line (variable)</center>
+      </td>
+      <td>if nil, lines are wrapped <br>
+otherwise each line of the file is a line on the screen (and a
+horizontal
+line is available)</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>server
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">server-start</td>
+      <td>start the server <br>
+once this is done, simply run <tt>emacsclient</tt> from the shell to
+edit a file within emacs <br>
+      <tt>emacsclient</tt> is blocked until the end of edition,
+indicated
+by C-x #, except if it has been run with the option <tt>--no-wait</tt>
+      <p>use <tt>gnuserv-start</tt> with xemacs (see <a
+ href="emacscust.htm">this
+page</a>)</p>
+      </td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x #</center>
+      </td>
+      <td>
+      <center>server-edit</center>
+      </td>
+      <td>switch to the next buffer <br>
+it is was the last one, notify the client</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>navigation
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x =</td>
+      <td align="center">what-cursor-position</td>
+      <td>display the current cursor position and the next character</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-&lt;</center>
+      </td>
+      <td>
+      <center>beginning-of-buffer</center>
+      </td>
+      <td>put the cursor at the buffer beginning</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">M-&gt;</td>
+      <td align="center">end-of-buffer</td>
+      <td>put the cursor at the buffer end</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">M-g</td>
+      <td align="center">goto-line</td>
+      <td>put the cursor at a given line</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x l</center>
+      </td>
+      <td>
+      <center>count-lines-page</center>
+      </td>
+      <td>Report number of lines on current page, before and after point</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>line-number-mode</center>
+      </td>
+      <td>toggle the display of the line number in the mode line
+(otherwise the
+percentage is displayed)</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>goto-char</center>
+      </td>
+      <td>put the cursor at a given position</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-a</td>
+      <td align="center">beginning-of-line</td>
+      <td>put the cursor at the line beginning</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-e</td>
+      <td align="center">end-of-line</td>
+      <td>put the cursor at the line end</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-l</td>
+      <td align="center">recenter</td>
+      <td>redisplay the buffer with the current line at the middle</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-b <br>
+LEFT</center>
+      </td>
+      <td>
+      <center>backward-char</center>
+      </td>
+      <td>move backward of one character</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-f <br>
+RIGHT</center>
+      </td>
+      <td>
+      <center>forward-char</center>
+      </td>
+      <td>move forward of one character</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-p <br>
+UP</center>
+      </td>
+      <td>
+      <center>previous-line</center>
+      </td>
+      <td>move backward of one line</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-n <br>
+DOWN</center>
+      </td>
+      <td>
+      <center>next-line</center>
+      </td>
+      <td>move forward of one line</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-b</center>
+      </td>
+      <td>
+      <center>backward-word</center>
+      </td>
+      <td>move backward of one word</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-f</center>
+      </td>
+      <td>
+      <center>forward-word</center>
+      </td>
+      <td>move forward of one word</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-a</center>
+      </td>
+      <td>
+      <center>backward-sentence</center>
+      </td>
+      <td>move backward of one sentence</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-e</center>
+      </td>
+      <td>
+      <center>forward-sentence</center>
+      </td>
+      <td>move forward of one sentence</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-[</center>
+      </td>
+      <td>
+      <center>backward-paragraph</center>
+      </td>
+      <td>move backward of one paragraph</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-]</center>
+      </td>
+      <td>
+      <center>forward-paragraph</center>
+      </td>
+      <td>move forward of one paragraph</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x [</center>
+      </td>
+      <td>
+      <center>backward-page</center>
+      </td>
+      <td>move backward of one page</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x ]</center>
+      </td>
+      <td>
+      <center>forward-page</center>
+      </td>
+      <td>move forward of one page</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-v <br>
+next</center>
+      </td>
+      <td>
+      <center>scroll-up</center>
+      </td>
+      <td>scroll the window toward the top</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-v <br>
+prior</center>
+      </td>
+      <td>
+      <center>scroll-down</center>
+      </td>
+      <td>scroll the window toward the bottom</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x &gt; <br>
+C-prior</center>
+      </td>
+      <td>
+      <center>scroll-right</center>
+      </td>
+      <td>sroll the window toward the right</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x &lt; <br>
+C-next</center>
+      </td>
+      <td>
+      <center>scroll-left</center>
+      </td>
+      <td>scroll the window toward the left</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-C-v <br>
+M-next</center>
+      </td>
+      <td>
+      <center>scroll-other-window</center>
+      </td>
+      <td>scroll the next window upward</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-S-C-v <br>
+M-prior</center>
+      </td>
+      <td>
+      <center>scroll-other window-down</center>
+      </td>
+      <td>scroll the next window downward</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>mark
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-space <br>
+C-@</td>
+      <td align="center">set-mark-command</td>
+      <td>set the mark at the current positon</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-x</center>
+      </td>
+      <td>
+      <center>exchange-point-and-mark</center>
+      </td>
+      <td>invert the mark and the current position</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-h</center>
+      </td>
+      <td>
+      <center>mark-paragraph</center>
+      </td>
+      <td>set the current position a the paragraph beginning and the
+mark at
+the paragraph end</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-p</center>
+      </td>
+      <td>
+      <center>mark-page</center>
+      </td>
+      <td>set the current position a the page beginning and the mark at
+the page
+end</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-&lt;</td>
+      <td align="center">mark-beginning-of-buffer</td>
+      <td>set the mark at the buffer beginning</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-&gt;</td>
+      <td align="center">mark-end-of-buffer</td>
+      <td>set the mark at the buffer end</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x h</center>
+      </td>
+      <td>
+      <center>mark-whole-buffer</center>
+      </td>
+      <td>put the current position at the buffer beginning and the mark
+at buffer
+end</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>region
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x n n</td>
+      <td align="center">narrow-to-region</td>
+      <td>restrict edition to current region</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x n w</center>
+      </td>
+      <td>
+      <center>widden</center>
+      </td>
+      <td>suppress edition restriction</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>register
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x g</td>
+      <td align="center">insert-register</td>
+      <td>insert the content of a register</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x x <br>
+C-x r s <br>
+C-x r x</center>
+      </td>
+      <td>
+      <center>copy-to-register</center>
+      </td>
+      <td>copy region into register</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>append-to-register</center>
+      </td>
+      <td>append region to register</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>prepend-to-register</center>
+      </td>
+      <td>prepend region to register</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>search
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-s</td>
+      <td align="center">isearch-forward</td>
+      <td>incremental search forward</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-r</td>
+      <td align="center">isearch-backward</td>
+      <td>incremental search backward</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">M-C-s</td>
+      <td align="center">isearch-forward-regex</td>
+      <td>incremental research forward for regular expression</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-C-r</center>
+      </td>
+      <td>
+      <center>isearch-backward-regexp</center>
+      </td>
+      <td>incremental research backward for regular expression</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>&eacute;dition
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-q</td>
+      <td align="center">quote-insert</td>
+      <td>read next input character and insert it</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-t</center>
+      </td>
+      <td>
+      <center>transpose-chars</center>
+      </td>
+      <td>interchange the two characters around point</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">M-t</td>
+      <td align="center">transpose-words</td>
+      <td>interchange the two words around point</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x C-t</td>
+      <td align="center">transpose-lines</td>
+      <td>exchange current line and previous one</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>transpose-line-up</center>
+      </td>
+      <td>move current line one line up</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>transpose-line-down</center>
+      </td>
+      <td>move current line one line down</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>transpose-paragraphs</center>
+      </td>
+      <td>interchange current paragraph with the previous one</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-^</center>
+      </td>
+      <td>
+      <center>delete-indentation</center>
+      </td>
+      <td>join la ligne courante &agrave; la ligne
+pr&eacute;c&eacute;dente</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>sort-lines</center>
+      </td>
+      <td>trie les lignes de la r&eacute;gion par ordre
+alphab&eacute;tique</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-l</center>
+      </td>
+      <td>
+      <center>downcase-region</center>
+      </td>
+      <td>passe les caract&egrave;res de la r&eacute;gion en minuscules</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-u</center>
+      </td>
+      <td>
+      <center>upcase-region</center>
+      </td>
+      <td>passe les caract&egrave;res de la r&eacute;gion en majuscules</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>DEL</center>
+      </td>
+      <td>
+      <center>backward-delete-char-untabify</center>
+      </td>
+      <td>d&eacute;truit le carat&egrave;re pr&eacute;c&eacute;dent en
+transformant
+les tabs en espaces</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-d</center>
+      </td>
+      <td>
+      <center>delete-char</center>
+      </td>
+      <td>d&eacute;truit le caract&egrave;re courant</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-d</center>
+      </td>
+      <td>
+      <center>kill-word</center>
+      </td>
+      <td>d&eacute;truit la fin du mot courant</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-k</td>
+      <td align="center">kill-line</td>
+      <td>d&eacute;truit la fin de la ligne courante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-k</center>
+      </td>
+      <td>
+      <center>kill-sentence</center>
+      </td>
+      <td>d&eacute;truit la fin de la phrase courante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-w</td>
+      <td align="center">kill-region</td>
+      <td>d&eacute;truit le texte entre le point (curseur) et la marque</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>erase-buffer</center>
+      </td>
+      <td>efface le contenu du buffer (le narrowing n'est pas pris en
+compte,
+le contenu n'est pas mis dans la kill ring)</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-w</center>
+      </td>
+      <td>
+      <center>kill-ring-save</center>
+      </td>
+      <td>met la r&eacute;gion dans la kill ring sans la d&eacute;truire</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-y</center>
+      </td>
+      <td>
+      <center>yank</center>
+      </td>
+      <td>yank le dernier kill</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-y</center>
+      </td>
+      <td>
+      <center>yank-pop</center>
+      </td>
+      <td>yank le kill pr&eacute;c&eacute;dent</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-insert</center>
+      </td>
+      <td>
+      <center>copy-primary-selection</center>
+      </td>
+      <td>copy the selection to the clipboard and the kill ring</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>S-del</center>
+      </td>
+      <td>
+      <center>kill-primary-selection</center>
+      </td>
+      <td>copy the selection to the clipboard and the kill ring then
+delete it</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>S-insert</center>
+      </td>
+      <td>
+      <center>yank-clipboard-selection</center>
+      </td>
+      <td>insert the clipboard content at point</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-del</center>
+      </td>
+      <td>
+      <center>delete-primary-selection</center>
+      </td>
+      <td>delete the selection without copying it to the clipboard or
+the kill
+ring</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-o</td>
+      <td align="center">open-line</td>
+      <td>ins&egrave;re un newline avant la position courante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-%</center>
+      </td>
+      <td>
+      <center>query-replace</center>
+      </td>
+      <td>remplace une cha&icirc;ne de caract&egrave;res par une autre</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-M-%</center>
+      </td>
+      <td>
+      <center>query-replace-regexp</center>
+      </td>
+      <td>remplace une regexp par une autre</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x i</center>
+      </td>
+      <td>
+      <center>insert-file</center>
+      </td>
+      <td>ins&egrave;re le contenu d'un fichier apr&egrave;s le curseur</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>insert-buffer</center>
+      </td>
+      <td>ins&egrave;re le contenu d'un buffer apr&egrave;s le curseur</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>append-to-buffer</center>
+      </td>
+      <td>append to specified buffer (before its point) the content of
+the region</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-C-\</center>
+      </td>
+      <td>
+      <center>indent-region</center>
+      </td>
+      <td>indent each line in the region</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>untabify</center>
+      </td>
+      <td>convert all tabs in region into multiple spaces</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>tabify</center>
+      </td>
+      <td>convert multiple spaces in region into tabs if possible</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x RET f</center>
+      </td>
+      <td>
+      <center>set-buffer-file-coding-system</center>
+      </td>
+      <td><font color="#006600">XEmacs only</font> <br>
+change le coding system d'un fichier</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x RET c</center>
+      </td>
+      <td>
+      <center>universal-coding-system-argument</center>
+      </td>
+      <td>ex&eacute;cute la prochaine commande avec un coding system
+donn&eacute;</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>insert</center>
+      </td>
+      <td>
+      <center>overwrite-mode</center>
+      </td>
+      <td>toggle insert/overwrite mode</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>buffer menu
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td>&nbsp;</td>
+      <td align="center"><br>
+      </td>
+      <td align="center">Buffer-menu-mode</td>
+      <td>switch the buffer to buffer menu mode</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>1</center>
+      </td>
+      <td>
+      <center>Buffer-menu-1-window</center>
+      </td>
+      <td>display this buffer in full frame</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>2</center>
+      </td>
+      <td>
+      <center>Buffer-menu-2-window</center>
+      </td>
+      <td>display this buffer is a window and the previous one in the
+other window</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>f <br>
+RET</center>
+      </td>
+      <td>
+      <center>Buffer-menu-this window</center>
+      </td>
+      <td>display this buffer in this window</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>o</center>
+      </td>
+      <td>
+      <center>Buffer-menu-other-window</center>
+      </td>
+      <td>display this buffer in the other window</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>m</center>
+      </td>
+      <td>
+      <center>Buffer-menu-mark</center>
+      </td>
+      <td>mark this buffer as to be displayed</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>v</center>
+      </td>
+      <td>
+      <center>Buffer-menu-select</center>
+      </td>
+      <td>close all windows and display this buffer and all the marked
+ones</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>s</center>
+      </td>
+      <td>
+      <center>Buffer-menu-save</center>
+      </td>
+      <td>mark this buffer as to be saved</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>d <br>
+k</center>
+      </td>
+      <td>
+      <center>Buffer-menu-delete</center>
+      </td>
+      <td>mark this buffer as to be deleted</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>u</center>
+      </td>
+      <td>
+      <center>Buffer-menu-unmark</center>
+      </td>
+      <td>unmark this buffer</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Buffer Menu</center>
+      </td>
+      <td>
+      <center>x</center>
+      </td>
+      <td>
+      <center>Buffer-menu-execute</center>
+      </td>
+      <td>execute the marked commands</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>gestions des buffers
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption>
+  <center></center>
+  <br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x s</td>
+      <td align="center">save-some-buffers</td>
+      <td>ask for saving all or some of the existing buffers</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x C-s</td>
+      <td align="center">save-buffer</td>
+      <td>save the current buffer</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-f</center>
+      </td>
+      <td>
+      <center>find-file</center>
+      </td>
+      <td>open a new buffer containing a file</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x 4 f</center>
+      </td>
+      <td>
+      <center>find-file-other-window</center>
+      </td>
+      <td>open a new buffer containg a file, buffer is opened in the
+next window</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-r</center>
+      </td>
+      <td>
+      <center>find-file-read-only</center>
+      </td>
+      <td>open a read-only buffer containing a file</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>toggle-read-only</center>
+      </td>
+      <td>toggle the read-only mode</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-v</center>
+      </td>
+      <td>
+      <center>find-alternate-file</center>
+      </td>
+      <td>replace file in current buffer</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>recover-file</center>
+      </td>
+      <td>load the last autosaved copy of the file</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+      <center>revert-buffer</center>
+      </td>
+      <td>reload the original file (as currently writen on the disk) in
+the current
+buffer</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-w</center>
+      </td>
+      <td>
+      <center>write-file</center>
+      </td>
+      <td>save the buffer in a file</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>append-to-file</center>
+      </td>
+      <td>append the content of the region to a file</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x k</center>
+      </td>
+      <td>
+      <center>kill-buffer</center>
+      </td>
+      <td>destroy a buffer</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>bury-buffer</center>
+      </td>
+      <td>put the buffer at the end of the list of all the buffers</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>gestions des windows
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption>
+  <center></center>
+  <br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x 0</td>
+      <td align="center">delete-window</td>
+      <td>d&eacute;truit la window courante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x 1</td>
+      <td align="center">delete-other-windows</td>
+      <td>d&eacute;truit toutes les windows sauf celle courante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x 2</center>
+      </td>
+      <td>
+      <center>split-window-vertically</center>
+      </td>
+      <td>coupe la window courante en deux verticalement</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x 3</center>
+      </td>
+      <td>
+      <center>split-window-horizontally</center>
+      </td>
+      <td>coupe la window courante en deux horizontalement</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x o</center>
+      </td>
+      <td>
+      <center>other-window</center>
+      </td>
+      <td>passe &agrave; la window suivante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x b</center>
+      </td>
+      <td>
+      <center>switch-to-buffer</center>
+      </td>
+      <td>change le buffer affich&eacute; dans la window</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x 4 b</center>
+      </td>
+      <td>
+      <center>switch-to-buffer-other-window</center>
+      </td>
+      <td>change le buffer affich&eacute; dans la window suivante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x 4 C-o</center>
+      </td>
+      <td>
+      <center>display-buffer</center>
+      </td>
+      <td>affiche un buffer sans le rendre courant</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-b</center>
+      </td>
+      <td>
+      <center>list-buffers</center>
+      </td>
+      <td>affiche la liste des buffers</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x 4 b</center>
+      </td>
+      <td>
+      <center>switch-to-buffer-other-window</center>
+      </td>
+      <td>change le buffer affich&eacute; dans une autre window</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x ^</center>
+      </td>
+      <td>
+      <center>enlarge-window</center>
+      </td>
+      <td>augmente la hauteur de la window courante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>shrink-window</center>
+      </td>
+      <td>diminue la hauteur de la window courante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x {</center>
+      </td>
+      <td>
+      <center>shrink-window-horizontally</center>
+      </td>
+      <td>diminue la largeur de la window courante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x }</center>
+      </td>
+      <td>
+      <center>enlarge-window-horizontally</center>
+      </td>
+      <td>augmente la largeur de la window courante</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x +</center>
+      </td>
+      <td>
+      <center>balance-windows</center>
+      </td>
+      <td>met toutes les windows avec la m&ecirc;me hauteur</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>compare-windows</center>
+      </td>
+      <td>compare the current window with the next one starting at each
+window's
+point, the point of each window is moved where is the first difference</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>frame management
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption>
+  <center></center>
+  <br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x 5 2</td>
+      <td align="center">make-frame-command</td>
+      <td>create a new frame containing the current buffer</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>make-frame <br>
+new-frame</center>
+      </td>
+      <td>create a new frame displaying the current buffer</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x 5 f</center>
+      </td>
+      <td>
+      <center>open-file-other-frame</center>
+      </td>
+      <td>open a file in a buffer in a new frame</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x 5 o</center>
+      </td>
+      <td>
+      <center>other-frame</center>
+      </td>
+      <td>select the next frame</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x 5 0</td>
+      <td align="center">delete-frame</td>
+      <td>destroy the current frame</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>help
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-h k</td>
+      <td align="center">describe-key</td>
+      <td>display the documentation of a function bound to a key
+sequence</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h f</center>
+      </td>
+      <td>
+      <center>describe-function</center>
+      </td>
+      <td>display the full documentation of a function</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+      <center>describe-variable</center>
+      </td>
+      <td>display the full documentation of a variable</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h a</center>
+      </td>
+      <td>
+      <center>hyper-apropos</center>
+      </td>
+      <td>display lists of functions and variables that match a regexp</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h A</center>
+      </td>
+      <td>
+      <center>command-apropos</center>
+      </td>
+      <td>show commands (interactively callable functions) that match a
+regexp</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h l</center>
+      </td>
+      <td>
+      <center>view-lossage</center>
+      </td>
+      <td>display the 'view-lossage-key-count' last input keystrokes
+and the
+'view-lossage-message-count' last minibuffer messages</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>&nbsp;C-h b</center>
+      </td>
+      <td>
+      <center>describe-bindings</center>
+      </td>
+      <td>display the key and mouse bindings</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h F</center>
+      </td>
+      <td>
+      <center>view-emacs-FAQ</center>
+      </td>
+      <td>display the FAQ</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h w</center>
+      </td>
+      <td>
+      <center>where-is</center>
+      </td>
+      <td>list the keys sequences that invoke a command</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h n</center>
+      </td>
+      <td>
+      <center>view-emacs-news</center>
+      </td>
+      <td>display the release note</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>system-configuration (variable)</center>
+      </td>
+      <td>contain configuration Emacs was built for</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>emacs-version</center>
+      </td>
+      <td>returns the version of Emacs that is running</td>
+    </tr>
+    <tr>
+      <td>Help</td>
+      <td>
+      <center>q</center>
+      </td>
+      <td>
+      <center>help-mode-quit</center>
+      </td>
+      <td>close the help buffer</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>info
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h i</center>
+      </td>
+      <td>
+      <center>info</center>
+      </td>
+      <td>open an Info buffer</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h C-i</center>
+      </td>
+      <td>
+      <center>Info-query</center>
+      </td>
+      <td>open an Info buffer on a given page&nbsp;</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h C-c</center>
+      </td>
+      <td>
+      <center>Info-goto-emacs-command-node</center>
+      </td>
+      <td>search for command in emacs Info manual</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h C-k</center>
+      </td>
+      <td>
+      <center>Info-goto-emacs-key-command-node</center>
+      </td>
+      <td>search for a key sequence in emacs Info manual</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-h C-f</center>
+      </td>
+      <td>
+      <center>Info-elisp-ref</center>
+      </td>
+      <td>search for a command in elisp info manual</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Info</center>
+      </td>
+      <td>
+      <center>p</center>
+      </td>
+      <td>
+      <center>info-prev</center>
+      </td>
+      <td>go to the next node</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Info</center>
+      </td>
+      <td>
+      <center>n</center>
+      </td>
+      <td>
+      <center>info-next</center>
+      </td>
+      <td>go to the previous node</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Info</center>
+      </td>
+      <td>
+      <center>u</center>
+      </td>
+      <td>
+      <center>info-up</center>
+      </td>
+      <td>go to the superior node</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Info</center>
+      </td>
+      <td>
+      <center>l</center>
+      </td>
+      <td>
+      <center>info-last</center>
+      </td>
+      <td>return to the last visited node</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Info</center>
+      </td>
+      <td>
+      <center>q</center>
+      </td>
+      <td>
+      <center>Info-exit</center>
+      </td>
+      <td>exit Info</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Info</center>
+      </td>
+      <td>
+      <center>i</center>
+      </td>
+      <td>
+      <center>Info-index</center>
+      </td>
+      <td>search for a string in the Info index</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Info</center>
+      </td>
+      <td>
+      <center>,</center>
+      </td>
+      <td>
+      <center>Info-index-next</center>
+      </td>
+      <td>go to the next match of&nbsp; 'Info-index'</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>Info-directory-list (variable)</center>
+      </td>
+      <td>directories where emacs looks for the Info files; the
+environment variable
+INFOPATH can be used to add some directories</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>shell (GNU Emacs 19.34)
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">shell</td>
+      <td>start a shell buffer</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>eshell
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+      <center>eshell</center>
+      </td>
+      <td>start an eshell session</td>
+    </tr>
+    <tr>
+      <td>
+      <center>eshell</center>
+      </td>
+      <td>
+      <center>UP</center>
+      </td>
+      <td>
+      <center>eshell-previous-matching-input-from-input</center>
+      </td>
+      <td>search backwards through input history for match for current
+input</td>
+    </tr>
+    <tr>
+      <td>
+      <center>eshell</center>
+      </td>
+      <td>
+      <center>DOWN</center>
+      </td>
+      <td>&nbsp;eshell-next-matching-input-from-input</td>
+      <td>search forwards through input history for match for current
+input.</td>
+    </tr>
+    <tr>
+      <td>
+      <center>eshell</center>
+      </td>
+      <td>
+      <center>C-c C-c</center>
+      </td>
+      <td>
+      <center>eshell-interrupt-process</center>
+      </td>
+      <td>interrupt the process</td>
+    </tr>
+    <tr>
+      <td>
+      <center>eshell</center>
+      </td>
+      <td>
+      <center>C-c C-s</center>
+      </td>
+      <td>
+      <center>list-processes</center>
+      </td>
+      <td>display a list of all processes</td>
+    </tr>
+    <tr>
+      <td>
+      <center>eshell</center>
+      </td>
+      <td>
+      <center>Tab</center>
+      </td>
+      <td>
+      <center>pcomplete</center>
+      </td>
+      <td>complete the file/directory name</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>version control
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x v v</td>
+      <td align="center">&nbsp;vc-next-action</td>
+      <td>do the next logical step <br>
+- create an element if the file is not under configuration <br>
+- check out the file if it is not <br>
+- check in the file if it is checked out</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-q</center>
+      </td>
+      <td>
+      <center>vc-toggle-read-only</center>
+      </td>
+      <td>checkout/checkin the file</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x v u</td>
+      <td align="center">vc-revert-buffer</td>
+      <td>uncheck out the file</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x v l</td>
+      <td align="center">vc-print-log</td>
+      <td>display the file history</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>printing
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">lpr-buffer</td>
+      <td>print buffer contents <br>
+      <tt>lpr-switches</tt> is a list of extra switches to pass to <tt>lpr</tt></td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>commandes
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">M-x</td>
+      <td align="center">execute-extended-command</td>
+      <td>execute a command entered in the minibuffer</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>macros
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">C-x (</td>
+      <td align="center">start-kbd-macro</td>
+      <td>commence &agrave; enregistrer une macro</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x )</center>
+      </td>
+      <td>
+      <center>end-kbd-macro</center>
+      </td>
+      <td>arr&egrave;te l'enregistrement d'une macro</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x e</center>
+      </td>
+      <td>
+      <center>call-last-kbd-macro</center>
+      </td>
+      <td>ex&eacute;cute la derni&egrave;re macro enregistr&eacute;e</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>name-last-kbd-macro</center>
+      </td>
+      <td>nomme la derni&egrave;re macro enregistr&eacute;e</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-u C-x (</center>
+      </td>
+      <td><br>
+      </td>
+      <td>ex&eacute;cute la derni&egrave;re macro et ajoute de
+nouvelles commandes</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>insert-kbd-maro</center>
+      </td>
+      <td>ins&egrave;re la macro dans le buffer courant</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>interaction with the shell
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center">M-!</td>
+      <td align="center">shell-command</td>
+      <td>run a shell command</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>M-|</center>
+      </td>
+      <td>
+      <center>shell-command-on-region</center>
+      </td>
+      <td>execute a shell command on the current region, the output is
+put in
+the *Shell Command Output* buffer <br>
+with the C-u prefix, the content of the region is replaced by the
+output
+of the shell command</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>setenv</center>
+      </td>
+      <td>create, modify or destroy an environment variable <br>
+to destroy interactively a variable, use the C-u prefix</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>cd</center>
+      </td>
+      <td>change the current directory</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>pwd</center>
+      </td>
+      <td>return the current directory</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+      <center>grep</center>
+      </td>
+      <td>run grep <br>
+use C-x ` to go through the found matches</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+      <center>grep-find</center>
+      </td>
+      <td>run grep via find <br>
+use C-x ` to go through the found matches</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>manual-entry</center>
+      </td>
+      <td>display a man page</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>Comint
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td>
+      <center>Comint</center>
+      </td>
+      <td align="center">M-p <br>
+C-UP</td>
+      <td align="center">comint-previous-input</td>
+      <td>cycle backwards through input history</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Comint</center>
+      </td>
+      <td>
+      <center>M-n <br>
+C-DOWN</center>
+      </td>
+      <td>
+      <center>comint-next-input</center>
+      </td>
+      <td>cycle forwards through input history</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Comint</center>
+      </td>
+      <td>
+      <center>C-i <br>
+TAB</center>
+      </td>
+      <td>
+      <center>comint-dynamic-complete</center>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>C
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">c-mode</td>
+      <td>switch the buffer to C mode</td>
+    </tr>
+    <tr>
+      <td>
+      <center>C</center>
+      </td>
+      <td>
+      <center>C-c C-c</center>
+      </td>
+      <td>
+      <center>comment-region</center>
+      </td>
+      <td>comment a region <br>
+(C-u C-c C-c to uncomment)</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>JDE
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">jde-mode</td>
+      <td>switch the buffer to JDE mode</td>
+    </tr>
+    <tr>
+      <td>
+      <center>JDE</center>
+      </td>
+      <td>
+      <center>TAB</center>
+      </td>
+      <td>
+      <center>c-indent-command</center>
+      </td>
+      <td>properly indent the line <br>
+      <tt>indent-tabs-mode</tt> variable indicates it the indentation
+must
+be done with tabs (if <tt>t</tt>) or with space (if <tt>nil</tt>)</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>senator
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">senator-minor-mode</td>
+      <td>switch the buffer to senator in minor mode</td>
+    </tr>
+    <tr>
+      <td>
+      <center>senator</center>
+      </td>
+      <td>
+      <center>S-Button3</center>
+      </td>
+      <td>
+      <center>&nbsp;senator-completion-menu-popup</center>
+      </td>
+      <td>display the completion popup menu</td>
+    </tr>
+    <tr>
+      <td>
+      <center>senator</center>
+      </td>
+      <td>
+      <center>C-c , Tab <br>
+C-c , C-i</center>
+      </td>
+      <td>
+      <center>senator-complete-symbol</center>
+      </td>
+      <td>complete the symbol under point</td>
+    </tr>
+    <tr>
+      <td>
+      <center>senator</center>
+      </td>
+      <td>
+      <center>C-c , j</center>
+      </td>
+      <td>
+      <center>senator-jump</center>
+      </td>
+      <td>jump to a given semantic symbol</td>
+    </tr>
+    <tr>
+      <td>
+      <center>senator</center>
+      </td>
+      <td>
+      <center>C-c, n</center>
+      </td>
+      <td>
+      <center>senator-next-token</center>
+      </td>
+      <td>jump to the next semantic token</td>
+    </tr>
+    <tr>
+      <td>
+      <center>senator</center>
+      </td>
+      <td>
+      <center>C-c , p</center>
+      </td>
+      <td>
+      <center>senator-previous-token</center>
+      </td>
+      <td>jump to the previous semantic token</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>HTML
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">html-mode</td>
+      <td>switch the buffer to HTML mode</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>hexadecimal
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">hexl-mode</td>
+      <td>switch the buffer to hexadecimal mode</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>Image
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">image-mode</td>
+      <td>switch the buffer to hexadecimal mode</td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">image<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">h<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">image-enter-hexl-mode<br>
+      </td>
+      <td style="vertical-align: top;">switch to hexadecimal mode<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top; text-align: center;">image<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">t<br>
+      </td>
+      <td style="vertical-align: top; text-align: center;">image-toggle-decoding<br>
+      </td>
+      <td style="vertical-align: top;">toggle text/image mode<br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>Lisp
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">eval-buffer</td>
+      <td>ex&eacute;cute le buffer comme &eacute;tant du code Lisp</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x C-e</center>
+      </td>
+      <td>
+      <center>eval-last-sexp</center>
+      </td>
+      <td>ex&eacute;cute la sexp avant la position courante</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>compilation
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">compile</td>
+      <td>start a compilation after asking for the compilation command
+line <br>
+the default compilation command is defined by compile-command <br>
+(setq-default compile-command "clearmake -v -V debug")</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>recompile</center>
+      </td>
+      <td>start a compilation with the same command line as the
+previous compilation</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>C-x `</center>
+      </td>
+      <td>
+      <center>next-error</center>
+      </td>
+      <td>edit the file at the line indicated by the next regexp match
+in the <tt>grep</tt>
+result or in the compilation log</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>&nbsp;</td>
+      <td>
+      <center>previous-error</center>
+      </td>
+      <td>edit the file at the line indicated by the previous regexp
+match in
+the <tt>grep</tt> result or in the compilation log</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Compilation</center>
+      </td>
+      <td>
+      <center>C-c C-k</center>
+      </td>
+      <td>
+      <center>kill-compilation</center>
+      </td>
+      <td>stop the compilation</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Compilation</center>
+      </td>
+      <td>
+      <center>C-m <br>
+C-c C-c</center>
+      </td>
+      <td>
+      <center>compile-goto-error</center>
+      </td>
+      <td>display the source code at the line corresponding to the
+error message
+point is on</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Compilation</center>
+      </td>
+      <td>
+      <center>M-n</center>
+      </td>
+      <td>
+      <center>compilation-next-error</center>
+      </td>
+      <td>move point to next error message</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Compilation</center>
+      </td>
+      <td>
+      <center>M-p</center>
+      </td>
+      <td>
+      <center>compilation-previous-error</center>
+      </td>
+      <td>move point to previous error message</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Compilation</center>
+      </td>
+      <td>
+      <center>M-(</center>
+      </td>
+      <td>
+      <center>compilation-next-file</center>
+      </td>
+      <td>move point to the next error for a different file</td>
+    </tr>
+    <tr>
+      <td>
+      <center>Compilation</center>
+      </td>
+      <td>
+      <center>M-)</center>
+      </td>
+      <td>
+      <center>compilation-previous-file</center>
+      </td>
+      <td>move point to the previous error for a different file</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>impression
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">ps-print-buffer</td>
+      <td>print the current file on a PostScript printer <br>
+with the <tt>C-u</tt>, save in a PostScript file</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>cosmetic
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">set-background-color</td>
+      <td>change the backgorund color</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>list-colors-display</center>
+      </td>
+      <td>display the list of available colors</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>toggle-scroll-bar</center>
+      </td>
+      <td>display/undisplay the vertical scrollbars in current frame</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p>librairies
+</p>
+<center>
+<table border="1" cols="4" width="100%">
+  <caption><br>
+  </caption><colgroup><col width="15%"><col width="10%"><col width="20%"><col
+ width="55%"></colgroup><tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td align="center"><br>
+      </td>
+      <td align="center">load-library</td>
+      <td>load a library</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+      <td>
+      <center>load-path (variable)</center>
+      </td>
+      <td>directories where emacs looks for the libraries (loaded by
+load-library);
+the environment variable EMACSLOADPATH can be used to prepend some
+directories</td>
+    </tr>
+  </tbody>
+</table>
+</center>
+<p><b><u>DOS support</u></b>
+<br>
+dans emacs ?.?.? pour supprimer les carriage returns d'un fichier DOS
+<br>
+<tt>C-x RET c</tt> pour mettre le coding <tt>system iso-latin-1-unix</tt>
+<br>
+<tt>C-x C-f</tt> pour lire le fichier
+<br>
+<tt>M-%</tt> pour remplacer <tt>C-q C-M</tt> par rien
+<br>
+<tt>C-x C-s</tt>
+</p>
+<p>replace <tt>^f</tt> by newlines
+<br>
+<tt>M-%</tt> to replace <tt>C-q C-f</tt> by <tt>C-q C-j</tt>
+</p>
+<p>xemacs 19.34.6 supports binary/text mode on DOS (indicated by <tt>B:</tt>
+or <tt>T:</tt> on the mode line).
+<br>
+Binary files are defined by the extensions listed in <tt>file-name-buffer-file-type-alist</tt>
+(but this seems to not work).
+<br>
+<tt>find-file-binary</tt> load a file in binary mode.
+<br>
+To correctly display the high half of ISO 8859 Latin1, execute <tt>standard-display-european</tt>.
+</p>
+<p>xemacs 21.4.6 installation
+</p>
+<ul>
+  <li>to avoid XEmacs complaint about $HOME undefined on Windows, add <tt>SET
+HOME=C:\</tt> in <tt>C:\AUTOEXEC.BAT</tt></li>
+  <li>install the packages:</li>
+  <br>
+get the package <tt>xemacs-sumo.tar.gz</tt> <br>
+start <tt>pkzip</tt> on <tt>xemacs-sumo.tar.gz</tt>, create <tt>xemacs-sumo.tar.tar</tt>
+and exit <tt>pkzip</tt> <br>
+start <tt>pkzip</tt> on <tt>xemacs-sumo.tar.tar</tt>, extract the
+files
+in <tt>c:\\PROGRAM FILES\\XEMACS</tt> (this creates a subdirectory <tt>xemacs-packages</tt>)
+and exit <tt>pkzip</tt>
+</ul>
+emacs key bindings
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>(define-key global-map [(ctrl tab)] 'other-window)</tt> <br>
+      <tt>(define-key global-map [(home)] 'beginning-of-line)</tt> <br>
+      <tt>(define-key global-map [(end)] 'end-of-line)</tt></td>
+    </tr>
+  </tbody>
+</table>
+<p>xemacs key bindings
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>(global-set-key [C-tab] 'other-window)</tt> <br>
+      <tt>(global-set-key [home] 'beginning-of-line)</tt> <br>
+      <tt>(global-set-key [end] 'end-of-line)</tt> <br>
+      <tt>(global-set-key [f5] 'next-error)</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: August 9</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()" target="_self">Laurent</a></font></i>
+</p>
+</body>
+</html>

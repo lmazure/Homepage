@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>m4</TITLE>
+<PATH>notes/m4.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<U>automatic indexation</U>
+<CODESAMPLE>
+define(`insertSortCriteria',`sortCriteria`'eval($1+$2)')<BR/>
+insertSortCriteria(17,1)<BR/>
+insertSortCriteria(17,2)<BR/>
+insertSortCriteria(17,3)<BR/>
+</CODESAMPLE>
+
+</CONTENT>
+<X><T>links</T><A>../links/unix.html#m4</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

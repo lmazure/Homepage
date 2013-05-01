@@ -1,0 +1,283 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Visual Basic in Word</TITLE>
+<PATH>notes/wordvb.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<BLIST>
+<ITEM>
+<CODESAMPLE>Application.ListCommands ListAllCommands:=True</CODESAMPLE> create a new document and list all the commands and their shortcuts 
+</ITEM>
+
+<ITEM>
+<CODESAMPLE>Selection.Tables(1).Select<BR/>
+Selection.Cells.Shading.BackgroundPatternColorIndex = wdAuto</CODESAMPLE> remove the background colors of all the table cells (but select the whole table...)
+</ITEM>
+
+<ITEM>
+<CODESAMPLE>CommandBars("Web").Enabled = False</CODESAMPLE> avoid the Web bar to be displayed when a hyperlink is clicked on
+</ITEM>
+
+<ITEM>
+<CODESAMPLE>Dialogs(wdDialogFileOpen).Show</CODESAMPLE> display the Open dialog<BR/>
+see page <X><T>Built-in dialog box argument lists</T><A>http://msdn.microsoft.com/library/default.asp?url=/library/en-us/off2000/html/xlmscdialogarglists.asp</A><L>en</L><F>HTML</F></X> for the list of dialogs
+</ITEM>
+
+<ITEM>
+<CODESAMPLE>Selection.Find.MatchWildcards = True<BR/>
+Selection.Find.Text = "[a-z]"</CODESAMPLE> matches &#xE9;,&#xE8;, &#xA1;, &#xF9;...
+</ITEM>
+
+<ITEM>
+<CODESAMPLE>Selection.Find.MatchWildcards = True<BR/>
+Selection.Find.Replacement.Highlight = True</CODESAMPLE> use the current highlight color, i.e. this will do nothing if there is currently no highlight color 
+</ITEM>
+
+<ITEM>
+Retrieve the bookmarks of a part of the document
+<CODESAMPLE>For i = 1 To newDoc.Tables(1).Rows.Count<BR/>
+<TAB/>Set c1 = newDoc.Tables(1).Cell(i, 1) <BR/>
+<TAB/>Set c2 = newDoc.Tables(1).Cell(i, 2) <BR/>
+<TAB/>c2.Select<BR/>
+<TAB/>If c1.range.Bookmarks.Count = 1 Then<BR/>
+<TAB/><TAB/>Dim t As String<BR/>
+<TAB/><TAB/>t = c1.range.Bookmarks(1)<BR/>
+<TAB/><TAB/>Selection.InsertAfter t<BR/>
+<TAB/>End If<BR/>
+Next i</CODESAMPLE>
+</ITEM>
+
+<ITEM>
+<CODESAMPLE>Set range = actDoc.range(firstCell.range.Start, firstCell.range.End - 1)<BR/>
+If (Not range.Font.StrikeThrough) Then<BR/>
+<TAB/>...<BR/>
+End If
+</CODESAMPLE>
+Test if the text of a table cell is not stroke through
+</ITEM>
+
+<ITEM>
+It is difficult to handle tables with merged cell. In the case of a table where the first column contains merged cells, I used the following code to get the cell of the first column associated with the each cell of the last column:
+<CODESAMPLE>
+For i = 2 To table.Rows.Count<BR/>
+<TAB/>' Set firstCell = table.Cell(i, 1) ' this does not work for merged cells, we use the following kludge instead<BR/>
+<TAB/>Set lastCell = table.Cell(i, table.Columns.Count) <BR/>
+<TAB/>lastCell.Select<BR/>
+<TAB/>For j = 1 To table.Columns.Count - 1<BR/>
+<TAB/><TAB/>Selection.MoveLeft Unit:=wdCell<BR/>
+<TAB/>Next j<BR/>
+<TAB/>Set firstCell = Selection.Cells(1) <BR/>
+<TAB/>' end of kludge<BR/>
+<TAB/>...<BR/>
+Next i
+</CODESAMPLE>
+If you just want to loop on the cells of the first column, you can use
+<CODESAMPLE>
+For Each firstCell In table.Columns(1).Cells<BR/>
+<TAB/>...<BR/>
+Next firstCell
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>document</B></U></TITLE>
+<ITEM>
+create a new document
+<CODESAMPLE>
+Dim newDoc As Document<BR/>
+Set newDoc = Documents.Add
+</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODEROUTINE>Document.Name</CODEROUTINE> is the file name without the path<BR/>
+<CODEROUTINE>Document.Path</CODEROUTINE> is the path of the file name<BR/>
+<CODEROUTINE>Document.FullName</CODEROUTINE> is the file name with its the path prepended<BR/>
+<CODEROUTINE>Application.PathSeparator</CODEROUTINE> is the separator to use to build folder names
+</ITEM>
+<ITEM>
+it orders to avoid problems when paring documents which may be a master document and/or in revision mode:
+<CODESAMPLE>Documents.Open FileName:=srsName(s), ReadOnly:=True<BR/>
+WordBasic.AcceptAllChangesInDoc<BR/>
+ActiveDocument.Subdocuments.Expanded = True<BR/>
+Set actdoc = ActiveDocument<BR/>
+... <BR/>
+<I>use actdoc</I><BR/>
+... <BR/>
+actdoc.Close SaveChanges:=wdDoNotSaveChanges</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>paragraphs</B></U></TITLE>
+<ITEM>
+<CODEROUTINE>OutlineLevel</CODEROUTINE> returns the outline level of the paragraph, it can be <CODEROUTINE>wdOutlineLevel1</CODEROUTINE>, <CODEROUTINE>wdOutlineLevel2</CODEROUTINE>,... or <CODEROUTINE>wdOutlineLevelBodyText</CODEROUTINE>.
+</ITEM>
+<ITEM>
+<CODEROUTINE>range.ListFormat.ListString</CODEROUTINE> returns the numbering of a paragraph
+<CODESAMPLE>
+Sub ExtractOutline()<BR/>
+<BR/>
+<TAB/>Dim p, p1, p2 As Paragraph<BR/>
+<TAB/>Dim actDoc, newDoc As Document<BR/>
+<BR/>
+<TAB/>Set actDoc = ActiveDocument<BR/>
+<TAB/>Set newDoc = Documents.Add<BR/>
+<BR/>
+<TAB/>For Each p In actDoc.Paragraphs<BR/>
+<TAB/><TAB/>If (p.OutlineLevel &lt;&gt; wdOutlineLevelBodyText) Then<BR/>
+<TAB/><TAB/><TAB/>newDoc.Content.InsertAfter (p.range.ListFormat.ListString &amp; vbTab &amp; actDoc.range(p.range.Start, p.range.End - 1))<BR/>
+<TAB/><TAB/><TAB/>newDoc.Content.InsertParagraphAfter<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/>Next p<BR/>
+<BR/>
+End Sub
+</CODESAMPLE>
+</ITEM>
+<ITEM>
+To add a bullet to a paragraph
+<CODESAMPLE>
+Paragraphs(newDoc.Paragraphs.Count).Range.ListFormat.ApplyListTemplate ListTemplate:=ListGalleries(wdBulletGallery).ListTemplates(1)
+</CODESAMPLE>
+The following code does not work, even paragraphs are not bulleted (I have not analyzed yet why):
+<CODESAMPLE>
+For s = 0 To UBound(list)
+<TAB/>newDoc.Content.InsertAfter (list(s))
+<TAB/>newDoc.Paragraphs(newDoc.Paragraphs.Count).Range.ListFormat.ApplyBulletDefault
+<TAB/>newDoc.Content.InsertParagraphAfter
+Next s
+</CODESAMPLE>
+It must be
+<CODESAMPLE>
+For s = 0 To UBound(list)
+<TAB/>newDoc.Content.InsertAfter (list(s))
+<TAB/>newDoc.Paragraphs(newDoc.Paragraphs.Count).Range.ListFormat.ApplyListTemplate ListTemplate:=ListGalleries(wdBulletGallery).ListTemplates(1)
+<TAB/>newDoc.Content.InsertParagraphAfter
+Next s
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>tables</B></U></TITLE>
+<ITEM>
+sometimes, setting borders does not work
+<CODESAMPLE>With theTable.Range.Borders<BR/>
+<TAB/>.InsideLineStyle = wdLineStyleSingle<BR/>
+<TAB/>.OutsideLineStyle = wdLineStyleSingle<BR/>
+End With</CODESAMPLE>
+fails to draw the vertical inner borders, but
+<CODESAMPLE>theTable.Select<BR/>
+With Selection.Borders<BR/>
+<TAB/>.InsideLineStyle = wdLineStyleSingle<BR/>
+<TAB/>.OutsideLineStyle = wdLineStyleSingle<BR/>
+End With</CODESAMPLE>
+works<BR/>
+(on the same document, <CODEROUTINE>theTable.range.Borders(wdBorderVertical)</CODEROUTINE> is undefined...)
+</ITEM>
+<ITEM>
+When retrieving the content of a cell will <CODEROUTINE>cell.range.Text</CODEROUTINE>, the returned text contains at its end ASCII 13 (carriage return) and ASCII 7 (which is used as an End of Cell indicator). They must be removed (<CODEROUTINE>Replace(cell.range.Text, vbCr &amp; Chr(7), "")</CODEROUTINE> or <CODEROUTINE>Left(cell.range.Text , len(cell.range.Text)-2)</CODEROUTINE>.<BR/>
+When writing in a cell, there is no need to add these two characters, <CODEROUTINE>cell.range.Text = "foobar"</CODEROUTINE> just work well.
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>statistics</B></U></TITLE>
+<ITEM>
+display the statistics toolbar
+<CODESAMPLE>CommandBars("Word Count").Visible = True</CODESAMPLE>
+</ITEM>
+<ITEM>
+display the statistics dialog
+<CODESAMPLE>Application.Dialogs(wdDialogDocumentStatistics).Show</CODESAMPLE>
+</ITEM>
+<ITEM>
+retrieve some values from the statistics dialog (not tested)
+<CODESAMPLE>With Dialogs(wdDialogDocumentStatistics)<BR/>
+<TAB/>MyVar = .FileName<BR/>
+<TAB/>MyVar2 = .Paragraphs<BR/>
+<TAB/>...<BR/>
+End With</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><U><B>easier macro execution</B></U></TITLE>
+<ITEM>When executing a macro which modifies a lot of data, Word displays a confirmation message from time to time indicating that the action will not be cancellable because of insufficient memory. To avoid this, the macro should regularly call <CODEROUTINE>newDoc.UndoClear</CODEROUTINE>.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>create a macro automatically executed when a document is opened</B></U></TITLE>
+<ITEM>in the project window, double click on "This Document"</ITEM>
+<ITEM>select <CODEMENU>Document</CODEMENU> from the drop-down object list</ITEM>
+<ITEM>select <CODEMENU>Open</CODEMENU> from the drop-down procedure list</ITEM>
+<ITEM>type the code in the inserted empty macro
+<CODESAMPLE>Private Sub Document_Open()<BR/>
+...<BR/>
+End Sub</CODESAMPLE></ITEM>
+<ITEM>check the security level (<CODEMENU>Tools>Macros>Security</CODEMENU>), otherwise the application may simply ignore the macro</ITEM>
+</BLIST>
+
+<U><B>transfer some data to Excel</B></U>
+<CODESAMPLE>Private Function formatForExcel(str As String) As String<BR/>
+<TAB/>Dim s As String<BR/>
+<TAB/>formatForExcel = str<BR/>
+<TAB/>formatForExcel = Replace(formatForExcel, """", """""")<BR/>
+<TAB/>formatForExcel = Replace(formatForExcel, "&#x201C;", """""")<BR/>
+<TAB/>formatForExcel = Replace(formatForExcel, "&#x201D;", """""")<BR/>
+<TAB/>formatForExcel = Replace(formatForExcel, Chr(171), """""")<BR/>
+<TAB/>formatForExcel = Replace(formatForExcel, Chr(187), """""")<BR/>
+<TAB/>formatForExcel = """" &amp; formatForExcel &amp; """" &amp; vbTab<BR/>
+End Function
+<BR/>
+<BR/>
+<BR/>
+Set newDoc = Documents.Add<BR/>
+newDoc.Content.InsertAfter (formatForExcel("data 1 1"))<BR/>
+newDoc.Content.InsertAfter (formatForExcel("data 1 2"))<BR/>
+newDoc.Content.InsertAfter (formatForExcel("data 1 3"))<BR/>
+newDoc.Content.InsertParagraphAfter<BR/>
+newDoc.Content.InsertAfter (formatForExcel("data 2 1"))<BR/>
+newDoc.Content.InsertAfter (formatForExcel("data 2 2"))<BR/>
+newDoc.Content.InsertAfter (formatForExcel("data 2 3"))<BR/>
+newDoc.Content.InsertParagraphAfter<BR/>
+newDoc.SaveAs FileName:= "foobar.txt", FileFormat:=wdFormatText<BR/>
+newDoc.Close<BR/>
+<BR/>
+Dim xl As Variant<BR/>
+Set xl = CreateObject("Excel.Application")<BR/>
+xl.Workbooks.Open "foobar.txt"<BR/>
+xl.Cells.Select<BR/>
+xl.Selection.Columns.AutoFit<BR/>
+xl.Selection.Rows.AutoFit</CODESAMPLE><BR/>
+
+<BLIST><TITLE><B><U>versions</U></B></TITLE>
+<ITEM>of the application
+<CODESAMPLE>Msgbox "The version of Word is " &amp; Application.Version</CODESAMPLE></ITEM>
+<ITEM>of the OS
+<CODESAMPLE>Msgbox "The system version is " &amp; System.Version</CODESAMPLE></ITEM>
+</BLIST><BR/>
+
+<BLIST><TITLE><B><U>screen refresh</U></B></TITLE>
+<ITEM>stop the automatic refresh of the screen
+<CODESAMPLE>Application.ScreenUpdating = False</CODESAMPLE></ITEM>
+<ITEM>restart the automatic refresh of the screen
+<CODESAMPLE>Application.ScreenUpdating = True</CODESAMPLE></ITEM>
+<ITEM>refresh the screen
+<CODESAMPLE>Application.ScreenRefresh</CODESAMPLE></ITEM>
+<ITEM> set the text in the status bar
+<CODESAMPLE>StatusBar = "Please wait..." </CODESAMPLE> </ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Macro interruption</U></B></TITLE>
+<ITEM>use <MODIFIERKEY ID='Ctrl'/><KEY ID='Break'/> to stop a macro</ITEM>
+<ITEM>disable <MODIFIERKEY ID='Ctrl'/><KEY ID='Break'/>
+<CODESAMPLE>Application.EnableCancelKey = wdCancelDisabled</CODESAMPLE></ITEM>
+<ITEM>re-enable <MODIFIERKEY ID='Ctrl'/><KEY ID='Break'/>
+<CODESAMPLE>Application.EnableCancelKey = wdCancelInterrupt</CODESAMPLE></ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>
+<X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>
+<X><T>macro samples</T><A>wordsample.htm</A><L>en</L><F>HTML</F></X>
+<X><T>new macro samples</T><A>wordvbsample.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

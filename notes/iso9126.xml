@@ -1,0 +1,182 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>ISO 9126</TITLE>
+<PATH>notes/iso9241.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST>
+<ITEM>
+ISO/IEC 9126-1: Software Engineering - Product quality - Part 1: Quality model<BR/>
+(G&#xE9;nie du logiciel - Qualit&#xE9; des produits - Partie 1 : mod&#xE8;le de qualit&#xE9;)
+</ITEM>
+<ITEM>
+ISO/IEC TR 9126-2: Software Engineering - Product quality - Part 2 External metrics<BR/>
+(G&#xE9;nie du logiciel - Qualit&#xE9; des produits - Partie 2 : m&#xE9;trologie externe)
+</ITEM>
+<ITEM>
+ISO/IEC TR 9126-3: Software Engineering - Product quality - Part 3 Internal metrics<BR/>
+(G&#xE9;nie du logiciel - Qualit&#xE9; des produits - Partie 3 : m&#xE9;trologie interne)
+</ITEM>
+<ITEM>
+ISO/IEC TR 9126-4: Software Engineering - Product quality - Part 4: Quality in use metrics<BR/>
+(G&#xE9;nie du logiciel - Qualit&#xE9; des produits - Partie 4 : m&#xE9;triques de fonctionnement)
+</ITEM>
+</BLIST>
+
+
+ISO/IEC 9126-1 defines a quality model which is applicable to every kind of software. It defines six product quality characteristics and in an annex provides a suggestion of quality subcharacteristics.
+
+<BLIST>
+<ITEM>
+<B>Functionality</B><BR/>
+<I>Are the required functions available in the software?</I><BR/>
+A set of attributes that bear on the existence of a set of functions and their specified properties. The functions are those that satisfy stated or implied needs.
+
+<BLIST>
+<ITEM>
+<B>Suitability</B><BR/>
+Attributes of software that bear on the presence and appropriateness of a set of functions for specified tasks.
+</ITEM>
+<ITEM>
+<B>Accurateness</B><BR/>
+Attributes of software that bear on the provision of right or agreed results or effects.
+</ITEM>
+<ITEM>
+<B>Interoperability</B><BR/>
+Attributes of software that bear on its ability to interact with specified systems.<BR/>
+Note: Interoperability is used in place of compatibility in order to avoid possible ambiguity with replaceability.
+</ITEM>
+<ITEM>
+<B>Compliance</B><BR/>
+Attributes of software that make the software adhere to application related standards or conventions or regulations in laws and similar prescriptions. 
+</ITEM>
+<ITEM>
+<B>Security</B><BR/>
+Attributes of software that bear on its ability to prevent unauthorized access, whether accidental or deliberate, to programs or data.
+</ITEM>
+</BLIST>
+</ITEM>
+
+<ITEM>
+<B>Reliability</B><BR/>
+<I>How reliable is the software?</I><BR/>
+A set of attributes that bear on the capability of software to maintain its level of performance under stated conditions for a stated period of time.<BR/>
+Note: Wear or ageing does not occur in software. Limitations in reliability are due to faults in requirements, design and implementation. Failures due to these faults depend on the way the software product is used and the program options selected rather than on elapsed time.
+
+<BLIST>
+<ITEM>
+<B>Maturity</B><BR/>
+Attributes of software that bear on the frequency of failure by faults in the software.
+</ITEM>
+<ITEM>
+<B>Fault tolerance</B><BR/>
+Attributes of software that bear on its ability to maintain a specified level of performance in case of software faults or of infringement of its specified interface.
+</ITEM>
+<ITEM>
+<B>Recoverability</B><BR/>
+Attributes of software that bear on the capability to re-establish its level of performance and recover the data directly affected in case of a failure and on the time and effort needed for it.
+</ITEM>
+</BLIST>
+</ITEM>
+
+<ITEM>
+<B>Usability</B><BR/>
+<I>Is the software easy to use?</I><BR/>
+A set of attributes that bear on the effort needed for use, and on the individual assessment of such use, by a stated or implied set of users.<BR/>
+Note 1: `Users' may be interpreted as most directly meaning the users of interactive software. Users may include operators, end users and indirect users who are under the influence or dependent on the use of the software. Usability must address all of the different user environments that the software may affect, which may include preparation for usage and evaluation of results.<BR/>
+Note 2: Usability defined in this International Standard as a specific set of attributes of software product differs from the definition from an ergonomic point of view, where other characteristics such as efficiency and effectiveness are also seen as constituents of usability.
+
+<BLIST>
+<ITEM>
+<B>Understandability</B><BR/>
+Attributes of software that bear on the users' effort for recognizing the logical concept and its applicability.
+</ITEM>
+<ITEM>
+<B>Learnability</B><BR/>
+Attributes of software that bear on the users' effort for learning its application.
+</ITEM>
+<ITEM>
+<B>Operability</B><BR/>
+Attributes of software that bear on the users' effort for operation and operation control.
+</ITEM>
+</BLIST>
+</ITEM>
+
+<ITEM>
+<B>Efficiency</B><BR/>
+<I>How efficient is the software?</I><BR/>
+A set of attributes that bear on the relationship between the level of performance of the software and the amount of resources used, under stated conditions.<BR/>
+Notes: Resources may include other software products, hardware facilities, materials, (e.g. print paper, floppy disks) and services of operating, maintaining or sustaining staff.
+
+<BLIST>
+<ITEM>
+<B>Time behavior</B><BR/>
+Attributes of software that bear on response and processing times and on throughput rates in performances its function.
+</ITEM>
+<ITEM>
+<B>Resource behavior</B><BR/>
+Attributes of software that bear on the amount of resource used and the duration of such use in performing its function.
+</ITEM>
+</BLIST>
+</ITEM>
+
+<ITEM>
+<B>Maintainability</B><BR/>
+<I>How easy is to modify the software?</I><BR/>
+A set of attributes that bear on the effort needed to make specified modifications.<BR/>
+Note: Modifications may include corrections, improvements or adaptation of software to changes in environment, and in requirements and functional specifications.
+
+<BLIST>
+<ITEM>
+<B>Analyzability</B><BR/>
+Attributes of software that bear on the effort needed for diagnosis of deficiencies or causes of failures, or for identification of parts to be modified.
+</ITEM>
+<ITEM>
+<B>Changeability</B><BR/>
+Attributes of software that bear on the effort needed for modification, fault removal or for environmental change.
+</ITEM>
+<ITEM>
+<B>Stability</B><BR/>
+Attributes of software that bear on the risk of unexpected effect of modifications.
+</ITEM>
+<ITEM>
+<B>Testability</B><BR/>
+Attributes of software that bear on the effort needed for validating the modified software.
+</ITEM>
+</BLIST>
+</ITEM>
+
+<ITEM>
+<B>Portability</B><BR/>
+<I>How easy is to transfer the software to another environment?</I><BR/>
+A set of attributes that bear on the ability of software to be transferred from one environment to another. <BR/>
+Note: The environment may include organizational, hardware or software environment.
+
+<BLIST>
+<ITEM>
+<B>Adaptability</B><BR/>
+Attributes of software that bear on the opportunity for its adaptation to different specified environments without applying other actions or means than those provided for this purpose for the software considered.
+</ITEM>
+<ITEM>
+<B>Installability</B><BR/>
+Attributes of software that bear on the effort needed to install the software in a specified environment.
+</ITEM>
+<ITEM>
+<B>Conformance</B><BR/>
+Attributes of software that make the software adhere to standards or conventions relating to portability.
+</ITEM>
+<ITEM>
+<B>Replaceability</B><BR/>
+Attributes of software that bear on opportunity and effort using it in the place of specified other software in the environment of that software.<BR/>
+Note 1: Replaceability is used in place of compatibility in order to avoid possible ambiguity with interoperability.<BR/>
+Note 2: Replaceability with a specific software does not imply that this software is replaceable with the software under consideration.<BR/>
+Note 3: Replaceability may include attributes of both installability and adaptability. The concept has been introduced as a subcharacteristic of its own because of its importance.
+</ITEM>
+</BLIST>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+</PAGE>

@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>STL</TITLE>
+<PATH>notes/stl.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><U><B>Sequence Containers</B></U></TITLE>
+<ITEM>they organize a finite set of objects into a strictly linear arrangement</ITEM>
+<ITEM>STL supports:
+<BLIST><ITEM><CODEROUTINE>Vector</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>List</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Deque</CODEROUTINE> (Double Ended Queue)</ITEM></BLIST></ITEM></BLIST>
+
+<BLIST><TITLE><U><B>Associative Containers</B></U></TITLE>
+<ITEM>provide an ability for fast retrieval of data based on keys</ITEM>
+<ITEM>STL supports:
+<BLIST><ITEM><CODEROUTINE>Set</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Map</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>MultiSet</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>MultiMap</CODEROUTINE></ITEM></BLIST>
+<CODEROUTINE>Set</CODEROUTINE> and <CODEROUTINE>Map</CODEROUTINE>: one element can be stored for a given key value<BR/>
+<CODEROUTINE>MultiSet</CODEROUTINE> and <CODEROUTINE>MultiMap</CODEROUTINE>: several elements can be stored for a given key value</ITEM></BLIST>
+
+<BLIST><TITLE><U><B>Types</B></U></TITLE>
+<ITEM><CODEROUTINE>size_type</CODEROUTINE> describe the type used to express the size of a container
+<CODESAMPLE>for (std::vector&lt;FooBar&gt;::size_type i=0; i&lt;a_vector.size(); i++) {...}</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>value_type</CODEROUTINE> give the type of the objects that can be stored in the container
+<CODESAMPLE>vector&lt;float&gt; v;<BR/>
+cout &lt;&lt; "value type: " &lt;&lt; typeidb(vector&lt;float&gt;::value_type).name();</CODESAMPLE>
+</ITEM></BLIST>
+
+<BLIST><TITLE><U><B>Iterators</B></U></TITLE>
+<ITEM>Input Iterators</ITEM>
+<ITEM>Output Iterators</ITEM>
+<ITEM>Forward Iterators</ITEM>
+<ITEM>Bidirectional Iterators</ITEM>
+<ITEM>Random Access Iterators</ITEM></BLIST>
+
+<BLIST><TITLE><U><B>smart pointer - (<CODEROUTINE>auto_ptr</CODEROUTINE>)</B></U></TITLE>
+<ITEM>defined in <CODEROUTINE>#include &lt;memory&gt;</CODEROUTINE></ITEM>
+<ITEM>three constructors
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>auto_ptr&lt;string&gt; strPtr(new string("Hello world"));</CODEROUTINE></TERM>
+<DESC>must be a pointer returned by <CODEROUTINE>new</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>auto_ptr&lt;string&gt; strPtr2(strPtr);</CODEROUTINE></TERM>
+<DESC><CODEROUTINE>strPtr</CODEROUTINE> looses the ownership of the pointer (but still has this value)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>auto_ptr&lt;string&gt; strPtr3; strPtr3=strPtr2;</CODEROUTINE></TERM>
+<DESC><CODEROUTINE>strPtr2</CODEROUTINE> looses the ownership of the pointer (but still has this value)</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>methods
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>get()</CODEROUTINE></TERM>
+<DESC>return the pointer</DESC></ROW>
+<ROW><TERM><CODEROUTINE>operator-&gt;()</CODEROUTINE></TERM>
+<DESC>deference the pointer (e.g. <CODEROUTINE>strPtr-&gt;insert("foobar");</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>operator*()</CODEROUTINE></TERM>
+<DESC>deference the pointer</DESC></ROW>
+<ROW><TERM><CODEROUTINE>reset(void *p)</CODEROUTINE></TERM>
+<DESC>delete the pointer and assign a new pointer</DESC></ROW>
+<ROW><TERM><CODEROUTINE>release()</CODEROUTINE></TERM>
+<DESC>loose the ownership of the pointer but keeps its value</DESC></ROW>
+</DEFINITIONTABLE></ITEM></BLIST>
+
+<BLIST><TITLE><U><B><CODEROUTINE>string</CODEROUTINE></B></U></TITLE>
+<ITEM>The pointer returned by <CODEROUTINE>c_str()</CODEROUTINE> is owned by the <CODEROUTINE>string</CODEROUTINE> object. The array should not be deleted it or modified. The returned pointer is not to be used after a non-<CODEROUTINE>const</CODEROUTINE> member function has been called. </ITEM>
+<ITEM>The member function <CODEROUTINE>data()</CODEROUTINE> also returns a <CODEROUTINE>const char *</CODEROUTINE> representation of its object, but the resulting array might not be <CODEROUTINE>null</CODEROUTINE>-terminated.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>STL helpers</B></U></TITLE>
+<ITEM><CODEROUTINE>template &lt;class T1, class T2&gt; void construct(T1* p, const T2 &amp;value);</CODEROUTINE><BR/>
+<CODEROUTINE>construct(p, value)</CODEROUTINE> creates an object of type <CODEROUTINE>T1</CODEROUTINE> at the location pointed to by <CODEROUTINE>p</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>template &lt;class T&gt; void destroy(T* pointer);</CODEROUTINE><BR/>
+destroys the object pointed to by pointer by calling the destructor <CODEROUTINE>T::~T()</CODEROUTINE><BR/>
+the memory pointed to by pointer is not deallocated</ITEM>
+<ITEM><CODEROUTINE>template &lt;class T&gt; void swap(T&amp; a, T&amp; b);</CODEROUTINE><BR/>
+assigns the contents of <CODEROUTINE>a</CODEROUTINE> to <CODEROUTINE>b</CODEROUTINE> and the contents of <CODEROUTINE>b</CODEROUTINE> to <CODEROUTINE>a</CODEROUTINE><BR/>
+<CODEROUTINE>T</CODEROUTINE> must support the copy constructor and the assignment</ITEM></BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/cpp.html#STL</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

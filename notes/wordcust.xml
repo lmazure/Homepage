@@ -1,0 +1,755 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Word customization</TITLE>
+<PATH>notes/wordcust.xml</PATH>
+<DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
+<CONTENT>
+<CODESAMPLE>Option Explicit<BR/>
+<BR/>
+Sub ToggleNoSingleDoubleStrikenThrough()<BR/>
+<TAB/>If (Selection.Range.Font.DoubleStrikeThrough) Then<BR/>
+<TAB/><TAB/>Selection.Range.Font.DoubleStrikeThrough = False<BR/>
+<TAB/><TAB/>Selection.Range.Font.StrikeThrough = False<BR/>
+<TAB/>ElseIf (Selection.Range.Font.StrikeThrough) Then<BR/>
+<TAB/><TAB/>Selection.Range.Font.DoubleStrikeThrough = True<BR/>
+<TAB/>Else<BR/>
+<TAB/><TAB/>Selection.Range.Font.StrikeThrough = True<BR/>
+<TAB/>End If<BR/>
+End Sub<BR/>
+<BR/>
+Private Sub setColor(color As WdColor)<BR/>
+<TAB/>Selection.Font.color = color<BR/>
+End Sub<BR/>
+<BR/>
+Sub setColorAutomatic()<BR/>
+<TAB/>setColor (wdColorAutomatic)<BR/>
+End Sub<BR/>
+<BR/>
+Sub setColorBlue()<BR/>
+<TAB/>setColor (wdColorBlue)<BR/>
+End Sub<BR/>
+<BR/>
+Sub setColorGreen()<BR/>
+<TAB/>setColor (wdColorSeaGreen)<BR/>
+End Sub<BR/>
+<BR/>
+Sub setColorRed()<BR/>
+<TAB/>setColor (wdColorRed)<BR/>
+End Sub<BR/>
+<BR/>
+Private Sub setHighlight(high As WdColor)<BR/>
+<TAB/>Selection.Range.HighlightColorIndex = high<BR/>
+End Sub<BR/>
+<BR/>
+Sub HighlightNone()<BR/>
+<TAB/>setHighlight (wdNoHighlight)<BR/>
+End Sub<BR/>
+<BR/>
+Sub HighlightRed()<BR/>
+<TAB/>setHighlight (wdRed)<BR/>
+End Sub<BR/>
+<BR/>
+Sub HighlightYellow()<BR/>
+<TAB/>setHighlight (wdYellow)<BR/>
+End Sub<BR/>
+<BR/>
+Sub HighlightGreen()<BR/>
+<TAB/>setHighlight (wdBrightGreen)<BR/>
+End Sub<BR/>
+<BR/>
+Sub HighlightBlue()<BR/>
+<TAB/>setHighlight (wdTurquoise)<BR/>
+End Sub<BR/>
+<BR/>
+Sub HighlightPurple()<BR/>
+<TAB/>setHighlight (wdPink)<BR/>
+End Sub<BR/>
+Sub SetLanguageToFrench()<BR/>
+<TAB/>Selection.LanguageID = wdFrench<BR/>
+End Sub<BR/>
+<BR/>
+Sub SetLanguageToEnglish()<BR/>
+<TAB/>Selection.LanguageID = wdEnglishUS<BR/>
+End Sub<BR/>
+<BR/>
+Sub SwitchProofing()<BR/>
+<TAB/>Selection.NoProofing = Not Selection.NoProofing<BR/>
+End Sub<BR/>
+<BR/>
+Sub InsertCurrentDate()<BR/>
+<TAB/>Selection.InsertDateTime DateTimeFormat:="dddd d MMMM yyyy", DateLanguage:=Selection.LanguageID, InsertAsField:=False<BR/>
+End Sub<BR/>
+<BR/>
+Sub InsertCurrentDate8601()<BR/>
+<TAB/>Selection.InsertDateTime DateTimeFormat:="yyyy-MM-dd", DateLanguage:=Selection.LanguageID, InsertAsField:=False<BR/>
+End Sub<BR/>
+<BR/>
+Sub SimplePaste()<BR/>
+<TAB/>Selection.PasteSpecial DataType:=wdPasteText<BR/>
+End Sub <BR/>
+<BR/>
+Sub FullScreenPrintPreview()<BR/>
+<TAB/>ActiveDocument.PrintPreview<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.FullScreen = True<BR/>
+End Sub<BR/>
+<BR/>
+Sub ClearTabs()<BR/>
+<TAB/>Selection.ParagraphFormat.TabStops.ClearAll<BR/>
+End Sub<BR/>
+<BR/>
+Sub DisplayRuler()<BR/>
+<TAB/>ActiveDocument.ActiveWindow.ActivePane.DisplayRulers = Not ActiveDocument.ActiveWindow.ActivePane.DisplayRulers<BR/>
+End Sub<BR/>
+<BR/>
+Sub SplitUnsplit()<BR/>
+<TAB/>If ActiveDocument.ActiveWindow.Split Then<BR/>
+<TAB/><TAB/>ActiveDocument.ActiveWindow.Panes(3 - ActiveDocument.ActiveWindow.ActivePane.Index).Close<BR/>
+<TAB/>Else<BR/>
+<TAB/><TAB/>ActiveDocument.ActiveWindow.Split = True<BR/>
+<TAB/>End If<BR/>
+End Sub<BR/>
+<BR/>
+Sub DisplayMap()<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DocumentMap = Not ActiveDocument.ActiveWindow.DocumentMap<BR/>
+End Sub<BR/>
+<BR/>
+Sub DisplayFormatting()<BR/>
+<TAB/>Application.TaskPanes(wdTaskPaneFormatting).Visible = True<BR/>
+<TAB/>ActiveDocument.FormattingShowClear = False<BR/>
+<TAB/>ActiveDocument.FormattingShowFilter = wdShowFilterFormattingInUse<BR/>
+<TAB/>ActiveDocument.FormattingShowFont = True<BR/>
+<TAB/>ActiveDocument.FormattingShowNumbering = True<BR/>
+<TAB/>ActiveDocument.FormattingShowParagraph = True<BR/>
+End Sub<BR/>
+<BR/>
+Sub DisplayRevealFormatting()<BR/>
+<TAB/>Application.TaskPanes(wdTaskPaneRevealFormatting).Visible = True<BR/>
+End Sub<BR/>
+<BR/>
+Sub ViewAsNormal()<BR/>
+<TAB/>Dim b As Boolean<BR/>
+<TAB/>b = ActiveDocument.ActiveWindow.DocumentMap<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.Type = wdNormalView<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DocumentMap = b<BR/>
+<TAB/>Application.DisplayStatusBar = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DisplayHorizontalScrollBar = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DisplayVerticalScrollBar = True<BR/>
+End Sub<BR/>
+<BR/>
+Sub ViewAsPage()<BR/>
+<TAB/>Dim b As Boolean<BR/>
+<TAB/>b = ActiveDocument.ActiveWindow.DocumentMap<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.Type = wdPageView<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DocumentMap = b<BR/>
+<TAB/>ActiveDocument.ActiveWindow.ActivePane.View.Zoom.PageFit = wdPageFitFullPage<BR/>
+<TAB/>Application.DisplayStatusBar = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DisplayHorizontalScrollBar = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DisplayVerticalScrollBar = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.DisplayPageBoundaries = True<BR/>
+End Sub<BR/>
+<BR/>
+Sub ViewAsOutline()<BR/>
+<TAB/>Dim b As Boolean<BR/>
+<TAB/>b = ActiveDocument.ActiveWindow.DocumentMap<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.Type = wdOutlineView<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DocumentMap = b<BR/>
+<TAB/>Application.DisplayStatusBar = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DisplayHorizontalScrollBar = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DisplayVerticalScrollBar = True<BR/>
+End Sub<BR/>
+<BR/>
+Sub ViewAsWeb()<BR/>
+<TAB/>Dim b As Boolean<BR/>
+<TAB/>b = ActiveDocument.ActiveWindow.DocumentMap<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.Type = wdWebView<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DocumentMap = b<BR/>
+<TAB/>Application.DisplayStatusBar = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DisplayHorizontalScrollBar = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DisplayVerticalScrollBar = True<BR/>
+End Sub<BR/>
+<BR/>
+Sub ViewAsReading()<BR/>
+<TAB/>Dim b As Boolean<BR/>
+<TAB/>b = ActiveDocument.ActiveWindow.DocumentMap<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.ReadingLayout = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.DocumentMap = b<BR/>
+End Sub<BR/>
+<BR/>
+Sub ViewAsReview()<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.ShowRevisionsAndComments = True<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.RevisionsView = wdRevisionsViewFinal<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.ShowInkAnnotations = False<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.ShowInsertionsAndDeletions = False<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.ShowFormatChanges = False<BR/>
+<TAB/>ActiveDocument.ActiveWindow.ToggleShowAllReviewers<BR/>
+<TAB/>ActiveDocument.ActiveWindow.View.Reviewers(Application.UserName).Visible = True<BR/>
+End Sub<BR/>
+<BR/>
+Sub SwitchBorders()<BR/>
+<TAB/>If ((Selection.Borders(wdBorderTop).LineStyle = wdLineStyleNone) Or _<BR/>
+<TAB/><TAB/><TAB/>(Selection.Borders(wdBorderLeft).LineStyle = wdLineStyleNone) Or _<BR/>
+<TAB/><TAB/><TAB/>(Selection.Borders(wdBorderBottom).LineStyle = wdLineStyleNone) Or _<BR/>
+<TAB/><TAB/><TAB/>(Selection.Borders(wdBorderRight).LineStyle = wdLineStyleNone)) Then<BR/>
+<TAB/><TAB/>Selection.Borders(wdBorderTop).LineStyle = Options.DefaultBorderLineStyle<BR/>
+<TAB/><TAB/>Selection.Borders(wdBorderLeft).LineStyle = Options.DefaultBorderLineStyle<BR/>
+<TAB/><TAB/>Selection.Borders(wdBorderBottom).LineStyle = Options.DefaultBorderLineStyle<BR/>
+<TAB/><TAB/>Selection.Borders(wdBorderRight).LineStyle = Options.DefaultBorderLineStyle<BR/>
+<TAB/>Else<BR/>
+<TAB/><TAB/>Selection.Borders(wdBorderTop).LineStyle = wdLineStyleNone<BR/>
+<TAB/><TAB/>Selection.Borders(wdBorderLeft).LineStyle = wdLineStyleNone<BR/>
+<TAB/><TAB/>Selection.Borders(wdBorderBottom).LineStyle = wdLineStyleNone<BR/>
+<TAB/><TAB/>Selection.Borders(wdBorderRight).LineStyle = wdLineStyleNone<BR/>
+<TAB/>End If<BR/>
+End Sub<BR/>
+<BR/>
+Sub InsertCommentInCurrentPlace()<BR/>
+<TAB/>If (Selection.range.End = Selection.range.Start) Then<BR/>
+<TAB/><TAB/>Selection.TypeText text:=" "<BR/>
+<TAB/><TAB/>Selection.MoveLeft Unit:=wdCharacter, Count:=1, Extend:=wdExtend<BR/>
+<TAB/><TAB/>Selection.Comments.Add range:=Selection.range<BR/>
+<TAB/>Else<BR/>
+<TAB/><TAB/>Selection.Comments.Add range:=Selection.range<BR/>
+<TAB/>End If<BR/>
+End Sub<BR/>
+<BR/>
+Sub ExpandDocument()<BR/>
+<TAB/>ActiveDocument.Subdocuments.Expanded = Not ActiveDocument.Subdocuments.Expanded<BR/>
+End Sub<BR/>
+<BR/>
+Sub Text2XML()<BR/>
+<BR/>
+<TAB/>Dim replacement As String<BR/>
+<TAB/>Dim theStart, theEnd As Long<BR/>
+<TAB/>Dim avance As Long<BR/>
+<TAB/>Dim rg As range<BR/>
+<TAB/>Dim i As Integer<BR/>
+<TAB/>theStart = Selection.Start<BR/>
+<TAB/>theEnd = Selection.End<BR/>
+<BR/>
+<TAB/>Do While theStart &lt; theEnd<BR/>
+<TAB/><TAB/>Set rg = ActiveDocument.range(theStart, theStart + 1)<BR/>
+<TAB/><TAB/>If (rg.text &lt;&gt; "") Then ' text may be empty (e.g. if the range contains a hyperlink)<BR/>
+<TAB/><TAB/><TAB/>i = AscW(rg.text)<BR/>
+<TAB/><TAB/>If (i = 38) Then<BR/>
+<TAB/><TAB/><TAB/>replacement = "&amp;amp;"<BR/>
+<TAB/><TAB/>ElseIf (i = 60) Then<BR/>
+<TAB/><TAB/><TAB/>replacement = "&amp;lt;"<BR/>
+<TAB/><TAB/>ElseIf (i = 62) Then<BR/>
+<TAB/><TAB/><TAB/>replacement = "&amp;gt;"<BR/>
+<TAB/><TAB/>ElseIf (i &gt; 31 And i &lt; 127) Or i = 13 Or i = 10 Then<BR/>
+<TAB/><TAB/><TAB/>replacement = rg.text<BR/>
+<TAB/><TAB/>Else<BR/>
+<TAB/><TAB/><TAB/>replacement = "&amp;#x" &amp; Hex(i) &amp; ";"<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>rg.text = replacement<BR/>
+<TAB/><TAB/>avance = Len(replacement)<BR/>
+<TAB/><TAB/>Else<BR/>
+<TAB/><TAB/><TAB/>avance = 1<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>theStart = theStart + avance<BR/>
+<TAB/><TAB/>theEnd = theEnd + avance - 1<BR/>
+<TAB/>Loop<BR/>
+<BR/>
+End Sub<BR/>
+<BR/>
+Sub cleanFileHistory()<BR/>
+<TAB/>Application.DisplayRecentFiles = False<BR/>
+<TAB/>Application.DisplayRecentFiles = True<BR/>
+<TAB/>RecentFiles.Maximum = 9<BR/>
+End Sub<BR/>
+<BR/>
+Sub Customize()<BR/>
+<TAB/>CustomizationContext = NormalTemplate<BR/>
+<BR/>
+<TAB/>' --------------- paragraph format<BR/>
+<TAB/>' Ctrl+R => paragraph on the right<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyR, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="RightPara"<BR/>
+<TAB/>' Ctrl+L => paragraph on the left<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyL, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="LeftPara"<BR/>
+<TAB/>' Ctrl+E => paragraph at the center<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyE, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="CenterPara"<BR/>
+<TAB/>' Ctrl+M => indent<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyM, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="Indent"<BR/>
+<TAB/>' Shift+Ctrl+M => unindent<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyM, wdKeyControl, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="UnIndent"<BR/>
+<TAB/>' Alt+Z => remove the tabs<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyZ, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ClearTabs"<BR/>
+<TAB/>' Alt+B => bullet<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyB, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="FormatBulletDefault"<BR/>
+<TAB/>' Alt+E => add/remove paragraph borders<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyE, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="SwitchBorders"<BR/>
+<BR/>
+<TAB/>' --------------- table<BR/>
+<TAB/>' Ctrl+Numeric* => merge cells<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyNumericMultiply, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="TableMergeCells"<BR/>
+<TAB/>' Ctrl+Numeric/ => delete column<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyNumericDivide, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="TableDeleteColumn"<BR/>
+<TAB/>' Ctrl+Shift+Numeric/ => delete line<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyNumericDivide, wdKeyControl, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="TableDeleteRow"<BR/>
+<BR/>
+<TAB/>' --------------- color<BR/>
+<TAB/>' Ctrl+1,Shift+N =&gt; no color<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyN, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="setColorAutomatic"<BR/>
+<TAB/>' Ctrl+1,Shift+B =&gt; blue<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyB, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="setColorBlue"<BR/>
+<TAB/>' Ctrl+1,Shift+B =&gt; green<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyG, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="setColorGreen"<BR/>
+<TAB/>' Ctrl+1,Shift+R =&gt; red<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyR, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="setColorRed"<BR/>
+<BR/>
+<TAB/>' --------------- highlight<BR/>
+<TAB/>' Ctrl+1,N =&gt; no highlight<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=wdKeyN, _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="HighlightNone"<BR/>
+<TAB/>' Ctrl+1,B =&gt; blue highlight<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=wdKeyB, _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="HighlightBlue"<BR/>
+<TAB/>' Ctrl+1,G =&gt; green highlight<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=wdKeyG, _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="HighlightGreen"<BR/>
+<TAB/>' Ctrl+1,P =&gt; purple highlight<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=wdKeyP, _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="HighlightPurple"<BR/>
+<TAB/>' Ctrl+1,R =&gt; red highlight<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=wdKeyR, _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="HighlightRed"<BR/>
+<TAB/>' Ctrl+1,Y =&gt; yellow highlight<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=wdKeyY, _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="HighlightYellow"<BR/>
+<BR/>
+<TAB/>' --------------- character format<BR/>
+<TAB/>' Ctrl+B => bold<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyB, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="Bold"<BR/>
+<TAB/>' Alt+C => replace character by its code<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyC, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:= wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ToggleCharacterCode"<BR/>
+<TAB/>' Ctrl+! => striken<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(223, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ToggleNoSingleDoubleStrikenThrough"<BR/>
+<TAB/>' Shift+Ctrl+! => hidden<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(223, wdKeyControl, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="Hidden"<BR/>
+<BR/>
+<TAB/>' --------------- dates<BR/>
+<TAB/>' Alt+D => insert current date<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyD, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="InsertCurrentDate"<BR/>
+<TAB/>' Shift+Alt+D => insert current date with ISO 8601 format<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyD, wdKeyShift, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="InsertCurrentDate8601"<BR/>
+<BR/>
+<TAB/>' --------------- cut 'n paste<BR/>
+<TAB/>' Alt+, =&gt; paste as unformatted text<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyComma, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="SimplePaste"<BR/>
+<TAB/>' Shift+Ctrl+, =&gt; special paste<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyComma, wdKeyControl, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="EditPasteSpecial"<BR/>
+<TAB/>' Shift+Ctrl+C =&gt; copy format<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyC, wdKeyControl, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="CopyFormat"<BR/>
+<TAB/>' Shift+Ctrl+V =&gt; paste format<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyV, wdKeyControl, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="PasteFormat"<BR/>
+<BR/>
+<TAB/>' --------------- display<BR/>
+<TAB/>' Ctrl+Alt+N => switch to normal mode<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyN, wdKeyControl, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ViewAsNormal"<BR/>
+<TAB/>' Ctrl+Alt+P => switch to page mode<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyP, wdKeyControl, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ViewAsPage"<BR/>
+<TAB/>' Ctrl+Alt+O => switch to outline mode<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyO, wdKeyControl, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ViewAsOutline"<BR/>
+<TAB/>' Ctrl+Alt+L => switch to reading mode<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyL, wdKeyControl, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ViewAsReading"<BR/>
+<TAB/>' Ctrl+Alt+W => switch to Web mode<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyW, wdKeyControl, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ViewAsWeb"<BR/>
+<TAB/>' Ctrl+Alt+R => set in a mode ready for review<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyR, wdKeyControl, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ViewAsReview"<BR/>
+<TAB/>' Alt+Shift+S => split/unsplit the window<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyS, wdKeyShift, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="SplitUnsplit"<BR/>
+<TAB/>' Alt+Q => display header<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyQ, wdKeyAlt), KeyCategory:= _<BR/>
+<TAB/><TAB/><TAB/>wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="NormalViewHeaderArea"<BR/>
+<TAB/>' Ctrl+* => display/undisplay all special characters<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyBackSlash, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="ShowAll"<BR/>
+<TAB/>' Alt+N  => display/undisplay the ruler<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyN, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="DisplayRuler"<BR/>
+<TAB/>' Alt+O  => display/undisplay the document map<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyO, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="DisplayMap"<BR/>
+<TAB/>' Alt+S => display the current style<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyS, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="DisplayFormatting"<BR/>
+<TAB/>' Alt+F => display the current format<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyF, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="DisplayRevealFormatting"<BR/>
+<TAB/>' Alt+P => display the print preview<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyP, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="FullScreenPrintPreview"<BR/>
+<BR/>
+<TAB/>' --------------- comments<BR/>
+<TAB/>' Alt+W => insert new comment on current selection<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyW, wdKeyAlt), _<BR/>
+<TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/>Command:="InsertCommentInCurrentPlace"<BR/>
+<BR/>
+<TAB/>' --------------- bookmarks<BR/>
+<TAB/>' Alt+K => display cross-reference windows<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyK, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:= wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="InsertCrossReference"<BR/>
+<TAB/>' Alt+I => display bookmark window<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyI, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:= wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="EditBookmark"<BR/>
+<BR/>
+<TAB/>' --------------- language<BR/>
+<TAB/>' Shift+Ctrl+Alt+E => flag text as English<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyE, wdKeyControl, wdKeyShift, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="SetLanguageToEnglish"<BR/>
+<TAB/>' Shift+Ctrl+Alt+F => flag text as French<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyF, wdKeyControl, wdKeyShift, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="SetLanguageToFrench"<BR/>
+<TAB/>' Shift+Ctrl+Alt+O => flag text as non proofable<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyO, wdKeyControl, wdKeyShift, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="SwitchProofing"<BR/>
+<BR/>
+<TAB/>' --------------- insert characters<BR/>
+<TAB/>' Ctrl+4, Left =&gt; insert left arrow<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey4, wdKeyControl), KeyCode2:=BuildKeyCode(37), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(8592)<BR/>
+<TAB/>' Ctrl+4, Up =&gt; insert up arrow<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey4, wdKeyControl), KeyCode2:=BuildKeyCode(38), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(8593)<BR/>
+<TAB/>' Ctrl+4, Right =&gt; insert right arrow<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey4, wdKeyControl), KeyCode2:=BuildKeyCode(39), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(8594)<BR/>
+<TAB/>' Ctrl+4, Bottom =&gt; insert down arrow<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey4, wdKeyControl), KeyCode2:=BuildKeyCode(40), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(8595)<BR/>
+<TAB/>' Ctrl+4, Shift+Left =&gt; insert left/right arrow<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey4, wdKeyControl), KeyCode2:=BuildKeyCode(37, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(8596)<BR/>
+<TAB/>' Ctrl+4, Shift+Up =&gt; insert up/down arrow<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey4, wdKeyControl), KeyCode2:=BuildKeyCode(38, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(8597)<BR/>
+<TAB/>' Ctrl+4, &lt; =&gt; less or equal<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey4, wdKeyControl), KeyCode2:=BuildKeyCode(226), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(8804)<BR/>
+<TAB/>' Ctrl+4, Shift+&lt; =&gt; greater or equal<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey4, wdKeyControl), KeyCode2:=BuildKeyCode(226, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(8805)<BR/>
+<TAB/>' Ctrl+4, L =&gt; insert a horizontal line<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey4, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyL), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="InsertHorizontalLine"<BR/>
+<TAB/>' Ctrl+2, A =&gt; insert a lower alpha character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyA), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(945)<BR/>
+<TAB/>' Ctrl+2, B =&gt; insert a lower beta character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyB), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(946)<BR/>
+<TAB/>' Ctrl+2, C =&gt; insert a lower gamma character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyC), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(947)<BR/>
+<TAB/>' Ctrl+2, D =&gt; insert a lower delta character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyD), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(948)<BR/>
+<TAB/>' Ctrl+2, E =&gt; insert a lower epsilon character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyE), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(949)<BR/>
+<TAB/>' Ctrl+2, K =&gt; insert a lower kappa character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyK), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(954)<BR/>
+<TAB/>' Ctrl+2, L =&gt; insert a lower lambda character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyL), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(955)<BR/>
+<TAB/>' Ctrl+2, M =&gt; insert a lower mu character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyM), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(956)<BR/>
+<TAB/>' Ctrl+2, N =&gt; insert a lower nu character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyN), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(957)<BR/>
+<TAB/>' Ctrl+2, O =&gt; insert a lower omega character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyO), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(969)<BR/>
+<TAB/>' Ctrl+2, P =&gt; insert a lower pi character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyP), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(960)<BR/>
+<TAB/>' Ctrl+2, R =&gt; insert a lower rho character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyR), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(961)<BR/>
+<TAB/>' Ctrl+2, S =&gt; insert a lower sigma character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyS), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(963)<BR/>
+<TAB/>' Ctrl+2, Shift+A =&gt; insert an upper alpha character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyA, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(913)<BR/>
+<TAB/>' Ctrl+2, Shift+B =&gt; insert an upper beta character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyB, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(914)<BR/>
+<TAB/>' Ctrl+2, Shift+C =&gt; insert an upper gamma character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyC, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(915)<BR/>
+<TAB/>' Ctrl+2, Shift+D =&gt; insert an upper delta character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyD, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(916)<BR/>
+<TAB/>' Ctrl+2, Shift+E =&gt; insert an upper epsilon character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyE, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(917)<BR/>
+<TAB/>' Ctrl+2, Shift+K =&gt; insert an upper kappa character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyK, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(922)<BR/>
+<TAB/>' Ctrl+2, Shift+L =&gt; insert an upper lambda character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyL, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(923)<BR/>
+<TAB/>' Ctrl+2, Shift+M =&gt; insert an upper mu character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyM, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(924)<BR/>
+<TAB/>' Ctrl+2, Shift+N =&gt; insert an upper nu character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyN, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(925)<BR/>
+<TAB/>' Ctrl+2, Shift+O =&gt; insert an upper omega character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyO, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(937)<BR/>
+<TAB/>' Ctrl+2, Shift+P =&gt; insert an upper pi character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyP, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(928)<BR/>
+<TAB/>' Ctrl+2, Shift+R =&gt; insert an upper rho character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyR, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(929)<BR/>
+<TAB/>' Ctrl+2, Shift+S =&gt; insert an upper sigma character<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey2, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyS, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(&amp;H3A3)<BR/>
+<TAB/>' Ctrl+Numeric- =&gt; insert en-dash<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyNumericSubtract, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(&amp;H2013)<BR/>
+<TAB/>' Ctrl+Shift+Numeric- =&gt; insert em-dash<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyNumericSubtract, wdKeyControl, wdKeyShift), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(&amp;H2014)<BR/>
+<TAB/>' Ctrl+Numeric- =&gt; insert ellipsis<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyNumericDecimal, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
+<TAB/><TAB/><TAB/>Command:=ChrW(&amp;H2026)<BR/>
+<BR/>
+<TAB/>' --------------- translate the selection into XML<BR/>
+<TAB/>' Alt+X => escape the selection into XML<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyX, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="Text2XML"<BR/>
+<BR/>
+<TAB/>' --------------- miscellaneous<BR/>
+<TAB/>' Ctrl+G => edit goto<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyG, wdKeyControl), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:= wdKeyCategoryCommand, _<BR/>
+<TAB/><TAB/><TAB/>Command:="EditGoTo"<BR/>
+<TAB/>' Alt+Numeric- => clean file history<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyNumericSubtract, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="cleanFileHistory"<BR/>
+<BR/>
+<TAB/>' configure the menubar display<BR/>
+<TAB/>CommandBars.DisplayTooltips = True<BR/>
+<TAB/>CommandBars.DisplayKeysInTooltips = True<BR/>
+<TAB/>CommandBars.AdaptiveMenus = False<BR/>
+<TAB/>CommandBars("Web").Enabled = False<BR/>
+<BR/>
+<TAB/>' use a single window<BR/>
+<TAB/>Application.ShowWindowsInTaskbar = False<BR/>
+<TAB/>' record the last nine used files<BR/>
+<TAB/>RecentFiles.Maximum = 9<BR/>
+<TAB/>' check the file properties the first time it is saved<BR/>
+<TAB/>Options.SavePropertiesPrompt = True<BR/>
+<TAB/>' always display the fields as shaded<BR/>
+<TAB/>Application.ActiveWindow.View.FieldShading = wdFieldShadingAlways<BR/>
+<TAB/>' always ask for how the file should be loaded<BR/>
+<TAB/>Options.ConfirmConversions = True<BR/>
+<TAB/>' display the bookmarks<BR/>
+<TAB/>Application.ActiveWindow.View.ShowBookmarks = True<BR/>
+<BR/>
+<TAB/>' set the autocorrection entries<BR/>
+<TAB/>Dim entry As AutoCorrectEntry<BR/>
+<TAB/>For Each entry In AutoCorrect.Entries<BR/>
+<TAB/><TAB/>entry.Delete<BR/>
+<TAB/>Next entry<BR/>
+<TAB/>AutoCorrect.Entries.Add Name:="&#xB2;co", Value:="Cordialement," &amp; vbCr &amp; "Laurent"<BR/>
+<TAB/>AutoCorrect.Entries.Add Name:="&#xB2;ca", Value:="Regards," &amp; vbCr &amp; "Laurent"<BR/>
+<TAB/>AutoCorrect.ReplaceText = True<BR/>
+<BR/>
+<TAB/>' avoid the other autocorrections<BR/>
+<TAB/>AutoCorrect.CorrectInitialCaps = False<BR/>
+<TAB/>AutoCorrect.CorrectSentenceCaps = False<BR/>
+<TAB/>AutoCorrect.CorrectDays = False<BR/>
+<TAB/>AutoCorrect.CorrectCapsLock = False<BR/>
+<TAB/>AutoCorrect.ReplaceTextFromSpellingChecker = False<BR/>
+<TAB/>AutoCorrect.CorrectKeyboardSetting = False<BR/>
+<TAB/>AutoCorrect.DisplayAutoCorrectOptions = False<BR/>
+<TAB/>AutoCorrect.CorrectTableCells = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeApplyHeadings = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeApplyBorders = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeApplyBulletedLists = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeApplyNumberedLists = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeApplyTables = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeReplaceQuotes = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeReplaceSymbols = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeReplaceOrdinals = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeReplaceFractions = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeReplacePlainTextEmphasis = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeReplaceHyperlinks = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeFormatListItemBeginning = False<BR/>
+<TAB/>Options.AutoFormatAsYouTypeDefineStyles = False<BR/>
+<TAB/>Options.TabIndentKey = False<BR/>
+<TAB/>Options.AutoFormatApplyHeadings = False<BR/>
+<TAB/>Options.AutoFormatApplyLists = False<BR/>
+<TAB/>Options.AutoFormatApplyBulletedLists = False<BR/>
+<TAB/>Options.AutoFormatApplyOtherParas = False<BR/>
+<TAB/>Options.AutoFormatReplaceQuotes = False<BR/>
+<TAB/>Options.AutoFormatReplaceSymbols = False<BR/>
+<TAB/>Options.AutoFormatReplaceOrdinals = False<BR/>
+<TAB/>Options.AutoFormatReplaceFractions = False<BR/>
+<TAB/>Options.AutoFormatReplacePlainTextEmphasis = False<BR/>
+<TAB/>Options.AutoFormatReplaceHyperlinks = False<BR/>
+<TAB/>Options.AutoFormatPreserveStyles = False<BR/>
+<TAB/>Options.AutoFormatPlainTextWordMail = False<BR/>
+<TAB/>Options.LabelSmartTags = False<BR/>
+<TAB/>Options.DisplaySmartTagButtons = False<BR/>
+<TAB/>Options.AllowAccentedUppercase = True<BR/>
+<TAB/>Application.DisplayAutoCompleteTips = False<BR/>
+<BR/>
+<TAB/>' define the user<BR/>
+<TAB/>Application.UserName = "Laurent Mazur&#233;"<BR/>
+<TAB/>Application.UserInitials = "LM"<BR/>
+<TAB/>Application.UserAddress = ""<BR/>
+End Sub<BR/>
+<BR/>
+Sub SaveXML()<BR/>
+<BR/>
+<TAB/>Dim p As Paragraph<BR/>
+<BR/>
+<TAB/>Set p = ActiveDocument.Paragraphs(6)<BR/>
+<BR/>
+<TAB/>If ((Left(p.range.text, 6) &lt;&gt; "&lt;DATE&gt;") Or _<BR/>
+<TAB/><TAB/>((Right(p.range.text, 9) &lt;&gt; ("&lt;/DATE&gt;" &amp; vbCrLf)) And (Right(p.range.text, 8) &lt;&gt; ("&lt;/DATE&gt;" &amp; vbCr)))) Then<BR/>
+<TAB/><TAB/>MsgBox "Incorrect date (" &amp; p.range.text &amp; ")", vbOKOnly<BR/>
+<TAB/><TAB/>Exit Sub<BR/>
+<TAB/>End If<BR/>
+<BR/>
+<TAB/>p.Range.Text = "&lt;DATE&gt;&lt;YEAR&gt;" &amp; Year(Now) &amp; "&lt;/YEAR&gt;&lt;MONTH&gt;" &amp; Month(Now) &amp; "&lt;/MONTH&gt;&lt;DAY&gt;" &amp; Day(Now) &amp; "&lt;/DAY&gt;&lt;/DATE&gt;" &amp; vbCrLf<BR/>
+<BR/>
+<TAB/>ActiveDocument.Save<BR/>
+<BR/>
+End Sub<BR/>
+</CODESAMPLE>
+</CONTENT>
+</PAGE>
+

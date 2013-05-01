@@ -1,0 +1,611 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Java</title>
+  <script language="JavaScript" src="../css/tools"></script>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+</head>
+<body>
+<b><u>operators</u></b>
+<br>
+<p><tt>==</tt> and <tt>!=</tt> compare handles.
+<br>
+The default <tt>equals()</tt> method implementation is to compare
+handles,
+so we must override it if we want a more useful method.
+<br>
+It is possible to use the bitwise operators to manipulate booleans,
+but in this case, there is no evaluation shortcut. (This is also the
+only
+way to perform a xor.)
+<br>
+<tt>&gt;&gt;</tt> uses sign extension, <tt>&gt;&gt;&gt;</tt> uses zero
+extension.
+<br>
+If we operator on a <tt>char</tt>, <tt>byte</tt> or <tt>short</tt>,
+it is promoted to <tt>int</tt>.
+<br>
+If we shift an <tt>int</tt>, only the five low bits of the right
+operand
+are used.
+<br>
+If we shift a <tt>long</tt>, only the six low bits of the right
+operand
+are used.
+<br>
+The comma operator can be used only in the <tt>for</tt> structure.
+</p>
+<p><b><u>final</u></b>
+</p>
+<ul>
+  <li>final data</li>
+with a primitive, <tt>final</tt> makes the value constant <br>
+with an object handle, <tt>final</tt> makes the handle constant (not
+the object) <br>
+final static primitives with constant initial value (i.e. not something
+like <tt>final static int a = (int)Math.random(20)</tt>) are named
+with
+all capitals <br>
+with Java 1.1, blank finals are supported: the initialization can be
+made at a different line than the declaration, but the variable must be
+initialized before being used, a blank final field must be initialized
+in every constructor
+</ul>
+<ul>
+  <li>final arguments</li>
+with Java 1.1, it is possible to declare an argument as <tt>final</tt>:
+the method will not modify it
+</ul>
+<ul>
+  <li>final methods</li>
+prevent a derived class to override the method <br>
+allow the compiler to inline the method <br>
+any private methods are implicitly final (the final keyword is usable,
+but it has no effect)
+</ul>
+<ul>
+  <li>final class</li>
+the class cannot be inherited
+</ul>
+<p><br>
+<b><u>visibility</u></b>
+<table border="1">
+  <tbody>
+    <tr>
+      <td><br>
+      </td>
+      <td>
+      <center>public</center>
+      </td>
+      <td>
+      <center>protected</center>
+      </td>
+      <td>
+      <center>package</center>
+      </td>
+      <td>
+      <center>private</center>
+      </td>
+    </tr>
+    <tr>
+      <td>same class</td>
+      <td>
+      <center>yes</center>
+      </td>
+      <td>
+      <center>yes</center>
+      </td>
+      <td>
+      <center>yes</center>
+      </td>
+      <td>
+      <center>yes</center>
+      </td>
+    </tr>
+    <tr>
+      <td>class in same package</td>
+      <td>
+      <center>yes</center>
+      </td>
+      <td>
+      <center>yes</center>
+      </td>
+      <td>
+      <center>yes</center>
+      </td>
+      <td>
+      <center>no</center>
+      </td>
+    </tr>
+    <tr>
+      <td>subclass in different package</td>
+      <td>
+      <center>yes</center>
+      </td>
+      <td>
+      <center>yes</center>
+      </td>
+      <td>
+      <center>no</center>
+      </td>
+      <td>
+      <center>no</center>
+      </td>
+    </tr>
+    <tr>
+      <td>non-subclass, different package</td>
+      <td>
+      <center>yes</center>
+      </td>
+      <td>
+      <center>no</center>
+      </td>
+      <td>
+      <center>no</center>
+      </td>
+      <td>
+      <center>no</center>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><b><u>main</u></b>
+<br>
+The main signature is:
+<br>
+<tt>public static void main(String[] args) {...}</tt>
+<br>
+To exit with a given status:
+<br>
+<tt>System.exit(status)</tt>
+<br>
+&nbsp;
+</p>
+<p><b><u>methods</u></b>
+<br>
+Java supports the <tt>this</tt> keyword, which is the handle of the
+object itself.
+<br>
+A method parameter can have the same name than a member, in the case,
+we must use the this syntax:
+<br>
+<tt>this.m = m;</tt>
+<br>
+Java support static methods (aka class methods).
+<br>
+&nbsp;
+</p>
+<p><b><u>constructor &amp; member initializations</u></b>
+<br>
+The constructor has the same name than the class.
+<br>
+A constructor without argument is the default constructor.
+<br>
+If a class has no constructor, the compiler will automatically create
+a default constructor.
+<br>
+It is possible to call another constructor from a constructor, this
+must be the first line and the syntax is:
+<br>
+<tt>this([param1 [, param2 [...] ] ] );</tt>
+</p>
+<p>If the constructor does not initialize all the members, they will
+have
+default values: zero for scalar, false for boolean, null for string and
+object handle.
+<br>
+It is possible to give initial values to members:
+<br>
+<tt>class Foobar {</tt>
+<br>
+<tt>&nbsp; int i = 1;</tt>
+<br>
+<tt>&nbsp; Quux n = new Quux(i);</tt>
+<br>
+<tt>&nbsp; ...</tt>
+<br>
+<tt>}</tt>
+<br>
+Initialization is performed before getting inside the constructor (even
+if the member is declared after the constructor).
+<br>
+Initialization are performed in the same order than the member
+declarations
+in the class.
+<br>
+Initialization of static members is performed the first time the class
+is used (creation of an object, call a static method, access a static
+member).
+It is performed before the initialization of non-static members.
+<br>
+It is possible to group static initialization in a static construction
+clause (aka static block):
+<br>
+<tt>class Foobar {</tt>
+<br>
+<tt>&nbsp; static int i;</tt>
+<br>
+<tt>&nbsp; static {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; i = 7;</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>&nbsp; ...</tt>
+<br>
+<tt>}</tt>
+<br>
+Java 1.1 also supports instance initialization clause:
+<br>
+<tt>class Foobar {</tt>
+<br>
+<tt>&nbsp; int i;</tt>
+<br>
+<tt>&nbsp;{</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; i = 7;</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>&nbsp; ...</tt>
+<br>
+<tt>}</tt>
+<br>
+<i>Question: When is it called?</i>
+<br>
+&nbsp;
+</p>
+<p><b><u>finalization</u></b>
+<br>
+The <tt>finalize</tt> method is called before an object is garbage
+collected (but do not forget that an object may be never garbage
+collected
+if the VM does not need memory).
+<br>
+To perform finalization:
+<br>
+<tt>System.gc();</tt>
+<br>
+<tt>System.runFinalization();</tt>
+<br>
+To ask finalization at program exit:
+<br>
+<tt>System.runFinalizersOnExit(true);</tt> but this last method is
+deprecated since it is intrinsicly unsafe
+<br>
+&nbsp;
+</p>
+<p><b><u>overloading</u></b>
+<br>
+Java supports method overloading.
+<br>
+For primitive types, there is a automatic promotion from a narrower
+to a wider if necessary (the opposite must be done with an explicit
+cast).
+<br>
+<i>Question: exact definition of the automatic promotion?</i>
+<br>
+&nbsp;
+</p>
+<p><b><u>inner class:<br>
+</u></b>A non-static inner class can access its outer class instance by
+using the syntax <span style="font-family: monospace;">OuterClassName.this</span>.<b><u><br>
+</u></b></p>
+<p><b><u>exceptions</u></b>
+<br>
+The base case of exceptions is <tt>Throwable</tt>. It has two
+sub-classes:
+</p>
+<ul>
+  <li> <tt>Error&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </tt>compile
+time
+and system
+errors</li>
+  <li> <tt>Exception&nbsp;&nbsp; </tt>run-time issues</li>
+</ul>
+<u><tt>Exception</tt>:</u>
+<br>
+<tt>Exception()</tt> the default constructor
+<br>
+<tt>Exception(String s)</tt> constructor defining the detailed messsage
+<br>
+<tt>String getMessage()</tt> returns the detailed message
+<br>
+<tt>String toString()</tt> returns a short description and the detailed
+message
+<br>
+<tt>void printStackTrace()</tt> prints on System.err the stack trace
+where the exception was created
+<br>
+<tt>void printStackTrace(PrintStream s)</tt> prints on s the stack
+trace where the exception was created
+<br>
+<tt>void fillInStackTrace()</tt> resets the stack trace to the current
+call stack
+<p><tt>RuntimeException</tt> is a subclass of <tt>Exception</tt>. The
+compiler
+does not impose the code to catch them.
+</p>
+<p>When overriding a method, we can only throw the same exceptions (or
+subclasses of the exceptions)&nbsp; than for the base class. But we can
+declare to throw less exceptions. This is not true for constructors
+which
+can throw any exception with no constraint relatively to the base
+class.
+</p>
+<p>A drawback of the Java exceptions: an exception is lost if another
+one
+is thrown in the finally block.
+<br>
+&nbsp;
+<br>
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+try { </span><br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+new testCCOW("awproxy");</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+System.out.println("done");</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+} catch ( CMException e ) {</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+System.out.println("testCCOW.main - exception: "+e.getMessage());</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+e.printStackTrace(System.out);</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br>
+</p>
+<p><b><u>AWT 1.0</u></b>
+<br>
+<u><tt>Component</tt>:</u> base class of most of the widgets
+<br>
+the following methods handle event, they must return true is the event
+is handled, false otherwise, if the event is not handled, <tt>super.method()</tt>
+must be called and its status returned
+<br>
+<tt>action(Event evt, Object what)</tt>
+<br>
+<tt>keyDown(Event evt, int key)</tt>
+<br>
+<tt>keyUp(Event evt, int key)</tt>
+<br>
+<tt>lostFocus(Event evt, Object what)</tt>
+<br>
+<tt>gotFocus(Event evt, Object what)</tt>
+<br>
+<tt>mouseDown(Event evt, int x, int y)</tt>
+<br>
+<tt>mouseUp(Event evt, int x, int y)</tt>
+<br>
+<tt>mouseMove(Event evt, int x, int y)</tt>
+<br>
+<tt>mouseDrag(Event evt, int x, int y)</tt>
+<br>
+<tt>mouseEnter(Event evt, int x, int y)</tt>
+<br>
+<tt>mouseExit(Event evt, int x, int y)</tt>
+</p>
+<p><u><tt>Container</tt>:</u> derives from component
+<br>
+<tt>setLayout(?)</tt> sets the layout manager of the container
+</p>
+<p><u><tt>Applet</tt>:</u> applets must derive from this class, derives
+from Container, the default layout manager is a FlowLayout
+<br>
+<tt>init()</tt> called the first time the applet is loaded
+<br>
+<tt>start()</tt> called when the applet is displayed
+<br>
+<tt>paint()</tt> called when the display of the applet must be
+refreshed
+(e.g. a window on top of the applet has been moved)
+<br>
+<tt>stop()</tt> called when the applet moves out of sight
+<br>
+<tt>destroy()</tt> called when the applet is unloaded
+<br>
+<tt>getAppletContext()</tt> returns the applet context
+<br>
+<tt>sShowStatus()</tt> sets the browser status line
+<br>
+<tt>add(?)</tt> add a widget to the applet
+</p>
+<p><tt><u>Button</u></tt>
+<br>
+<tt>Button(String s)</tt> creates a button whose label is s
+<br>
+<tt>Button()</tt> creates a button with no label
+<br>
+<tt>boolean equals(String s)</tt> tests if the label is s
+</p>
+<p><tt><u>TextField</u></tt>
+<br>
+<tt>TextField(String s, int l)</tt> creates a text field whose initial
+value is s and length is l
+<br>
+<tt>String getText()</tt> returns the text
+<br>
+<tt>String getSelectedText()</tt> returns the text
+<br>
+<tt>void setEditable(boolean b)</tt> authorizes or not the text edition
+</p>
+<p><tt><u>TextArea</u></tt> (same methods than <tt>TextField</tt>,
+with
+Java 1.0, scrollbars are always present, fixed by a new constructor in
+Java 1.1)
+<br>
+<tt>TextArea(String s, int r, int c)</tt> creates a text area whose
+initial value is s and whose has r rows and c columns
+<br>
+<tt>replaceText(?)</tt>
+<br>
+<tt>insertText(?)</tt>
+<br>
+<tt>apendText()</tt>
+</p>
+<p><tt><u>Label</u></tt>
+<br>
+<tt>Label()</tt> creates an empty label
+<br>
+<tt>Label(String s)</tt>&nbsp; creates a label whose text is s
+<br>
+<tt>Label(String s, int a)</tt> creates a label whose text is s and
+alignment is a (RIGHT, CENTER or LEFT
+<br>
+<tt>getAlignment()</tt>
+<br>
+<tt>getText()</tt>
+<br>
+<tt>setAlignement()</tt>
+<br>
+<tt>setText()</tt>
+</p>
+<p><tt><u>Checkbox</u></tt>
+<br>
+<tt>Checkbox(String s)</tt> creates a check box whose label is s
+<br>
+<tt>Checkbox(String s, CheckboxGroup g, boolean s)</tt> creates a check
+box in the group g whose label is s and state s
+<br>
+<tt>boolean getState()</tt> returns the state
+<br>
+<tt>setState()</tt>
+<br>
+<tt>setCheckboxGroup()</tt> puts the check box in a check box group
+</p>
+<p><tt><u>CheckboxGroup</u></tt> (aka radio buttons)
+<br>
+<tt>CheckboxGroup()</tt> creates a check box group
+</p>
+<p><tt><u>Choice</u></tt> (aka drop-down list)
+<br>
+<tt>Choice()</tt> creates a new choice
+<br>
+<tt>addItem(?)</tt> adds a new item in the choice
+<br>
+<tt>getSelectedIndex()</tt> returns the index of the selected item
+</p>
+<p><tt><u>List</u></tt>
+<br>
+<tt>List(int n, boolean b)</tt> creates a new list with n items, b
+indicates if multi-selection is allowed or not
+<br>
+<tt>addItem(String s, int p)</tt> adds a new item s in the list at
+position p
+<br>
+<tt>Strings[] getSelectedItems()</tt> returns the list of selected
+items
+</p>
+<p><u><tt>Window</tt>:</u> superclass of Frame and Dialog
+<br>
+<tt>show()</tt> displays the Window
+<br>
+<tt>setSize()</tt> sets a new size (must be called before show()
+otherwise
+the Window would not be visible)
+</p>
+<p><u><tt>Frame</tt>:</u> stands alone application must derived from
+this
+class, can have a MenuBar (Applet and Dialog cannot)
+<br>
+<tt>setMenuBar()</tt> set the menu bar of the frame
+<br>
+<tt>getMenuBar()</tt> returns the menu bar of the frame
+</p>
+<p><u><tt>MenuBar</tt>:</u> it is composed of Menu's
+</p>
+<p><u><tt>Menu</tt>:</u> it is composed of MenuItem's,
+CheckboxMenuItem's
+and Menu's
+</p>
+<p><tt><u>MenuItem</u></tt>
+</p>
+<p><tt><u>CheckboxMenuItem</u></tt>
+</p>
+<p><u><tt>Dialog</tt>:</u> the WINDOW_DESTROY event must be caught in
+handleEvent()
+to avoid to exit from the application
+<br>
+<tt>dispose()</tt> releases the resource used by the dialog
+</p>
+<p><tt><u>FileDialog</u></tt>
+<br>
+<tt>show()</tt> does not return until the user has selected a file
+of cancel
+<br>
+<tt>setFile()</tt> sets the file name filter
+<br>
+<tt>setDirectory()</tt> sets the directory
+<br>
+<tt>getFile()</tt> returns the file name (will be null if the user
+cancelled the selection)
+<br>
+<tt>getDirectory()</tt> returns the directory
+</p>
+<p>Layout managers
+</p>
+<ul>
+  <li> <tt>FlowLayout</tt>: widgets have their minimum size, they are
+stacked
+first left to right, then top to bottom</li>
+  <li> <tt>BorderLayout</tt>: widgets are dispatched in five zones
+("North", "East",
+"South", "West" and "Center"), we must use the <tt>Applet.add(String
+s,?)</tt>
+method to add a widget and indicates its zones</li>
+  <li> <tt>GridLayout</tt>: the widgets are dispatched in a grid</li>
+  <ul>
+    <li> <tt>GridLayout(int r, int c)</tt> creates a GridLayout of r
+rows
+and c
+columns</li>
+  </ul>
+  <li> <tt>CardLayout</tt>: enables to have tab cards managing several
+pannels</li>
+  <ul>
+    <li> <tt>add(String s, ?)</tt> adds a new card</li>
+    <li> <tt>first()</tt> displays the first card</li>
+    <li> <tt>next()</tt> displays the next card</li>
+    <li> <tt>last()</tt> displays the last card</li>
+  </ul>
+  <li> <tt>GridBagLayout</tt>: brain damaging layout?</li>
+</ul>
+<p><br>
+<b><u>AWT 1.1</u></b>
+<br>
+The old and new event managements cannot be mixed.
+<br>
+Listener's are interface's, they must implement each methods.
+<br>
+Adapters's are base classes, they provide default actions, so we do
+not have to implement each methods.
+<br>
+Listener's may not be called in the order they were added.
+</p>
+<p><tt><u>Window</u></tt>
+<br>
+<tt>setVisible(boolean t)</tt> replaces <tt>show()</tt>
+</p>
+<p><tt><u>Frame</u></tt>
+<br>
+<tt>add(?, int p)</tt> enables to sets the zone in a <tt>BorderLayout</tt>
+by using a symbolic constant instead of a string
+</p>
+<p></p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: October 20</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+&nbsp;
+<br>
+&nbsp;
+</p>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Java multithreading</TITLE>
+<PATH>notes/javathread2.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<U><B>Processes vs threads</B></U><BR/>
+Each process has its private set of run-time resources, in particular memory.<BR/>
+New processes can be created using a <CODEROUTINE>ProcessBuilder</CODEROUTINE> object.<BR/>
+<BR/>
+Threads of a process share the process's resources, including memory and open files.<BR/>
+From the application programmer's point of view, the process starts with just one thread, called the main thread.<BR/>
+Each thread is associated with an instance of the class <CODEROUTINE>Thread</CODEROUTINE>. There are two strategies to manage these instances: to directly control thread creation and management or to use an executor.<BR/>
+<BR/>
+<BR/>
+<U><B>Creating threads</B></U><BR/>
+<BLIST><TITLE>Thread can be created by:</TITLE>
+<ITEM>Creating a class implementing the <CODEROUTINE>Runnable</CODEROUTINE> interface. This interface defines a single method: <CODEROUTINE>public void run()</CODEROUTINE>.<BR/>
+<CODESAMPLE>public class HelloRunnable implements Runnable {<BR/>
+<BR/>
+<TAB/>public void run() {<BR/>
+<TAB/><TAB/>System.out.println("Hello from a thread!");<BR/>
+<TAB/>}<BR/>
+<BR/>
+<TAB/>public static void main(String args[]) {<BR/>
+<TAB/><TAB/>(new Thread(new HelloRunnable())).start();<BR/>
+<TAB/>}<BR/>
+<BR/>
+}</CODESAMPLE></ITEM>
+<ITEM>Creating a subclass of <CODEROUTINE>Thread</CODEROUTINE>. <CODEROUTINE>Thread</CODEROUTINE> implements the <CODEROUTINE>Runnable</CODEROUTINE> but its <CODEROUTINE>run()</CODEROUTINE> method does nothing.
+<CODESAMPLE>public class HelloThread extends Thread {<BR/>
+<BR/>
+<TAB/>public void run() {<BR/>
+<TAB/><TAB/>System.out.println("Hello from a thread!");<BR/>
+<TAB/>}<BR/>
+<BR/>
+<TAB/>public static void main(String args[]) {<BR/>
+<TAB/><TAB/>(new HelloThread()).start();<BR/>
+<TAB/>}<BR/>
+<BR/>
+}</CODESAMPLE></ITEM>
+</BLIST>
+The first idiom is more general, because the Runnable object can subclass a class other than Thread and it is applicable to the high-level thread management methods. The second idiom is easier to use in simple applications, but is limited by the fact that the task class must be a descendant of Thread.<BR/>
+<BR/>
+<BR/>
+<U><B>Sleep</B></U><BR/>
+<CODEROUTINE>Thread.sleep</CODEROUTINE> causes the current thread to suspend execution for a specified period. Sleep time can be specified in milisecond or nanoseconds. These sleep times are not guaranteed to be precise.<BR/> 
+<BR/>
+<BR/>
+<U><B>Interruption</B></U><BR/>
+A thread sends an interrupt by invoking <CODEROUTINE>interrupt</CODEROUTINE> on the Thread object for the thread to be interrupted.<BR/>
+
+If the thread is frequently invoking methods that throw <CODEROUTINE>InterruptedException</CODEROUTINE>, it simply returns from the <CODEROUTINE>run</CODEROUTINE> method after it catches that exception.<BR/>
+If a thread goes a long time without invoking a method that throws <CODEROUTINE>InterruptedException</CODEROUTINE>, it must periodically invoke <CODEROUTINE>Thread.interrupted</CODEROUTINE>, which returns true if an interrupt has been received.<BR/>
+<BR/>
+The interrupt mechanism is implemented using an internal flag known as the interrupt status. Invoking <CODEROUTINE>Thread.interrupt</CODEROUTINE> sets this flag. When a thread checks for an interrupt by invoking the static method <CODEROUTINE>Thread.interrupted</CODEROUTINE>, interrupt status is cleared. The non-static <CODEROUTINE>Thread.isInterrupted</CODEROUTINE>, which is used by one thread to query the interrupt status of another, does not change the interrupt status flag.  By convention, any method that exits by throwing an InterruptedException clears interrupt status when it does so. However, it's always possible that interrupt status will immediately be set again, by another thread invoking interrupt.<BR/>
+<BR/>
+<BR/>
+<U><B>Joins</B></U><BR/>
+The join method allows one thread to wait for the completion of another. If <CODEROUTINE>t</CODEROUTINE> is a Thread object whose thread is currently executing, <CODEROUTINE>t.join();</CODEROUTINE> causes the current thread to pause execution until t's thread terminates.<BR/>
+<BR/>
+<BR/>
+<U><B>Memory consistency</B></U><BR/>
+Memory consistency is based on the <I>happens-before</I> relation on memory operations. The results of a write by one thread are guaranteed to be visible to a read by another thread only if the write operation happens-before the read operation.
+<BLIST>
+<TITLE>Each action in a thread happens-before every action in that thread that comes later in the program's order.</TITLE>
+<ITEM>An unlock (synchronized block or method exit) of a monitor happens-before every subsequent lock (synchronized block or method entry) of that same monitor. And because the happens-before relation is transitive, all actions of a thread prior to unlocking happen-before all actions subsequent to any thread locking that monitor.</ITEM>
+<ITEM>A write to a volatile field happens-before every subsequent read of that same field. Writes and reads of volatile fields have similar memory consistency effects as entering and exiting monitors, but do not entail mutual exclusion locking.</ITEM>
+<ITEM>A call to <CODEROUTINE>start</CODEROUTINE> on a thread happens-before any action in the started thread.</ITEM>
+<ITEM>All actions in a thread happen-before any other thread successfully returns from a join on that thread.</ITEM>
+</BLIST><BR/>
+<BR/>
+<BR/>
+
+<U><B>Synchronization</B></U><BR/>
+<BLIST>
+<ITEM>Locks In Synchronized Methods<BR/>
+When a thread invokes a synchronized method, it acquires the monitor lock for that method's object and releases it when the method returns. The lock release occurs even if the return was caused by an uncaught exception.<BR/>
+When a static synchronized method is invoked, the thread acquires the intrinsic lock for the Class object associated with the class. Thus access to class's static fields is controlled by a lock that's distinct from the lock for any instance of the class.</ITEM>
+<ITEM>Synchronized Statements<BR/>
+Unlike synchronized methods, synchronized statements must specify the object that provides the intrinsic lock:<BR/>
+<CODESAMPLE>public void addName(String name) {<BR/>
+<TAB/>synchronized(this) {<BR/>
+<TAB/><TAB/>lastName = name;<BR/>
+<TAB/><TAB/>nameCount++;<BR/>
+<TAB/>}<BR/>
+<TAB/>nameList.add(name);<BR/>
+}</CODESAMPLE><BR/></ITEM>
+<ITEM>Reentrant Synchronization<BR/>
+A thread can acquire a lock that it already owns. Allowing a thread to acquire the same lock more than once enables reentrant synchronization.</ITEM>
+</BLIST>
+<BR/>
+<BR/>
+
+<U><B>Atomic Access</B></U><BR/>
+<BLIST>
+<ITEM>Reads and writes are atomic for reference variables and for most primitive variables (all types except <CODEROUTINE>long</CODEROUTINE> and <CODEROUTINE>double</CODEROUTINE>).</ITEM>
+<ITEM>Reads and writes are atomic for all variables declared volatile (including <CODEROUTINE>long</CODEROUTINE> and <CODEROUTINE>double</CODEROUTINE> variables).</ITEM>
+<ITEM>Atomic actions cannot be interleaved, so they can be used without fear of thread interference. However, this does not eliminate all need to synchronize atomic actions, because memory consistency errors are still possible. Using <CODEROUTINE>volatile</CODEROUTINE> variables reduces the risk of memory consistency errors, because any write to a volatile variable establishes a happens-before relationship with subsequent reads of that same variable. This means that changes to a <CODEROUTINE>volatile</CODEROUTINE> variable are always visible to other threads. What's more, it also means that when a thread reads a <CODEROUTINE>volatile</CODEROUTINE> variable, it sees not just the latest change to the <CODEROUTINE>volatile</CODEROUTINE>, but also the side effects of the code that led up the change.</ITEM>
+</BLIST>
+<BR/>
+<BR/>
+
+<U><B>Deadlock</B></U><BR/>
+Deadlock describes a situation where two or more threads are blocked forever, waiting for each other. 
+<BR/>
+<BR/>
+
+<U><B>Starvation</B></U><BR/>
+Starvation describes a situation where a thread is unable to gain regular access to shared resources and is unable to make progress. This happens when shared resources are made unavailable for long periods by "greedy" threads. 
+<BR/>
+<BR/>
+
+<U><B>Livelock</B></U><BR/>
+A thread often acts in response to the action of another thread. If the other thread's action is also a response to the action of another thread, then livelock may result.
+<BR/>
+<BR/>
+
+<U><B>Guarded blocks</B></U><BR/>
+A guarded block is a block beginning by polling a condition that must be true before the block can proceed.  Use <CODEROUTINE>Object.wait</CODEROUTINE> to suspend the current thread. The invocation of wait does not return until another thread has issued a notification that some special event may have occurred though not necessarily the event this thread is waiting for: 
+<CODESAMPLE>public synchronized guardedJoy() {<BR/>
+<TAB/>while(!joy) {<BR/>
+<TAB/><TAB/>try {<BR/>
+<TAB/><TAB/><TAB/>wait();<BR/>
+<TAB/><TAB/>} catch (InterruptedException e) {}<BR/>
+<TAB/>}<BR/>
+}</CODESAMPLE>
+Why is this version of guardedJoy synchronized? Suppose <CODEROUTINE>d</CODEROUTINE> is the object we're using to invoke wait. When a thread invokes <CODEROUTINE>d.wait</CODEROUTINE>, it must own the intrinsic lock for <CODEROUTINE>d</CODEROUTINE> otherwise an error is thrown. Invoking wait inside a synchronized method is a simple way to acquire the intrinsic lock.<BR/>
+When wait is invoked, the thread releases the lock and suspends execution. At some future time, another thread will acquire the same lock and invoke <CODEROUTINE>Object.notifyAll</CODEROUTINE>, informing all threads waiting on that lock that something important has happened: 
+<CODESAMPLE>public synchronized notifyJoy() {<BR/>
+<TAB/>joy = true;<BR/>
+<TAB/>notifyAll();<BR/>
+}</CODESAMPLE>
+Some time after the second thread has released the lock, the first thread reacquires the lock and resumes by returning from the invocation of <CODEROUTINE>wait</CODEROUTINE>.
+<BR/>
+<BR/>
+
+
+<U><B>Immutable Objects</B></U><BR/>
+<BLIST><TITLE>A Strategy for Defining Immutable Objects</TITLE>
+<ITEM>Don't provide "setter" methods, i.e. methods that modify fields or objects referred to by fields.</ITEM>
+<ITEM>Make all fields final and private.</ITEM>
+<ITEM>Don't allow subclasses to override methods. The simplest way to do this is to declare the class as final. A more sophisticated approach is to make the constructor private and construct instances in factory methods.</ITEM>
+<ITEM>If the instance fields include references to mutable objects, don't allow those objects to be changed: 
+<BLIST><ITEM>Don't provide methods that modify the mutable objects.</ITEM>
+<ITEM>Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, create copies, and store references to the copies. Similarly, create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.</ITEM></BLIST></ITEM>
+</BLIST>
+<BR/>
+<BR/>
+
+<U><B>Lock Objects</B></U><BR/>
+Some sophisticated locking idioms are supported by the java.util.concurrent.locks package. 
+<BR/>
+<BR/>
+
+<U><B>Executor interfaces</B></U><BR/>
+<BLIST>
+<ITEM><CODEROUTINE>Executor</CODEROUTINE> Interface<BR/>
+The <CODEROUTINE>Executor</CODEROUTINE> interface provides a single method, <CODEROUTINE>execute</CODEROUTINE>, designed to be a drop-in replacement for a common thread-creation idiom. If <CODEROUTINE>r</CODEROUTINE> is a <CODEROUTINE>Runnable</CODEROUTINE> object, and <CODEROUTINE>e</CODEROUTINE> is an <CODEROUTINE>Executor</CODEROUTINE> object you can replace <CODEROUTINE>(new Thread(r)).start();</CODEROUTINE> with <CODEROUTINE>e.execute(r);</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>ExecutorService</CODEROUTINE> Interface<BR/>
+The <CODEROUTINE>ExecutorService</CODEROUTINE> interface supplements execute with a similar, but more versatile <CODEROUTINE>submit</CODEROUTINE> method. Like <CODEROUTINE>execute</CODEROUTINE>, <CODEROUTINE>submit</CODEROUTINE> accepts <CODEROUTINE>Runnable</CODEROUTINE> objects, but also accepts <CODEROUTINE>Callable</CODEROUTINE> objects, which allow the task to return a value. The <CODEROUTINE>submit</CODEROUTINE> method returns a <CODEROUTINE>Future</CODEROUTINE> object, which is used to retrieve the <CODEROUTINE>Callable</CODEROUTINE> return value and to manage the status of both <CODEROUTINE>Callable</CODEROUTINE> and <CODEROUTINE>Runnable</CODEROUTINE> tasks. 
+<CODEROUTINE>ExecutorService</CODEROUTINE> also provides methods for submitting large collections of <CODEROUTINE>Callable</CODEROUTINE> objects. Finally, <CODEROUTINE>ExecutorService</CODEROUTINE> provides a number of methods for managing the shutdown of the executor. To support immediate shutdown, tasks should handle interrupts correctly.</ITEM>
+<ITEM><CODEROUTINE>ScheduledExecutorService</CODEROUTINE> Interface<BR/>
+The <CODEROUTINE>ScheduledExecutorService</CODEROUTINE> interface supplements the methods of its parent <CODEROUTINE>ExecutorService</CODEROUTINE> with schedule, which executes a <CODEROUTINE>Runnable</CODEROUTINE> or <CODEROUTINE>Callable</CODEROUTINE> task after a specified delay. In addition, the interface defines <CODEROUTINE>scheduleAtFixedRate</CODEROUTINE> and <CODEROUTINE>scheduleWithFixedDelay</CODEROUTINE>, which executes specified tasks repeatedly, at defined intervals.</ITEM>
+</BLIST>
+<BR/>
+<BR/>
+
+
+<U><B>Thread pools</B></U><BR/>
+<BLIST>
+<ITEM>Using worker threads minimizes the overhead due to thread creation. Thread objects use a significant amount of memory, and in a large-scale application, allocating and deallocating many thread objects creates a significant memory management overhead.</ITEM>
+<ITEM>One common type of thread pool is the fixed thread pool. This type of pool always has a specified number of threads running; if a thread is somehow terminated while it is still in use, it is automatically replaced with a new thread. Tasks are submitted to the pool via an internal queue, which holds extra tasks whenever there are more active tasks than threads. It is created by the <CODEROUTINE>newFixedThreadPool</CODEROUTINE> factory method in <CODEROUTINE>java.util.concurrent.Executors</CODEROUTINE>.</ITEM>
+<ITEM>The <CODEROUTINE>newCachedThreadPool</CODEROUTINE> method creates an executor with an expandable thread pool. This executor is suitable for applications that launch many short-lived tasks.</ITEM>
+<ITEM>The <CODEROUTINE>newSingleThreadExecutor</CODEROUTINE> method creates an executor that executes a single task at a time. </ITEM>
+<ITEM>Several factory methods are <CODEROUTINE>ScheduledExecutorService</CODEROUTINE> versions of the above executors.</ITEM>
+</BLIST>
+<BR/>
+<BR/>
+
+
+<U><B>Concurrent Collections</B></U><BR/>
+<BLIST>
+<ITEM><CODEROUTINE>BlockingQueue</CODEROUTINE> defines a first-in-first-out data structure that blocks or times out when you attempt to add to a full queue, or retrieve from an empty queue.</ITEM>
+<ITEM><CODEROUTINE>ConcurrentMap</CODEROUTINE> is a subinterface of <CODEROUTINE>java.util.Map</CODEROUTINE> that defines useful atomic operations. These operations remove or replace a key-value pair only if the key is present, or add a key-value pair only if the key is absent. Making these operations atomic helps avoid synchronization. The standard general-purpose implementation of <CODEROUTINE>ConcurrentMap</CODEROUTINE> is <CODEROUTINE>ConcurrentHashMap</CODEROUTINE>, which is a concurrent analog of <CODEROUTINE>HashMap</CODEROUTINE>.</ITEM>
+<ITEM><CODEROUTINE>ConcurrentNavigableMap</CODEROUTINE> is a subinterface of <CODEROUTINE>ConcurrentMap</CODEROUTINE> that supports approximate matches. The standard general-purpose implementation of <CODEROUTINE>ConcurrentNavigableMap</CODEROUTINE> is <CODEROUTINE>ConcurrentSkipListMap</CODEROUTINE>, which is a concurrent analog of <CODEROUTINE>TreeMap</CODEROUTINE>.</ITEM>
+</BLIST>
+<BR/>
+<BR/>
+
+
+
+<U><B>Atomic Variables</B></U><BR/>
+The <CODEROUTINE>java.util.concurrent.atomic</CODEROUTINE> package defines classes that support atomic operations on single variables. All classes have get and set methods that work like reads and writes on volatile variables. That is, a set has a happens-before relationship with any subsequent get on the same variable. The atomic <CODEROUTINE>compareAndSet</CODEROUTINE> method also has these memory consistency features, as do the simple atomic arithmetic methods that apply to integer atomic variables.<BR/>
+<BR/>
+<BR/>
+
+</CONTENT>
+</PAGE>
+

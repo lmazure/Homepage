@@ -1,0 +1,236 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>emacs customization</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+xemacs in server mode
+<br>
+Add in ~/.emacs
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>(if (string-equal</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; "XEmacs"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; (substring (emacs-version) 0 6))</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; ( gnuserv-start )</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; ( server-start ))</tt></td>
+    </tr>
+  </tbody>
+</table>
+Use the following script
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#!/bin/csh</tt>
+      <p><tt>if (`uname -s` == "SunOS") then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; set p=/outils/emacs/xemacs/sun5/bin</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; set s=xemacs</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; set c="gnuclient -q"</tt> <br>
+      <tt>&nbsp; else</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; set p=/usr/bin</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; set s=emacs</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; set c="emacsclient -n"</tt> <br>
+      <tt>&nbsp; endif</tt> </p>
+      <p><tt>ps -a -o user,comm | grep -v grep | egrep "`whoami`&nbsp;
+*($p/$s|$s)"
+&gt;&amp; /dev/null</tt> <br>
+      <tt>if ( $status ) then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( $#argv &gt; 0 ) then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $p/$s "$1" &amp;</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shift</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $p/$s &amp;</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; endif</tt> <br>
+      <tt>&nbsp; else</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( $#argv &gt; 0 ) then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $p/$c "$1"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shift</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $p/$c</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; endif</tt> <br>
+      <tt>&nbsp; endif</tt> </p>
+      <p><tt>while ( $#argv &gt; 0 )</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; set f=1</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; # loop to wait that the emacs server is up
+and
+listening</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; while ($f)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set f=0</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $p/$c "$1"
+&gt;&amp; /dev/null</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( $status ) set
+f=1</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; end</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; shift</tt> <br>
+      <tt>&nbsp; end</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>ClearCase shortkeys
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>defun <b>lm-catcs</b> ()</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; "edit config spec"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; (interactive)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ( progn</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( switch-to-buffer (
+generate-new-buffer
+"*catcs*" ) )</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( shell-command</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"/usr/atria/bin/cleartool
+catcs"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t ) )</tt> <br>
+      <tt>)</tt>
+      <p><tt>(defun <b>lm-savecs</b> ()</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; "save config spec"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; (interactive)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ( shell-command-on-region (point-min)
+(point-max)
+"cat - &gt; /tmp/cs.. ; /usr/atria/bin/cleartool setcs /tmp/cs.. ; rm
+/tmp/cs.."
+)</tt> <br>
+      <tt>)</tt> </p>
+      <p><tt>(defun lm-space-concat (&amp;rest strings )</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; "concatenate a list of strings separated
+by
+spaces"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ()</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ( if (cdr strings)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( concat (car strings) " "
+(apply
+`lm-space-concat (cdr strings)) )</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (car strings) )</tt> <br>
+      <tt>)</tt> </p>
+      <p><tt>(defun lm-cleartool (&amp;rest commands)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; "execute a clearcase command"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ()</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ( message ( apply `lm-space-concat
+commands
+) )</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ( apply 'call-process
+"/usr/atria/bin/cleartool"
+nil 0 nil commands )</tt> <br>
+      <tt>)</tt> </p>
+      <p><tt>(defun <b>lm-diff</b> ()</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; "diff with predecessor"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; (interactive)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ( lm-cleartool "diff" "-graphical" "-pred"
+(buffer-file-name)
+)</tt> <br>
+      <tt>)</tt> </p>
+      <p><tt>(defun <b>lm-tree</b> ()</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; "diff with predecessor"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; (interactive)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ( lm-cleartool "lsvtree" "-graphical"
+(buffer-file-name)
+)</tt> <br>
+      <tt>)</tt> </p>
+      <p><tt>(define-key global-map [(<span style="font-weight: bold;">alt
+d</span>)] 'lm-diff)<br>
+(define-key global-map [(<span style="font-weight: bold;">alt t</span>)]
+'lm-tree)<br>
+      </tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>build
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>(setq-default compile-command "clearmake -v -V -C gnu
+debug")</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>quick window destruction
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>(defun lm-killw ()</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; "kill buffer and close window"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; (interactive)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; ( progn</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( kill-buffer nil )</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ( delete-frame ) )</tt> <br>
+      <tt>)</tt>
+      <p><tt>(define-key global-map [(<b>alt k</b>)] 'lm-killw)</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>printing
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>(setq lpr-switches `("-Phprtg3so_ps") )</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>coding
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>(global-set-key [<span style="font-weight: bold;">f5</span>]
+'next-error)&nbsp;</tt> <br>
+      <tt>(setq-default indent-tabs-mode nil)</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>xterm
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><span style="font-family: monospace;">(defun lm-xterm ()<br>
+&nbsp; "create a xterm"<br>
+&nbsp; (interactive)<br>
+&nbsp; (call-process "xterm" nil 0 nil "-title" default-directory "-sb"
+"-sl" "5000" "-bg" "#000" "-fg" "#FFF" "-fn" "fixed")<br>
+)<br>
+(define-key global-map
+[(<span style="font-weight: bold;">alt x</span>)] 'lm-xterm)</span> </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>other stuff&nbsp; (le deuxi&egrave;me marche sur xemacs)<br>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>(define-key
+global-map [(alt o)] 'other-frame)<br>
+(global-set-key [C-tab] 'other-window)<br>
+      </tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: October 20</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+&nbsp;
+</p>
+</body>
+</html>

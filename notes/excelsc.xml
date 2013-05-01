@@ -1,0 +1,377 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>French Excel shortcuts</TITLE>
+<PATH>notes/excelsc.xml</PATH>
+<DATE><YEAR>2011</YEAR><MONTH>10</MONTH><DAY>24</DAY></DATE>
+<CONTENT>
+
+File management
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='N'/></TERM>
+<DESC>create a new book</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='O'/></TERM>
+<DESC>display the Open dialog</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+View
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='9'/></TERM>
+<DESC><STRIKE>hide selected rows</STRIKE></DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='('/></TERM>
+<DESC><STRIKE>unhide selected rows</STRIKE></DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='0'/></TERM>
+<DESC><STRIKE>hide selected colums</STRIKE></DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID=')'/></TERM>
+<DESC><STRIKE>unhide selected columns</STRIKE></DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='"'/></TERM>
+<DESC>display/undisplay the formulas</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F1'/></TERM>
+<DESC>display/undisplay the ribon</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+Move
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Up'/></TERM>
+<DESC>go to the empty cell/filled cell limit above</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Down'/></TERM>
+<DESC>go to the empty cell/filled cell limit below</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Left'/></TERM>
+<DESC>go to the empty cell/filled cell limit on the left</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Right'/></TERM>
+<DESC>go to the empty cell/filled cell limit on the right</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Origin'/></TERM>
+<DESC>go to cell A1</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='End'/></TERM>
+<DESC>go to the cell which is the intersection of the last column with the last row</DESC>
+</ROW>
+<ROW>
+<TERM><KEY ID='F6'/></TERM>
+<DESC>move to the next pane</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='F6'/></TERM>
+<DESC>move to the previous pane</DESC>
+</ROW>
+<ROW>
+<TERM><KEY ID='F5'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='T'/></TERM>
+<DESC>display the "go to" dialog</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+Sheets
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='PageDown'/></TERM>
+<DESC>move to next sheet</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='PageUp'/></TERM>
+<DESC>move to previous sheet</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='F11'/><BR/>
+<MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='F1'/></TERM>
+<DESC>insert a new worksheet</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/></TERM>
+<DESC>insert a Microsoft Excel 4.0 macro sheet</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='PageDown'/></TERM>
+<DESC>select the current and next sheet in the workbook</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='PageUp'/></TERM>
+<DESC>select the current and previous sheet in the workbook</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+Selection
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='*'/></TERM>
+<DESC>select the region around the active cell</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Space'/></TERM>
+<DESC>select the column</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='Space'/></TERM>
+<DESC>select the row</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Space'/></TERM>
+<DESC>select all objects on a sheet</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='A'/></TERM>
+<DESC>select the whole sheet</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+Format
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='1'/></TERM>
+<DESC>format cell</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='G'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='2'/></TERM>
+<DESC>set the characters to bold (toggle)</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='I'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='3'/></TERM>
+<DESC>set the characters to italic (toggle)</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='4'/></TERM>
+<DESC>set the characters to underline (toggle)</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='5'/></TERM>
+<DESC>set the characters to strikethough (toggle)</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='5'/></TERM>
+<DESC>set the characters to strikethough (toggle)</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='%'/></TERM>
+<DESC>apply the Percentage format with no decimal places</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='!'/></TERM>
+<DESC>apply the Number format with two decimal places, thousands separator, and minus sign (-) for negative values</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+Copy/Insert
+<DEFINITIONTABLE>
+<ROW>
+<TERM>DnD the selection border</TERM>
+<DESC>move the selected cells</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/>DnD the selection border</TERM>
+<DESC>move and insert the selected cells</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/>DnD the selection border</TERM>
+<DESC>copy the selected cells somewhere else</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/>DnD the selection border</TERM>
+<DESC>copy and insert the selected cells somewhere else</DESC>
+</ROW>
+</DEFINITIONTABLE>
+it is possible to copy at several locations at the same time by selecting several cells (<MODIFIERKEY ID='Ctrl'/>Click) before the copy (<MODIFIERKEY ID='Ctrl'/><KEY ID='C'/>)<BR/><BR/>
+
+Edit
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F'/></TERM>
+<DESC>find</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='H'/></TERM>
+<DESC>replace</DESC></ROW>
+<ROW>
+<TERM><KEY ID='F2'/></TERM>
+<DESC>edit active cell</DESC>
+</ROW>
+<ROW>
+<TERM><KEY ID='F4'/></TERM>
+<DESC>switch between relative and absolute references</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='B'/></TERM>
+<DESC>copy the data from the cell above</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/></TERM>
+<DESC>copy the data from the cell at the left</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='"'/></TERM>
+<DESC><STRIKE>copy the value from the cell above into the active cell</STRIKE></DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID="'"/></TERM>
+<DESC>copy the formula from the cell above into the active cell</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Alt'/><KEY ID='Down'/></TERM>
+<DESC>allow to select one of the column values</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Alt'/><KEY ID='Enter'/></TERM>
+<DESC>insert a newline</DESC>
+</ROW>
+<ROW>
+<TERM><KEY ID='Enter'/></TERM>
+<DESC>complete cell entry and move down</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='Enter'/></TERM>
+<DESC>complete cell entry and move up</DESC>
+</ROW>
+<ROW>
+<TERM><KEY ID='Tab'/></TERM>
+<DESC>complete cell entry and move right</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='Tab'/></TERM>
+<DESC>complete cell entry and move left</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='+'/></TERM>
+<DESC>insert blank cells</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='-'/></TERM>
+<DESC>delete selected cells</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID=';'/></TERM>
+<DESC>insert current date</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID=':'/></TERM>
+<DESC>insert current time</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Alt'/><KEY ID='+'/></TERM>
+<DESC>insert sum formula</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='CTRL'/><MODIFIERKEY ID='Shift'/><KEY ID='Enter'/></TERM>
+<DESC>insert a matrix formula</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/></TERM>
+<DESC>insert a hyperlink</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></TERM>
+<DESC>edit the cell's comment</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='F3'/></TERM>
+<DESC>insert a function in the current formula</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Alt'/>numeric keypad</TERM>
+<DESC>insert the character corresponding to the type Unicode number</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+names
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F3'/></TERM>
+<DESC>define cells' name</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F3'/></TERM>
+<DESC>define cells' name from contents of rows and/or columns</DESC>
+</ROW>
+<ROW>
+<TERM><KEY ID='F3'/></TERM>
+<DESC>paste a name in the current formula</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+recalculation
+<DEFINITIONTABLE>
+<ROW>
+<TERM><KEY ID='F9'/></TERM>
+<DESC>calculate all sheets in all open workbooks</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='F9'/></TERM>
+<DESC>calculate the active worksheet</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='F9'/></TERM>
+<DESC>calculate all cells of all sheets in the all open workbooks, even if Excel thinks that the cells are not dirty</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+outline
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='&amp;'/></TERM>
+<DESC>apply the outline border</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='_'/></TERM>
+<DESC>remove outline borders</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+group/ungroup
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Right'/></TERM>
+<DESC>group rows or columns</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Left'/></TERM>
+<DESC>ungroup rows or columns</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='L'/></TERM>
+<DESC>display/hide outline symbols</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+
+misc.
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='P'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F12'/></TERM>
+<DESC>display the Print Dialog box</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='_'/></TERM>
+<DESC>display/hide the standard toolbar</DESC>
+</ROW>
+</DEFINITIONTABLE>
+
+</CONTENT>
+</PAGE>
+

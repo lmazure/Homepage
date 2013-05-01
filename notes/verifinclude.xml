@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Verification of the include syntax</TITLE>
+<PATH>notes/verifinclude.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<CONTENT>
+This script is obsolete, the new one is  <X><T>here</T><A>verifinclude2.html</A><L>en</L><F>HTML</F></X>.<BR/>
+<BR/>
+<CODESAMPLE>
+#!/bin/ksh<BR/>
+<BR/>
+inputfile=$1<BR/>
+stdinc=`grep '#.*include.*&lt;.*&gt;' $inputfile | sed 's/[^&lt;]*&lt;//' | sed 's/&gt;[^&gt;]*//'`<BR/>
+nstinc=`grep '#.*include.*".*"' $inputfile | sed 's/[^"]*"//' | sed 's/"[^"]*//'`<BR/>
+<BR/>
+isStandard()<BR/>
+{<BR/>
+<TAB/>if [[ ( -f /usr/include/$1 ) ||<BR/>
+<TAB/><TAB/><TAB/><TAB/>( -f /usr/include/g3/$1 ) ||<BR/>
+<TAB/><TAB/><TAB/><TAB/>( -f /usr/lib/gcc-lib/i386-redhat-linux/2.96/include/$1 ) ]] then <BR/>
+<TAB/><TAB/>echo 1<BR/>
+<TAB/>else<BR/>
+<TAB/><TAB/>echo 0<BR/>
+<TAB/>fi<BR/>
+}<BR/>
+<BR/>
+for f in $stdinc<BR/>
+do<BR/>
+<TAB/>if [[ `isStandard $f` -eq 0 ]] then<BR/>
+<TAB/><TAB/>echo "cannot find standard $f ($inputfile)"<BR/>
+<TAB/>fi<BR/>
+done<BR/>
+<BR/>
+for f in $nstinc<BR/>
+do<BR/>
+<TAB/>if [[ `isStandard $f` -eq 1 ]] then<BR/>
+<TAB/><TAB/>echo "cannot find non-standard $f ($inputfile)"<BR/>
+<TAB/>fi<BR/>
+done
+</CODESAMPLE>
+</CONTENT>
+<X><T>ksh</T><A>ksh.htm</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

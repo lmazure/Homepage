@@ -1,0 +1,388 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Word</TITLE>
+<PATH>notes/word.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><U>open/save/close documents</U></TITLE>
+<ITEM>
+always ask how the files should be loaded (e.g. HTML vs raw text)<BR/>
+<CODEMENU>Tools<CODEMENU>Options...<CODEMENU>General<CODEMENU>Confirm conversion at Open</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+when holding down the <KEY ID='Shift'/> key to click on the <CODEMENU>File</CODEMENU> menu, <CODEMENU>Close</CODEMENU> is replaced by <CODEMENU>Close All</CODEMENU> and <CODEMENU>Save</CODEMENU> by <CODEMENU>Save All</CODEMENU>.
+</ITEM>
+<ITEM>
+protect a document from unauthorized reading by a password<BR/>
+<CODEMENU>File<CODEMENU>Save As...<CODEMENU>Tools<CODEMENU>General Options<CODEMENU>Password to open</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+protect a document from unauthorized modification by a password<BR/>
+<CODEMENU>File<CODEMENU>Save As...<CODEMENU>Tools<CODEMENU>General Options<CODEMENU>Password to modify</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+enable/disable macros execution when opening a document<BR/>
+<CODEMENU>Tools<CODEMENU>Macro<CODEMENU>Tools<CODEMENU>Security...<CODEMENU>Security Level</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+<BLIST><TITLE>search files containing a given word</TITLE>
+<ITEM><CODEMENU>File<CODEMENU>Open...<CODEMENU>Tools<CODEMENU>Find...</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>set <CODEMENU>Property</CODEMENU> to <CODEROUTINE>Content</CODEROUTINE></ITEM>
+<ITEM>set <CODEMENU>Condition</CODEMENU> to <CODEROUTINE>include words</CODEROUTINE></ITEM>
+<ITEM>set <CODEMENU>Value</CODEMENU> to the given word</ITEM>
+<ITEM>click on <CODEMENU>Add to List</CODEMENU></ITEM>
+<ITEM>click on <CODEMENU>Find Now</CODEMENU></ITEM>
+<ITEM>the filter remains active while navigating the directories (but the directories are not filtered themselves)</ITEM>
+<ITEM>once in the correct directory, use <MODIFIERKEY ID='Shift'/><KEY ID='right click'/> to select all the files</ITEM>
+<ITEM>click on <CODEMENU>Open</CODEMENU></ITEM>
+</BLIST>
+</ITEM>
+<ITEM>
+when typing a text in Word, instead of cutting 'n pasting in Outlook (which many times garbages the text format), use <CODEMENU>File<CODEMENU>Send to<CODEMENU>Mail Recipient</CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>master document</U></TITLE>
+<ITEM><BLIST><TITLE>Create a master Document (Word 2007, this is similar but buggy with large documents for Word 2003)</TITLE>
+  <ITEM>Display in outline mode</ITEM>
+  <ITEM>Choose the heading levels to display (<CODEMENU>afficher le niveau :</CODEMENU>)</ITEM>
+  <ITEM>Click on the <CODEMENU>Afficher le document</CODEMENU> button</ITEM>
+  <ITEM><BLIST><TITLE>Loop on</TITLE>
+    <ITEM>Select the paragraphs to put in a subdocument</ITEM>
+    <ITEM>Click on the <CODEMENU>cr&#xE9;er un sous-document</CODEMENU> button</ITEM>
+    </BLIST></ITEM>
+  <ITEM>Save</ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>edition</U></TITLE>
+<ITEM>
+insert a horizontal line<BR/>
+<CODEMENU>Format<CODEMENU>Border and Shading<CODEMENU>Horizontal Line</CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+insert an equation<BR/>
+<CODEMENU>Insert<CODEMENU>Object...<CODEMENU>Microsoft Equation 3.0</CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+insert a diagram<BR/>
+<CODEMENU>Insert<CODEMENU>Object...<CODEMENU>Microsoft Word Picture</CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+insert a JavaScript in a document so it will usable in the HTML version
+<NLIST>
+<ITEM>customize the Insert menu by adding "Insert Script", "Show All Scripts" and "Remove All Scripts" from the Tools>Customize>Commands>Tools category</ITEM>
+<ITEM>use Insert Script to add a script, this opens the Development Environment</ITEM>
+<ITEM>find where the script has been added (search for "VBscript")</ITEM>
+<ITEM>change the script language from VBScript to JavaScript (simply by replacing the text in the HTML source) and type the script</ITEM>
+</NLIST>
+</ITEM>
+<ITEM>
+it is possible to copy the same string in several table cells at the same type, you just have to select more than one cell before typing <MODIFIERKEY ID='Ctrl'/><KEY ID='C'/>
+</ITEM>
+<ITEM>
+<NLIST>
+<TITLE>to transfer a shading color (from a table cell to an other one for example):</TITLE>
+<ITEM><CODEMENU>Affichage<CODEMENU>Barres d'outils<CODEMENU>Tableaux et bordures</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>Select the whole table cell</ITEM>
+<ITEM>Select <CODEMENU>Couleur de la trame de fond</CODEMENU> dropdown list then <CODEMENU>Autres couleurs...</CODEMENU></ITEM>
+<ITEM>Click on <CODEMENU>OK</CODEMENU></ITEM>
+<ITEM>Select the whole new cell</ITEM>
+<ITEM>Click on the <CODEMENU>Couleur de la trame de fond</CODEMENU> button to reapply the color.</ITEM>
+</NLIST>
+</ITEM>
+<ITEM>
+it is possible to group/ungroup and to set the layer order of drawing components as in PowerPoint<BR/>
+<CODEMENU>Affichage<CODEMENU>Barres d'outils<CODEMENU>Dessin<CODEMENU>Dessiner<CODEMENU>...</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+configure a text zone to be the continuation of another one<BR/>
+<NLIST>
+<ITEM><CODEMENU>Affichage<CODEMENU>Barres d'outils<CODEMENU>Zone de texte</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>click on the first zone</ITEM>
+<ITEM>click on the link</ITEM>
+<ITEM>click on the second zone</ITEM>
+</NLIST>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>Table</U></TITLE>
+<ITEM>To insert a tab in a table, use <MODIFIERKEY ID='Ctrl'/><KEY ID='Tab'/>.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>formulas</U></TITLE>
+<ITEM>operators
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>+</CODEROUTINE></TERM><DESC>Addition<BR/>Syntax: <CODEROUTINE>{=x+y}</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>-</CODEROUTINE></TERM><DESC>Subtraction<BR/>Syntax: <CODEROUTINE>{=x-y}</CODEROUTINE><BR/>Note: <CODEROUTINE>{=x--y}</CODEROUTINE> is the same as <CODEROUTINE>{=x+y}</CODEROUTINE>. An even number of subtraction signs is equivalent to one addition sign.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>*</CODEROUTINE></TERM><DESC>Multiplication<BR/>Syntax: <CODEROUTINE>{=x*y}</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>/</CODEROUTINE></TERM><DESC>Division<BR/>Syntax: <CODEROUTINE>{=x/y}</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>%</CODEROUTINE></TERM><DESC>Percentage<BR/>Syntax: <CODEROUTINE>{=x%}</CODEROUTINE><BR/><CODEROUTINE>{=25%}</CODEROUTINE> = .25<BR/><CODEROUTINE>{=200*25%</CODEROUTINE>} = 50</DESC></ROW>
+<ROW><TERM><CODEROUTINE>^</CODEROUTINE></TERM><DESC>Powers and roots<BR/>Raise a number to another power or find a root of a number.<BR/>Syntax: <CODEROUTINE>{=x^y}</CODEROUTINE><BR/><CODEROUTINE>{=4^2}</CODEROUTINE> = 16  4 squared<BR/><CODEROUTINE>{=3^3}</CODEROUTINE> = 27  3 Cubed<BR/><CODEROUTINE>{=27^(1/3)}</CODEROUTINE> = 3 Cube root of 27</DESC></ROW>
+<ROW><TERM><CODEROUTINE>=</CODEROUTINE></TERM><DESC>Is equal to</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&lt;</CODEROUTINE></TERM><DESC>Less than</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&lt;=</CODEROUTINE></TERM><DESC>Less than or equal to</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&gt;</CODEROUTINE></TERM><DESC>Greater than</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&gt;=</CODEROUTINE></TERM><DESC>Greater than or equal to</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&lt;&gt;</CODEROUTINE></TERM><DESC>Not equal to</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>operators
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>Bookmarkname [D4]</CODEROUTINE></TERM><DESC>Cell <CODEROUTINE>D4</CODEROUTINE> in table identified by <CODEROUTINE>bookmarkname</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>Bookmarkname [D4:J17]</CODEROUTINE></TERM><DESC>Range of cells identified by <CODEROUTINE>bookmarkname</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>ABOVE</CODEROUTINE><BR/><CODEROUTINE>BELOW</CODEROUTINE><BR/><CODEROUTINE>LEFT</CODEROUTINE><BR/><CODEROUTINE>RIGHT</CODEROUTINE></TERM><DESC>can be used with the table functions (<CODEROUTINE>AVERAGE</CODEROUTINE>, <CODEROUTINE>COUNT</CODEROUTINE>, <CODEROUTINE>MAX</CODEROUTINE>, <CODEROUTINE>MIN</CODEROUTINE>, <CODEROUTINE>PRODUCT</CODEROUTINE>, <CODEROUTINE>SUM</CODEROUTINE>)</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+Click on <CODEMENU>Table<CODEMENU>Formula...</CODEMENU></CODEMENU> to insert a formula in a table
+</ITEM>
+<ITEM>functions
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>ABS(x)</CODEROUTINE></TERM>
+<DESC>Returns the absolute value of a number. The absolute value of a number is the number without its sign.<BR/>
+<CODEROUTINE>{=ABS(3.5)} = 3.5</CODEROUTINE><BR/>
+<CODEROUTINE>{=ABS(-3.5)} = 3.5</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>AND(x,y)</CODEROUTINE></TERM>
+<DESC>Returns "1" if both arguments are true. Returns "0" if both arguments are false. Mostly used with IF statements.<BR/>
+<CODEROUTINE>{=AND(profits&gt;1000, profits&lt;2000)}</CODEROUTINE> = 1 when "profits" has been defined as $1,234. The same formula returns 0 when profits has been defined as $2,234. <BR/>
+<CODEROUTINE>{=IF(AND(profits&gt;1000,profits&lt;2000),13,15)}</CODEROUTINE> = 13 when profits has been defined as $1,234. The same formula returns "15" when profits has been defined as $2,234.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>AVERAGE()</CODEROUTINE></TERM>
+<DESC>Gives the average value of the numbers in the list.<BR/>
+<CODEROUTINE>{=AVERAGE(10, 20, 60)}</CODEROUTINE> = 30<BR/>
+<CODEROUTINE>{=AVERAGE([RnCn],[RnCn])}</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>COUNT()</CODEROUTINE></TERM>
+<DESC>Tells you how many items are in the list. <BR/>
+<CODEROUTINE>{=COUNT(2, 5, 67, 1.38)}</CODEROUTINE> = 4<BR/>
+<CODEROUTINE>{=COUNT([RnCn],[RnCn],[RnCn],[RnCn])}</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>DEFINED(x)</CODEROUTINE></TERM>
+<DESC>Returns "1" (true) if x has been defined, "0" (false) if it has not.<BR/>
+<CODEROUTINE>{=DEFINED(4/0)}</CODEROUTINE> = 0<BR/>
+<CODEROUTINE>{=DEFINED(gross_income)} = 1</CODEROUTINE> if gross_income exists and it evaluates without error.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>FALSE</CODEROUTINE></TERM>
+<DESC>Returns a 1 if true or a 0 if true.<BR/>
+<CODEROUTINE>{=FALSE}</CODEROUTINE> = 0<BR/>
+<CODEROUTINE>{=IF(5=6,TRUE,FALSE)}</CODEROUTINE> = 0</DESC></ROW>
+<ROW><TERM><CODEROUTINE>IF(x,y,z)</CODEROUTINE></TERM>
+<DESC>The result y if the conditional expression x is true, or the result z if the conditional expression is false. Note that y and z is usually 1 and can be either any numberic value or the words "true" or "false".</DESC></ROW>
+<ROW><TERM><CODEROUTINE>INT(x)</CODEROUTINE></TERM>
+<DESC>Rounds x down to the nearest integer. <BR/>
+<CODEROUTINE>{=INT(5.67)}</CODEROUTINE> = 5</DESC></ROW>
+<ROW><TERM><CODEROUTINE>MAX()</CODEROUTINE></TERM>
+<DESC>Returns the largest value in the list. <BR/>
+<CODEROUTINE>{=MAX(3, 4, 5)}</CODEROUTINE> = 5<BR/>
+<CODEROUTINE>{=MAX([RnCn],[RnCn],[RnCn])}</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>MIN()</CODEROUTINE></TERM>
+<DESC>Returns the smallest value in the list. <BR/>
+<CODEROUTINE>{=MIN(3, 4, 5)}</CODEROUTINE> = 3<BR/>
+<CODEROUTINE>{=MIN([RnCn],[RnCn],[RnCn])}</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>MOD(x,y)</CODEROUTINE></TERM>
+<DESC>Returns the remainder (modulus) after x is divided by y. The result has the same sign as x. If the answer is 0, returns "0.0" (without quotation marks).<BR/>
+<CODEROUTINE>{=MOD(4, 2)}</CODEROUTINE> = 0.0<BR/>
+<CODEROUTINE>{=MOD(3, 2)}</CODEROUTINE> = 1<BR/>
+<CODEROUTINE>{=MOD(-3, 2)}</CODEROUTINE> = -1<BR/>
+<CODEROUTINE>{=MOD(3, -2)}</CODEROUTINE> = 1<BR/>
+<CODEROUTINE>{=MOD(-3, -2)}</CODEROUTINE> = -1<BR/>
+<CODEROUTINE>{=MOD(3.5, 2.7)}</CODEROUTINE> = 0.8</DESC></ROW>
+<ROW><TERM><CODEROUTINE>NOT(x)</CODEROUTINE></TERM>
+<DESC>Returns the Boolean opposite of the result. Mostly used with IF formulas. <BR/>
+<CODEROUTINE>{=NOT(1=1)}</CODEROUTINE> = 0<BR/>
+<CODEROUTINE>{=NOT(1=5)}</CODEROUTINE> = 1<BR/>
+If x is defined as 7, <CODEROUTINE>{=NOT(x>10)}</CODEROUTINE> = 1</DESC></ROW>
+<ROW><TERM><CODEROUTINE>OR(x,y)</CODEROUTINE></TERM>
+<DESC>Returns "1" if one or both arguments are true. Returns "0" if both arguments are false. Generally used with IF formulas.<BR/>
+<CODEROUTINE>{=OR(1+2=3, 2=4)}</CODEROUTINE> = 1<BR/>
+<CODEROUTINE>{=OR(1+5=3, 2=4)}</CODEROUTINE> = 0</DESC></ROW>
+<ROW><TERM><CODEROUTINE>PRODUCT()</CODEROUTINE></TERM>
+<DESC>Multiplies all the items in the list. <BR/>
+<CODEROUTINE>{=PRODUCT(5,4,3)}</CODEROUTINE> = 60<BR/>
+<CODEROUTINE>{=PRODUCT(5,4,3,(1/2))}</CODEROUTINE> = 30<BR/>
+<CODEROUTINE>{=PRODUCT([RnCn],[RnCn],[RnCn])}</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>ROUND(x,y)</CODEROUTINE></TERM>
+<DESC>Rounds x to y digits. If y is greater than 0, then x is rounded down to y decimal places.<BR/>
+If y is 0, x is rounded down to the nearest integer.<BR/>
+If y is a negative number, x is rounded down to the left of the decimal point.<BR/>
+<CODEROUTINE>{=ROUND(x,y)}</CODEROUTINE><BR/>
+<CODEROUTINE>{=ROUND(123.456, 2)}</CODEROUTINE> = 123.46<BR/>
+<CODEROUTINE>{=ROUND(123.456, 1)}</CODEROUTINE> = 123.5<BR/>
+<CODEROUTINE>{=ROUND(123.456, 0)}</CODEROUTINE> = 123<BR/>
+<CODEROUTINE>{=ROUND(123.456, -0)}</CODEROUTINE> = 123<BR/>
+<CODEROUTINE>{=ROUND(123.456, -1)}</CODEROUTINE> = 120<BR/>
+<CODEROUTINE>{=ROUND(123.456, -2)}</CODEROUTINE> = 100<BR/>
+<CODEROUTINE>{=ROUND(156.789, -2)}</CODEROUTINE> = 200<BR/>
+y is zero. Rounds x to the nearest integer.<BR/>
+<CODEROUTINE>{=ROUND(123.456, 0)}</CODEROUTINE> = 123<BR/>
+y is positive. Rounds to y decimal places.<BR/>
+<CODEROUTINE>{=ROUND(123.456, 2)}</CODEROUTINE> = 123.46<BR/>
+<CODEROUTINE>{=ROUND(123.456, 1)}</CODEROUTINE> = 123.5<BR/>
+y is negative. Rounds x to that number of places to the left of the decimal. Y must not be greater than 1 minus the number of digits in x. "-1" rounds to the nearest tens place, "-2" rounds to the nearest hundreds place, "-3" rounds to the nearest thousands place. <BR/>
+<CODEROUTINE>{=ROUND(123.456, -0)}</CODEROUTINE> = 123<BR/>
+<CODEROUTINE>{=ROUND(123.456, -1)}</CODEROUTINE> = 120<BR/>
+<CODEROUTINE>{=ROUND(123.456, -2)}</CODEROUTINE> = 100<BR/>
+<CODEROUTINE>{=ROUND(156.789, -2)}</CODEROUTINE> = 200</DESC></ROW>
+<ROW><TERM><CODEROUTINE>SIGN(x)</CODEROUTINE></TERM>
+<DESC>Determines whether a number is positive (returns 1) or negative (returns -1) or zero (returns 0). Mostly used with the IF field. <BR/>
+<CODEROUTINE>{=SIGN(-25)}</CODEROUTINE> = -1<BR/>
+<CODEROUTINE>{=SIGN(0)}</CODEROUTINE> = 0<BR/>
+<CODEROUTINE>{=SIGN(456)}</CODEROUTINE> = 1</DESC></ROW>
+<ROW><TERM><CODEROUTINE>SUM()</CODEROUTINE></TERM>
+<DESC>Adds the numbers in the list.<BR/>
+<CODEROUTINE>{=SUM(5, 13, 2, 4, 6)}</CODEROUTINE> = 30<BR/>
+<CODEROUTINE>{=SUM(5, 13, -2, 4, -6)}</CODEROUTINE> = 14<BR/>
+<CODEROUTINE>{=SUM([RnCn],[RnCn],[RnCn])}</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>TRUE</CODEROUTINE></TERM>
+<DESC>Returns a 1 if true or a 0 if false. <BR/>
+<CODEROUTINE>{=TRUE} = 1</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>table of content / index</U></TITLE>
+<ITEM>
+<BLIST><TITLE>When updating a document typed in a French version of Word where the headings have been defined as <CODEROUTINE>TITRE1</CODEROUTINE>, <CODEROUTINE>TITRE2</CODEROUTINE>, <CODEROUTINE>TITRE3</CODEROUTINE>... in an English version of Word, the Content Table will be lost. To regenerate it, perform the following:</TITLE>
+<ITEM><CODEMENU>Insert<CODEMENU>Index and tables...<CODEMENU>Table of Contents<CODEMENU>Options</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>In the <CODEMENU>Styles</CODEMENU> section, set the header levels 1, 2, 3,... in front of the right styles (i.e. <CODEROUTINE>TITRE1</CODEROUTINE>, <CODEROUTINE>TITRE2</CODEROUTINE>, <CODEROUTINE>TITRE3</CODEROUTINE>...).</ITEM>
+</BLIST>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>find/replace</U></TITLE>
+<ITEM>
+it is possible to use the format shortcut (<MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='B'/>...) in the Find/Replace window
+</ITEM>
+<ITEM>
+the following codes can be used to find/replace
+<DEFINITIONTABLE>
+<ROW><TERM>^p</TERM><DESC>end of line (aka paragraph mark)</DESC></ROW>
+<ROW><TERM>^n</TERM><DESC>column break</DESC></ROW>
+<ROW><TERM>^l</TERM><DESC>manual line break</DESC></ROW>
+<ROW><TERM>^m</TERM><DESC>manual page break</DESC></ROW>
+<ROW><TERM>^s</TERM><DESC>section break</DESC></ROW>
+<ROW><TERM>^a</TERM><DESC>comment mark</DESC></ROW>
+<ROW><TERM>^e</TERM><DESC>endnote mark</DESC></ROW>
+<ROW><TERM>^f</TERM><DESC>footnote mark</DESC></ROW>
+<ROW><TERM>^d</TERM><DESC>field</DESC></ROW>
+<ROW><TERM>^g</TERM><DESC>graphic</DESC></ROW>
+<ROW><TERM>^^</TERM><DESC>caret</DESC></ROW>
+<ROW><TERM>^t</TERM><DESC>tab</DESC></ROW>
+<ROW><TERM>^w</TERM><DESC>white space</DESC></ROW>
+<ROW><TERM>^+</TERM><DESC>en dash</DESC></ROW>
+<ROW><TERM>^=</TERM><DESC>em dash</DESC></ROW>
+<ROW><TERM>^~</TERM><DESC>non-breaking hyphen</DESC></ROW>
+<ROW><TERM>^s</TERM><DESC>non-breaking space</DESC></ROW>
+<ROW><TERM>^-</TERM><DESC>optional hyphen</DESC></ROW>
+<ROW><TERM>^?</TERM><DESC>any character</DESC></ROW>
+<ROW><TERM>^#</TERM><DESC>any digit</DESC></ROW>
+<ROW><TERM>^?</TERM><DESC>any letter</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>style</U></TITLE>
+<ITEM>
+reset the default styles to a correct value
+<BLIST>
+<ITEM><CODEMENU>Format<CODEMENU>Style...</CODEMENU></CODEMENU></ITEM>
+<ITEM>select the style</ITEM>
+<ITEM><CODEMENU>Modify...</CODEMENU></ITEM>
+<ITEM><CODEMENU>Format<CODEMENU>Font</CODEMENU></CODEMENU> and reset the font size</ITEM>
+<ITEM><CODEMENU>Format<CODEMENU>Paragraph</CODEMENU></CODEMENU> and reset the Left Indentation to 0</ITEM>
+<ITEM><CODEMENU>Format<CODEMENU>Tabs</CODEMENU></CODEMENU> and Clear All</ITEM>
+<ITEM>click OK on the Modify Style window</ITEM>
+<ITEM>click Cancel on the Style window</ITEM>
+</BLIST>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>ruler</U></TITLE>
+<ITEM>
+When working with the ruler, press the Alt key to display the distances.
+</ITEM>
+<ITEM>
+The upper triangle defines the First Line Indent.<BR/>
+The lower triangle defines the Hanging Indent (where the lines other than the first ones start). <BR/>
+The base rectangle is used to change the First Line Indent and the Hanging Indent at the same time.
+</ITEM>
+<ITEM>
+The left/right/bottom/top marges can be also changed with the ruler.
+</ITEM>
+<ITEM>
+There are four types of tab stops:
+<BLIST>
+<ITEM>limit the right side of the text</ITEM>
+<ITEM>the text is centered at the tab</ITEM>
+<ITEM>right text extends to the left from the tab stop until the tab's space is filled and then the text extends to the right</ITEM>
+<ITEM>the decimal text before the decimal point extends to the left and text after the decimal point extends to the right</ITEM>
+</BLIST>
+</ITEM>
+<ITEM>
+To create a tab stop, just click on the ruler.<BR/>
+To change the type of tab stop, click on the current tab stop type (at the left of the horizontal ruler).
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>statistics</U></TITLE>
+<ITEM>
+display the statistics toolbar<BR/>
+<CODEMENU>Affichage<CODEMENU>Barres d'outil<CODEMENU>Statistisques</CODEMENU></CODEMENU></CODEMENU><BR/>
+the bar allows to select one metric (word, characters - excluding spaces -, characters - including spaces -, pages, and paragraphs) and a button to refresh it.
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>change tracking</U></TITLE>
+<ITEM>
+compare two documents<BR/>
+<CODEMENU>Tools menu<CODEMENU>Track Changes<CODEMENU>Compare Documents</CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>printing</U></TITLE>
+<ITEM>
+number the lines on the printed document<BR/>
+<CODEMENU>File<CODEMENU>Page Setup<CODEMENU>Layout<CODEMENU>Line Numbers (select the right "Apply to:")</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>customization</U></TITLE>
+<ITEM>
+enable/disable Tab and Backspace to indent/outdent a paragraph:<BR/>
+Word 2000: <CODEMENU>Tools<CODEMENU>Options... <CODEMENU>Edit<CODEMENU>Tabs and backspace set left indent</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
+Word 2002: <CODEMENU>Outils<CODEMENU>Options de correction Automatique<CODEMENU>Lors de la frappe<CODEMENU>D&#xE9;finir les retraits &#xE0; gauche et de 1re ligne &#xE0; l'aide des touches TAB. et RET. ARR.</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+<BLIST><TITLE>display the list of shortcut keys associated to commands (shortcuts associated to macros are not listed)</TITLE>
+<ITEM><CODEMENU>Tools<CODEMENU>Macro<CODEMENU>Macros...</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>in the Macros in box, click Word commands</ITEM>
+<ITEM>in the Macro name box, click ListCommands and click Run</ITEM>
+<ITEM>in the List Commands dialog box, click Current menu and keyboard settings and click OK</ITEM>
+</BLIST>
+</ITEM>
+<ITEM>
+To disable the dynamic shortenings of the command dropdowns, select <CODEMENU>Outils<CODEMENU>Personnaliser...<CODEMENU>Options<CODEMENU>Toujours afficher les menus dans leur int&#xE9;gralit&#xE9;</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+To display the shortcuts in the tooltips, select <CODEMENU>Outils<CODEMENU>Personnaliser...<CODEMENU>Options<CODEMENU>Afficher les touches de raccourci dans les Info-bulles</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>Unicode</U></TITLE>
+<ITEM><BLIST><TITLE>use one of the following fonts:</TITLE>
+<ITEM>Arial Unicode MS</ITEM>
+<ITEM>Lucide Sans Unicode</ITEM></BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U>strange</U></TITLE>
+<ITEM>
+insert 3 paragraphs of 5 sentences "Servez &#xE0; ce monsieur une bi&#xE8;re et des kiwis".<BR/>
+type "=rand(3,5)" and press <KEY ID='Return'/>.
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/office.html#word</A><L>en</L><F>HTML</F></X>
+</PAGE>
+
+

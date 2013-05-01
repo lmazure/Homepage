@@ -1,0 +1,316 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>ClearCase scripts</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+<b><u>cleanvob:</u></b> delete the temporary files
+<br>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#!/bin/csh</tt>
+      <p><tt>find . \( -name 'core' -o -name '*.contrib' -o -name
+'*.contrib.[0-9]'
+-o -name '*.contrib.[0-9][0-9]' -o -name 'findmerge.*' -o&nbsp; -name
+'build_log_*' \) -print -exec rm
+{} \;</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><b><u>xd:</u></b> quick diff
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#!/bin/sh</tt>
+      <p><tt>if [ $# -eq 1 ]; then</tt> <br>
+      <tt>&nbsp; cleartool diff -graphical -pred -tiny "$1" &amp;</tt> <br>
+      <tt>&nbsp;else</tt> <br>
+      <tt>&nbsp; cleartool diff -graphical -tiny "$@" &amp;</tt> <br>
+      <tt>&nbsp;fi</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><b><u>cl:</u></b> list the checked out elements
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span
+ style="font-family: monospace;">#!/bin/csh</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">if ( $#argv == 0 ) then</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; set dir=.</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">else</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; set dir=$1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">endif</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">(cleartool lsco -me -short
+-cview -d $dir ; cleartool lsco -me -short -cview -recur $dir ) | sed
+'sT^\./TT'</span><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><b><u><span style="font-weight: bold;"><span
+ style="text-decoration: underline;"></span></span>mymerge:</u></b>
+integrate on the main branch and label the
+new
+version (the file must be currently checked out)
+<table style="font-family: monospace;" bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td>#!/bin/csh<br>
+      <br>
+set label=$1<br>
+shift<br>
+set comment="$1"<br>
+shift<br>
+      <br>
+ct describe lbtype:$label &gt;&amp; /dev/null<br>
+if ($status) then<br>
+&nbsp;&nbsp;&nbsp; echo "----&gt; cannot find label $label"<br>
+&nbsp;&nbsp;&nbsp; exit 1<br>
+endif<br>
+set lock=`ct describe -fmt "%[locked]p" lbtype:$label`<br>
+if ($lock != "unlocked") then<br>
+&nbsp;&nbsp;&nbsp; echo "----&gt; label $label is locked"<br>
+&nbsp;&nbsp;&nbsp; exit 1<br>
+endif<br>
+      <br>
+      <br>
+while ( $#argv &gt; 0 )<br>
+&nbsp;&nbsp; set file=$1<br>
+&nbsp;&nbsp; if (! -e $file) then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "$file does not exist"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit 1<br>
+&nbsp;&nbsp; endif<br>
+&nbsp;&nbsp; set branch=`ct ls -d -long $file | sed
+'s+^.*@@\(.*\)/CHECKEDOUT from /main/.*+\1+'`<br>
+&nbsp;&nbsp; set integbranch=`dirname $branch`<br>
+&nbsp;&nbsp; set workbranch=`basename $branch`<br>
+&nbsp;&nbsp; ct describe brtype:$workbranch &gt;&amp; /dev/null<br>
+&nbsp;&nbsp; if ($status) then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "cannot find the branch where $1 is
+checkedout"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; exit 1<br>
+&nbsp;&nbsp; endif<br>
+&nbsp;&nbsp; ct ci -ident -com "$comment" $file<br>
+&nbsp;&nbsp; if ($status) exit 1<br>
+&nbsp;&nbsp; diff $file@@$integbranch/$workbranch/LATEST
+$file@@$integbranch/LATEST &gt;&amp; /dev/null<br>
+&nbsp;&nbsp; if ( $status == "0" ) then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "----&gt; $file is the same as on
+the $integbranch branch"<br>
+&nbsp;&nbsp; else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ct co -com "$comment"
+$file@@$integbranch/LATEST<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($status) exit 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ct merge -to $file -version
+$integbranch/$workbranch/LATEST<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($status) exit 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ct mklabel -replace $label $file<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($status) exit 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ct ci -nc $file<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($status) exit 1<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ct lsvtree -graph $file<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ($status) exit 1<br>
+&nbsp;&nbsp; endif<br>
+&nbsp;&nbsp; shift<br>
+&nbsp; end</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><b><u>desintegrate:</u></b> unintegrate an element version<br>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>!/bin/csh<br>
+      <br>
+set file=$1<br>
+set versionID=$2<br>
+      <br>
+set version=`ct describe -fmt "%Vn" $1@@/$versionID`<br>
+      <br>
+foreach label ( `ct describe -fmt "%n" -alabel -all -pname clients |
+tail +2` )<br>
+&nbsp;&nbsp; ct rmlabel $label $1@@$version<br>
+end<br>
+      <br>
+foreach hlink ( `ct describe -fmt "%n" -ihlink -all -pname $1@@$version
+| sed -n 's/.*\(Merge@[0-9]\{1,\}\).*/\1/p' ` )<br>
+&nbsp;&nbsp; ct rmhlink $hlink<br>
+end<br>
+      <br>
+ct rmver -force $1@@$versio</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><b><u>vs:</u></b> summarize the integrations of the last days
+<table style="background-color: rgb(204, 204, 204);">
+  <tbody>
+    <tr>
+      <td><tt>#!/usr/bin/perl -w<br>
+#use strict;<br>
+      <br>
+my %full_dump;<br>
+my $max_old = $ARGV[0];<br>
+my $file = $ARGV[1];<br>
+      <br>
+sub stat_file {<br>
+&nbsp;&nbsp;&nbsp; my $file = shift;<br>
+&nbsp;&nbsp;&nbsp; return unless ( -f "$file@@/main/LATEST");<br>
+&nbsp;&nbsp;&nbsp; my ($current_year,$current_day) = (gmtime())[5,7];<br>
+&nbsp;&nbsp;&nbsp; open(CCL,"/usr/atria/bin/cleartool describe -fmt
+'%Ln' $file@@/main/LATEST |") or die("cannot get last version ($!)");<br>
+&nbsp;&nbsp;&nbsp; my $last_version = &lt;CCL&gt; || "0" ;<br>
+&nbsp;&nbsp;&nbsp; close(CCL);<br>
+&nbsp;&nbsp;&nbsp; my $i = $last_version;<br>
+&nbsp;&nbsp;&nbsp; while ( $i &gt; 1 ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my $f = $file.'@@/main/'.$i;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my $date = (stat($f))[10];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my
+($creation_year,$creation_day) = (gmtime($date))[5,7];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my $d = gmtime($date);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my $diff = $current_day -
+$creation_day + 365 * ( $current_year - $creation_year );<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; last if ( $diff &gt;
+$max_old );<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+open(CCC,"/usr/atria/bin/cleartool describe -fmt '%Nc' $f |") or
+die("cannot get comment ($!)");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my $comment = &lt;CCC&gt; ||
+"";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; close(CCC);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+open(CCU,"/usr/atria/bin/cleartool describe -fmt '%u' $f |") or
+die("cannot get user ($!)");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my $author = &lt;CCU&gt; or
+die("cannot read user for file $f ($!)");<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; close(CCU);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (
+defined($full_dump{$diff}{"$author: $comment"})) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$full_dump{$diff}{"$author: $comment"} .= "\n$f - $d"<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$full_dump{$diff}{"$author: $comment"} = "$f - $d";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $i--;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+}<br>
+      <br>
+sub scan_dir {<br>
+&nbsp;&nbsp;&nbsp; my $file = shift;<br>
+&nbsp;&nbsp;&nbsp; if ( -d $file ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; opendir(DIR,$file);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my @list = readdir(DIR);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; closedir(DIR);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach( @list ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+scan_dir("$file/$_") if ( $_ ne "." &amp;&amp; $_ ne ".." );<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp; elsif ( -f $file ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; stat_file($file);<br>
+&nbsp;&nbsp;&nbsp; } else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; die("$file is not a
+directory or a file");<br>
+&nbsp;&nbsp;&nbsp; }<br>
+}<br>
+      <br>
+scan_dir($file);<br>
+      <br>
+for my $v ( sort { $b &lt;=&gt; $a } values %full_dump ) {<br>
+&nbsp;&nbsp;&nbsp; print "\n--------------------------\n";<br>
+&nbsp;&nbsp;&nbsp; while ( my ( $l, $w ) = each (%$v) ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "$l\n$w\n\n";<br>
+&nbsp;&nbsp;&nbsp; }<br>
+}</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><span style="text-decoration: underline; font-weight: bold;">safecheck:</span><br>
+check that the safety attribute and the safety comment are consistent<br>
+</p>
+<table
+ style="width: 100%; text-align: left; background-color: rgb(204, 204, 204);"
+ border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <pre wrap=""><code>#/bin/csh<br><br>cleartool find . -element 'attype(AW4.2_SAFETY) &amp;&amp; version(</code><tt>/main/LATEST</tt><code>)' -exec 'echo $CLEARCASE_PN' | sort &gt; /tmp/l_attribute<br>cleartool find . -type f -exec 'grep -l "SAFETY WARNING" $CLEARCASE_PN' | sort &gt; /tmp/l_grep<br>cleartool diff -graphical -tiny /tmp/l_attribute /tmp/l_grep<br>/bin/rm </code><code>/tmp/l_attribute /tmp/l_grep</code></pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+</p>
+<p><b><u>Perl extracts:</u></b>
+</p>
+<ul>
+  <li>looping on the versions of a file</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>while ( -f $file.'@@/main/'.$i ) {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; my $f = $file.'@@/main/'.$i;</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; $i++;</tt> <br>
+        <tt>}</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  <li>getting the author of a version</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>open(CCC,"/usr/atria/bin/cleartool describe -fmt '%Nc'
+$f |") or
+die("cannot get comment ($!)");</tt> <br>
+        <tt>my $comment = &lt;CCC&gt; || "";</tt> <br>
+        <tt>close(CCC);</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  <li>getting the comment of a version</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>open(CCU,"/usr/atria/bin/cleartool describe -fmt '%u'
+$f |") or
+die("cannot get user ($!)");</tt> <br>
+        <tt>my $author = &lt;CCU&gt; or die("cannot read user ($!)");</tt>
+        <br>
+        <tt>close(CCU);</tt></td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: August 30</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2005 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

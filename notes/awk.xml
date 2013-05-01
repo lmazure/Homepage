@@ -1,0 +1,111 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>awk</TITLE>
+<PATH>notes/awk.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<CONTENT>
+
+<BLIST>
+
+<ITEM><CODEROUTINE>next</CODEROUTINE><BR/>
+stop to process the current record (no more match will be tried) and loop on the next one</ITEM>
+
+<ITEM><CODEROUTINE>exit</CODEROUTINE><BR/>
+outside of the <CODEROUTINE>END</CODEROUTINE> clause, go to the end clause<BR/>
+in the <CODEROUTINE>END</CODEROUTINE> clause, exit of the script<BR/>
+ (to really exit: outside the <CODEROUTINE>END</CODEROUTINE> clause, record a flag and call <CODEROUTINE>exit</CODEROUTINE>; at the beginning of the <CODEROUTINE>END</CODEROUTINE> clause, test the flag and call <CODEROUTINE>exit</CODEROUTINE> if it is set)</ITEM>
+
+<ITEM><U>environment variables:</U><BR/>
+the shell variable <CODEROUTINE>$HOME</CODEROUTINE> can be retrieved with the syntax <CODEROUTINE>ENVIRON["HOME"]</CODEROUTINE>.</ITEM>
+
+<ITEM><U>numbers</U><BR/>
+translate a hexadecimal string into an integer
+<CODESAMPLE>value = strtonum("0x"str);</CODESAMPLE></ITEM>
+
+<ITEM><BLIST><TITLE><U>examples:</U></TITLE>
+
+<ITEM>count the number of lines in C files
+<CODESAMPLE><PROMPT/>find . -name '*.c' | xargs -n 1 wc -l | awk ' { sum += $1 } \<BR/>
+<TAB/>END { print sum }'</CODESAMPLE></ITEM>
+
+<ITEM>count the number of word instances
+<CODESAMPLE><PROMPT/>cat /tmp/spr | awk ' \<BR/>
+<TAB/>{ a[$1]++; } \<BR/>
+<TAB/>END { for ( v in a ) { print v, a[v]; }; }'</CODESAMPLE></ITEM>
+
+<ITEM>delete the oldest files in order to reach a max total size
+<CODESAMPLE><PROMPT/>find . -type f -exec stat -c '%Z %s %n' {} \; | \<BR/>
+<TAB/>sort -nr | \<BR/>
+<TAB/>awk '{ totalSize += $2 ; if ( totalSize &gt; 300000000 ) system("/bin/rm "$3); }'</CODESAMPLE></ITEM>
+
+<ITEM>reformating DDTS dates
+<CODESAMPLE>#!/bin/sh<BR/>
+output_file=$1<BR/>
+tmp_file=$1.tmp<BR/>
+PATH=${PATH}:/ddts/bin<BR/>
+export PATH<BR/>
+echo "*** SPR to resolve ***" &gt; $output_file<BR/>
+findbug -p AW4.2 -p AiM_pp_1.0 "( status == A || status == O ) &amp;&amp; enclosure_name == @track" | \<BR/>
+<TAB/>bugval -s "%s %s %s\n" engineer identifier headline | \<BR/>
+<TAB/>sort -k1 | \<BR/>
+<TAB/>tee -a $output_file | \<BR/>
+<TAB/>awk '{print $1}' &gt; $tmp_file<BR/>
+echo &gt;&gt; $output_file<BR/>
+echo "*** SPR to verify ***" &gt;&gt; $output_file<BR/>
+findbug -p AW4.2 -p AiM_pp_1.0 "status == R"  | \<BR/>
+<TAB/>bugval -s "%s %s %s %s\n" ass_to_verify resolved_on identifier headline | \<BR/>
+<TAB/>sort -k1,2 | \<BR/>
+<TAB/>nawk 'function form(z) \<BR/>
+<TAB/>{ \<BR/>
+<TAB/><TAB/>y = substr(z,1,2); \<BR/>
+<TAB/><TAB/>m = substr(z,3,2); \<BR/>
+<TAB/><TAB/>d = substr(z,5,2); \<BR/>
+<TAB/><TAB/>if ( m == "01" ) mm = "Jan"; \<BR/>
+<TAB/><TAB/>else if ( m == "02" ) mm = "Feb"; \<BR/>
+<TAB/><TAB/>else if ( m == "03" ) mm = "Mar"; \<BR/>
+<TAB/><TAB/>else if ( m == "04" ) mm = "Apr"; \<BR/>
+<TAB/><TAB/>else if ( m == "05" ) mm = "May"; \<BR/>
+<TAB/><TAB/>else if ( m == "06" ) mm = "Jun"; \<BR/>
+<TAB/><TAB/>else if ( m == "07" ) mm = "Jul"; \<BR/>
+<TAB/><TAB/>else if ( m == "08" ) mm = "Aug"; \<BR/>
+<TAB/><TAB/>else if ( m == "09" ) mm = "Sep"; \<BR/>
+<TAB/><TAB/>else if ( m == "10" ) mm = "Oct"; \<BR/>
+<TAB/><TAB/>else if ( m == "11" ) mm = "Nov"; \<BR/>
+<TAB/><TAB/>else if ( m == "12" ) mm = "Dec"; \<BR/>
+<TAB/><TAB/>else mm = "???";\<BR/>
+<TAB/><TAB/>return d mm y; \<BR/>
+<TAB/>} \<BR/>
+<TAB/>{ printf "%s %s", $1, form($2); \<BR/>
+<TAB/><TAB/>for (i = 3; i &lt;= NF; i = i + 1) printf " %s", $i; \<BR/>
+<TAB/><TAB/>printf "\n" }' | \<BR/>
+<TAB/>tee -a $output_file | \<BR/>
+<TAB/>awk '{print $1}' &gt;&gt; $tmp_file<BR/>
+echo &gt;&gt; $output_file<BR/>
+echo "*** mailing list ***" &gt;&gt; $output_file<BR/>
+sort -u $tmp_file &gt;&gt; $output_file<BR/>
+rm $tmp_file</CODESAMPLE></ITEM>
+
+<ITEM>computing the memory used by a process on Linux<BR/>
+<CODESAMPLE><PROMPT/>cat /proc/pid/maps | awk -f toto</CODESAMPLE>
+where toto contains:
+<CODESAMPLE>BEGIN { sum = 0 }<BR/>
+{ start=substr($1,0,8);<BR/>
+<TAB/>end=substr($1,10,8);<BR/>
+<TAB/>_end = strtonum("0x"end);<BR/>
+<TAB/>_start = strtonum("0x"start);<BR/>
+<TAB/>_diff = _end - _start;<BR/>
+<TAB/>#print _start," | ",_end," | ",_diff;<BR/>
+<TAB/>sum = sum + _diff; }<BR/>
+END  { print "==&gt; ",sum;}</CODESAMPLE>
+</ITEM>
+
+</BLIST></ITEM>
+
+</BLIST>
+
+</CONTENT>
+
+<X><T>links</T><A>../links/unix.html#awk</A><L>en</L><F>HTML</F></X>
+
+</PAGE>

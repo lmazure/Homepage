@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Perl - file handling</TITLE>
+<PATH>notes/perlfile.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>glob</U></B></TITLE>
+<ITEM>list the HTML files in a directory
+<CODESAMPLE>
+my $datadirectory = "C:/windows/desktop/tempo/html_data";<BR/>
+my $file; <BR/>
+while ( $file = &lt;$datadirectory/*.htlm&gt; ) {<BR/>
+<TAB/>print "current file: $file\n";<BR/>
+}
+</CODESAMPLE>
+</ITEM>
+<ITEM>another syntax
+<CODESAMPLE>
+foreach my $f ( glob( $dirsource."/*.jpeg" ) ) {<BR/>
+<TAB/>copy($f,$dirtarget."/".basename($f));<BR/>
+}
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>file name parsing</U></B></TITLE>
+<ITEM>get the directory and base names of a file
+<CODESAMPLE>
+use File::Basename;<BR/>
+<BR/>
+$fullname = "/usr/local/src/perl-5.6.1.tar.gz";<BR/>
+<BR/>
+$file = basename($fullname); <BR/>
+# file="perl-5.6.1.tar.gz"<BR/>
+<BR/>
+$dir = dirname($fullname); <BR/>
+# dir="/usr/local/src"
+</CODESAMPLE>
+</ITEM>
+<ITEM>split the name of a file
+<CODESAMPLE>
+my($filename, $directories, $suffix) = fileparse($path);<BR/>
+my($filename, $directories, $suffix) = fileparse($path, @suffixes); <BR/>
+my $filename = fileparse($path, @suffixes);
+</CODESAMPLE>
+<CODEROUTINE>@suffixes</CODEROUTINE> is an optional pattern (either a string or a <CODEROUTINE>qr//</CODEROUTINE>) matched against the end of <CODEROUTINE>$filename</CODEROUTINE>. The matching portion defines <CODEROUTINE>$suffix</CODEROUTINE>.
+we always have <CODEROUTINE>$directories . $filename . $suffix</CODEROUTINE> which is equal to the full name of the file
+<CODESAMPLE>
+use File::Basename;<BR/>
+<BR/>
+$fullname = "/usr/local/src/perl-5.6.1.tar.gz";<BR/>
+<BR/>
+($file,$dir,$ext) = fileparse($fullname, qr/\..*/);<BR/>
+# dir="/usr/local/src/" file="perl-5" ext=".6.1.tar.gz"<BR/>
+<BR/>
+($file,$dir,$ext) = fileparse($fullname, qr/\.[^.]*/);<BR/>
+# dir="/usr/local/src/" file="perl-5.6.1.tar" ext=".gz"<BR/>
+<BR/>
+($file,$dir,$ext) = fileparse($fullname, qr/\.\D.*/); <BR/>
+# dir="/usr/local/src/" file="perl-5.6.1" ext=".tar.gz"<BR/>
+<BR/>
+($file,$dir,$bak) = fileparse("/tmp/file.bak", qr/~+$/, qr/\.(bak|orig|save)/) <BR/>
+# dir="/tmp/" file="file" ext=".bak"<BR/>
+<BR/>
+($file,$dir,$bak) = fileparse("/tmp/file~", qr/~+$/, qr/\.(bak|orig|save)/) <BR/>
+# dir="/tmp/" file="file" ext="~"
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/perl.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

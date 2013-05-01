@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>defining integer types of given sizes</TITLE>
+<PATH>notes/uint32.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+If the compiler is not C99 compliant:
+<CODESAMPLE>
+#include &lt;limits.h&gt;<BR/>
+<BR/>
+#if ULONG_MAX == 0xFFFFFFFF<BR/>
+typedef unsigned long uint32_t; <BR/>
+typedef long int32_t; <BR/>
+#elif UINT_MAX == 0xFFFFFFFF<BR/>
+typedef unsigned int uint32_t; <BR/>
+typedef int int32_t; <BR/>
+#elif USHRT_MAX == 0xFFFFFFFF<BR/>
+typedef unsigned short uint32_t; <BR/>
+typedef short int32_t; <BR/>
+#else /* ULONG_MAX, UINT_MAX, USHRT_MAX = 0xFFFFFFFF */<BR/>
+#error INTERNAL ERROR : Cannot find a 32-bit integral type<BR/>
+#endif /* ULONG_MAX, UINT_MAX, USHRT_MAX = 0xFFFFFFFF */<BR/>
+<BR/>
+#if USHRT_MAX == 0xFFFF<BR/>
+typedef unsigned short uint16_t; <BR/>
+typedef short int16_t; <BR/>
+#elif UINT_MAX == 0xFFFF<BR/>
+typedef unsigned int uint16_t; <BR/>
+typedef int int16_t; <BR/>
+#elif ULONG_MAX == 0xFFFF<BR/>
+typedef unsigned long uint16_t; <BR/>
+typedef long int16_t; <BR/>
+#else /* ULONG_MAX, UINT_MAX, USHRT_MAX = 0xFFFF */<BR/>
+#error INTERNAL ERROR : Cannot find a 16-bit integral type<BR/>
+#endif /* ULONG_MAX, UINT_MAX, USHRT_MAX = 0xFFFF */</CODESAMPLE>
+
+</CONTENT>
+
+</PAGE>

@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Word macro samples</TITLE>
+<PATH>notes/wordvbsample.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+suppress all duplicated paragraphs (to be used, for example, for a sorted extraction of identifiers)
+<CODESAMPLE>
+Sub suppressDuplicates()<BR/>
+<TAB/>Dim par As Paragraph<BR/>
+<TAB/>Dim str1, str2 As String<BR/>
+<BR/>
+<TAB/>str1 = ""<BR/>
+<TAB/>For Each par In ActiveDocument.Paragraphs<BR/>
+<TAB/><TAB/>str2 = par.range.text<BR/>
+<TAB/><TAB/>If (str1 = str2) Then<BR/>
+<TAB/><TAB/><TAB/>par.range.text = ""<BR/>
+<TAB/><TAB/>Else<BR/>
+<TAB/><TAB/><TAB/>str1 = str2<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/>Next par<BR/>
+End Sub
+</CODESAMPLE>
+
+<BR/>
+
+extract all the occurrences of "[...]" and put them into a new document
+<CODESAMPLE>
+Sub extract()<BR/>
+<TAB/>Dim actDoc, newDoc As Document<BR/>
+<TAB/>Set actDoc = ActiveDocument<BR/>
+<TAB/>Set newDoc = Documents.Add<BR/>
+<BR/>
+<TAB/>With actDoc.Content.Find<BR/>
+<TAB/><TAB/>.ClearFormatting<BR/>
+<TAB/><TAB/>.text = "\[*\]"<BR/>
+<TAB/><TAB/>.Format = False<BR/>
+<TAB/><TAB/>.MatchCase = False<BR/>
+<TAB/><TAB/>.MatchWholeWord = False<BR/>
+<TAB/><TAB/>.MatchKashida = False<BR/>
+<TAB/><TAB/>.MatchDiacritics = False<BR/>
+<TAB/><TAB/>.MatchAlefHamza = False<BR/>
+<TAB/><TAB/>.MatchControl = False<BR/>
+<TAB/><TAB/>.MatchAllWordForms = False<BR/>
+<TAB/><TAB/>.MatchSoundsLike = False<BR/>
+<TAB/><TAB/>.MatchWildcards = True<BR/>
+<TAB/><TAB/>.Execute<BR/>
+<TAB/><TAB/>Do While .Found = True<BR/>
+<TAB/><TAB/><TAB/>Dim str As String<BR/>
+<TAB/><TAB/><TAB/>str = actDoc.range(.Parent.Start, .Parent.End).text<BR/>
+<TAB/><TAB/><TAB/>newDoc.Content.InsertAfter (str) <BR/>
+<TAB/><TAB/><TAB/>newDoc.Content.InsertParagraphAfter<BR/>
+<TAB/><TAB/><TAB/>.Parent.Start = .Parent.End<BR/>
+<TAB/><TAB/><TAB/>.Execute<BR/>
+<TAB/><TAB/>Loop<BR/>
+<TAB/>End With<BR/>
+End Sub
+</CODESAMPLE>
+
+<BR/>
+
+select all the texts of style <CODEROUTINE>foobar</CODEROUTINE>
+<CODESAMPLE>
+Selection.Find.ClearFormatting<BR/>
+Selection.Find.Style = ActiveDocument.Styles("foobar")<BR/>
+With Selection.Find<BR/>
+<TAB/>.text = ""<BR/>
+<TAB/>.Replacement.text = ""<BR/>
+<TAB/>.Forward = True<BR/>
+<TAB/>.Wrap = wdFindContinue<BR/>
+<TAB/>.Format = True<BR/>
+<TAB/>.MatchCase = False<BR/>
+<TAB/>.MatchWholeWord = False<BR/>
+<TAB/>.MatchWildcards = False<BR/>
+<TAB/>.MatchSoundsLike = False<BR/>
+<TAB/>.MatchAllWordForms = False<BR/>
+End With<BR/>
+Selection.Find.Execute<BR/>
+WordBasic.SelectSimilarFormatting
+</CODESAMPLE>
+
+<BR/>
+
+retrieve the reference of a document in the headers
+<CODESAMPLE>
+Dim sect As Section<BR/>
+Dim n As Integer<BR/>
+Dim str As String<BR/>
+...<BR/>
+Documents.Open FileName:=file1.Path, ReadOnly:=True<BR/>
+Set actDoc = ActiveDocument<BR/>
+For Each sect In actDoc.Sections<BR/>
+<TAB/>If (sect.Headers(wdHeaderFooterPrimary).range.Tables.Count >= 1) Then<BR/>
+<TAB/><TAB/>n = sect.Headers(wdHeaderFooterPrimary).range.Tables(1).Columns.Count<BR/>
+<TAB/><TAB/>str = sect.Headers(wdHeaderFooterPrimary).range.Tables(1).Cell(1, n).range.text<BR/>
+<TAB/><TAB/>...<BR/>
+<TAB/>End If<BR/>
+Next sect<BR/>
+actDoc.Close (wdDoNotSaveChanges)
+</CODESAMPLE>
+
+<BR/>
+
+hyperlink the JIRA references
+<CODESAMPLE>
+Sub hyperlinkJIRA()<BR/>
+<TAB/>With ActiveDocument.Content.Find<BR/>
+<TAB/><TAB/>.ClearFormatting<BR/>
+<TAB/><TAB/>.text = "[DPSV][EIMU][MPR]-[0-9]{1;4}"<BR/>
+<TAB/><TAB/>.Format = False<BR/>
+<TAB/><TAB/>.MatchCase = False<BR/>
+<TAB/><TAB/>.MatchWholeWord = False<BR/>
+<TAB/><TAB/>.MatchKashida = False<BR/>
+<TAB/><TAB/>.MatchDiacritics = False<BR/>
+<TAB/><TAB/>.MatchAlefHamza = False<BR/>
+<TAB/><TAB/>.MatchControl = False<BR/>
+<TAB/><TAB/>.MatchAllWordForms = False<BR/>
+<TAB/><TAB/>.MatchSoundsLike = False<BR/>
+<TAB/><TAB/>.MatchWildcards = True<BR/>
+<TAB/><TAB/>.Execute<BR/>
+<TAB/><TAB/>Do While .Found = True<BR/>
+<TAB/><TAB/><TAB/>Dim str As String<BR/>
+<TAB/><TAB/><TAB/>str = ActiveDocument.range(.Parent.Start, .Parent.End).text<BR/>
+<TAB/><TAB/><TAB/>ActiveDocument.Hyperlinks.Add Anchor:=ActiveDocument.range(.Parent.Start, .Parent.End), _<BR/>
+<TAB/><TAB/><TAB/><TAB/>Address:="https://jira.kikamedical.net/browse/" &amp; str<BR/>
+<TAB/><TAB/><TAB/>.Parent.Start = .Parent.End<BR/>
+<TAB/><TAB/><TAB/>.Execute<BR/>
+<TAB/><TAB/>Loop<BR/>
+<TAB/>End With<BR/>
+End Sub
+</CODESAMPLE>
+
+<BR/>
+
+hyperlink the document references
+<CODESAMPLE>
+Sub hyperlinkDocs()<BR/>
+<TAB/>Dim str As String<BR/>
+<TAB/>With ActiveDocument.Content.Find<BR/>
+<TAB/><TAB/>.ClearFormatting<BR/>
+<TAB/><TAB/>.text = "K[0-9]{5}"<BR/>
+<TAB/><TAB/>.Format = False<BR/>
+<TAB/><TAB/>.MatchCase = False<BR/>
+<TAB/><TAB/>.MatchWholeWord = False<BR/>
+<TAB/><TAB/>.MatchKashida = False<BR/>
+<TAB/><TAB/>.MatchDiacritics = False<BR/>
+<TAB/><TAB/>.MatchAlefHamza = False<BR/>
+<TAB/><TAB/>.MatchControl = False<BR/>
+<TAB/><TAB/>.MatchAllWordForms = False<BR/>
+<TAB/><TAB/>.MatchSoundsLike = False<BR/>
+<TAB/><TAB/>.MatchWildcards = True<BR/>
+<TAB/><TAB/>.Execute<BR/>
+<TAB/><TAB/>Do While .Found = True<BR/>
+<TAB/><TAB/><TAB/>str = ActiveDocument.range(.Parent.Start, .Parent.End).text<BR/>
+<TAB/><TAB/><TAB/>ActiveDocument.Hyperlinks.Add Anchor:=ActiveDocument.range(.Parent.Start, .Parent.End), _<BR/>
+<TAB/><TAB/><TAB/><TAB/>Address:="http://srvuranus/K3DocArchive/" &amp; str<BR/>
+<TAB/><TAB/><TAB/>.Parent.Start = .Parent.End<BR/>
+<TAB/><TAB/><TAB/>.Execute<BR/>
+<TAB/><TAB/>Loop<BR/>
+<TAB/>End With<BR/>
+<TAB/>With ActiveDocument.Content.Find<BR/>
+<TAB/><TAB/>.ClearFormatting<BR/>
+<TAB/><TAB/>.Text = "D[0-9]{4}"<BR/>
+<TAB/><TAB/>.Format = False<BR/>
+<TAB/><TAB/>.MatchCase = False<BR/>
+<TAB/><TAB/>.MatchWholeWord = False<BR/>
+<TAB/><TAB/>.MatchKashida = False<BR/>
+<TAB/><TAB/>.MatchDiacritics = False<BR/>
+<TAB/><TAB/>.MatchAlefHamza = False<BR/>
+<TAB/><TAB/>.MatchControl = False<BR/>
+<TAB/><TAB/>.MatchAllWordForms = False<BR/>
+<TAB/><TAB/>.MatchSoundsLike = False<BR/>
+<TAB/><TAB/>.MatchWildcards = True<BR/>
+<TAB/><TAB/>.Execute<BR/>
+<TAB/><TAB/>Do While .Found = True<BR/>
+<TAB/><TAB/><TAB/>str = ActiveDocument.Range(.Parent.Start, .Parent.End).Text<BR/>
+<TAB/><TAB/><TAB/>ActiveDocument.Hyperlinks.Add Anchor:=ActiveDocument.Range(.Parent.Start, .Parent.End), _<BR/>
+<TAB/><TAB/><TAB/><TAB/>Address:="http://srvuranus/DIPDocArchive/" &amp; str<BR/>
+<TAB/><TAB/><TAB/>.Parent.Start = .Parent.End<BR/>
+<TAB/><TAB/><TAB/>.Execute<BR/>
+<TAB/><TAB/>Loop<BR/>
+<TAB/>End With<BR/>
+End Sub
+</CODESAMPLE>
+
+<BR/>
+
+check that the paragraphs are correctly outlined (e.g. that there is not a title 3 just after a title 1)<BR/>
+the bad paragraphs are listed in a new document
+<CODESAMPLE>
+Sub CheckOutline()<BR/>
+<BR/>
+<TAB/>Dim p As Paragraph<BR/>
+<TAB/>Dim lastLevel As Integer<BR/>
+<TAB/>Dim actdoc, newDoc As Document<BR/>
+<BR/>
+<TAB/>Set actdoc = ActiveDocument<BR/>
+<TAB/>Set newDoc = Documents.Add<BR/>
+<BR/>
+<TAB/>For Each p In actdoc.Paragraphs<BR/>
+<TAB/><TAB/>If (p.OutlineLevel &lt;&gt; wdOutlineLevelBodyText) Then<BR/>
+<TAB/><TAB/><TAB/>If ((p.OutlineLevel - lastLevel) &gt; 1) Then<BR/>
+<TAB/><TAB/><TAB/><TAB/>newDoc.Content.InsertAfter p.range.ListFormat.ListString &amp; " " &amp; p.range.text<BR/>
+<TAB/><TAB/><TAB/><TAB/>newDoc.Content.InsertParagraphAfter<BR/>
+<TAB/><TAB/><TAB/>End If<BR/>
+<TAB/><TAB/><TAB/>lastLevel = p.OutlineLevel<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/>Next p<BR/>
+<BR/>
+End Sub
+</CODESAMPLE>
+
+<BR/>
+
+highlight in turquoise all the bookmarks which point toward a stricken through text<BR/>
+ do no run this macro on the real document: in order to perform its tasks, it modifies the bookmarks<BR/>
+run this macro on a throwable copy of the document
+<CODESAMPLE>
+Sub findObsoleteBookmark()<BR/>
+<BR/>
+<TAB/>Dim f As Field<BR/>
+<TAB/>For Each f In ActiveDocument.Fields<BR/>
+<TAB/><TAB/>If (f.Type = wdFieldRef) Then<BR/>
+<TAB/><TAB/><TAB/>Dim oldStrikeThough As Boolean<BR/>
+<TAB/><TAB/><TAB/>oldStrikeThough = f.Result.Font.StrikeThrough<BR/>
+<TAB/><TAB/><TAB/>Dim rg As range<BR/>
+<TAB/><TAB/><TAB/>Set rg = f.Code<BR/>
+<TAB/><TAB/><TAB/>rg.Text = Replace(rg.Text, "\* MERGEFORMAT", "")<BR/>
+<TAB/><TAB/><TAB/>f.Update<BR/>
+<TAB/><TAB/><TAB/>If (Not oldStrikeThough And f.Result.Font.StrikeThrough) Then<BR/>
+<TAB/><TAB/><TAB/><TAB/>f.Result.HighlightColorIndex = wdTurquoise<BR/>
+<TAB/><TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/>Next f<BR/>
+<BR/>
+End Sub<BR/>
+</CODESAMPLE>
+
+<BR/>
+
+find all the sea green texts and set them to the automatic color
+<CODESAMPLE>
+With ActiveDocument.Content.Find<BR/>
+<TAB/>.ClearFormatting<BR/>
+<TAB/>.Font.color = wdColorSeaGreen<BR/>
+<TAB/>.Text = ""<BR/>
+<TAB/>.Format = True<BR/>
+<TAB/>.MatchCase = False<BR/>
+<TAB/>.MatchWholeWord = False<BR/>
+<TAB/>.MatchKashida = False<BR/>
+<TAB/>.MatchDiacritics = False<BR/>
+<TAB/>.MatchAlefHamza = False<BR/>
+<TAB/>.MatchControl = False<BR/>
+<TAB/>.MatchAllWordForms = False<BR/>
+<TAB/>.MatchSoundsLike = False<BR/>
+<TAB/>.MatchWildcards = False<BR/>
+<TAB/>.Execute<BR/>
+<TAB/>Do While ((.Found = True) And (.Parent.End &gt; .Parent.Start))<BR/>
+<TAB/><TAB/>' Word is doing something strange when there is no more matching: it still returns<BR/>
+<TAB/><TAB/>' Found = True, but with .Parent.Start = .Parent.End = character after the last match<BR/>
+<TAB/><TAB/>If ((ActiveDocument.range(.Parent.End + 1, .Parent.End + 2).Text = vbCr &amp; Chr(7)) And _<BR/>
+<TAB/><TAB/><TAB/>(ActiveDocument.range(.Parent.End + 1, .Parent.End + 2).Font.color = wdColorSeaGreen)) Then<BR/>
+<TAB/><TAB/><TAB/>' include end of table cell marker if necessary<BR/>
+<TAB/><TAB/><TAB/>.Parent.End = .Parent.End + 2<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/><TAB/>ActiveDocument.range(.Parent.Start, .Parent.End).Font.color = wdColorAutomatic<BR/>
+<TAB/><TAB/>.Parent.Start = .Parent.End<BR/>
+<TAB/><TAB/>.Execute<BR/>
+<TAB/>Loop<BR/>
+End With
+</CODESAMPLE>
+
+</CONTENT>
+<X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>
+<X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>
+<X><T>Visual Basic in Word</T><A>wordvb.html</A><L>en</L><F>HTML</F></X>
+</PAGE>

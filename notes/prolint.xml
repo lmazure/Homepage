@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>ProLint</TITLE>
+<PATH>notes/prolint.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>syntax</U></B></TITLE>
+<ITEM>
+use the <CODEROUTINE>%ENVVAR%</CODEROUTINE> to insert the value of an environment variable in a <CODEROUTINE>.lnt</CODEROUTINE> file<BR/>
+example: <CODEROUTINE>%TOPDIR%/tools/prolin/base.lnt</CODEROUTINE> to include the <CODEROUTINE>base.lnt</CODEROUTINE> file 
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>adding warnings</U></B></TITLE>
+<ITEM>
+define a short 2 / int 4 / long 8 / pointer 8 memory model:<BR/>
+<CODESAMPLE>-sb8 -sc1 -ss2 -si4 -sl8 -sf4 -sld16 -sp8 -spD8 -spP8 -smp8 -smpD8 -smpP8 -sw8</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>avoiding warnings</U></B></TITLE>
+<ITEM>syntaxes:
+<DEFINITIONTABLE>
+<ROW>
+<TERM><CODEROUTINE>-e#</CODEROUTINE><BR/>
+<CODEROUTINE>+e#</CODEROUTINE></TERM>
+<DESC>disable/re-enable warning<BR/>
+wildcards <CODEROUTINE>?</CODEROUTINE> and <CODEROUTINE>*</CODEROUTINE> can be used</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>-e(#)</CODEROUTINE></TERM>
+<DESC>inhibit warning for the next expression<BR/>
+example: <CODESAMPLE>a = /*lint -e(413) */ *(char *)0;</CODESAMPLE>
+the inhibition is recorded in the statement tree</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>--e(#)</CODEROUTINE></TERM>
+<DESC>inhibit warning for the entire expression before or within which it is placed<BR/>
+example: <CODESAMPLE>a = /*lint --e(413) */ *(int *)0 + *(char *)0;</CODESAMPLE></DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>-e{#}</CODEROUTINE></TERM>
+<DESC>inhibit warning for the next statement or declaration<BR/>
+example: <CODESAMPLE>//lint -e{715} suppress "k not referenced"<BR/>
+void f( int n, unsigned u, int k )<BR/>
+{<BR/>
+...<BR/>
+}
+</CODESAMPLE>
+the inhibition is recorded in the statement tree</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>--e{#}</CODEROUTINE></TERM>
+<DESC>inhibit warning for the entire braced region in which it is placed<BR/>
+the inhibition is recorded in the statement tree<BR/>
+wildcards <CODEROUTINE>?</CODEROUTINE> and <CODEROUTINE>*</CODEROUTINE> can be used</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>!e#</CODEROUTINE></TERM>
+<DESC>one-line message suppression<BR/>
+example: <CODESAMPLE>//lint !e573 !e721</CODESAMPLE>
+this cannot be used in a macro</DESC>
+</ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>when the copy constructor and assignment operator are not defined and declared as private to avoid their use
+<CODESAMPLE>class FooBar<BR/>
+{<BR/>
+<TAB/>public:<BR/>
+<TAB/><TAB/>...<BR/>
+<TAB/>private:<BR/>
+<TAB/><TAB/>FooBar( const FooBar &amp;i_other);<BR/>
+<TAB/><TAB/>/*lint -esym(1526,FooBar::FooBar)*/<BR/>
+<TAB/><TAB/>FooBar operator=( const FooBar &amp;i_other);<BR/>
+<TAB/><TAB/>/*lint -esym(1526,FooBar::operator=)*/<BR/>
+}</CODESAMPLE>
+</ITEM>
+<ITEM><BLIST><TITLE>header files</TITLE>
+<ITEM>ProLint will generate 1053 errors if the same include file is included with two differents paths<BR/>
+<U>example:</U> the source file contains (via the hierarchy of included files)
+<CODESAMPLE>#include "foo/bar.h"<BR/>
+#include "bar.h"</CODESAMPLE>
+and is compiled with <CODEROUTINE>-Ifoo</CODEROUTINE></ITEM>
+<ITEM>consider a file as a library header even if it is not included using angle brackets
+<CODESAMPLE>/*lint +libh(VxDrawImage.h)*/<BR/>
+#include "VxDrawImage.h"</CODESAMPLE></ITEM>
+<ITEM>kill a warning for an unused header file
+<CODESAMPLE>/*lint -efile(766,iterator)*/<BR/>
+#include &lt;iterator&gt; // required for GCC3.3.2 on Linux</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+<ITEM><CODEROUTINE>stdarg</CODEROUTINE> problems on Linux:<BR/>
+create a <CODEROUTINE>stdarg.h</CODEROUTINE> in directory <CODEROUTINE>/my/path</CODEROUTINE>
+<CODESAMPLE>#ifndef PROLINT_STDARG_H<BR/>
+#define PROLINT_STDARG_H<BR/>
+<BR/>
+typedef int va_list;<BR/>
+<BR/>
+#define va_start(a,b) ((void) ((a) = (int) ( &amp; (b) + 1)))<BR/>
+#define va_arg(a,b) /*lint --e(416)*/ (*( (b *) ( ((a) += sizeof(b)) - sizeof(b) )))<BR/>
+#define va_end(a) ( (void) 0 )<BR/>
+<BR/>
+#endif //PROLINT_STDARG_H </CODESAMPLE>
+add in the .lnt file:
+<CODEROUTINE>-i/my/path</CODEROUTINE>
+</ITEM>
+<ITEM>Same solution for the <CODEROUTINE>sstream</CODEROUTINE> problems on Linux:<BR/>
+<CODESAMPLE>#ifndef PROLINT_SSTREAM_H<BR/>
+#define PROLINT_SSTREAM_H<BR/>
+<BR/>
+#include &lt;string&gt;<BR/>
+#include &lt;iostream.h&gt;<BR/>
+#include &lt;streambuf.h&gt;<BR/>
+<BR/>
+class stringbuf : public streambuf<BR/>
+{<BR/>
+public:<BR/>
+<TAB/>typedef char char_type;<BR/>
+<TAB/>typedef int int_type;<BR/>
+<TAB/>typedef streampos pos_type;<BR/>
+<TAB/>typedef streamoff off_type;<BR/>
+<TAB/>explicit stringbuf(int which=ios::in|ios::out);<BR/>
+<TAB/>explicit stringbuf(const std::string &amp;s, int which=ios::in|ios::out);<BR/>
+<TAB/>std::string str() const;<BR/>
+<TAB/>void str(const std::string&amp; s);<BR/>
+<TAB/>inline streampos seekoff(streamoff o, _seek_dir d, int mode=ios::in|ios::out);<BR/>
+<TAB/>inline streampos seekpos(streampos pos, int mode = ios::in|ios::out);<BR/>
+};<BR/>
+<BR/>
+class stringstreambase : virtual public ios {<BR/>
+public:<BR/>
+<TAB/>std::string str() const;<BR/>
+<TAB/>void str(const std::string&amp; s);<BR/>
+<TAB/>stringbuf* rdbuf();<BR/>
+};<BR/>
+<BR/>
+class istringstream : public stringstreambase, public istream {<BR/>
+public:<BR/>
+<TAB/>istringstream(int which=ios::in);<BR/>
+<TAB/>istringstream(const std::string&amp; s, int which=ios::in);<BR/>
+<TAB/>istringstream&amp; seekg(streampos pos);<BR/>
+<TAB/>istringstream&amp; seekg(streamoff off, _seek_dir dir);<BR/>
+<TAB/>streampos tellg();<BR/>
+};<BR/>
+<BR/>
+class ostringstream : public stringstreambase, public ostream {<BR/>
+public:<BR/>
+<TAB/>ostringstream(int which=ios::out);<BR/>
+<TAB/>ostringstream(const std::string&amp; s, int which=ios::out);<BR/>
+<TAB/>ostringstream&amp; seekp(streampos pos);<BR/>
+<TAB/>ostringstream&amp; seekp(streamoff off, _seek_dir dir);<BR/>
+<TAB/>streampos tellp();<BR/>
+};<BR/>
+<BR/>
+class stringstream : public stringstreambase, public iostream {<BR/>
+public:
+<TAB/>stringstream(int which=ios::in|ios::out);<BR/>
+<TAB/>stringstream(const std::string &amp;s, int which=ios::in|ios::out);<BR/>
+<TAB/>stringstream&amp; seekg(streampos pos);<BR/>
+<TAB/>stringstream&amp; seekg(streamoff off, _seek_dir dir);<BR/>
+<TAB/>streampos tellg();<BR/>
+<TAB/>stringstream&amp; seekp(streampos pos);<BR/>
+<TAB/>stringstream&amp; seekp(streamoff off, _seek_dir dir);<BR/>
+<TAB/>streampos tellp();<BR/>
+};<BR/>
+<BR/>
+#endif // PROLINT_SSTREAM_H</CODESAMPLE>
+add in the .lnt file:
+<CODEROUTINE>-i/my/path</CODEROUTINE>
+</ITEM>
+<ITEM>ProLint is not able to understand complex templates (e.g. STL), see <X><T>http://www.gimpel.com/Discussion.cfm?ThreadID=923#2</T><A>http://www.gimpel.com/Discussion.cfm?ThreadID=923#2</A><L>en</L><F>HTML</F></X> for a proposition.<BR/>
+On Linux, a quick 'n dirty hack is to create the <CODEROUTINE>stl_config.h</CODEROUTINE> file:
+<CODESAMPLE>#define __STL_STATIC_TEMPLATE_MEMBER_BUG<BR/>
+#define __STL_NEED_TYPENAME<BR/>
+#define __STL_NEED_EXPLICIT<BR/>
+#define __STL_BEGIN_NAMESPACE<BR/>
+#define __STL_END_NAMESPACE</CODESAMPLE>
+there is still a warning with the <CODEROUTINE>list</CODEROUTINE>s: <CODEROUTINE>Error 1036: ambiguous reference to constructor; candidates: '_List_iterator&lt;basic_string&lt;char,...</CODEROUTINE><BR/>
+kill it with
+<CODESAMPLE>-efunc(1036,_List_iterator&lt;*,*,*&gt;::_List_iterator&lt;*&gt;)</CODESAMPLE></ITEM>
+<ITEM>Qt
+<CODESAMPLE>-emacro(1511,Q_OBJECT)   // Member hides non-virtual member<BR/>
+-emacro(1516,Q_OBJECT)   // Data member hides inherited member<BR/>
+// the next one avoids the issue with the 'public slots:' declaration<BR/>
+-d"QUObject=QUObject/*lint --e{1736}*/" // Redundant access specifier</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>license management</U></B></TITLE>
+<ITEM>in order to use <CODEROUTINE>prola</CODEROUTINE>, you must be in the ProLint directory</ITEM>
+<ITEM>list the current licence usage
+<CODESAMPLE><PROMPT/>prola print</CODESAMPLE></ITEM>
+<ITEM>disable a user (to avoid using more licences than the number of bought ones)
+<CODESAMPLE><PROMPT/>prola disable -user=foobar</CODESAMPLE></ITEM>
+<ITEM>disable a user given his UID
+<CODESAMPLE><PROMPT/>prola disable -user="uid10288"</CODESAMPLE></ITEM>
+</BLIST>
+
+<B><U>review of the Prolint comments</U></B><BR/>
+For the time being, this is trivial method:
+<CODESAMPLE><PROMPT/>grep -R -I -w lint | filter</CODESAMPLE>
+where <CODEROUTINE>filter</CODEROUTINE> is
+<CODESAMPLE>
+#!/usr/bin/perl<BR/>
+<BR/>
+use strict;<BR/>
+use warnings;<BR/>
+<BR/>
+my $currentLine = "";<BR/>
+my $previousLine = "";<BR/>
+<BR/>
+while (&lt;&gt;) {<BR/>
+<TAB/>my $predictedLine = $previousLine = $currentLine;<BR/>
+<TAB/>$predictedLine =~ s/-/+/g;<BR/>
+<TAB/>$currentLine = $_;<BR/>
+<TAB/>if ( $currentLine eq $predictedLine ) {<BR/>
+<TAB/><TAB/>$currentLine = "";<BR/>
+<TAB/>} else {<BR/>
+<TAB/><TAB/>print $previousLine;<BR/>
+<TAB/>}<BR/>
+}<BR/>
+<BR/>
+print $previousLine;
+</CODESAMPLE>
+</CONTENT>
+
+<X><T>Links</T><A>../links/coding.html#prolint</A><L>en</L><F>HTML</F></X>
+
+</PAGE>
+
+

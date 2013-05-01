@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Hijacking a system call</TITLE>
+<PATH>notes/lhijack.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+This is an update of the <X><T>Solaris hack</T><A>hijack.htm</A><L>en</L><F>HTML</F></X>.<BR/><BR/>
+<CODESAMPLE>
+#include &lt;X11/Intrinsic.h&gt;<BR/>
+#include &lt;dlfcn.h&gt;<BR/>
+#include &lt;stdio.h&gt;<BR/>
+#include &lt;stdlib.h&gt;<BR/>
+<BR/>
+XtIntervalId XtAppAddTimeOut( XtAppContext app,<BR/>
+<TAB/>unsigned long interval,<BR/>
+<TAB/>XtTimerCallbackProc proc,<BR/>
+<TAB/>XtPointer closure )<BR/>
+{<BR/>
+<TAB/>static XtIntervalId (*f)(XtAppContext,unsigned long,XtTimerCallbackProc,XtPointer);<BR/>
+<BR/>
+<TAB/>if (!f) {<BR/>
+<TAB/><TAB/>void *so = dlopen("/usr/X11R6/lib/libXt.so.6",RTLD_LAZY|RTLD_GLOBAL|RTLD_NOLOAD);<BR/>
+<TAB/><TAB/>if ( so == NULL ) {<BR/>
+<TAB/><TAB/><TAB/>fprintf(stderr,"dlopen failed (%s)\n",dlerror());<BR/>
+<TAB/><TAB/><TAB/>exit(EXIT_FAILURE);<BR/>
+<TAB/><TAB/>}<BR/>
+<TAB/><TAB/>f = (XtIntervalId(*)(XtAppContext,unsigned long,XtTimerCallbackProc,XtPointer))dlsym(so,"XtAppAddTimeOut");<BR/>
+<TAB/><TAB/>if ( f == NULL ) {<BR/>
+<TAB/><TAB/><TAB/>fprintf(stderr,"dlsym failed (%s)\n",dlerror());<BR/>
+<TAB/><TAB/><TAB/>exit(EXIT_FAILURE);<BR/>
+<TAB/><TAB/>}<BR/>
+<TAB/><TAB/>dlclose(so);<BR/>
+<TAB/>}<BR/>
+<BR/>
+<TAB/>return f(app,0,proc,closure);<BR/>
+}
+</CODESAMPLE>
+Compile with <CODESAMPLE><PROMPT/>gcc -Wall -shared -ldl patch.c -o patch.so</CODESAMPLE>.
+(<CODEROUTINE>-ldl</CODEROUTINE> is used to load the library defining <CODEROUTINE>dlopen</CODEROUTINE>.)<BR/>
+<BR/>
+Set the environment variable <CODESAMPLE><PROMPT/>setenv LD_PRELOAD /<I>path</I>/patch.so</CODESAMPLE>.<BR/>
+<BR/>
+Run the program.
+
+</CONTENT>
+</PAGE>
+

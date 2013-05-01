@@ -1,0 +1,1860 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Perl</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+<b><u>variable</u></b>
+<ul>
+  <li> <tt><u>my</u></tt></li>
+declare a local variable <br>
+&nbsp; <li><tt><u>our</u></tt></li>
+declare a global variable <br>
+&nbsp; <li><tt><u>local</u></tt></li>
+redefine a variable name to be local to the current block <br>
+&nbsp; <li><tt><u>undef</u></tt></li>
+undefine a variable <br>
+  <tt>undef $foobar;</tt> <br>
+since its returns an undefined value, it can be used to initialize
+a variable: <br>
+  <tt>$a = undef;</tt> <br>
+&nbsp; <li><tt><u>defined</u></tt></li>
+test if a variable is defined <br>
+&nbsp; <li><tt><u>exists</u></tt></li>
+test if a hash element, array element or subroutine exists (but it
+can be undefined) <br>
+&nbsp; <li><tt><u>delete</u></tt></li>
+remove the element of a hash or of an array
+</ul>
+<p><br>
+<b><u>quoted strings</u></b>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td>single quoted <br>
+literal string</td>
+      <td><tt>''</tt></td>
+      <td><tt>q{}</tt></td>
+      <td>no interpolation</td>
+    </tr>
+    <tr>
+      <td>double quoted <br>
+literal string</td>
+      <td><tt>""</tt></td>
+      <td><tt>qq{}</tt></td>
+      <td>interpolation</td>
+    </tr>
+    <tr>
+      <td>command</td>
+      <td><tt>``</tt></td>
+      <td><tt>qx{}</tt></td>
+      <td>interpolation unless <tt>''</tt> is delimiter</td>
+    </tr>
+    <tr>
+      <td>word list</td>
+      <td><br>
+      </td>
+      <td><tt>qw{}</tt></td>
+      <td>no interpolation</td>
+    </tr>
+    <tr>
+      <td>pattern match</td>
+      <td><tt>//</tt></td>
+      <td><tt>m{}</tt></td>
+      <td>interpolation unless <tt>''</tt> is delimiter</td>
+    </tr>
+    <tr>
+      <td>pattern</td>
+      <td><br>
+      </td>
+      <td><tt>qr{}</tt></td>
+      <td>interpolation unless <tt>''</tt> is delimiter</td>
+    </tr>
+    <tr>
+      <td>substitution</td>
+      <td><br>
+      </td>
+      <td><tt>s{}{}</tt></td>
+      <td>interpolation unless <tt>''</tt> is delimiter</td>
+    </tr>
+    <tr>
+      <td>transliteration</td>
+      <td><br>
+      </td>
+      <td><tt>tr{}{}</tt></td>
+      <td>no interpolation except for the first escape sequences (up to
+named
+char)</td>
+    </tr>
+  </tbody>
+</table>
+bracketing characters may be:
+</p>
+<ul>
+  <li>the same character at the beginning and the end</li>
+  <li>one of the four bracket types: round, angle, square, curly</li>
+</ul>
+<b><u>strings</u></b>
+<ul>
+  <li> <tt><u>lc</u></tt></li>
+return a lowercased string <br>
+&nbsp; <li><tt><u>lcfirst</u></tt></li>
+return the string with the first letter lowercased <br>
+&nbsp; <li><tt><u>uc</u></tt></li>
+return a uppercased string <br>
+&nbsp; <li><tt><u>ucfirst</u></tt></li>
+return the string with the first letter uppercased <br>
+&nbsp; <li><tt><u>chr</u></tt></li>
+return the character coded by an integer in the current character set
+(ASCII, except if use utf8, in this case Unicode) <br>
+&nbsp; <li><tt><u>ord</u></tt></li>
+return the integer coding the first character of a string in the
+current
+character set <br>
+&nbsp; <li><span
+ style="text-decoration: underline; font-family: monospace;">substr</span>
+    <br>
+extract a substring of a string <br>
+    <br>
+  </li>
+  <li><tt><u>split</u></tt></li>
+put the two first words and the remainder of a string into three
+variables <br>
+  <tt>my ($a,$b,$c)= split(/ +/,$string,3);</tt> <br>
+&nbsp; <li><tt><u>hex<br>
+    </u></tt>translate a string representing an integer in hexadecimal
+form
+into the integer<br>
+    <tt>if ( $address =~ /(..):(..):(..):(..):(..):(..)/ )</tt></li>
+  <br>
+  <tt>{</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $b0 = hex("0x".$1);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $b1 = hex("0x".$2);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $b2 = hex("0x".$3);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $b3 = hex("0x".$4);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $b4 = hex("0x".$5);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $b5 = hex("0x".$6);</tt> <br>
+  <tt>}</tt> <br>
+  <tt>else</tt> <br>
+  <tt>{</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; die "incorrect mac address\n"</tt> <br>
+  <tt>}<br>
+  <br>
+  </tt>
+</ul>
+<ul>
+  <li><tt><u>oct</u></tt><br>
+translate a string representing an integer in octal form
+into the integer<br>
+    <br>
+  </li>
+  <li><span style="text-decoration: underline; font-family: monospace;">vec</span><br>
+get/set element in a string considered as an array of bitsets (the
+considered bitset can be bits, duos, nibles, octets, half-words,
+words...)<br>
+  </li>
+</ul>
+<tt><u> </u></tt>
+<ul>
+  <br>
+</ul>
+<b><u>escape sequences</u></b>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>\t</tt></td>
+      <td>tab</td>
+      <td>0x09</td>
+      <td>^I</td>
+    </tr>
+    <tr>
+      <td><tt>\n</tt></td>
+      <td>linefeed</td>
+      <td>0x0a</td>
+      <td>^J</td>
+    </tr>
+    <tr>
+      <td><tt>\r</tt></td>
+      <td>carriage return</td>
+      <td>0x0d</td>
+      <td>^M</td>
+    </tr>
+    <tr>
+      <td><tt>\f</tt></td>
+      <td>formfeed</td>
+      <td>0x0c</td>
+      <td>^L</td>
+    </tr>
+    <tr>
+      <td><tt>\b</tt></td>
+      <td>backspace (not in a matching pattern where this means word
+boundary)</td>
+      <td>0x08</td>
+      <td>^H</td>
+    </tr>
+    <tr>
+      <td><tt>\a</tt></td>
+      <td>bell</td>
+      <td>0x07</td>
+      <td>^G</td>
+    </tr>
+    <tr>
+      <td><tt>\e</tt></td>
+      <td>escape</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\033</tt></td>
+      <td>octal char</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\x1b</tt></td>
+      <td>hex char</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\x{263a}</tt></td>
+      <td>wide hex char</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\cX</tt></td>
+      <td>control char (<tt>X</tt> being the uncontrolled char)</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\N{name}</tt></td>
+      <td>named char</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\l</tt></td>
+      <td>lowercase next char (see <tt>lcfirst</tt>)</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\u</tt></td>
+      <td>uppercase next char (see <tt>ucfirst</tt>)</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\L</tt></td>
+      <td>lowercase till <tt>\E</tt> (see <tt>lc</tt>)</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\U</tt></td>
+      <td>uppercase till <tt>\E</tt> (see <tt>uc</tt>)</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\Q</tt></td>
+      <td>quote non word characters till <tt>\E</tt></td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>\E</tt></td>
+      <td>end case modification or quote</td>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><b><u>tests</u></b>
+</p>
+<blockquote><li> <u>if/elsif/else:</u></li>
+  <tt>if ( $o_verb =~ /oyer/ )</tt> <br>
+  <tt>{</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; die "error in $line" if $o_verb =~ /envoyer$/;</tt>
+  <br>
+  <tt>&nbsp;&nbsp;&nbsp; $n_group = "36";</tt> <br>
+  <tt>}</tt> <br>
+  <tt>elsif ( $o_verb =~ /oyer/ )</tt> <br>
+  <tt>{</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; $n_group = "35";</tt> <br>
+  <tt>}</tt> <br>
+  <tt>else</tt> <br>
+  <tt>{</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; die "error in $line";</tt> <br>
+  <tt>}</tt> <br>
+&nbsp; <li><u>if/unless:</u></li>
+  <tt>die "..." if ...</tt> <br>
+  <tt>die "..." unless ...</tt> <br>
+&nbsp; <li><u>switch case:</u></li>
+  <tt>SW_GROUP: {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; if ( $o_group eq "6" )</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; last SW_GROUP;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; if ( $o_group eq "7" )</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; last SW_GROUP;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; die "unknown group: $o_group";</tt> <br>
+  <tt>}</tt> <br>
+or <br>
+  <tt>while ( &lt;$inputFile&gt; ) {</tt> <br>
+  <tt>&nbsp; SWITCH: {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; /^homme : ([^ ]*) (.*)$/ &amp;&amp; do {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $homme{'prenom'} = $1;</tt>
+  <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $homme{'nom'} = $2;</tt>
+  <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; last SWITCH;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; };</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; /^femme : ([^ ]*) (.*)$/ &amp;&amp; do {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $femme{'prenom'} = $1;</tt>
+  <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $femme{'nom'} = $2;</tt>
+  <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; last SWITCH;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; };</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; print "unknown parameter: $_";</tt> <br>
+  <tt>&nbsp; }</tt> <br>
+  <tt>}</tt></blockquote>
+<p><br>
+<b><u>loops</u></b>
+</p>
+<ul style="font-family: monospace;">
+  <li><span style="text-decoration: underline;">for:</span><br
+ style="text-decoration: underline;">
+for (my $i = 1; $i &lt; 10; $i++) {<br>
+&nbsp;&nbsp;&nbsp; ...<br>
+}<br>
+  </li>
+</ul>
+<blockquote><li> <u>loop&nbsp; on a list content:</u></li>
+  <tt>@letters = (a,b,c,d,e,f);</tt> <br>
+  <tt>foreach my $l ( @letters ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+  <tt>}</tt> <br>
+&nbsp; <li><tt><u>continue</u></tt></li>
+a <tt>continue</tt> block after a&nbsp; block (typically a <tt>while</tt>
+or <tt>foreach</tt> loop)&nbsp; is executed before the condition is
+evaluated
+once again <br>
+&nbsp; <li><tt><u>next</u></tt></li>
+go to the end of the block, execute the <tt>continue</tt> block and
+start the next iteration <br>
+with a label, go to the end of the labelled loop <br>
+&nbsp; <li><tt><u>last</u></tt></li>
+exit the block <br>
+with a label, exit the labelled block <br>
+&nbsp; <li><tt><u>redo</u></tt></li>
+restart the block without executing the <tt>continue</tt> block and
+evaluating the conditional <br>
+with a label, redo the labelled block
+  <p><tt>while (EXPR) {</tt> <br>
+  <tt>&nbsp; # redo </tt>always comes here <br>
+  <tt>&nbsp; do_something;</tt> <br>
+  <tt>} continue {</tt> <br>
+  <tt>&nbsp; # next </tt>always comes here <br>
+  <tt>&nbsp; do_something_else;</tt> <br>
+  <tt>&nbsp; # </tt>then back the top to re-check <tt>EXPR</tt> <br>
+  <tt>}</tt> <br>
+  <tt># </tt>last always comes here</p>
+</blockquote>
+<p><br>
+<b><u>error handling</u></b>
+</p>
+<blockquote><li> <tt><u>die</u></tt></li>
+exit the script with an error message <br>
+&nbsp; <li><tt><u>warn</u></tt></li>
+display an error message and continue <br>
+  <tt>warn "incorrect value [".$value."]";</tt></blockquote>
+<p><br>
+<b><u>subroutines</u></b>
+</p>
+<ul>
+  <li>the parameters are transmitted as a list (<tt>@_</tt>)</li>
+  <tt>sub foobar {</tt> <br>
+  <tt>&nbsp; my ($ar1, $var2) = @_;</tt> <br>
+  <tt>&nbsp; ...</tt> <br>
+  <tt>}</tt>
+</ul>
+<b><u>predefined subroutines</u></b>
+<ul>
+  <li>the keyword <tt>sub</tt> is optionnal</li>
+&nbsp; <li><tt><u>BEGIN</u></tt></li>
+executed as soon as it is read (before the remainder of the file is
+parsed) <br>
+once executed, it is removed from memory and cannot be called <br>
+&nbsp; <li><tt><u>END</u></tt></li>
+execute when the program exits (execept when <tt>exec</tt> is used
+or a signal is received) <br>
+&nbsp; <li><tt><u>INIT</u></tt></li>
+executes just before the runtime execution starts <br>
+&nbsp; <li><tt><u>CHECK</u></tt></li>
+executes just after the compilation finishes and before execution
+starts
+</ul>
+<b><u>pattern matching</u></b>
+<ul>
+  <li> <tt>m/pattern/cgimosx</tt></li>
+  <tt>/pattern/cgimosx</tt> search a string for a patttern match <br>
+if the separator is <tt>/</tt>, <tt>m</tt> is optional <br>
+if the separator is <tt>?</tt>, the match only once rule of <tt>?pattern?</tt>
+applies <br>
+if the separator is <tt>'</tt>, no interpolation is performed on <tt>pattern</tt>
+  <br>
+&nbsp; <li><tt>?pattern?</tt> matches only once (<font color="#cc0000">deprecated</font>)</li>
+  <tt>reset</tt> has to be called to authorize further matches <br>
+&nbsp; <li>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Match 0 or more times<br>
++&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Match 1 or more times<br>
+?&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Match 1 or 0 times<br>
+{n}&nbsp;&nbsp;&nbsp; Match exactly n times<br>
+{n,}&nbsp;&nbsp; Match at least n times<br>
+{n,m}&nbsp; Match at least n but not more than m times<br>
+    <br>
+  </li>
+  <li><tt>?</tt> set the subpattern to match the minimum length
+instead
+of the
+maximum (i.e. non-greedy search)<br>
+  </li>
+&nbsp; <li>test a pattern matching and retrieve the matching parts</li>
+  <tt>&nbsp; if ( $line =~ /^SPR # :&nbsp; (.....)(.....)/ )</tt> <br>
+  <tt>&nbsp; {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $idorg = $1;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $idnum = $2;</tt> <br>
+  <tt>&nbsp; }</tt> <br>
+&nbsp; <li>remove the space at the end of a variable value</li>
+  <tt>$l =~ s/^(.*?) *$/$1/;</tt> <br>
+&nbsp; <li>store a pattern in a variable</li>
+  <tt>$pattern = qr/^\(0x0010,0x0010\)/;</tt> <br>
+&nbsp; <li><tt><u>pos</u></tt></li>
+return the position of the end of the last <tt>m//g</tt> match <br>
+&nbsp; <li>use</li>
+  <ul>
+    <li> <tt>$&amp;</tt> to get the full matching string</li>
+    <li> <tt>$`</tt> to get the preceding part of the string</li>
+    <li> <tt>$'</tt> to get the following part</li>
+  </ul>
+  <tt>$line =~
+s~(((BUC|CTC|GSA|IIS|MRI|NPS|XRY)ge)|(YMSmr))[0-9][0-9][0-9][0-9][0-9]~&lt;AHREF="http://3.45.12.26/ddts/ddts_main?LastForm=DumpBug\&amp;bug_id=$&amp;
+"TARGET="_blank"&gt;$&amp;&lt;/A&gt;~g;</tt> <br>
+&nbsp; <li>character classes</li>
+  <table border="1">
+    <tbody>
+      <tr>
+        <td>\w</td>
+        <td>match a word character (alphanumeric or <tt>_</tt>)</td>
+      </tr>
+      <tr>
+        <td>\W</td>
+        <td>match a non word character</td>
+      </tr>
+      <tr>
+        <td>\s</td>
+        <td>match a whitespace character</td>
+      </tr>
+      <tr>
+        <td>\S</td>
+        <td>match a non whitespace character</td>
+      </tr>
+      <tr>
+        <td>\d</td>
+        <td>match a digit character</td>
+      </tr>
+      <tr>
+        <td>\D</td>
+        <td>match a non-digit character</td>
+      </tr>
+    </tbody>
+  </table>
+  <li>zero-width assertions</li>
+  <table border="1">
+    <tbody>
+      <tr>
+        <td><tt>^</tt></td>
+        <td>match the beginning of the line (may have multiply matches
+if <tt>/m</tt>
+modifier is used)</td>
+      </tr>
+      <tr>
+        <td><tt>$</tt></td>
+        <td>match the end of the line (may have multiply matches if <tt>/m</tt>
+modifier is used)</td>
+      </tr>
+      <tr>
+        <td><tt>\A</tt></td>
+        <td>match at beginning of string</td>
+      </tr>
+      <tr>
+        <td><tt>\Z</tt></td>
+        <td>match at end of string or before new line</td>
+      </tr>
+      <tr>
+        <td><tt>\z</tt></td>
+        <td>match at end of string</td>
+      </tr>
+      <tr>
+        <td><tt>\b</tt></td>
+        <td>match a word boundary</td>
+      </tr>
+      <tr>
+        <td><tt>\B</tt></td>
+        <td>match a non word boundary</td>
+      </tr>
+      <tr>
+        <td><tt>\G</tt></td>
+        <td>match only at pos (i.e. end of match position of last <tt>m//g</tt>)</td>
+      </tr>
+    </tbody>
+  </table>
+  <li>modifiers</li>
+  <table border="1">
+    <tbody>
+      <tr>
+        <td><tt>/g</tt></td>
+        <td>specify global pattern matching <li>in list context,
+return all the matching patterns</li>
+        <li>in scalar context, each call finds the next match and
+returns true if
+there
+is one, false if there is none</li>
+        </td>
+      </tr>
+      <tr>
+        <td><tt>/s</tt></td>
+        <td>treat the string as a single line (i.e. <tt>.</tt> also
+matches <tt>\n</tt>)</td>
+      </tr>
+      <tr>
+        <td><tt>/m</tt></td>
+        <td>treat the string as multi line (i.e. <tt>^</tt> and <tt>$</tt>
+matches
+the start and end of any line in the string, instead of the beginning
+and
+end of the string)</td>
+      </tr>
+      <tr>
+        <td><tt>/i</tt></td>
+        <td>case-insensitive pattern matching</td>
+      </tr>
+      <tr>
+        <td><tt>/x</tt></td>
+        <td>use extended regular expressions</td>
+      </tr>
+      <tr>
+        <td><tt>/e</tt></td>
+        <td>evaluate the right side as an expression (e.g. use <tt>$1</tt>,
+        <tt>$2</tt>...
+instead of <tt>\1</tt>,<tt>\2</tt>...)</td>
+      </tr>
+      <tr>
+        <td><tt>/o</tt></td>
+        <td>compile pattern only once</td>
+      </tr>
+      <tr>
+        <td><tt>/c</tt></td>
+        <td>do not reset position on a failed match when <tt>/g</tt>
+is in effect</td>
+      </tr>
+    </tbody>
+  </table>
+  <li>extended patterns</li>
+  <table border="1">
+    <tbody>
+      <tr>
+        <td><tt>(?=pattern)</tt></td>
+        <td>zero-width positive look ahead assertion</td>
+      </tr>
+      <tr>
+        <td><tt>(?!pattern)</tt></td>
+        <td>zero-width negative look ahead assertion</td>
+      </tr>
+      <tr>
+        <td><tt>(?&lt;=pattern)</tt></td>
+        <td>zero-width positive look behind expression</td>
+      </tr>
+      <tr>
+        <td><tt>(?&lt;!pattern)</tt></td>
+        <td>zero-width negative look behind expression</td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<p><br>
+<b><u>predefined variables</u></b>
+<br>
+<tt>use english;</tt> is used to allow the long variables names
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>$_</tt> <br>
+      <tt>$ARG</tt></td>
+      <td>default input and pattern-searching space</td>
+    </tr>
+    <tr>
+      <td><tt>$1</tt>, <tt>$2</tt>,...</td>
+      <td>sub-parts matching in the last perfomed pattern matching</td>
+    </tr>
+    <tr>
+      <td><tt>$&amp;</tt></td>
+      <td>last string matched by the last succesful pattern match</td>
+    </tr>
+    <tr>
+      <td><tt>$`</tt></td>
+      <td>string preceding the string matching the last successful
+pattern match</td>
+    </tr>
+    <tr>
+      <td><tt>$'</tt></td>
+      <td>string following the string matching the last successful
+pattern match</td>
+    </tr>
+    <tr>
+      <td><tt>$.</tt> <br>
+      <tt>$NR</tt></td>
+      <td>line number in the last read file</td>
+    </tr>
+    <tr>
+      <td><tt>$/</tt> <br>
+      <tt>$RS</tt></td>
+      <td>input record separator or size of the input records</td>
+    </tr>
+    <tr>
+      <td><tt>$,</tt> <br>
+      <tt>$OFS</tt></td>
+      <td>output field separator</td>
+    </tr>
+    <tr>
+      <td><tt>$\</tt> <br>
+      <tt>$ORS</tt></td>
+      <td>ouput record separator</td>
+    </tr>
+    <tr>
+      <td><tt>$"</tt></td>
+      <td>output separator used for arrays and slices interpolated into
+a double-quoted
+string</td>
+    </tr>
+    <tr>
+      <td><tt>$|</tt></td>
+      <td>force a flush after each write</td>
+    </tr>
+    <tr>
+      <td><tt>$@</tt></td>
+      <td>error message from the last eval operator</td>
+    </tr>
+    <tr>
+      <td><tt>$!</tt> <br>
+      <tt>$ERRNO</tt></td>
+      <td><tt>errno</tt> ou text describing the last system call error</td>
+    </tr>
+    <tr>
+      <td><tt>$^E</tt></td>
+      <td>more meaningfull description of the last system call error
+(this is
+identical to <tt>$!</tt> on most OSs)</td>
+    </tr>
+    <tr>
+      <td><tt>$?</tt></td>
+      <td>status of the last exited child process (<tt>system</tt>, <tt>wait</tt>,
+      <tt>paitpid</tt>
+or for a pipe close)</td>
+    </tr>
+    <tr>
+      <td><tt>$SIG</tt></td>
+      <td>signal, <tt>warn</tt> and <tt>die</tt> handlers</td>
+    </tr>
+    <tr>
+      <td><tt>$0</tt></td>
+      <td>name of the script being executed <br>
+(if assigned, will change the argument in <tt>ps</tt> on some OSs)</td>
+    </tr>
+    <tr>
+      <td><tt>@ARGV</tt></td>
+      <td>arguments passed to the script</td>
+    </tr>
+    <tr>
+      <td><tt>$$</tt> <br>
+      <tt>$PID</tt></td>
+      <td>process id of the process</td>
+    </tr>
+    <tr>
+      <td><tt>$&lt;</tt> <br>
+      <tt>$UID</tt></td>
+      <td>real user id of the process</td>
+    </tr>
+    <tr>
+      <td><tt>$&gt;</tt> <br>
+      <tt>$EUID</tt></td>
+      <td>effective user id of the process</td>
+    </tr>
+    <tr>
+      <td><tt>$(</tt> <br>
+      <tt>$GID</tt></td>
+      <td>real group id of the process</td>
+    </tr>
+    <tr>
+      <td><tt>$)</tt> <br>
+      <tt>$EGID</tt></td>
+      <td>effective group id of the process</td>
+    </tr>
+    <tr>
+      <td><tt>$^X</tt></td>
+      <td>name of the Perl binary</td>
+    </tr>
+    <tr>
+      <td><tt>@_</tt></td>
+      <td>arguments passed to the subroutine</td>
+    </tr>
+    <tr>
+      <td><tt>@INC</tt></td>
+      <td>path of the scripts files</td>
+    </tr>
+    <tr>
+      <td><tt>$]</tt></td>
+      <td>version + patchlevel/1000 <font color="#cc0000">deprecated,
+use $^V
+instead</font></td>
+    </tr>
+    <tr>
+      <td><tt>$^V</tt></td>
+      <td>version with the format <tt>chr(revision).chr(version).chr(subversion)</tt>
+      <br>
+can be compared with a literal of the form <tt>v5.6.1</tt></td>
+    </tr>
+    <tr>
+      <td><tt>$;</tt></td>
+      <td>subscript separator for multidimensional array emulation</td>
+    </tr>
+    <tr>
+      <td><tt>$[</tt></td>
+      <td>index of the first element in an array <font color="#cc0000">do
+not
+use</font></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;">$^W<br>
+      </td>
+      <td style="vertical-align: top;">
+      <pre wrap="">current value of the warning switch, either TRUE or FALSE</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><b><u>pragmas</u></b>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>strict</tt></td>
+      <td>unauthorize unsafe constructs</td>
+    </tr>
+    <tr>
+      <td><tt>warnings</tt></td>
+      <td>warn about dangerous constructions</td>
+    </tr>
+    <tr>
+      <td><tt>diagnostics<br>
+      </tt></td>
+      <td>display a full explanation of the compilation error messages</td>
+    </tr>
+    <tr>
+      <td><tt>vars</tt></td>
+      <td>predeclare global variable names</td>
+    </tr>
+    <tr>
+      <td><tt>utf8</tt></td>
+      <td>enable UTF8 in code</td>
+    </tr>
+    <tr>
+      <td><tt>constant</tt></td>
+      <td>define a constant <br>
+      <tt>use constant PI =&gt; 22/7;</tt> <br>
+with Perl 5.8.0, it is allowed to write <br>
+      <tt>use constant {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SUNDAY&nbsp;&nbsp;&nbsp; =&gt; 0,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MONDAY&nbsp;&nbsp;&nbsp; =&gt; 1,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+TUESDAY&nbsp;&nbsp; =&gt; 2,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+WEDNESDAY =&gt; 3,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+THURSDAY&nbsp; =&gt; 4,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FRIDAY&nbsp;&nbsp;&nbsp; =&gt; 5,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+SATURDAY&nbsp; =&gt; 6,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+};<br>
+      </tt>in a context that allow barewords, use the syntax <span
+ style="font-family: monospace;">FOOBAR()</span> or <span
+ style="font-family: monospace;">+FOOBAR</span> since <span
+ style="font-family: monospace;">FOOBAR</span> would not work, for
+example:<br>
+      <div style="margin-left: 40px;">
+      <ul>
+        <li><span style="font-family: monospace;">$hash{CONSTANT()}</span>
+or <span style="font-family: monospace;">$hash{+CONSTANT}</span>
+instead of <span style="font-family: monospace;">$hash{CONSTANT}</span></li>
+        <li><span style="font-family: monospace;">CONSTANT() =&gt;
+'value'</span> instead of <tt>CONSTANT =&gt; 'value'</tt></li>
+      </ul>
+      </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+</p>
+<p><b><u>arrays/lists</u></b></p>
+<ul>
+  <li><code>$#array</code> is the index of the last element of <code>@array</code><br>
+  </li>
+  <li> <tt><u>push</u></tt></li>
+push the values of a list on an array (equivalent to <tt>$array[++$#array]
+= $value;</tt> i.e. <tt>push</tt> will create <tt>$array[1]</tt> if
+the
+array is empty) <br>
+  <tt>push @array, $value;</tt> <br>
+&nbsp; <li><tt><u>pop</u></tt></li>
+return and remove the last value in a array <br>
+&nbsp; <li><tt><u>unshift</u></tt></li>
+prepend the value of a list at the beginning of the array <br>
+&nbsp; <li><tt><u>shift</u></tt></li>
+return and remove the first value of an array <br>
+&nbsp; <li>quick and dirty print</li>
+  <tt>$, = ",";</tt> <br>
+  <tt>print @list;</tt> <br>
+&nbsp; <li><tt><u>revert</u></tt></li>
+in list context,return a list which in in reversed order of the input
+string <br>
+in scalar context, concatenate the elements of the input list and
+return
+the resulting string in reversed character order <br>
+&nbsp; <li><tt><u>map</u></tt></li>
+return a list which is the evaluation of an expression or block on
+each element of an input list <br>
+&nbsp; <li><u>sort</u></li>
+return a list which is the sorted elements of an input list according
+to a given block or subroutine <br>
+&nbsp; <li><tt><u>grep</u></tt></li>
+return the list of the members of a list for which an expression or
+a block is true<br>
+  <br>
+  <li><tt><u>join</u></tt><br>
+join the separate strings of a list into a single string with fields
+separated by a given value<br>
+    <br>
+  </li>
+  <li>intersection and union of two lists<br>
+    <span style="font-family: monospace;">@a = (1, 3, 5, 6, 7, 8);</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">@b = (2, 3, 5, 7, 9);</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">@union = @isect = ();</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">%union = %isect = ();</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">foreach $e (@a) { $union{$e}
+= 1 }</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">foreach $e (@b) {</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; if (
+$union{$e} ) { $isect{$e} = 1 }</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; $union{$e}
+= 1;</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">@union = keys %union;</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">@isect = keys %isect;</span><br
+ style="font-family: monospace;">
+    <br style="font-family: monospace;">
+  </li>
+  <li>extract the elements of <tt>lista</tt> which are not
+in <tt>listb</tt></li>
+  <tt>foreach my $s ( @lista ) {</tt> <br>
+  <tt>&nbsp; if ( ! ( grep $s eq $_, @listb ) ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; print $s;</tt> <br>
+  <tt>&nbsp; }</tt> <br>
+  <tt>}</tt>
+</ul>
+<ul>
+  <li>using <span style="font-family: monospace;">split</span>, <span
+ style="font-family: monospace;">map </span>and <span
+ style="font-family: monospace;">join </span>to loop on the letters of
+a string<br>
+    <span style="font-family: monospace;">sub escape_char {</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp; my $txt = shift;</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp; return $txt if (
+$txt =~ /[A-Za-z0-9_]/ );</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp; return ( sprintf
+"%%%02x", ord $txt );</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;">
+    <br style="font-family: monospace;">
+    <span style="font-family: monospace;">sub escape_string {</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp; my $txt = shift;</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp; return ( join
+'', map { escape_char $_ } split(//,$txt) );</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">} </span><br>
+  </li>
+</ul>
+<p><b><u>hashes</u></b>
+</p>
+<ul>
+  <li> <tt><u>keys</u></tt></li>
+return the key list <br>
+in a scalar environment, return the number of keys
+</ul>
+<ul>
+  <li> <tt><u>values</u></tt></li>
+return the value list <br>
+&nbsp; <li><tt><u>each</u></tt></li>
+loop on a hash table elements <br>
+  <tt>while ( my ($key,$value) = each %h )</tt> <br>
+  <tt>{</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; print "$key=$value\n";</tt> <br>
+  <tt>}</tt> <br>
+&nbsp;
+  <p><tt>each</tt> iterator (there is a single one for each <tt>each</tt>
+of a given hash) is not reset autmatically <br>
+this can be a source of bug if used inside a loop <br>
+use <tt>keys</tt> or <tt>values</tt> to reset it <br>
+  <tt>my %changedFields = (</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"case A" , qr/^\(0x0001\)/,</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"case B" , qr/^\(0x0002\)/,</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"case C" , qr/^\(0x0003\)/,</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"case D" , qr/^\(0x0004\)/,</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+);</tt> <br>
+  <tt>sub checkOtherFields {</tt> <br>
+  <tt>&nbsp; open(IFILE,$initialFileDump) or die("cannot open file
+$initialFileDump
+($!)");</tt> <br>
+  <tt>&nbsp; open(AFILE,$anonFileDump) or die("cannot open file
+$anonFileDump
+($!)");</tt> <br>
+  <tt>&nbsp; my $iline = &lt;IFILE&gt;;</tt> <br>
+  <tt>&nbsp; my $aline = &lt;AFILE&gt;;</tt> <br>
+  <tt>&nbsp; THELOOP: while ( $aline &amp;&amp; $iline ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; while ( my ($key,$value) = each
+%changedFields ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (
+$iline
+=~ $value and $aline =~ $value ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$iline = &lt;IFILE&gt;;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$aline = &lt;AFILE&gt;;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+keys(%changedFields);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+next THELOOP;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt>
+  <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt> <br>
+  <tt>}</tt> <br>
+&nbsp; </p>
+  <li>merge several hashes</li>
+  <tt>foreach $h ( \%hash1, \%hash2 ) {</tt> <br>
+  <tt>&nbsp; while (($k, $v) = each %$h) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; if (exists $hashm{$k}) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "Warning: $k seen
+twice.&nbsp;
+Using the first definition.\n";</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; next;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; $hashm{$k} = $v;</tt> <br>
+  <tt>&nbsp; }</tt> <br>
+  <tt>}</tt> <br>
+&nbsp; <li>sort a hash keys according to the values</li>
+  <tt>foreach my $k ( sort { $value{$a} &lt;=&gt; $value{$b} } keys
+%value
+) {</tt> <br>
+  <tt>&nbsp;&nbsp; ...</tt> <br>
+  <tt>}</tt>
+</ul>
+<p><br>
+<b><u>array of hashes</u></b>
+</p>
+<ul>
+  <li>to push a hash on the array</li>
+  <tt>$myhash{'mykey'} = 'myvalue';</tt> <br>
+  <tt>push @myarray { %myhash };</tt> <br>
+&nbsp; <li>to retrieve the data</li>
+  <tt>my $incr = 0;</tt> <br>
+  <tt>while ( $incr &lt;= $#myarray ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; print $myarray[$incr]{'mykey'});</tt> <br>
+  <tt>}</tt>
+</ul>
+<p><br>
+<b><u>references</u></b>
+</p>
+<blockquote><li> <tt>ref</tt> returns the type if its argument is a
+reference (<tt>SCALAR</tt>, <tt>ARRAY</tt>, <tt>HASH</tt>, <tt>CODE</tt>,
+    <tt>REF</tt>, <tt>GLOB</tt>, <tt>LVALUE</tt>
+or package name if the reference has been blessed</li>
+return false if the argument is not a reference <br>
+&nbsp; <li><tt>bless</tt> declares a reference as being referencing an
+object of a
+given class</li>
+&nbsp; <li>pass a hash reference to a subroutine:</li>
+  <tt>&nbsp; sub bar</tt> <br>
+  <tt>&nbsp; {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my($h) = @_;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $k = keys(%$h);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print $$h{mykey};</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ...</tt> <br>
+  <tt>&nbsp; }</tt> <br>
+  <tt>&nbsp; ...</tt> <br>
+  <tt>&nbsp; bar(\%myhash);</tt></blockquote>
+<b><u>operators</u></b>
+<br>
+There are 24 levels of precedence:
+<table border="1">
+  <tbody>
+    <tr>
+      <td>left</td>
+      <td>terms and list operators</td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>-&gt;</tt></td>
+      <td>infix dereference operator
+      <table>
+        <tbody>
+          <tr>
+            <td>if the right side is a ...</td>
+            <td>left must be a ...</td>
+          </tr>
+          <tr>
+            <td><tt>[...]</tt></td>
+            <td>either a hard or symbolic reference to an array</td>
+          </tr>
+          <tr>
+            <td><tt>{...}</tt></td>
+            <td>... a hash</td>
+          </tr>
+          <tr>
+            <td><tt>(...)</tt></td>
+            <td>... a subroutine</td>
+          </tr>
+          <tr>
+            <td>a method name or <br>
+a subroutine reference</td>
+            <td>an object (i.e. a blessed reference) or <br>
+a class name (i.e. a package name)</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td><tt>++ --</tt></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>right</td>
+      <td><tt>**</tt></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>right</td>
+      <td><tt>! ~</tt> <br>
+unary <tt>-</tt></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td>unary <tt>+</tt></td>
+      <td>separator a function name from a parenthesized expression to
+avoid
+to consider it as its argument list</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><tt>\</tt></td>
+      <td>create a reference towards what follows it</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>=~</tt> <br>
+      <tt>!~</tt></td>
+      <td>binding operators</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>* / % x</tt></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>+ -</tt></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><tt>.</tt></td>
+      <td>concatenate two strings</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>&lt;&lt; &gt;&gt;</tt></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td>named unary operators</td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td><tt>&lt; &gt; &lt;= &gt;=</tt></td>
+      <td>number comparison</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><tt>lt gt le ge</tt></td>
+      <td>string comparison</td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td><tt>== != &lt;=&gt;</tt></td>
+      <td>number comparison</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><tt>eq ne cmp</tt></td>
+      <td>string comparison</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>&amp;</tt></td>
+      <td>bitwise boolean operator</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>| ^</tt></td>
+      <td>bitwise boolean operators</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>&amp;&amp;</tt></td>
+      <td>boolean operator <br>
+return the last evaluated value</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>||</tt></td>
+      <td>boolean operator <br>
+return the last evaluated value</td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td><tt>.. ...</tt></td>
+      <td>range operators</td>
+    </tr>
+    <tr>
+      <td>right</td>
+      <td><tt>?:</tt></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>right</td>
+      <td><tt>**= += *= &amp;= &lt;&lt;= &amp;&amp;=</tt> <br>
+      <tt>-= /= |= &gt;&gt;= ||=</tt> <br>
+      <tt>.= %= ^=</tt> <br>
+      <tt>x=</tt></td>
+      <td>assignment operators</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>,</tt></td>
+      <td>comma operator
+      <ul>
+        <li>in scalar context it evaluates its left argument, throws
+that value
+away,
+then evaluates its right argument and returns that value.</li>
+        <li>in list context, it inserts both its arguments into the
+list.</li>
+      </ul>
+      </td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><tt>=&gt;</tt></td>
+      <td>the <tt>=&gt;</tt> digraph is mostly just a synonym for the <tt>,</tt>
+operator except that it forces any word to the left to be interpreted
+as
+a string</td>
+    </tr>
+    <tr>
+      <td>N/A</td>
+      <td>list operators</td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>right</td>
+      <td><tt>not</tt></td>
+      <td><br>
+      </td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>and</tt></td>
+      <td>identical to <tt>&amp;&amp;</tt> but with a very low
+precedence</td>
+    </tr>
+    <tr>
+      <td>left</td>
+      <td><tt>or</tt></td>
+      <td>identical to <tt>||</tt> but with a very low precedence</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><tt>xor</tt></td>
+      <td><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><b><u>objects</u></b>
+</p>
+<ul>
+  <li>declare the superclass:</li>
+  <tt>our @ISA;</tt> <br>
+  <tt>@ISA = ("FooBar");</tt> <br>
+&nbsp; <li>call a method of the superclass:</li>
+  <tt>sub parse {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; my $self = shift;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; my $inputFile = shift;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; my $inputLine = shift;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; return
+self-&gt;SUPER::parse($self,$inputFile,$inputLine);</tt> <br>
+  <tt>}</tt>
+</ul>
+<p><br>
+<b><u>date<br>
+</u></b></p>
+<blockquote><li><tt><u>localtime</u></tt></li>
+return the local time <br>
+in a scalar context, return the <tt>ctime</tt> string <br>
+  <tt>$now = localtime();</tt> <br>
+  <tt>print(FILEHDL "------------------------\n".</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$now.</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"\n------------------------\n");</tt> <br>
+in a list context, return the integer values <br>
+  <tt>($sec,$min,$hour,$mday,$mon,$year,$wday,$yday,$isdst) =
+localtime(time);<br>
+  <br style="font-family: monospace;">
+  </tt></blockquote>
+<ul style="font-family: monospace;">
+  <li>compute the number of days between two dates: <br>
+use Time::Local; <br>
+$date1 = timegm(0, 0, 0, $day1, $month1-1, $year1); <br>
+$date2 = timegm(0, 0, 0, $day2, $month2-1, $year2); <br>
+return ($date2-$date1)/(24*60*60); </li>
+</ul>
+<p><br>
+<b><u>file handling</u></b>
+</p>
+<ul>
+  <li> <tt>&lt;...&gt;</tt> return an undefined value if there is no
+more
+line to
+be read</li>
+&nbsp; <li>loop on the file content</li>
+  <tt>open(FILE,"verb.txt") or die("cannot open file ($!)");</tt> <br>
+  <tt>while ( my $line = &lt;FILE&gt; )</tt> <br>
+  <tt>{</tt> <br>
+  <tt>...</tt> <br>
+  <tt>}</tt> <br>
+  <tt>close(FILE);</tt> <br>
+&nbsp; <li><span style="font-family: monospace;">open(DATE,"bugval -i
+$s Resolved_on |") or die("failed to get resolution date of $s ($!)");</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">( $resol_date{$s} =
+&lt;DATE&gt; ) or die("failed to get resolution date of $s");</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">close(DATE);</span><br
+ style="font-family: monospace;">
+will generate a message<br>
+    <span style="font-family: monospace;">Value of &lt;HANDLE&gt;
+construct can be "0"; test with defined() at extract_metrics.pl line
+231.</span><br style="font-family: monospace;">
+use instead:<br>
+    <span style="font-family: monospace;">open(DATE,"bugval -i $s
+Resolved_on |") or die("failed to get resolution date of $s ($!)");</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">defined( $resol_date{$s} =
+&lt;DATE&gt; ) or die("failed to get resolution date of $s");</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">close(DATE);</span><br
+ style="font-family: monospace;">
+    <br>
+  </li>
+  <li>open a file in write mode</li>
+  <tt>open(NFILE,'&gt;'.$nfile) or die("cannot open file $nfile ($!)");</tt>
+  <br>
+&nbsp; <li>open a file in append mode</li>
+  <tt>$collect = 'C:\WINDOWS\BUREAU\collect.txt';</tt> <br>
+  <tt>open(COLLECT,'&gt;&gt;',$collect) or die("cannot open $collect
+($!)");</tt> <br>
+  <tt>...</tt> <br>
+  <tt>close(COLLECT);</tt> <br>
+&nbsp; <li>open a file in <tt>rw-rw-r--</tt> mode</li>
+  <tt>use POSIX;</tt> <br>
+  <tt>my $mask = umask();</tt> <br>
+  <tt>umask(0002);</tt> <br>
+  <tt>sysopen(LOG, $logfile, O_WRONLY|O_CREAT|O_APPEND) or die("cannot
+open logfile $logfile");</tt> <br>
+  <tt>umask $mask;</tt> <br>
+&nbsp; <li>open a UTF8 file<br>
+    <span style="font-family: monospace;">open(INFILE,"&lt;:utf8",$input)
+    </span><br style="font-family: monospace;">
+    <br>
+  </li>
+  <li>to avoid that Perl replaces <tt>\n</tt> by <tt>\r\n</tt>
+on DOS
+when using <tt>print</tt></li>
+  <tt>open(FILE,"&gt;",$file) or die("Cannot open $file ($!)");</tt> <br>
+  <tt>binmode FILE;</tt> <br>
+&nbsp; <li>load the whole content of file in a variable</li>
+  <tt>undef $/;</tt> <br>
+  <tt>$input = &lt;INFILE&gt;;</tt> <br>
+&nbsp; <li>test if a directory exists</li>
+  <tt>( -d $dir ) or die("directory $dir does not exist");</tt> <li>test
+if a file is executable</li>
+  <tt>die("missing executable $dcmgen -- ") unless -x $dcmgen;<br>
+  <br>
+  </tt> <li>file
+tests</li>
+  <table border="1">
+    <tbody>
+      <tr>
+        <td><tt>-r</tt></td>
+        <td>is readable by effective uid/gid.</td>
+      </tr>
+      <tr>
+        <td><tt>-w</tt></td>
+        <td>is writable by effective uid/gid.</td>
+      </tr>
+      <tr>
+        <td><tt>-x</tt></td>
+        <td>is executable by effective uid/gid</td>
+      </tr>
+      <tr>
+        <td><tt>-u</tt></td>
+        <td>has setuid bit set</td>
+      </tr>
+      <tr>
+        <td><tt>-g</tt></td>
+        <td>has setgid bit set</td>
+      </tr>
+      <tr>
+        <td><tt>-k</tt></td>
+        <td>has sticky bit set</td>
+      </tr>
+      <tr>
+        <td><tt>-o</tt></td>
+        <td>is owned by effective uid</td>
+      </tr>
+      <tr>
+        <td><tt>-e</tt></td>
+        <td>exists</td>
+      </tr>
+      <tr>
+        <td><tt>-z</tt></td>
+        <td>has zero size</td>
+      </tr>
+      <tr>
+        <td><tt>-s</tt></td>
+        <td>has nonzero size (returns size)</td>
+      </tr>
+      <tr>
+        <td><tt>-f</tt></td>
+        <td>is a plain file</td>
+      </tr>
+      <tr>
+        <td><tt>-d</tt></td>
+        <td>is a directory</td>
+      </tr>
+      <tr>
+        <td><tt>-l</tt></td>
+        <td>is a symbolic link</td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<div style="margin-left: 40px;"><br>
+</div>
+<ul>
+  <li>create a directory</li>
+  <tt>mkdir($outdir) or die("failed to create directory $outdir: $!");</tt> <br></li>
+  <li>delete a directory</li>
+  <tt>rmdir($outdir) or die("failed to delete directory $outdir: $!");</tt> <br></li>
+  <li>list the content of a directory</li>
+  <tt>$dir = 'C:\Mes documents\a ecrire';</tt> <br>
+  <tt>opendir(DIR,$dir) or die ("cannot open directory $dir ($!)");</tt>
+  <br>
+  <tt>while ( $d = readdir(DIR) ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; print $d,"\n";</tt> <br>
+  <tt>}</tt> <br>
+  <tt>closedir(DIR) or die("cannot close directory $dir ($!)");</tt> <br>
+&nbsp; <li>recursively walk through the directories</li>
+  <tt>sub scan_dir {</tt> <br>
+  <tt>&nbsp;&nbsp; my $file = shift;</tt> <br>
+  <tt>&nbsp;&nbsp; if ( -d $file ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; opendir(DIR,$file);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; my @list = readdir(DIR);</tt>
+  <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; closedir(DIR);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; foreach( @list ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+scan_dir("$file/$_")
+if ( $_ ne "." &amp;&amp; $_ ne ".." );</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt> <br>
+  <tt>&nbsp;&nbsp; }</tt> <br>
+  <tt>&nbsp;&nbsp; elsif ( -f $file ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print "$file\n";</tt> <br>
+  <tt>&nbsp;&nbsp; }</tt> <br>
+  <tt>}</tt> <br>
+  <tt>scan_dir($file);</tt> <br>
+&nbsp; <li><tt>select</tt> set the default output filehandle and
+return the
+old one</li>
+&nbsp; <li>use quote strings to facilitate multiline and quote handling</li>
+  <tt>print $outputFile qq[function _display_$name() {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; return
+_openwin("_foobar_$name","$title","$text");</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; }\n];</tt> <br>
+&nbsp; <li>rename a file</li>
+  <tt>rename $oldfilename, $newfilename;</tt> <br>
+&nbsp; <li>destroy a file (more precisely a link to a file)</li>
+  <tt>unlink $file or die("failed to remove file $file ($!) --")</tt> <br>
+&nbsp; <li>change the access right of a file</li>
+  <tt>chmod 0700,$file or die("cannot chmod file $file ($!) --");<br>
+  <br>
+  </tt><li>get the file descriptor of a filehandle (return undefined if
+the filehandle is not open)<br>
+    <span style="font-family: monospace;">fileno FILEHANDLE <br>
+    <br>
+    </span></li>
+  <li><span style="font-family: monospace;">get the modification date
+of a file<br>
+use File::stat;<br>
+$d = stat($file)-&gt;mtime;<br>
+    </span></li>
+</ul>
+<p><br>
+<b><u>interaction with the shell</u></b>
+</p>
+<blockquote><li>
+get an environment variable</li>
+  <tt>$ENV{"FOOBAR"}</tt> <br>
+&nbsp; <li>modify the path so commands can be called directly</li>
+  <tt>$ENV{"PATH"} .= ":/ddts/bin";</tt> <br>
+&nbsp; <li><tt><u>glob</u></tt></li>
+syntax to use if we are sure that there is a single file (we must use
+a list, otherwise the next call to <tt>glob</tt> would return <tt>undefined</tt>)
+  <br>
+  <tt>my ($anonFile) = glob("$tempdir/*");</tt> <br>
+&nbsp; <li>fork and exec a command</li>
+  <tt>my $command = $ENV{"SDC_BIN"}."/browser";</tt> <br>
+  <tt>my $p = fork();</tt> <br>
+  <tt>if (!defined($p)) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; log_mess("Can't fork: $!");</tt> <br>
+  <tt>} elsif ( $p == 0 ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; exec $command;</tt> <br>
+  <tt>}</tt> <br>
+&nbsp; <li>handle signals</li>
+  <tt>sub catch_signal {</tt> <br>
+  <tt>&nbsp; my $sig = shift;</tt> <br>
+  <tt>&nbsp; log_mess("signal $sig catched");</tt> <br>
+  <tt>&nbsp; my $p = get_browser_pid();</tt> <br>
+  <tt>&nbsp; kill "USR1",$p;</tt> <br>
+  <tt>}</tt> <br>
+  <tt>$SIG{"INT"} =&nbsp; \&amp;catch_signal;</tt> <br>
+  <tt>$SIG{"QUIT"} =&nbsp; \&amp;catch_signal;</tt> <br>
+&nbsp; <li>get the pid of a process on Solaris</li>
+  <tt>sub get_browser_pid {</tt> <br>
+  <tt>&nbsp; open(PS,"ps -e -o pid,comm |");</tt> <br>
+  <tt>&nbsp; while ( &lt;PS&gt; ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; chomp;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; my ( $pid, $process ) = split;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; if ( $process eq "myprocess" ) {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; close(PS);</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return $pid;</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+  <tt>&nbsp; }</tt> <br>
+  <tt>&nbsp; close(PS);</tt> <br>
+  <tt>&nbsp; return 0;</tt> <br>
+  <tt>}</tt> <br>
+&nbsp; <li>get the output of a shell command</li>
+  <tt>open(BUGVAL,"/ddts/bin/bugval -i $spr Headline |") or die("failed
+to get headline of $spr ($!)");</tt> <br>
+  <tt>my $headline = &lt;BUGVAL&gt; or die("failed to get headline of
+$spr");</tt> <br>
+  <tt>print HTML to_html($headline);</tt> <br>
+  <tt>close(BUGVAL);</tt> <br>
+&nbsp; <li>execute a command and wait for its status</li>
+  <tt>@cmds = ("netscape", "-remote", "file:".$htmlfile);</tt> <br>
+  <tt>system(@cmds) == 0 or die("failed to communicate with Netscape
+($!) --");</tt> <br>
+or <br>
+  <tt>system("netscape -remote file:$htmlfile") == 0 or die("failed to
+communicate with Netscape</tt><tt>
+($!)</tt><tt> --");</tt> <br>
+&nbsp; <li>execute a <tt>grep</tt></li>
+  <tt>system("/usr/xpg4/bin/grep","-w","-q",$str,glob("*.c")) and print
+"$str is not used\n";</tt></blockquote>
+<p><br>
+<b><u>predefined functions</u></b>
+</p>
+<blockquote>
+<li> <tt><u>print</u></tt></li>
+print a message on <tt>stdout</tt> <br>
+  <tt>print "message\n";</tt> <br>
+print a message on <tt>stderr</tt> <br>
+  <tt>print STDERR "message\n";</tt> <br>
+<li><tt><u>printf</u></tt></li>
+print a formatted string<br>
+<li><tt><u>sprintf</u></tt></li>
+return a formatted string <br>
+  <tt>$s = sprintf "%04d%02d%02d", $year, $month, $day;</tt> <br>
+&nbsp; <li><tt><u>chop</u></tt></li>
+remove the last character of a string and return it <br>
+  <tt>chop($line);</tt> <br>
+&nbsp; <li><tt><u>chomp</u></tt></li>
+removes the end of a string if it is <tt>$/</tt> <br>
+  <tt>chomp($line);</tt> <br>
+&nbsp; <li><tt><u>crypt</u></tt></li>
+password encryption <br>
+  <tt>$crpwd = crypt($pwd,$salt);</tt> <br>
+&nbsp; <li><tt><u>do</u></tt></li>
+execute a script file (in order to load its routines) <br>
+&nbsp; <li><tt><u>require</u></tt></li>
+  <tt>require Foo::Bar;</tt> <br>
+load a module (i.e. execute the script <tt>Foo/Bar.pm</tt>, we can
+also write require <tt>Foo/Bar.pm</tt>) <br>
+&nbsp; <li><tt><u>use</u></tt></li>
+  <tt>use Foo::Bar;</tt> <br>
+load a module and call its <tt>import</tt> routine (this works only
+with a bareword)</blockquote>
+<p><br>
+<b><u>Internet</u></b>
+</p>
+<ul>
+  <li>retrieve a HTML page on Internet</li>
+  <tt>my $proxy = "http://3.231.200.25:88";</tt> <br>
+  <tt># Create a user agent object</tt> <br>
+  <tt>use LWP::UserAgent;</tt> <br>
+  <tt>my $ua = new LWP::UserAgent;</tt> <br>
+  <tt>$ua-&gt;agent("AgentName/0.1 " . $ua-&gt;agent);</tt> <br>
+  <tt>$ua-&gt;proxy('http', $proxy);</tt> <br>
+  <tt># Create a request</tt> <br>
+  <tt>my $req = new HTTP::Request GET =&gt; "http://www.foobar.com/";</tt>
+  <br>
+  <tt># Pass request to the user agent and get a response back</tt> <br>
+  <tt>my $res = $ua-&gt;request($req);</tt> <br>
+  <tt># Check the outcome of the response</tt> <br>
+  <tt>if (!$res-&gt;is_success) {</tt> <br>
+  <tt>&nbsp; die $req-&gt;as_string()," failure:
+",$res-&gt;message(),"\n";</tt> <br>
+  <tt>}</tt> <br>
+  <tt># Dump the data</tt> <br>
+  <tt>print $res-&gt;content();</tt>
+</ul>
+<b><u>tricks</u></b>
+<ul>
+  <li>test if a user is defined</li>
+  <ul>
+    <li>local</li>
+    <tt>( getpwnam($user) ) or die("$user is an unknown user");</tt> <li>NIS</li>
+    <tt>open(USER,"ypcat passwd |") or die("cannot open NIS passwd");</tt>
+    <br>
+    <tt>my $found = 0;</tt> <br>
+    <tt>my $u;</tt> <br>
+    <tt>while ( $u = &lt;USER&gt; ) {</tt> <br>
+    <tt>&nbsp;&nbsp;&nbsp; $found = 1 if ( $u =~ /^$user:/ );</tt> <br>
+    <tt>}</tt> <br>
+    <tt>( $found == 1 ) or die("$user is an unknown user");</tt> <br>
+    <tt>close(USER);</tt>
+  </ul>
+</ul>
+<p><br>
+<b><u>one-liners</u></b>
+</p>
+<ul>
+  <li>managing the quotes with the shell</li>
+  <tt>#&gt; perl -e 'print "select * from foo where bar ='\''a3'\''\n"';</tt>
+  <br>
+  <tt>#&gt; perl -e 'print "select * from foo where bar
+=".chr(39)."a3".chr(39)."\n"';</tt> <br>
+  <tt>#&gt; perl -e 'print qq#select * from foo where bar ="a3"\n#';</tt>
+  <br>
+&nbsp; <li>summing the number of occurences</li>
+  <tt>#&gt; ./foobar | perl -e 'while (&lt;&gt;) { chomp; $a{$_}++;};
+while (
+($w,$i)=each %a ) { print "$w\t$i\n"; }'</tt>
+</ul>
+<ul>
+  <li>uppercase the input<br>
+    <span style="font-family: monospace;">#&gt; echo foobar | perl -p
+-e 's/(.*)/\U\1\E/'<br>
+    <br>
+    </span></li>
+  <li>replace the $variables by the value of the corresponding
+environment variables in a file<br>
+    <span style="font-family: monospace;">#&gt; perl -p -e
+'s/\$([A-Za-z_][A-Za-z0-9_]*)/$ENV{$1}/ge' &lt;$infile &gt;$outfile <br>
+    <br>
+    </span></li>
+  <li><span style="font-family: monospace;">quickly check for a buffer
+overflow in </span>foobar<span style="font-family: monospace;"><br>
+    </span>#&gt; foobar `perl -e '{ print "A" x "9999" }'`<span
+ style="font-family: monospace;"><br>
+    </span></li>
+</ul>
+<p><br>
+<b><u>command line flags</u></b>
+</p>
+<ul>
+  <li> <tt>-w </tt>enable warnings<br>
+    <tt>-W </tt>enable warnings regardless of <span
+ style="font-family: monospace;">no warnings</span> or <span
+ style="font-family: monospace;">$^W</span><br>
+-X disable warnings regardless of <span style="font-family: monospace;">use
+warnings</span> or <tt>$^W<br>
+    <br>
+    </tt></li>
+  <li><tt>-c</tt> check the syntax of the progam but does not run it
+(except
+the <tt>BEGIN</tt> blocks, <tt>CHECK</tt> blocks and <tt>use</tt>
+statements)</li>
+&nbsp; <li><tt>-e commandline</tt> execute the command line</li>
+several <tt>-e</tt> options can be given to execute a multiline
+command <br>
+  <br>
+  <li>The <span style="font-family: monospace;">-n</span> switch wraps
+a while loop around your program.</li>
+  <span style="font-family: monospace;">while (&lt;&gt;) {</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">&lt;-e argument&gt;</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">&lt;-e argument&gt;</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">}</span><br>
+  <br>
+The -p switch does the same thing and prints the value of $_ at the end
+of each iteration.<br>
+  <span style="font-family: monospace;">while (&lt;&gt;) {</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">&lt;-e argument&gt;</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">&lt;-e argument&gt;</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">print;</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">}<br>
+  <br>
+  </span> <tt>-i</tt> edit the files in place <br>
+&nbsp; <li><tt>-Idir</tt> prepends the directory <tt>dir</tt> to <tt>@INC</tt></li>
+&nbsp; <li><tt>-mmodule</tt> execute <tt>a use module ();</tt> before
+the
+program</li>
+  <tt>-Mmodule</tt> execute <tt>a use module;</tt> before the program <br>
+  <tt>'-Mmodule qw(foo bar)'</tt> execute a <tt>use module qw(foo bar);</tt>
+before the program<br>
+  <br>
+  <li><span style="font-family: monospace;">-a</span><br>
+turns on autosplit mode when used with a <span
+ style="font-family: monospace;">-n</span> or <span
+ style="font-family: monospace;">-p</span>. An implicit split command
+to the <span style="font-family: monospace;">@F</span> array is done
+as the first thing inside the implicit while loop produced by the <span
+ style="font-family: monospace;">-n</span> or <span
+ style="font-family: monospace;">-p</span>.<br>
+    <span style="font-family: monospace;">perl -ane 'print pop(@F),
+"\n";'</span><br>
+is equivalent to<br>
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; while
+(&lt;&gt;) {</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+@F = split(' ');</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+print pop(@F), "\n";</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }<br>
+    </span><br style="font-family: monospace;">
+  </li>
+  <li><span style="font-family: monospace;">-Fpattern</span><br
+ style="font-family: monospace;">
+specifies the pattern to split on if <span
+ style="font-family: monospace;">-a</span> is also in effect. The
+pattern may be surrounded by <span style="font-family: monospace;">//</span>,
+    <span style="font-family: monospace;">""</span>, or <span
+ style="font-family: monospace;">''</span>, otherwise it will be put in
+single quotes.<br>
+    <br>
+  </li>
+  <li><span style="font-family: monospace;">-h</span><br>
+prints a summary of the options.<br>
+  </li>
+  <p><br>
+  <b><u>Unix scripting</u></b> </p>
+  <li>first line
+    <ul>
+      <tt>#!/usr/bin/perl -w<br>
+      </tt><br>
+    </ul>
+  </li>
+  <b><u>Windows scripting</u></b> <li>create a batch file which will
+support the drag 'n drop:</li>
+  <ul>
+  </ul>
+  <table
+ style="text-align: left; width: 100%; background-color: rgb(204, 204, 204);"
+ border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td style="vertical-align: top;"><code>@rem = '--*-Perl-*--<br>
+@echo off<br>
+D:\perl\bin\perl "C:\Mes documents\a ecrire\mailer.pl" %1</code> <br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+then, use <tt>$ARGV[0]</tt> in the script to get the name of the file,
+e.g.: <br>
+  <table
+ style="text-align: left; width: 100%; background-color: rgb(204, 204, 204);"
+ border="0" cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td style="vertical-align: top;"><code>use strict;<br>
+use warnings;<br>
+        <br>
+die("syntax: $0 &lt;xml_file&gt;") if ( $#ARGV != 0 );<br>
+        <br>
+my ( $infile, $outfile );<br>
+$infile = $ARGV[0];<br>
+( $outfile = $infile ) =~ s/\.htm$/.xml/;<br>
+        <br>
+open(INFILE,'&lt;',$infile) or die("cannot input open file ($infile):
+$!");<br>
+open(OUTFILE,'&gt;',$outfile) or die("cannot output open file
+($outfile): $!");<br>
+        <br>
+undef $/;<br>
+my $content = &lt;INFILE&gt;;<br>
+        <br>
+$content =~
+s{^.*&lt;html&gt;.*&lt;title&gt;(.*)&lt;/title&gt;.*&lt;body&gt;(.*)&lt;/body&gt;.*&lt;/html&gt;$}<br>
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp;&nbsp;&nbsp;
+{&lt;PAGE&gt;&lt;TITLE&gt;$1&lt;/TITLE&gt;&lt;CONTENT&gt;$2&lt;/CONTENT&gt;&lt;/PAGE&gt;}is;<br>
+        <br>
+print OUTFILE $content;<br>
+        <br>
+close(INFILE) or die("cannot input close file ($infile): $!");<br>
+close(OUTFILE) or die("cannot output close file ($outfile): $!");<br>
+        <br>
+my @cmds = ("C:/Program Files/Microsoft Office/Office10/WINWORD.EXE",
+$outfile);<br>
+system(@cmds) == 0 or die("failed to start Word: $!");</code> </td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: March 7</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2006 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+</p>
+</body>
+</html>

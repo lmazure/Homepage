@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>printing integers in binary format</TITLE>
+<PATH>notes/binprt.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<CONTENT>
+
+Quick 'n dirty code to print integers in binary format:
+<CODESAMPLE>
+const char *binaryString8(int8_t v)<BR/>
+{<BR/>
+<TAB/>static char buffer[9]; <BR/>
+<BR/>
+<TAB/>strcpy(buffer,"00000000");<BR/>
+<TAB/>int i=0;<BR/>
+<BR/>
+<TAB/>while (v) {<BR/>
+<TAB/><TAB/>if (v &amp; 0x80) buffer[i]='1'; <BR/>
+<TAB/><TAB/>v=v&gt;&gt;1;<BR/>
+<TAB/><TAB/>i++;<BR/>
+<TAB/>}<BR/>
+<BR/>
+<TAB/>return buffer;<BR/>
+}<BR/>
+<BR/>
+#define define_formatter(l) \<BR/>
+const char *binaryString##l(int##l##_t v) \<BR/>
+{ \<BR/>
+<TAB/>static char buffer[sizeof(v)*8+1]; \<BR/>
+\<BR/>
+<TAB/>size_t i;\<BR/>
+<TAB/>for (i=0; i&lt;sizeof(v); i++) { \<BR/>
+<TAB/><TAB/>strcpy(buffer+9*i,binaryString8(v&gt;&gt;((sizeof(v)-1-i)*8))); \<BR/>
+<TAB/><TAB/>buffer[9*i-1] = ' '; \<BR/>
+<TAB/>} \<BR/>
+\<BR/>
+<TAB/>return buffer; \<BR/>
+}<BR/>
+<BR/>
+define_formatter(16)<BR/>
+define_formatter(32)<BR/>
+define_formatter(64)
+</CODESAMPLE><BR/>
+
+Quick 'n dirtier code to dump a memory buffer in hexadecimal format:
+<CODESAMPLE>
+void binary_dump(void *buffer, size_t size) {<BR/>
+<TAB/>for (size_t i=0;i&lt;size;i++) {<BR/>
+<TAB/><TAB/>fprintf(stderr,"%02x|",int(((unsigned char*)buffer)[i]));<BR/>
+<TAB/><TAB/>if (i%8==7) fprintf(stderr,"\n");<BR/>
+<TAB/>}<BR/>
+<TAB/>fprintf(stderr,"\n");<BR/>
+}
+</CODESAMPLE><BR/>
+
+</CONTENT>
+
+</PAGE>

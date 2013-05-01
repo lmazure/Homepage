@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Software reviews</TITLE>
+<PATH>notes/softreview.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+<B><U>reviewed documents can be:</U></B>
+<BLIST>
+<ITEM>requirements</ITEM>
+<ITEM>design</ITEM>
+<ITEM>code</ITEM>
+<ITEM>test plans</ITEM>
+</BLIST>
+
+<B><U>review steps:</U></B>
+<BLIST>
+<ITEM><U>review planning:</U><BR/>
+selection of the review team, assignation of role and responsibilities, schedule the different review process steps<BR/>
+review entry and exit criteria may be defined</ITEM>
+<ITEM><U>defect detection (aka preparation phase):</U><BR/>
+reviewers individually read the document to find and document its defects</ITEM>
+<ITEM><U>review:</U><BR/>
+during the team meeting, each reported defect is accepted as a defect or refused as a false positive</ITEM>
+<ITEM><U>correction phase:</U><BR/>
+the author of the review document fixes the reported defects</ITEM>
+<ITEM><U>follow-up:</U><BR/>
+one, some or all the review participants check that all reported defects have been correctly fixed<BR/>
+the reviewers receive feedback about the review results</ITEM>
+</BLIST>
+
+<B><U>reading techniques:</U></B>
+<BLIST>
+<ITEM>ad hoc</ITEM>
+<ITEM>checklist</ITEM>
+<ITEM>specific technique: scenarios, perspective-based...</ITEM>
+</BLIST>
+
+<B><U>review variants:</U></B>
+<BLIST>
+<ITEM>walkthrough:<BR/>
+one or more reviewers and the author meet to discuss a document</ITEM>
+<ITEM>inspection:<BR/>
+each reviewer individually and systematically examines the document and records her/his findings</ITEM>
+</BLIST>
+</CONTENT>
+</PAGE>

@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Perl - networking</TITLE>
+<PATH>notes/perlnet.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+<B><U>using sockets</U></B>
+<CODESAMPLE>
+#!/usr/bin/perl -w<BR/>
+use strict;<BR/>
+<BR/>
+use IO::Socket;<BR/>
+<BR/>
+my $port = "512";<BR/>
+my $host = "3.249.12.132";<BR/>
+<BR/>
+my $repl;<BR/>
+my $socket = IO::Socket::INET->new(PeerAddr => $host,PeerPort => $port,Proto => "TCP") || die "socket ($!)";<BR/>
+print "socket created\n";<BR/>
+<BR/>
+my $req = "HELO a\r\n";<BR/>
+<BR/>
+syswrite($socket,$req,length($req));<BR/>
+$repl = &lt;$socket&gt;<BR/>
+print "server replied \"${repl}\"";<BR/>
+<BR/>
+close $socket;<BR/>
+</CODESAMPLE>
+
+</CONTENT>
+<X><T>links</T><A>../links/perl.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

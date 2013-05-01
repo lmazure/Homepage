@@ -1,0 +1,125 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>UML</TITLE>
+<PATH>notes/uml.xml</PATH>
+<DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE>
+<CONTENT>
+
+<B><U>history</U></B><BR/>
+<BLIST><TITLE>Created by the Three Amigos</TITLE>
+<ITEM>James Rumbaugh - OMT</ITEM>
+<ITEM>Grady Booch - Booch method</ITEM>
+<ITEM>Ivar Jacobson - OOSE</ITEM>
+</BLIST>
+
+
+<B><U>use case diagram</U></B><BR/>
+<BLIST><TITLE>inter use cases relations</TITLE>
+<ITEM>&#xab;include&#xbb; (dotted arrow): the pointing use case A includes the pointed use case B<BR/>
+i.e. every time A is performed, B is performed as a part of B<BR/>
+a user case can include more than one other use cases, but the temporal sequence cannot be represented</ITEM>
+<ITEM>&#xab;extend&#xbb; (dotted arrow): the pointing use case A is a variation of the pointed use case B<BR/>
+the extension occurs at one or more extension points of B (extension points are listed in the "extension points" compartment of a use case)<BR/>
+the condition of the extension and the corresponding extension points are optionally shown in a Note attached to the corresponding
+&#xab;extend&#xbb; relationship.</ITEM>
+<ITEM>generalization (standard generalization symbol)<BR/>
+the pointing use case A is a specialization of the pointed use case B</ITEM>
+</BLIST>
+actor relation<BR/>
+The only possible relationship between actors is the generalization (standard generalization symbol).<BR/>
+<BR/>
+
+
+<B><U>class diagram / object diagram</U></B><BR/>
+class<BR/>
+box with three parts
+<BLIST>
+<ITEM>names</ITEM>
+<ITEM>attributes<BR/>
+Syntax: <CODEROUTINE>visibility name : type-expression [ multiplicity ordering ] = initial-value { property-string }</CODEROUTINE><BR/>
+Visibility can be specified by a symbol or by a keyword <BLIST><ITEM><CODEROUTINE>+</CODEROUTINE> public</ITEM><ITEM><CODEROUTINE>#</CODEROUTINE> protected</ITEM><ITEM><CODEROUTINE>-</CODEROUTINE> private</ITEM><ITEM><CODEROUTINE>~</CODEROUTINE> package</ITEM></BLIST>
+The visibility marker may be suppressed. The absence of a visibility marker
+indicates that the visibility is not shown (not that it is undefined or public).<BR/>
+<I><CODEROUTINE>/</CODEROUTINE> indicates that the attribute is derived (its values is computed from other attributes)</I><BR/>
+Navigability is only from the class toward the attribute.
+A class-scope attribute is shown by underlining the name and type expression string; otherwise, the attribute is instance-scope.
+A nonchangeable attribute is specified with the property <CODEROUTINE>{frozen}</CODEROUTINE>.</ITEM>
+<ITEM>operations<BR/>
+Syntax: <CODEROUTINE>&#xab;stereotype&#xbb; visibility name ( parameter-list ): return-type-expression { property-strings }</CODEROUTINE><BR/>
+The colon and the return-type are omitted if the operation does not return a value.<BR/>
+<CODEROUTINE>parameter-list</CODEROUTINE> is a comma-separated list of formal parameters, each specified using the syntax: <CODEROUTINE>kind name : type-expression = default-value</CODEROUTINE>
+<BLIST><ITEM><CODEROUTINE>kind</CODEROUTINE> is <CODEROUTINE>in</CODEROUTINE>, <CODEROUTINE>out</CODEROUTINE>, or <CODEROUTINE>inout</CODEROUTINE>, with the default <CODEROUTINE>in</CODEROUTINE> if absent.</ITEM>
+<ITEM><CODEROUTINE>name</CODEROUTINE> is the name of a formal parameter.</ITEM>
+<ITEM><CODEROUTINE>type-expression</CODEROUTINE> is the (language-dependent) specification of an implementation type.</ITEM>
+<ITEM><CODEROUTINE>default-value</CODEROUTINE> is an optional value expression for the parameter, expressed in and subject to the limitations of the eventual target language.</ITEM></BLIST>
+The concurrency semantics of an operation are specified by a property string of the form <CODEROUTINE>{concurrency = name}</CODEROUTINE>, where name is one of the names: <CODEROUTINE>sequential</CODEROUTINE>, <CODEROUTINE>guarded</CODEROUTINE>, or <CODEROUTINE>concurrent</CODEROUTINE>. As a shorthand, one of the names may be used by itself.<BR/>
+An operation that does not modify the system state (one that has no side effects) is specified by the property <CODEROUTINE>{query}</CODEROUTINE>.<BR/>
+If this class does not implement the operation, the operation may be marked as <CODEROUTINE>{abstract}</CODEROUTINE> or
+the operation signature may be italicized.</ITEM></BLIST>
+Classes can be stereotyped as &#xab;type&#xbb; (specifying the operations without defining their implementation) and &#xab;implementationClass&#xbb;.<BR/>
+If Class B is attached to Class A by an anchor line with the anchor symbol (a plus sign within a circle) on Class A, then Class B is declared within the Namespace of Class A.<BR/>
+Parametrized class: A small dashed rectangle is superimposed on the upper right-hand corner of the rectangle for the class (or to the symbol for another modeling element). The dashed rectangle contains a parameter list of formal parameters for the class and their implementation types.<BR/>
+<BR/>
+<BLIST><TITLE>Three types of relationship:</TITLE>
+<ITEM>association<BR/>
+An association is indicated by a line.<BR/>
+The navigability of the association is indicated by a stick arrow at the end of the line (on the side of the class that is accessible). A X indicates the non navigability. If there is no symbol, the default is a bi-directional association. <BR/>
+The multiplicity of an association end is the number of possible instances of the class associated with a single instance of the other end. <BR/>
+<DEFINITIONTABLE>
+<ROW><TERM>0..1</TERM><DESC>zero or one instance</DESC></ROW>
+<ROW><TERM>n..m</TERM><DESC>range - n to m instances</DESC></ROW>
+<ROW><TERM>0..*<BR/>*</TERM><DESC>no limit on the number of instances (including none)</DESC></ROW>
+<ROW><TERM>1</TERM><DESC>exactly one instance</DESC></ROW>
+<ROW><TERM>1..*</TERM><DESC>at least one instance</DESC></ROW>
+<ROW><TERM>2,4</TERM><DESC>two or four instances</DESC></ROW>
+</DEFINITIONTABLE>
+An association end may have a role name to clarify the nature of the association.</ITEM>
+<ITEM>aggregation<BR/>
+When the aggregate can exist without any component, this is a composition. An aggregation is indicated by a hollow diamond at the end (on the side of the class which is the aggregate) of the association.</ITEM>
+<ITEM>composition<BR/>
+When the composite cannot exist without any component, this is a composition. A composition is indicated by a filled diamond at the end of the path.</ITEM>
+<ITEM>generalization<BR/>
+The generalization is indicated by a hollow triangle and a plain line (either for a class generalization or a type generalization). <BR/>
+The realization (of a type or of a parameterized class) is indicated by a hollow triangle and a dotted line.</ITEM>
+</BLIST>
+<BLIST><TITLE>stereotypes:</TITLE>
+<ITEM>ImplementationClass</ITEM>
+<ITEM>Type</ITEM>
+<ITEM>...</ITEM>
+</BLIST>
+<BR/>
+
+
+<B><U>sequence diagram</U></B><BR/>
+The lines have a rectangle header. This header uses the "object : class" syntax. class is optional (but the : must still be present). object is optional (but the : must still be present). <BR/>
+<BR/>
+If an object creates another object, the header of that second object is lower so to be aligned of the creation message arrow. <BR/>
+The destruction of an object is indicated by a X on the life line. <BR/>
+<BR/>
+A synchronous call is indicated by a filled solid arrowhead <BR/>
+An asynchronous call is indicated by a stick arrowhead (was indicated by a half stick arrowhead in UML1.3). <BR/>
+The return value (if there is such a value) is indicated by a dotted arrow with stick arrowhead. <BR/>
+<BR/>
+
+
+<B><U>collaboration diagram (known as communication diagrams in UML2)</U></B><BR/>
+The messages are numbered 1, 1.1, 1.1.1, 1.1.2, 1.2, 2....<BR/>
+<BR/>
+
+
+<B><U>state machine diagram</U></B><BR/>
+<BR/>
+
+
+<B><U>package diagrams</U></B><BR/>
+A package is shown as a large rectangle with a small rectangle (a "tab") attached to the left side of the top of the large rectangle.<BR/>
+The contents of the package may be shown within the large rectangle. Contents may also be shown by branching lines to contained elements, drawn outside of the package. A plus sign within a circle is drawn at the end attached to the container. The visibility of a package element outside the package may be indicated by preceding the name of the element by a visibility symbol<BR/>
+A keyword string may be placed above the package name. The predefined stereotypes are &#xab;facade&#xbb;, &#xab;framework&#xbb;, &#xab;stub&#xbb;, and &#xab;topLevel&#xbb;.<BR/>
+Relationships may be drawn between package symbols to show relationships between some of the elements in the packages. An import or access relationship between two packages is drawn as a dashed arrow with open arrowhead, labeled with the string &#xab;import&#xbb; or &#xab;access&#xbb;. (Note that the relationships are not transitive.)<BR/>
+A package can have properties, e.g. {abstract} if the package only contains interfaces.<BR/>
+Generalization symbols can appear, e.g. from an abstract package to a realization package. This implies an implicit dependency.<BR/>
+</CONTENT>
+<X><T>Links</T><A>../links/uml.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

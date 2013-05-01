@@ -1,0 +1,570 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>JavaScript</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+<ul>
+  <li>The window from which the current window has been opened is <span
+ style="font-family: monospace;">top.opener</span>.<br>
+For example, if a JavaScript script opens a new window, generates HTML
+including JavaScript code to fill it, and that JavaScript code must
+call a routine in the original window, use the syntax <span
+ style="font-family: monospace;">top.opener.my_routine()</span>.<br>
+  </li>
+</ul>
+<br>
+<br>
+<b><u>Strings:<br>
+</u></b>
+<ul>
+  <li style="font-family: monospace;">escape</li>
+escape a string<br>
+  <span style="font-family: monospace;">document.write(escape("Miss
+Piggy.")) </span><br style="font-family: monospace;">
+will give <br>
+  <span style="font-family: monospace;">Miss%20Piggy.<br>
+  </span><br style="font-family: monospace;">
+  <li> <span style="font-family: monospace;">string::replace</span><br>
+the first argument is a regular expression, the second a
+string or a function<br>
+    <span style="font-family: monospace;">javaFunctURL.replace(/\./g,"/")</span><br
+ style="font-family: monospace;">
+    <br>
+  </li>
+  <li>Translate a string into HTML
+(this routine is obviously not
+complete) <br>
+    <tt>function toHTML(s) {</tt> <br>
+    <tt>&nbsp; var t="";</tt> <br>
+    <tt>&nbsp; for (var i=0; i&lt;s.length; i++) {</tt> <br>
+    <tt>&nbsp;&nbsp;&nbsp; var c=s.charAt(i);</tt> <br>
+    <tt>&nbsp;&nbsp;&nbsp; if (c=="&lt;") t+="&amp;LT;"</tt> <br>
+    <tt>&nbsp;&nbsp;&nbsp; else if (c=="&gt;") t+="&amp;GT;"</tt> <br>
+    <tt>&nbsp;&nbsp;&nbsp; else if (c=="&amp;") t+="&amp;AMP;"</tt> <br>
+    <tt>&nbsp;&nbsp;&nbsp; else t+=c;</tt> <br>
+    <tt>&nbsp; }</tt> <br>
+    <tt>&nbsp; return t;</tt> <br>
+    <tt>}</tt> <br>
+  </li>
+</ul>
+&nbsp;
+<p><b><u>Randomizer</u></b>
+<br>
+<tt>function randomFloat() {</tt>
+<br>
+<tt>&nbsp; randomFloat.seed =
+(randomFloat.seed*randomFloat.a+randomFloat.c)%randomFloat.m;</tt>
+<br>
+<tt>&nbsp; return randomFloat.seed/randomFloat.m;</tt>
+<br>
+<tt>}</tt>
+<br>
+<tt>randomFloat.m=714025;</tt>
+<br>
+<tt>randomFloat.a=4096;</tt>
+<br>
+<tt>randomFloat.c=150889;</tt>
+<br>
+<tt>randomFloat.seed=(new Date()).getTime()%randomFloat.m;</tt>
+<br>
+<tt>function randomInteger(n) {</tt>
+<br>
+<tt>&nbsp; return Math.floor((n+1)*randomFloat());</tt>
+<br>
+<tt>}</tt>
+<br>
+&nbsp;
+</p>
+<p><b><u>Translate a number into a character:</u></b>
+<br>
+<tt>function toChar(n) {</tt>
+<br>
+<tt>&nbsp; return "abcdefghijklmnopqrstuvwxyz".charAt(n);</tt>
+<br>
+<tt>}</tt>
+<br>
+&nbsp;
+</p>
+<p><b><u>Including a script which is in another file:</u></b>
+<br>
+<tt>&lt;script language='JavaScript' src='foobar'&gt;</tt>
+<br>
+<tt>&lt;/script&gt;</tt>
+<br>
+&nbsp;
+</p>
+<p><b><u>DOM management</u></b>
+<br>
+<tt>function Application() {</tt>
+<br>
+<tt>&nbsp; this._ns = this._ie = false;</tt>
+<br>
+<tt>&nbsp; if (document.layers) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this._ns = true;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.windowWidth = window.innerWidth;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.windowHeight = window.innerHeight;</tt>
+<br>
+<tt>&nbsp; } else if (document.all ) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this._ie = true;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.windowWidth =
+window.document.body.offsetWidth;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.windowHeight =
+window.document.body.offsetHeight;</tt>
+<br>
+<tt>&nbsp; } else {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; alert("Oops! Sorry; your brower is not
+supported.\n"+</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Just tell
+me about this, I'm be enough courageous to fix that.\n"+</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; "Laurent");</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>}</tt>
+<br>
+&nbsp;
+</p>
+<p><b><u>Layer management</u></b>
+<br>
+define the style in the header :
+<br>
+<tt>&lt;header&gt;</tt>
+<br>
+<tt>&lt;style
+type="text/css"&gt;.f{position:absolute;top:0;left:0}&lt;/style&gt;</tt>
+<br>
+<tt>&lt;/header&gt;</tt>
+<br>
+puis utiliser la classe suivante :
+<br>
+<tt>Layer.width = function() {</tt>
+<br>
+<tt>&nbsp; if (this.app._ns) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; return this.layer.clip.width;</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>&nbsp; else if (this.app._ie) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; return this.layer.scrollWidth;</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>}</tt>
+</p>
+<p><tt>Layer.height = function() {</tt>
+<br>
+<tt>&nbsp; if (this.app._ns) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; return this.layer.clip.height;</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>&nbsp; else if (this.app._ie) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; return this.layer.scrollHeight;</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>}</tt>
+</p>
+<p><tt>Layer.show = function() {</tt>
+<br>
+<tt>&nbsp; if (this.app._ns) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.visibility = "show";</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>&nbsp; else if (this.app._ie) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.style.visibility = "visible";</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>}</tt>
+</p>
+<p><tt>Layer.hide = function() {</tt>
+<br>
+<tt>&nbsp; if (this.app._ns) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.visibility = "hide";</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>&nbsp; else if (this.app._ie) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.style.visibility = "hidden";</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>}</tt>
+</p>
+<p><tt>Layer.move = function(x,y) {</tt>
+<br>
+<tt>&nbsp; if (this.app._ns) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.pageX=x;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.pageY=y;</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>&nbsp; else if (this.app._ie) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.style.pixelLeft=x;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.style.pixelTop=y;</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>}</tt>
+</p>
+<p><tt>Layer.clip = function(left,right,top,bottom) {</tt>
+<br>
+<tt>&nbsp; if (this.app._ns) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.clip.left = left;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.clip.right = right;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.clip.top = top;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.clip.bottom = bottom;</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>&nbsp; else if (this.app._ie) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer.style.clip = "rect("+top+"px
+"+right+"px
+"+bottom+"px "+left+"px)";</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>}</tt>
+</p>
+<p><tt>function Layer(app,htmlCode) {</tt>
+<br>
+<tt>&nbsp; var id="layer_"+Layer.incr;</tt>
+<br>
+<tt>&nbsp; document.write('&lt;DIV ID="'+id+'"
+class="f"&gt;'+htmlCode+'&lt;/DIV&gt;');</tt>
+<br>
+<tt>&nbsp; if (app._ns) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer = document.layers[id];</tt>
+<br>
+<tt>&nbsp; } else if (app._ie) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; this.layer = document.all[id];</tt>
+<br>
+<tt>&nbsp; }</tt>
+<br>
+<tt>&nbsp; Layer.incr++;</tt>
+<br>
+<tt>&nbsp; this.app = app;</tt>
+<br>
+<tt>&nbsp; this.width = Layer.width;</tt>
+<br>
+<tt>&nbsp; this.height = Layer.height;</tt>
+<br>
+<tt>&nbsp; this.show = Layer.show;</tt>
+<br>
+<tt>&nbsp; this.hide = Layer.hide;</tt>
+<br>
+<tt>&nbsp; this.move = Layer.move;</tt>
+<br>
+<tt>&nbsp; this.clip = Layer.clip;</tt>
+<br>
+<tt>&nbsp; this.hide();</tt>
+<br>
+<tt>}</tt>
+</p>
+<p><tt>Layer.incr=1;</tt>
+<br>
+&nbsp;
+</p>
+<p><b><u>Form management:</u></b>
+<br>
+For the following HTML form:
+<br>
+<tt>&lt;FORM NAME="quizz" METHOD="POST" ACTION="mailto:toto@foobar.com"
+ONSUBMIT="return validate();"&gt;</tt>
+<br>
+<tt>Your first name:&lt;BR&gt;</tt>
+<br>
+<tt>&lt;INPUT NAME="first" TYPE="TEXT"&gt;&lt;BR&gt;&lt;BR&gt;</tt>
+<br>
+<tt>Your last name:&lt;BR&gt;</tt>
+<br>
+<tt>&lt;INPUT NAME="last" TYPE="TEXT"&gt;&lt;BR&gt;&lt;BR&gt;</tt>
+<br>
+<tt>Select name of the person who follows your training:&lt;BR&gt;</tt>
+<br>
+<tt>&lt;SELECT NAME="leader"&gt;</tt>
+<br>
+<tt>&lt;OPTION VALUE="none"&gt;--- Select a name ---</tt>
+<br>
+<tt>&lt;OPTION VALUE="Norbert@devnull.fr"&gt;Norb</tt>
+<br>
+<tt>&lt;OPTION VALUE="Camil@devnull.fr"&gt;Camilla</tt>
+<br>
+<tt>&lt;OPTION VALUE="Raoul@devnull.fr"&gt;Laurenzo</tt>
+<br>
+<tt>&lt;/SELECT&gt;&lt;BR&gt;</tt>
+<br>
+<tt>&lt;HR NOSHADE WIDTH="80%"&gt;</tt>
+<br>
+<tt>&lt;SCRIPT&gt;</tt>
+<br>
+<tt>function Question(text, answers)</tt>
+<br>
+<tt>{</tt>
+<br>
+<tt>&nbsp;&nbsp; this.text=text;</tt>
+<br>
+<tt>&nbsp;&nbsp; this.answers=answers;</tt>
+<br>
+<tt>&nbsp;&nbsp; this.displayed=0;</tt>
+<br>
+<tt>}</tt>
+</p>
+<p><tt>var Test = new Array (</tt>
+<br>
+<tt>&nbsp;new Question(</tt>
+<br>
+<tt>&nbsp; "Quelle est la couleur du cheval blanc d'Henri IV,</tt>
+<br>
+<tt>&nbsp; new Array(</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "bleu",</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "blanc",</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "rouge")),</tt>
+<br>
+<tt>...</tt>
+<br>
+<tt>&nbsp;new Question(</tt>
+<br>
+<tt>&nbsp; "Combien font 3 fois 5 ?",</tt>
+<br>
+<tt>&nbsp; new Array(</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "12",</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "13",</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "14",</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "15",</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "16",</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "17",</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; "18")));</tt>
+</p>
+<p><tt>&nbsp;&nbsp; for (var i=0; i&lt;Test.length; i++) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; n=randomInteger(Test.length-1-i);</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var k,l;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (k=0, l=0; l&lt;Test.length;
+l++) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(Test[l].displayed==0)
+{</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (k==n) break;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+k++;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; document.writeln('&lt;HR NOSHADE
+WIDTH="80%"&gt;');</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln('&lt;BR&gt;&lt;B&gt;Question
+'+(i+1)+':&lt;/B&gt;&lt;BR&gt;'+toHTML(Test[l].text)+'&lt;BR&gt;');</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (var j=0;
+j&lt;Test[l].answers.length;
+j++) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.writeln('&lt;INPUT
+TYPE="RADIO" NAME="question'+l+'"
+VALUE="'+toChar(j)+'"&gt;'+toHTML(Test[l].answers[j])+'&lt;BR&gt;');</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Test[l].displayed=i+1;</tt>
+<br>
+<tt>&nbsp;&nbsp; }</tt>
+<br>
+<tt>&lt;/SCRIPT&gt;</tt>
+<br>
+<tt>&lt;CENTER&gt;&lt;INPUT TYPE="SUBMIT" VALUE="Validate
+test"&gt;&lt;/CENTER&gt;</tt>
+<br>
+<tt>&lt;/FORM&gt;</tt>
+<br>
+the validation is:
+<br>
+<tt>function validate() {</tt>
+<br>
+<tt>&nbsp;&nbsp; if (document.forms.quizz.first.value=="") {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Please, enter your
+first name");</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(false);</tt>
+<br>
+<tt>&nbsp;&nbsp; }</tt>
+<br>
+<tt>&nbsp;&nbsp; if (document.forms.quizz.last.value=="") {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Please, enter your
+last name");</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(false);</tt>
+<br>
+<tt>&nbsp;&nbsp; }</tt>
+<br>
+<tt>&nbsp;&nbsp; if (document.forms.quizz.leader.selectedIndex==0)
+{</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; alert("Please, select a
+training
+leader");</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return(false);</tt>
+<br>
+<tt>&nbsp;&nbsp; }</tt>
+<br>
+<tt>&nbsp;&nbsp; for (var displayed=1; displayed&lt;=Test.length;
+displayed++)
+{</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var test;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (test=0;
+Test[test].displayed!=displayed;
+test++);</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var c=0;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; var
+t=document.quizz.elements["question"+test];</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; for (var i=0;
+i&lt;Test[test].answers.length;
+i++) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(t[i].checked)&nbsp; {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+c++;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (c==0) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+alert("Please,
+answer to question "+displayed);</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+false;</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt>
+<br>
+<tt>&nbsp;&nbsp; document.forms.quizz.action="mailto:"+</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+document.forms.quizz.leader.options[document.forms.quizz.leader.selectedIndex].value;</tt>
+<br>
+<tt>&nbsp;&nbsp; return true;</tt>
+<br>
+<tt>}</tt>
+</p>
+<p><b><u>Get the screen size on Netscape:</u></b>
+<br>
+<tt>&lt;SCRIPT LANGUAGE="Javascript1.1"&gt;</tt>
+<br>
+<tt>var tool = java.awt.Toolkit;</tt>
+<br>
+<tt>var size = new
+java.awt.Dimension(tool.getDefaultToolkit().getScreenSize());</tt>
+<br>
+<tt>var myWidth = size.width;</tt>
+<br>
+<tt>var myHeight = size.height;</tt>
+<br>
+<tt>alert(myWidth+'x'+myHeight);</tt>
+<br>
+<tt>&lt;/SCRIPT&gt;</tt>
+<br>
+&nbsp;
+</p>
+<p><b><u>Workaround the Netscape Messenger bug:</u></b>
+<br>
+Using JavaScript methods or variables in the HREF parameter does not
+work in the Netscape Messenger.
+<br>
+Instead of:
+<br>
+<tt>&lt;A HREF='javascript:doIt();'&gt;foobar&lt;/A&gt;</tt>
+<br>
+use:
+<br>
+<tt>&lt;A HREF='javascript:'&gt;foobar&lt;/A&gt;</tt>
+<br>
+<tt>&lt;SCRIPT LANGUAGE='JavaScript'&gt;</tt>
+<br>
+<tt>document.links[document.links.length-1].onclick=doIt();</tt>
+<br>
+<tt>&lt;/SCRIPT&gt;</tt>
+<br>
+&nbsp;
+</p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: January 3</font><sup><font size="-2">rd</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+&nbsp;
+</p>
+</body>
+</html>

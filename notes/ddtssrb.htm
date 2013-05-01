@@ -1,0 +1,503 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>DDTS scripts</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+check that the SPRs of a project have been resolved and verified
+by the
+correct person
+<table style="font-family: monospace;" bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td>#!/bin/sh
+      <p>PATH=${PATH}:/ddts/bin <br>
+export PATH </p>
+      <p>echo "select identifier from defects where ( (status =
+'R' or status
+= 'V' ) and resolver_id = engineer and project = '$1' );" | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a>
+-n -s &gt; /tmp/l1_$$ <br>
+echo "select identifier from defects where ( (status = 'R'
+or status
+= 'V' ) and project = '$1' );" | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a>
+-n -s &gt; /tmp/l2_$$ <br>
+echo SPRs resolved by a wrong person <br>
+echo "----------------------------------" <br>
+echo
+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; effective&nbsp;
+assigned" <br>
+echo
+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+resolver&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+to" <br>
+echo "----------------------------------" <br>
+diff /tmp/l1_$$ /tmp/l2_$$ | grep '&gt;' | sed 's/&gt; //'
+| <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+identifier resolver_id engineer&nbsp; | nawk '{ if ( toupper($2) !=
+toupper($3) ) print $0; }' <br>
+rm /tmp/l1_$$ /tmp/l2_$$ </p>
+      <p>echo <br>
+echo <br>
+echo </p>
+      <p>echo "select identifier from defects where ( status =
+'V' and ass_to_verify
+=&nbsp; verifier_id and project = '$1' );" | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a>
+-n -s &gt; /tmp/l1_$$ <br>
+echo "select identifier from defects where ( status = 'V'
+and project
+= '$1' );" | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a>
+-n -s &gt; /tmp/l2_$$ <br>
+echo SPRs verified by a wrong person <br>
+echo "----------------------------------" <br>
+echo
+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; effective&nbsp;
+assigned" <br>
+echo
+"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+verifier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+to" <br>
+echo "----------------------------------" <br>
+diff /tmp/l1_$$ /tmp/l2_$$ | grep '&gt;' | sed 's/&gt; //'
+| <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+identifier verifier_id ass_to_verify&nbsp; | nawk '{ if ( toupper($2)
+!= toupper($3) ) print $0; }' <br>
+rm /tmp/l1_$$ /tmp/l2_$$</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+print SPR graphs<br>
+<table style="text-align: left;" border="0" cellpadding="2"
+ cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <pre style="background-color: rgb(204, 204, 204);" wrap="">#!/bin/csh<br><br>setenv PATH ${PATH}:/ddts/bin<br><br>set projects = ( \<br>                 'AW3.1_H' \<br>                 'AW3.1_Opt' \<br>                 'AW3.1_U10' \<br>                 'AW3.1_U60' \<br>                 'AW4.0_Perf' \<br>                 'AW4.1' \<br>                 'AW4.2' \<br>                 'AW_Linux' \<br>                 'AWSoft-3' \<br>                 'AWSoft-ev' \<br>                 'AWSoft3_sanity' \<br>                 'AWSoft_3.0' \<br>                 'AiM_pp_1.0' \<br>                 'IOP3.2' \<br>                 'IOP3.2.5' \<br>                 'Merlot' \<br>                 )<br>set p = ""<br>foreach i ( $projects )<br>  set p = "$p -p $i"<br>end<br><br>findbug $p | \<br>   bugval -s "%s %s N: %s A: %s O: %s R: %s V: %s P: %s \n" Status Severity New-on Assigned-on Opened-on Resolved-on Verified-on Postponed-on | \<br>   tallybug -NAORV -1234 -gST -b980101 -e`date +"%y%m%d"` | \<br>   graphbug </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+dump SPRs without some given enclosures
+<br>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#!/usr/bin/perl -w</tt>
+      <p><tt>use strict;</tt> </p>
+      <p><tt>$ENV{"PATH"} .= ":/ddts/bin";</tt> </p>
+      <p><tt>my @projects = ( 'AiM_pp_1.0',</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'AW_Linux' );</tt> </p>
+      <p><tt>my @enclosure_name = ( 'AW4.1 init SRB',</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'AW_Linux init SRB',</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'AW4.1 evol SRB',</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'AW_Linux SRB 20020624',</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+'AW_Linux SRB 20020522' );</tt> </p>
+      <p><tt>my @sprs;</tt> <br>
+      <tt>foreach my $proj ( @projects ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; open(DUMP,qq{echo "select identifier from
+defects
+where submitted_on &gt;= '010101' and project = '$proj';" | ddtssql -n
+-s
+|}) or die("failed to dump the SPRs");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; while ( my $s = &lt;DUMP&gt;) { push
+@sprs, substr($s,0,10);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; close(DUMP);</tt> <br>
+      <tt>&nbsp; }</tt> </p>
+      <p><tt>my @reviewed_sprs;</tt> <br>
+      <tt>foreach my $name ( @enclosure_name ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; open(DUMP,qq{echo "select identifier from
+enclosures
+where name = '$name';" | ddtssql -n -s |}) or die("failed to dump the
+reviewed
+SPRs");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; while ( my $s = &lt;DUMP&gt;) { push
+@reviewed_sprs,
+substr($s,0,10);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; close(DUMP);</tt> <br>
+      <tt>}</tt> </p>
+      <p><tt>my %sev;</tt> <br>
+      <tt>foreach my $s ( @sprs ) {</tt> <br>
+      <tt>&nbsp; if ( ! ( grep $s eq $_, @reviewed_sprs ) ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; open(SEV,"bugval -i $s severity |") or
+die("failed
+to get severity of $s ($!)");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; $sev{$s} = &lt;SEV&gt; or die("failed to
+get data
+of $s");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; close(SEV);</tt> <br>
+      <tt>&nbsp; }</tt> <br>
+      <tt>}</tt> <br>
+      <tt>my @sorted_sprs = sort { $sev{$a} &lt;=&gt; $sev{$b} } keys
+%sev;</tt> </p>
+      <p><tt>foreach my $s ( @sorted_sprs ) {</tt> <br>
+      <tt>&nbsp;&nbsp; open(BUG,"dumpbug $s |") or die("failed to get
+headline
+of $s ($!)");</tt> <br>
+      <tt>&nbsp;&nbsp; undef $/;</tt> <br>
+      <tt>&nbsp;&nbsp; my $data = &lt;BUG&gt; or die("failed to dump
+$s");</tt> <br>
+      <tt>&nbsp;&nbsp; print $data;</tt> <br>
+      <tt>&nbsp;&nbsp; close(BUG);</tt> <br>
+      <tt>}</tt> </p>
+      <p><tt>foreach my $s ( @sorted_sprs ) {</tt> <br>
+      <tt>&nbsp;&nbsp; open(BUGVAL,"bugval -i $s Identifier Milestone
+Headline
+|") or die("failed to get data of $s ($!)");</tt> <br>
+      <tt>&nbsp;&nbsp; my $data = &lt;BUGVAL&gt; or die("failed to get
+data
+of $s");</tt> <br>
+      <tt>&nbsp;&nbsp; print $data;</tt> <br>
+      <tt>&nbsp;&nbsp; close(BUGVAL);</tt> <br>
+      <tt>}</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+</p>
+dump SPR dates<br>
+<table border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <pre style="background-color: rgb(204, 204, 204);" wrap=""><span
+ style="font-family: monospace;">#!/usr/bin/perl -w</span><br
+ style="font-family: monospace;"><br style="font-family: monospace;"><span
+ style="font-family: monospace;">use Time::Local;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">use strict;</span><br
+ style="font-family: monospace;"><br style="font-family: monospace;"><span
+ style="font-family: monospace;">$ENV{"PATH"} .= ":/ddts/bin";</span><br
+ style="font-family: monospace;"><br style="font-family: monospace;"><span
+ style="font-family: monospace;">my @projects = (</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AW3.1_H',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AW3.1_Opt',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AW3.1_U10',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AW3.1_U60',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AW4.0_Perf',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AW4.1',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AW4.2',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AW_Linux',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AWSoft-3',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AWSoft-ev',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AWSoft3_sanity',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AWSoft_3.0',</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">		'AiM_pp_1.0'</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">	       );</span><br
+ style="font-family: monospace;"><br style="font-family: monospace;"><br
+ style="font-family: monospace;"><span style="font-family: monospace;">#------------------------------------</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;"># format the date</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">#</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">sub format_date {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   my $date = shift;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   if ( $date eq "*" ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">       return $date;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">     }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   my $year = substr($date,0,2);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   my $month = substr($date,2,2);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   my $day = substr($date,4,2);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   if ( $year &lt; 50 ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      $year = "20".$year;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   } else {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      $year = "19".$year;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   return($day."/".$month."/".$year);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;"><br style="font-family: monospace;"><span
+ style="font-family: monospace;">#------------------------------------</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;"># compute the number of days between two dates</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">#</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">sub diff_date {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   my @date;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   ( $date[0], $date[1]) = @_;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   my $i = 0;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   while ( $i &lt; 2 ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">     if ( $date[$i] eq "*" ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">       return $date[$i];</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">     }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">     my $year = substr($date[$i],0,2);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">     my $month = substr($date[$i],2,2);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">     my $day = substr($date[$i],4,2);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">     my $d;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">     $date[$i] = timegm(0, 0, 0, $day, $month-1, $year);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">     $i++;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">   return ($date[0]-$date[1])/(24*60*60);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;"><br style="font-family: monospace;"><span
+ style="font-family: monospace;">#------------------------------------</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;"># dump one spr</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">#</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">sub dump_spr {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  my $id = shift;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  my $idEnd = $id;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  $idEnd =~ s{........(..)}{$1};</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  my $file = "</span><i
+ class="moz-txt-slash" style="font-family: monospace;"><span
+ class="moz-txt-tag">/</span>ddts/allbugs<span class="moz-txt-tag">/</span></i><span
+ style="font-family: monospace;">$idEnd/$id";</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  my $date_new = "*";</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  my $date_assign_first ="*";</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  my $date_assign_last ="*";</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  my $date_resol ="*";</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  my $date_verif ="*";</span><br
+ style="font-family: monospace;">  <br style="font-family: monospace;"><span
+ style="font-family: monospace;">  open (FILE,$file) or die("cannot open file $file ($!)");</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  while ( my $line = &lt;FILE&gt; )</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">    {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      # ignore duplicated SPRs</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      if ( $line =~ /^Duplicate-on: (\d\d\d\d\d\d)/ ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">	return;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      if ( $line =~ /^Submitted-on: (\d\d\d\d\d\d)/ ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">	$date_new = $1;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      if ( $line =~ /(\d\d\d\d\d\d) \d\d\d\d\d\d . -&gt; . \(Assigned to/ ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">	$date_assign_last = $1;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">	if ( $date_assign_first  eq "*" ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">	  $date_assign_first = $1;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">	}</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      if ( $line =~ /^Resolved-on: (\d\d\d\d\d\d)/ ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">	$date_resol = $1;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      if ( $line =~ /^Verified-on: (\d\d\d\d\d\d)/ ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">	$date_verif = $1;</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">      }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">    }</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  close(FILE);</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">  print "$id\t".</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">        format_date($date_new)."\t".</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">#        format_date($date_assign_first)."\t".</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">#        format_date($date_assign_last)."\t".</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">#        format_date($date_resol)."\t".</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">#        format_date($date_verif)."\t".</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">        diff_date($date_assign_first,$date_new)."\t".</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">        diff_date($date_assign_last,$date_assign_first)."\t".</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">        diff_date($date_resol,$date_assign_last)."\t".</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">        diff_date($date_verif,$date_resol)."\n";</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;"><br style="font-family: monospace;"><span
+ style="font-family: monospace;">#------------------------------------</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;"># main loop</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">#</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">foreach my $proj ( @projects ) {</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">    open(DUMP, "findbug -p $proj |") or die("failed to dump the SPRs ($!)");</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">    while ( my $s = &lt;DUMP&gt;) { chomp($s); dump_spr($s);}</span><br
+ style="font-family: monospace;"><span style="font-family: monospace;">    close(DUMP);</span><br
+ style="font-family: monospace;">} </pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+get the list of modified files from the SPRs<br>
+<table style="text-align: left; background-color: rgb(204, 204, 204);"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><code>#!/usr/bin/perl -w<br>
+      <br>
+use strict;<br>
+      <br>
+$ENV{"PATH"} .= ":/ddts/bin";<br>
+      <br>
+my @projects = ( 'AW4.2' );<br>
+my %full_dump;<br>
+      <br>
+#------------------------------------<br>
+# dump one spr<br>
+#<br>
+sub dump_spr {<br>
+&nbsp; my $id = shift;<br>
+&nbsp; my $idEnd = $id;<br>
+&nbsp; $idEnd =~ s{........(..)}{$1};<br>
+&nbsp; my $file = "/ddts/allbugs/$idEnd/$id";<br>
+&nbsp; my $flag1 = 0;<br>
+&nbsp; my $flag2 = 0;<br>
+&nbsp; <br>
+&nbsp; open (FILE,$file) or die("cannot open file $file ($!)");<br>
+&nbsp; while ( my $line = &lt;FILE&gt; )<br>
+&nbsp;&nbsp;&nbsp; {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( $line =~ /^Related-file::.*::
+Resolution/ ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $flag1 = 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elsif ( $line =~ /^Related-file:: / ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $flag1 = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $flag2 = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elsif ( ( $line =~
+/^\s*IMPACTED_FILES_COMPONENTS_DOCUMENTATION/ ) &amp;&amp; $flag1 ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $flag2 = 1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elsif ( $line =~ /^\s*RESOLVERs TEST
+DESCRIPTION, RESULTS and CONFIGURATION/ ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $flag2 = 0;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; elsif ( ( $line =~ /^\s*(\S*\/\S*)\s*$/
+) &amp;&amp; $flag2 ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; $line = $1;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; last if ( $line eq
+"N/A" );<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # keep the last two
+path components as the hash key<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if ( $file =~ /\// ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+$line =~ s/^.*?([^\/]*\/[^\/]*)$/$1/;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; push
+@{$full_dump{$line}}, $id;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp; }<br>
+&nbsp; close(FILE);<br>
+}<br>
+      <br>
+#------------------------------------<br>
+      <br>
+foreach my $proj ( @projects ) {<br>
+&nbsp;&nbsp;&nbsp; open(DUMP, "findbug -p $proj |") or die("failed to
+dump the SPRs ($!)");<br>
+&nbsp;&nbsp;&nbsp; while ( my $s = &lt;DUMP&gt;) { chomp($s);
+dump_spr($s);}<br>
+&nbsp;&nbsp;&nbsp; close(DUMP);<br>
+} <br>
+      <br>
+foreach my $file ( sort keys %full_dump ) {<br>
+&nbsp;&nbsp; my @l = sort @{$full_dump{$file}};<br>
+&nbsp;&nbsp; print $#l+1," $file";<br>
+&nbsp;&nbsp; foreach my $i ( 0 .. $#l ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; print " $l[$i]";<br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; print "\n";<br>
+&nbsp;}</code><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+display graphs of all SPRs and SPRs entered by foobar<br>
+<table style="text-align: left;" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td
+ style="background-color: rgb(204, 204, 204); vertical-align: top;"><span
+ style="font-family: monospace;">#!/bin/csh</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">setenv PATH
+${PATH}:/ddts/bin</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">findbug -p AW4.3 | \</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; bugval -s "%s
+%s N: %s A: %s O: %s R: %s V: %s P: %s \n" Status Severity New-on
+Assigned-on Opened-on Resolved-on Verified-on Postponed-on | \</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; tallybug
+-NAORV -1234 -gST -b040301 -e`date +"%y%m%d"` | \</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; graphbug
+-fP2x1 1 of 2 &gt; /tmp/truc</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">findbug -p AW4.3
+"submitter_id == foobar"| \</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; bugval -s "%s
+%s N: %s A: %s O: %s R: %s V: %s P: %s \n" Status Severity New-on
+Assigned-on Opened-on Resolved-on Verified-on Postponed-on | \</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; tallybug
+-NAORV -1234 -gST -b040301 -e`date +"%y%m%d"` | \</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; graphbug
+-fP2x1 2 of 2 &gt;&gt; /tmp/truc</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">pageview /tmp/truc &amp;</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">sleep 10</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">rm /tmp/truc</span><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+generate the top lists of submitters, resolvers and verifiers<br>
+<table style="background-color: rgb(204, 204, 204); text-align: left;"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span
+ style="font-family: monospace;">#!/bin/csh</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">echo === submitter ===</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">echo "select submitter_id
+from defects;" | /ddts/bin/ddtssql | awk ' { s[$1]++; } \</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; END { for ( v in s )
+{ print v, s[v]; }; }' | sort -r -n -k2,2</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">echo === resolver ===</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">echo "select resolver_id
+from defects;" | /ddts/bin/ddtssql | awk ' { s[$1]++; } \</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; END { for ( v in s )
+{ print v, s[v]; }; }' | sort -r -n -k2,2</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">echo === verifier ===</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">echo "select verifier_id
+from defects;" | /ddts/bin/ddtssql | awk ' { s[$1]++; } \</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; END { for ( v in s )
+{ print v, s[v]; }; }' | sort -r -n -k2,2</span><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<br>
+<hr noshade="noshade" width="80%"><a href="ddts.htm">Notes</a><br>
+<p><i><font size="-1">Last update: December 8</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2005 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

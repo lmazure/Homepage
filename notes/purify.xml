@@ -1,0 +1,66 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Purify</TITLE>
+<PATH>notes/purify.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST>
+
+<ITEM>how to use purify
+<CODESAMPLE><PROMPT/>setenv PURIFYOPTIONS "-chain-length=40 -cache-dir=/tmp"<BR/>
+<PROMPT/>make LD="purify g++"</CODESAMPLE></ITEM>
+
+<ITEM>get Purify release
+<CODESAMPLE><PROMPT/>purify -version</CODESAMPLE></ITEM>
+
+<ITEM>displays Purify options
+<CODESAMPLE><PROMPT/>purify -options</CODESAMPLE></ITEM>
+
+<ITEM>display the Purify options used to generate the binary
+<CODESAMPLE><PROMPT/>purify_what_options &lt;binary&gt;</CODESAMPLE></ITEM>
+
+<ITEM>workaround to see the code lines with Purify 5.3 on Solaris 8
+<CODESAMPLE>CC -xs -g</CODESAMPLE></ITEM>
+
+<ITEM>options:
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>-follow-child-processes=yes</CODEROUTINE></TERM><DESC>follow and check the child processes (this is not the case by default)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-chain-length=40</CODEROUTINE></TERM><DESC>specifies the number of recorded stack frames (default 6) </DESC></ROW>
+<ROW><TERM><CODEROUTINE>-cache-dir=/tmp</CODEROUTINE></TERM><DESC>specifies the cache directory</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-always-use-cache-dir</CODEROUTINE></TERM><DESC>stores purified files in cache directory instead of alongside original ones</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+
+<ITEM>by default Purify does not log alarm signals, to log them
+<CODESAMPLE>-handle-signals=SIGALRM</CODESAMPLE></ITEM>
+
+<ITEM>display a message in the Purify window if the program is tested with Purify, in <CODEROUTINE>stderr</CODEROUTINE> otherwise<BR/>
+Create a file <CODEROUTINE>purify_stub.c</CODEROUTINE>
+<CODESAMPLE>// default routines definition (necessary to be able to link without Purify)<BR/>
+extern "C" int purify_is_running(void); <BR/>
+extern "C" int purify_printf_with_call_chain(const char *fmt,...);<BR/>
+int purify_is_running() { return 0;} <BR/>
+int purify_printf_with_call_chain(const char*,...) { return 0;} <BR/>
+</CODESAMPLE>
+Use it in your code
+<CODESAMPLE>
+...<BR/>
+extern "C" int purify_is_running(void);<BR/>
+extern "C" int purify_printf_with_call_chain(const char *fmt,...);<BR/>
+...<BR/>
+if (purify_is_running()) {<BR/>
+<TAB/>purify_printf_with_call_chain("%s",message);<BR/>
+} else {<BR/>
+<TAB/>printf(stderr,"%s",message);<BR/>
+}
+</CODESAMPLE>
+</ITEM>
+
+</BLIST>
+
+</CONTENT>
+<X><T>Links</T><A>../links/coding.html#purify</A><L>en</L><F>HTML</F></X>
+</PAGE>
+
+

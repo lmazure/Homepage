@@ -1,0 +1,71 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE status='unmaintained' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>bypassing xdm</TITLE>
+<PATH>notes/bypassxdm.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<CONTENT>
+
+<U>step 1</U><BR/>
+You need to grant X server access to an account, lets say <I>foobar</I>. Add the following lines in <CODEFILENAME>/etc/X11/xdm/Xsetup_0</CODEFILENAME> (this is the file executed by xdm just before displaying the login window):
+<CODESAMPLE>/usr/X11R6/bin/xauth generate :0<BR/>
+/usr/X11R6/bin/xauth nextract - :0 | /bin/su -c '/usr/X11R6/bin/xauth -f .Xauthority nmerge - ' - foobar</CODESAMPLE>
+<BR/>
+<U>step 2</U><BR/>
+Being logged (using <CODEROUTINE>telnet</CODEROUTINE> or <CODEROUTINE>ssh</CODEROUTINE>)  as <I>foobar</I>, run the following script (first argument is logging name, second argument is password):
+<CODESAMPLE>
+#!/bin/bash<BR/>
+<BR/>
+function encode() {<BR/>
+<TAB/>command=`echo $1 | sed 's/./&lt;Key&gt;&amp; /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;\. /&lt;Key&gt;period /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;~ /&lt;Key&gt;asciitilde /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;! /&lt;Key&gt;exclam /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;@ /&lt;Key&gt;at /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;# /&lt;Key&gt;numbersign /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;$ /&lt;Key&gt;dollar /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;% /&lt;Key&gt;percent /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;^ /&lt;Key&gt;asciicircum /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;&amp; /&lt;Key&gt;ampersand /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;\* /&lt;Key&gt;asterisk /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;( /&lt;Key&gt;parenleft /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;) /&lt;Key&gt;parenright /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;_ /&lt;Key&gt;underscore /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;+ /&lt;Key&gt;plus /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;\` /&lt;Key&gt;grave /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;- /&lt;Key&gt;minus /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;= /&lt;Key&gt;equal /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;{ /&lt;Key&gt;braceleft /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;} /&lt;Key&gt;braceright /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;| /&lt;Key&gt;bar /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;\[ /&lt;Key&gt;bracketleft /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;\] /&lt;Key&gt;bracketright /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;\\ /&lt;Key&gt;backslash /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;: /&lt;Key&gt;colon /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;" /&lt;Key&gt;quotedbl /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;; /&lt;Key&gt;semicolon /g'`<BR/>
+<TAB/>command=`echo "$command" | sed "s/&lt;Key&gt;' /&lt;Key&gt;apostrophe /g"`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;&lt; /&lt;Key&gt;less /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;&gt; /&lt;Key&gt;greater /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;? /&lt;Key&gt;question /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;, /&lt;Key&gt;comma /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;\. /&lt;Key&gt;period /g'`<BR/>
+<TAB/>command=`echo "$command" | sed 's/&lt;Key&gt;\/ /&lt;Key&gt;slash /g'`<BR/>
+<TAB/>echo "$command"<BR/>
+}<BR/>
+<BR/>
+win=`xwininfo -root -tree -display :0.0 | grep '^        0x' | awk '{ print $1}'`<BR/>
+<BR/>
+# send login<BR/>
+e=`encode $1`<BR/>
+xse -window $win -display :0.0 $e "&lt;Key&gt;Return"<BR/>
+sleep 1<BR/>
+<BR/>
+# send password<BR/>
+e=`encode $2`<BR/>
+xse -window $win -display :0.0 $e "&lt;Key&gt;Return"<BR/>
+</CODESAMPLE>
+This works on Fedora Core 2, the mechanism to get the xdm logging window will probably have to be modified for other distributions.
+
+</CONTENT>
+</PAGE>

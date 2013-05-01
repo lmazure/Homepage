@@ -1,0 +1,117 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+   <meta name="KeyWords" content="Gaston Lagaffe, confidentialité, protection de la vie privée">
+   <title>la gaffe</title>
+<link REL=STYLESHEET TYPE="text/css" HREF="../css/standard" TITLE="standard">
+<script LANGUAGE="JavaScript">
+window.incr=Math.floor(Math.random()*200+1);
+function update_()
+{
+var s="00"+window.incr;
+var t=s.substring(s.length-3);
+document.manip.increm.value=t;
+document.images["planche"].src="http://www.gastonlagaffe.com/gaston/img/commun/gd_gaffe_"+t+".gif";
+}
+function inc_()
+{
+  window.incr++;
+  if (window.incr==201) window.incr=1;
+  update_();
+}
+function dec_()
+{
+  window.incr--;
+  if (window.incr==0) window.incr=200;
+  update_();
+}
+</script>
+<script language="JavaScript" src="../css/tools"></script>
+</head>
+<body ONLOAD="window.update_();">
+<u>13 janvier 2001 :</u>
+<p>Peut-&ecirc;tre suis-je parano&iuml;aque, mais, comme beaucoup de personnes
+ayant certaines connaissances techniques sur les technologies de l'information,
+je d&eacute;sire contr&ocirc;ler les informations qui circulent &agrave;
+mon sujet : que ce soient les dossiers que mon employeur, mon banquier,
+le fisc, la s&eacute;cu... ont sur moi, mes courriers personnels, mes photos...
+Imaginez un peu la masse de d&eacute;ductions que vous pourriez faire en
+croisant ces donn&eacute;es.
+<p>Dans certains cas, ces informations sont d&eacute;voil&eacute;es volontairement,
+avec ou sans l'accord de l'individu. C'est ainsi que GE pousse ses employ&eacute;s
+&agrave; signer un papier l'autorisant &agrave; fournir leurs donn&eacute;es
+personnelles aux diff&eacute;rentes branches afin que celles-ci puissent
+faire du d&eacute;marchage commercial. Sans commentaire...
+<p>Mais le probl&egrave;me est que, bien souvent, les informations sont
+r&eacute;v&eacute;l&eacute;es involontairement par l'incomp&eacute;tence
+de certaines personnes. Comme le monde devient de plus en plus connect&eacute;
+&agrave; Internet, les choses ne font pas aller en s'arrangeant. Je ne
+parle m&ecirc;me pas de <a href="../links/cracking.html">cracking</a> dus
+au fait que les administrateurs ont oubli&eacute; d'appliquer les patchs
+du mois dernier. Je ne fais pas non plus allusion aux probl&egrave;mes
+de configuration (allez voir <a href="http://www.kitetoa.com/" CLASS="french" TARGET="_blank">Kitetoa</a>
+pour avoir une id&eacute;e de l'ampleur des d&eacute;g&acirc;ts). Il s'agit
+simplement d'algos qui sont intrins&egrave;quement incorrects.
+<br>&nbsp;
+<p>Un exemple ? Evitez d'utiliser les cartes postales de <a href="http://www.gastonlagaffe.com/" CLASS="frenglish" TARGET="_blank">Gaston
+Lagaffe</a> : tout le monde pourra les lire. Il suffit de r&eacute;cup&eacute;rer
+l'index courant (pour cela envoyez-vous une carte ou voir paragraphe suivant).
+Il vaut, &agrave; l'instant o&ugrave; je tape, 43946. Puis vous pouvez
+lire toutes les cartes en remontant le temps simplement en d&eacute;cr&eacute;mentant
+l'index...
+<br><a href="http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43945" CLASS="french" TARGET="_blank">http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43945</a>
+<br><a href="http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43944" CLASS="french" TARGET="_blank">http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43944</a>
+<br><a href="http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43943" CLASS="french" TARGET="_blank">http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43943</a>
+<br><a href="http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43942" CLASS="french" TARGET="_blank">http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43942</a>
+<br><a href="http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43941" CLASS="french" TARGET="_blank">http://www.gastonlagaffe.com/gaston/code/fr/carte.cfm?id_carte=43941</a>
+<br>...
+<br>C'est souvent gentillet. Quelques fois, un peu coquin.
+<p>Je ne connais rien en administration de serveur Web, mais je pense que
+des personnes comme les sus-cit&eacute;s <a href="http://www.kitetoa.com/" CLASS="french" TARGET="_blank">Kitetoa</a>
+pourraient bien s'amuser sur ce site et trouver pleins de trucs sympas
+comme
+<br><a href="http://www.gastonlagaffe.com/gaston/code/fr/envoyer_mail.cfm" CLASS="french" TARGET="_blank">http://www.gastonlagaffe.com/gaston/code/fr/envoyer_mail.cfm</a>
+<br>qui permet de lire la derni&egrave;re carte envoy&eacute;e. En regardant
+le source HTML (au d&eacute;but de la d&eacute;finition du &lt;<tt>FORM>...&lt;/FORM>)</tt>),
+vous pouvez r&eacute;cup&eacute;rer la valeur courante de l'index.
+<p>Un petit cadeau pour finir.
+<br>(Je sais : ceci est sans doute peu fairplay, mais tellement pratique
+!).
+<br>&nbsp;
+<table>
+<tr>
+<td><form NAME="manip">
+<center><input TYPE="button" VALUE="suivant >>" ONCLICK="window.inc_();">
+<br><input TYPE="text" VALUE="001" SIZE="3" NAME="increm">
+<br><input TYPE="button" VALUE="<< pr&eacute;c&eacute;dent" ONCLICK="window.dec_();"></center>
+</form></td>
+
+<td><img NAME="planche" height=400 width=594></td>
+</tr>
+</table>
+
+<p>Je me demande si le d&eacute;veloppeur du site s'appelle Gaston. Sans
+doute un stagiaire de troisi&egrave;me ann&eacute;e de maternelle...
+<p><u>14 janvier 2001 :</u>
+<p>Le <a href="http://www.marsupilami.com/" CLASS="frenglish" TARGET="_blank">Masurpilami</a>
+a exactement le m&ecirc;me probl&egrave;me que Gaston : vous pouvez tr&egrave;s
+facilement lire toutes les cartes postales :
+<br><a href="http://www.marsupilami.com/site/code/fr/carte.cfm?id_carte=52083" CLASS="french" TARGET="_blank">http://www.marsupilami.com/site/code/fr/carte.cfm?id_carte=52083</a>
+<br><a href="http://www.marsupilami.com/site/code/fr/carte.cfm?id_carte=52084" CLASS="french" TARGET="_blank">http://www.marsupilami.com/site/code/fr/carte.cfm?id_carte=52084</a>
+<br><a href="http://www.marsupilami.com/site/code/fr/carte.cfm?id_carte=52085" CLASS="french" TARGET="_blank">http://www.marsupilami.com/site/code/fr/carte.cfm?id_carte=52085</a>
+<br><a href="http://www.marsupilami.com/site/code/fr/carte.cfm?id_carte=52086" CLASS="french" TARGET="_blank">http://www.marsupilami.com/site/code/fr/carte.cfm?id_carte=52086</a>
+<br>...
+<p>Vous pouvez aussi lire la derni&egrave;re envoy&eacute;e :
+<br><a href="http://www.marsupilami.com/site/txt_entry_fr.cfm" CLASS="french" TARGET="_blank">http://www.marsupilami.com/site/txt_entry_fr.cfm</a>
+<br>Mais, encore plus amusant, en regardant le source HTML de cette derni&egrave;re
+page, vous avez les adresses email de l'exp&eacute;diteur et du destinataire
+!
+<br>&nbsp;
+<p>
+<hr NOSHADE WIDTH="80%">
+<p><i><font size=-1>Last update: March 16</font><sup><font size=-2>th</font></sup><font size=-1>,
+2001 - <a href="javascript:do_email()">Laurent</a></font></i>
+</body>
+</html>

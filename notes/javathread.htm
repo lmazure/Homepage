@@ -1,0 +1,173 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Java multithreading</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><u>Runnable interface</u></b>
+<ul>
+  <li>void run() method executed by the new thread</li>
+</ul>
+<p><br>
+<b><u>Thread class</u></b>
+<br>
+implements the Runnable interface
+</p>
+<ul>
+  <li> <tt>Thread()</tt> construct a new <tt>Thread</tt></li>
+  <li> <tt>Thread(Runnable target)</tt> construct a new <tt>Thread </tt>object
+associated with the given <tt>Runnable</tt> object</li>
+  <li> <tt>Thread(String name)</tt> construct a new <tt>Thread </tt>with
+a given
+name</li>
+  <li> <tt>Thread(Runnable target, String name)</tt> construct a new <tt>Thread</tt>
+with a given name and associated with the given <tt>Runnable</tt>
+object</li>
+  <li> <tt>void setName(String name)</tt> set the name of the <tt>Thread</tt></li>
+  <li> <tt>String getName()</tt> return the name of the <tt>Thread</tt></li>
+  <br>
+&nbsp; <li><tt>void start()</tt> create a new thread and execute the <tt>run()</tt>
+method in it</li>
+  <li> <tt>void run()</tt> method executed by the new thread</li>
+  <li> <tt>static void sleep(long milliseconds</tt></li>
+  <br>
+  <tt>static void sleep(long milliseconds, int nanoseconds)</tt> put
+the current executing thread to sleep for the specified duration <li><tt>void
+stop()</tt> terminate an already running thread
+(deprecated because
+all the monitors locked by the thread are unlocked, the locked objects
+will now be available to the other threads, but they may be damaged -
+i.e.
+in an inconsistent state - because the stopped thread has not finished
+its jobs on them)</li>
+  <li> <tt>void suspend()</tt> suspend a thread (deprecated because
+the
+suspended
+thread may lock an object that will be required by the thread that
+should
+calls <tt>resume()</tt>, this results in a deadlock)</li>
+  <li> <tt>void resume()</tt> resume a suspended thread (deprecated as
+for <tt>suspend()</tt>)</li>
+  <li> <tt>boolean isAlive()</tt> test if a Thread is alive, a thread
+is
+alive
+sometime before it is started to sometimes after it is stopped</li>
+  <br>
+&nbsp; <li><tt>void join()</tt> wait that the thread is not alive
+anymore</li>
+  <li> <tt>void join(long timeout)</tt>&nbsp; and <tt>void join(long
+timeout,
+int nanos)</tt> wait that the thread is not alive anymore, but no
+longer
+than the specified duration</li>
+  <br>
+&nbsp; <li><tt>static Thread currentThread()</tt> return the current
+thread</li>
+  <li> <tt>static int enumerate()</tt> get all the Threads in the
+program,
+the
+return value (equal to the number of Threads stored into the array) is
+the minimum of the array size and of the total number of threads</li>
+  <li> <tt>static int activeCount()</tt> return the number of threads
+in
+the program</li>
+</ul>
+<p><br>
+<b><u>Two ways to create a new thread</u></b>
+</p>
+<ul>
+  <li>create a class FooBar deriving from Thread</li>
+  <tt>FooBar fb = new FooBar();</tt> <br>
+  <tt>fb.start();</tt> <br>
+&nbsp; <li>create a class FooBar implementing the Runnable interface</li>
+  <tt>Runnable fb = new FooBar();</tt> <br>
+  <tt>Threadth = new Thread(fb);</tt> <br>
+  <tt>th.start();</tt>
+</ul>
+<p><br>
+<b><tt><u>synchronized</u></tt></b>
+<br>
+A synchronized instance method (i.e. <tt>public synchronized int
+fooBar()
+{...}</tt>) or a synchronized block (i.e. <tt>synchronized(obj) {...}</tt>)
+blocks until the mutex of the object is acquired.
+<br>
+A synchronized class method (i.e. <tt>public synchronized static int
+fooBar() {...}</tt>) blocks until the mutex of the Class object
+corresponding
+to the class is acquired.
+</p>
+<p><b><u><tt>wait()</tt>/<tt>notify()</tt></u></b>
+<br>
+These methods are methods of the <tt>Object</tt> class,
+<br>
+They must be called from a block or method where the object is
+synchronized
+</p>
+<ul>
+  <li> <tt>void wait()</tt> free the object mutex, wait for a
+condition to
+occur,
+acquire the mutex and return</li>
+  <li> <tt>void wait(long timeout)</tt>&nbsp; and <tt>void wait(long
+timeout,
+int nanos)</tt> wait for a condition to occur, but no longer than the
+specified
+duration</li>
+  <li> <tt>void notify()</tt> notify one of the waiting thread that a
+condition
+has occurred</li>
+  <li> <tt>void notifyAll()</tt> notify all the waiting threads that a
+condition
+has occurred</li>
+</ul>
+<tt>notifyAll</tt> must be used when
+<ul>
+  <li>the condition can satisfy several threads</li>
+  <li>several threads are waiting for several conditions and the one
+receiving
+awoken by notify is not the right one</li>
+</ul>
+<u>example:</u>
+<br>
+in some part of the code
+<br>
+<tt>synchronized (lock) {</tt>
+<br>
+<tt>&nbsp;&nbsp; while (lock.getLock()) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; try {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+lock.wait();</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; } catch (Exception e) {}</tt>
+<br>
+<tt>&nbsp;&nbsp; }</tt>
+<br>
+<tt>}</tt>
+<br>
+somewhere else
+<br>
+<tt>synchronized (lock) {</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; someComputation();</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; lock.notify();</tt>
+<br>
+<tt>}</tt>
+<p></p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: July 26</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2003 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

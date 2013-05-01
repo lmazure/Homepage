@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Verification of the include syntax</TITLE>
+<PATH>notes/verifinclude2.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<CONTENT>
+Some software development tools (correctly) assume that the <CODEROUTINE>#include &lt;...&gt;</CODEROUTINE> syntax is used for system/language headers and the <CODEROUTINE>#include "..."</CODEROUTINE> syntax is used for the developer's own headers. So, if the wrong include syntax is used, they fail to properly handle the code. For example, this is a problem with static code analyzers that ignore warnings when the angle brackets are used and that display them when the double quotes are used. This trivial script helps to catch the incorrect include syntaxes.<BR/>
+You can use this script with <CODEROUTINE>find . -type | xargs -n 1000 the_script</CODEROUTINE><BR/>
+The old version of this script is available <X><T>here</T><A>verifinclude.html</A><L>en</L><F>HTML</F></X>.<BR/>
+<BR/>
+<CODESAMPLE>
+#!/bin/bash<BR/>
+<BR/>
+<BR/>
+<BR/>
+# list of directories containing header files<BR/>
+headerdir="/usr/include \<BR/>
+<TAB/>/usr/X11R6/include \<BR/>
+<TAB/>/usr/lib/gcc-lib/i386-redhat-linux/3.2.2/include \<BR/>
+<TAB/>/usr/lib/gcc-lib/i386-redhat-linux7/2.96/include"<BR/>
+<BR/>
+<BR/>
+<BR/>
+<BR/>
+# list of directories in the include path (the subdirectories must be after their directories)<BR/>
+includepath="/usr/include \<BR/>
+<TAB/>/usr/include/g++-3 \<BR/>
+<TAB/>/usr/X11R6/include \<BR/>
+<TAB/>/usr/lib/gcc-lib/i386-redhat-linux/3.2.2/include \<BR/>
+<TAB/>/usr/lib/gcc-lib/i386-redhat-linux7/2.96/include"<BR/>
+<BR/>
+<BR/>
+<BR/>
+# build list of header files<BR/>
+touch /tmp/the_header_list<BR/>
+for f in $headerdir<BR/>
+<TAB/>do<BR/>
+<TAB/><TAB/>find $f -type f &gt;&gt; /tmp/the_header_list<BR/>
+<TAB/>done<BR/>
+<BR/>
+rincludepath=()<BR/>
+for f in $includepath<BR/>
+<TAB/>do<BR/>
+<TAB/><TAB/>rincludepath="$f $rincludepath"<BR/>
+<TAB/>done<BR/>
+<BR/>
+for f in $rincludepath<BR/>
+<TAB/>do<BR/>
+<TAB/><TAB/>sed "s|$f/||" /tmp/the_header_list &gt; /tmp/the_header_list_<BR/>
+<TAB/><TAB/>rm /tmp/the_header_list<BR/>
+<TAB/><TAB/>mv /tmp/the_header_list_ /tmp/the_header_list<BR/>
+<TAB/>done<BR/>
+<BR/>
+<BR/>
+<BR/>
+# loop on the files<BR/>
+for file in $*<BR/>
+do<BR/>
+<BR/>
+<TAB/>stdinc=`grep '#.*include.*&lt;.*&gt;' $file | sed 's/[^&lt;]*&lt;//' | sed 's/&gt;[^&gt;]*//'`<BR/>
+<TAB/>nstinc=`grep '#.*include.*".*"' $file | sed 's/[^"]*"//' | sed 's/"[^"]*//'`<BR/>
+<BR/>
+<TAB/>for f in $stdinc<BR/>
+<TAB/>do<BR/>
+<TAB/><TAB/>if ! ( grep -x $f /tmp/the_header_list &gt; /dev/null ); then<BR/>
+<TAB/><TAB/><TAB/>echo "cannot find standard $f ($file)"<BR/>
+<TAB/><TAB/>fi<BR/>
+<TAB/>done<BR/>
+<BR/>
+<TAB/>for f in $nstinc<BR/>
+<TAB/>do<BR/>
+<TAB/><TAB/>if ( grep -x $f /tmp/the_header_list &gt; /dev/null ); then<BR/>
+<TAB/><TAB/><TAB/>echo "cannot find non-standard $f ($file)"<BR/>
+<TAB/><TAB/>fi<BR/>
+<TAB/>done<BR/>
+<BR/>
+<TAB/>shift<BR/>
+<BR/>
+done<BR/>
+<BR/>
+rm /tmp/the_header_list
+</CODESAMPLE>
+</CONTENT>
+<X><T>bash</T><A>bash.htm</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

@@ -1,0 +1,95 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>vim</TITLE>
+<PATH>notes/vim.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<U><B>Command line</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>vim file</CODEROUTINE></TERM>
+<DESC>edit the file in the current window</DESC></ROW>
+<ROW><TERM><CODEROUTINE>gvim file</CODEROUTINE></TERM>
+<DESC>edit the file in graphical mode (other window + menubar)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>vim +r123 file</CODEROUTINE></TERM>
+<DESC>edit the file with the cursor positioned on line 123</DESC></ROW>
+<ROW><TERM><CODEROUTINE>vim -b file</CODEROUTINE></TERM>
+<DESC>edit foobar in binary more (i.e. set <CODEROUTINE>noexpandtab</CODEROUTINE>, <CODEROUTINE>textwidth=0</CODEROUTINE>, <CODEROUTINE>nomodeline</CODEROUTINE>, and <CODEROUTINE>binary</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>vim -o file1 file2 file3</CODEROUTINE></TERM>
+<DESC>start vim with each file loaded in a horizontal window</DESC></ROW>
+<ROW><TERM><CODEROUTINE>vim -O file1 file2 file3</CODEROUTINE></TERM>
+<DESC>start vim with each file loaded in a vertical window</DESC></ROW>
+<ROW><TERM><CODEROUTINE>vim -o4 file1 file2</CODEROUTINE></TERM>
+<DESC>start vim with four horizontal windows</DESC></ROW>
+<ROW><TERM><CODEROUTINE>vim -O4 file1 file2</CODEROUTINE></TERM>
+<DESC>start vim with four vertical windows</DESC></ROW>
+<ROW><TERM><CODEROUTINE>vim -R file</CODEROUTINE></TERM>
+<DESC>open the file in read only mode</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>Undo/redo</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><KEY ID='u'/><BR/>
+<KEY ID='Undo'/><BR/>
+<CODEROUTINE>:u[ndo]</CODEROUTINE></TERM>
+<DESC>undo</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='r'/><BR/>
+<CODEROUTINE>:red[o]</CODEROUTINE></TERM>
+<DESC>redo</DESC></ROW>
+<ROW><TERM><KEY ID='U'/></TERM>
+<DESC>undo latest changes on the line</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>Search</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><KEY ID='*'/></TERM>
+<DESC>search for the word under the cursor</DESC></ROW>
+<ROW><TERM><CODEROUTINE>:set hlsearch</CODEROUTINE></TERM>
+<DESC>enable search result highlighting</DESC></ROW>
+<ROW><TERM><CODEROUTINE>:set noh[lsearch]</CODEROUTINE></TERM>
+<DESC>disable search result highlighting</DESC></ROW>
+<ROW><TERM><CODEROUTINE>:nohlsearch</CODEROUTINE></TERM>
+<DESC>hide the current search result highlighting</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B><X><T>Windows</T><A>http://vimdoc.sourceforge.net/htmldoc/windows.html</A><L>en</L><F>HTML</F></X></B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='s'/></TERM>
+<DESC>split the window horizontally in two</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='Left'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='h'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='h'/></TERM>
+<DESC>go to the left window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='Right'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='l'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='l'/></TERM>
+<DESC>go to the right window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='Down'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='j'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='j'/></TERM>
+<DESC>go to the window below</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='Up'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='k'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='k'/></TERM>
+<DESC>go to the window above</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>Colors</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>:set background=dark</CODEROUTINE></TERM>
+<DESC>set the syntax highlight colors corresponding to a dark background</DESC></ROW>
+<ROW><TERM><CODEROUTINE>:set background=light</CODEROUTINE></TERM>
+<DESC>set the syntax highlight colors corresponding to a light background</DESC></ROW>
+<ROW><TERM><CODEROUTINE>:syntax on</CODEROUTINE></TERM>
+<DESC>enable syntax highlighting (the default colors are applied)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>:syntax enable</CODEROUTINE></TERM>
+<DESC>enable syntax highlighting (the colors defined by <CODEROUTINE>:highlight</CODEROUTINE> are kept)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>:syntax off</CODEROUTINE></TERM>
+<DESC>disable syntax highlighting</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+the configuration file is <CODEROUTINE>$HOME/.vimrc</CODEROUTINE>.
+</CONTENT>
+<X><T>Links</T><A>../links/coding.html#vi</A><L>en</L><F>HTML</F></X>
+</PAGE>

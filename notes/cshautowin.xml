@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>automated window creation for shell commands</TITLE>
+<PATH>notes/cshautowin.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+Execute a command (here <CODEROUTINE>ps --forest -edf</CODEROUTINE>).<BR/>
+If this script is not called from a tty, it will automatically create one.
+<CODESAMPLE>
+#!/bin/csh<BR/>
+<BR/>
+tty -s<BR/>
+if ( $status ) then<BR/>
+<TAB/>setenv X_WAIT<BR/>
+<TAB/>xterm -geom 132x40 -sb -sl 5000 -e $0 $*<BR/>
+else<BR/>
+<TAB/><I>ps --forest -edf</I><BR/>
+<TAB/>if ( $?X_WAIT ) then<BR/>
+<TAB/><TAB/>echo "Press &lt;Enter&gt; to exit"<BR/>
+<TAB/><TAB/>echo "$&lt;" &gt;&amp; /dev/null<BR/>
+<TAB/>endif<BR/>
+endif
+</CODESAMPLE>
+
+</CONTENT>
+
+</PAGE>

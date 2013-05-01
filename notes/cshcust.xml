@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>csh customization</TITLE>
+<PATH>notes/cshcust.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<B><U>the usual stuff</U></B>
+<CODESAMPLE>
+alias cp '/bin/cp -i'<BR/>
+alias h  'history'<BR/>
+alias ls '/bin/ls -F'<BR/>
+alias mv '/bin/mv -i'<BR/>
+alias rm '/bin/rm -i'<BR/>
+set ignoreeof<BR/>
+set filec<BR/>
+set noclobber
+</CODESAMPLE>
+<BR/>
+<B><U><X><T>X</T><A>x11.htm</A><L>en</L><F>HTML</F></X></U></B>
+<CODESAMPLE>
+if ( ${?TERM} &amp;&amp; $TERM == "xterm" ) then<BR/>
+<TAB/>alias cd 'cd \!*; echo -n "^[]2;`cleartool pwv -setview -short`:`pwd`^G"'<BR/>
+endif<BR/>
+alias x 'xterm -title `pwd` -sb -sl 5000 -bg black -fg green -cr orange  -fn fixed'
+</CODESAMPLE>
+<BR/>
+<B><U><X><T>Purify</T><A>purify.html</A><L>en</L><F>HTML</F></X></U></B>
+<CODESAMPLE>
+setenv PURIFYOPTIONS '-chain-length=40 -cache-dir=/tmp'
+</CODESAMPLE>
+<BR/>
+<B><U><X><T>ClearCase</T><A>clcase.htm</A><L>en</L><F>HTML</F></X></U></B>
+<CODESAMPLE>
+alias ct cleartool<BR/>
+alias cmk 'clearmake \!* | &amp; tee build_log_`echo "\!*" | sed "s+[ /]+.+g"`_`date "+%a%d%b%y-%T"`'<BR/>
+alias xt "cleartool lsvtree -graphical \!*"<BR/>
+</CODESAMPLE>
+
+</CONTENT>
+</PAGE>

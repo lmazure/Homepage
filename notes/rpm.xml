@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>rpm</TITLE>
+<PATH>notes/rpm.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><U><B>install</B></U></TITLE>
+<ITEM>
+install a package<BR/>
+<CODESAMPLE><PROMPT/>rpm -i foobar.rpm [ toto.rpm ... ]</CODESAMPLE>
+</ITEM>
+<ITEM>
+install a package only if a previous version is already present<BR/>
+<CODESAMPLE><PROMPT/>rpm -F foobar.rpm [ toto.rpm ... ]</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>uninstall</B></U></TITLE>
+<ITEM>
+uninstall the foobar package<BR/>
+<CODESAMPLE><PROMPT/>rpm -e foobar</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>extract a file</B></U></TITLE>
+<ITEM>
+extract a file from a RPM<BR/>
+<CODESAMPLE><PROMPT/>rpm2cpio foobar.rpm | cpio -iumd thefile</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>query on a package</B></U></TITLE>
+<ITEM>
+list the capabilities provided by a package<BR/>
+<CODESAMPLE><PROMPT/>rpm -q --provides foobar</CODESAMPLE>
+</ITEM>
+<ITEM>
+list the packages on which this package depends<BR/>
+<CODESAMPLE><PROMPT/>rpm -q --requires foobar</CODESAMPLE>
+</ITEM>
+<ITEM>
+display the package description<BR/>
+<CODESAMPLE><PROMPT/>rpm -qi foobar</CODESAMPLE>
+</ITEM>
+<ITEM>
+list the files present in the package<BR/>
+<CODESAMPLE><PROMPT/>rpm -ql foobar</CODESAMPLE>
+</ITEM>
+<ITEM>
+list the files with their lengths, owner groups...<BR/>
+<CODESAMPLE><PROMPT/>rpm -ql --dump foobar</CODESAMPLE>
+</ITEM>
+<ITEM>
+the <CODEROUTINE>-p</CODEROUTINE> flag allows to query an uninstalled package, for example:
+<BLIST>
+<ITEM>
+display the uninstalled RPM package description<BR/>
+<CODESAMPLE><PROMPT/>rpm -qpi foobar.rpm</CODESAMPLE>
+</ITEM>
+<ITEM>
+list the files present in the uninstalled RPM package<BR/>
+<CODESAMPLE><PROMPT/>rpm -qpl foobar.rpm</CODESAMPLE>
+</ITEM>
+</BLIST>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>query on the machine</B></U></TITLE>
+<ITEM>
+return the list of all the installed packages <BR/>
+<CODESAMPLE><PROMPT/>rpm -qa</CODESAMPLE>
+</ITEM>
+<ITEM>
+indicate from which package is a given file <BR/>
+<CODESAMPLE><PROMPT/>rpm -qf /usr/include/string.h </CODESAMPLE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/life.html#rpm</A><L>en</L><F>HTML</F></X>
+</PAGE>

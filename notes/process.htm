@@ -1,0 +1,335 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Process examination</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><u>system</u></b><br>
+<ul>
+  <li><a href="http://bama.ua.edu/cgi-bin/man-cgi?vmstat+1M"
+ style="font-family: monospace;">vmstat</a>
+- report virtual memory usage<br>
+display forever, every 5 seconds, the virtual memory usage<br>
+    <span style="font-family: monospace;">#&gt; </span><a
+ href="http://bama.ua.edu/cgi-bin/man-cgi?vmstat+1M"
+ style="font-family: monospace;">vmstat</a><span
+ style="font-family: monospace;">
+5 </span><br style="font-family: monospace;">
+    <br>
+  </li>
+  <li><a href="http://bama.ua.edu/cgi-bin/man-cgi?iostat+1M"
+ style="font-family: monospace;">iostat</a>
+- report I/O usage<br>
+    <br>
+  </li>
+  <li><a href="http://bama.ua.edu/cgi-bin/man-cgi?mpstat+1M"
+ style="font-family: monospace;">mpstat</a>
+- report CPU usage<br>
+  </li>
+</ul>
+<b><u><br>
+examination of a binary</u></b>
+<blockquote><li>list the libraries of the binary <tt>foo</tt> calling
+the routine <tt>bar</tt></li>
+  <tt>#&gt; foreach file ( ` <a
+ href="http://www.visi.com/cgi-bin/man?ldd+1">ldd</a>
+foo | <a href="http://www.visi.com/cgi-bin/man?sed+1">sed</a>
+'s/.*=&gt;//'
+`)</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp; echo $file</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://www.visi.com/cgi-bin/man?nm+1">nm</a>
+$file | <a href="http://www.visi.com/cgi-bin/man?grep+1">grep</a> bar</tt>
+  <br>
+  <tt>&nbsp;&nbsp;&nbsp; end</tt></blockquote>
+<p><br>
+<b><u>examination&nbsp; of&nbsp; process run</u></b>
+</p>
+<ul>
+  <li>display the calls to <tt>open</tt></li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?truss+1">truss</a>
+-t open a.out</tt> <br>
+display the calls of the process and its children <br>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?truss+1">truss</a>
+-t open -f a.out</tt> <br>
+&nbsp; <li>list which routines of <tt>Xext.so</tt> are called from <tt>Kernel.so</tt></li>
+  <tt>#&gt; /usr/bin/<a href="http://www.visi.com/cgi-bin/man?sotruss+1">sotruss</a>
+-f -T /usr/openwin/lib/libXext.so.0 -F
+/export/home/sdc/lib/libKernel.so
+start.foobar</tt> <br>
+&nbsp; <li>indicate where is called a routine</li>
+  <tt>#&gt; /usr/ccs/bin/<a
+ href="http://www.visi.com/cgi-bin/man?whocalls+1">whocalls</a>
+routine executable &lt;arguments&gt;</tt>
+</ul>
+<p><br>
+<b><u>examination of a running process</u></b>
+</p>
+<ul>
+  <li>find the processes which are using a directory (for example, in
+case on
+a failed <tt>umount</tt> because the mount point is busy )</li>
+  <tt>#&gt; set dir=/vobs-awa/AW4.1_src</tt> <br>
+  <tt>#&gt; foreach file ( /proc/* )</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp; set file=`echo $file | sed 's+^.*/++'`</tt>
+  <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp; /usr/proc/bin/<a
+ href="http://www.visi.com/cgi-bin/man?proc+1">pwdx</a>
+$file | grep $dir</tt> <br>
+  <tt>&nbsp;&nbsp; end</tt> <br>
+&nbsp; <li>return the pids of a running instances of a binary given
+its name</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?pgrep+1">pgrep</a>
+foobar</tt> <br>
+&nbsp; <li>kill the running instances of a binary given its name</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?pgrep+1">pkill</a>
+foobar</tt> <br>
+&nbsp; <li>display the hierarchy of all processes</li>
+  <tt>#&gt; /usr/proc/bin/<a
+ href="http://www.visi.com/cgi-bin/man?proc+1">ptree</a></tt> <br>
+&nbsp; <li>display the process hirarchy of process 105</li>
+  <tt>#&gt; /usr/proc/bin/<a
+ href="http://www.visi.com/cgi-bin/man?proc+1">ptree</a>
+105</tt> <br>
+&nbsp; <li>return the list of open files of process 105</li>
+  <tt>#&gt;/usr/proc/bin/<a
+ href="http://www.visi.com/cgi-bin/man?proc+1">pfiles</a>
+105</tt> <br>
+&nbsp; <li>return the memory map of process 105</li>
+  <tt>#&gt; /usr/proc/bin/<a
+ href="http://www.visi.com/cgi-bin/man?proc+1">pmap</a>
+105</tt> <br>
+&nbsp; <li>list the signal actions of process 105</li>
+  <tt>#&gt; /usr/proc/bin/<a
+ href="http://www.visi.com/cgi-bin/man?proc+1">psig</a>
+105</tt> <br>
+&nbsp; <li>monitor and control running processes</li>
+  <tt>#&gt; /usr/dt/bin/<a
+ href="http://www.visi.com/cgi-bin/man?sdtprocess+1">sdtprocess</a></tt>
+  <br>
+&nbsp; <li>list process memory use</li>
+  <tt>#&gt; <a href="http://www.visi.com/cgi-bin/man?ps+1">ps</a> -e
+-o
+pid,ppid,vsz,args | <a href="http://www.visi.com/cgi-bin/man?sort+1">sort</a>
+-n -k 3,3</tt> <br>
+&nbsp; <li>dump the current stack</li>
+  <tt>#&gt; /usr/proc/bin/<a
+ href="http://www.visi.com/cgi-bin/man?proc+1">pstack</a>
+pid</tt> <br>
+&nbsp; <li>generate the core file of a running process</li>
+  <tt>#&gt; /bin/<a href="http://www.visi.com/cgi-bin/man?gcore+1">gcore</a>
+[ -o &lt;core_file&gt; ] pid</tt> <br>
+&nbsp; <li><tt><a href="http://www.visi.com/cgi-bin/man?proc+4">/proc</a></tt>
+hierarchy</li>
+  <table cellpadding="0" cellspacing="0">
+    <tbody>
+      <tr>
+        <td><tt>/proc</tt></td>
+        <td>directory (list of processes)</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid</tt></td>
+        <td>specific process directory</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/self</tt></td>
+        <td>alias for a process's own directory</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/as</tt></td>
+        <td>address space file</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/ctl</tt></td>
+        <td>process control file</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/status</tt></td>
+        <td>process status</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lstatus</tt></td>
+        <td>array of lwp status structs</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/psinfo</tt></td>
+        <td>process <tt><a href="http://www.visi.com/cgi-bin/man?ps+1">ps</a></tt>
+info</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lpsinfo</tt></td>
+        <td>array of lwp <tt><a
+ href="http://www.visi.com/cgi-bin/man?ps+1">ps</a></tt>
+info structs</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/map</tt></td>
+        <td>address space map</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/rmap</tt></td>
+        <td>reserved address map</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/cred</tt></td>
+        <td>process credentials</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/sigact</tt></td>
+        <td>process signal actions</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/auxv</tt></td>
+        <td>process aux vector</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/ldt</tt></td>
+        <td>process LDT (x86 only)</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/usage</tt></td>
+        <td>process usage</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lusage</tt></td>
+        <td>array of lwp usage structs</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/pagedata</tt></td>
+        <td>process page data</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/watch</tt></td>
+        <td>active watchpoints</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/cwd</tt></td>
+        <td>symlink to the current working directory</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/root</tt></td>
+        <td>symlink to the root directory</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/fd</tt></td>
+        <td>directory (list of open files)</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/fd/*</tt></td>
+        <td>aliases for process's open files</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/object</tt></td>
+        <td>directory (list of mapped files)</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/object/a.out</tt></td>
+        <td>alias for process's executable file</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/object/*</tt></td>
+        <td>aliases for other mapped files</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp</tt></td>
+        <td>directory (list of lwps)</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp/lwpid</tt></td>
+        <td>specific lwp directory</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp/agent</tt></td>
+        <td>alias for the agent lwp directory</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp/lwpid/lwpctl</tt></td>
+        <td>lwp control file</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp/lwpid/lwpstatus</tt></td>
+        <td>lwp status</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp/lwpid/lwpsinfo</tt></td>
+        <td>lwp <tt><a href="http://www.visi.com/cgi-bin/man?ps+1">ps</a></tt>
+info</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp/lwpid/lwpusage</tt></td>
+        <td>lwp usage</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp/lwpid/gwindows</tt></td>
+        <td>register windows (SPARC only)</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp/lwpid/xregs</tt></td>
+        <td>extra state registers</td>
+      </tr>
+      <tr>
+        <td><tt>/proc/pid/lwp/lwpid/asrs</tt></td>
+        <td>ancillary state registers (SPARC V9 only)</td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<b><u>dynamic linker</u></b>
+<ul>
+  <li> <tt>LD_LIBRARY_PATH</tt> specifies (comma separated)
+directories to
+be
+searched before the default directories</li>
+&nbsp; <li><tt>LD_NOVERSION</tt> forces the linker to ignore
+executable and
+shared
+object versions</li>
+&nbsp; <li><tt>LD_BIND_NOW</tt> forces the linker to bind all shared
+objects
+during
+process initalization</li>
+&nbsp; <li><tt>LD_PRELOAD</tt> specifies (space separated) shared
+objects to
+be linked
+after the program is executed but before any other shared objects
+referenced
+by the program</li>
+&nbsp; <li><tt>LD_PROFILE</tt> defines a shared object to be profiled
+(i.e.
+generation
+a <tt>gmon.out</tt> file to be read with <tt><a
+ href="http://www.visi.com/cgi-bin/man?gprof+1">gprof</a></tt>)</li>
+  <tt>LD_PROFILE_OUTPUT</tt> defines an alternative logfile name <br>
+&nbsp; <li><tt>LD_AUDIT</tt> defines a (colon separated) list of
+shared
+objects used
+to audit the linkage</li>
+&nbsp; <li><tt>LD_BREADTH</tt> requires the initialization routines to
+be
+called in
+reverse load order.</li>
+&nbsp; <li><tt>LD_DEBUG=help</tt> to get the usage description</li>
+  <tt>LD_DEBUG=bindings</tt> returns the bound shared objects <br>
+  <tt>LD_DEBUG=bindings,detail</tt> also returns real and relative
+relocations
+addresses <br>
+  <tt>LD_DEBUG=libs</tt> traces the share object lookup (same data as <tt>ldd</tt>)
+  <br>
+  <tt>LD_DEBUG=symbols</tt> traces the symbols lookup <br>
+  <tt>LD_DEBUG_OUTPUT</tt> defines a file to log debug data
+</ul>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: August 26</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2002 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

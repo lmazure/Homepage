@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Jasper Reports</TITLE>
+<PATH>notes/jasperreports.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST>
+
+<ITEM><BLIST><TITLE>loading data from a CSV file</TITLE>
+<ITEM> (Outside IReport: Create a CSV file where the first row defines the name of the columns.)</ITEM>
+<ITEM>Click on the <CODEMENU>Report datasources</CODEMENU> button</ITEM>
+<ITEM>Click on <CODEMENU>new</CODEMENU>, select <CODEMENU>File CSV datasource</CODEMENU> and click on <CODEMENU>Next</CODEMENU></ITEM>
+<ITEM>Type a name, select the file, click on <CODEMENU>Get columns name from the first row  of the file</CODEMENU></ITEM>
+<ITEM> (It seems that editing the column names in the datasource definition will break the report execution...)</ITEM>
+<ITEM>In the <CODEMENU>Report inspector</CODEMENU>, create one field per column, its name must be exactly the column header in the CSV file</ITEM>
+</BLIST></ITEM>
+
+<ITEM>creating a group<BR/>
+In the <CODEMENU>Report inspector</CODEMENU>, right-click on the root of the tree and select <CODEMENU>Add Report Group</CODEMENU></ITEM>
+
+<ITEM>setting a variable which sums on a group<BR/>
+(This variable shall be displayed in the corresponding Group footer.)<BR/>
+set <CODEMENU>Variable Class</CODEMENU> to <CODEROUTINE>lang.java.Integer</CODEROUTINE><BR/>
+set <CODEMENU>Calculation</CODEMENU> to <CODEMENU>Sum</CODEMENU><BR/>
+set <CODEMENU>Reset type</CODEMENU> to <CODEMENU>Group</CODEMENU><BR/>
+set <CODEMENU>Reset Group</CODEMENU> to the correct Group<BR/>
+set <CODEMENU>Increment type</CODEMENU> to <CODEMENU>none</CODEMENU><BR/>
+set <CODEMENU>Increment Factory Class</CODEMENU> to empty<BR/>
+set <CODEMENU>Variable Expression</CODEMENU> to <CODEROUTINE>$V(variableToSum)</CODEROUTINE><BR/>
+set <CODEMENU>Initial Value Expression</CODEMENU> to empty</ITEM>
+
+<ITEM>wrapping the content in a Text Field<BR/>
+set <CODEMENU>Stretch With Overflow</CODEMENU> to <CODEROUTINE>True</CODEROUTINE> for the Text Field.<BR/>
+set <CODEMENU>Stretch Type</CODEMENU> to <CODEMENU>Relative to Tallest Object</CODEMENU> for the other components of the band.</ITEM>
+
+</BLIST>
+
+</CONTENT>
+
+</PAGE>

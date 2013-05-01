@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>XHTML</TITLE>
+<PATH>notes/xhtml.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B>Transition from HTML to XHTML</B></TITLE>
+<ITEM>FTP URL with login/password
+<CODESAMPLE>ftp://user:password@machine/directory/</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B>Transition from HTML to XHTML</B></TITLE>
+<ITEM>
+<CODESAMPLE>&lt;CENTER&gt;...&lt;CENTER&gt; </CODESAMPLE>
+can be replaced by
+<CODESAMPLE>&lt;span style="text-align: center"&gt;...&lt;/span&gt;</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODESAMPLE>&lt;STRIKE&gt;...&lt;STRIKE&gt; </CODESAMPLE>
+can be replaced by
+<CODESAMPLE>&lt;span style="text-decoration: line-through"&gt;...&lt;/span&gt;</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODESAMPLE>&lt;A href="..." target="_blank"&gt;...&lt;A&gt; </CODESAMPLE>
+can be replaced by
+<CODESAMPLE>&lt;a href="..." onclick="window.open(this.href,'_blank');return false;"&gt;...&lt;/a&gt;</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODESAMPLE>&lt;img align="absmiddle" src="thumbup.gif"&gt; </CODESAMPLE>
+can be replaced by
+<CODESAMPLE>&lt;img style="vertical-align: middle; display: inline-block;" src="thumbup.gif"&gt;</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/html.html#XHTML</A><L>en</L><F>HTML</F></X>
+</PAGE>
+
+

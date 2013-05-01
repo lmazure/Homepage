@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Cracking</TITLE>
+<PATH>notes/cracking.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE>cracking unsalted MD5 passwords</TITLE>
+<ITEM>Use a site such as <X><T>passcracking.com</T><A>http://www.passcracking.com</A><L>en</L><F>HTML</F></X>.<BR/>
+If the password in not in the MD5 database, submit it to the MD5 rainbow.
+</ITEM>
+<ITEM>
+Use a tools such as <X><T>Cain &amp; Abel</T><A>http://www.oxid.it</A><L>en</L><F>HTML</F></X>
+<BLIST><ITEM>Use Winrtgen (which is part of Cain &amp; Abel) to generate the rainbow tables,</ITEM>
+<ITEM>then start <BLIST><TITLE>Cain</TITLE>
+<ITEM>click on the <CODEMENU>Cracker</CODEMENU> tab</ITEM>
+<ITEM>select <CODEMENU>MD5 Hashes</CODEMENU></ITEM>
+<ITEM>right click, select <CODEMENU>Add to list</CODEMENU>, and add the MD5-encrypted password.</ITEM>
+<ITEM>select one or more lines</ITEM>
+<ITEM>right click, select <CODEMENU>Cryptanalysis Attack via Rainbow Tables</CODEMENU>.</ITEM>
+<ITEM>add the tables and click <CODEMENU>Start</CODEMENU>.</ITEM>
+</BLIST></ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/cracking.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

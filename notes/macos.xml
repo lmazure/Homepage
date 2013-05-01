@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE status='unmaintained' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>MacOS</TITLE>
+<PATH>notes/macos.xml</PATH>
+<DATE><YEAR>2012</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><U><B>history</B></U></TITLE>
+<ITEM>10.0 Cheetah</ITEM>
+<ITEM>10.1 Puma</ITEM>
+<ITEM>10.2 Jaguar</ITEM>
+<ITEM>10.3 Panther</ITEM>
+<ITEM>10.4 Tiger</ITEM>
+<ITEM>10.5 Leopard</ITEM>
+<ITEM>10.6 Snow Leopard</ITEM>
+<ITEM>10.7 Lion</ITEM>
+<ITEM>10.8 Mountain Lion</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>file management</B></U></TITLE>
+<ITEM>to copy files/directories while preserving metadata and resource forks, use <CODEROUTINE><X><T>ditto</T><A>javascript:do_reference("man/macosx/1/ditto")</A><L>en</L><F>HTML</F></X></CODEROUTINE> or <CODEROUTINE><X><T>/Developer/Tools/CpMac</T><A>javascript:do_reference("man/macosx/1/CpMac")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/>
+starting at MacOS 10.4, the <CODEROUTINE><X><T>cp</T><A>javascript:do_reference("man/macosx/1/cp")</A><L>en</L><F>HTML</F></X></CODEROUTINE> preserves metadata and resource forks, <CODEROUTINE>/Developer/Tools/CpMac</CODEROUTINE> will be deprecated</ITEM>
+<ITEM>to move files/directories while preserving metadata and resource forks, use <CODEROUTINE><X><T>/Developer/Tools/MvMac</T><A>javascript:do_reference("man/macosx/1/MvMac")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/>
+starting at MacOS 10.4, the <CODEROUTINE><X><T>mv</T><A>javascript:do_reference("man/macosx/1/mv")</A><L>en</L><F>HTML</F></X></CODEROUTINE> preserves metadata and resource forks, <CODEROUTINE>/Developer/Tools/MvMac</CODEROUTINE> will be deprecated</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>applications</B></U></TITLE>
+<ITEM><CODESAMPLE><X><T>open</T><A>javascript:do_reference("man/macosx/1/open")</A><L>en</L><F>HTML</F></X> file 1 [ file2 [...] ]</CODESAMPLE>
+open the files with the adequate applications<BR/>
+the files can be specified as URLs<BR/>
+the application can be specified with the <CODEROUTINE>-a application</CODEROUTINE> option</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>CD/DVD</B></U></TITLE>
+<ITEM>convert a DMG image into an ISO image
+<CODESAMPLE><X><T>hdiutil</T><A>javascript:do_reference("man/macosx/1/hdiutil")</A><L>en</L><F>HTML</F></X> convert /path/to/filename.dmg -format UDTO -o /path/to/savefile.iso</CODESAMPLE></ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>Links</T><A>../links/macos.html</A><L>en</L><F>HTML</F></X>
+
+</PAGE>
+

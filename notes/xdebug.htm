@@ -1,0 +1,629 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>X11 debug code</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+debugging routines
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>const char *</tt> <br>
+      <tt>stringOfXEvent(int type)</tt> <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp; switch (type) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+KeyPress:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("KeyPress");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+KeyRelease:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("KeyRelease");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+ButtonPress:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("ButtonPress");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case ButtonRelease:&nbsp;&nbsp;&nbsp;
+return("ButtonRelease");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case MotionNotify:&nbsp;&nbsp;&nbsp;&nbsp;
+return("MotionNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+EnterNotify:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("EnterNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+LeaveNotify:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("LeaveNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+FocusIn:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("FocusIn");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+FocusOut:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("FocusOut");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case KeymapNotify:&nbsp;&nbsp;&nbsp;&nbsp;
+return("KeymapNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+Expose:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("Expose");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case GraphicsExpose:&nbsp;&nbsp;
+return("GraphicsExpose");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+NoExpose:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("NoExpose");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case VisibilityNotify:
+return("VisibilityNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case CreateNotify:&nbsp;&nbsp;&nbsp;&nbsp;
+return("CreateNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case DestroyNotify:&nbsp;&nbsp;&nbsp;
+return("DestroyNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+UnmapNotify:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("UnmapNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+MapNotify:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("MapNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case
+MapRequest:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return("MapRequest");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case ReparentNotify:&nbsp;&nbsp;
+return("ReparentNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case ConfigureNotify:&nbsp;
+return("ConfigureNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case ConfigureRequest:
+return("ConfigureRequest");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case GravityNotify:&nbsp;&nbsp;&nbsp;
+return("GravityNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case ResizeRequest:&nbsp;&nbsp;&nbsp;
+return("ResizeRequest");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case CirculateNotify:&nbsp;
+return("CirculateNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case CirculateRequest:
+return("CirculateRequest");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case PropertyNotify:&nbsp;&nbsp;
+return("PropertyNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case SelectionClear:&nbsp;&nbsp;
+return("SelectionClear");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case SelectionRequest:
+return("SelectionRequest");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case SelectionNotify:&nbsp;
+return("SelectionNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case ColormapNotify:&nbsp;&nbsp;
+return("ColormapNotify");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case ClientMessage:&nbsp;&nbsp;&nbsp;
+return("ClientMessage");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; case MappingNotify:&nbsp;&nbsp;&nbsp;
+return("MappingNotify");</tt> <br>
+      <tt>&nbsp; }</tt>
+      <p><tt>&nbsp; return("?");</tt> <br>
+      <tt>}</tt> </p>
+      <p><tt>const char *</tt> <br>
+      <tt>stringOfEventMask(long mask)</tt> <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; const size_t n=128;</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; static char result[n];</tt> </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; if (mask==0) return("NoEventMask");</tt>
+      </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; result[0] = '\0';</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; KeyPressMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"KeyPressMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; KeyReleaseMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"KeyReleaseMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; ButtonPressMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"ButtonPressMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; ButtonReleaseMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"ButtonReleaseMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; EnterWindowMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"EnterWindowMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; LeaveWindowMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"LeaveWindowMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; PointerMotionMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"PointerMotionMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; PointerMotionHintMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"PointerMotionHintMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button1MotionMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button1MotionMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button2MotionMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button2MotionMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button3MotionMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button3MotionMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button4MotionMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button4MotionMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button5MotionMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button5MotionMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; ButtonMotionMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"ButtonMotionMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; KeymapStateMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"KeymapStateMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; ExposureMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"ExposureMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; VisibilityChangeMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"VisibilityChangeMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; StructureNotifyMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"StructureNotifyMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; ResizeRedirectMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"ResizeRedirectMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; SubstructureNotifyMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"SubstructureNotifyMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; SubstructureRedirectMask )
+{</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"SubstructureRedirectMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; FocusChangeMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"FocusChangeMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; PropertyChangeMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strcat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"PropertyChangeMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; ColormapChangeMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"ColormapChangeMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; OwnerGrabButtonMask ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"OwnerGrabButtonMask",n);}</tt> </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; return(result);</tt> <br>
+      <tt>}</tt> <br>
+&nbsp; </p>
+      <p><tt>const char *</tt> <br>
+      <tt>stringOfKeyButtonMask(unsigned int mask)</tt> <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; const size_t n=128;</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; static char result[n];</tt> </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; if (mask==0) return("NoMask");</tt> </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; result[0] = '\0';</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; ShiftMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"ShiftMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; LockMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"LockMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; ControlMask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"ControlMask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Mod1Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Mod1Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Mod2Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Mod2Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Mod3Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Mod3Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Mod4Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Mod4Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Mod5Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Mod5Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button1Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button1Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button2Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button2Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button3Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button3Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button4Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button4Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; Button5Mask ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"Button5Mask",n);}</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( mask &amp; AnyModifier ) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (strlen(result))
+strncat(result,"
+",n);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strncat(result,"AnyModifier",n);}</tt> </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; return(result);</tt> <br>
+      <tt>}<br>
+      </tt></p>
+      <p><tt>const char *<br>
+stringOfVisualClass(int class) {<br>
+      <br>
+&nbsp; if ( c_class == StaticGray) return ("StaticGray");<br>
+&nbsp; if ( c_class == GrayScale) return ("GrayScale");<br>
+&nbsp; if ( c_class == StaticColor) return ("StaticColor");<br>
+&nbsp; if ( c_class == PseudoColor) return ("PseudoColor");<br>
+&nbsp; if ( c_class == TrueColor) return ("TrueColor");<br>
+&nbsp; if ( c_class == DirectColor) return ("DirectColor");<br>
+      <br>
+&nbsp; return("?");<br>
+}<br>
+      <br>
+const char *<br>
+stringOfVisualInfoMask(long mask)<br>
+{<br>
+&nbsp; static char result[128];<br>
+      <br>
+&nbsp; if (mask==0)&nbsp; return("VisualNoMask");<br>
+&nbsp; if (mask==VisualAllMask)&nbsp; return("VisualAllMask");<br>
+      <br>
+&nbsp; result[0] = '\0';<br>
+&nbsp; if ( mask &amp; VisualIDMask ) {<br>
+&nbsp;&nbsp;&nbsp; if (strlen(result)) strncat(result,"
+",sizeof(result));<br>
+&nbsp;&nbsp;&nbsp; strncat(result,"VisualIDMask",sizeof(result)); }<br>
+&nbsp; if ( mask &amp; VisualScreenMask ) {<br>
+&nbsp;&nbsp;&nbsp; if (strlen(result)) strncat(result,"
+",sizeof(result));<br>
+&nbsp;&nbsp;&nbsp; strncat(result,"VisualScreenMask",sizeof(result)); }<br>
+&nbsp; if ( mask &amp; VisualDepthMask ) {<br>
+&nbsp;&nbsp;&nbsp; if (strlen(result)) strncat(result,"
+",sizeof(result));<br>
+&nbsp;&nbsp;&nbsp; strncat(result,"VisualDepthMask",sizeof(result)); }<br>
+&nbsp; if ( mask &amp; VisualClassMask ) {<br>
+&nbsp;&nbsp;&nbsp; if (strlen(result)) strncat(result,"
+",sizeof(result));<br>
+&nbsp;&nbsp;&nbsp; strncat(result,"VisualClassMask",sizeof(result)); }<br>
+&nbsp; if ( mask &amp; VisualRedMaskMask ) {<br>
+&nbsp;&nbsp;&nbsp; if (strlen(result)) strncat(result,"
+",sizeof(result));<br>
+&nbsp;&nbsp;&nbsp; strncat(result,"VisualRedMaskMask",sizeof(result)); }<br>
+&nbsp; if ( mask &amp; VisualGreenMaskMask ) {<br>
+&nbsp;&nbsp;&nbsp; if (strlen(result)) strncat(result,"
+",sizeof(result));<br>
+&nbsp;&nbsp;&nbsp;
+strncat(result,"VisualGreenMaskMask",sizeof(result)); }<br>
+&nbsp; if ( mask &amp; VisualBlueMaskMask ) {<br>
+&nbsp;&nbsp;&nbsp; if (strlen(result)) strncat(result,"
+",sizeof(result));<br>
+&nbsp;&nbsp;&nbsp; strncat(result,"VisualBlueMaskMask",sizeof(result));
+}<br>
+&nbsp; if ( mask &amp; VisualColormapSizeMask ) {<br>
+&nbsp;&nbsp;&nbsp; if (strlen(result)) strncat(result,"
+",sizeof(result));<br>
+&nbsp;&nbsp;&nbsp;
+strncat(result,"VisualColormapSizeMask",sizeof(result)); }<br>
+&nbsp; if ( mask &amp; VisualBitsPerRGBMask ) {<br>
+&nbsp;&nbsp;&nbsp; if (strlen(result)) strncat(result,"
+",sizeof(result));<br>
+&nbsp;&nbsp;&nbsp;
+strncat(result,"VisualBitsPerRGBMask",sizeof(result)); }<br>
+      <br>
+&nbsp; return(result);<br>
+}<br>
+      <br>
+const char *<br>
+stringOfVisualInfo(const XVisualInfo *visualInfo)<br>
+{<br>
+&nbsp; static char result[256];<br>
+      <br>
+&nbsp; snprintf(result,sizeof(result),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"visual_id=%lx screen=%d depth=%d class=%s "<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"red_mask=%lx green_mask=%lx blue_mask=%lx "<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+"colormap_size=%d bits_per_rgb=%d",<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+(long)visualInfo-&gt;visualid,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+visualInfo-&gt;screen,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+visualInfo-&gt;depth,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+stringOfVisualClass(visualInfo-&gt;class),<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+visualInfo-&gt;red_mask,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+visualInfo-&gt;green_mask,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+visualInfo-&gt;blue_mask,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+visualInfo-&gt;colormap_size,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+visualInfo-&gt;bits_per_rgb);<br>
+      <br>
+&nbsp; return(result);<br>
+}<br>
+      </tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>dumping the X resource database for a shell (code extracted from <tt><a
+ href="http://www.xfree86.org/4.2.0/appres.1.html">appres</a></tt>)
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>static void</tt> <br>
+      <tt>PrintBindingQuarkList(XrmBindingList bindings,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+XrmQuarkList quarks,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+FILE *stream)</tt> <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp; Bool firstNameSeen;</tt>
+      <p><tt>&nbsp; for (firstNameSeen = False; *quarks; bindings++,
+quarks++)
+{</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if (*bindings == XrmBindLoosely) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void) fprintf(stream, "*");</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; } else if (firstNameSeen) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void) fprintf(stream, ".");</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; firstNameSeen = True;</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; (void)fputs(<a
+ href="http://www.xfree86.org/4.2.0/XrmQuarkToString.3.html">XrmQuarkToString</a>(*quarks),
+stream);</tt> <br>
+      <tt>&nbsp; }</tt> <br>
+      <tt>}</tt> </p>
+      <p><tt>XrmQuark XrmQString;</tt> <br>
+&nbsp; </p>
+      <p><tt>static Bool</tt> <br>
+      <tt>DumpEntry(XrmDatabase *db,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+XrmBindingList
+bindings,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+XrmQuarkList
+quarks,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+XrmRepresentation
+*type,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+XrmValuePtr
+value,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+XPointer
+data)</tt> <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp;
+FILE&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*stream = (FILE *)data;</tt> <br>
+      <tt>&nbsp; register unsigned
+int&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+i;</tt> <br>
+      <tt>&nbsp; register
+char&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+*s;</tt> <br>
+      <tt>&nbsp; register
+char&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+c;</tt> </p>
+      <p><tt>&nbsp; if (*type != XrmQString)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; (void) putc('!', stream);</tt> <br>
+      <tt>&nbsp; PrintBindingQuarkList(bindings, quarks, stream);</tt> <br>
+      <tt>&nbsp; s = value-&gt;addr;</tt> <br>
+      <tt>&nbsp; i = value-&gt;size;</tt> <br>
+      <tt>&nbsp; if (*type == XrmQString) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; (void) fputs(":\t", stream);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if (i)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; i--;</tt> <br>
+      <tt>&nbsp; }</tt> <br>
+      <tt>&nbsp; else</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; fprintf(stream, "=%s:\t",
+XrmRepresentationToString(*type));</tt> <br>
+      <tt>&nbsp; if (i &amp;&amp; (*s == ' ' || *s == '\t'))</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; (void) putc('\\', stream); /* preserve
+leading
+whitespace */</tt> <br>
+      <tt>&nbsp; while (i--) {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; c = *s++;</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if (c == '\n') {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (i)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void)
+fputs("\\n\\\n",
+stream);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void)
+fputs("\\n",
+stream);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; } else if (c == '\\')</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void) fputs("\\\\", stream);</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; else if ((c &lt; ' ' &amp;&amp; c != '\t')
+||</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+((unsigned char)c &gt;= 0x7f</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&amp;&amp; (unsigned char)c &lt; 0xa0))</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void) fprintf(stream,
+"\\%03o",
+(unsigned char)c);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; else</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (void) putc(c, stream);</tt> <br>
+      <tt>&nbsp; }</tt> <br>
+      <tt>&nbsp; (void) putc('\n', stream);</tt> <br>
+      <tt>&nbsp; return False;</tt> <br>
+      <tt>}</tt> </p>
+      <p><tt>int main()</tt> <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp; ...</tt> </p>
+      <p><tt>&nbsp; shell = <a
+ href="http://www.xfree86.org/4.2.0/XtVaAppCreateShell.3.html">XtVaAppCreateShell</a>(shellName,</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+shellClass,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+topLevelShellWidgetClass,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+dpy,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+NULL);</tt> <br>
+      <tt>&nbsp; ...</tt> </p>
+      <p><tt>&nbsp; XrmQString = <a
+ href="http://www.xfree86.org/4.2.0/XrmPermStringToQuark.3.html">XrmPermStringToQuark</a>("String");</tt>
+      </p>
+      <p><tt>&nbsp; XrmName names[101];</tt> <br>
+      <tt>&nbsp; XrmClass classes[101];</tt> </p>
+      <p><tt>&nbsp; XrmStringToClassList(shellName, classes);</tt> <br>
+      <tt>&nbsp; XrmStringToNameList(shellClass, names);</tt> </p>
+      <p><tt>&nbsp; <a
+ href="http://www.xfree86.org/4.2.0/XrmEnumerateDatabase.3.html">XrmEnumerateDatabase</a>(<a
+ href="http://www.xfree86.org/4.2.0/XtDatabase.3.html">XtDatabase</a>(dpy),</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+classes, names, XrmEnumAllLevels,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+DumpEntry, (XPointer)stdout);</tt> </p>
+      <p><tt>&nbsp; ...</tt> <br>
+      <tt>}</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+</p>
+<p></p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: June 24</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2005 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+&nbsp;
+</p>
+</body>
+</html>

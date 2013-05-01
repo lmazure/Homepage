@@ -1,0 +1,189 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+   <title>GE et son syst&egrave;me de filtre pour le WEB</title>
+   <base target="_blank">
+<link REL=STYLESHEET TYPE="text/css" HREF="../css/standard" TITLE="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+<u>29 mai 1999 :</u>
+<p>Je suis particuli&egrave;rement de mauvaise humeur contre mon employeur
+en ce moment. Alors je me d&eacute;foule un peu…
+<p>Comme certaines entreprises, GE a d&eacute;cid&eacute; de mettre en
+place un syst&egrave;me de filtre qui interdit &agrave; ses employ&eacute;s
+de surfer sur les sites parlant de cul ou de drogue, d'acc&eacute;der aux
+syst&egrave;mes de mail anonyme… Cependant ces sites sont tellement nombreux
+qu'ils ont un peu de mal &agrave; faire un filtrage correct. C'est ainsi
+que les sites mail de <a href="http://www.hotmail.com">HotMail</a>, <a href="http://webmail.netscape.com">Netscape</a>
+et <a href="http://mail.yahoo.com">Yahoo!</a> sont bloqu&eacute;s, mais
+ceux d'<a href="http://www.apexmail.com">ApexMail</a>, <a href="http://www.lemel.fr/">Lemel</a>,
+<a href="http://www.caramail.com/">Caramail</a>,
+<a href="http://www.latinmail.com">Latinmail</a>…
+sont accessibles. Sans commentaire !
+<p>Je comprends tr&egrave;s bien cette limitation : une &eacute;tude aux
+US a montr&eacute; qu'en moyenne les employ&eacute;s passent plus de 20%
+de leur temps &agrave; surfer sur des sites qui n'ont aucun rapport avec
+leurs activit&eacute;s professionnelles. Les Fran&ccedil;ais ne sont sans
+doute pas plus s&eacute;rieux.
+<p>Mais, et c'est l&agrave; o&ugrave; le b&acirc;t blesse, GE a r&eacute;cemment
+mis &agrave; jour son filtre (comme ils le font r&eacute;guli&egrave;rement)
+et je me retrouve dans l'impossibilit&eacute; d'acc&eacute;der &agrave;
+ma homepage qui contient tous les liens que j'utilise quotidiennement dans
+le cadre de mon travail. Je suis furax, j'ai envoy&eacute; plusieurs mails
+&agrave; l'adresse indiqu&eacute;e pour demander la r&eacute;ouverture
+&agrave; l'acc&egrave;s &agrave; <a href="http://perso.club-internet.fr">perso.club-internet.fr</a>
+et je n'ai re&ccedil;u aucune r&eacute;ponse. Il n'y a rien de plus d&eacute;sagr&eacute;able
+qu'un refus d'entendre.
+<p>Pour tous ceux qui sont dans ma situation, voici comment faire : il
+existe un moyen tr&egrave;s simple de passer &agrave; travers ce filtrage
+(et de pouvoir acc&eacute;der &agrave; nouveau &agrave; <a href="http://www.playboy.com">www.playboy.com</a>
+;-). Utiliser un lookup DNS, il y en a plusieurs sur Internet, par exemple
+<a href="http://www.webreference.com/cgi-bin/nslookup.cgi">ici</a>,
+pour r&eacute;cup&eacute;rer l'adresse IP du serveur. Cette adresse IP
+est constitu&eacute;e de 4 octets (par exemple, <tt><a href="http://206.251.29.10">206.251.29.10</a></tt>),
+vous pouvez donc le repr&eacute;senter comme un entier 32 bits. Calculer
+cet entier (par exemple, <tt>((((206*256)+251)*256)+29)*256+10=3472563466</tt>).
+Et le tour est jou&eacute;, il suffit d'utiliser l'URL ainsi obtenu (par
+exemple, <tt><a href="http://3472563466">http://3472563466</a></tt>) pour
+acc&eacute;der au site !
+<p>Bien s&ucirc;r, les responsables du filtrage vont bien finir par se
+rendre compte de la bidouille en analysant leurs fichiers de log. De la
+m&ecirc;me fa&ccedil;on qu'ils ont compris et bloqu&eacute; d'autres d&eacute;tours
+autour de leur filtre (utilisation de l'adresse IP au lieu du nom du serveur,
+passage par <a href="http://www.anonymizer.com/">anonymizer.com</a>…),
+ils vont sans doute corriger ce d&eacute;faut. Je trouverai bien une autre
+solution &agrave; ce moment l&agrave;… (Mais je dois avouer que cela devient
+de plus en plus difficile, mais je suis quelqu'un qui adore jouer et ceci
+ressemble fort &agrave; une partie de Gomoku.)
+<p>(PS : Il existe <a href="http://www.interhack.net/projects/32bitIP/">une
+page</a> qui fera tout &ccedil;a pour vous...)
+<br>&nbsp;
+<p><u>27 mars 2000 :</u>
+<p>Quelle joie, le lundi matin, de revenir au boulot ! Surtout quand vous
+auriez d&ucirc; livrer une nouvelle version le vendredi pr&eacute;c&eacute;dent
+et que, en fait, elle est tellement en retard (trois semaines) que la phase
+de tests n'est m&ecirc;me pas commenc&eacute;e...
+<p>Bref, c'est plein d'entrain que j'arrive &agrave; GE ("la plus belle
+entreprise du monde") et qu'apr&egrave;s une petite heure de travail, j'ai
+besoin d'un petit renseignement technique : une man page. J'ouvre mon navigateur
+pr&eacute;f&eacute;r&eacute; (Netscape, quelle question !) qui m'annonce
+froidement que <a href="http://3265159308/lmzr/index.htm">http://3265159308/lmzr/index.htm</a>
+n'est plus accessible. &Ccedil;a y est ! Ils ont corrig&eacute; leur syst&egrave;me
+de filtrage, je me retrouve le bec dans l'eau.
+<p>Je me rends alors compte &agrave; quel point Internet est devenu mon
+outil de travail quotidien : toutes les specs, les man pages, les outils
+internes &agrave; la bo&icirc;te sont hors de ma port&eacute;e car je ne
+connais pas leurs URLs, ceux-ci &eacute;tant enregistr&eacute;s sur mon
+inaccessible homepage.
+<p>Au bout d'une heure, je craque. Il faut que je passe ce putain de filtrage.
+<p>Rapidement, je d&eacute;couvre que le logiciel filtre est SmartFilter
+de <a href="http://www.securecomputing.com/">Secure Computing</a>, il interdit
+tous les acc&egrave;s &agrave; <a href="http://perso.club-internet.fr/">http://perso.club-internet.fr/</a>
+sous pr&eacute;texte qu'il s'agit d'un site de <i>chat</i> ! Peut-&ecirc;tre
+existe-t-il une dizaine d'utilisateurs de Club-Internet qui ont mis en
+place un syst&egrave;me de <i>causette</i> (traduction officielle de l'anglais
+<i>chat</i>),
+cependant, est-ce bien la peine de bloquer toutes les pages personnelles
+de ce fournisseur d'acc&egrave;s ? La plus belle bo&icirc;te du monde manque
+de subtilit&eacute;.
+<p>Je cherche rapidement &agrave; voir si des failles connues de SmartFilter
+sont d&eacute;crites sur le Web. Mais je ne trouve rien dans ce sens. Par
+contre, je d&eacute;couvre <a href="http://censorware.org/">un site anti-filtrage</a>
+qui n'aime pas ce produit, voir <a href="http://censorware.org/reports/utah/">cet
+article</a>. Ils listent plusieurs proxys pour acc&eacute;der &agrave;
+des sites bloqu&eacute;s, mais tous sont bloqu&eacute;s eux-m&ecirc;mes
+par SmartFilter. Je commence &agrave; m'inqui&eacute;ter quelque peu. Aurais-je
+affaire &agrave; des gens comp&eacute;tents ?
+<p>Je cherche, je cherche... sans succ&egrave;s. Il faut que j'aille voir
+le <a href="http://www.faqs.org/faqs/internet-services/access-via-email/">FAQ
+Accessing the Internet by Email</a>, que je mette la main sur <a href="http://www.geocities.com/CapitolHill/1236/servers.html">des
+passerelles Web/Email</a> dont&nbsp; <a href="http://www.ictp.trieste.it/~www4mail/manual/manual_toc.html">www4mail</a>,
+que je teste les quatre serveurs inventori&eacute;s, que je me rende compte
+qu'un seul fonctionne (<a href="mailto:www4mail@ftp.uni-stuttgart.de" TARGET="_self">www4mail@ftp.uni-stuttgart.de</a>)
+et que je lui demande de m'envoyer <a href="../links/gems.html" target="_self">ma
+page de liens vers les outils de GE</a>. Je peux travailler un minimum,
+mais quelle vexation ! Les responsables du filtrage ont gagn&eacute; et
+j'ai perdu.
+<p>Encore que... R&eacute;fl&eacute;chissons un peu : aucun ISP ne peut
+se permettre de n'avoir qu'un seul serveur, Club-Internet doit donc avoir
+d'autres machines. Un petit essai &agrave; l'adresse pr&eacute;c&eacute;dente
+<a href="http://3265159307/lmzr/index.htm">http://3265159307/lmzr/index.htm</a>,
+rat&eacute; ! Un petit essai &agrave; l'adresse suivante, <a href="http://3265159309/lmzr/index.htm">http://3265159309/lmzr/index.htm</a>,
+bingo ! &Ccedil;a marche !
+<p>Bref, trois heures plus tard (dont deux effectives), je retrouve ma
+homepage ch&eacute;rie et je peux retravailler en paix. <a href="http://194.158.96.141">http://194.158.96.141</a>
+fonctionne donc, de m&ecirc;me que <a href="http://194.158.96.142">http://194.158.96.142</a>
+(je n'ai pas essay&eacute; avec 143, 144...). Par contre, en passant par
+le nom des machines <a href="http://perso2.club-internet.fr">http://perso2.club-internet.fr</a>
+et <a href="http://perso3.club-internet.fr">http://perso3.club-internet.fr</a>,
+le filtrage fait son effet. C'est bizarre, je ne comprends pas cela.
+<p>Continuant sur ma lanc&eacute;e, un petit coup de DNS me montre que
+<a href="http://195.36.216.140">http://195.36.216.140</a>
+est un miroir. La m&ecirc;me exp&eacute;rience montre que <a href="http://195.36.216.141">http://195.36.216.141</a>
+et <a href="http://195.36.216.142">http://195.36.216.142</a> fonctionnent
+tout aussi bien (l&agrave; encore, je n'ai pas v&eacute;rifi&eacute; les
+adresses suivantes).
+<p>Me voici avec cinq URLs pour acc&eacute;der &agrave; ma homepage. Quel
+luxe ! Maintenant, la question est de savoir combien de temps faudra-t-il
+&agrave; la m&eacute;canique GE pour s'apercevoir de cette faille.&nbsp;
+En attendant, je n'ai toujours pas re&ccedil;u de r&eacute;ponse &agrave;
+la demande de d&eacute;bloquer l'acc&egrave;s &agrave; <b>ma</b> page.
+<p>Petite digression, voici le pipo officiel de Secure Computing :
+<br><i>"Estimates show that in some cases, up to 45% of employee time on
+the Web is spent surfing on non-business Web sites. By eliminating irrelevant
+and unwanted Internet content, SmartFilter can improve employee productivity."</i>
+<br>Les 45% me semblent un peu optimistes. De temps &agrave; autre, je
+donne un coup de main &agrave; l'un de mes coll&egrave;gues et, comme d'habitude,
+lorsqu'une question se pose, mon premier r&eacute;flexe est d'aller chercher
+la r&eacute;ponse sur Internet. Je suis alors sid&eacute;r&eacute; de voir
+que certains n'ont des bookmarks que vers <a href="http://www.rolandgarros.org/">Roland
+Garros</a>, <a href="http://www.letour.fr/">le Tour de France</a>, voire
+<a href="http://www.cadremploi.fr/">Cadremploi</a>,
+et aucun vers un site sur Solaris ou vers un FAQ technique.
+<br>Mais apr&egrave;s tout, est-ce vraiment un probl&egrave;me ? Il en
+est de m&ecirc;me pour l'email avec les blagues bien grasses pour les gar&ccedil;ons
+(du moins quand vous n'&ecirc;tes pas chef de projet, car, lorsque que
+vous &ecirc;tes &agrave; ce poste, celles-ci n'arrivent plus jusqu'&agrave;
+vous) et les derniers ragots pour les filles, et pour le t&eacute;l&eacute;phone
+(je ne compte plus les "OK pour ce soir 8 heures au Trocad&eacute;ro. Il
+faut que je raccroche, il y a le chef qui arrive."). Une soci&eacute;t&eacute;
+comme GE ne peut-elle pas se permettre que ses employ&eacute;s perdent
+deux heures par semaine <a href="http://www.clubaventure.fr/">&agrave;
+pr&eacute;parer leurs prochaines vacances</a> ou <a href="http://www.cinefil.com/">&agrave;
+choisir le film du week-end</a> ? S'ils font correctement leur boulot,
+o&ugrave; est le probl&egrave;me ?
+<br>Cette semaine, pour une fois, j'aurais moi aussi pass&eacute; mes deux
+heures hebdomadaires &agrave; surfer sur des sites non professionnels.
+Apr&egrave;s tout, n'&eacute;tait-ce pas de la veille technologique : SmartFilter
+est-il r&eacute;ellement <i>smart</i> ?
+<br>&nbsp;
+<p><u>14 juin 2000 :</u>
+<p>Les choses se d&eacute;gradent &agrave; nouveau : pour une raison que
+j'ignore, les miroirs de <a href="http://perso.club-internet.fr">perso.club-internet.fr</a>
+sont actuellement souvent tr&egrave;s lents, voire totalement en rade.
+Ceci &agrave; pour cons&eacute;quence que, certains matins, je n'ai plus
+acc&egrave;s &agrave; ma page.
+<p>Guy, mon coll&egrave;gue de bureau, a eu l'occasion de discuter la semaine
+derni&egrave;re avec les responsables Web, il a appris que le filtrage
+n'&eacute;tait pas centralis&eacute; pour tout GE, mais &eacute;tait fait
+site par site. Du coup, je me dis qu'en &eacute;crivant aux fran&ccedil;ais
+j'aurais peut-&ecirc;tre la chance qu'ils daignent me r&eacute;pondre.
+<p>A ma surprise, c'est ce qu'ils ont fait aujourd'hui: j'ai, dans mon
+courrier, un mail qu'ils ont rouvert l'acc&egrave;s &agrave; <a href="http://perso.club-internet.fr">perso.club-internet.fr</a>
+et ils me demandent de v&eacute;rifier que tout fonctionne correctement.
+Ce qui est le cas.
+<p>Les administrateurs fran&ccedil;ais seraient-ils plus intelligents que
+leurs coll&egrave;gues am&eacute;ricains ?
+<p>En attendant, j'esp&egrave;re que cette saga s'ach&egrave;ve l&agrave;…
+<br>&nbsp;
+<p>
+<hr NOSHADE WIDTH="80%">
+<p><i><font size=-1>Last update: July 9</font><sup><font size=-2>th</font></sup><font size=-1>,
+2000 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>&nbsp;
+</body>
+</html>

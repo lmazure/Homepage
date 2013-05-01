@@ -1,0 +1,82 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Finding the name of a routine given its address for a running
+process</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+</head>
+<body>
+Not
+useful everyday, not portable, coded like a dead brain... but I needed
+it quickly!
+<p>First argument: pid of the running process.
+<br>
+Second argument: program counter coded in hexadecimal (8 digits without
+the prefix 0x).
+</p>
+<p>I wanted to get also the source file name, but, for an unknown
+reason,
+my stuff did not work...
+<br>
+&nbsp;
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#!/bin/ksh</tt>
+      <p><tt>pid=$1</tt>
+      <br>
+      <tt>adr=`echo $2 |tr "[a-z]" [A-Z]"`</tt>
+      </p>
+      <p><tt># retrieve the shared object</tt>
+      <br>
+      <tt>so=`/usr/proc/bin/pmap $pid | awk "</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; { if (\\$1&lt;\\"$adr\\") \\$so=\\$4 }</tt>
+      <br>
+      <tt>END { print \\$so }</tt>
+      <br>
+      <tt>"`</tt>
+      </p>
+      <p><tt># retrieve the base address</tt>
+      <br>
+      <tt>ba=`/usr/proc/bin/pmap $pid | awk "</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; { if (\\$1&lt;\\"$adr\\") \\$ba=\\$1 }</tt>
+      <br>
+      <tt>END { print \\$ba }</tt>
+      <br>
+      <tt>"`</tt>
+      </p>
+      <p><tt># compute the offset</tt>
+      <br>
+      <tt>os=`/usr/local/bin/perl -e "printf '%08x',(0x$adr - 0x$ba)"`</tt>
+      </p>
+      <p><tt># retrieve the routine</tt>
+      <br>
+      <tt>rt=`/usr/xpg4/bin/nm -v -t x $so | grep GLOB | awk -F\| "</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; { if (\\$2&lt;\\"0x$os\\") \\$rt=\\$8 }</tt>
+      <br>
+      <tt>END { print \\$rt }</tt>
+      <br>
+      <tt>"`</tt>
+      <br>
+      <tt>echo $rt</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p></p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: May 3</font><sup><font size="-2">rd</font></sup><font
+ size="-1">,
+2001 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>XFS corrupter</TITLE>
+<PATH>notes/corrupter.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+This script is the result of an analysis of 8 weeks! We had some corrupted files using XFS, but we fumbled during a long time to been able to get a reproducible scenario: this script.<BR/>
+But the main issue was a turf war inside GE during the first quarter of 2005. The story is now finished, Jim and Rich <X><T>received recognition</T><A>http://marc.theaimsgroup.com/?l=linux-xfs&amp;m=111475870622632</A><L>en</L><F>HTML</F></X> (<X><T>M</T><A>http://oss.sgi.com/archives/xfs/2005-04/msg00379.html</A><L>en</L><F>HTML</F></X>, <X><T>M</T><A>http://archives.free.net.ph/message/20050429.070506.22ac6c73.en.html</A><L>en</L><F>HTML</F></X>) for this (and, despite the fight, I must tell they also worked a lot on this). Emmanuel and myself, we don't really care about this posterity, we just want a working OS. Nevertheless, it must be known that <B>Emmanuel</B> found the trigger (unmouting the partition) and <B>I</B> built the reproducible scenario.
+<CODESAMPLE>
+#!/bin/ksh -x<BR/>
+<BR/>
+numberOfSmallFiles=1000000<BR/>
+directory=/export/home1/sdc_image_pool/new<BR/>
+<BR/>
+device=`df -k $directory | tail -1 | awk '{ print $1}'`<BR/>
+<BR/>
+find $directory -type f -exec rm {} \;<BR/>
+<BR/>
+# --- fragment the disk ---<BR/>
+i=0<BR/>
+while [[ i -lt $numberOfSmallFiles ]]<BR/>
+do<BR/>
+<TAB/>echo "*" &gt; $directory/small_$i<BR/>
+<TAB/>i=$(($i+1))<BR/>
+done<BR/>
+i=0<BR/>
+while ( dd if=/dev/zero of=$directory/orimularge_$i bs=1M count=256 )<BR/>
+do<BR/>
+<TAB/>i=$(($i+1))<BR/>
+done<BR/>
+i=0<BR/>
+while [[ i -lt $numberOfSmallFiles ]]<BR/>
+do<BR/>
+<TAB/>rm $directory/small_$i<BR/>
+<TAB/>i=$(($i+2))<BR/>
+done<BR/>
+<BR/>
+# ---  create several copies of the same file ---<BR/>
+<BR/>
+dd if=/dev/urandom of=$directory/data_reference bs=1K count=512<BR/>
+i=0<BR/>
+while ( cp $directory/data_reference $directory/data_$i )<BR/>
+do<BR/>
+<TAB/>i=$(($i+1))<BR/>
+done<BR/>
+<BR/>
+# --- mount/umount ---<BR/>
+<BR/>
+umount $device<BR/>
+mount $device<BR/>
+<BR/>
+# --- check that the copies are equal ---<BR/>
+find $directory -name "data_*[0-9]" -exec cmp $directory/data_reference {} \;
+</CODESAMPLE>
+</CONTENT>
+</PAGE>

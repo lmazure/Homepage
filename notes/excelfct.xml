@@ -1,0 +1,1193 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Excel worksheet functions</TITLE>
+<PATH>notes/excelfct.xml</PATH>
+<DATE><YEAR>2011</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
+<CONTENT>
+
+navigation
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>OFFSET(reference,rows,cols[,height,width])</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DECALER(r&#xE9;f;lignes;colonnes[;hauteur;largeur])</CODEROUTINE></TERM2>
+<DESC>return a reference to a range that is a specified number of rows and columns from a cell or range of cells. The number of rows and the number of columns to be returned can be specified</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COLUMN(reference)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COLONNE(r&#xE9;f&#xE9;rence)</CODEROUTINE></TERM2>
+<DESC>return the column number of the given reference if reference is a range of cells, and if COLUMN is entered as a horizontal array, return the column numbers of reference as a horizontal array reference cannot refer to multiple areas<BR/>if no reference is given, return the column number of the current cell</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ROW(reference)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>LIGNE(r&#xE9;f&#xE9;rence)</CODEROUTINE></TERM2>
+<DESC>return the row number of a reference<BR/>if no reference is given, return the row number of the current cell</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COLUMNS(array)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COLONNES(tableau)</CODEROUTINE></TERM2>
+<DESC>return the number of columns in an array or reference</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ROWS(array)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>LIGNES(tableau)</CODEROUTINE></TERM2>
+<DESC>return the number of rows in a reference or array</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>AREAS(reference)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ZONES(r&#xE9;f&#xE9;rence)</CODEROUTINE></TERM2>
+<DESC>return the number of areas in a reference. An area is a range of contiguous cells or a single cell</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ADDRESS(row_num,column_num,abs_num[,a1,sheet_text])</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ADRESSE</CODEROUTINE></TERM2>
+<DESC>creates a cell address as text, given specified row and column numbers. abs_num specifies the type of reference to return<BR/>
+1 or omitted Absolute<BR/>
+2 Absolute row; relative column<BR/>
+3 Relative row; absolute column<BR/>
+4 Relative<BR/>
+sheet_text is the text specifying the name of the worksheet to be used as the external reference</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>INDIRECT(ref_text[,a1])</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>INDIRECT</CODEROUTINE></TERM2>
+<DESC>return the reference specified by a text string, references are immediately evaluated to display their contents if a1 is TRUE or omitted, ref_text is interpreted as an A1-style reference; if a1 is FALSE, ref_text is interpreted as an R1C1-style reference</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>CELL(info_type,reference)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CELLULE(type_info;r&#xE9;f&#xE9;rence)</CODEROUTINE></TERM2>
+<DESC>return information about the formatting, location, or contents of the upper-left cell in a reference
+<BLIST>
+<ITEM>"address"/"adresse" Reference of the first cell in reference, as text.</ITEM>
+<ITEM>"col"/"col" Column number of the cell in reference.</ITEM>
+<ITEM>"color"/"couleur" 1 if the cell is formatted in color for negative values; otherwise returns 0 (zero).</ITEM>
+<ITEM>"contents"/"contenu" Contents of the upper-left cell in reference.</ITEM>
+<ITEM>"filename"/"nomfichier" Filename (including full path) of the file that contains reference, as text. Returns empty text ("") if the worksheet that contains reference has not yet been saved.</ITEM>
+<ITEM>"format"/"format" Text value corresponding to the number format of the cell. The text values for the various formats are shown in the following table. Returns "-" at the end of the text value if the cell is formatted in color for negative values. Returns "()" at the end of the text value if the cell is formatted with parentheses for positive or all values.</ITEM>
+<ITEM>"parentheses"/"parenth&#xE8;ses" 1 if the cell is formatted with parentheses for positive or all values; otherwise returns 0.</ITEM>
+<ITEM>"prefix"/"pr&#xE9;fixe" Text value corresponding to the "label prefix" of the cell. Returns single quotation mark (') if the cell contains left-aligned text, double quotation mark (") if the cell contains right-aligned text, caret (^) if the cell contains centered text, backslash (\) if the cell contains fill-aligned text, and empty text ("") if the cell contains anything else.</ITEM>
+<ITEM>"protect"/"prot&#xE9;g&#xE9;" 0 if the cell is not locked, and 1 if the cell is locked.</ITEM>
+<ITEM>"row"/"ligne" Row number of the cell in reference.</ITEM>
+<ITEM>"type"/"type" Text value corresponding to the type of data in the cell. Returns "b" for blank if the cell is empty, "l" for label if the cell contains a text constant, and "v" for value if the cell contains anything else.</ITEM>
+<ITEM>"width"/"largeur" Column width of the cell rounded off to an integer. Each unit of column width is equal to the width of one character in the default font size.</ITEM></BLIST></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>TRANSPOSE(array)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TRANSPOSE</CODEROUTINE></TERM2>
+<DESC>the transpose of an array is created by using the first row of the array as the first column of the new array, the second row of the array as the second column of the new array, and so on.</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>INDEX(array,row_num,column_num)</CODEROUTINE><BR/><CODEROUTINE>INDEX(reference,row_num,column_num,area_num)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>INDEX</CODEROUTINE></TERM2>
+<DESC>return a value or the reference to a value from within a table or range</DESC>
+</ROW>
+</DEFINITION2TABLE>
+<BR/>
+
+lookup
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>MATCH(lookup_value,lookup_array,match_type)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>EQUIV</CODEROUTINE></TERM2>
+<DESC>return the relative position of an item in an array that matches a
+specified value in a specified order</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>CHOOSE(index_num,value1,value2,...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CHOISIR</CODEROUTINE></TERM2>
+<DESC>uses index_num to return a value from the list of value arguments</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LOOKUP(lookup_value,lookup_vector,result_vector)</CODEROUTINE><BR/><CODEROUTINE>LOOKUP(lookup_value,array)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>RECHERCHE</CODEROUTINE></TERM2>
+<DESC>find a value in one row or column of values that
+are sorted in ascending order. It then returns the value from the same
+position in a different row or column.</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>HLOOKUP(lookup_value,table_array,row_index_num,range_lookup)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>RECHERCHEH</CODEROUTINE></TERM2>
+<DESC>find a value in a list with column labels.</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>VLOOKUP(lookup_value,table_array,col_index_num,range_lookup)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>RECHERCHEV</CODEROUTINE></TERM2>
+<DESC>find a value in a list with row labels.</DESC>
+</ROW>
+</DEFINITION2TABLE>
+<BR/>
+
+string manipulation
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>CHAR(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CAR(nombre)</CODEROUTINE></TERM2>
+<DESC>return the character specified by a number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>CLEAN(text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>EPURAGE(texte)</CODEROUTINE></TERM2>
+<DESC>remove all nonprintable characters from text</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>CODE(text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CODE(texte)</CODEROUTINE></TERM2>
+<DESC>return a numeric code from the first character in a text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>CONCATENATE(text1,text2,...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CONCATENER(texte1;texte2;...)</CODEROUTINE></TERM2>
+<DESC>join several text strings into one text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DOLLAR(number,decimals)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>FRANC(nombre;d&#xE9;cimales)</CODEROUTINE></TERM2>
+<DESC>convert a number to text using Currency format, with the decimals rounded to the specified place</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>EXACT(text1,text2)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>EXACT(texte1;texte2)</CODEROUTINE></TERM2>
+<DESC>compares two text strings and returns TRUE if they're exactly the same, and FALSE otherwise. EXACT is case sensitive</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>FIND(find_text,within_text[,start_num])</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TROUVE(texte_cherch&#xE9;;texte[;no_d&#xE9;part])</CODEROUTINE></TERM2>
+<DESC>find one text string with another text string, and returns the number of
+the starting position of find_text, from the leftmost character of
+within_text.<BR/>
+If the string is not present, return a <CODEROUTINE>#VALUE!</CODEROUTINE> error.</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>FINDB(find_text,within_text,start_num)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TROUVERB(texte_cherch&#xE9;;texte;no_d&#xE9;part)</CODEROUTINE></TERM2>
+<DESC>find one text string (double-byte characters) with another text string, and returns the number of the starting position of find_text, from the leftmost character of within_text</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>FIXED(number,decimals,no_commas)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CTXT(nombre;d&#xE9;cimales;no_s&#xE9;parateur)</CODEROUTINE></TERM2>
+<DESC>round a number to a specified number of decimals, formats the number in
+decimal format using a period and commas, and returns the result as text</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LEFT(text,num_char)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>GAUCHE(texte;no_car)</CODEROUTINE></TERM2>
+<DESC>return the first character or characters in a text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LEFTB(text,num_bytes)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>GAUCHEB(texte;no_octets)</CODEROUTINE></TERM2>
+<DESC>return the first character or characters in a text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LEN(text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NBCAR(texte)</CODEROUTINE></TERM2>
+<DESC>return the number of characters in a text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LENB(text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NBCARB(texte)</CODEROUTINE></TERM2>
+<DESC>return the number of characters in a text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LOWER(text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MINUSCULE(texte)</CODEROUTINE></TERM2>
+<DESC>convert all uppercase letters in a text string to lowercase</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MID(text,start_num,num_chars)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>STXT(texte;no_d&#xE9;part;no_car)</CODEROUTINE></TERM2>
+<DESC>return a specific number of characters from a text string, starting at the specified position</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MIDB(text,start_num,num_bytes)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MIDB(texte;no_d&#xE9;part;no_octets)</CODEROUTINE></TERM2>
+<DESC>return a specific number of characters from a text string, starting at the specified position</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>PROPER(text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NOMPROPRE(texte)</CODEROUTINE></TERM2>
+<DESC>capitalize the first letter in a text string and any other letters in text
+that follow any character other than a letter</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>REPLACE(old_text,start_num,num_chars,new_text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>REMPLACER(ancien_texte;no_d&#xE9;part;no_car;nouveau_texte)</CODEROUTINE></TERM2>
+<DESC>replace part of a text string with a different text string based on the specified number of characters</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>REPLACEB(old_text,start_num,num_bytes,new_text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>REMPLACERB(ancien_texte;no_d&#xE9;part;no_car;nouveau_texte)</CODEROUTINE></TERM2>
+<DESC>replace part of a text string with a different text string, based on the specified number of bytes</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>REPT(text,number_times)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>REPT(texte;no_fois)</CODEROUTINE></TERM2>
+<DESC>repeat text a given number of times</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>RIGHT(text,num_chars)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DROITE(texte;no_car)</CODEROUTINE></TERM2>
+<DESC>return the last character or characters in a text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>RIGHTB(text,num_bytes)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DROITEB(texte;no_octets)</CODEROUTINE></TERM2>
+<DESC>return the last character or characters in a text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SEARCH(find_text,within_text,start_num)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CHERCHE(texte_cherch&#xE9;;texte;no_d&#xE9;part)</CODEROUTINE></TERM2>
+<DESC>return the number of the character at which a specific character or text
+string is first found, reading from left to right</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SEARCD(find_text,within_text,start_num)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CHERCHERB(texte_cherch&#xE9;;texte;no_d&#xE9;part)</CODEROUTINE></TERM2>
+<DESC>return the number of the double-byte character at which a specific character or text string is first found, reading from left to right</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SUBSTITUTE(text,old_text,new_text,instance_num)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SUBSTITUE(texte;ancien_texte;nouveau_texte;no_position)</CODEROUTINE></TERM2>
+<DESC>substitute new_text for old_text in a text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>T(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>T(valeur)</CODEROUTINE></TERM2>
+<DESC>return the text referred to by value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>TEXT(value,format_text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TEXTE(valeur;format_texte)</CODEROUTINE></TERM2>
+<DESC>convert a value to text in a specific number format</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>TRIM(text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SUPPRESPACE(texte)</CODEROUTINE></TERM2>
+<DESC>removes all spaces from text except for single spaces between words</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>UPPER(text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MAJUSCULE(texte)</CODEROUTINE></TERM2>
+<DESC>convert text to uppercase</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>VALUE(text)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CNUM(texte)</CODEROUTINE></TERM2>
+<DESC>convert a text string that represents a number to a number</DESC>
+</ROW>
+</DEFINITION2TABLE>
+<BR/>
+
+computation
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>INT</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ENT(nombre)</CODEROUTINE></TERM2>
+<DESC>round the number down (tending to -Infinity) to the nearest integer</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>TRUNC</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TRONQUE(nombre)</CODEROUTINE></TERM2>
+<DESC>round the number down (tending to zero) to the nearest integer</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ROUND</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ARRONDI(nombre;no_chiffres)</CODEROUTINE></TERM2>
+<DESC>return the value rounded (tending to zero) to the nearest multiple of 10<SUP>-digits</SUP></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>FLOOR</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PLANCHER(nombre;no_chiffres)</CODEROUTINE></TERM2>
+<DESC>return the value rounded to the inferior (tending to -Infinity) multiple of 10<SUP>-digits</SUP></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>CEILING</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PLAFOND(nombre;no_chiffres)</CODEROUTINE></TERM2>
+<DESC>return the value rounded to the superior (tending to +Infinity) multiple of 10<SUP>-digits</SUP></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ROUNDDOWN</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ARRONDI.INF(nombre;no_chiffres)</CODEROUTINE></TERM2>
+<DESC>return the value rounded to the inferior (tending to zero) multiple of 10<SUP>-digits</SUP></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ROUNDUP</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ARRONDI.SUP(nombre;no_chiffres)</CODEROUTINE></TERM2>
+<DESC>return the value rounded to the superior (away from zero) multiple of 10<SUP>-digits</SUP></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ABS(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ABS(nombre)</CODEROUTINE></TERM2>
+<DESC>return the absolute value of a number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>PRODUCT(number1,number2...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PRODUIT(nombre1;nombre2...)</CODEROUTINE></TERM2>
+<DESC>return the product of the number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>POWER(number,power)</CODEROUTINE><BR/><CODEROUTINE>number^power</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PUISSANCE(nombre;puissance)</CODEROUTINE></TERM2>
+<DESC>return the result of a number raised to a power</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SQRT(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>RACINE(nombre)</CODEROUTINE></TERM2>
+<DESC>return the square root of a number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SQRTPI(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>RACINE.PI(nombre)</CODEROUTINE></TERM2>
+<DESC>return the square root of ( number * &#x03C0;)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2...)</CODEROUTINE></TERM2>
+<DESC>multiply corresponding components in the arrays and return the sum of those products</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2...)</CODEROUTINE></TERM2>
+<DESC>multiply corresponding components in the arrays and return the sum of those products</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>QUOTIENT(numerator,denominator)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>QUOTIENT(num&#xE9;rateur;d&#xE9;nominateur)</CODEROUTINE></TERM2>
+<DESC>return the integer portion of a division</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MOD(numerator,denominator)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MOD(num&#xE9;rateur;d&#xE9;nominateur)</CODEROUTINE></TERM2>
+<DESC>return the remainder after numerator is divided by divisor</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>FACT(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>FACT(nombre)</CODEROUTINE></TERM2>
+<DESC>return the factorial of a number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>GCD(number1,number2...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PGCD(nombre1;nombre2...)</CODEROUTINE></TERM2>
+<DESC>return the greatest common divisor of two or more integers</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LCM(number1,number2...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PPCM(nombre1;nombre2...)</CODEROUTINE></TERM2>
+<DESC>return the least common multiple of two or more integers</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISEVEN(number1)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>EST.PAIR(nombre1)</CODEROUTINE></TERM2>
+<DESC>return TRUE if number is even, FALSE if odd</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISODD(number1)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>EST.IMPAIR(nombre1)</CODEROUTINE></TERM2>
+<DESC>return TRUE if number is odd, FALSE if even</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DELTA(number1,number2)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DELTA</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return 1 if two numbers are equal, 0 otherwise</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>GESTEP(number1[,step])</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SUP.SEUIL</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return 1 if <CODEROUTINE>number</CODEROUTINE> is greater or equal to <CODEROUTINE>step</CODEROUTINE>, 0 otherwise</DESC>
+</ROW>
+</DEFINITION2TABLE>
+<BR/>
+
+
+trigonometry
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>PI()</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PI()</CODEROUTINE></TERM2>
+<DESC>return the value of &#x03C0;</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COS(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COS(nombre)</CODEROUTINE></TERM2>
+<DESC>return the cosine of the given angle (in radians)<BR/>
+multiply by <CODEROUTINE>PI()/180</CODEROUTINE> if the angle is in degrees</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SIN(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SIN(nombre)</CODEROUTINE></TERM2>
+<DESC>return the sine of the given angle (in radians)<BR/>
+multiply by <CODEROUTINE>PI()/180</CODEROUTINE> if the angle is in degrees</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>TAN(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TAN(nombre)</CODEROUTINE></TERM2>
+<DESC>return the tangent of the given angle (in radians)<BR/>
+multiply by <CODEROUTINE>PI()/180</CODEROUTINE> if the angle is in degrees</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ACOS(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ACOS(nombre)</CODEROUTINE></TERM2>
+<DESC>return the arccosine of a number (in radians)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ASIN(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ASIN(nombre)</CODEROUTINE></TERM2>
+<DESC>return the arccosine of a number (in radians)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ATAN(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ATAN(nombre)</CODEROUTINE></TERM2>
+<DESC>return the arctangent of a number (in radians)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ATAN2(numberX,numberY)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ATAN2(nombreX,nombreY)</CODEROUTINE></TERM2>
+<DESC>return the arctangent of the point (numberX,numberY) (in radians)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COSH(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COSH(nombre)</CODEROUTINE></TERM2>
+<DESC>return the hyperbolic cosine of a number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SINH(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SINH(nombre)</CODEROUTINE></TERM2>
+<DESC>return the hyperbolic sine of a number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>TANH(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TANH(nombre)</CODEROUTINE></TERM2>
+<DESC>return the hyperbolic tangent of a number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ACOSH(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ACOSH(nombre)</CODEROUTINE></TERM2>
+<DESC>return the inverse hyperbolic cosine of a number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ASINH(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ASINH(nombre)</CODEROUTINE></TERM2>
+<DESC>return the inverse hyperbolic sine of a number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ATANH(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ATANH(nombre)</CODEROUTINE></TERM2>
+<DESC>return the inverse hyperbolic tangent of a number</DESC>
+</ROW>
+</DEFINITION2TABLE>
+<BR/>
+
+complex numbers
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>IMREAL</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.REEL</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the real coefficient of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMAGINARY</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.IMAGINAIRE</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the imaginary coefficient of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMCONJUGATE</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.CONJUGUE</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the complex conjugate of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COMPLEX</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert real and imaginary coefficients into a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMSUM</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.SOMME</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the sum of two or more complex numbers</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMSUB</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.DIFFERENCE</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+returns the difference of two or more complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMPRODUCT</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.PRODUIT</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the product of complex numbers</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMDIV</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.DIV</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the quotient of two complex numbers</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMABS</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.MODULE</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the absolute value (modulus) of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMARGUMENT</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.ARGUMENT</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the argument of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMCOS</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.COS</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the cosine of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMSIN</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.SIN</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the sine of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMLN</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.LN</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the natural logarithm of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMLOG2</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.LOG2</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the base-2 logarithm of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMLOG10</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.LOG10</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the common logarithm (base 10) of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMSQRT</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.RACINE</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the square root of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMEXP</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.EXP</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the exponential of a complex number</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>IMPOWER</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COMPLEXE.PUISSANCE</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return a complex number raised to a power</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>BESELI(X,N)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>BESELI</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the modified Bessel function</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>BESELJ(X,N)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>BESELJ</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the modified Bessel function</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>BESELK(X,N)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>BESELK</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the modified Bessel function</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>BESELY(X,N)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>BESELY</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the modified Bessel function</DESC>
+</ROW>
+</DEFINITION2TABLE>
+<BR/>
+
+statistics
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>MIN(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MIN</CODEROUTINE></TERM2>
+<DESC>return the smallest number (non number values are ignored)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MINA(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MINA</CODEROUTINE></TERM2>
+<DESC>return the smallest value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MAX(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MAX</CODEROUTINE></TERM2>
+<DESC>return the smallest number (non number values are ignored)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MAXA(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MAXA</CODEROUTINE></TERM2>
+<DESC>return the largest value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SMALL(range,k)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PETITE.VALEUR</CODEROUTINE></TERM2>
+<DESC>return the kth smallest value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LARGE(range,k)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>GRANDE.VALEUR</CODEROUTINE></TERM2>
+<DESC>return the kth largest value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MEDIAN</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MEDIANE</CODEROUTINE></TERM2>
+<DESC>return the median of a range of cells</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>AVERAGE</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MOYENNE</CODEROUTINE></TERM2>
+<DESC>return the average value of a range of cells (non number values are ignored)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>AVERAGEA</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>AVERAGEA</CODEROUTINE></TERM2>
+<DESC>return the average value of a range of cells</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>STDEV(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ECARTYPE</CODEROUTINE></TERM2>
+<DESC>compute the standard deviation calculated using the "nonbiased" or "n-1" method<BR/>
+cells containing non integer values are ignored</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>STDEVA(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>STDEVA</CODEROUTINE></TERM2>
+<DESC>compute the standard deviation calculated using the "nonbiased" or "n-1" method<BR/>
+text and boolean values are taken into account</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>STDEVP(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ECARTYPEP</CODEROUTINE></TERM2>
+<DESC>compute the standard deviation calculated using the "biased" or "n" method<BR/>
+cells containing non integer values are ignored</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>STDEVPA(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>STDEVPA</CODEROUTINE></TERM2>
+<DESC>compute the standard deviation calculated using the "biased" or "n" method<BR/>
+text and boolean values are taken into account</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>VAR(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>VAR</CODEROUTINE></TERM2>
+<DESC>compute the variance calculated using the "nonbiased" or "n-1" method<BR/>
+cells containing non integer values are ignored</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>VARA(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>VARA</CODEROUTINE></TERM2>
+<DESC>compute the variance calculated using the "nonbiased" or "n-1" method<BR/>
+text and boolean values are taken into account</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>VARP(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>VARP</CODEROUTINE></TERM2>
+<DESC>compute the variance calculated using the "biased" or "n" method<BR/>
+cells containing non integer values are ignored</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>VARPA(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>VARPA</CODEROUTINE></TERM2>
+<DESC>compute the variance calculated using the "biased" or "n" method<BR/>
+text and boolean values are taken into account</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MODE(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MODE</CODEROUTINE></TERM2>
+<DESC>compute the mode</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>QUARTILE(range,quart)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>QUARTILE</CODEROUTINE></TERM2>
+<DESC>compute a quartile
+the second argument can be:
+<BLIST><ITEM>0 minimum value</ITEM>
+<ITEM>1 first quartile</ITEM>
+<ITEM>2 median value</ITEM>
+<ITEM>3 third quartile</ITEM>
+<ITEM>4 maximum value</ITEM></BLIST></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SKEW(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COEFFICIENT.ASYMETRIE</CODEROUTINE></TERM2>
+<DESC>return the skewness</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>KURT(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>KURTOSIS</CODEROUTINE></TERM2>
+<DESC>return the kurtosis</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>NORMSINV(1-x)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>LOI.NORMALE.STANDARD.INVERSE(1-x)</CODEROUTINE></TERM2>
+<DESC>compute Z from defect rate</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>1-NORMSDIST(Z)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>1-LOI.NORMALE.STANDARD(Z)</CODEROUTINE></TERM2>
+<DESC>compute defect rate from Z</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>CHIDIST(probability,degrees_of_freedom)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>LOI.KHIDEUX(x;degr&#xE9;s_libert&#xE9;)</CODEROUTINE></TERM2>
+<DESC>compute the critical value for a Chi<SUP>2</SUP> test</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>CHIINV(critical_value,degrees_of_freedom)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>KHIDEUX.INVERSE(probabilit&#xE9;;degr&#xE9;s_libert&#xE9;)</CODEROUTINE></TERM2>
+<DESC>compute a probability value given a critical value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>CHITEST(actual_range,expected_range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TEST.KHIDEUX(plage_r&#xE9;elle;plage_attendue)</CODEROUTINE></TERM2>
+<DESC>return the test of independance (i.e. <CODEROUTINE>CHIDIST(sum of the differences;degrees of freedom)</CODEROUTINE>)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DEVSQ(number1,number2,...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMME.CARRES.ECARTS(nombre1;nombre2;...)</CODEROUTINE></TERM2>
+<DESC>return the sum of square of deviations of data points from their sample mean</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COVAR(array1,array2)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>COVARIANCE(matrice1,matrice2)</CODEROUTINE></TERM2>
+<DESC>return the covariance (the average of the products of deviations for each data point pair)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ERF(lower_limit,upper_limit)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ERF</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the error function integrated between <CODEROUTINE>lower_limit</CODEROUTINE> and <CODEROUTINE>upper_limit</CODEROUTINE></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ERFC(x)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ERFC</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the complementary ERF function integrated between <CODEROUTINE>x</CODEROUTINE> and infinity</DESC>
+</ROW>
+</DEFINITION2TABLE><BR/>
+
+
+regression
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>FORECAST(x,known_y's,known_x's)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PREVISION(x;y_connus;x_connus)</CODEROUTINE></TERM2>
+<DESC>compute the value predicted by a linear regression</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>TREND(known_y's,known_x's,new_x's,const)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TENDANCE(y_connus;x_connus;x_nouveaux;constante)</CODEROUTINE></TERM2>
+<DESC>compute values predicted by a linear regression</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>GROWTH(known_y's,known_x's,new_x's,const)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CROISSANCE(y_connus;x_connus;x_nouveaux;constante)</CODEROUTINE></TERM2>
+<DESC>compute values predicted by an exponential curve</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LINEST(known_y's,known_x's,const,stats)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DROITEREG(y_connus;x_connus;constante;statistiques)</CODEROUTINE></TERM2>
+<DESC>calculate the statistics for a plane (n dimensions) by using the "least squares" method that best fits your data, and returns an array
+that describes the line</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>LOGEST(known_y's,known_x's,const,stats)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>LOGREG(y_connus;x_connus;constante;statistiques)</CODEROUTINE></TERM2>
+<DESC>calculate an exponential curve (n dimensions) that fits your data and return an array of values that describes the curve</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SLOPE(known_y's,known_x's)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PENTE(y_connus;x_connus)</CODEROUTINE></TERM2>
+<DESC>slope of a linear regression line (using the "least squares")</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>INTERCEPT(known_y's,known_x's)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ORDONNEE.ORIGINE(y_connus;x_connus)</CODEROUTINE></TERM2>
+<DESC>point at which a linear regression line (using the "least squares") intersects the y-axis</DESC>
+</ROW>
+</DEFINITION2TABLE><BR/>
+
+tests
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>ISBLANK(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ESTVIDE</CODEROUTINE></TERM2>
+<DESC>tests if a cell is blank</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISERR(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ESTERR</CODEROUTINE></TERM2>
+<DESC>test if a the value is an error except <CODEROUTINE>#N/A</CODEROUTINE></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISNA(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ESTNA</CODEROUTINE></TERM2>
+<DESC>test if a the value is <CODEROUTINE>#N/A</CODEROUTINE></DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISERROR(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ESTERREUR</CODEROUTINE></TERM2>
+<DESC>test if a the value is an error</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISLOGICAL(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ESTLOGIQUE</CODEROUTINE></TERM2>
+<DESC>test if a the value is a logical value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISNONTEXT(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ESTNONTEXTE</CODEROUTINE></TERM2>
+<DESC>test if a the value is a not a text value or is a blank cell</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISNUMBER(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ESTNUM</CODEROUTINE></TERM2>
+<DESC>test if a the value is a number value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISREF(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ESTREF</CODEROUTINE></TERM2>
+<DESC>test if a the value is a reference value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>ISTEXT(value)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ESTTEXTE</CODEROUTINE></TERM2>
+<DESC>test if a the value is a text value</DESC>
+</ROW>
+</DEFINITION2TABLE><BR/>
+
+
+date/time
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>TODAY</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>AUJOURDHUI</CODEROUTINE></TERM2>
+<DESC>return the current date</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>NOW</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MAINTENANT</CODEROUTINE></TERM2>
+<DESC>return the current date and time</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DATE</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DATE</CODEROUTINE></TERM2>
+<DESC>return a date given a year, month and day</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>TIME</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TEMPS</CODEROUTINE></TERM2>
+<DESC>return a time given a hour, minutes and seconds</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>YEAR</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ANNEE</CODEROUTINE></TERM2>
+<DESC>return the year of a date</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MONTH</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MOIS</CODEROUTINE></TERM2>
+<DESC>return the month of a date</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>WEEKNUM</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NO.SEMAINE</CODEROUTINE></TERM2>
+<DESC>return the fiscal week of a date (in the Analysis ToolPak)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DAY</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>JOUR</CODEROUTINE></TERM2>
+<DESC>return the day of a date</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>WEEKDAY</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>JOURSEM(num&#xE9;ro_de_s&#xE9;rie;type_retour)</CODEROUTINE></TERM2>
+<DESC>return the day of a week of a date</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>HOUR</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>HEURE</CODEROUTINE></TERM2>
+<DESC>return the hour of a time value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MINUTE</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MINUTE</CODEROUTINE></TERM2>
+<DESC>return the minutes of a time value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SECOND</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SECONDE</CODEROUTINE></TERM2>
+<DESC>return the second of a time value</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DATEVALUE</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DATEVAL</CODEROUTINE></TERM2>
+<DESC>return a date from a string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>TIMEVALUE</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TEMPSVAL</CODEROUTINE></TERM2>
+<DESC>return the decimal number of the time represented by a text string</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DATEDIF(Date1,Date2,Interval)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DATEDIF</CODEROUTINE></TERM2>
+<DESC>calculates the number of days, months, or years between two dates<BR/>
+<CODEROUTINE>Date1</CODEROUTINE> must be less than (earlier) or equal to <CODEROUTINE>Date2</CODEROUTINE>. Otherwise, <CODEROUTINE>DATEDIF</CODEROUTINE> will return a <CODEROUTINE>#NUM!</CODEROUTINE> error.<BR/>
+If either <CODEROUTINE>Date1</CODEROUTINE> or <CODEROUTINE>Date2</CODEROUTINE> is not a date, <CODEROUTINE>DATEDIF</CODEROUTINE> will return a <CODEROUTINE>#VALUE!</CODEROUTINE> error.<BR/>
+Interval can be:
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>n</CODEROUTINE></TERM><DESC>number of complete months between <CODEROUTINE>Date1</CODEROUTINE> and <CODEROUTINE>Date2</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>d</CODEROUTINE></TERM><DESC>number of days between <CODEROUTINE>Date1</CODEROUTINE> and <CODEROUTINE>Date2</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>y</CODEROUTINE></TERM><DESC>number of complete years between <CODEROUTINE>Date1</CODEROUTINE> and <CODEROUTINE>Date2</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>ym</CODEROUTINE></TERM><DESC>number of months between <CODEROUTINE>Date1</CODEROUTINE> and <CODEROUTINE>Date2</CODEROUTINE>, as if <CODEROUTINE>Date1</CODEROUTINE> and <CODEROUTINE>Date2</CODEROUTINE> were in the same year</DESC></ROW>
+<ROW><TERM><CODEROUTINE>yd</CODEROUTINE></TERM><DESC>number of days between <CODEROUTINE>Date1</CODEROUTINE> and <CODEROUTINE>Date2</CODEROUTINE>, as if <CODEROUTINE>Date1</CODEROUTINE> and <CODEROUTINE>Date2</CODEROUTINE> were in the same year</DESC></ROW>
+<ROW><TERM><CODEROUTINE>md</CODEROUTINE></TERM><DESC>number of days between <CODEROUTINE>Date1</CODEROUTINE> and <CODEROUTINE>Date2</CODEROUTINE>, as if <CODEROUTINE>Date1</CODEROUTINE> and <CODEROUTINE>Date2</CODEROUTINE> were in the same month and the same year</DESC></ROW>
+</DEFINITIONTABLE>
+</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>NETWORKDAYS(start_date,end_date,holidays)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NB.JOURS.OUVRES(date_d&#xE9;but;date_fin;jours_f&#xE9;ri&#xE9;s)</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the number of whole working days between start_date and end_date. Working days exclude weekends and any dates identified in holidays.</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>WORKDAY(start_date,days,holidays)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SERIE.JOUR.OUVRE(date_d&#xE9;but;nb_jours;jours_f&#xE9;ri&#xE9;s)</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return a number that represents a date that is the indicated number of working days before or after a date (the starting date). Working days exclude weekends and any dates identified as holidays.</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>EDATE(start_date,months)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>MOIS.DECALER(date_d&#xE9;part;mois)</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the serial number that represents the date that is the indicated number of months before or after a specified date</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>EOMONTH(start_date,months)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>FIN.MOIS(date_d&#xE9;part;mois)</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+return the serial number for the last day of the month that is the indicated number of months before or after start_date</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>YEARFRAC(start_date,end_date,basis)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>FRACTION.ANNEE(date_d&#xE9;but;date_fin;base)</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+calculate the fraction of the year represented by the number of whole days between two dates (the start_date and the end_date).</DESC>
+</ROW>
+</DEFINITION2TABLE><BR/>
+
+logical
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>TRUE()</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>VRAI()</CODEROUTINE></TERM2>
+<DESC>return the logical value TRUE</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>FALSE()</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>FAUX()</CODEROUTINE></TERM2>
+<DESC>reverse the value of its argument</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>NOT(logical)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NON(valeur_logique)</CODEROUTINE></TERM2>
+<DESC>return the logical value FALSE</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>OR(logical1,logical2,...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>OU(valeur_logique1;valeur_logique2,...)</CODEROUTINE></TERM2>
+<DESC>return TRUE if any argument is TRUE</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>AND(logical1,logical2,...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ET(valeur_logique1;valeur_logique2;...)</CODEROUTINE></TERM2>
+<DESC>return TRUE if all its arguments are TRUE</DESC>
+</ROW>
+</DEFINITION2TABLE>
+<BR/>
+
+matrix
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>TRANSPOSE(matrix)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>TRANSPOSE(matrice)</CODEROUTINE></TERM2>
+<DESC>transpose a matrix</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MDETER(matrix)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DETERMAT(matrice)</CODEROUTINE></TERM2>
+<DESC>compute the determinant of a matrix</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MINVERSE(matrix)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>INVERSEMAT(matrice)</CODEROUTINE></TERM2>
+<DESC>inverse a matrix</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>MMULT(matrix1;matrix2)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PRODUITMAT(matrice1;matrice2)</CODEROUTINE></TERM2>
+<DESC>multiply two matrices</DESC>
+</ROW>
+</DEFINITION2TABLE>
+<BR/>
+
+conversions
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>BIN2DEC(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>BINDEC</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert a binary number to decimal</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>BIN2HEX(number,places)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>BINHEX</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert a binary number to hexadecimal</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>BIN2OCT(number,places)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>BINOCT</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert a binary number to octal</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DEC2BIN(number,places)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DECBIN</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert a decimal number to binary</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DEC2HEX(number,places)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DECHEX</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert a decimal number to hexadecimal</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>DEC2OCT(number,places)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>DECOCT</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert a decimal number to octal</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>HEX2BIN(number,places)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>HEXBIN</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert a hexadecimal number to binary</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>HEX2DEC(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>HEXDEC</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert a hexadecimal number to decimal</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>HEX2OCT(number,places)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>HEXOCT</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert a hexadecimal number to octal</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>OCT2BIN(number,places)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>OCTBIN</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert an octal number to binary</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>OCT2DEC(number)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>OCTDEC</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert an octal number to decimal</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>OCT2HEX(number,places)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>OCTHEX</CODEROUTINE></TERM2>
+<DESC>(Analysis ToolPak)<BR/>
+convert an octal number to hexadecimal</DESC>
+</ROW>
+</DEFINITION2TABLE><BR/>
+
+pivot table
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>GETPIVOTDATA(data_field,pivot_table,field1,item1,field2,item2,...)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>LIREDONNEESTABCROISDYNAMIQUE(champ_donn&#xE9;es;tableau_crois&#xE9;_dyn;champ1;&#xE9;l&#xE9;ment1;champ2;&#xE9;l&#xE9;ment2;...)</CODEROUTINE></TERM2>
+<DESC>return data stored in a PivotTable report</DESC>
+</ROW>
+</DEFINITION2TABLE><BR/>
+
+misc.
+<DEFINITION2TABLE>
+<ROW>
+<TERM1><CODEROUTINE>IF(condition,val_true,val_false)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SI(test_logique;valeur_si_vrai;valeur_si_faux)</CODEROUTINE></TERM2>
+<DESC>return one value or an other one depending on a condition</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COUNT(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NB</CODEROUTINE></TERM2>
+<DESC>count the number of cells that contain numbers</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COUNTA</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NBVAL</CODEROUTINE></TERM2>
+<DESC>count the number of non empty cells</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COUNTBLANK</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NB.VIDE</CODEROUTINE></TERM2>
+<DESC>count the number of empty cells</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>COUNTIF</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>NB.SI(plage;crit&#xE8;re)</CODEROUTINE></TERM2>
+<DESC>count the number of cells within a range that meet the given criteria</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SUM(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMME</CODEROUTINE></TERM2>
+<DESC>add all the numbers in a range of cells</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SUMSQ(range)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMME.CARRES</CODEROUTINE></TERM2>
+<DESC>compute the sum of squares (take care, this is not the sum of deviations!)</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>SUMIF(range,criteria[,sum_range])</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMME.SI(plage;crit&#xE8;re[;somme_plage])</CODEROUTINE></TERM2>
+<DESC>conditional sum</DESC>
+</ROW>
+<ROW>
+<TERM1><CODEROUTINE>RAND</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ALEA</CODEROUTINE></TERM2>
+<DESC>return a random number in the range</DESC>
+</ROW>
+</DEFINITION2TABLE><BR/>
+
+</CONTENT>
+</PAGE>
+
+

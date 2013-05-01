@@ -1,0 +1,50 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Retrieving a filename from fileno or FILE*</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+I don't think there is any easy
+way to do this on Irix or Solaris, but this is so simple with Linux...
+<br>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#include &lt;unistd.h&gt;</tt> <br>
+      <tt>#include &lt;stdio.h&gt;</tt>
+      <p><tt>int getFilenameFromFd(int fd, char *buf, size_t bufsiz)</tt>
+      <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp; char path[32];</tt> <br>
+      <tt>&nbsp; int n;</tt> <br>
+      <tt>&nbsp; sprintf(path,"/proc/self/fd/%d",fd);</tt> <br>
+      <tt>&nbsp; n=readlink(path,buf,bufsiz);</tt> <br>
+      <tt>&nbsp; if (n==bufsiz) n--;</tt> <br>
+      <tt>&nbsp; buf[(n&gt;0)?n:0]='\0';</tt> <br>
+      <tt>&nbsp; return n;</tt> <br>
+      <tt>}</tt> </p>
+      <p><tt>int getFilenameFromFILE(FILE *f, char *buf, size_t bufsiz)</tt>
+      <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp; return(getFilenameFromFd(fileno(f),buf,bufsiz));</tt> <br>
+      <tt>}</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+</p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: April 7</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2001 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

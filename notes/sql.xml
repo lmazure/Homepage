@@ -1,0 +1,646 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>SQL</TITLE>
+<PATH>notes/sql.xml</PATH>
+<DATE><YEAR>2012</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+
+<BLIST><TITLE><U><B>Command categories</B></U></TITLE>
+<ITEM>
+DML - Data Manipulation Language: used to insert, modify, delete, and update data in database.<BR/>
+Examples: INSERT, UPDATE and DELETE statements
+</ITEM>
+<ITEM>
+DQL - Data Query Language: used to retrieve records from database.<BR/>
+Many people include this category into DML Statements.<BR/>
+Example: SELECT statement
+</ITEM>
+<ITEM>
+DDL - Data Definition Language: used to create and modify the structure of database objects in database.<BR/>
+Examples: CREATE, ALTER, DROP statements
+</ITEM>
+<ITEM>
+DCL - Data Control Language: used to create roles, permissions, and referential integrity as well as to control access to database by securing it.<BR/>
+Examples: GRANT, REVOKE statements
+</ITEM>
+<ITEM>
+TCL - Transactional Control Language: used to manage different transactions occurring within a database.<BR/>
+Examples: COMMIT, SAVE POINT, ROLLBACK statements
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Database creation</B></U></TITLE>
+<ITEM>
+syntax
+<CODESAMPLE>CREATE DATABASE <I>database_name</I></CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Table creation</B></U></TITLE>
+<ITEM>
+syntax
+<CODESAMPLE>CREATE TABLE <I>table_name</I><BR/>
+(<BR/>
+<I>column_name1</I> <I>data_type</I>,<BR/>
+<I>column_name2</I> <I>data_type</I>,<BR/>
+...<BR/>
+<I>column_nameN</I> <I>data_type</I><BR/>
+)</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>CREATE TABLE Persons<BR/>
+(<BR/>
+LastName varchar(30),<BR/>
+FirstName varchar,<BR/>
+Address varchar,<BR/>
+Age int(3)<BR/>
+)</CODESAMPLE>
+</ITEM>
+<ITEM>
+data types
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>char(<I>size</I>)</CODEROUTINE></TERM><DESC>Fixed-length character string. Size is specified in parenthesis. Max 255 bytes.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>varchar(<I>size</I>)</CODEROUTINE></TERM><DESC>Variable-length character string. Max size is specified in parenthesis.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>number(<I>size</I>)</CODEROUTINE></TERM><DESC>Number value with a max number of column digits specified in parenthesis.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>date</CODEROUTINE></TERM><DESC>Date value</DESC></ROW>
+<ROW><TERM><CODEROUTINE>number(<I>size</I>,<I>d</I>)</CODEROUTINE></TERM><DESC>Number value with a maximum number of digits of "size" total, with a maximum number of "d" digits to the right of the decimal.</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM><BLIST><TITLE><U><B>constraints</B></U></TITLE>
+<ITEM>
+<CODEROUTINE>NOT NULL</CODEROUTINE> disallows <CODEROUTINE>NULL</CODEROUTINE> for a column
+<CODESAMPLE>CREATE TABLE Customer<BR/>
+(SID integer NOT NULL,<BR/>
+Last_Name varchar (30) NOT NULL,<BR/>
+First_Name varchar(30));</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODEROUTINE>UNIQUE</CODEROUTINE> ensures that all values in a column are distinct
+<CODESAMPLE>CREATE TABLE Customer<BR/>
+(SID integer UNIQUE,<BR/>
+Last_Name varchar (30) NOT NULL,<BR/>
+First_Name varchar(30));</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODEROUTINE>CHECK</CODEROUTINE> ensures that all values in a column satisfy certain conditions
+<CODESAMPLE>CREATE TABLE Customer<BR/>
+(SID integer CHECK (SID > 0),<BR/>
+Last_Name varchar (30) NOT NULL,<BR/>
+First_Name varchar(30));</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODEROUTINE>PRIMARY KEY</CODEROUTINE> specifies that a column as a primary key (i.e. used to uniquely identify each row in a table)
+<CODESAMPLE>CREATE TABLE Customer<BR/>
+(SID integer PRIMARY KEY,<BR/>
+Last_Name varchar (30) NOT NULL,<BR/>
+First_Name varchar(30));</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODEROUTINE>REFERENCES</CODEROUTINE> specifies that a column as a foreign key (i.e. the value points to the primary key of another table)
+<CODESAMPLE>CREATE TABLE Orders<BR/>
+(Order_ID integer PRIMARY KEY, <BR/>
+Order_Date date, <BR/>
+Customer_SID integer REFERENCES Customer(SID),<BR/>
+Amount double);</CODESAMPLE>
+</ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Table update</B></U></TITLE>
+<ITEM>
+add a column
+<CODESAMPLE>ALTER TABLE <I>table_name</I><BR/>
+ADD <I>column_name</I> <I>datatype</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>ALTER TABLE Person ADD City varchar(30);</CODESAMPLE>
+</ITEM>
+<ITEM>
+add a column
+<CODESAMPLE>ALTER TABLE <I>table_name</I><BR/>
+DROP COLUMN <I>column_name</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>ALTER TABLE Person DROP COLUMN Address;</CODESAMPLE>
+</ITEM>
+<ITEM>
+state that a column is a primary key
+<CODESAMPLE>ALTER TABLE Customer ADD PRIMARY KEY (SID);</CODESAMPLE>
+</ITEM>
+<ITEM>
+state that a column is a foreign key
+<CODESAMPLE>ALTER TABLE Orders ADD FOREIGN KEY (customer_sid) REFERENCES Customer(SID);</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Table deletion</B></U></TITLE>
+<ITEM>
+syntax
+<CODESAMPLE>DROP TABLE <I>table_name</I>;</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Data insertion</B></U></TITLE>
+<ITEM>
+syntax
+<CODESAMPLE>INSERT INTO <I>table_name</I><BR/>
+VALUES (<I>value1</I>, <I>value2</I>,...);</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>INSERT INTO Persons<BR/>
+VALUES ('Hetland', 'Camilla', 'Hagabakka 24', 'Sandnes');</CODESAMPLE>
+</ITEM>
+<ITEM>
+it is possible to indicate the columns into which inserting data
+<CODESAMPLE>INSERT INTO <I>table_name</I> (<I>column1</I>, <I>column2</I>,...)<BR/>
+VALUES (value1, value2,...);</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>INSERT INTO Persons (LastName, Address)<BR/>
+VALUES ('Rasmussen', 'Storgt 67');</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Data update</B></U></TITLE>
+<ITEM>
+syntax
+<CODESAMPLE>UPDATE <I>table_name</I><BR/>
+SET <I>column_name</I> = <I>new_value</I><BR/>
+WHERE <I>column_name</I> = <I>some_value</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>UPDATE Person<BR/>
+SET Address = 'Stien 12', City = 'Stavanger'<BR/>
+WHERE LastName = 'Rasmussen';</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Data deletion</B></U></TITLE>
+<ITEM>
+syntax
+<CODESAMPLE>DELETE FROM <I>table_name</I>
+WHERE <I>column_name</I> = <I>some_value</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>DELETE FROM Person WHERE LastName = 'Rasmussen';</CODESAMPLE>
+</ITEM>
+<ITEM>
+delete all the rows of a table
+<CODESAMPLE>DELETE FROM <I>table_name</I>;</CODESAMPLE>
+or
+<CODESAMPLE>TRUNCATE TABLE <I>table_name</I>;</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Data retrieval</B></U></TITLE>
+<ITEM>
+retrieve the values from some columns
+<CODESAMPLE>SELECT <I>column_name1</I>, <I>column_name2</I>...
+FROM <I>table_name</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>SELECT LastName,FirstName FROM Persons;</CODESAMPLE>
+</ITEM>
+<ITEM>
+retrieve the values of all columns
+<CODESAMPLE>SELECT * FROM Persons;</CODESAMPLE>
+</ITEM>
+<ITEM><BLIST><TITLE>where</TITLE>
+<ITEM>
+retrieve the values corresponding to a criterion
+<CODESAMPLE>SELECT <I>column_name1</I>, <I>column_name2</I>...
+FROM <I>table_name</I>
+WHERE <I>column</I> <I>operator</I> <I>value</I></CODESAMPLE>
+<I>operator</I> can be
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>=</CODEROUTINE></TERM><DESC>Equal</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&lt;&gt;</CODEROUTINE></TERM><DESC>Not equal</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&gt;</CODEROUTINE></TERM><DESC>Greater than</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&lt;</CODEROUTINE></TERM><DESC>Less than</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&gt;=</CODEROUTINE></TERM><DESC>Greater than or equal</DESC></ROW>
+<ROW><TERM><CODEROUTINE>&lt;=</CODEROUTINE></TERM><DESC>Less than or equal</DESC></ROW>
+<ROW><TERM><CODEROUTINE>BETWEEN</CODEROUTINE></TERM><DESC>Between an inclusive range</DESC></ROW>
+<ROW><TERM><CODEROUTINE>LIKE</CODEROUTINE></TERM><DESC>Search for a pattern</DESC></ROW>
+<ROW><TERM><CODEROUTINE>IN</CODEROUTINE></TERM><DESC>If you know the exact value you want to return for at least one of the columns</DESC></ROW>
+</DEFINITIONTABLE>
+<CODEROUTINE>AND</CODEROUTINE> and <CODEROUTINE>OR</CODEROUTINE> can be used to combine criterion, <CODEROUTINE>AND</CODEROUTINE> has higher precedence than <CODEROUTINE>OR</CODEROUTINE>, but parentheses should be used anyway
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>SELECT * FROM Persons WHERE<BR/>
+(FirstName='Tove' OR FirstName='Stephen')<BR/>
+AND LastName='Svendson'</CODESAMPLE>
+</ITEM>
+<ITEM>
+IN syntax
+<CODESAMPLE>SELECT <I>column_name</I> FROM <I>table_name</I><BR/>
+WHERE <I>column_name</I> IN (<I>value1</I>,<I>value2</I>,..);</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>SELECT * FROM Persons<BR/>
+WHERE LastName IN ('Hansen','Pettersen');</CODESAMPLE>
+</ITEM>
+<ITEM>
+BETWEEN syntax
+<CODESAMPLE>SELECT <I>column_name</I> FROM <I>table_name</I><BR/>
+WHERE <I>column_name</I><BR/>
+BETWEEN <I>value1</I> AND <I>value2</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>SELECT * FROM Persons WHERE LastName <BR/>
+BETWEEN 'Hansen' AND 'Pettersen';</CODESAMPLE>
+to have data out of the range
+<CODESAMPLE>SELECT * FROM Persons WHERE LastName <BR/>
+NOT BETWEEN 'Hansen' AND 'Pettersen';</CODESAMPLE>
+</ITEM>
+<ITEM>
+wildcards of the LIKE operator
+<DEFINITIONTABLE>
+<ROW><TERM>%</TERM><DESC>Matches any number of characters, even zero characters</DESC></ROW>
+<ROW><TERM>_</TERM><DESC>Matches exactly one character</DESC></ROW>
+<ROW><TERM>\%</TERM><DESC>Matches one "%" character</DESC></ROW>
+<ROW><TERM>\_</TERM><DESC>Matches one "_" character</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM></BLIST>
+</ITEM>
+<ITEM>
+avoid to return duplicate data
+<CODESAMPLE>SELECT DISTINCT <I>column_name1</I>, <I>column_name2</I>...
+FROM <I>table_name</I>;</CODESAMPLE>
+The opposite of <CODEROUTINE>DISTINCT</CODEROUTINE> is <CODEROUTINE>ALL</CODEROUTINE>.
+</ITEM>
+<ITEM><BLIST><TITLE>order by</TITLE>
+<ITEM>
+sorting the returned data
+<CODESAMPLE>SELECT Company, OrderNumber FROM Orders
+ORDER BY Company;</CODESAMPLE>
+</ITEM>
+<ITEM>
+it is possible to sort on more than one column
+<CODESAMPLE>SELECT Company, OrderNumber FROM Orders
+ORDER BY Company, OrderNumber;</CODESAMPLE>
+</ITEM>
+<ITEM>
+it is possible to sort by ascending (<CODEROUTINE>ASC</CODEROUTINE>, the default) or descending (<CODEROUTINE>DESC</CODEROUTINE>) order
+<CODESAMPLE>SELECT Company, OrderNumber FROM Orders
+ORDER BY Company DESC, OrderNumber ASC;</CODESAMPLE>
+</ITEM></BLIST>
+</ITEM>
+<ITEM><BLIST><TITLE>alias</TITLE>
+<ITEM>
+it is possible to define table aliases
+<CODESAMPLE>SELECT <I>column</I> FROM <I>table</I> AS <I>table_alias</I></CODESAMPLE>
+</ITEM>
+<ITEM>
+it is possible to define column aliases
+<CODESAMPLE>SELECT <I>column</I> AS <I>column_alias</I> FROM <I>table</I></CODESAMPLE>
+</ITEM>
+<ITEM>
+example
+<CODESAMPLE>SELECT name, birth, CURDATE(), (YEAR(CURDATE())-YEAR(birth)) - (RIGHT(CURDATE(),5)&lt;RIGHT(birth,5)) AS age<BR/>
+FROM pet ORDER BY age;</CODESAMPLE>
+</ITEM></BLIST>
+</ITEM>
+<ITEM><BLIST><TITLE>group by</TITLE>
+<ITEM>
+<CODEROUTINE>GROUP BY</CODEROUTINE> is used when we are selecting multiple columns from a table (or tables) and at least one arithmetic operator appears in the <CODEROUTINE>SELECT</CODEROUTINE> statement. When that happens, we need to <CODEROUTINE>GROUP BY</CODEROUTINE> all the other selected columns, i.e., all columns except the one(s) operated on by the arithmetic operator.</ITEM>
+<ITEM>
+<CODESAMPLE>SELECT storeName, SUM(sales)<BR/>
+FROM storeInformation<BR/>
+GROUP BY storeName;</CODESAMPLE>
+</ITEM></BLIST>
+</ITEM>
+<ITEM><BLIST><TITLE>having</TITLE>
+<ITEM>
+<CODEROUTINE>HAVING</CODEROUTINE> is used to write conditions containing aggregate functions</ITEM>
+<ITEM>
+<CODESAMPLE>SELECT storeName, SUM(sales)<BR/>
+FROM storeInformation<BR/>
+GROUP BY storeName<BR/>
+HAVING SUM(sales) &gt; 1500;</CODESAMPLE>
+</ITEM></BLIST>
+</ITEM>
+<ITEM><BLIST><TITLE>subqueries</TITLE>
+<ITEM>
+it is possible to embed a SQL statement within another
+<CODESAMPLE>SELECT <I>columnName1</I><BR/>
+FROM <I>tableName1</I><BR/>
+WHERE <I>columnName2</I> <I>operator</I><BR/>
+(SELECT <I>columnName3</I><BR/>
+FROM <I>tableName2</I><BR/>
+WHERE <I>condition</I>)</CODESAMPLE>
+the first three lines are the outer query<BR/>
+the last three lines are the inner query
+</ITEM>
+<ITEM>
+<CODESAMPLE>SELECT SUM(sales) FROM StoreInformation<BR/>
+WHERE storeName IN<BR/>
+(SELECT storeName FROM Geography<BR/>
+WHERE regionName = 'West')</CODESAMPLE>
+This type of subquery is called a simple subquery. The inner query is first executed, and the result is then fed into the outer query.
+</ITEM>
+<ITEM>
+<CODESAMPLE>SELECT SUM(a1.sales) FROM StoreInformation a1<BR/>
+WHERE a1.storeName IN<BR/>
+(SELECT storeName FROM Geography a2<BR/>
+WHERE a2.storeName = a1.storeName)</CODESAMPLE>
+This type of subquery is called a correlated subquery. The inner query is dependent on the outer query.
+</ITEM>
+<ITEM>
+<CODEROUTINE>EXISTS</CODEROUTINE> tests whether the inner query returns any row. If it does, then the outer query proceeds. If not, the outer query does not execute, and the entire SQL statement returns nothing.
+<CODESAMPLE>SELECT <I>columnName1</I><BR/>
+FROM <I>tableName1</I><BR/>
+WHERE EXISTS<BR/>
+(SELECT *<BR/>
+FROM <I>tableName2</I><BR/>
+WHERE <I>condition</I>)</CODESAMPLE>
+</ITEM></BLIST>
+</ITEM>
+<ITEM><BLIST><TITLE><CODEROUTINE>CASE</CODEROUTINE></TITLE>
+<ITEM>syntax
+<CODESAMPLE>SELECT CASE <I>columnName</I><BR/>
+WHEN <I>condition1</I> THEN <I>result1</I><BR/>
+WHEN <I>condition2</I> THEN <I>result2</I><BR/>
+...<BR/>
+[ELSE <I>resultN</I>]<BR/>
+END<BR/>
+FROM <I>tableName</I></CODESAMPLE>
+<CODEROUTINE>ELSE</CODEROUTINE> is optionnal
+</ITEM>
+<ITEM>example
+<CODESAMPLE>SELECT storeName, CASE storeName<BR/>
+WHEN 'Los Angeles' THEN Sales * 2<BR/>
+WHEN 'San Diego' THEN Sales * 1.5<BR/>
+ELSE Sales<BR/>
+END<BR/>
+"New Sales",<BR/>
+Date<BR/>
+FROM StoreInformation</CODESAMPLE>
+</ITEM></BLIST>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Join</B></U> (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Join_(SQL)</A><L>en</L><F>HTML</F></X>)</TITLE>
+<ITEM>inner join<BR/>
+explicit syntax
+<CODESAMPLE>SELECT Employees.Name, Orders.Product<BR/>
+FROM Employees<BR/>
+INNER JOIN Orders<BR/>
+ON Employees.Employee_ID=Orders.Employee_ID;</CODESAMPLE>
+implicit syntax
+<CODESAMPLE>SELECT Employees.Name, Orders.Product<BR/>
+FROM Employees, Orders<BR/>
+WHERE Employees.Employee_ID=Orders.Employee_ID;</CODESAMPLE>
+</ITEM>
+<ITEM>an equi-join is an inner join using the equality comparisons in the join predicate
+</ITEM>
+<ITEM>a natural join is an equi-join where the join predicate implicitly compares all columns in both tables that have the same column-name in the joined tables
+<CODESAMPLE>SELECT *<BR/>
+FROM employee NATURAL JOIN department;</CODESAMPLE>
+</ITEM>
+<ITEM>left outer join: returns all the rows from the first table (Employees), even if there are no matches in the second table (Orders)
+<CODESAMPLE>SELECT Employees.Name, Orders.Product<BR/>
+FROM Employees<BR/>
+LEFT OUTER JOIN Orders<BR/>
+ON Employees.Employee_ID=Orders.Employee_ID;</CODESAMPLE>
+the <CODEROUTINE>OUTER</CODEROUTINE> keyword is optional
+</ITEM>
+<ITEM>right outer join: returns all the rows from the second table (Orders), even if there are no matches in the first table (Employees)
+<CODESAMPLE>SELECT Employees.Name, Orders.Product<BR/>
+FROM Employees<BR/>
+RIGHT OUTER JOIN Orders<BR/>
+ON Employees.Employee_ID=Orders.Employee_ID;</CODESAMPLE>
+the <CODEROUTINE>OUTER</CODEROUTINE> keyword is optional
+</ITEM>
+<ITEM>full outer join: returns all the rows from the both tables, even if there are no matches in the other table
+<CODESAMPLE>SELECT *<BR/>
+FROM employee<BR/>
+FULL OUTER JOIN department<BR/>
+ON employee.DepartmentID = department.DepartmentID;</CODESAMPLE>
+the <CODEROUTINE>OUTER</CODEROUTINE> keyword is optional
+</ITEM>
+<ITEM>cross join<BR/>
+explicit syntax
+<CODESAMPLE>SELECT *<BR/>
+FROM employee CROSS JOIN department<BR/>
+WHERE Employees.Employee_ID=Orders.Employee_ID;</CODESAMPLE>
+implicit syntax
+<CODESAMPLE>SELECT *<BR/>
+FROM employee, department;</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Set operation</B></U> (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Set_operations_(SQL)</A><L>en</L><F>HTML</F></X>)</TITLE>
+<ITEM>union<BR/>
+combines the results of two SQL queries into a single table<BR/>
+duplicate records are automatically removed unless <CODEROUTINE>UNION ALL</CODEROUTINE> is used
+<CODESAMPLE>SELECT * FROM sales2005<BR/>
+UNION<BR/>
+SELECT * FROM sales2006;</CODESAMPLE>
+</ITEM>
+<ITEM>intersect<BR/>
+returns only rows that appear in both result sets of two SQL queries<BR/>
+duplicate records are automatically removed unless <CODEROUTINE>INTERSECT ALL</CODEROUTINE> is used
+<CODESAMPLE>SELECT *<BR/>
+FROM ORDER<BR/>
+WHERE Quantity BETWEEN 1 AND 100<BR/>
+INTERSECT<BR/>
+SELECT *<BR/>
+FROM ORDER<BR/>
+WHERE Quantity BETWEEN 50 AND 200;</CODESAMPLE>
+</ITEM>
+<ITEM>except/minus<BR/>
+(some databases support <CODEROUTINE>EXCEPT</CODEROUTINE> or <CODEROUTINE>MINUS</CODEROUTINE>)<BR/>
+returns only rows that do not appear in the second result set<BR/>
+duplicate records are automatically removed unless <CODEROUTINE>EXCEPT ALL</CODEROUTINE> is used
+<CODESAMPLE>SELECT *<BR/>
+FROM ORDER<BR/>
+WHERE Quantity BETWEEN 1 AND 100<BR/>
+EXCEPT<BR/>
+SELECT *<BR/>
+FROM ORDER<BR/>
+WHERE Quantity BETWEEN 50 AND 75;</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Views</B></U></TITLE>
+<ITEM>syntax
+<CODESAMPLE>CREATE VIEW <I>viewName</I> AS SQL <I>Statement</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>example
+<CODESAMPLE>CREATE VIEW regionSales<BR/>
+AS SELECT A1.region_name AS Region, SUM(A2.Sales) AS Sales<BR/>
+FROM Geography AS A1, storeInformation AS A2
+WHERE A1.storeName = A2.storeName
+GROUP BY A1.regionName;</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Indexes</B></U></TITLE>
+<ITEM>syntax
+<CODESAMPLE>CREATE INDEX <I>indexName</I> ON <I>tableName</I> (<I>columnName</I>);</CODESAMPLE>
+</ITEM>
+<ITEM>example
+<CODESAMPLE>CREATE INDEX idxCustomerLastName<BR/>
+ON customer (lastName);</CODESAMPLE>
+</ITEM>
+<ITEM>example
+<CODESAMPLE>CREATE INDEX idxCustomerLocation<BR/>
+ON customer (city, country);</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Aggregate functions</B></U></TITLE>
+<ITEM><BLIST><TITLE>count</TITLE>
+<ITEM><CODEROUTINE>COUNT(*)</CODEROUTINE> returns the number of rows of the table
+<CODESAMPLE>SELECT COUNT(*) FROM <I>table</I>;</CODESAMPLE>
+</ITEM>
+<ITEM><CODEROUTINE>COUNT(<I>column</I>)</CODEROUTINE> returns the number of rows without a NULL value in the specified column
+<CODESAMPLE>SELECT COUNT(<I>column</I>) FROM <I>table</I>;</CODESAMPLE>
+</ITEM>
+<ITEM><CODEROUTINE>COUNT(DISTINCT <I>column</I>)</CODEROUTINE> returns the number of distinct values in the specified column
+<CODESAMPLE>SELECT COUNT(DISTINCT <I>column</I>) FROM <I>table</I>;</CODESAMPLE>
+</ITEM>
+</BLIST></ITEM>
+<ITEM>sum<BR/>
+returns the total sum of a column
+<CODESAMPLE>SELECT SUM(<I>column</I>) FROM <I>table</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>min<BR/>
+returns the lowest value in a column (can be used for a text column)
+<CODESAMPLE>SELECT MIN(<I>column</I>) FROM <I>table</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>max<BR/>
+returns the highest value in a column (can be used for a text column)
+<CODESAMPLE>SELECT MAX(<I>column</I>) FROM <I>table</I>;</CODESAMPLE>
+</ITEM>
+<ITEM>avg<BR/>
+returns the total sum of a column
+<CODESAMPLE>SELECT AVG(<I>column</I>) FROM <I>table</I>;</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<U><B>Functions</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>CURDATE()</CODEROUTINE></TERM><DESC>returns the current date</DESC></ROW>
+<ROW><TERM><CODEROUTINE>CURTIME()</CODEROUTINE></TERM><DESC>returns the current time</DESC></ROW>
+<ROW><TERM><CODEROUTINE>CONCAT(<I>str1</I>,<I>str2</I>)</CODEROUTINE></TERM><DESC>concatenates two strings</DESC></ROW>
+<ROW><TERM><CODEROUTINE>SUBSTR(<I>str</I>,<I>pos</I>)</CODEROUTINE></TERM><DESC>select all characters from <I>str</I> starting at position <I>pos</I></DESC></ROW>
+<ROW><TERM><CODEROUTINE>SUBSTR(<I>str</I>,<I>pos</I>,<I>len</I>)</CODEROUTINE></TERM><DESC>select <I>len</I> characters from <I>str</I> starting at position <I>pos</I></DESC></ROW>
+<ROW><TERM><CODEROUTINE>TRIM(<I>str</I>)</CODEROUTINE></TERM><DESC>remove white spaces from the beginning and the end of <I>str</I></DESC></ROW>
+<ROW><TERM><CODEROUTINE>LTRIM(<I>str</I>)</CODEROUTINE></TERM><DESC>remove white spaces from the beginning of <I>str</I></DESC></ROW>
+<ROW><TERM><CODEROUTINE>RTRIM(<I>str</I>)</CODEROUTINE></TERM><DESC>remove white spaces at the end of <I>str</I></DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<BLIST><TITLE><U><B>Commit/rollback</B></U></TITLE>
+<ITEM><CODEROUTINE>BEGIN</CODEROUTINE> starts a new transaction
+</ITEM>
+<ITEM><CODEROUTINE>COMMIT</CODEROUTINE> commits the current transaction
+</ITEM>
+<ITEM><CODEROUTINE>ROLLBACK</CODEROUTINE> cancels the current transaction
+</ITEM>
+<ITEM><CODEROUTINE>SAVEPOINT <I>savepointName</I></CODEROUTINE> creates a savepoint
+</ITEM>
+<ITEM><CODEROUTINE>ROLLBACK TO SAVEPOINT <I>savepointName</I></CODEROUTINE> cancels current transaction up to a savepoint
+</ITEM>
+<ITEM><CODEROUTINE>RELEASE SAVEPOINT <I>savepointName</I></CODEROUTINE> deletes a savepoint
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>tricks</B></U></TITLE>
+<ITEM><X><T>ranks</T><A>http://www.1keydata.com/sql/sql-rank.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>median</T><A>http://www.1keydata.com/sql/sql-median.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>rank</T><A>http://www.1keydata.com/sql/sql-rank.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>running totals</T><A>http://www.1keydata.com/sql/sql-running-totals.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>percent to total</T><A>http://www.1keydata.com/sql/sql-percent-to-total.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>cumulative percent to total</T><A>http://www.1keydata.com/sql/sql-cumulative-percent-to-total.html</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>JDBC</B></U></TITLE>
+<ITEM>
+types of drivers (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/JDBC_driver</A><L>en</L><F>HTML</F></X>)
+<DEFINITIONTABLE>
+<ROW><TERM>type 1</TERM><DESC>JDBC-ODBC bridge</DESC></ROW>
+<ROW><TERM>type 2</TERM><DESC>Native-API Driver</DESC></ROW>
+<ROW><TERM>type 3</TERM><DESC>Network-Protocol Driver</DESC></ROW>
+<ROW><TERM>type 4</TERM><DESC>Native-Protocol Driver</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Informix</B></U></TITLE>
+<ITEM>
+display information about the tables
+<CODESAMPLE><PROMPT/>select * from systables;</CODESAMPLE>
+</ITEM>
+<ITEM>
+display information about a given table
+<CODESAMPLE><PROMPT/>select * from systables where tabname = "myfolder";</CODESAMPLE>
+</ITEM>
+<ITEM>
+update table information
+<CODESAMPLE><PROMPT/>update statistics high;</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>Postgres</B></U></TITLE>
+<ITEM>
+display the list of patients
+<CODESAMPLE><PROMPT/>echo "select patient_id, patient_name from patient_folder;" | <X><T>psql</T><A>http://www.postgresql.org/docs/current/static/app-psql.html</A><L>en</L><F>HTML</F></X> -U postgres -At ctmr_sdc_db</CODESAMPLE>
+</ITEM>
+<ITEM>
+display the lock status of series <CODEROUTINE>s105</CODEROUTINE>.
+<CODESAMPLE><PROMPT/><X><T>psql</T><A>http://www.postgresql.org/docs/current/static/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "select series_lock from series_environment where series_id = 's105';" </CODESAMPLE>
+</ITEM>
+<ITEM>
+change the lock status of series <CODEROUTINE>s105</CODEROUTINE>.
+<CODESAMPLE><PROMPT/><X><T>psql</T><A>http://www.postgresql.org/docs/current/static/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "update series_environment set series_lock ='Yes' where series_id = 's105';"</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>MySQL</B></U></TITLE>
+<ITEM>
+login
+<CODESAMPLE><PROMPT/>mysql -h <I>host</I> -u <I>user</I> -p<I>password</I> <I>database</I></CODESAMPLE>
+if <CODEROUTINE><I>host</I></CODEROUTINE> is not indicate, <CODEROUTINE>mysql</CODEROUTINE> will try to log on the localhost<BR/>
+<CODEROUTINE><I>password</I></CODEROUTINE> is optional, if the flag <CODEROUTINE>-p</CODEROUTINE> is present, but the password is not on the command line, <CODEROUTINE>mysql</CODEROUTINE> will prompt for it<BR/>
+<CODEROUTINE><I>database</I></CODEROUTINE> is optional, if absent, no database is selected</ITEM>
+<ITEM>
+logout
+<CODESAMPLE>quit</CODESAMPLE>
+the semicolon is optional
+</ITEM>
+<ITEM>
+list the databases
+<CODESAMPLE>show databases;</CODESAMPLE>
+</ITEM>
+<ITEM>
+select a database
+<CODESAMPLE>use <I>database</I></CODESAMPLE>
+the semicolon is optional
+</ITEM>
+<ITEM>
+list the tables
+<CODESAMPLE>show tables;</CODESAMPLE>
+</ITEM>
+<ITEM>
+display the definition of a table
+<CODESAMPLE> describe <I>table</I>;</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/sql.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

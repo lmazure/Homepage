@@ -1,0 +1,90 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>iostream</TITLE>
+<PATH>notes/iostream.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><U>error management</U></TITLE>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>ios_base::badbit</CODEROUTINE></TERM><DESC>Loss of integrity of stream buffer.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ios_base::eofbit</CODEROUTINE></TERM><DESC>End-Of-File reached while extracting from an input sequence.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ios_base::failbit</CODEROUTINE></TERM><DESC>Last input operation failed before completion.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ios_base::goodbit</CODEROUTINE></TERM><DESC>No error.<BR/>Represents the absence of all the above.</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>void *ios::operator void *() const</CODEROUTINE><BR/>
+A stream derived from <CODEROUTINE>ios</CODEROUTINE> can be casted to a pointer. This pointer is null if any of the error flags <CODEROUTINE>failbit</CODEROUTINE> or <CODEROUTINE>badbit</CODEROUTINE> is set. Otherwise a non-zero pointer (not intended to be referenced - just to indicate success) is returned. 
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>bool ios::operator!() const</CODEROUTINE><BR/>
+Returns <CODEROUTINE>true</CODEROUTINE> if any of the error flags <CODEROUTINE>failbit</CODEROUTINE> or <CODEROUTINE>badbit</CODEROUTINE> is set. Otherwise returns <CODEROUTINE>false</CODEROUTINE>. This behavior is equivalent to member function <CODEROUTINE>fail</CODEROUTINE>.
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>bool ios::fail() const</CODEROUTINE><BR/>
+The function returns <CODEROUTINE>true</CODEROUTINE> if an error other than End-Of-File has occurred after an I/O operation. The function checks if either <CODEROUTINE>badbit</CODEROUTINE> or <CODEROUTINE>failbit</CODEROUTINE> state flags are set in the stream, if so it returns <CODEROUTINE>true</CODEROUTINE>, otherwise <CODEROUTINE>false</CODEROUTINE>.
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>bool ios::bad() const</CODEROUTINE><BR/>
+The function returns <CODEROUTINE>true</CODEROUTINE> if the <CODEROUTINE>badbit</CODEROUTINE> stream's error flag has been set by a previous I/O operation. Notice that this member function is not the opposite of <CODEROUTINE>good()</CODEROUTINE>.
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>bool ios::eof() const</CODEROUTINE><BR/>
+The function returns <CODEROUTINE>true</CODEROUTINE> if the <CODEROUTINE>eofbit</CODEROUTINE> stream's error flag has been set by a previous I/O operation. This flag is set by standard I/O operations when the End Of File has been reached.
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>ios_base::iostate ios::rdstate() const</CODEROUTINE><BR/>
+Returns the current stream control state flags.
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>void ios::clear(iostate state = goodbit)</CODEROUTINE><BR/>
+Sets a new value for the control state ignoring the existing value. The call with no arguments turns
+all of the flags on. Despite its name, <CODEROUTINE>clear()</CODEROUTINE> is used to turn flags on more often than it is used to turn them off. we can turn on one  flag while keeping the others like this:
+<CODESAMPLE>str.clear(ios::badbit | str.rdstate());</CODESAMPLE>
+</ITEM>
+
+</BLIST>
+
+
+<BLIST><TITLE><U>ostream</U></TITLE>
+<ITEM>
+The stream manipulator <CODEROUTINE>ostream&amp;  endl( ostream&amp; os)</CODEROUTINE> inserts a new-line character in the stream and then flushes it (i.e. if calls <CODEROUTINE>os.put(os.widen('\n'))</CODEROUTINE> then <CODEROUTINE>os.flush()</CODEROUTINE>).
+</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><U>ostrstream</U></TITLE>
+<ITEM>
+An <CODEROUTINE>ostrstream</CODEROUTINE> can be created with an allocated buffer
+<CODESAMPLE>
+char buffer[64];<BR/>
+std::ostrstream oss(buffer,sizeof(buffer));
+</CODESAMPLE>
+In this case, there is no problem with memory allocation.
+</ITEM>
+<ITEM>
+If an <CODEROUTINE>ostrstream</CODEROUTINE> is created with a dynamic buffer:
+<CODESAMPLE>
+std::ostrstream oss;
+</CODESAMPLE>
+The stream must be frozen with <CODEROUTINE>oss.freeze()</CODEROUTINE> or <CODEROUTINE>oss.freeze(1)</CODEROUTINE> before using the buffer. The stream can be unfrozen with <CODEROUTINE>oss.freeze(0)</CODEROUTINE>. The freeze status can be retrieved with <CODEROUTINE>oss.frozen();</CODEROUTINE>
+The string can be accessed with <CODEROUTINE>oss.str()</CODEROUTINE> which freezes the stream, so the return string must be <CODEROUTINE>delete</CODEROUTINE>d of the stream must be unfrozen.
+</ITEM>
+<ITEM>
+<CODEROUTINE>ostrstream::str()</CODEROUTINE> does not add automatically the <CODEROUTINE>'\0'</CODEROUTINE> at the end of the buffer. <CODEROUTINE>std::ends</CODEROUTINE> must be explicitly appended to the stream before.
+</ITEM>
+</BLIST>
+
+</CONTENT>
+</PAGE>
+

@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Java commands</TITLE>
+<PATH>notes/jcommands.xml</PATH>
+<DATE><YEAR>2012</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>java</U></B></TITLE>
+<ITEM>syntax:<BR/>
+<CODEROUTINE>java [ options ] class [ argument ... ]</CODEROUTINE><BR/>
+<CODEROUTINE>java [ options ] -jar file.jar [ argument ... ]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>-client</CODEROUTINE> select the Java HotSpot Client VM</ITEM>
+<ITEM><CODEROUTINE>-server</CODEROUTINE> select the Java HotSpot Server VM</ITEM>
+<ITEM><CODEROUTINE>-verbose:class</CODEROUTINE> print a trace of the class loading</ITEM>
+<ITEM><CODEROUTINE>-version</CODEROUTINE> display version information and exit</ITEM>
+<ITEM><CODEROUTINE>-showversion</CODEROUTINE> display version information and continue</ITEM>
+<ITEM><CODEROUTINE>-Xms<I>n</I></CODEROUTINE> set the initial size, in bytes, of the memory allocation pool<BR/>
+The value must be a multiple of 1024 greater than 1MB.<BR/>
+Append the letter k or K to indicate kilobytes, or m or M to indicate megabytes.</ITEM>
+<ITEM><CODEROUTINE>-Xmx<I>n</I></CODEROUTINE> set the maximum size, in bytes, of the memory allocation pool<BR/>
+The value must be a multiple of 1024 greater than 2MB.<BR/>
+Append the letter k or K to indicate kilobytes, or m or M to indicate megabytes.</ITEM>
+<ITEM><CODEROUTINE>-Xss<I>n</I></CODEROUTINE> set the thread stack size</ITEM>
+<ITEM><CODEROUTINE>-D<I>property</I>=<I>value</I></CODEROUTINE> set a system property value</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>javac</U></B></TITLE>
+<ITEM>detail the deprecated features used by the file being compiled
+<CODESAMPLE>javac -deprecation foobar.java</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>javap</U></B></TITLE>
+<ITEM>dump the package, protected and public classes and members of a class:
+<CODESAMPLE>javap javax.swing.DefaultListRenderer</CODESAMPLE></ITEM>
+<ITEM>to know in which Java version is FooBar.class, execute
+<CODESAMPLE>javap FooBat</CODESAMPLE>
+and look for <CODEROUTINE>minor version</CODEROUTINE> and <CODEROUTINE>major version</CODEROUTINE>
+<TABLE>
+<ROW><CELL>major</CELL><CELL>minor</CELL><CELL>Java</CELL></ROW>
+<ROW><CELL>45</CELL><CELL>3</CELL><CELL>1.0</CELL></ROW>
+<ROW><CELL>45</CELL><CELL>3</CELL><CELL>1.1</CELL></ROW>
+<ROW><CELL>46</CELL><CELL>0</CELL><CELL>1.2</CELL></ROW>
+<ROW><CELL>47</CELL><CELL>0</CELL><CELL>1.3</CELL></ROW>
+<ROW><CELL>48</CELL><CELL>0</CELL><CELL>1.4</CELL></ROW>
+<ROW><CELL>49</CELL><CELL>0</CELL><CELL>1.5</CELL></ROW>
+<ROW><CELL>50</CELL><CELL>0</CELL><CELL>1.6</CELL></ROW>
+</TABLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>keytool</U></B></TITLE>
+<ITEM>manage keys and certificates</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>javaws</U></B></TITLE>
+<ITEM>start Java Web Start Launcher on the specified JNLP URL
+<CODESAMPLE>javaws &lt;url&gt;</CODESAMPLE></ITEM>
+<ITEM>run the Java Application Cache Viewer
+<CODESAMPLE>javaws</CODESAMPLE>
+<CODESAMPLE>javaws -viewer</CODESAMPLE></ITEM>
+<ITEM>use the system cache instead of the user cache
+<CODESAMPLE>javaws -system</CODESAMPLE></ITEM>
+<ITEM>clear the user cache
+<CODESAMPLE>javaws -Xclearcache</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>jconsole</U></B></TITLE>
+<ITEM>the monitored process must be started with the <CODEROUTINE>-Dcom.sun.management.jmxremote</CODEROUTINE> option</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>jps</U></B></TITLE>
+<ITEM>list the running JVMs, the class containing the <CODEROUTINE>main</CODEROUTINE> method and name and the arguments passed to the <CODEROUTINE>main</CODEROUTINE> method.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>jstack</U></B></TITLE>
+<ITEM>dump the stacks of all the threads of a process</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>jmap</U></B></TITLE>
+<ITEM>create a heapdump of a process:<BR/>
+<CODEROUTINE>jmap -dump:file="C:\Documents and setting\...\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
+<ITEM>create a heapdump containing only the non-garbageable objects:<BR/>
+<CODEROUTINE>jmap -dump:live,file="C:\Documents and setting\...\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>jhat</U></B></TITLE>
+<ITEM>analyse a heapdump and start a browser to allow to access the data<BR/>
+the server is reachable at http://localhost:7000</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>jstat</U></B></TITLE>
+<ITEM>return some JVM statistics</ITEM>
+<ITEM>track the usage of the perm gen space for one minute with an update every 500 ms<BR/>
+<CODEROUTINE>jstat -gcpermcapacity <I>pid</I> 500 120</CODEROUTINE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>jinfo</U></B></TITLE>
+<ITEM>return the properties and Java virtual machine command line flags<BR/>
+<CODEROUTINE>jinfo <I>pid</I></CODEROUTINE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>classpath</U></B></TITLE>
+<ITEM><CODEROUTINE>$CLASSPATH</CODEROUTINE> contains directories and JAR files to be appended to the default path (which is <CODEROUTINE>.;$JAVA/lib/classes.zip</CODEROUTINE>)<BR/>
+the elements are separated by <CODEROUTINE>:</CODEROUTINE> on Unix and <CODEROUTINE>;</CODEROUTINE> on Windows</ITEM>
+<ITEM><CODEROUTINE>-classpath</CODEROUTINE> overrides the default path and the $CLASSPATH environment variable
+<BLIST><ITEM>for compilation
+<CODESAMPLE>javac -classpath D:\Docs\perso\ftp-1.2.2\ftp.jar -deprecation MyTool.java MyMain.java</CODESAMPLE></ITEM>
+<ITEM>for execution (D:\Docs\perso\mystuff is the directory containing the MyMain.class file)
+<CODESAMPLE>java -classpath "D:\Docs\perso\ftp-1.2.2\ftp.jar;D:\Docs\perso\mystuff" MyMain</CODESAMPLE></ITEM></BLIST>
+<CODEROUTINE>-classpath</CODEROUTINE> can be abbreviated into <CODEROUTINE>-cp</CODEROUTINE></ITEM>
+</BLIST>
+
+</CONTENT>
+
+<X><T>Oracle's documentation</T><A>http://docs.oracle.com/javase/7/docs/technotes/tools/</A><L>en</L><F>HTML</F></X>
+
+</PAGE>
+

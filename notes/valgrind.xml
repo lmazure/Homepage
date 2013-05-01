@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Valgrind</TITLE>
+<PATH>notes/valgrind.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<B><U>installation</U></B> (using csh)
+<CODESAMPLE><PROMPT/>bzip2 -d valgrind-3.1.0.tar.bz2<BR/>
+<PROMPT/>tar xvf valgrind-3.1.0.tar<BR/>
+<PROMPT/>cd valgrind-3.1.0<BR/>
+<PROMPT/>./configure --prefix=$PWD:h<BR/>
+<PROMPT/>make<BR/>
+<PROMPT/>make install<BR/>
+<PROMPT/>../bin/valgrind ls -l</CODESAMPLE>
+<BR/>
+<B><U>Available tools</U></B>
+<DEFINITIONTABLE>
+<ROW><TERM>memcheck</TERM><DESC>memory checker</DESC></ROW>
+<ROW><TERM>addrcheck</TERM><DESC>same as memcheck except that the uninitialized are not checked<BR/>but it runs twice faster than memcheck</DESC></ROW>
+<ROW><TERM>cachegrind</TERM><DESC>CPU cache profiler</DESC></ROW>
+<ROW><TERM>massif</TERM><DESC>heap profiler</DESC></ROW>
+<ROW><TERM>helgrind</TERM><DESC>detect unlocked memory addresses accessed by several threads</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BLIST><TITLE><B><U>Core options</U></B></TITLE>
+<ITEM><DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>--tool=[memcheck|addrcheck|...]</CODEROUTINE></TERM><DESC>select the tool</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--help</CODEROUTINE></TERM><DESC>describe commands of core and selected tool</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--help-debug</CODEROUTINE></TERM><DESC>idem with the addition of the debugging options</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--version</CODEROUTINE></TERM><DESC>return version</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--log-file=foobar</CODEROUTINE></TERM><DESC>log the results in <CODEROUTINE>foobar.pid<I>pid</I></CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>--log-file-exactly=foobar</CODEROUTINE></TERM><DESC>log the results in <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>--log-file-qualifier=VAR</CODEROUTINE></TERM><DESC>log the results in the file name defined by the environment variable <CODEROUTINE>VAR</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>--log-socket=1.2.3.4:56789</CODEROUTINE></TERM><DESC>send log to machine 1.2.3.4 on port 56789 (use <CODEROUTINE>valgrind-listener</CODEROUTINE> to receive the results)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-q</CODEROUTINE><BR/><CODEROUTINE>--quiet</CODEROUTINE></TERM><DESC>only print error messages</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-v</CODEROUTINE><BR/><CODEROUTINE>--verbose</CODEROUTINE></TERM><DESC>display more information<BR/>repeating the flag increases the verbosity</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--trace-children=[yes|no]</CODEROUTINE></TERM><DESC>default is to not trace the children</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--track-fds=[yes|no]</CODEROUTINE></TERM><DESC>default is to not list open file descriptors</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--demangle=[yes|no]</CODEROUTINE></TERM><DESC>default is to demangle the C++ names</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--num-callers=&lt;number&gt;</CODEROUTINE></TERM><DESC>default is to backtrace 4 routines<BR/>maximum value is 
+50</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--error-limit=[yes|no]</CODEROUTINE></TERM><DESC>when enabled (this is the default), Valgrind stops reporting errors after 30000 in total, or 300 different ones, have been seen; this avoids the error tracking machinery from becoming a huge performance overhead in programs with many errors.</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>valgrind does not work with setuid'ed binaries.</ITEM>
+</BLIST>
+<BR/>
+<BLIST><TITLE><B><U>Memcheck</U></B></TITLE>
+<ITEM><BLIST>
+<TITLE>Every bit in memory or in the CPU has an associated valid-value (V) bit. For integer registers, the validity of the bits is check only when they are used to generate a memory address, to decide control flow, and as values of system calls (loading undefined bits in the registers and adding them is not an error). For floating registers, the control is simpler: it is done at the load instruction (i.e. all bits loaded in a floating register must be defined). Once the V bits for a value in the CPU have been checked, they are then set to indicate validity. This avoids long chains of errors.<BR/>
+Every byte in memory, but not in the CPU, have an associated valid-address (A) bit.</TITLE>
+<ITEM>When the program starts, all the global data areas are marked as accessible.</ITEM>
+<ITEM>When the program does malloc/new, the A bits for exactly the allocated area, and not a byte more, are marked as accessible.</ITEM>
+<ITEM>Upon freeing the area the A bits are changed to indicate inaccessibility.</ITEM>
+<ITEM>When the stack pointer register (<CODEROUTINE>%esp</CODEROUTINE>) moves up or down, A bits are set. The rule is that the area from <CODEROUTINE>%esp</CODEROUTINE> up
+to the base of the stack is marked as accessible, and below %esp is inaccessible.</ITEM>
+<ITEM>When doing system calls, A bits are changed appropriately. For example, <CODEROUTINE>mmap()</CODEROUTINE> magically makes files appear
+in the process's address space, so the A bits must be updated if <CODEROUTINE>mmap()</CODEROUTINE> succeeds.</ITEM>
+</BLIST></ITEM>
+<ITEM><DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>--leak-check=[no|summary|full]</CODEROUTINE></TERM><DESC>default leak check is <CODEROUTINE>summary</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>--show-reachable=[yes|no]</CODEROUTINE></TERM><DESC>default is do not display the reachable memory blocks</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--leak-resolution=[low|med|high]</CODEROUTINE></TERM><DESC>when doing leak checking, determines how we consider different backtraces to be the same: <CODEROUTINE>low</CODEROUTINE> (the default) 2, <CODEROUTINE>med</CODEROUTINE> 4 and <CODEROUTINE>high</CODEROUTINE> all entries need to match.</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+<ITEM>A typical command line is
+<CODESAMPLE> valgrind --tool=memcheck --trace-children=yes --num-callers=20 --log-file=/tmp/vglog --leak-check=full --leak-resolution=high
+--error-limit=no foobar</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Massif</U></B></TITLE>
+<ITEM><DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>--depth=&lt;number&gt;</CODEROUTINE></TERM><DESC>default is to list the 3 calling routines for each memory allocation</DESC></ROW>
+<ROW><TERM><CODEROUTINE>--format=[text|html]</CODEROUTINE></TERM><DESC>default is to produce a text file</DESC></ROW>
+</DEFINITIONTABLE></ITEM>
+</BLIST>
+
+</CONTENT>
+
+<X><T>Links</T><A>../links/coding.html#valgrind</A><L>en</L><F>HTML</F></X>
+
+</PAGE>
+
+

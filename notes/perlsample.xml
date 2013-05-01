@@ -1,0 +1,279 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Perl - samples</TITLE>
+<PATH>notes/perlsample.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<CONTENT>
+
+format a string into HTML
+<CODESAMPLE>
+sub to_html {<BR/>
+<TAB/>my $txt = shift; <BR/>
+<TAB/>$txt =~ s/&amp;/\&amp;AMP;/g;<BR/>
+<TAB/>$txt =~ s/&lt;/\&amp;LT;/g;<BR/>
+<TAB/>$txt =~ s/&gt;/\&amp;GT;/g;<BR/>
+<TAB/>return $txt;<BR/>
+}<BR/>
+</CODESAMPLE>
+
+<BR/>
+
+quick 'n dirty routine to send a HTML file by mail on Solaris 2.8
+<CODESAMPLE>
+# ---------------------------------------------------------------------<BR/>
+# send mail<BR/>
+<BR/>
+sub send_mail {<BR/>
+<TAB/>my $file = shift;<BR/>
+<TAB/>while ( my $address = shift ) {<BR/>
+<TAB/><TAB/>open(MAILER,"| mail $address") or die("failed to initialize the mail ($!)");<BR/>
+<TAB/><TAB/>open(FILE,$file) or die("failed to open the mail file ($!)");<BR/>
+<TAB/><TAB/>while ( &lt;FILE&gt; ) { print MAILER $_ or die("failed to transfer the mail ($!)"); };<BR/>
+<TAB/><TAB/>close(FILE);<BR/>
+<TAB/><TAB/>close(MAILER) or die("failed to send the mail ($!)");<BR/>
+<TAB/>}<BR/>
+}<BR/>
+<BR/>
+# ---------------------------------------------------------------------<BR/>
+# send a HTML page as the email itself<BR/>
+<BR/>
+sub send_html_file {<BR/>
+<TAB/>my $file = shift;<BR/>
+<TAB/>my $header = shift;<BR/>
+<TAB/>my $mail = $file.".mail";<BR/>
+<TAB/>my $replyto = 'toto@foobar.com';<BR/>
+<BR/>
+<TAB/>open(HTML,$file) or die("cannot open HTML file $file ($!)");<BR/>
+<TAB/>open(MAIL,'&gt;'.$mail) or die("cannot open mail file $mail ($!)");<BR/>
+<TAB/>print MAIL "MIME-Version: 1.0\n";<BR/>
+<TAB/>print MAIL "Subject: $header\n";<BR/>
+<TAB/>print MAIL "To: ".join(", ",@_)."\n";<BR/>
+<TAB/>print MAIL "Reply-To $replyto\n";<BR/>
+<TAB/>printf MAIL "Date: %02d %s %d %02d:%02d:%02d %s\n", $mday, $months[$mon-1], $year+1900, $hour, $min, $sec, $ENV{'TZ'};<BR/>
+<TAB/>print MAIL "Content-Type: text/html; charset=us-ascii\n";<BR/>
+<TAB/>print MAIL "Content-Transfer-Encoding: 7bit\n";<BR/>
+<TAB/>print MAIL "\n";<BR/>
+<TAB/>while ( my $line = &lt;HTML&gt; ) {<BR/>
+<TAB/><TAB/>print MAIL $line;<BR/>
+<TAB/>}<BR/>
+<TAB/>close(HTML);<BR/>
+<TAB/>close(MAIL) or die("cannot close mail file $mail ($!)");<BR/>
+<BR/>
+<TAB/>send_mail($mail,@_);<BR/>
+<TAB/>unlink $mail or die("cannot unlink mail file $mail ($!)");<BR/>
+<BR/>
+<TAB/>return;<BR/>
+}<BR/>
+<BR/>
+# ---------------------------------------------------------------------<BR/>
+# send a HTML page as an email attachment<BR/>
+<BR/>
+sub send_attached_html_file {<BR/>
+<TAB/>my $file = shift;<BR/>
+<TAB/>my $header = shift;<BR/>
+<TAB/>my $mail = $file.".mail";<BR/>
+<TAB/>my $replyto = 'toto@foobar.com';<BR/>
+<BR/>
+<TAB/>open(HTML,$file) or die("cannot open HTML file $file ($!)");<BR/>
+<TAB/>open(MAIL,'&gt;'.$mail) or die("cannot open mail file $mail ($!)");<BR/>
+<TAB/>print MAIL "MIME-Version: 1.0\n";<BR/>
+<TAB/>print MAIL "Subject: $header\n";<BR/>
+<TAB/>print MAIL "To: ".join(", ",@_)."\n";<BR/>
+<TAB/>print MAIL "Reply-To $replyto\n";<BR/>
+<TAB/>printf MAIL "Date: %02d %s %d %02d:%02d:%02d %s\n", $mday, $months[$mon-1], $year+1900, $hour, $min, $sec, $ENV{'TZ'};<BR/>
+<TAB/>print MAIL "Content-Type: multipart/mixed;\n";<BR/>
+<TAB/>print MAIL " boundary=\"------------050703030504090304070308\"\n";<BR/>
+<TAB/>print MAIL "\n";<BR/>
+<TAB/>print MAIL "This is a multi-part message in MIME format.\n";<BR/>
+<TAB/>print MAIL "--------------050703030504090304070308\n";<BR/>
+<TAB/>print MAIL "Content-Type: text/plain; charset=ISO-8859-1; format=flowed\n";<BR/>
+<TAB/>print MAIL "Content-Transfer-Encoding: 8bit\n";<BR/>
+<TAB/>print MAIL "\n";<BR/>
+<TAB/>print MAIL "\n";<BR/>
+<TAB/>print MAIL "see attached file\n";<BR/>
+<TAB/>print MAIL "\n";<BR/>
+<TAB/>print MAIL "\n";<BR/>
+<TAB/>print MAIL "--------------050703030504090304070308\n";<BR/>
+<TAB/>print MAIL "Content-Type: text/html;\n";<BR/>
+<TAB/>print MAIL " name=\"metrics_weekly.html\"\n";<BR/>
+<TAB/>print MAIL "Content-Transfer-Encoding: 7bit\n";<BR/>
+<TAB/>print MAIL "Content-Disposition: inline;\n";<BR/>
+<TAB/>print MAIL " filename=\"metrics_weekly.html\"\n";<BR/>
+<TAB/>print MAIL "\n";<BR/>
+<TAB/>while ( my $line = &lt;HTML&gt; ) {<BR/>
+<TAB/><TAB/>print MAIL $line;<BR/>
+<TAB/>}<BR/>
+<TAB/>close(HTML);<BR/>
+<TAB/>close(MAIL) or die("cannot close mail file $mail ($!)");<BR/>
+<BR/>
+<TAB/>send_mail($mail,@_);<BR/>
+<TAB/>unlink $mail or die("cannot unlink mail file $mail ($!)");<BR/>
+<BR/>
+<TAB/>return;<BR/>
+}<BR/>
+</CODESAMPLE>
+
+<BR/>
+
+recursive copy of a referenced file archive (using UNC file names)
+<CODESAMPLE>#!/bin/perl -w<BR/>
+<BR/>
+# synopsys:<BR/>
+# copy_files.pl [wikiSourcePage] [targetDirectory]<BR/>
+<BR/>
+use strict;<BR/>
+use warnings;<BR/>
+use diagnostics;<BR/>
+use File::Copy;<BR/>
+use File::Basename;<BR/>
+<BR/>
+my $wikiPage = $ARGV[0];<BR/>
+my $sourceDirectory = "\\\\srvuranus\\PM\\K3\\doc archive";<BR/>
+my $targetDirectory = $ARGV[1];<BR/>
+<BR/>
+sub dircopy {<BR/>
+<TAB/>my ($source,$target) = @_;<BR/>
+<TAB/>if ( -d $source ) {<BR/>
+<TAB/><TAB/>opendir(DIR,$source)  or die("cannot open $source directory ($!)");<BR/>
+<TAB/><TAB/>my @list = readdir(DIR);<BR/>
+<TAB/><TAB/>closedir(DIR);<BR/>
+<TAB/><TAB/>mkdir($target) or die("cannot create $target directory ($!)");<BR/>
+<TAB/><TAB/>foreach( @list ) {<BR/>
+<TAB/><TAB/><TAB/>dircopy("$source\\$_","$target\\$_") if ( $_ ne "." &amp;&amp; $_ ne ".." );<BR/>
+<TAB/><TAB/>}<BR/>
+<TAB/>}<BR/>
+<TAB/>elsif ( -f $source ) {<BR/>
+<TAB/><TAB/>copy($source,$target) or die("copy from $source to $target failed ($!)\n");<BR/>
+<TAB/>} else {<BR/>
+<TAB/><TAB/>print "Cannot handle $source\n";<BR/>
+<TAB/>}<BR/>
+}<BR/>
+<BR/>
+<BR/>
+die("cannot read $sourceDirectory directory") unless(-w $sourceDirectory);<BR/>
+<BR/>
+die("cannot write $targetDirectory directory") unless(-w $targetDirectory);<BR/>
+<BR/>
+open(WIKIPAGE,$wikiPage) or die("cannot open file $wikiPage ($!)");<BR/>
+undef $/;<BR/>
+$_ = &lt;WIKIPAGE&gt;;<BR/>
+close(WIKIPAGE);<BR/>
+<BR/>
+while ( m/K3[0-9]{4}/gcs ) {<BR/>
+<TAB/>my $ref = $&amp;;<BR/>
+<TAB/>if ( ! -d "$targetDirectory\\$ref" ) {<BR/>
+<TAB/><TAB/>print "$ref\n";<BR/>
+<TAB/><TAB/>dircopy("$sourceDirectory\\$ref","$targetDirectory\\$ref");<BR/>
+<TAB/>}<BR/>
+}</CODESAMPLE>
+
+<BR/>
+
+suppress source files of compressed files
+<CODESAMPLE>#!/bin/perl -w<BR/>
+<BR/>
+# synopsys:<BR/>
+# suppress_source_of_compressed_file.pl [dirname]<BR/>
+<BR/>
+use strict;<BR/>
+use warnings;<BR/>
+use diagnostics;<BR/>
+<BR/>
+my $extension="zip";<BR/>
+<BR/>
+sub handle_file {<BR/>
+<TAB/>my $infile = shift;<BR/>
+<TAB/>if ( $infile =~ /\.${extension}$/ ) {<BR/>
+<TAB/><TAB/>my $sourcefile = $infile;<BR/>
+<TAB/><TAB/>$sourcefile =~ s/\.${extension}//;<BR/>
+<TAB/><TAB/>if ( -f $sourcefile ) {<BR/>
+<TAB/><TAB/><TAB/>print "$sourcefile\n";<BR/>
+<TAB/><TAB/><TAB/>unlink($sourcefile) or die("cannot delete $sourcefile");<BR/>
+<TAB/><TAB/>}<BR/>
+<TAB/>}<BR/>
+}<BR/>
+<BR/>
+sub scan_dir {<BR/>
+<TAB/>my $file = shift;<BR/>
+<TAB/>if ( -d $file ) {<BR/>
+<TAB/><TAB/>opendir(DIR,$file);<BR/>
+<TAB/><TAB/>my @list = readdir(DIR);<BR/>
+<TAB/><TAB/>closedir(DIR);<BR/>
+<TAB/><TAB/>foreach( @list ) {<BR/>
+<TAB/><TAB/><TAB/>scan_dir("$file/$_") if ( $_ ne "." &amp;&amp; $_ ne ".." );<BR/>
+<TAB/><TAB/>}<BR/>
+<TAB/>}<BR/>
+<TAB/>elsif ( -f $file ) {<BR/>
+<TAB/><TAB/>handle_file($file);<BR/>
+<TAB/>} else {<BR/>
+<TAB/><TAB/>print "Cannot handle $file\n";<BR/>
+<TAB/>}<BR/>
+}<BR/>
+<BR/>
+scan_dir($ARGV[0]);</CODESAMPLE>
+
+<BR/>
+
+renaming files with long file names
+<CODESAMPLE>#!/bin/perl -w<BR/>
+<BR/>
+# synopsys:<BR/>
+#  change_long_file_names.pl [dirname]<BR/>
+<BR/>
+use strict;<BR/>
+use warnings;<BR/>
+use diagnostics;<BR/>
+use File::Basename;<BR/>
+<BR/>
+# $keepLeft: number of characters kept at the beginning of the name<BR/>
+# $keepRight: number of characters kept at the end of name<BR/>
+# $maxLength: maximum number of characters in a name<BR/>
+#<BR/>
+# we must have:<BR/>
+# $maxlength = $keepRight + length($incrStr) + $keepLeft<BR/>
+# where $incrStr is defined below<BR/>
+<BR/>
+my ($keepLeft,$keepRight,$maxLength) = (40,20,64);<BR/>
+my $incr = 0;<BR/>
+<BR/>
+sub handle_file {<BR/>
+<TAB/>my $infile = shift;<BR/>
+  <BR/>
+<TAB/>if ( length(basename($infile))&gt;$maxLength) {<BR/>
+<TAB/><TAB/>print "$infile\n";<BR/>
+<TAB/><TAB/>my $newName = basename($infile);<BR/>
+<TAB/><TAB/>my $incrStr = sprintf("~%02x~",$incr);<BR/>
+<TAB/><TAB/>$newName =~ s/(.{$keepLeft}).*(.{$keepRight})/${1}${incrStr}${2}/;<BR/>
+<TAB/><TAB/>$newName = dirname($infile)."/".$newName;<BR/>
+<TAB/><TAB/>print "renamed into\n";<BR/>
+<TAB/><TAB/>print "$newName\n";<BR/>
+<TAB/><TAB/>$incr++;<BR/>
+<TAB/><TAB/>$incr=0 if ($incr == 256);<BR/>
+<TAB/><TAB/>rename($infile, $newName) or die("Couldn't rename $infile to $newName: $!\n");<BR/>
+<TAB/>}<BR/>
+}<BR/>
+<BR/>
+sub scan_dir {<BR/>
+<TAB/>my $file = shift;<BR/>
+<TAB/>if ( -d $file ) {<BR/>
+<TAB/><TAB/>opendir(DIR,$file);<BR/>
+<TAB/><TAB/>my @list = readdir(DIR);<BR/>
+<TAB/><TAB/>closedir(DIR);<BR/>
+<TAB/><TAB/>foreach( @list ) {<BR/>
+<TAB/><TAB/><TAB/>scan_dir("$file/$_") if ( $_ ne "." &amp;&amp; $_ ne ".." );<BR/>
+<TAB/><TAB/>}<BR/>
+<TAB/>}<BR/>
+<TAB/>elsif ( -f $file ) {<BR/>
+<TAB/><TAB/>handle_file($file);<BR/>
+<TAB/>} else {<BR/>
+<TAB/><TAB/>print "Cannot handle $file\n";<BR/>
+<TAB/>}<BR/>
+}<BR/>
+<BR/>
+scan_dir($ARGV[0]);</CODESAMPLE>
+
+</CONTENT>
+<X><T>links</T><A>../links/perl.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

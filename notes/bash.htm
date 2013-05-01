@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <title>bash</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><u>startup files<br>
+</u></b>for interactive shells or shells called with the <code>--login</code>
+option:<br>
+<div style="margin-left: 40px;">at startup<br>
+</div>
+<ul style="font-family: monospace;">
+  <li><code>/etc/profile</code></li>
+  <li><code>~/.bash_profile</code><br>
+in general, this file contains "<code>if [ -f ~/.bashrc ]; then .
+~/.bashrc; f</code>" and then any login-specific initializations </li>
+  <li><code>~/.bash_login</code></li>
+  <li><code>~/.profile</code></li>
+</ul>
+<div style="margin-left: 40px;">at exit<br>
+</div>
+<ul>
+  <li><code>~/.bash_logout</code></li>
+</ul>
+for interactive non-login shell:<br>
+<div style="margin-left: 40px;">at startup<br>
+<ul>
+  <li><code>~/.bashrc</code></li>
+</ul>
+</div>
+for non-interactive shells (to run a shell script,
+for example)<br>
+<div style="margin-left: 40px;">at startup<br>
+<ul>
+  <li>the file defined by <code>$BASH_ENV</code></li>
+</ul>
+</div>
+<b><u>test</u></b><br>
+string comparison<br>
+<code>if [ X"$str1" = X"$str2 ]; then<br>
+&nbsp; ...<br>
+fi</code><br>
+number comparison<br>
+<code>if [ "$nb1" -eq "$nb2 ]; then<br>
+&nbsp; ...<br>
+fi</code>
+<p>check that we are in a subdirectory defined by <code>FOOBAR</code>
+(but
+<code>FOOBAR</code> may be undefined, in this case no error occurs)<br>
+<code>if ( expr `pwd` : ${FOOBAR:-@}'.*' 1&gt;/dev/null )<br>
+&nbsp; then<br>
+&nbsp;&nbsp;&nbsp;&nbsp; echo "we are in $FOOBAR"<br>
+&nbsp; fi</code><br>
+</p>
+<p><b><u>loops</u></b>
+<br>
+<code>for file in *.{a,so}
+<br>
+&nbsp; do<br>
+&nbsp;&nbsp;&nbsp; echo $file<br>
+&nbsp;&nbsp;&nbsp; nm $file | grep foobar<br>
+&nbsp; done</code>
+<br>
+<b><u><br>
+loop on file content</u></b><br>
+<code>while read l<br>
+do<br>
+&nbsp; group=`echo "$l" | sed 's/.*&lt;//'`<br>
+&nbsp; if [ "$group" = "*" ]; then<br>
+&nbsp;&nbsp;&nbsp; group="s"<br>
+&nbsp; fi<br>
+&nbsp; echo "$l" &gt;&gt; l_$group<br>
+done &lt; verb.txt</code>
+<br>
+</p>
+<p><b><u>predefined variables</u></b><br>
+<code>$!</code> : pid of the last process launched in background<br>
+&nbsp;
+<br>
+<span style="text-decoration: underline; font-weight: bold;">retrieve
+the directory containg the script</span><br style="font-weight: bold;">
+<span style="font-family: monospace;">if [ $0 = `basename $0` ]</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;then</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp; myfullname=`which $0`</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;else</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;&nbsp; myfullname=$0</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">&nbsp;fi</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">mydir=`dirname $myfullname` </span><br
+ style="font-family: monospace;">
+</p>
+<p><b><u>~/.bashrc</u></b></p>
+<table style="width: 100%; background-color: gray; text-align: left;"
+ border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td
+ style="vertical-align: top; background-color: rgb(204, 204, 204);"><code>if
+[ -f /etc/bashrc ]; then<br>
+&nbsp;&nbsp;&nbsp; . /etc/bashrc <br>
+fi<br>
+PS1="\W \!&gt;"
+noclobber=<br>
+alias rm='rm -i'<br>
+alias cp='cp -i'<br>
+alias mv='mv -i'<br>
+alias h=history</code></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: September 1</font><sup><font
+ size="-2">st</font></sup><font size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+&nbsp;
+</p>
+</body>
+</html>

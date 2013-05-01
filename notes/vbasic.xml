@@ -1,0 +1,836 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Visual Basic 6</TITLE>
+<PATH>notes/vbasic.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>syntax</U></B></TITLE>
+<ITEM>to cut a statement into several lines, use _ as the last character of the partial lines</ITEM>
+<ITEM>use <CODEROUTINE>&amp;H</CODEROUTINE> to define an integer constant in hexadecimal, e.g. <CODEROUTINE>&amp;H2026</CODEROUTINE>.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>types</U></B></TITLE>
+<ITEM><CODEROUTINE>Byte</CODEROUTINE><BR/>
+unsigned 1 byte integer (range [0,255])</ITEM>
+<ITEM><CODEROUTINE>Boolean</CODEROUTINE><BR/>
+can be True or False<BR/>
+stored with 2 bytes<BR/>
+equal to 0 (if False) or -1 (if True) when coerced into an integer type<BR/>
+when an integer is coerced into a boolean: False if the value is 0, True otherwise</ITEM>
+<ITEM><CODEROUTINE>Integer</CODEROUTINE><BR/>
+signed 2 bytes integer (range [-32768,32767])<BR/>
+type declaration character is <CODEROUTINE>%</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Long</CODEROUTINE><BR/>
+signed 4 bytes integer (range [-2147483648,2147483647])<BR/>
+type declaration character is <CODEROUTINE>&amp;</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Single</CODEROUTINE><BR/>
+32 bits float<BR/>
+type declaration character is <CODEROUTINE>!</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Double</CODEROUTINE><BR/>
+64 bits float<BR/>
+type declaration character is <CODEROUTINE>#</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Currency</CODEROUTINE><BR/>
+signed 8 bytes integer scaled by 10000 (range [922337203685477.5808,922337203685477.5807]) <BR/>
+type declaration character is <CODEROUTINE>@</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Decimal</CODEROUTINE><BR/>
+signed 12 bytes integer scaled by a variable power of 10 ranging from 0 to 28 </ITEM>
+<ITEM><CODEROUTINE>Date</CODEROUTINE><BR/>
+string literals are enclosed within two double quotes
+<CODESAMPLE>#31-Dec-00#</CODESAMPLE>
+<CODESAMPLE>#12:00 am#</CODESAMPLE>
+<CODESAMPLE>#12/31/92# ' is December 12, 1992 if the regional setting of the application is English (US) </CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>Object</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>String</CODEROUTINE><BR/>
+type declaration character is <CODEROUTINE>$</CODEROUTINE><BR/>
+string literals are enclosed within two double quotes<BR/>
+<CODESAMPLE>"Doe, John"</CODESAMPLE>
+It is possible to defines variable as string of a given length.<BR/> 
+<CODESAMPLE>Dim foo as String * 13</CODESAMPLE>
+</ITEM>
+<ITEM><CODEROUTINE>Variant</CODEROUTINE></ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>variables</U></B></TITLE>
+<ITEM>a type character defines the type of the preceding identifier<BR/>
+when a type character is used, the type declaration (e.g. <CODEROUTINE>As</CODEROUTINE>) is optional, if present, it must agree with the type character<BR/>
+<CODEROUTINE>%</CODEROUTINE> Integer<BR/>
+<CODEROUTINE>&amp;</CODEROUTINE> Long<BR/>
+<CODEROUTINE>@</CODEROUTINE> Decimal<BR/>
+<CODEROUTINE>!</CODEROUTINE> Single<BR/>
+<CODEROUTINE>#</CODEROUTINE> Double<BR/>
+<CODEROUTINE>$</CODEROUTINE> String<BR/>
+there is no type character for Byte and Short</ITEM>
+<ITEM>An escaped identifier is an identifier delimited by square brackets. Escaped identifiers follow the same rules as regular identifiers except that they may match keywords and may not have type characters.</ITEM>
+<ITEM>at the beginning of a module, use
+<CODESAMPLE>Option Explicit</CODESAMPLE>
+to oblige the declaration of variables (otherwise they are <CODEROUTINE>Variant</CODEROUTINE> by
+default)
+</ITEM>
+<ITEM><CODEROUTINE>Let</CODEROUTINE> (optional) assign a value to a variable<BR/>
+<CODESAMPLE>Let myString = "foobar"</CODESAMPLE>
+<CODEROUTINE>Set</CODEROUTINE> assign an object to a variable<BR/>
+<CODESAMPLE>Dim myCell As Range<BR/>
+Set myCell = Worksheets("Sheet1").Range("A1")</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>Const</CODEROUTINE> declares a constant variable<BR/>
+<CODESAMPLE>Const MyVar = 459<BR/>
+Const version As String = "3.3"</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>Public</CODEROUTINE> and <CODEROUTINE>Private</CODEROUTINE> declare the visibility of a variable variable</ITEM>
+<ITEM><CODEROUTINE>Dim</CODEROUTINE> declares a variable
+<CODESAMPLE>Dim X As Integer</CODESAMPLE>
+If no type is indicated, the default type is <CODEROUTINE>Variant</CODEROUTINE><BR/>
+It is possible to combine several <CODEROUTINE>Dim</CODEROUTINE> on the same line
+<CODESAMPLE>Dim password As String, yourName As String, firstnum As Integer</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>As</CODEROUTINE> declares the type of a variable or routine parameter
+<CODESAMPLE>Private Sub z_KeyPress(KeyAscii As Integer)<BR/>
+<TAB/>If (KeyAscii = 13) Then<BR/>
+<TAB/><TAB/>OK_Click<BR/>
+<TAB/>End If<BR/>
+End Sub</CODESAMPLE>
+</ITEM>
+<ITEM>use the following functions to coerce an expression to a given
+data type<BR/>
+<CODEROUTINE>CBool</CODEROUTINE>,
+<CODEROUTINE>CByte</CODEROUTINE>,
+<CODEROUTINE>CCur</CODEROUTINE>,
+<CODEROUTINE>CDate</CODEROUTINE>,
+<CODEROUTINE>CDbl</CODEROUTINE>,
+<CODEROUTINE>CDec</CODEROUTINE>,
+<CODEROUTINE>CInt</CODEROUTINE>,
+<CODEROUTINE>CLng</CODEROUTINE>,
+<CODEROUTINE>CSng</CODEROUTINE>,
+<CODEROUTINE>CStr</CODEROUTINE>,
+<CODEROUTINE>CVar</CODEROUTINE></ITEM>
+<ITEM>
+<CODEROUTINE>isEmpty</CODEROUTINE> test if a variable has been initialized
+<CODESAMPLE>Dim table<BR/>
+For i = 1 to oldDoc.Tables<BR/>
+<TAB/>...<BR/>
+<TAB/>If (isEmpty(table)) Then<BR/>
+<TAB/><TAB/>Set table = newDoc.table(1)<BR/>
+<TAB/>End If<BR/>
+<TAB/>...<BR/>
+End i</CODESAMPLE>
+</ITEM>
+<ITEM><CODEROUTINE>VarType foobar</CODEROUTINE> return the type of the variable <CODEROUTINE>Variant</CODEROUTINE> <CODEROUTINE>foobar</CODEROUTINE>: <CODEROUTINE>vbEmpty</CODEROUTINE> (uninitialized), <CODEROUTINE>vbNull</CODEROUTINE> (no valid data), <CODEROUTINE>vbInteger</CODEROUTINE>, <CODEROUTINE>vbLong</CODEROUTINE>, <CODEROUTINE>vbSingle</CODEROUTINE>, <CODEROUTINE>vbDouble</CODEROUTINE>, <CODEROUTINE>vbCurrency</CODEROUTINE>, <CODEROUTINE>vbDate</CODEROUTINE>, <CODEROUTINE>vbString</CODEROUTINE>, <CODEROUTINE>vbObject</CODEROUTINE>, <CODEROUTINE>vbError</CODEROUTINE>, <CODEROUTINE>vbBoolean</CODEROUTINE>, <CODEROUTINE>vbDataObject</CODEROUTINE>, <CODEROUTINE>vbDecimal</CODEROUTINE>, <CODEROUTINE>vbByte</CODEROUTINE> and <CODEROUTINE>vbUserDefinedType</CODEROUTINE>. If the variable contains an array, the returned value is <CODEROUTINE>vbArray</CODEROUTINE> + one of the preceding types. For an array of <CODEROUTINE>Variant</CODEROUTINE>s, <CODEROUTINE>vbArray+VbVariant</CODEROUTINE> is returned.
+</ITEM>
+<ITEM>a variable can be declared as static by using the <CODEROUTINE>Static</CODEROUTINE> keyword
+<CODESAMPLE>Static i as integer</CODESAMPLE>
+it is possible to declare all variables of a function or procedure as static by preceding the function/procedure name by <CODEROUTINE>Static</CODEROUTINE>
+</ITEM>
+<ITEM><CODEROUTINE>typeName(var)</CODEROUTINE> return a string which is the type of the variable <CODEROUTINE>var</CODEROUTINE></ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>arrays</U></B></TITLE>
+<ITEM><CODESAMPLE>Dim cusName(10) as String</CODESAMPLE>
+declare an array that consists of 10 elements if the statement Option Base 1 appear in the declaration area, of 11 elements otherwise
+</ITEM>
+<ITEM><CODESAMPLE>Dim count(100 to 500) as Integer</CODESAMPLE>
+declare an array that consists of the first element is <CODEROUTINE>count(100)</CODEROUTINE> and the last one is <CODEROUTINE>count(500)</CODEROUTINE>
+</ITEM>
+<ITEM><CODESAMPLE>Dim foo() as Integer</CODESAMPLE>
+it is also possible to not precise the size of the array (dynamic array)
+</ITEM>
+<ITEM><CODEROUTINE>ReDim</CODEROUTINE> can be used to change the number of dimensions, to define the number of elements and to define the upper and lower bounds for each dimension; but the existing values in the array are lost.<BR/>
+<CODEROUTINE>ReDim Preserve</CODEROUTINE> keeps the values
+<CODESAMPLE>ReDim Preserve varArray(UBound(varArray) + 10)</CODESAMPLE>
+enlarges the array <CODEROUTINE>varArray</CODEROUTINE> by 10 elements without losing the current values of the original elements
+</ITEM>
+<ITEM>
+<CODEROUTINE>UBound(arrayname[,dimension])</CODEROUTINE> return a <CODEROUTINE>Long</CODEROUTINE> containing the largest available subscript for the indicated dimension of an array
+</ITEM>
+<ITEM>
+<CODEROUTINE>LBound(arrayname[,dimension])</CODEROUTINE> return a <CODEROUTINE>Long</CODEROUTINE> containing the smallest available subscript for the indicated dimension of an array
+</ITEM>
+<ITEM>
+<CODEROUTINE>IsArray</CODEROUTINE> test if a variable is an array
+</ITEM>
+<ITEM>
+redefine the default lower bound for array subscripts (0 is the default) at the beginning of a module:
+<CODESAMPLE>Option Base 0</CODESAMPLE>
+or 
+<CODESAMPLE>Option Base 1</CODESAMPLE>
+</ITEM>
+<ITEM>trick to initialize an array of strings
+<CODESAMPLE>Dim foo() As String<BR/>
+foo() = Split("Identifier|Requirement Statement|Type|Predecessor Allocated Requirement|Safety|CTQ", "|")</CODESAMPLE>
+</ITEM>
+<ITEM><CODEROUTINE>Array</CODEROUTINE> returns a <CODEROUTINE>Variant</CODEROUTINE> variable containing an array
+<CODESAMPLE>Dim A As Variant<BR/>
+A = Array(10,20,30) </CODESAMPLE>
+</ITEM>
+<ITEM>multidimensional array
+<CODESAMPLE>
+Dim data(4, 6, 5, 3) As Integer<BR/>
+... <BR/>
+data(typ, impact, sev, col) = data(typ, impact, sev, col) + 1
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>enums</U></B></TITLE>
+<ITEM>use the <CODEROUTINE>Enum</CODEROUTINE>
+<CODESAMPLE>Public Enum taskPriority<BR/>
+<TAB/>taskTPEmpty<BR/>
+<TAB/>taskTPUrgent<BR/>
+<TAB/>taskTPHigh<BR/>
+<TAB/>taskTPMedium<BR/>
+<TAB/>taskTPLow<BR/>
+End Enum</CODESAMPLE>
+</ITEM>
+<ITEM>it is possbile to define the values
+<CODESAMPLE>Public Enum taskPriority<BR/>
+<TAB/>taskTPFirst = 0<BR/>
+<TAB/>taskTPEmpty = 0<BR/>
+<TAB/>taskTPUrgent = 1<BR/>
+<TAB/>taskTPHigh = 2<BR/>
+<TAB/>taskTPMedium = 3<BR/>
+<TAB/>taskTPLow = 4<BR/>
+<TAB/>taskTPLast<BR/>
+End Enum</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>operators</U></B></TITLE>
+<ITEM><CODEROUTINE>+</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>-</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>*</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>/</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>\</CODEROUTINE> integer division</ITEM>
+<ITEM><CODEROUTINE>Mod</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>+</CODEROUTINE> and <CODEROUTINE>&amp;</CODEROUTINE> string concatenation</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>comparison operators</U></B></TITLE>
+<ITEM><CODEROUTINE>&lt;</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>&lt;=</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>&gt;</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>&gt;=</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>=</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>&lt;&gt;</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Is</CODEROUTINE> compare two object reference variables
+</ITEM>
+<ITEM><CODEROUTINE>Like</CODEROUTINE></ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>boolean operators</U></B></TITLE>
+<ITEM><CODEROUTINE>And</CODEROUTINE> both expressions are always evaluated</ITEM>
+<ITEM><CODEROUTINE>AndAlso</CODEROUTINE> short-circuiting and</ITEM>
+<ITEM><CODEROUTINE>Eqv</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Imp</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Not</CODEROUTINE><BR/>
+<CODESAMPLE>a = Not b</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>Or</CODEROUTINE> both expressions are always evaluated </ITEM>
+<ITEM><CODEROUTINE>OrElse</CODEROUTINE> short-circuiting or</ITEM>
+<ITEM><CODEROUTINE>Xor</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Eqv</CODEROUTINE> logical equivalence</ITEM>
+<ITEM><CODEROUTINE>Imp</CODEROUTINE> logical implication</ITEM>
+</BLIST>
+
+
+
+<BLIST><TITLE><B><U>flow control</U></B></TITLE>
+
+<ITEM>test<BR/>
+<CODESAMPLE>
+If CommandBars("Standard").Visible Then<BR/>
+<TAB/>CommandBars("Standard").Visible = False<BR/>
+<TAB/>CommandBars("Formatting").Visible = True<BR/>
+ElseIf CommandBars("Formatting").Visible Then<BR/>
+<TAB/>CommandBars("Standard").Visible = False<BR/>
+<TAB/>CommandBars("Formatting").Visible = False<BR/>
+Else<BR/>
+<TAB/>CommandBars("Standard").Visible = True<BR/>
+<TAB/>CommandBars("Formatting").Visible = False<BR/>
+End If
+</CODESAMPLE>
+</ITEM>
+
+<ITEM>loop<BR/>
+<CODESAMPLE>
+For j = 2 To 10 Step 2<BR/>
+<TAB/>total = total + j<BR/>
+Next j
+</CODESAMPLE>
+</ITEM>
+
+<ITEM>do while/until
+<CODESAMPLE>Do While condition<BR/>
+<TAB/>Block of one or more VB statements<BR/>
+Loop</CODESAMPLE>
+<CODESAMPLE>Do<BR/>
+<TAB/>Block of one or more VB statements<BR/>
+Loop While condition</CODESAMPLE>
+<CODESAMPLE>Do Until condition<BR/>
+<TAB/>Block of one or more VB statements<BR/>
+Loop</CODESAMPLE>
+<CODESAMPLE>Do<BR/>
+<TAB/>Block of one or more VB statements<BR/>
+Loop Until condition</CODESAMPLE>
+</ITEM>
+
+<ITEM>loop on a collection content
+<CODESAMPLE>
+For Each c In col<BR/>
+<TAB/>...<BR/>
+Next c
+</CODESAMPLE>
+</ITEM>
+
+<ITEM>case
+<CODESAMPLE>Dim grade As String<BR/>
+Private Sub Compute_Click( )<BR/>
+<TAB/>grade=txtgrade.Text<BR/>
+<TAB/>Select Case grade<BR/>
+<TAB/><TAB/>Case  "A"<BR/>
+<TAB/><TAB/><TAB/>result.Caption="High Distinction"<BR/>
+<TAB/><TAB/>Case "A-"<BR/>
+<TAB/><TAB/><TAB/>result.Caption="Distinction"<BR/>
+<TAB/><TAB/>Case "B"<BR/>
+<TAB/><TAB/><TAB/>result.Caption="Credit"<BR/>
+<TAB/><TAB/>Case "C"<BR/>
+<TAB/><TAB/><TAB/>result.Caption="Pass"<BR/>
+<TAB/><TAB/>Case Else<BR/>
+<TAB/><TAB/><TAB/>result.Caption="Fail"<BR/>
+<TAB/>End Select</CODESAMPLE>
+<CODESAMPLE>Dim mark As Single<BR/>
+Private Sub Compute_Click()<BR/>
+<TAB/>mark = mrk.Text<BR/>
+<TAB/>Select Case mark<BR/>
+<TAB/><TAB/>Case Is &gt;= 85<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Excellence"<BR/>
+<TAB/><TAB/>Case Is &gt;= 70<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Good"<BR/>
+<TAB/><TAB/>Case Is &gt;= 60<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Above Average"<BR/>
+<TAB/><TAB/>Case Is &gt;= 50<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Average"<BR/>
+<TAB/><TAB/>Case Else<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Need to work harder"<BR/>
+<TAB/>End Select<BR/>
+End Sub</CODESAMPLE>
+<CODESAMPLE>Dim mark As Single<BR/>
+Private Sub Compute_Click()<BR/>
+<TAB/>mark = mrk.Text<BR/>
+<TAB/>Select Case mark<BR/>
+<TAB/><TAB/>Case 0 to 49<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Need to work harder"<BR/>
+<TAB/><TAB/>Case 50 to 59<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Average"<BR/>
+<TAB/><TAB/>Case 60 to 69<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Above Average"<BR/>
+<TAB/><TAB/>Case 70 to 84<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Good"<BR/>
+<TAB/><TAB/>Case Else<BR/>
+<TAB/><TAB/><TAB/>comment.Caption = "Excellence"<BR/>
+<TAB/>End Select<BR/>
+End Sub</CODESAMPLE></ITEM>
+
+<ITEM>break from a loop, function, procedure, or property
+<CODESAMPLE>
+For ... To<BR/>
+<TAB/>...<BR/>
+<TAB/>Exit For<BR/>
+<TAB/>...<BR/>
+Next
+</CODESAMPLE>
+<CODESAMPLE>
+For Each ...<BR/>
+<TAB/>...<BR/>
+<TAB/>Exit For<BR/>
+<TAB/>...<BR/>
+Next
+</CODESAMPLE>
+<CODESAMPLE>
+Do ...<BR/>
+<TAB/>...<BR/>
+<TAB/>Exit Do<BR/>
+<TAB/>...<BR/>
+Loop ...
+</CODESAMPLE>
+<CODESAMPLE>
+Function ...<BR/>
+<TAB/>...<BR/>
+<TAB/>Exit Function<BR/>
+<TAB/>...<BR/>
+End Function
+</CODESAMPLE>
+<CODESAMPLE>
+Sub ...<BR/>
+<TAB/>...<BR/>
+<TAB/>Exit Sub<BR/>
+<TAB/>...<BR/>
+End Sub
+</CODESAMPLE>
+<CODESAMPLE>
+Property ...<BR/>
+<TAB/>...<BR/>
+<TAB/>Exit Property<BR/>
+<TAB/>...<BR/>
+End Property
+</CODESAMPLE>
+</ITEM>
+
+<ITEM>goto<BR/>
+<CODESAMPLE>
+goto foobar<BR/>
+...<BR/>
+foobar:
+</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>error handling</U></B></TITLE>
+<ITEM><CODESAMPLE>On Error GoTo <I>line</I></CODESAMPLE>
+If a run-time error occurs, control branches to <I>line</I>.<BR/>
+<I>line</I> can be any line label or line number, it must be in the same procedure as the <CODEROUTINE>On Error</CODEROUTINE> statement.</ITEM>
+<ITEM><CODESAMPLE>On Error Resume Next</CODESAMPLE>
+When a run-time error occurs, control goes to the statement immediately following the statement where the error occurred.</ITEM>
+<ITEM><CODESAMPLE>On Error GoTo 0</CODESAMPLE>
+Disables any enabled error handler in the current procedure.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>functions</U></B></TITLE>
+<ITEM>The general format of a function is as follows:
+<CODESAMPLE>[Public|Friend|Private] [Static] Function functionName (Arg As dataType,..........) As dataType<BR/>
+...<BR/>
+End Function</CODESAMPLE> 
+<CODEROUTINE>Public</CODEROUTINE> the procedure is accessible to all other procedures in all modules. If used in a module that contains an Option
+Private, the procedure is not available outside the project.<BR/>
+<CODEROUTINE>Private</CODEROUTINE> the procedure is accessible only to other procedures in the module where it is declared.<BR/>
+<CODEROUTINE>Friend</CODEROUTINE> the procedure is visible throughout the project, but not visible to a controller of an instance of an object.<BR/>
+<CODEROUTINE>Static</CODEROUTINE> the procedure's local variables are preserved between calls. The Static attribute doesn't affect variables that are declared outside the Function, even if they are used in the procedure.<BR/>
+The return value is defined by setting the <CODEROUTINE>functionName</CODEROUTINE> variable is the function body.
+</ITEM>
+<ITEM><CODEROUTINE>Exit function</CODEROUTINE> exits from the function.
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>procedure</U></B></TITLE>
+<ITEM>The general format of a procedure is as follows:
+<CODESAMPLE>[Public|Friend|Private] [Static] Sub routineName (Arg As dataType,...)<BR/>
+...<BR/>
+End Sub</CODESAMPLE>
+</ITEM>
+<ITEM><CODEROUTINE>Exit sub</CODEROUTINE> exits from the routine.
+</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>function/procedure parameters</U></B></TITLE>
+<ITEM>A parameter can be declared as optional by using the <CODEROUTINE>Optional</CODEROUTINE> keyword.</ITEM>
+<ITEM>A default value can be provided for an optional parameter
+<CODESAMPLE>Public Sub Display(Optional number as Long = -1) <BR/>
+...<BR/>
+End Sub</CODESAMPLE>
+</ITEM>
+<ITEM>The existence of an optional Variant parameter can be tested with <CODEROUTINE>IsMissing</CODEROUTINE>
+<CODESAMPLE>Public Sub Display(Optional number as Variant)<BR/>
+If IsMissing(number) then<BR/>
+<TAB/>...<BR/>
+Else<BR/>
+<TAB/>...<BR/>
+End If<BR/>
+End Sub</CODESAMPLE>
+</ITEM>
+<ITEM>
+<CODEROUTINE>ByRef</CODEROUTINE> indicates that the attribute is passed by reference (the default)<BR/>
+<CODEROUTINE>ByVal</CODEROUTINE> indicates that the attribute is passed by value
+<CODESAMPLE>Private Sub copyToMaster(ByRef masterSheet As Worksheet)<BR/>
+... <BR/>
+End Sub</CODESAMPLE>
+</ITEM>
+<ITEM>When calling a routine/procedure without <CODEROUTINE>Call</CODEROUTINE>, the parentheses must not be present.<BR/>
+When calling a routine/procedure with <CODEROUTINE>Call</CODEROUTINE>, the parentheses must be present.
+</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>class</U></B></TITLE>
+<ITEM>create an object
+<CODESAMPLE>Dim oCE As New MyClass</CODESAMPLE></ITEM>
+<ITEM>indicate that a class implements an interface or another class
+<CODESAMPLE>Implements MyOtherClass</CODESAMPLE></ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>collections</U></B></TITLE>
+<ITEM>use the <CODEROUTINE>Item</CODEROUTINE> method to access the elements<BR/>
+<CODESAMPLE>Documents.Item(1)</CODESAMPLE> </ITEM>
+<ITEM>some collections can be accessed also by name<BR/>
+<CODESAMPLE>Documents("Sales.doc")</CODESAMPLE> </ITEM>
+<ITEM>some collections have predefined indexes<BR/>
+<CODESAMPLE>Selection.Paragraphs(1).Borders(wdBorderBottom)</CODESAMPLE></ITEM>
+<ITEM>use the <CODEROUTINE>Count</CODEROUTINE> attribute to get the number of
+elements</ITEM>
+<ITEM>use <CODEROUTINE>Add</CODEROUTINE> and <CODEROUTINE>Remove</CODEROUTINE> methods to add or remove an element</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>files</U></B></TITLE>
+<ITEM>writing a file
+<CODESAMPLE>Open "c:\My Documents\sample.txt" For Output As #1<BR/>
+Print #1, "Hello, world!"<BR/>
+Close #1</CODESAMPLE>
+</ITEM>
+<ITEM>reading a file
+<CODESAMPLE>Open "c:\My Documents\sample.txt" For Input As #1<BR/>
+Input #1, var<BR/>
+Close #1</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>FileSystemObject</U></B></TITLE>
+<ITEM>it is defined in the Scripting Runtime Library
+</ITEM>
+<ITEM><CODEROUTINE>Drives</CODEROUTINE>, <CODEROUTINE>Files</CODEROUTINE>, and <CODEROUTINE>Folders</CODEROUTINE> collections are not accessible with an integer index. The must be accessed by a string key: <CODEROUTINE>d.SubFolders("test.doc")</CODEROUTINE>
+</ITEM>
+<ITEM><CODEROUTINE>FileSystemObject</CODEROUTINE>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>GetDrive</CODEROUTINE></TERM><DESC>return a <CODEROUTINE>Drive</CODEROUTINE> from a pathname</DESC></ROW>
+<ROW><TERM><CODEROUTINE>CreateFolder</CODEROUTINE></TERM><DESC>create a folder</DESC></ROW>
+<ROW><TERM><CODEROUTINE>GetFolder</CODEROUTINE></TERM><DESC>return a <CODEROUTINE>Folder</CODEROUTINE> from a pathname</DESC></ROW>
+<ROW><TERM><CODEROUTINE>MoveFolder</CODEROUTINE></TERM><DESC>move a folder</DESC></ROW>
+<ROW><TERM><CODEROUTINE>CopyFolder</CODEROUTINE></TERM><DESC>copy a folder</DESC></ROW>
+<ROW><TERM><CODEROUTINE>DeleteFolder</CODEROUTINE></TERM><DESC>delete a folder</DESC></ROW>
+<ROW><TERM><CODEROUTINE>FolderExists</CODEROUTINE></TERM><DESC>test if a folder exists</DESC></ROW>
+<ROW><TERM><CODEROUTINE>GetParentFolderName</CODEROUTINE></TERM><DESC>return the name of a folder's parent folder</DESC></ROW>
+<ROW><TERM><CODEROUTINE>GetSpecialFolder</CODEROUTINE></TERM><DESC>return the path of system folders</DESC></ROW>
+<ROW><TERM><CODEROUTINE>CreateTextFile</CODEROUTINE></TERM><DESC>create a text file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>OpenTextFile</CODEROUTINE></TERM><DESC>open/create a text file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>GetFile</CODEROUTINE></TERM><DESC>return a <CODEROUTINE>File</CODEROUTINE> from a pathname</DESC></ROW>
+<ROW><TERM><CODEROUTINE>CopyFile</CODEROUTINE></TERM><DESC>copy a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>DeleteFile</CODEROUTINE></TERM><DESC>delete a file</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM><CODEROUTINE>Drive</CODEROUTINE>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>TotalSize</CODEROUTINE></TERM><DESC>total size of the drive in bytes</DESC></ROW>
+<ROW><TERM><CODEROUTINE>AvailableSpace</CODEROUTINE></TERM><DESC>available on the drive in bytes</DESC></ROW>
+<ROW><TERM><CODEROUTINE>FreeSpace</CODEROUTINE></TERM><DESC>available on the drive in bytes</DESC></ROW>
+<ROW><TERM><CODEROUTINE>DriveLetter</CODEROUTINE></TERM><DESC>letter assigned to the drive</DESC></ROW>
+<ROW><TERM><CODEROUTINE>DriveType</CODEROUTINE></TERM><DESC>type of the drive</DESC></ROW>
+<ROW><TERM><CODEROUTINE>SerialNumber</CODEROUTINE></TERM><DESC>drive's serial number</DESC></ROW>
+<ROW><TERM><CODEROUTINE>FileSystem</CODEROUTINE></TERM><DESC>drive's file system (e.g. FAT32)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>IsReady</CODEROUTINE></TERM><DESC>is the drive available?</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ShareName</CODEROUTINE></TERM><DESC>name of the share</DESC></ROW>
+<ROW><TERM><CODEROUTINE>VolumeName</CODEROUTINE></TERM><DESC>name of the volume</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Path</CODEROUTINE></TERM><DESC>path of the drive</DESC></ROW>
+<ROW><TERM><CODEROUTINE>RootFolder</CODEROUTINE></TERM><DESC>root folder of the drive</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM><CODEROUTINE>Folder and File</CODEROUTINE>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>Name</CODEROUTINE></TERM><DESC>name of the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ShortName</CODEROUTINE></TERM><DESC>8.3 name of the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Path</CODEROUTINE></TERM><DESC>path of the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ShortPath</CODEROUTINE></TERM><DESC>8.3 path of the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Type</CODEROUTINE></TERM><DESC>return information about the type of the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Delete</CODEROUTINE></TERM><DESC>delete the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Move</CODEROUTINE></TERM><DESC>move the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Copy</CODEROUTINE></TERM><DESC>copy the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>DateCreated</CODEROUTINE></TERM><DESC>date and time of creation of the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>DateLastAccessed</CODEROUTINE></TERM><DESC>date and time of last access to the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>DateLastModified</CODEROUTINE></TERM><DESC>date and time of last modification to the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Attributes</CODEROUTINE></TERM><DESC>attributes of the folder/file
+<TABLE><ROW><CELL>Constant</CELL><CELL>Value</CELL><CELL>Description</CELL></ROW>
+<ROW><CELL>Normal</CELL><CELL>0</CELL><CELL>Normal file. No attributes are set. </CELL></ROW>
+<ROW><CELL>ReadOnly</CELL><CELL>1</CELL><CELL>Read-only file. Attribute is read/write. </CELL></ROW>
+<ROW><CELL>Hidden</CELL><CELL>2</CELL><CELL>Hidden file. Attribute is read/write. </CELL></ROW>
+<ROW><CELL>System</CELL><CELL>4</CELL><CELL>System file. Attribute is read/write. </CELL></ROW>
+<ROW><CELL>Volume</CELL><CELL>8</CELL><CELL>Disk drive volume label. Attribute is read-only. </CELL></ROW>
+<ROW><CELL>Directory</CELL><CELL>16</CELL><CELL>Folder or directory. Attribute is read-only. </CELL></ROW>
+<ROW><CELL>Archive</CELL><CELL>32</CELL><CELL>File has changed since last backup. Attribute is read/write. </CELL></ROW>
+<ROW><CELL>Alias</CELL><CELL>1024</CELL><CELL>Link or shortcut. Attribute is read-only. </CELL></ROW>
+<ROW><CELL>Compressed</CELL><CELL>2048</CELL><CELL>Compressed file. Attribute is read-only. </CELL></ROW>
+</TABLE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>Drive</CODEROUTINE></TERM><DESC>return the letter of the drive where is the folder/file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ParentFolder</CODEROUTINE></TERM><DESC>return the folder containing the folder/file</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM><CODEROUTINE>Folder</CODEROUTINE>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>Files</CODEROUTINE></TERM><DESC>return the files contained in the folder</DESC></ROW>
+<ROW><TERM><CODEROUTINE>SubFolders</CODEROUTINE></TERM><DESC>return the folders contained in the folder</DESC></ROW>
+<ROW><TERM><CODEROUTINE>IsRootFolder</CODEROUTINE></TERM><DESC>test if the folder is a root folder</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Size</CODEROUTINE></TERM><DESC>return the size, in bytes, of all files and subfolders contained in the folder</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM><CODEROUTINE>File</CODEROUTINE>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>Size</CODEROUTINE></TERM><DESC>return the size, in bytes, of the file</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM><CODEROUTINE>TextStream</CODEROUTINE>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>Read</CODEROUTINE></TERM><DESC>read a specified number of characters from a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ReadLine</CODEROUTINE></TERM><DESC>read an entire line (up to, but not including, the newline character)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ReadAll</CODEROUTINE></TERM><DESC>read the entire contents of a text file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Skip</CODEROUTINE></TERM><DESC>skip a specified number of characters</DESC></ROW>
+<ROW><TERM><CODEROUTINE>SkipLine</CODEROUTINE></TERM><DESC>skip the next line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Write</CODEROUTINE></TERM><DESC>write data to an open text file without a trailing newline character</DESC></ROW>
+<ROW><TERM><CODEROUTINE>WriteLine</CODEROUTINE></TERM><DESC>write data to an open text file with a trailing newline character</DESC></ROW>
+<ROW><TERM><CODEROUTINE>WriteBlankLines</CODEROUTINE></TERM><DESC>write one or more blank lines to an open text file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Close</CODEROUTINE></TERM><DESC>close the file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Copy</CODEROUTINE></TERM><DESC>copy the file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Move</CODEROUTINE></TERM><DESC>move the file</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>an example
+<CODESAMPLE>Dim fso As Scripting.FileSystemObject<BR/>
+Dim folder, dir As Scripting.folder<BR/>
+Dim file As Scripting.file<BR/>
+<BR/>
+Set fso = CreateObject("Scripting.FileSystemObject")<BR/>
+<BR/>
+Set folder = fso.GetFolder("D:\Docs\human resources\timesheets")<BR/>
+For Each dir In folder.SubFolders<BR/>
+<TAB/>For Each file In dir.Files<BR/>
+<TAB/><TAB/>...<BR/>
+<TAB/>Next file<BR/>
+Next dir</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>numerics</U></B></TITLE>
+<ITEM><CODEROUTINE>IsNumeric</CODEROUTINE> test if an expression can be evaluated as a number</ITEM>
+<ITEM><CODEROUTINE>Int</CODEROUTINE> return the integer value of a Double for positive values<BR/>
+for negative values, return the first negative integer less than or equal to number<BR/>
+<CODEROUTINE>Int(-8.4)</CODEROUTINE> is equal to <CODEROUTINE>-9</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Fix</CODEROUTINE> return the integer value of a Double for positive values<BR/>
+<CODEROUTINE>Fix(-8.4)</CODEROUTINE> is equal to <CODEROUTINE>-8</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>Val</CODEROUTINE> transform a string into an integer<BR/>
+<CODESAMPLE>
+Dim v As Integer<BR/>
+v = Val("100 Blah Blah")<BR/>
+Print v   ' prints 100<BR/>
+v = Val("Nothing")<BR/>
+Print v  ' Could not convert, prints 0<BR/>
+</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>string manipulation</U></B></TITLE>
+<ITEM>use <CODEROUTINE>""</CODEROUTINE> to insert a <CODEROUTINE>"</CODEROUTINE> in a constant string<BR/>
+<CODESAMPLE>str = "the ""foobar"" word"</CODESAMPLE>
+</ITEM>
+<ITEM><CODEROUTINE>vbCr</CODEROUTINE>, <CODEROUTINE>vbLf</CODEROUTINE>, <CODEROUTINE>vbCrLf</CODEROUTINE> and <CODEROUTINE>vbTab</CODEROUTINE> are predefined constants, other values can be obtained with <CODEROUTINE>Chr()</CODEROUTINE>.
+</ITEM>
+<ITEM><CODEROUTINE>StrComp(string1, string2[, compare])</CODEROUTINE>compares two strings
+</ITEM>
+<ITEM><CODEROUTINE>Join(sourcearray[, delimiter])</CODEROUTINE>
+(Win2000) create a string which is the concatenation of an array of strings
+</ITEM>
+<ITEM> <CODEROUTINE>Split(expression[, delimiter[, limit[, compare]]])</CODEROUTINE>
+(Win2000) split a string into an array of substrings according to a
+given delimiter
+</ITEM>
+<ITEM><CODEROUTINE>Mid(string, start[, length])</CODEROUTINE>, <CODEROUTINE>Left(string, length)</CODEROUTINE> and <CODEROUTINE>Right(string, length)</CODEROUTINE> extract a substring from a string
+</ITEM>
+<ITEM><CODEROUTINE>Len(string)</CODEROUTINE> return the length (number of characters) of a string<BR/>
+<CODEROUTINE>LenB(string)</CODEROUTINE> return the number of bytes of a string 
+</ITEM>
+<ITEM>
+<CODEROUTINE>Replace(expression, find, replace[, start[, count[, compare]]]))</CODEROUTINE> return a string where instance of a substring have been replaced by another substring
+</ITEM>
+<ITEM>
+<CODEROUTINE>InStr([start,]string1,string2[,compare])</CODEROUTINE> return the position of the first occurrence of one string within another<BR/>
+<CODEROUTINE>InStrRev(string1,string2[,start[,compare]])</CODEROUTINE> return the position of the last occurrence of one string within another
+</ITEM>
+<ITEM><CODEROUTINE>LTrim(string)</CODEROUTINE> return a copy of the string without leading spaces<BR/>
+<CODEROUTINE>RTrim(string)</CODEROUTINE> return a copy of the string without trailing spaces<BR/>
+<CODEROUTINE>Trim(string)</CODEROUTINE> return a copy of the string without both leading and trailing spaces
+</ITEM>
+<ITEM>
+<CODEROUTINE>CleanString(string)</CODEROUTINE> return a copy of the string without control characters (they are removed or replaced by space)
+</ITEM>
+<ITEM>
+<CODEROUTINE>StrConv(str,vbUpperCase)</CODEROUTINE> convert the string to uppercase characters<BR/>
+<CODEROUTINE>StrConv(str,vbLowerCase)</CODEROUTINE> convert the string to lowercase characters<BR/>
+<CODEROUTINE>StrConv(str,vbProperCase)</CODEROUTINE> convert the first letter of every word in string to uppercase<BR/>
+<CODEROUTINE>StrConv(str,vbUnicode)</CODEROUTINE> convert the string to Unicode using the default code page of the system<BR/>
+<CODEROUTINE>StrConv(str,vbFromUnicode)</CODEROUTINE> convert the string from Unicode to the default code page of the system
+</ITEM>
+<ITEM><CODEROUTINE>Chr(val)</CODEROUTINE> return a string containing the character defined by the character code <CODEROUTINE>val</CODEROUTINE><BR/>
+<CODEROUTINE>ChrW(val)</CODEROUTINE> return a string containing the character defined by the Unicode value <CODEROUTINE>val</CODEROUTINE><BR/>
+<CODEROUTINE>ChrB(val)</CODEROUTINE> return a string containing the character defined by the byte <CODEROUTINE>val</CODEROUTINE><BR/>
+(this is not really clear...)
+</ITEM>
+<ITEM><CODEROUTINE>Asc(string)</CODEROUTINE> return the character code of the first letter of string<BR/>
+<CODEROUTINE>AscB(string)</CODEROUTINE> return the first byte of the first letter of string<BR/>
+<CODEROUTINE>AscW(string)</CODEROUTINE> return the Unicode code of the first letter of string<BR/>
+</ITEM>
+<ITEM><BLIST><TITLE>converting integers/float/dates into strings</TITLE>
+  <ITEM><CODEROUTINE>Str(number)</CODEROUTINE> convert an integer or float into a string<BR/>
+  the first character is reserved for the sign, so there is always a space at the beginning for positive numbers<BR/>
+  to avoid this, use <CODEROUTINE>FormatNumber(incr,0)</CODEROUTINE> instead of <CODEROUTINE>Str(incr)</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>Format(Format(expression[, format[, firstdayofweek[, firstweekofyear]]]))</CODEROUTINE> convert a value into a string</ITEM >
+  <ITEM><CODEROUTINE>FormatNumber(Expression[,NumDigitsAfterDecimal [,IncludeLeadingDigit [,UseParensForNegativeNumbers [,GroupDigits]]]])</CODEROUTINE> convert a number into a string</ITEM >
+  <ITEM><CODEROUTINE>FormatPercent(Expression[,NumDigitsAfterDecimal [,IncludeLeadingDigit [,UseParensForNegativeNumbers [,GroupDigits]]]])</CODEROUTINE> convert a percentage into a string</ITEM>
+  <ITEM><CODEROUTINE>FormatDateTime(Date[,NamedFormat])</CODEROUTINE> convert a date into a string</ITEM>
+  <ITEM><CODEROUTINE>FormatCurrency(Expression[,NumDigitsAfterDecimal [,IncludeLeadingDigit [,UseParensForNegativeNumbers [,GroupDigits]]]])</CODEROUTINE> convert a currency into a string</ITEM></BLIST>
+</ITEM>
+<ITEM>
+<CODEROUTINE>Space(number)</CODEROUTINE> return a string that consists of a specified number of spaces
+</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>date manipulation</U></B></TITLE>
+<ITEM><CODEROUTINE>IsDate(expr)</CODEROUTINE> test if an expression can be translated into a date
+</ITEM>
+<ITEM><CODEROUTINE>Date()</CODEROUTINE> return the current date<BR/>
+<CODEROUTINE>Time()</CODEROUTINE> return the current time<BR/>
+<CODEROUTINE>Now()</CODEROUTINE> return the current date and time
+</ITEM>
+<ITEM><CODEROUTINE>DateSerial(year, month, day)</CODEROUTINE> return the date corresponding to a year, month and day<BR/>
+<CODEROUTINE>TimeSerial(hours, minutes, seconds)</CODEROUTINE> return the date corresponding to a hours, minutes and seconds
+</ITEM>
+<ITEM><CODEROUTINE>DateValue(val)</CODEROUTINE> extract a date from a string<BR/>
+<CODEROUTINE>TimeValue(val)</CODEROUTINE> extract a time from a string
+</ITEM>
+<ITEM><CODEROUTINE>Year(val)</CODEROUTINE> return the year of a date<BR/>
+<CODEROUTINE>Month(val)</CODEROUTINE> return the month of a date<BR/>
+<CODEROUTINE>Day(val)</CODEROUTINE> return the day of a date<BR/>
+<CODEROUTINE>WeekDay(val)</CODEROUTINE> return the week day of a date<BR/>
+<CODEROUTINE>Hour(val)</CODEROUTINE> return the hours of a date<BR/>
+<CODEROUTINE>Minute(val)</CODEROUTINE> return the minutes of a date<BR/>
+<CODEROUTINE>Second(val)</CODEROUTINE> return the seconds of a date
+</ITEM>
+</BLIST>
+
+
+
+<BLIST><TITLE><B><U>associative array</U></B></TITLE>
+<ITEM>add "Microsoft Scripting Runtime" in the project references</ITEM>
+<ITEM>use the <CODEROUTINE>Dictionary</CODEROUTINE> class (take care, this class also exists in Word)</ITEM>
+<ITEM>properties
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>CompareMode</CODEROUTINE></TERM><DESC>Sets or returns the comparison mode for comparing keys in a Dictionary object</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Count</CODEROUTINE></TERM><DESC>Returns the number of key/item pairs in a Dictionary object</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Item</CODEROUTINE></TERM><DESC>Sets or returns the value of an item in a Dictionary object</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Key</CODEROUTINE></TERM><DESC>Sets a new key value for an existing key value in a Dictionary object</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>properties
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>Add</CODEROUTINE></TERM><DESC>Adds a new key/item pair to a Dictionary object</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Exists</CODEROUTINE></TERM><DESC>Returns a Boolean value that indicates whether a specified key exists in the Dictionary object</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Items</CODEROUTINE></TERM><DESC>Returns an array of all the items in a Dictionary object</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Keys</CODEROUTINE></TERM><DESC>Returns an array of all the keys in a Dictionary object</DESC></ROW>
+<ROW><TERM><CODEROUTINE>Remove</CODEROUTINE></TERM><DESC>Removes one specified key/item pair from the Dictionary object</DESC></ROW>
+<ROW><TERM><CODEROUTINE>RemoveAll</CODEROUTINE></TERM><DESC>Removes all the key/item pairs in the Dictionary object</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>example
+<CODESAMPLE>Dim dict As Scripting.Dictionary<BR/>
+Set dict = New Scripting.Dictionary<BR/>
+dict.Add "ACTI", 1<BR/>
+dict.Add "ADMI", 1<BR/>
+dict.Add "BUIL", 1<BR/>
+... <BR/>
+<TAB/>Set rg = ActiveDocument.range(c2.range.Start, c2.range.End - 1)<BR/>
+<TAB/>Dim txt As String<BR/>
+<TAB/>txt = rg.Text<BR/>
+<TAB/>txt = Left(txt, 4)<BR/>
+<TAB/>Dim incr As Integer<BR/>
+<TAB/>incr = dict.Item(txt)<BR/>
+<TAB/>dict.Remove txt<BR/>
+<TAB/>dict.Add txt, incr + 1<BR/>
+<TAB/>ActiveDocument.range(c2.range.Start + 5, c2.range.End - 1).InsertBefore Format(incr, "000")<BR/>
+<TAB/>ActiveDocument.range(c2.range.Start + 8, c2.range.Start + 11).Delete<BR/>
+</CODESAMPLE></ITEM>
+<ITEM>loop on the array content
+<CODESAMPLE>Dim dict As Scripting.Dictionary<BR/>
+Dim i As Integer<BR/>
+Dim t As String<BR/>
+... <BR/>
+For i = 0 To dict.Count - 1<BR/>
+<TAB/>t = dictSRS(0).Keys(i) <BR/>
+<TAB/>Selection.InsertAfter (t) <BR/>
+<TAB/>Selection.InsertAfter (" => ")<BR/>
+<TAB/>Selection.InsertAfter (dict.Item(t)) <BR/>
+Next i
+</CODESAMPLE></ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>versioning</U></B></TITLE>
+<ITEM><CODEROUTINE>ScriptEngine</CODEROUTINE> return the scripting language in use. It can return one of the following strings:
+<BLIST>
+<ITEM>VBScript - Indicates that Microsoft Visual Basic Scripting Edition is the current scripting engine</ITEM>
+<ITEM>JScript - Indicates that Microsoft JScript is the current scripting engine</ITEM>
+<ITEM>VBA - Indicates that Microsoft Visual Basic for Applications is the current scripting engine</ITEM>
+</BLIST></ITEM>
+<ITEM><CODEROUTINE>ScriptEngineBuildVersion</CODEROUTINE> return the build version number of the scripting engine in use</ITEM>
+<ITEM><CODEROUTINE>ScriptEngineMajorVersion</CODEROUTINE> return the major version number of the scripting engine in use</ITEM>
+<ITEM><CODEROUTINE>ScriptEngineMinorVersion</CODEROUTINE> return the minor version number of the scripting engine in use</ITEM>
+</BLIST>
+
+
+<BLIST><TITLE><B><U>application management</U></B></TITLE>
+<ITEM>start an application
+<CODESAMPLE>Shell "notepad", vbNormalFocus</CODESAMPLE></ITEM>
+<ITEM>use Excel to get the name of an existing file
+<CODESAMPLE>Function browseForFileUsingExcel(description As String, formats As String, title As String) As Variant<BR/>
+<TAB/>Dim xl As Variant<BR/>
+<TAB/>Set xl = CreateObject("Excel.Application")<BR/>
+<TAB/>browseForFileUsingExcel = xl.GetOpenFilename(description &amp; " ("&amp; formats &amp; ")," &amp; formats, , title) <BR/>
+End Function</CODESAMPLE>
+used for example by
+<CODESAMPLE>
+Dim inputFile As Variant, theInputFile As Variant<BR/>
+inputFile = browseForFileUsingExcel("Word file", "*.rtf;*.doc", "Input file")<BR/>
+If (VarType(inputFile) = vbString) Then<BR/>
+<TAB/>theInputFile = inputFile<BR/>
+<TAB/>... use theInputFile ... <BR/>
+End If</CODESAMPLE></ITEM>
+</BLIST>
+
+
+
+<BLIST><TITLE><B><U>message box</U></B></TITLE>
+<ITEM>displays a message in a dialog box, waits for the user to click a button, and return an integer indicating which button the user clicked. 
+<CODESAMPLE>MsgBox(prompt[, buttons] [, title] [, helpfile, context])</CODESAMPLE>
+Buttons can be <CODEROUTINE>vbOKOnly</CODEROUTINE>, <CODEROUTINE>vbOkCancel</CODEROUTINE>, <CODEROUTINE>vbYesNo</CODEROUTINE>, <CODEROUTINE>vbYesNoCancel</CODEROUTINE>, <CODEROUTINE>vbAbortRetryIgnore</CODEROUTINE>
+ or <CODEROUTINE>vbRetryCancel</CODEROUTINE>.<BR/>
+Icons can be <CODEROUTINE>vbQuestion</CODEROUTINE>, <CODEROUTINE>vbInformation</CODEROUTINE>, <CODEROUTINE>vbExclamation</CODEROUTINE> or <CODEROUTINE>vbCritical</CODEROUTINE>. <BR/>
+<CODEROUTINE>vbDefaultButton1</CODEROUTINE>, <CODEROUTINE>vbDefaultButton2</CODEROUTINE>... can be used to define the default button. <BR/>
+<CODESAMPLE>Msgbox "Do you want to save changes?",
+vbYesNo+vbExclamation+vbDefaultButton1, "Front Page"</CODESAMPLE>
+The returned value indicates the clicked button: <CODEROUTINE>vbOK</CODEROUTINE>, <CODEROUTINE>vbYes</CODEROUTINE>, <CODEROUTINE>vbNo</CODEROUTINE>, <CODEROUTINE>vbAbort</CODEROUTINE>, <CODEROUTINE>vbRetry</CODEROUTINE>, <CODEROUTINE>vbCancel</CODEROUTINE>
+or <CODEROUTINE>vbIgnore</CODEROUTINE>.
+</ITEM>
+<ITEM>displays a prompt in a dialog box, waits for the user to
+input
+text or
+click a button, and return a String containing the contents of the
+text
+box. 
+<CODESAMPLE>InputBox(prompt[, title] [, default] [, xpos] [, ypos] [, helpfile, context])</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>debugging</U></B></TITLE>
+<ITEM>print a message in the <I>immediate</I> window
+<CODESAMPLE>Debug.Print "Total Unread items = " &amp; oFldr.UnReadItemCount</CODESAMPLE></ITEM>
+</BLIST>
+
+
+</CONTENT>
+<X><T>links</T><A>../links/vbasic.html</A><L>en</L><F>HTML</F></X>
+<X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>
+<X><T>Word</T><A>wordvb.html</A><L>en</L><F>HTML</F></X>
+<X><T>Word macro samples</T><A>wordsample.htm</A><L>en</L><F>HTML</F></X>
+<X><T>new Word macro samples</T><A>wordvbsample.html</A><L>en</L><F>HTML</F></X>
+<X><T>Excel</T><A>excelvb.html</A><L>en</L><F>HTML</F></X>
+<X><T>Excel macro samples</T><A>excelsample.html</A><L>en</L><F>HTML</F></X>
+<X><T>Outlook macro samples</T><A>outlooksample.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Linux</TITLE>
+<PATH>notes/linux2.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEFILENAME><X><T>/dev/random</T><A>javascript:do_reference("man/linux/4/random")</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>when read, return random bytes<BR/>if the environment pool is empty, reading <CODEFILENAME>/dev/random</CODEFILENAME> will block until additional environmental noise is gathered</DESC></ROW>
+<ROW><TERM><CODEFILENAME><X><T>/dev/urandom</T><A>javascript:do_reference("man/linux/4/random")</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>when read, return random bytes<BR/>if the environment pool is empty, reading <CODEFILENAME>/dev/random</CODEFILENAME> will not block, but will compute new values</DESC></ROW>
+<ROW><TERM><CODEFILENAME><X><T>/dev/null</T><A>javascript:do_reference("man/linux/4/null")</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>when written, discard data<BR/>when read, return EOF</DESC></ROW>
+<ROW><TERM><CODEFILENAME><X><T>/dev/zero</T><A>javascript:do_reference("man/linux/4/null")</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>when written, discard data<BR/>when read, return characters equals to zero</DESC></ROW>
+</DEFINITIONTABLE>
+
+</CONTENT>
+</PAGE>
+
+

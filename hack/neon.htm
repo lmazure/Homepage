@@ -1,0 +1,443 @@
+<HTML>
+<HEAD>
+</HEAD>
+<BODY>
+<SCRIPT LANGUAGE="javascript1.2">
+
+function dumpProperties(o) {
+  var s="properties of "+o;
+  for (p in o) {
+    s+="\n\n"+p+"="+o[p];
+  }
+  alert(s);
+}
+
+// ---------------------------------------------------------------------------
+
+// callback when the mouse gets above the node
+Node.mover=function(e) {
+  window.status="use left button to drag";
+  this.bgColor="yellow";
+  for (var i=0; i<this.node.links.length; i++) {
+    this.node.links[i].layer.bgColor="lightskyblue";
+  }
+  return false;
+}
+
+// callback when the mouse gets outside the node
+Node.mout=function(e) {
+  window.status="";
+  this.bgColor="pink";
+  for (var i=0; i<this.node.links.length; i++) {
+    this.node.links[i].layer.bgColor="pink";
+  }
+  return false;
+}
+
+// callback when a mouse button is pushed while the mouse is above a node
+Node.mdown=function(e) {
+  this.offX=e.pageX-this.pageX;
+  this.offY=e.pageY-this.pageY;
+  window.captureEvents(Event.MOUSEMOVE|Event.MOUSEUP);
+  Node.current=this;
+  this.savemousemove=window.onmousemove;
+  this.savemouseup=window.onmouseup;
+  window.onmousemove=Node.mdrag;
+  window.onmouseup=Node.mup;
+  return false;
+}
+
+// callback when the node is dragged
+Node.mdrag=function(e) {
+  var that=Node.current;
+  x=e.pageX-that.offX;
+  y=e.pageY-that.offY;
+  if (x < 0) {
+    x = 0;
+  } else if (x+Node.current.clip.width > window.innerWidth) {
+    x = window.innerWidth - Node.current.clip.width;
+  }
+  if (y < 0) {
+    y = 0;
+  } else if (y+Node.current.clip.height > window.innerHeight) {
+    y = window.innerHeight - Node.current.clip.height;
+  }
+  that.node.x=that.pageX=x;
+  that.node.y=that.pageY=y;
+  that.node.dx=0;
+  that.node.dy=0;
+window.graph.redraw(); // LMZR
+  return false;
+}
+
+// callback when the drag is finished
+Node.mup=function() {
+  var that=Node.current;
+  window.onmousemove=that.savemousemove;
+  window.onmouseup=that.savemouseup;
+  var mask=0;
+  if (!window.onmousemove) mask|=Event.MOUSEMOVE;
+  if (!window.onmouseup) mask|=Event.MOUSEUP;
+  window.releaseEvents(mask);
+  Node.current=null;
+window.graph.redraw(); // LMZR
+  return false;
+}
+
+// add an edge between the node and another node
+Node.addLink=function(node) {
+  this.links[this.links.length]=node;
+}
+
+// place the node at a random position
+Node.randomPlace=function() {
+  this.layer.pageX=this.x=(window.innerWidth-this.layer.clip.width)*Math.random();
+  this.layer.pageY=this.y=(window.innerHeight-this.layer.clip.height)*Math.random();
+  this.dx=0.0;
+  this.dy=0.0;
+}
+
+// show the node
+Node.show=function() {
+ this.layer.visibility="show";
+}
+
+// redraw the node
+Node.redraw=function() {
+  this.layer.pageX=this.x;
+  this.layer.pageY=this.y;
+}
+
+// node constructor
+function Node(html) {
+  this.addLink=Node.addLink;
+  this.randomPlace=Node.randomPlace;
+  this.show=Node.show;
+  this.redraw=Node.redraw;
+  document.write('<LAYER NAME="node" BGCOLOR="pink" VISIBILITY="hide">'+
+                 html+'</LAYER>');
+  this.layer=document.layers.node;
+  this.layer.captureEvents(Event.MOUSEOVER|Event.MOUSEOUT|Event.MOUSEDOWN);
+  this.layer.onmouseover=Node.mover;
+  this.layer.onmouseout=Node.mout;
+  this.layer.onmousedown=Node.mdown;
+  this.layer.node=this;
+  this.layer.zIndex=1;
+  this.html=html;
+  this.links=new Array;
+}
+
+// ---------------------------------------------------------------------------
+
+function foo(x) {
+  var y=x/Graph.quantum;
+  return (0.5*(Math.exp(y)-1)/(Math.exp(y)+1));
+}
+
+// redraw an edge
+Edge.redraw=function() {
+  var x1=this.from.x;
+  var y1=this.from.y;
+  var w1=this.from.layer.clip.width;
+  var h1=this.from.layer.clip.height;
+  var x2=this.to.x;
+  var y2=this.to.y;
+  var w2=this.to.layer.clip.width;
+  var h2=this.to.layer.clip.height;
+  var xs,ys,hs,ws;
+  var spin=0;
+
+  var lx=x1-x2+(w1-w2)/2;
+  if ( lx>0 ) {
+    var e=foo(lx);
+    xs=x2+w2*(0.5+e);
+    ws=lx-(w1+w2)*e;
+  } else if ( lx<0 ) {
+    var e=foo(-lx);
+    xs=x1+w1*(0.5+e);
+    ws=-lx-(w1+w2)*e;
+    spin=1-spin;
+  } else {
+    xs=x2+w2/2;
+    ws=0;
+  }
+
+  var ly=y1-y2+(h1-h2)/2;
+  if ( ly>0 ) {
+    var e=foo(ly);
+    ys=y2+h2*(e+0.5);
+    hs=ly-(h1+h2)*e;
+  } else if ( ly<0 ) {
+    var e=foo(-ly);
+    ys=y1+h1*(e+0.5);
+    hs=-ly-(h1+h2)*e;
+    spin=1-spin;
+  } else {
+    ys=y2+h2/2;
+    hs=0;
+  }
+
+  if (spin==0) {
+    this.layerh.pageX=xs;
+    this.layerh.pageY=ys;
+    this.layerh.clip.right=ws;
+    this.layerv.pageX=xs+ws;
+    this.layerv.pageY=ys;
+    this.layerv.clip.bottom=hs;
+  } else {
+    this.layerh.pageX=xs;
+    this.layerh.pageY=ys;
+    this.layerh.clip.right=ws;
+    this.layerv.pageX=xs;
+    this.layerv.pageY=ys;
+    this.layerv.clip.bottom=hs;
+  }
+}
+
+// edge constructor
+function Edge(from,to,color) {
+  this.from=from;
+  this.to=to;
+  this.redraw=Edge.redraw;
+  document.write('<LAYER ID=linkh BGCOLOR="'+color+'"></LAYER>'+
+                 '<LAYER ID=linkv BGCOLOR="'+color+'"></LAYER>');
+  this.layerh=document.layers.linkh;
+  this.layerv=document.layers.linkv;
+  this.layerh.clip.top=0;
+  this.layerh.clip.left=0;
+  this.layerh.clip.bottom=1;
+  this.layerh.clip.right=0;
+  this.layerv.clip.top=0;
+  this.layerv.clip.left=0;
+  this.layerv.clip.bottom=0;
+  this.layerv.clip.right=1;
+  this.layerh.zIndex=0;
+  this.layerv.zIndex=0;
+}
+
+// ---------------------------------------------------------------------------
+
+// typical length of an edge
+Graph.quantum = 125;
+
+// redraw the graph
+Graph.redraw=function() {
+  for (var i=0 ; i<this.nodes.length; i++) {
+    this.nodes[i].redraw();
+  }
+  for (var i=0; i<this.edges.length; i++) {
+    this.edges[i].redraw();
+  }
+}
+
+// compute one step of relaxation
+Graph.relax=function() {
+  for (var i=0 ; i<this.edges.length; i++) {
+    var e=this.edges[i];
+    var vx=e.to.x - e.from.x;
+    var vy=e.to.y - e.from.y;
+    var len=Math.sqrt(vx * vx + vy * vy);
+    var f=(Graph.quantum - len) / (len * 3) ;
+    var dx=f * vx;
+    var dy=f * vy;
+    e.to.dx+=dx;
+    e.to.dy+=dy;
+    e.from.dx-=dx;
+    e.from.dy-=dy;
+  }
+
+  for (var i=0 ; i<this.nodes.length ; i++) {
+    var n1=this.nodes[i];
+    var dx=0;
+    var dy=0;
+    for (var j=0 ; j<this.nodes.length ; j++) {
+      if (i==j) continue;
+      var n2=this.nodes[j];
+      var vx=n1.x - n2.x;
+      var vy=n1.y - n2.y;
+      var len=vx * vx + vy * vy;
+      if (len==0) {
+        dx+=Math.random();
+        dy+=Math.random();
+      } else if (len<4*Graph.quantum*Graph.quantum) {
+        dx+=vx / len;
+        dy+=vy / len;
+      }
+    }
+    var dlen = dx * dx + dy * dy;
+    if (dlen>0) {
+      dlen=Math.sqrt(dlen) / 2;
+      n1.dx+=dx / dlen;
+      n1.dy+=dy / dlen;
+    }
+  }
+
+  for (var i = 0 ; i < this.nodes.length ; i++) {
+    var n = this.nodes[i];
+    if (n.layer!=Node.current) {
+      n.x+=Math.max(-5, Math.min(5, n.dx));
+      n.y+=Math.max(-5, Math.min(5, n.dy));
+      if (n.x < 0) {
+        n.x = 0;
+      } else if (n.x+n.layer.clip.width > window.innerWidth) {
+        n.x = window.innerWidth - n.layer.clip.width;
+      }
+      if (n.y < 0) {
+        n.y = 0;
+      } else if (n.y+n.layer.clip.height > window.innerHeight) {
+        n.y = window.innerHeight - n.layer.clip.height;
+      }
+      n.dx /= 2;
+      n.dy /= 2;
+   }
+  }
+
+  this.redraw();
+}
+
+// node factory
+Graph.addNode=function(n) {
+  for (var i=0; i<this.nodes.length; i++) {
+    if (this.nodes[i]==n) return;
+  }
+  n.randomPlace();
+  n.show();
+  this.nodes[this.nodes.length]=n;
+  return;
+}
+
+// graph constructor
+function Graph(coupleList,
+               bgcolor,
+               edgecolor) {
+  document.bgColor=bgcolor;
+  this.nodes=new Array();
+  this.edges=new Array();
+  this.relax=Graph.relax;
+  this.redraw=Graph.redraw;
+  this.nodeFactory=Graph.nodeFactory;
+  this.addNode=Graph.addNode;
+  for (var i=0; i<coupleList.length; i++) {
+    var n1=coupleList[i][0];
+    var n2=coupleList[i][1];
+    if (n1==n2) {
+        alert('node "'+n1.html+'" is linked to itself');
+        return;
+    }
+    this.addNode(n1);
+    this.addNode(n2);
+    n1.addLink(n2);
+    this.edges[this.edges.length]=new Edge(n1,n2,edgecolor);
+  }
+  this.redraw();
+}
+
+// ---------------------------------------------------------------------------
+
+function resetGraph() {
+  var g=window.graph;
+  for (var i=0; i<g.nodes.length; i++) {
+    g.nodes[i].randomPlace();;
+  }
+  g.redraw();
+}
+
+document.write('<FORM NAME="actions">');
+document.write('<INPUT TYPE="button" NAME="go" VALUE="loading...">');
+document.write('<INPUT TYPE="button" VALUE="reset" ONCLICK="resetGraph();">');
+document.write('</FORM>');
+
+function loopGraph() {
+  window.graph.relax();
+  if (window.stillRunning) {
+    setTimeout("loopGraph()",0);
+  }
+}
+
+function runGraph() {
+  document.actions.go.value="stop";
+  document.actions.go.onclick=stopGraph;
+  window.stillRunning=true;
+  loopGraph();
+}
+
+function stopGraph() {
+  document.actions.go.value="run";
+  document.actions.go.onclick=runGraph;
+  window.stillRunning=false;
+}
+
+window.stillRunning=false;
+/*
+window.graph=new Graph([["janvier","fevrier"],
+                        ["fevrier","mars"],
+                        ["mars","avril"],
+                        ["avril","mai"],
+                        ["mai","juin"],
+                        ["juin","juillet",],
+                        ["juillet","aout"],
+                        ["aout","septembre"],
+                        ["septembre","octobre"],
+                        ["octobre","novembre"],
+                        ["novembre","decembre"],
+                        ["decembre","janvier"]]);
+*/
+
+var n0=new Node("<IMG SRC='0.gif'>");
+var n1=new Node("<IMG SRC='1.gif'>");
+var n2=new Node("<IMG SRC='2.gif'>");
+var n3=new Node("<IMG SRC='3.gif'>");
+var n4=new Node("<IMG SRC='4.gif'>");
+var n5=new Node("<IMG SRC='5.gif'>");
+var n6=new Node("<IMG SRC='6.gif'>");
+var n7=new Node("<IMG SRC='7.gif'>");
+var n8=new Node("<IMG SRC='8.gif'>");
+var n9=new Node("<IMG SRC='9.gif'>");
+var ns=new Node("<IMG SRC='ast.gif'>");
+var nd=new Node("<IMG SRC='and.gif'>");
+
+/*
+var n0=new Node("zero");
+var n1=new Node("un");
+var n2=new Node("deux");
+var n3=new Node("trois");
+var n4=new Node("quatre");
+var n5=new Node("cinq");
+var n6=new Node("six");
+var n7=new Node("sept");
+var n8=new Node("huit");
+var n9=new Node("neuf");
+var ns=new Node("star");
+var nd=new Node("diese");
+*/
+
+window.graph=new Graph([[n1,n2], // definition of the graph
+                        [n2,n3],
+                        [n4,n5],
+                        [n5,n6],
+                        [n7,n8],
+                        [n8,n9],
+                        [ns,n0],
+                        [n0,nd],
+                        [n1,n4],
+                        [n2,n5],
+                        [n3,n6],
+                        [n4,n7],
+                        [n5,n8],
+                        [n6,n9],
+                        [n7,ns],
+                        [n8,n0],
+                        [n9,nd]],
+                        "black",   // backgound color
+                        "white"); // edge color
+
+/*
+window.graph=new Graph([["un deux trois","anticons"]]);
+*/
+stopGraph();
+</SCRIPT>
+</BODY>
+</HTML>
+
+
+

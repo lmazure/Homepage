@@ -1,0 +1,178 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Dump of Word shortcuts</TITLE>
+<PATH>notes/wordcust.xml</PATH>
+<DATE><YEAR>2012</YEAR><MONTH>5</MONTH><DAY>14</DAY></DATE>
+<CONTENT>
+
+This is aimed mainly for a French azerty keyboard...
+
+<CODESAMPLE> 
+Option Explicit<BR/>
+<BR/>
+Private Sub DumpOneKey(key As Long, table As Variant)<BR/>
+<BR/>
+<TAB/>Dim bind As KeyBinding<BR/>
+<TAB/>Dim rw As Variant<BR/>
+<BR/>
+<TAB/>Set rw = table.Rows.Add(beforeRow:=table.Rows(table.Rows.Count))<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(key))<BR/>
+<TAB/>rw.Cells(1).Range.text = bind.KeyString<BR/>
+<TAB/>rw.Cells(2).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(3).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, key))<BR/>
+<TAB/>rw.Cells(4).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(5).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyAlt, key))<BR/>
+<TAB/>rw.Cells(6).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyAlt, wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(7).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKeyAlt, key))<BR/>
+<TAB/>rw.Cells(8).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKeyAlt, wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(9).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKey1), BuildKeyCode(key))<BR/>
+<TAB/>rw.Cells(10).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKey1), BuildKeyCode(wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(11).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKey2), BuildKeyCode(key))<BR/>
+<TAB/>rw.Cells(12).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKey2), BuildKeyCode(wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(13).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKey4), BuildKeyCode(key))<BR/>
+<TAB/>rw.Cells(14).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKey4), BuildKeyCode(wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(15).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKeyComma), BuildKeyCode(key))<BR/>
+<TAB/>rw.Cells(16).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKeyComma), BuildKeyCode(wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(17).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKeySlash), BuildKeyCode(key))<BR/>
+<TAB/>rw.Cells(18).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKeySlash), BuildKeyCode(wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(19).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKeyCloseSquareBrace), BuildKeyCode(key))<BR/>
+<TAB/>rw.Cells(20).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<TAB/>Set bind = FindKey(BuildKeyCode(wdKeyControl, wdKeyCloseSquareBrace), BuildKeyCode(wdKeyShift, key))<BR/>
+<TAB/>rw.Cells(21).Range.text = bind.Command &amp; " " &amp; bind.CommandParameter<BR/>
+<BR/>
+End Sub<BR/>
+<BR/>
+Sub DumpKeys()<BR/>
+<BR/>
+<TAB/>Dim newDoc As Variant<BR/>
+<TAB/>Set newDoc = Documents.Add<BR/>
+<BR/>
+<TAB/>Dim table As Variant<BR/>
+<TAB/>table = newDoc.Tables.Add(Range:=Selection.Range, NumRows:=2, NumColumns:=21)<BR/>
+<TAB/>table.Rows(1).Cells(1).Range.text = "key"<BR/>
+<TAB/>table.Rows(1).Cells(2).Range.text = ""<BR/>
+<TAB/>table.Rows(1).Cells(3).Range.text = "Shift"<BR/>
+<TAB/>table.Rows(1).Cells(4).Range.text = "Ctrl"<BR/>
+<TAB/>table.Rows(1).Cells(5).Range.text = "Ctrl+Shift"<BR/>
+<TAB/>table.Rows(1).Cells(6).Range.text = "Alt"<BR/>
+<TAB/>table.Rows(1).Cells(7).Range.text = "Alt+Shift"<BR/>
+<TAB/>table.Rows(1).Cells(8).Range.text = "Alt+Ctrl+"<BR/>
+<TAB/>table.Rows(1).Cells(9).Range.text = "Alt+Ctrl+Shift"<BR/>
+<TAB/>table.Rows(1).Cells(10).Range.text = "Ctrl+1"<BR/>
+<TAB/>table.Rows(1).Cells(11).Range.text = "Ctrl+1 Shift"<BR/>
+<TAB/>table.Rows(1).Cells(12).Range.text = "Ctrl+2"<BR/>
+<TAB/>table.Rows(1).Cells(13).Range.text = "Ctrl+2 Shift"<BR/>
+<TAB/>table.Rows(1).Cells(14).Range.text = "Ctrl+4"<BR/>
+<TAB/>table.Rows(1).Cells(15).Range.text = "Ctrl+4 Shift"<BR/>
+<TAB/>table.Rows(1).Cells(16).Range.text = "Ctrl+,"<BR/>
+<TAB/>table.Rows(1).Cells(17).Range.text = "Ctrl+, Shift"<BR/>
+<TAB/>table.Rows(1).Cells(18).Range.text = "Ctrl+:"<BR/>
+<TAB/>table.Rows(1).Cells(19).Range.text = "Ctrl+: Shift"<BR/>
+<TAB/>table.Rows(1).Cells(20).Range.text = "Ctrl+^"<BR/>
+<TAB/>table.Rows(1).Cells(21).Range.text = "Ctrl+^ Shift"<BR/>
+<BR/>
+<TAB/>DumpOneKey wdKeyA, table<BR/>
+<TAB/>DumpOneKey wdKeyB, table<BR/>
+<TAB/>DumpOneKey wdKeyC, table<BR/>
+<TAB/>DumpOneKey wdKeyD, table<BR/>
+<TAB/>DumpOneKey wdKeyE, table<BR/>
+<TAB/>DumpOneKey wdKeyF, table<BR/>
+<TAB/>DumpOneKey wdKeyG, table<BR/>
+<TAB/>DumpOneKey wdKeyH, table<BR/>
+<TAB/>DumpOneKey wdKeyI, table<BR/>
+<TAB/>DumpOneKey wdKeyJ, table<BR/>
+<TAB/>DumpOneKey wdKeyK, table<BR/>
+<TAB/>DumpOneKey wdKeyL, table<BR/>
+<TAB/>DumpOneKey wdKeyM, table<BR/>
+<TAB/>DumpOneKey wdKeyN, table<BR/>
+<TAB/>DumpOneKey wdKeyO, table<BR/>
+<TAB/>DumpOneKey wdKeyP, table<BR/>
+<TAB/>DumpOneKey wdKeyQ, table<BR/>
+<TAB/>DumpOneKey wdKeyR, table<BR/>
+<TAB/>DumpOneKey wdKeyS, table<BR/>
+<TAB/>DumpOneKey wdKeyT, table<BR/>
+<TAB/>DumpOneKey wdKeyU, table<BR/>
+<TAB/>DumpOneKey wdKeyV, table<BR/>
+<TAB/>DumpOneKey wdKeyW, table<BR/>
+<TAB/>DumpOneKey wdKeyX, table<BR/>
+<TAB/>DumpOneKey wdKeyY, table<BR/>
+<TAB/>DumpOneKey wdKeyZ, table<BR/>
+<TAB/>DumpOneKey wdKey1, table<BR/>
+<TAB/>DumpOneKey wdKey2, table<BR/>
+<TAB/>DumpOneKey wdKey3, table<BR/>
+<TAB/>DumpOneKey wdKey4, table<BR/>
+<TAB/>DumpOneKey wdKey5, table<BR/>
+<TAB/>DumpOneKey wdKey6, table<BR/>
+<TAB/>DumpOneKey wdKey7, table<BR/>
+<TAB/>DumpOneKey wdKey8, table<BR/>
+<TAB/>DumpOneKey wdKey9, table<BR/>
+<TAB/>DumpOneKey wdKey0, table<BR/>
+<TAB/>DumpOneKey wdKeyF1, table<BR/>
+<TAB/>DumpOneKey wdKeyF2, table<BR/>
+<TAB/>DumpOneKey wdKeyF3, table<BR/>
+<TAB/>DumpOneKey wdKeyF4, table<BR/>
+<TAB/>DumpOneKey wdKeyF5, table<BR/>
+<TAB/>DumpOneKey wdKeyF6, table<BR/>
+<TAB/>DumpOneKey wdKeyF7, table<BR/>
+<TAB/>DumpOneKey wdKeyF8, table<BR/>
+<TAB/>DumpOneKey wdKeyF9, table<BR/>
+<TAB/>DumpOneKey wdKeyF10, table<BR/>
+<TAB/>DumpOneKey wdKeyF11, table<BR/>
+<TAB/>DumpOneKey wdKeyF12, table<BR/>
+<TAB/>DumpOneKey wdKeyPeriod, table<BR/>
+<TAB/>DumpOneKey 223, table<BR/>
+<TAB/>DumpOneKey wdKeySingleQuote, table<BR/>
+<TAB/>DumpOneKey wdKeyOpenSquareBrace, table<BR/>
+<TAB/>DumpOneKey wdKeyEquals, table<BR/>
+<TAB/>DumpOneKey wdKeySemiColon, table<BR/>
+<TAB/>DumpOneKey wdKeyBackSingleQuote, table<BR/>
+<TAB/>DumpOneKey wdKeyBackSlash, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric1, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric2, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric3, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric4, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric5, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric6, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric7, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric8, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric9, table<BR/>
+<TAB/>DumpOneKey wdKeyNumeric0, table<BR/>
+<TAB/>DumpOneKey wdKeyNumericDecimal, table<BR/>
+<TAB/>DumpOneKey wdKeyNumericAdd, table<BR/>
+<TAB/>DumpOneKey wdKeyNumericSubtract, table<BR/>
+<TAB/>DumpOneKey wdKeyNumericMultiply, table<BR/>
+<TAB/>DumpOneKey wdKeyNumericDivide, table<BR/>
+<TAB/>DumpOneKey wdKeyInsert, table<BR/>
+<TAB/>DumpOneKey wdKeyDelete, table<BR/>
+<TAB/>DumpOneKey wdKeyHome, table<BR/>
+<TAB/>DumpOneKey wdKeyEnd, table<BR/>
+<TAB/>DumpOneKey wdKeyPageUp, table<BR/>
+<TAB/>DumpOneKey wdKeyPageDown, table<BR/>
+<TAB/>DumpOneKey wdKeyReturn, table<BR/>
+<BR/>
+<TAB/>table.Rows(table.Rows.Count).Delete<BR/>
+End Sub
+</CODESAMPLE>
+
+</CONTENT>
+</PAGE>
+

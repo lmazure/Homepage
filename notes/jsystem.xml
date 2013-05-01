@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Java System Interactions</TITLE>
+<PATH>notes/jsystem.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+<CODESAMPLE>try {<BR/>
+<TAB/>final String command[] =  { "/usr/bin/psql", "-t", "-d", "my_db", "-U", "postgres", "-c", "select patient_id from patient_folder where patient_id='"+patientID+"';"};<BR/>
+<TAB/>final Process proc = Runtime.getRuntime().exec(command); <BR/>
+<TAB/>final BufferedReader err = new BufferedReader(new InputStreamReader(proc.getErrorStream()));<BR/>
+<TAB/>String line; <BR/>
+<TAB/>String errorMessage = "";<BR/>
+<TAB/>while ( (line=err.readLine()) != null )  errorMessage = errorMessage + "\n" + line; <BR/>
+<TAB/>if (errorMessage.length()>0) System.out.println("error: "+errorMessage); <BR/>
+<TAB/>final BufferedReader reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));<BR/>
+<TAB/>int n = 0; <BR/>
+<TAB/>while ( (line=reader.readLine()) != null ) {<BR/>
+<TAB/><TAB/>...<BR/>
+<TAB/>}<BR/>
+} catch (IOException e1) {<BR/>
+<TAB/>System.err.println("failed to run psql: "+e1.getMessage());<BR/>
+}</CODESAMPLE>
+
+</CONTENT>
+</PAGE>

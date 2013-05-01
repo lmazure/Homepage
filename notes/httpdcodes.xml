@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>HTTPD codes</TITLE>
+<PATH>notes/httpdcodes.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<TABLE>
+<ROW><CELL width='2'>Informational 1xx</CELL></ROW>
+<ROW><CELL>100</CELL><CELL>Continue</CELL></ROW>
+<ROW><CELL>101</CELL><CELL>Switching Protocols</CELL></ROW>
+<ROW><CELL width='2'>Successful 2xx</CELL></ROW>
+<ROW><CELL>200</CELL><CELL>OK</CELL></ROW>
+<ROW><CELL>201</CELL><CELL>Created</CELL></ROW>
+<ROW><CELL>202</CELL><CELL>Accepted</CELL></ROW>
+<ROW><CELL>203</CELL><CELL>Non-Authoritative Information</CELL></ROW>
+<ROW><CELL>204</CELL><CELL>No Content</CELL></ROW>
+<ROW><CELL>205</CELL><CELL>Reset Content</CELL></ROW>
+<ROW><CELL>206</CELL><CELL>Partial Content</CELL></ROW>
+<ROW><CELL width='2'>Redirection 3xx</CELL></ROW>
+<ROW><CELL>300</CELL><CELL>Multiple Choices</CELL></ROW>
+<ROW><CELL>301</CELL><CELL>Moved Permanently</CELL></ROW>
+<ROW><CELL>302</CELL><CELL>Found</CELL></ROW>
+<ROW><CELL>303</CELL><CELL>See Other</CELL></ROW>
+<ROW><CELL>304</CELL><CELL>Not Modified</CELL></ROW>
+<ROW><CELL>305</CELL><CELL>Use Proxy</CELL></ROW>
+<ROW><CELL>306</CELL><CELL>(Unused)</CELL></ROW>
+<ROW><CELL>307</CELL><CELL>Temporary Redirect</CELL></ROW>
+<ROW><CELL width='2'>Client Error 4xx</CELL></ROW>
+<ROW><CELL>400</CELL><CELL>Bad Request</CELL></ROW>
+<ROW><CELL>401</CELL><CELL>Unauthorized</CELL></ROW>
+<ROW><CELL>402</CELL><CELL>Payment Required</CELL></ROW>
+<ROW><CELL>403</CELL><CELL>Forbidden</CELL></ROW>
+<ROW><CELL>404</CELL><CELL>Not Found</CELL></ROW>
+<ROW><CELL>405</CELL><CELL>Method Not Allowed</CELL></ROW>
+<ROW><CELL>406</CELL><CELL>Not Acceptable</CELL></ROW>
+<ROW><CELL>407</CELL><CELL>Proxy Authentication Required</CELL></ROW>
+<ROW><CELL>408</CELL><CELL>Request Timeout</CELL></ROW>
+<ROW><CELL>409</CELL><CELL>Conflict</CELL></ROW>
+<ROW><CELL>410</CELL><CELL>Gone</CELL></ROW>
+<ROW><CELL>411</CELL><CELL>Length Required</CELL></ROW>
+<ROW><CELL>412</CELL><CELL>Precondition Failed</CELL></ROW>
+<ROW><CELL>413</CELL><CELL>Request Entity Too Large</CELL></ROW>
+<ROW><CELL>414</CELL><CELL>Request-URI Too Long</CELL></ROW>
+<ROW><CELL>415</CELL><CELL>Unsupported Media Type</CELL></ROW>
+<ROW><CELL>416</CELL><CELL>Requested Range Not Satisfiable</CELL></ROW>
+<ROW><CELL>417</CELL><CELL>Expectation Failed</CELL></ROW>
+<ROW><CELL width='2'>Server Error 5xx</CELL></ROW>
+<ROW><CELL>500</CELL><CELL>Internal Server Error</CELL></ROW>
+<ROW><CELL>501</CELL><CELL>Not Implemented</CELL></ROW>
+<ROW><CELL>502</CELL><CELL>Bad Gateway</CELL></ROW>
+<ROW><CELL>503</CELL><CELL>Service Unavailable</CELL></ROW>
+<ROW><CELL>504</CELL><CELL>Gateway Timeout</CELL></ROW>
+<ROW><CELL>505</CELL><CELL>HTTP Version Not Supported</CELL></ROW>
+</TABLE>
+
+
+</CONTENT>
+<X><T>standard</T><A>http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+
+

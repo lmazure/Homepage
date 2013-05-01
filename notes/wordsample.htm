@@ -1,0 +1,518 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Word macro samples</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools">
+
+ 
+
+  </script>
+</head>
+<body>
+create a new document containing all the tables of the
+current one:
+<br>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>Sub extract_data()</tt> <br>
+      <tt>&nbsp; Set actDoc = ActiveDocument</tt> <br>
+      <tt>&nbsp; Set newDoc = Documents.Add</tt> <br>
+      <tt>&nbsp; actDoc.Activate</tt> <br>
+      <tt>&nbsp; For Each aTable In actDoc.Tables</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; aTable.Range.Copy</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; Set Range = newDoc.Content</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; Range.Collapse Direction:=wdCollapseEnd</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; Range.Paste</tt> <br>
+      <tt>&nbsp; Next aTable</tt> <br>
+      <tt>End Sub</tt></td>
+    </tr>
+  </tbody>
+</table>
+<br>
+transfer the requirement tables into Excel via a text file:
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span
+ style="font-family: monospace;">Sub extract_data_txt()</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Dim
+extractionFormat As String</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;
+extractionFormat = "txt" ' "htm" should also be supported</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">' create the temporary
+documentation</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Dim actDoc,
+newDoc As Variant</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Set actDoc =
+ActiveDocument</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Set newDoc =
+Documents.Add</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">' copy the requirement
+tables in the temporary file</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Dim i, r, c, j
+As Integer</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; For i = 1 To
+actDoc.Tables.Count</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;
+Application.StatusBar = "copying table " &amp; i &amp; "/" &amp;
+actDoc.Tables.Count</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;
+Dim aTable, firstCell As Variant</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;
+Set aTable = actDoc.Tables(i)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;
+Set firstCell = aTable.Cell(1, 1)</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp; If
+(actDoc.Range(firstCell.Range.Start, firstCell.Range.End - 1).Text =
+"Identifier") Then</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+For r = 2 To aTable.Rows.Count</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+For c = 1 To aTable.Columns.Count</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If (c &gt; 1) Then</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+newDoc.Content.InsertAfter (vbTab)</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+End If</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dim cellText As String</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cellText = actDoc.Range(aTable.Cell(r, c).Range.Start, aTable.Cell(r,
+c).Range.End - 1).Text</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cellText = Replace(cellText, """", """""")</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cellText = Replace(cellText, "&#8220;", """""")</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+cellText = Replace(cellText, "&#8221;", """""")</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+newDoc.Content.InsertAfter ("""" &amp; cellText &amp; """")</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Next c</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+newDoc.Content.InsertParagraphAfter</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Next r</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; End If</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Next i</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">' compute the name of the
+temporary file</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Dim newDocname
+As String</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; newDocname =
+actDoc.FullName</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; newDocname =
+Left(newDocname, InStr(newDocname, ".") - 1)</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; newDocname =
+newDocname &amp; "_extract." &amp; extractionFormat</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">' save the temporary file</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; newDoc.SaveAs
+FileName:=newDocname, FileFormat:=wdFormatText</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; newDoc.Close</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">' start Excel on the
+temporary file</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; Shell "excel
+""" &amp; newDocname &amp; """", vbNormalFocus</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp; End Sub</span><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>transfer the requirement tables into Excel via a HTML file:
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>Sub extract_data()</tt> <br>
+      <tt>' compute the name of the temporary file</tt> <br>
+      <tt>&nbsp;&nbsp; Set actDoc = ActiveDocument</tt> <br>
+      <tt>&nbsp;&nbsp; newDocname = ActiveDocument.FullName</tt> <br>
+      <tt>&nbsp;&nbsp; pos = InStr(newDocname, ".")</tt> <br>
+      <tt>&nbsp;&nbsp; newDocname = Left(newDocname, pos - 1)</tt> <br>
+      <tt>&nbsp;&nbsp; newDocname = newDocname &amp; "_extract.htm"</tt>
+      <br>
+      <tt>' create the temporary documentation</tt> <br>
+      <tt>&nbsp;&nbsp; Set newDoc = Documents.Add</tt> <br>
+      <tt>' copy the requirement tables in the temporary documentation</tt>
+      <br>
+      <tt>&nbsp;&nbsp; actDoc.Activate</tt> <br>
+      <tt>&nbsp;&nbsp; For Each aTable In actDoc.Tables</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; Set firstCell = aTable.Cell(1, 1)</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; If
+(ActiveDocument.Range(firstCell.Range.Start,
+firstCell.Range.End - 1).Text = "Identifier") Then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ActiveDocument.Range(aTable.Cell(2,
+1).Range.Start, _</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+aTable.Cell(aTable.Rows.Count, aTable.Columns.Count).Range.End).Copy</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Set Range =
+newDoc.Content</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Range.Collapse
+Direction:=wdCollapseEnd</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Range.Paste</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; End If</tt> <br>
+      <tt>&nbsp;&nbsp; Next aTable</tt> <br>
+      <tt>' Reset the width of the temporary table in case some tables
+has
+bad widths in the original document</tt> <br>
+      <tt>&nbsp;&nbsp; Set newTable = newDoc.Tables(1)</tt> <br>
+      <tt>&nbsp;&nbsp; For c = 1 To newTable.Columns.Count</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; For r = 2 To newTable.Rows.Count</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; newTable.Cell(r,
+c).Width
+= newTable.Cell(1, c).Width</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; Next r</tt> <br>
+      <tt>&nbsp;&nbsp; Next c</tt> <br>
+      <tt>' Uncomment the next line if you just want the traceability
+(i.e.
+remove the requirements in the Excel file)</tt> <br>
+      <tt>'&nbsp;&nbsp; newTable.Columns(2).Delete</tt> <br>
+      <tt>' save the temporary documentation in the temporary file</tt>
+      <br>
+      <tt>&nbsp;&nbsp; newDoc.SaveAs FileName:=newDocname,
+FileFormat:=wdFormatHTML</tt> <br>
+      <tt>&nbsp;&nbsp; newDoc.Close</tt> <br>
+      <tt>' start Excel on the temporary file</tt> <br>
+      <tt>&nbsp;&nbsp; </tt><span style="font-family: monospace;">Shell
+"excel
+""" &amp; newDocname &amp; """", vbNormalFocus</span> <br>
+      <tt>&nbsp;End Sub</tt></td>
+    </tr>
+  </tbody>
+</table>
+second version, faster but dirtier
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td>
+      <pre wrap=""> Sub extract_data()<br>' compute the name of the temporary file<br>   Set actDoc = ActiveDocument<br>   newDocname = ActiveDocument.FullName<br>   pos = InStr(newDocname, ".")<br>   newDocname = Left(newDocname, pos - 1)<br>   newDocname = newDocname &amp; "_extract.htm"<br>' create the temporary documentation<br>   Set newDoc = Documents.Add<br>' copy the requirement tables in the temporary documentation<br>   actDoc.Activate<br>   Dim newTable<br>   For i = 1 To actDoc.Tables.Count<br>     StatusBar = "copying table " &amp; i &amp; "/" &amp; actDoc.Tables.Count<br>     Set aTable = actDoc.Tables(i)<br>     Set firstCell = aTable.Cell(1, 1)<br>     If (ActiveDocument.Range(firstCell.Range.Start, firstCell.Range.End - 1).Text = "Identifier") Then<br>' reset the width of the temporary table in case some tables have incorrect widths in the original document<br>       If (Not IsEmpty(newTable)) Then<br>         For c = 1 To newTable.Columns.Count<br>           aTable.Columns(c).SetWidth ColumnWidth:=newTable.Columns(c).Width, RulerStyle:=wdAdjustFirstColumn<br>         Next c<br>       Else<br>' copy the column titles<br>         ActiveDocument.Range(aTable.Cell(1, 1).Range.Start, _<br>                              aTable.Cell(1, aTable.Columns.Count).Range.End).Copy<br>         Set Range = newDoc.Content<br>         Range.Collapse Direction:=wdCollapseEnd<br>         Range.Paste<br><br>       End If<br>       ActiveDocument.Range(aTable.Cell(2, 1).Range.Start, _<br>                            aTable.Cell(aTable.Rows.Count, aTable.Columns.Count).Range.End).Copy<br>' now that we have copied the table with the right widths, we cancel the changes<br>       If (Not IsEmpty(newTable)) Then<br>         ActiveDocument.Undo (newTable.Columns.Count)<br>       End If<br>' paste the table at the end of the temporary document<br>       Set Range = newDoc.Content<br>       Range.Collapse Direction:=wdCollapseEnd<br>       Range.Paste<br>' initialise the temporary table if it has just been created<br>       If (IsEmpty(newTable)) Then<br>          Set newTable = newDoc.Tables(1)<br>       End If<br>     End If<br>   Next i<br>' ### BEGIN ### Uncomment the next lines if you just want the traceability (i.e. remove the requirements in the Excel file)<br>'   newTable.Columns(2).Delete<br>' ### END ###<br>' save the temporary documentation in the temporary file<br>   newDoc.SaveAs FileName:=newDocname, FileFormat:=wdFormatHTML<br>   newDoc.Close<br>' start Excel on the temporary file<br>   <span
+ style="font-family: monospace;">Shell "excel""" &amp; newDocname &amp; """", vbNormalFocus</span><br>  End Sub</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+&nbsp; <br>
+explicitly write the hyperlinks contained in the document:
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>Sub ShowURLs()</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; For Each aField In
+ActiveDocument.Fields</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; If InStr(1,
+aField.Code.Text,
+"HYPERLINK", vbTextCompare) Then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dim intStart As Integer, intEnd As Integer</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dim strURL As String</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+intStart = InStr(1, aField.Code.Text, """", vbTextCompare)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+intEnd = InStr(intStart + 1, aField.Code.Text, """", vbTextCompare)</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+strURL = Mid(aField.Code.Text, intStart + 1, intEnd - intStart - 1)</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+aField.Result.InsertAfter (" &lt;" + strURL + "&gt; ")</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; End If</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; Next aField</tt> <br>
+      <tt>&nbsp;End Sub</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>facilitate the edition of the XML files<br>
+</p>
+<table style="text-align: left; background-color: rgb(204, 204, 204);"
+ border="0" cellpadding="0" cellspacing="0">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <pre wrap="">Sub xml2text()<br>'<br>' replace the U, B and I tags by underline, bold and italic text<br>'<br>    With Selection.Find<br>        .ClearFormatting<br>        .Replacement.ClearFormatting<br>        .Replacement.Font.Underline = wdUnderlineSingle<br>        .Text = "\&lt;U\&gt;(?*)\&lt;/U\&gt;"<br>        .Replacement.Text = "\1"<br>        .Forward = True<br>        .Wrap = wdFindContinue<br>        .Format = True<br>        .MatchCase = False<br>        .MatchWholeWord = False<br>        .MatchAllWordForms = False<br>        .MatchSoundsLike = False<br>        .MatchWildcards = True<br>        .Execute Replace:=wdReplaceAll<br>'<br>        .ClearFormatting<br>        .Replacement.ClearFormatting<br>        .Replacement.Font.Italic = True<br>        .Text = "\&lt;I\&gt;(?*)\&lt;/I\&gt;"<br>        .Replacement.Text = "\1"<br>        .Forward = True<br>        .Wrap = wdFindContinue<br>        .Format = True<br>        .MatchCase = False<br>        .MatchWholeWord = False<br>        .MatchAllWordForms = False<br>        .MatchSoundsLike = False<br>        .MatchWildcards = True<br>        .Execute Replace:=wdReplaceAll<br>'<br>        .ClearFormatting<br>        .Replacement.ClearFormatting<br>        .Replacement.Font.Bold = True<br>        .Text = "\&lt;B\&gt;(?*)\&lt;/B\&gt;"<br>        .Replacement.Text = "\1"<br>        .Forward = True<br>        .Wrap = wdFindContinue<br>        .Format = True<br>        .MatchCase = False<br>        .MatchWholeWord = False<br>        .MatchAllWordForms = False<br>        .MatchSoundsLike = False<br>        .MatchWildcards = True<br>        .Execute Replace:=wdReplaceAll<br>'<br>' hide the HTML tags<br>'<br>        .ClearFormatting<br>        .Replacement.ClearFormatting<br>        .MatchWildcards = True<br>        .Text = "(\&lt;[!&gt;]@\&gt;)"<br>        .Replacement.Font.Hidden = True<br>        .Replacement.Text = "\1"<br>        .Execute Replace:=wdReplaceAll<br>    End With<br>'<br>' replace the character codes by the corresponding characters<br>'<br>    With ActiveDocument.Content.Find<br>        .ClearFormatting<br>        .MatchWildcards = True<br>        .Text = "&amp;#x[A-F0-9]{2};"<br>        Do While .Execute = True<br>            .Parent.Text = ChrW(Val("&amp;H" &amp; Mid(.Parent.Text, 4, 2)))<br>            .Parent.Collapse Direction:=wdCollapseEnd<br>        Loop<br>    End With<br>End Sub<br><br><br><br>Sub text2xml()<br>'<br>' replace special characters by their codes<br>'<br>    With ActiveDocument.Content.Find<br>        .ClearFormatting<br>        .MatchWildcards = True<br>        .Text = "[&aacute;&agrave;&acirc;&auml;&atilde;&aelig;&Aacute;&Agrave;&Acirc;&Auml;&Atilde;&AElig;&ccedil;&Ccedil;&eacute;&egrave;&ecirc;&euml;&Eacute;&Egrave;&Ecirc;&Euml;&iacute;&igrave;&icirc;&iuml;&amp;&Iacute;&Igrave;&Icirc;&Iuml;&ntilde;&Ntilde;&oacute;&ograve;&ocirc;&ouml;&#339;&Oacute;&Ograve;&Ocirc;&Ouml;&#338;&uacute;&ugrave;&ucirc;&uuml;&Uacute;&Ugrave;&Ucirc;&Uuml;&iexcl;&iquest;&copy;&reg;&#8482;&lt;&gt;&amp;]"<br>        Do While .Execute = True<br>            .Parent.Text = "&amp;#x" &amp; Hex(AscW(.Parent.Text)) &amp; ";"<br>            .Parent.Collapse Direction:=wdCollapseEnd<br>        Loop<br>    End With<br>'<br>' replace italic, bold and underline by the respective tags<br>'<br>    With Selection.Find<br>        .ClearFormatting<br>        .Replacement.ClearFormatting<br>        With .Replacement.Font<br>            .Bold = False<br>            .Italic = False<br>            .Underline = wdUnderlineNone<br>        End With<br>        .Text = "^p"<br>        .Replacement.Text = ""<br>        .Wrap = wdFindAsk<br>        .Format = True<br>        .MatchCase = False<br>        .MatchWholeWord = False<br>        .MatchWildcards = False<br>        .MatchSoundsLike = False<br>        .MatchAllWordForms = False<br>        .Execute Replace:=wdReplaceAll<br>'<br>        .ClearFormatting<br>        .Font.Underline = wdUnderlineSingle<br>        .Replacement.ClearFormatting<br>        .Replacement.Font.Underline = wdUnderlineNone<br>        .Text = ""<br>        .Replacement.Text = "&lt;U&gt;^&amp;&lt;/U&gt;"<br>        .Forward = True<br>        .Wrap = wdFindContinue<br>        .Format = True<br>        .MatchCase = False<br>        .MatchWholeWord = False<br>        .MatchWildcards = False<br>        .MatchSoundsLike = False<br>        .MatchAllWordForms = False<br>        .Execute Replace:=wdReplaceAll<br>'<br>        .ClearFormatting<br>        .Font.Italic = True<br>        .Replacement.ClearFormatting<br>        .Replacement.Font.Italic = False<br>        .Text = ""<br>        .Replacement.Text = "&lt;I&gt;^&amp;&lt;/I&gt;"<br>        .Forward = True<br>        .Wrap = wdFindContinue<br>        .Format = True<br>        .MatchCase = False<br>        .MatchWholeWord = False<br>        .MatchWildcards = False<br>        .MatchSoundsLike = False<br>        .MatchAllWordForms = False<br>        .Execute Replace:=wdReplaceAll<br>        .ClearFormatting<br>        .Font.Bold = True<br>        .Replacement.ClearFormatting<br>        .Replacement.Font.Bold = False<br>        .Text = ""<br>        .Replacement.Text = "&lt;B&gt;^&amp;&lt;/B&gt;"<br>        .Forward = True<br>        .Wrap = wdFindContinue<br>        .Format = True<br>        .MatchCase = False<br>        .MatchWholeWord = False<br>        .MatchWildcards = False<br>        .MatchSoundsLike = False<br>        .MatchAllWordForms = False<br>        .Execute Replace:=wdReplaceAll<br>    End With<br>'<br>End Sub</pre>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+</p>
+<p>old shortcut for displaying/handling the toolbars<br>
+</p>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;">
+      <p><code>Sub DisplayBar()<br>
+&nbsp;&nbsp;&nbsp; If CommandBars("Standard").Visible Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CommandBars("Standard").Visible
+= False<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CommandBars("Formatting").Visible
+= True<br>
+&nbsp;&nbsp;&nbsp; ElseIf CommandBars("Formatting").Visible
+Then<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CommandBars("Standard").Visible
+= False<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CommandBars("Formatting").Visible
+= False<br>
+&nbsp;&nbsp;&nbsp; Else<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CommandBars("Standard").Visible
+= True<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CommandBars("Formatting").Visible
+= False<br>
+&nbsp;&nbsp;&nbsp; End If<br>
+End Sub<br>
+      </code></p>
+      <p><code></code><code> ' Ctrl+Alt+Space<br>
+KeyBindings.Add
+KeyCode:=BuildKeyCode(wdKeySpacebar,
+wdKeyControl, wdKeyAlt), _<br>
+&nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+KeyCategory:=wdKeyCategoryMacro, _<br>
+&nbsp;&nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Command:="DisplayBar"</code><br>
+      </p>
+      <code></code></td>
+    </tr>
+  </tbody>
+</table>
+<p>insert a bookmark at the selected word and replace all instances of
+these words by a reference toward the new bookmark<br>
+</p>
+<table style="text-align: left; background-color: rgb(204, 204, 204);"
+ border="0" cellpadding="2" cellspacing="2">
+  <tbody>
+    <tr>
+      <td style="vertical-align: top;"><span
+ style="font-family: monospace;">' compute a string that can be used as
+a bookmark name</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">Function
+bookmarkEscapeString(st As String) As String</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; Dim i As
+Integer</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+bookmarkEscapeString = ""</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; For i =
+1 To Len(st)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dim c As Integer</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+c = Asc(Mid(st, i, 1))</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If (c &gt; 64 And c &lt; 91) Or (c &gt; 96 And c &lt; 123) Then</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+bookmarkEscapeString = bookmarkEscapeString &amp; Chr(c)</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Else</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+bookmarkEscapeString = bookmarkEscapeString &amp; "_" &amp; Mid(str(c),
+2)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+End If</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; Next i</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+bookmarkEscapeString = "bk___" &amp; bookmarkEscapeString</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">End Function</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">' insert a bookmark at the
+selected word and</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">' replace all instances of
+these words by a reference toward the new bookmark</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">Sub linkToSelectedWord()</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; ' extend
+selection to whole word (without the last space)</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+Selection.Expand (wdWord)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; If
+(Right(Selection.text, 1) = " ") Then</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Selection.MoveLeft Unit:=wdCharacter, Count:=1, Extend:=wdExtend</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; End If</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; ' define
+text and name of bookmark</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; Dim text
+As String, name As String</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; text =
+Selection.text</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; name =
+bookmarkEscapeString(text)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; ' create
+bookmark</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+ActiveDocument.Bookmarks.Add Range:=Selection.Range, name:=name</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; '
+replace all instances of text by a link toward the newly created
+bookmark</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; With
+ActiveDocument.Content.Find</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.ClearFormatting</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.text = text</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.Format = False</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.MatchCase = True</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.MatchWholeWord = True</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.MatchWildcards = False</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.MatchSoundsLike = False</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.MatchAllWordForms = False</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.Execute</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Do While .Found = True</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+If (.Parent.start &lt;&gt; ActiveDocument.Bookmarks(name).Range.start)
+Then</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dim oldEnd As Long, oldLength As Long, newLength As Long</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+oldLength = ActiveDocument.Range.End</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+oldEnd = .Parent.End</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.Parent.InsertCrossReference ReferenceType:=wdRefTypeBookmark, _</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ReferenceKind:=wdContentText, _</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ReferenceItem:=name, _</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+InsertAsHyperlink:=True, _</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+IncludePosition:=False</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+newLength = ActiveDocument.Range.End</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.Parent.start = oldEnd + Len(name) + (newLength - oldLength) ' to avoid
+looping on the same location forever (beacuse the link insertion
+displaces the range of the current finding)</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+End If</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.Execute</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Loop</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; End With</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">End Sub</span><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p><br>
+</p>
+<p>translate a file into ASCII before running a Perl script:
+</p>
+<ul>
+  <li>a batch file is created so I just have to double click on it</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>@rem = '--*-Perl-*--&nbsp;</tt> <br>
+        <tt>@echo off&nbsp;</tt> <br>
+        <tt>"C:\Program Files\Microsoft Office\Office\WINWORD" "C:\Mes
+documents\tools\paddress.doc"</tt> <br>
+        <tt>D:\perl\bin\perl "C:\Mes documents\tools\paddress.pl"</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  <li>padress.doc is an empty file with a single macro</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>Private Sub Document_Open()</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; ChangeFileOpenDirectory "C:\Mes
+documents\perso\"</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; Documents.Open FileName:="adresses.rtf"</tt>
+        <br>
+        <tt>&nbsp;&nbsp;&nbsp; ChangeFileOpenDirectory
+"C:\WINDOWS\BUREAU\"</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; ActiveDocument.SaveAs
+FileName:="adresses.txt",
+FileFormat:=wdFormatText</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; Application.Quit</tt> <br>
+        <tt>End Sub</tt></td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+There is probably something more intelligent than this, but it works...
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: July 11</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

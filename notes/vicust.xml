@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>vi customization</TITLE>
+<PATH>notes/vicust.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+<SLIST>
+<ITEM>
+<CODEROUTINE>vi</CODEROUTINE> customization is defined in <CODEFILENAME>~/.exrc</CODEFILENAME>
+</ITEM>
+<ITEM>
+ClearCase shortkeys:
+<CODESAMPLE>
+:map #3 :!cleartool co -nc %^M:se noro^M<BR/>
+:map #4 :!cleartool diff -graph -pred % &amp;^M<BR/>
+:map #5 :!cleartool lsvtree -graph % &amp;^M<BR/>
+</CODESAMPLE>
+</ITEM>
+</SLIST>
+</CONTENT>
+</PAGE>
+
+

@@ -1,0 +1,736 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>JTable</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<ul>
+  <li>A <tt>JTable</tt> must be attached to a <tt>TableModel</tt>.
+    <br>
+  </li>
+  <li>A <span style="font-family: monospace;">TableModel </span>can
+be defined by:</li>
+  <ul>
+    <li>implementing the <span style="font-family: monospace;">TableModel
+      </span>interface</li>
+    <li>creating a class derived from <span
+ style="font-family: monospace;">AbstractTableModel<br>
+      </span>the methods </li>
+    <ul>
+      <li> <tt>public int getRowCount();</tt></li>
+      <li> <tt>public int getColumnCount();</tt></li>
+      <li> <tt>public Object getValueAt(int row, int column)</tt></li>
+    </ul>
+  </ul>
+  <div style="margin-left: 40px;">must be defined </div>
+  <ul>
+    <li>using <span style="font-family: monospace;">DefaultTableModel</span></li>
+  </ul>
+</ul>
+<ul>
+  <li>simple example</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>import javax.swing.table.AbstractTableModel;</tt>
+        <p><tt>public class TaskListModel extends AbstractTableModel {</tt>
+        </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public final static int TITLE = 0;</tt>
+        <br>
+        <tt>&nbsp;&nbsp;&nbsp; public final static int PRIORITY = 1;</tt>
+        </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; private TaskList list;</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public TaskListModel (TaskList l) {</tt>
+        <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; list = l;</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; }</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public int getRowCount() {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+list.getSize();</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; }</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public int getColumnCount() {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return 2;</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; }</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public Object getValueAt(int row,</tt>
+        <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int column) {</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Task task =
+list.getTask(row);</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; switch
+(column) {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case TITLE:</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return(task.getTitle());</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case PRIORITY:</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return(new Integer(task.getPriority()));</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return null;</tt>
+        <br>
+        <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+        <tt>}</tt> <br>
+        </p>
+        <hr width="100%"><br>
+        <tt>import java.awt.*;</tt> <br>
+        <tt>import javax.swing.*;</tt> <br>
+        <tt>import javax.swing.table.*;</tt>
+        <p><tt>public class TaskManagerUI extends JFrame {</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public static void main(String[]
+args) {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TaskManagerUI ui
+= new
+TaskManagerUI();</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ui.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ui.setSize(400,300);</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ui.setVisible(true);</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; }</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public TaskManagerUI() {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TaskList
+taskList =
+new TaskList("main");</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Container pane =
+getContentPane();</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pane.setLayout(new BorderLayout());</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TaskListModel
+taskListModel
+= new TaskListModel(taskList);</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JTable taskTable
+= new
+JTable(taskListModel);</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; JScrollPane
+scrollPane
+= new JScrollPane(taskTable);</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+pane.add(scrollPane,
+BorderLayout.CENTER);</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+        <tt>}</tt></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <li>example of a complete table model<br>
+    <table style="text-align: left;" border="0" cellpadding="2"
+ cellspacing="2">
+      <tbody>
+        <tr>
+          <td
+ style="vertical-align: top; background-color: rgb(204, 204, 204);"><span
+ style="font-family: monospace;">public class ResultRecorder implements
+javax.swing.table.TableModel {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+private java.util.Vector a_data;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+private javax.swing.event.EventListenerList a_listenerList;</span><br
+ style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+private static final int TEST_NAME = 0;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+private static final int TEST_DESCRIPTION = 1;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+private static final int RESULT_STATUS = 2;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+private static final int RESULT_DESCRIPTION = 3;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+private class ResultRecord {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+private String&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a_testName;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+private String&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a_testDescription;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+private CheckStatus a_resultStatus;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+private String&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a_resultDescription;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+public ResultRecord(String testName,</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+String testDescription,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int&nbsp;&nbsp;&nbsp; resultStatus,</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+String resultDescription) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_testName = testName;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_testDescription = testDescription;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_resultStatus = new CheckStatus(resultStatus);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_resultDescription = resultDescription;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+public String getTestName() { return a_testName; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+public String getTestDescription() { return a_testDescription; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+public CheckStatus getResultStatus() { return a_resultStatus; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+public String getResultDescription() { return a_resultDescription; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public ResultRecorder() {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_data = new java.util.Vector();</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_listenerList = new javax.swing.event.EventListenerList();</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; void
+record(String testName,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+String testDescription,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int&nbsp;&nbsp;&nbsp; resultStatus,</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+String resultDescription) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_data.add( new ResultRecord(testName, testDescription, resultStatus,
+resultDescription) );</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+javax.swing.event.TableModelEvent e;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int n = a_data.size();</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+e = new javax.swing.event.TableModelEvent(this,</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+n, n,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+javax.swing.event.TableModelEvent.ALL_COLUMNS, </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+javax.swing.event.TableModelEvent.INSERT);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+java.util.EventListener[] list =
+a_listenerList.getListeners(javax.swing.event.TableModelListener.class);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+for (int i = list.length-1; i&gt;=0; i--) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+((javax.swing.event.TableModelListener)list[i]).tableChanged(e);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public Class getColumnClass(int columnIndex) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+switch (columnIndex) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case TEST_NAME:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; return String.class;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case TEST_DESCRIPTION:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; return String.class;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case RESULT_STATUS:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; return CheckStatus.class;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case RESULT_DESCRIPTION:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp; return String.class;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return null;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public int getColumnCount() {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return 4;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public int getRowCount() {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return a_data.size();</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public String getColumnName(int columnIndex) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+switch (columnIndex) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case TEST_NAME:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return "test";</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case TEST_DESCRIPTION:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return "description";</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case RESULT_STATUS:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return "status";</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case RESULT_DESCRIPTION:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return "result";</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return null;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public Object getValueAt(int rowIndex, int columnIndex) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ResultRecord r = (ResultRecord)a_data.get(rowIndex);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+switch (columnIndex) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case TEST_NAME:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return r.getTestName();</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case TEST_DESCRIPTION:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return r.getTestDescription();</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case RESULT_STATUS:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return r.getResultStatus();</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case RESULT_DESCRIPTION:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return r.getResultDescription();</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return null;</span><br style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public boolean isCellEditable(int rowIndex, int columnIndex) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return false;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public void addTableModelListener(javax.swing.event.TableModelListener
+l) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_listenerList.add(javax.swing.event.TableModelListener.class, l);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public void
+removeTableModelListener(javax.swing.event.TableModelListener l) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_listenerList.remove(javax.swing.event.TableModelListener.class, l);</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public void setValueAt(Object aValue, int rowIndex, int columnIndex) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">}</span><br>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </li>
+  <li>use <tt>public String getColumnName(int column)</tt> of the <tt>TableModel</tt>
+to define the titles of the columns (otherwise, the default is 'A',
+'B'...)<br>
+    <br>
+  </li>
+  <li>use <tt>public Class getColumnClass(int column)</tt>&nbsp; of
+the <tt>TableModel</tt>
+to define the classes of the elements in each columns (used to set up
+the
+renderers and editors)<br>
+    <br>
+  </li>
+  <li>use <tt>public boolean isCellEditable(int row, int column)</tt>
+of the <tt>TableModel</tt>
+to allow edition of cells (default is that cells are not editable)<br>
+    <br>
+  </li>
+  <li>definition of a renderer to change the background color<br>
+    <table style="background-color: rgb(204, 204, 204);" border="0">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;"><code>class
+ResultTableCellRenderer extends
+javax.swing.table.DefaultTableCellRenderer {<br>
+&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp; public java.awt.Component
+getTableCellRendererComponent( javax.swing.JTable table,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Object value,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+boolean isSelected,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+boolean hasFocus,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int row,<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int column ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; java.awt.Component renderer
+= super.getTableCellRendererComponent(table, value, isSelected,
+hasFocus, row, column);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if
+(table.getColumnModel().getColumn(column).getModelIndex() == 2) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+String str = (String)value;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if (
+str.equals("success") ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+renderer.setBackground(java.awt.Color.green);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+else if ( str.equals("warning") ) {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+renderer.setBackground(java.awt.Color.orange);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }
+else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+renderer.setBackground(java.awt.Color.red);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; else {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+renderer.setBackground(java.awt.Color.white);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; }<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return this;<br>
+&nbsp;&nbsp;&nbsp; }<br>
+}<br>
+          </code>
+          <hr style="width: 100%; height: 2px;"><code>taskTable.setDefaultRenderer(String.class,new
+ResultTableCellRenderer());</code><code><br>
+          </code></td>
+        </tr>
+      </tbody>
+    </table>
+or better, create a class and attach a special cell rendered to it<br
+ style="font-family: monospace;">
+    <table
+ style="text-align: left; background-color: rgb(204, 204, 204);"
+ border="0" cellpadding="2" cellspacing="2">
+      <tbody>
+        <tr>
+          <td style="vertical-align: top;"><span
+ style="font-family: monospace;">public class CheckStatus {</span><br
+ style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public static final int SUCCESS = 1;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public static final int WARNING = 2;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public static final int FAILURE = 3;</span><br
+ style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; int
+a_status;</span><br style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public CheckStatus(int status) {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+a_status = status;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public String toString() {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+switch (a_status) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case SUCCESS:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return "Success";</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case WARNING:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return "Warning";</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case FAILURE:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return "Failure";</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return null;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public java.awt.Color getColor() {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+switch (a_status) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case SUCCESS:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return java.awt.Color.green;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case WARNING:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return java.awt.Color.orange;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+case FAILURE:</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return java.awt.Color.red;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return null;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;">
+          <hr style="width: 100%; height: 2px; font-family: monospace;"><span
+ style="font-family: monospace;">class CheckStatusCellRenderer extends
+javax.swing.table.DefaultTableCellRenderer {</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; </span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+public java.awt.Component getTableCellRendererComponent(
+javax.swing.JTable table,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Object value,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+boolean isSelected,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+boolean hasFocus,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int row,</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int column ) {</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+java.awt.Component renderer =
+super.getTableCellRendererComponent(table, value, isSelected, hasFocus,
+row, column);</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+CheckStatus status = (CheckStatus)value;</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+renderer.setBackground(status.getColor());</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return this;</span><br style="font-family: monospace;">
+          <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+          <span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;">
+          <hr style="width: 100%; height: 2px; font-family: monospace;"><span
+ style="font-family: monospace;">taskTable.setDefaultRenderer(CheckStatus.class,new
+CheckStatusCellRenderer());</span><br>
+          <p class="MsoNormal"
+ style="border: medium none ; padding: 0cm;"><span
+ style="font-size: 8pt; font-family: monospace;" lang="EN-GB"></span><span
+ style="font-size: 8pt;" lang="EN-GB"><o:p></o:p></span></p>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </li>
+  <li>definition of a renderer for the dates</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>import java.text.DateFormat;</tt> <br>
+        <tt>import java.text.SimpleDateFormat;</tt> <br>
+        <tt>import java.util.Date;</tt> <br>
+        <tt>import javax.swing.table.DefaultTableCellRenderer;</tt>
+        <p><tt>public class DateTimeCellRenderer extends
+DefaultTableCellRenderer
+{</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; final static DateFormat format = new
+SimpleDateFormat("EEEE
+d MMMM yyyy HH:mm:ss");</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public DateTimeCellRenderer() {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; super();</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; }</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public void setValue(Object value) {</tt>
+        <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Date date =
+(Date)value;</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+super.setValue(format.format(date));</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+        <tt>}</tt> <br>
+        </p>
+        <hr noshade="noshade" width="80%"><br>
+        <tt>table.setDefaultRenderer(java.util.Date.class, new
+DateTimeCellRenderer);</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <li>definition of an editor for the dates</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>import java.text.DateFormat;</tt> <br>
+        <tt>import java.text.ParsePosition;</tt> <br>
+        <tt>import java.text.SimpleDateFormat;</tt> <br>
+        <tt>import java.util.Date;</tt> <br>
+        <tt>import javax.swing.DefaultCellEditor;</tt> <br>
+        <tt>import javax.swing.JTextField;</tt>
+        <p><tt>public class DateTimeCellEditor extends
+DefaultCellEditor {</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; static final DateFormat format = new
+SimpleDateFormat("dd/MM/yy
+HH:mm:ss");</tt> </p>
+        <p><tt>&nbsp;&nbsp;&nbsp; public DateTimeCellEditor(JTextField
+textField)
+{</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; super(textField);</tt>
+        <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this.delegate =
+new
+EditorDelegate() {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+public void setValue(Object value) {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Date date = (Date)value;</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+((JTextField)editorComponent).setText(format.format(date));</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+public Object getCellEditorValue() {</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+String text = ((JTextField)editorComponent).getText();</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Date date = format.parse(text, new ParsePosition(0));</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+return date;</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; };</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
+        <tt>}</tt> <br>
+        </p>
+        <hr noshade="noshade" width="80%"><br>
+        <tt>table.setDefaultEditor(java.util.Date.class, new
+DateTimeCellEditor(new
+JtextField()));</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <li>set the columns widths<br>
+    <span style="font-family: monospace;">TableColumn column = null;</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">for (int i = 0; i &lt; 5;
+i++) {</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; column =
+table.getColumnModel().getColumn(i);</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; if (i ==
+2) {</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+column.setPreferredWidth(100); //sport column is bigger</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; } else {</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+column.setPreferredWidth(50);</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">}</span><br>
+  </li>
+</ul>
+<hr noshade="noshade" width="80%"><br>
+<i><font size="-1">Last update: March 13</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+</body>
+</html>

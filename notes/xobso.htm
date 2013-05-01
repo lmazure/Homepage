@@ -1,0 +1,100 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Obsolete X11 routines</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+search for the routines deprecated in X11R6:
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#!/bin/csh</tt>
+      <br>
+      <tt>foreach file ($*)</tt>
+      <br>
+      <tt>&nbsp; echo "---&gt; $file"</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtPeekEvent[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtStringConversionWarning[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtAppAddConverter[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtAddConverter[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtConvert[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtDirectConvert[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtAddActions[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtProcessEvent[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtMainLoop[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtAddTimeOut[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtAddInput[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtNextEvent[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtPending[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtCreateApplicationShell[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtAppInitialize[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtVaAppInitialize[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtInitialize[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtSetErrorMsgHandler[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtSetWarningMsgHandler[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtErrorMsg[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtWarningMsg[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtSetErrorHandler[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtSetWarningHandler[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtError[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtWarning[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtGetErrorDatabase[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtGetErrorDatabaseText[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtAddWorkProc[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtDestroyGC[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtSetSelectionTimeout[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp; grep -n "XtGetSelectionTimeout[^A-Za-z]" $file</tt>
+      <br>
+      <tt>&nbsp;end</tt></td>
+    </tr>
+  </tbody>
+</table>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: March 15</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2001 - <a href="javascript:do_email()">Laurent</a></font></i>
+<br>
+&nbsp;
+</p>
+</body>
+</html>

@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Visual Studio</TITLE>
+<PATH>notes/visualstudio.xml</PATH>
+<DATE><YEAR>2012</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
+<CONTENT>
+
+<DEFINITIONTABLE>
+<ROW><TERM><KEY ID='F6'/></TERM>
+<DESC>build the solution</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/><MODIFIERKEY ID='Ctrl'/><KEY ID='C'/></TERM>
+<DESC>create a new Controller</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/><MODIFIERKEY ID='Ctrl'/><KEY ID='V'/></TERM>
+<DESC>create a new View</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/><BR/>
+<KEY ID='F2'/></TERM>
+<DESC>rename (refactoring)</DESC></ROW>
+<ROW><TERM><KEY ID='F12'/></TERM>
+<DESC>reach definition</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><KEY ID='T'/></TERM>
+<DESC>display Call Hierarchy Window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><KEY ID='R'/></TERM>
+<DESC>list all references of the current symbol</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='up'/></TERM>
+<DESC>go to previous reference (in the file) of the current symbol</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='down'/></TERM>
+<DESC>go to next reference (in the file) of the current symbol</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/><KEY ID='S'/></TERM>
+<DESC>display the Solution Explorer</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/><KEY ID='F'/></TERM>
+<DESC>display the Solution Navigator</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/><KEY ID='D'/></TERM>
+<DESC>display the Code Definition Window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/><KEY ID='E'/></TERM>
+<DESC>display the Error List Window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/><KEY ID='T'/></TERM>
+<DESC>display the Task List</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/><KEY ID='T'/></TERM>
+<DESC>display the Team Explorer</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/><KEY ID='J'/></TERM>
+<DESC>display the Object Browser</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID=';'/><KEY ID='D'/></TERM>
+<DESC>display a selector of possible namespaces</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='G'/></TERM>
+<DESC>go to line</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><MODIFIERKEY ID='CTRL'/><KEY ID='F'/></TERM>
+<DESC>reformat the code</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+launch
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F5'/></TERM>
+<DESC>launch an application in standard mode</DESC></ROW>
+<ROW><TERM><KEY ID='F5'/></TERM>
+<DESC>launch an application in debug mode</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F5'/></TERM>
+<DESC>stop the debugged application</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+unit tests
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/><KEY ID='T'/></TERM>
+<DESC>execute tests of current context</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/><MODIFIERKEY ID='Ctrl'/><KEY ID='T'/></TERM>
+<DESC>execute test of current context in debug mode</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/><KEY ID='A'/></TERM>
+<DESC>execute all tests of the solution</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/><MODIFIERKEY ID='Ctrl'/><KEY ID='A'/></TERM>
+<DESC>execute all tests of the solution in debug mode</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+debug
+<DEFINITIONTABLE>
+<ROW><TERM><KEY ID='F11'/></TERM>
+<DESC>next line, go in called methods (debug)</DESC></ROW>
+<ROW><TERM><KEY ID='F10'/></TERM>
+<DESC>next line in same method (debug)</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/><KEY ID='C'/></TERM>
+<DESC>display Call Stack window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/><KEY ID='A'/></TERM>
+<DESC>display Autos window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/><KEY ID='L'/></TERM>
+<DESC>display Locals window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/><KEY ID='I'/></TERM>
+<DESC>display Immediate window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/><KEY ID='B'/></TERM>
+<DESC>display Breakpoints window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/><KEY ID='Q'/></TERM>
+<DESC>display QuickWatch window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/><KEY ID='K'/></TERM>
+<DESC>display Parallel Tasks window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/><KEY ID='S'/></TERM>
+<DESC>display Parallel Stacks window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F9'/></TERM>
+<DESC>enable/disable breakpoint</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+In order to see all the files which are on the filesystem, even those not included in the project : <CODEMENU>Projet<CODEMENU>Afficher tous les fichiers</CODEMENU></CODEMENU> then<BR/>
+- with a right click a file and selecting <CODEMENU>Inclure dans le projet</CODEMENU>, or<BR/>
+- with <CODEMENU>Project<CODEMENU>Inclure dans le project</CODEMENU></CODEMENU><BR/>
+the file will be included in the project.<BR/>
+<BR/>
+With <CODEMENU>Project<CODEMENU>Exclure du projet</CODEMENU></CODEMENU>, it is possible to exclude a file from the project.
+<BR/>
+
+<BLIST><TITLE><X><T>Productivity Power Tools</T><A>http://visualstudiogallery.msdn.microsoft.com/d0d33361-18e2-46c0-8ff2-4adea1e34fef/</A><L>en</L><F>HTML</F></X></TITLE>
+<ITEM>To display a quideline at the 80th column, perform a right-click on the 80th column and select <CODEMENU>Guidelines>Add Guideline</CODEMENU>.</ITEM>
+<ITEM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Page Down'/> and <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Page Up'/> navigates between tabs.</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>C#</T><A>../notes/csharp.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

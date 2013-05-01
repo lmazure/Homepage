@@ -1,0 +1,191 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Windows 2000 / XP</TITLE>
+<PATH>notes/win2000.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST>
+
+<ITEM>
+To disable the dynamic shortening of the lists in the Start Menu:<BR/>
+<CODEMENU>Right click<CODEMENU>Propri&#xE9;t&#xE9;s<CODEMENU>Menu D&#xE9;marrer</CODEMENU></CODEMENU></CODEMENU><BR/>
+Select <CODEMENU>Menu D&#xE9;marrer Classique</CODEMENU><BR/>
+Click on <CODEMENU>Personnaliser...</CODEMENU><BR/>
+Unselect <CODEMENU>Utiliser des menus personnalis&#xE9;s</CODEMENU>
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>cmd.exe</CODEROUTINE> replaces <CODEROUTINE>command.com</CODEROUTINE>.
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>&amp;&amp;</CODEROUTINE> command following this symbol runs only if the command preceding the symbol succeeds<BR/>
+<CODEROUTINE>||</CODEROUTINE> command following this symbol runs only if the command preceding the symbol fails<BR/>
+<CODEROUTINE>&amp;</CODEROUTINE> separates multiple commands on the command line
+</ITEM>
+
+<ITEM>
+find a file whose name contains Ondine
+<CODESAMPLE>dir c:\ /s /b | find "Ondine"</CODESAMPLE>
+</ITEM>
+
+<ITEM>
+recursively loop on the <CODEROUTINE>*.htm</CODEROUTINE> file to find a string
+<CODESAMPLE>for /r %f in (*.htm) do find "foobar" "%f"</CODESAMPLE>
+</ITEM>
+
+<ITEM>
+recursively loop on files to compress them
+<CODESAMPLE>for /r %f in (*.*) do "C:\Program Files\7-Zip\7z.exe" a -tzip "%f.zip" "%f"</CODESAMPLE>
+</ITEM>
+
+<ITEM>
+to change the letter of a drive:<BR/>
+start <CODEROUTINE>compmgmt.msc</CODEROUTINE><BR/>
+click on <CODEMENU>Stockage<CODEMENU>Gestion des disques</CODEMENU></CODEMENU><BR/>
+right-click on the line corresponding to the disk<BR/>
+select <CODEMENU>Modifier la lettre et les chemins d'acc&#xE8;s...</CODEMENU><BR/>
+in the newly displayed dialog, click on <CODEMENU>Modifer...</CODEMENU><BR/>
+select the new letter and apply
+</ITEM>
+
+</BLIST>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>help</CODEROUTINE></TERM><DESC>display the list of the command</DESC></ROW>
+<ROW><TERM><CODEROUTINE>help foobar</CODEROUTINE></TERM><DESC>display help about command <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>cacls &lt;file&gt;</CODEROUTINE></TERM><DESC>display the ACLs of file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cacls &lt;file&gt; /g ftp:c david:c</CODEROUTINE></TERM>
+<DESC>
+grant change access to <CODEROUTINE>ftp</CODEROUTINE> and <CODEROUTINE>david</CODEROUTINE><BR/>
+the possible permission letters are
+<BLIST>
+<ITEM><CODEROUTINE>n</CODEROUTINE> none</ITEM>
+<ITEM><CODEROUTINE>r</CODEROUTINE> read</ITEM>
+<ITEM><CODEROUTINE>c</CODEROUTINE> change</ITEM>
+<ITEM><CODEROUTINE>f</CODEROUTINE> full</ITEM>
+</BLIST>
+the possible action letters are:
+<BLIST>
+<ITEM><CODEROUTINE>g</CODEROUTINE> grant rigths</ITEM>
+<ITEM><CODEROUTINE>p</CODEROUTINE> replace rights</ITEM>
+</BLIST>
+</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cacls &lt;file&gt; &lt;operations&gt; /e</CODEROUTINE></TERM><DESC>
+edit the ACLs instead of reseting them
+</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cacls &lt;dir&gt; &lt;operations&gt; /t</CODEROUTINE></TERM><DESC>change recursively the ACLs of sub-directories and files</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>find "string" file</CODEROUTINE></TERM><DESC>search a string in a file<BR/>e.g. <CODEROUTINE>find "blockquote" *</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>/v</CODEROUTINE></TERM><DESC>display all the lines not containing the string</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/c</CODEROUTINE></TERM><DESC>only return the number of lines</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/n</CODEROUTINE></TERM><DESC>prepend each line by its number in the file</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>findstr "string" file</CODEROUTINE></TERM><DESC>search a string in a file<BR/>perform a recursive search<BR/><CODEROUTINE>findstr /m /s "foobar" *.*</CODEROUTINE><BR/>the usual wild characters are supported
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>\&lt;</CODEROUTINE></TERM><DESC>match the beginning of a word</DESC></ROW>
+<ROW><TERM><CODEROUTINE>\&gt;</CODEROUTINE></TERM><DESC>match the end of a word</DESC></ROW>
+</DEFINITIONTABLE>
+<CODEROUTINE>findstr /m /s "\&lt;notes.htm\&gt;" *.*</CODEROUTINE> returns the list of files containing the word <CODEROUTINE>notes.htm</CODEROUTINE>
+</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/s</CODEROUTINE></TERM><DESC>perform a recursive search</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/m</CODEROUTINE></TERM><DESC>print only the file names</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/n</CODEROUTINE></TERM><DESC>print the line number for each matching line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/b</CODEROUTINE></TERM><DESC>the string must be at the beginning of the line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/e</CODEROUTINE></TERM><DESC>the string must be at the end of the line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/x</CODEROUTINE></TERM><DESC>the string must be the whole line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/i</CODEROUTINE></TERM><DESC>case independent search</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/l</CODEROUTINE></TERM><DESC>search literal string</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/r</CODEROUTINE></TERM><DESC>search expression</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/C:<I>string</I></CODEROUTINE></TERM><DESC>use <I>string</I> as a literal search string
+<BLIST><ITEM>search for "granny" or "Smith" in MyFile.txt<BR/>
+<CODEROUTINE>findstr "granny Smith" MyFile.txt</CODEROUTINE></ITEM>
+<ITEM>search for "granny Smith" in MyFile.txt<BR/>
+<CODEROUTINE>findstr /C:"granny Smith" MyFile.txt</CODEROUTINE><BR/>
+this is the same as the <CODEROUTINE>find</CODEROUTINE> command</ITEM></BLIST></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>ipconfig /all</CODEROUTINE></TERM><DESC>display the full network configuration</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ipconfig /displaynfs</CODEROUTINE></TERM><DESC>display the content of the DNS cache</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ipconfig /flushnfs</CODEROUTINE></TERM><DESC>flush the DNS cache</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tracert</CODEROUTINE></TERM><DESC>trace route</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ping</CODEROUTINE></TERM><DESC>ping</DESC></ROW>
+<ROW><TERM><CODEROUTINE>hostname</CODEROUTINE></TERM><DESC>return the machine name</DESC></ROW>
+<ROW><TERM><CODEROUTINE>nslookup <I>host</I></CODEROUTINE></TERM><DESC>return the IP address of <I>host</I></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>attrib</CODEROUTINE></TERM><DESC>list the attributes of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>attrib +r</CODEROUTINE></TERM><DESC>set the read only attribute of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>attrib -r</CODEROUTINE></TERM><DESC>unset the read only attribute of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>attrib +a</CODEROUTINE></TERM><DESC>set the archive attribute of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>attrib -a</CODEROUTINE></TERM><DESC>unset the archive attribute of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>attrib +s</CODEROUTINE></TERM><DESC>set the system file attribute of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>attrib -s</CODEROUTINE></TERM><DESC>unset the system file attribute of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>attrib +h</CODEROUTINE></TERM><DESC>set the hidden attribute of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>attrib -h</CODEROUTINE></TERM><DESC>unset the hidden attribute of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/s</CODEROUTINE></TERM><DESC>operate recursively in the folder and subfolder</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/d</CODEROUTINE></TERM><DESC>also process folders</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>xcopy</CODEROUTINE></TERM><DESC>copy a directory<BR/>
+e.g. <CODEROUTINE>xcopy dir_source/data dir_target/data /S /E</CODEROUTINE><BR/>
+if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy</CODEROUTINE> will ask if its must create a file or a directory (answer a directory)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/a</CODEROUTINE></TERM><DESC>copy only files with the archive attribute (keep the archive attribute of the source file)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/d:dd/mm/aa</CODEROUTINE></TERM><DESC>copy only files more recent than the indicated date</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/e</CODEROUTINE></TERM><DESC>copy all the subdirectories even if empty (to use with <CODEROUTINE>/s</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/m</CODEROUTINE></TERM><DESC>copy only files with the archive attribute (remove the archive attribute of the source file)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/p</CODEROUTINE></TERM><DESC>ask for confirmation before each file copy</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/s</CODEROUTINE></TERM><DESC>copy non empty directories and subdirectories (without this flag, <CODEROUTINE>xcopy</CODEROUTINE> copies only a directory)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/v</CODEROUTINE></TERM><DESC>check each data recording</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/w</CODEROUTINE></TERM><DESC>display a prompt before copying the file (the copy can be cancelled with <MODIFIERKEY ID='Ctrl'/><KEY ID='C'/>)</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>copy</CODEROUTINE></TERM><DESC>copy a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/v</CODEROUTINE></TERM><DESC>check that sectors written on disk are correct</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/a</CODEROUTINE></TERM><DESC>for a source file, the data are copied up to the first end-of-file mark(<MODIFIERKEY ID='Ctrl'/><KEY ID='Z'/>)<BR/>for a target file, a end-of-file mark is added as the last character in the file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/b</CODEROUTINE></TERM><DESC>for a source file, the file must be entirely copied including the end-of-file marks<BR/>for a target file, does not add a end-of-file mark at the end of the file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>copy foo+bar[+...] target</CODEROUTINE></TERM><DESC>concatenate the source files into a single target file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>copy foo+bar[+...]</CODEROUTINE></TERM><DESC>concatenate the files into <CODEROUTINE>foo</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>copy *.suf target</CODEROUTINE></TERM><DESC>concatenate the files in target</DESC></ROW>
+<ROW><TERM><CODEROUTINE>copy *.ref+*.tex *.doc</CODEROUTINE></TERM><DESC>concatenate the file pairs <CODEROUTINE>*.ref+*.tex</CODEROUTINE> in files <CODEROUTINE>*.doc</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>copy *.ref+*.tex target</CODEROUTINE></TERM><DESC>concatenate all the files into <CODEROUTINE>target</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>copy foo.bar+*.bar</CODEROUTINE></TERM><DESC>concatenate all the files into <CODEROUTINE>foo.bar</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>regsvr32</CODEROUTINE></TERM><DESC>register or unregister a DLL or an ActiveX control</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/u</CODEROUTINE></TERM><DESC>unregister</DESC></ROW>
+<ROW><TERM><CODEROUTINE>/s</CODEROUTINE></TERM><DESC>run silently and do not display any message box</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+
+Repair a USB key which is not accessible anymore: use <X><T>HP Drive Key Boot Utility</T><A>http://h18000.www1.hp.com/support/files/serveroptions/us/download/23839.html</A><L>en</L><F>HTML</F></X>.<BR/>
+<BR/>
+In order to know which process uses a given file, use <X><T>Handle</T><A>http://www.microsoft.com/france/technet/sysinternals/ProcessesAndThreads/Handle.mspx</A><L>fr</L><F>HTML</F></X> of <X><T>SysInternals</T><A>http://www.sysinternals.com</A><L>fr</L><F>HTML</F></X>.
+
+</CONTENT>
+<X><T>links</T><A>../links/windows.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

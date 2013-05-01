@@ -1,0 +1,201 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Project</TITLE>
+<PATH>notes/project.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>Computation</U></B></TITLE>
+<ITEM>Dur&#xE9;e = Travail &#xF7; Unit&#xE9;s de ressource</ITEM>
+<ITEM>
+<U>Types of tasks</U><BR/>
+What is the value modified by Project when another one is modified?
+<TABLE>
+<ROW><CELL width='2' height='2'></CELL><CELL width='3'>modified value</CELL></ROW>
+<ROW><CELL>duration</CELL><CELL>units</CELL><CELL>workload</CELL></ROW>
+<ROW><CELL height='3'>type of task</CELL><CELL>fixed duration<BR/>Dur&#xE9;e fixe</CELL><CELL>workload</CELL><CELL>workload</CELL><CELL>workload</CELL></ROW>
+<ROW><CELL>fixed capacity<BR/>Capacit&#xE9; fixe<BR/>(default)</CELL><CELL>workload</CELL><CELL>duration</CELL><CELL>duration</CELL></ROW>
+<ROW><CELL>fixed workload<BR/>Travail fixe</CELL><CELL>units</CELL><CELL>duration</CELL><CELL>duration</CELL></ROW>
+</TABLE>
+The default type can be defined in <CODEMENU>Outils<CODEMENU>Options...<CODEMENU>Pr&#xE9;visions<CODEMENU>Type de t&#xE2;che par d&#xE9;faut :</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+</ITEM>
+<ITEM>
+<U>Previsions driven by the effort</U><BR/>
+When a task is effort driven:
+<TABLE>
+<ROW><CELL>fixed duration<BR/>Dur&#xE9;e fixe</CELL><CELL>when adding/removing resources, their efforts are updated</CELL></ROW>
+<ROW><CELL>fixed capacity<BR/>Capacit&#xE9; fixe<BR/>(default)</CELL><CELL>when adding/removing resources, the duration is updated</CELL></ROW>
+<ROW><CELL>fixed workload<BR/>Travail fixe</CELL><CELL>the effort driven prevision cannot be switched off</CELL></ROW>
+</TABLE>
+The default flag value can be defined in <CODEMENU>Outils<CODEMENU>Options...<CODEMENU>Pr&#xE9;visions<CODEMENU>Les nouvelles t&#xE2;ches sont pilot&#xE9;es par l'effort</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Resources</U></B></TITLE>
+<ITEM><SLIST><TITLE>define days off for the whole team</TITLE>
+<ITEM><CODEMENU>Outils<CODEMENU>Modifier le temps de travail...</CODEMENU></CODEMENU></ITEM>
+<ITEM>Select <CODEMENU>Standard (Calendrier du projet)</CODEMENU> calendar</ITEM>
+<ITEM>Select the days</ITEM>
+<ITEM>Click on <CODEMENU>Ch&#xF4;m&#xE9;</CODEMENU></ITEM>
+</SLIST></ITEM>
+<ITEM><SLIST><TITLE>define days off for a team member</TITLE>
+<ITEM><CODEMENU>Outils<CODEMENU>Modifier le temps de travail...</CODEMENU></CODEMENU></ITEM>
+<ITEM>Select the person in the <CODEMENU>Pour:</CODEMENU> calendar dropdown list</ITEM>
+<ITEM>Select the days</ITEM>
+<ITEM>Click on <CODEMENU>Ch&#xF4;m&#xE9;</CODEMENU></ITEM>
+</SLIST></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>Task parameters</U></B> (for Excel import/export)</TITLE>
+<ITEM>for the tasks
+<TABLE>
+<ROW><CELL>N&#xB0;</CELL><CELL>task number</CELL></ROW>
+<ROW><CELL>R&#xE9;capitulative</CELL><CELL>(not editable)<BR/>flag indicating if the task is a summary or not (can be "Oui" or "Non")</CELL></ROW>
+<ROW><CELL>Critique</CELL><CELL>(not editable)<BR/>flag indicating if the task is on the critical path or not (can be "Oui" or "Non")</CELL></ROW>
+<ROW><CELL>Niveau Hi&#xE9;rarchique</CELL><CELL>hierarchical level (1, 2... the task is considered to be inside the previous task having the level equal to l-1)</CELL></ROW>
+<ROW><CELL>Pr&#xE9;d&#xE9;cesseurs</CELL><CELL>predecessor tasks defined by their numbers (separated by ";", empty string if there is no predecessor task)</CELL></ROW>
+<ROW><CELL>Successeurs</CELL><CELL>successor tasks defined by their numbers (separated by ";", empty string if there is no predecessor task)</CELL></ROW>
+<ROW><CELL>Nom</CELL><CELL>name of the task</CELL></ROW>
+<ROW><CELL>Dur&#xE9;e</CELL><CELL>duration</CELL></ROW>
+<ROW><CELL>Travail</CELL><CELL>workload ("j" &#x2192; days, "h" &#x2192; hours)</CELL></ROW>
+<ROW><CELL>Travail restant</CELL><CELL>remaining workload</CELL></ROW>
+<ROW><CELL>% achev&#xE9;</CELL><CELL>Percentage of done work</CELL></ROW>
+<ROW><CELL>D&#xE9;but</CELL><CELL>Start date</CELL></ROW>
+<ROW><CELL>Fin</CELL><CELL>End Date</CELL></ROW>
+<ROW><CELL>Remarque</CELL><CELL>?</CELL></ROW>
+<ROW><CELL>Unit&#xE9; d'affectation</CELL><CELL>?</CELL></ROW>
+<ROW><CELL>Type</CELL><CELL>type of task (can be "Capacit&#xE9; fixe", "Dur&#xE9;e fixe", or "Travail fixe")</CELL></ROW>
+<ROW><CELL>Pilot&#xE9;e par l'effort</CELL><CELL>effort driven (can be "Oui" or "Non")</CELL></ROW>
+<ROW><CELL>Noms resources</CELL><CELL>resource names (with the syntax "res1;res2[50%]")</CELL></ROW>
+<ROW><CELL>Jalon</CELL><CELL>flag indicating if it is a jalon or not (can be "Oui" or "Non", default is "Non")</CELL></ROW>
+<ROW><CELL>L'audit peut fractionner</CELL><CELL>flag indicating if the task can be split by the audit (can be "Oui" or "Non", default is "Oui")</CELL></ROW>
+<ROW><CELL>Priorit&#xE9;</CELL><CELL>priority (integer)</CELL></ROW>
+</TABLE>
+</ITEM>
+<ITEM>for the resources</ITEM>
+<ITEM>for the affectations</ITEM>
+</BLIST>
+The import does not work properly if the Excel cells contains newlines (the text of these cells is not imported).<BR/>
+If the column titles are the correct ones in Excel, Project will automatically recognize them<BR/>
+<BR/>
+<BLIST><TITLE><B><U>User Interface</U></B></TITLE>
+<ITEM><BLIST><TITLE>indicate that task &#x3B2; is linked to a task &#x3B1;</TITLE>
+<ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the graphical view<BR/>
+put the cursor on top of task &#x3B1;<BR/>
+left click<BR/>
+move the cursor toward the top or the bottom<BR/>
+move the cursor on top of task &#x3B2;<BR/>
+release the mouse button</ITEM>
+<ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view<BR/>
+select the tasks (e.g. by using <MODIFIERKEY ID='Ctrl'/>click)<BR/>
+(it is possible to link more than two tasks; in this case, there are linked one after the other)<BR/>
+type <MODIFIERKEY ID='Ctrl'/><KEY ID='F2'/></ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE>unlink tasks</TITLE>
+<ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the graphical view<BR/>
+double click on the dependence arrow<BR/>
+click on the <CODEMENU>Supprimer</CODEMENU> button of the displayed dialog</ITEM>
+<ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view<BR/>
+select the tasks (e.g. by using <MODIFIERKEY ID='Ctrl'/>click)<BR/>
+type <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></ITEM>
+</BLIST></ITEM>
+<ITEM>on the <CODEROUTINE>Organigramme des t&#xE2;ches</CODEROUTINE> view<BR/>
+put the cursor on top of task &#x3B1;<BR/>
+left click<BR/>
+move the cursor on top of task &#x3B2;<BR/>
+release the mouse button</ITEM>
+<ITEM>change the task orders:<BR/>
+on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view<BR/>
+select one or several lines<BR/>
+drag 'n drop the top limit of the tasks</ITEM>
+<ITEM>display the durations in days instead of hours:<BR/>
+set <CODEMENU>Outils<CODEMENU>Options...<CODEMENU>Pr&#xE9;visions<CODEMENU>Afficher la dur&#xE9;e en :</CODEMENU></CODEMENU></CODEMENU></CODEMENU> to <CODEMENU>Jours</CODEMENU></ITEM>
+<ITEM>display the workloads in days instead of hours:<BR/>
+set <CODEMENU>Outils<CODEMENU>Options...<CODEMENU>Pr&#xE9;visions<CODEMENU>Afficher le travail en :</CODEMENU></CODEMENU></CODEMENU></CODEMENU> to <CODEMENU>Jours</CODEMENU></ITEM>
+<ITEM>display all the subtasks<BR/>
+in the <CODEMENU>Mise en forme</CODEMENU> toolbar, <CODEMENU>Afficher<CODEMENU>Toutes les t&#xE2;ches subordonn&#xE9;es</CODEMENU></CODEMENU>
+</ITEM>
+</BLIST>
+<BR/>
+<B><U>Shortcuts</U></B><BR/>
+(<X><T>Microsoft list</T><A>http://office.microsoft.com/en-us/project/HP453045851033.aspx</A><L>en</L><F>HTML</F></X>)
+on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view
+<DEFINITIONTABLE>
+<ROW><TERM>
+<KEY ID='Ins'/>
+</TERM><DESC>
+insert a task before the selected one
+</DESC></ROW>
+<ROW><TERM>
+<KEY ID='Del'/>
+</TERM><DESC>
+delete the selected tasks
+</DESC></ROW>
+<ROW><TERM>
+<KEY ID='F2'/>
+</TERM><DESC>
+edit the field
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Shift'/><KEY ID='F2'/><BR/>
+double right click
+</TERM><DESC>
+display the task editor
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='F5'/>
+</TERM><DESC>
+center the view on the first selected task
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='F2'/>
+</TERM><DESC>
+link the selected tasks
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Alt'/><KEY ID='F10'/>
+</TERM><DESC>
+display the affectation window
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Ctrl'/><KEY ID='Left'/>
+</TERM><DESC>
+outdent task
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Ctrl'/><KEY ID='Right'/>
+</TERM><DESC>
+indent task
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='-'/> (numeric pad)
+</TERM><DESC>
+hide subtaks
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='+'/> (numeric pad)
+</TERM><DESC>
+show subtasks
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Alt'/><KEY ID='Left'/>
+</TERM><DESC>
+scroll calendar toward the past
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Alt'/><KEY ID='Right'/>
+</TERM><DESC>
+scroll calendar toward the future
+</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<BLIST><TITLE><B><U>Viewers</U></B></TITLE>
+  <ITEM><X><T>GANTT Project</T><A>http://ganttproject.biz</A><L>en</L><F>HTML</F></X> is able to load a Project file but this is buggy (it ignores the start date imposed to tasks, the dates are not the same as in MS Project...).</ITEM>
+  <ITEM><X><T>AdeptTracker</T><A>http://www.adepttracker.net</A><L>en</L><F>HTML</F></X> is able to load a Project XML file (it can also load a mpp file if MS Project is installed).</ITEM>
+  <ITEM><X><T>Seavus Project Viewer</T><A>http://www.seavusprojectviewer.com</A><L>en</L><F>HTML</F></X> seems to be a good viewer and is cheap (40$).</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/office.html#project</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

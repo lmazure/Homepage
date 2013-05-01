@@ -1,0 +1,290 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Hijacking a system call</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+Here is a description how to override a system call
+by our own routine.
+<br>
+(The choice of <tt>sysinfo(SI_HW_SERIAL)</tt> is purely accidental,
+this is by no way linked to the fact that many node-locked licenses are
+retrieving the hardware serial number to check their authorization ;-)
+<p>Here is a small and dirty program <tt>test.c</tt> dumping some
+system
+info:
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#include &lt;stdio.h&gt;</tt> <br>
+      <tt>#include &lt;stdlib.h&gt;</tt> <br>
+      <tt>#include &lt;unistd.h&gt;</tt> <br>
+      <tt>#include &lt;sys/systeminfo.h&gt;</tt>
+      <p><tt>#define DUMP(data) if ( sysinfo(data,str,sizeof(str)) &gt;
+0 ) printf("%s
+= %s\n",#data,str);</tt> </p>
+      <p><tt>char str[128];</tt> </p>
+      <p><tt>int</tt> <br>
+      <tt>main(int argc,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp; char **argv)</tt> <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; DUMP(SI_SYSNAME);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; DUMP(SI_HOSTNAME);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; DUMP(SI_RELEASE);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; DUMP(SI_VERSION);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; DUMP(SI_VERSION);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; DUMP(SI_MACHINE);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; DUMP(SI_ARCHITECTURE);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; DUMP(SI_HW_SERIAL);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; DUMP(SI_SRPC_DOMAIN);</tt> </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; printf("hostid=%lx\n",gethostid());</tt>
+      </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; return(EXIT_SUCCESS);</tt> <br>
+      <tt>}</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+Compile it: <tt>cc test.c -o test</tt>
+</p>
+<p>Here is the hijacking code (error handling is missing, but this is
+not
+the point):
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#include &lt;sys/systeminfo.h&gt;</tt> <br>
+      <tt>#include &lt;dlfcn.h&gt;</tt>
+      <p><tt>int</tt> <br>
+      <tt>sysinfo(int command,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; char *buf,</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; long count)</tt> <br>
+      <tt>{</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; static int (*f)(int,char*,long)=0;</tt> </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; if (!f)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; {</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; void *so =
+dlopen("/usr/lib/libc.so.1",RTLD_LAZY|RTLD_GLOBAL|RTLD_NOLOAD);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; f =
+(int(*)(int,char*,long))dlsym(so,"sysinfo");</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; dlclose(so);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; }</tt> </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; if (command!=SI_HW_SERIAL)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; return
+f(command,buf,count);</tt> </p>
+      <p><tt>&nbsp;&nbsp;&nbsp; sprintf(buf,"%d",0x80c0b97e);</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; return 11;</tt> <br>
+      <tt>}</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+Create a shared library: <tt>cc -G hack.c -o /tmp/hack.so</tt>
+</p>
+<p>Preload the library: <tt>setenv LD_PRELOAD /tmp/hack.so</tt>
+</p>
+<p>Start the test program: <tt>./test</tt>
+<br>
+<tt>sysinfo</tt> is correctly hijacked, but <tt>gethostid</tt> still
+returns the real value (it still calls the <tt>sysinfo</tt> of <tt>libc.so.1</tt>
+instead of our own one).
+</p>
+<hr noshade="noshade" width="80%">another example: <span
+ style="font-family: monospace;">mmap</span>/<span
+ style="font-family: monospace;">munmap</span><br>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td> <span style="font-family: monospace;">#include
+&lt;sys/types.h&gt;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">#include &lt;dlfcn.h&gt; </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">#include &lt;stdio.h&gt; </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">#include &lt;ctype.h&gt;</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">#include &lt;setjmp.h&gt;</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">#include &lt;sys/frame.h&gt;</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">#define FLUSHWIN() asm("ta
+3");</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">#define FRAME_PTR_INDEX 1</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">#define SKIP_FRAMES 0</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">void dumpStack()</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">{</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; jmp_buf
+buf;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; int
+*cast;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; struct
+frame *sp;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+FLUSHWIN();</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+(void)setjmp(buf);</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+cast=(int*)buf;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+sp=(struct frame *)cast[FRAME_PTR_INDEX];</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; while (
+sp &amp;&amp; sp-&gt;fr_savpc ) {</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Dl_info info;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+const char *function,*library;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+unsigned long offset;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if (dladdr((void*)sp-&gt;fr_savpc,&amp;info)) {</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+function=info.dli_sname;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+library=info.dli_fname;}</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else {</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+function=library="?";}</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+offset=sp-&gt;fr_savpc-(unsigned long)info.dli_saddr;</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fprintf(stderr,"library=%s,function=%s,offset=%lu\n",</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+library,function,offset);</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+sp=sp-&gt;fr_savfp;}</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">caddr_t mmap(void *addr,</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+size_t len,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int prot,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int flags,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+int fildes,</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+off_t off)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">{ </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; static
+caddr_t(*f)(void*,size_t,int,int,int,off_t) = NULL; </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; caddr_t
+result;</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; if (!f) </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; { </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+void *so =
+dlopen("/usr/lib/libc.so.1",RTLD_LAZY|RTLD_GLOBAL|RTLD_NOLOAD); </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+f = (caddr_t(*)(void*,size_t,int,int,int,off_t))dlsym(so,"mmap"); </span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+dlclose(so); </span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; } </span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+result=f(addr,len,prot,flags,fildes,off);</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+fprintf(stderr,"mmap --
+result=%p,addr=%p,len=%ld,prot=%d,flags=%d,off=%ld\n",</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+result,addr,(long)len,prot,flags,(long)off);</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+dumpStack();</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+fprintf(stderr,"-----------------\n");</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; return
+result;</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">int munmap(void *addr,</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+size_t len)</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">{</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; static
+int(*f)(void*,size_t);</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; int
+result;</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; if (!f)</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; {</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+void *so =
+dlopen("/usr/lib/libc.so.1",RTLD_LAZY|RTLD_GLOBAL|RTLD_NOLOAD);</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+f = (int(*)(void*,size_t))dlsym(so,"munmap");</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+dlclose(so);</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; }</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;
+result=f(addr,len);</span><br style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;
+fprintf(stderr,"munmap -- result=%d,addr=%p,len=%ld\n",</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+result,addr,len);</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+dumpStack();</span><br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;
+fprintf(stderr,"-----------------\n");</span><br
+ style="font-family: monospace;">
+      <br style="font-family: monospace;">
+      <span style="font-family: monospace;">&nbsp;&nbsp; return result;</span><br
+ style="font-family: monospace;">
+      <span style="font-family: monospace;">}</span><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: December 31</font><sup><font
+ size="-2">st</font></sup><font size="-1">,
+2003 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

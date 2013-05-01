@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html><meta content="text/html; charset=UTF-8" http-equiv="content-type" /><head><link href="../css/common.css" type="text/css" rel="stylesheet" /><title>Excel</title><script src="../css/common.js" type="text/javascript">{}</script></head><body><div id="header"><h1>Excel</h1></div><div id="body">
+
+<b><u>User interface</u></b><ul><li>using <span class="key">Shift</span> key on menubars/toolbars<ul><li>when holding down the <span class="key">Shift</span> key to click on the <span class="codemenu">File</span> menu<br />
+      <span class="codemenu">Close</span> is replaced by <span class="codemenu">Close All</span>
+    </li><li>when holding down the <span class="key">Shift</span> key to click on the <span class="codemenu">Edit</span> menu<br />
+      <span class="codemenu">Copy</span> is replaced by <span class="codemenu">Copy Picture</span><br />
+      <span class="codemenu">Paste</span> is replaced by <span class="codemenu">Paste Picture</span><br />
+      <span class="codemenu">Paste Special</span> is replaced by <span class="codemenu">Paste Picture Link</span>
+    </li><li>when holding down the <span class="key">Shift</span> key to click on the standard toolbar<br />
+      <span class="codemenu">Open</span> is replaced by <span class="codemenu">Save</span><br />
+      <span class="codemenu">Save</span> is replaced by <span class="codemenu">Open</span>
+    </li></ul></li></ul>
+
+<b><u>File</u></b><ul><li>Excel opens correctly and with no comment (up tro 2003, 2007 displays a warning message) a HTML file which has the .xls extension.</li><li>Format of a tab separated text file (extension <code>.txt</code>)<ul><li>when there is a newline in a cell:<ul><li>the field value shall be between <code>"</code>...<code>"</code></li><li>the newline shall be written as <code>\n</code></li><li>the <code>"</code> should be doubled</li></ul></li><li>the columns are separated by <code>\t</code></li><li>the lines are separated by <code>\r\n</code></li></ul></li><li>generated CSV files<ul><li>The generated files are not UTF8.</li><li>The separator is defined by the regional setting (<span class="codemenu">Start<span class="codemenu"> &#x25BA; Control Panel<span class="codemenu"> &#x25BA; Regional and Language Options<span class="codemenu"> &#x25BA; Regional Options<span class="codemenu"> &#x25BA; Customize<span class="codemenu"> &#x25BA; List Separator</span></span></span></span></span></span>).</li></ul></li></ul>
+
+<b><u>Sheet</u></b><ul><li>A sheet name can have up to 32 characters.<br />
+The characters <code>\</code>, <code>/</code>, <code>:</code>, <code>*</code>, <code>[</code>, <code>]</code>, and <code>?</code> are illegal.<br />
+The character <code>'</code> is illegal as the first or last characters.</li><li>To hide a sheet, perform a right click on the sheet name and select <span class="codemenu">Hide</span>.</li><li>To unhide a sheet, perform a right click on a sheet name and select <span class="codemenu">Unhide...</span>.</li></ul>
+
+<b><u>Display</u></b><ul><li>(Excel 2002, French) switch between results and formulas display<br />
+<span class="codemenu">Outils<span class="codemenu"> &#x25BA; Audit de formules<span class="codemenu"> &#x25BA; Mode Audit de formules</span></span></span><br />
+or <span class="modifierkey">Ctrl</span><span class="key">"</span></li><li>Excel use the Windows settings to display the date in a given language<br />
+<span class="codemenu">Start<span class="codemenu"> &#x25BA; Settings<span class="codemenu"> &#x25BA; Control Panel<span class="codemenu"> &#x25BA; Regional Options<span class="codemenu"> &#x25BA; General<span class="codemenu"> &#x25BA; Your locale</span></span></span></span></span></span><br />
+It seems that, starting at Excel 2002, it is possible to change the locale in the <span class="codemenu">date format</span> dialog.</li><li>(French) display a date with ISO 8160 format<br />
+<span class="codemenu">Format<span class="codemenu"> &#x25BA; Cellule...<span class="codemenu"> &#x25BA; Nombre<span class="codemenu"> &#x25BA; Personnalisée</span></span></span></span> and type <code>aaaa-mm-jj</code>.</li><li>(French) It is possible to have datetime format such as <code>aaaa-mm-jj hh:mm:ss</code>. In this case <code>mm</code> stands for the month, except if the previous element in the format is <code>hh</code> or <code>ss</code> in which case <code>mm</code> stands for the minutes.</li></ul>
+
+<b><u>Formula examples</u></b><ul><li>Excel accepts <code>@</code> before the function names: it automatically deletes it.<br />
+The first formula character can be <code>@</code> (followed by a function name). In this case, Execl will replace it by <code>=</code></li></ul>
+
+<b><u>Formula examples</u></b><ul><li>take care when comparing integers<br />
+<code>=SI(K2="4";"3.3";"3.X")</code> does not work<br />
+use <code>=SI(K2=4;"3.3";"3.X")</code> instead.</li><li>when adding a column where some value are unvalued (flagged as "N"), to get a "sum/number" of valued cells string, use:<br />
+<table class="file"><tr><td><code>CONCATENATE(TEXT(SUM(B2:B34);"00");"/";TEXT(COUNTIF(B2:B34;"&lt;&gt;N");"00"))</code></td></tr></table></li><li>translate a "n.m" format into a float value (e.g. for sorting)<br />
+<table class="file"><tr><td><code>=GAUCHE(A1;TROUVE(".";A1)-1)+STXT(A1;TROUVE(".";A1)+1;3)/1000</code></td></tr></table></li><li>perform a lookup up of the value of A1 on the sheet Feuil3 (indexes in column A, values in column B)<br />
+<table class="file"><tr><td><code>=SI(ESTNA(RECHERCHEV(A1;Feuil3!A:B;2;FAUX));"not found";RECHERCHEV(A1;Feuil3!A:B;2;FAUX))</code></td></tr></table></li></ul>
+
+<b><u>Matrix computation</u></b><ul><li>Excel supports matrix computation, but formulas must be entered with <span class="modifierkey">CTRL</span><span class="modifierkey">Shift</span><span class="key">Enter</span></li><li><table class="file"><tr><td><code>=SUM(D2:O3^2)</code></td></tr></table> compute the sum of the square of the matrix elements</li><li>select an area which has the same size as <code>D2:O3</code><br />
+type the formula <code>=SUM(D2:O3*3)</code><br />
+press <span class="modifierkey">CTRL</span><span class="modifierkey">Shift</span><span class="key">Enter</span><br />
+the selected area is filled with the values of <code>D2:O3</code> multiplied by 3</li><li><code>MTRANSPOSE</code>: transpose a matrix</li><li><code>MDETER</code>: compute the determinant of a matrix</li><li><code>MINVERSE</code>: inverse a matrix</li><li><code>MMULT</code>: multiply two matrices</li></ul>
+
+<b><u>AutoFilter:</u></b><ul><li>A question mark (<code>?</code>) matches any single character.<br />
+An asterisk (<code>*</code>) matches any sequence of characters.<br />
+To find an actual question mark or asterisk, use a tilde (<code>~</code>) preceding the character.</li></ul>
+
+<b><u>Edit</u></b><ul><li>take care to the fact that, when several sheets are selected, a change (edition, paste...) on one cell of the currently displayed sheet is done in fact on all the sheets.</li><li>if several cells are selected, when editing one of them and finishing the edition with <span class="modifierkey">Ctrl</span><span class="key">Return</span>, Excel will update the formula of all the selected cells</li><li>creation of a multi-value field in Excel (this does not work when pasting a cell, the value is not checked)<ul><li>enter values in some cells (e.g. "alpha", "beta", "gamma", and "delta" in L1:L4)</li><li>select the target cell</li><li><span class="codemenu">Données<span class="codemenu"> &#x25BA; Validation...<span class="codemenu"> &#x25BA; Options</span></span></span></li><li>choose <span class="codemenu">Liste</span> in <span class="codemenu">Autoriser</span> dropdown list</li><li>choose cells containing authorised values in <span class="codemenu">Source</span> field</li><li>click OK</li></ul></li></ul>
+
+<b><u>Find/Replace</u></b><ul><li>to find/replace a string in all sheets, right click on the sheet name (i.e. the sheet tab), select <span class="codemenu">Select all sheets</span>, then do the usual <span class="codemenu">Edit<span class="codemenu"> &#x25BA; Find...</span></span></li></ul>
+
+<b><u>References</u></b><ul><li>Columns are identified by letters (<code>A</code> through <code>IV</code>, for a total of 256 columns). Rows are identified by numbers (1 through 65536).<br />
+A cell is identified by the column letter followed by the row number, e.g. <code>B4</code>.<br />
+A rectangular region can be defined by reference of the upper-left corner cell, a colon, and the reference the lower-right corner cell, e.g. <code>B4:E7</code>.<br />
+Other examples:<br />
+All cells in row 5: <code>5:5</code><br />
+All cells in rows 5 through 10: <code>5:10</code><br />
+All cells in column H: <code>H:H</code><br />
+All cells in columns H through J: <code>H:J</code></li><li>If a dollar sign precedes the letter and/or number, such as <code>$A$1</code>, the column and/or row reference is absolute instead of relative.</li><li>It is possible to use labels of columns and rows on a worksheet to refer to the cells within those columns and rows.</li><li>A 3-D reference includes the cell or range reference, preceded by a range of worksheet names. Excel uses any worksheets stored between the starting and ending names of the reference (e.g.<code>=SUM(Sheet2:Sheet13!B5)</code>).</li><li>The reference can also use the R1C1 style: <code>R</code> followed by a row number and a <code>C</code> followed by a column number<br />
+<code>[</code>...<code>]</code> can be used to give relative references.<br />
+Some examples:<br />
+<code>R[-2]C</code> A relative reference to the cell two rows up and in the same column<br />
+<code>R[2]C[2]</code> A relative reference to the cell two rows down and two columns to the right<br />
+<code>R2C2</code> An absolute reference to the cell in the second row and in the second column<br />
+<code>R[-1]</code> A relative reference to the entire row above the active cell<br />
+<code>R</code> An absolute reference to the current row</li><li>dynamical references<br />
+use <code>INDIRECT</code>.<ul><li>Use <code>INDIRECT</code><br />
+For example, we look up the value of the cell <code>B3</code> in a matrix whose name is defined in <code>B2</code>:
+<table class="file"><tr><td><code>=RECHERCHEV(B3,INDIRECT(B$2),2,FAUX)</code></td></tr></table></li><li>Another solution is to build a string containing the reference.<br />
+For example, the second row contains the first data row of the column, the third row contains the last data row of the column, the sum of the data can be expressed as:
+<table class="file"><tr><td><code>=SUM(CONCATENATE("R";B$2;"C";COLUMN();":R";B$3;"C";COLUMN()))</code></td></tr></table>
+But this will not work with Excel in other languages, see below.
+</li></ul></li><li>
+The R1C1 notation depends of the localization:
+<table class="table"><tr><td>R1C1</td><td>English</td></tr><tr><td>L1C1</td><td>French</td></tr><tr><td>R1K1</td><td>Dutch</td></tr><tr><td>F1C1</td><td>Spanish</td></tr><tr><td>Z1S1</td><td>German</td></tr></table>
+to get the row letter, you can use the expression
+<table class="file"><tr><td><code>MID(ADDRESS(1;1;1FALSE);1;1)</code></td></tr></table>
+to get the column letter, you can use the expression
+<table class="file"><tr><td><code>MID(ADDRESS(1;1;1FALSE);3;1)</code></td></tr></table>
+</li><li>
+it is possible to link toward a cell in another Excel document<br />
+if the other document is not open, the syntax is
+<table class="file"><tr><td><code>=RECHERCHEV(A2;'D:\Docs\daily\[bug_tracking.xls]summary'!A:Z;7;FAUX)</code></td></tr></table>
+if the other document is open, the syntax is
+<table class="file"><tr><td><code>=RECHERCHEV(A2;[bug_tracking.xls]summary!A:Z;7;FAUX)</code></td></tr></table>
+</li></ul>
+<br />
+
+<b><u>Charts</u></b><ul><li>Create a temporal diagram<br />
+use the menu <span class="codemenu">Insert<span class="codemenu"> &#x25BA; Chart...</span></span><br />
+at the <span class="codemenu">Source Data</span> step of the Chart wizard:
+<ul><li>on the <span class="codemenu">Data Range</span> tab, select the values in the <span class="codemenu">Data range</span> field</li><li>on the <span class="codemenu">Series</span> tab, select the dates in the <span class="codemenu">Category (X) axis labels</span> field</li></ul></li></ul>
+
+<b><u>Drawing</u></b><ul><li>It is possible to define the text of a Text Box as a formula<br />
+<ul><li>select the text box</li><li>type the formula in the formula bar</li></ul></li></ul>
+
+<b><u>Pivot tables</u></b><ul><li>
+create a Pivot Table to get the number of elements of a class given two columns: ID of the element, class of the element.<ul><li>put a title to the two columns if they do not have one</li><li><span class="codemenu">Data<span class="codemenu"> &#x25BA; PivotTable and PivotChart report...</span></span></li><li>select <span class="codemenu">Microsoft Excel list or database</span> and <span class="codemenu">PivotTable</span>, and click <span class="codemenu">Next</span></li><li>select the two columns for the range and click <span class="codemenu">Next</span></li><li>select <span class="codemenu">Existing worksheet</span> and select a location on the sheet</li><li>click <span class="codemenu">Layout...</span>, drag 'n drop the class column title on <span class="codemenu">ROW</span>, drag 'n drop the ID column title on <span class="codemenu">DATA</span>, and click <span class="codemenu">OK</span></li><li>click <span class="codemenu">Finish</span></li><li>double click on the field setting (the cell above the class column title in the pivot table) and select <span class="codemenu">Count</span>, and click <span class="codemenu">OK</span></li></ul></li><li>Pivot table to have the number of elements per element type and per author. The data should have two columns (author and element type) and a line per element.<ul><li>drag 'n drop the author on <span class="codemenu">ROW</span></li><li>drag 'n drop the type on <span class="codemenu">COLUMN</span></li><li>drag 'n drop the type on <span class="codemenu">DATA</span></li><li>double click on the type in <span class="codemenu">DATA</span> and select number</li></ul></li><li>Pivot table to have the sum of time per author. The data should have two columns (author and time) and a line per task.<ul><li>drag 'n drop the author on <span class="codemenu">ROW</span></li><li>drag 'n drop the time on <span class="codemenu">DATA</span></li><li>double click on the time in <span class="codemenu">DATA</span> and select sum</li></ul></li></ul>
+
+<b><u>Regression</u></b><ul><li>
+one-dimensional linear regression:<br />
+<code>INTERCEPT(known_y's,known_x's)</code> is equal to <code>=INDEX(LINEST(known_y's,known_x's),2)</code><br />
+<code>SLOPE(known_y's,known_x's)</code> is equal to <code>=INDEX(LINEST(known_y's,known_x's),1)</code><br />
+except when data is undetermined and collinear
+</li><li>
+multidimensional linear regression:<br />
+let's say that we have 51 measurements depending of 9 parameters<br />
+the first column contains the measurements<br />
+the next columns contains the parameters<br />
+the constant is <code>INDEX(DROITEREG(A1:A51;B1:J51);10)</code><br />
+the coefficient for the parameter in column B is <code>INDEX(DROITEREG(A1:A51;B1:J51);9)</code><br />
+...<br />
+the coefficient for the parameter in column J is <code>INDEX(DROITEREG(A1:A51;B1:J51);1)</code>
+</li></ul>
+
+</div><hr id="footerseparator" /><div id="footer"><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="left">See also: <a href="../links/office.html#excel" title="language: en | format: HTML " target="_self">links</a></td><td align="right"><a href="javascript:do_search()">search</a></td></tr><tr><td align="left">Pages above: <a href="../perso/main.html" target="_self">homepage</a>&gt;notes&gt;Microsoft Office</td><td align="right"><a href="../hack/map.html" target="_self">map</a></td></tr><tr><td align="left">Pages below: <a href="../notes/excelsc.html" target="_self">Shortcuts</a> | <a href="../notes/excelfct.html" target="_self">Functions</a> | <a href="../notes/excelvb.html" target="_self">Visual Basic</a> | <a href="../notes/excelsample.html" target="_self">Macro samples</a></td><td align="right"><a href="javascript:do_email()" target="_self">contact me</a></td></tr><tr><td align="left">Last update: February 6<sup>th</sup>, 2013</td><td align="right"><a href="javascript:do_disclaimer()">disclaimer</a></td></tr><tr><td align="left">Version: <a href="../notes/excel.xml">XML</a></td><td align="right"><a href="javascript:do_help()">help</a></td></tr></table></div></body></html>

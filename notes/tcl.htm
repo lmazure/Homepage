@@ -1,0 +1,471 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Tcl</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><u>lists</u></b>
+<ul>
+  <li>return element <tt>n</tt> of list <tt>l</tt></li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/lindex.htm">lindex</a>
+$l $n</tt> <br>
+&nbsp; <li>add an element at the end of list <tt>l</tt></li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/lappend.htm">lappend</a>
+$l "foobar"</tt>
+</ul>
+<b><u>strings</u></b>
+<ul>
+  <li>two strings comparison</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/string.htm">string</a>
+compare "foo" "bar"</tt> <br>
+&nbsp; <li>extract substrings separated by a given character</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+size "123x5678"</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+cut [ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/string.htm">string</a>
+first "x" $size ]</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+width [ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/string.htm">string</a>
+range $size 0 [ <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/expr.htm">expr</a>
+$cut - 1 ] ]</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+height [ <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/string.htm">string</a>
+range $size [ <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/expr.htm">expr</a>
+$cut + 1 ] [ <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/string.htm">string</a>
+length $size ] ]</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+"width=$width height=$height"</tt>
+</ul>
+<b><u>input/ouput</u></b>
+<ul>
+  <li>print on <tt>stdout</tt></li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+[ expr 1 + 1 ]</tt><br>
+&nbsp; <li>I/O</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+stdout "Enter the host label:"</tt><br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+label [gets stdin]</tt><br>
+&nbsp; <li>use -nonewline to not add a new line at the end of the
+output<br>
+    <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm"
+ style="font-family: monospace;">puts</a><span
+ style="font-family: monospace;"> -nonewline stdout "#&gt; "</span><br
+ style="font-family: monospace;">
+    <br>
+  </li>
+  <li>print in a file</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+a [ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/open.htm">open</a>
+/tmp/tutu w ]</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+$a [ set_layout 1 ]</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/close.htm">close</a>
+$a<br>
+  </tt>
+</ul>
+<ul>
+  <li>flush a stream<br>
+    <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/flush.htm">flush</a>
+stdout<br>
+  </li>
+</ul>
+<ul>
+</ul>
+<b><u>procedures<br>
+</u></b>
+<ul>
+  <li>default value<br>
+    <span style="font-family: monospace;"><a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/proc.htm">proc</a>
+inc { value { increment
+1 } } {</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/expr.htm">expr</a>
+$value +
+$increment</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">}</span><br
+ style="font-family: monospace;">
+  </li>
+</ul>
+<div style="margin-left: 40px;"><span style="font-family: monospace;">inc
+42 3</span><br style="font-family: monospace;">
+<span style="font-family: monospace;">=&gt; 45</span><br
+ style="font-family: monospace;">
+<br style="font-family: monospace;">
+<span style="font-family: monospace;">inc 42</span><br
+ style="font-family: monospace;">
+<span style="font-family: monospace;">=&gt; 43 </span><br>
+<br>
+</div>
+<ul>
+  <li>if the last argument inthe argument list has a special name args,
+the procedure can be called with a varying number of arguments<br>
+    <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/proc.htm">proc</a>
+sum args {<br>
+&nbsp; <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+s 0<br>
+&nbsp; <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/foreach.htm">foreach</a>
+i $args {<br>
+&nbsp; &nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/incr.htm">incr</a> $s<br>
+&nbsp;&nbsp; }<br>
+&nbsp; <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/return.htm">return</a>
+%s<br>
+}<br>
+    <br>
+sum 1 2 3 4 5<br>
+=&gt; 15<br>
+    <br>
+sum<br>
+=&gt; 0 <br>
+    <br>
+  </li>
+  <li>if a script tries to invoke a command that does not exist, <span
+ style="font-family: monospace;">unknown</span> is called<br>
+it is possible to redefine <span style="font-family: monospace;">unknown</span>:<br>
+    <span style="font-family: monospace;"><a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/proc.htm">proc</a> <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/unknown.htm">unknown</a>
+{ c args} {</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+stderr "DOOM_TEST_EDDOR: unknown command call: \"$c $args\""</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">}</span></li>
+</ul>
+<b><u>structure control</u></b>
+<ul>
+  <li>test</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/if.htm">if</a>
+{$Protocol1 == "1"} { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Protocol1 6 }<br>
+  <br>
+  </tt><li>loop</li>
+  <tt>for { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+z 1 } { $z &lt; 10 } { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/incr.htm">incr</a>
+z 1 } {</tt> <br>
+  <tt>&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+$z</tt> <br>
+  <tt>}</tt> <br>
+&nbsp; <li>switch</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/switch.htm">switch</a>
+$Protocol1 {</tt><br>
+  <tt>&nbsp; 1 { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Protocol -4 }</tt><br>
+  <tt>&nbsp; 2 { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Protocol -3 }</tt><br>
+  <tt>&nbsp; 3 { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Protocol -1 }</tt><br>
+  <tt>&nbsp; 4 { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Protocol&nbsp; 1 }</tt><br>
+  <tt>&nbsp; 5 { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Protocol&nbsp; 2 }</tt><br>
+  <tt>&nbsp; 6 { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Protocol&nbsp; 3 }</tt><br>
+  <tt>&nbsp; 7 { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Protocol&nbsp; 4 }</tt><br>
+  <tt>}</tt>
+  <p><tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/switch.htm">switch</a>
+$Protocol1 {</tt><br>
+  <tt>&nbsp; 1|2|3|4|5 {</tt><br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+AppTitle ""</tt><br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Provider 2</tt><br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</tt><br>
+  <tt>&nbsp; 6|7&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {</tt><br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+AppTitle "AET"</tt><br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+Provider 4</tt><br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+}</tt><br>
+  <tt>}</tt><br>
+  </p>
+  <li>execute the <tt>foo</tt> file</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/source.htm">source</a>
+toto</tt>
+</ul>
+<p><br>
+<b><u>expressions</u></b>
+</p>
+<ul>
+  <li> <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+t [ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/expr.htm">expr</a>
+4 - $a ]</tt></li>
+&nbsp; <li>hexadecimal is supported</li>
+  <tt>#&gt; set mode 4195</tt> <br>
+  <tt>4195</tt> <br>
+  <tt>#&gt; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a> [ <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/expr.htm">expr</a>
+$mode == 0x1063 ]</tt> <br>
+  <tt>1</tt> <br>
+  <tt>#&gt; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a> [ <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/expr.htm">expr</a>
+$mode == 0x1062 ]</tt> <br>
+  <tt>0</tt>
+</ul>
+<p><br>
+<b><u>random</u></b>
+</p>
+<ul>
+  <li> <tt>#--- initialize the random routines ---</tt></li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/proc.htm">proc</a>
+random_init { seed } {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/global.htm">global</a>
+rand</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; #;## this ones come from Numerical Recipes in
+C</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; #;## first version (2^32)</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+rand(ia) 9301</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+rand(ic) 49297</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+rand(im) 233280</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; #;## second version (2^30)</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; #; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+rand(ia) 1366</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; #;<a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+rand(ic) 150889</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; #;<a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+rand(im) 714025</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+rand(seed) $seed</tt> <br>
+  <tt>}</tt>
+  <p><tt>#--- return a random float [0,1] ---</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/proc.htm">proc</a>
+random {} {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/global.htm">global</a>
+rand</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+rand(seed) [ <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/expr.htm">expr</a>
+($rand(seed)*$rand(ia) + $rand(ic)) % $rand(im) ]</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/return.htm">return</a>
+[ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/expr.htm">expr</a>
+$rand(seed)/double($rand(im)) ]</tt> <br>
+  <tt>}</tt> </p>
+  <p><tt>#--- return a random integer [0,range-1] ---</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/proc.htm">proc</a>
+random_range { range } {</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/expr.htm">expr</a>
+int([random]*$range)</tt> <br>
+  <tt>}<br>
+  </tt></p>
+  <li>a better algorithm<tt><br>
+proc random_init { seed } {<br>
+&nbsp;&nbsp; global rand<br>
+&nbsp;&nbsp; set rand(IM1)&nbsp; 2147483563<br>
+&nbsp;&nbsp; set rand(IM2)&nbsp; 2147483399<br>
+&nbsp;&nbsp; set rand(AM)&nbsp;&nbsp; [ expr 1. / $rand(IM1) ]<br>
+&nbsp;&nbsp; set rand(IMM1) [ expr $rand(IM1) - 1 ]<br>
+&nbsp;&nbsp; set rand(IA1)&nbsp; 40014<br>
+&nbsp;&nbsp; set rand(IA2)&nbsp; 40692<br>
+&nbsp;&nbsp; set rand(IQ1)&nbsp; 53668<br>
+&nbsp;&nbsp; set rand(IQ2)&nbsp; 52774<br>
+&nbsp;&nbsp; set rand(IR1)&nbsp; 12211<br>
+&nbsp;&nbsp; set rand(IR2)&nbsp; 3791<br>
+&nbsp;&nbsp; set rand(NTAB) 32<br>
+&nbsp;&nbsp; set rand(NDIV) [ expr 1 + $rand(IMM1)/$rand(NTAB) ]<br>
+&nbsp;&nbsp; set rand(EPS)&nbsp; 1.2e-7<br>
+&nbsp;&nbsp; set rand(RNMX) [ expr 1.0 - $rand(EPS) ]<br>
+&nbsp;&nbsp; set rand(idnum1) [ expr 1 + abs($seed) ]<br>
+&nbsp;&nbsp; set rand(idnum2) $rand(idnum1)<br>
+&nbsp;&nbsp; for { set j [ expr $rand(NTAB) + 7 ] } { $j &gt;= 0 } {
+incr j -1 } {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set k [ expr $rand(idnum1) /
+$rand(IQ1) ]<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; set rand(idnum1) [ expr $rand(IA1)
+* ( $rand(idnum1) - $k * $rand(IQ1) ) - $k * $rand(IR1) ]<br>
+&nbsp;&nbsp; if { $rand(idnum1) &lt; 0 } { incr rand(idnum1) $rand(IM1)
+}<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; if { $j &lt; $rand(NTAB) } { set
+rand(iv,$j) $rand(idnum1) }<br>
+&nbsp;&nbsp; }<br>
+&nbsp;&nbsp; set rand(iy) $rand(iv,0)<br>
+}<br>
+    <br>
+#--- return a random float [0.1] ---<br>
+proc random {} {<br>
+&nbsp;&nbsp; global rand<br>
+&nbsp;&nbsp; set k [ expr $rand(idnum1) / $rand(IQ1) ]<br>
+&nbsp;&nbsp; set rand(idnum1) [ expr $rand(IA1) * ( $rand(idnum1) - $k
+* $rand(IQ1) ) - $k * $rand(IR1) ]<br>
+&nbsp;&nbsp; if { $rand(idnum1) &lt; 0 } { incr rand(idnum1) $rand(IM1)
+}<br>
+&nbsp;&nbsp; set k [ expr $rand(idnum2) / $rand(IQ2) ]<br>
+&nbsp;&nbsp; set rand(idnum2) [ expr $rand(IA2) * ( $rand(idnum2) - $k
+* $rand(IQ2) ) - $k * $rand(IR2) ]<br>
+&nbsp;&nbsp; if { $rand(idnum2) &lt; 0 } { incr rand(idnum2) $rand(IM2)
+}<br>
+&nbsp;&nbsp; set j [ expr $rand(iy) / $rand(NDIV) ]<br>
+&nbsp;&nbsp; set rand(iy) [ expr $rand(iv,$j) - $rand(idnum2) ]<br>
+&nbsp;&nbsp; set rand(iv,$j) $rand(idnum1)<br>
+&nbsp;&nbsp; if { $rand(iy) &lt; 1 } { incr rand(iy) $rand(IMM1) }<br>
+&nbsp;&nbsp; set temp [ expr $rand(AM) * $rand(iy) ]<br>
+&nbsp;&nbsp; if { $temp &gt; $rand(RNMX) } { return $rand(RNMX);}<br>
+&nbsp;&nbsp; return $temp<br>
+}<br>
+    </tt></li>
+</ul>
+<b><u>errror handling<br>
+</u></b>
+<ul>
+  <li><code>&nbsp; if { [ <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/catch.htm">catch</a>
+{ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+log [ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/open.htm">open</a>
+$logfile {WRONLY CREAT} ] } fid ] } {<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+stderr "cannot open log file $logfile ($fid)";<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/flush.htm">flush</a>
+stderr;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/return.htm">return</a>;<br>
+&nbsp;&nbsp; } </code><br>
+  </li>
+</ul>
+<b><u>miscellaneous</u></b>
+<ul>
+  <li>loop to get TCL command from the user <br>
+    <span style="font-family: monospace;"><a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/while.htm">while</a>
+{1} {</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+-nonewline stdout "#&gt; "</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/flush.htm">flush</a>
+stdout</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a> line
+[ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/gets.htm">gets</a>
+stdin ]</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/eval.htm">eval</a>
+$line</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">}</span><br>
+    <br>
+  </li>
+  <li>info exists tests if a variable exists<br>
+    <tt>&gt; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+[ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/info.htm">info</a>
+exists env(HOME) ]</tt></li>
+  <tt>1</tt> <br>
+  <tt>&gt; <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+[ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/info.htm">info</a>
+exists env(XYZ) ]</tt> <br>
+  <tt>0</tt>
+  <p>get an environment variable <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+$env(HOME)</tt> <br>
+dump all the environment variables <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/foreach.htm">foreach</a>
+i [ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/array.htm">array</a>
+names env ] { <a
+ href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+$i=$env($i) }</tt> <br>
+&nbsp; </p>
+  <li>display a description of the last met error</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+$errorInfo</tt> <br>
+&nbsp; <li>return the list of variables</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/info.htm">info</a>
+vars *</tt> <br>
+&nbsp; <li>return the list of commands beggining by <tt>get_</tt></li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/info.htm">info</a>
+commands get_*</tt> <br>
+&nbsp; <li>date/time</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+d [ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/clock.htm">clock</a>
+format [ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/clock.htm">clock</a>
+seconds ] ]</tt> <br>
+instead of the stupid <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+d [ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/exec.htm">exec</a>
+date ]</tt> <br>
+&nbsp; <li>execute 123 times foobar and return the average time per
+execution (as
+an explanatory string)</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/time.htm">time</a>
+{ foobar 0 0 10 20 } 123</tt> <br>
+&nbsp; <li>modify the float precision</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/global.htm">global</a>
+tcl_precision</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/set.htm">set</a>
+tcl_precision 9</tt> <br>
+&nbsp; <li>retrieve the process name (Solaris 2.5.1)</li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/puts.htm">puts</a>
+[ <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/exec.htm">exec</a>
+ps -edf | awk "\$2 == [pid]" | awk "\{ print \$8 \" ]</tt> <br>
+&nbsp; <li>retrieve a variable from the calling routine<br>
+    <a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/upvar.htm">upvar</a>
+foobar foobar<br>
+    <br>
+  </li>
+  <li>inactivate temporaly the foo command <tt>foo</tt></li>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/rename.htm">rename</a>
+foo foo_keep</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/proc.htm">proc</a>
+foo { args } {}</tt> <br>
+  <tt>...</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/rename.htm">rename</a>
+foo ""</tt> <br>
+  <tt><a href="http://dev.scriptics.com/man/tcl8.4/TclCmd/rename.htm">rename</a>
+foo_keep foo</tt>
+</ul>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: February 4</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

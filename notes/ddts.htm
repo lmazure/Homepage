@@ -1,0 +1,588 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>ddts</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+<b><u>queries:</u></b>
+<ul>
+  <li>bugval vs ddtssql:<br>
+bugval seems to open the file <span style="font-family: monospace;">~ddts/allbugs/74/EURge18174</span>
+and to parse
+it and to return the values according to certain field tag matching
+rules (case independent, "-" and "_" are matching...).<br>
+ddtssql performs a request to the datbase.<br>
+Some fields (e.g. <span style="font-family: monospace;">SRE-Review</span>)
+are not stored in the database, they seem to be only in the SPR text
+file, so ddtssql cannot be used to get them, bugval must be used
+instead.<br>
+Some fields (e.g. <span style="font-family: monospace;">Version</span>)
+are longer in the SPR text file than in the database, so ddtssql will
+return a truncated value. But bugval will do the same except if a <span
+ style="font-family: monospace;">%20s</span> format is given (i.e. the <span
+ style="font-family: monospace;">-s</span> option must be used to force
+a longer returned value).<br>
+    <br>
+  </li>
+  <li>get the headline of a SPR</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+-i XYZab12345 Headline</tt> <br>
+or <br>
+  <tt>#&gt; echo "select headline from defects where identifier =
+'XYZab12345';"
+| <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a>
+-noheader -silent</tt> <br>
+&nbsp; <li>get the SRE flag of a SPR</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+-i XYZab12345 sre_review</tt> <br>
+&nbsp; <li>perform some filtered queries</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p AiM_pp_1.0 -NAORV Headline has z</tt> <br>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p AiM_pp_1.0 -NAORV submitted_on == 010212</tt> <br>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p AiM_pp_1.0 -NAORV submitted_on \&gt;= 010101</tt> <br>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p AiM_pp_1.0 -NAORV status == V</tt> <br>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p AW4.1 -p AiM_pp_1.0 Project == AW4.1 \|\| submitted_on \&gt;= 010101
+\|\|
+status != V</tt> <br>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p AW4.1 -p AiM_pp_1.0 "engineer == toto &amp;&amp; ( milestone ==
+ME-HIGH
+|| milestone == ME-MIDDLE || milestone == ASAP ) "</tt> <br>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p AWSoft-ev "enclosure_text has filt \&amp;\&amp; enclosure_text has
+stat"
+| <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+Identifier Headline</tt> <br>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p AWSoft-ev "headline has filt \&amp;\&amp; headline has stat" | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+Identifier Headline</tt> <br>
+  <tt>#&gt; echo "select identifier from defects where new_on &gt;=
+'11/24/2001
+00:00:00' ;" | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a><br>
+  <br>
+  </tt><li>DDTS is forgetting some SPRs, use only simple requests! <br>
+    <span style="font-family: monospace;">#&gt; </span><tt><a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a></tt><span style="font-family: monospace;">
+-p AW4.2 -p AiM_pp_1.0 "( status == A || status == O ) &amp;&amp;
+enclosure_name == @track"</span> <br>
+sometimes forgets some SPRs, use instead<br>
+    <span style="font-family: monospace;">#&gt; echo "select identifier
+from enclosures where name='@track';" | </span><tt><a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a></tt><span style="font-family: monospace;">
+-noheader -silent | </span><tt><a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a></tt><span style="font-family: monospace;">
+Identifier Status | egrep ' A$| O$' | awk '{print $1}' </span></li>
+</ul>
+<b><u>loading SPRs in Excel:<br>
+</u></b>
+<ul>
+  <li>dump the SPRs with<br>
+    <span style="font-family: monospace;">findbug -p AW4.3 | bugval -s
+"%10s%80s%20s%2s\n" identifier headline version &gt; ~/spr.txt</span><br>
+  </li>
+</ul>
+<ul>
+  <li>load the SPRs with the following Excel VB command<br>
+    <span style="font-family: monospace;">Workbooks.OpenText
+Filename:="H:\spr.txt", Origin:=xlWindows, StartRow:=1,
+DataType:=xlFixedWidth, FieldInfo:=Array(Array(0, 2), Array(10, 2),
+Array(90, 2), Array(110, 2))</span><br>
+  </li>
+</ul>
+<b><u><br>
+fields:</u></b>
+<ul>
+  <li>change a field value</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/batchbug.htm"
+ target="_blank">batchbug</a>
+-i XYZab12345 ProcModule Database</tt>
+</ul>
+<b><u>enclosures:</u></b>
+<ul>
+  <li>get the list of enclosures of a SPR</li>
+  <tt><a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/dumpbug.htm"
+ target="_blank">dumpbug</a>
+-R XYZab12345 | grep 'Related-file::' | sed 's/.*:://'</tt> <br>
+&nbsp; <li>get the list of SPR with a <tt>quux</tt> enclosure</li>
+  <tt>#&gt; echo "select enclosures.identifier from enclosures where
+enclosures.name
+= 'quux';" | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a>
+-noheader -silent</tt> <br>
+&nbsp; <li>find the SPRs which do not have a <tt>@flag</tt> enclosure</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>#!/bin/sh</tt>
+        <p><tt>PATH=${PATH}:/ddts/bin</tt> <br>
+        <tt>export PATH</tt> </p>
+        <p><tt>echo "select defects.identifier, enclosures.name from
+defects, enclosures
+where ( defects.project = 'AW4.1' or defects.project = 'AiM_pp_1.0' )
+and
+( defects.status = 'N' or defects.status = 'A' or defects.status = 'O'
+or defects.status = 'R' ) and defects.submitted_on &gt;= '010101' and
+defects.identifier=enclosures.identifier;"
+| <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a>
+-n -s | sed 's/ /&szlig;/' | awk -F&szlig; '{ enclosure[$1] =
+enclosure[$1]
+"/" $2 }\</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; END { for (x in
+enclosure)
+print x,enclosure[x] }' | fgrep -v "@flag" | sed 's/ .*//'</tt></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+&nbsp; <li>get the lists of SPR in bucket <tt>foobar</tt> with a <tt>quux</tt>
+enclosure
+containing a given string</li>
+  <tt>#&gt; echo "select defects.identifier, defects.headline from
+defects,
+enclosures where defects.project = 'foobar' and
+defects.identifier=enclosures.identifier
+and enclosures.name='quux' and enclosures.text like '%DATAEXPORT%';" | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a>
+-n -s</tt> <br>
+&nbsp; <li>get the content of the <tt>quux</tt> enclosures</li>
+create the file <tt>/tmp/dumpquux</tt> with the following content:
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>Identifier:&nbsp; "$$\n"</tt> <br>
+        <tt>Related-file:&nbsp;&nbsp;&nbsp; if equals "quux"</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+putfile</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fi</tt></td>
+      </tr>
+    </tbody>
+  </table>
+then use the command: <br>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-NAO -p merlot | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/dumpbug.htm"
+ target="_blank">dumpbug</a>
+-t /tmp/dumpquux</tt> <br>
+&nbsp; <li>get the content of the <tt>quux</tt> enclosure for a SPR
+(if the
+enclosure
+text is longer than 132 characters, execute <tt>format %s</tt> before
+the
+request)</li>
+  <tt>#&gt; echo "select enclosures.text from enclosures where
+identifier
+= 'XYZab12345' and enclosures.name = 'quux';" | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtssql.htm"
+ target="_blank">ddtssql</a>
+-noheader -silent</tt> <br>
+&nbsp; <li>add an enclosure<br>
+#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/batchbug.htm"
+ target="_blank">batchbug</a>
+-i BUCge12345 -e my_enclosure.txt "the name of my enclosure" <br>
+    <br>
+  </li>
+  <li>retrieve the flags attached to the SPRs (send this in <tt>sort</tt>)</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>#!/bin/csh</tt>
+        <p><tt>setenv PATH ~ddts/bin:$PATH</tt> </p>
+        <p><tt>cat &gt; /tmp/template$$ &lt;&lt; _EOF_</tt> <br>
+        <tt>Related-file:&nbsp;&nbsp;&nbsp; if equals "@flag"</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+putfile</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fi</tt> <br>
+        <tt>_EOF_</tt> </p>
+        <p><tt>foreach spr ( `<a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-NAO -p AW4.1` )</tt> <br>
+        <tt>&nbsp; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/dumpbug.htm"
+ target="_blank">dumpbug</a>
+-t /tmp/template$$ -f -n $spr | sed "s&szlig;.*&szlig;&amp; `<a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+-i $spr %s-%s Identifier Headline`&szlig;"</tt> <br>
+        <tt>end</tt> </p>
+        <p><tt>rm /tmp/template$$</tt></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<ul>
+  <li> to have a special close Enclosure for the project foobar, modify
+the file ~ddts/class/cspr/master.tmpl</li>
+  <table style="text-align: left;" bgcolor="#cccccc" border="0"
+ cellpadding="2" cellspacing="2">
+    <tbody>
+      <tr>
+        <td style="vertical-align: top;"><span
+ style="font-family: monospace;">Related-file:&nbsp;&nbsp; if equal
+$STATE$OPERATION Rp</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if not equals "$Action-taken" "nofix"</span><br
+ style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if uniquetitle -q -f "Related-file" "Resolution.$Enclosure-count"</span><br
+ style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if match $Project foobar</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+editfile -i $~/class/$Class/resolve_fb.encl "Resolution.$Resolv_nb"</span><br
+ style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+editfile -i $~/class/$Class/resolve.encl "Resolution.$Resolv_nb"</span><br
+ style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fi</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+inc Enclosure-count</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+set Last-enclosure "$$"</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+log Enclosure&nbsp; \"$$\" added by $Resolver-id</span><br
+ style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fi</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+else</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+if uniquetitle -q -f "Related-file" "nofix"</span><br
+ style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+editfile -i $~/class/$Class/nofix.encl "nofix"</span><br
+ style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+inc Enclosure-count</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+set Last-enclosure "$$"</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+log Enclosure&nbsp; \"$$\" added by $Resolver-id</span><br
+ style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fi</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fi</span><br style="font-family: monospace;">
+        <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+fi</span><br>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+the file resolve_fb.encl must be stored in ~ddts/class/cspr<br>
+</ul>
+<p><b><u>graphs:</u></b>
+</p>
+<ul>
+  <li>create the state graphs of the project:</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p AW4.1 -p AiM_pp_1.0 | \</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+-s "%s %s N: %s A: %s O: %s R: %s V: %s P: %s \n" Status Severity
+New-on
+Assigned-on Opened-on Resolved-on Verified-on Postponed-on | \</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/tallybug.htm"
+ target="_blank">tallybug</a>
+-NAORV -1234 -gST -b010101 -e`date +"%y%m%d"` | \</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/graphbug.htm"
+ target="_blank">graphbug</a>&nbsp;
+-o0,3.0 -s11.0x8.5</tt> <br>
+&nbsp; <li>create the graphs for all the engineers:</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>#!/bin/csh</tt>
+        <p><tt>setenv PATH ~ddts/bin:$PATH</tt> </p>
+        <p><tt>set project=AW4.1</tt> </p>
+        <p><tt>set engineer_list=`<a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-AOR -p $project | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+engineer | sort -u`</tt> <br>
+        <tt>set figure=6</tt> <br>
+        <tt>set page=0</tt> </p>
+        <p><tt>foreach engineer ( $engineer_list )</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; @ figure++</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; if ( $figure == 7 ) then</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @ page++</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; @ figure=1</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; endif</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; echo "-&gt;" $engineer</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/findbug.htm"
+ target="_blank">findbug</a>
+-p $project "engineer == $engineer" | \</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; bugval -s "%s %s N: %s A: %s O: %s R: %s
+V:
+%s P: %s \n" Status Severity New-on Assigned-on Opened-on Resolved-on
+Verified-on
+Postponed-on | \</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/tallybug.htm"
+ target="_blank">tallybug</a>
+-AORV&nbsp; -1234 -gST -b010601 -e`date +"%y%m%d"` "engineer ==
+$engineer"
+| \</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/graphbug.htm"
+ target="_blank">graphbug</a>
+-fL2x3 $figure of 6 &gt;&gt; /tmp/spr.page$page.ps</tt> <br>
+        <tt>&nbsp; end</tt></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<b><u>updates:</u></b>
+<ul>
+  <li>lock a SPR</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtslock.htm"
+ target="_blank">ddtslock</a>
+XYZab12345</tt> <br>
+&nbsp; <li>unlock a SPR</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtslock.htm"
+ target="_blank">ddtslock</a>
+-u XYZab12345</tt> <br>
+&nbsp; <li>test if an action is possible</li>
+for example, assignment: <br>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtsaccess.htm">ddtsaccess</a>
+-s A BUCge53218</tt> <br>
+  <tt>#&gt; echo $status</tt> <br>
+&nbsp; <li>assignment</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/batchbug.htm"
+ target="_blank">batchbug</a>
+-i XYZab12345 -t ~ddts/class/cspr/batchbug/A Engineer lmzr milestone M3
+ass_to_verify foobar</tt> <br>
+&nbsp; <li>resolve</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/batchbug.htm"
+ target="_blank">batchbug</a>
+-i XYZab12345 -t ~ddts/class/cspr/batchbug/R resolver_id lmzr
+action_taken
+nofix resolved_sw AW4.1_B1.1.07.A resolution 'no action taken'</tt> <br>
+&nbsp; <li>forward (this does not reset the SPR to the N status)</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/batchbug.htm"
+ target="_blank">batchbug</a>
+-i XYZab12345 -t ~ddts/class/software/batchbug/F New-class cspr
+Forwarded-to
+case</tt> <br>
+&nbsp; <li>two <tt><a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/batchbug.htm"
+ target="_blank">batchbug</a></tt>
+calls cannot occur freely one after the other one (the NFS mount will
+not
+be up to date after the first call and he second one will operate on
+obsolete
+data)</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>#!/bin/csh</tt>
+        <p><tt><a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtslock.htm"
+ target="_blank">ddtslock</a>
+XYZab12345</tt> <br>
+        <tt>if ($status) then</tt> <br>
+        <tt>&nbsp; echo 'failed to get lock on XYZab12345'</tt> <br>
+        <tt>&nbsp; exit 1</tt> <br>
+        <tt>endif</tt> <br>
+        <tt>echo XYZab12345 locked</tt> </p>
+        <p><tt>cat &lt;&lt; __EOF__ &gt; /tmp/__XYZab12345_text</tt> <br>
+        <tt>... text&nbsp; ...</tt> <br>
+        <tt>__EOF__</tt> </p>
+        <p><tt>set stamp=`bugval -i XYZab12345 timestamp`</tt> </p>
+        <p><tt><a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/batchbug.htm"
+ target="_blank">batchbug</a>
+-i XYZab12345&nbsp; -e /tmp/__XYZab12345_text 'AW4.1 evol SRB' -t
+~ddts/class/cspr/batchbug/A
+Engineer 'lmzr' milestone 'M1' ass_to_verify 'foobar'</tt> <br>
+        <tt>rm /tmp/__my__srb__XYZab12345_text</tt> <br>
+        <tt>if ($status) then</tt> <br>
+        <tt>&nbsp; echo 'failed to assign XYZab12345'</tt> <br>
+        <tt>&nbsp; exit 1</tt> <br>
+        <tt>endif</tt> <br>
+        <tt>echo XYZab12345 assigned</tt> </p>
+        <p><tt>cat &lt;&lt; __EOF__ &gt; /tmp/__XYZab12345_resol</tt> <br>
+        <tt>... text ...</tt> <br>
+        <tt>__EOF__</tt> </p>
+        <p><tt>echo -n 'waiting for XYZab12345 update'</tt> <br>
+        <tt>while ( $stamp == `<a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/bugval.htm"
+ target="_blank">bugval</a>
+-i XYZab12345 timestamp` )</tt> <br>
+        <tt>&nbsp; echo -n '.'</tt> <br>
+        <tt>&nbsp; sleep 1</tt> <br>
+        <tt>end</tt> <br>
+        <tt>echo 'done'</tt> </p>
+        <p><tt><a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/batchbug.htm"
+ target="_blank">batchbug</a>
+-i XYZab12345 -e /tmp/__XYZab12345_resol 'Resolution_no_fix' -t
+~ddts/class/cspr/batchbug/R
+resolver_id 'lmzr' action_taken 'nofix' resolved_sw 'AW4.1' resolution
+'no action taken'</tt> <br>
+        <tt>rm /tmp/__XYZab12345_resol</tt> <br>
+        <tt>if ($status) then</tt> <br>
+        <tt>&nbsp; echo 'failed to resolve XYZab12345'</tt> <br>
+        <tt>&nbsp; exit 1</tt> <br>
+        <tt>endif</tt> <br>
+        <tt>echo XYZab12345 resolved</tt> </p>
+        <p><tt><a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtslock.htm"
+ target="_blank">ddtslock</a>
+-u XYZab12345</tt> <br>
+        <tt>if ($status) then</tt> <br>
+        <tt>&nbsp; echo 'failed to release lock on XYZab12345'</tt> <br>
+        <tt>&nbsp; exit 1</tt> <br>
+        <tt>endif</tt> <br>
+        <tt>echo XYZab12345 unlocked</tt></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<b><u>miscellaneous:</u></b>
+<ul>
+  <li>return the home directory of ddts</li>
+  <tt>#&gt; <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/ddtshome.htm"
+ target="_blank">ddtshome</a></tt> <br>
+&nbsp; <li><tt>~ddts/projects/&lt;project&gt;/proj.control</tt>
+authorization rigths</li>
+  <tt>~ddts/projects/&lt;project&gt;/proj.notify</tt> notification mail
+list <br>
+  <tt>~ddts/class/&lt;class&gt;/oneofs/&lt;project&gt;/*</tt>
+definition of
+the available values of the SPR fields <br>
+&nbsp; <li>test if a user is known</li>
+  <tt>#&gt; echo $user | <a
+ href="http://clearddts.rational.com/wt/doc/man/man1html/goodusers.htm"
+ target="_blank">goodusers</a></tt> <br>
+  <tt>#&gt; echo $status</tt> <br>
+&nbsp; <li>GEMS' configuration:</li>
+DDTS fields (assignement by leader, resolution/verification by engineer
+) use Outlook alias <br>
+acces file uses Unix account <br>
+&nbsp; <li>someone has the rights to modify an enclosure if and only
+if he has the rights to assign the SPR<br>
+    <br>
+  </li>
+  <li>the fields and their sizes are listed in <tt>~ddts/dbms/ddts/schema_file</tt>
+and <tt>~ddts/etc/cache_conf</tt> (obsolete).</li>
+  <br>
+&nbsp; <li>follow the SPR being currently proccessed</li>
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td> <li><tt>#!/bin/csh</tt></li>
+        <br>
+        <tt>while (1)</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; echo ================================</tt>
+        <br>
+        <tt>&nbsp;&nbsp;&nbsp; ls -t ~ddts/spool/bugs.in</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; sleep 30</tt> <br>
+        <tt>&nbsp; end</tt></td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<b><u>mail:<br>
+</u></b>
+<ul>
+  <li>DDTS will create a mail_log enclosure containing a mail sent to
+ddts@frbucdts01medge.euro.med.ge.com which has a SPR ID in the title.
+But the attached document are stored in base 64!<br>
+  </li>
+</ul>
+<b><u>Web:</u></b>
+<ul>
+  <li>display bug ABCxy12345</li>
+  <tt>http://frbucdts01medge.euro.med.ge.com/ddts/ddts_main?LastForm=DumpBug&amp;bug_id=ABCxy12345<br>
+  <br>
+  </tt><li>in order to add an enclosure Foobar accessible from the Web:<br>
+- add the file <span style="font-family: monospace;">Foobar.encl</span>
+in <span style="font-family: monospace;">~ddts/class/cspr</span><br>
+- add the line "<span style="font-family: monospace;">Foobar</span>" in
+    <span style="font-family: monospace;">~ddts/class/cspr/encl_list</span><br>
+  </li>
+</ul>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: January 4</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2005 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

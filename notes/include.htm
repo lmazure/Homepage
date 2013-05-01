@@ -1,0 +1,126 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>How to get rid of unused includes?</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+</head>
+<body>
+How to get rid of the unuseful includes
+in a source file? In my team, this is a real nightmare, some guys are
+including
+everything they can think of... I would like to clean up this mess. But
+how to do it effectively?
+<p>This script will try to do the job:
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#!/bin/ksh</tt>
+      <p><tt>try=/tmp/include_try_$$.c</tt> </p>
+      <p><tt>comp="$1"</tt> <br>
+      <tt>shift</tt> <br>
+      <tt>while [[ $# &gt; 0 ]]</tt> <br>
+      <tt>&nbsp; do</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; first_letter=` echo $1 | sed
+'s/\(.\).*/\1/'
+`</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if [[ "$1" = "-o" ]]; then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # ignore the target file name</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shift 2</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; elif [[ "$first_letter" = "-" ]]; then</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # keep the flag</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comp="$comp $1"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shift</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; elif [[ "$first_letter" = "+" ]]; then</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # keep the flag</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; comp="$comp $1"</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shift</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; else</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; # ignore the source file name</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; source=$1</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; shift</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; fi</tt> <br>
+      <tt>&nbsp; done</tt> </p>
+      <p><tt>grep '^[&nbsp; ]*#[&nbsp; ]*include[&nbsp; ]*' $source |
+while read
+line</tt> <br>
+      <tt>&nbsp; do</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; sed "s+^$line\$++" $source &gt; $try</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; if ( 1&gt;&amp;- 2&gt;&amp;- $comp -o
+${try%.c}.o
+$try )</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; rm ${try%.c}.o</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo line
+\"$line\"
+can be removed in $source</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; fi</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; rm $try</tt> <br>
+      <tt>&nbsp; done</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+and run it via <tt>make</tt>:
+<br>
+<tt>make "CXX=script CC"</tt>
+</p>
+<p>But this is not good at all: before cleaning the code, we must clean
+the header files themselves.
+<br>
+Some headers are missing (i.e. a header file <tt>a.h</tt> uses a
+type/routine
+defined in another header <tt>b.h</tt>, but <tt>a.h</tt> does not
+include
+<tt>b.h</tt>).
+A quick way to test this is to try to compile <tt>a.h</tt> included in
+an empty code file (i.e. a file containing the single line
+<tt>#include
+"a.h"</tt>), but what about the types/routines which are in macros
+(e.g.
+if <tt>a.h</tt> contains <tt>#define DEBUG(x) printf(x)</tt>)?
+<br>
+Some headers include non useful headers. Of course, once cleaned, the
+code files may not compile anymore because once <tt>b.h</tt> is not
+included
+anymore in <tt>a.h</tt>, it will have to be included in <tt>a.c</tt>.
+But
+this is not an issue.
+<br>
+I hope that once we have cleaned up the headers, we do not have such
+situations such as <tt>a.h</tt> including <tt>b.h</tt> and <tt>b.h</tt>
+including <tt>a.h</tt> (I'm pretty sure that due to design errors, we
+will
+have this). In this case, the previous script will not work.
+<br>
+In fact, I need a real preprocessor / C++ analyzer (which is more
+difficult
+than a simple C++ parser).
+<br>
+This is too difficult :-( If you have any idea/tool, I'm interested...
+</p>
+<p>By the way, this script also improperly handles the architecture
+dependent
+preprocessing (e.g. <tt>#if defined(solaris) #include
+&lt;sys/solaris.h&gt;
+#endif</tt>).
+<br>
+&nbsp;
+</p>
+<p></p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: April 7</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2001 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

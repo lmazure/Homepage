@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>ksh</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><u>variables</u></b>
+<ul>
+  <li>initialize and export a variable</li>
+  <tt>export foo=value</tt> <br>
+&nbsp; <li><tt>$*</tt> cut the arguments containing an IFS
+character</li>
+  <tt>"$@"</tt> does not do it (but the double quotes must be used)
+  <p><tt>#&gt; set now "is the" time</tt> </p>
+  <p><tt>#&gt; for i in "$@"; do echo "($i)"; done</tt> <br>
+  <tt>(now)</tt> <br>
+  <tt>(is the)</tt> <br>
+  <tt>(time)</tt> </p>
+  <p><tt>#&gt; for i in "$*"; do echo "($i)"; done</tt> <br>
+  <tt>(now is the time)</tt> </p>
+  <p><tt>#&gt; for i in $@; do echo "($i)"; done</tt> <br>
+  <tt>(now)</tt> <br>
+  <tt>(is)</tt> <br>
+  <tt>(the)</tt> <br>
+  <tt>(time)</tt> </p>
+  <p><tt>#&gt; for i in $*; do echo "($i)"; done</tt> <br>
+  <tt>(now)</tt> <br>
+  <tt>(is)</tt> <br>
+  <tt>(the)</tt> <br>
+  <tt>(time)</tt> <br>
+&nbsp; </p>
+  <li>get the last argument</li>
+ksh allows any index <br>
+  <tt>eval last=\${$#}</tt> <br>
+  <tt>let index="$# - 1"</tt> <br>
+  <tt>eval secondlast=\${index}</tt> <br>
+sh only allow index &lt; 10 <br>
+  <tt>last=`shift \`expr $# - 1\`; echo "$1"`</tt> <br>
+  <tt>secondlast=`shift \`expr $# - 2\`; echo "$1"`</tt>
+</ul>
+<p><br>
+<b><u>test</u></b>
+</p>
+<ul>
+  <li>the syntax <tt>[...]</tt> use <tt>test</tt></li>
+  <li>the syntax <tt>[[ ... ]]</tt> execute the test by the shell
+itself,
+hence
+a performance gain</li>
+</ul>
+<b><u>arithmetics<br>
+</u></b>
+<ul>
+  <li><span style="font-family: monospace;">i=0</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">while</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">do</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp; ...</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp; i=$(($i+1))</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">done</span><br>
+  </li>
+</ul>
+<b><u>tricks</u></b>
+<br>
+&nbsp;
+<ul>
+  <li>test if a variable is numeric or not</li>
+  <tt>if /bin/expr "$var" + 0 1&gt;&amp;- 2&gt;&amp;-</tt> <br>
+  <tt>then</tt> <br>
+  <tt>&nbsp; # numeric</tt> <br>
+  <tt>else</tt> <br>
+  <tt>&nbsp; # non numeric</tt> <br>
+  <tt>endif</tt> <br>
+&nbsp; <li>get the status of a command at the begining of a pipe</li>
+  <tt>status = `((command; echo $? 1&gt;&amp;3) | tee foo 3&gt;&amp;)
+3&gt;&amp;1)</tt> <br>
+&nbsp; <li>filename wildcard</li>
+  <tt>/usr/include/{.,*}/*.h</tt> <br>
+&nbsp; <li>avoid that Ctrl-D destroys the shell</li>
+  <tt>set -o ignoreeof</tt> <br>
+&nbsp; <li>avoid to overwrite a file</li>
+  <tt>set o noclobber</tt> <br>
+&nbsp; <li>to suspend a shell</li>
+  <tt>suspend</tt> <br>
+to restart it, send a SIGCONT or use <tt>fg %1</tt> <br>
+&nbsp; <li>loop on the lines of a file</li>
+  <tt>while read line</tt> <br>
+  <tt>&nbsp; do</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; echo $line</tt> <br>
+  <tt>&nbsp; done &lt; $file</tt> <br>
+or <br>
+  <tt>cat $file | while read line</tt> <br>
+  <tt>&nbsp; do</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; echo $line</tt> <br>
+  <tt>&nbsp; done</tt> <br>
+&nbsp; <li>retrieve the directory where is the executable<br>
+    <tt>#!/bin/sh</tt></li>
+  <tt>if [ $0 = `basename $0` ]</tt> <br>
+  <tt>&nbsp; then</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; myfullname=`which $0`</tt> <br>
+  <tt>&nbsp; else</tt> <br>
+  <tt>&nbsp;&nbsp;&nbsp; myfullname=$0</tt> <br>
+  <tt>&nbsp; fi</tt> <br>
+  <tt>mydir=`dirname $myfullname`</tt> <br>
+  <tt>nawk -f $mydir/tfwSum.awk $*<br>
+  <br>
+  </tt><li>compute some result while letting the data go through the
+script (i.e. it acts has a noop filter)<br>
+    <code>#!/bin/sh<br>
+exitcode=1<br>
+fifo=/tmp/myfifo$$<br>
+mkfifo $fifo<br>
+set -o monitor<br>
+tee $fifo &amp;<br>
+result=`grep 'reportType="SubTestResult"' $fifo | sed
+'s/^.*result="\([^"]*\)".*$/\1/'`<br>
+[ "x$result" = "xpass" ] &amp;&amp; exitcode=0<br>
+rm $fifo<br>
+exit $exitcode<br>
+    </code></li>
+</ul>
+<span style="text-decoration: underline; font-weight: bold;">Exemples
+of scripts</span><br>
+<a href="verifinclude.html">Verification of the include syntax</a><br>
+<br>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: March 9</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2005 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

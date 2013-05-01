@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>C Types</TITLE>
+<PATH>notes/ctypes.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<CONTENT>
+If you really need to have integer types having a given number of bytes, use the following types defined in stdint.h.
+
+<TABLE><ROW><CELL>name</CELL><CELL>size</CELL><CELL>signed?</CELL><CELL>fscanf format</CELL><CELL>fprintf format</CELL><CELL>min value</CELL><CELL>max value</CELL><CELL>macro for constant definition</CELL></ROW>
+<ROW><CELL>int8_t</CELL><CELL>8 bits</CELL><CELL>signed</CELL><CELL>SCNd8<BR/>SCNi8</CELL><CELL>PRId8<BR/>PRIi8</CELL><CELL>INT8_MIN</CELL><CELL>INT8_MAX</CELL><CELL>INT8_C</CELL></ROW>
+<ROW><CELL>uint8_t</CELL><CELL>8 bits</CELL><CELL>unsigned</CELL><CELL>SCNo8<BR/>SCNu8<BR/>SCNx8</CELL><CELL>PRIo8<BR/>PRIu8<BR/>PRIx8<BR/>PRIX8</CELL><CELL>0</CELL><CELL>UINT8_MAX</CELL><CELL>UINT8_C</CELL></ROW>
+<ROW><CELL>int16_t</CELL><CELL>16 bits</CELL><CELL>signed</CELL><CELL>SCNd16<BR/>SCNi16</CELL><CELL>PRId16<BR/>PRIi16</CELL><CELL>INT16_MIN</CELL><CELL>INT16_MAX</CELL><CELL>INT16_C</CELL></ROW>
+<ROW><CELL>uint16_t</CELL><CELL>16 bits</CELL><CELL>unsigned</CELL><CELL>SCNo16<BR/>SCNu16<BR/>SCNx16</CELL><CELL>PRIo16<BR/>PRIu16<BR/>PRIx16<BR/>PRIX16</CELL><CELL>0</CELL><CELL>UINT16_MAX</CELL><CELL>UINT16_C</CELL></ROW>
+<ROW><CELL>int32_t</CELL><CELL>32 bits</CELL><CELL>signed</CELL><CELL>SCNd32<BR/>SCNi32</CELL><CELL>PRId16<BR/>PRIi16</CELL><CELL>INT32_MIN</CELL><CELL>INT32_MAX</CELL><CELL>INT32_C</CELL></ROW>
+<ROW><CELL>uint32_t</CELL><CELL>32 bits</CELL><CELL>unsigned</CELL><CELL>SCNo32<BR/>SCNu32<BR/>SCNx32</CELL><CELL>PRIo32<BR/>PRIu32<BR/>PRIx32<BR/>PRIX32</CELL><CELL>0</CELL><CELL>UINT32_MAX</CELL><CELL>UINT32_C</CELL></ROW>
+<ROW><CELL>int64_t</CELL><CELL>64 bits</CELL><CELL>signed</CELL><CELL>SCNd64<BR/>SCNi64</CELL><CELL>PRId64<BR/>PRIi64</CELL><CELL>INT64_MIN</CELL><CELL>INT64_MAX</CELL><CELL>INT64_C</CELL></ROW>
+<ROW><CELL>uint64_t</CELL><CELL>64 bits</CELL><CELL>unsigned</CELL><CELL>SCNo64<BR/>SCNu64<BR/>SCNx64</CELL><CELL>PRIo64<BR/>PRIu64<BR/>PRIx64<BR/>PRIX64</CELL><CELL>0</CELL><CELL>UINT64_MAX</CELL><CELL>UINT64_C</CELL></ROW></TABLE>
+<BR/>
+The types int64_t and uint64_t may be unavailable. You should test if the macro INT64_MAX or  UINT64_MAX is defined to know if the current environment support them. <BR/>
+<BR/>
+The printf/scanf formats are defined in inttypes.h. They are defined by C99, but they are not available in C++. Here is an example how to use them:
+<CODESAMPLE>uint32_t val = ... <BR/>
+printf("The integer value is %020" PRIu32 "\n", val);</CODESAMPLE>
+<BR/>
+The macros defining constant are defined in stdint.h. They are defined by C99, but they are not available in C++. Here is an example how to use them:<BR/>
+<CODESAMPLE>uint32_t val = UINT32_C(17);</CODESAMPLE>
+
+
+Note:
+<BLIST><TITLE>stdint.h and inttypes.h also define:</TITLE>
+<ITEM><BLIST><TITLE>minimum-width integer types:</TITLE>
+<ITEM>int_least8_t</ITEM>
+<ITEM>int_least16_t</ITEM>
+<ITEM>int_least32_t</ITEM>
+<ITEM>int_least64_t</ITEM>
+<ITEM>uint_least8_t</ITEM>
+<ITEM>uint_least16_t</ITEM>
+<ITEM>uint_least32_t</ITEM>
+<ITEM>uint_least64_t</ITEM>
+</BLIST>
+int_leastn_t is a signed integer type with a width of at least n.<BR/>
+uint_leastn_t is a unsigned integer type with a width of at least n.</ITEM>
+<ITEM><BLIST><TITLE>minimum-width fast integer types:</TITLE>
+<ITEM>int_fast8_t</ITEM>
+<ITEM>int_fast16_t</ITEM>
+<ITEM>int_fast32_t</ITEM>
+<ITEM>int_fast64_t</ITEM>
+<ITEM>uint_fast8_t</ITEM>
+<ITEM>uint_fast16_t</ITEM>
+<ITEM>uint_fast32_t</ITEM>
+<ITEM>uint_fast64_t</ITEM>
+</BLIST>
+int_fastn_t is a fast signed integer type with a width of at least n.<BR/>
+uint_fastn_t is a fast unsigned integer type with a width of at least n.</ITEM>
+<ITEM><BLIST><TITLE>largest-width integer types</TITLE>
+<ITEM>intmax_t: a signed integer type capable of representing any value of any signed integer type</ITEM>
+<ITEM>uintmax_t: an unsigned integer type capable of representing any value of any signed integer type</ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+The macros defining the min and max values (e.g. INT_FAST8_MAX, INTMAX_MIN...) and the scanf and printf formats (e.g. PRIdFAST8, PRIoMAX...) are also available for the previous types.<BR/>
+<BR/>
+strtoimax and strtoumax routines should be used to parse a string into a intmax_t or uintmax_t. <BR/>
+<BR/>
+INTMAX_C and UINTMAX_C macros should be used to define intmax_t or uintmax_t constants.
+
+</CONTENT>
+</PAGE>
+

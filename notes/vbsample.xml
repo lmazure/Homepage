@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>VB samples</TITLE>
+<PATH>notes/vbsample.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+create a name for a file to be written on the desktop and whose name depends on the date
+<CODESAMPLE>
+Dim WSHShell As Object<BR/>
+Set WSHShell = CreateObject("Wscript.Shell")<BR/>
+Dim filename As String<BR/>
+filename = WSHShell.SpecialFolders("Desktop") &amp; "\" _<BR/>
+<TAB/>&amp; Format(Year(Now), "####") &amp; "-" &amp; Format(Month(Now), "0#") &amp; "-" &amp; Format(Day(Now), "0#" )_<BR/>
+<TAB/>&amp; "_" &amp; Format(Hour(Now), "0#") &amp; Format(Minute(Now), "0#") &amp; Format(Second(Now), "0#") &amp; ".htm"
+</CODESAMPLE>
+<BR/>
+navigate the filesystem
+<CODESAMPLE>
+Dim fso, dir1, dir2<BR/>
+fso = CreateObject("Scripting.FileSystemObject")<BR/>
+Set dir1 = fso.GetFolder("\\Srvuranus\pm\K3\doc archive")<BR/>
+For Each dir2 In dir1.SubFolders<BR/>
+<TAB/>If (Left(dir2.Name, 3) = "K30") Then<BR/>
+<TAB/><TAB/>...<BR/>
+<TAB/>End If<BR/>
+Next dir2<BR/>
+</CODESAMPLE>
+</CONTENT>
+</PAGE>

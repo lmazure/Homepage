@@ -1,0 +1,138 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>XPath</TITLE>
+<PATH>notes/xpath.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+XPath is a language for addressing parts of an XML document.<BR/>
+It is used by XSLT and XPointer<BR/>
+The specification is <X><T>http://www.w3.org/TR/xpath</T><A>http://www.w3.org/TR/xpath</A><L>en</L><F>HTML</F></X>.<BR/>
+<BR/>
+<BLIST><TITLE>XPath models the XML document as a tree. This tree contains seven types of nodes:</TITLE>
+<ITEM>root nodes</ITEM>
+<ITEM>element nodes</ITEM>
+<ITEM>text node</ITEM>
+<ITEM>attribute nodes</ITEM>
+<ITEM>namespace nodes</ITEM>
+<ITEM>processing instruction nodes</ITEM>
+<ITEM>comment nodes</ITEM>
+</BLIST>
+<BR/>
+<BLIST><TITLE>The XPath syntax is structured in several parts:</TITLE>
+<ITEM>the axis</ITEM>
+<ITEM>the test node</ITEM>
+<ITEM>one or more predicates</ITEM>
+</BLIST>
+<BR/>
+<BLIST><TITLE>The axis can be:</TITLE>
+<ITEM><CODEROUTINE>child</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>descendant</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>parent</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>ancestor</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>following-sibling</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>preceding-sibling</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>following</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>preceding</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>attribute</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>namespace</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>self</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>descendant-or-self</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>ancestor-or-self</CODEROUTINE></ITEM>
+</BLIST>
+<BR/>
+The basic XPath syntax is similar to filesystem addressing. If the path starts with the slash <CODEROUTINE>/</CODEROUTINE>, then it represents an absolute path to the required element.<BR/>
+<CODEROUTINE>/AAA</CODEROUTINE> select the root element <CODEROUTINE>AAA</CODEROUTINE>.<BR/>
+<CODEROUTINE>/AAA/CCC</CODEROUTINE> select all elements <CODEROUTINE>CCC</CODEROUTINE> which are children of the root element <CODEROUTINE>AAA</CODEROUTINE>.<BR/>
+<CODEROUTINE>/AAA/DDD/BBB</CODEROUTINE> select all elements <CODEROUTINE>BBB</CODEROUTINE> which are children of <CODEROUTINE>DDD</CODEROUTINE> which are children of the root element <CODEROUTINE>AAA</CODEROUTINE>.<BR/>
+<BR/>
+If the path starts with <CODEROUTINE>//</CODEROUTINE> then all elements in the document which fulfill following criteria are selected.<BR/>
+<CODEROUTINE>//BBB</CODEROUTINE> select all elements <CODEROUTINE>BBB</CODEROUTINE>.<BR/>
+<CODEROUTINE>//DDD/BBB</CODEROUTINE> select all elements <CODEROUTINE>BBB</CODEROUTINE> which are children of DDD.<BR/>
+<BR/>
+The star <CODEROUTINE>*</CODEROUTINE> selects all elements located by preceding path.<BR/>
+<CODEROUTINE>/AAA/CCC/DDD/*</CODEROUTINE> select all elements enclosed by elements <CODEROUTINE>/AAA/CCC/DDD</CODEROUTINE><BR/>
+<CODEROUTINE>/*/*/*/BBB</CODEROUTINE> select all elements <CODEROUTINE>BBB</CODEROUTINE> which have 3 ancestors<BR/>
+<CODEROUTINE>//*</CODEROUTINE> select all elements<BR/>
+<BR/>
+Expressions in square brackets (aka predicates) can further specify an element. A number in the brackets gives the position of the element in the selected set. The function <CODEROUTINE>last()</CODEROUTINE> selects the last element in the selection.<BR/>
+<CODEROUTINE>/AAA/BBB[1]</CODEROUTINE> select the first <CODEROUTINE>BBB</CODEROUTINE> child of element <CODEROUTINE>AAA</CODEROUTINE><BR/>
+<CODEROUTINE>/AAA/BBB[last()]</CODEROUTINE> select the last <CODEROUTINE>BBB</CODEROUTINE> child of element <CODEROUTINE>AAA</CODEROUTINE><BR/>
+<BR/>
+Attributes are specified by <CODEROUTINE>@</CODEROUTINE> prefix.<BR/>
+<CODEROUTINE>//@id</CODEROUTINE> select all attributes <CODEROUTINE>@id</CODEROUTINE><BR/>
+<CODEROUTINE>//BBB[@id]</CODEROUTINE> select <CODEROUTINE>BBB</CODEROUTINE> elements which have attribute <CODEROUTINE>id</CODEROUTINE><BR/>
+<CODEROUTINE>//BBB[@*]</CODEROUTINE> select <CODEROUTINE>BBB</CODEROUTINE> elements which have any attribute<BR/>
+<CODEROUTINE>//BBB[not(@*)]</CODEROUTINE> select <CODEROUTINE>BBB</CODEROUTINE> elements without an attribute<BR/>
+<BR/>
+Values of attributes can be used as selection criteria. Function <CODEROUTINE>normalize-space</CODEROUTINE> removes leading and trailing spaces and replaces sequences of whitespace characters by a single space.<BR/>
+<CODEROUTINE>//BBB[@id='b1']</CODEROUTINE> select <CODEROUTINE>BBB</CODEROUTINE> elements which have attribute <CODEROUTINE>id</CODEROUTINE> with value <CODEROUTINE>b1</CODEROUTINE><BR/>
+<CODEROUTINE>//BBB[normalize-space(@name)='bbb']</CODEROUTINE> select <CODEROUTINE>BBB</CODEROUTINE> elements which have attribute name with value <CODEROUTINE>bbb</CODEROUTINE>, leading and trailing spaces are removed before comparison<BR/>
+<CODEROUTINE>&lt;xsl:if test="normalize-space(.)"&gt;...&lt;/xsl:if&gt;</CODEROUTINE> matches only with non empty nodes<BR/>
+<BR/>
+Function <CODEROUTINE>count()</CODEROUTINE> counts the number of selected elements<BR/>
+<CODEROUTINE>//*[count(BBB)=2]</CODEROUTINE> select elements which have two children <CODEROUTINE>BBB</CODEROUTINE><BR/>
+<CODEROUTINE>//*[count(*)=3]</CODEROUTINE> select elements which have 3 children<BR/>
+<BR/>
+Function <CODEROUTINE>name</CODEROUTINE> returns name of the element, the <CODEROUTINE>starts-with</CODEROUTINE> function returns true if the first argument string starts with the second argument string, and the <CODEROUTINE>contains</CODEROUTINE> function returns true if the first argument string contains the second argument string. The <CODEROUTINE>string-length</CODEROUTINE> function returns the number of characters in the string. You must use <CODEROUTINE>&amp;lt;</CODEROUTINE> as a substitute for <CODEROUTINE>&lt;</CODEROUTINE> and <CODEROUTINE>&amp;gt;</CODEROUTINE> as a substitute for <CODEROUTINE>&gt;</CODEROUTINE>.<BR/>
+<CODEROUTINE>//*[name()='BBB']</CODEROUTINE> select all elements with name <CODEROUTINE>BBB</CODEROUTINE>, equivalent with <CODEROUTINE>//BBB</CODEROUTINE><BR/>
+<CODEROUTINE>//*[starts-with(name(),'B')]</CODEROUTINE> select all elements name of which starts with letter <CODEROUTINE>B</CODEROUTINE><BR/>
+<CODEROUTINE>//*[contains(name(),'C')]</CODEROUTINE> select all elements name of which contain letter <CODEROUTINE>C</CODEROUTINE><BR/>
+<CODEROUTINE>//*[string-length(name()) = 3]</CODEROUTINE> select elements with three-letter name<BR/>
+<CODEROUTINE>//*[string-length(name()) &lt; 3]</CODEROUTINE> select elements name of which has one or two characters<BR/>
+<CODEROUTINE>//*[string-length(name()) &gt; 3]</CODEROUTINE> select elements with name longer than three characters<BR/>
+<BR/>
+Several paths can be combined with <CODEROUTINE>|</CODEROUTINE> separator.<BR/>
+<CODEROUTINE>//CCC | //BBB</CODEROUTINE> select all elements <CODEROUTINE>CCC</CODEROUTINE> and <CODEROUTINE>BBB</CODEROUTINE><BR/>
+<CODEROUTINE>/AAA/EEE | //BBB</CODEROUTINE> select all elements <CODEROUTINE>BBB</CODEROUTINE> and elements <CODEROUTINE>EEE</CODEROUTINE> which are children of root element <CODEROUTINE>AAA</CODEROUTINE><BR/>
+<CODEROUTINE>/AAA/EEE | //DDD/CCC | /AAA | //BBB</CODEROUTINE> number of combinations is not restricted<BR/>
+<BR/>
+The <CODEROUTINE>child</CODEROUTINE> axis contains the children of the context node. The child axis is the default axis and it can be omitted.<BR/>
+<CODEROUTINE>/AAA</CODEROUTINE> equivalent of <CODEROUTINE>/child::AAA</CODEROUTINE><BR/>
+<CODEROUTINE>/child::AAA</CODEROUTINE> equivalent of <CODEROUTINE>/AAA</CODEROUTINE><BR/>
+<CODEROUTINE>/AAA/BBB</CODEROUTINE> equivalent of <CODEROUTINE>/child::AAA/child::BBB</CODEROUTINE><BR/>
+<CODEROUTINE>/child::AAA/child::BBB</CODEROUTINE> equivalent of <CODEROUTINE>/AAA/BBB</CODEROUTINE><BR/>
+<CODEROUTINE>/child::AAA/BBB</CODEROUTINE> both possibilities can be combined<BR/>
+<BR/>
+The <CODEROUTINE>descendant</CODEROUTINE> axis contains the descendants of the context node; a descendant is a child or a child of a child and so on; thus the descendant axis never contains attribute or namespace nodes<BR/>
+<CODEROUTINE>/descendant::*</CODEROUTINE> select all descendants of document root and therefore all elements<BR/>
+<CODEROUTINE>/AAA/BBB/descendant::*</CODEROUTINE> select all descendants of <CODEROUTINE>/AAA/BBB</CODEROUTINE><BR/>
+<CODEROUTINE>//CCC/descendant::*</CODEROUTINE> select all elements which have <CODEROUTINE>CCC</CODEROUTINE> among its ancestors<BR/>
+<BR/>
+The <CODEROUTINE>parent</CODEROUTINE> axis contains the parent of the context node, if there is one.<BR/>
+<CODEROUTINE>//DDD/parent::*</CODEROUTINE> select all parents of <CODEROUTINE>DDD</CODEROUTINE> element<BR/>
+<BR/>
+The <CODEROUTINE>ancestor</CODEROUTINE> axis contains the ancestors of the context node; the ancestors of the context node consist of the parent of context node and the parent's parent and so on; thus, the <CODEROUTINE>ancestor</CODEROUTINE> axis will always include the root node, unless the context node is the root node.<BR/>
+<CODEROUTINE>/AAA/BBB/DDD/CCC/EEE/ancestor::*</CODEROUTINE> select all elements given in this absolute path<BR/>
+<CODEROUTINE>//FFF/ancestor::*</CODEROUTINE> select ancestors of <CODEROUTINE>FFF</CODEROUTINE> element<BR/>
+<BR/>
+The <CODEROUTINE>following-sibling</CODEROUTINE> axis contains all the following siblings of the context node.<BR/>
+<CODEROUTINE>/AAA/BBB/following-sibling::*</CODEROUTINE><BR/>
+<BR/>
+The <CODEROUTINE>preceding-sibling</CODEROUTINE> axis contains all the preceding siblings of the context node<BR/>
+ /AAA/XXX/preceding-sibling::*<BR/>
+<BR/>
+The <CODEROUTINE>following</CODEROUTINE> axis contains all nodes in the same document as the context node that are after the context node in document order, excluding any descendants and excluding attribute nodes and namespace nodes.<BR/> 
+<CODEROUTINE>/AAA/XXX/following::*</CODEROUTINE><BR/>
+<BR/>
+The <CODEROUTINE>preceding</CODEROUTINE> axis contains all nodes in the same document as the context node that are before the context node in document order, excluding any ancestors and excluding attribute nodes and namespace nodes<BR/>
+<CODEROUTINE>/AAA/XXX/preceding::*</CODEROUTINE><BR/>
+<BR/>
+The <CODEROUTINE>descendant-or-self</CODEROUTINE> axis contains the context node and the descendants of the context node<BR/>
+<CODEROUTINE>/AAA/XXX/descendant-or-self::*</CODEROUTINE><BR/>
+<BR/>
+The <CODEROUTINE>ancestor-or-self</CODEROUTINE> axis contains the context node and the ancestors of the context node; thus, the ancestor-or-self axis will always include the root node.<BR/>
+<CODEROUTINE>/AAA/XXX/DDD/EEE/ancestor-or-self::*</CODEROUTINE><BR/>
+<BR/>
+The <CODEROUTINE>ancestor</CODEROUTINE>, <CODEROUTINE>descendant</CODEROUTINE>, <CODEROUTINE>following</CODEROUTINE>, <CODEROUTINE>preceding</CODEROUTINE> and <CODEROUTINE>self</CODEROUTINE> axes partition a document (ignoring attribute and namespace nodes): they do not overlap and together they contain all the nodes in the document.<BR/>
+<BR/>
+The <CODEROUTINE>div</CODEROUTINE> operator performs floating-point division, the <CODEROUTINE>mod</CODEROUTINE> operator returns the remainder from a truncating division. The <CODEROUTINE>floor</CODEROUTINE> function returns the largest (closest to positive infinity) number that is not greater than the argument and that is an integer. The <CODEROUTINE>ceiling</CODEROUTINE> function returns the smallest (closest to negative infinity) number that is not less than the argument and that is an integer.<BR/>
+<CODEROUTINE>//BBB[position() mod 2 = 0 ]</CODEROUTINE> select even <CODEROUTINE>BBB</CODEROUTINE> elements<BR/>
+<CODEROUTINE>//BBB[ position() = floor(last() div 2 + 0.5) or position() = ceiling(last() div 2 + 0.5) ]</CODEROUTINE> select middle BBB element(s)<BR/>
+
+</CONTENT>
+
+<X><T>links</T><A>../links/xml.html#xpath</A><L>en</L><F>HTML</F></X>
+
+</PAGE>

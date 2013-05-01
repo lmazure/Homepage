@@ -1,0 +1,116 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>MedDRA</TITLE>
+<PATH>notes/meddra.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE>MedDRA is a terminology for coding all medical information obtained during all phases of development and marketing:</TITLE>
+<ITEM>Symptoms</ITEM>
+<ITEM>Signs</ITEM>
+<ITEM>Diseases</ITEM>
+<ITEM>Diagnoses</ITEM>
+<ITEM>Indications</ITEM>
+<ITEM>Investigations/Procedures</ITEM>
+<ITEM>Medical/Social History</ITEM>
+</BLIST>
+
+<BLIST><TITLE>Excluded from MedDRA</TITLE>
+<ITEM>term qualifiers -frequent, rare, mild, severe (there are exceptions) </ITEM>
+<ITEM>numerical values -potassium value of 3.0 mg/dL</ITEM>
+</BLIST>
+
+<BLIST><TITLE>MedDRA is organized with the following hierarchy (numbers are for MEdDRA 8.1):</TITLE>
+<ITEM>System Organ Class (SOC) 26</ITEM>
+<ITEM>High-Level Group Terms (HLGT) 332</ITEM>
+<ITEM>High-Level Terms (HLT) 1683</ITEM>
+<ITEM>Preferred Terms (PT) - a PT represents a single unique medical concept 16976</ITEM>
+<ITEM>Lower-Level Terms (LLT) - <BLIST><TITLE>a LLT Has one of the following relationships to the Preferred Term (PT)</TITLE>
+<ITEM>Synonym</ITEM>
+<ITEM>Lexical variant</ITEM>
+<ITEM>Quasi-synonym</ITEM></BLIST>
+62950</ITEM>
+</BLIST>
+
+<BLIST><TITLE>The 26 SOC:</TITLE>
+<ITEM>Blood and lymphatic system disorders</ITEM>
+<ITEM>Cardiac disorders</ITEM>
+<ITEM>Congenital, familial and genetic disorders</ITEM>
+<ITEM>Ear and labyrinth disorders</ITEM>
+<ITEM>Endocrine disorders</ITEM>
+<ITEM>Eye disorders</ITEM>
+<ITEM>Gastrointestinal disorders</ITEM>
+<ITEM>General disorders and administration site conditions</ITEM>
+<ITEM>Hepatobiliary disorders</ITEM>
+<ITEM>Infections and infestations</ITEM>
+<ITEM>Immune system disorders</ITEM>
+<ITEM>Injury, poisoning and procedural complications</ITEM>
+<ITEM>Investigations</ITEM>
+<ITEM>Metabolism and nutrition disorders</ITEM>
+<ITEM>Musculoskeletal and connective tissue disorders</ITEM>
+<ITEM>Neoplasms benign, malignant and unspecified (including cysts and polyps) </ITEM>
+<ITEM>Nervous system disorders</ITEM>
+<ITEM>Pregnancy, puerperium and perinatal conditions</ITEM>
+<ITEM>Psychiatric disorders</ITEM>
+<ITEM>Renal and urinary disorders</ITEM>
+<ITEM>Reproductive system and breast disorders</ITEM>
+<ITEM>Respiratory, thoracic and mediastinal disorders</ITEM>
+<ITEM>Skin and subcutaneous tissue disorders</ITEM>
+<ITEM>Social circumstances</ITEM>
+<ITEM>Surgical and medical procedures</ITEM>
+<ITEM>Vascular disorders</ITEM>
+</BLIST>
+
+The dictionary allows multiaxial coding: certains PT terms can be found in more than one SOC. But, in each SOC, each PT is represented by only one HLT and one HLGT. Each PT has a primary pathway that must be used for the initial analysis.<BR/>
+
+<BLIST><TITLE>LLT may be a non-current term</TITLE>
+<ITEM>Ambiguous, vague, misspelled, outdated terms</ITEM>
+<ITEM>Terms derived from other terminologies that do not comply with MedDRA rules</ITEM>
+<ITEM>Flagged as non-current</ITEM>
+</BLIST>
+
+<BLIST><TITLE>MedDRA also supports Special Search Categories (SSC) that contain clinical concepts relative to a similar etiology that cross SOCs. They generally group PTs relevant to a disease or a syndrome. In MedDRA 7.0:</TITLE>
+<ITEM>Bone Marrow Depression</ITEM>
+<ITEM>Cardiac Ischaemia</ITEM>
+<ITEM>Haemorrhage</ITEM>
+<ITEM>Hypersensitivity Reactions</ITEM>
+<ITEM>Immediate Hypersensitivity and AnaphlyacticReactions</ITEM>
+<ITEM>Oedema</ITEM>
+<ITEM>Pain</ITEM>
+<ITEM>Premalignant Lesions</ITEM>
+<ITEM>Secondary Immunocompromised State</ITEM>
+<ITEM>Thrombosis</ITEM>
+<ITEM>Upper GI Bleeding/Perforation</ITEM>
+<ITEM>Vasculitis</ITEM>
+</BLIST>
+
+<BLIST><TITLE>MaeDRA aslo contains Standardized MedDRA Queries (SMQs). They will eventually replace SSCs. The result for a COOPERATIVE effort between CIOMS and ICH (MSSO). They are groupings of MedDRA terms, ordinarily at the Preferred Term (PT) level, that relate to a defined medical condition or area of interest. Terms included in a given SMQ may relate to relevant signs, symptoms, diagnoses, syndromes, physical findings, laboratory and other physiologic test data... In Production (as of 2005-10-11)</TITLE>
+<ITEM>Acute Renal Failure</ITEM>
+<ITEM>HaemolyticDisorders</ITEM>
+<ITEM>Hepatic Disorders</ITEM>
+<ITEM>Rhabdomyolysis/Myopathy</ITEM>
+<ITEM>Severe Cutaneous Adverse Reactions</ITEM>
+<ITEM>Torsades de Pointes/QT Prolongation</ITEM>
+</BLIST>
+
+<BLIST><TITLE>some details</TITLE>
+<ITEM>British English spelling is used at the PT level and above. American spellings are included at the LLT level<BR/>
+Capitalization is used for the first letter of each term, proper names, and abbreviations</ITEM>
+<ITEM>Universally accepted abbreviations can be found at the LLT</ITEM>
+<ITEM>Natural word order is maintained at the PT level except when reversal of words allows similar terms to be grouped together</ITEM>
+<ITEM>Punctuation is limited to apostrophes in people's names and hyphens in some terms</ITEM>
+<ITEM>NEC = Not Elsewhere Classified (When terminology does not allow for specificity of reported verbatim) </ITEM>
+<ITEM>NOS = Not Otherwise Specified (When reported verbatim is not specific) Eliminated from PTs in 2003 in Version 6.1 (The NOS PTs were demoted to LLTs, and the equivalent non-NOS LLTs were promoted to PTs: 4,236 changes!) </ITEM>
+<ITEM>Numeric codes are 8 digits, starting with first code of 10000001.<BR/>
+Initially assigned alphabetically by term. New terms are assigned sequentially<BR/>
+Codes are never reused<BR/>
+"Codes" are not really coded information, do not reflect organization of dictionary: codes are just identification numbers</ITEM>
+</BLIST>
+
+The dictionary is updated twice a year. Major updates are indicated by an increment of the first digit, minor ones by an increment of the second.<BR/>
+<BR/>
+If a patient experiences a recurring given AE, this one is counted only once with a severity equal to the greatest severity of all occurrences.
+
+</CONTENT>
+</PAGE>

@@ -1,0 +1,305 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Unix file utilities</TITLE>
+<PATH>notes/unixfu.xml</PATH>
+<DATE><YEAR>2012</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
+<CONTENT>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>ls</T><A>javascript:do_reference("man/linux/1/ls")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display directory/file information</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ls -d</CODEROUTINE></TERM><DESC>list directory entries instead of contents, and do not dereference symbolic links</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ls -1</CODEROUTINE></TERM><DESC>list one file per line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ls --color=never</CODEROUTINE></TERM><DESC>never use color display</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ls --color=always</CODEROUTINE></TERM><DESC>always use color display</DESC></ROW>
+<ROW><TERM><CODEROUTINE>ls --color=auto</CODEROUTINE></TERM><DESC>use color display only if standard output is sent to a tty</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>mkdir</T><A>javascript:do_reference("man/linux/1/mkdir")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>create a directory</DESC></ROW>
+<ROW><TERM><CODEROUTINE>mkdir -p</CODEROUTINE><BR/><CODEROUTINE>mkdir --parents</CODEROUTINE></TERM><DESC>automatically create the intermediary directories</DESC></ROW>
+<ROW><TERM><CODEROUTINE>mkdir -m</CODEROUTINE><BR/><CODEROUTINE>mkdir --mode=&lt;mode&gt;</CODEROUTINE></TERM><DESC>set permission mode (as in <CODEROUTINE>chmod</CODEROUTINE>), not <CODEROUTINE>rwxrwxrwx - umask</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>dirname</T><A>javascript:do_reference("man/linux/1/dirname")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>strip non-directory suffix from file name</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>basename</T><A>javascript:do_reference("man/linux/1/basename")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>strip directory and suffix from filenames</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>df</T><A>javascript:do_reference("man/linux/1/df")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>report usage of all the file systems</DESC></ROW>
+<ROW><TERM><CODEROUTINE>df /foo/bar</CODEROUTINE></TERM><DESC>report usage of file system <CODEROUTINE>/foo/bar</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>df -k</CODEROUTINE></TERM><DESC>report disk space in kilobytes</DESC></ROW>
+<ROW><TERM><CODEROUTINE>df -l</CODEROUTINE></TERM><DESC>list only local file systems</DESC></ROW>
+<ROW><TERM><CODEROUTINE>df -T</CODEROUTINE></TERM><DESC>report file system type</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>grep</T><A>javascript:do_reference("man/linux/1/grep")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print lines matching a pattern</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -r</CODEROUTINE><BR/><CODEROUTINE>grep -R</CODEROUTINE><BR/><CODEROUTINE>grep --recursive</CODEROUTINE><BR/><CODEROUTINE>grep -d recurse</CODEROUTINE><BR/><CODEROUTINE>grep -directories=recurse</CODEROUTINE><BR/></TERM><DESC>perform a recursive <CODEROUTINE>grep</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -i</CODEROUTINE></TERM><DESC>case independent search</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -w</CODEROUTINE></TERM><DESC>restrict to match of whole words (letters, digits and underscore)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -x</CODEROUTINE></TERM><DESC>restrict to match of whole line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -E</CODEROUTINE><BR/><CODEROUTINE>egrep</CODEROUTINE></TERM><DESC>use extended regular expressions</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -F</CODEROUTINE><BR/><CODEROUTINE>fgrep</CODEROUTINE></TERM><DESC>use fixed strings</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -I</CODEROUTINE></TERM><DESC>binary files do not match</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -d read</CODEROUTINE><BR/><CODEROUTINE>grep --directories=read</CODEROUTINE></TERM><DESC>read directories (the default)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -d skip</CODEROUTINE><BR/><CODEROUTINE>grep --directories=skip</CODEROUTINE></TERM><DESC>ignore directories</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -D read</CODEROUTINE><BR/><CODEROUTINE>grep --directories=read</CODEROUTINE></TERM><DESC>read devices, FIFOs, and sockets (the default)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -D skip</CODEROUTINE><BR/><CODEROUTINE>grep --directories=skip</CODEROUTINE></TERM><DESC>ignore devices, FIFOs, and sockets</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -f &lt;pattern_file&gt;</CODEROUTINE></TERM><DESC>search for regexes defined in a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -l</CODEROUTINE></TERM><DESC>suppress normal input and print only the file name (the scanning is stopped at the first match)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -n</CODEROUTINE></TERM><DESC>prefix each line by the line number in the input file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -c</CODEROUTINE></TERM><DESC>suppress normal input and print only the numbers of matches</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -H</CODEROUTINE></TERM><DESC>always prefix the filename for each match (even if the grep is on only one file)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -h</CODEROUTINE></TERM><DESC>never prefix the filename for each match (even if the grep is on more than one file)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -o</CODEROUTINE><BR/><CODEROUTINE>grep --only-matching</CODEROUTINE></TERM><DESC>print only the matching part of the line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -B &lt;n&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -C &lt;n&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>n</CODEROUTINE> lines after the match</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -B &lt;n&gt; -C &lt;m&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>m</CODEROUTINE> lines after the match</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep "a[[:space:]]+b"</CODEROUTINE></TERM><DESC>search <CODEROUTINE>a</CODEROUTINE> followed by one or more spaces, tabs... and finally by <CODEROUTINE>b</CODEROUTINE><BR/>
+<BLIST><TITLE>the named character classes are:</TITLE>
+<ITEM><CODEROUTINE>[:alnum:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:alpha:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:cntrl:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:digit:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:graph:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:lower:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:print:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:punct:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:space:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:upper:]</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>[:xdigit:]</CODEROUTINE></ITEM>
+</BLIST>
+<CODEROUTINE>\w</CODEROUTINE> is a synonym for <CODEROUTINE>[[:alnum:]]</CODEROUTINE><BR/>
+<CODEROUTINE>\W</CODEROUTINE> is a synonym for <CODEROUTINE>[^[:alnum:]]</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+for more complex searches (e.g. multiline searches), use <X><T>Perl</T><A>perl.htm</A><L>en</L><F>HTML</F></X>:
+<BLIST>
+<ITEM>
+find line containing a delete followed by a line containing an assignment:
+<CODESAMPLE><PROMPT/>perl -n -e 'undef $/; if (/\n.*delete[^\n]*;\n?[^\n]*=.*\n/m) { print "$ARGV $.:$&amp;\n" }' lib/*/*.c</CODESAMPLE>
+</ITEM>
+<ITEM>
+find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODEROUTINE>:
+<CODESAMPLE><PROMPT/>find . -type f -name '*[ch]' -exec perl -n -e 'undef $/; while ( /printf[^;]*getpid.*?\) *;/sg ) { print "-------------------------\n$ARGV:\n$&amp;\n" }' {} \;</CODESAMPLE>
+</ITEM>
+</BLIST>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>cat</T><A>javascript:do_reference("man/linux/1/cat")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>concatenate files</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cat -v</CODEROUTINE></TERM><DESC>display special characters with the <CODEROUTINE>^</CODEROUTINE> and <CODEROUTINE>M-</CODEROUTINE> notations except tab and LFD</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cat -T</CODEROUTINE></TERM><DESC>display tabs as <CODEROUTINE>^I</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>cat -t</CODEROUTINE></TERM><DESC>same as <CODEROUTINE>-vT</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>tac</T><A>javascript:do_reference("man/linux/1/tac")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>concatenate files in reverse</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>tail</T><A>javascript:do_reference("man/linux/1/tail")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>file display the 10 last lines of file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tail -105</CODEROUTINE></TERM><DESC>display the 105 last lines</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tail +105</CODEROUTINE></TERM><DESC>display the last lines starting at the 105th one</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tail -c78</CODEROUTINE></TERM><DESC>display the 78 last characters</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tail -f</CODEROUTINE></TERM><DESC>display the file content as the file grows</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tail -f foo bar</CODEROUTINE></TERM><DESC>it is possible to follow several files at the same time</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tail -f --retry</CODEROUTINE></TERM><DESC>keep looking at file growth even if the file is inaccessible</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>head</T><A>javascript:do_reference("man/linux/1/head")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display the 10 first lines of file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>head -23</CODEROUTINE><BR/><CODEROUTINE>head -lines 23</CODEROUTINE></TERM><DESC>display the 23 first lines</DESC></ROW>
+<ROW><TERM><CODEROUTINE>head -c 23</CODEROUTINE></TERM><DESC>display the 23 first characters</DESC></ROW>
+<ROW><TERM><CODEROUTINE>head -n -23</CODEROUTINE></TERM><DESC>display all but the 23 last lines</DESC></ROW>
+<ROW><TERM><CODEROUTINE>head -c -23</CODEROUTINE></TERM><DESC>display all but the 23 last characters</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>dd</T><A>javascript:do_reference("man/linux/1/dd")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>convert files</DESC></ROW>
+<ROW><TERM><CODEROUTINE>dd if=infoobar of=outfoobar count=1 ibs=12345</CODEROUTINE></TERM><DESC>get the first 12345 bytes of a file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>dd if=infoobar of=outfoobar skip=1 ibs=12345</CODEROUTINE></TERM><DESC>get the end of a file starting at offset 12345</DESC></ROW>
+<ROW><TERM><CODEROUTINE>dd if=/dev/zero of=foobar bs=2000M count=1</CODEROUTINE></TERM><DESC>quickly create a file of 2G</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>cut</T><A>javascript:do_reference("man/linux/1/cut")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>extract sections of lines</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cut -f12</CODEROUTINE></TERM><DESC>extract the 12<SUP>th</SUP> field</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cut -d" "</CODEROUTINE></TERM><DESC>use space instead of tab as the field delimiter</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>sort</T><A>javascript:do_reference("man/linux/1/sort")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>sort lines of text</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sort -n</CODEROUTINE></TERM><DESC>sort strings as numerical values</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sort -t.</CODEROUTINE></TERM><DESC>use <CODEROUTINE>.</CODEROUTINE> as the field separator</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sort -k3</CODEROUTINE></TERM><DESC>sort key starts at the 3<SUP>rd</SUP> field</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sort -k3,5</CODEROUTINE></TERM><DESC>sort key starts at the 3<SUP>rd</SUP> field and ends at the 5<SUP>th</SUP> field</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sort -u</CODEROUTINE></TERM><DESC>output only first of lines with equal keys (take care, the remainder of the lines may be different, pipe into <CODEROUTINE><X><T>uniq</T><A>javascript:do_reference("man/linux/1/uniq")</A><L>en</L><F>HTML</F></X></CODEROUTINE> if necessary)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sort -r</CODEROUTINE></TERM><DESC>sort in reverse order</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sort -c</CODEROUTINE></TERM><DESC>check for ordering, do not sort</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sort -c -u</CODEROUTINE></TERM><DESC>check for strict ordering, do not sort</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>uniq</T><A>javascript:do_reference("man/linux/1/uniq")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>remove duplicated lines from a sorted file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>uniq -c</CODEROUTINE></TERM><DESC>prefix lines by the number of occurrences</DESC></ROW>
+<ROW><TERM><CODEROUTINE>uniq -d</CODEROUTINE></TERM><DESC>print only duplicated lines</DESC></ROW>
+<ROW><TERM><CODEROUTINE>uniq -u</CODEROUTINE></TERM><DESC>print only unique lines</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>diff</T><A>javascript:do_reference("man/linux/1/diff")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>diff -r</CODEROUTINE><BR/><CODEROUTINE>diff --recursive</CODEROUTINE></TERM><DESC>perform a recursive diff</DESC></ROW>
+<ROW><TERM><CODEROUTINE>diff -s</CODEROUTINE><BR/><CODEROUTINE>diff --report-identical-files</CODEROUTINE></TERM><DESC>indicate names of files which are identical</DESC></ROW>
+<ROW><TERM><CODEROUTINE>diff -y</CODEROUTINE><BR/><CODEROUTINE>diff --side-by-side</CODEROUTINE></TERM><DESC>side by side display (as for <CODEROUTINE>sdiff</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>diff --suppress-common-lines</CODEROUTINE></TERM><DESC>suppress common lined display (for side by side output format, i.e. as <CODEROUTINE>-s</CODEROUTINE> of <CODEROUTINE>sdiff</CODEROUTINE>)</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>cmp</T><A>javascript:do_reference("man/linux/1/cmp")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>compare <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and indicate the offset and line number of the first difference</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>sdiff</T><A>javascript:do_reference("man/linux/1/sdiff")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and merge them interactively</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sdiff -s</CODEROUTINE></TERM><DESC>ignore common lines</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>find</T><A>javascript:do_reference("man/linux/1/find")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>look for files</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -P</CODEROUTINE></TERM><DESC>never follow symbolic links (this is the default)<BR/>(i.e. the symbolic link is used to perform the tests)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -L</CODEROUTINE></TERM><DESC>follow symbolic links<BR/>(i.e. the pointed file/directory is used to perform the tests)<BR/>this implies <CODEROUTINE>-noleaf</CODEROUTINE><BR/><CODEROUTINE>-lname</CODEROUTINE> and <CODEROUTINE>-ilname</CODEROUTINE> always return false</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -H</CODEROUTINE></TERM><DESC>follow symbolic links only for the command line arguments, but not for the scanned directories</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -ctime 2</CODEROUTINE></TERM><DESC>list the files whose status was modified two days ago</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -ctime -2</CODEROUTINE></TERM><DESC>list the files whose status was modified (strictly) less than two days</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -ctime +2</CODEROUTINE></TERM><DESC>list the files whose status was modified (strictly) more than two days</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -mtime 2</CODEROUTINE></TERM><DESC>list the files whose data was modified two days ago</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -atime 2</CODEROUTINE></TERM><DESC>list the files accessed two days ago</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -name toto</CODEROUTINE></TERM><DESC>true if the entry basename matches <CODEROUTINE>toto</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -iname toto</CODEROUTINE></TERM><DESC>same as <CODEROUTINE>-name</CODEROUTINE>,  but  the  match  is  case insensitive</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -lname toto</CODEROUTINE></TERM><DESC>true if the entry is a symbolic link whose content matches <CODEROUTINE>toto</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -ilname toto</CODEROUTINE></TERM><DESC>same as <CODEROUTINE>-lname</CODEROUTINE>,  but  the  match  is  case insensitive</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -type f</CODEROUTINE></TERM><DESC>true if the entry is a regular file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -type d</CODEROUTINE></TERM><DESC>true if the entry is a directory</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -empty</CODEROUTINE></TERM><DESC>true if the entry is an empty directory or an empty regular file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -mount</CODEROUTINE><BR/><CODEROUTINE>find . -xdev</CODEROUTINE></TERM><DESC>do not scan other filesystems</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . \( -name 'l' -o -name 'll' \) -print</CODEROUTINE></TERM><DESC>example of using the <CODEROUTINE>or</CODEROUTINE> operator</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -noleaf</CODEROUTINE></TERM><DESC>do not optimize by assuming that directories contain two fewer subdirectories than their hard link count (necessary for some filesystems: MSDOS, CDROM, AFS...)</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>file</T><A>javascript:do_reference("man/linux/1/file")</A><L>en</L><F>HTML</F></X> &lt;file&gt;</CODEROUTINE></TERM><DESC>return the type of <CODEROUTINE>file</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>stat</T><A>javascript:do_reference("man/linux/1/stat")</A><L>en</L><F>HTML</F></X> &lt;file&gt;</CODEROUTINE></TERM><DESC>display information about <CODEROUTINE>file</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>stat -c &lt;format&gt;</CODEROUTINE></TERM><DESC>specifies the output format
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>%A</CODEROUTINE></TERM><DESC>Access rights in human readable form</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%a</CODEROUTINE></TERM><DESC>Access rights in octal</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%B</CODEROUTINE></TERM><DESC>The size in bytes of each block reported by '%b'</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%b</CODEROUTINE></TERM><DESC>Number of blocks allocated (see %B) </DESC></ROW>
+<ROW><TERM><CODEROUTINE>%C</CODEROUTINE></TERM><DESC>SELinux security context</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%D</CODEROUTINE></TERM><DESC>Device number in hex</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%d</CODEROUTINE></TERM><DESC>Device number in decimal</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%F</CODEROUTINE></TERM><DESC>File type</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%f</CODEROUTINE></TERM><DESC>Raw mode in hex</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%G</CODEROUTINE></TERM><DESC>Group name of owner</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%g</CODEROUTINE></TERM><DESC>Group ID of owner</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%h</CODEROUTINE></TERM><DESC>Number of hard links</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%i</CODEROUTINE></TERM><DESC>Inode number</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%N</CODEROUTINE></TERM><DESC>Quoted File name with dereference if symbolic link</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%n</CODEROUTINE></TERM><DESC>File name</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%o</CODEROUTINE></TERM><DESC>IO block size</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%s</CODEROUTINE></TERM><DESC>Total size, in bytes</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%T</CODEROUTINE></TERM><DESC>Minor device type in hex</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%t</CODEROUTINE></TERM><DESC>Major device type in hex</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%U</CODEROUTINE></TERM><DESC>User name of owner</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%u</CODEROUTINE></TERM><DESC>User ID of owner</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%X</CODEROUTINE></TERM><DESC>Time of last access as seconds since Epoch</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%x</CODEROUTINE></TERM><DESC>Time of last access</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%Y</CODEROUTINE></TERM><DESC>Time of last modification as seconds since Epoch</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%y</CODEROUTINE></TERM><DESC>Time of last modification</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%Z</CODEROUTINE></TERM><DESC>Time of last change as seconds since Epoch</DESC></ROW>
+<ROW><TERM><CODEROUTINE>%z</CODEROUTINE></TERM><DESC>Time of last change</DESC></ROW>
+</DEFINITIONTABLE>
+</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>chmod</T><A>javascript:do_reference("man/linux/1/chmod")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change file access permissions</DESC></ROW>
+<ROW><TERM><CODEROUTINE>chmod -s file</CODEROUTINE></TERM><DESC>unset the user and group setuid bits</DESC></ROW>
+<ROW><TERM><CODEROUTINE>chmod u+s file</CODEROUTINE></TERM><DESC>set the user setuid bit</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>dos2unix</T><A>javascript:do_reference("man/linux/1/dos2unix")</A><L>en</L><F>HTML</F></X> foobqr</CODEROUTINE></TERM><DESC>convert <CODEROUTINE>foobar</CODEROUTINE> from DOS encoding into Unix encoding</DESC></ROW>
+<ROW><TERM><CODEROUTINE>dos2unix -c mac foobar</CODEROUTINE></TERM><DESC>convert <CODEROUTINE>foobar</CODEROUTINE> from Mac encoding into Unix encoding</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>unix2dos</T><A>javascript:do_reference("man/linux/1/unix2dos")</A><L>en</L><F>HTML</F></X> foobar</CODEROUTINE></TERM><DESC>convert <CODEROUTINE>foobar</CODEROUTINE> from Unix encoding into DOS encoding</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>iconv</T><A>javascript:do_reference("man/linux/1/iconv")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>convert encoding of given files from one encoding to another</DESC></ROW>
+<ROW><TERM><CODEROUTINE>iconv --from-code=ISO-8859-1 --to-code=UTF-8 &lt; old_file &gt; new_file</CODEROUTINE></TERM><DESC>convert a file from ISO-8859-1 to UTF-8</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>tar</T><A>javascript:do_reference("man/linux/1/tar")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>archiving utility</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tar -c</CODEROUTINE><BR/><CODEROUTINE>tar --create</CODEROUTINE></TERM><DESC>create an archive file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tar -x</CODEROUTINE><BR/><CODEROUTINE>tar --extract</CODEROUTINE><BR/><CODEROUTINE>tar --get</CODEROUTINE></TERM><DESC>extract files from an archive file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tar -t</CODEROUTINE><BR/><CODEROUTINE>tar --list</CODEROUTINE></TERM><DESC>list content of an archive file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tar -z</CODEROUTINE></TERM><DESC>filter the archive file through gzip</DESC></ROW>
+<ROW><TERM><CODEROUTINE>tar /tmp/data.tar -I /tmp/list</CODEROUTINE></TERM><DESC>archive the files listed in <CODEROUTINE>/tmp/list</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>getfacl</T><A>javascript:do_reference("man/linux/1/getfacl")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return the ACL rights of <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>setfacl</T><A>javascript:do_reference("man/linux/1/setfacl")</A><L>en</L><F>HTML</F></X></CODEROUTINE> -m u:tommy:r file</TERM><DESC>give <CODEROUTINE>tommy</CODEROUTINE> read access to <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>logrotate</T><A>javascript:do_reference("man/linux/8/logrotate")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>rotate/compress/delete/mail some logfiles</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>du</T><A>javascript:do_reference("man/linux/1/du")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>compute disk space usage</DESC></ROW>
+<ROW><TERM><CODEROUTINE>du -s</CODEROUTINE></TERM><DESC>display only a total for each argument</DESC></ROW>
+<ROW><TERM><CODEROUTINE>du -k</CODEROUTINE></TERM><DESC>display sizes in kilobytes</DESC></ROW>
+<ROW><TERM><CODEROUTINE>du -b</CODEROUTINE></TERM><DESC>display apparent sizes in bytes</DESC></ROW>
+<ROW><TERM><CODEROUTINE>du -b</CODEROUTINE></TERM><DESC>display apparent sizes in bytes</DESC></ROW>
+<ROW><TERM><CODEROUTINE>du -B<I>size</I></CODEROUTINE></TERM><DESC>display size in <I>size</I>-byte blocks</DESC></ROW>
+<ROW><TERM><CODEROUTINE>du --apparent-size</CODEROUTINE></TERM><DESC>print  apparent  sizes,  rather  than disk usage; although the apparent size is usually smaller, it may be larger due to holes in (sparse) files, internal fragmentation, indirect blocks, and the like.</DESC></ROW>
+</DEFINITIONTABLE>
+
+</CONTENT>
+</PAGE>
+
+
+

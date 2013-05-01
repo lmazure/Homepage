@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>make</TITLE>
+<PATH>notes/make.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+<BLIST>
+<ITEM>
+display the default rules
+<CODESAMPLE>make -p -f /dev/null</CODESAMPLE>
+</ITEM>
+<ITEM>
+in order to support Java, define a new suffix rule
+<CODESAMPLE>
+.SUFFIXES : .java .class<BR/>
+.java.class:<BR/>
+<TAB/> javac -g $&#x3C;</CODESAMPLE>
+</ITEM>
+<ITEM>
+append a string to a variable
+<CODESAMPLE>variable += more</CODESAMPLE>
+or
+<CODESAMPLE>variable := $(variable) more</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>discrepancies between <CODEROUTINE>clearmake -C gnu</CODEROUTINE> and <CODEROUTINE>make</CODEROUTINE></B></U></TITLE>
+<ITEM><CODEROUTINE>clearmake</CODEROUTINE> accepts that there is no space after <CODEROUTINE>ifeq</CODEROUTINE> but <CODEROUTINE>make</CODEROUTINE> fails
+<CODESAMPLE> ifeq($(AW_VER),AW_4.3)<BR/>
+<TAB/>AIM_IMPORT_LIB = $(AIM_IMPORT_ROOT)/lib_$(ARCH)<BR/>
+else<BR/>
+<TAB/>AIM_IMPORT_LIB = $(AIM_IMPORT_ROOT)/lib<BR/>
+endif</CODESAMPLE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/coding.html#make</A><L>en</L><F>HTML</F></X>
+</PAGE>

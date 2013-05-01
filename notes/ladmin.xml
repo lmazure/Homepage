@@ -1,0 +1,356 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Linux system administration</TITLE>
+<PATH>notes/ladmin.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><U><B>Vulcan Nerve Pinch</B></U></TITLE>
+<ITEM>
+enable it with
+<CODESAMPLE><PROMPT/><X><T>sysctl</T><A>javascript:do_reference("man/linux/8/sysctl")</A><L>en</L><F>HTML</F></X> -w kernel.sysrq=1</CODESAMPLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="R"/></TERM><DESC>use raw keyboard events</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="K"/></TERM><DESC>kill current VT in use</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="E"/></TERM><DESC>terminate all running processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="I"/></TERM><DESC>kill all processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="L"/></TERM><DESC>kill all processes (including <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="B"/></TERM><DESC>reboot</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="S"/></TERM><DESC>sync all drives</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="U"/></TERM><DESC>umount all filesystems</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="O"/></TERM><DESC>turn the machine off</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="P"/></TERM><DESC>dump processor's registers</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="T"/></TERM><DESC>dump current tasks</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="M"/></TERM><DESC>dump some memory info</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="0"/> up to <MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="9"/></TERM><DESC>set kernel log level and redirect it to console</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>users/groups</B></U></TITLE>
+<ITEM><BLIST><TITLE>end user</TITLE>
+<ITEM><CODEROUTINE><X><T>chsh</T><A>javascript:do_reference("man/linux/1/chsh")</A><L>en</L><F>HTML</F></X></CODEROUTINE> change login shell</ITEM>
+<ITEM><CODEROUTINE><X><T>passwd</T><A>javascript:do_reference("man/linux/1/passwd")</A><L>en</L><F>HTML</F></X></CODEROUTINE> change password</ITEM>
+<ITEM><CODEROUTINE><X><T>chfn</T><A>javascript:do_reference("man/linux/1/chfn")</A><L>en</L><F>HTML</F></X></CODEROUTINE> change finger information</ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE>system administration</TITLE>
+<ITEM><CODEROUTINE><X><T>vipw</T><A>javascript:do_reference("man/linux/8/vipw")</A><L>en</L><F>HTML</F></X></CODEROUTINE> edit the file<CODEFILENAME><X><T>/etc/passwd</T><A>javascript:do_reference("man/linux/5/passwd")</A><L>en</L><F>HTML</F></X></CODEFILENAME></ITEM>
+<ITEM><CODEROUTINE><X><T>vigr</T><A>javascript:do_reference("man/linux/8/vigr")</A><L>en</L><F>HTML</F></X></CODEROUTINE> edit the file<CODEFILENAME><X><T>/etc/group</T><A>javascript:do_reference("man/linux/5/group")</A><L>en</L><F>HTML</F></X></CODEFILENAME></ITEM>
+<ITEM><CODEROUTINE><X><T>visudo</T><A>javascript:do_reference("man/linux/8/visudo")</A><L>en</L><F>HTML</F></X></CODEROUTINE> edit the file <CODEFILENAME><X><T>/etc/sudoers</T><A>javascript:do_reference("man/linux/5/sudoers")</A><L>en</L><F>HTML</F></X></CODEFILENAME></ITEM>
+</BLIST></ITEM></BLIST>
+
+<BLIST><TITLE><U><B>network</B></U></TITLE>
+<ITEM><BLIST><TITLE>DNS</TITLE>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>host</T><A>javascript:do_reference("man/linux/1/host")</A><L>en</L><F>HTML</F></X> foobar</CODEROUTINE></TERM><DESC>perform a DNS lookup and return the IP address of <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>host</T><A>javascript:do_reference("man/linux/1/host")</A><L>en</L><F>HTML</F></X> 11.22.33.44</CODEROUTINE></TERM><DESC>perform a DNS lookup and return the name of <CODEROUTINE>11.22.33.44</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+</ITEM>
+<ITEM>
+starting with Fedora Core 2, use <CODEROUTINE>system-config-network</CODEROUTINE> to configure the network<BR/>
+before this, use <CODEROUTINE>redhat-config-network</CODEROUTINE>
+</ITEM>
+<ITEM>
+<BLIST><TITLE>FTP</TITLE>
+<ITEM>
+<BLIST><TITLE>VSFTP</TITLE>
+<ITEM> <CODEFILENAME>/etc/vsftpd.ftpusers</CODEFILENAME> contains the list of users that are not allowed to log in via FTP (these users are still prompted for a password)</ITEM>
+<ITEM>if <CODEROUTINE>userlist_enable</CODEROUTINE> is <CODEROUTINE>YES</CODEROUTINE>, <CODEFILENAME>/etc/vsftpd.user_list</CODEFILENAME> contains the list of users that will not be prompted for a password and, hence, will not be able to log in (this avoid to transmit the passwords in clear text over the network)</ITEM>
+</BLIST>
+</ITEM>
+<ITEM>
+<BLIST><TITLE>WU-FTP</TITLE>
+<ITEM>to disallow FTP users, use <CODEROUTINE>deny-uid</CODEROUTINE>, <CODEROUTINE>deny-gid</CODEROUTINE>, <CODEROUTINE>allow-uid</CODEROUTINE> and <CODEROUTINE>allow-gid</CODEROUTINE> in <CODEFILENAME>/etc/ftpaccess</CODEFILENAME> instead of using <CODEFILENAME>/etc/ftpusers</CODEFILENAME></ITEM>
+</BLIST>
+</ITEM>
+</BLIST>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>hardware analysis</B></U></TITLE>
+<ITEM>
+report the temperature, number of errors, lifetime... of a ATA/IDE/SCSI3 hard drive
+<CODESAMPLE><PROMPT/><X><T>smartctl</T><A>javascript:do_reference("man/linux/8/smartctl")</A><L>en</L><F>HTML</F></X> -a /dev/sda</CODESAMPLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>scsiinfo</T><A>javascript:do_reference("man/linux/8/scsiinfo")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display/set SCSI device parameters</DESC></ROW>
+<ROW><TERM><CODEROUTINE>scsiinfo -X</CODEROUTINE></TERM><DESC>set SCSI device parameters (use <CODEROUTINE><X><T>scsi-config</T><A>javascript:do_reference("man/linux/8/scsi-config")</A><L>en</L><F>HTML</F></X></CODEROUTINE> instead)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>scsiinfo -d /dev/sda</CODEROUTINE></TERM><DESC>dump defect list from manufacturer table and grown table</DESC></ROW>
+<ROW><TERM><CODEROUTINE>scsiinfo -a /dev/sda</CODEROUTINE></TERM><DESC>display all information</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>hdparm</T><A>javascript:do_reference("man/linux/8/hdparm")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display/set IDE hard disk parameters</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>scsiformat</T><A>javascript:do_reference("man/linux/8/scsiformat")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>format a SCSI disk</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>badblocks</T><A>javascript:do_reference("man/linux/8/badblocks")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>list the bad blocks of a device</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>system analysis</B></U></TITLE>
+<ITEM>
+The messages log by the system are in <CODEFILENAME>/var/log</CODEFILENAME>.
+<DEFINITIONTABLE>
+<ROW><TERM><CODEFILENAME>/var/log/messages</CODEFILENAME></TERM><DESC>System log</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/var/log/boot.log</CODEFILENAME></TERM><DESC>Service start/stop log</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/var/log/secure</CODEFILENAME></TERM><DESC>Security log</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/var/log/maillog</CODEFILENAME></TERM><DESC>Sendmail log</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/var/log/httpd/access_log</CODEFILENAME></TERM><DESC>Apache access log</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/var/log/httpd/error_log</CODEFILENAME></TERM><DESC>Apache error log</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+a script can log a message in <CODEROUTINE>syslog</CODEROUTINE> with <CODEROUTINE><X><T>logger</T><A>javascript:do_reference("man/linux/1/logger")</A><L>en</L><F>HTML</F></X></CODEROUTINE>
+</ITEM>
+<ITEM>
+display the kernel ring buffer<BR/>
+<CODESAMPLE><PROMPT/><X><T>dmesg</T><A>javascript:do_reference("man/linux/8/dmesg")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+</ITEM>
+<ITEM>
+<BLIST><TITLE>modules</TITLE>
+<ITEM>
+list all the modules currently loaded in the kernel (this list is also in <CODEFILENAME>/proc/modules</CODEFILENAME>)<BR/>
+<CODESAMPLE><PROMPT/><X><T>lsmod</T><A>javascript:do_reference("man/linux/8/lsmod")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+</ITEM>
+<ITEM>
+load a module<BR/>
+<CODESAMPLE><PROMPT/><X><T>insmod</T><A>javascript:do_reference("man/linux/8/insmod")</A><L>en</L><F>HTML</F></X> mymod</CODESAMPLE>
+</ITEM>
+<ITEM>
+unload a module from the kernel<BR/>
+<CODESAMPLE><PROMPT/><X><T>rmmod</T><A>javascript:do_reference("man/linux/8/rmmod")</A><L>en</L><F>HTML</F></X> mymod</CODESAMPLE>
+</ITEM>
+</BLIST>
+</ITEM>
+<ITEM>
+display resources used by the processes<BR/>
+<CODESAMPLE><PROMPT/><X><T>top</T><A>javascript:do_reference("man/linux/1/top")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+</ITEM>
+<ITEM>
+report system activity<BR/>
+<CODESAMPLE><PROMPT/><X><T>sar</T><A>javascript:do_reference("man/linux/1/sar")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+</ITEM>
+<ITEM>
+display the free/used memory in real time<BR/>
+<CODESAMPLE><PROMPT/><X><T>watch</T><A>javascript:do_reference("man/linux/1/watch")</A><L>en</L><F>HTML</F></X> -n 1 -d <X><T>free</T><A>javascript:do_reference("man/linux/1/free")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+</ITEM>
+<ITEM>
+<BLIST><TITLE>systat</TITLE>
+<ITEM>
+report processors related statistics<BR/>
+<CODESAMPLE><PROMPT/><X><T>mpstat</T><A>javascript:do_reference("man/linux/1/mpstat")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+</ITEM>
+<ITEM>
+report CPU and I/O statistics<BR/>
+<CODESAMPLE><PROMPT/><X><T>iostat</T><A>javascript:do_reference("man/linux/1/iostat")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+</ITEM>
+<ITEM>
+get the lists of the writing processes<BR/>
+<CODESAMPLE><PROMPT/>service syslog stop # to avoid a mad loop if syslogd tries to write something during the experiment<BR/>
+<PROMPT/>echo 1 &gt; /proc/sys/vm/block_dump</CODESAMPLE>
+perform
+<CODESAMPLE><PROMPT/>dmesg</CODESAMPLE>
+clean up
+<CODESAMPLE><PROMPT/>echo 0 &gt; /proc/sys/vm/block_dump<BR/>
+<PROMPT/>service syslog start</CODESAMPLE>
+</ITEM>
+<ITEM>
+report virtual memory statistics<BR/>
+<CODESAMPLE><PROMPT/><X><T>vmstat</T><A>javascript:do_reference("man/linux/8/vmstat")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+</ITEM>
+</BLIST>
+</ITEM>
+<ITEM>
+<BLIST><TITLE>SCSI</TITLE>
+<ITEM>
+return the SCSI devices corresponding to the <CODEROUTINE>/dev/sg</CODEROUTINE>s
+<CODESAMPLE><PROMPT/><X><T>sg_map</T><A>javascript:do_reference("man/linux/8/sg_map")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+</ITEM>
+<ITEM>
+list the <CODEROUTINE>/dev/sg</CODEROUTINE>s bound to a SCSI device
+<CODESAMPLE><PROMPT/><X><T>sg_scan</T><A>javascript:do_reference("man/linux/8/sg_scan")</A><L>en</L><F>HTML</F></X> -i</CODESAMPLE>
+</ITEM>
+<ITEM>
+list the all the information about the device bound to <CODEROUTINE>/dev/sg1</CODEROUTINE>
+<CODESAMPLE><PROMPT/><X><T>sciiinfo</T><A>javascript:do_reference("man/linux/8/sciiinfo")</A><L>en</L><F>HTML</F></X> -a /dev/sg1</CODESAMPLE>
+</ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE>PCI</TITLE>
+<ITEM>list the PCI devices
+<CODESAMPLE><PROMPT/><X><T>lspci</T><A>javascript:do_reference("man/linux/8/lspci")</A><L>en</L><F>HTML</F></X></CODESAMPLE></ITEM>
+</BLIST></ITEM>
+<ITEM>
+<X><T>/proc</T><A>http://www.redhat.com/docs/manuals/linux/RHL-8.0-Manual/ref-guide/ch-proc.html</A><L>en</L><F>HTML</F></X> files
+<DEFINITIONTABLE>
+<ROW><TERM><CODEFILENAME>/proc/cmdline</CODEFILENAME></TERM><DESC>the command line parameters used to start the kernel</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/kcore</CODEFILENAME></TERM><DESC>is the image of the physical memory (in the core file format)</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/kmsg</CODEFILENAME></TERM><DESC>is the kernel messages log (only a provileged process can read it and syslog must be called by a process)</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/ksyms</CODEFILENAME></TERM><DESC>is the kernel symbol table</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/loadavg</CODEFILENAME></TERM><DESC>contains load indicators (same as uptime)</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/cpuinfo</CODEFILENAME></TERM><DESC>CPU characteristics (only the cpu and bogomips are standard entries)</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/meminfo</CODEFILENAME></TERM><DESC>contains the current memory usage (same as free)</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/modules</CODEFILENAME></TERM><DESC>lists the modules currently loaded in the kernel</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/uptime</CODEFILENAME></TERM><DESC>contains the uptime and idle time</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/version</CODEFILENAME></TERM><DESC>contains the versions of the Linux kernel, gcc and Red Hat Linux installed on the system</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/filesystems</CODEFILENAME></TERM><DESC>lists the file systems supported by the kernel</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/swaps</CODEFILENAME></TERM><DESC>lists the swap spaces and their use</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/stat</CODEFILENAME></TERM><DESC>contains some kernel statitistics</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/slabinfo</CODEFILENAME></TERM><DESC>lists the memory usage on the slab level</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/mounts</CODEFILENAME></TERM><DESC>lists all the mount of the system</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/locks</CODEFILENAME></TERM><DESC>lists the file currently locked by the kernel</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/devices</CODEFILENAME></TERM><DESC>major numbers and device groups</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/ioports</CODEFILENAME></TERM><DESC>used IO addresses</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/interrupts</CODEFILENAME></TERM><DESC>used interrupts</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/dma</CODEFILENAME></TERM><DESC>used DMA channels</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM><BLIST><TITLE>/proc/sys</TITLE>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>sysctl</T><A>javascript:do_reference("man/linux/8/sysctl")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>configure kernel parameters at runtime</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sysctl -a</CODEROUTINE></TERM><DESC>list all the parameters currently set</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sysctl -w kernel.sysrq=1</CODEROUTINE></TERM><DESC>this is the same as <CODEROUTINE>echo 1 &gt; /proc/sys/kernel/sysrq</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>When the system boots, the <CODEROUTINE>init</CODEROUTINE> program runs the <CODEFILENAME>/etc/rc.d/rc.sysinit</CODEFILENAME> script which executes <CODEROUTINE>sysctl</CODEROUTINE> using <CODEFILENAME>/etc/sysctl.conf</CODEFILENAME>. So any values added to <CODEFILENAME>/etc/sysctl.conf</CODEFILENAME> will take effect each time the system boots.</ITEM>
+</BLIST></ITEM>
+<ITEM>
+<CODEFILENAME><X><T>/etc/services</T><A>javascript:do_reference("man/linux/5/services")</A><L>en</L><F>HTML</F></X></CODEFILENAME> contains the port/server mapping<BR/>
+the services are defined in <CODEFILENAME>/etc/xinetd.d</CODEFILENAME> (one file per service)<BR/>
+the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>javascript:do_reference("man/linux/5/xinetd.conf")</A><L>en</L><F>HTML</F></X></CODEFILENAME>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>chkconfig</T><A>javascript:do_reference("man/linux/8/chkconfig")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>configure system services</DESC></ROW>
+<ROW><TERM><CODEROUTINE>chkconfig --list</CODEROUTINE></TERM><DESC>list the current state of the services</DESC></ROW>
+<ROW><TERM><CODEROUTINE>chkconfig rexec on</CODEROUTINE></TERM><DESC>enable a service<BR/>the service will be started only at the nest reboot, use <CODEROUTINE>service rexec start</CODEROUTINE> to start it now</DESC></ROW>
+<ROW><TERM><CODEROUTINE>chkconfig rexec off</CODEROUTINE></TERM><DESC>disable a service</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>service --status-all</CODEROUTINE></TERM><DESC>return the status of all services</DESC></ROW>
+<ROW><TERM><CODEROUTINE>service sshd status</CODEROUTINE></TERM><DESC>indicate if <CODEROUTINE>sshd</CODEROUTINE> is running</DESC></ROW>
+<ROW><TERM><CODEROUTINE>service sshd start</CODEROUTINE></TERM><DESC>start <CODEROUTINE>sshd</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>service sshd stop</CODEROUTINE></TERM><DESC>stop <CODEROUTINE>sshd</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>file system analysis</B></U></TITLE>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>lsof</T><A>http://people.freebsd.org/~abe/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>list the open files</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>shred</T><A>javascript:do_reference("man/linux/1/shred")</A><L>en</L><F>HTML</F></X> foobar</CODEROUTINE></TERM><DESC>overwrite a file before deleting it</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEFILENAME><X><T>/etc/fstab</T><A>javascript:do_reference("man/linux/5/fstab")</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>description of the filesystems to mount</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/etc/mtab</CODEFILENAME></TERM><DESC>tracking of the mounted filesystems</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>sfdisk</T><A>javascript:do_reference("man/linux/8/sfdisk")</A><L>en</L><F>HTML</F></X> -l /dev/sdb</CODEROUTINE></TERM><DESC>display the partition table of disk /dev/sdb</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM><BLIST><TITLE>swap</TITLE>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>swapon</T><A>javascript:do_reference("man/linux/1/swapon")</A><L>en</L><F>HTML</F></X> -s</CODEROUTINE><BR/><CODEROUTINE>cat <CODEFILENAME><X><T>/proc/swaps</T><A>javascript:do_reference("man/linux/5/proc")</A><L>en</L><F>HTML</F></X></CODEFILENAME></CODEROUTINE></TERM><DESC>display swap usage</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+</ITEM>
+<ITEM><BLIST><TITLE>XFS</TITLE>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>mkfs.xfs</T><A>javascript:do_reference("man/linux/8/mkfs.xfs")</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE><BR/><CODEROUTINE><X><T>mkfs</T><A>javascript:do_reference("man/linux/8/mkfs")</A><L>en</L><F>HTML</F></X> -t xfs /dev/md4</CODEROUTINE></TERM><DESC>create a XFS filesystem</DESC></ROW>
+<ROW><TERM><CODEROUTINE>mkfs.xfs -f</CODEROUTINE></TERM><DESC>do not create the filesystem, only display its parameters</DESC></ROW>
+<ROW><TERM><CODEROUTINE>mkfs.xfs -N</CODEROUTINE></TERM><DESC>force the filesystem creation even if the partition already contains one</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODESAMPLE><X><T>xfs_growfs</T><A>javascript:do_reference("man/linux/8/xfs_growfs")</A><L>en</L><F>HTML</F></X> -n /dev/md4<BR/>xfs_growfs -n /export/home1</CODESAMPLE></TERM><DESC>display the filesystem parameters</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODESAMPLE><X><T>xfs_info</T><A>javascript:do_reference("man/linux/8/xfs_info")</A><L>en</L><F>HTML</F></X> /dev/md4<BR/>xfs_info /export/home1</CODESAMPLE></TERM><DESC>same as <CODEROUTINE>xfs_growfs -n</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>xfs_db</T><A>javascript:do_reference("man/linux/8/xfs_db")</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>launch the XFS debugger on /dev/md4</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>xfs_check</T><A>javascript:do_reference("man/linux/8/xfs_check")</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>launch the XFS checker on <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>xfs_check -i 123 /dev/md4</CODEROUTINE></TERM><DESC>launch the XFS checker on inode 123 of <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>xfs_check -l /dev/scsi/sbdc1b0t0u0p5 /dev/md0</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-l</CODEROUTINE> option indicates that <CODEROUTINE>/dev/md0</CODEROUTINE> has an external log <CODEROUTINE>/dev/scsi/sbdc1b0t0u0p5</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>xfs_ncheck</T><A>javascript:do_reference("man/linux/8/xfs_ncheck")</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>return the list of inodes/pathnames on <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>xfs_ncheck -i 123 /dev/md4</CODEROUTINE></TERM><DESC>return pathname of inode 123 of <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>xfs_ncheck -l /dev/scsi/sbdc1b0t0u0p5 /dev/md0</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-l</CODEROUTINE> option indicates that <CODEROUTINE>/dev/md0</CODEROUTINE> has an external log <CODEROUTINE>/dev/scsi/sbdc1b0t0u0p5</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>xfs_repair</T><A>javascript:do_reference("man/linux/8/xfs_repair")</A><L>en</L><F>HTML</F></X> /dev/md0</CODEROUTINE></TERM><DESC>repair the filesystem mounted on <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>xfs_repair -l /dev/scsi/sbdc1b0t0u0p5 /dev/md0</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-l</CODEROUTINE> option indicates that <CODEROUTINE>/dev/md0</CODEROUTINE> has an external log <CODEROUTINE>/dev/scsi/sbdc1b0t0u0p5</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+</ITEM>
+<ITEM><BLIST><TITLE>NFS</TITLE>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEFILENAME>/var/lib/nfs/rmtab</CODEFILENAME></TERM><DESC>client information</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/var/lib/nfs/etab</CODEFILENAME></TERM><DESC>detailed export information</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/fs/nfs/exports</CODEFILENAME><BR/><CODEFILENAME><X><T>/etc/exports</T><A>javascript:do_reference("man/linux/5/exports")</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>lists of clients</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/var/lib/nfs/xtab</CODEFILENAME></TERM><DESC>explicit machine names</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>libraries</B></U></TITLE>
+<ITEM>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>ldconfig</T><A>javascript:do_reference("man/linux/8/ldconfig")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>recreate the links for the shared libraries and rebuild the cache</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+</BLIST>
+
+</CONTENT>
+</PAGE>
+
+
+

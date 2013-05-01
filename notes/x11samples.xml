@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE status="unmaintained" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>X11 samples</TITLE>
+<PATH>notes/x11samples.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+<SLIST>
+
+<ITEM>
+Example of creation of a pulldown menu
+<CODESAMPLE>
+Widget pulldownMenu=XmCreatePulldownMenu(form,<BR/>
+<TAB/><TAB/>(char*)"pulldown",<BR/>
+<TAB/><TAB/>NULL,<BR/>
+<TAB/><TAB/>0);<BR/>
+<BR/>
+Arg args[7];<BR/>
+Cardinal n=0;<BR/>
+XtSetArg(args[n],XmNtopAttachment,XmATTACH_FORM); n++;<BR/>
+XtSetArg(args[n],XmNbottomAttachment,XmATTACH_FORM); n++;<BR/>
+XtSetArg(args[n],XmNleftAttachment,XmATTACH_FORM); n++;<BR/>
+XtSetArg(args[n],XmNrightAttachment,XmATTACH_WIDGET); n++;<BR/>
+XtSetArg(args[n],XmNrightWidget,value_); n++;<BR/>
+XtSetArg(args[n],XmNsubMenuId,pulldownMenu); n++;<BR/>
+expendPatternOptionMenu=XmCreateOptionMenu(form(),<BR/>
+<TAB/><TAB/>(char*)"option_menu",<BR/>
+<TAB/><TAB/>args,<BR/>
+<TAB/><TAB/>n);<BR/>
+<BR/>
+beginsButton=XtVaCreateManagedWidget("begins_button",<BR/>
+<TAB/><TAB/>xmPushButtonGadgetClass,<BR/>
+<TAB/><TAB/>pulldownMenu,<BR/>
+<TAB/><TAB/>NULL);<BR/>
+<BR/>
+containsButton=XtVaCreateManagedWidget("contains_button",<BR/>
+<TAB/><TAB/>xmPushButtonGadgetClass,<BR/>
+<TAB/><TAB/>pulldownMenu,<BR/>
+<TAB/><TAB/>NULL);<BR/>
+<BR/>
+isButton=XtVaCreateManagedWidget("is_button",<BR/>
+<TAB/><TAB/>xmPushButtonGadgetClass,<BR/>
+<TAB/><TAB/>pulldownMenu,<BR/>
+<TAB/><TAB/>NULL);<BR/>
+<BR/>
+XtVaSetValues(expendPatternOptionMenu_,<BR/>
+<TAB/><TAB/>XmNmenuHistory, beginsButton_,<BR/>
+<TAB/><TAB/>NULL);<BR/>
+<BR/>
+XtAddCallback(beginsButton,<BR/>
+<TAB/><TAB/>XmNactivateCallback,<BR/>
+<TAB/><TAB/>FltGuiFieldPatternMatching_expendPatternCB,<BR/>
+<TAB/><TAB/>this);<BR/>
+XtAddCallback(containsButton,<BR/>
+<TAB/><TAB/>XmNactivateCallback,<BR/>
+<TAB/><TAB/>FltGuiFieldPatternMatching_expendPatternCB,<BR/>
+<TAB/><TAB/>this);<BR/>
+XtAddCallback(isButton,<BR/>
+<TAB/><TAB/>XmNactivateCallback,<BR/>
+<TAB/><TAB/>FltGuiFieldPatternMatching_expendPatternCB,<BR/>
+<TAB/><TAB/>this);<BR/>
+<BR/>
+XtManageChild(expendPatternOptionMenu);
+</CODESAMPLE>
+</ITEM>
+
+<ITEM>
+Avoid some resize problems (when the buttons are added and removed dynamically to an option menu):
+<CODESAMPLE>
+button=XtVaCreateManagedWidget("button",<BR/>
+<TAB/><TAB/>xmPushButtonGadgetClass,<BR/>
+<TAB/><TAB/>pulldownMenu,<BR/>
+<TAB/><TAB/>XmNwidth,105,<BR/>
+<TAB/><TAB/>XmNrecomputeSize, False,<BR/>
+<TAB/><TAB/>NULL);<BR/>
+</CODESAMPLE>
+</ITEM>
+
+<ITEM>
+Retrieve the string which is currently selected
+<CODESAMPLE>
+char *text;<BR/>
+XmString str;<BR/>
+Widget w;<BR/>
+XtVaGetValues(optionMenu, XmNmenuHistory, &amp;w, NULL);<BR/>
+XtVaGetValues(w, XmNlabelString, &amp;str, NULL);<BR/>
+XmStringGetLtoR(str, XmSTRING_DEFAULT_CHARSET, &amp;text);<BR/>
+XmStringFree(str);<BR/>
+std::cout &lt;&lt; text &lt;&lt; std::endl;
+</CODESAMPLE>
+</ITEM>
+
+</SLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/x11.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

@@ -1,0 +1,841 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>old DOS notes</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+These notes are very old (circa 1992), some are obsolete,
+some have been revised since.
+<p>cmd
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>cmd</tt></td>
+      <td>command interpreter</td>
+    </tr>
+    <tr>
+      <td><tt>/C string</tt></td>
+      <td>execute the command specified by string and exist</td>
+    </tr>
+    <tr>
+      <td><tt>/K string</tt></td>
+      <td>execute the command specified by string and remain</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>relative path
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>.</tt></td>
+      <td>current directory</td>
+    </tr>
+    <tr>
+      <td><tt>..</tt></td>
+      <td>parent directory</td>
+    </tr>
+    <tr>
+      <td><tt>...</tt></td>
+      <td>parent of parent directory</td>
+    </tr>
+    <tr>
+      <td><tt>....</tt></td>
+      <td>parent of parent of parent directory</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>dir /p</tt></td>
+      <td>list the directory in page mode</td>
+    </tr>
+    <tr>
+      <td><tt>dir /S</tt></td>
+      <td>recursive listing</td>
+    </tr>
+    <tr>
+      <td><tt>dir /w</tt></td>
+      <td>list the directory in multicolumn mode</td>
+    </tr>
+    <tr>
+      <td><tt>dir</tt></td>
+      <td>equivalent to <tt>dir *.*</tt></td>
+    </tr>
+    <tr>
+      <td><tt>dir name</tt></td>
+      <td>equivalent to <tt>dir name.*</tt></td>
+    </tr>
+    <tr>
+      <td><tt>dir .suf</tt></td>
+      <td>equivalent to <tt>dir *.suf</tt></td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>dir /b</code><br>
+      </td>
+      <td style="vertical-align: top;">bare format<br>
+      <code>dir /b &gt; list.txt</code> record the content of a
+directory in a file (list.txt will appear itself in the list)<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>dir /od<br>
+      </code></td>
+      <td style="vertical-align: top;">sort by increasing date<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>dir /on<br>
+      </code></td>
+      <td style="vertical-align: top;">sort by name<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>dir /oe<br>
+      </code></td>
+      <td style="vertical-align: top;">sort by extension<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>dir /og<br>
+      </code></td>
+      <td style="vertical-align: top;">group directories first<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>dir /os<br>
+      </code></td>
+      <td style="vertical-align: top;">sort by increasing size<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>-<br>
+      </code></td>
+      <td style="vertical-align: top;">reverse sort order<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><code>dir /o-d<br>
+      </code></td>
+      <td style="vertical-align: top;">sort by decreasing date<br>
+      </td>
+    </tr>
+    <tr>
+      <td style="vertical-align: top;"><span
+ style="font-family: monospace;">dir /a&lt;attributes&gt;</span><br>
+      </td>
+      <td style="vertical-align: top;">display files with specified
+attributes<br>
+      <table style="text-align: left;" border="1" cellpadding="2"
+ cellspacing="2">
+        <tbody>
+          <tr>
+            <td style="vertical-align: top;"><span
+ style="font-family: monospace;">D</span><br>
+            </td>
+            <td style="vertical-align: top;">directories<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><span
+ style="font-family: monospace;">H</span><br>
+            </td>
+            <td style="vertical-align: top;">hidden files<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><span
+ style="font-family: monospace;">S</span><br>
+            </td>
+            <td style="vertical-align: top;">system files</td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><span
+ style="font-family: monospace;">R</span><br>
+            </td>
+            <td style="vertical-align: top;">read-only files<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><span
+ style="font-family: monospace;">A</span><br>
+            </td>
+            <td style="vertical-align: top;">files ready for archiving<br>
+            </td>
+          </tr>
+          <tr>
+            <td style="vertical-align: top;"><span
+ style="font-family: monospace;">-</span><br>
+            </td>
+            <td style="vertical-align: top;">prefix to negate an
+attribute<br>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td>
+      <div align="right">echo</div>
+      </td>
+      <td>print a message</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>exit</tt></td>
+      <td>exit the batch script</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>doskey</tt></td>
+      <td>start <tt>DosKey</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>start Window applications
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>start .</tt></td>
+      <td>display a window of the content of the current library</td>
+    </tr>
+    <tr>
+      <td><tt>start tips.txt</tt></td>
+      <td>display <tt>tips.txt</tt> in a Windows application</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>del /p</tt> <br>
+      <tt>erase /p</tt></td>
+      <td>ask for a confirmation of file deletion</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>date</tt></td>
+      <td>display the date and ask for a new value</td>
+    </tr>
+    <tr>
+      <td><tt>date dd.mm.aa</tt></td>
+      <td>set the date</td>
+    </tr>
+    <tr>
+      <td><tt>time</tt></td>
+      <td>display the time and ask for a new value</td>
+    </tr>
+    <tr>
+      <td><tt>time hh[:mm[:ss:[.cc]]]</tt></td>
+      <td>set the time</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>cls</tt></td>
+      <td>clear the screen</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>cd</tt> <br>
+      <tt>chdir</tt></td>
+      <td>(without argument) return the name of the current directory</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>ver</tt></td>
+      <td>return the DOS version</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>type</tt></td>
+      <td>list a file on the screen</td>
+    </tr>
+    <tr>
+      <td><tt>more</tt></td>
+      <td>display a file sreen per screen</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>mkdir</tt> <br>
+      <tt>mk</tt></td>
+      <td>create a directory</td>
+    </tr>
+    <tr>
+      <td><tt>rmdir</tt> <br>
+      <tt>rd</tt></td>
+      <td>delete an empty directory (including hidden files)</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>rename</tt> <br>
+      <tt>ren</tt></td>
+      <td>rename a file</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>sort</tt></td>
+      <td>sort the lines (case independant)</td>
+    </tr>
+    <tr>
+      <td><tt>/t</tt></td>
+      <td>reverse the sort order</td>
+    </tr>
+    <tr>
+      <td><tt>/+n</tt></td>
+      <td>sort on the n<sup>th</sup> column</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>verify on</tt></td>
+      <td>DOS verifies that file are correctly recorded</td>
+    </tr>
+    <tr>
+      <td><tt>verify off</tt></td>
+      <td>DOS performs no verification</td>
+    </tr>
+    <tr>
+      <td><tt>verify</tt></td>
+      <td>display the current mode</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>vol</tt></td>
+      <td>return the volume name of a unit</td>
+    </tr>
+    <tr>
+      <td><tt>label</tt></td>
+      <td>define the label of a volume</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>tree</tt></td>
+      <td>graphicaly list a directory content</td>
+    </tr>
+    <tr>
+      <td><tt>/f</tt></td>
+      <td>display the name of the file in each directory</td>
+    </tr>
+    <tr>
+      <td><tt>/a</tt></td>
+      <td>use graphic characters to dsplay more quickly</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>path</tt></td>
+      <td>display the current path</td>
+    </tr>
+    <tr>
+      <td><tt>path unit:path;unit:path;...;unit:path</tt> <br>
+      <tt>set path=unit:path;unit:path;...;unit:path</tt></td>
+      <td>define the path</td>
+    </tr>
+    <tr>
+      <td><tt>set path=unit:path;%path%</tt></td>
+      <td>complete the path</td>
+    </tr>
+    <tr>
+      <td><tt>path;</tt> <br>
+      <tt>set path=</tt></td>
+      <td>define an empty path</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>prompt</tt></td>
+      <td>define the DOS prompt</td>
+    </tr>
+    <tr>
+      <td><tt>$q</tt></td>
+      <td>character =</td>
+    </tr>
+    <tr>
+      <td><tt>$$</tt></td>
+      <td>character $</td>
+    </tr>
+    <tr>
+      <td><tt>$t</tt></td>
+      <td>current hour</td>
+    </tr>
+    <tr>
+      <td><tt>$d</tt></td>
+      <td>current date</td>
+    </tr>
+    <tr>
+      <td><tt>$p</tt></td>
+      <td>current directory of default unit</td>
+    </tr>
+    <tr>
+      <td><tt>$v</tt></td>
+      <td>version number</td>
+    </tr>
+    <tr>
+      <td><tt>$n</tt></td>
+      <td>default unit</td>
+    </tr>
+    <tr>
+      <td><tt>$g</tt></td>
+      <td>character &gt;</td>
+    </tr>
+    <tr>
+      <td><tt>$l</tt></td>
+      <td>character &lt;</td>
+    </tr>
+    <tr>
+      <td><tt>$b</tt></td>
+      <td>character |</td>
+    </tr>
+    <tr>
+      <td><tt>$-</tt></td>
+      <td>line return</td>
+    </tr>
+    <tr>
+      <td><tt>$e</tt></td>
+      <td>character Esc</td>
+    </tr>
+    <tr>
+      <td><tt>$h</tt></td>
+      <td>backspace</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>set</tt></td>
+      <td>list the environment variables</td>
+    </tr>
+    <tr>
+      <td><tt>set var=</tt></td>
+      <td>earse an environment variable</td>
+    </tr>
+    <tr>
+      <td><tt>set var=string</tt></td>
+      <td>define an environment variable</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>fdisk</tt></td>
+      <td>configure a hard drive</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>find "string" file</tt></td>
+      <td>search a string in a file</td>
+    </tr>
+    <tr>
+      <td><tt>/v</tt></td>
+      <td>display all the lines not containing the string</td>
+    </tr>
+    <tr>
+      <td><tt>/c</tt></td>
+      <td>only return the number of lines</td>
+    </tr>
+    <tr>
+      <td><tt>/n</tt></td>
+      <td>prepend each line by its number in the file</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>mem</tt></td>
+      <td>display the free and used memory</td>
+    </tr>
+    <tr>
+      <td><tt>/c</tt> <br>
+      <tt>/classify</tt></td>
+      <td>list programs present in memory</td>
+    </tr>
+    <tr>
+      <td><tt>/d</tt> <br>
+      <tt>/debug</tt></td>
+      <td>list programs and internal controllers present in memory</td>
+    </tr>
+    <tr>
+      <td><tt>/f</tt> <br>
+      <tt>/free</tt></td>
+      <td>display the amount of free memory left</td>
+    </tr>
+    <tr>
+      <td><tt>/p</tt> <br>
+      <tt>/page</tt></td>
+      <td>pause after each screen</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>keyb fr</tt></td>
+      <td>configure the keyboard to French</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>fc</tt></td>
+      <td>compare two files</td>
+    </tr>
+    <tr>
+      <td><tt>/a</tt></td>
+      <td>abvreviated ASCII comparison, only the first and last lines
+of zones
+of difference are displayed</td>
+    </tr>
+    <tr>
+      <td><tt>/b</tt></td>
+      <td>binary comparison</td>
+    </tr>
+    <tr>
+      <td><tt>/c</tt></td>
+      <td>case independent comparison</td>
+    </tr>
+    <tr>
+      <td><tt>/l</tt></td>
+      <td>ASCII comparison</td>
+    </tr>
+    <tr>
+      <td><tt>/lb num</tt></td>
+      <td>define the internal buffer size in number of lines</td>
+    </tr>
+    <tr>
+      <td><tt>/n</tt></td>
+      <td>display the line numbers</td>
+    </tr>
+    <tr>
+      <td><tt>/t</tt></td>
+      <td>does not transform tabs into spaces</td>
+    </tr>
+    <tr>
+      <td><tt>/w</tt></td>
+      <td>compress spaces and tabulations</td>
+    </tr>
+    <tr>
+      <td><tt>/nnnn</tt></td>
+      <td>maximum number of identical lines, but inserted between
+different lines,
+that will be considered different by extension</td>
+    </tr>
+    <tr>
+      <td><tt>comp</tt></td>
+      <td>compare two files</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>break on</tt></td>
+      <td>disk reads/writes can be interrupted by Ctrl-C</td>
+    </tr>
+    <tr>
+      <td><tt>break off</tt></td>
+      <td>disk reads/writes cannot be interrupted</td>
+    </tr>
+    <tr>
+      <td><tt>break</tt></td>
+      <td>return the current switch state</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>chkdsk</tt></td>
+      <td>return a disk check report</td>
+    </tr>
+    <tr>
+      <td><tt>/f</tt></td>
+      <td>in case of a problem, ask for a reparation by creating a file
+containing
+the lost chain</td>
+    </tr>
+    <tr>
+      <td><tt>/v</tt></td>
+      <td>display each file name while it is checked</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>replace</tt></td>
+      <td>update anterior versions of files</td>
+    </tr>
+    <tr>
+      <td><tt>/a</tt></td>
+      <td>add the new files to the target directory instead of
+replacing existing
+files</td>
+    </tr>
+    <tr>
+      <td><tt>/p</tt></td>
+      <td>ask for a confirmation before replacing a file</td>
+    </tr>
+    <tr>
+      <td><tt>/r</tt></td>
+      <td>replace also the write protected files</td>
+    </tr>
+    <tr>
+      <td><tt>/s</tt></td>
+      <td>searchin the subdirectories of the target directory (there is
+never
+a search in the subdirectories of the source directory), incompatible
+with <tt>/a</tt></td>
+    </tr>
+    <tr>
+      <td><tt>/u</tt></td>
+      <td>replace only the files which are older in the target
+directory than
+in the source directory</td>
+    </tr>
+    <tr>
+      <td><tt>/w</tt></td>
+      <td>prompt before strating the command</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>graftabl</tt></td>
+      <td>allow the display, in graphic mode, of an extended character
+set (CGA)</td>
+    </tr>
+    <tr>
+      <td><tt>graftabl xxx</tt></td>
+      <td>use the <tt>xxx</tt> page</td>
+    </tr>
+    <tr>
+      <td><tt>graftabl ?</tt></td>
+      <td>display a help message</td>
+    </tr>
+    <tr>
+      <td><tt>graftabl /sta</tt></td>
+      <td>display the current status</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>diskcopy</tt></td>
+      <td>copy floppies (the files are not defragmented)</td>
+    </tr>
+    <tr>
+      <td><tt>/1</tt></td>
+      <td>copy a single face</td>
+    </tr>
+  </tbody>
+</table>
+<br>
+&nbsp;
+<table border="1">
+  <tbody>
+    <tr>
+      <td><tt>backup</tt></td>
+      <td>backup files</td>
+    </tr>
+    <tr>
+      <td><tt>/s</tt></td>
+      <td>save the subdirectories</td>
+    </tr>
+    <tr>
+      <td><tt>/m</tt></td>
+      <td>save only the files modified since last backup</td>
+    </tr>
+    <tr>
+      <td><tt>/a</tt></td>
+      <td>add only the files which does not exist in the backup</td>
+    </tr>
+    <tr>
+      <td><tt>/f</tt></td>
+      <td>format the floppy with a given capacity</td>
+    </tr>
+    <tr>
+      <td><tt>/d</tt></td>
+      <td>save only the files modified since a given date</td>
+    </tr>
+    <tr>
+      <td><tt>/t</tt></td>
+      <td>save only the files modified since a given hour</td>
+    </tr>
+    <tr>
+      <td><tt>/l</tt></td>
+      <td>create an entry in a given journal file</td>
+    </tr>
+    <tr>
+      <td><tt>restore</tt></td>
+      <td>restore files</td>
+    </tr>
+    <tr>
+      <td><tt>/s</tt></td>
+      <td>restore the subdirectories</td>
+    </tr>
+    <tr>
+      <td><tt>/p</tt></td>
+      <td>ask for a confirmation for file which are write protected or
+modified
+since the backup</td>
+    </tr>
+    <tr>
+      <td><tt>/b</tt></td>
+      <td>restore only the files modified before a given date</td>
+    </tr>
+    <tr>
+      <td><tt>/a</tt></td>
+      <td>restore only the files modified after a given date</td>
+    </tr>
+    <tr>
+      <td><tt>/e</tt></td>
+      <td>restore only the files modified before a given hour</td>
+    </tr>
+    <tr>
+      <td><tt>/l</tt></td>
+      <td>restore only the files modified after a given hour</td>
+    </tr>
+    <tr>
+      <td><tt>/m</tt></td>
+      <td>restore only the files modified since the last backup</td>
+    </tr>
+    <tr>
+      <td><tt>/n</tt></td>
+      <td>restore only the files which does not exist anymore</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: July 20</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2005 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

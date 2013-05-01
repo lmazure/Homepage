@@ -1,0 +1,160 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Visual Basic Editor</TITLE>
+<PATH>notes/vbeditor.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+all windows
+<DEFINITIONTABLE>
+<ROW><TERM>
+<KEY ID='F1'/>
+</TERM><DESC>
+help<BR/>
+(put the cursor just after the method/property name and type <KEY ID='F1'/> to have help on it)
+</DESC></ROW>
+<ROW><TERM>
+<KEY ID='F2'/>
+</TERM><DESC>
+view Object Browser
+</DESC></ROW>
+<ROW><TERM>
+<KEY ID='F7'/>
+</TERM><DESC>
+view Code Window
+</DESC></ROW>
+<ROW><TERM>
+<KEY ID='F4'/>
+</TERM><DESC>
+view Properties Window
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='R'/>
+</TERM><DESC>
+view Project Window
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='L'/>
+</TERM><DESC>
+view call stack
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='G'/>
+</TERM><DESC>
+view Immediate Window
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Alt'/><KEY ID='F11'/>
+</TERM><DESC>
+switch to originating application
+</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+edit window
+<DEFINITIONTABLE>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='Space'/>
+</TERM><DESC>
+complete word
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='J'/>
+</TERM><DESC>
+after <CODEROUTINE>foo</CODEROUTINE>, list the properties/methods beginning by <I>foo</I><BR/>
+after <CODEROUTINE>foo.</CODEROUTINE>, list the properties/methods of <CODEROUTINE>foo</CODEROUTINE>
+</DESC></ROW>
+<ROW><TERM>
+<KEY ID='Tab'/>
+</TERM><DESC>
+indent
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Shift'/><KEY ID='Tab'/>
+</TERM><DESC>
+outdent
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Shift'/><KEY ID='F2'/>
+</TERM><DESC>
+go to definition of identifier below cursor
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='F'/>
+</TERM><DESC>
+find text
+</DESC></ROW>
+<ROW><TERM>
+<KEY ID='F3'/>
+</TERM><DESC>
+find next occurrence of text
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Shift'/><KEY ID='F3'/>
+</TERM><DESC>
+find previous occurrence of text
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='H'/>
+</TERM><DESC>
+replace text
+</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+watch window
+<DEFINITIONTABLE>
+<ROW><TERM>
+<KEY ID='Del'/>
+</TERM><DESC>
+delete selected watch
+</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+debug
+<DEFINITIONTABLE>
+<ROW><TERM>
+<KEY ID='F8'/>
+</TERM><DESC>
+step into
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Shift'/><KEY ID='F8'/>
+</TERM><DESC>
+step over
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F8'/>
+</TERM><DESC>
+step out
+</DESC></ROW>
+<ROW><TERM>
+<KEY ID='F5'/>
+</TERM><DESC>
+continue
+</DESC></ROW>
+<ROW><TERM>
+<KEY ID='F9'/><BR/>
+left click in margin
+</TERM><DESC>
+set/remove breakpoint
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Shift'/><KEY ID='F9'/>
+</TERM><DESC>
+watch selected variable
+</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+
+<B><U>misc.</U></B>
+<BLIST>
+<ITEM>enable access to routines or classes defined in a DLL<BR/>
+<CODEMENU>Tools<CODEMENU>References...</CODEMENU></CODEMENU></ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>
+</PAGE>

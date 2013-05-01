@@ -1,0 +1,995 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>ClearCase</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><u>directories</u></b>
+<ul>
+  <li>print the currect directory</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/pwd')"
+ target="_self">pwd</a></tt> <br>
+&nbsp; <li>change the current directory</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/cd')"
+ target="_self">cd</a><br>
+  <br>
+  </tt><li>create a link<br>
+    <code>#&gt; ct <a href="javascript:do_reference('clearcase/ln')"
+ target="_self">ln</a>
+-s source target</code><br>
+    <br>
+  </li>
+  <li>create a directory<br>
+    <code>#&gt; ct <a href="javascript:do_reference('clearcase/mkdir')"
+ target="_self">mkdir</a>
+newdir<br>
+    </code><code>#&gt; ct <a
+ href="javascript:do_reference('clearcase/mkelem')" target="_self">mkelem</a>
+-eltype directory newdir</code><br>
+    <br>
+  </li>
+  <li>create a new element from a existing private object<br>
+    <code>#&gt; ct <a
+ href="javascript:do_reference('clearcase/mkelem')" target="_self">mkelem</a>
+myfile</code></li>
+</ul>
+<ul>
+  <li>remove the entry file.c from the current directory (which must be
+checked out)<br>
+    <span style="font-family: monospace;">#&gt; ct </span><a
+ style="font-family: monospace;" target="_self"
+ href="javascript:do_reference('clearcase/rmname')">rmname</a><span
+ style="font-family: monospace;">
+file.c</span><br>
+    <br>
+  </li>
+  <li>remove the element file.c from the VOB (use with care...)<br>
+    <span style="font-family: monospace;">#&gt; ct </span><a
+ style="font-family: monospace;" target="_self"
+ href="javascript:do_reference('clearcase/rmelem')">rmelem</a><span
+ style="font-family: monospace;">
+file.c</span><br>
+  </li>
+</ul>
+<b><u><br>
+element types<br>
+</u></b>
+<ul>
+  <li>list the element type<br>
+    <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/lstype')" target="_self">lstype</a>
+-kind eltype<br>
+    </span><br>
+  </li>
+  <li>create an element type subtype of <span
+ style="font-family: monospace;">text_file</span><br>
+    <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/mkeltype')" target="_self">mkeltype</a>
+-supertype
+text_file -nc c_source</span> <br>
+  </li>
+</ul>
+<b><u>vobs</u></b>
+<ul>
+  <li>list the VOBs</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/lsvob')"
+ target="_self">lsvob</a></tt> <br>
+&nbsp; <li>get the description of the vob</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/describe')"
+ target="_self">describe</a>
+vob:/vobs/foobar_src</tt> <br>
+&nbsp; <li>unlock a vob</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/unlock')"
+ target="_self">unlock</a>
+vob:/vobs/foobar_src<br>
+  <br>
+  </tt><li>activate VOB<tt> /vobs/foobar<br>
+    </tt><span style="font-family: monospace;">#&gt; ct <a
+ target="_self" href="javascript:do_reference('clearcase/mount')">mount</a>
+/vobs/foobar</span></li>
+  <tt><br>
+  </tt><li>activate all VOBs</li>
+  <tt>#&gt; ct <a target="_self"
+ href="javascript:do_reference('clearcase/mount')">mount</a>
+-all </tt>
+</ul>
+<ul>
+</ul>
+<b><u>source transfers<br>
+</u></b>
+<ul>
+  <li>import the file hierarchy ~/foobar in VOB /vobs/quux<br>
+    <span style="font-family: monospace;">#&gt; <a target="_self"
+ href="javascript:do_reference('clearcase/clearfsimport')">clearfsimport</a>
+-follow -recurse -nsetevent ~/foobar /vobs/quux</span><br>
+  </li>
+</ul>
+<ul>
+  <li>to import data from a ClearCase / CVS / PVCS / RCS / SCCS /
+SourceSafe repository in a VOB, use <a target="_self"
+ href="javascript:do_reference('clearcase/clearexport_ccase')">clearexport_ccase</a>
+/ <a target="_self"
+ href="javascript:do_reference('clearcase/clearexport_cvs')">clearexport_cvs</a>
+/ <a target="_self"
+ href="javascript:do_reference('clearcase/clearexport_pcvs')">clearexport_pvcs</a>
+/ <a target="_self"
+ href="javascript:do_reference('clearcase/clearexport_rcs')">clearexport_rcs</a>
+/ <a target="_self"
+ href="javascript:do_reference('clearcase/clearexport_sccs')">clearexport_sccs</a>
+/ <a target="_self"
+ href="javascript:do_reference('clearcase/clearexport_ssafe')">clearexport_ssafe</a>
+and then <a target="_self"
+ href="javascript:do_reference('clearcase/clearimport')">clearimport</a>.</li>
+</ul>
+<ul>
+  <li>display the graphical help navigator<br>
+    <span style="font-family: monospace;">#&gt; ct <a target="_self"
+ href="javascript:do_reference('clearcase/man')">man</a> -graph</span></li>
+</ul>
+<br>
+<b><u>views</u></b>
+<ul>
+  <li>list the existing views</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/lsview')"
+ target="_self">lsview</a></tt> <br>
+&nbsp; <li>get information about a view:<br>
+    <tt style="font-family: monospace;">#&gt; </tt><span
+ style="font-family: monospace;">ct </span><tt><a
+ href="javascript:do_reference('clearcase/lsview')" target="_self">lsview</a></tt><span
+ style="font-family: monospace;"> -long myview</span><br
+ style="font-family: monospace;">
+    <br>
+  </li>
+  <li>create a new view</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/mkview')"
+ target="_self">mkview</a>
+-tag my_view /export/home/view_store/my_view.vw</tt> <br>
+&nbsp; <li>delete an existing view</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/rmview')"
+ target="_self">rmview</a>
+-tag my_view</tt> <br>
+&nbsp; <li>destroy a view that is no more accessible (for example on a
+dead machine)<br>
+first retrieve the view uuis with<br>
+    <span style="font-family: monospace;">#&gt; ct </span><tt><a
+ href="javascript:do_reference('clearcase/lsview')" target="_self">lsview</a></tt><span
+ style="font-family: monospace;"> -long my_view</span><br
+ style="font-family: monospace;">
+then execute<br>
+    <span style="font-family: monospace;">#&gt; ct </span><tt><a
+ href="javascript:do_reference('clearcase/rmview')" target="_self">rmview</a></tt><span
+ style="font-family: monospace;"> -uuid my_uuid -avobs </span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/unregister')" target="_self">unregister</a>
+-view -uuid my_uuid</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/rmtag')" target="_self">rmtag</a>
+-view my_view</span><br style="font-family: monospace;">
+    <br>
+  </li>
+  <li>return the name of the setview (the one set by the last "ct
+setview" command)<br>
+    <span style="font-family: monospace;">#&gt; ct </span><tt><a
+ href="javascript:do_reference('clearcase/pwv')" target="_self">pwv</a></tt><span
+ style="font-family: monospace;"> -setview -short<br>
+    </span><br style="font-family: monospace;">
+  </li>
+  <li>return the name view corresponding to the current directory (it
+will be
+different from the setview if with use "cd /view/myview" for exemple)<br>
+    <span style="font-family: monospace;">#&gt; ct </span><tt><a
+ href="javascript:do_reference('clearcase/pwv')" target="_self">pwv</a></tt><span
+ style="font-family: monospace;"> -wdview -short</span><br>
+    <br>
+  </li>
+  <li>recover a dumped view</li>
+  <tt>#&gt; ct <a
+ href="javascript:do_reference('clearcase/reformatview')" target="_self">reformatview</a>
+-load -tag my_view</tt> <br>
+&nbsp; <li>the active views are accessible in <tt>/view</tt></li>
+</ul>
+<ul>
+  <li>start a dynamic view<br>
+    <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/startview')" target="_self">startview</a>
+my_view</span><br style="font-family: monospace;">
+(<span style="font-family: monospace;">mkview</span>, <span
+ style="font-family: monospace;">mktag</span> and <span
+ style="font-family: monospace;">setview</span> automatically call
+startview, so this is useful only in situations such as when we want to
+access the view through the <span style="font-family: monospace;">/view</span>
+path)<br>
+  </li>
+</ul>
+<b><u>branches</u></b>
+<ul>
+  <li>create a new branch type</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/mkbrtype')"
+ target="_self">mkbrtype</a>
+my_branch</tt> <br>
+&nbsp; <li>list the branch types<br>
+    <span style="font-family: monospace;">#&gt; ct </span><tt><a
+ href="javascript:do_reference('clearcase/lstype')" target="_self">lstype</a></tt><span
+ style="font-family: monospace;"> -kind brtype</span><br>
+    <br>
+  </li>
+  <li>list the branch types, including the obsolete ones<br>
+    <span style="font-family: monospace;">#&gt; ct </span><tt><a
+ href="javascript:do_reference('clearcase/lstype')" target="_self">lstype</a></tt><span
+ style="font-family: monospace;"> -obsolete -kind brtype </span><br>
+    <br>
+  </li>
+  <li>create a branch for an element<br>
+    <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/mkbranch')" target="_self">mkbranch</a>
+my_branch foobar.c</span><br>
+    <br>
+  </li>
+  <li>destroy a branch of an element</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/rmbranch')"
+ target="_self">rmbranch</a>
+foobar.c@@/main/my_branch</tt> <br>
+&nbsp; <li>find all elements which have a given branch</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a>
+. -elem 'brtype(my_branch)' -print</tt>
+</ul>
+<b><u>labels</u></b>
+<ul>
+  <li>create a label type</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/mklbtype')"
+ target="_self">mklbtype</a>
+MY_LABEL</tt> <br>
+  <tt>-shared</tt> to enable to use the label type from any replica<br>
+&nbsp; <li>list all label types</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/lstype')"
+ target="_self">lstype</a>
+-kind lbtype</tt> <br>
+&nbsp; <li>list all the labels sorted by creation date<br>
+    <span style="font-family: monospace;">#&gt; ct </span><tt
+ style="font-family: monospace;"><a
+ href="javascript:do_reference('clearcase/lstype')" target="_self">lstype</a></tt><span
+ style="font-family: monospace;"> -kind lbtype -fmt "%Nd %n\n" | sort</span><br
+ style="font-family: monospace;">
+    <br>
+  </li>
+  <li>delete a label type and the corresponding labels:</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/rmtype')"
+ target="_self">rmtype</a>
+-rmall lbtype:LM_INTEG</tt> <br>
+  <br>
+  <li>label the current version of a file</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/mklabel')"
+ target="_self">mklabel</a>
+MY_LABEL file.c</tt> <br>
+&nbsp; <li>move a label on a file</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/mklabel')"
+ target="_self">mklabel</a>
+-replace MY_LABEL file.c@@/main/my_branch/105</tt> <br>
+&nbsp; <li>remove a label on a file</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/rmlabel')"
+ target="_self">rmlabel</a>
+MY_LABEL fobar.c@@/main/105</tt> <br>
+&nbsp; <li>rename a label</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/rename')"
+ target="_self">rename</a>
+lbtype:FOO BAR</tt> <br>
+&nbsp; <li>extract the files from a list which have / have not a given
+label <br>
+    <code>#&gt; cat list | xargs cleartool </code><tt><a
+ href="javascript:do_reference('clearcase/describe')" target="_self">describe</a>
+    </tt><code>-fmt "<a
+ href="javascript:do_reference('clearcase/fmt_ccase')" target="_self">%n
+%l\n</a>" | grep MY_LABEL | awk '{ print $1 }' <br>
+#&gt; cat list | xargs cleartool </code><tt><a
+ href="javascript:do_reference('clearcase/describe')" target="_self">describe</a>
+    </tt><code>-fmt "</code><code><a
+ href="javascript:do_reference('clearcase/fmt_ccase')" target="_self">%n
+%l\n</a></code><code>" | grep -v MY_LABEL | awk '{ print $1 }' <br>
+    </code><br>
+  </li>
+  <li>find out files with given labels</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a>
+. -ver 'version(MY_LABEL_1) || version(MY_LABEL_2)' -print</tt> <br>
+&nbsp; <li>check that the latest on the <tt>main</tt> branch is
+correctly
+labeled</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a>
+. -ver ' ( version(/main/LATEST) &amp;&amp; \!version(MY_LABEL) ) || (
+\!version(/main/LATEST) &amp;&amp; version(MY_LABEL) ) ' -print</tt>
+</ul>
+<b><u>attributes</u></b>
+<ul>
+  <li>create an attribute type</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/mkattype')"
+ target="_self">mkattype</a>
+-nc MY_ATTRIBUTE</tt> <br>
+&nbsp; <li>create an attribute type with a default value</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/mkattype')"
+ target="_self">mkattype</a>
+-default '"TRUE"' -nc MY_ATTRIBUTE</tt> <br>
+&nbsp; <li>list the existing attribute types <br>
+    <code>#&gt; ct <a
+ href="javascript:do_reference('clearcase/lstype')" target="_self">lstype</a>
+-kind attype </code><br>
+    <br>
+  </li>
+  <li>attach an attribute with its default value to an element</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/mkattr')"
+ target="_self">mkattr</a>
+-default MY_ATTRIBUTE code.c@@</tt> <br>
+&nbsp; <li>list the attributes of an element</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/describe')"
+ target="_self">describe</a>
+-aattr -all foobar.c@@</tt> <br>
+&nbsp; <li>remove an attribute on an element:</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/rmattr')"
+ target="_self">rmattr</a>
+MY_ATTRIBUTE code.c@@</tt> <br>
+&nbsp; <li>return the elements which have a given attribute</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a>
+. -element 'attype(MY_ATRIBUTE)' -print</tt> <br>
+&nbsp; <li>of course, this also works for the element versions</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/mkattr')"
+ target="_self">mkattr</a>
+-default MY_ATTRIBUTE code.c</tt> <br>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/describe')"
+ target="_self">describe</a>
+-aattr -all foobar.c</tt> <br>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/rmattr')"
+ target="_self">rmattr</a>
+MY_ATTRIBUTE code.c</tt>
+</ul>
+<b><u>lock<br>
+</u></b>
+<ul>
+  <li>lock/unlock a label</li>
+  <table border="1" width="100%">
+    <tbody>
+      <tr>
+        <td><br>
+        </td>
+        <td>
+        <center>unlock</center>
+        </td>
+        <td>
+        <center>lock</center>
+        </td>
+        <td>
+        <center>obsolete</center>
+        </td>
+      </tr>
+      <tr>
+        <td>
+        <center>unlock</center>
+        </td>
+        <td>N/A</td>
+        <td><tt>ct <a href="javascript:do_reference('clearcase/lock')"
+ target="_self">lock</a>
+lbtype:MY_LABEL</tt></td>
+        <td><tt>ct <a href="javascript:do_reference('clearcase/lock')"
+ target="_self">lock</a>
+-obsolete lbtype:MY_LABEL</tt></td>
+      </tr>
+      <tr>
+        <td>
+        <center>lock</center>
+        </td>
+        <td><tt>ct <a
+ href="javascript:do_reference('clearcase/unlock')" target="_self">unlock</a>
+lbtype:MY_LABEL</tt></td>
+        <td>N/A</td>
+        <td><tt>ct <a href="javascript:do_reference('clearcase/lock')"
+ target="_self">lock</a>
+-replace lbtype:MY_LABEL</tt></td>
+      </tr>
+      <tr>
+        <td>
+        <center>obsolete</center>
+        </td>
+        <td><tt>ct <a
+ href="javascript:do_reference('clearcase/unlock')" target="_self">unlock</a>
+lbtype:MY_LABEL</tt></td>
+        <td><tt>ct <a href="javascript:do_reference('clearcase/lock')"
+ target="_self">lock</a>
+-replace lbtype:MY_LABEL</tt></td>
+        <td>N/A</td>
+      </tr>
+    </tbody>
+  </table>
+</ul>
+<ul>
+  <li>lock a label type except for some users<br>
+  </li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/lock')"
+ target="_self">lock</a>
+-nusers foo,bar lbtype:MY_LABEL</tt><br>
+&nbsp; <li>describe the lock of a label type</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/lslock')"
+ target="_self">lslock</a>
+lbtype:MY_LABEL</tt><br>
+  <br>
+  <li>this form is much more handy in a script </li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/describe')"
+ target="_self">describe</a>
+-fmt "<a href="javascript:do_reference('clearcase/fmt_ccase')"
+ target="_self">%[locked]p</a>"
+lbtype:MY_LABEL</tt><br>
+but it does not indicate if the label is locked for all users or if
+there are some users who can still use the label <br>
+</ul>
+<br>
+<b><u>version</u></b>
+<ul>
+  <li>delete a file version</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/rmver')"
+ target="_self">rmver</a>
+-force foobar.c@@/main/LATEST</tt>
+</ul>
+<b><u>merge</u></b>
+<ul>
+  <li>merge latest of main branch in current checked out version of the
+file</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/merge')"
+ target="_self">merge</a>
+-to quux.c -version /main/LATEST</tt> <br>
+&nbsp; <li>this also works with a label<br>
+    <tt>#&gt; ct <a href="javascript:do_reference('clearcase/merge')"
+ target="_self">merge</a>
+-to quux.c -version MY_LABEL<br>
+    <br>
+    </tt></li>
+  <li>remove a merge arrow</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/rmmerge')"
+ target="_self">rmmerge</a>
+foobar.c@@/main/my_branch/LATEST foobar.c@@/main/18</tt> <br>
+&nbsp; <li>perform a findmerge from a given labeled version</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/findmerge')"
+ target="_self">findmerge</a>
+. -fversion MY_LABEL -merge</tt> <br>
+  <tt><a href="javascript:do_reference('clearcase/comments')"
+ target="_self">-nc</a></tt>
+checkout the files with no comment <br>
+  <tt><a href="javascript:do_reference('clearcase/comments')"
+ target="_self">-com
+"comment"</a></tt> checkout the files with a comment <br>
+&nbsp; <li>findmerge from a branch</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/findmerge')"
+ target="_self">findmerge</a>
+. -fversion /main/the_branch/LATEST -merge</tt>
+</ul>
+<b><u>hyperlink<br>
+</u></b>
+<ul>
+  <li>to delete a merge arrow, it is necessary to get its ID<br>
+    <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/describe')" target="_self">describe</a>
+-long ffobar.c@@/main/4</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">version "foobar.c@@/main/4"</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;created
+07-Nov-03.13:47:50 by John Doe (doe.develop@aaron)</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;"fixed memory leak"</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;Element Protection:</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp; User :
+vobadm&nbsp;&nbsp; : r--</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp; Group: informix
+: r--</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;
+Other:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; : r--</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;element type: c_source</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;predecessor version:
+/main/3</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;Hyperlinks:</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">&nbsp;&nbsp;
+Merge@1392667@/vobs-awa/AW4.2_src &lt;-
+/vobs-awa/AW4.2_src/src/lib/vtkImagePipeline/MMXBilinearZoom.c@@/main/sg_dvpt_27/2</span><br
+ style="font-family: monospace;">
+    <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/rmhlink')" target="_self">rmhlink</a>
+Merge@1392667</span><br style="font-family: monospace;">
+    <span style="font-family: monospace;">Removed hyperlink
+"Merge@1392667". </span><br>
+  </li>
+</ul>
+<b><u>check in/out</u></b>
+<ul>
+  <li>checkout a file</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/checkout')"
+ target="_self">co</a>
+foobar.c</tt> <br>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/checkout')"
+ target="_self">checkout</a>
+foobar.c</tt> <br>
+  <tt><a href="javascript:do_reference('clearcase/comments')"
+ target="_self">-com
+"comment"</a></tt> with a given comment <br>
+  <tt><a href="javascript:do_reference('clearcase/comments')"
+ target="_self">-nc</a></tt>
+without comment <br>
+&nbsp; <li>uncheckout a file</li>
+  <tt>#&gt; ct <a
+ href="javascript:do_reference('clearcase/uncheckout')" target="_self">unco</a>
+foobar.c</tt> <br>
+  <tt>#&gt; ct <a
+ href="javascript:do_reference('clearcase/uncheckout')" target="_self">unchecout</a>
+foobar.c</tt> <br>
+  <tt>-keep</tt> create a <tt>foobar.c.keep</tt> backup in the view <br>
+  <tt>-rm</tt> create no backup <br>
+&nbsp; <li>checkin a file</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/checkin')"
+ target="_self">ci</a>
+foobar.c</tt> <br>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/checkin')"
+ target="_self">checkin</a>
+foobar.c</tt> <br>
+  <tt><a href="javascript:do_reference('clearcase/comments')"
+ target="_self">-com
+"comment"</a></tt> with a given comment <br>
+  <tt><a href="javascript:do_reference('clearcase/comments')"
+ target="_self">-nc</a></tt>
+without comment <br>
+  <tt>-ident</tt> force the checkin even if the new version is
+identical
+to the previous one <br>
+&nbsp; <li>modify the checkin comment on a file</li>
+  <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/chevent')" target="_self">chevent</a>
+-replace -c "fix bug XYZge12345" foobar.c@@/main/goto_m3/1 </span> <br>
+  <br>
+  <li>append a string to the checkin comment on a file</li>
+  <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/chevent')" target="_self">chevent</a>
+-c "more
+information" foobar.c@@/main/goto_m3/1 </span><br
+ style="font-family: monospace;">
+or<br>
+  <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/chevent')" target="_self">chevent</a>
+-append -c
+"more information" foobar.c@@/main/goto_m3/1 </span><br
+ style="font-family: monospace;">
+  <br>
+  <li>prepend a string to the checkin comment on a file</li>
+  <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/chevent')" target="_self">chevent</a>
+-insert -c
+"some introductional information" foobar.c@@/main/goto_m3/1 </span><br
+ style="font-family: monospace;">
+  <br>
+  <li>list the checked out files</li>
+  <tt>#&gt; ct <a
+ href="javascript:do_reference('clearcase/lscheckout')" target="_self">lsco</a>
+-short </tt>display only the filename <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -me </tt>list
+only files checked out by current user <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+-cview </tt>list
+files check out in current view <br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -all
+  </tt>lists
+all the checkouts in the VOB (use the VOB defined by the argument if
+there
+is one)<br>
+  <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -</tt><tt>fmt
+"<a href="javascript:do_reference('clearcase/fmt_ccase')" target="_self">format</a>"</tt><tt>
+  </tt>lists the informations as defined by the format<br>
+  <br>
+  <br>
+  <li style="font-family: monospace;">#&gt; ct <tt><a
+ href="javascript:do_reference('clearcase/lscheckout')" target="_self">lsco</a></tt>
+-recur dir</li>
+list files checked out in the filesystem subtree (instead of only the
+directory level)<br>
+take care the directory dir itself is not&nbsp; taken into account!
+(this is the same if no directory name is given, the current directory
+will not be reported if it is checked out)<br>
+  <br>
+  <li style="font-family: monospace;">#&gt; ct <tt><a
+ href="javascript:do_reference('clearcase/lscheckout')" target="_self">lsco</a></tt>
+-d dir</li>
+list the checked out version of the directory, not of its elements<br>
+&nbsp; <li>unreserve a checked out file (in a deleted view, for
+example)</li>
+  <tt>#&gt; ct <a
+ href="javascript:do_reference('clearcase/lscheckout')" target="_self">lsco</a>
+-long</tt> <br>
+  <tt>10-Aug-96.16:59:25&nbsp;&nbsp;&nbsp;&nbsp; Ellie Jackson
+(jackson.user@oxygen)</tt> <br>
+  <tt>checkout version "hello.c" from /main/37 (reserved)</tt> <br>
+  <tt>by view: jackson_fix
+("oxygen:/usr/home/jackson/ccviews/fix.vws")</tt> <br>
+  <tt>"merge from bugfix branch"</tt> <br>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/unreserve')"
+ target="_self">unreserve</a>
+-view oxygen:/usr/home/jackson/ccviews/fix.vws hello.c</tt> <br>
+&nbsp; <li>get the checkin comment of a version of a file</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/describe')"
+ target="_self">describe</a>
+-fmt '<a href="javascript:do_reference('clearcase/fmt_ccase')"
+ target="_self">%Nc</a>'
+foobar.c@@/main/17</tt>
+</ul>
+<b><u><a href="javascript:do_reference('clearcase/config_spec')"
+ target="_self">config
+spec</a></u></b>
+<ul>
+  <li>return the config spec of the current view</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/catcs')"
+ target="_self">catcs</a></tt> <br>
+&nbsp; <li>return the config spec of a view</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/catcs')"
+ target="_self">catcs</a>
+-tag my_view</tt> <br>
+&nbsp; <li>set a given file as the config spec</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/setcs')"
+ target="_self">setcs</a>
+/tmp/foobar</tt> <br>
+&nbsp; <li>change the config spec of a given view<br>
+    <span style="font-family: monospace;">#&gt; ct </span><tt><a
+ href="javascript:do_reference('clearcase/setcs')" target="_self">setcs</a></tt><span
+ style="font-family: monospace;"> -tag myview /tmp/foobar<br>
+    </span><br>
+  </li>
+  <li><span style="font-family: monospace;">element * FOOBAR</span><br
+ style="font-family: monospace;">
+select all elements labeled <span style="font-family: monospace;">FOOBAR</span><br>
+    <br>
+    <span style="font-family: monospace;">element -directory&nbsp; *
+FOOBAR</span><br>
+select all directory elements labeled <span
+ style="font-family: monospace;">FOOBAR</span> (i.e. created by <code>ct
+    <a href="javascript:do_reference('clearcase/mkdir')" target="_self">mkdir</a></code>
+or <code>ct <a href="javascript:do_reference('clearcase/mkelem')"
+ target="_self">mkelem</a>
+-eltype directory</code>)<br>
+    <br>
+    <span style="font-family: monospace;">element -file&nbsp; * FOOBAR</span><br>
+  </li>
+select all file elements labeled <span style="font-family: monospace;">FOOBAR</span>
+(i.e. not the previous
+ones)<br>
+  <br>
+  <li>config spec to see the labels as a given date (<tt>time</tt>
+does
+no work
+for LATEST)</li>
+  <tt>element * /main/lm_rsna_13/LATEST</tt> <br>
+  <tt>time 21-Dec.10:00</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.50.E -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.50.D -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.50.C -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.50.B -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.50.A -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.49.E -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.49.D -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.49.C -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.49.B -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.49.A -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.48.F -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.48.E -mkbranch lm_rsna_13</tt> <br>
+  <tt>element * /main/AW4.1_B1.1.48.D_EXT -mkbranch lm_rsna_13</tt> <br>
+  <tt>end time</tt> <br>
+  <tt>element * /main/0 -mkbranch lm_rsna_13</tt>
+</ul>
+<b><u>derived objects<br>
+</u></b>
+<ul>
+  <li>list the derived objects<br>
+#&gt;&nbsp; ct <a href="javascript:do_reference('clearcase/lsdo')"
+ target="_self">lsdo<br>
+    </a></li>
+</ul>
+<b><u>protection</u></b>
+<ul>
+  <li>authorize group write access to the current directory</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/protect')"
+ target="_self">protect</a>
+-chmod g+w .</tt>
+</ul>
+<b><u>queries</u></b>
+<ul>
+  <li>list the integration comments of a given day</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a>
+. -version "brtype(main) &amp;&amp; created_since(Friday)" -exec
+'cleartool <a href="javascript:do_reference('clearcase/describe')"
+ target="_self">describe</a>
+-fmt "<a href="javascript:do_reference('clearcase/fmt_ccase')"
+ target="_self">-----------
+%n (%u)\n%c</a>" $CLEARCASE_PN'</tt> <br>
+&nbsp; <li>list who has done what and when on the <tt>main</tt>
+branch
+since a given
+date</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a>
+. -ver 'brtype(main) &amp;&amp; created_since(10-sep-2000)' -exec
+'cleartool <a href="javascript:do_reference('clearcase/describe')"
+ target="_self">describe</a>
+-fmt "<a href="javascript:do_reference('clearcase/fmt_ccase')"
+ target="_self">%Nd
+%u %n\n</a>" $CLEARCASE_XPN'<br>
+  <br>
+  </tt>
+</ul>
+<ul>
+  <li>list the changes done since december 19<br>
+    <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/lshistory')" target="_self">lshistory</a>
+-recur -since 19-dec . </span><br>
+  </li>
+</ul>
+<ul>
+  <li>list the changes done since december 19 only for the main branch<br>
+    <span style="font-family: monospace;">#&gt; ct </span><span
+ style="font-family: monospace;"><a
+ href="javascript:do_reference('clearcase/lshistory')" target="_self">lshistory</a></span><span
+ style="font-family: monospace;"> -recur -since 19-dec -branch main .<br>
+    <br>
+    </span></li>
+  <li>To really look for all elements versions, instead of<span
+ style="font-family: monospace;"><br>
+#&gt; ct </span><tt><a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a></tt><span style="font-family: monospace;"> .
+-version 'version(mylabel)' -print<br>
+    </span>the following command must be used<span
+ style="font-family: monospace;"><br>
+#&gt; ct </span><tt><a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a></tt><span style="font-family: monospace;"> .
+-all -nvisible -version
+'version(mylabel)' -print<br>
+    </span></li>
+</ul>
+<b><u>help</u></b>
+<ul>
+  <li>display all helps</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/help')"
+ target="_self">help</a></tt> <br>
+&nbsp; <li>display help for a command</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/help')"
+ target="_self">help</a>
+command</tt> <br>
+or <br>
+  <tt>#&gt; ct command -help</tt>
+</ul>
+<b><u>clearmake<br>
+</u></b>
+<ul>
+  <li>verbose mode<br>
+#&gt; <a href="javascript:do_reference('clearcase/clearmake')"
+ target="_self">clearmake</a>
+-v<br>
+    <br>
+  </li>
+  <li>compatibility with gmake<br>
+#&gt;&nbsp;<a href="javascript:do_reference('clearcase/clearmake')"
+ target="_self">clearmake</a>
+-C gnu<br>
+    <br>
+  </li>
+  <li>disable winking<br>
+#&gt;&nbsp;<a href="javascript:do_reference('clearcase/clearmake')"
+ target="_self">clearmake</a>
+-V<br>
+  </li>
+</ul>
+<b><u>build</u></b>
+<ul>
+  <li>list the files directly used to create a derived object</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/catcr')"
+ target="_self">catcr</a>
+-short -nxname quux.o</tt> <br>
+&nbsp; <li>display the configuration records of the subtargets of the
+derived object</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/catcr')"
+ target="_self">catcr</a>
+-recurse derived_object</tt> <br>
+&nbsp; <li>display the consolidated&nbsp; configuration records of the
+subtargets
+of the derived object</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/catcr')"
+ target="_self">catcr</a>
+-flat derived_object</tt> <br>
+&nbsp; <li>display only the versionned elements, not the derived
+objects,
+user to
+create derived_object</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/catcr')"
+ target="_self">catcr</a>
+-element_only derived_object</tt> <br>
+&nbsp; <li>list all the elements used to build some DOs</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/catcr')"
+ target="_self">catcr</a>
+-short -nxname -flat -element_only do1 do2 do3 | sort -u</tt> <br>
+&nbsp; <li>retrieve the list of the files not used during the build</li>
+1) list all the files <br>
+  <tt>#&gt; find . -print | xargs cleartool <a
+ href="javascript:do_reference('clearcase/catcr')" target="_self">catcr</a>
+-short -nxname |&amp; tee /tmp/full_log</tt> <br>
+2) extract the files used for the build <br>
+  <tt>#&gt; grep '^/vobs/foobar_src' /tmp/full_log | sort -u &gt;
+/tmp/l_used</tt> <br>
+3) extract the files in the VOB <br>
+  <tt>#&gt; grep '^cleartool: Error: Not a derived object: '
+/tmp/full_log
+| sed 's/cleartool: Error: Not a derived object: "\(.*\)"/\1/' | sort
+&gt;
+/tmp/l_present</tt> <br>
+4) script performing the lookup
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>#!/bin/ksh</tt>
+        <p><tt>cat /tmp/l_present | while read line</tt> <br>
+        <tt>&nbsp; do</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; if { ( fgrep -x $line /tmp/l_used &gt;
+/dev/null
+) } then</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo OK $line</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; else</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo KO $line</tt> <br>
+        <tt>&nbsp;&nbsp;&nbsp; fi</tt> <br>
+        <tt>&nbsp; done</tt></p>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <li>idem</li>
+  <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/ls')" target="_self">ls</a>
+-recur -view -short
+| xargs cleartool <a
+ href="javascript:do_reference('clearcase/describe')" target="_self">describe</a>
+-fmt "%n %m\n" | grep 'derived object' | awk
+'{print $1}' | xargs cleartool <a
+ href="javascript:do_reference('clearcase/catcr')" target="_self">catcr</a>
+-short -nxname | sort -u &gt; l</span><br
+ style="font-family: monospace;">
+  <span style="font-family: monospace;">#&gt; ct <a
+ href="javascript:do_reference('clearcase/find')" target="_self">find</a>
+`pwd` -type f
+-exec 'echo -n "$CLEARCASE_PN "; grep -x -c $CLEARCASE_PN l' | grep -v
+' 1$' </span><br>
+</ul>
+<b><u>modification management</u></b>
+<ul>
+  <li><span style="font-family: monospace;">#&gt; ct </span><code><a
+ href="javascript:do_reference('clearcase/diff')" target="_self">diff</a></code><span
+ style="font-family: monospace;"> foo bar</span><br>
+display the difference between files foo and bar<br>
+    <span style="font-family: monospace;">ct </span><code><a
+ href="javascript:do_reference('clearcase/diff')" target="_self">diff</a></code><span
+ style="font-family: monospace;"> - pred hello.c</span>
+display the difference between the current version of hello.c and its
+predecessor<br>
+    <span style="font-family: monospace;">-serial</span> display in
+serial format instead of side-by-side<br>
+    <span style="font-family: monospace;">-graph</span> display the
+diff in a window<br>
+    <br>
+  </li>
+  <li>check if the files have been modified<br>
+    <code>#&gt; foreach file ( `ct <tt><a
+ href="javascript:do_reference('clearcase/lscheckout')" target="_self">lsco</a></tt>
+-me -short -cview -recur`)<br>
+&nbsp; if { ( ct <a href="javascript:do_reference('clearcase/diff')"
+ target="_self">diff</a>
+-pred $file &gt; /dev/null ) } then<br>
+&nbsp;&nbsp;&nbsp; echo $file is unchanged<br>
+&nbsp; endif<br>
+end </code><br>
+    <br>
+  </li>
+  <li>display all the modifications in the checked out files:</li>
+  <code>#&gt; ct <a
+ href="javascript:do_reference('clearcase/lscheckout')" target="_self">lsco</a>
+-me -short -cview -recur | xargs -n 1 cleartool <a
+ href="javascript:do_reference('clearcase/diff')" target="_self">diff</a>
+-pred -serial_format</code>
+</ul>
+<ul>
+  <li>desintegrate a day's work</li>
+1) get the list of the file and their version <br>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a>
+. -version "{ created_by(`whoami`) &amp;&amp; created_since(28-Oct-99)
+&amp;&amp; \!created_since(29-Oct-99) &amp;&amp; brtype(main) }" -print</tt>
+  <br>
+2) apply a negative delta on these files with the following script
+  <table bgcolor="#cccccc">
+    <tbody>
+      <tr>
+        <td><tt>#!/bin/csh</tt> <br>
+        <tt>set file=`echo $1 | sed 's/\(.*\)@@.*/\1/'`</tt> <br>
+        <tt>set version=`echo $1 | sed 's/.*@@\(.*\)/\1/'`</tt> <br>
+        <tt>cleartool <a
+ href="javascript:do_reference('clearcase/checkout')" target="_self">checkout</a><a
+ href="javascript:do_reference('clearcase/comments')" target="_self">-nc</a>
+$file</tt> <br>
+        <tt>cleartool <a
+ href="javascript:do_reference('clearcase/merge')" target="_self">merge</a>
+-to $file -delete -version $version</tt></td>
+      </tr>
+    </tbody>
+  </table>
+  <br>
+  <li><span style="font-family: monospace;">#&gt; ct <a target="_self"
+ href="javascript:do_reference('clearcase/annotate')">annotate</a>
+hello.c</span><br>
+create a file hello.c.ann which contains, for each line, who, when and
+on which version the line has been changed for the last time.<br>
+    <span style="font-family: monospace;">-rm</span> also displays the
+lines that have been removed<br>
+    <span style="font-family: monospace;">-all</span> also displays all
+the lines present in any version of the file (i.e. even the lines which
+are not in a predecessor version, but which are present on other
+branches)<br>
+    <span style="font-family: monospace;">-out foobar</span> put the
+result in the file <span style="font-family: monospace;">foobar</span>
+instead of <span style="font-family: monospace;">hello.c.ann</span><br>
+    <span style="font-family: monospace;">-out -</span> send the result
+in <span style="font-family: monospace;">stdout</span> instead of <span
+ style="font-family: monospace;">hello.c.ann</span><br>
+  </li>
+</ul>
+<b><u>replicas<br>
+</u></b>
+<ul>
+  <li>list the replicas of the VOB<br>
+    <span style="font-family: monospace;">#&gt; ct </span><a
+ href="javascript:do_reference('clearcase/lsreplica')"
+ style="font-family: monospace;">lsreplica</a><span
+ style="font-family: monospace;"> </span><br>
+  </li>
+</ul>
+<b><u>miscellaneous</u></b>
+<ul>
+  <li>on my machine, the binaries are in <tt>/usr/atria</tt></li>
+the configuration and log files are in <tt>/var/adm/atria</tt> <br>
+&nbsp; <li>display the version<br>
+#&gt; <a target="_self"
+ href="javascript:do_reference('clearcase/cleartool')">cleartool</a>
+-version<br>
+    <br>
+  </li>
+  <li>display the current license usage</li>
+  <tt>#&gt; <a href="javascript:do_reference('clearcase/clearlicense')"
+ target="_self">clearlicense</a></tt> <br>
+&nbsp; <li>tar the elements of the VOB</li>
+  <tt>#&gt; tar cvf /tmp/aim.tar ` ct <a
+ href="javascript:do_reference('clearcase/find')" target="_self">find</a>
+. -type f -exec 'echo $CLEARCASE_PN' `</tt> <br>
+&nbsp; <li>run a <tt>grep</tt> only on the elements of the VOB (not
+the
+derived objects)</li>
+  <tt>#&gt; ct <a href="javascript:do_reference('clearcase/find')"
+ target="_self">find</a>
+/vobs/foobar_src -exec 'grep "SAFETY WARNING" $CLEARCASE_PN /dev/null'</tt>
+</ul>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: January 1</font><sup><font size="-2">st</font></sup><font
+ size="-1">,
+2006 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

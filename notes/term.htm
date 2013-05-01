@@ -1,0 +1,117 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Terminal capabilities</title>
+  <base target="_blank">
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<ul>
+  <li>define backspace as the delete character</li>
+#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/stty.html">stty</a>
+erase ^H <br>
+&nbsp; <li>list the terminal capabilities</li>
+  <tt>#&gt; infocmp -1</tt> <br>
+&nbsp; <li>return the type of the terminal</li>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+longname</tt>
+</ul>
+<ul>
+  <li>return the number of columns and lines</li>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+cols</tt> <br>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+lines</tt> <br>
+&nbsp; <li>put the cursor at line <tt>&lt;a&gt;</tt>, column <tt>&lt;b&gt;</tt></li>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+cup &lt;a&gt; &lt;b&gt;</tt>
+</ul>
+<ul>
+  <li>clear the window</li>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+clear</tt>
+</ul>
+<ul>
+  <li>write in bold</li>
+  <tt>#&gt; bold=`<a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+smso`</tt> <br>
+  <tt>#&gt; boldoff=`<a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+rmso`</tt> <br>
+  <tt>#&gt; echo "${bold}boobar${boldoff}"</tt>
+</ul>
+<ul>
+  <li>write in underline</li>
+  <tt>#&gt; under=`<a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+smul`</tt> <br>
+  <tt>#&gt; underoff=`<a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+rmul`</tt> <br>
+  <tt>#&gt; echo "${under}boobar${underoff}"</tt>
+</ul>
+<ul>
+  <li>return the number of buffered characters before display</li>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+bufsz</tt>
+</ul>
+<ul>
+  <li>use the alternate charset</li>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+smacs</tt> <br>
+return to the standard charset <br>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+sgr</tt> <br>
+&nbsp; <li>return the supported number of colors</li>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+colors</tt> <br>
+&nbsp; <li>return the supported number of color pairs</li>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+pairs</tt> <br>
+&nbsp; <li>change the foreground or background color</li>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+setf &lt;n&gt;</tt> <br>
+  <tt>#&gt; <a
+ href="http://www.opengroup.org/onlinepubs/007908799/xcu/tput.html">tput</a>
+setb &lt;n&gt;</tt>
+</ul>
+<hr noshade="noshade" width="80%">
+<br>
+<b>articles:</b>
+<ul>
+  <li>"<a
+ href="http://astronomy.swin.edu.au/%7Epbourke/dataformats/ansi.html"
+ target="_blank">ANSI
+Standard (X3.64) Control Sequences for Video Terminals and Peripherals
+in alphabetic order by mnemonic</a>" by Paul Bourke (March 1989) - HTML</li>
+  <li>"<a
+ href="http://astronomy.swin.edu.au/%7Epbourke/dataformats/vt100/index.html"
+ target="_blank">VT100
+commands and control sequences</a>" by Paul Bourke - HTML</li>
+</ul>
+<hr noshade="noshade" width="80%">
+<p><i><font size="-1">Last update: April 29</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2003 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

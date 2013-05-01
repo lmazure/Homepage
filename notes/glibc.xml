@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>glibc</TITLE>
+<PATH>notes/glibc.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B><U>stack dump</U></B></TITLE>
+<ITEM>return the call stack
+<CODESAMPLE>#include &lt;execinfo.h&gt;<BR/>
+...<BR/>
+void *array[10];<BR/>
+size_t size = <X><T>backtrace</T><A>http://www.gnu.org/software/libc/manual/html_node/Backtraces.html</A><L>en</L><F>HTML</F></X>(array, 10);<BR/>
+char **strings = <X><T>backtrace_symbols</T><A>http://www.gnu.org/software/libc/manual/html_node/Backtraces.html</A><L>en</L><F>HTML</F></X>(array, size);<BR/>
+for (size_t i = 0; i &lt; size; i++) std::cout &lt;&lt; strings[i] &lt;&lt; std::endl;<BR/>
+free(strings);</CODESAMPLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>system analysis</U></B></TITLE>
+<ITEM>use <CODEROUTINE><X><T>statfs</T><A>javascript:do_reference("man/linux/2/statfs")</A><L>en</L><F>HTML</F></X></CODEROUTINE> or <CODEROUTINE><X><T>statvfs</T><A>javascript:do_reference("man/linux/2/statvfs")</A><L>en</L><F>HTML</F></X></CODEROUTINE> to get information about a mounted file paritition.</ITEM>
+</BLIST>
+<BLIST><TITLE><B><U>I/O</U></B></TITLE>
+<ITEM>use <CODEROUTINE>fcntl</CODEROUTINE> with the <CODEROUTINE>O_DIRECT</CODEROUTINE> flag to perform direct I/Os (bypassing the filesystem cache). The transfer is synchronous (when <CODEROUTINE>read</CODEROUTINE> or <CODEROUTINE>write</CODEROUTINE> returns, data is guaranteed to be transferred). Under Linux 2.4 transfer sizes, and the alignment of user buffer and file offset must all be multiples of the logical block size of the file system. Under Linux 2.6 alignment to 512-byte boundaries suffices.</ITEM>
+</BLIST>
+
+<BLIST><TITLE><B><U>special routines</U></B></TITLE>
+<ITEM><CODEROUTINE>mempcpy</CODEROUTINE> same as <CODEROUTINE>memcpy</CODEROUTINE> (i.e.copy a memory buffer) but return a pointer to the last byte</ITEM>
+<ITEM><CODEROUTINE>rawmemchr</CODEROUTINE> same as <CODEROUTINE>memchr</CODEROUTINE> (i.e. return the first instance of a character) but it has no length argument, so it is faster to execute</ITEM>
+<ITEM><CODEROUTINE>strchrnul</CODEROUTINE> same as <CODEROUTINE>strchr</CODEROUTINE> (i.e. return the first instance of a character in a string) but return the end of the string if the character is not found</ITEM>
+</BLIST>
+
+</CONTENT>
+
+<X><T>Links</T><A>../links/c.html#glibc</A><L>en</L><F>HTML</F></X>
+
+</PAGE>

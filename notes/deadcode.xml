@@ -1,0 +1,151 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Finding unused methods</TITLE>
+<PATH>notes/deadcode.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<CONTENT>
+This is a quick 'n dirty script to find some C++ methods that are never used. The script lists the strings which have a <CODEROUTINE>class::method</CODEROUTINE> format and then count the number of times <CODEROUTINE>method</CODEROUTINE> appears. If it is 1 or 2, there is something to look at.<BR/>
+(Of course, I know this script is stupid, it does not differentiate enum and routines... But, once again, as stupid as it is, it is able to find many methods that are never called. The sed script used to remove the comments comes from <X><T>here</T><A>http://sed.sourceforge.net/grabbag/scripts/remccoms3.sed</A><L>en</L><F>HTML</F></X>)
+<CODESAMPLE>
+#!/bin/ksh<BR/>
+<BR/>
+find . -type f \( -name '*.c' -o -name '*.h' -o -name '*.icc' -o -name '*.cc' \) -exec /tmp/remccom.sed {} \; |\<BR/>
+<TAB/>grep '[A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*' |\<BR/>
+<TAB/>perl -pe 's/^.*?([A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*).*$/\1/' |\<BR/>
+<TAB/>sort -u > /tmp/the_routines
+<BR/>
+find . -type f \( -name '*.c' -o -name '*.h' -o -name '*.icc' -o -name '*.cc' \) -exec /tmp/remccom.sed {} \; |\<BR/>
+<TAB/>perl -a -F"/[^A-Za-z0-9_]/" -ne 'print join("\n",@F),"\n"' |\<BR/>
+<TAB/>grep '[A-Za-z0-9_]' > /tmp/the_full_list<BR/>
+<BR/>
+for word in ` cat /tmp/the_routines `<BR/>
+do<BR/>
+<TAB/>w=`echo $word | sed 's/.*:://'`<BR/>
+<TAB/>n=`grep -w $w /tmp/the_full_list | wc -l`<BR/>
+<TAB/>echo $n $word<BR/>
+done | sort  -n<BR/>
+<BR/>
+rm /tmp/the_routines /tmp/the_full_list
+</CODESAMPLE>
+where <CODEROUTINE>/tmp/remcom</CODEROUTINE> is:
+<CODESAMPLE>
+#!/bin/sed -nf<BR/>
+<BR/>
+# Remove C and C++ comments, by Brian Hiles (brian_hiles@rocketmail.com)<BR/>
+<BR/>
+# Sped up (and bugfixed to some extent) by Paolo Bonzini (bonzini@gnu.org)<BR/>
+# Works its way through the line, copying to hold space the text up to the<BR/>
+# first special character (/, ", ').<TAB/>The original version went exactly a<BR/>
+# character at a time, hence the greater speed of this one.<TAB/>But the concept<BR/>
+# and especially the trick of building the line in hold space are entirely<BR/>
+# merit of Brian.<BR/>
+<BR/>
+:loop<BR/>
+<BR/>
+# This line is sufficient to remove C++ comments!<BR/>
+/^\/\// s,.*,,<BR/>
+<BR/>
+/^$/{<BR/>
+<TAB/>x<BR/>
+<TAB/>p<BR/>
+<TAB/>n<BR/>
+<TAB/>b loop<BR/>
+}<BR/>
+/^"/{<BR/>
+<TAB/>:double<BR/>
+<TAB/>/^$/{<BR/>
+<TAB/><TAB/>x<BR/>
+<TAB/><TAB/>p<BR/>
+<TAB/><TAB/>n<BR/>
+<TAB/><TAB/>/^"/b break<BR/>
+<TAB/><TAB/>b double<BR/>
+<TAB/>}<BR/>
+<BR/>
+<TAB/>H<BR/>
+<TAB/>x<BR/>
+<TAB/>s,\n\(.[^\"]*\).*,\1,<BR/>
+<TAB/>x<BR/>
+<TAB/>s,.[^\"]*,,<BR/>
+<TAB/><BR/>
+<TAB/>/^"/b break<BR/>
+<TAB/>/^\\/{<BR/>
+<TAB/><TAB/>H<BR/>
+<TAB/><TAB/>x<BR/>
+<TAB/><TAB/>s,\n\(.\).*,\1,<BR/>
+<TAB/><TAB/>x<BR/>
+<TAB/><TAB/>s/.//<BR/>
+<TAB/>}<BR/>
+<TAB/>b double<BR/>
+}<BR/>
+<BR/>
+/^'/{<BR/>
+<TAB/>:single<BR/>
+<TAB/>/^$/{<BR/>
+<TAB/><TAB/>x<BR/>
+<TAB/><TAB/>p<BR/>
+<TAB/><TAB/>n<BR/>
+<TAB/><TAB/>/^'/b break<BR/>
+<TAB/><TAB/>b single<BR/>
+<TAB/>}<BR/>
+<TAB/>H<BR/>
+<TAB/>x<BR/>
+<TAB/>s,\n\(.[^\']*\).*,\1,<BR/>
+<TAB/>x<BR/>
+<TAB/>s,.[^\']*,,<BR/>
+<TAB/><BR/>
+<TAB/>/^'/b break<BR/>
+<TAB/>/^\\/{<BR/>
+<TAB/><TAB/>H<BR/>
+<TAB/><TAB/>x<BR/>
+<TAB/><TAB/>s,\n\(.\).*,\1,<BR/>
+<TAB/><TAB/>x<BR/>
+<TAB/><TAB/>s/.//<BR/>
+<TAB/>}<BR/>
+<TAB/>b single<BR/>
+}<BR/>
+<BR/>
+/^\/\*/{<BR/>
+<TAB/>s/.//<BR/>
+<TAB/>:ccom<BR/>
+<TAB/>s,^.[^*]*,,<BR/>
+<TAB/>/^$/ n<BR/>
+<TAB/>/^\*\//{<BR/>
+<TAB/><TAB/>s/..//<BR/>
+<TAB/><TAB/>b loop<BR/>
+<TAB/>}<BR/>
+<TAB/>b ccom<BR/>
+}<BR/>
+<BR/>
+:break<BR/>
+H<BR/>
+x<BR/>
+s,\n\(.[^"'/]*\).*,\1,<BR/>
+x<BR/>
+s/.[^"'/]*//<BR/>
+b loop
+</CODESAMPLE>
+<BR/>
+Here is the same thing for the <CODEROUTINE>#define</CODEROUTINE>s
+<CODESAMPLE>
+#!/bin/ksh<BR/>
+<BR/>
+find . -type f \( -name '*.c' -o -name '*.h' -o -name '*.icc' -o -name '*.cc' \) -exec egrep '^[ \t]*#define[ \t]+[A-Za-z0-9_]+' {} \; |\<BR/>
+<TAB/>sed 's/^[ <TABCHAR/>]*#define[ <TABCHAR/>]*\([A-Za-z0-9_]*\).*$/\1/' |\<BR/>
+<TAB/>sort -u &gt; /tmp/the_defines<BR/>
+<BR/>
+find . -type f \( -name '*.c' -o -name '*.h' -o -name '*.icc' -o -name '*.cc' \) -exec perl -a -F"/[^A-Za-z0-9_]/" -ne 'print join("\n",@F),"\n"' {} \; |\<BR/>
+<TAB/>grep '[A-Za-z0-9_]' &gt; /tmp/the_full_list<BR/>
+<BR/>
+for word in ` cat /tmp/the_defines `<BR/>
+do<BR/>
+<TAB/>w=`echo $word | sed 's/.*:://'`<BR/>
+<TAB/>n=`grep -w $w /tmp/the_full_list | wc -l`<BR/>
+<TAB/>echo $n $word<BR/>
+done | sort -n<BR/>
+<BR/>
+rm /tmp/the_defines /tmp/the_full_list
+</CODESAMPLE>
+</CONTENT>
+</PAGE>
+

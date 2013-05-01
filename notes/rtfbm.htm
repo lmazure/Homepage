@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>Manipulating bookmarked text in a RTF file</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"> 
+  </script>
+</head>
+<body>
+Quick and dirty renumbering of
+spec requirements.
+<p>The current version put the whole file as a single line (this avoids
+issues with CR-LF in the middle of a bookmark), This does not seem to
+be
+an issue for Word.
+<br>
+There is still one bug (limitation? ;-):
+</p>
+<ul>
+  <li>
+Tags may be crossed: <tt>{\*\foobarstart}{\*\bkmkstart
+toto}text{\*\foobarend}{\*\bkmkend
+toto}</tt>.</li>
+  <br>
+Check the script trace and, if necessary, modify the document in Word
+and regenerate the RTF input file.
+</ul>
+<table bgcolor="#cccccc">
+  <tbody>
+    <tr>
+      <td><tt>#!/usr/local/bin/perl -w</tt><tt></tt>
+      <p><tt>use strict;</tt><tt></tt>
+      </p>
+      <p><tt>my $infile="srs.rtf";</tt>
+      <br>
+      <tt>my $outfile="newsrs.rtf";</tt><tt></tt>
+      </p>
+      <p><tt>open(SRSFILE,$infile) or die("cannot open file $infile
+($!)");</tt>
+      <br>
+      <tt>undef $/;</tt>
+      <br>
+      <tt>$_ = &lt;SRSFILE&gt;;</tt>
+      <br>
+      <tt>close(SRSFILE);</tt><tt></tt>
+      </p>
+      <p><tt>s/\r\n//g;</tt><tt></tt>
+      </p>
+      <p><tt>open(SRSREBUILT,"&gt;$outfile") or die("cannot open file
+$outfile ($!)");</tt><tt></tt>
+      </p>
+      <p><tt>my %increm;</tt>
+      <br>
+      <tt>while ( m/\G(.*?)\{\\\*\\bkmkstart ([^_][^
+]*)\}(.*?)\{\\\*\\bkmkend
+\2\}/gcs ) {</tt>
+      <br>
+      <tt>&nbsp; my ($pred, $refer, $text) = ($1, $2, $3);</tt>
+      <br>
+      <tt>&nbsp; my $t;</tt>
+      <br>
+      <tt>&nbsp; if ( $text =~ /([A-Z][A-Z])-[0-9][0-9][0-9]/ ) {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; $increm{"$1"}++;</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; $t = sprintf "%s-%03d", $1, $increm{"$1"};</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; print $t;</tt>
+      <br>
+      <tt>&nbsp; } else {</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; print "$text\n";</tt>
+      <br>
+      <tt>&nbsp;&nbsp;&nbsp; $t = $text;</tt>
+      <br>
+      <tt>&nbsp; }</tt>
+      <br>
+      <tt>&nbsp; print SRSREBUILT "$pred\{\\*\\bkmkstart
+$refer\}$t\{\\*\\bkmkend
+$refer\}";</tt>
+      <br>
+      <tt>}</tt>
+      <br>
+      <tt>m/\G(.*)$/gs;</tt>
+      <br>
+      <tt>print SRSREBUILT "$1";</tt><tt></tt>
+      </p>
+      <p><tt>close(SRSREBUILT);</tt></p>
+      </td>
+    </tr>
+  </tbody>
+</table>
+<p>
+</p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: June 6</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2001 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

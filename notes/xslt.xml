@@ -1,0 +1,293 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>XSLT</TITLE>
+<PATH>notes/xslt.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+<B>eXtensible Stylesheet Language Transformation</B><BR/>
+XSLT is used to transform an XML tree into another XML tree<BR/>
+<BR/>
+Every XSL stylesheet must start with xsl:stylesheet element. The attribute <CODEROUTINE>version</CODEROUTINE> specifies the version of XSL(T) specification. The simplest stylesheet is:
+<CODESAMPLE>
+&lt;xsl:stylesheet version = '1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&gt;<BR/>
+&lt;/xsl:stylesheet&gt;
+</CODESAMPLE>
+<BR/>
+An XSL processor parses an XML source and tries to find a matching template rule. If it does, instructions inside matching template are evaluated.<BR/>
+<CODESAMPLE>
+&lt;xsl:template match="bold"&gt;<BR/>
+<TAB/>&lt;p&gt;<BR/>
+<TAB/><TAB/>&lt;b&gt;<BR/>
+<TAB/><TAB/><TAB/>&lt;xsl:value-of select="."/&gt;<BR/>
+<TAB/><TAB/>&lt;/b&gt;<BR/>
+<TAB/>&lt;/p&gt;<BR/>
+&lt;/xsl:template&gt;
+</CODESAMPLE>
+<BR/>
+Parts of XML document to which templates should be applied are determined by location paths. The required syntax is specified in the XPath specification.
+<CODESAMPLE>
+&lt;xsl:template match="/source/AAA/CCC/DDD"&gt;<BR/>
+&lt;/xsl:template&gt;
+</CODESAMPLE>
+<BR/>
+Processing always starts with the template <CODEROUTINE>match="/"</CODEROUTINE> . This matches the root node. Many stylesheets do not contain this element explicitly. When this template is not explicitly given, the implicit template and instruction
+<CODESAMPLE>
+&lt;xsl:template match="/"&gt;<BR/>
+     &lt;xsl:apply-templates/&gt;<BR/>
+&lt;/xsl:template&gt;
+</CODESAMPLE>
+is used.<BR/>
+<BR/>
+A template can match from a selection of location paths, individual paths being separated with <CODEROUTINE>|</CODEROUTINE>. Wildcard <CODEROUTINE>*</CODEROUTINE> selects all possibilities.<BR/>
+<CODEROUTINE>//</CODEROUTINE> is very common in location paths. When it is used at the beginning of a location path, it means: select all nodes in the document of the specified type. In the middle of a location path it means: select all nodes which appear in the node selected with the first part of the location path.<BR/>
+<BR/>
+Contents of the original elements can be recovered from the original sources in two basic ways:<BR/>
+<BLIST><ITEM><CODEROUTINE>xsl:value-of</CODEROUTINE>: the contents of the element is used without any further processing</ITEM>
+<ITEM><CODEROUTINE>xsl:apply-templates</CODEROUTINE>: the parser further processes selected elements</ITEM></BLIST>
+<BR/>
+With modes, an element can be processed multiple times, each time producing a different result.
+<CODESAMPLE>
+&lt;xsl:stylesheet version = '1.0'<BR/>
+<TAB/>xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&gt;<BR/>
+&lt;xsl:template match="/"&gt;<BR/>
+<TAB/>&lt;xsl:apply-templates select="//CCC" mode="red"/&gt;<BR/>
+<TAB/>&lt;xsl:apply-templates select="//CCC" mode="blue"/&gt;<BR/>
+&lt;/xsl:template&gt;<BR/>
+&lt;xsl:template match="CCC" mode="red"&gt;<BR/>
+<TAB/>...<BR/>
+&lt;/xsl:template&gt;<BR/>
+&lt;xsl:template match="CCC" mode="blue"&gt;<BR/>
+<TAB/>...<BR/>
+&lt;/xsl:template&gt;<BR/>
+&lt;/xsl:stylesheet&gt;
+</CODESAMPLE>
+<BR/>
+Quite often several templates match the same element in XML source. It must be therefore decided which one should be used. This priority order can be specified with the <CODEROUTINE>priority</CODEROUTINE> attribute. If this attribute is not specified, its priority is calculated according to several rules.<BR/>
+<BR/>
+Attributes can be accessed in similar way as elements.
+<CODESAMPLE>
+&lt;xsl:value-of select="data/@color"/&gt;
+</CODESAMPLE>
+Attributes can be processed in the same way as elements.
+<CODESAMPLE>
+&lt;xsl:template match="@id"&gt;<BR/>
+<TAB/>&lt;i&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:value-of select="."/&gt;<BR/>
+<TAB/>&lt;/i&gt;<BR/>
+&lt;/xsl:template&gt;
+</CODESAMPLE>
+You can also select elements, which contain or do not contain the given attribute.
+<CODESAMPLE>
+&lt;xsl:template match="car[@checked]"&gt;<BR/>
+<TAB/>...<BR/>
+&lt;/xsl:template&gt;<BR/>
+&lt;xsl:template match="car[not(@checked)]"&gt;<BR/>
+<TAB/>...<BR/>
+&lt;/xsl:template&gt;
+</CODESAMPLE>
+<BR/>
+Simple test:
+<CODESAMPLE>
+&lt;xsl:if test="./MONTH=1"&gt;January &lt;/xsl:if&gt;
+</CODESAMPLE>
+Test with several else-if's or with a else:
+<CODESAMPLE>
+&lt;xsl:choose&gt;<BR/>
+<TAB/>&lt;xsl:when test="./DAY=1 or ./DAY=21 or ./DAY=31"&gt;st&lt;/xsl:when&gt;<BR/>
+<TAB/>&lt;xsl:when test="./DAY=2 or ./DAY=22"&gt;nd&lt;/xsl:when&gt;<BR/>
+<TAB/>&lt;xsl:when test="./DAY=3 or ./DAY=23"&gt;rd&lt;/xsl:when&gt;<BR/>
+<TAB/>&lt;xsl:otherwise&gt;th&lt;/xsl:otherwise&gt;<BR/>
+&lt;/xsl:choose&gt;
+</CODESAMPLE>
+Test on the parent node:
+<CODESAMPLE>
+&lt;xsl:choose&gt;<BR/>
+<TAB/>&lt;xsl:when test="name(parent::*)='NLIST'"&gt;<BR/>
+<TAB/><TAB/>&lt;LI&gt;&lt;xsl:apply-templates/&gt;&lt;/LI&gt;<BR/>
+<TAB/>&lt;/xsl:when&gt;<BR/>
+<TAB/>&lt;xsl:otherwise&gt;<BR/>
+<TAB/><TAB/>&lt;P&gt;&lt;xsl:apply-templates/&gt;&lt;/P&gt;&lt;BR/&gt;<BR/>
+<TAB/>&lt;/xsl:otherwise&gt;<BR/>
+&lt;/xsl:choose&gt;<BR/>
+</CODESAMPLE>
+other solution:
+<CODESAMPLE>
+&lt;xsl:template match="CODEMENU"&gt;<BR/>
+<TAB/>&lt;CODE&gt;&lt;xsl:if test="name(..)='CODEMENU'"&gt;&amp;gt;&lt;/xsl:if&gt;&lt;xsl:apply-templates/&gt;&lt;/CODE&gt;<BR/>
+&lt;/xsl:template&gt; <BR/>
+</CODESAMPLE>
+Test on the parent node and location in the parent node
+<CODESAMPLE>
+&lt;xsl:choose&gt;<BR/>
+<TAB/>&lt;xsl:when test="name(..)='ARTICLE' and count(preceding-sibling::*)=1"&gt;<BR/>
+<TAB/><TAB/>&lt;!-- case of second, third... node in an article --&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:text&gt;M&lt;/xsl:text&gt;<BR/>
+<TAB/>&lt;/xsl:when&gt;<BR/>
+<TAB/>&lt;xsl:otherwise&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:value-of select="./T"/&gt;<BR/>
+<TAB/>&lt;/xsl:otherwise&gt;<BR/>
+&lt;/xsl:choose&gt;
+</CODESAMPLE>
+Test on an attribute:
+<CODESAMPLE>
+&lt;xsl:choose&gt;<BR/>
+<TAB/>&lt;xsl:when test="./@ID='Left'"&gt;&amp;#x2190;&lt;/xsl:when&gt;<BR/>
+<TAB/>&lt;xsl:when test="./@ID='Up'"&gt;&amp;#x2191;&lt;/xsl:when&gt;<BR/>
+<TAB/>&lt;xsl:when test="./@ID='Right'"&gt;&amp;#x2192;&lt;/xsl:when&gt;<BR/>
+<TAB/>&lt;xsl:when test="./@ID='Down'"&gt;&amp;#x2193;&lt;/xsl:when&gt;<BR/>
+<TAB/>&lt;xsl:otherwise&gt;&lt;xsl:value-of select="@ID"/&gt;&lt;/xsl:otherwise&gt;<BR/>
+&lt;/xsl:choose&gt;
+</CODESAMPLE>
+<BR/>
+Include another XML document and applies the templates on it
+<CODESAMPLE>
+&lt;xsl:apply-templates select="document('menu.xml')"/&gt;
+</CODESAMPLE>
+(in order to avoid to apply the template of the main document to <CODEROUTINE>menu.xml</CODEROUTINE>, take care to not use <CODEROUTINE>&lt;xsl:template match="/"&gt;&lt;/xsl:template&gt;</CODEROUTINE> but <CODEROUTINE>&lt;xsl:template match="/PAGE"&gt;&lt;/xsl:template&gt;</CODEROUTINE> and <CODEROUTINE>&lt;xsl:template match="/MENU"&gt;&lt;/xsl:template&gt;</CODEROUTINE> where <CODEROUTINE>PAGE</CODEROUTINE> is the root element of the main document and <CODEROUTINE>MENU</CODEROUTINE> the root element of the included document)<BR/>
+<BR/>
+Apply a named template to the <CODEROUTINE>ITM</CODEROUTINE> parents of the current node
+<CODESAMPLE>
+&lt;xsl:for-each select="./ancestor::*[self::ITM]"&gt;<BR/>
+<TAB/>&lt;xsl:call-template name="map_item"/&gt;<BR/>
+&lt;/xsl:for-each&gt;
+</CODESAMPLE>
+<BR/>
+Dive through a hierarchy of <CODEROUTINE>ITM</CODEROUTINE> nodes to find the desired one
+<CODESAMPLE>
+&lt;xsl:template match="/MENU//ITM"&gt;<BR/>
+<TAB/>&lt;xsl:choose&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:when test="[the test]"&gt;<BR/>
+<TAB/> <TAB/> <TAB/> [do the job]<BR/>
+<TAB/><TAB/>&lt;/xsl:when&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:otherwise&gt;<BR/>
+<TAB/><TAB/><TAB/>&lt;xsl:apply-templates select="./ITM"/&gt;<BR/>
+<TAB/><TAB/>&lt;/xsl:otherwise&gt;<BR/>
+<TAB/>&lt;/xsl:choose&gt;<BR/>
+&lt;/xsl:template&gt;
+</CODESAMPLE>
+<BR/>
+To create dynamically some attributes use <CODEROUTINE>xsl:template</CODEROUTINE> and <CODEROUTINE>xsl:attribute</CODEROUTINE>:<BR/>
+For example, to transform
+<CODESAMPLE>&lt;X&gt;&lt;T&gt;homepage&lt;/T&gt;&lt;A&gt;index.htm&lt;/A&gt;&lt;L&gt;en&lt;/L&gt;&lt;F&gt;HTML&lt;/F&gt;&lt;/X&gt;
+</CODESAMPLE>
+into
+<CODESAMPLE>
+&lt;A href="index.htm"&gt;homepage&lt;/A&gt;
+</CODESAMPLE>
+use
+<CODESAMPLE>
+&lt;xsl:template match="X"&gt;<BR/>
+<TAB/>&lt;xsl:element name="A"&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:attribute name="href"&gt;<BR/>
+<TAB/><TAB/><TAB/>&lt;xsl:value-of select="./A"/&gt;<BR/>
+<TAB/><TAB/>&lt;/xsl:attribute&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:value-of select="./T"/&gt;<BR/>
+<TAB/>&lt;/xsl:element&gt;<BR/>
+&lt;/xsl:template&gt;
+</CODESAMPLE>
+<BR/>
+Test the beginning of a string:
+<CODESAMPLE>
+&lt;xsl:template match="X"&gt;<BR/>
+<TAB/>&lt;xsl:element name="A"&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:attribute name="href"&gt;<BR/>
+<TAB/><TAB/><TAB/>&lt;xsl:value-of select="./A"/&gt;<BR/>
+<TAB/><TAB/>&lt;/xsl:attribute&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:if test="starts-with(./A,'http://')"&gt;<BR/>
+<TAB/><TAB/><TAB/>&lt;xsl:attribute name="target"&gt;<BR/>
+<TAB/><TAB/><TAB/><TAB/>&lt;xsl:text&gt;_blank&lt;/xsl:text&gt;<BR/>
+<TAB/><TAB/><TAB/>&lt;/xsl:attribute&gt;<BR/>
+<TAB/><TAB/>&lt;/xsl:if&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:value-of select="./T"/&gt;<BR/>
+<TAB/>&lt;/xsl:element&gt;<BR/>
+&lt;/xsl:template&gt;
+</CODESAMPLE>
+<BR/>
+<CODESAMPLE>
+&lt;xsl:text disable-output-escaping = "no"&gt;&amp;lt;SSS/&amp;gt;&lt;/xsl:text&gt;
+</CODESAMPLE>
+generates
+<CODESAMPLE>
+&amp;lt;SSS/&amp;gt;
+</CODESAMPLE>
+<CODESAMPLE>
+&lt;xsl:text disable-output-escaping = "yes"&gt;&amp;lt;SSS/&amp;gt;&lt;/xsl:text&gt;
+</CODESAMPLE>
+generates
+<CODESAMPLE>
+&lt;SSS/&gt;
+</CODESAMPLE>
+<BR/>
+To insert <CODEROUTINE>&amp;nbsp;</CODEROUTINE> in the generated document
+<CODESAMPLE>
+&lt;xsl:text disable-output-escaping="yes"&gt;&amp;amp;amp;nbsp;&lt;/xsl:text&gt;
+</CODESAMPLE>
+<BR/>
+<CODEROUTINE>&lt;xsl:copy&gt;</CODEROUTINE> copies the current node but not its attributes and children<BR/>
+it must contains a <CODEROUTINE>&lt;xsl:apply-template&gt;</CODEROUTINE> node to indicate the attributes and children to copy<BR/>
+<BR/>
+There is no way to retrieve the name of the XML file with XLST1.0.<BR/>
+<BR/>
+Insert
+<BLIST>
+<ITEM>the supported version of XSLT
+<CODESAMPLE>
+&lt;xsl:value-of select = "system-property('xsl:version')" /&gt;
+</CODESAMPLE></ITEM>
+<ITEM>the name of the vendor
+<CODESAMPLE>
+&lt;xsl:value-of select = "system-property('xsl:vendor')" /&gt;
+</CODESAMPLE></ITEM>
+<ITEM>the URL of the vendor
+<CODESAMPLE>
+&lt;xsl:value-of select = "system-property('xsl:vendor-url')" /&gt;
+</CODESAMPLE></ITEM>
+</BLIST>
+<BR/>
+Mozilla/Firebird does not support disable-output-escaping, so the trick
+<CODESAMPLE>
+&lt;xsl:text disable-output-escaping="yes"&gt;&amp;amp;amp;nbsp;&lt;/xsl:text&gt;
+</CODESAMPLE>
+does not work, use instead
+<CODESAMPLE>
+&amp;#xA0;
+</CODESAMPLE>
+<BR/>
+Loop on a list
+<CODESAMPLE>
+&lt;xsl:template match="DEFINITIONTABLE"&gt;<BR/>
+<TAB/>&lt;TABLE border="1"&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:for-each select="./ROW"&gt;<BR/>
+<TAB/><TAB/><TAB/>&lt;TR&gt;<BR/>
+<TAB/><TAB/><TAB/><TAB/>&lt;TD&gt;<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>&lt;xsl:apply-templates select="./TERM"/&gt;<BR/>
+<TAB/><TAB/><TAB/><TAB/>&lt;/TD&gt;<BR/>
+<TAB/><TAB/><TAB/><TAB/>&lt;TD&gt;<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>&lt;xsl:apply-templates select="./DESC"/&gt;<BR/>
+<TAB/><TAB/><TAB/><TAB/>&lt;/TD&gt;<BR/>
+<TAB/><TAB/><TAB/>&lt;/TR&gt;<BR/>
+<TAB/><TAB/>&lt;/xsl:for-each&gt;<BR/>
+<TAB/>&lt;/TABLE&gt;<BR/>
+&lt;/xsl:template&gt;
+</CODESAMPLE>
+<BR/>
+Loop on a list and apply something special to the first or last element:
+<CODESAMPLE>
+&lt;xsl:for-each select="/PAGE/X"&gt;<BR/>
+<TAB/>&lt;xsl:apply-templates select="."/&gt;<BR/>
+<TAB/>&lt;xsl:if test="not(position()=last())"&gt;<BR/>
+<TAB/><TAB/>&lt;xsl:text&gt; | &lt;/xsl:text&gt;<BR/>
+<TAB/>&lt;/xsl:if&gt;<BR/>
+&lt;/xsl:for-each&gt;
+</CODESAMPLE>
+<CODEROUTINE>generate-id()</CODEROUTINE> returns a unique string identifying the node<BR/>
+<BR/>
+define the output format as XHTML 1.0 transitional (just after the line (<CODEROUTINE>&lt;xsl:stylesheet version = '1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'&gt;</CODEROUTINE>):
+<CODESAMPLE>&lt;xsl:output method="html" encoding="UTF-8" doctype-public="-//W3C//DTD XHTML 1.0 Transitional//EN" doctype-system="http://www.w3.org/TR/html4/loose.dtd"/&gt;</CODESAMPLE>
+this will insert in the first line of the resulting document:
+<CODESAMPLE>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"&gt;</CODESAMPLE>
+
+</CONTENT>
+<X><T>links</T><A>../links/xml.html#xslt</A><L>en</L><F>HTML</F></X>
+</PAGE>

@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Finding useless forward declarations</TITLE>
+<PATH>notes/forwdecl.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+Yet another stupid little script. This one finds useless forward declarations.
+<CODESAMPLE>
+#!/bin/ksh<BR/>
+<BR/>
+list=`egrep "^[[:space:]]*class[[:space:]]+[A-Za-z_][A-Za-z0-9_]*[[:space:]]*;" $1 | awk '{print $2}' | sed 's/; *//'`<BR/>
+<BR/>
+for l in $list<BR/>
+do<BR/>
+<TAB/>if [ `grep -c $l $1` -eq 1 ] <BR/>
+<TAB/>then<BR/>
+<TAB/><TAB/>echo $l unused in $1<BR/>
+<TAB/>fi<BR/>
+done<BR/>
+</CODESAMPLE>
+</CONTENT>
+<X><T>ksh</T><A>ksh.htm</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

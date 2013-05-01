@@ -1,0 +1,1287 @@
+<!DOCTYPE html PUBLIC "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+  <meta http-equiv="Content-Type"
+ content="text/html; charset=iso-8859-1">
+  <meta name="GENERATOR"
+ content="Mozilla/4.74 [en] (Win95; U) [Netscape]">
+  <title>csh</title>
+  <link rel="STYLESHEET" type="text/css" href="../css/standard"
+ title="standard">
+  <script language="JavaScript" src="../css/tools"></script>
+</head>
+<body>
+<b><u>Test on files</u></b>
+<table>
+  <tbody>
+    <tr>
+      <td>
+      <center><tt>r</tt></center>
+      </td>
+      <td>read access</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>w</tt></center>
+      </td>
+      <td>write access</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>x</tt></center>
+      </td>
+      <td>execute access</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>e</tt></center>
+      </td>
+      <td>existence</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>o</tt></center>
+      </td>
+      <td>ownership</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>z</tt></center>
+      </td>
+      <td>zero size</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>s</tt></center>
+      </td>
+      <td>size greater than zero</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>f</tt></center>
+      </td>
+      <td>plain file</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>d</tt></center>
+      </td>
+      <td>directory</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>l</tt></center>
+      </td>
+      <td>symbolic link</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>c</tt></center>
+      </td>
+      <td>character special file</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>b</tt></center>
+      </td>
+      <td>block special file</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>p</tt></center>
+      </td>
+      <td>named pipe (fifo)</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>u</tt></center>
+      </td>
+      <td>set-user-ID bit is set</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>g</tt></center>
+      </td>
+      <td>set-group-id is set</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>k</tt></center>
+      </td>
+      <td>sticky bit is set</td>
+    </tr>
+    <tr>
+      <td>
+      <center><tt>t</tt></center>
+      </td>
+      <td>open file descriptor for terminal device</td>
+    </tr>
+  </tbody>
+</table>
+<p><b><u>History</u></b>
+<br>
+The historic commands are reapplied by using the syntax: <tt>!event:position:action</tt>
+</p>
+<p><u>event</u>
+<table>
+  <tbody>
+    <tr>
+      <td><tt>!n</tt></td>
+      <td>event number <tt>n</tt></td>
+    </tr>
+    <tr>
+      <td><tt>!-n</tt></td>
+      <td>n<sup>th</sup> last event</td>
+    </tr>
+    <tr>
+      <td><tt>!string</tt></td>
+      <td>last event beginning by <tt>string</tt></td>
+    </tr>
+    <tr>
+      <td><tt>!?string?</tt></td>
+      <td>last event containing <tt>string</tt></td>
+    </tr>
+    <tr>
+      <td><tt>!!</tt></td>
+      <td>last event</td>
+    </tr>
+  </tbody>
+</table>
+<tt>!</tt> is not considered as a historic command if followed by a
+blank,
+tab, newline, <tt>=</tt> or <tt>(</tt>.
+</p>
+<p><u>position</u>
+<table>
+  <tbody>
+    <tr>
+      <td><tt>0</tt></td>
+      <td>first word (command)</td>
+    </tr>
+    <tr>
+      <td><tt>n</tt></td>
+      <td>n<sup>th</sup> argument</td>
+    </tr>
+    <tr>
+      <td><tt>^</tt></td>
+      <td>first argument (i.e. 1)</td>
+    </tr>
+    <tr>
+      <td><tt>$</tt></td>
+      <td>last argument</td>
+    </tr>
+    <tr>
+      <td><tt>%</tt></td>
+      <td>argument matching with <tt>?string?</tt></td>
+    </tr>
+    <tr>
+      <td><tt>x-y</tt></td>
+      <td>from <tt>x</tt><sup>th</sup> to <tt>y</tt><sup>th</sup>
+arguments</td>
+    </tr>
+    <tr>
+      <td><tt>-y</tt></td>
+      <td>equivalent to <tt>0-y</tt></td>
+    </tr>
+    <tr>
+      <td><tt>*</tt></td>
+      <td>equivalent to <tt>^-$</tt> or the first word if it is alone</td>
+    </tr>
+    <tr>
+      <td><tt>x*</tt></td>
+      <td>equivalent to <tt>x-$</tt></td>
+    </tr>
+    <tr>
+      <td><tt>x-</tt></td>
+      <td>same without the last word</td>
+    </tr>
+  </tbody>
+</table>
+<tt>:</tt> in not necessary if the position starts with <tt>^</tt>, <tt>$</tt>,
+<tt>*</tt>,
+<tt>-</tt>
+or <tt>%</tt>.
+</p>
+<p><u>action</u>
+<table>
+  <tbody>
+    <tr>
+      <td><tt>h</tt></td>
+      <td>head (remove the last element of the path)</td>
+    </tr>
+    <tr>
+      <td><tt>r</tt></td>
+      <td>root (remove the extension)</td>
+    </tr>
+    <tr>
+      <td><tt>e</tt></td>
+      <td>extension</td>
+    </tr>
+    <tr>
+      <td><tt>t</tt></td>
+      <td>tail (keep only the last element of the path)</td>
+    </tr>
+    <tr>
+      <td><tt>s/old/new/</tt></td>
+      <td>replace <tt>old</tt> by <tt>new</tt> (<tt>/</tt> maybe
+replaced by
+another character)</td>
+    </tr>
+    <tr>
+      <td><tt>&amp;</tt></td>
+      <td>repeat the previous substitution</td>
+    </tr>
+    <tr>
+      <td>g</td>
+      <td>if <tt>g</tt> precedes one of the previous command, the
+modification
+is done on all word and not only on the first one</td>
+    </tr>
+    <tr>
+      <td><tt>p</tt></td>
+      <td>print the command but does not execute it</td>
+    </tr>
+    <tr>
+      <td><tt>q</tt></td>
+      <td>quote the substituted words, avoiding a further substitution</td>
+    </tr>
+    <tr>
+      <td><tt>x</tt></td>
+      <td>same but cut in words at each blank, tab or newline</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>In <tt>s/old/new/</tt>, <tt>&amp;</tt> can be used in <tt>new</tt>
+to
+insert <tt>old</tt> (which is a string and not a regular expression),
+a
+<tt>\</tt>
+can be used to escape the separation character or <tt>&amp;</tt>. If
+old
+is nul, the previous <tt>old</tt> string or <tt>?string?</tt> is
+used.
+</p>
+<p><tt>^</tt> is equivalent to <tt>!:s^</tt>
+</p>
+<p><tt>!{event:position:action}</tt> protects the historic command from
+the following characters.
+<br>
+&nbsp;
+</p>
+<p><b><u>Variables</u></b>
+<table>
+  <tbody>
+    <tr>
+      <td><tt>$name</tt> <br>
+      <tt>${name}</tt></td>
+      <td>is repaced by the words contained in the variable, they are
+separated
+by blanks <br>
+      <tt>name</tt> may be 20 characters long (letters, digits and
+underscore)
+and starts by a letter or underscore</td>
+    </tr>
+    <tr>
+      <td><tt>$name[selector]</tt> <br>
+      <tt>${name[selector]}</tt></td>
+      <td>apply variable substitution <br>
+&nbsp;
+      <table>
+        <tbody>
+          <tr>
+            <td><tt>n</tt></td>
+            <td>choose <tt>n</tt><sup>th</sup> word</td>
+          </tr>
+          <tr>
+            <td><tt>n-m</tt></td>
+            <td>choose <tt>n</tt><sup>th</sup> to <tt>m</tt><sup>th</sup>
+words</td>
+          </tr>
+          <tr>
+            <td><tt>-m</tt></td>
+            <td>choose first to <tt>m</tt><sup>th</sup> words</td>
+          </tr>
+          <tr>
+            <td><tt>n-</tt></td>
+            <td>choose <tt>n</tt><sup>th</sup> to last word</td>
+          </tr>
+          <tr>
+            <td><tt>*</tt></td>
+            <td>choose all words</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>$#name</tt> <br>
+      <tt>${#name}</tt></td>
+      <td>return the number of words <br>
+may be used as a selector</td>
+    </tr>
+    <tr>
+      <td><tt>$0</tt></td>
+      <td>name of the file wherea are read the commands <br>
+an error occurs if the file is not known</td>
+    </tr>
+    <tr>
+      <td><tt>$number</tt> <br>
+      <tt>${number}</tt></td>
+      <td>equivalent to <tt>$argv[number]</tt></td>
+    </tr>
+    <tr>
+      <td><tt>$*</tt></td>
+      <td>equivalent to <tt>$argv[*]</tt></td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><tt>:h</tt>, <tt>:t</tt>, <tt>:r</tt>, <tt>:q</tt>, <tt>:x</tt>,
+<tt>:gh</tt>,
+<tt>:gt</tt>
+and <tt>:gr</tt> can be used in the previous variables. The must be
+inside
+the braces if these ones are used.
+<br>
+&nbsp;
+<table>
+  <tbody>
+    <tr>
+      <td><tt>$?name</tt> <br>
+      <tt>${?name}</tt></td>
+      <td>return the string <tt>1</tt> if name exists, <tt>0</tt>
+otherwise</td>
+    </tr>
+    <tr>
+      <td><tt>$?0</tt></td>
+      <td>return <tt>1</tt> if the command file is known, <tt>0</tt>
+otherwise</td>
+    </tr>
+    <tr>
+      <td><tt>$$</tt></td>
+      <td>return the shell pid</td>
+    </tr>
+    <tr>
+      <td><tt>$&lt;</tt></td>
+      <td>read a line from the standard input <br>
+no other substitution is further performed on the variable</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><b><u>Input/output</u></b>
+<table>
+  <tbody>
+    <tr>
+      <td><tt>&lt;name</tt></td>
+      <td>open the file <tt>name</tt> as standard input <br>
+(variable, file and command expansions have been done on <tt>name</tt>)</td>
+    </tr>
+    <tr>
+      <td><tt>&lt;&lt;word</tt></td>
+      <td>read the shell input until finding a line identical to <tt>word</tt>
+      <br>
+      <tt>(word</tt> and the line before comparison are not expanded) <br>
+the read lines are variable and command expanded except if <tt>word</tt>
+is quoted <br>
+blanks, tabs and newlnes are kept (except the last newline)</td>
+    </tr>
+    <tr>
+      <td><tt>&gt;name</tt> <br>
+      <tt>&gt;!name</tt> <br>
+      <tt>&gt;&amp;name</tt> <br>
+      <tt>&gt;&amp;!name</tt></td>
+      <td>open the file <tt>name</tt> as standard output <br>
+if the <tt>noclobber</tt> variable is defined, the file must not exist
+before or must a special character file <br>
+      <tt>!</tt> suppresses this control <br>
+      <tt>&amp;</tt> also associates the error ouput to <tt>name</tt></td>
+    </tr>
+    <tr>
+      <td><tt>&gt;&gt;name</tt> <br>
+      <tt>&gt;&gt;!name</tt> <br>
+      <tt>&gt;&gt;&amp;name</tt> <br>
+      <tt>&gt;&gt;&amp;!name</tt></td>
+      <td>same thing except that data are appended at the file end <br>
+if the <tt>noclobber</tt> variable is defined, the file must exist</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>To get the standard output in one file and the error output in
+another
+one:
+<br>
+<tt>( cmd &gt; file1 ) &gt;&amp; file2</tt>
+</p>
+<p><tt>/dev/tty</tt> can be used to redirect the input or output toward
+a terminal.
+</p>
+<p><b><u>Commands</u></b>
+<table>
+  <tbody>
+    <tr>
+      <td><tt>alias</tt></td>
+      <td>list the defined aliases</td>
+    </tr>
+    <tr>
+      <td><tt>alias name</tt></td>
+      <td>dispaly an alias definition</td>
+    </tr>
+    <tr>
+      <td><tt>alias name wordlist</tt></td>
+      <td>define an alias</td>
+    </tr>
+    <tr>
+      <td><tt>alloc</tt></td>
+      <td>display the dynamic memory (used and free)</td>
+    </tr>
+    <tr>
+      <td><tt>bg</tt></td>
+      <td>put the current job in background</td>
+    </tr>
+    <tr>
+      <td><tt>bg %job</tt></td>
+      <td>put the specified job in background</td>
+    </tr>
+    <tr>
+      <td><tt>break</tt></td>
+      <td>continue the execution until the end of the nearest <tt>foreach</tt>
+or <tt>while</tt> <br>
+the other commands on the line are executed, so several <tt>break</tt>s
+can be used</td>
+    </tr>
+    <tr>
+      <td><tt>breaksw</tt></td>
+      <td>continue the execution until the <tt>endsw</tt> of a <tt>switch</tt></td>
+    </tr>
+    <tr>
+      <td><tt>case label</tt></td>
+      <td>label of a swicth</td>
+    </tr>
+    <tr>
+      <td><tt>cd</tt> <br>
+      <tt>chdir</tt></td>
+      <td>change the current directory to be the home directory</td>
+    </tr>
+    <tr>
+      <td><tt>cd name</tt> <br>
+      <tt>chdir name</tt></td>
+      <td>change the current directory to be <tt>name</tt></td>
+    </tr>
+    <tr>
+      <td><tt>continue</tt></td>
+      <td>continue the execution to the beginning nearest <tt>while</tt>
+or <tt>foreach</tt> <br>
+the other commands of the lina are executed</td>
+    </tr>
+    <tr>
+      <td><tt>default</tt></td>
+      <td>default label in a switch</td>
+    </tr>
+    <tr>
+      <td><tt>dirs</tt></td>
+      <td>display the directory stack</td>
+    </tr>
+    <tr>
+      <td><tt>dirs -l</tt></td>
+      <td>display the directory stack with the directory names being
+expanded</td>
+    </tr>
+    <tr>
+      <td><tt>echo wordlist</tt></td>
+      <td>display <tt>wordlist</tt></td>
+    </tr>
+    <tr>
+      <td><tt>echo -n wordlist</tt></td>
+      <td>display <tt>wordlist</tt> without a newline <br>
+&nbsp;
+      <table>
+        <tbody>
+          <tr>
+            <td><tt>\n</tt></td>
+            <td>char with ASCII <tt>n</tt> in octal</td>
+          </tr>
+          <tr>
+            <td><tt>\\</tt></td>
+            <td>backslash</td>
+          </tr>
+          <tr>
+            <td><tt>\t</tt></td>
+            <td>tab</td>
+          </tr>
+          <tr>
+            <td><tt>\r</tt></td>
+            <td>carriage return</td>
+          </tr>
+          <tr>
+            <td><tt>\n</tt></td>
+            <td>newline</td>
+          </tr>
+          <tr>
+            <td><tt>\f</tt></td>
+            <td>form feed</td>
+          </tr>
+          <tr>
+            <td><tt>\c</tt></td>
+            <td>print line without newline</td>
+          </tr>
+          <tr>
+            <td><tt>\b</tt></td>
+            <td>backspace</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>eval&nbsp; arg...</tt></td>
+      <td>arguments are read as shell input and the resulting commands
+are executed
+(used to execute commands created by other commands)</td>
+    </tr>
+    <tr>
+      <td><tt>exec command</tt></td>
+      <td><tt>command</tt> is executed in place of the shell (i.e. no
+subshell
+is created)</td>
+    </tr>
+    <tr>
+      <td><tt>exit</tt></td>
+      <td>end of the shell with a status equal to the variable <tt>status</tt></td>
+    </tr>
+    <tr>
+      <td><tt>exit(expr)</tt></td>
+      <td>end of the shell with a status equal to the expression value</td>
+    </tr>
+    <tr>
+      <td><tt>fg</tt></td>
+      <td>put the current job in foreground</td>
+    </tr>
+    <tr>
+      <td><tt>fg %job</tt></td>
+      <td>pout the specified job in foreground</td>
+    </tr>
+    <tr>
+      <td><tt>foreach name (wordlist)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+      <tt>&nbsp; end</tt></td>
+      <td>the <tt>name</tt> variable is initialized with each of the <tt>worklist</tt>
+arguments and the commands are executed</td>
+    </tr>
+    <tr>
+      <td><tt>glob wordlist</tt></td>
+      <td>display <tt>wordlist</tt> with the nul character between
+each word,
+the \ escape sequences are not recognized</td>
+    </tr>
+    <tr>
+      <td><tt>goto word</tt></td>
+      <td><tt>word</tt> is expanded (file and command expansions) and
+the execution
+continues
+after the line containing the corresponding label</td>
+    </tr>
+    <tr>
+      <td><tt>history</tt></td>
+      <td>display the command history <br>
+&nbsp;
+      <table>
+        <tbody>
+          <tr>
+            <td><tt>-r</tt></td>
+            <td>reverse the display order</td>
+          </tr>
+          <tr>
+            <td><tt>-h</tt></td>
+            <td>does not display the command numbers</td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>history n</tt></td>
+      <td>display the last <tt>n</tt> commands</td>
+    </tr>
+    <tr>
+      <td><tt>if (expr) command</tt></td>
+      <td>execute <tt>command</tt> if <tt>expr</tt> is true, the
+command must
+be simple (no parentheses, pipe...)</td>
+    </tr>
+    <tr>
+      <td><tt>if (expr) then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+      <tt>&nbsp; else if (expr2) then</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+      <tt>&nbsp; else</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+      <tt>end</tt></td>
+      <td>mulitple test <br>
+the <tt>if</tt>, <tt>else</tt>&nbsp; and<tt> end</tt> must be alone
+ont their line</td>
+    </tr>
+    <tr>
+      <td><tt>jobs</tt></td>
+      <td>display the active jobs</td>
+    </tr>
+    <tr>
+      <td><tt>jobs -l</tt></td>
+      <td>display the active jobs with their process id</td>
+    </tr>
+    <tr>
+      <td><tt>kill %job</tt> <br>
+      <tt>kill pid</tt></td>
+      <td>send a TERM signal to the process</td>
+    </tr>
+    <tr>
+      <td><tt>kill -sig %job</tt> <br>
+      <tt>kill -sig pid</tt></td>
+      <td>send the <tt>sig</tt> signal to the process</td>
+    </tr>
+    <tr>
+      <td><tt>kill -l</tt></td>
+      <td>display the list of the signals</td>
+    </tr>
+    <tr>
+      <td><tt>limit</tt></td>
+      <td>display the current limits</td>
+    </tr>
+    <tr>
+      <td><tt>limit -h</tt></td>
+      <td>display the current hard limits</td>
+    </tr>
+    <tr>
+      <td><tt>limit ressource</tt></td>
+      <td>display the current limit for <tt>resource</tt>
+      <table>
+        <tbody>
+          <tr>
+            <td><br>
+            </td>
+            <td>default units</td>
+            <td>other available units</td>
+          </tr>
+          <tr>
+            <td><tt>cputime</tt></td>
+            <td><tt>s</tt></td>
+            <td><tt>m</tt>, <tt>h</tt></td>
+          </tr>
+          <tr>
+            <td><tt>filesize</tt></td>
+            <td><tt>k</tt>, <tt>kilobyte</tt></td>
+            <td><tt>m</tt>, <tt>megabytes</tt></td>
+          </tr>
+          <tr>
+            <td><tt>datasize</tt></td>
+            <td><tt>k</tt>, <tt>kilobyte</tt></td>
+            <td><tt>m</tt>, <tt>megabyte</tt></td>
+          </tr>
+          <tr>
+            <td><tt>stacksize</tt></td>
+            <td><tt>k</tt>, <tt>kilobyte</tt></td>
+            <td><tt>m</tt>, <tt>megabyte</tt></td>
+          </tr>
+          <tr>
+            <td><tt>coredupsize</tt></td>
+            <td><tt>k</tt>, <tt>kilobyte</tt></td>
+            <td><tt>m</tt>, <tt>megabyte</tt></td>
+          </tr>
+          <tr>
+            <td><tt>memoryuse</tt></td>
+            <td><tt>k</tt>, <tt>kilobyte</tt></td>
+            <td><tt>m</tt>, <tt>megabyte</tt></td>
+          </tr>
+        </tbody>
+      </table>
+      </td>
+    </tr>
+    <tr>
+      <td><tt>limit -h ressource</tt></td>
+      <td>display the current hard limit for <tt>resource</tt></td>
+    </tr>
+    <tr>
+      <td><tt>limit ressource maximum_use</tt></td>
+      <td>define the current limit for <tt>ressource</tt></td>
+    </tr>
+    <tr>
+      <td><tt>limit -h ressource maximum_use</tt></td>
+      <td>define the current hard limit for <tt>ressource</tt></td>
+    </tr>
+    <tr>
+      <td><tt>login</tt></td>
+      <td>terminate the current shell by replacing it by <tt>login</tt></td>
+    </tr>
+    <tr>
+      <td><tt>logout</tt></td>
+      <td>terminate the login shell</td>
+    </tr>
+    <tr>
+      <td><tt>nice</tt></td>
+      <td>set the current shell to the priority level 4</td>
+    </tr>
+    <tr>
+      <td><tt>nice +number</tt></td>
+      <td>set the current shell to the priority level <tt>number</tt></td>
+    </tr>
+    <tr>
+      <td><tt>nice command</tt></td>
+      <td>execute <tt>command</tt> at the priority level 4</td>
+    </tr>
+    <tr>
+      <td><tt>nice +number command</tt></td>
+      <td>execute <tt>command</tt> at the priority level <tt>number</tt>
+(only
+the super-user can give a negative priority level)</td>
+    </tr>
+    <tr>
+      <td><tt>nohup</tt></td>
+      <td>the shell ignoes the hangups</td>
+    </tr>
+    <tr>
+      <td><tt>nohup command</tt></td>
+      <td><tt>command</tt> is executed while ignoring the hangups</td>
+    </tr>
+    <tr>
+      <td><tt>notify</tt></td>
+      <td>the shell will indicate asynchronously the job ends (or other
+status
+modifications)</td>
+    </tr>
+    <tr>
+      <td><tt>notify %job ...</tt></td>
+      <td>the status modifications og the job(s) are indicated
+asynchronously</td>
+    </tr>
+    <tr>
+      <td><tt>onintr</tt></td>
+      <td>take into account the interruptions</td>
+    </tr>
+    <tr>
+      <td><tt>onintr -</tt></td>
+      <td>ignore the interruptions</td>
+    </tr>
+    <tr>
+      <td><tt>onintr label</tt></td>
+      <td>goto <tt>label</tt> in case of an interruption</td>
+    </tr>
+    <tr>
+      <td><tt>popd</tt></td>
+      <td>pop one element from the directory stack and go the the new
+top directory</td>
+    </tr>
+    <tr>
+      <td><tt>popd +n</tt></td>
+      <td>destroy the <tt>n</tt><sup>th</sup> directory from the stack</td>
+    </tr>
+    <tr>
+      <td><tt>pushd</tt></td>
+      <td>swap the two top directories from the stack and go to the new
+top directory</td>
+    </tr>
+    <tr>
+      <td><tt>pushd name</tt></td>
+      <td>push the current directory on the stack and set <tt>name</tt>
+as the
+new current directory</td>
+    </tr>
+    <tr>
+      <td>pushd +n</td>
+      <td>rotate the stacks elements to put the <tt>n</tt><sup>th</sup>
+element
+on the top and go to it</td>
+    </tr>
+    <tr>
+      <td><tt>rehash</tt></td>
+      <td>rehash the command table</td>
+    </tr>
+    <tr>
+      <td><tt>repeat count command</tt></td>
+      <td>execute the (simple) command <tt>command</tt> <tt>count</tt>
+times
+(one time if <tt>count</tt> is equal to zero)</td>
+    </tr>
+    <tr>
+      <td><tt>set</tt></td>
+      <td>list the shell variable</td>
+    </tr>
+    <tr>
+      <td><tt>set name</tt></td>
+      <td>give a null string value to the variable <tt>name</tt></td>
+    </tr>
+    <tr>
+      <td><tt>set name=word</tt></td>
+      <td>initialize the variable <tt>name</tt> with the value <tt>word</tt></td>
+    </tr>
+    <tr>
+      <td><tt>set name[index]=word</tt></td>
+      <td>initialize the element <tt>index</tt> of the variable <tt>name</tt>
+to the value <tt>word</tt></td>
+    </tr>
+    <tr>
+      <td><tt>set name=(wordlist)</tt></td>
+      <td>initialize the variable <tt>name</tt> with the word list</td>
+    </tr>
+    <tr>
+      <td><tt>setenv</tt></td>
+      <td>list the environment variable <br>
+the variables <tt>PATH</tt>, <tt>USER</tt>, <tt>LOGNAME</tt>, <tt>HOME</tt>
+and <tt>TERM</tt> are automatically imported and exported with the
+shell
+variables</td>
+    </tr>
+    <tr>
+      <td><tt>setenv name</tt></td>
+      <td>initialize the environment variable <tt>name</tt> with the
+null string</td>
+    </tr>
+    <tr>
+      <td><tt>setenv name=value</tt></td>
+      <td>initialize the environment variable <tt>name</tt> with the
+value <tt>value</tt></td>
+    </tr>
+    <tr>
+      <td><tt>shift</tt></td>
+      <td>shift the <tt>argv</tt> variable (<tt>argv[1]</tt> is lost)</td>
+    </tr>
+    <tr>
+      <td><tt>shift var</tt></td>
+      <td>shift the variable <tt>var</tt></td>
+    </tr>
+    <tr>
+      <td>source name</td>
+      <td>the shell execute the commands contained in the file <tt>name</tt></td>
+    </tr>
+    <tr>
+      <td><tt>source -h name</tt></td>
+      <td>the shell execute the commands and record them in the history</td>
+    </tr>
+    <tr>
+      <td>stop</td>
+      <td>stop the current process</td>
+    </tr>
+    <tr>
+      <td><tt>stop %job</tt></td>
+      <td>stop the specified job</td>
+    </tr>
+    <tr>
+      <td><tt>suspend</tt></td>
+      <td>stop the shell</td>
+    </tr>
+    <tr>
+      <td><tt>switch (string)</tt> <br>
+      <tt>&nbsp; case str1:</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; breakw</tt> <br>
+      <tt>&nbsp; ...</tt> <br>
+      <tt>&nbsp; default:</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; breaksw</tt> <br>
+      <tt>&nbsp; endsw</tt></td>
+      <td>multiple choice <br>
+the file wildcards <tt>*</tt>, <tt>?</tt> and <tt>[...]</tt> can be
+used for the labels</td>
+    </tr>
+    <tr>
+      <td><tt>time</tt></td>
+      <td>display the CPU duration consumed by the shell and its
+children</td>
+    </tr>
+    <tr>
+      <td><tt>time command</tt></td>
+      <td>execute <tt>command</tt> and display the CPU duration
+consumed</td>
+    </tr>
+    <tr>
+      <td>umask</td>
+      <td>display the creation mask</td>
+    </tr>
+    <tr>
+      <td><tt>umask value</tt></td>
+      <td>set the creation mask to the octal value <tt>value</tt></td>
+    </tr>
+    <tr>
+      <td>unalias pattern</td>
+      <td>unalias all the names matching with <tt>pattern</tt> <br>
+      <tt>unalias *</tt> unalias all the aliases</td>
+    </tr>
+    <tr>
+      <td><tt>unhash</tt></td>
+      <td>the command table is no more used</td>
+    </tr>
+    <tr>
+      <td><tt>unlimit</tt></td>
+      <td>remove the limits on all the resources</td>
+    </tr>
+    <tr>
+      <td><tt>unlimit resource</tt></td>
+      <td>remove the limit of <tt>resource</tt></td>
+    </tr>
+    <tr>
+      <td><tt>unlimit -h</tt></td>
+      <td>remove the hard limits on all resources</td>
+    </tr>
+    <tr>
+      <td><tt>unlimlit -h resource</tt></td>
+      <td>remove the hard limit of <tt>resource</tt></td>
+    </tr>
+    <tr>
+      <td><tt>unset pattern</tt></td>
+      <td>destroy all the variables matching with <tt>pattern</tt></td>
+    </tr>
+    <tr>
+      <td><tt>unsetenv pattern</tt></td>
+      <td>destroy all the environment variables mathing with <tt>pattern</tt></td>
+    </tr>
+    <tr>
+      <td><tt>wait</tt></td>
+      <td>wait for all the background jobs</td>
+    </tr>
+    <tr>
+      <td><tt>while (expr)</tt> <br>
+      <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
+      <tt>&nbsp; end</tt></td>
+      <td>loop until <tt>expr</tt> is equal to 0</td>
+    </tr>
+    <tr>
+      <td><tt>%job</tt></td>
+      <td>put the specified job in foreground</td>
+    </tr>
+    <tr>
+      <td><tt>%job &amp;</tt></td>
+      <td>continue the specified job in foreground</td>
+    </tr>
+    <tr>
+      <td><tt>@</tt></td>
+      <td>list all the shell variables</td>
+    </tr>
+    <tr>
+      <td>@ name=expr</td>
+      <td>initialize the variable <tt>name</tt> with the value of <tt>expr</tt></td>
+    </tr>
+    <tr>
+      <td>@ name[index]=expr</td>
+      <td>initialize the element <tt>index</tt> of variable <tt>name</tt>
+with
+the value of expr</td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p><b><u>Variables</u></b>
+<table>
+  <tbody>
+    <tr>
+      <td><tt>argv</tt></td>
+      <td>arguments at the shell call</td>
+    </tr>
+    <tr>
+      <td><tt>cdpath</tt></td>
+      <td>list of all alternative directories scanned during a <tt>chdir</tt>
+command</td>
+    </tr>
+    <tr>
+      <td><tt>child</tt></td>
+      <td>process id of the last background job</td>
+    </tr>
+    <tr>
+      <td><tt>cwd</tt></td>
+      <td>full path of the current directory</td>
+    </tr>
+    <tr>
+      <td><tt>echo</tt></td>
+      <td>echo flag for the command before execution (the name
+expansions are
+already performed)</td>
+    </tr>
+    <tr>
+      <td><tt>fignore</tt></td>
+      <td>list of the file suffixes ignored for the filemane completion</td>
+    </tr>
+    <tr>
+      <td><tt>filec</tt></td>
+      <td>flag of filename completion</td>
+    </tr>
+    <tr>
+      <td><tt>histchars</tt></td>
+      <td>redefine the characters used for the historic substitution (<tt>!</tt>
+and <tt>^</tt>)</td>
+    </tr>
+    <tr>
+      <td><tt>history</tt></td>
+      <td>size of the historic list</td>
+    </tr>
+    <tr>
+      <td><tt>home</tt></td>
+      <td>home directory</td>
+    </tr>
+    <tr>
+      <td><tt>ignoreeof</tt></td>
+      <td>ignore the EOF character (^D) received from a terminal (avoid
+to exit
+the shell)</td>
+    </tr>
+    <tr>
+      <td><tt>mail</tt></td>
+      <td>list of the files where is the incomming mail and interval
+time between
+two verifications</td>
+    </tr>
+    <tr>
+      <td><tt>nobeep</tt></td>
+      <td>avoid a beep when sevral files are possible for a filename
+completion</td>
+    </tr>
+    <tr>
+      <td><tt>noclobber</tt></td>
+      <td>check the file presence for the <tt>&gt;&gt;</tt>
+redirection and the file
+absence for the <tt>&gt;</tt> redirection</td>
+    </tr>
+    <tr>
+      <td><tt>noglob</tt></td>
+      <td>unallow the filename completion</td>
+    </tr>
+    <tr>
+      <td><tt>nonomatch</tt></td>
+      <td>if the filename expansion is impossible, there is no error,
+the original
+name is returned</td>
+    </tr>
+    <tr>
+      <td><tt>notify</tt></td>
+      <td>a message indicating a job status change is instantaly
+displayed, without
+waiting for a prompt (asynchronous declaration)</td>
+    </tr>
+    <tr>
+      <td><tt>path</tt></td>
+      <td>list of the directories where the commands are searched</td>
+    </tr>
+    <tr>
+      <td><tt>prompt</tt></td>
+      <td>define the prmpt, this ne must be defined only if it already
+exists
+(to avoid to have it in the scripts)</td>
+    </tr>
+    <tr>
+      <td><tt>savehist</tt></td>
+      <td>indicate the number of commands stored in the history at the
+end of
+the session</td>
+    </tr>
+    <tr>
+      <td><tt>shell</tt></td>
+      <td>name of&nbsp; the file containing the shell</td>
+    </tr>
+    <tr>
+      <td><tt>status</tt></td>
+      <td>status of the last command</td>
+    </tr>
+    <tr>
+      <td><tt>time</tt></td>
+      <td>if the variable is defined, the duration of all command will
+be displayed
+if greater than <tt>$time</tt></td>
+    </tr>
+    <tr>
+      <td><tt>verbose</tt></td>
+      <td>the commands are repeated after historic substitution</td>
+    </tr>
+    <tr>
+      <td><br>
+      </td>
+      <td><br>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</p>
+<p>loop on the parameters
+<br>
+<tt>while ( $#argv &gt; 0 )</tt>
+<br>
+<tt>&nbsp; echo "[$1]"</tt>
+<br>
+<tt>&nbsp; shift</tt>
+<br>
+<tt>end</tt>
+</p>
+<p>commands in parentheses are executed in a subshell
+</p>
+<p>if <tt>a;b;c</tt> is interrupted while <tt>b</tt> is executed, the
+shell
+will at once executed <tt>c</tt>
+<br>
+to avoid this, use <tt>(a;b;c)</tt>
+</p>
+<p>when a stopped command is restarted, the shell displays the
+directory
+current when the command was started, even if the command has changed
+its
+current directory
+</p>
+<p>to change the value of a path variable, use the following syntax:
+<br>
+<tt>setenv PATH ${PATH}:/foo/bar</tt>
+</p>
+<p>wait that the user types a key
+<br>
+<tt>echo "$&lt;" &gt;&amp; /dev/null</tt>
+</p>
+<p>loop on a file containing a list of wildcarded filenames
+<br>
+<tt>set numline=`wc -l $filelist | awk '{print $1}'`</tt>
+<br>
+<tt>set n=1</tt>
+<br>
+<tt>while ($n &lt;= $numline )</tt>
+<br>
+<tt>&nbsp; set line = "`cat $filelist | tail +$n | head -1`"</tt>
+<br>
+<tt>&nbsp; foreach file ($line)</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; # do stuff here</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; end</tt>
+<br>
+<tt>&nbsp; @ n++</tt>
+<br>
+<tt>&nbsp; end</tt>
+</p>
+<p>check that a file is writable
+<br>
+<tt>touch $file &gt;&amp; /dev/null</tt>
+<br>
+<tt>if ( $status ) then</tt>
+<br>
+<tt>&nbsp; echo "${0}: cannot create file $file"</tt>
+<br>
+<tt>&nbsp; exit 1</tt>
+<br>
+<tt>&nbsp; endif</tt>
+</p>
+<p>loop on a list content
+<br>
+<tt>set class = ( \</tt>
+<br>
+<tt>&nbsp; foo \</tt>
+<br>
+<tt>&nbsp; bar \</tt>
+<br>
+<tt>&nbsp; quux \</tt>
+<br>
+<tt>)</tt>
+<br>
+<tt>while ( $#class &gt; 0 )</tt>
+<br>
+<tt>&nbsp; if ($1 == $class[1])</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; # do stuff here</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; endif</tt>
+<br>
+<tt>&nbsp; shift class</tt>
+<br>
+<tt>&nbsp; end</tt>
+</p>
+<p>script which is able to create its own window if necessary
+<br>
+<tt>#!/bin/csh</tt>
+<br>
+<tt>tty -s</tt>
+<br>
+<tt>if ($status) then</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; setenv WAIT_FLAG</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; xterm -geom 132x40 -sb -sl 5000 -e $0 $*</tt>
+<br>
+<tt>&nbsp; else</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; # do the real job here</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; if ( $?WAIT_FLAG ) then</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "Type &lt;CR&gt; to
+exit"</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; echo "$&lt;" &gt;&amp;
+/dev/null</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; endif</tt>
+<br>
+<tt>&nbsp; endif</tt>
+</p>
+<p>test if a file exists
+<br>
+<tt>if ( ! -f $file ) then</tt>
+<br>
+<tt>&nbsp; echo "$file does not exit"</tt>
+<br>
+<tt>endif</tt>
+</p>
+<p>evaluation&nbsp; in <tt>.cshrc</tt>
+<br>
+<tt>alias foo ' make |&amp; tee log_`date
+"+%a%d%b%y-%T"`'&nbsp;&nbsp;&nbsp;
+creation date of the shell</tt>
+<br>
+<tt>alias bar " make |&amp; tee log_`date
+'+%a%d%b%y-%T'`"&nbsp;&nbsp;&nbsp;
+date of make launch</tt>
+</p>
+<p>test the presence of a string in a file
+<br>
+<tt>if { ( egrep -i "foo|bar" file &gt; /dev/null ) } then</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; set flag=1</tt>
+<br>
+<tt>&nbsp; endif</tt>
+</p>
+<p>test the absence of a string in a file
+<br>
+<tt>if ( ! { ( grep thestring /tmp/thefile &gt; /dev/null ) } )
+echo&nbsp;
+thestring is not in /tmp/thefile;</tt>
+</p>
+<p>test if a string ends with ".o" (there is probably something more
+intelligent)
+<br>
+<tt>set substr=`echo $str | sed 's/\.o$//'`".o"</tt>
+<br>
+<tt>if ( "$substr" == "$str" ) then</tt>
+<br>
+<tt>&nbsp;&nbsp;&nbsp; ...</tt>
+<br>
+<tt>&nbsp; endif</tt>
+</p>
+<p>test if two files are different<br>
+<code>if ! { ( diff $tmp.[12] &gt; /dev/null ) } then<br>
+&nbsp;&nbsp; sdiff $tmp.[12]<br>
+endif <br>
+</code></p>
+<p>use of a boolean variable
+<br>
+<tt>set flag=0</tt> or <tt>set flag=1</tt>
+<br>
+<tt>if $flag printf "coucou\n"</tt>
+</p>
+<p>alias <tt>cd</tt> only in xterms
+<br>
+<tt>if ( ${?TERM} &amp;&amp; $TERM == "xterm" ) then</tt>
+<br>
+<tt>&nbsp; alias cd 'cd \!*; echo -n "^[]2;`pwd`^G"'</tt>
+<br>
+<tt>endif</tt>
+</p>
+<p></p>
+<hr noshade="noshade" width="80%"><br>
+<p><i><font size="-1">Last update: February 9</font><sup><font size="-2">th</font></sup><font
+ size="-1">,
+2004 - <a href="javascript:do_email()">Laurent</a></font></i>
+</p>
+</body>
+</html>

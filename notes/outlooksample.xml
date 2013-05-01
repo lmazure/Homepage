@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Outlook macro samples</TITLE>
+<PATH>notes/outlooksample.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<CONTENT>
+
+loop on all messages (except the ones in Public Folders)
+<CODESAMPLE>
+Option Explicit<BR/>
+<BR/>
+Private Sub RecurseOnFolder(folder As Outlook.MAPIFolder)<BR/>
+<TAB/>Dim f As Outlook.MAPIFolder<BR/>
+<TAB/>Dim message As Outlook.MailItem<BR/>
+<BR/>
+<TAB/>Debug.Print "------------------------------------------------------------"<BR/>
+<TAB/>Debug.Print folder.Name<BR/>
+<BR/>
+<TAB/>For Each f In folder.Folders<BR/>
+<TAB/><TAB/>RecurseOnFolder f<BR/>
+<TAB/>Next f<BR/>
+<BR/>
+<TAB/>If (folder.DefaultItemType = olMailItem) Then<BR/>
+<TAB/><TAB/>For Each message In folder.Items.Restrict("[MessageClass] = 'IPM.Note'")<BR/>
+<TAB/><TAB/><TAB/>Debug.Print "&lt;&lt;&lt;"<BR/>
+<TAB/><TAB/><TAB/>Debug.Print "subject:" &amp; message.Subject<BR/>
+<TAB/><TAB/><TAB/>Debug.Print "sender name:" &amp; message.SenderName<BR/>
+<TAB/><TAB/><TAB/>Debug.Print "to:" &amp; message.To<BR/>
+<TAB/><TAB/><TAB/>Debug.Print "cc:" &amp; message.CC<BR/>
+<TAB/><TAB/><TAB/>Debug.Print "&gt;&gt;&gt;"<BR/>
+<TAB/><TAB/>Next message<BR/>
+<TAB/>End If<BR/>
+End Sub<BR/>
+<BR/>
+Public Sub ProcessInbox()<BR/>
+<TAB/>Dim ns As Outlook.NameSpace<BR/>
+<TAB/>Dim f As Outlook.MAPIFolder<BR/>
+<BR/>
+<TAB/>Set ns = GetNamespace("MAPI")<BR/>
+<BR/>
+<TAB/>For Each f In ns.Folders<BR/>
+<TAB/><TAB/>If (f.Name &lt;&gt; "Public Folders") Then<BR/>
+<TAB/><TAB/><TAB/>RecurseOnFolder f<BR/>
+<TAB/><TAB/>End If<BR/>
+<TAB/>Next f<BR/>
+<BR/>
+End Sub
+</CODESAMPLE>
+
+</CONTENT>
+<X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>
+<X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
+

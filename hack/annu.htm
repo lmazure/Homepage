@@ -1,0 +1,34 @@
+<HTML>
+<TITLE>Annuaire inversé</TITLE>
+<BODY>
+<SCRIPT LANGUAGE="JavaScript">
+function doIt()
+{
+   var temp=document.search.number.value;
+   var number="";
+   for (var i=0; i<temp.length; i++)
+   {
+     var c=temp.charAt(i);
+     if (c>='0' && c<='9') number=number+c;
+   }
+   if (document.search.engines[0].checked)
+       window.open("http://www2.eu-info.com/France/wp/search/result.asp?firstRec=0&searchtype=white&cityguess=1&fullname=&zip=&city=&phone="+number+"&Search=Chercher","_blank");
+   if (document.search.engines[1].checked)
+       window.open("http://www.01directory.com/01direct/wizards/services/annufrresult.cfm?firstRec=0&searchtype=white&cityguess=1&fullname=&city=&phone="+number+"&SUBMIT.x=22&SUBMIT.y=9","_blank");
+   if (document.search.engines[2].checked)
+       window.open("http://www.comparatel.com/fixed/index.php3?content=common_annu_output&firstRec=0&mid=5&phone="+number,"_blank");
+}
+</SCRIPT>
+<FORM NAME="search" onSubmit="doIt();">
+<INPUT TYPE="text" NAME="number">
+<INPUT TYPE="button" VALUE="Recherche" ONCLICK="doIt()">
+<BR><INPUT TYPE="checkbox" NAME="engines" VALUE="1" CHECKED>Infobel.com
+<BR><INPUT TYPE="checkbox" NAME="engines" VALUE="2">01Direct.com
+<BR><INPUT TYPE="checkbox" NAME="engines" VALUE="3">ComparaTEL.fr
+<BR><BR><CENTER><INPUT TYPE="button" VALUE="Fermer la fenêtre" ONCLICK="window.close(self)"></CENTER>
+</FORM>
+</BODY>
+</HTML>
+
+
+

@@ -1,0 +1,89 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>CDISC</TITLE>
+<PATH>notes/cdisc.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE><B>ODM</B></TITLE>
+  <ITEM><BLIST><TITLE><B>Study</B></TITLE>
+    <ITEM><B>GlobalVariables</B></ITEM>
+    <ITEM><BLIST><TITLE><B>BasicDefinitions</B></TITLE>
+      <ITEM><B>MeasurementUnit</B> is a physical unit of measure for a data item or value.</ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE><B>MetaDataVersion</B> defines the types of study events, forms, item groups, and items that form the study data</TITLE>
+      <ITEM><BLIST><TITLE><B>Protocol</B> lists the kinds of study events that can occur within a specific version of a Study</TITLE>
+        <ITEM><B>StudyEventRef</B> references a StudyEventDef as it occurs within a specific version of a Study</ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE><B>StudyEventDef</B> describes a type of study event that takes place during a study. A scheduled event is one that is expected to occur for each subject as part of the ordinary progress of the study. An unscheduled event is not expected to occur, but may occur as circumstance dictates. Scheduled and unscheduled events typically occur at some particular time. A common event collects data forms, but is not expected to be associated with a particular time. The Repeating flag indicates that this type of study event can occur repeatedly within the containing study.</TITLE>
+        <ITEM><B>FormRef</B> references a FormDef as it occurs within a specific StudyEventDef</ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE><B>FormDef</B> describes a type of form that can occur in a study</TITLE>
+        <ITEM><B>ItemGroupRef</B> references an ItemGroupDef as it occurs within a specific FormDef</ITEM>
+        <ITEM><B>ArchiveLayout</B></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE><B>ItemGroupDef</B> describes a type of item group that can occur within a study</TITLE>
+        <ITEM><B>ItemRef</B> references an ItemDef as it occurs within a specific ItemGroupDef. </ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE><B>ItemDef</B> describes a type of item that can occur within a study. Item properties include name, datatype, data size, measurement units, range or codelist restrictions, and several other properties.</TITLE>
+        <ITEM><B>Question</B> is a human-readable label used to name an item on paper or on a screen.</ITEM>
+        <ITEM><B>ExternalQuestion</B> is a reference to an externally defined question.</ITEM>
+        <ITEM><B>MeasurementUnitRef</B> references a MeasurementUnit.</ITEM>
+        <ITEM><BLIST><TITLE><B>RangeCheck</B> is a one-sided constraint on an item value (a full range check will require two RangeCheck elements, one for the lower bound and one for the upper bound).</TITLE>
+          <ITEM><B>CheckValue</B> is a comparison value used in a range check.</ITEM>
+          <ITEM><B>MeasurementUnitRef</B> references a MeasurementUnit.</ITEM>
+          <ITEM><BLIST><TITLE><B>ErrorMessage</B> is an error message to be used when a range check is violated.</TITLE>
+            <ITEM><B>TranslatedText</B></ITEM>
+          </BLIST></ITEM>
+        </BLIST></ITEM>
+        <ITEM><B>CodeListRef</B> references a CodeList definition</ITEM>
+        <ITEM><B>Role</B></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE><B>CodeList</B> defines a discrete set of permitted values for an item. The definition can be an explicit list of values (CodeListItem*) or a reference to an externally defined codelist (ExternalCodeList).</TITLE>
+        <ITEM><BLIST><TITLE><B>CodeListItem</B> defines an individual member value of a codelist. The actual value is given, along with a set of print-forms.</TITLE>
+          <ITEM><BLIST><TITLE><B>Decode</B> is the set of print-forms for a codelist value.</TITLE>
+            <ITEM><B>TranslatedText</B></ITEM>
+          </BLIST></ITEM>
+        </BLIST></ITEM>
+        <ITEM><B>ExternalCodeList</B> is a reference to an externally defined codelist.</ITEM>
+      </BLIST></ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+  <ITEM><B>AdminData</B></ITEM>
+  <ITEM><B>ReferenceData</B></ITEM>
+  <ITEM><BLIST><TITLE><B>ClinicalData</B> contains the clinical data for multiple subjects.</TITLE>
+    <ITEM><BLIST><TITLE><B>SubjectData</B> contains the clinical data for a single subject.</TITLE>
+      <ITEM><B>AuditRecord</B></ITEM>
+      <ITEM><B>Signature</B></ITEM>
+      <ITEM><B>InvestigatorRef</B></ITEM>
+      <ITEM><B>SiteRef</B></ITEM>
+      <ITEM><B>Annotation</B></ITEM>
+      <ITEM><BLIST><TITLE><B>StudyEventData</B> contains the clinical data for a study event (visit).</TITLE>
+        <ITEM><B>AuditRecord</B></ITEM>
+        <ITEM><B>Signature</B></ITEM>
+        <ITEM><B>Annotation</B></ITEM>
+        <ITEM><BLIST><TITLE><B>FormData</B> contains the clinical data for a form (page).</TITLE>
+          <ITEM><B>AuditRecord</B></ITEM>
+          <ITEM><B>Signature</B></ITEM>
+          <ITEM><B>ArchiveLayoutRef</B></ITEM>
+          <ITEM><B>Annotation</B></ITEM>
+          <ITEM><BLIST><TITLE><B>ItemGroupData</B> contains the clinical data for an item group (record).</TITLE>
+            <ITEM><B>AuditRecord</B></ITEM>
+            <ITEM><B>Signature</B></ITEM>
+            <ITEM><B>Annotation</B></ITEM>
+            <ITEM><BLIST><TITLE><B>ItemData</B> contains the clinical data for an item.</TITLE>
+              <ITEM><B>AuditRecord</B></ITEM>
+              <ITEM><B>Signature</B></ITEM>
+              <ITEM><B>MeasurementUnitRef</B></ITEM>
+              <ITEM><B>Annotation</B></ITEM>
+            </BLIST></ITEM>
+          </BLIST></ITEM>
+        </BLIST></ITEM>
+      </BLIST></ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+</BLIST>
+
+</CONTENT>
+</PAGE>

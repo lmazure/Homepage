@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE status="unmaintained" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>*sh</TITLE>
+<PATH>links/shell.xml</PATH>
+<DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE>
+<CONTENT>
+
+<ANCHOR>sh</ANCHOR>sh:
+<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Bourne_shell</A><L>en</L><F>HTML</F></X><BR/>
+
+<ANCHOR>csh</ANCHOR>csh:
+<X><T>personal notes</T><A>../notes/csh.htm</A><L>en</L><F>HTML</F></X>,
+<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/C_shell</A><L>en</L><F>HTML</F></X><BR/>
+
+<ANCHOR>ksh</ANCHOR>ksh:
+<X><T>functions</T><A>http://bolthole.com/solaris/ksh-functions.html</A><L>en</L><F>HTML</F></X>,
+<X><T>personal notes</T><A>../notes/ksh.htm</A><L>en</L><F>HTML</F></X>,
+<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Korn_shell</A><L>en</L><F>HTML</F></X><BR/>
+
+<ANCHOR>bash</ANCHOR>bash:
+<X><T>GNU</T><A>http://www.gnu.org/software/bash/manual/bash.html</A><L>en</L><F>HTML</F></X>,
+<X><T>FAQ</T><A>http://www.faqs.org/faqs/unix-faq/shell/bash/</A><L>en</L><F>HTML</F></X>,
+<X><T>tutorial</T><A>http://www.linuxconfig.org/Bash_scripting_Tutorial</A><L>en</L><F>HTML</F></X>,
+<X><T>personal notes</T><A>../notes/bash2.html</A><L>en</L><F>HTML</F></X>,
+<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Bash_(Unix_shell)</A><L>en</L><F>HTML</F></X><BR/>
+
+<ANCHOR>tcsh</ANCHOR><X><T>tcsh</T><A>http://www.tcsh.org/</A><L>en</L><F>HTML</F></X>:
+<X><T>man</T><A>http://www.gsp.com/cgi-bin/man.cgi?section=1&amp;topic=tcsh</A><L>en</L><F>HTML</F></X>
+(<X><T>M</T><A>http://www.nevis.columbia.edu/cgi-bin/man.sh?man=tcsh</A><L>en</L><F>HTML</F></X>),
+<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Tcsh</A><L>en</L><F>HTML</F></X><BR/>
+
+<ANCHOR>zsh</ANCHOR><X><T>zsh</T><A>http://sunsite.dk/zsh/</A><L>en</L><F>HTML</F></X>:
+<X><T>zsh.org</T><A>http://www.zsh.org/</A><L>en</L><F>HTML</F></X>,
+<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Zsh</A><L>en</L><F>HTML</F></X><BR/>
+
+<LINE/>
+
+<BLIST><TITLE><B><U>articles:</U></B></TITLE>
+<ITEM><ARTICLE><X><T>csh programming considered harmful</T><A>http://www.faqs.org/faqs/unix-faq/shell/csh-whynot/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Tom Christiansen</AUTHOR><DATE><YEAR>1995</YEAR></DATE><COMMENT>This guy really hates csh. What can I tell? Yes, I agree with him, but I do not think sh is much better.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Tips on good shell programming practices</T><A>http://www.itworld.com/swol-0999-unix101</A><L>en</L><F>HTML</F></X><AUTHOR>Mo Budlong</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>9</MONTH></DATE><COMMENT>The first part describes the hash-bang syntax and gives some tricks using it. The second part is about checking script parameters.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Unix command line 101: How much do you know?</T><A>http://www.itworld.com/swol-1099-unix101</A><L>en</L><F>HTML</F></X><AUTHOR>Mo Budlong</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>10</MONTH></DATE><COMMENT>After reminding us of the never-respected rules for the Unix commands, Mo describes the <CODEROUTINE>getopts</CODEROUTINE> command.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Curtains up: introducing the Z shell - Improve the efficiency of your shell interaction</T><A>http://www.ibm.com/developerworks/linux/library/l-z.html</A><L>en</L><F>HTML</F></X><AUTHOR>Matt Chapman</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>2</MONTH></DATE><COMMENT>A presentation of the interactive features of zsh.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>A Batch Job to Add New User IDs</T><A>http://linux.oreillynet.com/pub/a/linux/2002/05/09/uid.html</A><L>en</L><F>HTML</F></X><AUTHOR>Arnold Robbins</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>An example of the <CODEROUTINE>((...))</CODEROUTINE> ksh syntax.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Advanced Bash-Scripting Guide - An in-depth exploration of the art of shell scripting</T><A>http://www.tldp.org/LDP/abs/html/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Mendel Cooper</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+</BLIST>
+
+</CONTENT>
+</PAGE>
+
