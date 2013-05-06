@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE>generalities</TITLE>
@@ -68,15 +68,10 @@
 <BLIST><TITLE>GUI tests</TITLE>
   <ITEM><X><T>QuickTest Professional</T><A>https://h10078.www1.hp.com/cda/hpms/display/main/hpms_content.jsp?zn=bto&amp;cp=1-11-127-24^1322_4000_100__</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><BLIST><TITLE>X11/Motif</TITLE>
-    <ITEM><X status='dead'><T>WinRunner</T><A>http://h10078.www1.hp.com/cda/hpms/display/main/hpms_content.jsp?zn=bto&amp;cp=1-11-15-24%5E1074_4000_100__</A><L>en</L><F>HTML</F></X></ITEM>
-  </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>X11/Motif</TITLE>
     <ITEM><X><T>Xnee</T><A>http://www.gnu.org/software/xnee/</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Xrunner</T><A>http://www.mercury.com/us/products/application-delivery/xrunner/</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Qt</TITLE>
     <ITEM><X><T>squish</T><A>http://www.froglogic.com/pg?id=Products&amp;category=squish</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>KD Executor</T><A>http://www.klaralvdalens-datakonsult.se/?page=products&amp;sub=kdexecutor</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Java</TITLE>
     <ITEM><X><T>Marathon</T><A>http://marathonman.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -84,7 +79,6 @@
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Web</TITLE>
     <ITEM><X><T>WebTest</T><A>http://webtest.canoo.com/webtest/manual/WebTestHome.html</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>WAST (MS Web Application Stress Tool)</T><A>http://www.microsoft.com/technet/archive/itsolutions/intranet/downloads/webstres.mspx?mfr=true</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Watir</T><A>http://wtr.rubyforge.org</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>LiquidTest</T><A>http://www.jadeliquid.com/liquidtest/</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
@@ -92,7 +86,7 @@
     <ITEM><X><T>QEngine</T><A>http://www.adventnet.com/products/qengine/index.html</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Selenium</T><A>http://seleniumhq.org</A><L>en</L><F>HTML</F></X>:
       <X><T>SeleniumGRID</T><A>http://seleniumgrid.thoughtworks.com</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Chickenfoot</T><A>http://groups.csail.mit.edu/uid/chickenfoot/index.php</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X status='obsolete'><T>Chickenfoot</T><A>http://groups.csail.mit.edu/uid/chickenfoot/index.php</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
 </BLIST>
 
@@ -194,6 +188,7 @@
     <ITEM><ARTICLE><X><T>Testing 2.0</T><A>http://googletesting.blogspot.com/2012/08/testing-20.html</A><L>en</L><F>HTML</F></X><AUTHOR>Anthony F. Voellm</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE><COMMENT>Testing is integrated to coding, so done by developers. SET s and TEs are providing expertise in particular for security, reliability, and performance. Nothing new here. I guess Google is just trying to hire more TEs and SETs.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Conversation with a Test Engineer</T><A>http://googletesting.blogspot.com/2012/09/conversation-with-test-engineer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Alan Myrvold</AUTHOR><AUTHOR>Alan Faulkner</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>The interview of a Google Test Engineer. Once again nothing new here, this is a hiring advertisement.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Why Are There So Many C++ Testing Frameworks?</T><A>http://googletesting.blogspot.com/2012/10/why-are-there-so-many-c-testing.html</A><L>en</L><F>HTML</F></X><AUTHOR>Zhanyong Wan</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE><COMMENT>Why they are so many C++ test framework and some Google Test design choices.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Testing on the Toilet: Testing State vs. Testing Interactions</T><A>http://googletesting.blogspot.fr/2013/03/testing-on-toilet-testing-state-vs.html</A><L>en</L><F>HTML</F></X><AUTHOR>Andrew Trenk</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE><COMMENT>After explaining the difference between testing states and testing interactions, the author explains that we should test states except in some particular cases.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>AAFTT (Agile Alliance's Functional Testing Tool) 2007</TITLE>
     <ITEM><ARTICLE><X><T>Does It Work? Are We Done? Is It Right? (Keep It Light!)</T><A>http://video.google.com/videoplay?docid=-3256499677006040213</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>5</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR>Jim Shore</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH></DATE><COMMENT>(The transcript is available in <X><T>Does It Work? Are We Done? Is It Right? (Keep It Light!)</T><A>http://www.jamesshore.com/Blog/Does-It-Work-Are-We-Done.html</A><L>en</L><F>HTML</F></X>) TDD is the solution to minimize waste when checking if the software works properly and it is complete.</COMMENT></ARTICLE></ITEM>
@@ -259,6 +254,9 @@
         <ITEM><ARTICLE><X quality ='-1'><T>GTAC 2011: The Latest in Google Test Tools</T><A>http://www.youtube.com/watch?v=fQtBrmUU8Uk</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>57</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR>Ibrahim El Far</AUTHOR><AUTHOR>Jason Arbon</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE><COMMENT>A presentation of BITE (the "head up display" bug reporting system that James Whittaker described in the past) and of some quality bots.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GTAC 2011: Closing Keynote - Secrets of World Class Software Organizations</T><A>http://www.youtube.com/watch?v=EE-t5J7hnHE</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>42</SECOND></DURATION></X><AUTHOR>Steve McConnell</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE><COMMENT>The common traits of the best software companies: hiring the best talents, strong sense of mission, business accountability, commitment to quality, frequent introspection, practices adapted to teams, all of these resulting into a high commitment of the staff.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>  
+      <ITEM><BLIST><TITLE>2013</TITLE>
+        <ITEM><ARTICLE><X><T>GTAC 2013 Day 1 Closing Keynote: How Facebook Tests Facebook on Android</T><A>http://www.youtube.com/watch?v=HUE_yrd8tl0</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>46</MINUTE><SECOND>43</SECOND></DURATION></X><AUTHOR>Simon Stewart</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>A description of Facebook development environment: each team develops its features on all platforms, Git with one branch, homemade build system, tests...</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Leah Stockley</TITLE>
       <ITEM><ARTICLE><X><T>Visual Test Models</T><A>http://www.inspiredtester.com/1/post/2013/04/visual-test-models.html</A><L>en</L><F>HTML</F></X><AUTHOR> Leah Stockley </AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE><COMMENT>Using a Visual Test Model, i.e. a mindmap representing the test coverage.</COMMENT></ARTICLE></ITEM>
