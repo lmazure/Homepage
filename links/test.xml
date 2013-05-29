@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE>generalities</TITLE>
@@ -20,7 +20,7 @@
   <ITEM><X><T>Terry Shepard - list of testing tools</T><A>http://www.cs.queensu.ca/~shepard/testing.html</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Open Certification of Software Testers</T><A>http://www.freetestingcertification.com</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Software Testing Club</T><A>http://club.drivenqa.com</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>GTAC</T><A>http://www.gtac.biz</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>GTAC</T><A>https://developers.google.com/google-test-automation-conference/</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
 <BLIST><TITLE>specialty sites</TITLE>
@@ -256,8 +256,14 @@
         <ITEM><ARTICLE><X><T>GTAC 2011: Closing Keynote - Secrets of World Class Software Organizations</T><A>http://www.youtube.com/watch?v=EE-t5J7hnHE</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>42</SECOND></DURATION></X><AUTHOR>Steve McConnell</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE><COMMENT>The common traits of the best software companies: hiring the best talents, strong sense of mission, business accountability, commitment to quality, frequent introspection, practices adapted to teams, all of these resulting into a high commitment of the staff.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>  
       <ITEM><BLIST><TITLE>2013</TITLE>
+        <ITEM><ARTICLE><X><T>GTAC 2013: WebDriver for Chrome</T><A>http://www.youtube.com/watch?v=dMwUZxRgJWs</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>15</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR>Ken Kania</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>A new version of WebDriver for Chrome is available, aiming at supporting all platforms. This talk quickly describes how this new version has been implemented.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>GTAC 2013: Karma - Test Runner for JavaScript</T><A>http://www.youtube.com/watch?v=YG5DEzaQBIc</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>15</MINUTE><SECOND>34</SECOND></DURATION></X><AUTHOR>Vojta Jina</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>Description of Karma, a JavaScript Unit Test runner.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GTAC 2013 Day 1 Closing Keynote: How Facebook Tests Facebook on Android</T><A>http://www.youtube.com/watch?v=HUE_yrd8tl0</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>46</MINUTE><SECOND>43</SECOND></DURATION></X><AUTHOR>Simon Stewart</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>A description of Facebook development environment: each team develops its features on all platforms, Git with one branch, homemade build system, tests...</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GTAC 2013 Day 2 Keynote: Testable JavaScript - Architecting Your Application for Testability</T><A>http://www.youtube.com/watch?v=JjqKQ8ezwKQ</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>45</MINUTE><SECOND>36</SECOND></DURATION></X><AUTHOR>Mark Trostler</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE><COMMENT>How to write testable JavaScript. This is mostly about applying the SOLID principles.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>GTAC 2013: Web Performance Testing with WebDriver</T><A>http://www.youtube.com/watch?v=0_kAPWSZNY4</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>14</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR>Michael Klepikov</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE><COMMENT>Chrome WebDriver has been extended to support profiling, so it is now possible to automate performance tests with it.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X quality='-1'><T>GTAC 2013: Finding Culprits Automatically in Failing Builds - i.e. Who Broke the Build?</T><A>http://www.youtube.com/watch?v=SZLuBYlq3OM</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>16</MINUTE><SECOND>34</SECOND></DURATION></X><AUTHOR>Celal Ziftci</AUTHOR><AUTHOR>Vivek Ramavajjala</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE><COMMENT>A tool using heuristics to find which commit broke the build.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X quality='-1'><T>GTAC 2013: Empirical Investigation of Software Product Line Quality</T><A>http://www.youtube.com/watch?v=fiG-SdNcjTE</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>44</MINUTE><SECOND>42</SECOND></DURATION></X><AUTHOR>Katerina Goseva-Popstojanova</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE><COMMENT>Using statistics to try to build a predictive model of which modules will contain the most bugs.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>GTAC 2013: AddressSanitizer, ThreadSanitizer and MemorySanitizer -- Dynamic Testing Tools for C++</T><A>http://www.youtube.com/watch?v=Q2C2lP8_tNE</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>29</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR>Kostya Serebryany</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Leah Stockley</TITLE>

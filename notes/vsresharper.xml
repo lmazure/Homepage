@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Visual Studio with ReSharper</TITLE>
 <PATH>notes/vsresharper.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 Windows
@@ -27,6 +27,8 @@ Edition
 <DESC>jump to previous highlighted syntax error/warning</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><KEY ID='PageDown'/></TERM>
 <DESC>jump to next highlighted syntax error/warning</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Backspace'/></TERM>
+<DESC>jump to the last point the code has been changed, repeating jump to the previous edition point, and so on...</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 
