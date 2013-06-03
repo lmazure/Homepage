@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Visual Studio with ReSharper</TITLE>
 <PATH>notes/vsresharper.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 
 Windows
@@ -21,8 +21,10 @@ Edition
 <DESC>close Tabed Document</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
 <DESC>Add New Item</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='P'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/>, <KEY ID='P'/></TERM>
 <DESC>when the caret is between the parentheses of a method call, display a list of valid parameters</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/>, <KEY ID='T'/></TERM>
+<DESC>display Call Hierarchy</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><KEY ID='PageUp'/></TERM>
 <DESC>jump to previous highlighted syntax error/warning</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><KEY ID='PageDown'/></TERM>
@@ -34,14 +36,14 @@ Edition
 
 Refactoring
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='R'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/>, <KEY ID='R'/></TERM>
 <DESC>rename</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 
 Debug
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='C'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/>, <KEY ID='C'/></TERM>
 <DESC>display Call Stack</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -49,12 +51,11 @@ Debug
 Unit Tests
 Unit Tests
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='R'/></TERM>
-<DESC>run current Unit Test if inside a Unit Test,
-run Unit Tests of the file otherwise</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='D'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <KEY ID='R'/></TERM>
+<DESC>run current Unit Test if inside a Unit Test, run Unit Tests of the file otherwise</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <KEY ID='D'/></TERM>
 <DESC>debug current Unit Test</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='L'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <KEY ID='L'/></TERM>
 <DESC>run all Unit Tests of Solution</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
