@@ -1,18 +1,18 @@
-<xsl:stylesheet version = '1.0'
-    xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
-<xsl:output method="xml" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN" doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"/>
+<xsl:stylesheet version = '1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
+<xsl:output method="html" encoding="utf-8" indent="yes" />
 
 <xsl:variable name="filepath" select="/PAGE/PATH"/>
 
 <xsl:template match="PAGE">
+  <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
   <html>
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <head>
 	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>
       <xsl:value-of select="/PAGE/TITLE"/>
     </title>
-    <script type="text/javascript" src="../css/common.js">{}</script> <!-- {} is a dirty hack for Firefox -->
+    <script src="../css/common.js"></script>
     <xsl:if test="count(/PAGE/SCRIPT)=1">
       <script type="text/javascript">
         <xsl:value-of disable-output-escaping="yes" select="/PAGE/SCRIPT"/>
