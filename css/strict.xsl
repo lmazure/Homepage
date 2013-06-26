@@ -33,9 +33,9 @@
       </div>
       <hr id="footerseparator"/>
       <div id ="footer">
-        <table border="0" cellspacing="0" cellpadding="0" width="100%">
+        <table class="footertable">
           <tr>
-            <td align="left">
+            <td>
               <xsl:text>See also: </xsl:text>
               <xsl:for-each select="/PAGE/X">
                 <xsl:apply-templates select="."/>
@@ -44,7 +44,7 @@
                 </xsl:if>
               </xsl:for-each>
             </td>
-            <td align="right">
+            <td>
               <a href="javascript:do_search()">search</a>
             </td>
           </tr>
@@ -55,16 +55,16 @@
             <xsl:with-param name="target">_parent</xsl:with-param>
           </xsl:apply-templates>
           <tr>
-            <td align="left">
+            <td>
               <xsl:text>Last update: </xsl:text>
               <xsl:apply-templates select="/PAGE/DATE"/>
             </td>
-            <td align="right">
+            <td>
               <a href="javascript:do_disclaimer()">disclaimer</a>
             </td>
           </tr>
           <tr>
-            <td align="left">
+            <td>
               <xsl:text>Version: </xsl:text>
               <xsl:choose>
                 <xsl:when test="system-property('xsl:vendor-url')='http://xml.apache.org/xalan-j'" >
@@ -88,7 +88,7 @@
                 </xsl:otherwise>
               </xsl:choose>
             </td>
-            <td align="right">
+            <td>
               <a href="javascript:do_help()">help</a>
             </td>
           </tr>
@@ -297,8 +297,8 @@
 </xsl:template>
 
 <xsl:template match="ANCHOR">
-  <xsl:element name="a">
-    <xsl:attribute name="name">
+  <xsl:element name="div">
+    <xsl:attribute name="id">
       <xsl:value-of select="."/>
     </xsl:attribute>
   </xsl:element>
@@ -526,7 +526,7 @@
 <xsl:template match="*" mode="map">
   <xsl:param name="target">_self</xsl:param>  
   <tr>
-    <td align="left">
+    <td>
       <xsl:text>Pages above: </xsl:text>
       <xsl:element name="a">
         <xsl:attribute name="href">../perso/main.html</xsl:attribute>
@@ -550,7 +550,8 @@
           </xsl:for-each>
         </xsl:otherwise>
       </xsl:choose>
-    </td><td align="right">
+    </td>
+	<td>
       <xsl:element name="a">
         <xsl:attribute name="href">../hack/map.html</xsl:attribute>
         <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>map</xsl:element>
@@ -558,7 +559,7 @@
     </td>
   </tr>
   <tr>
-    <td align="left">
+    <td>
       <xsl:text>Pages below: </xsl:text>
       <xsl:if test="count(./self::TITLE)=1" >
         <xsl:for-each select="./parent::*/child::*[self::ITEM]">
@@ -570,7 +571,8 @@
           </xsl:if>
         </xsl:for-each>
       </xsl:if>
-    </td><td align="right">
+    </td>
+	<td>
       <xsl:element name="a">
         <xsl:attribute name="href">javascript:do_email()</xsl:attribute>
         <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>contact me</xsl:element>
