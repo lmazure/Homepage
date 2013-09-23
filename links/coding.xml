@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 
 <X><T>stackoverflow</T><A>http://stackoverflow.com</A><L>en</L><F>HTML</F></X><BR/>
@@ -273,6 +273,9 @@
     </BLIST></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>editors</TITLE>
+    <ITEM><BLIST><TITLE>Vi</TITLE>
+      <ITEM><ARTICLE><X><T>Top Vim Plugins</T><A>http://www.youtube.com/watch?v=_galFWwSDt0</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>8</MINUTE><SECOND>59</SECOND></DURATION></X><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>Someone presents his preferred plugins.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Emacs</TITLE>
       <ITEM><ARTICLE><X><T>Customizing Emacs with Perl</T><A>http://www.perl.com/pub/a/2005/03/31/lightning2.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bob DuCharme</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE><COMMENT>The title says everything</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Emacs Org-mode - a system for note-taking and project planning</T><A>http://www.youtube.com/watch?v=oJTwQvgfgMM</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>46</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR>Carsten Dominik</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>7</MONTH><DAY>15</DAY></DATE><COMMENT>A presentation of org-mode, a note taking / todo list / agenda / table editor / ... mode.</COMMENT></ARTICLE></ITEM>
@@ -353,6 +356,7 @@
       <ITEM><ARTICLE><X><T>TFS 2010 Scrum - Relation between PBIs, Tasks, Bugs and Impediments</T><A>http://www.c-sharpcorner.com/uploadfile/sanks/tfs-2010-scrum-relation-between-pbis-tasks-bugs-and-impediments/</A><L>en</L><F>HTML</F></X><AUTHOR>Sanket Terdal</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>5</MONTH><DAY>4</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Microsoft announces cloud building with TFS, Feature Packs for Visual Studio -- Microsoft has announced a new cloud-building service for its Team Foundation &#x2026;</T><A>http://arstechnica.com/information-technology/2012/03/microsoft-announces-cloud-building-with-tfs-feature-packs-for-visual-studio/</A><L>en</L><F>HTML</F></X><AUTHOR>Peter Bright</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Exploratory Testing in TFS 2012 -- Learn how Visual Studio 2012 makes exploratory testing quick and easy.</T><A>http://visualstudiomagazine.com/articles/2012/11/27/exploratory-testing-in-tfs-2012.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Mickey Gousset</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>11</MONTH><DAY>27</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Teams without areas using a team field in Team Foundation Server 2012</T><A>http://nakedalm.com/team-foundation-server-2012-teams-without-areas/</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Hinshelwood</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Work Item Tagging In TFS -- Work item tagging allows you to add searchable "keywords" to individual work items in TFS.</T><A>http://visualstudiomagazine.com/articles/2013/03/01/work-item-tagging.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Mickey Gousset</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE><COMMENT>Visual Studio 2012 Update 2's CTP allows to add tags to Work Items and to filter on them.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
@@ -373,11 +377,12 @@
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>code review</TITLE>
     <ITEM><ARTICLE><X status='dead'><T>Part of Your Complete Breakfast - Code Review is a Source of Essential Vitamins and Minerals</T><A>http://www.macadamian.com/column/completeBreakfast.html</A><L>en</L><F>HTML</F></X><AUTHOR>Stephane Lussier</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>11</MONTH><DAY>20</DAY></DATE><COMMENT>Nothing new here, but this is still a good argumentation for performing code reviews. A checklist is also provided.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X status='dead'><T>Single Committer Software Development - Introducing single committer and peer code review into your development process</T><A>http://www.macadamian.com/column/singleCommitter.html</A><L>en</L><F>HTML</F></X><AUTHOR>Francis Beaudet</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE><COMMENT>This article is more about the code review process in some Open Source project (they give the example of the participation to Wine) than about the fact that the code integration is centralized by a single person.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X status='dead'><T>Single Committer Software Development - Introducing single committer and peer code review into your development process</T><A>http://www.macadamian.com/column/singleCommitter.html</A><L>en</L><F>HTML</F></X><AUTHOR>Francis Beaudet</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE><COMMENT>This article is more about the code review process in some Open Source projects (they give the example of the participation to Wine) than about the fact that the code integration is centralized by a single person.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Is Software Inspection Value Added?</T><A>http://www.isixsigma.com/methodology/voc-customer-focus/software-inspection-value-added/</A><L>en</L><F>HTML</F></X><AUTHOR>Gary A. Gack</AUTHOR><COMMENT>A numerical analysis of the ROI of code reviews.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Are you using a toolset in your code review?</T><A>http://www.ibm.com/developerworks/opensource/library/os-toolset/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Shuji Morisaki</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE><COMMENT>Some good advice, but it would be better if it would detail further how to actually perform the code review.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X protection='free_registration'><T>Agile Techniques: When and How to Conduct a Code Review
  -- Code review is a tool to help teams increase their software engineering maturity, and in the end this means delivering higher value to customers</T><A>http://www.devx.com/architect/Article/45741</A><L>en</L><F>HTML</F></X><AUTHOR>Eric Landes</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>20</DAY></DATE><COMMENT>A description of a code review process, but I do not understand how the code review can last only 55 minutes.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X quality='-1'><T>Six Ways to Make Your Peer Code Reviews More Effective</T><A>http://programming.oreilly.com/2013/07/six-ways-to-make-your-peer-code-reviews-more-effective.html</A><L>en</L><F>HTML</F></X><AUTHOR>Emma Jane Westby</AUTHOR><COMMENT>Some short tips for code reviews.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>compilers</TITLE>
     <ITEM><ARTICLE><X><T>Get to know GCC 4 -- What's new in the GNU Compiler Collection release series</T><A>http://www.ibm.com/developerworks/linux/library/l-gcc4</A><L>en</L><F>HTML</F></X><AUTHOR>M. Tim Jones</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE><COMMENT>A short description of the GCC4 releases.</COMMENT></ARTICLE></ITEM>
