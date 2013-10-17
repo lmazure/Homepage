@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <X quality="1"><T>Oracle</T><A>http://www.oracle.com/technetwork/java/index.html</A><L>en</L><F>HTML</F></X><BR/>
 
@@ -218,6 +218,7 @@ test:
   <ITEM><BLIST><TITLE>Databases</TITLE>
     <ITEM><ARTICLE><X><T>Advanced DAO programming - Learn techniques for building better DAOs</T><A>http://www.ibm.com/developerworks/library/j-dao</A><L>en</L><F>HTML</F></X><AUTHOR>Sean C. Sullivan</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>Some advice for implementing the Data Access Object design pattern: handling the transaction demarcations inside the DAO or leaving the client to handle them, using JDBC vs JTA, logging and exception handling.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>5 things you didn't know about ... Java Database Connectivity -- Update your relationship to the JDBC API</T><A>http://www.ibm.com/developerworks/java/library/j-5things10/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ted Neward</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>8</MONTH><DAY>10</DAY></DATE><COMMENT>Getting the list of scalar functions, scrollable and updateable <CODEROUTINE>ResultSet</CODEROUTINE>s, <CODEROUTINE>RowSet</CODEROUTINE>s, and batch updates.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Develop Spring Redis applications -- Build Spring-based applications with Redis as the datastore</T><A>http://www.ibm.com/developerworks/library/os-springredis/</A><L>en</L><F>HTML</F></X><AUTHOR>Shekhar Gulati</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE><COMMENT>A presentation of Redis and Spring Java Redis.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Servlets</TITLE>
     <ITEM><ARTICLE><X><T>Java theory and practice: Are all stateful Web applications broken? -- HttpSession and friends are trickier than they look</T><A>http://www.ibm.com/developerworks/library/j-jtp09238.html</A><L>en</L><F>HTML</F></X><AUTHOR>Brian Goetz</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>9</MONTH><DAY>23</DAY></DATE><COMMENT>How to properly use <CODEROUTINE>ServletContext</CODEROUTINE> and <CODEROUTINE>HttpSession</CODEROUTINE> to avoid race conditions.</COMMENT></ARTICLE></ITEM>
