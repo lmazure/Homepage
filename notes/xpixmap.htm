@@ -134,11 +134,11 @@ bitmap creation and display
       <hr noshade="noshade" width="80%">
       <br>
       <tt>&nbsp; Pixmap bitmap = <a
- href="http://www.xfree86.org/4.2.0/XCreateBitmapFromData.3.html">XCreatePixmapFromBitmapData</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDisplay.3.html">XtDisplay</a>(widget),&nbsp;</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XCreateBitmapFromData.3.html">XCreatePixmapFromBitmapData</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDisplay.3.html">XtDisplay</a>(widget),&nbsp;</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="http://www.xfree86.org/4.2.0/XtWindow.3.html">XtWindow</a>(widget),&nbsp;</tt>
+      <a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtWindow.3.html">XtWindow</a>(widget),&nbsp;</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 (char*)checker_bits,&nbsp;</tt>
@@ -158,27 +158,27 @@ checker_height,&nbsp;</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 1);</tt>
       <p><tt>&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XGCValues.3.html">XGCValues</a>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XGCValues.3.html">XGCValues</a>
 gcValues;</tt>
       <br>
       <tt>&nbsp; gcValues.foreground = <a
- href="http://www.xfree86.org/4.2.0/WhitePixel.3.html">WhitePixel</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDisplay.3.html">XtDisplay</a>(widget),<a
- href="http://www.xfree86.org/4.2.0/DefaultScreen.3.html">DefaultScreen</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDisplay.3.html">XtDisplay</a>(widget)));</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/WhitePixel.3.html">WhitePixel</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDisplay.3.html">XtDisplay</a>(widget),<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/DefaultScreen.3.html">DefaultScreen</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDisplay.3.html">XtDisplay</a>(widget)));</tt>
       <br>
       <tt>&nbsp; gcValues.background = <a
- href="http://www.xfree86.org/4.2.0/BlackPixel.3.html">BlackPixel</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDisplay.3.html">XtDisplay</a>(widget),<a
- href="http://www.xfree86.org/4.2.0/DefaultScreen.3.html">DefaultScreen</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDisplay.3.html">XtDisplay</a>(widget)));</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/BlackPixel.3.html">BlackPixel</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDisplay.3.html">XtDisplay</a>(widget),<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/DefaultScreen.3.html">DefaultScreen</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDisplay.3.html">XtDisplay</a>(widget)));</tt>
       <br>
       <tt>&nbsp; GC gc = <a
- href="http://www.xfree86.org/4.2.0/XCreateGC.3.html">XCreateGC</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDisplay.3.html">XtDisplay</a>(box),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XCreateGC.3.html">XCreateGC</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDisplay.3.html">XtDisplay</a>(box),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <a href="http://www.xfree86.org/4.2.0/XtWindow.3.html">XtWindow</a>(box),</tt>
+      <a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtWindow.3.html">XtWindow</a>(box),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 GCForeground | GCBackground,</tt>
@@ -187,14 +187,14 @@ GCForeground | GCBackground,</tt>
 &amp;gcValues);</tt>
       </p>
       <p><tt>&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XCopyPlane.3.html">XCopyPlane</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDisplay.3.html">XtDisplay</a>(widget),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XCopyPlane.3.html">XCopyPlane</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDisplay.3.html">XtDisplay</a>(widget),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 bitmap,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XtWindow.3.html">XtWindow</a>(widget),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtWindow.3.html">XtWindow</a>(widget),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gc,</tt>
@@ -221,14 +221,14 @@ checker_height,</tt>
 1L);</tt>
       </p>
       <p><tt>&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XFreeGC.3.html">XFreeGC</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDisplay.3.html">XtDisplay</a>(widget),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XFreeGC.3.html">XFreeGC</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDisplay.3.html">XtDisplay</a>(widget),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gc);</tt>
       </p>
       <p><tt>&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XFreePixmap.3.html">XFreePixmap</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDisplay.3.html">XtDisplay</a>(widget),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XFreePixmap.3.html">XFreePixmap</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDisplay.3.html">XtDisplay</a>(widget),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 bitmap);</tt></p>
@@ -240,10 +240,10 @@ bitmap);</tt></p>
 <table bgcolor="#cccccc">
   <tbody>
     <tr>
-      <td><tt><a href="http://www.xfree86.org/4.2.0/XGCValues.3.html">XGCValues</a>
+      <td><tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XGCValues.3.html">XGCValues</a>
 gcValues;</tt>
       <br>
-      <tt><a href="http://www.xfree86.org/4.2.0/XGetGCValues.3.html">XGetGCValues</a>(display,</tt>
+      <tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XGetGCValues.3.html">XGetGCValues</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gc,</tt>
@@ -254,7 +254,7 @@ GCFunction|GCForeground|GCBackground|GCPlaneMask,</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &amp;gcValues);</tt>
       <p><tt><a
- href="http://www.xfree86.org/4.2.0/XSetBackground.3.html">XSetForeground</a>(display,</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XSetBackground.3.html">XSetForeground</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gc,</tt>
@@ -262,7 +262,7 @@ gc,</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ~0L);</tt>
       <br>
-      <tt><a href="http://www.xfree86.org/4.2.0/XSetBackground.3.html">XSetBackground</a>(display,</tt>
+      <tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XSetBackground.3.html">XSetBackground</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gc,</tt>
@@ -270,7 +270,7 @@ gc,</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 0L);</tt>
       <br>
-      <tt><a href="http://www.xfree86.org/4.2.0/XSetPlaneMask.3.html">XSetPlaneMask</a>(display,</tt>
+      <tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XSetPlaneMask.3.html">XSetPlaneMask</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gc,</tt>
@@ -278,7 +278,7 @@ gc,</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gcValues.foreground);</tt>
       <br>
-      <tt><a href="http://www.xfree86.org/4.2.0/XSetFunction.3.html">XSetFunction</a>(display,</tt>
+      <tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XSetFunction.3.html">XSetFunction</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gc,</tt>
@@ -286,7 +286,7 @@ gc,</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 GXor);</tt>
       <br>
-      <tt><a href="http://www.xfree86.org/4.2.0/XCopyPlane.3.html">XCopyPlane</a>(display,</tt>
+      <tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XCopyPlane.3.html">XCopyPlane</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 bitmap,</tt>
@@ -318,7 +318,7 @@ h,</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 1L);</tt>
       </p>
-      <p><tt><a href="http://www.xfree86.org/4.2.0/XSetPlaneMask.3.html">XSetPlaneMask</a>(display,</tt>
+      <p><tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XSetPlaneMask.3.html">XSetPlaneMask</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gc,</tt>
@@ -326,7 +326,7 @@ gc,</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 ~gcValues.foreground);</tt>
       <br>
-      <tt><a href="http://www.xfree86.org/4.2.0/XSetFunction.3.html">XSetFunction</a>(display,</tt>
+      <tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XSetFunction.3.html">XSetFunction</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gc,</tt>
@@ -334,7 +334,7 @@ gc,</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 GXandInverted);</tt>
       <br>
-      <tt><a href="http://www.xfree86.org/4.2.0/XCopyPlane.3.html">XCopyPlane</a>(display,</tt>
+      <tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XCopyPlane.3.html">XCopyPlane</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 bitmap,</tt>
@@ -366,7 +366,7 @@ h,</tt>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 1L);</tt>
       </p>
-      <p><tt><a href="http://www.xfree86.org/4.2.0/XChangeGC.3.html">XChangeGC</a>(display,</tt>
+      <p><tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XChangeGC.3.html">XChangeGC</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gc,</tt>
       <br>
@@ -416,10 +416,10 @@ int depth)</tt></b>
       <tt>{</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; if (window == 0) window = <a
- href="http://www.xfree86.org/4.2.0/RootWindowOfScreen.3.html">RootWindowOfScreen</a>(screen);</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/RootWindowOfScreen.3.html">RootWindowOfScreen</a>(screen);</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; if (depth == 0) depth = <a
- href="http://www.xfree86.org/4.2.0/DefaultDepthOfScreen.3.html">DefaultDepthOfScreen</a>(screen);</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/DefaultDepthOfScreen.3.html">DefaultDepthOfScreen</a>(screen);</tt>
       <p><tt>&nbsp;&nbsp;&nbsp; /*** load the bitmap file ***/</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; Pixmap bitmap;</tt>
@@ -429,7 +429,7 @@ int depth)</tt></b>
       <tt>&nbsp;&nbsp;&nbsp; int hotX,hotY;</tt>
       </p>
       <p><tt>&nbsp;&nbsp;&nbsp; if ( <a
- href="http://www.xfree86.org/4.2.0/XReadBitmapFile.3.html">XReadBitmapFile</a>(DisplayOfScreen(screen),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XReadBitmapFile.3.html">XReadBitmapFile</a>(DisplayOfScreen(screen),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 window,</tt>
@@ -468,7 +468,7 @@ bitmapFileName);</tt>
       <p><tt>&nbsp;&nbsp;&nbsp; /*** create the GC ***/</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XGCValues.3.html">XGCValues</a>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XGCValues.3.html">XGCValues</a>
 gcValues;</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; gcValues.foreground = foreground;</tt>
@@ -479,8 +479,8 @@ gcValues;</tt>
 GCBackground;</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; GC gc=<a
- href="http://www.xfree86.org/4.2.0/XCreateGC.3.html">XCreateGC</a>(<a
- href="http://www.xfree86.org/4.2.0/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XCreateGC.3.html">XCreateGC</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 window,</tt>
@@ -494,8 +494,8 @@ gcMask,</tt>
       <p><tt>&nbsp;&nbsp;&nbsp; /*** create the pixmap ***/</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; Pixmap pixmap=<a
- href="http://www.xfree86.org/4.2.0/XCreatePixmap.3.html">XCreatePixmap</a>(<a
- href="http://www.xfree86.org/4.2.0/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XCreatePixmap.3.html">XCreatePixmap</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 window,</tt>
@@ -510,8 +510,8 @@ height,</tt>
 depth);</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XCopyPlane.3.html">XCopyPlane</a>(<a
- href="http://www.xfree86.org/4.2.0/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XCopyPlane.3.html">XCopyPlane</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 bitmap,</tt>
@@ -537,15 +537,15 @@ width,height,</tt>
       <p><tt>&nbsp;&nbsp;&nbsp; /*** free temporary resources ***/</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XFreePixmap.3.html">XFreePixmap</a>(<a
- href="http://www.xfree86.org/4.2.0/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XFreePixmap.3.html">XFreePixmap</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 bitmap);</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XFreeGC.3.html">XFreeGC</a>(<a
- href="http://www.xfree86.org/4.2.0/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XFreeGC.3.html">XFreeGC</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/DisplayOfScreen.3.html">DisplayOfScreen</a>(screen),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 gc);</tt>
@@ -605,10 +605,10 @@ int depth)</tt></b>
       <tt>{</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; if (window == 0) window = <a
- href="http://www.xfree86.org/4.2.0/RootWindowOfScreen.3.html">RootWindowOfScreen</a>(screen);</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/RootWindowOfScreen.3.html">RootWindowOfScreen</a>(screen);</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; if (depth == 0) depth = <a
- href="http://www.xfree86.org/4.2.0/DefaultDepthOfScreen.3.html">DefaultDepthOfScreen</a>(screen);</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/DefaultDepthOfScreen.3.html">DefaultDepthOfScreen</a>(screen);</tt>
       <p><tt>&nbsp;&nbsp;&nbsp; /*** load the bitmap file ***/</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; unsigned int width,height;</tt>
@@ -618,7 +618,7 @@ int depth)</tt></b>
       <tt>&nbsp;&nbsp;&nbsp; unsigned char *data;</tt>
       </p>
       <p><tt>&nbsp;&nbsp;&nbsp; if ( <a
- href="http://www.xfree86.org/4.2.0/XReadBitmapFileData.3.html">XReadBitmapFileData</a>(bitmapFileName,</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XReadBitmapFileData.3.html">XReadBitmapFileData</a>(bitmapFileName,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 &amp;width,</tt>
@@ -650,7 +650,7 @@ bitmapFileName);</tt>
       <p><tt>&nbsp;&nbsp;&nbsp; /*** create the pixmap ***/</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; Pixmap pixmap=<a
- href="http://www.xfree86.org/4.2.0/XCreatePixmapFromBitmapData.3.html">XCreatePixmapFromBitmapData</a>(DisplayOfScreen(screen),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XCreatePixmapFromBitmapData.3.html">XCreatePixmapFromBitmapData</a>(DisplayOfScreen(screen),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 window,</tt>
@@ -676,7 +676,7 @@ depth);</tt>
       <p><tt>&nbsp;&nbsp;&nbsp; /*** free temporary memory ***/</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XFree.3.html">XFree</a>(data);</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XFree.3.html">XFree</a>(data);</tt>
       </p>
       <p><tt>&nbsp;&nbsp;&nbsp; /*** return pixmap geometry if required
 ***/</tt>

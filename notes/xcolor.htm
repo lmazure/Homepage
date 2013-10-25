@@ -17,10 +17,10 @@ set the foreground of a GC to a named color
 <table bgcolor="#cccccc">
   <tbody>
     <tr>
-      <td><tt><a href="http://www.xfree86.org/4.2.0/XColor.3.html">XColor</a>
+      <td><tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XColor.3.html">XColor</a>
 exactColor, screenColor;</tt>
       <br>
-      <tt>if (!<a href="http://www.xfree86.org/4.2.0/XAllocColor.3.html">XAllocNamedColor</a>(display,</tt>
+      <tt>if (!<a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XAllocColor.3.html">XAllocNamedColor</a>(display,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 colorMap,</tt>
@@ -42,12 +42,12 @@ color\n");</tt>
       <tt>&nbsp;&nbsp;&nbsp; return (EXIT_FAILURE);</tt>
       <br>
       <tt>&nbsp; }</tt>
-      <p><tt><a href="http://www.xfree86.org/4.2.0/XGCValues.3.html">XGCValues</a>
+      <p><tt><a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XGCValues.3.html">XGCValues</a>
 gcValues;</tt>
       <br>
       <tt>gcValues.foreground = screenColor.pixel;</tt>
       <br>
-      <tt>dp.gc = <a href="http://www.xfree86.org/4.2.0/XtGetGC.3.html">XtGetGC</a>(shell,
+      <tt>dp.gc = <a href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtGetGC.3.html">XtGetGC</a>(shell,
 GCForeground, &amp;gcValues);</tt></p>
       </td>
     </tr>
@@ -67,17 +67,17 @@ GCForeground, &amp;gcValues);</tt></p>
       <tt>{</tt>
       <br>
       <tt>&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XtSetLanguageProc.3.html">XtSetLanguageProc</a>(NULL,
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtSetLanguageProc.3.html">XtSetLanguageProc</a>(NULL,
 NULL, NULL);&nbsp;</tt>
       </p>
       <p><tt>&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XtToolkitInitialize.3.html">XtToolkitInitialize</a>();&nbsp;</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtToolkitInitialize.3.html">XtToolkitInitialize</a>();&nbsp;</tt>
       </p>
       <p><tt>&nbsp; XtAppContext app=<a
- href="http://www.xfree86.org/4.2.0/XtCreateApplicationContext.3.html">XtCreateApplicationContext</a>();&nbsp;</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtCreateApplicationContext.3.html">XtCreateApplicationContext</a>();&nbsp;</tt>
       </p>
       <p><tt>&nbsp; Display *dpy=<a
- href="http://www.xfree86.org/4.2.0/XtOpenDisplay.3.html">XtOpenDisplay</a>(app,&nbsp;</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtOpenDisplay.3.html">XtOpenDisplay</a>(app,&nbsp;</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 NULL,&nbsp;</tt>
@@ -112,7 +112,7 @@ display\n");&nbsp;</tt>
       <tt>&nbsp; }&nbsp;</tt>
       </p>
       <p><tt>&nbsp; for (int i=0; i&lt;<a
- href="http://www.xfree86.org/4.2.0/ScreenCount.3.html">ScreenCount</a>(dpy);
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/ScreenCount.3.html">ScreenCount</a>(dpy);
 i++)</tt>
       <br>
       <tt>&nbsp; {</tt>
@@ -120,8 +120,8 @@ i++)</tt>
       <tt>&nbsp;&nbsp;&nbsp; int nb;</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; Colormap *cmaps=<a
- href="http://www.xfree86.org/4.2.0/XListInstalledColormaps.3.html">XListInstalledColormaps</a>(dpy,<a
- href="http://www.xfree86.org/4.2.0/RootWindow.3.html">RootWindow</a>(dpy,i),&amp;nb);</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XListInstalledColormaps.3.html">XListInstalledColormaps</a>(dpy,<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/RootWindow.3.html">RootWindow</a>(dpy,i),&amp;nb);</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; fprintf(stdout,"Colormaps intalled on
 screen
@@ -137,7 +137,7 @@ fprintf(stdout,"0x%x\n",cmaps[j]);</tt>
       <tt>&nbsp;&nbsp;&nbsp; }</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XFree.3.html">XFree</a>(cmaps);</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XFree.3.html">XFree</a>(cmaps);</tt>
       <br>
       <tt>&nbsp; }</tt>
       </p>

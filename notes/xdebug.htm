@@ -472,7 +472,7 @@ visualInfo-&gt;bits_per_rgb);<br>
   </tbody>
 </table>
 <p>dumping the X resource database for a shell (code extracted from <tt><a
- href="http://www.xfree86.org/4.2.0/appres.1.html">appres</a></tt>)
+ href="http://www.x.org/archive/X11R7.5/doc/man/man1/appres.1.html">appres</a></tt>)
 <table bgcolor="#cccccc">
   <tbody>
     <tr>
@@ -496,7 +496,7 @@ quarks++)
       <tt>&nbsp;&nbsp;&nbsp; }</tt> <br>
       <tt>&nbsp;&nbsp;&nbsp; firstNameSeen = True;</tt> <br>
       <tt>&nbsp;&nbsp;&nbsp; (void)fputs(<a
- href="http://www.xfree86.org/4.2.0/XrmQuarkToString.3.html">XrmQuarkToString</a>(*quarks),
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XrmQuarkToString.3.html">XrmQuarkToString</a>(*quarks),
 stream);</tt> <br>
       <tt>&nbsp; }</tt> <br>
       <tt>}</tt> </p>
@@ -582,7 +582,7 @@ stream);</tt> <br>
       <tt>{</tt> <br>
       <tt>&nbsp; ...</tt> </p>
       <p><tt>&nbsp; shell = <a
- href="http://www.xfree86.org/4.2.0/XtVaAppCreateShell.3.html">XtVaAppCreateShell</a>(shellName,</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtVaAppCreateShell.3.html">XtVaAppCreateShell</a>(shellName,</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 shellClass,</tt> <br>
@@ -594,15 +594,15 @@ dpy,</tt> <br>
 NULL);</tt> <br>
       <tt>&nbsp; ...</tt> </p>
       <p><tt>&nbsp; XrmQString = <a
- href="http://www.xfree86.org/4.2.0/XrmPermStringToQuark.3.html">XrmPermStringToQuark</a>("String");</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XrmPermStringToQuark.3.html">XrmPermStringToQuark</a>("String");</tt>
       </p>
       <p><tt>&nbsp; XrmName names[101];</tt> <br>
       <tt>&nbsp; XrmClass classes[101];</tt> </p>
       <p><tt>&nbsp; XrmStringToClassList(shellName, classes);</tt> <br>
       <tt>&nbsp; XrmStringToNameList(shellClass, names);</tt> </p>
       <p><tt>&nbsp; <a
- href="http://www.xfree86.org/4.2.0/XrmEnumerateDatabase.3.html">XrmEnumerateDatabase</a>(<a
- href="http://www.xfree86.org/4.2.0/XtDatabase.3.html">XtDatabase</a>(dpy),</tt>
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XrmEnumerateDatabase.3.html">XrmEnumerateDatabase</a>(<a
+ href="http://www.x.org/archive/X11R7.5/doc/man/man3/XtDatabase.3.html">XtDatabase</a>(dpy),</tt>
       <br>
       <tt>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 classes, names, XrmEnumAllLevels,</tt> <br>
