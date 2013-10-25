@@ -15,6 +15,7 @@ if ( $hostname eq "samsung" ) { $lib_dir = "C:/Documents and Settings/Laurent/Me
 if ( $hostname eq "DEVELOPPEMENT21" ) { $lib_dir = "D:/Docs/lib"; }
 if ( $hostname eq "lapt022" ) { $lib_dir = "E:/lib"; }
 if ( $hostname eq "LU01LAP053" ) { $lib_dir = "F:/lib"; }
+if ( $hostname eq "LU01LAP161" ) { $lib_dir = "C:/Users/blam/lib"; }
 die("don't know where are the Java libraries") if ( ! defined($lib_dir) );
 
 print "$0\n";
