@@ -39,7 +39,7 @@ function do_help() {
 // ---------------------------------------------------------------------------------------------------------------
 
 function do_feed(str) {
-    var url = "http://www.google.com/reader/view/feed/" + URLencode(str);
+    var url = "http://rss.bloople.net/?url=" + URLencode(str);
     window.open(url,'_blank','width=800,height=1000,scrollbars');
 }
 
