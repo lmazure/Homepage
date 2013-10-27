@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE>generalities</TITLE>
@@ -269,7 +269,8 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Roy Osherove</TITLE>
       <ITEM><ARTICLE><X><T>Naming standards for unit tests</T><A>http://osherove.com/blog/2005/4/3/naming-standards-for-unit-tests.html</A><L>en</L><F>HTML</F></X><AUTHOR>Roy Osherove</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>4</MONTH><DAY>3</DAY></DATE><COMMENT>Roy describes the MethodName_StateUnderTest_ExpectedBehavior naming convention for unit tests.</COMMENT></ARTICLE></ITEM>
-      <ITEM><BLIST><TITLE>NCD 2009</TITLE>
+      <ITEM><ARTICLE><X><T>Refactoring and Design Skills for Test Driven Development SA2013</T><A>http://www.youtube.com/watch?v=9ZSbuwCmwuc</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>26</MINUTE><SECOND>30</SECOND></DURATION></X><AUTHOR>Roy Osherove</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE><COMMENT>(Conference: Software Architect 2013) How to do TDD for brand new applications and for legacy applications. There is nothing new in the first part, but this is still a good TDD explanation. The part about legacy code is more interesting because less frequently spoken about.</COMMENT></ARTICLE></ITEM>
+      <ITEM><BLIST><TITLE>NDC 2009</TITLE>
         <ITEM><ARTICLE><X quality='2'><T>Understanding Test Driven Development</T><A>http://osherove.com/videos/2009/8/25/understanding-test-driven-development.html</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>2</MINUTE><SECOND>33</SECOND></DURATION></X><AUTHOR>Roy Osherove</AUTHOR><DATE><YEAR>2009</YEAR></DATE><COMMENT>A good tutorial on how to write unit tests and an introduction to TDD.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality='2'><T>Unit Testing Best Practices</T><A>http://osherove.com/videos/2009/8/25/unit-testing-best-practices.html</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>1</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR>Roy Osherove</AUTHOR><DATE><YEAR>2009</YEAR></DATE><COMMENT>Some good advice on writing good unit tests, i.e. unit test which are trustworthy, maintainable and readable.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality='2'><T>TDD - Understanding Mock Objects</T><A>http://osherove.com/videos/2009/8/25/tdd-understanding-mock-objects.html</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>1</MINUTE><SECOND>36</SECOND></DURATION></X><AUTHOR>Roy Osherove</AUTHOR><DATE><YEAR>2009</YEAR></DATE><COMMENT>A presentation of system isolation: a tutorial on isolation, an explanation of mock vs stub, a demo of NUnit, Rhino Mocks and Typemock's Isolator.</COMMENT></ARTICLE></ITEM>
