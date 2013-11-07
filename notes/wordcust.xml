@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Word customization</TITLE>
 <PATH>notes/wordcust.xml</PATH>
-<DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <CODESAMPLE>Option Explicit<BR/>
 <BR/>
@@ -18,53 +18,54 @@ Sub ToggleNoSingleDoubleStrikenThrough()<BR/>
 <TAB/>End If<BR/>
 End Sub<BR/>
 <BR/>
-Private Sub setColor(color As WdColor)<BR/>
+Private Sub SetColor(color As WdColor)<BR/>
 <TAB/>Selection.Font.color = color<BR/>
 End Sub<BR/>
 <BR/>
-Sub setColorAutomatic()<BR/>
-<TAB/>setColor (wdColorAutomatic)<BR/>
+Sub SetColorAutomatic()<BR/>
+<TAB/>SetColor (wdColorAutomatic)<BR/>
 End Sub<BR/>
 <BR/>
-Sub setColorBlue()<BR/>
-<TAB/>setColor (wdColorBlue)<BR/>
+Sub SetColorBlue()<BR/>
+<TAB/>SetColor (wdColorBlue)<BR/>
 End Sub<BR/>
 <BR/>
-Sub setColorGreen()<BR/>
-<TAB/>setColor (wdColorSeaGreen)<BR/>
+Sub SetColorGreen()<BR/>
+<TAB/>SetColor (wdColorSeaGreen)<BR/>
 End Sub<BR/>
 <BR/>
-Sub setColorRed()<BR/>
-<TAB/>setColor (wdColorRed)<BR/>
+Sub SetColorRed()<BR/>
+<TAB/>SetColor (wdColorRed)<BR/>
 End Sub<BR/>
 <BR/>
-Private Sub setHighlight(high As WdColor)<BR/>
+Private Sub SetHighlight(high As WdColor)<BR/>
 <TAB/>Selection.Range.HighlightColorIndex = high<BR/>
 End Sub<BR/>
 <BR/>
 Sub HighlightNone()<BR/>
-<TAB/>setHighlight (wdNoHighlight)<BR/>
+<TAB/>SetHighlight (wdNoHighlight)<BR/>
 End Sub<BR/>
 <BR/>
 Sub HighlightRed()<BR/>
-<TAB/>setHighlight (wdRed)<BR/>
+<TAB/>SetHighlight (wdRed)<BR/>
 End Sub<BR/>
 <BR/>
 Sub HighlightYellow()<BR/>
-<TAB/>setHighlight (wdYellow)<BR/>
+<TAB/>SetHighlight (wdYellow)<BR/>
 End Sub<BR/>
 <BR/>
 Sub HighlightGreen()<BR/>
-<TAB/>setHighlight (wdBrightGreen)<BR/>
+<TAB/>SetHighlight (wdBrightGreen)<BR/>
 End Sub<BR/>
 <BR/>
 Sub HighlightBlue()<BR/>
-<TAB/>setHighlight (wdTurquoise)<BR/>
+<TAB/>SetHighlight (wdTurquoise)<BR/>
 End Sub<BR/>
 <BR/>
 Sub HighlightPurple()<BR/>
-<TAB/>setHighlight (wdPink)<BR/>
+<TAB/>SetHighlight (wdPink)<BR/>
 End Sub<BR/>
+<BR/>
 Sub SetLanguageToFrench()<BR/>
 <TAB/>Selection.LanguageID = wdFrench<BR/>
 End Sub<BR/>
@@ -253,7 +254,7 @@ Sub Text2XML()<BR/>
 <BR/>
 End Sub<BR/>
 <BR/>
-Sub cleanFileHistory()<BR/>
+Sub CleanFileHistory()<BR/>
 <TAB/>Application.DisplayRecentFiles = False<BR/>
 <TAB/>Application.DisplayRecentFiles = True<BR/>
 <TAB/>RecentFiles.Maximum = 9<BR/>
@@ -314,19 +315,19 @@ Sub Customize()<BR/>
 <TAB/>' Ctrl+1,Shift+N =&gt; no color<BR/>
 <TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyN, wdKeyShift), _<BR/>
 <TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
-<TAB/><TAB/><TAB/>Command:="setColorAutomatic"<BR/>
+<TAB/><TAB/><TAB/>Command:="SetColorAutomatic"<BR/>
 <TAB/>' Ctrl+1,Shift+B =&gt; blue<BR/>
 <TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyB, wdKeyShift), _<BR/>
 <TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
-<TAB/><TAB/><TAB/>Command:="setColorBlue"<BR/>
+<TAB/><TAB/><TAB/>Command:="SetColorBlue"<BR/>
 <TAB/>' Ctrl+1,Shift+B =&gt; green<BR/>
 <TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyG, wdKeyShift), _<BR/>
 <TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
-<TAB/><TAB/><TAB/>Command:="setColorGreen"<BR/>
+<TAB/><TAB/><TAB/>Command:="SetColorGreen"<BR/>
 <TAB/>' Ctrl+1,Shift+R =&gt; red<BR/>
 <TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKey1, wdKeyControl), KeyCode2:=BuildKeyCode(wdKeyR, wdKeyShift), _<BR/>
 <TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
-<TAB/><TAB/><TAB/>Command:="setColorRed"<BR/>
+<TAB/><TAB/><TAB/>Command:="SetColorRed"<BR/>
 <BR/>
 <TAB/>' --------------- highlight<BR/>
 <TAB/>' Ctrl+1,N =&gt; no highlight<BR/>
@@ -656,7 +657,7 @@ Sub Customize()<BR/>
 <TAB/>' Alt+Numeric- => clean file history<BR/>
 <TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyNumericSubtract, wdKeyAlt), _<BR/>
 <TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
-<TAB/><TAB/><TAB/>Command:="cleanFileHistory"<BR/>
+<TAB/><TAB/><TAB/>Command:="CleanFileHistory"<BR/>
 <BR/>
 <TAB/>' configure the menubar display<BR/>
 <TAB/>CommandBars.DisplayTooltips = True<BR/>
