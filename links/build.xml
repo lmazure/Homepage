@@ -3,14 +3,14 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Site building</TITLE>
 <PATH>links/build.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 
 <X><T>Apache</T><A>http://www.apache.org/</A><L>en</L><F>HTML</F></X><BR/>
 
 wikis:
 <X><T>TWiki</T><A>http://twiki.org/</A><L>en</L><F>HTML</F></X>,
-<X><T>Kwiki</T><A>http://www.kwiki.org/</A><L>en</L><F>HTML</F></X>,
+<X status='dead'><T>Kwiki</T><A>http://www.kwiki.org/</A><L>en</L><F>HTML</F></X>,
 <X><T>PmKiki</T><A>http://www.pmichaud.com/wiki/PmWiki/PmWiki</A><L>en</L><F>HTML</F></X>,
 <X><T>MediaKiki</T><A>http://www.mediawiki.org/wiki/MediaWiki</A><L>en</L><F>HTML</F></X>,
 <X><T>MoinMoin</T><A>http://moinmo.in</A><L>en</L><F>HTML</F></X>,
@@ -40,8 +40,6 @@ sites testing latency, speed, and other stuff:
 (<X><T>test</T><A>http://www.websitepulse.com/help/tools.php</A><L>en</L><F>HTML</F></X>),
 <X><T>WatchMouse</T><A>http://www.watchmouse.com</A><L>en</L><F>HTML</F></X>
 (<X><T>test</T><A>http://www.watchmouse.com/fr/ping.php</A><L>fr</L><F>HTML</F></X>),
-<X><T>Gomez</T><A>http://www.gomez.com</A><L>fr</L><F>HTML</F></X>
-(<X><T>test</T><A>http://www.gomez.com/info_center/instant-test.php</A><L>fr</L><F>HTML</F></X>),
 <X><T>WebpageTest</T><A>http://www.webpagetest.org</A><L>fr</L><F>HTML</F></X>,
 <X><T>keynote</T><A>http://www.keynote.com</A><L>fr</L><F>HTML</F></X><BR/>
 
@@ -53,8 +51,7 @@ tools for performance analysis:
 
 counters:
 <X><T>Yahoo list</T><A>http://dir.yahoo.com/Computers_and_Internet/Internet/World_Wide_Web/Programming/Access_Counters/</A><L>en</L><F>HTML</F></X>,
-<X><T>WEBcounter</T><A>http://www.digits.com/</A><L>en</L><F>HTML</F></X>,
-<X><T>FastCounter</T><A>http://www.fastcounter.com/</A><L>en</L><F>HTML</F></X><BR/>
+<X><T>WEBcounter</T><A>http://www.digits.com/</A><L>en</L><F>HTML</F></X><BR/>
 
 Web log analyzers:
 <X><T>Wikipedia list</T><A>http://en.wikipedia.org/wiki/List_of_web_analytics_software</A><L>en</L><F>HTML</F></X>,
@@ -65,7 +62,6 @@ Web log analyzers:
 
 
 icons &amp; animated GIFs:
-<X><T>Animation Factory</T><A>http://www.eclipsed.com/</A><L>en</L><F>HTML</F></X>,
 <X><T>IconBazaar</T><A>http://www.iconbazaar.com/</A><L>en</L><F>HTML</F></X>,
 <X><T>IconArchive</T><A>http://www.iconarchive.com/</A><L>en</L><F>HTML</F></X>,
 <X><T>wigflip</T><A>http://wigflip.com</A><L>en</L><F>HTML</F></X><BR/>
@@ -73,11 +69,7 @@ icons &amp; animated GIFs:
 <X><T>W3C TRs</T><A>http://www.w3.org/TR//</A><L>en</L><F>HTML</F></X><BR/>
 
 permanent URL:
-<X><T>PURL</T><A>http://purl.oclc.org</A><L>en</L><F>HTML</F></X>,
-<X><T>V3</T><A>http://www.v3.com/</A><L>en</L><F>HTML</F></X><BR/>
-
-URL multi-submission:
-<X><T>Reference ESPACE 2001</T><A>http://www.espace2001.com/reference/index.html</A><L>fr</L><F>HTML</F></X><BR/>
+<X><T>PURL</T><A>http://purl.oclc.org</A><L>en</L><F>HTML</F></X><BR/>
 
 search info:
 <X><T>Search Engine Watch</T><A>http://www.searchenginewatch.com</A><L>en</L><F>HTML</F></X><BR/>
@@ -92,8 +84,6 @@ cloud computing:
 <X><T>favicon.cc</T><A>http://www.favicon.cc</A><L>en</L><F>HTML</F></X><BR/>
 
 <X><T>microformats</T><A>http://microformats.org</A><L>en</L><F>HTML</F></X><BR/>
-
-<X><T>OPML</T><A>http://www.opml.org/</A><L>en</L><F>HTML</F></X><BR/>
 
 <LINE/>
 
@@ -177,6 +167,7 @@ cloud computing:
     <ITEM><ARTICLE><X quality='1'><T>50 performance tricks to make your HTML5 apps and sites faster</T><A>http://channel9.msdn.com/Events/Build/2012/3-132</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>59</MINUTE><SECOND>5</SECOND></DURATION></X><AUTHOR>Janiter Mann</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>10</MONTH><DAY>30</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Waterfall Antipatterns</T><A>http://www.youtube.com/watch?v=O5az5D51ACQ</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>49</MINUTE><SECOND>53</SECOND></DURATION></X><AUTHOR>Rick Viscomi</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>An explanation of the waterfall created by <X><T>WebPagetest.org</T><A>http://www.webpagetest.org</A><L>en</L><F>HTML</F></X> and how to detect some common performance problems by using it.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Chrome Office Hours: Performance</T><A>http://www.youtube.com/watch?v=z0_jD8nO5Zw</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>44</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR>Paul Lewis</AUTHOR><AUTHOR>Paul Irish</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>19</DAY></DATE><COMMENT>The two guys analyze some sites and explain how to find the performance bottlenecks and solve them.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>High Performance Browser Networking -- what every web developer should know about networking and browser performance</T><A>https://docs.google.com/presentation/d/1f2J_HrzMNvVHhsB3f7DKJFPl2N0Q_QR2ZEECWQu6oV8/present</A><L>en</L><F>HTML</F></X><AUTHOR>Ilya Grigorik</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE><COMMENT>Some general ideas about performance: latency, HTTP2.0, W3C navigation timing, battery life, WiFi...</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>An Engineer's Guide</TITLE>
       <ITEM><ARTICLE><X><T>An Engineer's Guide to Bandwidth</T><A>http://developer.yahoo.net/blog/archives/2009/10/a_engineers_gui.html</A><L>en</L><F>HTML</F></X><AUTHOR>Carlos Bueno</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>Some miscellaneous ideas on network performance.</COMMENT></ARTICLE></ITEM>
      <ITEM><ARTICLE><X><T>An Engineer's Guide to DNS</T><A>http://developer.yahoo.net/blog/archives/2009/11/guide_to_dns.html</A><L>en</L><F>HTML</F></X><AUTHOR>Carlos Bueno</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE><COMMENT>An experiment trying to measure DNS performance.</COMMENT></ARTICLE></ITEM>
