@@ -58,7 +58,7 @@ function do_reference(str) {
     var url="?";
     if ( a[0] == "rfc" ) {
         //url = "http://www.zvon.org/tmRFC/RFC"+a[1]+"/Output/index.html";
-        url = "http://rfc-ref.org/RFC-TEXTS/"+a[1];
+        url = "http://www.ietf.org/rfc/rfc"+a[1]+".txt";
     } else if ( a[0] == "man" && a[1] == "linux" ) {
         url = "http://man-wiki.net/index.php/"+a[2]+":"+a[3];
     } else if ( a[0] == "man" && a[1] == "macosx" ) {
