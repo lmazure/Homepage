@@ -228,13 +228,7 @@
   <xs:complexType>
     <xs:sequence>
   	  <xs:element ref="X" minOccurs="1" maxOccurs="unbounded"/>
-  	  <xs:element name="AUTHOR" minOccurs="0" maxOccurs="unbounded">
-        <xs:complexType mixed="true">
-          <xs:sequence maxOccurs="unbounded">
-            <xs:element ref="X" minOccurs="0" maxOccurs="unbounded"/>
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
+  	  <xs:element name="AUTHOR" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
   	  <xs:element name="DATE" type="partialDate" minOccurs="0" maxOccurs="1"/>
   	  <xs:element name="COMMENT" type="content" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 
 <X><T>Cetus</T><A>http://www.sente.ch/cetus/oo_patterns.html</A><L>en</L><F>HTML</F></X>
@@ -53,7 +53,7 @@
 <ITEM><ARTICLE><X><T>Prototype</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/prototype.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Product Trader: Let clients create objects by naming an abstract superclass and by providing a specification.</TITLE>
-<ITEM><ARTICLE><X><T>Product Trader</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-product-trader.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR><X><T>Dirk Riehle</T><A>http://www.riehle.org/index.html</A><L>en</L><F>HTML</F></X></AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>This is a complete description of the role pattern with the pros, cons, C++ and Smalltalk examples...</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Product Trader</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-product-trader.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>This is a complete description of the role pattern with the pros, cons, C++ and Smalltalk examples...</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Singleton: Ensure a class only has one instance, and provide a global point of access to it.</TITLE>
 <ITEM><ARTICLE><X><T>Singleton</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/singleton.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
@@ -63,7 +63,7 @@
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>structural patterns</TITLE>
 <ITEM><BLIST><TITLE>Adapter (a.k.a. Wrapper): Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.</TITLE>
-<ITEM><ARTICLE><X><T>Adaptor Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Adaptor.html</A><L>en</L><F>HTML</F></X><AUTHOR><X><T>Thomas Minka</T><A>http://alumni.media.mit.edu/~tpminka</A><L>en</L><F>HTML</F></X></AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Adaptor Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Adaptor.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
 <ITEM><ARTICLE><X><T>Wrapper Design Pattern</T><A>http://www.castle-cadenza.demon.co.uk/wrapper.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Bridge (a.k.a. Handle/Body): Decouple an abstraction from its implementation so that the two can vary independently.</TITLE>
@@ -114,7 +114,7 @@ Pinchuk</AUTHOR><AUTHOR>Yonat Sharon</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMM
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>behavioral patterns</TITLE>
 <ITEM><BLIST><TITLE>Atomizer (a.k.a. Serializer): Read arbitrarily complex object structures from and write them to varying data structure-based backends. Efficiently store and retrieve objects from different backends, such as flat files, relational databases, and RPC buffers.</TITLE>
-<ITEM><ARTICLE><X><T>Serializer</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-serializer.html</A><L>en</L><F>PDF</F></X><AUTHOR><X><T>Dirk Riehle</T><A>http://www.riehle.org/index.html</A><L>en</L><F>HTML</F></X></AUTHOR><AUTHOR>Wolf
+<ITEM><ARTICLE><X><T>Serializer</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-serializer.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf
 Siberski</AUTHOR><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Daniel Megert</AUTHOR><AUTHOR>Heinz Z&#xFC;llighoven</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This is a full description of the pattern.</COMMENT></ARTICLE></ITEM>
 <ITEM><ARTICLE><X><T>Atomizer Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Atomizer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
@@ -148,7 +148,7 @@ Siberski</AUTHOR><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Daniel Megert</AUTHOR>
 <ITEM><ARTICLE><X><T>Applying Observer Pattern in C++ Applications</T><A>http://www.codeguru.com/cpp_mfc/observer.shtml</A><L>en</L><F>HTML</F></X><X><T>Applying Observer Pattern in C++ Applications</T><A>http://www.codeproject.com/KB/architecture/observer.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Kulathu Sarma</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE><COMMENT>This short presentation contains some good ideas (mainly coming from GoF's book) such as nofication vs polling, pull vs push... with C++ examples.</COMMENT></ARTICLE></ITEM>
 <ITEM><ARTICLE><X><T>Observer Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Observer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
 <ITEM><ARTICLE><X><T>Observer Pattern</T><A>http://www.castle-cadenza.demon.co.uk/observe.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
-<ITEM><ARTICLE><X><T>The Event Notification Pattern - Integrating Implicit Invocation with Object-Orientation</T><A>http://www.riehle.org/computer-science/research/1996/tapos-1996-event.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><X><T>Dirk Riehle</T><A>http://www.riehle.org/index.html</A><L>en</L><F>HTML</F></X></AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A small variation of the pattern.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>The Event Notification Pattern - Integrating Implicit Invocation with Object-Orientation</T><A>http://www.riehle.org/computer-science/research/1996/tapos-1996-event.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A small variation of the pattern.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>State (Objects for States): Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.</TITLE>
 <ITEM><ARTICLE><X><T>State</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/state.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
