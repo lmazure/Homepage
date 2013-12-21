@@ -38,13 +38,6 @@ function do_help() {
 
 // ---------------------------------------------------------------------------------------------------------------
 
-function do_feed(str) {
-    var url = "http://rss.bloople.net/?url=" + URLencode(str);
-    window.open(url,'_blank','width=800,height=1000,scrollbars');
-}
-
-// ---------------------------------------------------------------------------------------------------------------
-
 // rfc/<rfc-number>
 // man/linux/<man-section-number>/<command>
 // man/macosx/<man-section-number>/<command>

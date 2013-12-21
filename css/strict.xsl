@@ -230,7 +230,8 @@
   </xsl:element>
   <xsl:for-each select="./FEED">
     <xsl:element name="a">
-      <xsl:attribute name="href">javascript:do_feed('<xsl:value-of select="./A"/>')</xsl:attribute>
+      <xsl:attribute name="href"><xsl:value-of select="./A"/></xsl:attribute>
+      <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
       <xsl:element name="img">
         <xsl:attribute name="src"><xsl:text>../images/feed.jpg</xsl:text></xsl:attribute>
         <xsl:attribute name="alt"><xsl:value-of select="./F"/><xsl:text> feed</xsl:text></xsl:attribute>
