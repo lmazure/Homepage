@@ -3,7 +3,7 @@
 <PAGE status="unmaintained" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>C++</TITLE>
 <PATH>links/cpp.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 
 <X><T>Yahoo page</T><A>http://dir.yahoo.com/Computers_and_Internet/Programming_and_Development/Languages/C_and_C__/C__/</A><L>en</L><F>HTML</F></X>,
@@ -12,14 +12,13 @@
 <X><T>M</T><A>http://www.objenv.com/cetus/oo_c_plus_plus.html</A><L>en</L><F>HTML</F></X>),
 <X><T>Open Directory</T><A>http://www.dmoz.org/Computers/Programming/Languages/C%2b%2b/</A><L>en</L><F>HTML</F></X><BR/>
 
-<X><T>WG21</T><A>http://www.open-std.org/jtc1/sc22/wg21/</A><L>en</L><F>HTML</F></X>,
 <X><T>C/C++ Reference</T><A>http://www.cppreference.com/</A><L>en</L><F>HTML</F></X>,
 <X><T>Glen McCluskey</T><A>http://www.glenmccl.com/</A><L>en</L><F>HTML</F></X>,
 <X><T>Dinkumware (archive.org)</T><A>http://web.archive.org/web/20110710131926/http://www.dinkumware.com/manuals/default.aspx</A><L>en</L><F>HTML</F></X>,
 <X><T>cplusplus.com</T><A>http://www.cplusplus.com/</A><L>en</L><F>HTML</F></X><BR/>
 
 ANSI C++:
-<X><T>the committee</T><A>http://www.open-std.org/jtc1/sc22/wg21/</A><L>en</L><F>HTML</F></X>,
+<X><T>WG21</T><A>http://www.open-std.org/jtc1/sc22/wg21/</A><L>en</L><F>HTML</F></X>,
 <X><T>standard draft</T><A>http://std.dkuug.dk/jtc1/sc22/wg21/docs/wp/html/oct97/</A><L>en</L><F>HTML</F></X>,
 <X><T>beyond the ARM</T><A>http://www.corfield.org/index.php?event=cplusplus.main</A><L>en</L><F>HTML</F></X><BR/>
 
@@ -56,13 +55,11 @@ tutorials:
 
 <ANCHOR>rules</ANCHOR>coding rules:
 <X><T>Ellemtel</T><A>http://www.doc.ic.ac.uk/lab/cplus/c++.rules/</A><L>en</L><F>HTML</F></X>,
-<X><T>Industrial Strength C++</T><A>http://hem.passagen.se/erinyq/industrial/</A><L>en</L><F>HTML</F></X>,
 <X><T>Mozilla C++ portability guide</T><A>http://www.literateprogramming.com/portablecpp.pdf</A><L>en</L><F>PDF</F></X>,
 <X><T>CoreLinux</T><A>http://corelinux.sourceforge.net/cppstnd.php</A><L>en</L><F>HTML</F></X>,
 <X><T>Todd Hoff</T><A>http://www.possibility.com/Cpp/CppCodingStandard.html</A><L>en</L><F>HTML</F></X>,
 <X><T>Mark Williams</T><A>http://www.cryst.bbk.ac.uk/%7Eclasslib/bioinf/standards.html</A><L>en</L><F>HTML</F></X>,
 <X><T>SPIDER CERN</T><A>http://pst.web.cern.ch/PST/HandBookWorkBook/Handbook/Programming/CodingStandard/c++standard.pdf</A><L>en</L><F>PDF</F></X>,
-<X><T>Macadamian</T><A>http://www.macadamian.com/codingconventions.htm</A><L>en</L><F>HTML</F></X>,
 <X><T>Universit&#xE4;t Bonn Computer Graphik</T><A>http://cg.cs.uni-bonn.de/docs/teaching/2002/SS/pg2002/documents/ProgrammingGuidelines1-22.pdf</A><L>en</L><F>PDF</F></X><BR/>
 
 <BLIST><TITLE>libraries</TITLE>
@@ -92,7 +89,7 @@ interface with other languages:
     <ITEM><ARTICLE><X><T>Counting Objects in C++</T><A>http://www.drdobbs.com/cpp/counting-objects-in-c/184403484</A><L>en</L><F>HTML</F></X><AUTHOR>Scott Meyers</AUTHOR><DATE><YEAR>1998</YEAR><MONTH>4</MONTH></DATE><COMMENT>The driving idea of this article is how to implement class instance counting. But the main interest is that several C++ complex features are referred: thrown exception in <CODEROUTINE>new</CODEROUTINE>, placement <CODEROUTINE>new</CODEROUTINE>/<CODEROUTINE>delete</CODEROUTINE>...</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>exceptions</TITLE>
-    <ITEM><ARTICLE><X><T>Exception Handling: A False Sense of Security</T><A>http://www.awprofessional.com/content/images/020163371x/supplements/Exception_Handling_Article.html</A><L>en</L><F>HTML</F></X><X><T>Exception Handling: A False Sense of Security</T><A>http://www.awprofessional.com/content/images/020163371x/supplements/Exception_Handling_Article.html</A><L>en</L><F>HTML</F></X><AUTHOR>Tom Cargill</AUTHOR><DATE><YEAR>1994</YEAR><MONTH>11</MONTH></DATE><COMMENT>A very good warning that exceptions are much more complex to use than you would think.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Exception Handling: A False Sense of Security</T><A>http://www.awprofessional.com/content/images/020163371x/supplements/Exception_Handling_Article.html</A><L>en</L><F>HTML</F></X><AUTHOR>Tom Cargill</AUTHOR><DATE><YEAR>1994</YEAR><MONTH>11</MONTH></DATE><COMMENT>A very good warning that exceptions are much more complex to use than you would think.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Coping with Exceptions</T><A>http://www.bleading-edge.com/Publications/C++Report/v9603/Article2a.htm</A><L>en</L><F>HTML</F></X><X><T>Coping with Exceptions</T><A>../attic/Article2a.rtf</A><L>en</L><F>HTML</F></X><AUTHOR>Jack W. Reeves</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>The author proposes some guidelines to use the exceptions. He applies them to the example described in the previous article.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Exception-Safe Generic Containers</T><A>http://www.cs.huji.ac.il/course/2003/ood/resources/Exception_Safe_Generic_Containers.pdf</A><L>en</L><F>PDF</F></X><X><T>Exception-Safe Generic Containers</T><A>../attic/Exception_Safe_Generic_Containers.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Herb Sutter</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>9</MONTH></DATE><COMMENT>Another answer to Cargill article. This one is simpler than Reeves' one.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Unmanaged Pointers in C++: Parameter Evaluation, auto_ptr, and Exception Safety</T><A>http://www.drdobbs.com/unmanaged-pointers-in-c-parameter-evalua/184403851</A><L>en</L><F>HTML</F></X><AUTHOR>Herb Sutter</AUTHOR><DATE><YEAR>2002</YEAR></DATE><COMMENT>Understanding the evaluation order of function parameters and how to correctly use<CODEROUTINE>auto_ptr</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
