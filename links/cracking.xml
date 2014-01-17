@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 
 hacker sites:
@@ -17,15 +17,12 @@ hacker sites:
 political sites:
 <X><T>Cryptome</T><A>http://cryptome.org/</A><L>en</L><F>HTML</F></X><BR/>
 
-script kiddies:
-<X><T>MAdChAt</T><A>http://www.madchat.org/</A><L>fr</L><F>HTML</F></X><BR/>
-
 cryptography libraries:
 <X><T>MCrypt</T><A>http://mcrypt.sourceforge.net/</A><L>en</L><F>HTML</F></X>,
-<X><T>crypto++</T><A>http://www.eskimo.com/%7Eweidai/cryptlib.html</A><L>en</L><F>HTML</F></X><BR/>
+<X><T>crypto++</T><A>http://www.cryptopp.com</A><L>en</L><F>HTML</F></X><BR/>
 
 steganography:
-<X><T>OutGuess</T><A>http://www.outguess.org/</A><L>en</L><F>HTML</F></X><BR/>
+<X status='obsolete'><T>OutGuess</T><A>http://www.outguess.org/</A><L>en</L><F>HTML</F></X><BR/>
 
 feats:
 <X><T>the Robert Morris Internet Worm</T><A>http://ethics.csc.ncsu.edu/abuse/wvt/worm/darby/index.html</A><L>en</L><F>HTML</F></X>,
@@ -44,8 +41,8 @@ security holes reports:
 <X><T>XSSed</T><A>http://www.xssed.com</A><L>en</L><F>HTML</F></X><BR/>
 
 FAQ:
-<X><T>2600 FAQ</T><A>http://www.faqs.org/faqs/alt-2600/faq/</A><L>en</L><F>HTML</F></X>,
-<X><T>Cryptography</T><A>http://www.faqs.org/faqs/cryptography-faq/</A><L>en</L><F>HTML</F></X><BR/>
+<X status='obsolete'><T>2600 FAQ</T><A>http://www.faqs.org/faqs/alt-2600/faq/</A><L>en</L><F>HTML</F></X>,
+<X status='obsolete'><T>Cryptography</T><A>http://www.faqs.org/faqs/cryptography-faq/</A><L>en</L><F>HTML</F></X><BR/>
 
 crypto:
 <X><T>PGP</T><A>http://www.pgpi.com/</A><L>en</L><F>HTML</F></X>,
@@ -53,10 +50,10 @@ crypto:
 
 one-way hash functions:
 MD5
-(<X><T>RFC 1321</T><A>javascript:do_reference("rfc/1321")</A><L>fr</L><F>HTML</F></X>,
+(<X><T>RFC 1321</T><A>javascript:do_reference('rfc/1321')</A><L>fr</L><F>HTML</F></X>,
 <X><T>Ronald L. Rivest</T><A>http://userpages.umbc.edu/%7Emabzug1/cs/md5/md5.html</A><L>en</L><F>HTML</F></X>),
 SHA-1
-(<X><T>RFC 3174</T><A>javascript:do_reference("rfc/3174")</A><L>fr</L><F>HTML</F></X>)<BR/>
+(<X><T>RFC 3174</T><A>javascript:do_reference('rfc/3174')</A><L>fr</L><F>HTML</F></X>)<BR/>
 
 <BLIST><TITLE>tools</TITLE>
   <ITEM><X><T>nessus</T><A>http://www.nessus.org/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -73,9 +70,6 @@ SHA-1
   <ITEM><ANCHOR>burp</ANCHOR><X><T>Burp</T><A>http://www.portswigger.net</A><L>en</L><F>HTML</F><FEED><A>http://blog.portswigger.net/feeds/posts/default</A><F>RSS</F></FEED></X>:
     a Web proxy allowing snooping, replay...(<X><T>personal notes</T><A>../notes/burp.html</A><L>en</L><F>HTML</F></X>)</ITEM>
 </BLIST>
-
-books:
-<X><T>O'Reilly</T><A>http://security.oreilly.com/</A><L>en</L><F>HTML</F></X><BR/>
 
 <X><T>Bruce Schneier</T><A>http://www.schneier.com</A><L>en</L><F>HTML</F></X><BR/>
 
@@ -122,7 +116,7 @@ books:
     </BLIST></ITEM>
 
     <ITEM><BLIST><TITLE>format string</TITLE>
-      <ITEM><ARTICLE><X quality="2"><T>[Paper] Format bugs</T><A>http://julianor.tripod.com/bc/kalou-formats.txt</A><L>en</L><F>HTML</F></X><X><T>[Paper] Format bugs</T><A>http://www.phiral.net/other/formatbug.txt</A><L>en</L><F>txt</F></X><X><T>[Paper] Format bugs</T><A>http://archives.neohapsis.com/archives/vuln-dev/2000-q3/att-0194/01-formats.txt</A><L>en</L><F>txt</F></X><AUTHOR>Pascal Bouchareine</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>7</MONTH><DAY>18</DAY></DATE><COMMENT>How to exploit format string bugs to examine the stack and execute a root shell.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality="2"><T>[Paper] Format bugs</T><A>http://julianor.tripod.com/bc/kalou-formats.txt</A><L>en</L><F>HTML</F></X><X><T>[Paper] Format bugs</T><A>http://archives.neohapsis.com/archives/vuln-dev/2000-q3/att-0194/01-formats.txt</A><L>en</L><F>txt</F></X><AUTHOR>Pascal Bouchareine</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>7</MONTH><DAY>18</DAY></DATE><COMMENT>How to exploit format string bugs to examine the stack and execute a root shell.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Write It Secure: Format Strings and Locale Filtering</T><A>http://www.dwheeler.com/essays/write_it_secure_1.html</A><L>en</L><F>HTML</F></X><AUTHOR>David A. Wheeler</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>12</MONTH></DATE><COMMENT>A non technical overview of format string exploit and locale hijacks.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
 
@@ -139,7 +133,7 @@ books:
     </BLIST></ITEM>
 
     <ITEM><BLIST><TITLE>race conditions</TITLE>
-      <ITEM><ARTICLE><X><T>Secure programmer: Prevent race conditions - Resource contention can be used against you</T><A>http://www.ibm.com/developerworks/linux/library/l-sprace.html</A><L>en</L><F>HTML</F></X><AUTHOR>David A. Wheeler</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>Some advice on avoiding race condition attacks when using files.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status='dead'><T>Secure programmer: Prevent race conditions - Resource contention can be used against you</T><A>http://www.ibm.com/developerworks/linux/library/l-sprace.html</A><L>en</L><F>HTML</F></X><AUTHOR>David A. Wheeler</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>Some advice on avoiding race condition attacks when using files.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
 
     <ITEM><BLIST><TITLE>signals</TITLE>
@@ -154,18 +148,18 @@ books:
     </BLIST></ITEM>
 
     <ITEM><BLIST><TITLE>Web bugs</TITLE>
-      <ITEM><ARTICLE><X><T>Microsoft Word Documents that "Phone Home"</T><A>http://www.privacyfoundation.org/privacywatch/report.asp?id=39&amp;action=0</A><L>en</L><F>HTML</F></X><AUTHOR>Richard M. Smith</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE><COMMENT>A clever way to use Web bugs: embed them in an Office document!</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Email Wiretapping</T><A>http://www.privacyfoundation.org/privacywatch/report.asp?id=54&amp;action=0</A><L>en</L><F>HTML</F></X><AUTHOR>Richard M. Smith</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>Even more clever, use the Web bugs to trace the forward and added text to an email you have sent.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status='dead'><T>Microsoft Word Documents that "Phone Home"</T><A>http://www.privacyfoundation.org/privacywatch/report.asp?id=39&amp;action=0</A><L>en</L><F>HTML</F></X><AUTHOR>Richard M. Smith</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE><COMMENT>A clever way to use Web bugs: embed them in an Office document!</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status='dead'><T>Email Wiretapping</T><A>http://www.privacyfoundation.org/privacywatch/report.asp?id=54&amp;action=0</A><L>en</L><F>HTML</F></X><AUTHOR>Richard M. Smith</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>Even more clever, use the Web bugs to trace the forward and added text to an email you have sent.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
 
     <ITEM><BLIST><TITLE>Denial of Service</TITLE>
-      <ITEM><ARTICLE><X><T>Denial of Service via Algorithmic Complexity Attacks</T><A>http://www.cs.rice.edu/%7Escrosby/hash/CrosbyWallach_UsenixSec2003/</A><L>en</L><F>HTML</F></X><X><T>Denial of Service via Algorithmic Complexity Attacks</T><A>http://www.cs.rice.edu/%7Escrosby/hash/CrosbyWallach_UsenixSec2003.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Scott A. Crosby</AUTHOR><AUTHOR>Dan S. Wallach</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>A DoS based on finding the worst case of use of a hash table, the authors propose their own version of a universal hashing to fix the issue.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X quality='-1'><T>Protect your Apache server from DoS attacks</T><A>http://articles.techrepublic.com.com/5100-10878_11-5058830.html</A><L>en</L><F>HTML</F></X><AUTHOR>Scott Robinson</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>8</MONTH><DAY>12</DAY></DATE><COMMENT>Some information on Apache and DoS attacks, but this article is not very clear and informative.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Denial of Service via Algorithmic Complexity Attacks</T><A>http://web.archive.org/web/20070202204633/www.cs.rice.edu/~scrosby/hash/CrosbyWallach_UsenixSec2003/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Scott A. Crosby</AUTHOR><AUTHOR>Dan S. Wallach</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>A DoS based on finding the worst case of use of a hash table, the authors propose their own version of a universal hashing to fix the issue.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality='-1'><T>Protect your Apache server from DoS attacks</T><A>http://www.techrepublic.com/article/protect-your-apache-server-from-dos-attacks/</A><L>en</L><F>HTML</F></X><AUTHOR>Scott Robinson</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>8</MONTH><DAY>12</DAY></DATE><COMMENT>Some information on Apache and DoS attacks, but this article is not very clear and informative.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
 
     <ITEM><BLIST><TITLE>MD5 attacks</TITLE>
       <ITEM><ARTICLE><X><T>Attacking Hash Functions by Poisoned Messages "The Story of Alice and her Boss"</T><A>http://th.informatik.uni-mannheim.de/People/lucks/HashCollisions/</A><L>en</L><F>HTML</F></X><AUTHOR>Magnus Daum</AUTHOR><AUTHOR>Stefan Lucks</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>15</DAY></DATE><COMMENT>The authors have created two PostScript files with the same MD5 checksum.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Enough With The Rainbow Tables: What You Need To Know About Secure Password Schemes</T><A>http://chargen.matasano.com/chargen/2007/9/7/enough-with-the-rainbow-tables-what-you-need-to-know-about-s.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Ptace</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>Encoding passwords with as a simple MD5 checksum is a bad idea, Thomas suggests some better methods.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Enough With The Rainbow Tables: What You Need To Know About Secure Password Schemes</T><A>http://www.securityfocus.com/blogs/262</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Ptace</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>Encoding passwords with as a simple MD5 checksum is a bad idea, Thomas suggests some better methods.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Google as a password cracker</T><A>http://www.lightbluetouchpaper.org/2007/11/16/google-as-a-password-cracker/</A><L>en</L><F>HTML</F></X><AUTHOR>Steven J. Murdoch</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE><COMMENT>Using Google to break a MD5 checksum.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Predicting the winner of the 2008 US Presidential Elections using a Sony PlayStation 3</T><A>http://www.win.tue.nl/hashclash/Nostradamus/</A><L>en</L><F>HTML</F></X><AUTHOR>Marc Stevens</AUTHOR><AUTHOR>Arjen Lenstra</AUTHOR><AUTHOR>Benne de Weger</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE><COMMENT>"3D5 15 DEAD": the authors have created 12 meaningful PDF files with the same MD5 checksum.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -196,17 +190,17 @@ books:
       <ITEM><ARTICLE><X><T>Remote Vulnerabilities in Bugzilla</T><A>http://www.mail-archive.com/bugtraq@securityfocus.com/msg05806.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dave Aitel</AUTHOR><AUTHOR>Andrew Danforth</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>4</MONTH><DAY>30</DAY></DATE><COMMENT>A typical example of applying the methods described in the previous rain.puppy.forest's article.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>using Google</TITLE>
         <ITEM><ARTICLE><X><T>Google Your Site For Security Vulnerabilities</T><A>http://www.onlamp.com/pub/a/security/2004/10/07/googling_for_vulnerabilities.html</A><L>en</L><F>HTML</F></X><AUTHOR>Nitesh Dhanjani</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>Using Google to find security holes on Web servers.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Bulletproof your organization against Google hacking: Assess your vulnerability to these ten simple security searches</T><A>http://downloads.techrepublic.com.com/download.aspx?docid=260167</A><L>en</L><F>HTML</F></X><AUTHOR>Ido Johnny Long</AUTHOR><AUTHOR>Ed Skoudis</AUTHOR><AUTHOR>Alrik van Eijkelenborg</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>12</MONTH></DATE><COMMENT>A longer description of the same techniques.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X status='dead'><T>Bulletproof your organization against Google hacking: Assess your vulnerability to these ten simple security searches</T><A>http://downloads.techrepublic.com.com/download.aspx?docid=260167</A><L>en</L><F>HTML</F></X><AUTHOR>Ido Johnny Long</AUTHOR><AUTHOR>Ed Skoudis</AUTHOR><AUTHOR>Alrik van Eijkelenborg</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>12</MONTH></DATE><COMMENT>A longer description of the same techniques.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><ARTICLE><X><T>RPC without borders (surfing USA ...)</T><A>http://www.phrack.com/issues.html?issue=58&amp;id=9</A><L>en</L><F>HTML</F></X><AUTHOR>sleath</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>12</MONTH><DAY>24</DAY></DATE><COMMENT><CODEROUTINE>SOAP::Lite</CODEROUTINE> is highly insecure: any loaded routine can be remotely called.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>The Dangers of Allowing Users to Post Images</T><A>http://www.securityfocus.com/archive/1/191114</A><L>en</L><F>HTML</F></X><AUTHOR>John Percival</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>Some CGI scripts allowing user to post images to not check the input, this can be used to execute some GET methods.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status='dead'><T>The Dangers of Allowing Users to Post Images</T><A>http://www.securityfocus.com/archive/1/191114</A><L>en</L><F>HTML</F></X><AUTHOR>John Percival</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>Some CGI scripts allowing user to post images to not check the input, this can be used to execute some GET methods.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>NT Web Technology Vulnerabilities</T><A>http://www.phrack.org/issues.html?issue=54&amp;id=8</A><L>en</L><F>HTML</F></X><AUTHOR>rain.forest.puppy</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>12</MONTH><DAY>25</DAY></DATE><COMMENT>In this article, rfp explains some holes in IIS, Cold Fusion and MS SQL server (FYI, there are some problems with the HTML page, it is better to read the source).</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>A practical vulnerability analysis</T><A>http://hexagon.itgo.com/Notadetapa/a_practical_vulnerability_analys.htm</A><L>en</L><F>HTML</F></X><AUTHOR>jfs</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE><COMMENT>PC Week proposed a challenge: break into their Linux server. This is a description of the winner method.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>A practical vulnerability analysis</T><A>http://hispahack.ccc.de/oldweb/en/mi019en.htm</A><L>en</L><F>HTML</F></X><AUTHOR>jfs</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE><COMMENT>PC Week proposed a challenge: break into their Linux server. This is a description of the winner method.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>IP-spoofing Demystified (Trust-Relationship Exploitation)</T><A>http://www.phrack.org/issues.html?issue=48&amp;id=14</A><L>en</L><F>HTML</F></X><AUTHOR>daemon9</AUTHOR><DATE><YEAR>1996</YEAR><MONTH>6</MONTH></DATE><COMMENT>This is a short summary of the TCP/IP protocol, how to perform IP spoofing and how to avoid it.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>How can I get setuid shell scripts to work?</T><A>http://www.faqs.org/faqs/unix-faq/faq/part4/section-7.html</A><L>en</L><F>HTML</F></X><AUTHOR>Maarten Litmaath</AUTHOR><COMMENT>Since I'm fed up to explain my workmates that setuid scripts are a very bad idea, I now just send them this FAQ.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Detecting Loadable Kernel Modules (LKM)</T><A>http://www.s0ftpj.org/docs/lkm.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Toby Miller</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE><COMMENT>This paper explains how to detect LKM rootkits.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Examining Remote OS Detection using LPD Querying</T><A>http://seclists.org/bugtraq/2001/Feb/att-0214/osdetect-lpd_txt</A><L>en</L><F>HTML</F></X><X><T>Examining Remote OS Detection using LPD Querying</T><A>http://lwn.net/2001/0222/a/sec-lpddetect.php3</A><L>en</L><F>HTML</F></X><AUTHOR>f0bic</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE><COMMENT>How to recognize an OS by sending malformed request to the <CODEROUTINE>lpd</CODEROUTINE> daemon.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X protection='payed_registration'><T>Search Engines as a Security Threat</T><A>http://www2.computer.org/portal/web/csdl/doi/10.1109/2.955094</A><L>en</L><F>HTML</F></X><AUTHOR>Julio C&#xE9;sar Hern&#xE1;ndez</AUTHOR><AUTHOR>Jos&#xE9; Mar&#xED;a Sierra</AUTHOR><AUTHOR>Arturo Ribagorda</AUTHOR><AUTHOR>Benjam&#xED;n Ramos</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>10</MONTH></DATE><COMMENT>Search engines can help to find vulnerable servers or can be used as anonymous proxies.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Examining Remote OS Detection using LPD Querying</T><A>http://lwn.net/2001/0222/a/sec-lpddetect.php3</A><L>en</L><F>HTML</F></X><AUTHOR>f0bic</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE><COMMENT>How to recognize an OS by sending malformed request to the <CODEROUTINE>lpd</CODEROUTINE> daemon.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status='dead' protection='payed_registration'><T>Search Engines as a Security Threat</T><A>http://www2.computer.org/portal/web/csdl/doi/10.1109/2.955094</A><L>en</L><F>HTML</F></X><AUTHOR>Julio C&#xE9;sar Hern&#xE1;ndez</AUTHOR><AUTHOR>Jos&#xE9; Mar&#xED;a Sierra</AUTHOR><AUTHOR>Arturo Ribagorda</AUTHOR><AUTHOR>Benjam&#xED;n Ramos</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>10</MONTH></DATE><COMMENT>Search engines can help to find vulnerable servers or can be used as anonymous proxies.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Linux kernel file offset pointer handling</T><A>http://isec.pl/vulnerabilities/isec-0016-procleaks.txt</A><L>en</L><F>HTML</F></X><AUTHOR>Paul Starzetz</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>8</MONTH><DAY>04</DAY></DATE><COMMENT>Using a race condition on the file offset management to be able to read kernel memory.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Cache missing for fun and profit</T><A>http://www.daemonology.net/papers/htt.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Colin Percival</AUTHOR><DATE><YEAR>2005</YEAR></DATE><COMMENT>How to measure the memory access times to analyze cache hits/misses and break a cryptographic key.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -215,7 +209,7 @@ books:
   <ITEM><BLIST><TITLE>advice</TITLE>
     <ITEM><ARTICLE><X status='dead'><T>Create effective passwords - Strategies for computer-based systems</T><A>http://www.ibm.com/developerworks/library/s-pass.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Shimonski</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE><COMMENT>How to avoid bad passwords.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Love and Authentication -- Addressing the problem of password reset</T><A>http://www.youtube.com/watch?v=pypFzJmgPhg</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>55</MINUTE><SECOND>46</SECOND></DURATION></X><AUTHOR>Markus Jakobsson</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>8</MONTH><DAY>12</DAY></DATE><COMMENT>After describing the issues with current password resetting mechanisms, Markus Jakobsson proposes a new technique based on user preferences.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>The Ultra-Secure Network Architecture</T><A>http://mcgladrey.com/Risk-Advisory-Services/The-UltraSecure-Network-Architecture</A><L>en</L><F>HTML</F></X><AUTHOR>Jeff Hall</AUTHOR><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X status='dead'><T>The Ultra-Secure Network Architecture</T><A>http://mcgladrey.com/Risk-Advisory-Services/The-UltraSecure-Network-Architecture</A><L>en</L><F>HTML</F></X><AUTHOR>Jeff Hall</AUTHOR><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
 
     <ITEM><BLIST><TITLE>system administration</TITLE>
 
@@ -231,7 +225,7 @@ books:
     <ITEM><ARTICLE><X><T>How To Eliminate The Ten Most Critical Internet Security Threats</T><A>http://www.peterswire.net/privarchives/How%20To%20Eliminate%20The%20Ten%20Most%20Critical%20Internet%20Security%20Threats.html</A><L>en</L><F>HTML</F></X><AUTHOR>SANS Institute</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE><COMMENT>This list (which is regularly updated) describes the most common holes used to break in a computer. It is a must read if you are a system administrator.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A Buffer Overflow Study Attacks &amp; Defenses</T><A>http://www.ouah.org/bofstd.pdf</A><L>en</L><F>PDF</F></X><X><T>A Buffer Overflow Study Attacks &amp; Defenses</T><A>../attic/report.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Pierre-Alain Fayolle</AUTHOR><AUTHOR>Vincent Glaume</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>3</MONTH></DATE><COMMENT>The current status of some buffer overflows (with a presentation of their mechanisms) and some Linux patches to avoid them.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Introduction to Ngrep</T><A>http://www.stearns.org/doc/ngrep-intro.v0.8.html</A><L>en</L><F>HTML</F></X><AUTHOR>William Stearns</AUTHOR><DATE><YEAR>2002</YEAR></DATE><COMMENT>A quick presentation of <CODEROUTINE><X><T>ngrep</T><A>http://ngrep.sourceforge.net/</A><L>en</L><F>HTML</F></X></CODEROUTINE>: a tool to grep network packets.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>10 common network security design flaws</T><A>http://i.techrepublic.com.com/downloads/adl_10_security_design_flaws.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Brien Posey</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE><COMMENT>Some short basic pieces of advice for designing a network.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>10 common network security design flaws</T><A>http://www.techrepublic.com/blog/10-things/10-common-network-security-design-flaws/</A><L>en</L><F>HTML</F></X><AUTHOR>Brien Posey</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE><COMMENT>Some short basic pieces of advice for designing a network.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
 
     <ITEM><BLIST><TITLE>coding</TITLE>
@@ -270,17 +264,17 @@ books:
     <ITEM><ARTICLE><X><T>Traffic Lights</T><A>http://www.phrack.org/issues.html?issue=60&amp;id=14</A><L>en</L><F>HTML</F></X><AUTHOR>plunkett</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>Wanna hack traffic lights in South Africa?</COMMENT></ARTICLE></ITEM>
 <ITEM><ARTICLE><X><T>Hacking the hotel through the TV</T><A>http://news.cnet.com/2100-1029_3-5812598.html</A><L>en</L><F>HTML</F></X><AUTHOR>Joris Evers</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE><COMMENT>Or you may prefer playing with the hotel TV?</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Automated Denial-of-Service Attack Using the U.S. Post Office</T><A>http://www.schneier.com/crypto-gram-0304.html#1</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE><COMMENT>The Slashdot effect: a spammer gets flooded by junk mail... This is a real DoS attack, but in meatspace instead of cyberspace as usual.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Mangez gratuit chez MacDo</T><A>http://www.nimportequi.com/lesv_d_o/lecteur.swf?vid=107</A><L>en</L><F>HTML</F></X><AUTHOR>R&#xE9;mi Gaillard</AUTHOR><DATE><YEAR>2006</YEAR></DATE><COMMENT>How to have a free lunch in a MacDrive.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X status='dead'><T>Mangez gratuit chez MacDo</T><A>http://www.nimportequi.com/lesv_d_o/lecteur.swf?vid=107</A><L>en</L><F>HTML</F></X><AUTHOR>R&#xE9;mi Gaillard</AUTHOR><DATE><YEAR>2006</YEAR></DATE><COMMENT>How to have a free lunch in a MacDrive.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 
   <ITEM><BLIST><TITLE>miscellaneous</TITLE>
-    <ITEM><ARTICLE><X><T>Spies Among Us</T><A>http://www.time.com/time/europe/magazine/2000/0731/cover.html</A><L>en</L><F>HTML</F></X><AUTHOR>Adam Cohen</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE><COMMENT>This is a basic presentation of the Trojan horse software which report private data to some miscreant companies.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Spies Among Us</T><A>http://content.time.com/time/world/article/0,8599,2050979,00.html</A><L>en</L><F>HTML</F></X><AUTHOR>Adam Cohen</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE><COMMENT>This is a basic presentation of the Trojan horse software which report private data to some miscreant companies.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Open Source Security: Still a Myth</T><A>http://www.onlamp.com/pub/a/security/2004/09/16/open_source_security_myths.html</A><L>en</L><F>HTML</F></X><AUTHOR>John Viega</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE><COMMENT>The author explains why open source software is probably less secure than proprietary software. I agree that the "many eyeballs" is wrong for most open source code, only the most important applications have their code reviewed by several persons, but I also believe that most software companies are not allocating real resources to improve the security of their products.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Setuid Demystified</T><A>http://www.cs.berkeley.edu/%7Edaw/papers/setuid-usenix02.ps</A><L>en</L><F>PostScript</F></X><X><T>Setuid Demystified</T><A>http://www.cs.berkeley.edu/%7Edaw/papers/setuid-usenix02.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Hao Chen</AUTHOR><AUTHOR>David Wagner</AUTHOR><AUTHOR>Drew Dean</AUTHOR><COMMENT>A thorough analysis of <CODEROUTINE>setuid</CODEROUTINE>: the system calls, divergence between Solaris, Linux and FreeBSD, its pitfalls...</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Linux Security "State of the Union"</T><A>http://www-1.ibm.com/linux/news/LTCWhitepaper.shtml</A><L>en</L><F>HTML</F></X><AUTHOR>Robb Romans</AUTHOR><AUTHOR>Emily Ratliff</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE><COMMENT>A list of some of the projects trying to improve Linux security. This list is interesting, but it misses too many projects and the article is much too optimistic: no Linux deficiency is described, the projects are not criticized.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Journey from Poacher to Gamekeeper</T><A>http://www.oreillynet.com/pub/a/oreilly/security/news/2004/03/08/netsec.html</A><L>en</L><F>HTML</F></X><AUTHOR>Chris McNab</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE><COMMENT>When you turn from a black hat into a white hat, people tend to be suspicious.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>A Sci-Fi Future Awaits the Court</T><A>http://www.wired.com/news/politics/0,1283,68911,00.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE><COMMENT>John Robert, future technologies and the "right to privacy".</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>W3C criticizes antirobot tests</T><A>http://news.com.com/W3C+criticizes+antirobot+tests/2100-1032_3-5103639.html</A><L>en</L><F>HTML</F></X><AUTHOR>Paul Festa</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>11</MONTH><DAY>3</DAY></DATE><COMMENT>The issues with the visual "Turing tests" used to impede bots of exploiting a Web service.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>W3C criticizes antirobot tests</T><A>http://news.cnet.com/2100-1032_3-5103639.html</A><L>en</L><F>HTML</F></X><AUTHOR>Paul Festa</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>11</MONTH><DAY>3</DAY></DATE><COMMENT>The issues with the visual "Turing tests" used to impede bots of exploiting a Web service.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Google's Click-Fraud Crackdown</T><A>http://www.wired.com/news/columns/0,71370-0.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>7</MONTH><DAY>13</DAY></DATE><COMMENT>How to know if the visitor of your site is a human or a robot?</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality='1'><T>Real Story of the Rogue Rootkit</T><A>http://www.wired.com/news/privacy/0,1848,69601,00.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>11</MONTH><DAY>17</DAY></DATE><COMMENT>Why have the security companies not reported and fought against the Sony's rootkit?</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Everyone Wants to 'Own' Your PC</T><A>http://www.wired.com/news/columns/1,70802-0.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>5</MONTH><DAY>4</DAY></DATE><COMMENT>More and more people are trying to get some control on everyone's PC: DRM, spyware, adware, security features that does not work against some companies products...</COMMENT></ARTICLE></ITEM>
@@ -291,7 +285,7 @@ books:
     <ITEM><ARTICLE><X><T>The Eternal Value of Privacy</T><A>http://www.wired.com/news/columns/0,70886-0.html</A><L>en</L><F>HTML</F></X><X><T>The Eternal Value of Privacy</T><A>http://www.schneier.com/essay-114.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>5</MONTH><DAY>18</DAY></DATE><COMMENT>Schneier tries to explain why we should try to protect our privacy. But I find this article less convincing that his usual production, even if I fully agree with the message.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Anti-ID-Theft Bill That Isn't</T><A>http://www.wired.com/news/columns/0,70690-0.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>4</MONTH><DAY>20</DAY></DATE><COMMENT>US Congress votes a law for personal data protection that will pre-empt the state laws which are stronger.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality ='1'><T>Data Mining 101: Finding Subversives with Amazon Wishlists</T><A>http://www.applefritter.com/bannedbooks</A><L>en</L><F>HTML</F></X><AUTHOR>Tom Owad</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE><COMMENT>Some data mining in the data that <X><T>Amazon</T><A>http://www.amazon.com/</A><L>en</L><F>HTML</F></X> let us look at...</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Why Microsoft is wrong on Vista security</T><A>http://news.com.com/Why+Microsoft+is+wrong+on+Vista+security/2010-7349-6123924.html</A><L>en</L><F>HTML</F></X><AUTHOR>George Heron</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>McAfee explains that Microsoft impedes them to properly implement an antivirus in Vista.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Why Microsoft is wrong on Vista security</T><A>http://news.cnet.com/Why-Microsoft-is-wrong-on-Vista-security/2010-7349_3-6123924.html</A><L>en</L><F>HTML</F></X><AUTHOR>George Heron</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>McAfee explains that Microsoft impedes them to properly implement an antivirus in Vista.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Lessons From the Facebook Riots</T><A>http://www.wired.com/news/columns/0,71815-0.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH><DAY>21</DAY></DATE><COMMENT>Facebook has learned the hard way that it is not the real secrecy of privacy that matters, but the its perception.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>My Data, Your Machine</T><A>http://www.wired.com/news/columns/0,72196-0.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE><COMMENT>It is difficult to protect something which in the hands of the attacker.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Architecture of Security</T><A>http://www.wired.com/news/columns/0,71968-0.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Schneier</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>10</MONTH><DAY>19</DAY></DATE><COMMENT>Architectural artefacts remain much longer that the risk they were design to solve.</COMMENT></ARTICLE></ITEM>
