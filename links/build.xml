@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Site building</TITLE>
 <PATH>links/build.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 
 <X><T>Apache</T><A>http://www.apache.org/</A><L>en</L><F>HTML</F></X><BR/>
@@ -61,7 +61,6 @@ Web log analyzers:
 
 
 icons &amp; animated GIFs:
-<X><T>IconBazaar</T><A>http://www.iconbazaar.com/</A><L>en</L><F>HTML</F></X>,
 <X><T>IconArchive</T><A>http://www.iconarchive.com/</A><L>en</L><F>HTML</F></X>,
 <X><T>wigflip</T><A>http://wigflip.com</A><L>en</L><F>HTML</F></X><BR/>
 
@@ -153,7 +152,7 @@ cloud computing:
     <ITEM><ARTICLE><X><T>Non-blocking JavaScript Downloads</T><A>http://yuiblog.com/blog/2008/07/22/non-blocking-scripts/</A><L>en</L><F>HTML</F></X><AUTHOR>Stoyan Stefanov</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE><COMMENT>Several workarounds to avoid the fact that Browsers download, parse and execute each script before downloading the other components.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Episodes: a Framework for Measuring Web Page Load Times</T><A>http://stevesouders.com/episodes/paper.php</A><L>en</L><F>HTML</F></X><AUTHOR>Steve Souders</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>7</MONTH></DATE><COMMENT>A presentation of Episodes.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Building Fast Client-side Searches</T><A>http://code.flickr.com/blog/2009/03/18/building-fast-client-side-searches/</A><L>en</L><F>HTML</F></X><AUTHOR>Ross Harmes</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE><COMMENT>A description of how Flickr implemented a very fast auto-completion for the contact list.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Not Just a Pretty Face: Performance and the New Yahoo! Search</T><A>http://developer.yahoo.net/blog/archives/2009/09/search_performance.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ryan Grove</AUTHOR><AUTHOR>Stoyan Stefanov</AUTHOR><AUTHOR>Venkateswaran Udayasankar</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE><COMMENT>A description of the implementation of the new Yahoo results page.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Not Just a Pretty Face: Performance and the New Yahoo! Search</T><A>http://developer.yahoo.com/blogs/ydn/not-just-pretty-face-performance-yahoo-search-7718.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ryan Grove</AUTHOR><AUTHOR>Stoyan Stefanov</AUTHOR><AUTHOR>Venkateswaran Udayasankar</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE><COMMENT>A description of the implementation of the new Yahoo results page.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Analyzing Bandwidth and Latency on YUIBlog.com</T><A>http://www.yuiblog.com/blog/2010/04/08/analyzing-bandwidth-and-latency</A><L>en</L><F>HTML</F></X><AUTHOR>Philip Tellis</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>Some statistics on the latency and the bandwidth of YUIBlog readers.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>High Performance JavaScript</T><A>http://www.youtube.com/watch?v=_fUGWFGUrUw</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>22</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR>Nicholas Zakas</AUTHOR><AUTHOR>Stoyan Stefanov</AUTHOR><AUTHOR>Ross Harmes</AUTHOR><AUTHOR>Julien Lecomte</AUTHOR><AUTHOR>Matt Sweeney</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>4</MONTH></DATE><COMMENT>A presentation of some well known performance subjects:<BR/>- How to limit the slowness of interacting with the DOM<BR/>- How to have a responsive interface<BR/>- Multipart XHR (transferring many resources &#x2013; CSS, images... &#x2013; in a single HTTP request)<BR/>- Combining, minifying, compressing, proper management of the Browser cache, using a CDN<BR/>- Network analyzers and profilers.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Top 10 Performance Problems taken from Zappos, Monster, Thomson and Co</T><A>http://blog.dynatrace.com/2010/06/15/top-10-performance-problems-taken-from-zappos-monster-and-co/</A><L>en</L><F>HTML</F></X><AUTHOR>Andreas Grabner</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>6</MONTH><DAY>15</DAY></DATE><COMMENT>A quick description, with some pointers toward more information, of some common Web server performance issues.</COMMENT></ARTICLE></ITEM>
@@ -177,7 +176,7 @@ cloud computing:
       <ITEM><ARTICLE><X><T>Image Optimization, Part 3: Four Steps to File Size Reduction</T><A>http://yuiblog.com/blog/2008/11/14/imageopt-3/</A><L>en</L><F>HTML</F></X><AUTHOR>Stoyan Stefanov</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE><COMMENT>Some tools to reduce image size with no quality loss.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Image Optimization, Part 4: Progressive JPEG&#x2026;Hot or Not?</T><A>http://yuiblog.com/blog/2008/12/05/imageopt-4/</A><L>en</L><F>HTML</F></X><AUTHOR>Stoyan Stefanov</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>5</DAY></DATE><COMMENT>An analysis to determine when progressive JPEG gives files smaller than normal JPEG.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Image Optimization, Part 5: AlphaImageLoader</T><A>http://yuiblog.com/blog/2008/12/08/imageopt-5/</A><L>en</L><F>HTML</F></X><AUTHOR>Stoyan Stefanov</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE><COMMENT>Avoid using AlphaImageLoader CSS filter: it freezes the rendering and it uses too much memory.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Performance on Yahoo! Search for Earth Day</T><A>http://developer.yahoo.net/blog/archives/2010/04/performance_on_yahoo_search_earth_day_data_uri_ftw.html</A><L>en</L><F>HTML</F></X><AUTHOR>Stoyan Stefanov</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE><COMMENT>The author explains how he optimized a simple page.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Performance on Yahoo! Search for Earth Day</T><A>http://developer.yahoo.com/blogs/ydn/performance-yahoo-search-earth-day-7944.html</A><L>en</L><F>HTML</F></X><AUTHOR>Marcel Duran</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE><COMMENT>The author explains how he optimized a simple page.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>scalability</TITLE>
