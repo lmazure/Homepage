@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Life cycle</TITLE>
 <PATH>links/life.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE>development processes</TITLE>
@@ -129,6 +129,8 @@
   <ITEM><X><T>IEEE 1028-1997</T><A>http://pesona.mmu.edu.my/~wruslan/SE2/Readings/detail/Reading-6.pdf</A><L>en</L><F>PDF</F></X>: IEEE Standard for Software Reviews</ITEM>
 </BLIST>
 
+<X><T>IEEE's Software Engineering Code of Ethics and Professional Practice</T><A>http://www.acm.org/about/se-code</A><L>en</L><F>HTML</F></X><BR/>
+
 <LINE/>
 
 <BLIST><TITLE>articles</TITLE>
@@ -173,6 +175,7 @@ Examining the effectiveness of agile practices</T><A>http://www.drdobbs.com/arch
         <ITEM><ARTICLE><X><T>MountainWest RubyConf 2013 Trolls of 2013 by Ryan Davis</T><A>http://www.youtube.com/watch?v=r1JMxJ06I98</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>36</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR>Ryan Davis</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>4</DAY></DATE><COMMENT>Writing an interpreter in Ruby while using TDD. Ryan Davis finishes with a lightning talk, presenting Flay, a code analysis tool detecting similar code pieces.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>The Transformation Priority Premise</T><A>http://blog.8thlight.com/uncle-bob/2013/05/27/TheTransformationPriorityPremise.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE><COMMENT>Uncle Bob proposes a prioritized list of transformations (giving higher priority to simpler transformations) to be applied when the code must be changed to get the last added test green. Each transformation results in a more generic code. Uncle Bob claims that, by privileging the simplest transformations, the risk of an impasse (i.e. having to rewrite an important part of the production code in order to get the next test green) is reduced.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality='1'><T>Ian Cooper: TDD, where did it all go wrong</T><A>http://vimeo.com/68375232</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR>Ian Cooper</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>6</MONTH></DATE><COMMENT>Coming back to the initial ideas of Kent Beck with some good advice on how to do TDD.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>The Right Tests in the Wrong Order</T><A>http://blog.8thlight.com/mike-jansen/2013/07/18/the-right-tests-in-the-wrong-order.html</A><L>en</L><F>HTML</F></X><AUTHOR>Mike Jansen</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT>The order of the tests will have an important impact on the final production code. This article does not help determinating this order. Its main conclusion if that if too much code must be changed for getting the next test green, the developer should back up and consider another approach.</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE>Brett L. Schuchert</TITLE>
           <ITEM><BLIST><TITLE>RPN calculator in Java using Eclipse</TITLE>
             <ITEM><ARTICLE><X><T>Getting Started with Tdd in Java using Eclipse</T><A>http://vimeo.com/10569751</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>51</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR>Brett L. Schuchert</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>3</MONTH><DAY>30</DAY></DATE><COMMENT>A rather slow but clear introduction to TDD using Java and Eclipse : creating a RPN calculator.</COMMENT></ARTICLE></ITEM>
