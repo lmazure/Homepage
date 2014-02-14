@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Visual Studio with ReSharper</TITLE>
 <PATH>notes/vsresharper.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>2</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -14,8 +14,6 @@
 
 Windows
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='*'/>, <KEY ID='M'/></TERM>
-<DESC>display Team Explorer</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/>, <KEY ID='E'/></TERM>
 <DESC>display the Error List Window</DESC></ROW>
 </DEFINITIONTABLE>
@@ -51,10 +49,11 @@ Debug
 <DEFINITIONTABLE>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/>, <KEY ID='C'/></TERM>
 <DESC>display Call Stack</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Ctrl'/><KEY ID='B'/></TERM>
+<DESC>display the Breakpoints window</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 
-Unit Tests
 Unit Tests
 <DEFINITIONTABLE>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <KEY ID='R'/></TERM>
