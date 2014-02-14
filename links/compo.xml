@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Components</TITLE>
 <PATH>links/compo.xml</PATH>
-<DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE>virtualization</TITLE>
@@ -24,9 +24,9 @@
 <ITEM><BLIST><TITLE>CORBA</TITLE>
 <ITEM><X><T>MICO</T><A>http://www.mico.org/</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>TAO</T><A>http://www.cs.wustl.edu/%7Eschmidt/TAO.html</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>ORBit</T><A>http://developer.gnome.org/doc/whitepapers/ORBit/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>ORBit</T><A>http://orbit-resource.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST></ITEM>
-<ITEM><X><T>DCOP</T><A>http://developer.kde.org/documentation/library/kdeqt/kde3arch/dcop.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>DCOP</T><A>http://api.kde.org/3.5-api/kdelibs-apidocs/dcop/html/index.html</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
 <BLIST><TITLE>HPC</TITLE>
@@ -39,12 +39,12 @@
 <ITEM>flex: <X><T>GNU</T><A>http://flex.sourceforge.net</A><L>en</L><F>HTML</F></X><BR/></ITEM>
 <ITEM>bison: <X><T>GNU</T><A>http://www.gnu.org/software/bison/manual/</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>ANTLR</T><A>http://www.antlr.org/</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>JavaCC</T><A>http://javacc.dev.java.net/</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>JavaCC</T><A>https://javacc.java.net</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>Open Source Parser Generators in Java</T><A>http://java-source.net/open-source/parser-generators</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
 
-<X><T>Kerberos</T><A>http://web.mit.edu/kerberos/www/</A><L>en</L><F>HTML</F></X>: <X><T>dmoz</T><A>http://directory.google.com/Top/Computers/Security/Authentication/Kerberos/</A><L>en</L><F>HTML</F></X><BR/>
+<X><T>Kerberos</T><A>http://web.mit.edu/kerberos/www/</A><L>en</L><F>HTML</F></X><BR/>
 VNC: <X><T>RealVNC</T><A>http://www.realvnc.com/</A><L>en</L><F>HTML</F></X><BR/>
 mathematics: <X><T>Matrix and Quaternions FAQ</T><A>http://www.j3d.org/matrix_faq/matrfaq_latest.html</A><L>en</L><F>HTML</F></X><BR/>
 random numbers: <X><T>HotBits</T><A>http://www.fourmilab.ch/hotbits/</A><L>en</L><F>HTML</F></X><BR/>
@@ -76,9 +76,9 @@ artificial life: <X><T>biota.org</T><A>http://www.biota.org/</A><L>en</L><F>HTML
 <BLIST><TITLE><B>articles</B></TITLE>
 
 <ITEM><BLIST><TITLE>parser generators:</TITLE>
-  <ITEM><ARTICLE><X><T>ANTLR: A Predicated-LL(k) Parser Generator</T><A>http://www.antlr.org/article/1055550346383/antlr.pdf</A><L>en</L><F>PDF</F></X><X><T>ANTLR: A Predicated-LL(k) Parser Generator</T><A>http://www.cs.ubc.ca/local/reading/proceedings/spe91-95/spe/vol25/issue7/spe964tp.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>T.J. Parr</AUTHOR><AUTHOR>R. W. Quong</AUTHOR><DATE><YEAR>1994</YEAR><MONTH>11</MONTH><DAY>17</DAY></DATE><COMMENT>A detailed presentation of ANTLR</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>JavaCC, parse trees, and the XQuery grammar, Part 1 - Using BNF and JavaCC to build custom parsers</T><A>http://www.ibm.com/developerworks/xml/library/x-javacc1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Howard Katz</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>A short presentation of JavaCC, a Java parser generator.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>JavaCC, parse trees, and the XQuery grammar, Part 2 - Building and walking a custom parse tree using JJTree</T><A>http://www.ibm.com/developerworks/xml/library/x-javacc2</A><L>en</L><F>HTML</F></X><AUTHOR>Howard Katz</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>An even shorter presentation of JJTree, a layer above JavaCC to directly generate an abstract syntax tree.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>ANTLR: A Predicated-LL(k) Parser Generator</T><A>http://courses.engr.illinois.edu/cs421/sp2012/project/antlr.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>T.J. Parr</AUTHOR><AUTHOR>R. W. Quong</AUTHOR><DATE><YEAR>1994</YEAR><MONTH>11</MONTH><DAY>17</DAY></DATE><COMMENT>A detailed presentation of ANTLR</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>JavaCC, parse trees, and the XQuery grammar, Part 1 -- Using BNF and JavaCC to build custom parsers</T><A>http://www.ibm.com/developerworks/xml/library/x-javacc1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Howard Katz</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>A short presentation of JavaCC, a Java parser generator.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X status='dead'><T>JavaCC, parse trees, and the XQuery grammar, Part 2 -- Building and walking a custom parse tree using JJTree</T><A>http://www.ibm.com/developerworks/xml/library/x-javacc2</A><L>en</L><F>HTML</F></X><AUTHOR>Howard Katz</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>An even shorter presentation of JJTree, a layer above JavaCC to directly generate an abstract syntax tree.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 
 <ITEM><BLIST><TITLE>memory management</TITLE>
@@ -86,7 +86,7 @@ artificial life: <X><T>biota.org</T><A>http://www.biota.org/</A><L>en</L><F>HTML
 </BLIST></ITEM>
 
 <ITEM><BLIST><TITLE>I18N</TITLE>
-  <ITEM><ARTICLE><X><T>Port your code around the world with m17n - The multilingualization library lets you adapt your user interface to multiple languages</T><A>http://www.ibm.com/developerworks/linux/library/l-m17n/</A><L>en</L><F>HTML</F></X><AUTHOR>Frank Pohlmann</AUTHOR><AUTHOR>Martin Streicher</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE><COMMENT>An introduction to the m17n toolkit.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X status='dead'><T>Port your code around the world with m17n -- The multilingualization library lets you adapt your user interface to multiple languages</T><A>http://www.ibm.com/developerworks/linux/library/l-m17n/</A><L>en</L><F>HTML</F></X><AUTHOR>Frank Pohlmann</AUTHOR><AUTHOR>Martin Streicher</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE><COMMENT>An introduction to the m17n toolkit.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 
 <ITEM><BLIST><TITLE>JasperReports</TITLE>
@@ -99,7 +99,7 @@ artificial life: <X><T>biota.org</T><A>http://www.biota.org/</A><L>en</L><F>HTML
   <ITEM><ARTICLE><X><T>A Hash Function for Hash Table Lookup</T><A>http://burtleburtle.net/bob/hash/doobs.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bob Jenkins</AUTHOR><COMMENT>A comparison of some hash functions.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>TFTP and Error Correction</T><A>http://www.oreillynet.com/pub/a/wireless/2003/12/04/tftp.html</A><L>en</L><F>HTML</F></X><AUTHOR>Heath Johns</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>A presentation of redundancy, acknowledgement and timeouts for the dummies. But the description is so oversimplified, that nobody will learn something useful with this article.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Ontology Tools Survey, Revisited</T><A>http://www.xml.com/pub/a/2004/07/14/onto.html</A><L>en</L><F>HTML</F></X><AUTHOR>Michael Denny</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>7</MONTH><DAY>14</DAY></DATE><COMMENT>A long list of tools, but the article is difficult to read because the author tried to put too much information in it.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>Server clinic: RTF on the server - Automate document handling with low-cost server processes</T><A>http://www.ibm.com/developerworks/library/l-sc9</A><L>en</L><F>HTML</F></X><AUTHOR>Cameron Laird</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>A very short description of some tools to manipulate DOC and RTF files.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Server clinic: RTF on the server -- Automate document handling with low-cost server processes</T><A>http://www.ibm.com/developerworks/library/l-sc9</A><L>en</L><F>HTML</F></X><AUTHOR>Cameron Laird</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>A very short description of some tools to manipulate DOC and RTF files.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Using libferris with XML</T><A>http://www.xml.com/pub/a/2004/03/31/ferris.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ben Martin</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE><COMMENT>This article misses an introduction on libferris and dives too quickly in the details to be a good introduction about this tool.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Conversing through the Internet with cURL and libcurl -- Using libcurl with C and Python</T><A>http://www.ibm.com/developerworks/opensource/library/os-curl/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>M. Tim Jones</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>A presentation of cURL as a command and as a C/Python/... library.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Graphics Card Maker Turns to High-Performance Bioinformatics</T><A>http://www.bio-itworld.com/2010/03/09/gollery-comment.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Gollery</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE><COMMENT>Nvidia is offering some open source code that exploits CUDA to accelerate some chemistry and biology algorithms.</COMMENT></ARTICLE></ITEM>
