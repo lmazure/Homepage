@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>2</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>2</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 
 <X><T>Yahoo!</T><A>http://dir.yahoo.com/Computers_and_Internet/Programming_and_Development/Tools/Software_Engineering/</A><L>en</L><F>HTML</F></X>,
@@ -77,7 +77,8 @@ O'Reilly's CD bookshelf:
       <ITEM><ARTICLE><X><T>Java development 2.0: MongoDB: A NoSQL datastore with (all the right) RDBMS moves -- Create and query documents using Java code and Groovy</T><A>http://www.ibm.com/developerworks/java/library/j-javadev2-12/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Andrew Glover</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE><COMMENT>A presentation of MongoDB with its JavaScript and Groovy (GMongo) APIs.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>ESB</TITLE>
+  <ITEM><BLIST><TITLE>SOA</TITLE>
+    <ITEM><ARTICLE><X><T>Versioning in SOA</T><A>http://msdn.microsoft.com/en-us/library/bb491124.aspx</A><L>fr</L><F>HTML</F></X><AUTHOR>Boris Lublinsky</AUTHOR><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Les 10 pi&#xE8;ges de la SOA : 10 &#x2013; Le syndrome &#xAB; Not Invented Here &#xBB;</T><A>http://blog.xebia.fr/2008/05/16/les-10-pieges-de-la-soa-10-le-syndrome-not-invented-here/</A><L>fr</L><F>HTML</F></X><AUTHOR>Vincent Partington</AUTHOR><AUTHOR>Christophe Heub&#xE8;s</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>5</MONTH><DAY>16</DAY></DATE><COMMENT>Two NIH symptoms: not reusing a service, writing its own ESB.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>miscellaneous</TITLE>
@@ -106,9 +107,10 @@ O'Reilly's CD bookshelf:
     <ITEM><ARTICLE><X><T>Design Principles and Design Patterns</T><A>http://www.objectmentor.com/resources/articles/Principles_and_Patterns.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>A presentation of<BR/>- the class design principles:<BR/>o the Open Closed Principle<BR/>o the Liskov Substitution Principle<BR/>o the Dependency Inversion Principle<BR/>- the package architecture principles:<BR/>o the Release Reuse Equivalency Principe<BR/>o the Common Closure Principle<BR/>o the Common Reuse Principle<BR/>o the Acyclic Dependencies Principle<BR/>o the Stable Dependencies Principle<BR/>o the Stable Abstractions Principle<BR/>- some design patterns:<BR/>o the Abstract Server<BR/>o the Adapter<BR/>o the Observer<BR/>o the Bridge<BR/>o the Abstract Factory</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Legacy Application Strangulation : Case Studies</T><A>http://paulhammant.com/2013/07/14/legacy-application-strangulation-case-studies/</A><L>en</L><F>HTML</F></X><AUTHOR>Paul Hammant</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>14</DAY></DATE><COMMENT>Some examples of strangulation of a legacy application: rewriting parts after parts while still using the (fewer and fewer) old parts meanwhile.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Synchronization in a Distributed System</T><A>http://blog.8thlight.com/rylan-dirksen/2013/10/04/synchronization-in-a-distributed-system.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rylan Dirksen</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>4</DAY></DATE><COMMENT>Lamport timestamp and vector clock.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X quality='1'><T>Ruby Midwest 2011 - Keynote: Architecture the Lost Years by Robert Martin</T><A>http://www.youtube.com/watch?v=WpkDN78P884</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>6</MINUTE><SECOND>39</SECOND></DURATION></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>4</DAY></DATE><COMMENT>Uncle Bob explains basic good architecture principles, which we knew 10 years ago, but have been forgotten because of the Web craziness...</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X quality='2'><T>Ruby Midwest 2011 - Keynote: Architecture the Lost Years by Robert Martin</T><A>http://www.youtube.com/watch?v=WpkDN78P884</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>6</MINUTE><SECOND>39</SECOND></DURATION></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>4</DAY></DATE><COMMENT>Uncle Bob explains basic good architecture principles, which we knew 10 years ago, but have been forgotten because of the Web craziness...</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Robert C. Martin - Clean Architecture</T><A>http://vimeo.com/43612849</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>57</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>6</MONTH><DAY>7</DAY></DATE><COMMENT>This is the same presentation that above, this one is better structured, but less lively, I prefer the previous one.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Dance you Imps!</T><A>http://blog.8thlight.com/uncle-bob/2013/10/01/Dance-You-Imps.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>Object-Relational Mapping is a misnomer, ORMs are data structure migrators. An object is an abstraction of behaviour, not an abstraction of data. They should represent business objects, not database tables.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X quality='1'><T>GoRuCo 2011 - Sandi Metz - Less - The Path to Better Design</T><A>http://vimeo.com/26330100</A><L>en</L><F>Flash Video</F><DURATION quality='1'><MINUTE>41</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR>Sandi Metz</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>6</MONTH><DAY>4</DAY></DATE><COMMENT>Sandy Metz indicates first that code must be transparent, reasonable, usable and exemplary. Then, she analyzes some implementations with these criteria.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
 
