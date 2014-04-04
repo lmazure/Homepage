@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Linux system administration</TITLE>
 <PATH>notes/ladmin.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><U><B>Vulcan Nerve Pinch</B></U></TITLE>
@@ -196,7 +196,7 @@ list the all the information about the device bound to <CODEROUTINE>/dev/sg1</CO
 <CODESAMPLE><PROMPT/><X><T>lspci</T><A>javascript:do_reference("man/linux/8/lspci")</A><L>en</L><F>HTML</F></X></CODESAMPLE></ITEM>
 </BLIST></ITEM>
 <ITEM>
-<X><T>/proc</T><A>http://www.redhat.com/docs/manuals/linux/RHL-8.0-Manual/ref-guide/ch-proc.html</A><L>en</L><F>HTML</F></X> files
+<X><T>/proc</T><A>http://www.tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html</A><L>en</L><F>HTML</F></X> files
 <DEFINITIONTABLE>
 <ROW><TERM><CODEFILENAME>/proc/cmdline</CODEFILENAME></TERM><DESC>the command line parameters used to start the kernel</DESC></ROW>
 <ROW><TERM><CODEFILENAME>/proc/kcore</CODEFILENAME></TERM><DESC>is the image of the physical memory (in the core file format)</DESC></ROW>

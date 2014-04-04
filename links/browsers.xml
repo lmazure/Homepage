@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Browsers</TITLE>
 <PATH>links/browsers.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 
 <BLIST>
@@ -19,16 +19,14 @@
 
 <ITEM><BLIST><TITLE>Internet Explorer</TITLE>
   <ITEM><X><T>modern.IE</T><A>http://www.modern.ie</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>download</T><A>http://www.microsoft.com/windows/ie/downloads/default.asp</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>blog</T><A>http://blogs.msdn.com/ie</A><L>en</L><F>HTML</F><FEED><A>http://blogs.msdn.com/ie/rss.xml</A><F>RSS</F></FEED></X></ITEM>
   <ITEM><X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Internet_Explorer</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Google Chrome Frame</T><A>http://code.google.com/chrome/chromeframe/</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST></ITEM>
 
 <ITEM><BLIST><TITLE><ANCHOR>chrome</ANCHOR>Chrome</TITLE>
   <ITEM><X><T>download</T><A>http://www.google.com/chrome</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>blog</T><A>http://chrome.blogspot.com</A><L>en</L><F>HTML</F><FEED><A>http://feeds2.feedburner.com/blogspot/Egta</A><F>RSS</F></FEED></X></ITEM>
-  <ITEM><X><T>Chromium</T><A>http://code.google.com/chromium/</A><L>en</L><F>HTML</F></X>:
+  <ITEM><X><T>Chromium</T><A>http://www.chromium.org</A><L>en</L><F>HTML</F></X>:
     <X><T>blog</T><A>http://blog.chromium.org</A><L>en</L><F>HTML</F><FEED><A>http://blog.chromium.org/feeds/posts/default</A><F>RSS</F></FEED></X></ITEM>
   <ITEM><X><T>developer tools</T><A>https://developers.google.com/chrome-developer-tools/</A><L>en</L><F>HTML</F></X>:
     <X><T>shortcuts</T><A>https://developers.google.com/chrome-developer-tools/docs/shortcuts</A><L>en</L><F>HTML</F></X></ITEM>
@@ -51,8 +49,7 @@ Browser statistics:
 <X><T>W3Counter</T><A>http://www.w3counter.com/globalstats.php</A><L>en</L><F>HTML</F></X>,
 <X><T>Market Share</T><A>http://marketshare.hitslink.com/report.aspx?qprid=0</A><L>en</L><F>HTML</F></X>,
 <X><T>the counter.com</T><A>http://www.thecounter.com/stats/</A><L>en</L><F>HTML</F></X>,
-<X><T>Browser News</T><A>http://www.upsdell.com/BrowserNews/stat_trends.htm</A><L>en</L><F>HTML</F></X>,
-<X><T>Google Browser Size</T><A>http://browsersize.googlelabs.com</A><L>en</L><F>HTML</F></X><BR/>
+<X><T>Browser News</T><A>http://www.upsdell.com/BrowserNews/stat_trends.htm</A><L>en</L><F>HTML</F></X><BR/>
 
 <X><T>Secrets of the Browser Developer Tools</T><A>http://devtoolsecrets.com</A><L>en</L><F>HTML</F></X><BR/>
 <X><T>QuirksMode.org</T><A>http://www.quirksmode.org</A><L>en</L><F>HTML</F></X><BR/>
@@ -64,7 +61,7 @@ Browser statistics:
 
   <ITEM><ARTICLE><X><T>Cookie Specification Vulnerabilities</T><A>http://www.onlamp.com/pub/a/security/2004/04/01/cookie_vulnerabilities.html</A><L>en</L><F>HTML</F></X><AUTHOR>Alexander Prohorenko</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE><COMMENT>A simple presentation of cookie specified limits and how to use them to perform cookie flooding.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Browser makers hope WebGL will remake 3D</T><A>http://news.cnet.com/8301-30685_3-10416966-264.html</A><L>en</L><F>HTML</F></X><AUTHOR>Stephen Shankland</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>Yet another try to standardize 3D in Browsers.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>Browserscope &amp; SpriteMe</T><A>http://www.youtube.com/watch?v=pNfRL-TwzZY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>52</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR>Lindsey Simon</AUTHOR><AUTHOR>Steve Souders</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE><COMMENT>A presentation of <X><T>Browserscope</T><A>http://browserscope.org</A><L>en</L><F>HTML</F></X>, a browser benchmark ran by the community, and <X><T>SpriteMe</T><A>http://spriteme.org</A><L>en</L><F>HTML</F></X>, a page analyzer proposing some CSS sprites to accelerate the download.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Browserscope &amp; SpriteMe</T><A>http://www.youtube.com/watch?v=pNfRL-TwzZY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>52</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR>Lindsey Simon</AUTHOR><AUTHOR>Steve Souders</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE><COMMENT>A presentation of <X><T>Browserscope</T><A>http://www.browserscope.org</A><L>en</L><F>HTML</F></X>, a browser benchmark ran by the community, and <X><T>SpriteMe</T><A>http://spriteme.org</A><L>en</L><F>HTML</F></X>, a page analyzer proposing some CSS sprites to accelerate the download.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Here comes Yahoo's own Web browser -- Axis</T><A>http://news.cnet.com/8301-1023_3-57439724-93/here-comes-yahoos-own-web-browser-axis/</A><L>en</L><F>HTML</F></X><AUTHOR>Rafe Needleman</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE><COMMENT>A browser focused on search.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Secrets of the
 Browser Developer Tools</T><A>http://www.83rdstasis.net/devtoolsecrets/slides/london-web</A><L>en</L><F>HTML</F></X><AUTHOR>Andi Smith</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE><COMMENT>Tips and tricks about dev tools.</COMMENT></ARTICLE></ITEM>
@@ -87,7 +84,7 @@ Browser Developer Tools</T><A>http://www.83rdstasis.net/devtoolsecrets/slides/lo
   </BLIST></ITEM>
 
   <ITEM><BLIST><TITLE>Mozilla</TITLE>
-    <ITEM><ARTICLE><X><T>Mozilla at One: A Look Back and Ahead</T><A>http://www.mozilla.org/mozilla-at-one.html</A><L>en</L><F>HTML</F></X><AUTHOR>Frank Hecker</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE><COMMENT>A Mozilla status one year after the source opening...</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Mozilla at One: A Look Back and Ahead</T><A>http://www-archive.mozilla.org/mozilla-at-one.html</A><L>en</L><F>HTML</F></X><AUTHOR>Frank Hecker</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE><COMMENT>A Mozilla status one year after the source opening...</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Remote Control of Unix Netscape</T><A>http://www.see.ed.ac.uk/~mfg/work/x-remote-proto.html</A><L>en</L><F>HTML</F></X><AUTHOR>Jamie Zawinski</AUTHOR><DATE><YEAR>1994</YEAR><MONTH>12</MONTH></DATE><COMMENT>This paper describes how to control an existing Nestcape process.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Configuring Netscape Mail on Unix: Why the Content-Length Format is Bad</T><A>http://www.jwz.org/doc/content-length.html</A><L>en</L><F>HTML</F></X><AUTHOR>Jamie Zawinski</AUTHOR><DATE><YEAR>1997</YEAR></DATE><COMMENT>Jamie explains the mess with the mail box formats.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
@@ -167,7 +164,7 @@ Browser Developer Tools</T><A>http://www.83rdstasis.net/devtoolsecrets/slides/lo
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Native Client</TITLE>
       <ITEM><ARTICLE><X><T>Google Faculty Summit 2009: Frontiers in Systems Research</T><A>http://www.youtube.com/watch?v=zgng4C18nNk</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>52</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR>Brad Chen</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE><COMMENT>A high level introduction to NaCl.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Native Client: A Sandbox for Portable, Untrusted x86 Native Code</T><A>http://nativeclient.googlecode.com/svn/trunk/src/native_client/documentation/nacl_paper.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Bennet Yee</AUTHOR><AUTHOR>David Sehr</AUTHOR><AUTHOR>Gregory Dardyk</AUTHOR><AUTHOR>J. Bradley Chen</AUTHOR><AUTHOR>Robert Muth</AUTHOR><AUTHOR>Tavis Ormandy</AUTHOR><AUTHOR>Shiki Okasaka</AUTHOR><AUTHOR>Neha Narula</AUTHOR><AUTHOR>Nicholas Fullagar</AUTHOR><DATE><YEAR>2009</YEAR></DATE><COMMENT>A description of the NaCl inner sandbox: segmented memory is used, binary is disassembled for validation against a subset of legal instruction.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Native Client: A Sandbox for Portable, Untrusted x86 Native Code</T><A>http://static.googleusercontent.com/media/research.google.com/fr//pubs/archive/34913.pdfs</A><L>en</L><F>PDF</F></X><AUTHOR>Bennet Yee</AUTHOR><AUTHOR>David Sehr</AUTHOR><AUTHOR>Gregory Dardyk</AUTHOR><AUTHOR>J. Bradley Chen</AUTHOR><AUTHOR>Robert Muth</AUTHOR><AUTHOR>Tavis Ormandy</AUTHOR><AUTHOR>Shiki Okasaka</AUTHOR><AUTHOR>Neha Narula</AUTHOR><AUTHOR>Nicholas Fullagar</AUTHOR><DATE><YEAR>2009</YEAR></DATE><COMMENT>A description of the NaCl inner sandbox: segmented memory is used, binary is disassembled for validation against a subset of legal instruction.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>PNaCl: Portable Native Client Executables</T><A>http://nativeclient.googlecode.com/svn/data/site/pnacl.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Alan Donovan</AUTHOR><AUTHOR>Robert Muth</AUTHOR><AUTHOR>Brad Chen</AUTHOR><AUTHOR>David Sehr</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>22</DAY></DATE><COMMENT>Google has chosen LLVM for allowing creation of portable native Web applications.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Games, apps and runtimes come to Native Client</T><A>http://blog.chromium.org/2011/12/games-apps-and-runtimes-come-to-native.html</A><L>en</L><F>HTML</F></X><AUTHOR>Christian Stefansen</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE><COMMENT>Google is promoting Native Client to game developers.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Native Client Event: December 8, 2011</T><A>http://www.youtube.com/watch?v=g3aBfkFbPWk</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>34</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR>Ian Ellison Taylor</AUTHOR><AUTHOR>Brad Chen</AUTHOR><AUTHOR>Erik Kay</AUTHOR><AUTHOR>Christian Stefansen</AUTHOR><AUTHOR>Yoichi Wada</AUTHOR><AUTHOR>Amir Rao</AUTHOR><AUTHOR>Neil Wadhawan</AUTHOR><AUTHOR>Oren Tversky</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE><COMMENT>The video corresponding to the previous blog announcement.</COMMENT></ARTICLE></ITEM>
