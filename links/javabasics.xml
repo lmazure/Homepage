@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 
 tutorials:
@@ -123,8 +123,8 @@ tutorials:
 
 <ITEM><BLIST><TITLE>XML</TITLE>
   <ITEM><ARTICLE><X status='dead'><T>Simplify document handler programs with the SAX parser - A design strategy for SAX parsers</T><A>http://www.ibm.com/developerworks/xml/library/x-dochan.html</A><L>en</L><F>HTML</F></X><AUTHOR>Gianluigi Colaiacomo</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE><COMMENT>I don't believe the solution proposed by the author, creating one class per node type and using reflection to instantiate it, is usable for non trivial XML schemas where the XML elements are not fully independent.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X status='dead'><T>XML Matters: The XOM Java XML API - A rigorously correct tree-oriented XML model</T><A>http://www.ibm.com/developerworks/xml/library/x-matters32.html</A><L>en</L><F>HTML</F></X><AUTHOR>David Mertz</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>A cleaner DOM...</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>Parsing, indexing, and searching XML with Digester and Lucene - These open source projects can ease your XML-handling tasks</T><A>http://www.ibm.com/developerworks/library/j-lucene</A><L>en</L><F>HTML</F></X><AUTHOR>Otis Gospodnetic</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>3</DAY></DATE><COMMENT>Disgester is a simple to use parser ala SAX. Lucene is a text indexer.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>XML Matters: The XOM Java XML API - A rigorously correct tree-oriented XML model</T><A>http://www.ibm.com/developerworks/xml/library/x-matters32.html</A><L>en</L><F>HTML</F></X><AUTHOR>David Mertz</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>A cleaner DOM...</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X status='dead'><T>Parsing, indexing, and searching XML with Digester and Lucene - These open source projects can ease your XML-handling tasks</T><A>http://www.ibm.com/developerworks/library/j-lucene</A><L>en</L><F>HTML</F></X><AUTHOR>Otis Gospodnetic</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>3</DAY></DATE><COMMENT>Disgester is a simple to use parser ala SAX. Lucene is a text indexer.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>What's new in JAXP 1.3? Part 1 - An overview of the technology, and a look at parsing API changes and a new validation API</T><A>http://www.ibm.com/developerworks/xml/library/x-jaxp13a.html</A><L>en</L><F>HTML</F></X><AUTHOR>Neil Grahamand</AUTHOR><AUTHOR>Elena Litani</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>11</MONTH><DAY>9</DAY></DATE><COMMENT>A description of the new features of JAXP1.3 and some details on the <CODEROUTINE>javax.xml.validation</CODEROUTINE> package enabling validation support.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X quality='1'><T>The Java XML Validation API -- Check your documents for conformance to schemas</T><A>http://www.ibm.com/developerworks/xml/library/x-javaxmlvalidapi.html</A><L>en</L><F>HTML</F></X><AUTHOR>Elliotte Rusty Harold</AUTHOR><AUTHOR>Elena Litani</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE><COMMENT>A good introduction to the of <CODEROUTINE>javax.xml.validation</CODEROUTINE> package.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
