@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix</TITLE>
 <PATH>links/unix.xml</PATH>
-<DATE><YEAR>2012</YEAR><MONTH>9</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 
 <X><T>The Open Group</T><A>http://www.opengroup.org/</A><L>en</L><F>HTML</F></X>
@@ -76,7 +76,7 @@ curses:
   <ITEM><BLIST><TITLE>development</TITLE>
     <ITEM><ARTICLE><X><T>Getting Started With POSIX Threads</T><A>http://parallel.hpclab.ceid.upatras.gr/pthreads.pdf</A><L>en</L><F>PDF</F></X><X><T>Getting Started With POSIX Threads</T><A>http://www.lix.polytechnique.fr/~liberti/public/computing/parallel/threads/threads-tutorial/tutorial.html</A><L>en</L><F>HTML</F></X><AUTHOR>Tom Wagner</AUTHOR><AUTHOR>Don Towsley</AUTHOR><DATE><YEAR>1995</YEAR><MONTH>7</MONTH><DAY>19</DAY></DATE><COMMENT>A not-so-good introduction on <CODEROUTINE>ptreads</CODEROUTINE> with a not-so-good semaphore library.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Why LD_LIBRARY_PATH is bad</T><A>http://xahlee.org/UnixResource_dir/_/ldpath.html</A><L>en</L><F>HTML</F></X><AUTHOR>David Barr</AUTHOR><COMMENT>A description of the usual problems with using LD_LIBRARY_PATH...</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Introduction to Interprocess Communication Using Named Pipes</T><A>http://developers.sun.com/solaris/articles/named_pipes.html</A><L>en</L><F>HTML</F></X><AUTHOR>Faisal Faruqui</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X status='dead'><T>Introduction to Interprocess Communication Using Named Pipes</T><A>http://developers.sun.com/solaris/articles/named_pipes.html</A><L>en</L><F>HTML</F></X><AUTHOR>Faisal Faruqui</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Use reentrant functions for safer signal handling - How and when to employ reentrancy to keep your code bug free</T><A>http://www.ibm.com/developerworks/library/l-reent.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dipak K. Jha</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A presentation of the problem of routine reentrancy. The description of the problems is fine, but the proposed solutions are not so clear.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>filesystems</TITLE>
