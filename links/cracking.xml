@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 
 hacker sites:
@@ -132,6 +132,10 @@ SHA-1
       <ITEM><ARTICLE><X><T>Cross-site scripting - Use a custom tag library to encode dynamic content</T><A>http://www.ibm.com/developerworks/tivoli/library/s-csscript/</A><L>en</L><F>HTML</F></X><AUTHOR>Paul S. Lee</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>9</MONTH></DATE><COMMENT>After a quick presentation of some types of cross-site scripting attacks, the author describes how to easily avoid them in JSP by using a private tag.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
 
+    <ITEM><BLIST><TITLE>cross-site request forgery</TITLE>
+      <ITEM><ARTICLE><X><T>Prevent cross-site request forgery: Know the hidden danger in your browser tabs -- Learn to prevent cross-site request forgery or your clients might do a hacker's bidding without knowing it</T><A>https://www.ibm.com/developerworks/library/se-appscan-detect-csrf-xsrf/</A><L>en</L><F>HTML</F></X><AUTHOR>Paul Ionescu</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+
     <ITEM><BLIST><TITLE>race conditions</TITLE>
       <ITEM><ARTICLE><X status='dead'><T>Secure programmer: Prevent race conditions - Resource contention can be used against you</T><A>http://www.ibm.com/developerworks/linux/library/l-sprace.html</A><L>en</L><F>HTML</F></X><AUTHOR>David A. Wheeler</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>Some advice on avoiding race condition attacks when using files.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -152,7 +156,7 @@ SHA-1
       <ITEM><ARTICLE><X status='dead'><T>Email Wiretapping</T><A>http://www.privacyfoundation.org/privacywatch/report.asp?id=54&amp;action=0</A><L>en</L><F>HTML</F></X><AUTHOR>Richard M. Smith</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>Even more clever, use the Web bugs to trace the forward and added text to an email you have sent.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
 
-    <ITEM><BLIST><TITLE>Denial of Service</TITLE>
+    <ITEM><BLIST><TITLE>denial of Service</TITLE>
       <ITEM><ARTICLE><X><T>Denial of Service via Algorithmic Complexity Attacks</T><A>http://web.archive.org/web/20070202204633/www.cs.rice.edu/~scrosby/hash/CrosbyWallach_UsenixSec2003/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Scott A. Crosby</AUTHOR><AUTHOR>Dan S. Wallach</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>A DoS based on finding the worst case of use of a hash table, the authors propose their own version of a universal hashing to fix the issue.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality='-1'><T>Protect your Apache server from DoS attacks</T><A>http://www.techrepublic.com/article/protect-your-apache-server-from-dos-attacks/</A><L>en</L><F>HTML</F></X><AUTHOR>Scott Robinson</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>8</MONTH><DAY>12</DAY></DATE><COMMENT>Some information on Apache and DoS attacks, but this article is not very clear and informative.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
