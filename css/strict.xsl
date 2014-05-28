@@ -226,7 +226,10 @@
         <xsl:attribute name="target"><xsl:text>_self</xsl:text></xsl:attribute>
       </xsl:otherwise>
     </xsl:choose>
-    <xsl:value-of select="./T"/>
+    <span class="linktitle"><xsl:value-of select="./T"/></span>
+    <xsl:for-each select="./ST">
+      <xsl:text> &#8212; </xsl:text><span class="linksubtitle"><xsl:value-of select="."/></span>
+    </xsl:for-each>
   </xsl:element>
   <xsl:for-each select="./FEED">
     <xsl:element name="a">
