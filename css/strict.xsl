@@ -7,7 +7,7 @@
   <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
   <html>
     <head>
-	<link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <title>
       <xsl:value-of select="/PAGE/TITLE"/>
@@ -25,7 +25,7 @@
       </div>
       <div id="body">
         <xsl:if test="@status='unmaintained'">
-		  <div id="unmaintained">
+          <div id="unmaintained">
             <xsl:text>This page is unmaintained. It may contain out-of-date data, broken links...</xsl:text>
           </div>
         </xsl:if>
@@ -555,7 +555,7 @@
         </xsl:otherwise>
       </xsl:choose>
     </td>
-	<td>
+    <td>
       <xsl:element name="a">
         <xsl:attribute name="href">../hack/map.html</xsl:attribute>
         <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>map</xsl:element>
@@ -576,7 +576,7 @@
         </xsl:for-each>
       </xsl:if>
     </td>
-	<td>
+    <td>
       <xsl:element name="a">
         <xsl:attribute name="href">javascript:do_email()</xsl:attribute>
         <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>contact me</xsl:element>
