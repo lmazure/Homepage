@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>2D/3D graphics</TITLE>
 <PATH>links/3d.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE>tools, libraries source repositories:</TITLE>
@@ -47,11 +47,16 @@
 
 <LINE/>
 
-<BLIST><TITLE><B>articles:</B></TITLE>
-  <ITEM><BLIST><TITLE>OpenGL:</TITLE>
+<BLIST><TITLE><B>articles</B></TITLE>
+  <ITEM><BLIST><TITLE>OpenGL</TITLE>
     <ITEM><ARTICLE><X status='zombie'><T>OpenGL Optimizer White Paper</T><A>http://www.sgi.co.jp/software/optimizer/whitepaper.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>1997</YEAR></DATE><COMMENT>This paper lists and desribes the modules of OpenGL Optimizer: high order representations, tessellation simplifiers, multiprocessing harness, scene graph...</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>SVG:</TITLE>
+  <ITEM><BLIST><TITLE>WebGL</TITLE>
+    <ITEM><ARTICLE><X><T>3D development with WebGL, Part 1: Introducing WebGL</T><ST>Unleash the power of 3D hardware in your browser applications</ST><A>http://www.ibm.com/developerworks/web/library/wa-webgl1/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Sing Li</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>10</DAY></DATE><COMMENT>The history of WebGL and how to use it directly (defining the mesh and color, setting up a camera, defining the shaders...).</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>3D development with WebGL, Part 2: Code less, do more with WebGL libraries</T><ST>Tame WebGL with higher-level libraries: Three.js and SceneJS</ST><A>http://www.ibm.com/developerworks/web/library/wa-webgl2/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Sing Li</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE><COMMENT>Using high level libraries (Three.js and SceneJS) for a much easier implementation. Using tween.js for interpolation.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>3D development with WebGL, Part 3: Add user interaction</T><ST>Creating 3D apps and data visualizations</ST><A>http://www.ibm.com/developerworks/web/library/wa-webgl3/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Sing Li</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>How to get user input in Three.js and SceneJS for several types of devices (mouse, Leap Motion Controller...).</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>SVG</TITLE>
     <ITEM><ARTICLE><X><T>An Introduction to Scalable Vector Graphics</T><A>http://www.xml.com/pub/a/2001/03/21/svg.html</A><L>en</L><F>HTML</F></X><AUTHOR>J. David Eisenberg</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>3</MONTH><DAY>21</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Hot and Fresh Technology for the Enterprise</T><A>http://www.xml.com/pub/a/2002/04/17/svg.html</A><L>en</L><F>HTML</F></X><AUTHOR>Antoine Quint</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>4</MONTH><DAY>17</DAY></DATE><COMMENT>The current status of SVG in enterprise applications.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Going Mobile With SVG: Standards</T><A>http://www.xml.com/pub/a/2004/06/16/mobilesvg.html</A><L>en</L><F>HTML</F></X><AUTHOR>Antoine Quint</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>16</DAY></DATE><COMMENT>SVG defines now three tiers: tiny, basic and full.</COMMENT></ARTICLE></ITEM>
