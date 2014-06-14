@@ -1,9 +1,9 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
-<TITLE>Windows 2000 / XP</TITLE>
+<TITLE>Windows 2000 / XP / Seven</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 
 <BLIST>
@@ -18,6 +18,10 @@ Unselect <CODEMENU>Utiliser des menus personnalis&#xE9;s</CODEMENU>
 
 <ITEM>
 <CODEROUTINE>cmd.exe</CODEROUTINE> replaces <CODEROUTINE>command.com</CODEROUTINE>.
+</ITEM>
+
+<ITEM>
+<CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
 </ITEM>
 
 <ITEM>
