@@ -12,16 +12,12 @@ my $lib_dir;
 if ( $hostname eq "Kirikou" ) { $lib_dir = "C:/Users/Laurent/Documents/lib"; }
 if ( $hostname eq "bianca" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
 if ( $hostname eq "samsung" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
-if ( $hostname eq "DEVELOPPEMENT21" ) { $lib_dir = "D:/Docs/lib"; }
-if ( $hostname eq "lapt022" ) { $lib_dir = "E:/lib"; }
-if ( $hostname eq "LU01LAP053" ) { $lib_dir = "F:/lib"; }
 if ( $hostname eq "LU01LAP161" ) { $lib_dir = "C:/Users/blam/lib"; }
 die("don't know where are the Java libraries") if ( ! defined($lib_dir) );
 
 print "$0\n";
 my $base_dir = $0;
 $base_dir =~ s{^(.*)\\[^\\]*\\[^\\]*$}{$1};
-#my $xalan_dir = $base_dir."/../lib/xalan-j_2_7_1";
 my $xalan_dir = $lib_dir."/xalan-j_2_7_1";
 my $start_dir = $base_dir;
 my $xlst_file = $start_dir."/css/strict.xsl";
@@ -43,15 +39,15 @@ sub to_html {
        ( stat($xlst_file)->mtime >= stat($outfile)->mtime ) ||
        ( stat($map_file)->mtime >= stat($outfile)->mtime ) ) {
     my @cmds = ("java",
-		"-cp",
-		"$xalan_dir/xalan.jar",
-		"org.apache.xalan.xslt.Process",
-		"-IN",
-		"$infile",
-		"-XSL",
-		"$xlst_file",
-		"-OUT",
-		"$outfile");
+        "-cp",
+        "$xalan_dir/xalan.jar",
+        "org.apache.xalan.xslt.Process",
+        "-IN",
+        "$infile",
+        "-XSL",
+        "$xlst_file",
+        "-OUT",
+        "$outfile");
     if (system(@cmds)) {
         unlink $outfile;
         die("run Java ($!)");
