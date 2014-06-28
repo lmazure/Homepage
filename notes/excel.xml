@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Excel</TITLE>
 <PATH>notes/excel.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><B><U>User interface</U></B></TITLE>
@@ -132,8 +132,7 @@ Some examples:<BR/>
 <CODEROUTINE>R2C2</CODEROUTINE> An absolute reference to the cell in the second row and in the second column<BR/>
 <CODEROUTINE>R[-1]</CODEROUTINE> A relative reference to the entire row above the active cell<BR/>
 <CODEROUTINE>R</CODEROUTINE> An absolute reference to the current row</ITEM>
-<ITEM><BLIST><TITLE>dynamical references<BR/>
-use <CODEROUTINE>INDIRECT</CODEROUTINE>.</TITLE>
+<ITEM><BLIST><TITLE>dynamical references<BR/>use <CODEROUTINE>INDIRECT</CODEROUTINE>.</TITLE>
 <ITEM>Use <CODEROUTINE>INDIRECT</CODEROUTINE><BR/>
 For example, we look up the value of the cell <CODEROUTINE>B3</CODEROUTINE> in a matrix whose name is defined in <CODEROUTINE>B2</CODEROUTINE>:
 <CODESAMPLE>=RECHERCHEV(B3,INDIRECT(B$2),2,FAUX)</CODESAMPLE></ITEM>

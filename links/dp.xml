@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <X><T>Cetus</T><A>http://www.sente.ch/cetus/oo_patterns.html</A><L>en</L><F>HTML</F></X>
@@ -28,8 +28,7 @@
 <BLIST><TITLE>some design patterns</TITLE>
 <ITEM><BLIST><TITLE>creational patterns</TITLE>
 <ITEM><BLIST><TITLE>Abstract Factory (a.k.a. Kit): Provide an interface for creating families of related or dependent objects without specifying their concrete classes.</TITLE>
-<ITEM><ARTICLE><X><T>Abstract
- Factory</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/abstractFactory.html</A><L>en</L><F>PDF</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Abstract Factory</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/abstractFactory.html</A><L>en</L><F>PDF</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
 <ITEM><ARTICLE><X><T>Abstract Factory Design Pattern</T><A>http://www.castle-cadenza.demon.co.uk/abfact.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
 <ITEM><ARTICLE><X><T>Creating Truly Maintainable Class Factories</T><A>http://www.drdobbs.com/creating-truly-maintainable-class-factor/184401309</A><L>en</L><F>HTML</F></X><AUTHOR>Early Ehlinger</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>11</MONTH></DATE><COMMENT>A factory implementation using dynamic library loading.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
@@ -39,11 +38,8 @@
 <ITEM><ARTICLE><X><T>Builder Pattern</T><A>http://www.castle-cadenza.demon.co.uk/builder.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Factory Method (a.k.a. Virtual Constructor): Define an interface for creating an object, but let subclasses decide which class to instanciate. Factory Method lets a class defer instanciation to subclasses.</TITLE>
-<ITEM><ARTICLE><X><T>Factory
- Method</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/factoryMethod.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-<ITEM><ARTICLE><X status='dead'><T>An
- Example of the Factory Method</T><A>http://industriallogic.com/patterns/examples/factory.html</A><L>en</L><F>HTML</F></X><AUTHOR>Joshua Kerievsky</AUTHOR><COMMENT>An example using the factory method <CODEROUTINE>Component::createImage</CODEROUTINE>
- from Java.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Factory Method</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/factoryMethod.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X status='dead'><T>An Example of the Factory Method</T><A>http://industriallogic.com/patterns/examples/factory.html</A><L>en</L><F>HTML</F></X><AUTHOR>Joshua Kerievsky</AUTHOR><COMMENT>An example using the factory method <CODEROUTINE>Component::createImage</CODEROUTINE> from Java.</COMMENT></ARTICLE></ITEM>
 <ITEM><ARTICLE><X><T>Factory Method Pattern</T><A>http://www.castle-cadenza.demon.co.uk/factory.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Inversion of control</TITLE>
@@ -105,8 +101,7 @@
 <ITEM><ARTICLE><X><T>Proxy</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/proxy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Skin: Separate the presentation style of an application from its logic.</TITLE>
-<ITEM><ARTICLE><X><T>The Skin Pattern</T><A>http://ootips.org/yonat/Skin.pdf</A><L>en</L><F>PDF</F></X><X><T>The Skin Pattern</T><A>http://hillside.net/plop/plop2k/proceedings/Sharon/Sharon.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Rani
-Pinchuk</AUTHOR><AUTHOR>Yonat Sharon</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>The complete presentation of the pattern.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>The Skin Pattern</T><A>http://ootips.org/yonat/Skin.pdf</A><L>en</L><F>PDF</F></X><X><T>The Skin Pattern</T><A>http://hillside.net/plop/plop2k/proceedings/Sharon/Sharon.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Rani Pinchuk</AUTHOR><AUTHOR>Yonat Sharon</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>The complete presentation of the pattern.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Streams: Process a stream of information by feeding it through a network of independent and reusable processing units.</TITLE>
 <ITEM><ARTICLE><X><T>Streams Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Streams.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
@@ -114,8 +109,7 @@ Pinchuk</AUTHOR><AUTHOR>Yonat Sharon</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMM
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>behavioral patterns</TITLE>
 <ITEM><BLIST><TITLE>Atomizer (a.k.a. Serializer): Read arbitrarily complex object structures from and write them to varying data structure-based backends. Efficiently store and retrieve objects from different backends, such as flat files, relational databases, and RPC buffers.</TITLE>
-<ITEM><ARTICLE><X><T>Serializer</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-serializer.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf
-Siberski</AUTHOR><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Daniel Megert</AUTHOR><AUTHOR>Heinz Z&#xFC;llighoven</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This is a full description of the pattern.</COMMENT></ARTICLE></ITEM>
+<ITEM><ARTICLE><X><T>Serializer</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-serializer.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf Siberski</AUTHOR><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Daniel Megert</AUTHOR><AUTHOR>Heinz Z&#xFC;llighoven</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This is a full description of the pattern.</COMMENT></ARTICLE></ITEM>
 <ITEM><ARTICLE><X><T>Atomizer Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Atomizer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Chain of Responsibility: Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.</TITLE>

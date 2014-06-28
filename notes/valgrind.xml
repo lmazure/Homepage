@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Valgrind</TITLE>
 <PATH>notes/valgrind.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <B><U>installation</U></B> (using csh)
@@ -48,8 +48,7 @@
 <BR/>
 <BLIST><TITLE><B><U>Memcheck</U></B></TITLE>
 <ITEM><BLIST>
-<TITLE>Every bit in memory or in the CPU has an associated valid-value (V) bit. For integer registers, the validity of the bits is check only when they are used to generate a memory address, to decide control flow, and as values of system calls (loading undefined bits in the registers and adding them is not an error). For floating registers, the control is simpler: it is done at the load instruction (i.e. all bits loaded in a floating register must be defined). Once the V bits for a value in the CPU have been checked, they are then set to indicate validity. This avoids long chains of errors.<BR/>
-Every byte in memory, but not in the CPU, have an associated valid-address (A) bit.</TITLE>
+<TITLE>Every bit in memory or in the CPU has an associated valid-value (V) bit. For integer registers, the validity of the bits is check only when they are used to generate a memory address, to decide control flow, and as values of system calls (loading undefined bits in the registers and adding them is not an error). For floating registers, the control is simpler: it is done at the load instruction (i.e. all bits loaded in a floating register must be defined). Once the V bits for a value in the CPU have been checked, they are then set to indicate validity. This avoids long chains of errors.<BR/>Every byte in memory, but not in the CPU, have an associated valid-address (A) bit.</TITLE>
 <ITEM>When the program starts, all the global data areas are marked as accessible.</ITEM>
 <ITEM>When the program does malloc/new, the A bits for exactly the allocated area, and not a byte more, are marked as accessible.</ITEM>
 <ITEM>Upon freeing the area the A bits are changed to indicate inaccessibility.</ITEM>
