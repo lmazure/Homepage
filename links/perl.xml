@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Perl</TITLE>
 <PATH>links/perl.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 
 <X><T>Yahoo page</T><A>http://dir.yahoo.com/Computers_and_Internet/Programming_and_Development/Languages/Perl/</A><L>en</L><F>HTML</F></X>,
@@ -29,11 +29,11 @@
 <X><T>Perl 5 Reference Guide</T><A>http://www.rexswain.com/perl5.html</A><L>en</L><F>HTML</F></X><BR/>
 
 
-<BLIST><TITLE>scripts</TITLE>
+<BLIST><TITLE>Scripts</TITLE>
   <ITEM><X status='obsolete'><T>Perl Power Tools</T><A>http://search.cpan.org/dist/ppt/</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
-<BLIST><TITLE>modules</TITLE>
+<BLIST><TITLE>Modules</TITLE>
   <ITEM><X><T>libwww-perl</T><A>http://gitorious.org/libwww-perl</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>SOAP::Lite</T><A>http://www.soaplite.com/</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>HTML::Mason</T><A>http://www.masonhq.com/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -50,14 +50,14 @@ books and 'zines:
 <BR/>
 
 
-<BLIST><TITLE>articles</TITLE>
-  <ITEM><BLIST><TITLE>books</TITLE>
+<BLIST><TITLE>Articles</TITLE>
+  <ITEM><BLIST><TITLE>Books</TITLE>
     <ITEM><ARTICLE><X><T>Perl 5 by example</T><A>http://affy.blogspot.com/p5be/index.htm</A><L>en</L><F>HTML</F></X><AUTHOR>David Medinets</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>Yet another book on Perl.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>introduction</TITLE>
+  <ITEM><BLIST><TITLE>Introduction</TITLE>
     <ITEM><ARTICLE><X><T>Getting started with Perl, Part 1</T><A>http://www.kingcomputerservices.com/unix_101/getting_started_with_perl_part_1.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Mo Budlong</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>5</MONTH></DATE><COMMENT>A quick introduction to functions, arrays and file reading in Perl.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Getting started with Perl, Part 2</T><A>http://www.kingcomputerservices.com/unix_101/getting_started_with_perl_part_2.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Mo Budlong</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>6</MONTH></DATE><COMMENT>Mo describes how to declare a routine, call it and get its parameters, how to use named blocks and how to open a file in write, read or append mode.</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>the road to better programming</TITLE>
+    <ITEM><BLIST><TITLE>The road to better programming</TITLE>
       <ITEM><ARTICLE><X><T>The road to better programming: Introduction and chapter 1 - Developing coding guidelines</T><A>http://www.opensourcetutorials.com/tutorials/Server-Side-Coding/Perl/developing-coding-guidelines/page1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Teodor Zlatanov</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>11</MONTH></DATE><COMMENT>An overview of the author book and the interest of code guidelines.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The road to better programming: Chapter 2 - Commenting your code</T><A>http://www.opensourcetutorials.com/tutorials/Server-Side-Coding/Perl/commenting-your-code/page1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Teodor Zlatanov</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>11</MONTH></DATE><COMMENT>How to comment code.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The road to better programming: Chapter 3 - Loops, clean code, and the Perl idioms</T><A>http://www.opensourcetutorials.com/tutorials/Server-Side-Coding/Perl/loops-clean-code-perl-idioms/page1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Teodor Zlatanov</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>12</MONTH></DATE><COMMENT>Choosing the right flow controls: loops, tests...</COMMENT></ARTICLE></ITEM>
@@ -68,7 +68,7 @@ books and 'zines:
       <ITEM><ARTICLE><X><T>The road to better programming: Chapter 8 - The top-level and compound-class parsers - cfperl learns to talk</T><A>http://www.opensourcetutorials.com/tutorials/Server-Side-Coding/Perl/top-level-compound-class-parsers/page1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Teodor Zlatanov</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE><COMMENT>Parsing the configuration files with <CODEROUTINE>Parse::RecDescent</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>core</TITLE>
+  <ITEM><BLIST><TITLE>Core</TITLE>
     <ITEM><ARTICLE><X><T>Little Acts of Magic</T><A>http://www.stonehenge.com/merlyn/UnixReview/col34.html</A><L>en</L><F>HTML</F></X><AUTHOR>Randal L. Schwartz</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>10</MONTH></DATE><COMMENT>The usual Perl tricks to number the lines, reverse their order, count word occurences...</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>One-liners 101</T><A>http://www.ibm.com/developerworks/linux/library/l-p101/</A><L>en</L><F>HTML</F></X><AUTHOR>Teodor Zlatanov</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>4</MONTH></DATE><COMMENT>A presentation of the command line flags useful to write one liners.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Cultured Perl: One-liners 102</T><ST>More one-line Perl scripts</ST><A>http://www.ibm.com/developerworks/linux/library/l-p102.html</A><L>en</L><F>HTML</F></X><AUTHOR>Teodor Zlatanov</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>3</MONTH><DAY>12</DAY></DATE><COMMENT>Using Perl to extract the lines between 10 and 20, reversing the content of a file...</COMMENT></ARTICLE></ITEM>
@@ -76,7 +76,7 @@ books and 'zines:
     <ITEM><ARTICLE><X><T>Hidden Treasures of the Perl Core</T><A>http://www.perl.com/pub/a/2003/05/29/treasures.html</A><L>en</L><F>HTML</F></X><AUTHOR>Casey West</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE><COMMENT>Some useful but badly known features of core modules.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Hidden Treasures of the Perl Core, part II</T><A>http://www.perl.com/pub/a/2003/06/19/treasures.html</A><L>en</L><F>HTML</F></X><AUTHOR>Casey West</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>19</DAY></DATE><COMMENT>Except for the <CODEROUTINE>constant</CODEROUTINE> pragma, the described modules (<CODEROUTINE>Attribute::Handlers</CODEROUTINE>, <CODEROUTINE>B::Deparse</CODEROUTINE>, <CODEROUTINE>Class::Struct</CODEROUTINE>...) are less commonly useful than the ones described in the previous article.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Working with localtime in Perl</T><A>http://www.users.voicenet.com/%7Ecorr/macsupt/macperl/localtime.html</A><L>en</L><F>HTML</F></X><AUTHOR>Paul Corr</AUTHOR><DATE><YEAR>1999</YEAR></DATE><COMMENT><CODEROUTINE>localtime</CODEROUTINE> for the dummies</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>sort</TITLE>
+    <ITEM><BLIST><TITLE>Sort</TITLE>
       <ITEM><ARTICLE><X><T>Far More Than Everything You've Ever Wanted to Know About Sorting</T><A>ftp://rpmfind.net/linux/redhat-archive/6.2/cpan/CPAN-archive/doc/FMTEYEWTK/postscript/sorting.ps.gz</A><L>en</L><F>PostScript</F></X><AUTHOR>Tom Christiansen</AUTHOR><DATE><YEAR>1995</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE><COMMENT>A detail deconstruction of the Schwartzian Transform and how to call the <CODEROUTINE>sort</CODEROUTINE> Unix utility.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A Fresh Look at Efficient Perl Sorting</T><A>http://www.sysarch.com/perl/sort_paper.html</A><L>en</L><F>HTML</F></X><AUTHOR>Uri Guttman</AUTHOR><AUTHOR>Larry Rosler</AUTHOR><COMMENT>The Guttman-Rosler Transform: using concatenated keys and values strings to accelerate the sorting.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -92,7 +92,7 @@ books and 'zines:
     <ITEM><ARTICLE><X><T>Symbol::Approx::Sub: A Module for Bad Typists</T><A>http://www.drdobbs.com/symbolapproxsub-a-module-for-bad-typists/199102032</A><L>en</L><F>HTML</F></X><AUTHOR>Dave Cross</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>5</MONTH></DATE><COMMENT>This module is a joke, but still a good introduction to typeglobs and <CODEROUTINE>AUTOLOAD</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Proxy Objects</T><A>http://www.perl.com/pub/a/2002/08/07/proxyobject.html</A><L>en</L><F>HTML</F></X><AUTHOR>Matt Sergeant</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE><COMMENT>Using the <CODEROUTINE>AUTOLOAD</CODEROUTINE> mechanism to implement the proxy design pattern and resolve the garbage collection issue with circular references.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Bless my referents!</T><A>http://www.perl.com/pub/1999/09/refererents.html</A><L>en</L><F>HTML</F></X><AUTHOR>Damian Conway</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE><COMMENT>A very good introduction to references and objects.</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>tie</TITLE>
+    <ITEM><BLIST><TITLE>Tie</TITLE>
       <ITEM><ARTICLE><X><T>Changing Hash Behaviour with tie</T><A>http://www.perl.com/pub/a/2001/09/04/tiedhash.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dave Cross</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>9</MONTH><DAY>4</DAY></DATE><COMMENT>How to tie a hash.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>How Hashes Really Work</T><A>http://www.perl.com/pub/a/2002/10/01/hashes.html</A><L>en</L><F>HTML</F></X><AUTHOR>Abhijit Menon-Sen</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>Basic computer science: an introduction to hash tables. A Perl example is given with a tied hash.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Cultured Perl: Tied variables - Examples of tying scalar, array, and hash variables through CPAN modules</T><A>http://old.tltsu.ru/archive/doc/programming/python/cp/l-cptied.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Teodor Zlatanov</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>1</MONTH></DATE><COMMENT>Examples of tying a scalar, an array and a hash.</COMMENT></ARTICLE></ITEM>
@@ -102,11 +102,11 @@ books and 'zines:
     <ITEM><ARTICLE><X status='dead'><T>Small observations about the big picture</T><A>http://www.ibm.com/developerworks/linux/library/l-perl1/</A><L>en</L><F>HTML</F></X><AUTHOR>Teodor Zlatanov</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>6</MONTH></DATE><COMMENT>A miscellaneous list of tips: writing loops, using <CODEROUTINE>map</CODEROUTINE> and <CODEROUTINE>grep</CODEROUTINE>...</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Perl Design Patterns</T><A>http://www.perl.com/pub/a/2003/06/13/design1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Phil Crow</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>The author explains that some GoF patterns (Iterator, Decorator, Flyweight, Singleton) are better implemented in Perl by using the core language instead of objects. As usual with Perl proselytes, he explains that is a proof that Perl is the best. Maybe this is just the proof that Perl is the messiest...</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Perl Design Patterns, Part 2</T><A>http://www.perl.com/pub/a/2003/08/07/design2.html</A><L>en</L><F>HTML</F></X><AUTHOR>Phil Crow</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE><COMMENT>The demonstration continues with Strategy, Template Method, Builder, Interpreter.</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>avoiding bugs</TITLE>
+    <ITEM><BLIST><TITLE>Avoiding bugs</TITLE>
       <ITEM><ARTICLE><X><T>Doing It Right the First Time</T><A>http://www.perl.com/pub/2001/01/begperl6.html</A><L>en</L><F>HTML</F></X><AUTHOR>Doug Sheppard</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>The basics to avoid bugs: the <CODEROUTINE>-w</CODEROUTINE> flag, tainting and the "<CODEROUTINE>use strict;</CODEROUTINE>" pragma.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status='dead'><T>How to use safety guards to error proof your Perl scripts</T><A>http://perl.about.com/library/weekly/aa081701a.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Emmie Lewis</AUTHOR><COMMENT>Same type of article describing <CODEROUTINE>-w flag</CODEROUTINE>, <CODEROUTINE>use strict</CODEROUTINE>, and <CODEROUTINE>use diagnostics</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>regular expressions</TITLE>
+    <ITEM><BLIST><TITLE>Regular expressions</TITLE>
       <ITEM><ARTICLE><X><T>Regexp Power</T><A>http://www.perl.com/pub/a/2003/06/06/regexps.html</A><L>en</L><F>HTML</F></X><AUTHOR>Simon Cozens</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>06</DAY></DATE><COMMENT>Multi-line, /x and recursive regular expressions.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Power Regexps, Part II</T><A>http://www.perl.com/pub/a/2003/07/01/regexps.html</A><L>en</L><F>HTML</F></X><AUTHOR>Simon Cozens</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>7</MONTH><DAY>01</DAY></DATE><COMMENT>Lookahead, lookbehind, /g, split and the regular expression modules.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Braille Contractions and Regular Expressions</T><A>http://interglacial.com/~sburke/tpj/as_html/tpj15.html</A><L>en</L><F>HTML</F></X><X><T>Braille Contractions and Regular Expressions</T><A>http://books.google.com/books?id=PidRpr7RgNIC&amp;pg=PA159</A><L>en</L><F>HTML</F></X><AUTHOR>Sean M. Burke</AUTHOR><AUTHOR>Sheri Wells-Jensen</AUTHOR><DATE><YEAR>1999</YEAR></DATE><COMMENT>A nice article which presents how the author studied and implemented the Braille contractions by using some new Perl pattern matching features (lookbehind, lookahead, code).</COMMENT></ARTICLE></ITEM>
@@ -120,18 +120,18 @@ books and 'zines:
     <ITEM><ARTICLE><X><T>Apache::CodeRed</T><A>http://www.onlamp.com/lpt/a//apache/2001/08/16/code_red.html</A><L>en</L><F>HTML</F></X><AUTHOR>Reuven M. Lerner</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>8</MONTH><DAY>16</DAY></DATE><COMMENT>Reuven describes how he wrote a Apache module using Perl to send alarm emails when CodeRed was trying to get into his machine.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Why Not Translate Perl to C?</T><A>http://www.perl.com/pub/a/2001/06/27/ctoperl.html</A><L>en</L><F>HTML</F></X><AUTHOR>Mark-Jason Dominus</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>The author tries to prove that compiling Perl scripts into C would not improve performance: but his demonstration is oversimplified and proves nothing (quick counter-proof: compile the script into a C program which calls the internal C routines of Perl interpreter, you have at least a marginal performance gain - no byte code to parse -, then perform aggressive inlining, suppress SV when possible - e.g. temporary variables -...).</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Optimizing Your Perl</T><A>http://www.perl.com/pub/a/2002/02/12/bigo.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert Spier</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>2</MONTH><DAY>12</DAY></DATE><COMMENT>Some very basic ideas about optimization.</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>multi-threading</TITLE>
+    <ITEM><BLIST><TITLE>Multi-threading</TITLE>
       <ITEM><ARTICLE><X><T>Where Wizards Fear To Tread</T><A>http://www.perl.com/pub/a/2002/06/11/threads.html</A><L>en</L><F>HTML</F></X><AUTHOR>Artur Bergman</AUTHOR><DATE><YEAR>202</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE><COMMENT>A presentation of multi-threading in Perl 5.8: shared variables and reimplementation of <CODEROUTINE>cwd</CODEROUTINE>, <CODEROUTINE>mkdir</CODEROUTINE>... In my mind, this multithreading is still immature.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Going Up?</T><A>http://www.perl.com/pub/a/2002/09/04/threads.html</A><L>en</L><F>HTML</F></X><AUTHOR>Sam Tregar</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>9</MONTH><DAY>4</DAY></DATE><COMMENT>A detailed example of a multithreaded program.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><ARTICLE><X><T>The Lighter Side of CPAN</T><A>http://www.perl.com/pub/a/2001/10/31/lighter.html</A><L>en</L><F>HTML</F></X><AUTHOR>Alex Gough</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE><COMMENT>A list of Perl modules which have absolutely no interest (they should be funny, but I've probably missed the point).</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>internals</TITLE>
+  <ITEM><BLIST><TITLE>Internals</TITLE>
     <ITEM><ARTICLE><X><T>perlhacktut - so you want to be a Perl porter?</T><A>http://www.theperlreview.com/Issues/The_Perl_Review_0_0.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Simon Cozens</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>2</MONTH><DAY>1</DAY></DATE><COMMENT>A quick introduction to Perl source code.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>PerlGuts Illustrated</T><A>http://www.cpan.org/authors/id/GAAS/illguts-0.09.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Gisle Aas</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH><DAY>19</DAY></DATE><COMMENT>A nice introduction to Perl internal structures.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Where Wizards Fear To Tread</T><A>http://www.perl.com/pub/a/2002/05/07/optree.html</A><L>en</L><F>HTML</F></X><AUTHOR>Simon Cozens</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>5</MONTH><DAY>7</DAY></DATE><COMMENT>Using <CODEROUTINE>B::Utils</CODEROUTINE> and <CODEROUTINE>B::Generate</CODEROUTINE> to modify the octree generated by the Perl compiler. What is the use of this?</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>modules</TITLE>
+  <ITEM><BLIST><TITLE>Modules</TITLE>
     <ITEM><ARTICLE><X><T>Object Oriented Exception Handling in Perl</T><A>http://www.perl.com/pub/a/2002/11/14/exception.html</A><L>en</L><F>HTML</F></X><AUTHOR>Arun Udaya Shankar</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE><COMMENT>Using <CODEROUTINE>Error.pm</CODEROUTINE> to be able to use exceptions in Perl.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>What Is POE, And Why Should I Use It?</T><A>http://www.perl.com/pub/2001/01/poe.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Taylor</AUTHOR><AUTHOR>Jeff Goff</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>1</MONTH></DATE><COMMENT>This presentation of the Perl Object Environment could be clearer. But you can get the rough picture.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Benchmarking Perl</T><A>http://www.theperlreview.com/Issues/The_Perl_Review_0_0.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>brian d foy</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>2</MONTH><DAY>1</DAY></DATE><COMMENT>A presentation of the <CODEROUTINE>Benchmark</CODEROUTINE> module.</COMMENT></ARTICLE></ITEM>
@@ -143,7 +143,7 @@ books and 'zines:
      <ITEM><ARTICLE><X><T>Quick Start with SOAP</T><A>http://www.perl.com/pub/2001/01/soap.html</A><L>en</L><F>HTML</F></X><AUTHOR>Paul Kulchenko</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE><COMMENT>An overview of <CODEROUTINE>SOAP::Lite</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Quick Start Guide With SOAP and SOAP::Lite Part Two</T><A>http://www.perl.com/pub/2001/04/24/soap.html</A><L>en</L><F>HTML</F></X><AUTHOR>Paul Kulchenko</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>How to install SOAP services on the server, some examples of services available on Internet, security and complex data structures.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>parsers</TITLE>
+    <ITEM><BLIST><TITLE>Parsers</TITLE>
       <ITEM><ARTICLE><X><T>Parse::RecDescent Tutorial</T><A>http://www.perl.com/pub/2001/06/13/recdecent.html</A><L>en</L><F>HTML</F></X><AUTHOR>Jeffrey Goff</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>A presentation of <CODEROUTINE>Parse::RecDescent</CODEROUTINE>, a parser for right recursive grammars.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Parsing with Perl modules</T><ST>The right tools simplify the tasks and extend the grammars</ST><A>http://www.ibm.com/developerworks/linux/library/l-perl-parsing/</A><L>en</L><F>HTML</F></X><AUTHOR>Teodor Zlatanov</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>4</MONTH></DATE><COMMENT>Another presentation of <CODEROUTINE>Parse::RecDescent</CODEROUTINE>. This one describes more things, but is less easy to read.</COMMENT></ARTICLE></ITEM>
      <ITEM><ARTICLE><X><T>Building a Parrot Compiler</T><A>http://www.onlamp.com/pub/a/onlamp/2004/04/15/parrot_compiler_construction.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dan Sugalski</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE><COMMENT>An example of using <CODEROUTINE>Parse::RecDescent</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
@@ -153,11 +153,11 @@ books and 'zines:
     <ITEM><ARTICLE><X><T>Acme::Comment</T><A>http://www.perl.com/pub/a/2002/08/13/comment.html</A><L>en</L><F>HTML</F></X><AUTHOR>Jos Boumans</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>8</MONTH><DAY>13</DAY></DATE><COMMENT>The other explains how he wrote <CODEROUTINE>Acme::Comment</CODEROUTINE> to allow multi-line comments and how to use <CODEROUTINE>Filter::Util::Call</CODEROUTINE> or <CODEROUTINE>Filter::Simple</CODEROUTINE> to write such source filters.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Fusion of Perl and Oracle</T><A>http://www.perl.com/pub/a/2002/09/04/perlfororacle.html</A><L>en</L><F>HTML</F></X><AUTHOR>Andy Duncan</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>9</MONTH><DAY>4</DAY></DATE><COMMENT>Much bullshit and few information about <CODEROUTINE>PDBA</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Manage Perl persistence with Pixie</T><ST>A schema-less interface to relational data</ST><A>http://www.ibm.com/developerworks/linux/library/l-pixie.html</A><L>en</L><F>HTML</F></X><AUTHOR>James A. Duncan</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>3</MONTH><DAY>4</DAY></DATE><COMMENT>Using <CODEROUTINE>Pixie</CODEROUTINE> to implement object persistency without coding tables in a RDMS.</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>cryptography</TITLE>
+    <ITEM><BLIST><TITLE>Cryptography</TITLE>
       <ITEM><ARTICLE><X><T>Symmetric Cryptography in Perl</T><A>http://www.perl.com/pub/a/2001/07/10/crypto.html</A><L>en</L><F>HTML</F></X><AUTHOR>Abhijit Menon-Sen</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>7</MONTH><DAY>10</DAY></DATE><COMMENT>A quick overview of the <CODEROUTINE>Crypt::</CODEROUTINE> namespace, in particular <CODEROUTINE>Crypt::Twofish</CODEROUTINE> and <CODEROUTINE>Crypt::CBC</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Asymmetric Cryptography in Perl</T><A>http://www.perl.com/pub/a/2001/09/26/crypto1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Vipul Ved Prakash</AUTHOR><AUTHOR>Benjamin Trott</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE><COMMENT>Some quick samples to use <CODEROUTINE>Crypt::RSA</CODEROUTINE>, <CODEROUTINE>Crypt::DH</CODEROUTINE> and <CODEROUTINE>Crypt::DSA</CODEROUTINE> with a short theorical presentation for each algorithm.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>mail</TITLE>
+    <ITEM><BLIST><TITLE>Mail</TITLE>
       <ITEM><ARTICLE><X><T>Mail Filtering with Mail::Audit</T><A>http://www.perl.com/pub/a/2001/07/17/mailfiltering.html</A><L>en</L><F>HTML</F></X><AUTHOR>Simon Cozens</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>7</MONTH><DAY>17</DAY></DATE><COMMENT>A description of <CODEROUTINE>Mail::Audit</CODEROUTINE> to filter incoming mails and <CODEROUTINE>News::Gateway</CODEROUTINE> to build a news/mailing list gateway.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Stopping Spam with SpamAssassin</T><A>http://www.perl.com/pub/a/2002/03/06/spam.html</A><L>en</L><F>HTML</F></X><AUTHOR>Simon Cozens</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE><COMMENT>A presentation of <CODEROUTINE>Mail::SpamAssasin</CODEROUTINE>, a Perl module to flag spam mails.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Filtering Mail with PerlMx</T><A>http://www.perl.com/pub/a/2001/10/10/perlmx.html</A><L>en</L><F>HTML</F></X><AUTHOR>Mike DeGraw-Bertsch</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>A presentation of PerlMx and its callback mechanism.</COMMENT></ARTICLE></ITEM>
@@ -177,7 +177,7 @@ books and 'zines:
       <ITEM><ARTICLE><X><T>Screen-scraping with WWW::Mechanize</T><A>http://www.perl.com/pub/a/2003/01/22/mechanize.html</A><L>en</L><F>HTML</F></X><AUTHOR>Chris Ball</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>1</MONTH><DAY>22</DAY></DATE><COMMENT>Using <CODEROUTINE>WWW::Mechanize</CODEROUTINE> to automatize page navigation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>FEAR-less Site Scraping</T><A>http://www.perl.com/pub/a/2006/06/01/fear-api.html</A><L>en</L><F>HTML</F></X><AUTHOR>Yung-chung Lin</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE><COMMENT>Yet another API for scraping a site...</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>fun</TITLE>
+    <ITEM><BLIST><TITLE>Fun</TITLE>
       <ITEM><ARTICLE><X><T>Quantum::Entanglement</T><A>http://www.perl.com/pub/a/2001/08/08/quantum.html</A><L>en</L><F>HTML</F></X><AUTHOR>Alex Gough</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>8</MONTH><DAY>08</DAY></DATE><COMMENT>Quantum calculus... What's the use of this? The article is not clear, but this may be because I've forgotten my quantum mechanics lessons.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Just Another Perl Haiku</T><A>http://www.foo.be/docs/tpj/issues/vol4_4/tpj0404-0004.html</A><L>en</L><F>HTML</F></X><AUTHOR>Damian Conway</AUTHOR><DATE><YEAR>1999</YEAR></DATE><COMMENT>A presentation of <CODEROUTINE>Coy</CODEROUTINE> which replaces error messages by haikus.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -217,9 +217,9 @@ books and 'zines:
       <ITEM><ARTICLE><X><T>Creating VoiceXML Applications With Perl</T><A>http://www.xml.com/pub/a/2001/08/09/perlxml.html</A><L>en</L><F>HTML</F></X><AUTHOR>Kip Hampton</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>8</MONTH><DAY>09</DAY></DATE><COMMENT>Using Perl to write a RSS/VoiceXML gateway and a CGI script generating VoiceXML.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>history</TITLE>
+  <ITEM><BLIST><TITLE>History</TITLE>
     <ITEM><ARTICLE><X protection='free_registration'><T>Uncultured Perl</T><A>http://www.linux-mag.com/id/322</A><L>en</L><F>HTML</F></X><AUTHOR>Larry Wall</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>10</MONTH></DATE><COMMENT>Larry tells us the history of Perl</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>conferences</TITLE>
+    <ITEM><BLIST><TITLE>Conferences</TITLE>
       <ITEM><ARTICLE><X><T>Yet Another YAPC Report: Montreal</T><A>http://www.perl.com/pub/a/2001/06/21/yapcreport.html</A><L>en</L><F>HTML</F></X><AUTHOR>Schuyler Erle</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE><COMMENT>Summary of Yet Another Perl Conference North America 2001.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Yet Another Perl Conference Europe 2001</T><A>http://www.perl.com/pub/a/2001/08/13/yapc-europe.html</A><L>en</L><F>HTML</F></X><AUTHOR>Jouke Visser</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>8</MONTH><DAY>13</DAY></DATE><COMMENT>Summary of Yet Another Perl Conference Europe 2001.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -265,7 +265,7 @@ books and 'zines:
     <ITEM><ARTICLE><X><T>Parroty Bits: Bit 1, The Parrot Vooms!</T><A>http://www.theperlreview.com/Issues/The_Perl_Review_0_3.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Dan Sugalski</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE><COMMENT>An introduction to Parrot assembly code, registers and stacks.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Parroty Bits: Bit 2, BASIC PARROT</T><A>http://www.theperlreview.com/Issues/The_Perl_Review_0_4.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Clinton A. Pierce</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE><COMMENT>The author explains how he wrote BASIC on Parrot.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>misc.</TITLE>
+  <ITEM><BLIST><TITLE>Miscellaneous</TITLE>
     <ITEM><ARTICLE><X><T>Tcl vs Perl Comparison</T><A>ftp://rpmfind.net/linux/redhat-archive/6.2/cpan/CPAN-archive/doc/FMTEYEWTK/versus/asherman-on-tcl.html</A><L>en</L><F>HTML</F></X><AUTHOR>Aaron Sherman</AUTHOR><COMMENT>A Perl proponent is bashing Tcl. Most arguments were right, but are now out-of-date with the newest Tcl releases.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Perl vs. Python</T><A>http://www.perl.com/doc/FMTEYEWTK/versus/python</A><L>en</L><F>HTML</F></X><AUTHOR>Tom Christiansen</AUTHOR><DATE><YEAR>1995</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE><COMMENT>A gentle comparison between Python and Perl. There is not much information in this.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Year In Scripting Languages Lua/Perl/Python/Ruby/Tcl 2002</T><A>http://www.vendian.org/language_year/</A><L>en</L><F>HTML</F></X><AUTHOR>Mitchell Charity</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>1</MONTH></DATE><COMMENT>The 2002 summary for these fives languages.</COMMENT></ARTICLE></ITEM>
