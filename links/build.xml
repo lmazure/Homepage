@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Site building</TITLE>
 <PATH>links/build.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 
 <X><T>Apache</T><A>http://www.apache.org/</A><L>en</L><F>HTML</F></X><BR/>
@@ -85,10 +85,10 @@ cloud computing:
 
 <LINE/>
 
-<BLIST><TITLE>articles</TITLE>
-  <ITEM><BLIST><TITLE>email</TITLE>
+<BLIST><TITLE>Articles</TITLE>
+  <ITEM><BLIST><TITLE>Email</TITLE>
     <ITEM><ARTICLE><X><T>Using bluemail to renew the design and study of enterprise email</T><A>http://www.youtube.com/watch?v=g_bKEfwAcNs</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>59</MINUTE><SECOND>44</SECOND></DURATION></X><AUTHOR>John C. Tang</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE><COMMENT>Bluemail is an email client supporting folders, tags, threads and "orienteering." The IBM team analyzed the use of this prototype: threads are used, tags are not, some people classify all they mails while others classify nothing...</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>spam</TITLE>
+    <ITEM><BLIST><TITLE>Spam</TITLE>
       <ITEM><ARTICLE><X status='dead'><T>Why Am I Getting All This Spam? Unsolicited Commercial E-mail Research Six Month Report</T><A>http://www.cdt.org/speech/spam/030319spamreport.shtml</A><L>en</L><F>HTML</F></X><AUTHOR>the Center for Democracy &amp; Technology</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>3</MONTH></DATE><COMMENT>A study of where spammers are harvesting email addresses.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Spam, Phishing, and Online Scams: A View from the Network-Level</T><A>http://www.youtube.com/watch?v=IBPg9Lyta3A</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>6</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR>Nick Feamster</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>6</MONTH><DAY>17</DAY></DATE><COMMENT>Trying to detect spam by analysing the sender behaviour on the network rather that the content of the mails.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -137,12 +137,12 @@ cloud computing:
     <ITEM><ARTICLE><X quality='1'><T>REST (Representational State Transfer)</T><A>http://www.xfront.com/REST.html</A><L>en</L><F>HTML</F></X><X quality='1'><T>REST (Representational State Transfer)</T><A>http://www.xfront.com/REST.ppt</A><L>en</L><F>PowerPoint</F></X><AUTHOR>Philip McCarthy</AUTHOR><DATE><YEAR>2002</YEAR></DATE><COMMENT>An introduction to REST, a comparison with SOAP, and why REST should be used rather than SOAP.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Intro to REST</T><A>http://www.youtube.com/watch?v=YCcAE2SCQ6k</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>13</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR>Joe Gregorio</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>A short introduction explaining REST and its benefits.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>database (server side)</TITLE>
+  <ITEM><BLIST><TITLE>Database (server side)</TITLE>
     <ITEM><ARTICLE><X quality='-1'><T>CouchDB: Relaxing Offline JavaScript</T><A>http://www.youtube.com/watch?v=ESDBM9-U804</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>57</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR>Chris Anderson</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE><COMMENT>A presentation of CouchDB, a database engine supporting offline replication This talk is too much verbose and not enough technical.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>JavaScriptDB: Persevere&#x2019;s New High-Performance Storage Engine</T><A>http://www.sitepen.com/blog/2009/04/20/javascriptdb-perseveres-new-high-performance-storage-engine/</A><L>en</L><F>HTML</F></X><AUTHOR>Kris Zyp</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>4</MONTH><DAY>20</DAY></DATE><COMMENT>A description of Perservere, a JSON storage and JavaScript application server.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Redis - The Hacker's Database</T><A>http://www.youtube.com/watch?v=1BS3UVSLX-I</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>49</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR>Amir Salihefendic</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>12</MONTH><DAY>2</DAY></DATE><COMMENT>The lead developer of Plurk explains why he likes Redis, an in-memory databse.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>performance</TITLE>
+  <ITEM><BLIST><TITLE>Performance</TITLE>
     <ITEM><ARTICLE><X quality='2'><T>High Performance Web Sites and YSlow</T><A>http://www.youtube.com/watch?v=BTHvs3V8DBA</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>33</SECOND></DURATION></X><AUTHOR>Steve Souders</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE><COMMENT><BLIST><TITLE>Souders describes the importance of the front-end in the performance, the fact that data is most often not cached... Then, he details some of his 14 rules:</TITLE><ITEM>Make fewer HTTP requets</ITEM><ITEM>Use a CDN</ITEM><ITEM>Add an Expires header</ITEM><ITEM>Gzip components</ITEM><ITEM>Put stylesheets at the top</ITEM><ITEM>Move scripts at the bottom</ITEM><ITEM>Make JS and CSS external</ITEM><ITEM>Minify JS</ITEM><ITEM>Avoid redirects</ITEM><ITEM>Make AJAX cacheable</ITEM></BLIST>At last, he speaks about his tool to check if these rules are respected: YSlow.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality='2'><T>Life's Too Short - Write Fast Code (part 2)</T><A>http://www.youtube.com/watch?v=52gL93S3usU</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>55</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR>Steve Souders</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE><COMMENT><BLIST><TITLE>Some new rules</TITLE><ITEM>Load scripts without blocking</ITEM><ITEM>Couple asynchronous scripts</ITEM><ITEM>Flush the document early</ITEM><ITEM>Use iframes sparingly</ITEM></BLIST>Souders focuses on the two first bullets, describing several solutions with their pros &amp; cons, since none of them is the best for all situations.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality='1'><T>YDN Theater - Julien Lecomte: &#x201C;High Performance Ajax Applications&#x201D;</T><A>http://yuiblog.com/blog/2007/12/20/video-lecomte/</A><L>en</L><F>Flash Video</F><F>MP4</F><DURATION><MINUTE>49</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR>Julien Lecomte</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE><COMMENT>Some advice on how to write fast AJAX.</COMMENT></ARTICLE></ITEM>
@@ -171,7 +171,7 @@ cloud computing:
       <ITEM><ARTICLE><X><T>An Engineer's Guide to Bandwidth</T><A>http://developer.yahoo.com/blogs/ydn/engineer-guide-bandwidth-7726.html</A><L>en</L><F>HTML</F></X><AUTHOR>Tom Hughes-Croucher</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>Some miscellaneous ideas on network performance.</COMMENT></ARTICLE></ITEM>
      <ITEM><ARTICLE><X><T>An Engineer's Guide to DNS</T><A>http://developer.yahoo.com/blogs/ydn/engineer-guide-dns-7786.html</A><L>en</L><F>HTML</F></X><AUTHOR>Carlos Bueno</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE><COMMENT>An experiment trying to measure DNS performance.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>image optimization</TITLE>
+    <ITEM><BLIST><TITLE>Image optimization</TITLE>
       <ITEM><ARTICLE><X><T>Image Optimization Part 1: The Importance of Images</T><A>http://yuiblog.com/blog/2008/10/29/imageopt-1/</A><L>en</L><F>HTML</F></X><AUTHOR>Stoyan Stefanov</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>29</DAY></DATE><COMMENT>Images represent a very large part of a page weight.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Image Optimization Part 2: Selecting the Right File Format</T><A>http://yuiblog.com/blog/2008/11/04/imageopt-2/</A><L>en</L><F>HTML</F></X><AUTHOR>Stoyan Stefanov</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>11</MONTH><DAY>4</DAY></DATE><COMMENT>A short description of the images formats and their supports by the Browsers.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Image Optimization, Part 3: Four Steps to File Size Reduction</T><A>http://yuiblog.com/blog/2008/11/14/imageopt-3/</A><L>en</L><F>HTML</F></X><AUTHOR>Stoyan Stefanov</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE><COMMENT>Some tools to reduce image size with no quality loss.</COMMENT></ARTICLE></ITEM>
@@ -180,7 +180,7 @@ cloud computing:
       <ITEM><ARTICLE><X><T>Performance on Yahoo! Search for Earth Day</T><A>http://developer.yahoo.com/blogs/ydn/performance-yahoo-search-earth-day-7944.html</A><L>en</L><F>HTML</F></X><AUTHOR>Marcel Duran</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE><COMMENT>The author explains how he optimized a simple page.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>scalability</TITLE>
+  <ITEM><BLIST><TITLE>Scalability</TITLE>
     <ITEM><ARTICLE><X quality='2'><T>Nighttime Story: Learning From Early Success of One Thousand and One Rails Ap...</T><A>http://www.youtube.com/watch?v=mRf4bpEtI6I</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>33</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR>Jason Hoffman</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>8</MONTH><DAY>17</DAY></DATE><COMMENT>A small part of this talk is about Ruby and DTrace, but the most important and most interesting portion is about creating scalable Web applications in general.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Cloud computing</TITLE>
@@ -205,7 +205,7 @@ cloud computing:
     <ITEM><ARTICLE><X><T>Google I/O 2009 - Programming With and For Google Wave</T><A>http://www.youtube.com/watch?v=O5JT2jBrJX8</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>1</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR>Douwe Osinga</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>Embedding Wave, writing gadgets and robots.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Google Wave: Powered by Google Web Toolkit</T><A>http://www.youtube.com/watch?v=lWMVzhXwh-I</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>57</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR>Adam Schuck</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>A description of some technologies used to implement and test Wave: GWT (and the improvements done on it while Wave was being created), Web Driver...</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>mobile</TITLE>
+  <ITEM><BLIST><TITLE>Mobile</TITLE>
     <ITEM><ARTICLE><X><T>DOs and DON'Ts of Mobile Strategy</T><A>http://www.youtube.com/watch?v=hpwiU5Kigic</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>14</MINUTE><SECOND>36</SECOND></DURATION></X><AUTHOR>Jason Grigsby</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE><COMMENT>Some interesting food for thought for companies looking to support mobile access to their Web site.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Stephen Woods: Creating Responsive HTML5 Touch Interfaces</T><A>http://www.youtube.com/watch?v=lcD9CF0bxyk</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>24</MINUTE><SECOND>28</SECOND></DURATION></X><AUTHOR>Stephen Woods</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>Some advice for implementing a responsive UI on a touch screen of a mobile.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Building A Performant HTML5 App</T><A>http://www.youtube.com/watch?v=ft9R72R7TlI</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>11</SECOND></DURATION></X><AUTHOR>Trunal Bhanse</AUTHOR><AUTHOR>Akhilesh Gupta</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE><COMMENT>The two LinkedIn engineers give their feedback on creating the mobile version on LinkedIn: local storage, memory leaks, unloading images...</COMMENT></ARTICLE></ITEM>
@@ -214,7 +214,7 @@ cloud computing:
   <ITEM><BLIST><TITLE>SPDY</TITLE>
     <ITEM><ARTICLE><X quality='-1'><T>SPDY Essentials</T><A>http://www.youtube.com/watch?v=TNBkxA313kk</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR>Roberto Peon</AUTHOR><AUTHOR>William Chan</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE><COMMENT>A little about technology, some numbers, the current state of SPDY usage... This talk is not a very good presentation of SPDY.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>misc.</TITLE>
+  <ITEM><BLIST><TITLE>Miscellaneous</TITLE>
     <ITEM><ARTICLE><X status='dead'><T>Untangle URIs, URLs, and URNs</T><ST>Naming and the problem of persistence</ST><A>http://www.ibm.com/developerworks/xml/library/x-urlni.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dan Connolly</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE><COMMENT>What are the differences between a URI, a URL and a URN? The answer provided here is not so clear.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Discover Internet Protocol, version 6 (IPv6)</T><ST>Learn about the concepts, benefits, and industry compliance of this next-generation protocol</ST><A>http://www.ibm.com/developerworks/web/library/wa-ipv6/</A><L>en</L><F>HTML</F></X><AUTHOR>Makham V. Kumar</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>6</MONTH><DAY>6</DAY></DATE><COMMENT>A short description of the IPv6 address syntax and a list of products supporting IPv6.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>What Is Web 2.0 - Design Patterns and Business Models for the Next Generation of Software</T><A>http://www.oreillynet.com/pub/a/oreilly/tim/news/2005/09/30/what-is-web-20.html</A><L>en</L><F>HTML</F></X><AUTHOR>Tim O'Reilly</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE><COMMENT>The new trends of the Internet, which are refered as Web2.0: the Web is the plateform, using the users to build value, the data is the value, continuous software upgrade, lightweight programming models, target any device (non only the PC) and rich GUIs.</COMMENT></ARTICLE></ITEM>
