@@ -8,7 +8,7 @@
 
 <BLIST>
 
-<ITEM><BLIST><TITLE>access a new repository</TITLE>
+<ITEM><BLIST><TITLE>Access a new repository</TITLE>
 <ITEM>local repository
 <CODESAMPLE><PROMPT/>cvs -d /usr/local/cvs command</CODESAMPLE></ITEM>
 <ITEM>password-authenticated server
@@ -29,7 +29,7 @@ and can be removed from <CODEFILENAME>~/.cvspass</CODEFILENAME> with
 <ITEM>create a project
 <CODESAMPLE><PROMPT/>cvs import -m "log msg" projname vendortag releasetag</CODESAMPLE></ITEM>
 
-<ITEM><BLIST><TITLE>checking out a working copy</TITLE>
+<ITEM><BLIST><TITLE>Checking out a working copy</TITLE>
 <ITEM><CODESAMPLE><PROMPT/>cvs checkout myproj</CODESAMPLE>
 or
 <CODESAMPLE><PROMPT/>cvs co myproj</CODESAMPLE></ITEM>
@@ -41,7 +41,7 @@ or
 <CODESAMPLE><PROMPT/>cvs co -c</CODESAMPLE></ITEM>
 </BLIST></ITEM>
 
-<ITEM><BLIST><TITLE>creating/removing elements</TITLE>
+<ITEM><BLIST><TITLE>Creating/removing elements</TITLE>
 <ITEM>creating a file requires two steps: first the <CODEROUTINE>add</CODEROUTINE> command on it, then <CODEROUTINE>commit</CODEROUTINE>:
 <CODESAMPLE><PROMPT/>cvs add newfile.c<BR/>
 <PROMPT/>cvs ci -m "added newfile.c" newfile.c</CODESAMPLE></ITEM>
@@ -86,14 +86,14 @@ mv: newdir/CVS: cannot overwrite directory <I>(this is not a problem)</I><BR/>
 <ITEM>status 
 <CODESAMPLE><PROMPT/>cvs status hello.c</CODESAMPLE></ITEM>
 
-<ITEM><BLIST><TITLE>history</TITLE>
+<ITEM><BLIST><TITLE>History</TITLE>
 <ITEM>dump the log of the file
 <CODESAMPLE><PROMPT/>cvs log hello.c</CODESAMPLE></ITEM>
 <ITEM>for each file of the file, indicate whan, who and on which revision the change has been done 
 <CODESAMPLE><PROMPT/>cvs annotate hello.c</CODESAMPLE></ITEM>
 </BLIST></ITEM>
 
-<ITEM><BLIST><TITLE>update</TITLE>
+<ITEM><BLIST><TITLE>Update</TITLE>
 <ITEM><CODESAMPLE><PROMPT/>cvs update</CODESAMPLE></ITEM>
 <ITEM>to a given revision
 <CODESAMPLE><PROMPT/>cvs update -r 1.2</CODESAMPLE></ITEM>
@@ -101,7 +101,7 @@ mv: newdir/CVS: cannot overwrite directory <I>(this is not a problem)</I><BR/>
 <CODESAMPLE><PROMPT/>cvs update -r MyTag</CODESAMPLE></ITEM>
 </BLIST></ITEM>
 
-<ITEM><BLIST><TITLE>diff</TITLE>
+<ITEM><BLIST><TITLE>Diff</TITLE>
 <ITEM><CODESAMPLE><PROMPT/>cvs diff</CODESAMPLE></ITEM>
 <ITEM>use <CODESAMPLE>-c</CODESAMPLE> to perform a context diff
 <CODESAMPLE><PROMPT/>cvs diff -c foobar.c</CODESAMPLE></ITEM>
@@ -122,7 +122,7 @@ mv: newdir/CVS: cannot overwrite directory <I>(this is not a problem)</I><BR/>
 or
 <CODESAMPLE><PROMPT/>cvs ci -m "print goodbye too" hello.c</CODESAMPLE></ITEM>
 
-<ITEM><BLIST><TITLE>tag</TITLE>
+<ITEM><BLIST><TITLE>Tag</TITLE>
 <ITEM>a tag name starts with a letter and contain letters, digits, hyphens (<CODEROUTINE>-</CODEROUTINE>), and underscores (<CODEROUTINE>_</CODEROUTINE>).</ITEM>
 <ITEM>CVS has two different kinds of tags:<BR/>
 <B>Sticky</B> tags which are tightly bound to one particular revision number for a given file<BR/>
@@ -141,7 +141,7 @@ or
 <CODESAMPLE><PROMPT/>cvs rtag -d MyTag MyProject</CODESAMPLE></ITEM>
 </BLIST></ITEM>
 
-<ITEM><BLIST><TITLE>help</TITLE>
+<ITEM><BLIST><TITLE>Help</TITLE>
 <ITEM>return the version of the client and of the server 
 <CODESAMPLE><PROMPT/>cvs version </CODESAMPLE></ITEM>
 <ITEM>return the list of synonyms

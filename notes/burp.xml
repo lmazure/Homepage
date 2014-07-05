@@ -17,22 +17,22 @@
 <ITEM>Comparer - "diff" between any two items of data</ITEM>
 </BLIST>
 
-<BLIST><TITLE>configuration of the Browser to be tested</TITLE>
+<BLIST><TITLE>Configuration of the Browser to be tested</TITLE>
 <ITEM>set the proxy as host=<CODEROUTINE>127.0.0.1</CODEROUTINE> and port=<CODEROUTINE>8080</CODEROUTINE> for HTTP and HTTPS protocols</ITEM>
 </BLIST>
 
-<BLIST><TITLE>allocate more memory when launching Burp</TITLE>
+<BLIST><TITLE>Allocate more memory when launching Burp</TITLE>
 <ITEM><CODEROUTINE>java -jar -Xmx500m burpsuite_v1.2.jar</CODEROUTINE></ITEM>
 </BLIST>
 
-<BLIST><TITLE>to avoid to intercept the K3 pings</TITLE>
+<BLIST><TITLE>To avoid to intercept the K3 pings</TITLE>
 <ITEM>click on the proxy tab</ITEM>
 <ITEM>click on the option subtab</ITEM>
 <ITEM>add <CODEROUTINE>and</CODEROUTINE> <CODEROUTINE>URL</CODEROUTINE> <CODEROUTINE>does not match</CODEROUTINE> <CODEROUTINE>^/k3/notificationservlet\?command=getNotifications.*</CODEROUTINE> in <CODEMENU>client requests</CODEMENU></ITEM>
 <ITEM>do the same in <CODEMENU>server responses</CODEMENU> if server responses are also intercepted</ITEM>
 </BLIST>
 
-<BLIST><TITLE>to intercept the server responses (this is not the case by default)</TITLE>
+<BLIST><TITLE>To intercept the server responses (this is not the case by default)</TITLE>
 <ITEM>check <CODEMENU>intercept if:</CODEMENU> in <CODEMENU>server responses</CODEMENU></ITEM>
 </BLIST>
 
