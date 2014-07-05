@@ -58,7 +58,7 @@ mashups:
 <LINE/>
 <BR/>
 <BLIST>
-<TITLE><B>articles:</B></TITLE>
+<TITLE>Articles</TITLE>
   <ITEM><ARTICLE><X><T>XML and Java: A potent partnership, Part 3</T><A>http://www.javaworld.com/javaworld/jw-08-1999/jw-08-howto_p.html</A><L>en</L><F>HTML</F></X><AUTHOR>Todd Sundsted</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH></DATE><COMMENT>This is an introduction to Rhino, a JavaScript interpreter written in Java.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Pnglets</T><A>http://www.elf.org/pnglets/</A><L>en</L><F>HTML</F></X><AUTHOR>Roger E Critchlow Jr</AUTHOR><DATE><YEAR>1999</YEAR></DATE><COMMENT>Some (client side) JavaScript code to write PNG images on the flight.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Javascript Closures</T><A>http://jibbering.com/faq/notes/closures/</A><L>en</L><F>HTML</F></X><AUTHOR>Richard Cornford</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH></DATE><COMMENT>A detailed description of closures.</COMMENT></ARTICLE></ITEM>
@@ -119,10 +119,10 @@ mashups:
     <ITEM><ARTICLE><X><T>eBay Developer Challenge 2006</T><A>http://www.oreillynet.com/pub/a/network/2005/12/05/ebay-developer-challenge-2006.html</A><L>en</L><F>HTML</F></X><AUTHOR>Alan Lewis</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>12</MONTH><DAY>5</DAY></DATE><COMMENT>eBay tries to do the same as Google: inviting hacker to build killer apps on top of their APIs.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Seattle Movie Finder: An AJAX- and REST-Powered Virtual Earth Mashup</T><A>http://www.xml.com/pub/a/2006/03/01/seattle-movie-finder-AJAX-REST-virtual-earth-mashup.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dare Obasanjo</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>An example of using MSN Virtual Earth, but this article is not very clear.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>server side</TITLE>
+  <ITEM><BLIST><TITLE>Server side</TITLE>
     <ITEM><ARTICLE><X><T>Isaac Schlueter and Matt Hackett: Server-side JavaScript</T><A>http://www.youtube.com/watch?v=V3InSvKckAY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>23</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR>Isaac Schlueter</AUTHOR><AUTHOR>Matt Hackett</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH></DATE><COMMENT>A much too quick presentation of server side JS and a tic-tac-toe implementation using Narwhal and Jack.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>YUI Theater &#x2014; Elijah Insua: &#x201C;jsdom: a CommonJS Implementation of the DOM&#x201D; (18 min.)</T><A>http://www.yuiblog.com/blog/2010/05/20/video-insua/</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>18</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR>Elijah Insua</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>5</MONTH></DATE><COMMENT>A presentation of the interest of JSDom, a JavaScript DOM Level 1 implementation.</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>node.js</TITLE>
+    <ITEM><BLIST><TITLE>Node.js</TITLE>
       <ITEM><ARTICLE><X><T>YUI Theater &#x2014; Ryan Dahl: &#x201C;Introduction to NodeJS&#x201D; (58 min.)</T><A>http://www.yuiblog.com/blog/2010/05/20/video-dahl/</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>58</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR>Ryan Dahl</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>5</MONTH></DATE><COMMENT>A presentation of Node.js, the rational of its design (using an event loop and having no blocking call - in particular I/Os -), and some code samples.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Node.js: JavaScript on the Server</T><A>http://www.youtube.com/watch?v=F6k8lTrAE2g</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>59</MINUTE><SECOND>59</SECOND></DURATION></X><AUTHOR>Ryan Dahl</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>7</MONTH><DAY>28</DAY></DATE><COMMENT>The same talk, but the Q&amp;A are different.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>YUI Theater &#x2014; Dav Glass: &#x201C;Using Node.js and YUI 3&#x2033; (36 min.)</T><A>http://www.yuiblog.com/blog/2010/09/29/video-glass-node/</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>36</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR>Dav Glass</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>9</MONTH></DATE><COMMENT>A demonstration of node.js and YUI3 used to generate the HTML on the server and to transmit it to the browser.</COMMENT></ARTICLE></ITEM>
@@ -165,19 +165,19 @@ mashups:
   <ITEM><BLIST><TITLE>WebGL</TITLE>
       <ITEM><ARTICLE><X quality='-1'><T>Exporting 3D Scenes from Maya to WebGL Using Clang and LLVM</T><A>http://www.youtube.com/watch?v=Ek-SkrGVyjY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>45</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR>Jochen Wilhelmy</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>17</DAY></DATE><COMMENT>The title says all. The technical feat may be worthwhile, but this presentation is boring.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>graceful degradation / progressive enhancement</TITLE>
+  <ITEM><BLIST><TITLE>Graceful degradation / progressive enhancement</TITLE>
     <ITEM><ARTICLE><X><T>Inclusive Web Design For the Future with Progressive Enhancement</T><A>http://hesketh.com/publications/inclusive_web_design_for_the_future/</A><L>en</L><F>HTML</F></X><AUTHOR>Steven Champeon</AUTHOR><AUTHOR>Nick Finck</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>3</MONTH><DAY>11</DAY></DATE><COMMENT>Using progressive enhancement to ensure compatibility with older Browsers.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Hijax</T><A>http://domscripting.com/blog/display/41</A><L>en</L><F>HTML</F></X><AUTHOR>Jeremy Keith</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>1</MONTH><DAY>1</DAY></DATE><COMMENT>Plan AJAX from the start, but implement it at the end, after the site is working correctly with static pages.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality='1'><T>A guide to writing unobtrusive JavaScript and Ajax</T><ST>Employ good programming practices when creating your web applications</ST><A>http://www.ibm.com/developerworks/web/library/wa-aj-unobtrusive/</A><L>en</L><F>HTML</F></X><AUTHOR>Joe Lennon</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>2</DAY></DATE><COMMENT>A very good tutorial on writing Ajaxified pages that also work without JavaScript.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Nicholas Zakas: Progressive Enhancement 2.0</T><A>http://www.youtube.com/watch?v=hdTxeR90_1E</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>50</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR>Nicholas Zakas</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>3</MONTH><DAY>5</DAY></DATE><COMMENT>Despite "2.0" branding, there is nothing new here.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Crockford on JavaScript</TITLE>
-    <ITEM><BLIST><TITLE>papers</TITLE>
+    <ITEM><BLIST><TITLE>Papers</TITLE>
       <ITEM><ARTICLE><X><T>JavaScript: The World's Most Misunderstood Programming Language</T><A>http://javascript.crockford.com/javascript.html</A><L>en</L><F>HTML</F></X><AUTHOR>Douglas Crockford</AUTHOR><DATE><YEAR>2001</YEAR></DATE><COMMENT>Douglas tries to explains why there are so many misconceptions about JavaScript.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality='1'><T>Private Members in JavaScript</T><A>http://www.crockford.com/javascript/private.html</A><L>en</L><F>HTML</F></X><AUTHOR>Douglas Crockford</AUTHOR><DATE><YEAR>2001</YEAR></DATE><COMMENT>How to perform data encapsulation in JavaScript.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Classical Inheritance in JavaScript</T><A>http://javascript.crockford.com/inheritance.html</A><L>en</L><F>HTML</F></X><AUTHOR>Douglas Crockford</AUTHOR><COMMENT>How to implement several types of inheritance in JavaScript.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>videos</TITLE>
+    <ITEM><BLIST><TITLE>Videos</TITLE>
       <ITEM><ARTICLE><X><T>Video: Douglas Crockford &#x2014; Crockford on JavaScript</T><ST>Volume 1: The Early Years</ST><A>http://www.youtube.com/watch?v=JxAXlJEmNMg</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>42</MINUTE><SECOND>9</SECOND></DURATION></X><AUTHOR>Douglas Crockford</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>1</MONTH><DAY>25</DAY></DATE><COMMENT>A history of computer hardware and languages, from Jacquard loom to Caja.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Video: Douglas Crockford &#x2014; Crockford on JavaScript</T><ST>Chapter 2: And Then There Was JavaScript</ST><A>http://www.youtube.com/watch?v=RO1Wnu-xKoY</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>30</MINUTE><SECOND>23</SECOND></DURATION></X><AUTHOR>Douglas Crockford</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>A high level description of JavaScript with its good and bad parts.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Video: Douglas Crockford &#x2014; Crockford on JavaScript</T><ST>Act III: Function the Ultimate</ST><A>http://www.youtube.com/watch?v=ya4UHuXNygM</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>13</MINUTE><SECOND>29</SECOND></DURATION></X><AUTHOR>Douglas Crockford</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>JavaScript functions (definition, invocation, constructors) and some examples.</COMMENT></ARTICLE></ITEM>
@@ -189,7 +189,7 @@ mashups:
       <ITEM><ARTICLE><X><T>Douglas Crockford: Monads and Gonads (YUIConf Evening Keynote)</T><A>http://www.youtube.com/watch?v=dkZFtimgAcM</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>54</MINUTE><SECOND>27</SECOND></DURATION></X><AUTHOR>Douglas Crockford</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE><COMMENT>Using Monads in JavaScript: the Identity Monad, the Ajax Monad, the Maybe Monad, the Promise Monad.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>debuggers</TITLE>
+  <ITEM><BLIST><TITLE>Debuggers</TITLE>
     <ITEM><BLIST><TITLE>Firebug</TITLE>
       <ITEM><ARTICLE><X><T>Debugging and Testing the Web with Firebug</T><A>http://www.youtube.com/watch?v=7p24bC8ZR3U</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>39</MINUTE><SECOND>53</SECOND></DURATION></X><AUTHOR>Rob Campbell</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE><COMMENT>A presentation of the new Firebug 1.4 features and some Q&amp;A about Firebug.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
