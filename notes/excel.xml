@@ -7,7 +7,7 @@
 <CONTENT>
 
 <BLIST><TITLE><B><U>User interface</U></B></TITLE>
-  <ITEM><BLIST><TITLE>using <KEY ID='Shift'/> key on menubars/toolbars</TITLE>
+  <ITEM><BLIST><TITLE>Using <KEY ID='Shift'/> key on menubars/toolbars</TITLE>
     <ITEM>when holding down the <KEY ID='Shift'/> key to click on the <CODEMENU>File</CODEMENU> menu<BR/>
       <CODEMENU>Close</CODEMENU> is replaced by <CODEMENU>Close All</CODEMENU>
     </ITEM>
@@ -26,7 +26,7 @@
 <BLIST><TITLE><B><U>File</U></B></TITLE>
   <ITEM>Excel opens correctly and with no comment (up tro 2003, 2007 displays a warning message) a HTML file which has the .xls extension.</ITEM>
   <ITEM><BLIST><TITLE>Format of a tab separated text file (extension <CODEROUTINE>.txt</CODEROUTINE>)</TITLE>
-    <ITEM><BLIST><TITLE>when there is a newline in a cell:</TITLE>
+    <ITEM><BLIST><TITLE>When there is a newline in a cell:</TITLE>
       <ITEM>the field value shall be between <CODEROUTINE>"</CODEROUTINE>...<CODEROUTINE>"</CODEROUTINE></ITEM>
       <ITEM>the newline shall be written as <CODEROUTINE>\n</CODEROUTINE></ITEM>
       <ITEM>the <CODEROUTINE>"</CODEROUTINE> should be doubled</ITEM>
@@ -34,7 +34,7 @@
   <ITEM>the columns are separated by <CODEROUTINE>\t</CODEROUTINE></ITEM>
   <ITEM>the lines are separated by <CODEROUTINE>\r\n</CODEROUTINE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>generated CSV files</TITLE>
+  <ITEM><BLIST><TITLE>Generated CSV files</TITLE>
     <ITEM>The generated files are not UTF8.</ITEM>
     <ITEM>The separator is defined by the regional setting (<CODEMENU>Start<CODEMENU>Control Panel<CODEMENU>Regional and Language Options<CODEMENU>Regional Options<CODEMENU>Customize<CODEMENU>List Separator</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>).</ITEM>
   </BLIST></ITEM>
@@ -99,7 +99,7 @@ To find an actual question mark or asterisk, use a tilde (<CODEROUTINE>~</CODERO
 <BLIST><TITLE><B><U>Edit</U></B></TITLE>
 <ITEM>take care to the fact that, when several sheets are selected, a change (edition, paste...) on one cell of the currently displayed sheet is done in fact on all the sheets.</ITEM>
 <ITEM>if several cells are selected, when editing one of them and finishing the edition with <MODIFIERKEY ID='Ctrl'/><KEY ID='Return'/>, Excel will update the formula of all the selected cells</ITEM>
-<ITEM><BLIST><TITLE>creation of a multi-value field in Excel (this does not work when pasting a cell, the value is not checked)</TITLE>
+<ITEM><BLIST><TITLE>Creation of a multi-value field in Excel (this does not work when pasting a cell, the value is not checked)</TITLE>
 <ITEM>enter values in some cells (e.g. "alpha", "beta", "gamma", and "delta" in L1:L4)</ITEM>
 <ITEM>select the target cell</ITEM>
 <ITEM><CODEMENU>Donn&#xE9;es<CODEMENU>Validation...<CODEMENU>Options</CODEMENU></CODEMENU></CODEMENU></ITEM>
@@ -132,7 +132,7 @@ Some examples:<BR/>
 <CODEROUTINE>R2C2</CODEROUTINE> An absolute reference to the cell in the second row and in the second column<BR/>
 <CODEROUTINE>R[-1]</CODEROUTINE> A relative reference to the entire row above the active cell<BR/>
 <CODEROUTINE>R</CODEROUTINE> An absolute reference to the current row</ITEM>
-<ITEM><BLIST><TITLE>dynamical references<BR/>use <CODEROUTINE>INDIRECT</CODEROUTINE>.</TITLE>
+<ITEM><BLIST><TITLE>Dynamical references<BR/>use <CODEROUTINE>INDIRECT</CODEROUTINE>.</TITLE>
 <ITEM>Use <CODEROUTINE>INDIRECT</CODEROUTINE><BR/>
 For example, we look up the value of the cell <CODEROUTINE>B3</CODEROUTINE> in a matrix whose name is defined in <CODEROUTINE>B2</CODEROUTINE>:
 <CODESAMPLE>=RECHERCHEV(B3,INDIRECT(B$2),2,FAUX)</CODESAMPLE></ITEM>
@@ -186,7 +186,7 @@ at the <CODEMENU>Source Data</CODEMENU> step of the Chart wizard:
 
 <BLIST><TITLE><B><U>Pivot tables</U></B></TITLE>
 <ITEM>
-<BLIST><TITLE>create a Pivot Table to get the number of elements of a class given two columns: ID of the element, class of the element.</TITLE>
+<BLIST><TITLE>Create a Pivot Table to get the number of elements of a class given two columns: ID of the element, class of the element.</TITLE>
 <ITEM>put a title to the two columns if they do not have one</ITEM>
 <ITEM><CODEMENU>Data<CODEMENU>PivotTable and PivotChart report...</CODEMENU></CODEMENU></ITEM>
 <ITEM>select <CODEMENU>Microsoft Excel list or database</CODEMENU> and <CODEMENU>PivotTable</CODEMENU>, and click <CODEMENU>Next</CODEMENU></ITEM>
