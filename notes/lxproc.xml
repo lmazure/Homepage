@@ -112,7 +112,7 @@ for example, trace the calls to the <CODEROUTINE>foobar.so</CODEROUTINE> library
 <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/exe</CODEROUTINE></TERM><DESC>a link toward the binary of the process</DESC></ROW>
 <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/fd/&lt;fd&gt;</CODEROUTINE></TERM><DESC>a symbolic link toward the file whose file descriptor is <CODEROUTINE>&lt;fd&gt;</CODEROUTINE></DESC></ROW>
 <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/maps</CODEROUTINE></TERM><DESC>parts of the process' address space which are currently mapped to a file.<BR/>
-<BLIST><TITLE>the fields, from left to right, are:</TITLE>
+<BLIST><TITLE>The fields, from left to right, are:</TITLE>
 <ITEM>the address space associated to this mapping (start address - end address)</ITEM>
 <ITEM>the permissions associated to this mapping</ITEM>
 <ITEM>the offset from the beginning of the file where the mapping starts</ITEM>

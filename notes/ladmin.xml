@@ -30,19 +30,19 @@ enable it with
 </ITEM>
 </BLIST>
 
-<BLIST><TITLE><U><B>users/groups</B></U></TITLE>
-<ITEM><BLIST><TITLE>end user</TITLE>
+<BLIST><TITLE><U><B>Users/groups</B></U></TITLE>
+<ITEM><BLIST><TITLE>End user</TITLE>
 <ITEM><CODEROUTINE><X><T>chsh</T><A>javascript:do_reference("man/linux/1/chsh")</A><L>en</L><F>HTML</F></X></CODEROUTINE> change login shell</ITEM>
 <ITEM><CODEROUTINE><X><T>passwd</T><A>javascript:do_reference("man/linux/1/passwd")</A><L>en</L><F>HTML</F></X></CODEROUTINE> change password</ITEM>
 <ITEM><CODEROUTINE><X><T>chfn</T><A>javascript:do_reference("man/linux/1/chfn")</A><L>en</L><F>HTML</F></X></CODEROUTINE> change finger information</ITEM>
 </BLIST></ITEM>
-<ITEM><BLIST><TITLE>system administration</TITLE>
+<ITEM><BLIST><TITLE>System administration</TITLE>
 <ITEM><CODEROUTINE><X><T>vipw</T><A>javascript:do_reference("man/linux/8/vipw")</A><L>en</L><F>HTML</F></X></CODEROUTINE> edit the file<CODEFILENAME><X><T>/etc/passwd</T><A>javascript:do_reference("man/linux/5/passwd")</A><L>en</L><F>HTML</F></X></CODEFILENAME></ITEM>
 <ITEM><CODEROUTINE><X><T>vigr</T><A>javascript:do_reference("man/linux/8/vigr")</A><L>en</L><F>HTML</F></X></CODEROUTINE> edit the file<CODEFILENAME><X><T>/etc/group</T><A>javascript:do_reference("man/linux/5/group")</A><L>en</L><F>HTML</F></X></CODEFILENAME></ITEM>
 <ITEM><CODEROUTINE><X><T>visudo</T><A>javascript:do_reference("man/linux/8/visudo")</A><L>en</L><F>HTML</F></X></CODEROUTINE> edit the file <CODEFILENAME><X><T>/etc/sudoers</T><A>javascript:do_reference("man/linux/5/sudoers")</A><L>en</L><F>HTML</F></X></CODEFILENAME></ITEM>
 </BLIST></ITEM></BLIST>
 
-<BLIST><TITLE><U><B>network</B></U></TITLE>
+<BLIST><TITLE><U><B>Network</B></U></TITLE>
 <ITEM><BLIST><TITLE>DNS</TITLE>
 <ITEM>
 <DEFINITIONTABLE>
@@ -73,7 +73,7 @@ before this, use <CODEROUTINE>redhat-config-network</CODEROUTINE>
 </ITEM>
 </BLIST>
 
-<BLIST><TITLE><U><B>hardware analysis</B></U></TITLE>
+<BLIST><TITLE><U><B>Hardware analysis</B></U></TITLE>
 <ITEM>
 report the temperature, number of errors, lifetime... of a ATA/IDE/SCSI3 hard drive
 <CODESAMPLE><PROMPT/><X><T>smartctl</T><A>javascript:do_reference("man/linux/8/smartctl")</A><L>en</L><F>HTML</F></X> -a /dev/sda</CODESAMPLE>
@@ -103,7 +103,7 @@ report the temperature, number of errors, lifetime... of a ATA/IDE/SCSI3 hard dr
 </ITEM>
 </BLIST>
 
-<BLIST><TITLE><U><B>system analysis</B></U></TITLE>
+<BLIST><TITLE><U><B>System analysis</B></U></TITLE>
 <ITEM>
 The messages log by the system are in <CODEFILENAME>/var/log</CODEFILENAME>.
 <DEFINITIONTABLE>
@@ -123,7 +123,7 @@ display the kernel ring buffer<BR/>
 <CODESAMPLE><PROMPT/><X><T>dmesg</T><A>javascript:do_reference("man/linux/8/dmesg")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
 </ITEM>
 <ITEM>
-<BLIST><TITLE>modules</TITLE>
+<BLIST><TITLE>Modules</TITLE>
 <ITEM>
 list all the modules currently loaded in the kernel (this list is also in <CODEFILENAME>/proc/modules</CODEFILENAME>)<BR/>
 <CODESAMPLE><PROMPT/><X><T>lsmod</T><A>javascript:do_reference("man/linux/8/lsmod")</A><L>en</L><F>HTML</F></X></CODESAMPLE>
@@ -253,7 +253,7 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>javascript:
 </ITEM>
 </BLIST>
 
-<BLIST><TITLE><U><B>file system analysis</B></U></TITLE>
+<BLIST><TITLE><U><B>File system analysis</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>lsof</T><A>http://people.freebsd.org/~abe/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>list the open files</DESC></ROW>
@@ -275,7 +275,7 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>javascript:
 <ROW><TERM><CODEROUTINE><X><T>sfdisk</T><A>javascript:do_reference("man/linux/8/sfdisk")</A><L>en</L><F>HTML</F></X> -l /dev/sdb</CODEROUTINE></TERM><DESC>display the partition table of disk /dev/sdb</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
-<ITEM><BLIST><TITLE>swap</TITLE>
+<ITEM><BLIST><TITLE>Swap</TITLE>
 <ITEM>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>swapon</T><A>javascript:do_reference("man/linux/1/swapon")</A><L>en</L><F>HTML</F></X> -s</CODEROUTINE><BR/><CODEROUTINE>cat <CODEFILENAME><X><T>/proc/swaps</T><A>javascript:do_reference("man/linux/5/proc")</A><L>en</L><F>HTML</F></X></CODEFILENAME></CODEROUTINE></TERM><DESC>display swap usage</DESC></ROW>
@@ -341,7 +341,7 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>javascript:
 </ITEM>
 </BLIST>
 
-<BLIST><TITLE><U><B>libraries</B></U></TITLE>
+<BLIST><TITLE><U><B>Libraries</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>ldconfig</T><A>javascript:do_reference("man/linux/8/ldconfig")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>recreate the links for the shared libraries and rebuild the cache</DESC></ROW>

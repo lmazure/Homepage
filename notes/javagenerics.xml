@@ -54,7 +54,7 @@ To declare a bounded type parameter, list the type parameter's name, followed by
 <TAB/>...<BR/>
 }</CODESAMPLE>
 will not accept a parameter of type <CODEROUTINE>Box&lt;Double&gt;</CODEROUTINE></ITEM>
-<ITEM><BLIST><TITLE>wildcards</TITLE>
+<ITEM><BLIST><TITLE>Wildcards</TITLE>
 <ITEM>upper bound: <CODEROUTINE>&lt;? extends Animal&gt;</CODEROUTINE> means an unknown type that is a subtype of <CODEROUTINE>Animal</CODEROUTINE>, possibly <CODEROUTINE>Animal</CODEROUTINE> itself</ITEM>
 <ITEM>lower bound: <CODEROUTINE>&lt;? super Animal&gt;</CODEROUTINE> means an unknown type that is a supertype of <CODEROUTINE>Animal</CODEROUTINE>, possibly <CODEROUTINE>Animal</CODEROUTINE> itself</ITEM>
 <ITEM>unbounded wildcard  <CODEROUTINE>&lt;?&gt;</CODEROUTINE>, this is the same as <CODEROUTINE>&lt;? extends Object&gt;</CODEROUTINE></ITEM></BLIST></ITEM>
