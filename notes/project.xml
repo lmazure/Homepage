@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Project</TITLE>
 <PATH>notes/project.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><B><U>Computation</U></B></TITLE>
@@ -32,13 +32,13 @@ The default flag value can be defined in <CODEMENU>Outils<CODEMENU>Options...<CO
 </BLIST>
 
 <BLIST><TITLE><B><U>Resources</U></B></TITLE>
-<ITEM><SLIST><TITLE>define days off for the whole team</TITLE>
+<ITEM><SLIST><TITLE>Define days off for the whole team</TITLE>
 <ITEM><CODEMENU>Outils<CODEMENU>Modifier le temps de travail...</CODEMENU></CODEMENU></ITEM>
 <ITEM>Select <CODEMENU>Standard (Calendrier du projet)</CODEMENU> calendar</ITEM>
 <ITEM>Select the days</ITEM>
 <ITEM>Click on <CODEMENU>Ch&#xF4;m&#xE9;</CODEMENU></ITEM>
 </SLIST></ITEM>
-<ITEM><SLIST><TITLE>define days off for a team member</TITLE>
+<ITEM><SLIST><TITLE>Define days off for a team member</TITLE>
 <ITEM><CODEMENU>Outils<CODEMENU>Modifier le temps de travail...</CODEMENU></CODEMENU></ITEM>
 <ITEM>Select the person in the <CODEMENU>Pour:</CODEMENU> calendar dropdown list</ITEM>
 <ITEM>Select the days</ITEM>
@@ -79,7 +79,7 @@ The import does not work properly if the Excel cells contains newlines (the text
 If the column titles are the correct ones in Excel, Project will automatically recognize them<BR/>
 <BR/>
 <BLIST><TITLE><B><U>User Interface</U></B></TITLE>
-<ITEM><BLIST><TITLE>indicate that task &#x3B2; is linked to a task &#x3B1;</TITLE>
+<ITEM><BLIST><TITLE>Indicate that task &#x3B2; is linked to a task &#x3B1;</TITLE>
 <ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the graphical view<BR/>
 put the cursor on top of task &#x3B1;<BR/>
 left click<BR/>
@@ -91,28 +91,28 @@ select the tasks (e.g. by using <MODIFIERKEY ID='Ctrl'/>click)<BR/>
 (it is possible to link more than two tasks; in this case, there are linked one after the other)<BR/>
 type <MODIFIERKEY ID='Ctrl'/><KEY ID='F2'/></ITEM>
 </BLIST></ITEM>
-<ITEM><BLIST><TITLE>unlink tasks</TITLE>
-<ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the graphical view<BR/>
+<ITEM><BLIST><TITLE>Unlink tasks</TITLE>
+<ITEM>On the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the graphical view<BR/>
 double click on the dependence arrow<BR/>
 click on the <CODEMENU>Supprimer</CODEMENU> button of the displayed dialog</ITEM>
 <ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view<BR/>
 select the tasks (e.g. by using <MODIFIERKEY ID='Ctrl'/>click)<BR/>
 type <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></ITEM>
 </BLIST></ITEM>
-<ITEM>on the <CODEROUTINE>Organigramme des t&#xE2;ches</CODEROUTINE> view<BR/>
+<ITEM>On the <CODEROUTINE>Organigramme des t&#xE2;ches</CODEROUTINE> view<BR/>
 put the cursor on top of task &#x3B1;<BR/>
 left click<BR/>
 move the cursor on top of task &#x3B2;<BR/>
 release the mouse button</ITEM>
-<ITEM>change the task orders:<BR/>
+<ITEM>Change the task orders:<BR/>
 on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view<BR/>
 select one or several lines<BR/>
 drag 'n drop the top limit of the tasks</ITEM>
-<ITEM>display the durations in days instead of hours:<BR/>
+<ITEM>Display the durations in days instead of hours:<BR/>
 set <CODEMENU>Outils<CODEMENU>Options...<CODEMENU>Pr&#xE9;visions<CODEMENU>Afficher la dur&#xE9;e en :</CODEMENU></CODEMENU></CODEMENU></CODEMENU> to <CODEMENU>Jours</CODEMENU></ITEM>
-<ITEM>display the workloads in days instead of hours:<BR/>
+<ITEM>Display the workloads in days instead of hours:<BR/>
 set <CODEMENU>Outils<CODEMENU>Options...<CODEMENU>Pr&#xE9;visions<CODEMENU>Afficher le travail en :</CODEMENU></CODEMENU></CODEMENU></CODEMENU> to <CODEMENU>Jours</CODEMENU></ITEM>
-<ITEM>display all the subtasks<BR/>
+<ITEM>Display all the subtasks<BR/>
 in the <CODEMENU>Mise en forme</CODEMENU> toolbar, <CODEMENU>Afficher<CODEMENU>Toutes les t&#xE2;ches subordonn&#xE9;es</CODEMENU></CODEMENU>
 </ITEM>
 </BLIST>

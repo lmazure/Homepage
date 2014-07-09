@@ -6,7 +6,7 @@
 <DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 
-<BLIST><TITLE><U><B>Install and Update</B></U></TITLE>
+<BLIST><TITLE><U><B>Install and update</B></U></TITLE>
 <ITEM>Set up the Proxy:<BR/>
 go in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Install/Update</CODEMENU></CODEMENU></CODEMENU><BR/>
 select <CODEMENU>Enable HTTP proxy connection</CODEMENU><BR/>
@@ -161,7 +161,7 @@ in Search window
 </BLIST>
 
 <U><B>Refactoring</B></U><BR/>
-in Editor window
+In Editor window
 <DEFINITIONTABLE>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='T'/></TERM>
 <DESC>display refactoring menu</DESC></ROW>
@@ -183,7 +183,7 @@ in Editor window
 </BLIST>
 
 <U><B>Running/debugging applications</B></U><BR/>
-in Editor window
+In Editor window
 <DEFINITIONTABLE>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/></TERM>
 <DESC>run last launched</DESC></ROW>
@@ -214,13 +214,13 @@ in Debug window
 <DESC>reenter the current stack frame in debug mode</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-<BLIST><TITLE>create a run configuration</TITLE>
+<BLIST><TITLE>Create a run configuration</TITLE>
 <ITEM><CODEMENU>Run<CODEMENU>Run...</CODEMENU></CODEMENU></ITEM>
 <ITEM>select <CODEMENU>Java application</CODEMENU> and click <CODEMENU>New</CODEMENU></ITEM>
 <ITEM>define its name in the <CODEMENU>Name</CODEMENU> field and fill all the necessary parameters</ITEM>
 </BLIST>
 <BR/>
-<BLIST><TITLE>run an application</TITLE>
+<BLIST><TITLE>Run an application</TITLE>
 <ITEM><CODEMENU>Run<CODEMENU>Run...</CODEMENU></CODEMENU> and select the run configuration</ITEM>
 <ITEM>select the main class and <CODEMENU>Run<CODEMENU>Run As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/> run last launched</ITEM>
@@ -228,14 +228,14 @@ in Debug window
 <ITEM>in the "Debug > Debug" view, select process and <CODEMENU>right click<CODEMENU>Relaunch</CODEMENU></CODEMENU></ITEM>
 </BLIST>
 <BR/>
-<BLIST><TITLE>debug an application</TITLE>
+<BLIST><TITLE>Debug an application</TITLE>
 <ITEM><CODEMENU>Run<CODEMENU>Debug...</CODEMENU></CODEMENU></ITEM>
 <ITEM>select the main class and <CODEMENU>Run<CODEMENU>Debug As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM><KEY ID='F11'/> debug last launched</ITEM>
 <ITEM>in the "Java Browser > Types" view, select the main class and <CODEMENU>right click<CODEMENU>Debug<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
 </BLIST>
 <BR/>
-<BLIST><TITLE>solve a deadlock</TITLE>
+<BLIST><TITLE>Solve a deadlock</TITLE>
 <ITEM>in the Debug View, select <CODEMENU>View menu<CODEMENU>Java<CODEMENU>Show Monitors</CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM>suspend the threads</ITEM>
 <ITEM>for each thread, look at the lock waited for and to who owns it</ITEM>
@@ -243,7 +243,7 @@ in Debug window
 <BR/>
 
 <BLIST><TITLE><U><B>Application creation</B></U></TITLE>
-<ITEM><BLIST><TITLE>create a JAR file</TITLE>
+<ITEM><BLIST><TITLE>Create a JAR file</TITLE>
 <ITEM>Right click on the project name in the <CODEMENU>Project Explorer</CODEMENU> and select <CODEMENU>Export</CODEMENU>.</ITEM>
 <ITEM>Select <CODEMENU>Java<CODEMENU>JAR file</CODEMENU></CODEMENU> and click <CODEMENU>Next</CODEMENU>.</ITEM>
 <ITEM>Select the file to generate in the <CODEMENU>JAR file</CODEMENU> field and click <CODEMENU>Next</CODEMENU>.</ITEM>
@@ -260,7 +260,7 @@ in Debug window
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
 <DESC>insert Javadoc comment</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
-<ITEM><BLIST><TITLE>declare the Javadoc command</TITLE>
+<ITEM><BLIST><TITLE>Declare the Javadoc command</TITLE>
 <ITEM>Eclipse 3.0:<BR/>
 <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Javadoc</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM>Eclipse 3.1<BR/>
@@ -268,7 +268,7 @@ Fill the field <CODEMENU>Javadoc command</CODEMENU> in <CODEMENU>Project<CODEMEN
 </BLIST></ITEM>
 <ITEM>generate the documentation<BR/>
 <CODEMENU>Project<CODEMENU>Generate Javadoc...</CODEMENU></CODEMENU></ITEM>
-<ITEM><BLIST><TITLE>define the location of the JDK Javadoc</TITLE>
+<ITEM><BLIST><TITLE>Define the location of the JDK Javadoc</TITLE>
 <ITEM>Eclipse 3.0:<BR/>
 <CODEMENU>Windows<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Installed JREs</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
 double click on a JRE<BR/>
@@ -299,7 +299,7 @@ double click on <CODEMENU>Javadoc location</CODEMENU> and type <CODEROUTINE>file
 
 <BLIST><TITLE><U><B>FindBugs</B></U></TITLE>
 <ITEM>
-<BLIST><TITLE>installing FindBugs</TITLE>
+<BLIST><TITLE>Installing FindBugs</TITLE>
 <ITEM><CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install...</CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM>select  <CODEMENU>Search for new features to install</CODEMENU></ITEM>
 <ITEM>click on <CODEMENU>New Remote Site...</CODEMENU></ITEM>
@@ -313,7 +313,7 @@ URL: http://findbugs.cs.umd.edu/eclipse</ITEM>
 <ITEM>restart Eclipse</ITEM>
 </BLIST></ITEM>
 <ITEM>
-<BLIST><TITLE>using FindBugs</TITLE>
+<BLIST><TITLE>Using FindBugs</TITLE>
 <ITEM>right click on a Java project and select <CODEMENU>Find Bugs<CODEMENU>Find Bugs</CODEMENU></CODEMENU></ITEM>
 </BLIST></ITEM>
 </BLIST>
