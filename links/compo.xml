@@ -6,7 +6,7 @@
 <DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
-<BLIST><TITLE>virtualization</TITLE>
+<BLIST><TITLE>Virtualization</TITLE>
 <ITEM><X><T>VirtualPC</T><A>http://www.microsoft.com/en-us/download/details.aspx?id=4580</A><L>en</L><F>HTML</F></X>:
   <X><T>Internet Explorer Application Compatibility VPC Image</T><A>http://www.microsoft.com/downloads/details.aspx?FamilyId=21EABB90-958F-4B64-B5F1-73D0A413C8EF</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>VMware</T><A>http://www.vmware.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -14,13 +14,13 @@
 <ITEM><X><T>VirtualBox</T><A>http://www.virtualbox.org</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
-<BLIST><TITLE>database</TITLE>
+<BLIST><TITLE>Database</TITLE>
 <ITEM><X><T>PostgreSQL</T><A>http://www.postgresql.org</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>MySQL</T><A>http://www.mysql.com</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>SQL Relay</T><A>http://sqlrelay.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
-<BLIST><TITLE>software bus</TITLE>
+<BLIST><TITLE>Software bus</TITLE>
 <ITEM><BLIST><TITLE>CORBA</TITLE>
 <ITEM><X><T>MICO</T><A>http://www.mico.org/</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>TAO</T><A>http://www.cs.wustl.edu/%7Eschmidt/TAO.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -29,7 +29,7 @@
 <ITEM><X><T>DCOP</T><A>http://api.kde.org/3.5-api/kdelibs-apidocs/dcop/html/index.html</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
-<BLIST><TITLE>parser generators</TITLE>
+<BLIST><TITLE>Parser generators</TITLE>
 <ITEM><X><T>comp.compilers</T><A>http://compilers.iecc.com/</A><L>en</L><F>HTML</F></X>: <X><T>FAQ</T><A>http://compilers.iecc.com/faq.txt</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM>flex: <X><T>GNU</T><A>http://flex.sourceforge.net</A><L>en</L><F>HTML</F></X><BR/></ITEM>
 <ITEM>bison: <X><T>GNU</T><A>http://www.gnu.org/software/bison/manual/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -47,7 +47,7 @@ artificial life: <X><T>biota.org</T><A>http://www.biota.org/</A><L>en</L><F>HTML
 
 <LINE/>
 
-<BLIST><TITLE>mess...</TITLE>
+<BLIST><TITLE>Mess...</TITLE>
   <ITEM><X><T>Jabber</T><A>http://www.jabber.org</A><L>en</L><F>HTML</F></X>: a instant messaging system</ITEM>
   <ITEM><X><T>GNUStep</T><A>http://www.gnustep.org</A><L>en</L><F>HTML</F></X>: GNU's implementation of OpenStep</ITEM>
   <ITEM><X><T>JavaDict</T><A>http://www.cs.arizona.edu/japan/JavaDict</A><L>en</L><F>HTML</F></X>: Japanese/English dictionary</ITEM>
@@ -67,15 +67,15 @@ artificial life: <X><T>biota.org</T><A>http://www.biota.org/</A><L>en</L><F>HTML
 </BLIST>
 
 <LINE/>
-<BLIST><TITLE><B>articles</B></TITLE>
+<BLIST><TITLE>Articles</TITLE>
 
-<ITEM><BLIST><TITLE>parser generators</TITLE>
+<ITEM><BLIST><TITLE>Parser generators</TITLE>
   <ITEM><ARTICLE><X><T>ANTLR: A Predicated-LL(k) Parser Generator</T><A>http://courses.engr.illinois.edu/cs421/sp2012/project/antlr.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>T.J. Parr</AUTHOR><AUTHOR>R. W. Quong</AUTHOR><DATE><YEAR>1994</YEAR><MONTH>11</MONTH><DAY>17</DAY></DATE><COMMENT>A detailed presentation of ANTLR</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>JavaCC, parse trees, and the XQuery grammar, Part 1</T><ST>Using BNF and JavaCC to build custom parsers</ST><A>http://www.ibm.com/developerworks/xml/library/x-javacc1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Howard Katz</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>A short presentation of JavaCC, a Java parser generator.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X status='dead'><T>JavaCC, parse trees, and the XQuery grammar, Part 2</T><ST>Building and walking a custom parse tree using JJTree</ST><A>http://www.ibm.com/developerworks/xml/library/x-javacc2</A><L>en</L><F>HTML</F></X><AUTHOR>Howard Katz</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>12</MONTH></DATE><COMMENT>An even shorter presentation of JJTree, a layer above JavaCC to directly generate an abstract syntax tree.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 
-<ITEM><BLIST><TITLE>memory management</TITLE>
+<ITEM><BLIST><TITLE>Memory management</TITLE>
   <ITEM><ARTICLE><X><T>Inside memory management</T><ST>The choices, tradeoffs, and implementations of dynamic allocation</ST><A>http://www.ibm.com/developerworks/linux/library/l-memory/</A><L>en</L><F>HTML</F></X><AUTHOR>Jonathan Bartlett</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE><COMMENT>A good overview of memory management (<CODEROUTINE>brk</CODEROUTINE>/<CODEROUTINE>sbrk</CODEROUTINE>, <CODEROUTINE>malloc</CODEROUTINE>/<CODEROUTINE>free</CODEROUTINE>, reference counting, garbage collection...), but nothing new here.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 
@@ -89,7 +89,7 @@ artificial life: <X><T>biota.org</T><A>http://www.biota.org/</A><L>en</L><F>HTML
 
 </BLIST></ITEM>
 
-<ITEM><BLIST><TITLE>miscellaneous</TITLE>
+<ITEM><BLIST><TITLE>Miscellaneous</TITLE>
   <ITEM><ARTICLE><X><T>A Hash Function for Hash Table Lookup</T><A>http://burtleburtle.net/bob/hash/doobs.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bob Jenkins</AUTHOR><COMMENT>A comparison of some hash functions.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>TFTP and Error Correction</T><A>http://www.oreillynet.com/pub/a/wireless/2003/12/04/tftp.html</A><L>en</L><F>HTML</F></X><AUTHOR>Heath Johns</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>A presentation of redundancy, acknowledgement and timeouts for the dummies. But the description is so oversimplified, that nobody will learn something useful with this article.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Ontology Tools Survey, Revisited</T><A>http://www.xml.com/pub/a/2004/07/14/onto.html</A><L>en</L><F>HTML</F></X><AUTHOR>Michael Denny</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>7</MONTH><DAY>14</DAY></DATE><COMMENT>A long list of tools, but the article is difficult to read because the author tried to put too much information in it.</COMMENT></ARTICLE></ITEM>
