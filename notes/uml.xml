@@ -15,7 +15,7 @@
 
 
 <B><U>use case diagram</U></B><BR/>
-<BLIST><TITLE>inter use cases relations</TITLE>
+<BLIST><TITLE>Inter use cases relations</TITLE>
 <ITEM>&#xab;include&#xbb; (dotted arrow): the pointing use case A includes the pointed use case B<BR/>
 i.e. every time A is performed, B is performed as a part of B<BR/>
 a user case can include more than one other use cases, but the temporal sequence cannot be represented</ITEM>
@@ -26,7 +26,7 @@ the condition of the extension and the corresponding extension points are option
 <ITEM>generalization (standard generalization symbol)<BR/>
 the pointing use case A is a specialization of the pointed use case B</ITEM>
 </BLIST>
-actor relation<BR/>
+Actor relation<BR/>
 The only possible relationship between actors is the generalization (standard generalization symbol).<BR/>
 <BR/>
 
@@ -83,7 +83,7 @@ When the composite cannot exist without any component, this is a composition. A 
 The generalization is indicated by a hollow triangle and a plain line (either for a class generalization or a type generalization). <BR/>
 The realization (of a type or of a parameterized class) is indicated by a hollow triangle and a dotted line.</ITEM>
 </BLIST>
-<BLIST><TITLE>stereotypes:</TITLE>
+<BLIST><TITLE>Stereotypes:</TITLE>
 <ITEM>ImplementationClass</ITEM>
 <ITEM>Type</ITEM>
 <ITEM>...</ITEM>

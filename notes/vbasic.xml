@@ -667,7 +667,7 @@ given delimiter
 <CODEROUTINE>AscB(string)</CODEROUTINE> return the first byte of the first letter of string<BR/>
 <CODEROUTINE>AscW(string)</CODEROUTINE> return the Unicode code of the first letter of string<BR/>
 </ITEM>
-<ITEM><BLIST><TITLE>converting integers/float/dates into strings</TITLE>
+<ITEM><BLIST><TITLE>Converting integers/float/dates into strings</TITLE>
   <ITEM><CODEROUTINE>Str(number)</CODEROUTINE> convert an integer or float into a string<BR/>
   the first character is reserved for the sign, so there is always a space at the beginning for positive numbers<BR/>
   to avoid this, use <CODEROUTINE>FormatNumber(incr,0)</CODEROUTINE> instead of <CODEROUTINE>Str(incr)</CODEROUTINE></ITEM>

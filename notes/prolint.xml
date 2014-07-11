@@ -3,24 +3,24 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>ProLint</TITLE>
 <PATH>notes/prolint.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 
-<BLIST><TITLE><B><U>syntax</U></B></TITLE>
+<BLIST><TITLE><B><U>Syntax</U></B></TITLE>
 <ITEM>
 use the <CODEROUTINE>%ENVVAR%</CODEROUTINE> to insert the value of an environment variable in a <CODEROUTINE>.lnt</CODEROUTINE> file<BR/>
 example: <CODEROUTINE>%TOPDIR%/tools/prolin/base.lnt</CODEROUTINE> to include the <CODEROUTINE>base.lnt</CODEROUTINE> file 
 </ITEM>
 </BLIST>
 
-<BLIST><TITLE><B><U>adding warnings</U></B></TITLE>
+<BLIST><TITLE><B><U>Adding warnings</U></B></TITLE>
 <ITEM>
 define a short 2 / int 4 / long 8 / pointer 8 memory model:<BR/>
 <CODESAMPLE>-sb8 -sc1 -ss2 -si4 -sl8 -sf4 -sld16 -sp8 -spD8 -spP8 -smp8 -smpD8 -smpP8 -sw8</CODESAMPLE>
 </ITEM>
 </BLIST>
 
-<BLIST><TITLE><B><U>avoiding warnings</U></B></TITLE>
+<BLIST><TITLE><B><U>Avoiding warnings</U></B></TITLE>
 <ITEM>syntaxes:
 <DEFINITIONTABLE>
 <ROW>
@@ -77,7 +77,7 @@ this cannot be used in a macro</DESC>
 <TAB/><TAB/>/*lint -esym(1526,FooBar::operator=)*/<BR/>
 }</CODESAMPLE>
 </ITEM>
-<ITEM><BLIST><TITLE>header files</TITLE>
+<ITEM><BLIST><TITLE>Header files</TITLE>
 <ITEM>ProLint will generate 1053 errors if the same include file is included with two differents paths<BR/>
 <U>example:</U> the source file contains (via the hierarchy of included files)
 <CODESAMPLE>#include "foo/bar.h"<BR/>
@@ -186,7 +186,7 @@ kill it with
 -d"QUObject=QUObject/*lint --e{1736}*/" // Redundant access specifier</CODESAMPLE></ITEM>
 </BLIST>
 
-<BLIST><TITLE><B><U>license management</U></B></TITLE>
+<BLIST><TITLE><B><U>License management</U></B></TITLE>
 <ITEM>in order to use <CODEROUTINE>prola</CODEROUTINE>, you must be in the ProLint directory</ITEM>
 <ITEM>list the current licence usage
 <CODESAMPLE><PROMPT/>prola print</CODESAMPLE></ITEM>
@@ -196,7 +196,7 @@ kill it with
 <CODESAMPLE><PROMPT/>prola disable -user="uid10288"</CODESAMPLE></ITEM>
 </BLIST>
 
-<B><U>review of the Prolint comments</U></B><BR/>
+<B><U>Review of the Prolint comments</U></B><BR/>
 For the time being, this is trivial method:
 <CODESAMPLE><PROMPT/>grep -R -I -w lint | filter</CODESAMPLE>
 where <CODEROUTINE>filter</CODEROUTINE> is

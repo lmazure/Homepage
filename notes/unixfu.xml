@@ -64,7 +64,7 @@
 <ROW><TERM><CODEROUTINE>grep -C &lt;n&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>n</CODEROUTINE> lines after the match</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -B &lt;n&gt; -C &lt;m&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>m</CODEROUTINE> lines after the match</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep "a[[:space:]]+b"</CODEROUTINE></TERM><DESC>search <CODEROUTINE>a</CODEROUTINE> followed by one or more spaces, tabs... and finally by <CODEROUTINE>b</CODEROUTINE><BR/>
-<BLIST><TITLE>the named character classes are:</TITLE>
+<BLIST><TITLE>The named character classes are:</TITLE>
 <ITEM><CODEROUTINE>[:alnum:]</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>[:alpha:]</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>[:cntrl:]</CODEROUTINE></ITEM>
