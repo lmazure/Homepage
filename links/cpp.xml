@@ -62,7 +62,7 @@ tutorials:
 <X><T>SPIDER CERN</T><A>http://pst.web.cern.ch/PST/HandBookWorkBook/Handbook/Programming/CodingStandard/c++standard.pdf</A><L>en</L><F>PDF</F></X>,
 <X><T>Universit&#xE4;t Bonn Computer Graphik</T><A>http://cg.cs.uni-bonn.de/docs/teaching/2002/SS/pg2002/documents/ProgrammingGuidelines1-22.pdf</A><L>en</L><F>PDF</F></X><BR/>
 
-<BLIST><TITLE>libraries</TITLE>
+<BLIST><TITLE>Libraries</TITLE>
 <ITEM><X><T>Boost.org</T><A>http://www.boost.org/</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>OSE</T><A>http://www.dscpl.com.au</A><L>en</L><F>HTML</F></X>: C++ class library</ITEM>
 <ITEM><X><T>ACE</T><A>http://www.cs.wustl.edu/%7Eschmidt/ACE.html</A><L>en</L><F>HTML</F></X>: OS independant IPC mechanisms</ITEM>
@@ -78,24 +78,24 @@ interface with other languages:
 
 <LINE/>
 
-<BLIST><TITLE>articles</TITLE>
-  <ITEM><BLIST><TITLE>books</TITLE>
+<BLIST><TITLE>Articles</TITLE>
+  <ITEM><BLIST><TITLE>Books</TITLE>
     <ITEM><ARTICLE><X><T>Thinking in C++</T><A>http://www.mindview.net/Books/TICPP/ThinkingInCPP2e.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bruce Eckel</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE><COMMENT>A free book to learn C++.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>memory management</TITLE>
+  <ITEM><BLIST><TITLE>Memory management</TITLE>
     <ITEM><ARTICLE><X><T>The "Empty Member" C++ Optimization</T><A>http://www.cantrip.org/emptyopt.html</A><L>en</L><F>HTML</F></X><AUTHOR>Nathan C. Myers</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>8</MONTH></DATE><COMMENT>Avoid to allocate space for an empty class by using it as a base class.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Memory Management in C++</T><A>http://www.cantrip.org/wave12.html</A><L>en</L><F>HTML</F></X><AUTHOR>Nathan C. Myers</AUTHOR><DATE><YEAR>1993</YEAR></DATE><COMMENT>The first part describes the interface to use private memory allocators. The second part gives an example of algorithm for such an allocator.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>C++ Memory Management: From Fear to Triumph</T><A>http://linux.oreillynet.com/pub/a/linux/2003/05/08/cpp_mm-1.html</A><L>en</L><F>HTML</F></X><AUTHOR>George Belotsky</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>Nothing interesting in the first half of the article: the usual advice about copy constructors and assignment operators, ... But the second part gives an interesting and not so common list of frequent errors.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Counting Objects in C++</T><A>http://www.drdobbs.com/cpp/counting-objects-in-c/184403484</A><L>en</L><F>HTML</F></X><AUTHOR>Scott Meyers</AUTHOR><DATE><YEAR>1998</YEAR><MONTH>4</MONTH></DATE><COMMENT>The driving idea of this article is how to implement class instance counting. But the main interest is that several C++ complex features are referred: thrown exception in <CODEROUTINE>new</CODEROUTINE>, placement <CODEROUTINE>new</CODEROUTINE>/<CODEROUTINE>delete</CODEROUTINE>...</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>exceptions</TITLE>
+  <ITEM><BLIST><TITLE>Exceptions</TITLE>
     <ITEM><ARTICLE><X><T>Exception Handling: A False Sense of Security</T><A>http://www.awprofessional.com/content/images/020163371x/supplements/Exception_Handling_Article.html</A><L>en</L><F>HTML</F></X><AUTHOR>Tom Cargill</AUTHOR><DATE><YEAR>1994</YEAR><MONTH>11</MONTH></DATE><COMMENT>A very good warning that exceptions are much more complex to use than you would think.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Coping with Exceptions</T><A>http://www.bleading-edge.com/Publications/C++Report/v9603/Article2a.htm</A><L>en</L><F>HTML</F></X><X><T>Coping with Exceptions</T><A>../attic/Article2a.rtf</A><L>en</L><F>HTML</F></X><AUTHOR>Jack W. Reeves</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>The author proposes some guidelines to use the exceptions. He applies them to the example described in the previous article.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Exception-Safe Generic Containers</T><A>http://www.cs.huji.ac.il/course/2003/ood/resources/Exception_Safe_Generic_Containers.pdf</A><L>en</L><F>PDF</F></X><X><T>Exception-Safe Generic Containers</T><A>../attic/Exception_Safe_Generic_Containers.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Herb Sutter</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>9</MONTH></DATE><COMMENT>Another answer to Cargill article. This one is simpler than Reeves' one.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Unmanaged Pointers in C++: Parameter Evaluation, auto_ptr, and Exception Safety</T><A>http://www.drdobbs.com/unmanaged-pointers-in-c-parameter-evalua/184403851</A><L>en</L><F>HTML</F></X><AUTHOR>Herb Sutter</AUTHOR><DATE><YEAR>2002</YEAR></DATE><COMMENT>Understanding the evaluation order of function parameters and how to correctly use<CODEROUTINE>auto_ptr</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>C++ exception-handling tricks for Linux</T><ST>Four techniques for dealing with built-in language limitations</ST><A>http://www.ibm.com/developerworks/library/l-cppexcep.html</A><L>en</L><F>HTML</F></X><AUTHOR>Sachin O. Agrawal</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE><COMMENT>A bag of tricks for exceptions: dumping the backtrace, translating signals into exceptions, catching exceptions thrown during construction/destruction of global variables and ignoring exceptions in non-vital threads.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>templates</TITLE>
+  <ITEM><BLIST><TITLE>Templates</TITLE>
     <ITEM><ARTICLE><X quality='2'><T>Using Templates in Practice</T><A>http://www.drdobbs.com/using-templates-in-practice/184403945</A><L>en</L><F>HTML</F></X><AUTHOR>David Vandevoorde</AUTHOR><AUTHOR>Nicolai M. Josuttis</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>2</MONTH></DATE><COMMENT>A very practical description of template use: how to handle their sources (inclusion vs. separation), precompiled header, debugging...</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Template Metaprograms</T><A>http://www10.informatik.uni-erlangen.de/~pflaum/pflaum/ProSeminar/meta-art.html</A><L>en</L><F>HTML</F></X><AUTHOR>Todd Veldhuizen</AUTHOR><DATE><YEAR>1995</YEAR><MONTH>5</MONTH></DATE><COMMENT>Stretching template use beyond belief in order to help the compiler... The resulting code is simply unreadable. There are better ways to improve performance than using this trick.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Expression Templates</T><A>http://www10.informatik.uni-erlangen.de/~pflaum/pflaum/Literatur_Grid/exprtmpl.ps.gz</A><L>en</L><F>PostScript</F></X><AUTHOR>Todd Veldhuizen</AUTHOR><DATE><YEAR>1995</YEAR><MONTH>6</MONTH></DATE><COMMENT>This paper applies the same techniques as the previous one to handle expression evaluation without defining a routine. This time the result is interesting: code is faster and more readable than using the usual routine definition.</COMMENT></ARTICLE></ITEM>
@@ -111,22 +111,22 @@ interface with other languages:
     <ITEM><ARTICLE><X><T>Three Guidelines for Effective Iterator Usage</T><A>http://www.drdobbs.com/cpp/three-guidelines-for-effective-iterator/184401406</A><L>en</L><F>HTML</F></X><AUTHOR>Scott Meyers</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH></DATE><COMMENT>As usual with Scott, some good advice on using <CODEROUTINE>iterator</CODEROUTINE>, <CODEROUTINE>const_iterator</CODEROUTINE>,   <CODEROUTINE>reverse_iterator</CODEROUTINE> and <CODEROUTINE>reverse_const_iterator</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>STL Algorithms vs. Hand-Written Loops</T><A>http://www.drdobbs.com/stl-algorithms-vs-hand-written-loops/184401446</A><L>en</L><F>HTML</F></X><AUTHOR>Scott Meyers</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>10</MONTH></DATE><COMMENT>Why it is better to use the algorithms rather than the loops with iterators.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>libraries</TITLE>
-    <ITEM><BLIST><TITLE>parsers</TITLE>
+  <ITEM><BLIST><TITLE>Libraries</TITLE>
+    <ITEM><BLIST><TITLE>Parsers</TITLE>
       <ITEM><ARTICLE><X><T>Introducing the Boost parser framework</T><A>http://www.ibm.com/developerworks/aix/library/au-boost_parser/</A><L>en</L><F>HTML</F></X><AUTHOR>Arpan Sen</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE><COMMENT>A presentation of Boost's Spirit which is a simple parser based on functors.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>locales</TITLE>
+  <ITEM><BLIST><TITLE>Locales</TITLE>
     <ITEM><ARTICLE><X><T>The Standard C++ Locale</T><A>http://www.cantrip.org/locale.html</A><L>en</L><F>HTML</F></X><AUTHOR>Nathan C. Myers</AUTHOR><DATE><YEAR>1997</YEAR></DATE><COMMENT>A description of the implementation of the locale support (<CODEROUTINE>facet</CODEROUTINE>, <CODEROUTINE>locale</CODEROUTINE>, <CODEROUTINE>locale::id</CODEROUTINE>...).</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Internationalization Using Standard C++</T><A>http://www.angelikalanger.com/Articles/Cuj/Internationalization/I18N.html</A><L>en</L><F>HTML</F></X><AUTHOR>Klaus Kreft</AUTHOR><AUTHOR>Angelina Langer</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>9</MONTH></DATE><COMMENT>Yet another description of the locales and facets.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>language philosophy</TITLE>
+  <ITEM><BLIST><TITLE>Language philosophy</TITLE>
     <ITEM><ARTICLE><X status='dead'><T>The language barrier</T><A>http://www.redherring.com/Home/1981</A><L>en</L><F>HTML</F></X><AUTHOR>Andrew Madden</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>James Gosling and Bjarne Stroustrup have diverging ideas about how a language should evolve.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>C++ Answers From Bjarne Stroustrup</T><A>http://slashdot.org/interviews/00/02/25/1034222.shtml</A><L>en</L><F>HTML</F></X><DATE><YEAR>2000</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE><COMMENT>A Slashdot interview of Bjarne Stroustrup: the usual C++ subjects are spoken about.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>An interview with Bjarne Stroustrup - The future is multiparadigm programming</T><A>http://linux.sys-con.com/node/32929</A><L>en</L><F>HTML</F></X><AUTHOR>Danny Kalev</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>Stroustrup describes why the object orientation adoption was so slow, the divergence of C and C++, his desired new features and C++ poor advocacy.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The New C++: Trip Report</T><A>http://www.drdobbs.com/trip-report-october-2002/184403857</A><L>en</L><F>HTML</F></X><AUTHOR>Herb Sutter</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>10</MONTH></DATE><COMMENT>A description of how the C++ standard committee works and its current status.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>code analysis</TITLE>
+  <ITEM><BLIST><TITLE>Code analysis</TITLE>
     <ITEM><ARTICLE><X><T>A First Look at C++ Program Analyzers</T><A>http://www.aristeia.com/ddjpaper1_frames.html</A><L>en</L><F>HTML</F></X><X><T>A First Look at C++ Program Analyzers</T><A>http://www.aristeia.com/ddjpaper1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Scott Meyers</AUTHOR><AUTHOR>Martin Klaus</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>2</MONTH></DATE><COMMENT>The authors perform a benchmark on several static analysers for C++ code. This benchmark is based on Meyers' rules.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>C compatibility</TITLE>
@@ -140,7 +140,7 @@ interface with other languages:
     <ITEM><ARTICLE><X><T>The Standard Librarian: Complex Numbers</T><A>http://www.drdobbs.com/the-standard-librarian-complex-numbers/184401491</A><L>en</L><F>HTML</F></X><AUTHOR>Matt Austern</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>3</MONTH></DATE><COMMENT>A quick presentation of the support of complex numbers in the standard library.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Matrix libraries for C and C++</T><A>http://www.ibm.com/developerworks/library/l-matrix.html</A><L>en</L><F>HTML</F></X><AUTHOR>Andrew L. Blais</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH></DATE><COMMENT>A quick presentation and speed comparison of <X><T>Meschach</T><A>http://www.math.uiowa.edu/%7Edstewart/meschach/</A><L>en</L><F>HTML</F></X>, <X><T>CwMtx</T><A>http://www.xs4all.nl/%7Ehkuiper/cwmtx/cwmtx.html</A><L>en</L><F>HTML</F></X> and <X><T>blitz++</T><A>http://oonumerics.org/blitz/</A><L>en</L><F>HTML</F></X></COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>performance</TITLE>
+  <ITEM><BLIST><TITLE>Performance</TITLE>
     <ITEM><ARTICLE><X><T>Programming Guidelines for Vectorizing C/C++ Compilers</T><A>http://www.drdobbs.com/programming-guidelines-for-vectorizing-c/184401611</A><L>en</L><F>HTML</F></X><AUTHOR>Aart Bik</AUTHOR><AUTHOR>Milind Girkar</AUTHOR><AUTHOR>Paul Grey</AUTHOR><AUTHOR>Xinmin Tian</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>2</MONTH></DATE><COMMENT>How to provide some hints to help the Intel compiler to vectorize some loops.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>gcc</TITLE>
@@ -153,7 +153,7 @@ interface with other languages:
     <ITEM><ARTICLE><X><T>Getting C++ Threads Right</T><A>http://www.youtube.com/watch?v=mrvAqvtWYb4</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>10</MINUTE><SECOND>17</SECOND></DURATION></X><AUTHOR>Hans Boehm</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE><COMMENT>A presentation of some issues when dealing with multi-threading and how the C++0x standard will handle them.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>An Overview of the Coming C++ (C++0x) Standard</T><A>http://www.youtube.com/watch?v=JffvCivHEHU</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>59</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR>Lawrence Crowl</AUTHOR><AUTHOR>Matt Austern</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE><COMMENT>A very fast presentation of all the new features of C++0X as this one is now in review.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
- <ITEM><BLIST><TITLE>miscellaneous</TITLE>
+ <ITEM><BLIST><TITLE>Miscellaneous</TITLE>
    <ITEM><ARTICLE><X status='dead'><T>Navigating C++ Streams: How to Paddle Softly and Avoid the Alligators</T><A>http://www.cse.concordia.ca/%7Egrogono/streams.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Peter Grogono</AUTHOR><DATE><YEAR>2001</YEAR><MONTH>12</MONTH></DATE><COMMENT>A tutorial on streams.</COMMENT></ARTICLE></ITEM>
    <ITEM><ARTICLE><X><T>C++ Idioms</T><A>http://tinf2.vub.ac.be/~dvermeir/c++/EuroPLoP98.html</A><L>en</L><F>HTML</F></X><AUTHOR>James O. Coplien</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>The idioms are too quickly described, this makes this stuff not correctly understandable (this is probably different if you have already read other Coplien's papers).</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead' quality='2'><T>Casting in C++: Bringing Safety and Smartness to Your Programs</T><A>http://www.acm.org/crossroads/xrds3-1/ovp3-1.html</A><L>en</L><F>HTML</F></X><AUTHOR>G. Bowden Wise</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A clear presentation of the C++ cast operators.</COMMENT></ARTICLE></ITEM>
