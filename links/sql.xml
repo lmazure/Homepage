@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>SQL</TITLE>
 <PATH>links/sql.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>8</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>8</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <X><T>Yahoo page</T><A>http://dir.yahoo.com/Computers_and_Internet/Programming_and_Development/Languages/SQL/</A><L>en</L><F>HTML</F></X>,
 <X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Languages/SQL/</A><L>en</L><F>HTML</F></X><BR/>
@@ -32,6 +32,7 @@ tutorials:
     <ITEM><ARTICLE><X><T>Performance Tuning Best Practices for MySQL</T><A>http://www.youtube.com/watch?v=u70mkgDnDdU</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>43</MINUTE><SECOND>33</SECOND></DURATION></X><AUTHOR>Jay Pipes</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>4</MONTH><DAY>28</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Define and Store MySQL ADO Connection String in VB.NET 2005</T><A>http://dev.mysql.com/tech-resources/articles/ebonat-connection-string-vb-net.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ernest Bonat</AUTHOR><COMMENT>Connection strings must be recorded in a configuration file, not hardcoded.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Beyond MySQL</T><ST>Branching the popular database</ST><A>http://www.ibm.com/developerworks/opensource/library/os-beyondmysql/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Michael Abernethy</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE><COMMENT>A quick presentation of some forks of MySQL: XtraDB, Percona, MariaDB and Drizzle.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Baron Schwartz: MySQL, SQL, NoSQL, and Open Source in 2014 and Beyond</T><A>https://www.youtube.com/watch?v=f1hSvfDIfbo</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>25</MINUTE><SECOND>27</SECOND></DURATION></X><AUTHOR>Baron Schwartz</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE><COMMENT>Miscelaneous ideas/opinions about MySQL, relational databases, NoSQL databases, performance...</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Derby</TITLE>
     <ITEM><BLIST><TITLE>SQL</TITLE>
@@ -68,6 +69,7 @@ tutorials:
     <ITEM><ARTICLE><X quality='1'><T>Transaction strategies: The High Performance strategy</T><ST>Learn how to implement a transaction strategy for high-performance applications</ST><A>http://www.ibm.com/developerworks/java/library/j-ts6/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Mark Richards</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE><COMMENT>The author explains how to use local transactions and handle some errors with a compensation framework. The performance is higher but some changes can be impossible to roll back.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Business Intelligence</TITLE>
+    <ITEM><ARTICLE><X><T>ReportingDatabase</T><A>http://martinfowler.com/bliki/ReportingDatabase.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE><COMMENT>A very short overview of the advantages of a reporting database.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Designing the Star Schema Database</T><A>http://www.ciobriefings.com/Publications/WhitePapers/DesigningtheStarSchemaDatabase/tabid/101/Default.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Craig Utley</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>7</MONTH><DAY>17</DAY></DATE><COMMENT>The differences between OLTP and OLAP databases, what is a star schema, what is a snowflake schema.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Adventures with Testing BI/DW Application:On a crusade to find the Holy Grail</T><A>http://msdn.microsoft.com/en-us/library/gg248101.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Raj Kamal</AUTHOR><AUTHOR>Nakul</AUTHOR> <COMMENT>Some high level generalities about reviewing and testing the whole BI chain: from the data soruces to the reports.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
