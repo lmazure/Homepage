@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java - multi-threading</TITLE>
 <PATH>links/javamt.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 
 <X><T>personal notes</T><A>../notes/javathread.htm</A><L>en</L><F>HTML</F></X>
@@ -47,7 +47,13 @@
   <ITEM><BLIST><TITLE>JCSP</TITLE>
     <ITEM><ARTICLE><X><T>CSP for Java programmers, Part 1</T><ST>Pitfalls of multithreaded programming on the Java platform</ST><A>http://www.ibm.com/developerworks/java/library/j-csp1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Abhijit Belapurkar</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE><COMMENT>Some generalities about Java multi-threading and its pitfalls.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>CSP for Java programmers, Part 2</T><ST>Concurrent programming with JCSP</ST><A>http://www.ibm.com/developerworks/java/library/j-csp2</A><L>en</L><F>HTML</F></X><AUTHOR>Abhijit Belapurkar</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE><COMMENT>A presentation of JCSP framework: how to build a network of processes linked by channels.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>CSP for Java programmers, Part 3</T><ST>Advanced topics in JCSP</ST><A>http://www.ibm.com/developerworks/java/library/j-csp3.html</A><L>en</L><F>HTML</F></X><AUTHOR>Abhijit Belapurkar</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE><COMMENT>Some advanced JCSP features (<CODEROUTINE>Barrier</CODEROUTINE>, <CODEROUTINE>Bucket</CODEROUTINE>, <CODEROUTINE>CREW</CODEROUTINE>, <CODEROUTINE>ProcessManager</CODEROUTINE>...) with some non-convincing comparison with AOP and the java.util.concurrent package.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>CSP for Java programmers, Part 3</T><ST>Advanced topics in JCSP</ST><A>http://www.ibm.com/developerworks/java/library/j-csp3.html</A><L>en</L><F>HTML</F></X><AUTHOR>Abhijit Belapurkar</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE><COMMENT>Some advanced JCSP features (<CODEROUTINE>Barrier</CODEROUTINE>, <CODEROUTINE>Bucket</CODEROUTINE>, <CODEROUTINE>CREW</CODEROUTINE>, <CODEROUTINE>ProcessManager</CODEROUTINE>...) with some non-convincing comparison with AOP and the <CODEROUTINE>java.util.concurrent</CODEROUTINE> package.</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>JVM concurrency</TITLE>
+    <ITEM><ARTICLE><X><T>JVM concurrency: Java and Scala concurrency basics</T><ST>Understand concurrency in the Java language and the added options that Scala provides</ST><A>http://www.ibm.com/developerworks/library/j-jvmc1/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>A short recall of <CODEROUTINE>synchronized</CODEROUTINE> and <CODEROUTINE>volatile</CODEROUTINE>, a description of how to use thread pools and fork/join in Java, and callbacks, <CODEROUTINE>for</CODEROUTINE> comprehension and waiting in Scala.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>JVM concurrency: Java 8 concurrency basics</T><ST>See how Java 8 features make concurrent programming easier</ST><A>http://www.ibm.com/developerworks/library/j-jvmc2/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT><CODEROUTINE>CompletableFuture</CODEROUTINE> and streams.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>JVM concurrency: To block, or not to block?</T><ST>Compare blocking and nonblocking approaches to handling asynchronous events in Java 8</ST><A>http://www.ibm.com/developerworks/library/j-jvmc3/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE><COMMENT>Using <CODEROUTINE>CompletableFuture</CODEROUTINE>s with a waiting thread or by combining them, and the performance / complexity of both solutions.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>JVM concurrency: Asynchronous event handling in Scala</T><ST>Learn blocking and nonblocking techniques, including easy nonblocking code with the async macro</ST><A>http://www.ibm.com/developerworks/library/j-jvmc4/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE><COMMENT>The same content as the previous article, but this time inScala with the special <CODEROUTINE>async </CODEROUTINE>/<CODEROUTINE>await</CODEROUTINE> macro.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
 </CONTENT>

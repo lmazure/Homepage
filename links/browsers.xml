@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Browsers</TITLE>
 <PATH>links/browsers.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 
 <BLIST>
@@ -142,6 +142,7 @@ Browser statistics:
     <ITEM><ARTICLE><X><T>Lossless and Transparency Modes in WebP</T><A>http://blog.chromium.org/2012/08/lossless-and-transparency-modes-in-webp.html</A><L>en</L><F>HTML</F></X><AUTHOR>Jyrki Alakuijala</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>10 Chrome tricks to improve your browsing experience</T><A>http://www.techrepublic.com/blog/10things/10-chrome-tricks-to-improve-your-browsing-experience/3587</A><L>en</L><F>HTML</F></X><AUTHOR>Scott Matteson</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Disabling showModalDialog</T><A>http://blog.chromium.org/2014/07/disabling-showmodaldialog.html</A><L>en</L><F>HTML</F></X><AUTHOR>Adam Barth</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>16</DAY></DATE><COMMENT>Chrome is dropping support of <CODEROUTINE>showModalDialog</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Responsive Web Design with DevTools' Device Mode</T><A>http://blog.chromium.org/2014/09/responsive-web-design-with-devtools.html</A><L>en</L><F>HTML</F></X><AUTHOR>Paul Bakaus</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>Chrome now includes some features to emulate mobiles, including their bandwidth and ping time.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Security</TITLE>
       <ITEM><ARTICLE><X><T>Security in Depth: Local Web Pages</T><A>http://blog.chromium.org/2008/12/security-in-depth-local-web-pages.html</A><L>en</L><F>HTML</F></X><AUTHOR>Adam Barth</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>What should be the limitations imposed to local pages?</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Security in Depth: The Password Manager</T><A>http://blog.chromium.org/2008/12/security-in-depth-password-manager.html</A><L>en</L><F>HTML</F></X><AUTHOR>Adam Barth</AUTHOR><AUTHOR>Tim Steele</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>The rational for Chrome Password Manager implementation.</COMMENT></ARTICLE></ITEM>
@@ -155,6 +156,7 @@ Browser statistics:
       <ITEM><ARTICLE><X><T>Fuzzing for Security</T><A>http://blog.chromium.org/2012/04/fuzzing-for-security.html</A><L>en</L><F>HTML</F></X><AUTHOR>Abhishek Arya</AUTHOR><AUTHOR>Cris Neckar</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE><COMMENT>A description of ClusterFuzz, an infrastructure running 50.000.000 tests per day on the latest stable build and analyzing the crashes.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A Tale of Two Pwnies (Part 1)</T><A>http://blog.chromium.org/2012/05/tale-of-two-pwnies-part-1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Jorge Lucangeli Obes</AUTHOR><AUTHOR>Justin Schuh</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE><COMMENT>An impressive use of several Chrome bugs to get full privileges on the user's machine (and win 60000$).</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A Tale Of Two Pwnies (Part 2)</T><A>http://blog.chromium.org/2012/06/tale-of-two-pwnies-part-2.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ken Buchanan</AUTHOR><AUTHOR>Chris Evans</AUTHOR><AUTHOR>Charlie Reis</AUTHOR><AUTHOR>Tom Sepez</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE><COMMENT>A similar story.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Gradually Sunsetting SHA-1</T><A>http://blog.chromium.org/2014/09/gradually-sunsetting-sha-1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Chris Palmer</AUTHOR><AUTHOR>Ryan Sleevi</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE><COMMENT>Certificates using SHA-1 and expiring after 2017-01-01 will be considered insecure.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>WebKit</TITLE>
       <ITEM><ARTICLE><X><T>The Chromium WebKit API</T><A>http://www.youtube.com/watch?v=JFzC_Gx76E8</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>29</MINUTE><SECOND>40</SECOND></DURATION></X><AUTHOR>Darin Fisher</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE><COMMENT>A description of the API encapsulating WebKit in Chromium.</COMMENT></ARTICLE></ITEM>
