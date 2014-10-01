@@ -157,6 +157,12 @@
   </code></td></tr></table>
 </xsl:template>
 
+<xsl:template match="TEXTBLOCK">
+  <table class="textblock"><tr><td>
+    <xsl:apply-templates/>
+  </td></tr></table>
+</xsl:template>
+
 <xsl:template match="CODEROUTINE">
   <code>
     <xsl:apply-templates/>
@@ -479,16 +485,20 @@
   <i><xsl:apply-templates/></i>
 </xsl:template>
 
+<xsl:template match="SMALL">
+  <small><xsl:apply-templates/></small>
+</xsl:template>
+
+<xsl:template match="STRIKE">
+  <span style="text-decoration: line-through"><xsl:apply-templates/></span>
+</xsl:template>
+
 <xsl:template match="SUP">
   <sup><xsl:apply-templates/></sup>
 </xsl:template>
 
 <xsl:template match="SUB">
   <sub><xsl:apply-templates/></sub>
-</xsl:template>
-
-<xsl:template match="STRIKE">
-  <span style="text-decoration: line-through"><xsl:apply-templates/></span>
 </xsl:template>
 
 <xsl:template match="SCRIPT">
