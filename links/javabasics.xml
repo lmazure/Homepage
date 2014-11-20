@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>11</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 
 tutorials:
@@ -102,6 +102,7 @@ tutorials:
   <ITEM><ARTICLE><X status='dead'><T>Taming Tiger: Formatted output</T><ST>Let there be printf</ST><A>http://www.ibm.com/developerworks/java/library/j-tiger04024.html</A><L>en</L><F>HTML</F></X><AUTHOR>John Zukowski</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE><COMMENT>A short presentation of <CODEROUTINE>Formatter</CODEROUTINE> to format a la <CODEROUTINE>printf</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>The New NIO, aka JSR-203</T><A>http://www.youtube.com/watch?v=yNRS1ssLPdQ</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>2</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR>Alan Bateman</AUTHOR><AUTHOR>Carl Quinn</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>5</MONTH><DAY>16</DAY></DATE><COMMENT>The new I/O features that will be implemented in Java 1.7: file system, socket channel, asynchronous I/O...</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Efficient data transfer through zero copy</T><ST>Zero copy, zero overhead</ST><A>http://www.ibm.com/developerworks/linux/library/j-zerocopy/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Sathish K. Palaniappan</AUTHOR><AUTHOR>Pramod B. Nagaraja</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE><COMMENT>Using the <CODEROUTINE>FileChannel.transfertTo()</CODEROUTINE> routine to exploit Linux kernel zero-copy mechanism.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>Apprentice Blog of the Week: Did Java Break My byte?</T><A>http://blog.8thlight.com/dave-torre/2014/09/10/did-java-break-my-byte.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dave Torre</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The danger of using <CODEROUTINE>InputStream.read()</CODEROUTINE> which treats bytes as unsigned.</COMMENT></ARTICLE></ITEM>
 </BLIST></ITEM>
 
 <ITEM><BLIST><TITLE>Networking</TITLE>
