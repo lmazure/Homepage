@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Test Driven Development / Behavior Driven Development</TITLE>
 <PATH>links/tdd.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>10</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 
 TDD:
@@ -35,6 +35,7 @@ BDD:
     <ITEM><ARTICLE><X><T>Test-Driving the Game Loop pt. 1</T><A>http://blog.8thlight.com/eric-smith/2014/08/18/test-driving-the-game-loop-part-1.html</A><L>en</L><F>HTML</F></X><AUTHOR>Eric Smith</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT>Applying TDD to the classical game loop. This is typical the case where you can wonder if you are testing too much give the simplicity of the production code.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Test-Driving the Game Loop pt. 2</T><A>http://blog.8thlight.com/eric-smith/2014/10/14/test-driving-the-game-loop-part-2%20copy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Eric Smith</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>10</MONTH><DAY>14</DAY></DATE><COMMENT>This is the continuation of the previous blog. Code is getting less trivial, tests are making sense.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Test Time</T><A>http://blog.cleancoder.com/uncle-bob/2014/09/03/TestTime.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>3</DAY></DATE><COMMENT>Uncle Bob explains that tests must be fast and the design should be such to enable this. (This gets back to DHH who explains that design should not be corrupted for the only purpose of getting fast tests.)</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Thorns around the Gold</T><A>http://blog.cleancoder.com/uncle-bob/2014/11/19/GoingForTheGold.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>11</MONTH><DAY>19</DAY></DATE><COMMENT>Uncle Bob advices to write first tests for exceptional behaviors, then degenerate behaviors, then ancillary behaviors, before testing the core feature.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Brett L. Schuchert</TITLE>
       <ITEM><BLIST><TITLE>RPN calculator in Java using Eclipse</TITLE>
         <ITEM><ARTICLE><X><T>Getting Started with Tdd in Java using Eclipse</T><A>http://vimeo.com/10569751</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>51</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR>Brett L. Schuchert</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>3</MONTH><DAY>30</DAY></DATE><COMMENT>A rather slow but clear introduction to TDD using Java and Eclipse : creating a RPN calculator.</COMMENT></ARTICLE></ITEM>
