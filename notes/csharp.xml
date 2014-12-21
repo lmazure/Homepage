@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>C#</TITLE>
 <PATH>notes/csharp.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2014</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 
 
@@ -48,13 +48,13 @@ The constant declaration can declare multiple constants, such as:<BR/>
 
 <BLIST><TITLE><U><B>Constructors</B></U></TITLE>
 <ITEM>Constructors have the same name as the class.</ITEM>
-<ITEM>constructor that takes no parameters is called a default constructor. Default constructors are invoked whenever an object is instantiated using the new operator and no arguments are provided to new.</ITEM>
+<ITEM>A constructor that takes no parameters is called a default constructor. Default constructors are invoked whenever an object is instantiated using the new operator and no arguments are provided to new.</ITEM>
 <ITEM>Unless the class is static, classes without constructors are given a public default constructor by the C# compiler in order to enable class instantiation.</ITEM>
 <ITEM>A private constructor is a special instance constructor. It is commonly used in classes that contain static members only. If a class has one or more private constructors and no public constructors, then other classes (except nested classes) are not allowed to create instances of this class. The declaration of the empty constructor prevents the automatic generation of a default constructor.</ITEM>
-<ITEM>Constructors for struct types are similar to class constructors, but structs cannot contain an explicit default constructor because one is provided automatically by the compiler. This constructor initializes each field in the struct to the default values shown in the Default Values Table. However, this default constructor is only invoked if the struct is instantiated with new.</ITEM>
-<ITEM>Both classes and structs can define constructors that take parameters. Constructors that take parameters must be called through a new statement or a base statement.</ITEM>
-<ITEM>In a derived class, if a base-class constructor is not called explicitly using the base keyword, then the default constructor, if there is one, is called implicitly. If a base class does not offer a default constructor, the derived class must make an explicit call to a base constructor using base.</ITEM>
-<ITEM>A constructor can invoke another constructor in the same object using the this keyword. Like base, this can be used with or without parameters, and any parameters in the constructor are available as parameters to this, or as part of an expression.
+<ITEM>Constructors for struct types are similar to class constructors, but structs cannot contain an explicit default constructor because one is provided automatically by the compiler. This constructor initializes each field in the struct to their default values. However, this default constructor is only invoked if the struct is instantiated with new.</ITEM>
+<ITEM>Both classes and structs can define constructors that take parameters. Constructors that take parameters must be called through a new statement or a <CODEROUTINE>base</CODEROUTINE> statement.</ITEM>
+<ITEM>In a derived class, if a base class constructor is not called explicitly using the <CODEROUTINE>base</CODEROUTINE> keyword, then the default constructor, if there is one, is called implicitly. If a base class does not offer a default constructor, the derived class must make an explicit call to a base constructor using <CODEROUTINE>base</CODEROUTINE>.</ITEM>
+<ITEM>A constructor can invoke another constructor in the same object using the <CODEROUTINE>this</CODEROUTINE> keyword. Like <CODEROUTINE>base</CODEROUTINE>, <CODEROUTINE>this</CODEROUTINE> can be used with or without parameters, and any parameters in the constructor are available as parameters to <CODEROUTINE>this</CODEROUTINE>, or as part of an expression.
 <CODESAMPLE>public Employee(int weeklySalary, int numberOfWeeks)<BR/>
 <TAB/>: this(weeklySalary * numberOfWeeks) <BR/>
 {<BR/>
@@ -63,8 +63,8 @@ The constant declaration can declare multiple constants, such as:<BR/>
 <BR/>
 
 <BLIST><TITLE><U><B>Static Constructors</B></U></TITLE>
-<ITEM>A constructor can be declared static using the static keyword. Static constructors are called automatically, immediately before any static fields are accessed, and are normally used to initialize static class members. </ITEM>
-<ITEM><CODESAMPLE>class SampleClass<BR/>
+<ITEM>A constructor can be declared static using the <CODEROUTINE>static</CODEROUTINE> keyword. Static constructors are called automatically, immediately before any static fields are accessed, and are normally used to initialize static class members.
+<CODESAMPLE>class SampleClass<BR/>
 {<BR/>
 <TAB/>static SampleClass()<BR/>
 <TAB/>{<BR/>
@@ -663,7 +663,7 @@ Found under the <CODEROUTINE>System.Collections.Generic</CODEROUTINE> namespace.
 catch (System.OverflowException e) <BR/>
 {<BR/>
 <TAB/>Console.WriteLine(e.ToString());<BR/>
-</CODESAMPLE>
+}</CODESAMPLE>
 </ITEM>
 <ITEM><CODEROUTINE>checked</CODEROUTINE> explicitly enables overflow-checking for integral-type arithmetic operations and conversions.
 <CODESAMPLE>unchecked<BR/>
