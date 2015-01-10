@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>TFS</TITLE>
+<PATH>notes/tfs.xml</PATH>
+<DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>6</DAY></DATE>
+<CONTENT>
+
+<CODEROUTINE><PROMPT/>tf="/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/TF.exe"</CODEROUTINE><BR/>
+<BR/>
+
+create a workspace <I>foobar</I><BR/>
+<CODEROUTINE><PROMPT/>cd "$tfsdir"</CODEROUTINE><BR/>
+<CODEROUTINE><PROMPT/>mkdir <I>foobar</I></CODEROUTINE><BR/>
+<CODEROUTINE><PROMPT/>cd "<I>foobar</I></CODEROUTINE><BR/>
+<CODEROUTINE><PROMPT/>"$tf" workspace /new <I>foobar</I> /collection:http://alm.eurofins.local/tfs/eurofinscollection</CODEROUTINE><BR/>
+<CODEROUTINE><PROMPT/>"$tf" get "eCommerce/EOL/Trunk" /recursive</CODEROUTINE><BR/>
+<BR/>
+
+delete a workspace <I>foobar</I><BR/>
+<CODEROUTINE><PROMPT/>"$tf" workspace /delete <I>foobar</I></CODEROUTINE><BR/>
+<CODEROUTINE><PROMPT/>cd "$tfsdir"</CODEROUTINE><BR/>
+<CODEROUTINE><PROMPT/>rm -fr <I>foobar</I></CODEROUTINE><BR/>
+<BR/>
+
+</CONTENT>
+<X><T>links</T><A>../links/coding.html#tfs</A><L>en</L><F>HTML</F></X>
+</PAGE>
+
