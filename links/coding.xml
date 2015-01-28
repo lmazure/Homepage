@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <X><T>stackoverflow</T><A>http://stackoverflow.com</A><L>en</L><F>HTML</F></X><BR/>
@@ -395,11 +395,12 @@
   <ITEM><BLIST><TITLE>Compilers</TITLE>
     <ITEM><ARTICLE><X><T>Get to know GCC 4</T><ST>What's new in the GNU Compiler Collection release series</ST><A>http://www.ibm.com/developerworks/linux/library/l-gcc4</A><L>en</L><F>HTML</F></X><AUTHOR>M. Tim Jones</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE><COMMENT>A short description of the GCC4 releases.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>GCC hacks in the Linux kernel</T><ST>Discover GCC extensions for the C language</ST><A>http://www.ibm.com/developerworks/linux/library/l-gcc-hacks</A><L>en</L><F>HTML</F></X><AUTHOR>M. Tim Jones</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE><COMMENT>The presentation of some gcc extensions used by the Linux kernel.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Stochastic Optimization for x86 </T><A>https://www.youtube.com/watch?v=aD9mZDJzb58</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR>Eric Schkufza</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>Using stochastic search to optimize object code.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Debuggers</TITLE>
     <ITEM><ARTICLE><X><T>Debugging tools and techniques for Linux on Power</T><A>http://www.ibm.com/developerworks/systems/library/es-debug/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Calvin Sze</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>8</MONTH><DAY>4</DAY></DATE><COMMENT>Some very basic introduction of Valgrind, gdb, jdb and strace. This can interest only persons who are discovering debugging tools on Linux.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality='1'><T>Virtual Machine-Based Replay Debugging</T><A>http://www.youtube.com/watch?v=RvMlihjqlhY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>57</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR>E Christopher Lewis</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>30</DAY></DATE><COMMENT>VMware allows to record a run demonstrating a bug and to replay it exactly the same way in Visual Studio. This is a neat use of virtualisation.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Silver Bullet</T><ST>Time Travelling Debugger</ST><A>http://www.youtube.com/watch?v=LpfmKIxusZY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>42</MINUTE><SECOND>17</SECOND></DURATION></X><AUTHOR>Prashant Deva</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT>Another debugger implementation enabling the record and analysis of a bug scenario. But this tool is limited to Java.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Silver Bullet -- Time Travelling Debugger</T><A>http://www.youtube.com/watch?v=LpfmKIxusZY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>42</MINUTE><SECOND>17</SECOND></DURATION></X><AUTHOR>Prashant Deva</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT>Another debugger implementation enabling the record and analysis of a bug scenario. But this tool is limited to Java.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Dynamic analyzers</TITLE>
     <ITEM><ARTICLE><X status='dead'><T>Postmortem memory profiling with PERL</T><ST>Find and fix memory leaks in wireless applications</ST><A>http://www.ibm.com/developerworks/library/wi-perl.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martyn Honeyford</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>A simplistic solution for finding memory leaks, it is unwieldy and supposes that you liberate all your memory blocks when exiting. But this article can be a starting point if you want to think how a real memory checker could be implemented (yes, you will have to do some highly OS dependent stuff...).</COMMENT></ARTICLE></ITEM>
