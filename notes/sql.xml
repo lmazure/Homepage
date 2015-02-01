@@ -45,7 +45,7 @@ syntax
 (<BR/>
 <I>column_name1</I> <I>data_type</I>,<BR/>
 <I>column_name2</I> <I>data_type</I>,<BR/>
-...<BR/>
+&#x2026;<BR/>
 <I>column_nameN</I> <I>data_type</I><BR/>
 )</CODESAMPLE>
 </ITEM>
@@ -149,7 +149,7 @@ syntax
 <ITEM>
 syntax
 <CODESAMPLE>INSERT INTO <I>table_name</I><BR/>
-VALUES (<I>value1</I>, <I>value2</I>,...);</CODESAMPLE>
+VALUES (<I>value1</I>, <I>value2</I>,&#x2026;);</CODESAMPLE>
 </ITEM>
 <ITEM>
 example
@@ -158,8 +158,8 @@ VALUES ('Hetland', 'Camilla', 'Hagabakka 24', 'Sandnes');</CODESAMPLE>
 </ITEM>
 <ITEM>
 it is possible to indicate the columns into which inserting data
-<CODESAMPLE>INSERT INTO <I>table_name</I> (<I>column1</I>, <I>column2</I>,...)<BR/>
-VALUES (value1, value2,...);</CODESAMPLE>
+<CODESAMPLE>INSERT INTO <I>table_name</I> (<I>column1</I>, <I>column2</I>,&#x2026;)<BR/>
+VALUES (value1, value2,&#x2026;);</CODESAMPLE>
 </ITEM>
 <ITEM>
 example
@@ -204,7 +204,7 @@ or
 <BLIST><TITLE><U><B>Data retrieval</B></U></TITLE>
 <ITEM>
 retrieve the values from some columns
-<CODESAMPLE>SELECT <I>column_name1</I>, <I>column_name2</I>...
+<CODESAMPLE>SELECT <I>column_name1</I>, <I>column_name2</I>&#x2026;
 FROM <I>table_name</I>;</CODESAMPLE>
 </ITEM>
 <ITEM>
@@ -218,7 +218,7 @@ retrieve the values of all columns
 <ITEM><BLIST><TITLE>where</TITLE>
 <ITEM>
 retrieve the values corresponding to a criterion
-<CODESAMPLE>SELECT <I>column_name1</I>, <I>column_name2</I>...
+<CODESAMPLE>SELECT <I>column_name1</I>, <I>column_name2</I>&#x2026;
 FROM <I>table_name</I>
 WHERE <I>column</I> <I>operator</I> <I>value</I></CODESAMPLE>
 <I>operator</I> can be
@@ -277,7 +277,7 @@ wildcards of the LIKE operator
 </ITEM>
 <ITEM>
 avoid to return duplicate data
-<CODESAMPLE>SELECT DISTINCT <I>column_name1</I>, <I>column_name2</I>...
+<CODESAMPLE>SELECT DISTINCT <I>column_name1</I>, <I>column_name2</I>&#x2026;
 FROM <I>table_name</I>;</CODESAMPLE>
 The opposite of <CODEROUTINE>DISTINCT</CODEROUTINE> is <CODEROUTINE>ALL</CODEROUTINE>.
 </ITEM>
@@ -373,7 +373,7 @@ WHERE <I>condition</I>)</CODESAMPLE>
 <CODESAMPLE>SELECT CASE <I>columnName</I><BR/>
 WHEN <I>condition1</I> THEN <I>result1</I><BR/>
 WHEN <I>condition2</I> THEN <I>result2</I><BR/>
-...<BR/>
+&#x2026;<BR/>
 [ELSE <I>resultN</I>]<BR/>
 END<BR/>
 FROM <I>tableName</I></CODESAMPLE>

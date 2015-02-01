@@ -23,7 +23,7 @@
 <ITEM>go in the <CODEFILENAME>trunk</CODEFILENAME> directory</ITEM>
 <ITEM>copy the source hierarchy in it</ITEM>
 <ITEM>go back to where the <CODEFILENAME>tempo</CODEFILENAME> directory is created</ITEM>
-<ITEM>right click and select <CODEMENU>TortoiseSVN<CODEMENU>Import...</CODEMENU></CODEMENU></ITEM>
+<ITEM>right click and select <CODEMENU>TortoiseSVN<CODEMENU>Import&#x2026;</CODEMENU></CODEMENU></ITEM>
 <ITEM>select the URL: <CODEROUTINE>file:///G:/laurent_svn_repository/my_project</CODEROUTINE></ITEM>
 <ITEM>type the import commit comment</ITEM>
 <ITEM>click on <CODEMENU>OK</CODEMENU></ITEM>
@@ -37,10 +37,10 @@
 
 <BLIST><TITLE><U>solution 1</U></TITLE>
 <ITEM>open "SVN Repositories" View</ITEM>
-<ITEM>right-click and select <CODEMENU>New<CODEMENU>Repository location...</CODEMENU></CODEMENU></ITEM>
+<ITEM>right-click and select <CODEMENU>New<CODEMENU>Repository location&#x2026;</CODEMENU></CODEMENU></ITEM>
 <ITEM>set the location URL to <CODEROUTINE>file:///G:/laurent_svn_repository/my_project</CODEROUTINE></ITEM>
 <ITEM>expand the created repository</ITEM>
-<ITEM>right-click on the <CODEFILENAME>trunk</CODEFILENAME> directory and select <CODEMENU>Checkout...</CODEMENU></ITEM>
+<ITEM>right-click on the <CODEFILENAME>trunk</CODEFILENAME> directory and select <CODEMENU>Checkout&#x2026;</CODEMENU></ITEM>
 <ITEM><BLIST><TITLE>in the "Check out from SVN" dialog</TITLE>
 <ITEM>select <CODEMENU>Check out as a project configured using the New Project Wizard</CODEMENU></ITEM>
 <ITEM>click on <CODEMENU>Finish</CODEMENU></ITEM>
@@ -55,7 +55,7 @@
 </BLIST>
 
 <BLIST><TITLE><U>solution 2</U></TITLE>
-<ITEM><CODEMENU>File<CODEMENU>New<CODEMENU>Project...</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM><CODEMENU>File<CODEMENU>New<CODEMENU>Project&#x2026;</CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM><BLIST><TITLE>in the "New Project" Dialog</TITLE>
 <ITEM>select <CODEMENU>SVN<CODEMENU>Checkout Projects from SVN</CODEMENU></CODEMENU></ITEM>
 <ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>

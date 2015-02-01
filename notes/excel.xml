@@ -27,7 +27,7 @@
   <ITEM>Excel opens correctly and with no comment (up tro 2003, 2007 displays a warning message) a HTML file which has the .xls extension.</ITEM>
   <ITEM><BLIST><TITLE>Format of a tab separated text file (extension <CODEROUTINE>.txt</CODEROUTINE>)</TITLE>
     <ITEM><BLIST><TITLE>When there is a newline in a cell:</TITLE>
-      <ITEM>the field value shall be between <CODEROUTINE>"</CODEROUTINE>...<CODEROUTINE>"</CODEROUTINE></ITEM>
+      <ITEM>the field value shall be between <CODEROUTINE>"</CODEROUTINE>&#x2026;<CODEROUTINE>"</CODEROUTINE></ITEM>
       <ITEM>the newline shall be written as <CODEROUTINE>\n</CODEROUTINE></ITEM>
       <ITEM>the <CODEROUTINE>"</CODEROUTINE> should be doubled</ITEM>
     </BLIST></ITEM>
@@ -45,7 +45,7 @@
 The characters <CODEROUTINE>\</CODEROUTINE>, <CODEROUTINE>/</CODEROUTINE>, <CODEROUTINE>:</CODEROUTINE>, <CODEROUTINE>*</CODEROUTINE>, <CODEROUTINE>[</CODEROUTINE>, <CODEROUTINE>]</CODEROUTINE>, and <CODEROUTINE>?</CODEROUTINE> are illegal.<BR/>
 The character <CODEROUTINE>'</CODEROUTINE> is illegal as the first or last characters.</ITEM>
 <ITEM>To hide a sheet, perform a right click on the sheet name and select <CODEMENU>Hide</CODEMENU>.</ITEM>
-<ITEM>To unhide a sheet, perform a right click on a sheet name and select <CODEMENU>Unhide...</CODEMENU>.</ITEM>
+<ITEM>To unhide a sheet, perform a right click on a sheet name and select <CODEMENU>Unhide&#x2026;</CODEMENU>.</ITEM>
 </BLIST>
 
 <BLIST><TITLE><B><U>Display</U></B></TITLE>
@@ -56,7 +56,7 @@ or <MODIFIERKEY ID='Ctrl'/><KEY ID='"'/></ITEM>
 <CODEMENU>Start<CODEMENU>Settings<CODEMENU>Control Panel<CODEMENU>Regional Options<CODEMENU>General<CODEMENU>Your locale</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
 It seems that, starting at Excel 2002, it is possible to change the locale in the <CODEMENU>date format</CODEMENU> dialog.</ITEM>
 <ITEM>(French) display a date with ISO 8160 format<BR/>
-<CODEMENU>Format<CODEMENU>Cellule...<CODEMENU>Nombre<CODEMENU>Personnalis&#xE9;e</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and type <CODEROUTINE>aaaa-mm-jj</CODEROUTINE>.</ITEM>
+<CODEMENU>Format<CODEMENU>Cellule&#x2026;<CODEMENU>Nombre<CODEMENU>Personnalis&#xE9;e</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and type <CODEROUTINE>aaaa-mm-jj</CODEROUTINE>.</ITEM>
 <ITEM>(French) It is possible to have datetime format such as <CODEROUTINE>aaaa-mm-jj hh:mm:ss</CODEROUTINE>. In this case <CODEROUTINE>mm</CODEROUTINE> stands for the month, except if the previous element in the format is <CODEROUTINE>hh</CODEROUTINE> or <CODEROUTINE>ss</CODEROUTINE> in which case <CODEROUTINE>mm</CODEROUTINE> stands for the minutes.</ITEM>
 </BLIST>
 
@@ -97,19 +97,19 @@ To find an actual question mark or asterisk, use a tilde (<CODEROUTINE>~</CODERO
 </BLIST>
 
 <BLIST><TITLE><B><U>Edit</U></B></TITLE>
-<ITEM>take care to the fact that, when several sheets are selected, a change (edition, paste...) on one cell of the currently displayed sheet is done in fact on all the sheets.</ITEM>
+<ITEM>take care to the fact that, when several sheets are selected, a change (edition, paste&#x2026;) on one cell of the currently displayed sheet is done in fact on all the sheets.</ITEM>
 <ITEM>if several cells are selected, when editing one of them and finishing the edition with <MODIFIERKEY ID='Ctrl'/><KEY ID='Return'/>, Excel will update the formula of all the selected cells</ITEM>
 <ITEM><BLIST><TITLE>Creation of a multi-value field in Excel (this does not work when pasting a cell, the value is not checked)</TITLE>
 <ITEM>enter values in some cells (e.g. "alpha", "beta", "gamma", and "delta" in L1:L4)</ITEM>
 <ITEM>select the target cell</ITEM>
-<ITEM><CODEMENU>Donn&#xE9;es<CODEMENU>Validation...<CODEMENU>Options</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM><CODEMENU>Donn&#xE9;es<CODEMENU>Validation&#x2026;<CODEMENU>Options</CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM>choose <CODEMENU>Liste</CODEMENU> in <CODEMENU>Autoriser</CODEMENU> dropdown list</ITEM>
 <ITEM>choose cells containing authorised values in <CODEMENU>Source</CODEMENU> field</ITEM>
 <ITEM>click OK</ITEM></BLIST></ITEM>
 </BLIST>
 
 <BLIST><TITLE><B><U>Find/Replace</U></B></TITLE>
-<ITEM>to find/replace a string in all sheets, right click on the sheet name (i.e. the sheet tab), select <CODEMENU>Select all sheets</CODEMENU>, then do the usual <CODEMENU>Edit<CODEMENU>Find...</CODEMENU></CODEMENU></ITEM>
+<ITEM>to find/replace a string in all sheets, right click on the sheet name (i.e. the sheet tab), select <CODEMENU>Select all sheets</CODEMENU>, then do the usual <CODEMENU>Edit<CODEMENU>Find&#x2026;</CODEMENU></CODEMENU></ITEM>
 </BLIST>
 
 <BLIST><TITLE><B><U>References</U></B></TITLE>
@@ -125,7 +125,7 @@ All cells in columns H through J: <CODEROUTINE>H:J</CODEROUTINE></ITEM>
 <ITEM>It is possible to use labels of columns and rows on a worksheet to refer to the cells within those columns and rows.</ITEM>
 <ITEM>A 3-D reference includes the cell or range reference, preceded by a range of worksheet names. Excel uses any worksheets stored between the starting and ending names of the reference (e.g.<CODEROUTINE>=SUM(Sheet2:Sheet13!B5)</CODEROUTINE>).</ITEM>
 <ITEM>The reference can also use the R1C1 style: <CODEROUTINE>R</CODEROUTINE> followed by a row number and a <CODEROUTINE>C</CODEROUTINE> followed by a column number<BR/>
-<CODEROUTINE>[</CODEROUTINE>...<CODEROUTINE>]</CODEROUTINE> can be used to give relative references.<BR/>
+<CODEROUTINE>[</CODEROUTINE>&#x2026;<CODEROUTINE>]</CODEROUTINE> can be used to give relative references.<BR/>
 Some examples:<BR/>
 <CODEROUTINE>R[-2]C</CODEROUTINE> A relative reference to the cell two rows up and in the same column<BR/>
 <CODEROUTINE>R[2]C[2]</CODEROUTINE> A relative reference to the cell two rows down and two columns to the right<BR/>
@@ -168,7 +168,7 @@ if the other document is open, the syntax is
 
 <BLIST><TITLE><B><U>Charts</U></B></TITLE>
 <ITEM>Create a temporal diagram<BR/>
-use the menu <CODEMENU>Insert<CODEMENU>Chart...</CODEMENU></CODEMENU><BR/>
+use the menu <CODEMENU>Insert<CODEMENU>Chart&#x2026;</CODEMENU></CODEMENU><BR/>
 at the <CODEMENU>Source Data</CODEMENU> step of the Chart wizard:
 <BLIST>
 <ITEM>on the <CODEMENU>Data Range</CODEMENU> tab, select the values in the <CODEMENU>Data range</CODEMENU> field</ITEM>
@@ -188,11 +188,11 @@ at the <CODEMENU>Source Data</CODEMENU> step of the Chart wizard:
 <ITEM>
 <BLIST><TITLE>Create a Pivot Table to get the number of elements of a class given two columns: ID of the element, class of the element.</TITLE>
 <ITEM>put a title to the two columns if they do not have one</ITEM>
-<ITEM><CODEMENU>Data<CODEMENU>PivotTable and PivotChart report...</CODEMENU></CODEMENU></ITEM>
+<ITEM><CODEMENU>Data<CODEMENU>PivotTable and PivotChart report&#x2026;</CODEMENU></CODEMENU></ITEM>
 <ITEM>select <CODEMENU>Microsoft Excel list or database</CODEMENU> and <CODEMENU>PivotTable</CODEMENU>, and click <CODEMENU>Next</CODEMENU></ITEM>
 <ITEM>select the two columns for the range and click <CODEMENU>Next</CODEMENU></ITEM>
 <ITEM>select <CODEMENU>Existing worksheet</CODEMENU> and select a location on the sheet</ITEM>
-<ITEM>click <CODEMENU>Layout...</CODEMENU>, drag 'n drop the class column title on <CODEMENU>ROW</CODEMENU>, drag 'n drop the ID column title on <CODEMENU>DATA</CODEMENU>, and click <CODEMENU>OK</CODEMENU></ITEM>
+<ITEM>click <CODEMENU>Layout&#x2026;</CODEMENU>, drag 'n drop the class column title on <CODEMENU>ROW</CODEMENU>, drag 'n drop the ID column title on <CODEMENU>DATA</CODEMENU>, and click <CODEMENU>OK</CODEMENU></ITEM>
 <ITEM>click <CODEMENU>Finish</CODEMENU></ITEM>
 <ITEM>double click on the field setting (the cell above the class column title in the pivot table) and select <CODEMENU>Count</CODEMENU>, and click <CODEMENU>OK</CODEMENU></ITEM>
 </BLIST></ITEM>
@@ -223,7 +223,7 @@ the first column contains the measurements<BR/>
 the next columns contains the parameters<BR/>
 the constant is <CODEROUTINE>INDEX(DROITEREG(A1:A51;B1:J51);10)</CODEROUTINE><BR/>
 the coefficient for the parameter in column B is <CODEROUTINE>INDEX(DROITEREG(A1:A51;B1:J51);9)</CODEROUTINE><BR/>
-...<BR/>
+&#x2026;<BR/>
 the coefficient for the parameter in column J is <CODEROUTINE>INDEX(DROITEREG(A1:A51;B1:J51);1)</CODEROUTINE>
 </ITEM>
 </BLIST>

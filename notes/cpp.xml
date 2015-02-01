@@ -67,7 +67,7 @@ void f()<BR/>
 <TAB/><TAB/>int k() { return ::x; } // ok<BR/>
 <TAB/><TAB/>int l() { return g(); } // ok<BR/>
 <TAB/>};<BR/>
-<TAB/>// ...<BR/>
+<TAB/>// &#x2026;<BR/>
 }</CODESAMPLE>
 The enclosing function has no special access to members of the local class, it obeys the usual access rules. Member functions of a local class must be defined within their class definition. A local class may not have static data members.</ITEM>
 </BLIST>

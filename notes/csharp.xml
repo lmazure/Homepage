@@ -68,7 +68,7 @@ The constant declaration can declare multiple constants, such as:<BR/>
 {<BR/>
 <TAB/>static SampleClass()<BR/>
 <TAB/>{<BR/>
-<TAB/><TAB/>...<BR/>
+<TAB/><TAB/>&#x2026;<BR/>
 <TAB/>}<BR/>
 }</CODESAMPLE></ITEM>
 <ITEM>A static constructor does not take access modifiers or have parameters.</ITEM>
@@ -182,7 +182,7 @@ all characters are interpreted verbatim, except the quote escape sequence (i.e. 
 {<BR/>
 <TAB/>Console.WriteLine(s);<BR/>
 }<BR/>
-...<BR/>
+&#x2026;<BR/>
 TestDelegate testDelA = new TestDelegate(M);</CODESAMPLE>
 C# 2.0 allowed the syntax
 <CODESAMPLE>TestDelegate testDelA = M;</CODESAMPLE></ITEM>
@@ -280,7 +280,7 @@ Use the <CODEROUTINE>??</CODEROUTINE> (the null-coalescing operator) operator to
 In order to pass argument by reference, use the <CODEROUTINE>ref</CODEROUTINE> or <CODEROUTINE>out</CODEROUTINE>both in the method definition and the method call
 <CODESAMPLE>int i=1;<BR/>
 setVar(ref i);<BR/>
-...<BR/>
+&#x2026;<BR/>
 public void setVar(ref int a)<BR/>
 {<BR/>
 <TAB/>a=2;<BR/>
@@ -393,19 +393,19 @@ class TestDerived : TestBase<BR/>
 <U><B>Overriding a method</B></U><BR/>
 <CODESAMPLE>class TestBase<BR/>
 {<BR/>
-...<BR/>
+&#x2026;<BR/>
 public virtual void dump()<BR/>
 {<BR/>
-...<BR/>
+&#x2026;<BR/>
 }<BR/>
 }<BR/>
 <BR/>
 class TestDerived<BR/>
 {<BR/>
-...<BR/>
+&#x2026;<BR/>
 public override void dump()<BR/>
 {<BR/>
-...<BR/>
+&#x2026;<BR/>
 }<BR/>
 }</CODESAMPLE>
 <BR/>
@@ -432,7 +432,7 @@ Extension methods enable you to "add" methods to existing types without creating
 }</CODESAMPLE>
 
 <CODESAMPLE>using ExtensionMethods;<BR/>
-...<BR/>
+&#x2026;<BR/>
 string s = "Hello Extension Methods";<BR/>
 int i = s.WordCount();</CODESAMPLE>
 <BR/>
@@ -628,12 +628,12 @@ Found under the <CODEROUTINE>System.Collections.Generic</CODEROUTINE> namespace.
 <ITEM><CODEROUTINE>public delegate TResult Func&lt;out TResult&gt;()</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>public delegate TResult Func&lt;in T,out TResult&gt;(T arg)</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>public delegate TResult Func&lt;in T1,in T2,out TResult&gt;(T1 arg1, T2 arg2)</CODEROUTINE></ITEM>
-<ITEM>...</ITEM>
+<ITEM>&#x2026;</ITEM>
 <ITEM><CODEROUTINE>public delegate TResult Func&lt;in T1,in T2,in T3,in T4,in T5,in T6,in T7,in T8,in T9,in T10,in T11,in T12,in T13,in T14,in T15,in T16,out TResult&gt;(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16)</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>public delegate void Action()</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>public delegate void Action&lt;in T&gt;(T obj)</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>public delegate void Action&lt;in T1,in T2&gt;(T1 arg1, T2 arg2)</CODEROUTINE></ITEM>
-<ITEM>...</ITEM>
+<ITEM>&#x2026;</ITEM>
 <ITEM><CODEROUTINE>public delegate void Action&lt;in T1,in T2,in T3,in T4,in T5,in T6,in T7,in T8,in T9,in T10,in T11,in T12,in T13,in T14,in T15,in T16&gt;(T1 arg1, T2 arg2, T3 arg3, T4 arg4, T5 arg5, T6 arg6, T7 arg7, T8 arg8, T9 arg9, T10 arg10, T11 arg11, T12 arg12, T13 arg13, T14 arg14, T15 arg15, T16 arg16)</CODEROUTINE></ITEM>
 </BLIST>
 <BR/>

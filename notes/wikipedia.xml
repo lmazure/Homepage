@@ -69,7 +69,7 @@
 <ROW><TERM><CODEROUTINE>[[foobar|title]]</CODEROUTINE></TERM><DESC>link toward page <I>foobar</I> with the text of the link being <I>title</I></DESC></ROW>
 <ROW><TERM><CODEROUTINE>[[foobar#quux]]</CODEROUTINE></TERM><DESC>link toward anchor <I>quux</I> in page <I>foobar</I></DESC></ROW>
 <ROW><TERM><CODEROUTINE>[[#quux]]</CODEROUTINE></TERM><DESC>link toward anchor <I>quux</I> in the current page</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;span id="kloox"&gt;... &lt;/span&gt;</CODEROUTINE></TERM><DESC>define anchor <I>kloox</I></DESC></ROW>
+<ROW><TERM><CODEROUTINE>&lt;span id="kloox"&gt;&#x2026; &lt;/span&gt;</CODEROUTINE></TERM><DESC>define anchor <I>kloox</I></DESC></ROW>
 <ROW><TERM><CODEROUTINE>[http://example.com an example]</CODEROUTINE></TERM><DESC>external link as a named link</DESC></ROW>
 <ROW><TERM><CODEROUTINE>http://example.com</CODEROUTINE></TERM><DESC>external link as a unnamed link (only used within article
 body for footnotes)</DESC></ROW>
@@ -91,14 +91,14 @@ The classical HTML tags <CODEROUTINE>&lt;table&gt;</CODEROUTINE>, <CODEROUTINE>&
 It is possible to use the attribute <CODEROUTINE>border</CODEROUTINE>
 <CODESAMPLE>
 &lt;table border="1"&gt;<BR/>
-...<BR/>
+&#x2026;<BR/>
 &lt;/table&gt;
 </CODESAMPLE>
 It is also possible to use the attributes <CODEROUTINE>colspan</CODEROUTINE> and <CODEROUTINE>rowspan</CODEROUTINE> for the cells
 <CODESAMPLE>
-...<BR/>
+&#x2026;<BR/>
 &lt;td rowspan=4&gt;foobar&lt;/td&gt;<BR/>
-...
+&#x2026;
 </CODESAMPLE>
 </ITEM>
 <ITEM>redirection

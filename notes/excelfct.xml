@@ -93,7 +93,7 @@ lookup
 specified value in a specified order</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>CHOOSE(index_num,value1,value2,...)</CODEROUTINE></TERM1>
+<TERM1><CODEROUTINE>CHOOSE(index_num,value1,value2,&#x2026;)</CODEROUTINE></TERM1>
 <TERM2><CODEROUTINE>CHOISIR</CODEROUTINE></TERM2>
 <DESC>uses index_num to return a value from the list of value arguments</DESC>
 </ROW>
@@ -135,8 +135,8 @@ string manipulation
 <DESC>return a numeric code from the first character in a text string</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>CONCATENATE(text1,text2,...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>CONCATENER(texte1;texte2;...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>CONCATENATE(text1,text2,&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CONCATENER(texte1;texte2;&#x2026;)</CODEROUTINE></TERM2>
 <DESC>join several text strings into one text string</DESC>
 </ROW>
 <ROW>
@@ -321,8 +321,8 @@ computation
 <DESC>return the absolute value of a number</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>PRODUCT(number1,number2...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>PRODUIT(nombre1;nombre2...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>PRODUCT(number1,number2&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PRODUIT(nombre1;nombre2&#x2026;)</CODEROUTINE></TERM2>
 <DESC>return the product of the number</DESC>
 </ROW>
 <ROW>
@@ -341,13 +341,13 @@ computation
 <DESC>return the square root of ( number * &#x03C0;)</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2&#x2026;)</CODEROUTINE></TERM2>
 <DESC>multiply corresponding components in the arrays and return the sum of those products</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2&#x2026;)</CODEROUTINE></TERM2>
 <DESC>multiply corresponding components in the arrays and return the sum of those products</DESC>
 </ROW>
 <ROW>
@@ -366,13 +366,13 @@ computation
 <DESC>return the factorial of a number</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>GCD(number1,number2...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>PGCD(nombre1;nombre2...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>GCD(number1,number2&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PGCD(nombre1;nombre2&#x2026;)</CODEROUTINE></TERM2>
 <DESC>return the greatest common divisor of two or more integers</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>LCM(number1,number2...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>PPCM(nombre1;nombre2...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>LCM(number1,number2&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PPCM(nombre1;nombre2&#x2026;)</CODEROUTINE></TERM2>
 <DESC>return the least common multiple of two or more integers</DESC>
 </ROW>
 <ROW>
@@ -763,8 +763,8 @@ the second argument can be:
 <DESC>return the test of independance (i.e. <CODEROUTINE>CHIDIST(sum of the differences;degrees of freedom)</CODEROUTINE>)</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>DEVSQ(number1,number2,...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>SOMME.CARRES.ECARTS(nombre1;nombre2;...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>DEVSQ(number1,number2,&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMME.CARRES.ECARTS(nombre1;nombre2;&#x2026;)</CODEROUTINE></TERM2>
 <DESC>return the sum of square of deviations of data points from their sample mean</DESC>
 </ROW>
 <ROW>
@@ -1016,13 +1016,13 @@ logical
 <DESC>return the logical value FALSE</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>OR(logical1,logical2,...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>OU(valeur_logique1;valeur_logique2,...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>OR(logical1,logical2,&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>OU(valeur_logique1;valeur_logique2,&#x2026;)</CODEROUTINE></TERM2>
 <DESC>return TRUE if any argument is TRUE</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>AND(logical1,logical2,...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>ET(valeur_logique1;valeur_logique2;...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>AND(logical1,logical2,&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ET(valeur_logique1;valeur_logique2;&#x2026;)</CODEROUTINE></TERM2>
 <DESC>return TRUE if all its arguments are TRUE</DESC>
 </ROW>
 </DEFINITION2TABLE>
@@ -1132,8 +1132,8 @@ convert an octal number to hexadecimal</DESC>
 pivot table
 <DEFINITION2TABLE>
 <ROW>
-<TERM1><CODEROUTINE>GETPIVOTDATA(data_field,pivot_table,field1,item1,field2,item2,...)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>LIREDONNEESTABCROISDYNAMIQUE(champ_donn&#xE9;es;tableau_crois&#xE9;_dyn;champ1;&#xE9;l&#xE9;ment1;champ2;&#xE9;l&#xE9;ment2;...)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>GETPIVOTDATA(data_field,pivot_table,field1,item1,field2,item2,&#x2026;)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>LIREDONNEESTABCROISDYNAMIQUE(champ_donn&#xE9;es;tableau_crois&#xE9;_dyn;champ1;&#xE9;l&#xE9;ment1;champ2;&#xE9;l&#xE9;ment2;&#x2026;)</CODEROUTINE></TERM2>
 <DESC>return data stored in a PivotTable report</DESC>
 </ROW>
 </DEFINITION2TABLE><BR/>

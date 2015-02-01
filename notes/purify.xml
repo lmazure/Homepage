@@ -39,16 +39,16 @@
 Create a file <CODEROUTINE>purify_stub.c</CODEROUTINE>
 <CODESAMPLE>// default routines definition (necessary to be able to link without Purify)<BR/>
 extern "C" int purify_is_running(void); <BR/>
-extern "C" int purify_printf_with_call_chain(const char *fmt,...);<BR/>
+extern "C" int purify_printf_with_call_chain(const char *fmt,&#x2026;);<BR/>
 int purify_is_running() { return 0;} <BR/>
-int purify_printf_with_call_chain(const char*,...) { return 0;} <BR/>
+int purify_printf_with_call_chain(const char*,&#x2026;) { return 0;} <BR/>
 </CODESAMPLE>
 Use it in your code
 <CODESAMPLE>
-...<BR/>
+&#x2026;<BR/>
 extern "C" int purify_is_running(void);<BR/>
-extern "C" int purify_printf_with_call_chain(const char *fmt,...);<BR/>
-...<BR/>
+extern "C" int purify_printf_with_call_chain(const char *fmt,&#x2026;);<BR/>
+&#x2026;<BR/>
 if (purify_is_running()) {<BR/>
 <TAB/>purify_printf_with_call_chain("%s",message);<BR/>
 } else {<BR/>

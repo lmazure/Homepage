@@ -20,7 +20,7 @@ If you really need to have integer types having a given number of bytes, use the
 The types int64_t and uint64_t may be unavailable. You should test if the macro INT64_MAX or  UINT64_MAX is defined to know if the current environment support them. <BR/>
 <BR/>
 The printf/scanf formats are defined in inttypes.h. They are defined by C99, but they are not available in C++. Here is an example how to use them:
-<CODESAMPLE>uint32_t val = ... <BR/>
+<CODESAMPLE>uint32_t val = &#x2026; <BR/>
 printf("The integer value is %020" PRIu32 "\n", val);</CODESAMPLE>
 <BR/>
 The macros defining constant are defined in stdint.h. They are defined by C99, but they are not available in C++. Here is an example how to use them:<BR/>
@@ -59,7 +59,7 @@ uint_fastn_t is a fast unsigned integer type with a width of at least n.</ITEM>
 </BLIST></ITEM>
 </BLIST>
 
-The macros defining the min and max values (e.g. INT_FAST8_MAX, INTMAX_MIN...) and the scanf and printf formats (e.g. PRIdFAST8, PRIoMAX...) are also available for the previous types.<BR/>
+The macros defining the min and max values (e.g. INT_FAST8_MAX, INTMAX_MIN&#x2026;) and the scanf and printf formats (e.g. PRIdFAST8, PRIoMAX&#x2026;) are also available for the previous types.<BR/>
 <BR/>
 strtoimax and strtoumax routines should be used to parse a string into a intmax_t or uintmax_t. <BR/>
 <BR/>

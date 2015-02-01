@@ -52,9 +52,9 @@ int main(int argc, char **argv) {<BR/>
 </BLIST>
 
 <BLIST><TITLE><B><U><X><T><CODEROUTINE>&lt;stdint.h&gt;</CODEROUTINE></T><A>http://www.opengroup.org/onlinepubs/007904975/basedefs/stdint.h.html</A><L>en</L><F>HTML</F></X></U></B></TITLE>
-<ITEM><CODEROUTINE>int8_t</CODEROUTINE>, <CODEROUTINE>uint8_t</CODEROUTINE>, <CODEROUTINE>int16_t</CODEROUTINE>... define types of a given sizes</ITEM>
-<ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>... define types having at least a given size (the compiler will choose the types the most adequate for performance -e.g. it will use words if the CPU manipulate words faster than half-words - )</ITEM>
-<ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>... define types having at least a given size (the compiler will choose the types the most adequate for the registers, this is useful for loop indexes for example)</ITEM>
+<ITEM><CODEROUTINE>int8_t</CODEROUTINE>, <CODEROUTINE>uint8_t</CODEROUTINE>, <CODEROUTINE>int16_t</CODEROUTINE>&#x2026; define types of a given sizes</ITEM>
+<ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>&#x2026; define types having at least a given size (the compiler will choose the types the most adequate for performance -e.g. it will use words if the CPU manipulate words faster than half-words - )</ITEM>
+<ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>&#x2026; define types having at least a given size (the compiler will choose the types the most adequate for the registers, this is useful for loop indexes for example)</ITEM>
 <ITEM><CODEROUTINE>intptr_t</CODEROUTINE>, <CODEROUTINE>uintptr_t</CODEROUTINE> define types large enough to contain a pointer</ITEM>
 </BLIST>
 

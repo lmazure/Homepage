@@ -13,7 +13,7 @@
 
 <ITEM>
 <CODESAMPLE>Selection.Tables(1).Select<BR/>
-Selection.Cells.Shading.BackgroundPatternColorIndex = wdAuto</CODESAMPLE> remove the background colors of all the table cells (but select the whole table...)
+Selection.Cells.Shading.BackgroundPatternColorIndex = wdAuto</CODESAMPLE> remove the background colors of all the table cells (but select the whole table&#x2026;)
 </ITEM>
 
 <ITEM>
@@ -27,7 +27,7 @@ see page <X><T>Built-in dialog box argument lists</T><A>http://msdn.microsoft.co
 
 <ITEM>
 <CODESAMPLE>Selection.Find.MatchWildcards = True<BR/>
-Selection.Find.Text = "[a-z]"</CODESAMPLE> matches &#xE9;,&#xE8;, &#xA1;, &#xF9;...
+Selection.Find.Text = "[a-z]"</CODESAMPLE> matches &#xE9;,&#xE8;, &#xA1;, &#xF9;&#x2026;
 </ITEM>
 
 <ITEM>
@@ -52,7 +52,7 @@ Next i</CODESAMPLE>
 <ITEM>
 <CODESAMPLE>Set range = actDoc.range(firstCell.range.Start, firstCell.range.End - 1)<BR/>
 If (Not range.Font.StrikeThrough) Then<BR/>
-<TAB/>...<BR/>
+<TAB/>&#x2026;<BR/>
 End If
 </CODESAMPLE>
 Test if the text of a table cell is not stroke through
@@ -70,13 +70,13 @@ For i = 2 To table.Rows.Count<BR/>
 <TAB/>Next j<BR/>
 <TAB/>Set firstCell = Selection.Cells(1) <BR/>
 <TAB/>' end of kludge<BR/>
-<TAB/>...<BR/>
+<TAB/>&#x2026;<BR/>
 Next i
 </CODESAMPLE>
 If you just want to loop on the cells of the first column, you can use
 <CODESAMPLE>
 For Each firstCell In table.Columns(1).Cells<BR/>
-<TAB/>...<BR/>
+<TAB/>&#x2026;<BR/>
 Next firstCell
 </CODESAMPLE>
 </ITEM>
@@ -102,16 +102,16 @@ it orders to avoid problems when paring documents which may be a master document
 WordBasic.AcceptAllChangesInDoc<BR/>
 ActiveDocument.Subdocuments.Expanded = True<BR/>
 Set actdoc = ActiveDocument<BR/>
-... <BR/>
+&#x2026; <BR/>
 <I>use actdoc</I><BR/>
-... <BR/>
+&#x2026; <BR/>
 actdoc.Close SaveChanges:=wdDoNotSaveChanges</CODESAMPLE>
 </ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>paragraphs</B></U></TITLE>
 <ITEM>
-<CODEROUTINE>OutlineLevel</CODEROUTINE> returns the outline level of the paragraph, it can be <CODEROUTINE>wdOutlineLevel1</CODEROUTINE>, <CODEROUTINE>wdOutlineLevel2</CODEROUTINE>,... or <CODEROUTINE>wdOutlineLevelBodyText</CODEROUTINE>.
+<CODEROUTINE>OutlineLevel</CODEROUTINE> returns the outline level of the paragraph, it can be <CODEROUTINE>wdOutlineLevel1</CODEROUTINE>, <CODEROUTINE>wdOutlineLevel2</CODEROUTINE>,&#x2026; or <CODEROUTINE>wdOutlineLevelBodyText</CODEROUTINE>.
 </ITEM>
 <ITEM>
 <CODEROUTINE>range.ListFormat.ListString</CODEROUTINE> returns the numbering of a paragraph
@@ -172,7 +172,7 @@ With Selection.Borders<BR/>
 <TAB/>.OutsideLineStyle = wdLineStyleSingle<BR/>
 End With</CODESAMPLE>
 works<BR/>
-(on the same document, <CODEROUTINE>theTable.range.Borders(wdBorderVertical)</CODEROUTINE> is undefined...)
+(on the same document, <CODEROUTINE>theTable.range.Borders(wdBorderVertical)</CODEROUTINE> is undefined&#x2026;)
 </ITEM>
 <ITEM>
 When retrieving the content of a cell will <CODEROUTINE>cell.range.Text</CODEROUTINE>, the returned text contains at its end ASCII 13 (carriage return) and ASCII 7 (which is used as an End of Cell indicator). They must be removed (<CODEROUTINE>Replace(cell.range.Text, vbCr &amp; Chr(7), "")</CODEROUTINE> or <CODEROUTINE>Left(cell.range.Text , len(cell.range.Text)-2)</CODEROUTINE>.<BR/>
@@ -194,7 +194,7 @@ retrieve some values from the statistics dialog (not tested)
 <CODESAMPLE>With Dialogs(wdDialogDocumentStatistics)<BR/>
 <TAB/>MyVar = .FileName<BR/>
 <TAB/>MyVar2 = .Paragraphs<BR/>
-<TAB/>...<BR/>
+<TAB/>&#x2026;<BR/>
 End With</CODESAMPLE>
 </ITEM>
 </BLIST>
@@ -210,7 +210,7 @@ End With</CODESAMPLE>
 <ITEM>select <CODEMENU>Open</CODEMENU> from the drop-down procedure list</ITEM>
 <ITEM>type the code in the inserted empty macro
 <CODESAMPLE>Private Sub Document_Open()<BR/>
-...<BR/>
+&#x2026;<BR/>
 End Sub</CODESAMPLE></ITEM>
 <ITEM>check the security level (<CODEMENU>Tools>Macros>Security</CODEMENU>), otherwise the application may simply ignore the macro</ITEM>
 </BLIST>
@@ -263,7 +263,7 @@ xl.Selection.Rows.AutoFit</CODESAMPLE><BR/>
 <ITEM>refresh the screen
 <CODESAMPLE>Application.ScreenRefresh</CODESAMPLE></ITEM>
 <ITEM> set the text in the status bar
-<CODESAMPLE>StatusBar = "Please wait..." </CODESAMPLE> </ITEM>
+<CODESAMPLE>StatusBar = "Please wait&#x2026;" </CODESAMPLE> </ITEM>
 </BLIST>
 
 <BLIST><TITLE><B><U>Macro interruption</U></B></TITLE>

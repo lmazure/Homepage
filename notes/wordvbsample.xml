@@ -26,7 +26,7 @@ End Sub
 
 <BR/>
 
-extract all the occurrences of "[...]" and put them into a new document
+extract all the occurrences of "[&#x2026;]" and put them into a new document
 <CODESAMPLE>
 Sub extract()<BR/>
 <TAB/>Dim actDoc, newDoc As Document<BR/>
@@ -88,14 +88,14 @@ retrieve the reference of a document in the headers
 Dim sect As Section<BR/>
 Dim n As Integer<BR/>
 Dim str As String<BR/>
-...<BR/>
+&#x2026;<BR/>
 Documents.Open FileName:=file1.Path, ReadOnly:=True<BR/>
 Set actDoc = ActiveDocument<BR/>
 For Each sect In actDoc.Sections<BR/>
 <TAB/>If (sect.Headers(wdHeaderFooterPrimary).range.Tables.Count >= 1) Then<BR/>
 <TAB/><TAB/>n = sect.Headers(wdHeaderFooterPrimary).range.Tables(1).Columns.Count<BR/>
 <TAB/><TAB/>str = sect.Headers(wdHeaderFooterPrimary).range.Tables(1).Cell(1, n).range.text<BR/>
-<TAB/><TAB/>...<BR/>
+<TAB/><TAB/>&#x2026;<BR/>
 <TAB/>End If<BR/>
 Next sect<BR/>
 actDoc.Close (wdDoNotSaveChanges)

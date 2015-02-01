@@ -13,7 +13,7 @@ select <CODEMENU>Enable HTTP proxy connection</CODEMENU><BR/>
 fill <CODEMENU>HTTP proxy host address:</CODEMENU> and <CODEMENU>HTTP proxy host port:</CODEMENU>.
 </ITEM>
 <ITEM>Install new stuff:<BR/>
-go in <CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install...</CODEMENU></CODEMENU></CODEMENU><BR/>
+go in <CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install&#x2026;</CODEMENU></CODEMENU></CODEMENU><BR/>
 select <CODEMENU>Search for new features to install</CODEMENU> and click <CODEMENU>Next</CODEMENU><BR/>
 select the update site(s) and click <CODEMENU>Finish</CODEMENU><BR/>
 select the feature(s) and click <CODEMENU>Next</CODEMENU><BR/>
@@ -31,7 +31,7 @@ But the following command line works:<BR/>
 
 <BLIST><TITLE><U><B>Project management</B></U></TITLE>
 <ITEM>create a project on an existing source hierarchy<BR/>
-<CODEMENU>File<CODEMENU>New<CODEMENU>Project...<CODEMENU>Java Project</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
+<CODEMENU>File<CODEMENU>New<CODEMENU>Project&#x2026;<CODEMENU>Java Project</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
 <CODESAMPLE>Project Name: foobar<BR/>
 Location: Create project a external location<BR/>
 <TAB/>Directory: D:\Docs\perso\develop\ptm</CODESAMPLE></ITEM>
@@ -118,10 +118,10 @@ Location: Create project a external location<BR/>
 
 <BLIST><TITLE><U><B>Bookmarks</B></U></TITLE>
 <ITEM>add a boomark on the current line:<BR/>
-right-click on the left margin of the Editor and select <CODEMENU>Add Bookmark...</CODEMENU> or<CODEMENU>Edit<CODEMENU>Add Bookmark...</CODEMENU></CODEMENU> in the menubar<BR/>
+right-click on the left margin of the Editor and select <CODEMENU>Add Bookmark&#x2026;</CODEMENU> or<CODEMENU>Edit<CODEMENU>Add Bookmark&#x2026;</CODEMENU></CODEMENU> in the menubar<BR/>
 and type the name of the bookmark</ITEM>
 <ITEM>display the Bookmark View: <BR/>
-in the menubar, select <CODEMENU>Windows<CODEMENU>Show view<CODEMENU>Other...</CODEMENU></CODEMENU></CODEMENU><BR/>
+in the menubar, select <CODEMENU>Windows<CODEMENU>Show view<CODEMENU>Other&#x2026;</CODEMENU></CODEMENU></CODEMENU><BR/>
 select <CODEMENU>General<CODEMENU>Bookmarks</CODEMENU></CODEMENU></ITEM>
 <ITEM>delete a bookmark:<BR/>
 right-click on the left margin of the Editor and select <CODEMENU>Delete Bookmark</CODEMENU> or<BR/>
@@ -156,8 +156,8 @@ in Search window
 <BLIST>
 <ITEM>set the field name prefixes in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Code Style</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM>type the fields</ITEM>
-<ITEM>generate the constructor with <CODEMENU>Source<CODEMENU>Generate Constructor using Fields...</CODEMENU></CODEMENU></ITEM>
-<ITEM>generate the setters and/or getters <CODEMENU>Source<CODEMENU>Generate Getters and Setters...</CODEMENU></CODEMENU></ITEM>
+<ITEM>generate the constructor with <CODEMENU>Source<CODEMENU>Generate Constructor using Fields&#x2026;</CODEMENU></CODEMENU></ITEM>
+<ITEM>generate the setters and/or getters <CODEMENU>Source<CODEMENU>Generate Getters and Setters&#x2026;</CODEMENU></CODEMENU></ITEM>
 </BLIST>
 
 <U><B>Refactoring</B></U><BR/>
@@ -215,13 +215,13 @@ in Debug window
 </DEFINITIONTABLE>
 <BR/>
 <BLIST><TITLE>Create a run configuration</TITLE>
-<ITEM><CODEMENU>Run<CODEMENU>Run...</CODEMENU></CODEMENU></ITEM>
+<ITEM><CODEMENU>Run<CODEMENU>Run&#x2026;</CODEMENU></CODEMENU></ITEM>
 <ITEM>select <CODEMENU>Java application</CODEMENU> and click <CODEMENU>New</CODEMENU></ITEM>
 <ITEM>define its name in the <CODEMENU>Name</CODEMENU> field and fill all the necessary parameters</ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>Run an application</TITLE>
-<ITEM><CODEMENU>Run<CODEMENU>Run...</CODEMENU></CODEMENU> and select the run configuration</ITEM>
+<ITEM><CODEMENU>Run<CODEMENU>Run&#x2026;</CODEMENU></CODEMENU> and select the run configuration</ITEM>
 <ITEM>select the main class and <CODEMENU>Run<CODEMENU>Run As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/> run last launched</ITEM>
 <ITEM>in the "Java Browser > Types" view, select the main class and <CODEMENU>right click<CODEMENU>Run<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
@@ -229,7 +229,7 @@ in Debug window
 </BLIST>
 <BR/>
 <BLIST><TITLE>Debug an application</TITLE>
-<ITEM><CODEMENU>Run<CODEMENU>Debug...</CODEMENU></CODEMENU></ITEM>
+<ITEM><CODEMENU>Run<CODEMENU>Debug&#x2026;</CODEMENU></CODEMENU></ITEM>
 <ITEM>select the main class and <CODEMENU>Run<CODEMENU>Debug As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM><KEY ID='F11'/> debug last launched</ITEM>
 <ITEM>in the "Java Browser > Types" view, select the main class and <CODEMENU>right click<CODEMENU>Debug<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
@@ -264,10 +264,10 @@ in Debug window
 <ITEM>Eclipse 3.0:<BR/>
 <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Javadoc</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM>Eclipse 3.1<BR/>
-Fill the field <CODEMENU>Javadoc command</CODEMENU> in <CODEMENU>Project<CODEMENU>Generate Javadoc...</CODEMENU></CODEMENU></ITEM>
+Fill the field <CODEMENU>Javadoc command</CODEMENU> in <CODEMENU>Project<CODEMENU>Generate Javadoc&#x2026;</CODEMENU></CODEMENU></ITEM>
 </BLIST></ITEM>
 <ITEM>generate the documentation<BR/>
-<CODEMENU>Project<CODEMENU>Generate Javadoc...</CODEMENU></CODEMENU></ITEM>
+<CODEMENU>Project<CODEMENU>Generate Javadoc&#x2026;</CODEMENU></CODEMENU></ITEM>
 <ITEM><BLIST><TITLE>Define the location of the JDK Javadoc</TITLE>
 <ITEM>Eclipse 3.0:<BR/>
 <CODEMENU>Windows<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Installed JREs</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
@@ -300,9 +300,9 @@ double click on <CODEMENU>Javadoc location</CODEMENU> and type <CODEROUTINE>file
 <BLIST><TITLE><U><B>FindBugs</B></U></TITLE>
 <ITEM>
 <BLIST><TITLE>Installing FindBugs</TITLE>
-<ITEM><CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install...</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM><CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install&#x2026;</CODEMENU></CODEMENU></CODEMENU></ITEM>
 <ITEM>select  <CODEMENU>Search for new features to install</CODEMENU></ITEM>
-<ITEM>click on <CODEMENU>New Remote Site...</CODEMENU></ITEM>
+<ITEM>click on <CODEMENU>New Remote Site&#x2026;</CODEMENU></ITEM>
 <ITEM>Name:  FindBugs update site<BR/>
 URL: http://findbugs.cs.umd.edu/eclipse</ITEM>
 <ITEM>select <CODEMENU>FindBugs update site</CODEMENU> and click <CODEMENU>Finish</CODEMENU></ITEM>
@@ -326,7 +326,7 @@ URL: http://findbugs.cs.umd.edu/eclipse</ITEM>
 
 <BLIST><TITLE><U><B>JavaScript</B></U></TITLE>
 <ITEM><CODEMENU>Window<CODEMENU>Open Perspective<CODEMENU>JavaScript</CODEMENU></CODEMENU></CODEMENU><BR/>
-once the perspective is displayed, in the <CODEMENU>Script Explorer</CODEMENU> view, right-click on the project and select <CODEMENU>Configure<CODEMENU>Add JavaScript support...</CODEMENU></CODEMENU></ITEM>
+once the perspective is displayed, in the <CODEMENU>Script Explorer</CODEMENU> view, right-click on the project and select <CODEMENU>Configure<CODEMENU>Add JavaScript support&#x2026;</CODEMENU></CODEMENU></ITEM>
 </BLIST>
 
 </CONTENT>

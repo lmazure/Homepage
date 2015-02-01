@@ -6,7 +6,7 @@
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 This is a quick 'n dirty script to find some C++ methods that are never used. The script lists the strings which have a <CODEROUTINE>class::method</CODEROUTINE> format and then count the number of times <CODEROUTINE>method</CODEROUTINE> appears. If it is 1 or 2, there is something to look at.<BR/>
-(Of course, I know this script is stupid, it does not differentiate enum and routines... But, once again, as stupid as it is, it is able to find many methods that are never called. The sed script used to remove the comments comes from <X><T>here</T><A>http://sed.sourceforge.net/grabbag/scripts/remccoms3.sed</A><L>en</L><F>HTML</F></X>)
+(Of course, I know this script is stupid, it does not differentiate enum and routines&#x2026; But, once again, as stupid as it is, it is able to find many methods that are never called. The sed script used to remove the comments comes from <X><T>here</T><A>http://sed.sourceforge.net/grabbag/scripts/remccoms3.sed</A><L>en</L><F>HTML</F></X>)
 <CODESAMPLE>
 #!/bin/ksh<BR/>
 <BR/>

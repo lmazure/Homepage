@@ -8,8 +8,8 @@
 
 <BLIST><TITLE><B><U>java</U></B></TITLE>
 <ITEM>syntax:<BR/>
-<CODEROUTINE>java [ options ] class [ argument ... ]</CODEROUTINE><BR/>
-<CODEROUTINE>java [ options ] -jar file.jar [ argument ... ]</CODEROUTINE></ITEM>
+<CODEROUTINE>java [ options ] class [ argument &#x2026; ]</CODEROUTINE><BR/>
+<CODEROUTINE>java [ options ] -jar file.jar [ argument &#x2026; ]</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>-client</CODEROUTINE> select the Java HotSpot Client VM</ITEM>
 <ITEM><CODEROUTINE>-server</CODEROUTINE> select the Java HotSpot Server VM</ITEM>
 <ITEM><CODEROUTINE>-verbose:class</CODEROUTINE> print a trace of the class loading</ITEM>
@@ -79,9 +79,9 @@ and look for <CODEROUTINE>minor version</CODEROUTINE> and <CODEROUTINE>major ver
 
 <BLIST><TITLE><B><U>jmap</U></B></TITLE>
 <ITEM>create a heapdump of a process:<BR/>
-<CODEROUTINE>jmap -dump:file="C:\Documents and setting\...\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
+<CODEROUTINE>jmap -dump:file="C:\Documents and setting\&#x2026;\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
 <ITEM>create a heapdump containing only the non-garbageable objects:<BR/>
-<CODEROUTINE>jmap -dump:live,file="C:\Documents and setting\...\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
+<CODEROUTINE>jmap -dump:live,file="C:\Documents and setting\&#x2026;\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
 </BLIST>
 
 <BLIST><TITLE><B><U>jhat</U></B></TITLE>

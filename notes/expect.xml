@@ -20,7 +20,7 @@ A timeout of -1 is an infinite timeout.
 execute a command as root
 <CODESAMPLE>
 #!/bin/ksh<BR/>
-...<BR/>
+&#x2026;<BR/>
 expect<TAB/>&lt;&lt; EOF<BR/>
 <TAB/>spawn "su" "-"<BR/>
 <TAB/>expect -re "Password:\$"<BR/>
@@ -29,7 +29,7 @@ expect<TAB/>&lt;&lt; EOF<BR/>
 <TAB/>send "my_script_for_root\r"<BR/>
 <TAB/>expect -re "#\$"<BR/>
 EOF<BR/>
-...<BR/>
+&#x2026;<BR/>
 </CODESAMPLE>
 </ITEM>
 <ITEM>
@@ -107,7 +107,7 @@ EOF<BR/>
 </CODESAMPLE>
 </ITEM>
 <ITEM>
-remotely log to the machine despite <CODEROUTINE>xdm</CODEROUTINE> (this is very dirty... <X><T>this solution</T><A>bypassxdm.html</A><L>en</L><F>HTML</F></X> is probably cleaner)
+remotely log to the machine despite <CODEROUTINE>xdm</CODEROUTINE> (this is very dirty&#x2026; <X><T>this solution</T><A>bypassxdm.html</A><L>en</L><F>HTML</F></X> is probably cleaner)
 <CODESAMPLE>
 #!/bin/ksh<BR/>
 <BR/>

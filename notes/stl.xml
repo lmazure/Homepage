@@ -25,7 +25,7 @@
 
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
 <ITEM><CODEROUTINE>size_type</CODEROUTINE> describe the type used to express the size of a container
-<CODESAMPLE>for (std::vector&lt;FooBar&gt;::size_type i=0; i&lt;a_vector.size(); i++) {...}</CODESAMPLE></ITEM>
+<CODESAMPLE>for (std::vector&lt;FooBar&gt;::size_type i=0; i&lt;a_vector.size(); i++) {&#x2026;}</CODESAMPLE></ITEM>
 <ITEM><CODEROUTINE>value_type</CODEROUTINE> give the type of the objects that can be stored in the container
 <CODESAMPLE>vector&lt;float&gt; v;<BR/>
 cout &lt;&lt; "value type: " &lt;&lt; typeidb(vector&lt;float&gt;::value_type).name();</CODESAMPLE>
