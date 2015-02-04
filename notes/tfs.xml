@@ -3,24 +3,24 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TFS</TITLE>
 <PATH>notes/tfs.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 
-<CODEROUTINE><PROMPT/>tf="/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/TF.exe"</CODEROUTINE><BR/>
+<CODESAMPLE><PROMPT/>tf="/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/TF.exe"</CODESAMPLE><BR/>
 <BR/>
 
 create a workspace <I>foobar</I><BR/>
-<CODEROUTINE><PROMPT/>cd "$tfsdir"</CODEROUTINE><BR/>
-<CODEROUTINE><PROMPT/>mkdir <I>foobar</I></CODEROUTINE><BR/>
-<CODEROUTINE><PROMPT/>cd "<I>foobar</I></CODEROUTINE><BR/>
-<CODEROUTINE><PROMPT/>"$tf" workspace /new <I>foobar</I> /collection:http://alm.eurofins.local/tfs/eurofinscollection</CODEROUTINE><BR/>
-<CODEROUTINE><PROMPT/>"$tf" get "eCommerce/EOL/Trunk" /recursive</CODEROUTINE><BR/>
+<CODESAMPLE><PROMPT/>cd "$tfsdir"<BR/>
+<PROMPT/>mkdir <I>foobar</I><BR/>
+<PROMPT/>cd "<I>foobar</I><BR/>
+<PROMPT/>"$tf" workspace /new <I>foobar</I> /collection:http://alm.eurofins.local/tfs/eurofinscollection<BR/>
+<PROMPT/>"$tf" get "eCommerce/EOL/Trunk" /recursive</CODESAMPLE><BR/>
 <BR/>
 
 delete a workspace <I>foobar</I><BR/>
-<CODEROUTINE><PROMPT/>"$tf" workspace /delete <I>foobar</I></CODEROUTINE><BR/>
-<CODEROUTINE><PROMPT/>cd "$tfsdir"</CODEROUTINE><BR/>
-<CODEROUTINE><PROMPT/>rm -fr <I>foobar</I></CODEROUTINE><BR/>
+<CODESAMPLE><PROMPT/>"$tf" workspace /delete <I>foobar</I><BR/>
+<PROMPT/>cd "$tfsdir"<BR/>
+<PROMPT/>rm -fr <I>foobar</I></CODESAMPLE><BR/>
 <BR/>
 
 </CONTENT>
