@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 
 <X><T>stackoverflow</T><A>http://stackoverflow.com</A><L>en</L><F>HTML</F></X><BR/>
@@ -44,7 +44,7 @@
     <X><T>Visual Studio Team Foundation Server Branching and Merging Guide</T><A>http://vsarbranchingguide.codeplex.com/</A><L>en</L><F>HTML</F></X>,
      <X><T>personal notes</T><A>../notes/tfs.html</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM>comparisons:
-    <X quality='1'><T>Better SCM</T><A>http://better-scm.berlios.de</A><L>en</L><F>HTML</F></X></ITEM>
+    <X quality='1'><T>Better SCM</T><A>http://better-scm.shlomifish.org</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
 <BLIST><TITLE>Continuous integration</TITLE>
@@ -88,7 +88,6 @@
   <ITEM><X><T>UltraEdit</T><A>http://www.ultraedit.com</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><ANCHOR>notepadpp</ANCHOR><X><T>Notepad++</T><A>http://notepad-plus-plus.org</A><L>en</L><F>HTML</F></X>:
     <X><T>plugins</T><A>http://sourceforge.net/projects/npp-plugins</A><L>en</L><F>HTML</F></X>,
-    <X><T>NpWiki++</T><A>http://sourceforge.net/apps/mediawiki/notepad-plus/index.php</A><L>en</L><F>HTML</F></X>,
     <X><T>personal notes</T><A>../notes/notepadpp.html</A><L>fr</L><F>HTML</F></X></ITEM>
 </BLIST>
 
@@ -140,7 +139,7 @@
     <X><T>personal notes</T><A>../notes/valgrind.html</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>dmalloc</T><A>http://dmalloc.com/</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>ccmalloc</T><A>http://cs.ecs.baylor.edu/~donahoo/tools/ccmalloc/</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Electric Fence</T><A>http://perens.com/FreeSoftware/ElectricFence/</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X status='dead'><T>Electric Fence</T><A>http://perens.com/FreeSoftware/ElectricFence/</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Boehm Collector</T><A>http://www.hboehm.info/gc/</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>LeakTracer</T><A>http://www.andreasen.org/LeakTracer/</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>MemWatch</T><A>http://sourceforge.net/projects/memwatch/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -161,7 +160,7 @@
     <ITEM><ANCHOR>prolint</ANCHOR><X><T>PC-lint/FlexeLint/ProLint</T><A>http://www.gimpel.com</A><L>en</L><F>HTML</F></X>:
       <X><T>error messages</T><A>http://www.gimpel.com/html/pub/msg.txt</A><L>en</L><F>HTML</F></X>,
       <X><T>personal notes</T><A>../notes/prolint.html</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Parasoft C++test</T><A>http://www.parasoft.com/jsp/products/home.jsp?product=Wizard</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Parasoft C++test</T><A>http://www.parasoft.com/product/cpptest</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>PolySpace</T><A>http://www.polyspace.com/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Flawfinder</T><A>http://www.dwheeler.com/flawfinder/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Klocwork</T><A>http://www.klocwork.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -172,7 +171,7 @@
   <ITEM><BLIST><TITLE>Java</TITLE>
     <ITEM><X><T>PMD</T><A>http://pmd.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>CheckStyle</T><A>http://checkstyle.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Jtest</T><A>http://www.parasoft.com/jsp/products/home.jsp?product=Jtest</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Jtest</T><A>http://www.parasoft.com/product/jtest/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Jlint</T><A>http://artho.com/jlint</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>FindBugs</T><A>http://findbugs.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Macker</T><A>http://innig.net/macker</A><L>en</L><F>HTML</F></X></ITEM>
@@ -183,6 +182,7 @@
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>JavaScript</TITLE>
     <ITEM><X><T>JSLint</T><A>http://www.jslint.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>JHLint</T><A>http://jshint.com</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Multi-language</TITLE>
     <ITEM><X><T>Coverity</T><A>http://www.coverity.com/products/coverity-save.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -248,8 +248,8 @@
 
   <ITEM><BLIST><TITLE>Configuration management</TITLE>
     <ITEM><ARTICLE><X><T>The New Breed of Version Control Systems</T><A>http://www.onlamp.com/pub/a/onlamp/2004/01/29/scm_overview.html</A><L>en</L><F>HTML</F></X><AUTHOR>Shlomi Fish</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE><COMMENT>A short description of the current open source version control systems.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Comments on Open Source Software / Free Software (OSS/FS) Software Configuration Management (SCM) Systems</T><A>http://www.dwheeler.com/essays/scm.html</A><L>en</L><F>HTML</F></X><AUTHOR>David A. Wheeler</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>5</MONTH><DAY>18</DAY></DATE><COMMENT>A good overview of the current source management tools.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Microsoft's Branching and Merging Guidelines</T><A>http://www.infoq.com/news/2012/04/Branching-Guide</A><L>en</L><F>HTML</F></X><AUTHOR>Jonathan Allen</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>Microsoft released a guide on branch management.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Comments on Open Source Software / Free Software (OSS/FS) Software Configuration Management (SCM) / Revision-Control Systems</T><A>http://www.dwheeler.com/essays/scm.html</A><L>en</L><F>HTML</F></X><AUTHOR>David A. Wheeler</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>5</MONTH><DAY>18</DAY></DATE><COMMENT>A good overview of the current source management tools.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Microsoft&#x2019;s Branching and Merging Guidelines</T><A>http://www.infoq.com/news/2012/04/Branching-Guide</A><L>en</L><F>HTML</F></X><AUTHOR>Jonathan Allen</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>Microsoft released a guide on branch management.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>CVS</TITLE>
       <ITEM><ARTICLE><X><T>Open Source Development with CVS</T><A>http://cvsbook.red-bean.com/</A><L>en</L><F>HTML</F></X><AUTHOR>Karl Fogel</AUTHOR><AUTHOR>Moshe Bar</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>7</MONTH></DATE><COMMENT>A free book teaching CVS.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -261,7 +261,7 @@
     <ITEM><BLIST><TITLE>Git</TITLE>
       <ITEM><ARTICLE><X><T>Git</T><A>http://www.youtube.com/watch?v=8dhZ9BXQgc4</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>59</MINUTE><SECOND>48</SECOND></DURATION></X><AUTHOR>Randal Schwartz</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE><COMMENT>A presentation of Git, but this goes too fast, Randall tries to say too many things in too little time.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Git changes the game of distributed Web development</T><ST>Modern version control systems provide powerful support for collaboration</ST><A>http://www.ibm.com/developerworks/linux/library/wa-git/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>William von Hagen</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE><COMMENT>A (too) short introduction to Git.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>YUI Theater &#x2014; Tom Preston-Werner, Chris Wanstrath and Scott Chacon: &#x201C;Git, GitHub and Social Coding&#x201D;</T><A>http://www.yuiblog.com/blog/2009/09/29/video-github/</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>8</MINUTE><SECOND>19</SECOND></DURATION></X><AUTHOR>Tom Preston-Werner</AUTHOR><AUTHOR>Chris Wanstrath</AUTHOR><AUTHOR>Scott Chacon</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>7</MONTH><DAY>2</DAY></DATE><COMMENT>A presentation of Git and GitHub: how to organise the repositories, some tips and tricks&#x2026;</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>YUI Theater &#x2014; Tom Preston-Werner, Chris Wanstrath and Scott Chacon: "Git, GitHub and Social Coding"</T><A>http://www.yuiblog.com/blog/2009/09/29/video-github/</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>8</MINUTE><SECOND>19</SECOND></DURATION></X><AUTHOR>Tom Preston-Werner</AUTHOR><AUTHOR>Chris Wanstrath</AUTHOR><AUTHOR>Scott Chacon</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>7</MONTH><DAY>2</DAY></DATE><COMMENT>A presentation of Git and GitHub: how to organise the repositories, some tips and tricks&#x2026;</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Introducing Git Version Control into Your Team</T><A>http://channel9.msdn.com/Events/Patterns-Practices-Symposium-Online/pattern-practices-symposium-2013/Introducing-Git-Version-Control-into-Your-Team</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>53</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR>Mark Groves</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE><COMMENT>Yet another introduction to Git. This one is rather good. It also gives a few tips for those working with TFS and wanting to use Git.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mercurial</TITLE>
@@ -282,7 +282,7 @@
   <ITEM><BLIST><TITLE>Editors</TITLE>
     <ITEM><BLIST><TITLE>Vi</TITLE>
       <ITEM><ARTICLE><X><T>Top Vim Plugins</T><A>http://www.youtube.com/watch?v=_galFWwSDt0</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>8</MINUTE><SECOND>59</SECOND></DURATION></X><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>Someone presents his preferred plugins.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>OSCON 2013: "More Instantly Better Vim" - Damian Conway</T><A>http://www.youtube.com/watch?v=aHm36-na4-4</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>38</MINUTE><SECOND>53</SECOND></DURATION></X><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT>Damian tries to do everything in Vim. Some tips are interesting, some are doubtful&#x2026;</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Damian Conway, "More Instantly Better Vim" - OSCON 2013</T><A>http://www.youtube.com/watch?v=aHm36-na4-4</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>38</MINUTE><SECOND>53</SECOND></DURATION></X><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT>Damian tries to do everything in Vim. Some tips are interesting, some are doubtful&#x2026;</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Emacs</TITLE>
       <ITEM><ARTICLE><X><T>Customizing Emacs with Perl</T><A>http://www.perl.com/pub/a/2005/03/31/lightning2.html</A><L>en</L><F>HTML</F></X><AUTHOR>Bob DuCharme</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE><COMMENT>The title says everything</COMMENT></ARTICLE></ITEM>
@@ -312,7 +312,7 @@
           <ITEM><ARTICLE><X status='dead'><T>Build GUIs with the Eclipse Visual Editor project</T><ST>A graphical tool for building graphical interfaces</ST><A>http://www.ibm.com/developerworks/opensource/library/os-ecvisual/</A><L>en</L><F>HTML</F></X><AUTHOR>David Gallardo</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE><COMMENT>A presentation of the Visual Editor with two short examples: one with AWT/Swing and the other with SWT.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
-      <ITEM><ARTICLE><X><T>Conquer medieval kingdoms with CodeRuler - Stretch your Java programming skills with this new animated graphical simulator</T><A>http://www.cse.lehigh.edu/~munoz/CSE497/assignments/files/coderuler.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Sing Li</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>Code your own warlord&#x2026;</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Conquer medieval kingdoms with CodeRuler</T><ST>Stretch your Java programming skills with this new animated graphical simulator</ST><A>http://www.cse.lehigh.edu/~munoz/CSE497/assignments/files/coderuler.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Sing Li</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>Code your own warlord&#x2026;</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Eclipse Plugins Exposed, Part 1: A First Glimpse</T><A>http://www.onjava.com/pub/a/onjava/2005/02/09/eclipse.html</A><L>en</L><F>HTML</F></X><AUTHOR>Emmanuel Proulx</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE><COMMENT>This description is not clear at all, but maybe the author just wants to give an idea about the plugin creation workflow&#x2026;</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Implementing Web user interfaces for Eclipse components</T><ST>Leveraging RIA technologies in Eclipse-based components</ST><A>http://www.ibm.com/developerworks/opensource/library/os-eclipse-webui/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert Ma</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>How to instantiate an SWT browser widget and communicate between Eclipse and this widget:<BR/>- a quick and dirty solution uses Javascript from Eclipse to the Browser, and the Browser status for the other direction<BR/>- a cleaner one is using Jetty and HTTP requests</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>History</TITLE>
@@ -361,7 +361,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Team Foundation Server</TITLE>
       <ITEM><ARTICLE><X><T>diff/merge configuration in Team Foundation - common Command and Argument values</T><A>http://blogs.msdn.com/b/jmanning/archive/2006/02/20/diff-merge-configuration-in-team-foundation-common-command-and-argument-values.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>James Manning</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>How to configure diff and merge tools in Visual Studio for Team Foundation Server.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Introducing Visual Studio Team Foundation Server 2010, Part I</T><A>http://www.codeguru.com/cpp/article.php/c18481</A><L>en</L><F>HTML</F></X><AUTHOR>Jani Jarvinen</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT>An overview of TFS.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Introducing Microsoft Visual Studio Team Foundation Server 2010, Part I</T><A>http://www.codeguru.com/cpp/article.php/c18481</A><L>en</L><F>HTML</F></X><AUTHOR>Jani Jarvinen</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT>An overview of TFS.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Benefiting from Team Foundation Server Work Items</T><A>http://www.codeguru.com/csharp/.net/article.php/c18505</A><L>en</L><F>HTML</F></X><AUTHOR>Jani Jarvinen</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>What are Work Items and how to use them.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Unit and Load Testing With Team Foundation Server 2010</T><A>http://www.codeguru.com/csharp/.net/article.php/c18555</A><L>en</L><F>HTML</F></X><AUTHOR>Jani Jarvinen</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>Running unit tests, Web tests, and load tests in TFS.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>TFS 2010 Scrum - Relation between PBIs, Tasks, Bugs and Impediments</T><A>http://www.c-sharpcorner.com/uploadfile/sanks/tfs-2010-scrum-relation-between-pbis-tasks-bugs-and-impediments/</A><L>en</L><F>HTML</F></X><AUTHOR>Sanket Terdal</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>5</MONTH><DAY>4</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
@@ -378,8 +378,8 @@
       <ITEM><ARTICLE><X><T>The Parallel Revolution Has Started: Are You Part of the Solution or Part of the Problem?</T><A>http://www.youtube.com/watch?v=A2H_SrpAPZU</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>5</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR>David Patterson</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE><COMMENT>Random thoughts on parallelism: why CPUs are now multi-core? why software will have to effectively exploit paralelism? possible killer apps requiring yet further CPU performance improvements, autotunners, a simple performance model&#x2026;</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Assertions</TITLE>
-    <ITEM><ARTICLE><X><T>Diagnosing Java code: Assertions and temporal logic in Java programming - Introduce temporal logic to assertions to supplement testing</T><A>http://www.50001.com/language/javaside/lec/java_ibm/%C0%DA%B9%D9%20%C7%C1%B7%CE%B1%D7%B7%A1%B9%D6%BF%A1%BC%AD%C0%C7%20Assertion%B0%FA%20temporal%20logic%20%28%BF%B5%B9%AE%29.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Eric E. Allen</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH></DATE><COMMENT>The author introduces the idea of temporal logic: assertions taking into account the execution sequence into account ("always", "sometime", "until" and "next").</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Diagnosing Java code: Using temporal logic with bug patterns - Preventing common bugs with temporal logic assertions</T><A>http://www.50001.com/language/javaside/lec/java_ibm/%B9%F6%B1%D7%20%C6%D0%C5%CF%BF%A1%20Temporal%20logic%20%BB%E7%BF%EB%C7%CF%B1%E2%20%28%BF%B5%B9%AE%29.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Eric E. Allen</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>8</MONTH></DATE><COMMENT>Some samples of how to use temporal logic, but most of them could be verified with standard assertions (i.e. "always" is the same as defining an invariant). It would be more convincing to choose more tricky bugs, but maybe the article would have been too complex&#x2026;</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Diagnosing Java code: Assertions and temporal logic in Java programming</T><ST>Introduce temporal logic to assertions to supplement testing</ST><A>http://www.50001.com/language/javaside/lec/java_ibm/%C0%DA%B9%D9%20%C7%C1%B7%CE%B1%D7%B7%A1%B9%D6%BF%A1%BC%AD%C0%C7%20Assertion%B0%FA%20temporal%20logic%20%28%BF%B5%B9%AE%29.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Eric E. Allen</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH></DATE><COMMENT>The author introduces the idea of temporal logic: assertions taking into account the execution sequence into account ("always", "sometime", "until" and "next").</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Diagnosing Java code: Using temporal logic with bug patterns</T><ST>Preventing common bugs with temporal logic assertions</ST><A>http://www.50001.com/language/javaside/lec/java_ibm/%B9%F6%B1%D7%20%C6%D0%C5%CF%BF%A1%20Temporal%20logic%20%BB%E7%BF%EB%C7%CF%B1%E2%20%28%BF%B5%B9%AE%29.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Eric E. Allen</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>8</MONTH></DATE><COMMENT>Some samples of how to use temporal logic, but most of them could be verified with standard assertions (i.e. "always" is the same as defining an invariant). It would be more convincing to choose more tricky bugs, but maybe the article would have been too complex&#x2026;</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Design by contract</TITLE>
     <ITEM><ARTICLE><X><T>Building bug-free O-O software: An introduction to Design by Contract</T><A>http://www.eiffel.com/developers/design_by_contract_in_detail.html</A><L>en</L><F>HTML</F></X><COMMENT>A presentation of design by contract.</COMMENT></ARTICLE></ITEM>
@@ -399,7 +399,7 @@
   <ITEM><BLIST><TITLE>Compilers</TITLE>
     <ITEM><ARTICLE><X><T>Get to know GCC 4</T><ST>What's new in the GNU Compiler Collection release series</ST><A>http://www.ibm.com/developerworks/linux/library/l-gcc4</A><L>en</L><F>HTML</F></X><AUTHOR>M. Tim Jones</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE><COMMENT>A short description of the GCC4 releases.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>GCC hacks in the Linux kernel</T><ST>Discover GCC extensions for the C language</ST><A>http://www.ibm.com/developerworks/linux/library/l-gcc-hacks</A><L>en</L><F>HTML</F></X><AUTHOR>M. Tim Jones</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE><COMMENT>The presentation of some gcc extensions used by the Linux kernel.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Stochastic Optimization for x86 </T><A>https://www.youtube.com/watch?v=aD9mZDJzb58</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR>Eric Schkufza</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>Using stochastic search to optimize object code.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Stochastic Optimization for x86</T><A>https://www.youtube.com/watch?v=aD9mZDJzb58</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR>Eric Schkufza</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>Using stochastic search to optimize object code.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Debuggers</TITLE>
     <ITEM><ARTICLE><X><T>Debugging tools and techniques for Linux on Power</T><A>http://www.ibm.com/developerworks/systems/library/es-debug/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Calvin Sze</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>8</MONTH><DAY>4</DAY></DATE><COMMENT>Some very basic introduction of Valgrind, gdb, jdb and strace. This can interest only persons who are discovering debugging tools on Linux.</COMMENT></ARTICLE></ITEM>
@@ -435,7 +435,7 @@
       <ITEM><ARTICLE><X><T>FindBugs, Part 1: Improve the quality of your code</T><A>http://www.ibm.com/developerworks/java/library/j-findbug1</A><L>en</L><F>HTML</F></X><AUTHOR>Chris Grindstaff</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE><COMMENT>Some examples of bugs reported by FindBugs and how to integrate it in the Ant build.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>FindBugs, Part 2: Writing custom detectors</T><ST>How to write custom detectors to find application-specific problems</ST><A>http://www.ibm.com/developerworks/java/library/j-findbug2</A><L>en</L><F>HTML</F></X><AUTHOR>Chris Grindstaff</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE><COMMENT>An example showing how to define his/her own rules.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java theory and practice: Kill bugs dead</T><ST>Inspection tools like FindBugs provide a second layer of defense against common coding errors</ST><A>http://www.ibm.com/developerworks/library/j-jtp06294.html</A><L>en</L><F>HTML</F></X><AUTHOR>Brian Goetz</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>The author describes how FindBugs can flag some bugs he described in previous articles.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X quality='1'><T>Using Static Analysis For Software Defect Detection</T><A>https://www.youtube.com/watch?v=UmtAGENejEo</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>2</MINUTE><SECOND>30</SECOND></DURATION></X><AUTHOR>Wiliam Pugh</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>7</MONTH><DAY>6</DAY></DATE><COMMENT>A good overview of FindBugs: some examples of detected bug patterns, the results of running FindBugs on some well-known products, new features (using annotations, bug history), possible future improvements&#x2026; Williams also speaks about its new project: Marmoset.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality='1'><T>Using Static Analysis For Software Defect Detection</T><A>https://www.youtube.com/watch?v=UmtAGENejEo</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>2</MINUTE><SECOND>30</SECOND></DURATION></X><AUTHOR>William Pugh</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>7</MONTH><DAY>6</DAY></DATE><COMMENT>A good overview of FindBugs: some examples of detected bug patterns, the results of running FindBugs on some well-known products, new features (using annotations, bug history), possible future improvements&#x2026; Williams also speaks about its new project: Marmoset.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Microsoft</TITLE>
       <ITEM><ARTICLE><X status='dead'><T>User Interface Challenges in Static Defect Detection</T><A>http://research.microsoft.com/users/jpincus/uwmsrsi01.ppt</A><L>en</L><F>PowerPoint</F></X><AUTHOR>Jonathan Pincus</AUTHOR><DATE><YEAR>2001</YEAR></DATE><COMMENT>Some interesting comments on the way developers interact with static analysis tools.</COMMENT></ARTICLE></ITEM>
