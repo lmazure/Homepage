@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 
 <U><B>Tortoise SVN</B></U>
@@ -76,10 +76,13 @@
 </BLIST></ITEM>
 </BLIST>
 
+Copy a tag:
+<CODESAMPLE>svn copy  "https://svn.eurofins.local/EOL/tags/EOL-2014-12a-RC2"  "https://svn.eurofins.local/EOL/tags/EOL-2014-12a" -m "issue #97713: Create SVN tag for EOL-2014-12a"</CODESAMPLE>
 
 </CONTENT>
 
 <X><T>Links</T><A>../links/coding.html#svn</A><L>en</L><F>HTML</F></X>
 
 </PAGE>
+
 

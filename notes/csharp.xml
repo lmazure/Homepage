@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>C#</TITLE>
 <PATH>notes/csharp.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 
@@ -643,6 +643,7 @@ Found under the <CODEROUTINE>System.Collections.Generic</CODEROUTINE> namespace.
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>public static IEnumerable&lt;TResult&gt; Select&lt;TSource, Tresult&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TResult&gt; selector)</CODEROUTINE></TERM><DESC>applies a function to each element of the Enumerable and return the corresponding Enumerable</DESC></ROW>
 <ROW><TERM><CODEROUTINE>public static IEnumerable&lt;TResult&gt; SelectMany&lt;TSource, TResult&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, IEnumerable&lt;TResult&gt;&gt; selector)</CODEROUTINE></TERM><DESC>applies a function returning an Enumerable  to each element of the Enumerable and return the flatten Enumerable</DESC></ROW>
+<ROW><TERM><CODEROUTINE>public static TSource Aggregate&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TSource, TSource&gt; func)</CODEROUTINE></TERM><DESC>applies an accumulator function over a sequence<BR/>This method works by calling <CODEROUTINE>func</CODEROUTINE> one time for each element in <CODEROUTINE>source</CODEROUTINE> except the first one. Each time <CODEROUTINE>func</CODEROUTINE> is called, <CODEROUTINE>Aggregate</CODEROUTINE> passes both the element from the sequence and an aggregated value (as the first argument to <CODEROUTINE>func</CODEROUTINE>). The first element of <CODEROUTINE>source</CODEROUTINE> is used as the initial aggregate value. The result of <CODEROUTINE>func</CODEROUTINE> replaces the previous aggregated value. <CODEROUTINE>Aggregate</CODEROUTINE> returns the final result of <CODEROUTINE>func</CODEROUTINE>.</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>

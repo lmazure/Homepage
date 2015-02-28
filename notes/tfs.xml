@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TFS</TITLE>
 <PATH>notes/tfs.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 
 <CODESAMPLE><PROMPT/>tf="/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/TF.exe"</CODESAMPLE><BR/>
@@ -22,6 +22,9 @@ delete a workspace <I>foobar</I><BR/>
 <PROMPT/>cd "$tfsdir"<BR/>
 <PROMPT/>rm -fr <I>foobar</I></CODESAMPLE><BR/>
 <BR/>
+
+create a label:<BR/>
+right click on $/eCommerce/EOL/Trunk and select <CODEMENU>Advanced<CODEMENU>Apply Label... </CODEMENU></CODEMENU>
 
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#tfs</A><L>en</L><F>HTML</F></X>

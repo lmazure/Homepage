@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 
 <X><T>Open Directory</T><A>http://dmoz.org/Computers/Software/Software_Engineering/</A><L>en</L><F>HTML</F></X>,
@@ -65,6 +65,12 @@ O'Reilly's CD bookshelf:
     <ITEM><ARTICLE><X><T>The Open Closed Principle</T><A>http://blog.8thlight.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE><COMMENT>You should be able to extend the behavior of a system without having to modify that system. This is what plugins achieve.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Visualization Mnemonics for Software Principles</T><A>http://www.daedtech.com/visualization-mnemonics-for-software-principles</A><L>en</L><F>HTML</F></X><AUTHOR>Erik Dietrich</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>15</DAY></DATE><COMMENT>This blog entry will not learn the software first principles (SOLID + law of Demeter), but tells some funny stories to remember them.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Clean Code: Four Simple Design Rules &#x2013; Obligatory Read</T><A>http://java.dzone.com/articles/clean-code-four-simple-design</A><L>en</L><F>HTML</F></X><AUTHOR>Jakub Hol&#xFD;</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>Kent Beck's Four Simple Design Rules:<BR/>- Runs all the tests<BR/>- Contains no duplications<BR/>- Expresses the intent of the programmers<BR/>- Minimizes the number of classes and methods</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>SOLID
+Deconstruction</T><A>http://yowconference.com.au/slides/yow2013/Henney-SOLIDDeconstruction.pdf</A><L>en</L><F>PDF</F></X><X><T>SOLID
+Deconstruction</T><A>https://github.com/newmana/solid-deconstructed/blob/master/Henney-SOLIDDeconstruction.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Jakub Hol&#xFD;</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>Yet another presentation of the SOLID principles.</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Domain Driven Design</TITLE>
+    <ITEM><ARTICLE><X><T>BoundedContext</T><A>http://martinfowler.com/bliki/BoundedContext.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>Splitting a large models into several Bounded Contexts and defining the relations between them.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Conversation about Hexagonal Rails</TITLE>
     <ITEM><X><T>Martin Fowler's notes</T><A>http://martinfowler.com/articles/badri-hexagonal/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -139,6 +145,7 @@ O'Reilly's CD bookshelf:
     <ITEM><ARTICLE><X><T>OO vs FP</T><A>http://blog.cleancoder.com/uncle-bob/2014/11/24/FPvsOO.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE><COMMENT>Functional Programming (no assignment operator) and Object Orientation (polymorphism) are not mutually exclusive.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>'Interface' Considered Harmful</T><A>http://blog.cleancoder.com/uncle-bob/2015/01/08/InterfaceConsideredHarmful.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT>Uncle Bob is complaining about C# and Java <CODEROUTINE>interface</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality='1'><T>Software Design: Why, When &amp; How - Kent Beck</T><A>http://vimeo.com/105771493</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>2</SECOND></DURATION></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The title says all. Kent Beck provides very nuanced answer to the three questions: Why, when and how doing design decisions.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>CQRS</T><A>http://www.martinfowler.com/bliki/CQRS.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>7</MONTH><DAY>14</DAY></DATE><COMMENT>A description of the Command Query Responsibility Segregation where the model is split into two ones: one for display (the Query Model) and one for update (the Command Model).</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
 

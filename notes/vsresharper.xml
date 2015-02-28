@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Visual Studio with ReSharper</TITLE>
 <PATH>notes/vsresharper.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -16,6 +16,12 @@
 
 Windows
 <DEFINITIONTABLE>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Ctrl'/><KEY ID='L'/></TERM>
+<DESC>display the Solution Explorer</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='*'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='M'/></TERM>
+<DESC>display the Team Explorer</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='*'/>, <KEY ID='T'/></TERM>
+<DESC>display the Task List</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/>, <KEY ID='E'/></TERM>
 <DESC>display the Error List Window</DESC></ROW>
 </DEFINITIONTABLE>
@@ -27,6 +33,8 @@ Edition
 <DESC>close Tabed Document</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
 <DESC>Add New Item</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/></TERM>
+<DESC>Duplicate current line or selected text</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/>, <KEY ID='P'/></TERM>
 <DESC>when the caret is between the parentheses of a method call, display a list of valid parameters</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/>, <KEY ID='T'/></TERM>
