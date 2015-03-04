@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 
 <X><T>stackoverflow</T><A>http://stackoverflow.com</A><L>en</L><F>HTML</F></X><BR/>
@@ -112,10 +112,14 @@
     <X><T>personal notes</T><A>../notes/together.html</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Source-Navigator</T><A>http://sourcenav.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Anjuta</T><A>http://anjuta.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM>Visual Studio:
-    <X><T>VS2012 ALM VM</T><A>http://blogs.msdn.com/b/briankel/archive/2011/09/16/visual-studio-11-application-lifecycle-management-virtual-machine-and-hands-on-labs-demo-scripts.aspx</A><L>en</L><F>HTML</F></X>,
-    <X><T>VS2012 shortcuts</T><A>http://visualstudioshortcuts.com/2012/</A><L>en</L><F>HTML</F></X>,
-    <X><T>VS2013 shortcuts</T><A>http://visualstudioshortcuts.com/2013/</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><BLIST><TITLE>Visual Studio</TITLE>
+    <ITEM><X><T>VS2012 ALM VM</T><A>http://blogs.msdn.com/b/briankel/archive/2011/09/16/visual-studio-11-application-lifecycle-management-virtual-machine-and-hands-on-labs-demo-scripts.aspx</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>VS2012 shortcuts</T><A>http://visualstudioshortcuts.com/2012/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>VS2013 shortcuts</T><A>http://visualstudioshortcuts.com/2013/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X quality='1'><T>ReSharper</T><A>http://www.jetbrains.com/resharper</A><L>en</L><F>HTML</F></X>:
+      <X><T>Help</T><A>https://www.jetbrains.com/resharper/webhelp80</A><L>fr</L><F>HTML</F></X></ITEM>
+    </BLIST>
+  </ITEM>
 </BLIST>
 
 <BLIST><TITLE>Assertions/design by contract</TITLE>
@@ -353,10 +357,13 @@
       <ITEM><ARTICLE><X><T>Visual Studio 3D StarterKit</T><A>http://channel9.msdn.com/posts/Visual-Studio-3D-StarterKit</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>18</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR>JP Duplessis</AUTHOR><AUTHOR>Roberto Sonnino</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE><COMMENT>A demo of the 3D StarterKit: editing/importing a model, editing a texture, defining a shader&#x2026;</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Use Code Maps to Understand Code Relationships</T><ST>Visual Studio 2012 Update 1 (Ultimate Edition) includes a new tool to help visualize code relationships, and it's worth your time to learn.</ST><A>http://visualstudiomagazine.com/articles/2013/04/25/use-code-maps-to-understand-code-relationships.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Mickey Gousset</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE><COMMENT>Visual Studio 2012.1 Ultimate supports Code Maps: a annotatable diagram of method calls.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Flow brings instant code snippets to Visual Studio</T><A>http://www.techrepublic.com/blog/software-engineer/flow-brings-instant-code-snippets-to-visual-studio/</A><L>en</L><F>HTML</F></X><AUTHOR>Tony Patton</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>Searching the Web for code snippets and inserting these ones in the current file without leaving Visual Studio.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Sharing Code Across Platforms With Visual Studio 2015</T><A>http://channel9.msdn.com/Events/Visual-Studio/Connect-event-2014/517</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>6</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR>Will Buik</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE><COMMENT>A description of Shared Projects.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>ReSharper</TITLE>
+        <ITEM><ARTICLE><X><T>15 Resharper keyboard shortcuts you need to know</T><A>http://blog.drorhelper.com/2009/05/15-resharper-keyboard-shortcuts-you.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dror Helper</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>8</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Create live templates using Resharper </T><A>http://blog.drorhelper.com/2013/07/create-live-templates-using-resharper.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dror Helper</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>2</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality='1'><T>Practical Refactoring</T><A>http://www.youtube.com/watch?v=aWiwDdx_rdo</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>54</MINUTE><SECOND>30</SECOND></DURATION></X><AUTHOR>Llewellyn Falco</AUTHOR><AUTHOR>Woody Zuill</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>11</MONTH></DATE><COMMENT>How to refactor legacy code with ReSharper and NCrunch.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Sharpening Developer Productivity with ReSharper</T><A>http://visualstudiomagazine.com/articles/2015/01/01/sharpening-developer-productivity.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Ondrej Balas</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>A short presentation of ReSharper.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>ReSharper Tips for Quicker Code Delivery</T><A>http://visualstudiomagazine.com/articles/2015/01/08/resharper-tips-for-quicker-code-delivery.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Eric Vogel</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT>Some features of ReSharper.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>ReSharper Tips for Quicker Code Delivery</T><A>http://visualstudiomagazine.com/articles/2015/01/08/resharper-tips-for-quicker-code-delivery.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Eric Vogel</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT>Some features of ReSharper.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Sharpening Developer Productivity with ReSharper</T><A>http://visualstudiomagazine.com/articles/2015/01/01/sharpening-developer-productivity.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Ondrej Balas</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>A short presentation of ReSharper.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Team Foundation Server</TITLE>
