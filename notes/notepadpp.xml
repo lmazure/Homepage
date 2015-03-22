@@ -3,12 +3,18 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Notepad++</TITLE>
 <PATH>notes/notepadpp.xml</PATH>
-<DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='g'/></TERM>
 <DESC>go to line</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='q'/></TERM>
+<DESC>block comment/uncomment (toggle)</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='k'/></TERM>
+<DESC>block comment</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='k'/></TERM>
+<DESC>block uncomment</DESC></ROW>
 </DEFINITIONTABLE>
 
 

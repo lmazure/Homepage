@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript Libraries</TITLE>
 <PATH>links/jslib.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 
 toolkits:
@@ -21,7 +21,10 @@ toolkits:
 <X><T>Underscore</T><A>http://underscorejs.org</A><L>en</L><F>HTML</F></X>,
 <X><T>AngularJS</T><A>https://angularjs.org</A><L>en</L><F>HTML</F></X>,
 <X><T>Knockout</T><A>http://knockoutjs.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Bootstrap</T><A>http://getbootstrap.com</A><L>en</L><F>HTML</F></X><BR/>
+<X><T>Bootstrap</T><A>http://getbootstrap.com</A><L>en</L><F>HTML</F></X>,
+<X><T>Flux</T><A>http://fluxxor.com/what-is-flux.html</A><L>en</L><F>HTML</F></X>,
+<X><T>Ampersand.js</T><A>http://ampersandjs.com</A><L>en</L><F>HTML</F></X>,
+<X><T>React</T><A>http://facebook.github.io/react</A><L>en</L><F>HTML</F></X><BR/>
 
 benchmarks:
 <X><T>TaskSpeed</T><A>http://dante.dojotoolkit.org/taskspeed/</A><L>en</L><F>HTML</F></X><BR/>
@@ -30,6 +33,8 @@ benchmarks:
 <BR/>
 <BLIST>
 <TITLE>Articles</TITLE>
+  <ITEM><ARTICLE><X><T>Opinionated rundown of JS frameworks</T><A>http://blog.andyet.com/2014/08/13/opinionated-rundown-of-js-frameworks</A><L>en</L><F>HTML</F></X><AUTHOR>Henrik Joreteg</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>8</MONTH><DAY>13</DAY></DATE><COMMENT>A comparison of the main current JavaScript frameworks and some information about Ampersand.js, the framework the author contributed to create.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>A JS framework on every table</T><A>http://www.allenpike.com/2015/javascript-framework-fatigue/</A><L>en</L><F>HTML</F></X><AUTHOR>Allen Pike</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>The crazy JavaScript framework ecosystem, why it is like this, and what can we do about it...</COMMENT></ARTICLE></ITEM>
   <ITEM><BLIST><TITLE>jQuery</TITLE>
     <ITEM><ARTICLE><X><T>Tutorials:Getting Started with jQuery</T><A>http://docs.jquery.com/Tutorials:Getting_Started_with_jQuery</A><L>en</L><F>HTML</F></X><AUTHOR>J&#xF6;rn Zaefferer</AUTHOR><COMMENT>A short introduction to jQuery.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Simplify Ajax development with jQuery</T><ST>Discover how easy Ajax and DOM scripting can be</ST><A>http://www.ibm.com/developerworks/library/x-ajaxjquery.html</A><L>en</L><F>HTML</F></X><AUTHOR>Jesse Skinner</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>4</MONTH><DAY>10</DAY></DATE><COMMENT>Another short introduction to jQuery.</COMMENT></ARTICLE></ITEM>
@@ -104,10 +109,16 @@ benchmarks:
     <ITEM><ARTICLE><X><T>Angular: A Radically Different Way of Building AJAX Apps</T><A>http://www.youtube.com/watch?v=0iQCLlu1dko</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>56</MINUTE><SECOND>23</SECOND></DURATION></X><AUTHOR>Misko Hevery</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>7</MONTH><DAY>28</DAY></DATE><COMMENT>A demo of creating a Buzz client with Angular, a JavaScript library allowing to extend the Browser capabilities: definition of custom HTML tags and attributes, synchronized model and view&#x2026;</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality='1'><T>AngularJS Fundamentals In 60-ish Minutes</T><A>http://www.youtube.com/watch?v=i9MHigUZKEM</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>10</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR>Dan Wahlin</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT>A clear introduction to AngularJS.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><ARTICLE><X><T>Data visualization, Part 1: Visualize browsing metrics with SVG and D3</T><ST>Learn graphical techniques for representing data</ST><A>http://www.ibm.com/developerworks/library/os-dataviz1/</A><L>en</L><F>HTML</F></X><AUTHOR>Bilal Siddiqui</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>15</DAY></DATE><COMMENT>A presentation of how to generate SVG with D3.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>Data visualization, Part 2: Use D3 component layouts</T><ST>Learn graphical calculations for drawing components in various arrangements</ST><A>http://www.ibm.com/developerworks/library/os-dataviz2/</A><L>en</L><F>HTML</F></X><AUTHOR>Bilal Siddiqui</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>15</DAY></DATE><COMMENT>A more complex example.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>Create high-performance mobile UIs with Famo.us</T><ST>Level up to a native-code user experience for JavaScript apps</ST><A>http://www.ibm.com/developerworks/library/wa-famous/</A><L>en</L><F>HTML</F></X><AUTHOR>Sing Li</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>8</DAY></DATE><COMMENT>A presentation of famo.us display-related features (the physics engine is not described).</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>Hacker Way: Rethinking Web App Development at Facebook</T><A>http://www.youtube.com/watch?v=nYkdrAPrdcw</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>44</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR>Tom Occhino</AUTHOR><AUTHOR>Pete Hunt</AUTHOR><AUTHOR>Jing Chen</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>30</DAY></DATE><COMMENT>An introduction to <X><T>Flux</T><A>http://fluxxor.com/what-is-flux.html</A><L>en</L><F>HTML</F><DURATION><MINUTE>44</MINUTE><SECOND>35</SECOND></DURATION></X> and <X><T>React</T><A>http://facebook.github.io/react</A><L>en</L><F>HTML</F><DURATION><MINUTE>44</MINUTE><SECOND>35</SECOND></DURATION></X>.</COMMENT></ARTICLE></ITEM>
+  <ITEM><BLIST><TITLE>D3</TITLE>
+    <ITEM><ARTICLE><X><T>Data visualization, Part 1: Visualize browsing metrics with SVG and D3</T><ST>Learn graphical techniques for representing data</ST><A>http://www.ibm.com/developerworks/library/os-dataviz1/</A><L>en</L><F>HTML</F></X><AUTHOR>Bilal Siddiqui</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>15</DAY></DATE><COMMENT>A presentation of how to generate SVG with D3.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Data visualization, Part 2: Use D3 component layouts</T><ST>Learn graphical calculations for drawing components in various arrangements</ST><A>http://www.ibm.com/developerworks/library/os-dataviz2/</A><L>en</L><F>HTML</F></X><AUTHOR>Bilal Siddiqui</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>15</DAY></DATE><COMMENT>A more complex example.</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Famo.us</TITLE>
+    <ITEM><ARTICLE><X><T>Create high-performance mobile UIs with Famo.us</T><ST>Level up to a native-code user experience for JavaScript apps</ST><A>http://www.ibm.com/developerworks/library/wa-famous/</A><L>en</L><F>HTML</F></X><AUTHOR>Sing Li</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>8</DAY></DATE><COMMENT>A presentation of famo.us display-related features (the physics engine is not described).</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Flux / React</TITLE>
+    <ITEM><ARTICLE><X><T>Hacker Way: Rethinking Web App Development at Facebook</T><A>http://www.youtube.com/watch?v=nYkdrAPrdcw</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>44</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR>Tom Occhino</AUTHOR><AUTHOR>Pete Hunt</AUTHOR><AUTHOR>Jing Chen</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>30</DAY></DATE><COMMENT>An introduction to Flux and React.</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
 
 </BLIST>
 
