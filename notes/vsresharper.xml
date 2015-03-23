@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Visual Studio with ReSharper</TITLE>
 <PATH>notes/vsresharper.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -24,6 +24,8 @@ Windows
 <DESC>display the Task List</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/>, <KEY ID='E'/></TERM>
 <DESC>display the Error List Window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='B'/></TERM>
+<DESC>display the Breakpoint Window</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 
@@ -32,9 +34,9 @@ Edition
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F4'/></TERM>
 <DESC>close Tabed Document</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
-<DESC>Add New Item</DESC></ROW>
+<DESC>add New Item</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/></TERM>
-<DESC>Duplicate current line or selected text</DESC></ROW>
+<DESC>duplicate current line or selected text</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/>, <KEY ID='P'/></TERM>
 <DESC>when the caret is between the parentheses of a method call, display a list of valid parameters</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/>, <KEY ID='T'/></TERM>
@@ -45,6 +47,10 @@ Edition
 <DESC>jump to next highlighted syntax error/warning</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Backspace'/></TERM>
 <DESC>jump to the last point the code has been changed, repeating jump to the previous edition point, and so on&#x2026;</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='/'/></TERM>
+<DESC>comment/uncomment with line comment</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='/'/></TERM>
+<DESC>comment/uncomment with block comment</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 
