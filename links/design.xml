@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 
 <X><T>Open Directory</T><A>http://dmoz.org/Computers/Software/Software_Engineering/</A><L>en</L><F>HTML</F></X>,
@@ -41,6 +41,7 @@ O'Reilly's CD bookshelf:
   <ITEM><X><T>Architecture Review Checklist</T><A>http://www.opengroup.org/public/arch/p4/comp/clists/syseng.htm</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>sysml</T><A>http://www.sysml.org/</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Catalog of Patterns of Enterprise Application Architecture</T><A>http://martinfowler.com/eaaCatalog/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>Enterprise Integration Patterns</T><A>http://www.enterpriseintegrationpatterns.com</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
 <X><T>IEEE 1016-2009</T><A>https://cow.ceng.metu.edu.tr/Courses/download_courseFile.php?id=6211</A><L>en</L><F>PDF</F></X>: IEEE Recommended Practice for Software Design Descriptions<BR/>
@@ -149,6 +150,8 @@ O'Reilly's CD bookshelf:
     <ITEM><ARTICLE><X quality='1'><T>Software Design: Why, When &amp; How - Kent Beck</T><A>http://vimeo.com/105771493</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>2</SECOND></DURATION></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The title says all. Kent Beck provides very nuanced answer to the three questions: Why, when and how doing design decisions.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>CQRS</T><A>http://www.martinfowler.com/bliki/CQRS.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>7</MONTH><DAY>14</DAY></DATE><COMMENT>A description of the Command Query Responsibility Segregation where the model is split into two ones: one for display (the Query Model) and one for update (the Command Model).</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Option Type</T><A>http://blog.8thlight.com/dave-torre/2015/03/11/the-option-type.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dave Torre</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>11</DAY></DATE><COMMENT>A description of the Option Type using the Rust language.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Why You Should Avoid a Canonical Data Model</T><A>https://www.innoq.com/en/blog/thoughts-on-a-canonical-data-model/</A><L>en</L><F>HTML</F></X><AUTHOR>Stefan Tilkov</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE><COMMENT>Having a model common to the whole enterprise is a bad idea and the author suggests, instead, providing a searchable repository of small fragments each one being provided by the team mastering its domain.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Agile Connect 2011 - Keynote: Software Design in the 21st Century</T><A>https://www.youtube.com/watch?v=p5Qj75nJPEs</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2011</YEAR></DATE><COMMENT>- Flaky tests must be fixed, some causes why tests are randomly failing<BR/>- why doing design<BR/>- 10 years after the Agile Manifesto</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
 
