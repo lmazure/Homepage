@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 
 <X><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_patterns.html</A><L>en</L><F>HTML</F></X>
@@ -107,6 +107,9 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Behavioral patterns</TITLE>
+      <ITEM><BLIST><TITLE>Active Object (a.k.a.Concurrent Object or Actor): Decouple method execution  from  method  invocation  to  enhance  concurrency  and simplify synchronized access to an object that resides in its own thread of control.</TITLE>
+        <ITEM><ARTICLE><X><T>Active Object</T><ST>An Object Behavioral Pattern for Concurrent Programming</ST><A>http://www.cs.wustl.edu/~schmidt/PDF/Act-Obj.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>R. Greg Lavender</AUTHOR><AUTHOR>Douglas C. Schmidt</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A complete description of the pattern with some information on a C++ implementation.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Atomizer (a.k.a. Serializer): Read arbitrarily complex object structures from and write them to varying data structure-based backends. Efficiently store and retrieve objects from different backends, such as flat files, relational databases, and RPC buffers.</TITLE>
         <ITEM><ARTICLE><X><T>Serializer</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-serializer.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf Siberski</AUTHOR><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Daniel Megert</AUTHOR><AUTHOR>Heinz Z&#xFC;llighoven</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This is a full description of the pattern.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Atomizer Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Atomizer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
