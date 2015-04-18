@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Visual Studio</TITLE>
 <PATH>notes/visualstudio.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -22,9 +22,9 @@
 <DESC>display Call Hierarchy Window</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><KEY ID='R'/></TERM>
 <DESC>list all references of the current symbol</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='up'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2191;'/></TERM>
 <DESC>go to previous reference (in the file) of the current symbol</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='down'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2193;'/></TERM>
 <DESC>go to next reference (in the file) of the current symbol</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/><KEY ID='S'/></TERM>
 <DESC>display the Solution Explorer</DESC></ROW>
@@ -44,7 +44,7 @@
 <DESC>display a selector of possible namespaces</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='G'/></TERM>
 <DESC>go to line</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><MODIFIERKEY ID='CTRL'/><KEY ID='F'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><MODIFIERKEY ID='Ctrl'/><KEY ID='F'/></TERM>
 <DESC>reformat the code</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -111,8 +111,8 @@ With <CODEMENU>Project<CODEMENU>Exclure du projet</CODEMENU></CODEMENU>, it is p
 <BLIST><TITLE>Productivity Power Tools</TITLE>
 <ITEM><X><T>Productivity Power Tools</T><A>http://visualstudiogallery.msdn.microsoft.com/d0d33361-18e2-46c0-8ff2-4adea1e34fef</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>Productivity Power Tools 2012</T><A>http://visualstudiogallery.msdn.microsoft.com/3a96a4dc-ba9c-4589-92c5-640e07332afd</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM>To display a quideline at the 80th column, perform a right-click on the 80th column and select <CODEMENU>Guidelines>Add Guideline</CODEMENU>.</ITEM>
-<ITEM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Page Down'/> and <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Page Up'/> navigates between tabs.</ITEM>
+<ITEM>To display a quideline at the 80th column, perform a right click on the 80th column and select <CODEMENU>Guidelines>Add Guideline</CODEMENU>.</ITEM>
+<ITEM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='PageDown'/> and <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='PageUp'/> navigates between tabs.</ITEM>
 </BLIST>
 
 <BLIST><TITLE>TFS Power Tools</TITLE>

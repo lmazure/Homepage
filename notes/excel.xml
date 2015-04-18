@@ -3,20 +3,20 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Excel</TITLE>
 <PATH>notes/excel.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><B><U>User interface</U></B></TITLE>
-  <ITEM><BLIST><TITLE>Using <KEY ID='Shift'/> key on menubars/toolbars</TITLE>
-    <ITEM>when holding down the <KEY ID='Shift'/> key to click on the <CODEMENU>File</CODEMENU> menu<BR/>
+  <ITEM><BLIST><TITLE>Using <MODIFIERKEY ID='Shift'/> key on menubars/toolbars</TITLE>
+    <ITEM>when holding down the <MODIFIERKEY ID='Shift'/> key to click on the <CODEMENU>File</CODEMENU> menu<BR/>
       <CODEMENU>Close</CODEMENU> is replaced by <CODEMENU>Close All</CODEMENU>
     </ITEM>
-    <ITEM>when holding down the <KEY ID='Shift'/> key to click on the <CODEMENU>Edit</CODEMENU> menu<BR/>
+    <ITEM>when holding down the <MODIFIERKEY ID='Shift'/> key to click on the <CODEMENU>Edit</CODEMENU> menu<BR/>
       <CODEMENU>Copy</CODEMENU> is replaced by <CODEMENU>Copy Picture</CODEMENU><BR/>
       <CODEMENU>Paste</CODEMENU> is replaced by <CODEMENU>Paste Picture</CODEMENU><BR/>
       <CODEMENU>Paste Special</CODEMENU> is replaced by <CODEMENU>Paste Picture Link</CODEMENU>
     </ITEM>
-    <ITEM>when holding down the <KEY ID='Shift'/> key to click on the standard toolbar<BR/>
+    <ITEM>when holding down the <MODIFIERKEY ID='Shift'/> key to click on the standard toolbar<BR/>
       <CODEMENU>Open</CODEMENU> is replaced by <CODEMENU>Save</CODEMENU><BR/>
       <CODEMENU>Save</CODEMENU> is replaced by <CODEMENU>Open</CODEMENU>
     </ITEM>
@@ -78,11 +78,11 @@ use <CODEROUTINE>=SI(K2=4;"3.3";"3.X")</CODEROUTINE> instead.</ITEM>
 </BLIST>
 
 <BLIST><TITLE><B><U>Matrix computation</U></B></TITLE>
-<ITEM>Excel supports matrix computation, but formulas must be entered with <MODIFIERKEY ID='CTRL'/><MODIFIERKEY ID='Shift'/><KEY ID='Enter'/></ITEM>
+<ITEM>Excel supports matrix computation, but formulas must be entered with <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Enter'/></ITEM>
 <ITEM><CODESAMPLE>=SUM(D2:O3^2)</CODESAMPLE> compute the sum of the square of the matrix elements</ITEM>
 <ITEM>select an area which has the same size as <CODEROUTINE>D2:O3</CODEROUTINE><BR/>
 type the formula <CODEROUTINE>=SUM(D2:O3*3)</CODEROUTINE><BR/>
-press <MODIFIERKEY ID='CTRL'/><MODIFIERKEY ID='Shift'/><KEY ID='Enter'/><BR/>
+press <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Enter'/><BR/>
 the selected area is filled with the values of <CODEROUTINE>D2:O3</CODEROUTINE> multiplied by 3</ITEM>
 <ITEM><CODEROUTINE>MTRANSPOSE</CODEROUTINE>: transpose a matrix</ITEM>
 <ITEM><CODEROUTINE>MDETER</CODEROUTINE>: compute the determinant of a matrix</ITEM>
@@ -98,7 +98,7 @@ To find an actual question mark or asterisk, use a tilde (<CODEROUTINE>~</CODERO
 
 <BLIST><TITLE><B><U>Edit</U></B></TITLE>
 <ITEM>take care to the fact that, when several sheets are selected, a change (edition, paste&#x2026;) on one cell of the currently displayed sheet is done in fact on all the sheets.</ITEM>
-<ITEM>if several cells are selected, when editing one of them and finishing the edition with <MODIFIERKEY ID='Ctrl'/><KEY ID='Return'/>, Excel will update the formula of all the selected cells</ITEM>
+<ITEM>if several cells are selected, when editing one of them and finishing the edition with <MODIFIERKEY ID='Ctrl'/><KEY ID='Enter'/>, Excel will update the formula of all the selected cells</ITEM>
 <ITEM><BLIST><TITLE>Creation of a multi-value field in Excel (this does not work when pasting a cell, the value is not checked)</TITLE>
 <ITEM>enter values in some cells (e.g. "alpha", "beta", "gamma", and "delta" in L1:L4)</ITEM>
 <ITEM>select the target cell</ITEM>

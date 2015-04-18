@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Outlook shortcuts</TITLE>
 <PATH>notes/outlooksc.xml</PATH>
-<DATE><YEAR>2011</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -171,7 +171,7 @@ open folder
 mail box
 <DEFINITIONTABLE>
 <ROW><TERM>
-<KEY ID='Return'/>
+<KEY ID='Enter'/>
 </TERM><DESC>
 display mail in mail window
 </DESC></ROW>
@@ -255,7 +255,7 @@ new appointment
 view one day
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Alt'/><I><KEY ID='n'/></I>
+<MODIFIERKEY ID='Alt'/><I><KEY ID='N'/></I>
 </TERM><DESC>
 view <I>n</I> days
 </DESC></ROW>
@@ -275,22 +275,22 @@ switch to weeks
 switch to months
 </DESC></ROW>
 <ROW><TERM>
-<KEY ID='Left'/>
+<KEY ID='&#x2190;'/>
 </TERM><DESC>
 go to previous day
 </DESC></ROW>
 <ROW><TERM>
-<KEY ID='Right'/>
+<KEY ID='&#x2192;'/>
 </TERM><DESC>
 go to next day
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Alt'/><KEY ID='Down'/>
+<MODIFIERKEY ID='Alt'/><KEY ID='&#x2193;'/>
 </TERM><DESC>
 go to the same day of the next week
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Alt'/><KEY ID='Up'/>
+<MODIFIERKEY ID='Alt'/><KEY ID='&#x2191;'/>
 </TERM><DESC>
 go to the same day of the previous week
 </DESC></ROW>

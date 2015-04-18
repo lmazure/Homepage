@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Word</TITLE>
 <PATH>notes/word.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><U>open/save/close documents</U></TITLE>
@@ -12,7 +12,7 @@ always ask how the files should be loaded (e.g. HTML vs raw text)<BR/>
 <CODEMENU>Tools<CODEMENU>Options&#x2026;<CODEMENU>General<CODEMENU>Confirm conversion at Open</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
 </ITEM>
 <ITEM>
-when holding down the <KEY ID='Shift'/> key to click on the <CODEMENU>File</CODEMENU> menu, <CODEMENU>Close</CODEMENU> is replaced by <CODEMENU>Close All</CODEMENU> and <CODEMENU>Save</CODEMENU> by <CODEMENU>Save All</CODEMENU>.
+when holding down the <MODIFIERKEY ID='Shift'/> key to click on the <CODEMENU>File</CODEMENU> menu, <CODEMENU>Close</CODEMENU> is replaced by <CODEMENU>Close All</CODEMENU> and <CODEMENU>Save</CODEMENU> by <CODEMENU>Save All</CODEMENU>.
 </ITEM>
 <ITEM>
 protect a document from unauthorized reading by a password<BR/>
@@ -35,7 +35,7 @@ enable/disable macros execution when opening a document<BR/>
 <ITEM>click on <CODEMENU>Add to List</CODEMENU></ITEM>
 <ITEM>click on <CODEMENU>Find Now</CODEMENU></ITEM>
 <ITEM>the filter remains active while navigating the directories (but the directories are not filtered themselves)</ITEM>
-<ITEM>once in the correct directory, use <MODIFIERKEY ID='Shift'/><KEY ID='right click'/> to select all the files</ITEM>
+<ITEM>once in the correct directory, use <MODIFIERKEY ID='Shift'/>right click to select all the files</ITEM>
 <ITEM>click on <CODEMENU>Open</CODEMENU></ITEM>
 </BLIST>
 </ITEM>
@@ -377,12 +377,13 @@ To display the shortcuts in the tooltips, select <CODEMENU>Outils<CODEMENU>Perso
 <BLIST><TITLE><U>strange</U></TITLE>
 <ITEM>
 insert 3 paragraphs of 5 sentences "Servez &#xE0; ce monsieur une bi&#xE8;re et des kiwis".<BR/>
-type "=rand(3,5)" and press <KEY ID='Return'/>.
+type "=rand(3,5)" and press <KEY ID='Enter'/>.
 </ITEM>
 </BLIST>
 
 </CONTENT>
 <X><T>links</T><A>../links/office.html#word</A><L>en</L><F>HTML</F></X>
 </PAGE>
+
 
 

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Vim</TITLE>
 <PATH>notes/vim.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 
 <U><B>Command line</B></U>
@@ -30,11 +30,10 @@
 
 <U><B>Undo/redo</B></U>
 <DEFINITIONTABLE>
-<ROW><TERM><KEY ID='u'/><BR/>
-<KEY ID='Undo'/><BR/>
+<ROW><TERM><KEY ID='U'/><BR/>
 <CODEROUTINE>:u[ndo]</CODEROUTINE></TERM>
 <DESC>undo</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='r'/><BR/>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/><BR/>
 <CODEROUTINE>:red[o]</CODEROUTINE></TERM>
 <DESC>redo</DESC></ROW>
 <ROW><TERM><KEY ID='U'/></TERM>
@@ -55,23 +54,23 @@
 
 <U><B><X><T>Windows</T><A>http://vimdoc.sourceforge.net/htmldoc/windows.html</A><L>en</L><F>HTML</F></X></B></U>
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='s'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='S'/></TERM>
 <DESC>split the window horizontally in two</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='Left'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='h'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='h'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='&#x2190;'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='H'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='H'/></TERM>
 <DESC>go to the left window</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='Right'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='l'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='l'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='&#x2192;'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='L'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='L'/></TERM>
 <DESC>go to the right window</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='Down'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='j'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='j'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='&#x2193;'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='J'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='J'/></TERM>
 <DESC>go to the window below</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='Up'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='k'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='w'/> <KEY ID='k'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='&#x2191;'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='K'/></TERM>
 <DESC>go to the window above</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 
@@ -93,3 +92,4 @@ the configuration file is <CODEROUTINE>$HOME/.vimrc</CODEROUTINE>.
 </CONTENT>
 <X><T>Links</T><A>../links/coding.html#vi</A><L>en</L><F>HTML</F></X>
 </PAGE>
+

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><U><B>Install and update</B></U></TITLE>
@@ -84,13 +84,13 @@ Location: Create project a external location<BR/>
 <DESC>display class hierarchy of selected item</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Ctrl'/><KEY ID='H'/></TERM>
 <DESC>display call hierarchy of selected item</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Up '/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2191;'/></TERM>
 <DESC>expand selection to enclosing element</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Right '/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2192;'/></TERM>
 <DESC>expand selection to next element</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Left '/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2190;'/></TERM>
 <DESC>expand selection to previous element</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Down '/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2193;'/></TERM>
 <DESC>restore last selection</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='S'/></TERM>
 <DESC>save</DESC></ROW>
@@ -200,7 +200,7 @@ In Editor window
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='D'/></TERM>
 <DESC>display variable</DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I '/>
+<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I'/>
 </TERM><DESC>
 inspect expression
 </DESC></ROW>
