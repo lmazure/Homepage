@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Visual Studio with ReSharper</TITLE>
 <PATH>notes/vsresharper.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -51,6 +51,10 @@ Edition
 <DESC>comment/uncomment with line comment</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='/'/></TERM>
 <DESC>comment/uncomment with block comment</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='PageDown'/></TERM>
+<DESC>go to next error</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='PageUp'/></TERM>
+<DESC>go to previous error</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 
