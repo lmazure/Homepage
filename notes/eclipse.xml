@@ -43,7 +43,7 @@ Location: Create project a external location<BR/>
 <DESC>editor</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F6'/></TERM>
 <DESC>next editor</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='F6'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F6'/></TERM>
 <DESC>previous editor</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/></TERM>
 <DESC>close current editor</DESC></ROW>
@@ -51,11 +51,11 @@ Location: Create project a external location<BR/>
 <DESC>go to last edit location</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F7'/></TERM>
 <DESC>next view</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='F7'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F7'/></TERM>
 <DESC>previous view</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
 <DESC>next perspective</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F8'/></TERM>
 <DESC>previous perspective</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Q'/><KEY ID='X'/></TERM>
 <DESC>display errors</DESC></ROW>
@@ -82,7 +82,7 @@ Location: Create project a external location<BR/>
 <DESC>display declaration (i.e. source code) of selected item</DESC></ROW>
 <ROW><TERM><KEY ID='F4'/></TERM>
 <DESC>display class hierarchy of selected item</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Ctrl'/><KEY ID='H'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='H'/></TERM>
 <DESC>display call hierarchy of selected item</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2191;'/></TERM>
 <DESC>expand selection to enclosing element</DESC></ROW>
@@ -94,7 +94,7 @@ Location: Create project a external location<BR/>
 <DESC>restore last selection</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='S'/></TERM>
 <DESC>save</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='S'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='S'/></TERM>
 <DESC>save all</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='L'/></TERM>
 <DESC>goto line</DESC></ROW>
@@ -108,7 +108,7 @@ Location: Create project a external location<BR/>
 <DESC>expand all folded code</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Num /'/></TERM>
 <DESC>enable/disable code folding</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='Q'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Q'/></TERM>
 <DESC>enable/disable QuickDiff</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='O'/></TERM>
 <DESC>toggle mark occurrences</DESC></ROW>
@@ -135,11 +135,11 @@ in Editor window
 <DESC>find/replace</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/></TERM>
 <DESC>find next</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='K'/></TERM>
 <DESC>find previous</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='J'/></TERM>
 <DESC>incremental find next</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='J'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
 <DESC>incremental find previous</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='H'/></TERM>
 <DESC>search</DESC></ROW>
@@ -199,9 +199,7 @@ In Editor window
 <DESC>resume</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='D'/></TERM>
 <DESC>display variable</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I'/>
-</TERM><DESC>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I'/></TERM><DESC>
 inspect expression
 </DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='B'/></TERM>
