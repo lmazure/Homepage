@@ -253,7 +253,7 @@ while&#xA0;(&#xA0;$line&#xA0;)&#xA0;{<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;if&#xA0;(&#xA0;$amil&#xA0;ne&#xA0;$milestone&#xA0;)&#xA0;{<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;warn("$spr&#xA0;is&#xA0;assigned&#xA0;for&#xA0;'$milestone',&#xA0;but&#xA0;SRB&#xA0;indicates&#xA0;'$amil'");<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;$err++;<BR/>
-	&#xA0;&#xA0;&#xA0;&#xA0;}<BR/>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;print&#xA0;HTML&#xA0;to_html($data),&#xA0;"&lt;BR&gt;\n";<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;print&#xA0;FILE&#xA0;$data,&#xA0;"\n";<BR/>
@@ -263,13 +263,13 @@ while&#xA0;(&#xA0;$line&#xA0;)&#xA0;{<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;if&#xA0;(system("cat&#xA0;/ddts/proj.info/$1&#xA0;|&#xA0;grep&#xA0;'Class:&#xA0;cspr'&#xA0;&gt;&#xA0;/dev/null"&#xA0;))&#xA0;{<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;warn("$1&#xA0;is&#xA0;an&#xA0;unknown&#xA0;bucket&#xA0;in&#xA0;class&#xA0;cspr&#xA0;for&#xA0;$spr");<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;$err++;<BR/>
-	&#xA0;&#xA0;&#xA0;&#xA0;}<BR/>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;print&#xA0;FILE&#xA0;"\n-&gt;&#xA0;forwarded&#xA0;in&#xA0;$1&#xA0;bucket\n";<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}&#xA0;elsif&#xA0;(&#xA0;$data&#xA0;=~&#xA0;/^#&gt;C&#xA0;(.*)$/&#xA0;)&#xA0;{<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;if&#xA0;(system("echo&#xA0;$1&#xA0;|&#xA0;/ddts/bin/goodusers&#xA0;&gt;&#xA0;/dev/null"))&#xA0;{<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;warn("$1&#xA0;is&#xA0;an&#xA0;unknown&#xA0;user&#xA0;for&#xA0;$spr");<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;$err++;<BR/>
-	&#xA0;&#xA0;&#xA0;&#xA0;}<BR/>
+&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;print&#xA0;FILE&#xA0;"\n-&gt;&#xA0;closed\n";<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;}&#xA0;else&#xA0;{<BR/>
 &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;warn("unrecognized&#xA0;command&#xA0;$spr");<BR/>
