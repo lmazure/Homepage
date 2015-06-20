@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 
 <X><T>Open Directory</T><A>http://dmoz.org/Computers/Software/Software_Engineering/</A><L>en</L><F>HTML</F></X>,
@@ -73,6 +73,7 @@ O'Reilly's CD bookshelf:
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Domain Driven Design</TITLE>
     <ITEM><ARTICLE><X><T>BoundedContext</T><A>http://martinfowler.com/bliki/BoundedContext.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>Splitting a large models into several Bounded Contexts and defining the relations between them.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>AnemicDomainModel</T><A>http://www.martinfowler.com/bliki/AnemicDomainModel.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>11</MONTH><DAY>25</DAY></DATE><COMMENT>When the business logic ends up in the Service Layer rather than in the Domain Layer.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Conversation about Hexagonal Rails</TITLE>
     <ITEM><X><T>Martin Fowler's notes</T><A>http://martinfowler.com/articles/badri-hexagonal/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -154,6 +155,7 @@ O'Reilly's CD bookshelf:
     <ITEM><ARTICLE><X><T>Why You Should Avoid a Canonical Data Model</T><A>https://www.innoq.com/en/blog/thoughts-on-a-canonical-data-model/</A><L>en</L><F>HTML</F></X><AUTHOR>Stefan Tilkov</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE><COMMENT>Having a model common to the whole enterprise is a bad idea and the author suggests, instead, providing a searchable repository of small fragments each one being provided by the team mastering its domain.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Agile Connect 2011 - Keynote: Software Design in the 21st Century</T><A>https://www.youtube.com/watch?v=p5Qj75nJPEs</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2011</YEAR></DATE><COMMENT>- Flaky tests must be fixed, some causes why tests are randomly failing<BR/>- why doing design<BR/>- 10 years after the Agile Manifesto</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Does Organization Matter?</T><A>http://blog.cleancoder.com/uncle-bob/2015/04/15/DoesOrganizationMatter.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE><COMMENT>The larger a program is, the more organized it must be, and new comers must learn that organization.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Game Loop</T><A>http://gameprogrammingpatterns.com/game-loop.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert Nystrom</AUTHOR><DATE><YEAR>2014</YEAR></DATE><COMMENT>The main design pattern of any game.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
 

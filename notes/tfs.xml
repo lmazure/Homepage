@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TFS</TITLE>
 <PATH>notes/tfs.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 
 <CODESAMPLE><PROMPT/>tf="/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/TF.exe"</CODESAMPLE><BR/>
@@ -15,6 +15,10 @@ create a workspace <I>foobar</I><BR/>
 <PROMPT/>cd "<I>foobar</I><BR/>
 <PROMPT/>"$tf" workspace /new <I>foobar</I> /collection:http://alm.eurofins.local/tfs/eurofinscollection<BR/>
 <PROMPT/>"$tf" get "eCommerce/EOL/Trunk" /recursive</CODESAMPLE><BR/>
+<BR/>
+
+list the workspaces on the current computer<BR/>
+<CODESAMPLE><PROMPT/>"$tf" workspaces</CODESAMPLE><BR/>
 <BR/>
 
 delete a workspace <I>foobar</I><BR/>
