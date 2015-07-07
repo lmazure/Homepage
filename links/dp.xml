@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 
 <X><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_patterns.html</A><L>en</L><F>HTML</F></X>
@@ -11,7 +11,7 @@
 <X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Category:Software_design_patterns</A><L>en</L><F>HTML</F></X><BR/>
 
 <X><T>Hillside</T><A>http://hillside.net/patterns/</A><L>en</L><F>HTML</F></X>, 
-<X><T>Portland Patterns Repository</T><A>http://c2.com/cgi/wiki?StartingPoints</A><L>en</L><F>HTML</F></X>,
+<X><T>Portland Patterns Repository</T><A>http://c2.com/cgi/wiki?SoftwareDesignPatternsIndex</A><L>en</L><F>HTML</F></X>,
 <X><T>edlin</T><A>http://www.edlin.org/cs/patterns.html</A><L>en</L><F>HTML</F></X><BR/>
 
 <X><T>PLOP 2000</T><A>http://hillside.net/plop/plop2k/</A><L>en</L><F>HTML</F></X><BR/>
@@ -67,6 +67,9 @@
         <ITEM><ARTICLE><X status='dead'><T>An Example of the Bridge Pattern</T><A>http://industriallogic.com/patterns/examples/bridge.html</A><L>en</L><F>HTML</F></X><COMMENT>A very short C++ example found in MFC (<CODEROUTINE>CFile</CODEROUTINE>).</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='dead'><T>Getting the Handle of Handles</T><A>http://www.acm.org/crossroads/xrds2-2/ovp.html</A><L>en</L><F>HTML</F></X><AUTHOR>G. Bowden Wise</AUTHOR><DATE><YEAR>1995</YEAR></DATE><COMMENT>Not described as a design pattern, but this article is still a good presentation of possible uses of a bridge.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Bureaucracy: Define a self-constrained hierarchical structure which maintains its inner consistency, accepts interaction with clients on any level of the hierarchy, and scales for application design.</TITLE>
+        <ITEM><ARTICLE><X><T>Bureaucracy</T><A>http://www.riehle.org/computer-science/research/1996/europlop-1996-bureaucracy.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This pattern is very complex. In my mind, it is not very generic, so I would consider this as a design rather than a design pattern. But this is a good example of the composition of several patterns. The author proposes a way (using roles) to handle this type of complex pattern compositions. But, this is maybe only a joke&#x2026;</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Composite: Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.</TITLE>
         <ITEM><ARTICLE><X><T>Composite</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/composite.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
@@ -98,6 +101,9 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Proxy (a.k.a. Surrogate): Provide a surrogate or placeholder for another object to control access to it.</TITLE>
         <ITEM><ARTICLE><X><T>Proxy</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/proxy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Role: Adapt an object to different client's needs through transparently attached role objects, each one representing a role the object has to play in that client's context.</TITLE>
+        <ITEM><ARTICLE><X><T>The Role Object Pattern</T><A>http://dirkriehle.com/computer-science/research/2000/plopd-4.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf Siberski</AUTHOR><AUTHOR>Martina Wulf</AUTHOR><DATE><YEAR>1999</YEAR></DATE><COMMENT>This is a complete description of the role pattern with the pros, cons, C++ example&#x2026;</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Skin: Separate the presentation style of an application from its logic.</TITLE>
         <ITEM><ARTICLE><X><T>The Skin Pattern</T><A>http://ootips.org/yonat/Skin.pdf</A><L>en</L><F>PDF</F></X><X><T>The Skin Pattern</T><A>http://hillside.net/plop/plop2k/proceedings/Sharon/Sharon.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Rani Pinchuk</AUTHOR><AUTHOR>Yonat Sharon</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>The complete presentation of the pattern.</COMMENT></ARTICLE></ITEM>
@@ -146,6 +152,9 @@
         <ITEM><ARTICLE><X><T>Observer Pattern</T><A>http://www.castle-cadenza.demon.co.uk/observe.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>The Event Notification Pattern - Integrating Implicit Invocation with Object-Orientation</T><A>http://www.riehle.org/computer-science/research/1996/tapos-1996-event.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A small variation of the pattern.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Specification: Specify if a candidate object matches some criteria.</TITLE>
+        <ITEM><ARTICLE><X><T>Specifications</T><A>http://martinfowler.com/apsupp/spec.pdf</A><L>en</L><F>HTML</F></X><AUTHOR>Eric Evans</AUTHOR><AUTHOR>Martin Fowler</AUTHOR><COMMENT>A detailed description of the pattern and, also, its extensions into subsumption and partially filled specifications.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
       <ITEM><BLIST><TITLE>State (Objects for States): Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.</TITLE>
         <ITEM><ARTICLE><X><T>State</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/state.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
@@ -161,14 +170,6 @@
       <ITEM><BLIST><TITLE>Visitor: Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.</TITLE>
         <ITEM><ARTICLE><X><T>Visitor</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/visitor.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Visitor Pattern</T><A>http://www.castle-cadenza.demon.co.uk/visitor.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-    </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>Complex patterns</TITLE>
-      <ITEM><BLIST><TITLE>Bureaucracy: Define a self-constrained hierarchical structure which maintains its inner consistency, accepts interaction with clients on any level of the hierarchy, and scales for application design.</TITLE>
-        <ITEM><ARTICLE><X><T>Bureaucracy</T><A>http://www.riehle.org/computer-science/research/1996/europlop-1996-bureaucracy.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This pattern is very complex. In my mind, it is not very generic, so I would consider this as a design rather than a design pattern. But this is a good example of the composition of several patterns. The author proposes a way (using roles) to handle this type of complex pattern compositions. But, this is maybe only a joke&#x2026;</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Role: Adapt an object to different client's needs through transparently attached role objects, each one representing a role the object has to play in that client's context.</TITLE>
-        <ITEM><ARTICLE><X><T>The Role Object Pattern</T><A>http://www.riehle.org/computer-science/research/1997/plop-1997-role-object.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf Siberski</AUTHOR><AUTHOR>Martina Wulf</AUTHOR><DATE><YEAR>1997</YEAR></DATE><COMMENT>This is a complete description of the role pattern (except for the "Known uses" paragraph which is off the point) with the pros, cons, C++ example&#x2026;</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
