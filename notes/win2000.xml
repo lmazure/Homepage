@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Windows 2000 / XP / Seven</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 
 <BLIST>
@@ -53,6 +53,11 @@ right-click on the line corresponding to the disk<BR/>
 select <CODEMENU>Modifier la lettre et les chemins d'acc&#xE8;s&#x2026;</CODEMENU><BR/>
 in the newly displayed dialog, click on <CODEMENU>Modifer&#x2026;</CODEMENU><BR/>
 select the new letter and apply
+</ITEM>
+
+<ITEM>
+to shutdown the computer in 10 minutes
+<CODESAMPLE>shutdown /t 600 /s</CODESAMPLE>
 </ITEM>
 
 </BLIST>

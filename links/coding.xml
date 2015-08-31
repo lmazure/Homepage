@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 
 <X><T>stackoverflow</T><A>http://stackoverflow.com</A><L>en</L><F>HTML</F></X><BR/>
@@ -286,6 +286,7 @@
     </BLIST></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Editors</TITLE>
+    <ITEM><ARTICLE><X><T>Prune: A Code Editor that is Not a Text Editor</T><A>https://www.facebook.com/notes/kent-beck/prune-a-code-editor-that-is-not-a-text-editor/1012061842160013</A><L>en</L><F>HTML</F></X><AUTHOR>Knt Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE><COMMENT>An abandoned tentative to replace the text editor with a tree editor to write code.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Vi</TITLE>
       <ITEM><ARTICLE><X><T>Top Vim Plugins</T><A>http://www.youtube.com/watch?v=_galFWwSDt0</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>8</MINUTE><SECOND>59</SECOND></DURATION></X><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>Someone presents his preferred plugins.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Damian Conway, "More Instantly Better Vim" - OSCON 2013</T><A>http://www.youtube.com/watch?v=aHm36-na4-4</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>38</MINUTE><SECOND>53</SECOND></DURATION></X><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT>Damian tries to do everything in Vim. Some tips are interesting, some are doubtful&#x2026;</COMMENT></ARTICLE></ITEM>
@@ -391,6 +392,7 @@
   <ITEM><BLIST><TITLE>Assertions</TITLE>
     <ITEM><ARTICLE><X><T>Diagnosing Java code: Assertions and temporal logic in Java programming</T><ST>Introduce temporal logic to assertions to supplement testing</ST><A>http://www.50001.com/language/javaside/lec/java_ibm/%C0%DA%B9%D9%20%C7%C1%B7%CE%B1%D7%B7%A1%B9%D6%BF%A1%BC%AD%C0%C7%20Assertion%B0%FA%20temporal%20logic%20%28%BF%B5%B9%AE%29.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Eric E. Allen</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH></DATE><COMMENT>The author introduces the idea of temporal logic: assertions taking into account the execution sequence into account ("always", "sometime", "until" and "next").</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Diagnosing Java code: Using temporal logic with bug patterns</T><ST>Preventing common bugs with temporal logic assertions</ST><A>http://www.50001.com/language/javaside/lec/java_ibm/%B9%F6%B1%D7%20%C6%D0%C5%CF%BF%A1%20Temporal%20logic%20%BB%E7%BF%EB%C7%CF%B1%E2%20%28%BF%B5%B9%AE%29.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Eric E. Allen</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>8</MONTH></DATE><COMMENT>Some samples of how to use temporal logic, but most of them could be verified with standard assertions (i.e. "always" is the same as defining an invariant). It would be more convincing to choose more tricky bugs, but maybe the article would have been too complex&#x2026;</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Improve Test Asserts with Shouldly</T><ST>Augment your testing framework with Shouldly for improved test code readability and better test failure messages.</ST><A>https://visualstudiomagazine.com/articles/2015/08/01/improve-test-asserts-with-shouldly.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Jason Roberts</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE><COMMENT>Yet another C# assertion library.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Design by contract</TITLE>
     <ITEM><ARTICLE><X><T>Building bug-free O-O software: An introduction to Design by Contract</T><A>http://www.eiffel.com/developers/design_by_contract_in_detail.html</A><L>en</L><F>HTML</F></X><COMMENT>A presentation of design by contract.</COMMENT></ARTICLE></ITEM>
