@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Visual Studio with ReSharper</TITLE>
 <PATH>notes/vsresharper.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -55,6 +55,16 @@ Edition
 <DESC>go to next error</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='&#x21DE;'/></TERM>
 <DESC>go to previous error</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/></TERM>
+<DESC>collapse/expand the current section</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/></TERM>
+<DESC>collapse/expand the current section</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/><MODIFIERKEY ID='Ctrl'/><KEY ID='O'/></TERM>
+<DESC>collapse to the definition</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/><MODIFIERKEY ID='Ctrl'/><KEY ID='L'/></TERM>
+<DESC>collapse/expand all</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='M'/><MODIFIERKEY ID='Ctrl'/><KEY ID='P'/></TERM>
+<DESC>disable the outline mode</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 
