@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java multithreading</TITLE>
 <PATH>notes/javathread2.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 
 <U><B>Processes vs threads</B></U><BR/>
@@ -87,7 +87,7 @@ Unlike synchronized methods, synchronized statements must specify the object tha
 <TAB/><TAB/>nameCount++;<BR/>
 <TAB/>}<BR/>
 <TAB/>nameList.add(name);<BR/>
-}</CODESAMPLE><BR/></ITEM>
+}</CODESAMPLE></ITEM>
 <ITEM>Reentrant Synchronization<BR/>
 A thread can acquire a lock that it already owns. Allowing a thread to acquire the same lock more than once enables reentrant synchronization.</ITEM>
 </BLIST>
