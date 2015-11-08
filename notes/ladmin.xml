@@ -60,7 +60,7 @@ before this, use <CODEROUTINE>redhat-config-network</CODEROUTINE>
 <BLIST><TITLE>FTP</TITLE>
 <ITEM>
 <BLIST><TITLE>VSFTP</TITLE>
-<ITEM> <CODEFILENAME>/etc/vsftpd.ftpusers</CODEFILENAME> contains the list of users that are not allowed to log in via FTP (these users are still prompted for a password)</ITEM>
+<ITEM><CODEFILENAME>/etc/vsftpd.ftpusers</CODEFILENAME> contains the list of users that are not allowed to log in via FTP (these users are still prompted for a password)</ITEM>
 <ITEM>if <CODEROUTINE>userlist_enable</CODEROUTINE> is <CODEROUTINE>YES</CODEROUTINE>, <CODEFILENAME>/etc/vsftpd.user_list</CODEFILENAME> contains the list of users that will not be prompted for a password and, hence, will not be able to log in (this avoid to transmit the passwords in clear text over the network)</ITEM>
 </BLIST>
 </ITEM>

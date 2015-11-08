@@ -463,9 +463,9 @@ When calling a routine/procedure with <CODEROUTINE>Call</CODEROUTINE>, the paren
 
 <BLIST><TITLE><B><U>Collections</U></B></TITLE>
 <ITEM>use the <CODEROUTINE>Item</CODEROUTINE> method to access the elements<BR/>
-<CODESAMPLE>Documents.Item(1)</CODESAMPLE> </ITEM>
+<CODESAMPLE>Documents.Item(1)</CODESAMPLE></ITEM>
 <ITEM>some collections can be accessed also by name<BR/>
-<CODESAMPLE>Documents("Sales.doc")</CODESAMPLE> </ITEM>
+<CODESAMPLE>Documents("Sales.doc")</CODESAMPLE></ITEM>
 <ITEM>some collections have predefined indexes<BR/>
 <CODESAMPLE>Selection.Paragraphs(1).Borders(wdBorderBottom)</CODESAMPLE></ITEM>
 <ITEM>use the <CODEROUTINE>Count</CODEROUTINE> attribute to get the number of
@@ -628,7 +628,7 @@ Print v  ' Could not convert, prints 0<BR/>
 <ITEM><CODEROUTINE>Join(sourcearray[, delimiter])</CODEROUTINE>
 (Win2000) create a string which is the concatenation of an array of strings
 </ITEM>
-<ITEM> <CODEROUTINE>Split(expression[, delimiter[, limit[, compare]]])</CODEROUTINE>
+<ITEM><CODEROUTINE>Split(expression[, delimiter[, limit[, compare]]])</CODEROUTINE>
 (Win2000) split a string into an array of substrings according to a
 given delimiter
 </ITEM>
