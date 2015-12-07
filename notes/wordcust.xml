@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Word customization</TITLE>
 <PATH>notes/wordcust.xml</PATH>
-<DATE><YEAR>2013</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <CODESAMPLE>Option Explicit<BR/>
 <BR/>
@@ -76,6 +76,10 @@ End Sub<BR/>
 <BR/>
 Sub SwitchProofing()<BR/>
 <TAB/>Selection.NoProofing = Not Selection.NoProofing<BR/>
+End Sub<BR/>
+<BR/>
+Sub InsertCurrentTime()<BR/>
+<TAB/>Selection.InsertDateTime DateTimeFormat:="HH:mm", DateLanguage:=Selection.LanguageID, InsertAsField:=False<BR/>
 End Sub<BR/>
 <BR/>
 Sub InsertCurrentDate()<BR/>
@@ -374,6 +378,10 @@ Sub Customize()<BR/>
 <TAB/><TAB/><TAB/>Command:="Hidden"<BR/>
 <BR/>
 <TAB/>' --------------- dates<BR/>
+<TAB/>' Shift+Alt+T => insert current time<BR/>
+<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyT, wdKeyShift, wdKeyAlt), _<BR/>
+<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
+<TAB/><TAB/><TAB/>Command:="InsertCurrentTime"<BR/>
 <TAB/>' Alt+D => insert current date<BR/>
 <TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyD, wdKeyAlt), _<BR/>
 <TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
