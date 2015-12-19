@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>C#</TITLE>
 <PATH>notes/csharp.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>8</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2015</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 
 
@@ -167,9 +167,9 @@ all characters are interpreted verbatim, except the quote escape sequence (i.e. 
 
 <U><B>Array constants</B></U><BR/>
 <BLIST>
-<ITEM><CODESAMPLE>int[] entiers=new int[] {0,10,20,30};</CODESAMPLE></ITEM>
-<ITEM><CODESAMPLE>double[,] r&#xE9;els=new double[,] { {0.5, 1.7}, {8.4, -6}};</CODESAMPLE></ITEM>
-<ITEM><CODESAMPLE>double[,] r&#xE9;els={ {0.5, 1.7}, {8.4, -6}};</CODESAMPLE></ITEM>
+<ITEM><CODESAMPLE>int[] entiers = new int[] {0,10,20,30};</CODESAMPLE></ITEM>
+<ITEM><CODESAMPLE>double[,] r&#xE9;els = new double[,] { {0.5, 1.7}, {8.4, -6}};</CODESAMPLE></ITEM>
+<ITEM><CODESAMPLE>double[,] r&#xE9;els = { {0.5, 1.7}, {8.4, -6}};</CODESAMPLE></ITEM>
 </BLIST>
 <BR/>
 
@@ -656,6 +656,10 @@ Found under the <CODEROUTINE>System.Collections.Generic</CODEROUTINE> namespace.
 <ROW><TERM><CODEROUTINE>public static int <X><T>Count</T><A>https://msdn.microsoft.com/en-us/library/bb535181</A><L>fr</L><F>HTML</F></X>&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, bool&gt; predicate)</CODEROUTINE></TERM><DESC>returns a number that represents how many elements in the specified sequence satisfy a predicate</DESC></ROW>
 <ROW><TERM><CODEROUTINE>public static IEnumerable&lt;TSource&gt; <X><T>Where</T><A>https://msdn.microsoft.com/en-us/library/bb534803</A><L>fr</L><F>HTML</F></X>&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, bool&gt; predicate)</CODEROUTINE></TERM><DESC>filters a sequence of values based on a predicate</DESC></ROW>
 <ROW><TERM><CODEROUTINE>public static IEnumerable&lt;TSource&gt; <X><T>Where</T><A>https://msdn.microsoft.com/en-us/library/bb549418</A><L>fr</L><F>HTML</F></X>&lt;TSource&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, int, bool&gt; predicate)</CODEROUTINE></TERM><DESC>filters a sequence of values based on a predicate using the element's index</DESC></ROW>
+<ROW><TERM><CODEROUTINE>public static IOrderedEnumerable&lt;TSource&gt; <X><T>OrderBy</T><A>https://msdn.microsoft.com/en-us/library/bb534966.aspx</A><L>fr</L><F>HTML</F></X>&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource,&#x2002;TKey&gt; keySelector)</CODEROUTINE></TERM><DESC>sorts the elements of a sequence in ascending order according to a key</DESC></ROW>
+<ROW><TERM><CODEROUTINE>public static IOrderedEnumerable&lt;TSource&gt; <X><T>OrderBy</T><A>https://msdn.microsoft.com/en-us/library/bb549422.aspx</A><L>fr</L><F>HTML</F></X>&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource,&#x2002;TKey&gt; keySelector, IComparer&lt;TKey&gt; comparer)</CODEROUTINE></TERM><DESC>sorts the elements of a sequence in ascending order by using a specified comparer</DESC></ROW>
+<ROW><TERM><CODEROUTINE>public static IOrderedEnumerable&lt;TSource&gt; <X><T>OrderByDescending</T><A>https://msdn.microsoft.com/en-us/library/bb534855.aspx</A><L>fr</L><F>HTML</F></X>&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource,&#x2002;TKey&gt; keySelector)</CODEROUTINE></TERM><DESC>sorts the elements of a sequence in descending order according to a key</DESC></ROW>
+<ROW><TERM><CODEROUTINE>public static IOrderedEnumerable&lt;TSource&gt; <X><T>OrderByDescending</T><A>https://msdn.microsoft.com/en-us/library/bb548916.aspx</A><L>fr</L><F>HTML</F></X>&lt;TSource, TKey&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource,&#x2002;TKey&gt; keySelector, IComparer&lt;TKey&gt; comparer)</CODEROUTINE></TERM><DESC>sorts the elements of a sequence in descending order by using a specified comparer</DESC></ROW>
 <ROW><TERM><CODEROUTINE>public static IEnumerable&lt;TResult&gt; <X><T>Select</T><A>https://msdn.microsoft.com/en-us/library/bb548891</A><L>fr</L><F>HTML</F></X>&lt;TSource, Tresult&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, TResult&gt; selector)</CODEROUTINE></TERM><DESC>applies a function to each element of the Enumerable and returns the corresponding Enumerable</DESC></ROW>
 <ROW><TERM><CODEROUTINE>public static IEnumerable&lt;TResult&gt; <X><T>Select</T><A>https://msdn.microsoft.com/en-us/library/bb534869</A><L>fr</L><F>HTML</F></X>&lt;TSource, TResult&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, int, TResult&gt; selector)</CODEROUTINE></TERM><DESC>applies a function to each element, using its index, of the Enumerable and returns the corresponding Enumerable</DESC></ROW>
 <ROW><TERM><CODEROUTINE>public static IEnumerable&lt;TResult&gt; <X><T>SelectMany</T><A>https://msdn.microsoft.com/en-us/library/bb534336</A><L>fr</L><F>HTML</F></X>&lt;TSource, TResult&gt;(this IEnumerable&lt;TSource&gt; source, Func&lt;TSource, IEnumerable&lt;TResult&gt;&gt; selector)</CODEROUTINE></TERM><DESC>applies a function returning an Enumerable to each element of the Enumerable and return the flatten Enumerable</DESC></ROW>
