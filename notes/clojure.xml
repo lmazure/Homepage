@@ -1,0 +1,105 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Clojure</TITLE>
+<PATH>notes/clojure.xml</PATH>
+<DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>2</DAY></DATE>
+<CONTENT>
+
+
+<BLIST><TITLE><U><B>Data structures</B></U></TITLE>
+<ITEM><BLIST><TITLE><U><B>Map</B></U></TITLE>
+<ITEM>Empty map:
+<CODESAMPLE>{}<BR/>
+<PROMPT/>{}</CODESAMPLE></ITEM>
+<ITEM>Some examples of literals:
+<CODESAMPLE>{:first-name "Charlie"<BR/>
+ :last-name "McFishwich"}<BR/>
+<PROMPT/>#&lt;core$_GT_ clojure.core$_GT_@15cfd851&gt;</CODESAMPLE>
+<CODESAMPLE>{"string-key" +}<BR/>
+<PROMPT/>{"string-key" #&lt;core$_PLUS_ clojure.core$_PLUS_@658d00be&gt;</CODESAMPLE></ITEM>
+<ITEM>Maps can be created with the <CODEROUTINE>hash-map</CODEROUTINE> function
+<CODESAMPLE>(hash-map :a 1 :b 2)<BR/>
+<PROMPT/>{:a 1 :b 2}</CODESAMPLE></ITEM>
+<ITEM>Look-up can be done with the <CODEROUTINE>get</CODEROUTINE> function.<BR/>
+If the key is not present, <CODEROUTINE>nil</CODEROUTINE> is returned.
+<CODESAMPLE>(get {:a 0 :b 1} :a)<BR/>
+<PROMPT/>0</CODESAMPLE>
+<CODESAMPLE>(get {:a 0 :b 1} :c)<BR/>
+<PROMPT/>nil</CODESAMPLE></ITEM>
+<ITEM>It is possible to give a default value to <CODEROUTINE>get</CODEROUTINE> which will be returned if the key is not found.
+<CODESAMPLE>(get {:a 0 :b 1} :c -1)<BR/>
+<PROMPT/>-1</CODESAMPLE></ITEM>
+<ITEM>Another way to look up a value in a map is to treat the map like a function with the key as its argument:
+<CODESAMPLE> ({:name "The Human Coffeepot"} :name) <BR/>
+<PROMPT/>"The Human Coffeepot"</CODESAMPLE></ITEM>
+<ITEM>The <CODEROUTINE>get-in</CODEROUTINE> function lets you look up values in nested maps
+<CODESAMPLE> (get-in {:a 0 :b {:c "ho hum"}} [:b :c]) <BR/>
+<PROMPT/>"ho hum"</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE><U><B>Vector</B></U></TITLE>
+<ITEM>Literal:
+<CODESAMPLE>[3 2 1]<BR/>
+<PROMPT/>[3 2 1]</CODESAMPLE></ITEM>
+<ITEM>Getting the n-th value can be done with the <CODEROUTINE>get</CODEROUTINE> function.
+<CODESAMPLE>(get [3 2 1] 0)<BR/>
+<PROMPT/>3</CODESAMPLE></ITEM>
+<ITEM>Vectors can also be created with the <CODEROUTINE>vector</CODEROUTINE> function.
+<CODESAMPLE>(vector "creepy" "full" "moon")<BR/>
+<PROMPT/>["creepy" "full" "moon"]</CODESAMPLE></ITEM>
+<ITEM>Elements can be added at the end of a vector with the <CODEROUTINE>conj</CODEROUTINE> function.
+<CODESAMPLE>(conj [1 2 3] 4)<BR/>
+<PROMPT/>[1 2 3 4]</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE><U><B>List</B></U></TITLE>
+<ITEM>Literal:
+<CODESAMPLE>'(1 2 3 4)<BR/>
+<PROMPT/>(1 2 3 4)</CODESAMPLE></ITEM>
+<ITEM>Getting the n-th value can be done with the <CODEROUTINE>nth</CODEROUTINE> function.
+<CODESAMPLE>(nth '(:a :b :c) 2)<BR/>
+<PROMPT/>:c</CODESAMPLE></ITEM>
+<ITEM>Lists can also be created with the <CODEROUTINE>list</CODEROUTINE> function.
+<CODESAMPLE>(list "creepy" "full" "moon")<BR/>
+<PROMPT/>("creepy" "full" "moon")</CODESAMPLE></ITEM>
+<ITEM>Elements can be added at the beginning of a list with the <CODEROUTINE>conj</CODEROUTINE> function.
+<CODESAMPLE>(conj '(1 2 3) 4)<BR/>
+<PROMPT/>(4 1 2 3)</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE><U><B>Set</B></U></TITLE>
+<ITEM><BLIST><TITLE><U><B>Hash set</B></U></TITLE>
+<ITEM>Literal:
+<CODESAMPLE>#{"kurt vonnegut" 20 :icicle}<BR/>
+<PROMPT/>#{:icicle "kurt vonnegut" 20}</CODESAMPLE></ITEM>
+<ITEM>Hash sets can also be created with the <CODEROUTINE>hash-ser</CODEROUTINE> function.
+<CODESAMPLE>(hash-set 1 1 2 2)<BR/>
+<PROMPT/>#{1 2}</CODESAMPLE></ITEM>
+<ITEM>Elements can be added with the <CODEROUTINE>conj</CODEROUTINE> function.
+<CODESAMPLE>(conj #{:a :b} :c)<BR/>
+<PROMPT/>#{:a :b :c}</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE><U><B>Sorted set</B></U></TITLE>
+</BLIST></ITEM>
+<ITEM>To test if a value is in a set, use the <CODEROUTINE>contains?</CODEROUTINE> function.
+<CODESAMPLE>(contains? #{:a :b} :a)<BR/>
+<PROMPT/>true<BR/>
+(contains? #{:a :b} 3)<BR/>
+<PROMPT/>false<BR/>
+(contains? #{nil} nil)<BR/>
+<PROMPT/>true</CODESAMPLE></ITEM>
+<ITEM>To test if a value is in a set, we can also use the <CODEROUTINE>get</CODEROUTINE> function. But testing on <CODEROUTINE>nil</CODEROUTINE> will always return <CODEROUTINE>nil</CODEROUTINE>.
+<CODESAMPLE>(get #{:a :b} :a)
+<PROMPT/>:a
+(get #{:a nil} nil)
+<PROMPT/>nil
+(get #{:a :b} "kurt vonnegut")
+<PROMPT/>nil</CODESAMPLE></ITEM>
+<ITEM>To test if a value is in a set, we can also use a ketword.
+<CODESAMPLE>(:a #{:a :b})
+<PROMPT/>:a</CODESAMPLE></ITEM>
+</BLIST></ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/lisp.html#clojure</A><L>en</L><F>HTML</F></X>
+</PAGE>
+
