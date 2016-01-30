@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Clojure</TITLE>
 <PATH>notes/clojure.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 
 
@@ -52,7 +52,8 @@ If the key is not present, <CODEROUTINE>nil</CODEROUTINE> is returned.
 <PROMPT/>[1 2 3 4]</CODESAMPLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE><U><B>List</B></U></TITLE>
-<ITEM>Literal:
+<ITEM>Literal:<BR/>
+the single quote indicates that this is not a function call, but an actual list
 <CODESAMPLE>'(1 2 3 4)<BR/>
 <PROMPT/>(1 2 3 4)</CODESAMPLE></ITEM>
 <ITEM>Getting the n-th value can be done with the <CODEROUTINE>nth</CODEROUTINE> function.
@@ -98,6 +99,33 @@ If the key is not present, <CODEROUTINE>nil</CODEROUTINE> is returned.
 <PROMPT/>:a</CODESAMPLE></ITEM>
 </BLIST></ITEM>
 </BLIST>
+
+<CODEROUTINE>defn</CODEROUTINE> defines a function.
+<CODESAMPLE>(defn square [x] (* x x))<BR/>
+<PROMPT/>'sandbox18629/square<BR/>
+(square 10)<BR/>
+<PROMPT/>100</CODESAMPLE>
+<CODEROUTINE>fn</CODEROUTINE> defines an anonymous function.
+<CODESAMPLE>(fn [x] (* x x))</CODESAMPLE>
+<CODESAMPLE>((fn [x] (* x x)) 10)</CODESAMPLE>
+<CODEROUTINE>defn</CODEROUTINE> is just syntaxic sugar around <CODEROUTINE>def</CODEROUTINE> and <CODEROUTINE>fn</CODEROUTINE>
+<CODESAMPLE>(def square (fn [x] (* x x)))</CODESAMPLE>
+A <I>higher order function</I> is a function that takes another function as an argument.<BR/>
+<CODEROUTINE>map</CODEROUTINE> is a higher order function.<BR/>
+<BR/>
+
+<CODEROUTINE>(nil? x)</CODEROUTINE> returns true if x is nil, false otherwise.<BR/>
+<CODEROUTINE>(odd? x)</CODEROUTINE> returns true if n is odd, throws an exception if n is not an integer.<BR/>
+<CODEROUTINE>(even? x)</CODEROUTINE> returns true if n is even, throws an exception if n is not an integer.<BR/>
+<CODEROUTINE>(not x)</CODEROUTINE> returns <CODEROUTINE>true</CODEROUTINE> if x is logical false, <CODEROUTINE>false</CODEROUTINE> otherwise.<BR/>
+<CODEROUTINE>(or)</CODEROUTINE><CODEROUTINE>(or x)</CODEROUTINE><CODEROUTINE>(or x &amp; next)</CODEROUTINE> evaluates expressions one at a time, from left to right. If a form returns a logical true value, <CODEROUTINE>or</CODEROUTINE> returns that value and doesn't
+evaluate any of the other expressions, otherwise it returns the value of the last expression. <CODEROUTINE>(or)</CODEROUTINE> returns <CODEROUTINE>nil</CODEROUTINE>.<BR/>
+<CODEROUTINE>(and)</CODEROUTINE><CODEROUTINE>(and x)</CODEROUTINE><CODEROUTINE>(and x &amp; next)</CODEROUTINE> evaluates expressions one at a time, from left to right. If a form returns logical false (<CODEROUTINE>nil</CODEROUTINE> or <CODEROUTINE>false</CODEROUTINE>), <CODEROUTINE>and</CODEROUTINE> returns that value and doesn't evaluate any of the other expressions, otherwise it returns the value of the last expression. <CODEROUTINE>(and)</CODEROUTINE> returns <CODEROUTINE>true</CODEROUTINE>.<BR/>
+<CODEROUTINE>(= x)</CODEROUTINE><CODEROUTINE>(= x y)</CODEROUTINE><CODEROUTINE>(= x y &amp; more)</CODEROUTINE> returns true if x equals y, false if not.<BR/>
+<CODEROUTINE>(not= x)</CODEROUTINE><CODEROUTINE>(not= x y)</CODEROUTINE><CODEROUTINE>(not= x y &amp; more)</CODEROUTINE> returns the same as <CODEROUTINE>(not (= obj1 obj2))</CODEROUTINE>.<BR/>
+<CODEROUTINE>(first coll)</CODEROUTINE> returns the first item in the collection. Calls <CODEROUTINE>seq</CODEROUTINE> on its argument. If coll is <CODEROUTINE>nil</CODEROUTINE>, returns <CODEROUTINE>nil</CODEROUTINE>.<BR/>
+<CODEROUTINE>(rest coll)</CODEROUTINE> returns a possibly empty seq of the items after the first. Calls <CODEROUTINE>seq</CODEROUTINE> on its argument.<BR/>
+<CODEROUTINE>(cons x seq)</CODEROUTINE> returns a new seq where x is the first element and seq is the rest.<BR/>
 
 </CONTENT>
 <X><T>links</T><A>../links/lisp.html#clojure</A><L>en</L><F>HTML</F></X>
