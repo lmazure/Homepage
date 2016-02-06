@@ -3,9 +3,60 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Clojure</TITLE>
 <PATH>notes/clojure.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 
+<BLIST><TITLE><U><B>Types</B></U></TITLE>
+<ITEM>Ratio type:
+<CODESAMPLE>(/ 22 7)<BR/>
+<PROMPT/>22/7</CODESAMPLE></ITEM>
+<ITEM>Use a floating-point literal for forcing the division
+<CODESAMPLE>(/ 22.0 7) <BR/>
+<PROMPT/>3.142857142857143</CODESAMPLE></ITEM>
+<ITEM>The integer quotient and remainder
+<CODESAMPLE>(quot 22 7)<BR/>
+<PROMPT/>3<BR/>
+(rem 22 7)<BR/>
+<PROMPT/>1</CODESAMPLE></ITEM>
+<ITEM>Append M to a number to create a <CODEROUTINE>BigDecimal</CODEROUTINE> literal:
+<CODESAMPLE>(+ 1 (/ 0.00001 1000000000000000000))<BR/>
+<PROMPT/>1.0</CODESAMPLE>
+<CODESAMPLE> (+ 1 (/ 0.00001M 1000000000000000000))<BR/>
+<PROMPT/>1.00000000000000000000001M</CODESAMPLE></ITEM>
+<ITEM>For arbitrary precision integers, you can append N to create a <CODEROUTINE>BigInt</CODEROUTINE> literal:
+<CODESAMPLE>(* 1000N 1000 1000 1000 1000 1000 1000)<BR/>
+<PROMPT/>1000000000000000000000N</CODESAMPLE></ITEM>
+<ITEM>Multiline strings
+<CODESAMPLE>"This is a\nmultiline string"<BR/>
+<PROMPT/>"This is a\nmultiline string"<BR/>
+"This is also<BR/>
+a multiline string"<BR/>
+<PROMPT/>"This is also\na multiline string"</CODESAMPLE></ITEM>
+<ITEM>Using Java interop forms:
+<CODESAMPLE>(.toUpperCase "hello")<BR/>
+<PROMPT/>"HELLO"</CODESAMPLE></ITEM>
+<ITEM>Converting to a string
+<CODESAMPLE>(str 1 2 nil 3)<BR/>
+<PROMPT/>"123"</CODESAMPLE></ITEM>
+<ITEM>Character literal syntax is <CODEROUTINE>\{letter}</CODEROUTINE>, where <CODEROUTINE>letter</CODEROUTINE> can be a letter or the name of a character: <CODEROUTINE>backspace</CODEROUTINE>, <CODEROUTINE>formfeed</CODEROUTINE>, <CODEROUTINE>newline</CODEROUTINE>, <CODEROUTINE>return</CODEROUTINE>, <CODEROUTINE>space</CODEROUTINE>, or <CODEROUTINE>tab</CODEROUTINE>
+<CODESAMPLE>(Character/toUpperCase \s)
+<PROMPT/>\S</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>true</CODEROUTINE> is true<BR/>
+<CODEROUTINE>false</CODEROUTINE> is false<BR/>
+<CODEROUTINE>nil</CODEROUTINE> also evaluates to false in a boolean context<BR/>
+everything else evaluates to true in a boolean context</ITEM>
+<ITEM><CODEROUTINE>true?</CODEROUTINE> tests whether a value is actually true, not whether the value evaluates to true in a boolean context. The only thing that is <CODEROUTINE>true?</CODEROUTINE> is <CODEROUTINE>true</CODEROUTINE> itself:
+<CODESAMPLE>(true? true)<BR/>
+<PROMPT/>true<BR/>
+(true? "foo")<BR/>
+<PROMPT/>false</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>nil?</CODEROUTINE> and <CODEROUTINE>false?</CODEROUTINE> work the same way. Only <CODEROUTINE>nil</CODEROUTINE> is <CODEROUTINE>nil?</CODEROUTINE>, and only <CODEROUTINE>false</CODEROUTINE> is <CODEROUTINE>false?</CODEROUTINE>.</ITEM>
+<ITEM><CODEROUTINE>zero?</CODEROUTINE> works with any numeric type, returning true if it is zero:
+<CODESAMPLE> (zero? 0.0)<BR/>
+<PROMPT/>true<BR/>
+(zero? (/ 22 7)) <BR/>
+<PROMPT/>false</CODESAMPLE></ITEM>
+</BLIST>
 
 <BLIST><TITLE><U><B>Data structures</B></U></TITLE>
 <ITEM><BLIST><TITLE><U><B>Map</B></U></TITLE>
@@ -33,6 +84,13 @@ If the key is not present, <CODEROUTINE>nil</CODEROUTINE> is returned.
 <ITEM>Another way to look up a value in a map is to treat the map like a function with the key as its argument:
 <CODESAMPLE> ({:name "The Human Coffeepot"} :name) <BR/>
 <PROMPT/>"The Human Coffeepot"</CODESAMPLE></ITEM>
+<ITEM>Keywords are functions. They take a map argument and look themselves up in the map. You can look up by calling the map or by calling a key:
+<CODESAMPLE>(def inventors {:Lisp "McCarthy" :Clojure "Hickey"})<BR/>
+<PROMPT/>#'user/inventors<BR/>
+(inventors :Clojure)<BR/>
+<PROMPT/>"Hickey"<BR/>
+:Clojure inventors)<BR/>
+<PROMPT/>"Hickey"</CODESAMPLE></ITEM>
 <ITEM>The <CODEROUTINE>get-in</CODEROUTINE> function lets you look up values in nested maps
 <CODESAMPLE> (get-in {:a 0 :b {:c "ho hum"}} [:b :c]) <BR/>
 <PROMPT/>"ho hum"</CODESAMPLE></ITEM>
@@ -88,13 +146,13 @@ the single quote indicates that this is not a function call, but an actual list
 (contains? #{nil} nil)<BR/>
 <PROMPT/>true</CODESAMPLE></ITEM>
 <ITEM>To test if a value is in a set, we can also use the <CODEROUTINE>get</CODEROUTINE> function. But testing on <CODEROUTINE>nil</CODEROUTINE> will always return <CODEROUTINE>nil</CODEROUTINE>.
-<CODESAMPLE>(get #{:a :b} :a)
-<PROMPT/>:a
-(get #{:a nil} nil)
-<PROMPT/>nil
-(get #{:a :b} "kurt vonnegut")
+<CODESAMPLE>(get #{:a :b} :a)<BR/>
+<PROMPT/>:a<BR/>
+(get #{:a nil} nil) <BR/>
+<PROMPT/>nil<BR/>
+(get #{:a :b} "kurt vonnegut")<BR/>
 <PROMPT/>nil</CODESAMPLE></ITEM>
-<ITEM>To test if a value is in a set, we can also use a ketword.
+<ITEM>To test if a value is in a set, we can also use a keyword.
 <CODESAMPLE>(:a #{:a :b})
 <PROMPT/>:a</CODESAMPLE></ITEM>
 </BLIST></ITEM>
@@ -114,7 +172,6 @@ A <I>higher order function</I> is a function that takes another function as an a
 <CODEROUTINE>map</CODEROUTINE> is a higher order function.<BR/>
 <BR/>
 
-<CODEROUTINE>(nil? x)</CODEROUTINE> returns true if x is nil, false otherwise.<BR/>
 <CODEROUTINE>(odd? x)</CODEROUTINE> returns true if n is odd, throws an exception if n is not an integer.<BR/>
 <CODEROUTINE>(even? x)</CODEROUTINE> returns true if n is even, throws an exception if n is not an integer.<BR/>
 <CODEROUTINE>(not x)</CODEROUTINE> returns <CODEROUTINE>true</CODEROUTINE> if x is logical false, <CODEROUTINE>false</CODEROUTINE> otherwise.<BR/>
@@ -126,6 +183,29 @@ evaluate any of the other expressions, otherwise it returns the value of the las
 <CODEROUTINE>(first coll)</CODEROUTINE> returns the first item in the collection. Calls <CODEROUTINE>seq</CODEROUTINE> on its argument. If coll is <CODEROUTINE>nil</CODEROUTINE>, returns <CODEROUTINE>nil</CODEROUTINE>.<BR/>
 <CODEROUTINE>(rest coll)</CODEROUTINE> returns a possibly empty seq of the items after the first. Calls <CODEROUTINE>seq</CODEROUTINE> on its argument.<BR/>
 <CODEROUTINE>(cons x seq)</CODEROUTINE> returns a new seq where x is the first element and seq is the rest.<BR/>
+
+<BLIST><TITLE><U><B>Libraries</B></U></TITLE>
+<ITEM>When you require a library named <CODEROUTINE>foo.bar.quux</CODEROUTINE>, Clojure looks for a file named <CODEROUTINE>foo/bar/quux.clj</CODEROUTINE> on the <CODEROUTINE>CLASSPATH</CODEROUTINE>.
+<CODESAMPLE>(require 'foo.bar.quux)<BR/>
+<PROMPT/>nil<BR/>
+(take 10 foo.bar.quux/fibs) <BR/>
+<PROMPT/>(0 1 1 2 3 5 8 13 21 34)</CODESAMPLE></ITEM>
+<ITEM>Fully qualified names get old quickly. You can refer a namespace, creating mappings for all its names in your current namespace
+<CODESAMPLE>(require 'foo.bar.quux)<BR/>
+<PROMPT/>nil<BR/>
+(refer 'foo.bar.quux)<BR/>
+<PROMPT/>nil<BR/>
+(take 10 fibs) <BR/>
+<PROMPT/>(0 1 1 2 3 5 8 13 21 34)</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>use</CODEROUTINE> performs <CODEROUTINE>require</CODEROUTINE> and <CODEROUTINE>refer</CODEROUTINE> in a single step
+<CODESAMPLE>(use 'foo.bar.quux)<BR/>
+<PROMPT/>nil<BR/>
+ (take 10 fibs) <BR/>
+<PROMPT/>(0 1 1 2 3 5 8 13 21 34)</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>:reload</CODEROUTINE> flag forces a library to reload
+<CODESAMPLE>(use :reload 'foo.bar.quux)</CODESAMPLE></ITEM>
+</BLIST>
+
 
 </CONTENT>
 <X><T>links</T><A>../links/lisp.html#clojure</A><L>en</L><F>HTML</F></X>
