@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Word customization</TITLE>
 <PATH>notes/wordcust.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <CODESAMPLE>Option Explicit<BR/>
 <BR/>
@@ -91,7 +91,7 @@ Sub InsertCurrentDate8601()<BR/>
 End Sub<BR/>
 <BR/>
 Sub SimplePaste()<BR/>
-<TAB/>Selection.PasteSpecial DataType:=wdPasteText<BR/>
+<TAB/>Selection.PasteAndFormat (wdFormatPlainText)<BR/>
 End Sub <BR/>
 <BR/>
 Sub FullScreenPrintPreview()<BR/>
