@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Clojure</TITLE>
 <PATH>notes/clojure.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
@@ -28,6 +28,12 @@
 <PROMPT/>1000000000000000000000N</CODESAMPLE></ITEM>
 <ITEM><CODEROUTINE>(odd? x)</CODEROUTINE> returns true if n is odd, throws an exception if n is not an integer.</ITEM>
 <ITEM><CODEROUTINE>(even? x)</CODEROUTINE> returns true if n is even, throws an exception if n is not an integer.</ITEM>
+<ITEM><CODEROUTINE>(&lt; x)</CODEROUTINE><BR/><CODEROUTINE>(&lt; x y)</CODEROUTINE><BR/><CODEROUTINE>(&lt; x y &amp; more)</CODEROUTINE> returns true if the numbers are in strictly increasing order, false otherwise.</ITEM>
+<ITEM><CODEROUTINE>(&lt;= x)</CODEROUTINE><BR/><CODEROUTINE>(&lt;= x y)</CODEROUTINE><BR/><CODEROUTINE>(&lt;= x y &amp; more)</CODEROUTINE> returns true if the numbers are in monotically increasing order, false otherwise.</ITEM>
+<ITEM><CODEROUTINE>(&gt; x)</CODEROUTINE><BR/><CODEROUTINE>(&gt; x y)</CODEROUTINE><BR/><CODEROUTINE>(&gt; x y &amp; more)</CODEROUTINE> returns true if the numbers are in strictly decreasing order, false otherwise.</ITEM>
+<ITEM><CODEROUTINE>(&gt;= x)</CODEROUTINE><BR/><CODEROUTINE>(&gt;= x y)</CODEROUTINE><BR/><CODEROUTINE>(&gt;= x y &amp; more)</CODEROUTINE> returns true if the numbers are in monotically decreasing order, false otherwise.</ITEM>
+<ITEM><CODEROUTINE>(inc x)</CODEROUTINE> returns x plus 1, does not auto-promote longs, will throw on overflow.</ITEM>
+<ITEM><CODEROUTINE>(dec x)</CODEROUTINE> returns x minus 1, does not auto-promote longs, will throw on overflow.</ITEM>
 <ITEM>Multiline strings
 <CODESAMPLE>"This is a\nmultiline string"<BR/>
 <PROMPT/>"This is a\nmultiline string"<BR/>
@@ -202,6 +208,8 @@ Default username is 'world'."<BR/>
 <CODESAMPLE>(def square (fn [x] (* x x)))</CODESAMPLE></ITEM>
 <ITEM>A <I>higher order function</I> is a function that takes another function as an argument.<BR/>
 <CODEROUTINE>map</CODEROUTINE> is a higher order function.</ITEM>
+<ITEM><CODEROUTINE>memoize</CODEROUTINE> returns a memoized version of a function
+<CODESAMPLE>(memoize f)</CODESAMPLE></ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>Libraries</B></U></TITLE>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TFS</TITLE>
 <PATH>notes/tfs.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 
 <CODESAMPLE><PROMPT/>tf="/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/TF.exe"</CODESAMPLE><BR/>
@@ -28,9 +28,10 @@ delete a workspace <I>foobar</I><BR/>
 <BR/>
 
 create a label:<BR/>
-right click on $/eCommerce/EOL/Trunk and select <CODEMENU>Advanced<CODEMENU>Apply Label&#x2026;</CODEMENU></CODEMENU>
+right click on $/eCommerce/EOL/Trunk and select <CODEMENU>Advanced<CODEMENU>Apply Label&#x2026;</CODEMENU></CODEMENU><BR/>
+<BR/>
 
-search
+search:<BR/>
 <DEFINITIONTABLE>
 <ROW><TERM>tags:teal bozo</TERM>
 <DESC>Work Items with the "teal" tag and containing the "bozo" string</DESC></ROW>
