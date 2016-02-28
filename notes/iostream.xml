@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Iostream</TITLE>
 <PATH>notes/iostream.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><U>error management</U></TITLE>
@@ -49,7 +49,7 @@ Returns the current stream control state flags.
 <ITEM>
 <CODEROUTINE>void ios::clear(iostate state = goodbit)</CODEROUTINE><BR/>
 Sets a new value for the control state ignoring the existing value. The call with no arguments turns
-all of the flags on. Despite its name, <CODEROUTINE>clear()</CODEROUTINE> is used to turn flags on more often than it is used to turn them off. we can turn on one  flag while keeping the others like this:
+all of the flags on. Despite its name, <CODEROUTINE>clear()</CODEROUTINE> is used to turn flags on more often than it is used to turn them off. we can turn on one flag while keeping the others like this:
 <CODESAMPLE>str.clear(ios::badbit | str.rdstate());</CODESAMPLE>
 </ITEM>
 
@@ -58,7 +58,7 @@ all of the flags on. Despite its name, <CODEROUTINE>clear()</CODEROUTINE> is use
 
 <BLIST><TITLE><U>ostream</U></TITLE>
 <ITEM>
-The stream manipulator <CODEROUTINE>ostream&amp;  endl( ostream&amp; os)</CODEROUTINE> inserts a new-line character in the stream and then flushes it (i.e. if calls <CODEROUTINE>os.put(os.widen('\n'))</CODEROUTINE> then <CODEROUTINE>os.flush()</CODEROUTINE>).
+The stream manipulator <CODEROUTINE>ostream&amp; endl( ostream&amp; os)</CODEROUTINE> inserts a new-line character in the stream and then flushes it (i.e. if calls <CODEROUTINE>os.put(os.widen('\n'))</CODEROUTINE> then <CODEROUTINE>os.flush()</CODEROUTINE>).
 </ITEM>
 </BLIST>
 
@@ -87,4 +87,5 @@ The string can be accessed with <CODEROUTINE>oss.str()</CODEROUTINE> which freez
 
 </CONTENT>
 </PAGE>
+
 

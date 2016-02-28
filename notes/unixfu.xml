@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2012</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -194,9 +194,9 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <ROW><TERM><CODEROUTINE>find . -mtime 2</CODEROUTINE></TERM><DESC>list the files whose data was modified two days ago</DESC></ROW>
 <ROW><TERM><CODEROUTINE>find . -atime 2</CODEROUTINE></TERM><DESC>list the files accessed two days ago</DESC></ROW>
 <ROW><TERM><CODEROUTINE>find . -name toto</CODEROUTINE></TERM><DESC>true if the entry basename matches <CODEROUTINE>toto</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>find . -iname toto</CODEROUTINE></TERM><DESC>same as <CODEROUTINE>-name</CODEROUTINE>,  but  the  match  is  case insensitive</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -iname toto</CODEROUTINE></TERM><DESC>same as <CODEROUTINE>-name</CODEROUTINE>, but the match is case insensitive</DESC></ROW>
 <ROW><TERM><CODEROUTINE>find . -lname toto</CODEROUTINE></TERM><DESC>true if the entry is a symbolic link whose content matches <CODEROUTINE>toto</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>find . -ilname toto</CODEROUTINE></TERM><DESC>same as <CODEROUTINE>-lname</CODEROUTINE>,  but  the  match  is  case insensitive</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -ilname toto</CODEROUTINE></TERM><DESC>same as <CODEROUTINE>-lname</CODEROUTINE>, but the match is case insensitive</DESC></ROW>
 <ROW><TERM><CODEROUTINE>find . -type f</CODEROUTINE></TERM><DESC>true if the entry is a regular file</DESC></ROW>
 <ROW><TERM><CODEROUTINE>find . -type d</CODEROUTINE></TERM><DESC>true if the entry is a directory</DESC></ROW>
 <ROW><TERM><CODEROUTINE>find . -empty</CODEROUTINE></TERM><DESC>true if the entry is an empty directory or an empty regular file</DESC></ROW>
@@ -295,7 +295,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <ROW><TERM><CODEROUTINE>du -b</CODEROUTINE></TERM><DESC>display apparent sizes in bytes</DESC></ROW>
 <ROW><TERM><CODEROUTINE>du -b</CODEROUTINE></TERM><DESC>display apparent sizes in bytes</DESC></ROW>
 <ROW><TERM><CODEROUTINE>du -B<I>size</I></CODEROUTINE></TERM><DESC>display size in <I>size</I>-byte blocks</DESC></ROW>
-<ROW><TERM><CODEROUTINE>du --apparent-size</CODEROUTINE></TERM><DESC>print  apparent  sizes,  rather  than disk usage; although the apparent size is usually smaller, it may be larger due to holes in (sparse) files, internal fragmentation, indirect blocks, and the like.</DESC></ROW>
+<ROW><TERM><CODEROUTINE>du --apparent-size</CODEROUTINE></TERM><DESC>print apparent sizes, rather than disk usage; although the apparent size is usually smaller, it may be larger due to holes in (sparse) files, internal fragmentation, indirect blocks, and the like.</DESC></ROW>
 </DEFINITIONTABLE>
 
 </CONTENT>

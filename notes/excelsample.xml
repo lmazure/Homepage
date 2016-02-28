@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Excel macro samples</TITLE>
 <PATH>notes/excelsample.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 fix the URLs incorrectly handled by Excel 2002
@@ -174,8 +174,8 @@ Sub merge()<BR/>
 <TAB/>Dim keyColumns(2) As String<BR/>
 <TAB/>Set source(0) = Sheets("Sheet2") ' name of the SRS sheet<BR/>
 <TAB/>Set source(1) = Sheets("Sheet1") ' name of the VP sheet<BR/>
-<TAB/>keyColumns(0) = "A"<TAB/><TAB/><TAB/>  ' column containing the Requirement ID in the SRS sheet<BR/>
-<TAB/>keyColumns(1) = "B"<TAB/><TAB/><TAB/>  ' column containing the Requirement ID in the VP sheet<BR/>
+<TAB/>keyColumns(0) = "A"<TAB/><TAB/><TAB/>' column containing the Requirement ID in the SRS sheet<BR/>
+<TAB/>keyColumns(1) = "B"<TAB/><TAB/><TAB/>' column containing the Requirement ID in the VP sheet<BR/>
 <TAB/><BR/>
 <TAB/><BR/>
 <TAB/>' -------------------------------------<BR/>

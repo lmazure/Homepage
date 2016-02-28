@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Finding unused methods</TITLE>
 <PATH>notes/deadcode.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 This is a quick 'n dirty script to find some C++ methods that are never used. The script lists the strings which have a <CODEROUTINE>class::method</CODEROUTINE> format and then count the number of times <CODEROUTINE>method</CODEROUTINE> appears. If it is 1 or 2, there is something to look at.<BR/>
 (Of course, I know this script is stupid, it does not differentiate enum and routines&#x2026; But, once again, as stupid as it is, it is able to find many methods that are never called. The sed script used to remove the comments comes from <X><T>here</T><A>http://sed.sourceforge.net/grabbag/scripts/remccoms3.sed</A><L>en</L><F>HTML</F></X>)
@@ -24,7 +24,7 @@ do<BR/>
 <TAB/>w=`echo $word | sed 's/.*:://'`<BR/>
 <TAB/>n=`grep -w $w /tmp/the_full_list | wc -l`<BR/>
 <TAB/>echo $n $word<BR/>
-done | sort  -n<BR/>
+done | sort -n<BR/>
 <BR/>
 rm /tmp/the_routines /tmp/the_full_list
 </CODESAMPLE>

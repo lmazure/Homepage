@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <U><B>Tortoise SVN</B></U>
@@ -17,7 +17,7 @@
 </BLIST>
 
 <BLIST>
-<ITEM>somewhere else on the filesystem,  create a directory <CODEFILENAME>tempo</CODEFILENAME></ITEM>
+<ITEM>somewhere else on the filesystem, create a directory <CODEFILENAME>tempo</CODEFILENAME></ITEM>
 <ITEM>go in it</ITEM>
 <ITEM>create the 3 directories <CODEFILENAME>branches</CODEFILENAME>, <CODEFILENAME>tags</CODEFILENAME> and <CODEFILENAME>trunk</CODEFILENAME></ITEM>
 <ITEM>go in the <CODEFILENAME>trunk</CODEFILENAME> directory</ITEM>
@@ -77,7 +77,7 @@
 </BLIST>
 
 Copy a tag:
-<CODESAMPLE>svn copy  "https://svn.eurofins.local/EOL/tags/EOL-2014-12a-RC2"  "https://svn.eurofins.local/EOL/tags/EOL-2014-12a" -m "issue #97713: Create SVN tag for EOL-2014-12a"</CODESAMPLE>
+<CODESAMPLE>svn copy "https://svn.eurofins.local/EOL/tags/EOL-2014-12a-RC2" "https://svn.eurofins.local/EOL/tags/EOL-2014-12a" -m "issue #97713: Create SVN tag for EOL-2014-12a"</CODESAMPLE>
 
 </CONTENT>
 

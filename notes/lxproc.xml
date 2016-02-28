@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Linux process examination</TITLE>
 <PATH>notes/lxproc.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><U><B>process analysis</B></U></TITLE>
@@ -93,7 +93,7 @@
 <ROW><TERM><CODEROUTINE>-C</CODEROUTINE></TERM><DESC>demangle the C++ names</DESC></ROW>
 <ROW><TERM><CODEROUTINE>-s 128</CODEROUTINE></TERM><DESC>set the string truncation limit to 128</DESC></ROW>
 <ROW><TERM><CODEROUTINE>-S</CODEROUTINE></TERM><DESC>display also the system calls</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-A col</CODEROUTINE></TERM><DESC>align the return values on column  <CODEROUTINE>col</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>-A col</CODEROUTINE></TERM><DESC>align the return values on column <CODEROUTINE>col</CODEROUTINE></DESC></ROW>
 <ROW><TERM><CODEROUTINE>-l lib</CODEROUTINE></TERM><DESC>limit the traces to the specified library<BR/>
 for example, trace the calls to the <CODEROUTINE>foobar.so</CODEROUTINE> library:<BR/>
 <CODESAMPLE><PROMPT/>ltrace -C -l /the/path/foobar.so quux</CODESAMPLE></DESC></ROW>

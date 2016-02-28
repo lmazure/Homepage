@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <X status='obsolete'><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_patterns.html</A><L>en</L><F>HTML</F></X>
@@ -76,7 +76,7 @@
       </BLIST></ITEM>
       <ITEM>Data Accessor: Decouple data access of the algorithm using it by providing a standardized handler object.</ITEM>
       <ITEM><BLIST><TITLE>Data Transfer Object: Hold the data used for communicating with a remote interface in order to minimize the number of calls.</TITLE>
-        <ITEM><ARTICLE><X><T>Data Transfer Object</T><A>http://msdn.microsoft.com/en-us/library/ms978717.aspx</A><L>en</L><F>HTML</F></X><COMMENT>A  very complete description of the pattern.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Data Transfer Object</T><A>http://msdn.microsoft.com/en-us/library/ms978717.aspx</A><L>en</L><F>HTML</F></X><COMMENT>A very complete description of the pattern.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Decorator: Attach additional responsibilities to an objet dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.</TITLE>
         <ITEM><ARTICLE><X><T>Decorator</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/decorator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
@@ -114,7 +114,7 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Behavioral patterns</TITLE>
-      <ITEM><BLIST><TITLE>Active Object (a.k.a.Concurrent Object or Actor): Decouple method execution  from  method  invocation  to  enhance  concurrency  and simplify synchronized access to an object that resides in its own thread of control.</TITLE>
+      <ITEM><BLIST><TITLE>Active Object (a.k.a.Concurrent Object or Actor): Decouple method execution from method invocation to enhance concurrency and simplify synchronized access to an object that resides in its own thread of control.</TITLE>
         <ITEM><ARTICLE><X><T>Active Object</T><ST>An Object Behavioral Pattern for Concurrent Programming</ST><A>http://www.cs.wustl.edu/~schmidt/PDF/Act-Obj.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>R. Greg Lavender</AUTHOR><AUTHOR>Douglas C. Schmidt</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A complete description of the pattern with some information on a C++ implementation.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Atomizer (a.k.a. Serializer): Read arbitrarily complex object structures from and write them to varying data structure-based backends. Efficiently store and retrieve objects from different backends, such as flat files, relational databases, and RPC buffers.</TITLE>

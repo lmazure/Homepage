@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Javadoc</TITLE>
 <PATH>notes/javadoc.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -23,7 +23,7 @@ this can be used for the main description, @return, @param and @throws</DESC></R
 <I>label</I> is optional</DESC></ROW>
 <ROW><TERM>@serial</TERM><DESC>used in the doc comment for a default serializable field</DESC></ROW>
 <ROW><TERM>@serialData <I>data-description</I></TERM><DESC>documents the types and order of data in the serialized form</DESC></ROW>
-<ROW><TERM>@serialField <I>field-name</I>  <I>field-type</I>  <I>field-description</I></TERM><DESC>documents an ObjectStreamField component of a Serializable class's serialPersistentFields member</DESC></ROW>
+<ROW><TERM>@serialField <I>field-name</I> <I>field-type</I> <I>field-description</I></TERM><DESC>documents an ObjectStreamField component of a Serializable class's serialPersistentFields member</DESC></ROW>
 <ROW><TERM>@since <I>since-text</I></TERM><DESC>adds a "Since" heading with the specified <I>since-text</I> to the generated documentation</DESC></ROW>
 <ROW><TERM>@throws <I>class-name</I> <I>description</I></TERM><DESC>adds a "Throws" subheading to the generated documentation, with the <I>class-name</I> and <I>description</I> text</DESC></ROW>
 <ROW><TERM>{@value <I>package.class#field</I>}</TERM><DESC>replaced by the value of a static field</DESC></ROW>
@@ -44,9 +44,10 @@ A Javadoc comment is composed of a main description followed by a tag section, b
 Tags can also be used inline by putting them between curly braces (they are called "in-line tags" in opposition of the usual tags called "block tags"):
 <CODESAMPLE>
 /**<BR/>
- * @deprecated  As of JDK 1.1, replaced by {@link #setBounds(int,int,int,int)} <BR/>
+ * @deprecated As of JDK 1.1, replaced by {@link #setBounds(int,int,int,int)} <BR/>
  */<BR/>
 </CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/java.html#javadoc</A><L>en</L><F>HTML</F></X>
 </PAGE>
+
