@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TFS</TITLE>
 <PATH>notes/tfs.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 
 <CODESAMPLE><PROMPT/>tf="/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/TF.exe"</CODESAMPLE><BR/>
@@ -25,6 +25,11 @@ delete a workspace <I>foobar</I><BR/>
 <CODESAMPLE><PROMPT/>"$tf" workspace /delete <I>foobar</I><BR/>
 <PROMPT/>cd "$tfsdir"<BR/>
 <PROMPT/>rm -fr <I>foobar</I></CODESAMPLE><BR/>
+<BR/>
+
+get last changeset included in label EOL-2015-12-RC3<BR/>
+<CODESAMPLE><PROMPT/>cd "$tfsdir"<BR/>
+<PROMPT/>"$tf" history . /stopafter:1 /noprompt /r /version:LEOL-2015-12-RC3</CODESAMPLE><BR/>
 <BR/>
 
 create a label:<BR/>
