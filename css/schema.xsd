@@ -74,6 +74,7 @@
     <xs:element ref="BLIST"/>
     <xs:element ref="SLIST"/>
     <xs:element ref="NLIST"/>
+    <xs:element ref="CLIST"/>
     <xs:element ref="DEFINITIONTABLE"/>
     <xs:element ref="DEFINITION2TABLE"/>
     <xs:element ref="TABLE"/>
@@ -145,6 +146,15 @@
 </xs:element>
 
 <xs:element name="NLIST">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="TITLE" type="content" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="ITEM" type="content" minOccurs="1" maxOccurs="unbounded"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
+<xs:element name="CLIST">
   <xs:complexType>
     <xs:sequence>
       <xs:element name="TITLE" type="content" minOccurs="0" maxOccurs="1"/>

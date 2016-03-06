@@ -459,6 +459,15 @@
   </xsl:choose>
 </xsl:template>
 
+<xsl:template match="CLIST">
+  <xsl:apply-templates select="./TITLE"/>:
+  <xsl:choose>
+     <xsl:when test="count(./ITEM)>0">
+       <xsl:apply-templates select="./ITEM"/>
+     </xsl:when>
+  </xsl:choose><br/>
+</xsl:template>
+
 <xsl:template match="ITEM">
   <xsl:choose>
     <xsl:when test="name(parent::*)='NLIST'">
@@ -466,6 +475,12 @@
     </xsl:when>
     <xsl:when test="name(parent::*)='BLIST'">
       <li><xsl:apply-templates/></li>
+    </xsl:when>
+    <xsl:when test="name(parent::*)='CLIST'">
+      <xsl:apply-templates/>
+      <xsl:if test="position()&lt;last()" >
+        <xsl:text>, </xsl:text>
+      </xsl:if>
     </xsl:when>
     <xsl:otherwise>
       <xsl:apply-templates/><br/>
