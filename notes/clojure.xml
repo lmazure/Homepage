@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Clojure</TITLE>
 <PATH>notes/clojure.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
@@ -210,6 +210,9 @@ Default username is 'world'."<BR/>
 <CODEROUTINE>map</CODEROUTINE> is a higher order function.</ITEM>
 <ITEM><CODEROUTINE>memoize</CODEROUTINE> returns a memoized version of a function
 <CODESAMPLE>(memoize f)</CODESAMPLE></ITEM>
+<ITEM><CODEROUTINE>trampoline</CODEROUTINE> can be used to convert algorithms requiring mutual recursion without stack consumption. Calls <CODEROUTINE>f</CODEROUTINE> with supplied arguments, if any. If <CODEROUTINE>f</CODEROUTINE> returns a fonction, calls that function with no arguments, and continues to repeat, until the return value is not a functionn, then returns that non-function value. Note that if you want to return a function as a final value, you must wrap it in some data structure and unpack it after <CODEROUTINE>trampoline</CODEROUTINE> returns.
+<CODESAMPLE>(trampoline f)</CODESAMPLE>
+<CODESAMPLE>(trampoline f &amp; args)</CODESAMPLE></ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>Libraries</B></U></TITLE>
