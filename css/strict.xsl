@@ -465,7 +465,7 @@
      <xsl:when test="count(./ITEM)>0">
        <xsl:apply-templates select="./ITEM"/>
      </xsl:when>
-  </xsl:choose><br/>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="ITEM">

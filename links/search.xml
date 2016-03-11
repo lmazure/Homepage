@@ -3,142 +3,151 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Basics</TITLE>
 <PATH>links/search.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 
-<B>search engines</B><BR/>
-<ANCHOR>google</ANCHOR>
-<CLIST><TITLE><X><T>Google</T><A>http://www.google.com/</A><L>en</L><F>HTML</F></X></TITLE>
-  <ITEM><X><T>Advance Search</T><A>http://www.google.com/advanced_search?</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>books</T><A>http://books.google.com/</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Scholar</T><A>http://scholar.google.com/</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Search Help</T><A>http://www.google.com/intl/en/help/features.html</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Zeitgeist</T><A>http://www.google.com/intl/en/press/zeitgeist.html</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Analytics</T><A>http://www.google.com/analytics</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>alerts</T><A>http://www.google.com/alerts</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Google Fight</T><A>http://www.googlefight.com</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Let me google that for you</T><A>http://lmgtfy.com</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>personal notes</T><A>../notes/google.html</A><L>en</L><F>HTML</F></X></ITEM>
-</CLIST>
-searchers:
-<X><T>Bing</T><A>http://www.bing.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Ask.com</T><A>http://www.ask.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Yahoo!</T><A>http://search.yahoo.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Exalead</T><A>http://www.exalead.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Qwant</T><A>https://www.qwant.com</A><L>en</L><F>HTML</F></X><BR/>
-metasearchers:
-<X><T>Dogpile</T><A>http://www.dogpile.com</A><L>en</L><F>HTML</F></X><BR/>
-usenet searchers:
-<X><T>Google</T><A>http://groups.google.com/</A><L>en</L><F>HTML</F></X>
-(<X><T>Advanced Search</T><A>http://groups.google.com/advanced_search</A><L>en</L><F>HTML</F></X>) <BR/>
-blog search:
-<X><T>Google</T><A>http://www.google.com/blogsearch?</A><L>en</L><F>HTML</F></X>,
-<X><T>Technorati</T><A>http://www.technorati.com</A><L>en</L><F>HTML</F></X><BR/>
-images:
-<X><T>Google</T><A>http://images.google.com</A><L>en</L><F>HTML</F></X><BR/>
-music:
-<X><T>midomi</T><A>http://www.midomi.com</A><L>en</L><F>HTML</F></X><BR/>
-<BR/>
+<SLIST><TITLE><B>search engines</B></TITLE>
+  <ITEM><CLIST><TITLE><ANCHOR>google</ANCHOR><X><T>Google</T><A>http://www.google.com/</A><L>en</L><F>HTML</F></X></TITLE>
+    <ITEM><X><T>Advance Search</T><A>http://www.google.com/advanced_search?</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>books</T><A>http://books.google.com/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Scholar</T><A>http://scholar.google.com/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Search Help</T><A>http://www.google.com/intl/en/help/features.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Zeitgeist</T><A>http://www.google.com/intl/en/press/zeitgeist.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Analytics</T><A>http://www.google.com/analytics</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>alerts</T><A>http://www.google.com/alerts</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Google Fight</T><A>http://www.googlefight.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Let me google that for you</T><A>http://lmgtfy.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>personal notes</T><A>../notes/google.html</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>searchers</TITLE>
+    <ITEM><X><T>Bing</T><A>http://www.bing.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Ask.com</T><A>http://www.ask.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Yahoo!</T><A>http://search.yahoo.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Qwant</T><A>https://www.qwant.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>metasearchers</TITLE>
+    <ITEM><X><T>Dogpile</T><A>http://www.dogpile.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>images</TITLE>
+    <ITEM><X><T>Google</T><A>http://images.google.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>videos</TITLE>
+    <ITEM><X><T>Google</T><A>http://video.google.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>blinks</T><A>http://www.blinkx.com</A><L>fr</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>music</TITLE>
+    <ITEM><X><T>midomi</T><A>http://www.midomi.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+</SLIST><BR/>
 
-<B>directories</B><BR/>
-directories:
-<X><T>Open Directory</T><A>http://dmoz.org/</A><L>en</L><F>HTML</F></X><BR/>
-web cams:
-<X><T>EarthCam</T><A>http://www.earthcam.com/</A><L>en</L><F>HTML</F></X><BR/>
-web radios:
-<X><T>Web-Radio</T><A>http://www.web-radio.com/</A><L>en</L><F>HTML</F></X><BR/>
-mailing lists directories:
-<X><T>CataList</T><A>http://www.lsoft.com/lists/listref.html</A><L>en</L><F>HTML</F></X>,
-<X><T>The Mail Archive</T><A>http://www.mail-archive.com/</A><L>en</L><F>HTML</F></X><BR/>
-<BR/>
+<SLIST><TITLE><B>directories</B></TITLE>
+  <ITEM><CLIST><TITLE>directories</TITLE>
+    <ITEM><X><T>Open Directory</T><A>http://dmoz.org/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>web cams</TITLE>
+    <ITEM><X><T>EarthCam</T><A>http://www.earthcam.com/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>mailing lists directories</TITLE>
+    <ITEM><X><T>CataList</T><A>http://www.lsoft.com/lists/listref.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>The Mail Archive</T><A>http://www.mail-archive.com/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+</SLIST><BR/>
 
-<B>communities</B><BR/>
-social networks:
-<X><T>LinkedIn</T><A>http://www.linkedin.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Viadeo</T><A>http://www.viadeo.com</A><L>fr</L><F>HTML</F></X>,
-<X><T>Xing</T><A>http://www.xing.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Plaxo</T><A>http://www.plaxo.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Facebook</T><A>http://www.facebook.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Ecademy</T><A>http://www.ecademy.com</A><L>en</L><F>HTML</F></X><BR/>
-<X><T>StackExchange</T><A>http://stackexchange.com</A><L>fr</L><F>HTML</F></X><BR/>
-<BR/>
+<SLIST><TITLE><B>communities</B></TITLE>
+  <ITEM><CLIST><TITLE>social networks</TITLE>
+    <ITEM><X><T>LinkedIn</T><A>http://www.linkedin.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Viadeo</T><A>http://www.viadeo.com</A><L>fr</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Xing</T><A>http://www.xing.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Facebook</T><A>http://www.facebook.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>groups</TITLE>
+    <ITEM><X><T>Google</T><A>http://groups.google.com/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>StackExchange</T><A>http://stackexchange.com</A><L>fr</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+</SLIST><BR/>
 
-<B>services</B><BR/>
-videos:
-<X><T>YouTube</T><A>http://www.youtube.com</A><L>fr</L><F>HTML</F></X>,
-<X><T>Dailymotion</T><A>http://www.dailymotion.com</A><L>fr</L><F>HTML</F></X>,
-<X><T>Vimeo</T><A>http://www.vimeo.com</A><L>fr</L><F>HTML</F></X><BR/>
-<X><T>blinks</T><A>http://www.blinkx.com</A><L>fr</L><F>HTML</F></X><BR/>
-RSS reader:
-<X><T>Netvibes</T><A>http://www.netvibes.com</A><L>en</L><F>HTML</F></X><BR/>
-surveys:
-<X><T>zoomerang</T><A>http://www.zoomerang.com</A><L>en</L><F>HTML</F></X>,
-<X><T>SurveyMonkey</T><A>https://www.surveymonkey.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Doodle</T><A>http://doodle.com</A><L>en</L><F>HTML</F></X><BR/>
-calendar:
-<X><T>Google calendar</T><A>http://calendar.google.com</A><L>en</L><F>HTML</F></X><BR/>
-free email:
-<X><T>Gmail</T><A>http://mail.google.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Hotmail</T><A>http://www.hotmail.com/</A><L>en</L><F>HTML</F></X>,
-<X><T>Yahoo!</T><A>http://mail.yahoo.com/</A><L>en</L><F>HTML</F></X>,
-<X><T>latinmail</T><A>http://www.latinmail.com/</A><L>en</L><F>HTML</F></X>,
-<X><T>HushMail</T><A>http://www.hushmail.com/</A><L>en</L><F>HTML</F></X><BR/>
-blogs:
-<X><T>blogger</T><A>http://www.blogger.com</A><L>en</L><F>HTML</F></X><BR/>
-postcards:
-<X><T>Cyber Cartes</T><A>http://www.cybercartes.com</A><L>fr</L><F>HTML</F></X>,
-<X><T>La Girafe Timbr&#233;e</T><A>http://www.girafetimbree.com/</A><L>fr</L><F>HTML</F></X><BR/>
-auctions:
-<X><T>eBay</T><A>http://www.ebay.com/</A><L>en</L><F>HTML</F></X><BR/>
-anonymiser:
-<X><T>anonymiser.com</T><A>http://www.anonymizer.com/</A><L>en</L><F>HTML</F></X><BR/>
-bookmarks:
-<X><T>MyBookmarks</T><A>http://www.mybookmarks.com/</A><L>en</L><F>HTML</F></X><BR/>
-control:
-<X><T>SurfControl</T><A>http://www.surfcontrol.com/</A><L>en</L><F>HTML</F></X>,
-<X><T>NetNanny</T><A>http://www.netnanny.com/</A><L>en</L><F>HTML</F></X>,
-<X><T>CyberSister</T><A>http://www.solidoak.com/cysitter.htm</A><L>en</L><F>HTML</F></X><BR/>
-surf by email:
-<X><T>FAQ</T><A>http://www.faqs.org/faqs/internet-services/access-via-email/</A><L>en</L><F>HTML</F></X>, <X><T>www4mail</T><A>http://www4mail.org/</A><L>en</L><F>HTML</F></X><BR/>
-<BR/>
+<SLIST><TITLE><B>services</B></TITLE>
+  <ITEM><CLIST><TITLE>videos</TITLE>
+    <ITEM><X><T>YouTube</T><A>http://www.youtube.com</A><L>fr</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Dailymotion</T><A>http://www.dailymotion.com</A><L>fr</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Vimeo</T><A>http://www.vimeo.com</A><L>fr</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>RSS reader</TITLE>
+    <ITEM><X><T>Netvibes</T><A>http://www.netvibes.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>surveys</TITLE>
+    <ITEM><X><T>SurveyMonkey</T><A>https://www.surveymonkey.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>scheduling</TITLE>
+    <ITEM><X><T>Doodle</T><A>http://doodle.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>calendar</TITLE>
+    <ITEM><X><T>Google calendar</T><A>http://calendar.google.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>free email</TITLE>
+    <ITEM><X><T>Gmail</T><A>http://mail.google.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Outlook mail</T><A> https://outlook.live.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Yahoo!</T><A>http://mail.yahoo.com/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>latinmail</T><A>http://www.latinmail.com/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>HushMail</T><A>http://www.hushmail.com/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>address books</TITLE>
+    <ITEM><X><T>Plaxo</T><A>http://www.plaxo.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>blogs</TITLE>
+    <ITEM><X><T>blogger</T><A>http://www.blogger.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>postcards</TITLE>
+    <ITEM><X><T>Cyber Cartes</T><A>http://www.cybercartes.com</A><L>fr</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>La Girafe Timbr&#233;e</T><A>http://www.girafetimbree.com/</A><L>fr</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>auctions</TITLE>
+    <ITEM><X><T>eBay</T><A>http://www.ebay.com/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>anonymiser</TITLE>
+    <ITEM><X><T>anonymiser.com</T><A>http://www.anonymizer.com/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>bookmarks</TITLE>
+    <ITEM><X><T>MyBookmarks</T><A>http://www.mybookmarks.com/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>control</TITLE>
+    <ITEM><X><T>NetNanny</T><A>http://www.netnanny.com/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>CyberSister</T><A>http://www.solidoak.com/cysitter.htm</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>reverse DNS</TITLE>
+    <ITEM><X><T>12dt</T><A>http://remote.12dt.com/rns/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>WhoIs</TITLE>
+    <ITEM><X><T>Who.is</T><A>http://www.who.is/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>RIPE</T><A>https://apps.db.ripe.net/search/query.html</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+</SLIST><BR/>
 
-<B>ISPs</B><BR/>
-French ISPs:
-<X><T>AOL</T><A>http://www.aol.fr/</A><L>fr</L><F>HTML</F></X>,
-<X><T>SFR</T><A>http://www.sfr.fr/</A><L>fr</L><F>HTML</F></X>
-(<X><T>WebMail</T><A>http://webmail-adsl.sfr.fr</A><L>fr</L><F>HTML</F></X>),
-<X><T>numericable</T><A>http://www.noos.fr/</A><L>fr</L><F>HTML</F></X>,
-<X><T>Orange</T><A>http://www.orange.fr/</A><L>fr</L><F>HTML</F></X>,
-<X><T>Free.fr</T><A>http://www.free.fr/</A><L>fr</L><F>HTML</F></X>,
-<X><T>Alice</T><A>http://www.aliceadsl.fr</A><L>fr</L><F>HTML</F></X><BR/>
-news:
-<X><T>fr.reseaux.telecoms.adsl</T><A>https://groups.google.com/forum/?fromgroups=#!forum/fr.reseaux.telecoms.adsl</A><L>fr</L><F>HTML</F></X><BR/>
-<BR/>
+<SLIST><TITLE><B>ISPs</B></TITLE>
+  <ITEM><CLIST><TITLE>French ISPs</TITLE>
+    <ITEM><X><T>SFR</T><A>http://www.sfr.fr/</A><L>fr</L><F>HTML</F></X>
+      (<X><T>WebMail</T><A>http://webmail-adsl.sfr.fr</A><L>fr</L><F>HTML</F></X>)</ITEM>
+    <ITEM><X><T>numericable</T><A>http://www.noos.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Orange</T><A>http://www.orange.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Free</T><A>http://www.free.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Alice</T><A>http://www.aliceadsl.fr</A><L>fr</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+</SLIST><BR/>
 
-<B>DNS</B><BR/>
-reverse:
-<X><T>12dt</T><A>http://remote.12dt.com/rns/</A><L>en</L><F>HTML</F></X><BR/>
-both:
-<X><T>bankes.com</T><A>http://www.bankes.com/nslookup.htm</A><L>en</L><F>HTML</F></X>,
-<X><T>Ziring</T><A>http://cgibin.erols.com/ziring/cgi-bin/nsgate/gate.pl</A><L>en</L><F>HTML</F></X><BR/>
-WhoIs:
-<X><T>Who.is</T><A>http://www.who.is/</A><L>en</L><F>HTML</F></X>,
-<X><T>Europe</T><A>http://www.ripe.net/cgi-bin/whois</A><L>en</L><F>HTML</F></X><BR/>
-<BR/>
-
-<B>miscellaneous</B><BR/>
-devices:
-<X><T>Austria's telerobot</T><A>http://telerobot.mech.uwa.edu.au/Telerobot/index.html</A><L>en</L><F>HTML</F></X><BR/>
-barcodes:
-<X><T>UPC</T><A>http://www.upcdatabase.com/</A><L>en</L><F>HTML</F></X><BR/>
-statistics:
-<X><T>Internet Traffic Report</T><A>http://www.internettrafficreport.com/</A><L>en</L><F>HTML</F></X><BR/>
-traceroute:
-<X><T>traceroute.org</T><A>http://www.traceroute.org/</A><L>en</L><F>HTML</F></X><BR/>
-ADSL speed test:
-<X><T>MacBidouille</T><A>http://speedtest.macbidouille.com</A><L>fr</L><F>HTML</F></X>,
-<X><T>CNET France</T><A>http://www.cnetfrance.fr/services/speedtest</A><L>fr</L><F>HTML</F></X>,
-<X><T>60 Millions de Consommateurs</T><A>http://www.60millions-mag.com/outils/testeur_de_connexion</A><L>fr</L><F>HTML</F></X><BR/>
+<SLIST><TITLE><B>miscellaneous</B></TITLE>
+  <ITEM><CLIST><TITLE>barcodes</TITLE>
+    <ITEM><X><T>UPC</T><A>http://www.upcdatabase.com/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>statistics</TITLE>
+    <ITEM><X><T>Internet Traffic Report</T><A>http://www.internettrafficreport.com/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>traceroute</TITLE>
+    <ITEM><X><T>traceroute.org</T><A>http://www.traceroute.org/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>ADSL speed test</TITLE>
+    <ITEM><X><T>60 Millions de Consommateurs</T><A>http://www.60millions-mag.com/outils/testeur_de_connexion</A><L>fr</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+</SLIST><BR/>
 
 <LINE/>
 <BR/>
@@ -157,12 +166,12 @@ ADSL speed test:
   <ITEM><BLIST><TITLE>Search</TITLE>
     <ITEM><BLIST><TITLE>Google</TITLE>
       <ITEM><ARTICLE><X><T>Google: "Goggles Does NOT Do Face Recognition"</T><A>http://spectrum.ieee.org/tech-talk/consumer-electronics/portable-devices/google-goggles-does-not-do-face-recognition</A><L>en</L><F>HTML</F></X><AUTHOR>Sally Adee</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE><COMMENT>Google says it will deliver its visual search before the end of the year, but it will not support facial recognition, despite the fact it already has the technology.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X quality='-1' protection='free_registration'><T>10 Concerns With Google Instant</T><ST>Instant is a dramatic move and will likely change Web business and how consumers use the Web in a number of ways</ST><A>http://www.devx.com/webdev/Article/45570</A><L>en</L><F>HTML</F></X><AUTHOR>Alex Genadinik</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The author tries to predict the impact of Google instant search, but, in fact, he has very few things to say and his arguments are not very convincing.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality='-1'><T>10 Concerns With Google Instant</T><ST>Instant is a dramatic move and will likely change Web business and how consumers use the Web in a number of ways</ST><A>http://www.devx.com/webdev/Article/45570</A><L>en</L><F>HTML</F></X><AUTHOR>Alex Genadinik</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The author tries to predict the impact of Google instant search, but, in fact, he has very few things to say and his arguments are not very convincing.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Structured Search Engine</T><A>http://www.youtube.com/watch?v=5lCSDOuqv1A</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>19</MINUTE><SECOND>33</SECOND></DURATION></X><AUTHOR>Andrew Hogue</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>1</MONTH><DAY>19</DAY></DATE><COMMENT>A presentation of FreeBase (a semantic knowledge database) and Google Squared (a elements/attributes table generated from Internet data).</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Can Google survive its blind faith in the algorithm?</T><A>http://www.techrepublic.com/blog/hiner/can-google-survive-its-blind-faith-in-the-algorithm/9654</A><L>en</L><F>HTML</F></X><AUTHOR>Jason Hiner</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE><COMMENT>Google has more and more trouble getting rid of content farms and, while trying to do so, it impacts some good sites at the same time. The author claims search will be obsoleted by social networks. I disagree, I cannot see how social networks will help routinely find information when you need it.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Can Google survive its blind faith in the algorithm?</T><A>http://www.techrepublic.com/blog/hiner/can-google-survive-its-blind-faith-in-the-algorithm/9654</A><L>en</L><F>HTML</F></X><AUTHOR>Jason Hiner</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE><COMMENT>Google has more and more trouble getting rid of content farms and, while trying to do so, it impacts some good sites at the same time. The author claims search will be made obsolete by social networks. I disagree, I cannot see how social networks will help routinely find information when you need it.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
-  <ITEM><ARTICLE><X><T>The Epic Saga of The Well</T><A>http://www.wired.com/wired/archive/5.05/ff_well.html</A><L>en</L><F>HTML</F></X><AUTHOR>Katie Hafner</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>5</MONTH></DATE><COMMENT>The history of the most well known BBS.</COMMENT></ARTICLE></ITEM>
+  <ITEM><ARTICLE><X><T>The Epic Saga of The Well</T><A>http://www.wired.com/wired/archive/5.05/ff_well.html</A><L>en</L><F>HTML</F></X><AUTHOR>Katie Hafner</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>5</MONTH></DATE><COMMENT>The history of the most well-known BBS.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X quality='-1'><T>Nicole Sullivan, "Don't Feed The Trolls" - Fluent 2012</T><A>http://www.youtube.com/watch?v=ulNSlES1Fds</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>12</MINUTE><SECOND>46</SECOND></DURATION></X><AUTHOR>Nicole Sullivan</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE><COMMENT>How to deal with trolls and not being a troll oneself.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Une banale histoire de proc&#xE8;s sur Internet</T><A>http://vidberg.blog.lemonde.fr/2013/07/20/une-banale-histoire-de-proces-sur-internet/</A><L>fr</L><F>HTML</F></X><AUTHOR>Martin Vidberg</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE><COMMENT>The story of the trial MyWittyGames vs Tric Trac.</COMMENT></ARTICLE></ITEM>
 </BLIST>
