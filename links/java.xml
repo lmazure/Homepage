@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <X quality="1"><T>Oracle</T><A>http://www.oracle.com/technetwork/java/index.html</A><L>en</L><F>HTML</F></X><BR/>
 
@@ -26,12 +26,14 @@ freeware:
 
 <X><T>archive</T><A>http://www.oracle.com/technetwork/java/archive-139210.html</A><L>en</L><F>HTML</F></X><BR/>
 
-JDK docs:
-<X><T>1.3</T><A>http://docs.oracle.com/javase/3/docs/index.html</A><L>en</L><F>HTML</F></X>,
-<X><T>1.4</T><A>http://docs.oracle.com/javase/4/docs/index.html</A><L>en</L><F>HTML</F></X>,
-<X><T>1.5</T><A>http://docs.oracle.com/javase/5/docs/index.html</A><L>en</L><F>HTML</F></X>,
-<X><T>1.6</T><A>http://docs.oracle.com/javase/6/docs/index.html</A><L>en</L><F>HTML</F></X>,
-<X><T>1.7</T><A>http://docs.oracle.com/javase/7/docs/index.html</A><L>en</L><F>HTML</F></X><BR/>
+<CLIST><TITLE>JDK docs</TITLE>
+  <ITEM><X><T>1.3</T><A>http://docs.oracle.com/javase/3/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>1.4</T><A>http://docs.oracle.com/javase/4/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>1.5</T><A>http://docs.oracle.com/javase/5/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>1.6</T><A>http://docs.oracle.com/javase/6/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>1.7</T><A>http://docs.oracle.com/javase/7/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>1.8</T><A>http://docs.oracle.com/javase/8/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+</CLIST>
 
 <ANCHOR>javadoc</ANCHOR><X><T>javadoc</T><A>http://docs.oracle.com/javase/6/docs/technotes/tools/windows/javadoc.html</A><L>en</L><F>HTML</F></X>:
 <X><T>FAQ</T><A>http://www.oracle.com/technetwork/java/javase/downloads/index-136934.html</A><L>en</L><F>HTML</F></X>,
@@ -253,6 +255,9 @@ test:
       <ITEM><ARTICLE><X><T>Showtime! Java 7 is here</T><A>http://www.oraclejavamagazine-digital.com/javamagazine/premiere2011?pg=21#pg21</A><L>en</L><F>HTML</F></X><AUTHOR>Mark Reinhold</AUTHOR><AUTHOR>Michael Meloan</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>9</MONTH></DATE><COMMENT>Yet another quick overview of the new features.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Java 8</TITLE>
+      <ITEM><ARTICLE><X><T>API Stream &#x2013; Une nouvelle fa&#xE7;on de g&#xE9;rer les Collections en Java 8</T><A>http://blog.ippon.fr/2014/03/17/api-stream-une-nouvelle-facon-de-gerer-les-collections-en-java-8/</A><L>fr</L><F>HTML</F></X><AUTHOR>Luc Cl&#xE9;ment</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>An overview of <CODEROUTINE>Stream</CODEROUTINE>s.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Java 8 &#x2013; Interfaces fonctionnelles</T><A>http://blog.ippon.fr/2014/03/18/java-8-interfaces-fonctionnelles/</A><L>fr</L><F>HTML</F></X><AUTHOR>Alexis Seigneurin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE><COMMENT>An overview of Functional Interfaces.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Java 8 &#x2013; Gestion du temps</T><A>http://blog.ippon.fr/2014/03/19/java-8-gestion-du-temps/</A><L>fr</L><F>HTML</F></X><AUTHOR>Pierre Templier</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>19</DAY></DATE><COMMENT>An overview of <CODEROUTINE>java.time</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java 8 language changes</T><ST>Learn how Lambda expressions and changes to interface classes make Java 8 a new language</ST><A>http://www.ibm.com/developerworks/library/j-java8lambdas/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>A short overview of lambda expressions.</COMMENT></ARTICLE></ITEM>
   <ITEM><ARTICLE><X><T>Lambda: A Peek Under the Hood</T><A>http://parleys.com/play/5251c164e4b0a43ac1212459/about</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>59</MINUTE><SECOND>5</SECOND></DURATION></X><AUTHOR>Brian Goetz</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE><COMMENT>An explanation on how are implemented lambdas and the rational for this implementation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>JVM concurrency: Java 8 concurrency basics</T><ST>See how Java 8 features make concurrent programming easier</ST><A>http://www.ibm.com/developerworks/library/j-jvmc2/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>A presentation (too short to be usable) of <CODEROUTINE>CompletableFuture</CODEROUTINE>s and <CODEROUTINE>Stream</CODEROUTINE>s.</COMMENT></ARTICLE></ITEM>
