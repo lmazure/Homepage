@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Games</TITLE>
 <PATH>links/games.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE>Puzzles</TITLE>
@@ -19,24 +19,25 @@
 </BLIST>
 
 <BLIST><TITLE>Board games</TITLE>
-  <ITEM>Chess:
-    <X><T>spawk.fish</T><A>http://spawk.fish</A><L>en</L><F>HTML</F></X>
-  </ITEM>
+  <ITEM><CLIST><TITLE>Chess</TITLE>
+    <ITEM><X><T>spawk.fish</T><A>http://spawk.fish</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
   <ITEM><X><T>Martin Fowler's Eurogames</T><A>http://martinfowler.com/articles/eurogames</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>F&#xE9;d&#xE9;ration Fran&#xE7;aise de GO</T><A>http://ffg.jeudego.org</A><L>fr</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>blokus</T><A>http://www.blokus.com</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Pentago</T><A>http://pentago.logrys.org.ua/pentago.php</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Morpion Solitaire</T><A>http://www.morpionsolitaire.com</A><L>fr</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Wazabi</T><A>http://www.wazabi-online.com</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Tantrix</T><A>http://www.tantrix.com</A><L>en</L><F>HTML</F></X>:
-    <X><T>online puzzles</T><A>http://www.shockwave.com/gamelanding/tantrix.jsp</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><CLIST><TITLE><X><T>Tantrix</T><A>http://www.tantrix.com</A><L>en</L><F>HTML</F></X></TITLE>
+    <ITEM><X><T>online puzzles</T><A>http://www.shockwave.com/gamelanding/tantrix.jsp</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
   <ITEM><X><T>Dots and Boxes</T><A>http://en.wikipedia.org/wiki/Dots_and_Boxes</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><BLIST><TITLE>Role-playing</TITLE>
     <ITEM><X><T>Insectes &amp; Compagnie</T><A>http://imaginez.net.free.fr/jeu/telecharger/telecharger.htm</A><L>fr</L><F>HTML</F></X></ITEM>
-    <ITEM>Pathfinder:
-      <X><T>pathfinder-fr.org</T><A>http://www.pathfinder-fr.org</A><L>fr</L><F>HTML</F></X>,
-      <X><T>d20pfsrd</T><A>http://www.d20pfsrd.com</A><L>en</L><F>HTML</F></X>
-    </ITEM>
+    <ITEM><CLIST><TITLE>Pathfinder</TITLE>
+      <ITEM><X><T>pathfinder-fr.org</T><A>http://www.pathfinder-fr.org</A><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>d20pfsrd</T><A>http://www.d20pfsrd.com</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
   </BLIST></ITEM>
 </BLIST>
 
@@ -62,6 +63,7 @@
   <ITEM><X><T>FingerTime.com</T><A>http://www.fingertime.com</A><L>fr</L><F>HTML</F></X></ITEM>
   <ITEM><X quality='1'><T>logicieleducatif.fr</T><A>http://www.logicieleducatif.fr</A><L>fr</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>code.org</T><A>https://studio.code.org</A><L>fr</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>Inspirograph</T><A>http://nathanfriend.io/inspirograph/</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
 <LINE/>

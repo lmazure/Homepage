@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 
 <X><T>Open Directory</T><A>http://dmoz.org/Computers/Software/Software_Engineering/</A><L>en</L><F>HTML</F></X>,
@@ -15,7 +15,7 @@ O'Reilly's CD bookshelf:
 <X><T>www.c3.hu</T><A>http://www.c3.hu/docs/oreilly</A><L>en</L><F>HTML</F></X><BR/>
 
 <BLIST><TITLE>Software theory</TITLE>
-<ITEM><X><T>CiteSeer</T><A>http://citeseer.ist.psu.edu/cs</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>CiteSeer</T><A>http://citeseer.ist.psu.edu/cs</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 
 <BLIST><TITLE>Aspect programming</TITLE>
@@ -66,6 +66,7 @@ O'Reilly's CD bookshelf:
     <ITEM><ARTICLE><X><T>The Open Closed Principle</T><A>http://blog.8thlight.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE><COMMENT>You should be able to extend the behavior of a system without having to modify that system. This is what plugins achieve.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Visualization Mnemonics for Software Principles</T><A>http://www.daedtech.com/visualization-mnemonics-for-software-principles</A><L>en</L><F>HTML</F></X><AUTHOR>Erik Dietrich</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>15</DAY></DATE><COMMENT>This blog entry will not learn the software first principles (SOLID + law of Demeter), but tells some funny stories to remember them.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>SOLID Deconstruction</T><A>http://yowconference.com.au/slides/yow2013/Henney-SOLIDDeconstruction.pdf</A><L>en</L><F>PDF</F></X><X><T>SOLID Deconstruction</T><A>https://github.com/newmana/solid-deconstructed/blob/master/Henney-SOLIDDeconstruction.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Jakub Hol&#xFD;</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>Yet another presentation of the SOLID principles.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>What Is Assumed When Deferring Database Decisions?</T><A>https://blog.8thlight.com/patrick-gombert/2016/04/18/deferring-database.html</A><L>en</L><F>HTML</F></X><AUTHOR>Patrick Gombert</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE><COMMENT>The choice of the database is not really a technical detail, the data access patterns of the application limit the choice of the database.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Beck's Design Rules</TITLE>
     <ITEM><ARTICLE><X><T>Clean Code: Four Simple Design Rules &#x2013; Obligatory Read</T><A>http://java.dzone.com/articles/clean-code-four-simple-design</A><L>en</L><F>HTML</F></X><AUTHOR>Jakub Hol&#xFD;</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>Kent Beck's Four Simple Design Rules:<BR/>- Runs all the tests<BR/>- Contains no duplications<BR/>- Expresses the intent of the programmers<BR/>- Minimizes the number of classes and methods</COMMENT></ARTICLE></ITEM>
