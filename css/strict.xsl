@@ -9,6 +9,8 @@
     <head>
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <link rel="icon" type="image/png" href="../icon.png" />
+    <xsl:comment>[if IE]&gt;&lt;link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/&gt;&lt;![endif]</xsl:comment>
     <title>
       <xsl:value-of select="/PAGE/TITLE"/>
     </title>
