@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>C#</TITLE>
 <PATH>links/csharp.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 
 <X status='obsolete'><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_csharp.html</A><L>en</L><F>HTML</F></X>
@@ -76,6 +76,15 @@ IDEs:
       <ITEM><ARTICLE><X><T>The Future of C#</T><A>http://channel9.msdn.com/Events/Lang-NEXT/Lang-NEXT-2014/CSharp</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>37</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR>Dustin Campbell</AUTHOR><AUTHOR>Mads Torgersen</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE><COMMENT>Roslyn and some new C# 5 features.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Top 10 C# 6.0 Language Features</T><A>http://www.developer.com/net/csharp/top-10-c-6.0-language-features.html</A><L>en</L><F>HTML</F></X><AUTHOR>Arun Karthick</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>12</MONTH><DAY>10</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>What's New In C# 6.0</T><A>http://channel9.msdn.com/events/Visual-Studio/Connect-event-2014/116</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>7</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR>Mads Torgersen</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE><COMMENT>A quick presentation of the C# 6 features (only syntactic sugars), the same as than the previous article.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>7.0</TITLE>
+      <ITEM><BLIST><TITLE>Exploring C# 7 </TITLE>
+        <ITEM><ARTICLE><X><T>Exploring C# 7 - Binary Literals</T><A>https://www.youtube.com/watch?v=MTfW9gdnMug</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>3</MINUTE><SECOND>2</SECOND></DURATION></X><AUTHOR>Josh Varty</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>Binary litterals (with the <CODEROUTINE>0b</CODEROUTINE> prefix) and using underscore to group digits.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Exploring C# 7 - Local Functions</T><A>https://www.youtube.com/watch?v=7JBpDZL0lfk</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>13</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR>Josh Varty</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>Local functions (i.e. functions in functions).</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Exploring C# 7 - Enabling C# 7 Features in Roslyn</T><A>https://www.youtube.com/watch?v=SMIfb0-U8sE</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>14</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR>Josh Varty</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE><COMMENT>Getting Roslyn from Github, changing its code to enable the new features and compiling it.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Exploring C# 7 - Pattern Matching</T><A>https://www.youtube.com/watch?v=QzjZUt-APWg</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>14</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR>Josh Varty</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>Two possible syntaxes for doing class matching on an object.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><ARTICLE><X><T>The Future of C#</T><A>https://www.youtube.com/watch?v=eVgEkJGM_wM</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>46</MINUTE><SECOND>53</SECOND></DURATION></X><AUTHOR>Mads Torgersen</AUTHOR><AUTHOR>Dustin Campbell</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>27</DAY></DATE><COMMENT>A presentation of the features considered for C# 7 and Visual Studio 15.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>LINQ</TITLE>
@@ -157,12 +166,6 @@ IDEs:
     <ITEM><ARTICLE><X><T>The Roslyn Project - Meet the Design Team</T><A>http://channel9.msdn.com/Blogs/Charles/The-Roslyn-Project-Meet-the-Design-Team</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>33</MINUTE><SECOND>43</SECOND></DURATION></X><AUTHOR>Charles</AUTHOR><AUTHOR>Anders Hejlsberg</AUTHOR><AUTHOR>Karen Ng</AUTHOR><AUTHOR>Matt Warren</AUTHOR><AUTHOR>Peter Golde</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE><COMMENT>A presentation of the Roslyn project: the new C# and Visual Basic compilers.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>10 Questions, 10 Answers on Roslyn</T><A>http://visualstudiomagazine.com/articles/2012/03/20/10-questions-10-answers-on-roslyn.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Joe Kunk</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE><COMMENT>Some information about Roslyn.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>.NET Compiler Platform ("Roslyn") for the Rest of Us</T><A>http://channel9.msdn.com/Blogs/funkyonex/-NET-Compiler-Platform-Roslyn-for-the-Rest-of-Us</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>30</MINUTE><SECOND>45</SECOND></DURATION></X><AUTHOR>Beth Massi</AUTHOR><AUTHOR>Dustin Campbell</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>24</DAY></DATE><COMMENT>Some information about Roslyn: some refactoring tools in VS 2014 CTP (these tools exist in some other IDEs for years&#x2026;), better C#/VB integration&#x2026;</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>C# 7 possible features</TITLE>
-      <ITEM><ARTICLE><X><T>Exploring C# 7 - Binary Literals</T><A>https://www.youtube.com/watch?v=MTfW9gdnMug</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>3</MINUTE><SECOND>2</SECOND></DURATION></X><AUTHOR>Josh Varty</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>Binary litterals (with the <CODEROUTINE>0b</CODEROUTINE> prefix) and using underscore to group digits.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Exploring C# 7 - Local Functions</T><A>https://www.youtube.com/watch?v=7JBpDZL0lfk</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>13</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR>Josh Varty</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>Local functions (i.e. functions in functions).</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Exploring C# 7 - Enabling C# 7 Features in Roslyn</T><A>https://www.youtube.com/watch?v=SMIfb0-U8sE</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>14</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR>Josh Varty</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE><COMMENT>Getting Roslyn from Github, changing its code to enable the new features and compiling it.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Exploring C# 7 - Pattern Matching</T><A>https://www.youtube.com/watch?v=QzjZUt-APWg</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>14</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR>Josh Varty</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>Two possible syntaxes for doing class matching on an object.</COMMENT></ARTICLE></ITEM>
-    </BLIST></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Yet Another Language Geek</TITLE>
     <ITEM><ARTICLE><X><T>Continuation-Passing Style</T><A>http://blogs.msdn.com/b/wesdyer/archive/2007/12/22/continuation-passing-style.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Wes Dyer</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>12</MONTH><DAY>22</DAY></DATE><COMMENT>The application of Continuation-Passing Style to C#.</COMMENT></ARTICLE></ITEM>
