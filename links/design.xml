@@ -3,16 +3,16 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 
 <X><T>Open Directory</T><A>http://dmoz.org/Computers/Software/Software_Engineering/</A><L>en</L><F>HTML</F></X>,
 <X><T>FAQ</T><A>http://www.faqs.org/faqs/software-eng/</A><L>en</L><F>HTML</F></X><BR/>
 
 O'Reilly's CD bookshelf:
-(<X><T>S</T><A>http://www.google.com/search?q=%22O%27Reilly%27s+CD+bookshelf%22</A><L>en</L><F>HTML</F></X>)
-<X><T>unix.org.ua</T><A>http://www.unix.org.ua/orelly/</A><L>en</L><F>HTML</F></X>,
-<X><T>www.c3.hu</T><A>http://www.c3.hu/docs/oreilly</A><L>en</L><F>HTML</F></X><BR/>
+(<X status='obsolete'><T>S</T><A>http://www.google.com/search?q=%22O%27Reilly%27s+CD+bookshelf%22</A><L>en</L><F>HTML</F></X>)
+<X status='obsolete'><T>unix.org.ua</T><A>http://www.unix.org.ua/orelly/</A><L>en</L><F>HTML</F></X>,
+<X status='obsolete'><T>www.c3.hu</T><A>http://www.c3.hu/docs/oreilly</A><L>en</L><F>HTML</F></X><BR/>
 
 <BLIST><TITLE>Software theory</TITLE>
   <ITEM><X><T>CiteSeer</T><A>http://citeseer.ist.psu.edu/cs</A><L>en</L><F>HTML</F></X></ITEM>
@@ -112,7 +112,9 @@ O'Reilly's CD bookshelf:
   <ITEM><BLIST><TITLE>Microservices</TITLE>
     <ITEM><ARTICLE><X><T>Microservices and Jars</T><A>http://blog.cleancoder.com/uncle-bob/2014/09/19/MicroServicesAndJars.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>Microservices is the latest fad, but the most important is to split the system into parts using a plugin architecture, then setup service only at some boundaries.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Clean Micro-service Architecture</T><A>http://blog.cleancoder.com/uncle-bob/2014/10/01/CleanMicroserviceArchitecture.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>A similar blog: using microservices is a deployment detail. By adopting a Clean Architecture, you will be able to switch to microservices if scaling requires it.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Expecting Failures In Microservices and Working Around Them</T><A>http://www.codeguru.com/csharp/csharp/cs_network/expecting-failures-in-microservices-and-working-around-them.html</A><L>en</L><F>HTML</F></X><AUTHOR>Christian Horsdal</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>23</DAY></DATE><COMMENT>Some basic but good design advice.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>A Microscope on Microservices</T><A>http://techblog.netflix.com/2015/02/a-microscope-on-microservices.html</A><L>en</L><F>HTML</F></X><AUTHOR>Coburn Watson</AUTHOR><AUTHOR>Scott Emmons</AUTHOR><AUTHOR>Brendan Gregg</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE><COMMENT>An impressive description of the monitoring tools used by Netflix.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Performance Issue Considerations for Microservices APIs</T><A>http://blog.smartbear.com/apm/performance-issue-considerations-for-microservices-apis/</A><L>en</L><F>HTML</F></X><AUTHOR>John Mueller</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE><COMMENT>This article does not speak only about performance, but it contains some good basic advice.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Expecting Failures In Microservices and Working Around Them</T><A>http://www.codeguru.com/csharp/csharp/cs_network/expecting-failures-in-microservices-and-working-around-them.html</A><L>en</L><F>HTML</F></X><AUTHOR>Christian Horsdal</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>23</DAY></DATE><COMMENT>Also some basic but good design advice.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Miscellaneous</TITLE>
     <ITEM><ARTICLE><X><T>A Field Guide to Boxology: Preliminary Classification of Architectural Styles for Software Systems</T><A>http://www-2.cs.cmu.edu/afs/cs.cmu.edu/project/vit/www/paper_abstracts/Boxology.html</A><L>en</L><F>HTML</F></X><AUTHOR>Mary Shaw</AUTHOR><AUTHOR>Paul Clements</AUTHOR><DATE><YEAR>1996</YEAR><MONTH>4</MONTH></DATE><COMMENT>After trying to define architecture styles, the authors propose a classification of these ones.</COMMENT></ARTICLE></ITEM>
