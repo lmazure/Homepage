@@ -3,37 +3,40 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript Libraries</TITLE>
 <PATH>links/jslib.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 
-toolkits:
-<X><T>Yahoo! User Interface Library</T><A>http://developer.yahoo.com/yui/</A><L>en</L><F>HTML</F></X>,
-<X><T>Closure Library</T><A>http://code.google.com/closure/library/</A><L>en</L><F>HTML</F></X>,
-<X><T>jQuery</T><A>http://jquery.com</A><L>en</L><F>HTML</F></X>,
-<X><T>prototype</T><A>http://www.prototypejs.org</A><L>en</L><F>HTML</F></X>,
-<X><T>MooTools</T><A>http://mootools.net</A><L>en</L><F>HTML</F></X>,
-<X><T>Dojo</T><A>http://dojotoolkit.org</A><L>en</L><F>HTML</F></X>,
-<X><T>DWR</T><A>http://directwebremoting.org</A><L>en</L><F>HTML</F></X>,
-<X><T>extJS</T><A>http://extjs.com</A><L>en</L><F>HTML</F></X>,
-<X><T>qooxdoo</T><A>http://qooxdoo.org</A><L>en</L><F>HTML</F></X>,
-<X><T>Echo</T><A>http://echo.nextapp.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Meteor</T><A>https://www.meteor.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Underscore</T><A>http://underscorejs.org</A><L>en</L><F>HTML</F></X>,
-<X><T>AngularJS</T><A>https://angularjs.org</A><L>en</L><F>HTML</F></X>,
-<X><T>Durandal</T><A>http://durandaljs.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Knockout</T><A>http://knockoutjs.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Bootstrap</T><A>http://getbootstrap.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Flux</T><A>http://fluxxor.com/what-is-flux.html</A><L>en</L><F>HTML</F></X>,
-<X><T>Ampersand.js</T><A>http://ampersandjs.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Backbone.js</T><A>http://backbonejs.org</A><L>en</L><F>HTML</F></X>,
-<X><T>Ember.js</T><A>http://emberjs.com</A><L>en</L><F>HTML</F></X>,
-<X><T>React</T><A>http://facebook.github.io/react</A><L>en</L><F>HTML</F></X><BR/>
-
-benchmarks:
-<X><T>TaskSpeed</T><A>http://dante.dojotoolkit.org/taskspeed/</A><L>en</L><F>HTML</F></X><BR/>
+<SLIST>
+  <ITEM><CLIST><TITLE>toolkits</TITLE>
+    <ITEM><X><T>Yahoo! User Interface Library</T><A>http://developer.yahoo.com/yui/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Closure Library</T><A>http://code.google.com/closure/library/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>jQuery</T><A>http://jquery.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>prototype</T><A>http://www.prototypejs.org</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>MooTools</T><A>http://mootools.net</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Dojo</T><A>http://dojotoolkit.org</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>DWR</T><A>http://directwebremoting.org</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>extJS</T><A>http://extjs.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>qooxdoo</T><A>http://qooxdoo.org</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Echo</T><A>http://echo.nextapp.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Meteor</T><A>https://www.meteor.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Underscore</T><A>http://underscorejs.org</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>AngularJS</T><A>https://angularjs.org</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Durandal</T><A>http://durandaljs.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Knockout</T><A>http://knockoutjs.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Bootstrap</T><A>http://getbootstrap.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Flux</T><A>http://fluxxor.com/what-is-flux.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Ampersand.js</T><A>http://ampersandjs.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Backbone.js</T><A>http://backbonejs.org</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Ember.js</T><A>http://emberjs.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>React</T><A>http://facebook.github.io/react</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>benchmarks</TITLE>
+    <ITEM><X><T>TaskSpeed</T><A>http://dante.dojotoolkit.org/taskspeed/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+</SLIST>
 
 <LINE/>
-<BR/>
+
 <BLIST>
 <TITLE>Articles</TITLE>
   <ITEM><ARTICLE><X><T>Opinionated rundown of JS frameworks</T><A>http://blog.andyet.com/2014/08/13/opinionated-rundown-of-js-frameworks</A><L>en</L><F>HTML</F></X><AUTHOR>Henrik Joreteg</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>8</MONTH><DAY>13</DAY></DATE><COMMENT>A comparison of the main current JavaScript frameworks and some information about Ampersand.js, the framework the author contributed to create.</COMMENT></ARTICLE></ITEM>

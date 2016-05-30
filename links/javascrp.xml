@@ -3,52 +3,55 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript</TITLE>
 <PATH>links/javascrp.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 
-<X status='obsolete'><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_javascript.html</A><L>en</L><F>HTML</F></X>
-(<X status='obsolete'><T>M</T><A>http://www.objenv.com/cetus/oo_javascript.html</A><L>en</L><F>HTML</F></X>),
-<X><T>OpenDirectory</T><A>http://dmoz.org/Computers/Programming/Languages/JavaScript/</A><L>en</L><F>HTML</F></X> <BR/>
-<X><T>ECMA-262 standard</T><A>http://www.ecma-international.org/publications/standards/Ecma-262.htm</A><L>en</L><F>HTML</F></X><BR/>
-
-<X status='obsolete'><T>Voodoo's Introduction to Javascript</T><A>http://oopweb.com/JavaScript/Documents/jsintro/Volume/tutorial.htm</A><L>en</L><F>HTML</F></X>,
-<X><T>W3 Schools</T><A>http://www.w3schools.com/js</A><L>en</L><F>HTML</F></X>,
-<X><T>JavaScript Garden</T><A>http://bonsaiden.github.com/JavaScript-Garden/</A><L>en</L><F>HTML</F></X><BR/>
-
-profiling:
-<X><T>spy-js</T><A>http://spy-js.com</A><L>en</L><F>HTML</F></X><BR/>
-
-code documentation:
-<X><T>JSDoc</T><A>https://github.com/jsdoc3/jsdoc</A><L>en</L><F>HTML</F></X><BR/>
-
-FAQ:
-<X><T>Meta-FAQ</T><A>http://www.faqs.org/faqs/computer-lang/java/javascript/</A><L>en</L><F>HTML</F></X><BR/>
-
-directory:
-<X><T>The JavaScript Source</T><A>http://javascript.internet.com</A><L>en</L><F>HTML</F></X><BR/>
-
-minifiers:
-<X status='obsolete'><T>JSMin</T><A>http://crockford.com/javascript/jsmin</A><L>en</L><F>HTML</F></X>,
-<X><T>Dojo ShrinkSafe</T><A>http://shrinksafe.dojotoolkit.org/</A><L>en</L><F>HTML</F></X>,
-<X><T>Dean Edwards Packer</T><A>http://dean.edwards.name/packer/</A><L>en</L><F>HTML</F></X>,
-<X><T>MiniME</T><A>http://www.toptensoftware.com/minime/</A><L>en</L><F>HTML</F></X>,
-<X><T>YUI Compressor</T><A>http://developer.yahoo.com/yui/compressor/</A><L>en</L><F>HTML</F></X>,
-<X><T>Microsoft Ajax Minifier</T><A>http://ajaxmin.codeplex.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Closure Compiler</T><A>http://code.google.com/closure/compiler/</A><L>en</L><F>HTML</F></X>,
-<X><T>Wikipedia list</T><A>http://en.wikipedia.org/wiki/Minification_(programming)</A><L>en</L><F>HTML</F></X><BR/>
-
-Java implementations:
-<X><T>Rhino</T><A>http://www.mozilla.org/rhino/</A><L>en</L><F>HTML</F></X><BR/>
-
-demos:
-<X><T>Chrome Experiments</T><A>http://www.chromeexperiments.com</A><L>en</L><F>HTML</F></X><BR/>
-
-mashups:
-<X><T>ProgrammableWeb</T><A>http://www.programmableweb.com</A><L>en</L><F>HTML</F></X><BR/>
-
-<X><T>ES6 Fiddle</T><A>http://www.es6fiddle.net</A><L>en</L><F>HTML</F></X><BR/>
-
-<X><T>personal notes</T><A>../notes/js.htm</A><L>en</L><F>HTML</F></X>
+<SLIST>
+  <ITEM><CLIST><TITLE>directories</TITLE>
+    <ITEM><X status='obsolete'><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_javascript.html</A><L>en</L><F>HTML</F></X>
+     (<X status='obsolete'><T>M</T><A>http://www.objenv.com/cetus/oo_javascript.html</A><L>en</L><F>HTML</F></X>)</ITEM>
+<ITEM><X><T>OpenDirectory</T><A>http://dmoz.org/Computers/Programming/Languages/JavaScript/</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>ECMA-262 standard</T><A>http://www.ecma-international.org/publications/standards/Ecma-262.htm</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>tutorials</TITLE>
+    <ITEM><X status='obsolete'><T>Voodoo's Introduction to Javascript</T><A>http://oopweb.com/JavaScript/Documents/jsintro/Volume/tutorial.htm</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>W3 Schools</T><A>http://www.w3schools.com/js</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>JavaScript Garden</T><A>http://bonsaiden.github.com/JavaScript-Garden/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>profiling</TITLE>
+    <ITEM><X><T>spy-js</T><A>http://spy-js.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>code documentation</TITLE>
+    <ITEM><X><T>JSDoc</T><A>https://github.com/jsdoc3/jsdoc</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>FAQ</TITLE>
+    <ITEM><X><T>Meta-FAQ</T><A>http://www.faqs.org/faqs/computer-lang/java/javascript/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>directory</TITLE>
+    <ITEM><X><T>The JavaScript Source</T><A>http://javascript.internet.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>minifiers</TITLE>
+    <ITEM><X status='obsolete'><T>JSMin</T><A>http://crockford.com/javascript/jsmin</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Dojo ShrinkSafe</T><A>http://shrinksafe.dojotoolkit.org/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Dean Edwards Packer</T><A>http://dean.edwards.name/packer/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>MiniME</T><A>http://www.toptensoftware.com/minime/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>YUI Compressor</T><A>http://developer.yahoo.com/yui/compressor/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Microsoft Ajax Minifier</T><A>http://ajaxmin.codeplex.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Closure Compiler</T><A>http://code.google.com/closure/compiler/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Wikipedia list</T><A>http://en.wikipedia.org/wiki/Minification_(programming)</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>Java implementations</TITLE>
+    <ITEM><X><T>Rhino</T><A>http://www.mozilla.org/rhino/</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>demos</TITLE>
+    <ITEM><X><T>Chrome Experiments</T><A>http://www.chromeexperiments.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><CLIST><TITLE>mashups</TITLE>
+    <ITEM><X><T>ProgrammableWeb</T><A>http://www.programmableweb.com</A><L>en</L><F>HTML</F></X></ITEM>
+  </CLIST></ITEM>
+  <ITEM><X><T>ES6 Fiddle</T><A>http://www.es6fiddle.net</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>personal notes</T><A>../notes/js.htm</A><L>en</L><F>HTML</F></X></ITEM>
+</SLIST>
 
 <LINE/>
 <BR/>
