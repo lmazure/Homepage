@@ -22,19 +22,19 @@
     </xsl:if>
     </head>
     <body>
-      <div id="header">
+      <header>
         <h1><xsl:value-of select="/PAGE/TITLE"/></h1>
-      </div>
-      <div id="body">
+      </header>
+      <section>
         <xsl:if test="@status='unmaintained'">
           <div id="unmaintained">
             <xsl:text>This page is unmaintained. It may contain out-of-date data, broken links...</xsl:text>
           </div>
         </xsl:if>
         <xsl:apply-templates select="/PAGE/CONTENT"/>
-      </div>
+      </section>
       <hr id="footerseparator"/>
-      <div id ="footer">
+      <footer>
         <table class="footertable">
           <tr>
             <td>
@@ -95,7 +95,7 @@
             </td>
           </tr>
         </table>
-      </div>
+      </footer>
     </body>
   </html>
 </xsl:template>
