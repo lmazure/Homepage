@@ -3,10 +3,12 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java - multi-threading</TITLE>
 <PATH>links/javamt.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 
-<X><T>personal notes</T><A>../notes/javathread.htm</A><L>en</L><F>HTML</F></X>
+<SLIST>
+  <ITEM><X><T>personal notes</T><A>../notes/javathread.htm</A><L>en</L><F>HTML</F></X></ITEM>
+</SLIST>
 
 <LINE/>
 
@@ -55,6 +57,7 @@
     <ITEM><ARTICLE><X><T>JVM concurrency: To block, or not to block?</T><ST>Compare blocking and nonblocking approaches to handling asynchronous events in Java 8</ST><A>http://www.ibm.com/developerworks/library/j-jvmc3/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE><COMMENT>Using <CODEROUTINE>CompletableFuture</CODEROUTINE>s with a waiting thread or by combining them, and the performance / complexity of both solutions.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>JVM concurrency: Asynchronous event handling in Scala</T><ST>Learn blocking and nonblocking techniques, including easy nonblocking code with the async macro</ST><A>http://www.ibm.com/developerworks/library/j-jvmc4/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE><COMMENT>The same content as the previous article, but this time inScala with the special <CODEROUTINE>async</CODEROUTINE>/<CODEROUTINE>await</CODEROUTINE> macro.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>JVM concurrency: Acting asynchronously with Akka</T><ST>Build actor systems for concurrent applications</ST><A>http://www.ibm.com/developerworks/library/j-jvmc5/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>A presentation of Akka, an actor-based toolkit.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>JVM concurrency: Building actor applications with Akka</T><ST>Go beyond the basics to build applications that use actor interactions</ST><A>http://www.ibm.com/developerworks/library/j-jvmc6/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dennis Sosnoski</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>8</MONTH><DAY>12</DAY></DATE><COMMENT>More information on Akka.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
 </CONTENT>
