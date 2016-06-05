@@ -607,7 +607,6 @@
       <xsl:element name="a">
         <xsl:attribute name="href">javascript:do_email()</xsl:attribute>
         <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>contact me</xsl:element>
-
     </td>
   </tr>
 </xsl:template>
