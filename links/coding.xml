@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 
 <X><T>stackoverflow</T><A>http://stackoverflow.com</A><L>en</L><F>HTML</F></X><BR/>
@@ -391,6 +391,7 @@
     <ITEM><ARTICLE><X><T>Application Optimization on Linux Tutorial Material</T><A>http://www.akkadia.org/drepper/optimtut2.ps.gz</A><L>en</L><F>HTML</F></X><AUTHOR>Ulrich Drepper</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE><COMMENT>After a presentation of gprof, sprof, gcov and memprof, the author proposes an exercise to optimize a sample program. A paragraph contains some material of the previous article.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality='2'><T>We have it easy, but do we have it right?</T><A>https://www.youtube.com/watch?v=DKVRkfXrBpg</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>57</MINUTE><SECOND>19</SECOND></DURATION></X><AUTHOR>Amer Diwan</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE><COMMENT>A very good proof that performance evaluation is very difficult: very minor changes in the environment or in the executable have a large impact on the measured performance.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Parallel Revolution Has Started: Are You Part of the Solution or Part of the Problem?</T><A>https://www.youtube.com/watch?v=A2H_SrpAPZU</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>5</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR>David Patterson</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE><COMMENT>Random thoughts on parallelism: why CPUs are now multi-core? why software will have to effectively exploit paralelism? possible killer apps requiring yet further CPU performance improvements, autotunners, a simple performance model&#x2026;</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Performance of inline assembly: An analysis based on the computation of Fibonacci sequence</T><ST>Accelerating performance with inline assembly using IBM XL C/C++ compiler on Linux on z Systems</ST><A>http://www.ibm.com/developerworks/library/l-performance-of-inline-assembly-trs/index.html</A><L>en</L><F>HTML</F></X><AUTHOR>Anh Tuyen Tran</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE><COMMENT>A performance analysis of several Fibonacci implementations.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Assertions</TITLE>
     <ITEM><ARTICLE><X><T>Diagnosing Java code: Assertions and temporal logic in Java programming</T><ST>Introduce temporal logic to assertions to supplement testing</ST><A>http://www.50001.com/language/javaside/lec/java_ibm/%C0%DA%B9%D9%20%C7%C1%B7%CE%B1%D7%B7%A1%B9%D6%BF%A1%BC%AD%C0%C7%20Assertion%B0%FA%20temporal%20logic%20%28%BF%B5%B9%AE%29.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Eric E. Allen</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH></DATE><COMMENT>The author introduces the idea of temporal logic: assertions taking into account the execution sequence into account ("always", "sometime", "until" and "next").</COMMENT></ARTICLE></ITEM>
