@@ -435,6 +435,9 @@
 </xsl:template>
 
 <xsl:template match="SLIST">
+  <xsl:if test="count(./TITLE)>0">
+    <xsl:apply-templates select="./TITLE"/><br/>
+  </xsl:if>
   <xsl:apply-templates select="./TITLE"/><br/>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
@@ -444,7 +447,9 @@
 </xsl:template>
 
 <xsl:template match="BLIST">
-  <xsl:apply-templates select="./TITLE"/>
+  <xsl:if test="count(./TITLE)>0">
+    <xsl:apply-templates select="./TITLE"/>
+  </xsl:if>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
        <ul><xsl:apply-templates select="./ITEM"/></ul>
@@ -453,7 +458,9 @@
 </xsl:template>
 
 <xsl:template match="NLIST">
-  <xsl:apply-templates select="./TITLE"/>
+  <xsl:if test="count(./TITLE)>0">
+    <xsl:apply-templates select="./TITLE"/>
+  </xsl:if>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
        <ol><xsl:apply-templates select="./ITEM"/></ol>
@@ -462,7 +469,20 @@
 </xsl:template>
 
 <xsl:template match="CLIST">
-  <xsl:apply-templates select="./TITLE"/>:
+  <xsl:if test="count(./TITLE)>0">
+    <xsl:apply-templates select="./TITLE"/>:
+  </xsl:if>
+  <xsl:choose>
+     <xsl:when test="count(./ITEM)>0">
+       <xsl:apply-templates select="./ITEM"/>
+     </xsl:when>
+  </xsl:choose>
+</xsl:template>
+
+<xsl:template match="LLIST">
+  <xsl:if test="count(./TITLE)>0">
+    <h2><xsl:apply-templates select="./TITLE"/></h2>
+  </xsl:if>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
        <xsl:apply-templates select="./ITEM"/>
@@ -482,6 +502,12 @@
       <xsl:apply-templates/>
       <xsl:if test="position()&lt;last()" >
         <xsl:text>, </xsl:text>
+      </xsl:if>
+    </xsl:when>
+    <xsl:when test="name(parent::*)='LLIST'">
+      <xsl:apply-templates/>
+      <xsl:if test="position()&lt;last()" >
+        <hr class="line"/>
       </xsl:if>
     </xsl:when>
     <xsl:otherwise>
