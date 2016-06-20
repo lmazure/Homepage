@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE>Generalities</TITLE>
@@ -55,6 +55,13 @@
     <ITEM><X><T>T.S.T.</T><A>http://tst.codeplex.com</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
   <ITEM><X><T>personal notes</T><A>../notes/unittest.html</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+
+<BLIST><TITLE>Mutation testing</TITLE>
+  <ITEM><BLIST><TITLE>Java</TITLE>
+    <ITEM><X status='obsolete'><T>Jester</T><A>http://jester.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>PIT</T><A>http://pitest.org</A><L>en</L><F>HTML</F></X></ITEM>
+  </BLIST></ITEM>
 </BLIST>
 
 <BLIST><TITLE>BDD</TITLE>
@@ -354,6 +361,9 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Jasmine</TITLE>
       <ITEM><ARTICLE><X><T>Testing JavaScript Using the Jasmine Framework</T><A>http://www.htmlgoodies.com/beyond/javascript/testing-javascript-using-the-jasmine-framework.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Gravelle</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>9</MONTH></DATE><COMMENT>A short introduction to writing JavaScript unit tests using Jasmine.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Mutation testing</TITLE>
+  <ITEM><ARTICLE><X><T>Mutation Testing</T><A>http://blog.cleancoder.com/uncle-bob/2016/06/10/MutationTesting.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE><COMMENT>An introduction to mutation testing.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Performance testing</TITLE>
