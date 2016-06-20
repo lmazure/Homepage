@@ -438,7 +438,6 @@
   <xsl:if test="count(./TITLE)>0">
     <xsl:apply-templates select="./TITLE"/><br/>
   </xsl:if>
-  <xsl:apply-templates select="./TITLE"/><br/>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
        <xsl:apply-templates select="./ITEM"/>
