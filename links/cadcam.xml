@@ -5,28 +5,22 @@
 <PATH>links/cadcam.xml</PATH>
 <DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
-
-companies:
-<BLIST>
-<ITEM><X><T>Spatial technology</T><A>http://www.spatial.com/</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>Parametric Technology</T><A>http://www.ptc.com/</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>Tecnomatix</T><A>http://www.plm.automation.siemens.com/en_us/products/tecnomatix/index.shtml</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-
-3D scanning
-<BLIST>
-<ITEM><X><T>Trimble</T><A>http://www.trimble.com</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>Leica Geosystems</T><A>http://www.leica-geosystems.com</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-
-<LINE/>
-
-<BLIST><TITLE>Articles</TITLE>
-
-  <ITEM><ARTICLE><X><T>The Future of Design</T><A>https://www.youtube.com/watch?v=xNqs_S-zEBY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>3</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR>Elon Musk</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE><COMMENT>Using hand gestures, 3D vision, and 3D printers.</COMMENT></ARTICLE></ITEM>
-
-</BLIST>
-
+<LLIST>
+  <ITEM><SLIST>
+    <ITEM><BLIST><TITLE>companies</TITLE>
+      <ITEM><X><T>Spatial technology</T><A>http://www.spatial.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Parametric Technology</T><A>http://www.ptc.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Tecnomatix</T><A>http://www.plm.automation.siemens.com/en_us/products/tecnomatix/index.shtml</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>3D scanning</TITLE>
+      <ITEM><X><T>Trimble</T><A>http://www.trimble.com</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Leica Geosystems</T><A>http://www.leica-geosystems.com</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+  </SLIST></ITEM>
+  <ITEM><BLIST><TITLE>Articles</TITLE>
+    <ITEM><ARTICLE><X><T>The Future of Design</T><A>https://www.youtube.com/watch?v=xNqs_S-zEBY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>3</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR>Elon Musk</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE><COMMENT>Using hand gestures, 3D vision, and 3D printers.</COMMENT></ARTICLE></ITEM>
+  </BLIST></ITEM>
+</LLIST>
 </CONTENT>
 </PAGE>
 
