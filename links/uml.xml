@@ -5,155 +5,126 @@
 <PATH>links/uml.xml</PATH>
 <DATE><YEAR>2015</YEAR><MONTH>9</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
-
-<X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Methodologies/Modeling_Languages/Unified_Modeling_Language/</A><L>en</L><F>HTML</F></X>, 
-<X status='obsolete'><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_uml.html</A><L>en</L><F>HTML</F></X>
-(<X status='obsolete'><T>M</T><A>http://www.objenv.com/cetus/oo_uml.html</A><L>en</L><F>HTML</F></X>)<BR/>
-
-<X><T>OMG</T><A>http://www.uml.org</A><L>en</L><F>HTML</F></X>, 
-<X><T>IBM</T><A>http://www-306.ibm.com/software/rational/uml/</A><L>en</L><F>HTML</F></X>,
-<X><T>uml-diagrams.org</T><A>http://www.uml-diagrams.org</A><L>en</L><F>HTML</F></X><BR/>
-
-<X><T>Scott W. Ambler's Diagrams of UML 2.0</T><A>http://www.agilemodeling.com/essays/umlDiagrams.htm</A><L>en</L><F>HTML</F></X>, 
-<X><T>Scott W. Ambler's Modeling Style</T><A>http://www.agilemodeling.com/style</A><L>en</L><F>HTML</F></X>,
-<X><T>Kirill Fakhroutdinov's UML Diagrams</T><A>http://www.uml-diagrams.org</A><L>en</L><F>HTML</F></X><BR/>
-
-tutorials:
-<X><T>Laurent Piechocki</T><A>http://uml.free.fr</A><L>fr</L><F>HTML</F></X><BR/>
-
-XMI:
-<X><T>OMG</T><A>http://www.omg.org/technology/documents/formal/xmi.htm</A><L>en</L><F>HTML</F></X>, 
-<X><T>OASIS</T><A>http://www.oasis-open.org/cover/xmi.html</A><L>en</L><F>HTML</F></X><BR/>
-
-software:
-<X><T>Visual Paragdigm</T><A>http://www.visual-paradigm.com</A><L>en</L><F>HTML</F></X>,
-<X><T>Poseidon</T><A>http://www.gentleware.com</A><L>en</L><F>HTML</F></X><BR/>
-
-<BLIST><TITLE>Modelers</TITLE>
-  <ITEM><X><T>Umbrello</T><A>http://uml.sourceforge.net/index.php</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>ArgoUML</T><A>http://argouml.tigris.org/</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>inSight</T><A>http://www.klocwork.com/products/insight.asp</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Enterprise Architect</T><A>http://www.sparxsystems.com.au/products/ea.html</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-
-
-<X><T>personal notes</T><A>../notes/uml.html</A><L>en</L><F>HTML</F></X>
-
-<LINE/>
-
-<BLIST><TITLE><B>Article</B></TITLE>
-
-  <ITEM><BLIST><TITLE>Diagrams</TITLE>
-
-    <ITEM><BLIST><TITLE>Structural Diagrams</TITLE>
-
-
-      <ITEM>Class Diagram<BR/>
-shows the classes of the system, their inter-relationships, and the operations and attributes of the classes<BR/>
-        <ARTICLE><X><T>UML 2 Class Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/classDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-        <ARTICLE><X><T>UML Class Diagram Guidelines</T><A>http://www.agilemodeling.com/style/classDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Object Diagram<BR/>
-this is a class diagram containing no class<BR/>
-        <ARTICLE><X><T>UML 2 Object Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/objectDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Component Diagram<BR/>
-shows the dependencies among software components, including the classifiers that specify them (for example implementation classes) and the artifacts that implement them; such as source code files, binary code files, executable files, scripts<BR/>
-        <ARTICLE><X><T>UML 2 Component Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/componentDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-        <ARTICLE><X><T>UML Component Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/componentDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Deployment Diagram<BR/>
-depicts a static view of the run-time configuration of hardware nodes and the software components that run on those nodes<BR/>
-        <ARTICLE><X><T>UML 2 Deployment Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/deploymentDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-        <ARTICLE><X><T>UML Deployment Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/deploymentDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Composite Structure Diagram (UML 2)<BR/>
-depicts the internal structure of a classifier (such as a class, component, or use case), including the interaction points of the classifier to other parts of the system<BR/>
-        <ARTICLE><X><T>UML 2 Composite Structure Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/compositeStructureDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-      </ITEM>
-
+<LLIST>
+  <ITEM><SLIST>
+    <ITEM><CLIST><TITLE>directories</TITLE>
+      <ITEM><X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Methodologies/Modeling_Languages/Unified_Modeling_Language/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status='obsolete'><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_uml.html</A><L>en</L><F>HTML</F></X>
+        (<X status='obsolete'><T>M</T><A>http://www.objenv.com/cetus/oo_uml.html</A><L>en</L><F>HTML</F></X>)</ITEM>
+    </CLIST></ITEM>
+    <ITEM><CLIST>
+      <ITEM><X><T>OMG</T><A>http://www.uml.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>IBM</T><A>http://www-306.ibm.com/software/rational/uml/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>uml-diagrams.org</T><A>http://www.uml-diagrams.org</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><CLIST>
+      <ITEM><X><T>Scott W. Ambler's Diagrams of UML 2.0</T><A>http://www.agilemodeling.com/essays/umlDiagrams.htm</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Scott W. Ambler's Modeling Style</T><A>http://www.agilemodeling.com/style</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Kirill Fakhroutdinov's UML Diagrams</T><A>http://www.uml-diagrams.org</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><CLIST><TITLE>tutorials</TITLE>
+      <ITEM><X><T>Laurent Piechocki</T><A>http://uml.free.fr</A><L>fr</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><CLIST><TITLE>XMI</TITLE>
+      <ITEM><X><T>OMG</T><A>http://www.omg.org/technology/documents/formal/xmi.htm</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>OASIS</T><A>http://www.oasis-open.org/cover/xmi.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><CLIST><TITLE>software</TITLE>
+      <ITEM><X><T>Visual Paragdigm</T><A>http://www.visual-paradigm.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Poseidon</T><A>http://www.gentleware.com</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><BLIST><TITLE>Modelers</TITLE>
+      <ITEM><X><T>Umbrello</T><A>http://uml.sourceforge.net/index.php</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>ArgoUML</T><A>http://argouml.tigris.org/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>inSight</T><A>http://www.klocwork.com/products/insight.asp</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Enterprise Architect</T><A>http://www.sparxsystems.com.au/products/ea.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
-
-    <ITEM><BLIST><TITLE>Behavior Diagrams</TITLE>
-
-      <ITEM>Use Case Diagram<BR/>
-shows the relationships among actors and use cases within a system<BR/>
-        <ARTICLE><X><T>UML 2 Use Case Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/useCaseDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-        <ARTICLE><X><T>UML Use Case Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/useCaseDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Sequence Diagram<BR/>
-models the sequential logic, in effect the time ordering of messages between classifiers<BR/>
-        <ARTICLE><X><T>UML 2 Sequence Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/sequenceDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-        <ARTICLE><X><T>UML Sequence Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/sequenceDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Timing Diagram (UML 2)<BR/>
-depicts the change in state or condition of a classifier instance or role over time<BR/>
-        <ARTICLE><X><T>UML 2 Timing Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/timingDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Activity Diagram<BR/>
-depicts high-level business processes, including data flow, or to model the logic of complex logic within a system<BR/>
-        <ARTICLE><X><T>UML 2 Activity Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/activityDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-        <ARTICLE><X><T>UML Activity Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/activityDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Interaction Overview Diagram<BR/>
-A variant of an activity diagram which overviews the control flow within a system or business process. Each node/activity within the diagram can represent another interaction diagram.<BR/>
-        <ARTICLE><X><T>UML 2 Interaction Overview Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/interactionOverviewDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Collaboration Diagram (communication diagram in UML 2)<BR/>
-shows instances of classes, their interrelationships, and the message flow between them<BR/>
-        <ARTICLE><X><T>UML 2 Communication Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/communicationDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-        <ARTICLE><X><T>UML Collaboration Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/collaborationDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Statechart Diagram (state machine diagram in UML 2)<BR/>
-depict the dynamic behavior of an entity based on its response to events, showing how the entity reacts to various events depending on the current state that it is in<BR/>
-        <ARTICLE><X><T>UML 2 State Machine Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/stateMachineDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-        <ARTICLE><X><T>UML State Chart Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/stateChartDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
+    <ITEM><X><T>personal notes</T><A>../notes/uml.html</A><L>en</L><F>HTML</F></X></ITEM>
+  </SLIST></ITEM>
+  <ITEM><BLIST><TITLE><B>Article</B></TITLE>
+    <ITEM><BLIST><TITLE>Diagrams</TITLE>
+      <ITEM><BLIST><TITLE>Structural Diagrams</TITLE>
+        <ITEM>Class Diagram<BR/>
+  shows the classes of the system, their inter-relationships, and the operations and attributes of the classes<BR/>
+          <ARTICLE><X><T>UML 2 Class Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/classDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+          <ARTICLE><X><T>UML Class Diagram Guidelines</T><A>http://www.agilemodeling.com/style/classDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Object Diagram<BR/>
+  this is a class diagram containing no class<BR/>
+          <ARTICLE><X><T>UML 2 Object Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/objectDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Component Diagram<BR/>
+  shows the dependencies among software components, including the classifiers that specify them (for example implementation classes) and the artifacts that implement them; such as source code files, binary code files, executable files, scripts<BR/>
+          <ARTICLE><X><T>UML 2 Component Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/componentDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+          <ARTICLE><X><T>UML Component Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/componentDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Deployment Diagram<BR/>
+  depicts a static view of the run-time configuration of hardware nodes and the software components that run on those nodes<BR/>
+          <ARTICLE><X><T>UML 2 Deployment Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/deploymentDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+          <ARTICLE><X><T>UML Deployment Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/deploymentDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Composite Structure Diagram (UML 2)<BR/>
+  depicts the internal structure of a classifier (such as a class, component, or use case), including the interaction points of the classifier to other parts of the system<BR/>
+          <ARTICLE><X><T>UML 2 Composite Structure Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/compositeStructureDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+        </ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Behavior Diagrams</TITLE>
+        <ITEM>Use Case Diagram<BR/>
+  shows the relationships among actors and use cases within a system<BR/>
+          <ARTICLE><X><T>UML 2 Use Case Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/useCaseDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+          <ARTICLE><X><T>UML Use Case Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/useCaseDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Sequence Diagram<BR/>
+  models the sequential logic, in effect the time ordering of messages between classifiers<BR/>
+          <ARTICLE><X><T>UML 2 Sequence Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/sequenceDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+          <ARTICLE><X><T>UML Sequence Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/sequenceDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Timing Diagram (UML 2)<BR/>
+  depicts the change in state or condition of a classifier instance or role over time<BR/>
+          <ARTICLE><X><T>UML 2 Timing Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/timingDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Activity Diagram<BR/>
+  depicts high-level business processes, including data flow, or to model the logic of complex logic within a system<BR/>
+          <ARTICLE><X><T>UML 2 Activity Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/activityDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+          <ARTICLE><X><T>UML Activity Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/activityDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Interaction Overview Diagram<BR/>
+  A variant of an activity diagram which overviews the control flow within a system or business process. Each node/activity within the diagram can represent another interaction diagram.<BR/>
+          <ARTICLE><X><T>UML 2 Interaction Overview Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/interactionOverviewDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Collaboration Diagram (communication diagram in UML 2)<BR/>
+  shows instances of classes, their interrelationships, and the message flow between them<BR/>
+          <ARTICLE><X><T>UML 2 Communication Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/communicationDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+          <ARTICLE><X><T>UML Collaboration Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/collaborationDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Statechart Diagram (state machine diagram in UML 2)<BR/>
+  depict the dynamic behavior of an entity based on its response to events, showing how the entity reacts to various events depending on the current state that it is in<BR/>
+          <ARTICLE><X><T>UML 2 State Machine Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/stateMachineDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+          <ARTICLE><X><T>UML State Chart Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/stateChartDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
+        </ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Model Management Diagrams</TITLE>
+        <ITEM>Packages<BR/>
+  shows how model elements are organized into packages as well as the dependencies between packages<BR/>
+          <ARTICLE><X><T>UML 2 Package Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/packageDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+          <ARTICLE><X><T>Package Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/packageDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
+        </ITEM>
+        <ITEM>Subsystems</ITEM>
+        <ITEM>Models</ITEM>
+     </BLIST></ITEM>
     </BLIST></ITEM>
-
-    <ITEM><BLIST><TITLE>Model Management Diagrams</TITLE>
-
-      <ITEM>Packages<BR/>
-shows how model elements are organized into packages as well as the dependencies between packages<BR/>
-        <ARTICLE><X><T>UML 2 Package Diagram Overview</T><A>http://www.agilemodeling.com/artifacts/packageDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-        <ARTICLE><X><T>Package Diagramming Guidelines</T><A>http://www.agilemodeling.com/style/packageDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><COMMENT>Some guidelines to draw the diagram</COMMENT></ARTICLE>
-      </ITEM>
-
-      <ITEM>Subsystems</ITEM>
-
-      <ITEM>Models</ITEM>
-
-   </BLIST></ITEM>
-
+    <ITEM><BLIST><TITLE>Non UML diagrams</TITLE>
+        <ITEM>Robustness Diagram<BR/>
+  ensures that use cases are sufficiently robust to represent the usage requirements for the system<BR/>
+          <ARTICLE><X><T>Robustness Diagrams</T><A>http://www.agilemodeling.com/artifacts/robustnessDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
+        </ITEM>
+    </BLIST></ITEM>
+    <ITEM><ARTICLE><X quality='2'><T>Death by UML Fever</T><A>http://www2.ufpa.br/cdesouza/teaching/es/Death-by-UML-Fever.pdf</A><L>en</L><F>PDF</F></X><X quality='2'><T>Death by UML Fever</T><A>http://queue.acm.org/detail.cfm?id=984495</A><L>en</L><F>HTML</F></X><AUTHOR>Alex E. Bell</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>3</MONTH></DATE><COMMENT>Using UML is not a proof of good, worthwhile work.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X protection='free_registration'><T>Useful UML Modeling: UML's Double-Edged Sword</T><ST>Avoid overuse and misuse of the "include" and "extend" relationships</ST><A>http://www.devx.com/architect/Article/45118</A><L>en</L><F>HTML</F></X><AUTHOR>Bob Maksimchuk</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>7</MONTH><DAY>8</DAY></DATE><COMMENT>Some people wrongly tends to overuse <CODEROUTINE>&lt;&lt;include&gt;&gt;</CODEROUTINE> and <CODEROUTINE>&lt;&lt;extend&gt;&gt;</CODEROUTINE> in a Use Case Diagram, detailing down to the software structure.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Effects of Defects in UML Models &#x2013; An Experimental Investigation</T><A>http://www.liacs.nl/~nikolov/StudSem/SE_effects_of_defects-lange.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Christian F.J. Lange</AUTHOR><AUTHOR>Michel R.V. Chaudron</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>5</MONTH></DATE><COMMENT>An experiment to see if errors in UML diagrams are detected.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>UML - The good bits - Eoin Woods</T><A>http://vimeo.com/user22258446/review/79099668/bf360f2a91</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>33</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR>Eoin Woods</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>A description of the UML diagrams and how to use them (or to not use them).</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-
-  <ITEM><BLIST><TITLE>Non UML diagrams</TITLE>
-
-      <ITEM>Robustness Diagram<BR/>
-ensures that use cases are sufficiently robust to represent the usage requirements for the system<BR/>
-        <ARTICLE><X><T>Robustness Diagrams</T><A>http://www.agilemodeling.com/artifacts/robustnessDiagram.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Scott W. Ambler</AUTHOR><DATE><YEAR>2003</YEAR></DATE><COMMENT>An overview of the diagram</COMMENT></ARTICLE><BR/>
-      </ITEM>
-
-  </BLIST></ITEM>
-
-  <ITEM><ARTICLE><X quality='2'><T>Death by UML Fever</T><A>http://www2.ufpa.br/cdesouza/teaching/es/Death-by-UML-Fever.pdf</A><L>en</L><F>PDF</F></X><X quality='2'><T>Death by UML Fever</T><A>http://queue.acm.org/detail.cfm?id=984495</A><L>en</L><F>HTML</F></X><AUTHOR>Alex E. Bell</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>3</MONTH></DATE><COMMENT>Using UML is not a proof of good, worthwhile work.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X protection='free_registration'><T>Useful UML Modeling: UML's Double-Edged Sword</T><ST>Avoid overuse and misuse of the "include" and "extend" relationships</ST><A>http://www.devx.com/architect/Article/45118</A><L>en</L><F>HTML</F></X><AUTHOR>Bob Maksimchuk</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>7</MONTH><DAY>8</DAY></DATE><COMMENT>Some people wrongly tends to overuse <CODEROUTINE>&lt;&lt;include&gt;&gt;</CODEROUTINE> and <CODEROUTINE>&lt;&lt;extend&gt;&gt;</CODEROUTINE> in a Use Case Diagram, detailing down to the software structure.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>Effects of Defects in UML Models &#x2013; An Experimental Investigation</T><A>http://www.liacs.nl/~nikolov/StudSem/SE_effects_of_defects-lange.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Christian F.J. Lange</AUTHOR><AUTHOR>Michel R.V. Chaudron</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>5</MONTH></DATE><COMMENT>An experiment to see if errors in UML diagrams are detected.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>UML - The good bits - Eoin Woods</T><A>http://vimeo.com/user22258446/review/79099668/bf360f2a91</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>33</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR>Eoin Woods</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>A description of the UML diagrams and how to use them (or to not use them).</COMMENT></ARTICLE></ITEM>
-
-</BLIST>
-
+</LLIST>
 </CONTENT>
 </PAGE>
 
