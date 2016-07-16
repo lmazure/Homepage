@@ -5,142 +5,128 @@
 <PATH>links/office.xml</PATH>
 <DATE><YEAR>2015</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
-
-<BLIST><TITLE>MS Office</TITLE>
-  <ITEM><ANCHOR>word</ANCHOR>Word:
-    <X><T>fr/us macro translations</T><A>http://support.microsoft.com/kb/467685/FR/</A><L>en</L><F>HTML</F></X>,
-    <X><T>personal notes</T><A>../notes/word.html</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><ANCHOR>excel</ANCHOR>Excel:
-    <X><T>David McRitchie</T><A>http://www.mvps.org/dmcritchie/excel/excel.htm</A><L>en</L><F>HTML</F></X>,
-    <X><T>personal notes</T><A>../notes/excel.html</A><L>en</L><F>HTML</F></X>,
-    <X><T>contextures tip's</T><A>http://www.contextures.com/tiptech.html</A><L>en</L><F>HTML</F></X>,
-    <X><T>JaxWorks functions</T><A>http://www.jaxworks.com/functions.htm</A><L>en</L><F>HTML</F></X>,
-    <X><T>translation of function names</T><A>http://dolf.trieschnigg.nl/excel/excel.html</A><L>en</L><F>HTML</F></X>
-</ITEM>
-  <ITEM><ANCHOR>powerpoint</ANCHOR>Powerpoint:
-    <X><T>personal notes</T><A>../notes/powerpoint.html</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><ANCHOR>outlook</ANCHOR>Outlook:
-    <X><T>search syntax</T><A>https://support.office.com/en-nz/article/Learn-to-narrow-your-search-criteria-for-better-searches-in-Outlook-d824d1e9-a255-4c8a-8553-276fb895a8da</A><L>en</L><F>HTML</F></X>,
-    <X><T>personal notes</T><A>../notes/outlook.html</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><ANCHOR>visio</ANCHOR>Visio:
-    <X><T>free Viewer</T><A>http://www.microsoft.com/en-us/download/details.aspx?id=21701</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><ANCHOR>project</ANCHOR>Project:
-    <X><T>Housatonic free Viewer</T><A>http://www.projectviewercentral.com/projectviewer/projectviewerfree.html</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><ANCHOR>communicator</ANCHOR>Communicator:
-    <X><T>shortcuts</T><A>http://office.microsoft.com/en-us/communicator-help/office-communicator-2007-keyboard-shortcuts-HA010236675.aspx</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-
-<X><T>OpenOffice.org</T><A>http://www.openoffice.org</A><L>en</L><F>HTML</F></X>,
-<X><T>LibreOffice.org</T><A>http://www.libreoffice.org</A><L>en</L><F>HTML</F></X><BR/>
-
-<BLIST><TITLE>Online suite</TITLE>
-  <ITEM><BLIST><TITLE><X><T>Google docs</T><A>http://docs.google.com</A><L>en</L><F>HTML</F></X> (<X><T>blog</T><A>http://google-d-s.blogspot.com/</A><L>en</L><F>HTML</F><FEED><A>http://google-d-s.blogspot.com/atom.xml</A><F>RSS</F></FEED></X>)</TITLE>
-    <ITEM>Spreadsheets:
-      <X><T>shortcuts</T><A>https://support.google.com/docs/bin/answer.py?hl=en&amp;answer=181110&amp;p=spreadsheets_shortcuts</A><L>en</L><F>HTML</F></X>
-    </ITEM>
+<LLIST>
+  <ITEM><SLIST>
+    <ITEM><BLIST><TITLE>MS Office</TITLE>
+      <ITEM><CLIST><TITLE><ANCHOR>word</ANCHOR>Word</TITLE>
+        <ITEM><X><T>fr/us macro translations</T><A>http://support.microsoft.com/kb/467685/FR/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>personal notes</T><A>../notes/word.html</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>	
+      <ITEM><CLIST><TITLE><ANCHOR>excel</ANCHOR>Excel</TITLE>
+        <ITEM><X><T>David McRitchie</T><A>http://www.mvps.org/dmcritchie/excel/excel.htm</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>personal notes</T><A>../notes/excel.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>contextures tip's</T><A>http://www.contextures.com/tiptech.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>JaxWorks functions</T><A>http://www.jaxworks.com/functions.htm</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>translation of function names</T><A>http://dolf.trieschnigg.nl/excel/excel.html</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>	
+      <ITEM><CLIST><TITLE><ANCHOR>powerpoint</ANCHOR>Powerpoint</TITLE>
+        <ITEM><X><T>personal notes</T><A>../notes/powerpoint.html</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>	
+      <ITEM><CLIST><TITLE><ANCHOR>outlook</ANCHOR>Outlook</TITLE>
+        <ITEM><X><T>search syntax</T><A>https://support.office.com/en-nz/article/Learn-to-narrow-your-search-criteria-for-better-searches-in-Outlook-d824d1e9-a255-4c8a-8553-276fb895a8da</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>personal notes</T><A>../notes/outlook.html</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>	
+      <ITEM><CLIST><TITLE><ANCHOR>visio</ANCHOR>Visio</TITLE>
+        <ITEM><X><T>free Viewer</T><A>http://www.microsoft.com/en-us/download/details.aspx?id=21701</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>	
+      <ITEM><CLIST><TITLE><ANCHOR>project</ANCHOR>Project</TITLE>
+        <ITEM><X><T>Housatonic free Viewer</T><A>http://www.projectviewercentral.com/projectviewer/projectviewerfree.html</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>	
+      <ITEM><CLIST><TITLE><ANCHOR>communicator</ANCHOR>Communicator</TITLE>
+        <ITEM><X><T>shortcuts</T><A>http://office.microsoft.com/en-us/communicator-help/office-communicator-2007-keyboard-shortcuts-HA010236675.aspx</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>	
+    </BLIST></ITEM>
+    <ITEM><CLIST>
+      <ITEM><X><T>OpenOffice.org</T><A>http://www.openoffice.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>LibreOffice.org</T><A>http://www.libreoffice.org</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><BLIST><TITLE>Online suite</TITLE>
+      <ITEM><BLIST><TITLE><X><T>Google docs</T><A>http://docs.google.com</A><L>en</L><F>HTML</F></X> (<X><T>blog</T><A>http://google-d-s.blogspot.com/</A><L>en</L><F>HTML</F><FEED><A>http://google-d-s.blogspot.com/atom.xml</A><F>RSS</F></FEED></X>)</TITLE>
+        <ITEM>Spreadsheets:
+          <X><T>shortcuts</T><A>https://support.google.com/docs/bin/answer.py?hl=en&amp;answer=181110&amp;p=spreadsheets_shortcuts</A><L>en</L><F>HTML</F></X>
+        </ITEM>
+      </BLIST></ITEM>
+      <ITEM><X><T>Zoho</T><A>http://docs.zoho.com</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Statistics</TITLE>
+      <ITEM><X><T>R</T><A>http://www.r-project.org</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Compression</TITLE>
+      <ITEM><X><T>gzip</T><A>http://www.gzip.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>bzip2</T><A>http://www.bzip.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>WinZip</T><A>http://www.winzip.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>7-Zip</T><A>http://www.7-zip.org</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Mind map</TITLE>
+      <ITEM><X><T>list</T><A>http://en.wikipedia.org/wiki/List_of_Mind_Mapping_software</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>FreeMind</T><A>http://freemind.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Freeplane</T><A>http://sourceforge.net/projects/freeplane</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Network</TITLE>
+      <ITEM><X><T>FileZilla</T><A>http://filezilla-project.org</A><L>en</L><F>HTML</F></X>: a FTP client</ITEM>
+      <ITEM><X><T>PuTTY</T><A>http://www.chiark.greenend.org.uk/~sgtatham/putty</A><L>en</L><F>HTML</F></X>: a Telnet/SSH Client</ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>CDRom</TITLE>
+      <ITEM><X><T>CDrecord</T><A>http://cdrecord.berlios.de/old/private/cdrecord.html</A><L>en</L><F>HTML</F></X>: a CDRom driver</ITEM>
+      <ITEM><X><T>DeepBurner</T><A>http://www.deepburner.com</A><L>en</L><F>HTML</F></X>: a CDRom driver</ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Documentation authoring</TITLE>
+      <ITEM><X><T>MadCap Flare</T><A>http://www.madcapsoftware.com/products/flare</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Docufy</T><A>http://www.docufy.eu</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>SCHEMA ST4</T><A>http://www.schema.de/en/software/schema-st4.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Miscellaneous</TITLE>
+      <ITEM><X><T>Free Online OCR</T><A>http://www.onlineocr.net</A><L>en</L><F>HTML</F></X>: free online OCR</ITEM>
+      <ITEM><X><T>HTTrack</T><A>http://www.httrack.com</A><L>en</L><F>HTML</F></X>: Web site copier</ITEM>
+      <ITEM><X><T>html2ps</T><A>http://user.it.uu.se/~jan/html2ps.html</A><L>en</L><F>HTML</F></X>: a HTML to PostScript converter written in Perl</ITEM>
+      <ITEM><X><T>gww</T><A>http://www.mindworkshop.com/alchemy/gww.html</A><L>en</L><F>HTML</F></X>: graphic formats converter for Windows</ITEM>
+      <ITEM><X><T>PDFCreator</T><A>http://sourceforge.net/projects/pdfcreator/</A><L>en</L><F>HTML</F></X>: a PDF driver</ITEM>
+      <ITEM><X><T>SyncToy</T><A>http://www.microsoft.com/downloads/details.aspx?familyid=C26EFA36-98E0-4EE9-A7C5-98D0592D8C52&amp;displaylang=en</A><L>en</L><F>HTML</F></X>: a filesystem synchronization tool for Windows</ITEM>
+    </BLIST></ITEM>
+  </SLIST></ITEM>
+  <ITEM><BLIST><TITLE><B><U>Articles</U></B></TITLE>
+    <ITEM><BLIST><TITLE>MS Office</TITLE>
+      <ITEM><BLIST><TITLE>Excel</TITLE>
+        <ITEM><ARTICLE><X><T>On the Accuracy of Statistical Distributions in Microsoft Excel 97</T><A>http://www.stat.uni-muenchen.de/%7Eknuesel/elv/excelacc.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Leo Kn&#252;sel</AUTHOR><COMMENT>In summary: do not use Excel for computing your statistics!</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Microsoft Knowledge Base Article - 827369 - Excel Statistical Functions: NORMSDIST</T><A>http://support.microsoft.com/?kbid=827369</A><L>en</L><F>HTML</F></X><DATE><YEAR>2003</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE><COMMENT>But the NORMSDIST function is at least better in Excel 2003.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Looking back at Microsoft Excel Easter Eggs</T><A>http://www.techrepublic.com/pictures/look-back-at-microsoft-excel-easter-eggs/</A><L>en</L><F>HTML</F></X><AUTHOR>Greg Shultz</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>8</MONTH><DAY>2</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Returning a Blank Value</T><A>http://excel.tips.net/T002814_Returning_a_Blank_Value.html</A><L>en</L><F>HTML</F></X><AUTHOR>Allen Wyatt</AUTHOR><COMMENT>There is no way to have a formula returning a blank value.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>How to find duplicates in Excel</T><A>http://www.techrepublic.com/blog/windows-and-office/how-to-find-duplicates-in-excel-245163/</A><L>en</L><F>HTML</F></X><AUTHOR>Susan Harkins</AUTHOR><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Use XML Mapping in Excel 2007</T><A>http://content4.catalog.video.msn.com/e2/ds/alt-en-us/ALTENUS_MSDN/ALTENUS_MSDN_MIGRATION/8ABA5ABC-7C19-458F-9001-ADD08464E77E.wmv</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>20</MINUTE><SECOND>55</SECOND></DURATION></X><AUTHOR>Steve Hansen</AUTHOR><COMMENT>How to write a VBA macro which creates an XML mapping.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Format Excel 2010 sparklines to expose details</T><A>http://www.techrepublic.com/blog/msoffice/format-excel-2010-sparklines-to-expose-details/4549</A><L>en</L><F>HTML</F></X><AUTHOR>Susan Harkins</AUTHOR><COMMENT>The configuration of sparklines, a new Office 2010 features.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Five tips for enhancing Excel charts</T><A>http://www.techrepublic.com/blog/five-tips/five-tips-for-enhancing-excel-charts/710/</A><L>en</L><F>HTML</F></X><AUTHOR>Susan Sales Harkins</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE><COMMENT>Formatting the axis, defining the title as a cell's content, adding a series by using cut 'n paste, and changing a series title.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Create an X Y Scatter Chart with Data Labels</T><A>https://www.youtube.com/watch?v=4GOsq9bRDB0</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>7</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR>oug H</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>9</DAY></DATE><COMMENT>To summarize: you need a macro.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Word</TITLE>
+        <ITEM><ARTICLE><X><T>The Case of the Missing Tab</T><A>http://blogs.msdn.com/rick_schaut/archive/2005/01/12/351235.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Rick Schaut</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>An explanation on how Word chooses to indent a paragraph or to insert a tab when the user types the tab key.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Anatomy of Word: Taking Word tables to the next level with spreadsheet techniques</T><A>http://www.techrepublic.com/article/anatomy-of-word-taking-word-tables-to-the-next-level/</A><L>en</L><F>PDF</F></X><AUTHOR>Scott Lowe</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>A basic introduction to using formulas in Word tables.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Anatomy of Word: Creating and formatting tables tutorial</T><A>http://i.i.cbsi.com/cnwk.1d/i/tr/downloads/home/1PDF_lowe_word_tables_1.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Scott Lowe</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>A basic introduction to using Word tables.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Anatomy of Word: Use Excel information in your Word documents</T><A>http://www.techrepublic.com/article/anatomy-of-word-using-excel-information-in-word-documents/</A><L>en</L><F>PDF</F></X><AUTHOR>Scott Lowe</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE><COMMENT>The different solutions to integrate Excel data in Word.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>34 timesaving mouse tricks for Word users</T><A>http://www.techrepublic.com/blog/windows-and-office/34-timesaving-mouse-tricks-for-word-users/</A><L>en</L><F>HTML</F></X><AUTHOR>Jody Gilbert</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE><COMMENT>Some less known double-click actions.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Limited programmatic access to Word discontinuous selections</T><A>http://support.microsoft.com/kb/288424/en-us/</A><L>en</L><F>HTML</F></X><COMMENT>VBA does not properly supports discontinuous selections.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>PowerPoint</TITLE>
+        <ITEM><ARTICLE><X><T>10 slide design tips for producing powerful and effective presentations</T><A>http://www.techrepublic.com/article/10-slide-design-tips-for-producing-powerful-and-effective-presentations/</A><L>en</L><F>HTML</F></X><AUTHOR>Garr Reynolds</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Looking back at Microsoft PowerPoint Easter Eggs</T><A>http://www.techrepublic.com/pictures/looking-back-at-microsoft-powerpoint-easter-eggs/</A><L>en</L><F>HTML</F></X><AUTHOR>Greg Shultz</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>8</MONTH><DAY>10</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Outlook</TITLE>
+        <ITEM><ARTICLE><X><T>Looking back at Microsoft Outlook Easter Eggs</T><A>http://www.techrepublic.com/pictures/looking-back-at-microsoft-outlook-easter-eggs/</A><L>en</L><F>HTML</F></X><AUTHOR>Greg Shultz</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Quickly export Outlook e-mail items to Excel</T><A>http://www.techrepublic.com/blog/microsoft-office/quickly-export-outlook-e-mail-items-to-excel/</A><L>en</L><F>HTML</F></X><AUTHOR>Susan Harkins</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>20</DAY></DATE><COMMENT>A, badly written, macro to transfer data from Outlook into Excel.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Internet Explorer</TITLE>
+        <ITEM><ARTICLE><X><T>Microsoft Knowledge Base Article - 942840 - You may experience slow Web browser performance when you view a Web page that uses JScript in Internet Explorer 6 on a Windows Server 2003-based computer or on a Windows XP-based computer</T><A>http://support.microsoft.com/?kbid=942840</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR><MONTH>11</MONTH><DAY>27</DAY></DATE><COMMENT>The JavaScript engine of IE may be replaced by a much faster one.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>OpenOffice.org</TITLE>
+      <ITEM><ARTICLE><X quality='-1'><T>Open Office Training</T><A>https://www.youtube.com/watch?v=yLHDoTzjt6U</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>42</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR>Michelle Murrian</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>6</MONTH><DAY>5</DAY></DATE><COMMENT>Nothing interesting here: the speaker spends more time describing the same old stuff about open source, there is little information on OOo.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>OpenOffice.org: 7 Things You Didn't Know You Could Do</T><A>http://www.pcmag.com/article2/0,2817,2341228,00.asp</A><L>en</L><F>HTML</F></X><AUTHOR>Edward Mendelson</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE><COMMENT>Some random information about OpenOffice.org.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><ARTICLE><X><T>How to save and share ridiculously large files</T><A>http://news.cnet.com/8301-27076_3-20000133-248.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Josh Lowensohn</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE><COMMENT>A list of free and paid file exchange services.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X status='zombie'><T>4 programmes de mind mapping</T><A>http://www.svmlemag.fr/comparatif/05015/4_programmes_de_mind_mapping</A><L>fr</L><F>HTML</F></X><AUTHOR>Dominique Maroutian</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>11</MONTH></DATE><COMMENT>The comparison of four mind mapping tools: Freemind, Xmind, Edraw Max, and Bubbl.us.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>I Saw a Cool Font Online. How Do I Find Out What It Is</T><A>http://www.htmlgoodies.com/beyond/webmaster/i-saw-a-cool-font-online.-how-do-i-find-out-what-it-is.html</A><L>en</L><F>HTML</F></X><AUTHOR>Nathan Segal</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH></DATE><COMMENT>An introduction to <X><T>WhatTheFont</T><A>http://new.myfonts.com/WhatTheFont/</A><L>en</L><F>HTML</F></X>, a web site trying to find the closest matching font.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Casting spells with ImageMagick</T><ST>Image manipulation for users and programmers alike</ST><A>http://www.ibm.com/developerworks/library/os-imagemagick/</A><L>en</L><F>HTML</F></X><AUTHOR>Bill Zimmerly</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>A short introduction to ImageMagick, using it from the command line or from its API.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
-  <ITEM><X><T>Zoho</T><A>http://docs.zoho.com</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-
-<BLIST><TITLE>Statistics</TITLE>
-  <ITEM><X><T>R</T><A>http://www.r-project.org</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-
-<BLIST><TITLE>Compression</TITLE>
-  <ITEM><X><T>gzip</T><A>http://www.gzip.org</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>bzip2</T><A>http://www.bzip.org</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>WinZip</T><A>http://www.winzip.com</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>7-Zip</T><A>http://www.7-zip.org</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-
-<BLIST><TITLE>Mind map</TITLE>
-  <ITEM><X><T>list</T><A>http://en.wikipedia.org/wiki/List_of_Mind_Mapping_software</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>FreeMind</T><A>http://freemind.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Freeplane</T><A>http://sourceforge.net/projects/freeplane</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-
-<BLIST><TITLE>Network</TITLE>
-  <ITEM><X><T>FileZilla</T><A>http://filezilla-project.org</A><L>en</L><F>HTML</F></X>: a FTP client</ITEM>
-  <ITEM><X><T>PuTTY</T><A>http://www.chiark.greenend.org.uk/~sgtatham/putty</A><L>en</L><F>HTML</F></X>: a Telnet/SSH Client</ITEM>
-</BLIST>
-
-<BLIST><TITLE>CDRom</TITLE>
-  <ITEM><X><T>CDrecord</T><A>http://cdrecord.berlios.de/old/private/cdrecord.html</A><L>en</L><F>HTML</F></X>: a CDRom driver</ITEM>
-  <ITEM><X><T>DeepBurner</T><A>http://www.deepburner.com</A><L>en</L><F>HTML</F></X>: a CDRom driver</ITEM>
-</BLIST>
-
-<BLIST><TITLE>Documentation authoring</TITLE>
-  <ITEM><X><T>MadCap Flare</T><A>http://www.madcapsoftware.com/products/flare</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Docufy</T><A>http://www.docufy.eu</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>SCHEMA ST4</T><A>http://www.schema.de/en/software/schema-st4.html</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-
-<BLIST><TITLE>Miscellaneous</TITLE>
-  <ITEM><X><T>Free Online OCR</T><A>http://www.onlineocr.net</A><L>en</L><F>HTML</F></X>: free online OCR</ITEM>
-  <ITEM><X><T>HTTrack</T><A>http://www.httrack.com</A><L>en</L><F>HTML</F></X>: Web site copier</ITEM>
-  <ITEM><X><T>html2ps</T><A>http://user.it.uu.se/~jan/html2ps.html</A><L>en</L><F>HTML</F></X>: a HTML to PostScript converter written in Perl</ITEM>
-  <ITEM><X><T>gww</T><A>http://www.mindworkshop.com/alchemy/gww.html</A><L>en</L><F>HTML</F></X>: graphic formats converter for Windows</ITEM>
-  <ITEM><X><T>PDFCreator</T><A>http://sourceforge.net/projects/pdfcreator/</A><L>en</L><F>HTML</F></X>: a PDF driver</ITEM>
-  <ITEM><X><T>SyncToy</T><A>http://www.microsoft.com/downloads/details.aspx?familyid=C26EFA36-98E0-4EE9-A7C5-98D0592D8C52&amp;displaylang=en</A><L>en</L><F>HTML</F></X>: a filesystem synchronization tool for Windows</ITEM>
-</BLIST>
-
-<LINE/>
-
-<BLIST><TITLE><B><U>Articles</U></B></TITLE>
-
-<ITEM><BLIST><TITLE>MS Office</TITLE>
-
-  <ITEM><BLIST><TITLE>Excel</TITLE>
-    <ITEM><ARTICLE><X><T>On the Accuracy of Statistical Distributions in Microsoft Excel 97</T><A>http://www.stat.uni-muenchen.de/%7Eknuesel/elv/excelacc.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Leo Kn&#252;sel</AUTHOR><COMMENT>In summary: do not use Excel for computing your statistics!</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Microsoft Knowledge Base Article - 827369 - Excel Statistical Functions: NORMSDIST</T><A>http://support.microsoft.com/?kbid=827369</A><L>en</L><F>HTML</F></X><DATE><YEAR>2003</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE><COMMENT>But the NORMSDIST function is at least better in Excel 2003.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Looking back at Microsoft Excel Easter Eggs</T><A>http://www.techrepublic.com/pictures/look-back-at-microsoft-excel-easter-eggs/</A><L>en</L><F>HTML</F></X><AUTHOR>Greg Shultz</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>8</MONTH><DAY>2</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Returning a Blank Value</T><A>http://excel.tips.net/T002814_Returning_a_Blank_Value.html</A><L>en</L><F>HTML</F></X><AUTHOR>Allen Wyatt</AUTHOR><COMMENT>There is no way to have a formula returning a blank value.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>How to find duplicates in Excel</T><A>http://www.techrepublic.com/blog/windows-and-office/how-to-find-duplicates-in-excel-245163/</A><L>en</L><F>HTML</F></X><AUTHOR>Susan Harkins</AUTHOR><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Use XML Mapping in Excel 2007</T><A>http://content4.catalog.video.msn.com/e2/ds/alt-en-us/ALTENUS_MSDN/ALTENUS_MSDN_MIGRATION/8ABA5ABC-7C19-458F-9001-ADD08464E77E.wmv</A><L>en</L><F>Windows Media Player</F><DURATION><MINUTE>20</MINUTE><SECOND>55</SECOND></DURATION></X><AUTHOR>Steve Hansen</AUTHOR><COMMENT>How to write a VBA macro which creates an XML mapping.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Format Excel 2010 sparklines to expose details</T><A>http://www.techrepublic.com/blog/msoffice/format-excel-2010-sparklines-to-expose-details/4549</A><L>en</L><F>HTML</F></X><AUTHOR>Susan Harkins</AUTHOR><COMMENT>The configuration of sparklines, a new Office 2010 features.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Five tips for enhancing Excel charts</T><A>http://www.techrepublic.com/blog/five-tips/five-tips-for-enhancing-excel-charts/710/</A><L>en</L><F>HTML</F></X><AUTHOR>Susan Sales Harkins</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE><COMMENT>Formatting the axis, defining the title as a cell's content, adding a series by using cut 'n paste, and changing a series title.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>Create an X Y Scatter Chart with Data Labels</T><A>https://www.youtube.com/watch?v=4GOsq9bRDB0</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>7</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR>oug H</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>9</DAY></DATE><COMMENT>To summarize: you need a macro.</COMMENT></ARTICLE></ITEM>
-  </BLIST></ITEM>
-
-  <ITEM><BLIST><TITLE>Word</TITLE>
-    <ITEM><ARTICLE><X><T>The Case of the Missing Tab</T><A>http://blogs.msdn.com/rick_schaut/archive/2005/01/12/351235.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Rick Schaut</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>An explanation on how Word chooses to indent a paragraph or to insert a tab when the user types the tab key.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Anatomy of Word: Taking Word tables to the next level with spreadsheet techniques</T><A>http://www.techrepublic.com/article/anatomy-of-word-taking-word-tables-to-the-next-level/</A><L>en</L><F>PDF</F></X><AUTHOR>Scott Lowe</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>A basic introduction to using formulas in Word tables.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Anatomy of Word: Creating and formatting tables tutorial</T><A>http://i.i.cbsi.com/cnwk.1d/i/tr/downloads/home/1PDF_lowe_word_tables_1.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Scott Lowe</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>A basic introduction to using Word tables.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Anatomy of Word: Use Excel information in your Word documents</T><A>http://www.techrepublic.com/article/anatomy-of-word-using-excel-information-in-word-documents/</A><L>en</L><F>PDF</F></X><AUTHOR>Scott Lowe</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE><COMMENT>The different solutions to integrate Excel data in Word.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>34 timesaving mouse tricks for Word users</T><A>http://www.techrepublic.com/blog/windows-and-office/34-timesaving-mouse-tricks-for-word-users/</A><L>en</L><F>HTML</F></X><AUTHOR>Jody Gilbert</AUTHOR><DATE><YEAR>2005</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE><COMMENT>Some less known double-click actions.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Limited programmatic access to Word discontinuous selections</T><A>http://support.microsoft.com/kb/288424/en-us/</A><L>en</L><F>HTML</F></X><COMMENT>VBA does not properly supports discontinuous selections.</COMMENT></ARTICLE></ITEM>
-  </BLIST></ITEM>
-
-  <ITEM><BLIST><TITLE>PowerPoint</TITLE>
-    <ITEM><ARTICLE><X><T>10 slide design tips for producing powerful and effective presentations</T><A>http://www.techrepublic.com/article/10-slide-design-tips-for-producing-powerful-and-effective-presentations/</A><L>en</L><F>HTML</F></X><AUTHOR>Garr Reynolds</AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Looking back at Microsoft PowerPoint Easter Eggs</T><A>http://www.techrepublic.com/pictures/looking-back-at-microsoft-powerpoint-easter-eggs/</A><L>en</L><F>HTML</F></X><AUTHOR>Greg Shultz</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>8</MONTH><DAY>10</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
-  </BLIST></ITEM>
-
-  <ITEM><BLIST><TITLE>Outlook</TITLE>
-    <ITEM><ARTICLE><X><T>Looking back at Microsoft Outlook Easter Eggs</T><A>http://www.techrepublic.com/pictures/looking-back-at-microsoft-outlook-easter-eggs/</A><L>en</L><F>HTML</F></X><AUTHOR>Greg Shultz</AUTHOR><DATE><YEAR>2007</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Quickly export Outlook e-mail items to Excel</T><A>http://www.techrepublic.com/blog/microsoft-office/quickly-export-outlook-e-mail-items-to-excel/</A><L>en</L><F>HTML</F></X><AUTHOR>Susan Harkins</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>20</DAY></DATE><COMMENT>A, badly written, macro to transfer data from Outlook into Excel.</COMMENT></ARTICLE></ITEM>
-  </BLIST></ITEM>
-
-  <ITEM><BLIST><TITLE>Internet Explorer</TITLE>
-    <ITEM><ARTICLE><X><T>Microsoft Knowledge Base Article - 942840 - You may experience slow Web browser performance when you view a Web page that uses JScript in Internet Explorer 6 on a Windows Server 2003-based computer or on a Windows XP-based computer</T><A>http://support.microsoft.com/?kbid=942840</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR><MONTH>11</MONTH><DAY>27</DAY></DATE><COMMENT>The JavaScript engine of IE may be replaced by a much faster one.</COMMENT></ARTICLE></ITEM>
-  </BLIST></ITEM>
-
-</BLIST></ITEM>
-
-<ITEM><BLIST><TITLE>OpenOffice.org</TITLE>
-
-  <ITEM><ARTICLE><X quality='-1'><T>Open Office Training</T><A>https://www.youtube.com/watch?v=yLHDoTzjt6U</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>42</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR>Michelle Murrian</AUTHOR><DATE><YEAR>2008</YEAR><MONTH>6</MONTH><DAY>5</DAY></DATE><COMMENT>Nothing interesting here: the speaker spends more time describing the same old stuff about open source, there is little information on OOo.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>OpenOffice.org: 7 Things You Didn't Know You Could Do</T><A>http://www.pcmag.com/article2/0,2817,2341228,00.asp</A><L>en</L><F>HTML</F></X><AUTHOR>Edward Mendelson</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE><COMMENT>Some random information about OpenOffice.org.</COMMENT></ARTICLE></ITEM>
-
-</BLIST></ITEM>
-
-  <ITEM><ARTICLE><X><T>How to save and share ridiculously large files</T><A>http://news.cnet.com/8301-27076_3-20000133-248.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Josh Lowensohn</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE><COMMENT>A list of free and paid file exchange services.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X status='zombie'><T>4 programmes de mind mapping</T><A>http://www.svmlemag.fr/comparatif/05015/4_programmes_de_mind_mapping</A><L>fr</L><F>HTML</F></X><AUTHOR>Dominique Maroutian</AUTHOR><DATE><YEAR>2009</YEAR><MONTH>11</MONTH></DATE><COMMENT>The comparison of four mind mapping tools: Freemind, Xmind, Edraw Max, and Bubbl.us.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>I Saw a Cool Font Online. How Do I Find Out What It Is</T><A>http://www.htmlgoodies.com/beyond/webmaster/i-saw-a-cool-font-online.-how-do-i-find-out-what-it-is.html</A><L>en</L><F>HTML</F></X><AUTHOR>Nathan Segal</AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH></DATE><COMMENT>An introduction to <X><T>WhatTheFont</T><A>http://new.myfonts.com/WhatTheFont/</A><L>en</L><F>HTML</F></X>, a web site trying to find the closest matching font.</COMMENT></ARTICLE></ITEM>
-  <ITEM><ARTICLE><X><T>Casting spells with ImageMagick</T><ST>Image manipulation for users and programmers alike</ST><A>http://www.ibm.com/developerworks/library/os-imagemagick/</A><L>en</L><F>HTML</F></X><AUTHOR>Bill Zimmerly</AUTHOR><DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>A short introduction to ImageMagick, using it from the command line or from its API.</COMMENT></ARTICLE></ITEM>
-
-</BLIST>
-
+</LLIST>
 </CONTENT>
 </PAGE>
 

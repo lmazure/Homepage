@@ -5,186 +5,184 @@
 <PATH>links/dp.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
-
-<X status='obsolete'><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_patterns.html</A><L>en</L><F>HTML</F></X>
-(<X status='obsolete'><T>M</T><A>http://www.objenv.com/cetus/oo_patterns.html</A><L>en</L><F>HTML</F></X>),
-<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Category:Software_design_patterns</A><L>en</L><F>HTML</F></X><BR/>
-
-<X><T>Hillside</T><A>http://hillside.net/patterns/</A><L>en</L><F>HTML</F></X>, 
-<X><T>Portland Patterns Repository</T><A>http://c2.com/cgi/wiki?SoftwareDesignPatternsIndex</A><L>en</L><F>HTML</F></X>,
-<X><T>edlin</T><A>http://www.edlin.org/cs/patterns.html</A><L>en</L><F>HTML</F></X><BR/>
-
-<X><T>PLOP 2000</T><A>http://hillside.net/plop/plop2k/</A><L>en</L><F>HTML</F></X><BR/>
-
-<LINE/>
-<BLIST><TITLE>Articles</TITLE>
-
-  <ITEM><BLIST><TITLE>Introduction</TITLE>
-    <ITEM><ARTICLE><X status='dead' quality='2'><T>Design Patterns: Abstraction and Reuse of Object-Oriented Design</T><A>http://www.ifs.uni-linz.ac.at/~ecoop/cd/papers/0707/07070406.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Erich Gamma</AUTHOR><AUTHOR>Richard Helm</AUTHOR><AUTHOR>Ralph Johnson</AUTHOR><AUTHOR>John Vlissides</AUTHOR><DATE><YEAR>1993</YEAR></DATE><COMMENT>This is the original paper by the gang of four. If you do not know what design patterns are, you must read this and then go to the store and buy their book. The appendix contains three patterns: <CODEROUTINE>AbstractFactory</CODEROUTINE>, <CODEROUTINE>Strategy</CODEROUTINE> and <CODEROUTINE>Wrapper</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X status='dead'><T>Software Design Patterns: Common Questions and Answers</T><A>http://eprints.kfupm.edu.sa/65561/1/65561.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>James O. Coplien</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This is a small design pattern FAQ.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>A Little About Patterns.</T><A>http://blog.cleancoder.com/uncle-bob/2014/06/30/ALittleAboutPatterns.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>A very basic introduction to Design Patterns and why they are still relevant.</COMMENT></ARTICLE></ITEM>
-  </BLIST></ITEM>
-
-  <ITEM><BLIST><TITLE>Some design patterns</TITLE>
-    <ITEM><BLIST><TITLE>Creational patterns</TITLE>
-      <ITEM><BLIST><TITLE>Abstract Factory (a.k.a. Kit): Provide an interface for creating families of related or dependent objects without specifying their concrete classes.</TITLE>
-        <ITEM><ARTICLE><X><T>Abstract Factory</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/abstractFactory.html</A><L>en</L><F>PDF</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Abstract Factory Design Pattern</T><A>http://www.castle-cadenza.demon.co.uk/abfact.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Creating Truly Maintainable Class Factories</T><A>http://www.drdobbs.com/creating-truly-maintainable-class-factor/184401309</A><L>en</L><F>HTML</F></X><AUTHOR>Early Ehlinger</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>11</MONTH></DATE><COMMENT>A factory implementation using dynamic library loading.</COMMENT></ARTICLE></ITEM>
+<LLIST>
+  <ITEM><SLIST>
+    <ITEM><CLIST>
+      <ITEM><X status='obsolete'><T>Cetus</T><A>http://web.nchu.edu.tw/~jlu/cetus/oo_patterns.html</A><L>en</L><F>HTML</F></X>
+             (<X status='obsolete'><T>M</T><A>http://www.objenv.com/cetus/oo_patterns.html</A><L>en</L><F>HTML</F></X>)</ITEM>
+      <ITEM><X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Category:Software_design_patterns</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><CLIST>
+      <ITEM><X><T>Hillside</T><A>http://hillside.net/patterns/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Portland Patterns Repository</T><A>http://c2.com/cgi/wiki?SoftwareDesignPatternsIndex</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>edlin</T><A>http://www.edlin.org/cs/patterns.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><X><T>PLOP 2000</T><A>http://hillside.net/plop/plop2k/</A><L>en</L><F>HTML</F></X></ITEM>
+  </SLIST></ITEM>
+  <ITEM><BLIST><TITLE>Articles</TITLE>
+    <ITEM><BLIST><TITLE>Introduction</TITLE>
+      <ITEM><ARTICLE><X status='dead' quality='2'><T>Design Patterns: Abstraction and Reuse of Object-Oriented Design</T><A>http://www.ifs.uni-linz.ac.at/~ecoop/cd/papers/0707/07070406.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Erich Gamma</AUTHOR><AUTHOR>Richard Helm</AUTHOR><AUTHOR>Ralph Johnson</AUTHOR><AUTHOR>John Vlissides</AUTHOR><DATE><YEAR>1993</YEAR></DATE><COMMENT>This is the original paper by the gang of four. If you do not know what design patterns are, you must read this and then go to the store and buy their book. The appendix contains three patterns: <CODEROUTINE>AbstractFactory</CODEROUTINE>, <CODEROUTINE>Strategy</CODEROUTINE> and <CODEROUTINE>Wrapper</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status='dead'><T>Software Design Patterns: Common Questions and Answers</T><A>http://eprints.kfupm.edu.sa/65561/1/65561.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>James O. Coplien</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This is a small design pattern FAQ.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>A Little About Patterns.</T><A>http://blog.cleancoder.com/uncle-bob/2014/06/30/ALittleAboutPatterns.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>A very basic introduction to Design Patterns and why they are still relevant.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Some design patterns</TITLE>
+      <ITEM><BLIST><TITLE>Creational patterns</TITLE>
+        <ITEM><BLIST><TITLE>Abstract Factory (a.k.a. Kit): Provide an interface for creating families of related or dependent objects without specifying their concrete classes.</TITLE>
+          <ITEM><ARTICLE><X><T>Abstract Factory</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/abstractFactory.html</A><L>en</L><F>PDF</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Abstract Factory Design Pattern</T><A>http://www.castle-cadenza.demon.co.uk/abfact.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Creating Truly Maintainable Class Factories</T><A>http://www.drdobbs.com/creating-truly-maintainable-class-factor/184401309</A><L>en</L><F>HTML</F></X><AUTHOR>Early Ehlinger</AUTHOR><DATE><YEAR>2000</YEAR><MONTH>11</MONTH></DATE><COMMENT>A factory implementation using dynamic library loading.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Builder: Separate the construction of a complex object from its representation so that the same construction process can create different representations.</TITLE>
+          <ITEM><ARTICLE><X><T>Builder</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/builder.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Builder Pattern</T><A>http://www.castle-cadenza.demon.co.uk/builder.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Factory Method (a.k.a. Virtual Constructor): Define an interface for creating an object, but let subclasses decide which class to instanciate. Factory Method lets a class defer instanciation to subclasses.</TITLE>
+          <ITEM><ARTICLE><X><T>Factory Method</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/factoryMethod.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X status='dead'><T>An Example of the Factory Method</T><A>http://industriallogic.com/patterns/examples/factory.html</A><L>en</L><F>HTML</F></X><AUTHOR>Joshua Kerievsky</AUTHOR><COMMENT>An example using the factory method <CODEROUTINE>Component::createImage</CODEROUTINE> from Java.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Factory Method Pattern</T><A>http://www.castle-cadenza.demon.co.uk/factory.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Inversion of control</TITLE>
+          <ITEM><ARTICLE><X><T>Inversion of Control Containers and the Dependency Injection pattern</T><A>http://martinfowler.com/articles/injection.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>A very good introduction to the design pattern: after presenting several kinds of dependy injection (constructor injection, setter injection, and interface injection), Martin Fowler lists some pros and cons for each one and compares dependency injection to using a service locator.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Prototype: Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.</TITLE>
+          <ITEM><ARTICLE><X><T>Prototype</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/prototype.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Product Trader: Let clients create objects by naming an abstract superclass and by providing a specification.</TITLE>
+          <ITEM><ARTICLE><X><T>Product Trader</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-product-trader.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>This is a complete description of the role pattern with the pros, cons, C++ and Smalltalk examples&#x2026;</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Singleton: Ensure a class only has one instance, and provide a global point of access to it.</TITLE>
+          <ITEM><ARTICLE><X><T>Singleton</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/singleton.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Singleton Pattern</T><A>http://www.castle-cadenza.demon.co.uk/single.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Singleton Design Pattern</T><A>http://www.theperlreview.com/Issues/The_Perl_Review_0_1.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>brian d foy</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>A presentation of the pattern, how to implement it in Perl and some samples of modules using it.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Little Singleton</T><A>http://blog.8thlight.com/uncle-bob/2015/06/30/the-little-singleton.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>Singleton is not evil&#x2026; if you accept to break encapsulation in order to be able to mock.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
       </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Builder: Separate the construction of a complex object from its representation so that the same construction process can create different representations.</TITLE>
-        <ITEM><ARTICLE><X><T>Builder</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/builder.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Builder Pattern</T><A>http://www.castle-cadenza.demon.co.uk/builder.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
+      <ITEM><BLIST><TITLE>Structural patterns</TITLE>
+        <ITEM><BLIST><TITLE>Adapter (a.k.a. Wrapper): Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.</TITLE>
+          <ITEM><ARTICLE><X><T>Adaptor Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Adaptor.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Wrapper Design Pattern</T><A>http://www.castle-cadenza.demon.co.uk/wrapper.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Bridge (a.k.a. Handle/Body): Decouple an abstraction from its implementation so that the two can vary independently.</TITLE>
+          <ITEM><ARTICLE><X><T>Bridge</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/bridge.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Bridge Pattern - Bridging the gap between Interface and Implementation</T><A>http://www.codeguru.com/cpp_mfc/bridge.shtml</A><L>en</L><F>HTML</F></X><AUTHOR>Kulathu Sarma</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE><COMMENT>This other Sarma paper is also a good description, but, this time (see in strategy pattern) , I have no negative comments&#x2026;</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X status='dead'><T>An Example of the Bridge Pattern</T><A>http://industriallogic.com/patterns/examples/bridge.html</A><L>en</L><F>HTML</F></X><COMMENT>A very short C++ example found in MFC (<CODEROUTINE>CFile</CODEROUTINE>).</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X status='dead'><T>Getting the Handle of Handles</T><A>http://www.acm.org/crossroads/xrds2-2/ovp.html</A><L>en</L><F>HTML</F></X><AUTHOR>G. Bowden Wise</AUTHOR><DATE><YEAR>1995</YEAR></DATE><COMMENT>Not described as a design pattern, but this article is still a good presentation of possible uses of a bridge.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Bureaucracy: Define a self-constrained hierarchical structure which maintains its inner consistency, accepts interaction with clients on any level of the hierarchy, and scales for application design.</TITLE>
+          <ITEM><ARTICLE><X><T>Bureaucracy</T><A>http://www.riehle.org/computer-science/research/1996/europlop-1996-bureaucracy.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This pattern is very complex. In my mind, it is not very generic, so I would consider this as a design rather than a design pattern. But this is a good example of the composition of several patterns. The author proposes a way (using roles) to handle this type of complex pattern compositions. But, this is maybe only a joke&#x2026;</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Composite: Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.</TITLE>
+          <ITEM><ARTICLE><X><T>Composite</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/composite.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM>Data Accessor: Decouple data access of the algorithm using it by providing a standardized handler object.</ITEM>
+        <ITEM><BLIST><TITLE>Data Transfer Object: Hold the data used for communicating with a remote interface in order to minimize the number of calls.</TITLE>
+          <ITEM><ARTICLE><X><T>Data Transfer Object</T><A>http://msdn.microsoft.com/en-us/library/ms978717.aspx</A><L>en</L><F>HTML</F></X><COMMENT>A very complete description of the pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Decorator: Attach additional responsibilities to an objet dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.</TITLE>
+          <ITEM><ARTICLE><X><T>Decorator</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/decorator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X status='dead'><T>Example of the Decorator Pattern</T><A>http://industriallogic.com/patterns/examples/decorator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Joshua Kerievsky</AUTHOR><DATE><YEAR>1995</YEAR><MONTH>10</MONTH></DATE><COMMENT>A short good C++ example.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Decorator Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Decorator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>3</MONTH><DAY>27</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Decorator Pattern</T><A>http://www.castle-cadenza.demon.co.uk/decorate.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Using the Decorator Pattern</T><A>http://www.onjava.com/pub/a/onjava/2003/02/05/decorator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Budi Kurniawan</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>A description of how to implement the pattern for Java Swing components.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Facade: Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.</TITLE>
+          <ITEM><ARTICLE><X><T>Facade</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/facade.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Facade Design Pattern</T><A>http://www.theperlreview.com/Issues/The_Perl_Review_0_4.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>brian d foy</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE><COMMENT>Not really a good presentation of the pattern, but lengthily describes its advantages (loose link with the library) and gives some Perl samples.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Flyweight: Use sharing to support large numbers of fine-grained objects efficiently.</TITLE>
+          <ITEM><ARTICLE><X><T>Flyweight</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/flyweight.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X status='dead'><T>Example of the Flyweight Pattern</T><A>http://industriallogic.com/patterns/examples/flyweight.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ralph Richard Cook</AUTHOR><COMMENT>Cook continues to work on his strategy pattern C++ example (see in strategy paragraph) and modifies it to use a flyweight pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Model-View-Controller: Separate the management of user input, data computation and visual feedback into three objects.</TITLE>
+          <ITEM><ARTICLE><X><T>Applications Programming in Smalltalk-80 (TM): How to use Model-View-Controller (MVC)</T><A>http://st-www.cs.uiuc.edu/users/smarch/st-docs/mvc.html</A><L>en</L><F>HTML</F></X><AUTHOR>Steve Burbeck</AUTHOR><DATE><YEAR>1992</YEAR></DATE><COMMENT>This article predates the design patterns fad, so it does not use the usual description template. But it thoroughly describes the MVC implementation, maybe this is too Smalltalk biased for those who want to easily use MVC with an other language.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Phrasebook: When the application needs to execute, create or output expressions in another language, keep these expressions in a separate phrasebook</TITLE>
+          <ITEM><ARTICLE><X><T>The Phrasebook Pattern</T><A>http://ootips.org/yonat/Phrasebook.pdf</A><L>en</L><F>PDF</F></X><X><T>The Phrasebook Pattern</T><A>http://hillside.net/plop/plop2k/proceedings/Pinchuk/Pinchuk.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Yonat Sharon</AUTHOR><AUTHOR>Rani Pinchuk</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>The complete presentation of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Design Phrasebook Pattern</T><A>http://www.perl.com/pub/a/2002/10/22/phrasebook.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rani Pinchuk</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE><COMMENT>A presentation of <CODEROUTINE>Class::Phrasebook</CODEROUTINE> and <CODEROUTINE>Class::Phrasebook::SQL</CODEROUTINE> classes to implement the Phrasebook design pattern in Perl.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Proxy (a.k.a. Surrogate): Provide a surrogate or placeholder for another object to control access to it.</TITLE>
+          <ITEM><ARTICLE><X><T>Proxy</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/proxy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Role: Adapt an object to different client's needs through transparently attached role objects, each one representing a role the object has to play in that client's context.</TITLE>
+          <ITEM><ARTICLE><X><T>The Role Object Pattern</T><A>http://dirkriehle.com/computer-science/research/2000/plopd-4.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf Siberski</AUTHOR><AUTHOR>Martina Wulf</AUTHOR><DATE><YEAR>1999</YEAR></DATE><COMMENT>This is a complete description of the role pattern with the pros, cons, C++ example&#x2026;</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Skin: Separate the presentation style of an application from its logic.</TITLE>
+          <ITEM><ARTICLE><X><T>The Skin Pattern</T><A>http://ootips.org/yonat/Skin.pdf</A><L>en</L><F>PDF</F></X><X><T>The Skin Pattern</T><A>http://hillside.net/plop/plop2k/proceedings/Sharon/Sharon.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Rani Pinchuk</AUTHOR><AUTHOR>Yonat Sharon</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>The complete presentation of the pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Streams: Process a stream of information by feeding it through a network of independent and reusable processing units.</TITLE>
+          <ITEM><ARTICLE><X><T>Streams Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Streams.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
       </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Factory Method (a.k.a. Virtual Constructor): Define an interface for creating an object, but let subclasses decide which class to instanciate. Factory Method lets a class defer instanciation to subclasses.</TITLE>
-        <ITEM><ARTICLE><X><T>Factory Method</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/factoryMethod.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X status='dead'><T>An Example of the Factory Method</T><A>http://industriallogic.com/patterns/examples/factory.html</A><L>en</L><F>HTML</F></X><AUTHOR>Joshua Kerievsky</AUTHOR><COMMENT>An example using the factory method <CODEROUTINE>Component::createImage</CODEROUTINE> from Java.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Factory Method Pattern</T><A>http://www.castle-cadenza.demon.co.uk/factory.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Inversion of control</TITLE>
-        <ITEM><ARTICLE><X><T>Inversion of Control Containers and the Dependency Injection pattern</T><A>http://martinfowler.com/articles/injection.html</A><L>en</L><F>HTML</F></X><AUTHOR>Martin Fowler</AUTHOR><DATE><YEAR>2004</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>A very good introduction to the design pattern: after presenting several kinds of dependy injection (constructor injection, setter injection, and interface injection), Martin Fowler lists some pros and cons for each one and compares dependency injection to using a service locator.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Prototype: Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.</TITLE>
-        <ITEM><ARTICLE><X><T>Prototype</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/prototype.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Product Trader: Let clients create objects by naming an abstract superclass and by providing a specification.</TITLE>
-        <ITEM><ARTICLE><X><T>Product Trader</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-product-trader.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>This is a complete description of the role pattern with the pros, cons, C++ and Smalltalk examples&#x2026;</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Singleton: Ensure a class only has one instance, and provide a global point of access to it.</TITLE>
-        <ITEM><ARTICLE><X><T>Singleton</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/singleton.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Singleton Pattern</T><A>http://www.castle-cadenza.demon.co.uk/single.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>The Singleton Design Pattern</T><A>http://www.theperlreview.com/Issues/The_Perl_Review_0_1.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>brian d foy</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>A presentation of the pattern, how to implement it in Perl and some samples of modules using it.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>The Little Singleton</T><A>http://blog.8thlight.com/uncle-bob/2015/06/30/the-little-singleton.html</A><L>en</L><F>HTML</F></X><AUTHOR>Robert C. Martin</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>Singleton is not evil&#x2026; if you accept to break encapsulation in order to be able to mock.</COMMENT></ARTICLE></ITEM>
+      <ITEM><BLIST><TITLE>Behavioral patterns</TITLE>
+        <ITEM><BLIST><TITLE>Active Object (a.k.a.Concurrent Object or Actor): Decouple method execution from method invocation to enhance concurrency and simplify synchronized access to an object that resides in its own thread of control.</TITLE>
+          <ITEM><ARTICLE><X><T>Active Object</T><ST>An Object Behavioral Pattern for Concurrent Programming</ST><A>http://www.cs.wustl.edu/~schmidt/PDF/Act-Obj.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>R. Greg Lavender</AUTHOR><AUTHOR>Douglas C. Schmidt</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A complete description of the pattern with some information on a C++ implementation.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Atomizer (a.k.a. Serializer): Read arbitrarily complex object structures from and write them to varying data structure-based backends. Efficiently store and retrieve objects from different backends, such as flat files, relational databases, and RPC buffers.</TITLE>
+          <ITEM><ARTICLE><X><T>Serializer</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-serializer.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf Siberski</AUTHOR><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Daniel Megert</AUTHOR><AUTHOR>Heinz Z&#xFC;llighoven</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This is a full description of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Atomizer Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Atomizer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Chain of Responsibility: Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.</TITLE>
+          <ITEM><ARTICLE><X><T>Chain of Responsibility</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/chainOfResponsibility.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Chain of Responsibility Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/CoR.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>19</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Command (a.k.a. Action or Transaction): Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.</TITLE>
+          <ITEM><ARTICLE><X><T>Command</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/command.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Command Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Command.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Interpreter: Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.</TITLE>
+          <ITEM><ARTICLE><X><T>Interpreter</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/interpreter.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Interpreter Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Interpreter.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>27</DAY></DATE><COMMENT>A good presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Iterator (a.k.a. Cursor): Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.</TITLE>
+          <ITEM><ARTICLE><X><T>Iterator</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/iterator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Lock: Temporarily restrict the access to some capability of an object to another one.</TITLE>
+          <ITEM><ARTICLE><X><T>Lock Pattern</T><A>http://www.castle-cadenza.demon.co.uk/lock.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Mediator: Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.</TITLE>
+          <ITEM><ARTICLE><X><T>Mediator</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/mediator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Mediator Pattern</T><A>http://www.castle-cadenza.demon.co.uk/mediat.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Memento (a.k.a. Token): Without violating encapsulation, capture and externalize an object's internal state so that the object can be restored to this state later.</TITLE>
+          <ITEM><ARTICLE><X><T>Memento</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/memento.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Observer (a.k.a. Dependents or Publish-Subscribe): Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.</TITLE>
+          <ITEM><ARTICLE><X><T>Observer</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/observer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Applying Observer Pattern in C++ Applications</T><A>http://www.codeguru.com/cpp_mfc/observer.shtml</A><L>en</L><F>HTML</F></X><X><T>Applying Observer Pattern in C++ Applications</T><A>http://www.codeproject.com/KB/architecture/observer.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Kulathu Sarma</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE><COMMENT>This short presentation contains some good ideas (mainly coming from GoF's book) such as nofication vs polling, pull vs push&#x2026; with C++ examples.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Observer Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Observer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Observer Pattern</T><A>http://www.castle-cadenza.demon.co.uk/observe.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Event Notification Pattern - Integrating Implicit Invocation with Object-Orientation</T><A>http://www.riehle.org/computer-science/research/1996/tapos-1996-event.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A small variation of the pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Specification: Specify if a candidate object matches some criteria.</TITLE>
+          <ITEM><ARTICLE><X><T>Specifications</T><A>http://martinfowler.com/apsupp/spec.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Eric Evans</AUTHOR><AUTHOR>Martin Fowler</AUTHOR><COMMENT>A detailed description of the pattern and, also, its extensions into subsumption and partially filled specifications.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>State (Objects for States): Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.</TITLE>
+          <ITEM><ARTICLE><X><T>State</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/state.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Strategy (a.k.a. Policy): Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.</TITLE>
+          <ITEM><ARTICLE><X><T>Strategy</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/strategy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Applying Strategy Pattern in C++ Applications</T><A>http://www.codeguru.com/cpp_mfc/strategy.shtml</A><L>en</L><F>HTML</F></X><X><T>Applying Strategy Pattern in C++ Applications</T><A>http://www.codeproject.com/KB/architecture/strategy.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Kulathu Sarma</AUTHOR><DATE><YEAR>1998</YEAR><MONTH>11</MONTH><DAY>27</DAY></DATE><COMMENT>This is a rather good description to the strategy pattern, but I believe this paper contains several errors (e.g. using templates does not reduce footprint).</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X status='dead'><T>An Example of the Strategy Pattern</T><A>http://industriallogic.com/patterns/examples/strategy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ralph Richard Cook</AUTHOR><COMMENT>A short C++ example of the strategy pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Strategy Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Strategy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>11</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Template Method: Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.</TITLE>
+          <ITEM><ARTICLE><X><T>Template Method</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/templateMethod.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Visitor: Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.</TITLE>
+          <ITEM><ARTICLE><X><T>Visitor</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/visitor.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Visitor Pattern</T><A>http://www.castle-cadenza.demon.co.uk/visitor.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>Structural patterns</TITLE>
-      <ITEM><BLIST><TITLE>Adapter (a.k.a. Wrapper): Convert the interface of a class into another interface clients expect. Adapter lets classes work together that couldn't otherwise because of incompatible interfaces.</TITLE>
-        <ITEM><ARTICLE><X><T>Adaptor Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Adaptor.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Wrapper Design Pattern</T><A>http://www.castle-cadenza.demon.co.uk/wrapper.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Bridge (a.k.a. Handle/Body): Decouple an abstraction from its implementation so that the two can vary independently.</TITLE>
-        <ITEM><ARTICLE><X><T>Bridge</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/bridge.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Bridge Pattern - Bridging the gap between Interface and Implementation</T><A>http://www.codeguru.com/cpp_mfc/bridge.shtml</A><L>en</L><F>HTML</F></X><AUTHOR>Kulathu Sarma</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE><COMMENT>This other Sarma paper is also a good description, but, this time (see in strategy pattern) , I have no negative comments&#x2026;</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X status='dead'><T>An Example of the Bridge Pattern</T><A>http://industriallogic.com/patterns/examples/bridge.html</A><L>en</L><F>HTML</F></X><COMMENT>A very short C++ example found in MFC (<CODEROUTINE>CFile</CODEROUTINE>).</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X status='dead'><T>Getting the Handle of Handles</T><A>http://www.acm.org/crossroads/xrds2-2/ovp.html</A><L>en</L><F>HTML</F></X><AUTHOR>G. Bowden Wise</AUTHOR><DATE><YEAR>1995</YEAR></DATE><COMMENT>Not described as a design pattern, but this article is still a good presentation of possible uses of a bridge.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Bureaucracy: Define a self-constrained hierarchical structure which maintains its inner consistency, accepts interaction with clients on any level of the hierarchy, and scales for application design.</TITLE>
-        <ITEM><ARTICLE><X><T>Bureaucracy</T><A>http://www.riehle.org/computer-science/research/1996/europlop-1996-bureaucracy.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This pattern is very complex. In my mind, it is not very generic, so I would consider this as a design rather than a design pattern. But this is a good example of the composition of several patterns. The author proposes a way (using roles) to handle this type of complex pattern compositions. But, this is maybe only a joke&#x2026;</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Composite: Compose objects into tree structures to represent part-whole hierarchies. Composite lets clients treat individual objects and compositions of objects uniformly.</TITLE>
-        <ITEM><ARTICLE><X><T>Composite</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/composite.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM>Data Accessor: Decouple data access of the algorithm using it by providing a standardized handler object.</ITEM>
-      <ITEM><BLIST><TITLE>Data Transfer Object: Hold the data used for communicating with a remote interface in order to minimize the number of calls.</TITLE>
-        <ITEM><ARTICLE><X><T>Data Transfer Object</T><A>http://msdn.microsoft.com/en-us/library/ms978717.aspx</A><L>en</L><F>HTML</F></X><COMMENT>A very complete description of the pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Decorator: Attach additional responsibilities to an objet dynamically. Decorators provide a flexible alternative to subclassing for extending functionality.</TITLE>
-        <ITEM><ARTICLE><X><T>Decorator</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/decorator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X status='dead'><T>Example of the Decorator Pattern</T><A>http://industriallogic.com/patterns/examples/decorator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Joshua Kerievsky</AUTHOR><DATE><YEAR>1995</YEAR><MONTH>10</MONTH></DATE><COMMENT>A short good C++ example.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Decorator Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Decorator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>3</MONTH><DAY>27</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Decorator Pattern</T><A>http://www.castle-cadenza.demon.co.uk/decorate.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Using the Decorator Pattern</T><A>http://www.onjava.com/pub/a/onjava/2003/02/05/decorator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Budi Kurniawan</AUTHOR><DATE><YEAR>2003</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>A description of how to implement the pattern for Java Swing components.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Facade: Provide a unified interface to a set of interfaces in a subsystem. Facade defines a higher-level interface that makes the subsystem easier to use.</TITLE>
-        <ITEM><ARTICLE><X><T>Facade</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/facade.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>The Facade Design Pattern</T><A>http://www.theperlreview.com/Issues/The_Perl_Review_0_4.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>brian d foy</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE><COMMENT>Not really a good presentation of the pattern, but lengthily describes its advantages (loose link with the library) and gives some Perl samples.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Flyweight: Use sharing to support large numbers of fine-grained objects efficiently.</TITLE>
-        <ITEM><ARTICLE><X><T>Flyweight</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/flyweight.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X status='dead'><T>Example of the Flyweight Pattern</T><A>http://industriallogic.com/patterns/examples/flyweight.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ralph Richard Cook</AUTHOR><COMMENT>Cook continues to work on his strategy pattern C++ example (see in strategy paragraph) and modifies it to use a flyweight pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Model-View-Controller: Separate the management of user input, data computation and visual feedback into three objects.</TITLE>
-        <ITEM><ARTICLE><X><T>Applications Programming in Smalltalk-80 (TM): How to use Model-View-Controller (MVC)</T><A>http://st-www.cs.uiuc.edu/users/smarch/st-docs/mvc.html</A><L>en</L><F>HTML</F></X><AUTHOR>Steve Burbeck</AUTHOR><DATE><YEAR>1992</YEAR></DATE><COMMENT>This article predates the design patterns fad, so it does not use the usual description template. But it thoroughly describes the MVC implementation, maybe this is too Smalltalk biased for those who want to easily use MVC with an other language.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Phrasebook: When the application needs to execute, create or output expressions in another language, keep these expressions in a separate phrasebook</TITLE>
-        <ITEM><ARTICLE><X><T>The Phrasebook Pattern</T><A>http://ootips.org/yonat/Phrasebook.pdf</A><L>en</L><F>PDF</F></X><X><T>The Phrasebook Pattern</T><A>http://hillside.net/plop/plop2k/proceedings/Pinchuk/Pinchuk.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Yonat Sharon</AUTHOR><AUTHOR>Rani Pinchuk</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>The complete presentation of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>The Design Phrasebook Pattern</T><A>http://www.perl.com/pub/a/2002/10/22/phrasebook.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rani Pinchuk</AUTHOR><DATE><YEAR>2002</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE><COMMENT>A presentation of <CODEROUTINE>Class::Phrasebook</CODEROUTINE> and <CODEROUTINE>Class::Phrasebook::SQL</CODEROUTINE> classes to implement the Phrasebook design pattern in Perl.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Proxy (a.k.a. Surrogate): Provide a surrogate or placeholder for another object to control access to it.</TITLE>
-        <ITEM><ARTICLE><X><T>Proxy</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/proxy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Role: Adapt an object to different client's needs through transparently attached role objects, each one representing a role the object has to play in that client's context.</TITLE>
-        <ITEM><ARTICLE><X><T>The Role Object Pattern</T><A>http://dirkriehle.com/computer-science/research/2000/plopd-4.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf Siberski</AUTHOR><AUTHOR>Martina Wulf</AUTHOR><DATE><YEAR>1999</YEAR></DATE><COMMENT>This is a complete description of the role pattern with the pros, cons, C++ example&#x2026;</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Skin: Separate the presentation style of an application from its logic.</TITLE>
-        <ITEM><ARTICLE><X><T>The Skin Pattern</T><A>http://ootips.org/yonat/Skin.pdf</A><L>en</L><F>PDF</F></X><X><T>The Skin Pattern</T><A>http://hillside.net/plop/plop2k/proceedings/Sharon/Sharon.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Rani Pinchuk</AUTHOR><AUTHOR>Yonat Sharon</AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>The complete presentation of the pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Streams: Process a stream of information by feeding it through a network of independent and reusable processing units.</TITLE>
-        <ITEM><ARTICLE><X><T>Streams Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Streams.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-    </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>Behavioral patterns</TITLE>
-      <ITEM><BLIST><TITLE>Active Object (a.k.a.Concurrent Object or Actor): Decouple method execution from method invocation to enhance concurrency and simplify synchronized access to an object that resides in its own thread of control.</TITLE>
-        <ITEM><ARTICLE><X><T>Active Object</T><ST>An Object Behavioral Pattern for Concurrent Programming</ST><A>http://www.cs.wustl.edu/~schmidt/PDF/Act-Obj.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>R. Greg Lavender</AUTHOR><AUTHOR>Douglas C. Schmidt</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A complete description of the pattern with some information on a C++ implementation.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Atomizer (a.k.a. Serializer): Read arbitrarily complex object structures from and write them to varying data structure-based backends. Efficiently store and retrieve objects from different backends, such as flat files, relational databases, and RPC buffers.</TITLE>
-        <ITEM><ARTICLE><X><T>Serializer</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-serializer.html</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><AUTHOR>Wolf Siberski</AUTHOR><AUTHOR>Dirk Ba&#xFC;mer</AUTHOR><AUTHOR>Daniel Megert</AUTHOR><AUTHOR>Heinz Z&#xFC;llighoven</AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This is a full description of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Atomizer Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Atomizer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Chain of Responsibility: Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.</TITLE>
-        <ITEM><ARTICLE><X><T>Chain of Responsibility</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/chainOfResponsibility.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Chain of Responsibility Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/CoR.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>19</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Command (a.k.a. Action or Transaction): Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.</TITLE>
-        <ITEM><ARTICLE><X><T>Command</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/command.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Command Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Command.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Interpreter: Given a language, define a representation for its grammar along with an interpreter that uses the representation to interpret sentences in the language.</TITLE>
-        <ITEM><ARTICLE><X><T>Interpreter</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/interpreter.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Interpreter Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Interpreter.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>27</DAY></DATE><COMMENT>A good presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Iterator (a.k.a. Cursor): Provide a way to access the elements of an aggregate object sequentially without exposing its underlying representation.</TITLE>
-        <ITEM><ARTICLE><X><T>Iterator</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/iterator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Lock: Temporarily restrict the access to some capability of an object to another one.</TITLE>
-        <ITEM><ARTICLE><X><T>Lock Pattern</T><A>http://www.castle-cadenza.demon.co.uk/lock.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Mediator: Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.</TITLE>
-        <ITEM><ARTICLE><X><T>Mediator</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/mediator.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Mediator Pattern</T><A>http://www.castle-cadenza.demon.co.uk/mediat.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Memento (a.k.a. Token): Without violating encapsulation, capture and externalize an object's internal state so that the object can be restored to this state later.</TITLE>
-        <ITEM><ARTICLE><X><T>Memento</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/memento.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Observer (a.k.a. Dependents or Publish-Subscribe): Define a one-to-many dependency between objects so that when one object changes state, all its dependents are notified and updated automatically.</TITLE>
-        <ITEM><ARTICLE><X><T>Observer</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/observer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Applying Observer Pattern in C++ Applications</T><A>http://www.codeguru.com/cpp_mfc/observer.shtml</A><L>en</L><F>HTML</F></X><X><T>Applying Observer Pattern in C++ Applications</T><A>http://www.codeproject.com/KB/architecture/observer.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Kulathu Sarma</AUTHOR><DATE><YEAR>1999</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE><COMMENT>This short presentation contains some good ideas (mainly coming from GoF's book) such as nofication vs polling, pull vs push&#x2026; with C++ examples.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Observer Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Observer.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Observer Pattern</T><A>http://www.castle-cadenza.demon.co.uk/observe.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>The Event Notification Pattern - Integrating Implicit Invocation with Object-Orientation</T><A>http://www.riehle.org/computer-science/research/1996/tapos-1996-event.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Dirk Riehle</AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A small variation of the pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Specification: Specify if a candidate object matches some criteria.</TITLE>
-        <ITEM><ARTICLE><X><T>Specifications</T><A>http://martinfowler.com/apsupp/spec.pdf</A><L>en</L><F>PDF</F></X><AUTHOR>Eric Evans</AUTHOR><AUTHOR>Martin Fowler</AUTHOR><COMMENT>A detailed description of the pattern and, also, its extensions into subsumption and partially filled specifications.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>State (Objects for States): Allow an object to alter its behavior when its internal state changes. The object will appear to change its class.</TITLE>
-        <ITEM><ARTICLE><X><T>State</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/state.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Strategy (a.k.a. Policy): Define a family of algorithms, encapsulate each one, and make them interchangeable. Strategy lets the algorithm vary independently from clients that use it.</TITLE>
-        <ITEM><ARTICLE><X><T>Strategy</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/strategy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Applying Strategy Pattern in C++ Applications</T><A>http://www.codeguru.com/cpp_mfc/strategy.shtml</A><L>en</L><F>HTML</F></X><X><T>Applying Strategy Pattern in C++ Applications</T><A>http://www.codeproject.com/KB/architecture/strategy.aspx</A><L>en</L><F>HTML</F></X><AUTHOR>Kulathu Sarma</AUTHOR><DATE><YEAR>1998</YEAR><MONTH>11</MONTH><DAY>27</DAY></DATE><COMMENT>This is a rather good description to the strategy pattern, but I believe this paper contains several errors (e.g. using templates does not reduce footprint).</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X status='dead'><T>An Example of the Strategy Pattern</T><A>http://industriallogic.com/patterns/examples/strategy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Ralph Richard Cook</AUTHOR><COMMENT>A short C++ example of the strategy pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Strategy Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Strategy.html</A><L>en</L><F>HTML</F></X><AUTHOR>Thomas Minka</AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>11</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Template Method: Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.</TITLE>
-        <ITEM><ARTICLE><X><T>Template Method</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/templateMethod.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Visitor: Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.</TITLE>
-        <ITEM><ARTICLE><X><T>Visitor</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/visitor.html</A><L>en</L><F>HTML</F></X><AUTHOR>Rob Kremer</AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Visitor Pattern</T><A>http://www.castle-cadenza.demon.co.uk/visitor.htm</A><L>en</L><F>HTML</F></X><AUTHOR>Shaun Parry</AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Kent Beck</TITLE>
+      <ITEM><ARTICLE><X><T>Patterns Enhance Craft Step 1: Programs is Programs</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-step-1-programs-is-programs/907298705969661</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>Design decisions are resulting mostly from internal constraints, not from the external constraints (i.e. what the software needs to do).</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Patterns Enhance Craft Step 2: Programming Rhymes</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-step-2-programming-rhymes/908002152565983</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>Since the design problems come from internal constraints, they are similar (Kent Beck cites variable naming as an example), so it makes sense to have a catalog of solutions for these repeating constraint configurations.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Patterns Enhance Craft Sidebar: My Personal Crisis</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-sidebar-my-personal-crisis/908356345863897</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Patterns Enhance Craft Step 3: A Few Good Solutions</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-step-3-a-handful-of-solutions/911063088926556</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>For a given configuration of constraints, the choice between the solutions depends on the relative forces of the constraints.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Patterns Enhance Craft: The Final Step, Pareto Effort</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-the-final-step-pareto-effort/914582455241286</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>After suffering one week for imposing himself to always determinate the pattern he was currently using, Kent got a list of tens of them. Patterns then allowed him to focus only on communicating the intent to the future reader of the code, the technical details of the implementation are already defined by applying the patter. Design patterns also facilitate communications.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
-
-  <ITEM><BLIST><TITLE>Kent Beck</TITLE>
-    <ITEM><ARTICLE><X><T>Patterns Enhance Craft Step 1: Programs is Programs</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-step-1-programs-is-programs/907298705969661</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>Design decisions are resulting mostly from internal constraints, not from the external constraints (i.e. what the software needs to do).</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Patterns Enhance Craft Step 2: Programming Rhymes</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-step-2-programming-rhymes/908002152565983</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>Since the design problems come from internal constraints, they are similar (Kent Beck cites variable naming as an example), so it makes sense to have a catalog of solutions for these repeating constraint configurations.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Patterns Enhance Craft Sidebar: My Personal Crisis</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-sidebar-my-personal-crisis/908356345863897</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Patterns Enhance Craft Step 3: A Few Good Solutions</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-step-3-a-handful-of-solutions/911063088926556</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>For a given configuration of constraints, the choice between the solutions depends on the relative forces of the constraints.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Patterns Enhance Craft: The Final Step, Pareto Effort</T><A>https://www.facebook.com/notes/kent-beck/patterns-enhance-craft-the-final-step-pareto-effort/914582455241286</A><L>en</L><F>HTML</F></X><AUTHOR>Kent Beck</AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>After suffering one week for imposing himself to always determinate the pattern he was currently using, Kent got a list of tens of them. Patterns then allowed him to focus only on communicating the intent to the future reader of the code, the technical details of the implementation are already defined by applying the patter. Design patterns also facilitate communications.</COMMENT></ARTICLE></ITEM>
-  </BLIST></ITEM>
-
-</BLIST>
-
+</LLIST>
 </CONTENT>
 </PAGE>
 

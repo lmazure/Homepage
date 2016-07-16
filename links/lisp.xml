@@ -5,40 +5,40 @@
 <PATH>links/lisp.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
-
-<B>Lisp:</B><BR/>
-<X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Languages/Lisp</A><L>en</L><F>HTML</F></X><BR/>
-<X><T>Emacs lisp</T><A>http://www.gnu.org/software/emacs/manual/html_mono/elisp.html</A><L>en</L><F>HTML</F></X>: 
-  <X><T>personal notes</T><A>../notes/emacs.htm</A><L>en</L><F>HTML</F></X>
-
-<LINE/>
-<B>Scheme:</B><BR/>
-<X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Languages/Lisp/Scheme</A><L>en</L><F>HTML</F></X>
-
-<LINE/>
-<B>GUILE:</B><BR/>
-<X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Languages/Lisp/Scheme/Implementations/Guile</A><L>en</L><F>HTML</F></X><BR/>
-<X><T>homepage</T><A>http://www.gnu.org/software/guile/guile.html</A><L>en</L><F>HTML</F></X>
-
-<LINE/>
-<B><ANCHOR>clojure</ANCHOR>Clojure:</B><BR/>
-<X><T>clojure.org</T><A>http://clojure.org</A><L>en</L><F>HTML</F></X>,
-  <X><T>clojure-doc.org</T><A>http://clojure-doc.org</A><L>en</L><F>HTML</F></X><BR/>
-<X><T>Clojure for the Brave and True</T><A>http://www.braveclojure.com</A><L>en</L><F>HTML</F></X><BR/>
-<X><T>Clojure instaREPL</T><A>http://web.clojurerepl.com</A><L>en</L><F>HTML</F></X><BR/>
-<X><T>personal notes</T><A>../notes/clojure.html</A><L>en</L><F>HTML</F></X>
-
-<LINE/>
-
-<BLIST><TITLE>Articles</TITLE>
-  <ITEM><ARTICLE><X><T>CLOS, Eiffel, and Sather: A Comparison</T><A>http://www.icsi.berkeley.edu/~sather/Publications/tr-91-047.html</A><L>en</L><F>PostScript</F></X><AUTHOR>Heinz W. Schmidt</AUTHOR><AUTHOR>Stephen M. Omohundro</AUTHOR><DATE><YEAR>1991</YEAR></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
-  <ITEM><BLIST><TITLE>Clojure</TITLE>
-    <ITEM><ARTICLE><X quality='-1'><T>Zach Oakes - Making Games at Runtime with Clojure</T><A>https://www.youtube.com/watch?v=0GzzFeS5cMc</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>37</MINUTE><SECOND>33</SECOND></DURATION></X><AUTHOR>Zach Oakes</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE><COMMENT>A rational for using Clojure to program games and a short introduction to play-clj.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Trampolining Through Mutual Recursion With Clojure</T><A>http://jakemccrary.com/blog/2010/12/06/trampolining-through-mutual-recursion/</A><L>en</L><F>HTML</F></X><AUTHOR>Jake McCrary</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>12</MONTH><DAY>10</DAY></DATE><COMMENT>An example of using <CODEROUTINE>trampoline</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Exploring Clojure Memoization</T><A>http://danmidwood.com/content/2013/02/24/exploring-clojure-memoization.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dan Midwood</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE><COMMENT>A simple and clear introduction to <CODEROUTINE>memoize</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+<LLIST>
+  <ITEM><SLIST>
+    <ITEM><BLIST><TITLE>Lisp</TITLE>
+      <ITEM><X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Languages/Lisp</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>Emacs lisp</T><A>http://www.gnu.org/software/emacs/manual/html_mono/elisp.html</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>personal notes</T><A>../notes/emacs.htm</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Scheme</TITLE>
+      <ITEM><X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Languages/Lisp/Scheme</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>GUILE</TITLE>
+      <ITEM><X><T>Open Directory</T><A>http://dmoz.org/Computers/Programming/Languages/Lisp/Scheme/Implementations/Guile</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>homepage</T><A>http://www.gnu.org/software/guile/guile.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE><ANCHOR>clojure</ANCHOR>Clojure</TITLE>
+      <ITEM><CLIST>
+        <ITEM><X><T>clojure.org</T><A>http://clojure.org</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>clojure-doc.org</T><A>http://clojure-doc.org</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
+      <ITEM><X><T>Clojure for the Brave and True</T><A>http://www.braveclojure.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Clojure instaREPL</T><A>http://web.clojurerepl.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>personal notes</T><A>../notes/clojure.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+  </SLIST></ITEM>
+  <ITEM><BLIST><TITLE>Articles</TITLE>
+    <ITEM><ARTICLE><X><T>CLOS, Eiffel, and Sather: A Comparison</T><A>http://www.icsi.berkeley.edu/~sather/Publications/tr-91-047.html</A><L>en</L><F>PostScript</F></X><AUTHOR>Heinz W. Schmidt</AUTHOR><AUTHOR>Stephen M. Omohundro</AUTHOR><DATE><YEAR>1991</YEAR></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+    <ITEM><BLIST><TITLE>Clojure</TITLE>
+      <ITEM><ARTICLE><X quality='-1'><T>Zach Oakes - Making Games at Runtime with Clojure</T><A>https://www.youtube.com/watch?v=0GzzFeS5cMc</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>37</MINUTE><SECOND>33</SECOND></DURATION></X><AUTHOR>Zach Oakes</AUTHOR><DATE><YEAR>2014</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE><COMMENT>A rational for using Clojure to program games and a short introduction to play-clj.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Trampolining Through Mutual Recursion With Clojure</T><A>http://jakemccrary.com/blog/2010/12/06/trampolining-through-mutual-recursion/</A><L>en</L><F>HTML</F></X><AUTHOR>Jake McCrary</AUTHOR><DATE><YEAR>2010</YEAR><MONTH>12</MONTH><DAY>10</DAY></DATE><COMMENT>An example of using <CODEROUTINE>trampoline</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Exploring Clojure Memoization</T><A>http://danmidwood.com/content/2013/02/24/exploring-clojure-memoization.html</A><L>en</L><F>HTML</F></X><AUTHOR>Dan Midwood</AUTHOR><DATE><YEAR>2013</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE><COMMENT>A simple and clear introduction to <CODEROUTINE>memoize</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
   </BLIST></ITEM>
-</BLIST>
-
+</LLIST>
 </CONTENT>
 </PAGE>
 
