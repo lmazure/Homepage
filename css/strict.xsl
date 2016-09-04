@@ -62,11 +62,6 @@
               <xsl:apply-templates select="/PAGE/DATE"/>
             </td>
             <td>
-              <a href="javascript:do_disclaimer()">disclaimer</a>
-            </td>
-          </tr>
-          <tr>
-            <td>
               <xsl:text>Version: </xsl:text>
               <xsl:choose>
                 <xsl:when test="system-property('xsl:vendor-url')='http://xml.apache.org/xalan-j'" >
@@ -89,9 +84,6 @@
                   </xsl:element>
                 </xsl:otherwise>
               </xsl:choose>
-            </td>
-            <td>
-              <a href="javascript:do_help()">help</a>
             </td>
           </tr>
         </table>
