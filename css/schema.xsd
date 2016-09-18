@@ -3,6 +3,17 @@
 
 <!-- definition of the types -->
 
+<xs:complexType name="person">
+  <xs:sequence>
+    <xs:element name="NAMEPREFIX" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="FIRSTNAME" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="MIDDLENAME" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="LASTNAME" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="NAMESUFFIX" type="xs:string" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="GIVENNAME" type="xs:string" minOccurs="0" maxOccurs="1"/>
+  </xs:sequence>
+</xs:complexType>
+
 <xs:complexType name="fullDate">
   <xs:sequence>
     <xs:element name="YEAR" type="xs:integer"/>
@@ -253,7 +264,7 @@
   <xs:complexType>
     <xs:sequence>
         <xs:element ref="X" minOccurs="1" maxOccurs="unbounded"/>
-        <xs:element name="AUTHOR" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
+        <xs:element name="AUTHOR" minOccurs="0" maxOccurs="unbounded" type="person"/>
         <xs:element name="DATE" type="partialDate" minOccurs="0" maxOccurs="1"/>
         <xs:element name="COMMENT" type="content" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>

@@ -131,7 +131,17 @@
       <xsl:if test="(position()>2) and (position()=last())" >
         <xsl:text>, and </xsl:text>
       </xsl:if>
-      <xsl:apply-templates select="."/>
+      <xsl:value-of select="./NAMEPREFIX"/>
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="./FIRSTNAME"/>
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="./MIDDLENAME"/>
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="./LASTNAME"/>
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="./NAMESUFFIX"/>
+      <xsl:text> </xsl:text>
+      <xsl:value-of select="./GIVENNAME"/>
     </xsl:for-each>
   </xsl:if>
   <xsl:if test="count(./DATE)=1">
