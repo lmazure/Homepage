@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -78,6 +78,7 @@
     <ITEM><BLIST><TITLE>Library design</TITLE>
       <ITEM><ARTICLE><X><T>Good practices in Library Design Implementation, and Maintenance</T><A>http://www.akkadia.org/drepper/goodpractice.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Ulrich</FIRSTNAME><LASTNAME>Drepper</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>3</MONTH><DAY>7</DAY></DATE><COMMENT>This article speaks mainly of the C/C++ compilation issues: keeping binary compatibility, avoiding name clashes&#x2026;</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality='1'><T>How To Design A Good API and Why it Matters</T><A>https://www.youtube.com/watch?v=aAb7hSCtvGw</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>19</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Joshua</FIRSTNAME><LASTNAME>Bloch</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>Some good advice on design a good API: when in doubt, leave it out; the principle of least astonishment&#x2026;</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Every public change is a breaking change</T><A>https://blogs.msdn.microsoft.com/ericlippert/2012/01/09/every-public-change-is-a-breaking-change/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Lippert</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>How to Design Great APIs - Parse Developer Day 2013</T><A>https://www.youtube.com/watch?v=qCdpTji8nxo</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>32</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Lacker</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE><COMMENT>An API must be:<BR/>- intuitive (homogeneity, ugliness of dangerous calls)<BR/>- documented (reference docs, tutorials, quick-starts)<BR/>- opinionated (dictatorship of design philosophy)</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Don't Make Me Remember Things</T><A>https://blog.8thlight.com/rob-looby/2016/01/28/dont-make-me-remember-things.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Looby</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE><COMMENT>Designing an API in a way the developer does not have to remember about possible pitfalls.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
