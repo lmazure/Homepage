@@ -1,4 +1,4 @@
-<xsl:stylesheet version = '1.0' xmlns:xsl='http://www.w3.org/1999/XSL/Transform'>
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 <xsl:output method="html" encoding="utf-8" indent="yes" />
 
 <xsl:variable name="filepath" select="/PAGE/PATH"/>
@@ -131,17 +131,10 @@
       <xsl:if test="(position()>2) and (position()=last())" >
         <xsl:text>, and </xsl:text>
       </xsl:if>
-      <xsl:value-of select="./NAMEPREFIX"/>
-      <xsl:text> </xsl:text>
-      <xsl:value-of select="./FIRSTNAME"/>
-      <xsl:text> </xsl:text>
-      <xsl:value-of select="./MIDDLENAME"/>
-      <xsl:text> </xsl:text>
-      <xsl:value-of select="./LASTNAME"/>
-      <xsl:text> </xsl:text>
-      <xsl:value-of select="./NAMESUFFIX"/>
-      <xsl:text> </xsl:text>
-      <xsl:value-of select="./GIVENNAME"/>
+      <xsl:for-each select="NAMEPREFIX/text() | FIRSTNAME/text() | MIDDLENAME/text() | LASTNAME/text() | NAMESUFFIX/text() | GIVENNAME/text()">
+        <xsl:value-of select="."/>
+        <xsl:if test="not(position() = last())"><xsl:text> </xsl:text></xsl:if>
+      </xsl:for-each>
     </xsl:for-each>
   </xsl:if>
   <xsl:if test="count(./DATE)=1">
