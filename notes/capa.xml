@@ -3,16 +3,31 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>CAPA - Corrective Action Preventive Action</TITLE>
 <PATH>notes/capa.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 
-<BLIST>
-<TITLE><U><B>Definitions</B></U></TITLE>
-<ITEM><U>Corrective Action:</U> Action taken to eliminate the causes of an <B>existing</B> nonconformity in order to prevent recurrence. (from ISO 13485:2003)</ITEM>
-<ITEM><U>Preventive Action:</U> Action taken to eliminate the causes of a <B>potential</B> nonconformity, defect, or other undesirable situation in order to prevent occurrence. (from ISO 13485:2003)</ITEM>
-<ITEM><U>Nonconformity:</U> nonfulfillment of a specified requirement. (from 21CFR820.3)</ITEM>
-<ITEM><U>Quality:</U> totality of features and characteristics that  bear on the ability of a device to satisfy fitness-for-use, including safety and performance. (from 21CFR820.3)</ITEM>
-<ITEM><U>Defect:</U> nonfulfilment of an intended usage requirement or reasonable expectation, including one concerned with safety. (from ISO 8402:1994)</ITEM>
+<BLIST><TITLE><U><B>Definitions</B></U></TITLE>
+  <ITEM><U>Corrective Action:</U> Action taken to eliminate the causes of an <B>existing</B> nonconformity in order to prevent recurrence. (from ISO 13485:2003)</ITEM>
+  <ITEM><U>Preventive Action:</U> Action taken to eliminate the causes of a <B>potential</B> nonconformity, defect, or other undesirable situation in order to prevent occurrence. (from ISO 13485:2003)</ITEM>
+  <ITEM><U>Nonconformity:</U> nonfulfillment of a specified requirement. (from 21CFR820.3)</ITEM>
+  <ITEM><U>Quality:</U> totality of features and characteristics that  bear on the ability of a device to satisfy fitness-for-use, including safety and performance. (from 21CFR820.3)</ITEM>
+  <ITEM><U>Defect:</U> nonfulfilment of an intended usage requirement or reasonable expectation, including one concerned with safety. (from ISO 8402:1994)</ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>ISO 9000:2005(E)</B></U></TITLE>
+  <ITEM><NLIST><TITLE><U>Correction:</U> action to eliminate a detected nonconformity.</TITLE>
+    <ITEM>A correction can be made in conjunction with a corrective action.</ITEM>
+    <ITEM>A correction can be, for example, rework or regrade.</ITEM>
+  </NLIST></ITEM>
+  <ITEM><NLIST><TITLE><U>Corrective Action:</U> action to eliminate the cause of a detected non-conformity or other undesirable situation.</TITLE>
+    <ITEM>There can be more than one cause for a nonconformity.</ITEM>
+    <ITEM>Corrective action is taken to prevent recurrence.</ITEM>
+    <ITEM>There is a difference between correction and corrective action.</ITEM>
+  </NLIST></ITEM>
+  <ITEM><NLIST><TITLE><U>Preventive Action:</U> action to eliminate the cause of a potential non-conformity or other undesirable situation.</TITLE>
+    <ITEM>There can be more than one cause for a potential nonconformity.</ITEM>
+    <ITEM>Preventive action is taken to prevent occurrence.</ITEM>
+  </NLIST></ITEM>
 </BLIST>
 
 <SLIST>
@@ -150,4 +165,5 @@ Verify that the change fixed the root cause. Last but not least, document all th
 
 </CONTENT>
 </PAGE>
+
 
