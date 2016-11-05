@@ -63,6 +63,8 @@ sub handle_file {
         print OUTFILE "    <changefreq>monthly</changefreq>\n";
     } elsif ( $dir eq "favicon.ico") {
         print OUTFILE "    <changefreq>yearly</changefreq>\n";
+    } elsif ( $dir eq "icon.png") {
+        print OUTFILE "    <changefreq>yearly</changefreq>\n";
     } else {
         die ("unknown directory: $dir");
     }
