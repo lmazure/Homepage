@@ -29,11 +29,11 @@ sub handle_file {
             die("cannot find date in source file $source");
         }
         print OUTFILE "  <url>\n";
-        print OUTFILE "    <loc>http://lmzr.club.fr/$file</loc>\n";
+        print OUTFILE "    <loc>http://mazure.fr/$file</loc>\n";
         printf OUTFILE "    <lastmod>%04d-%02d-%02d</lastmod>\n", $1, $2, $3;
     } else {
         print OUTFILE "  <url>\n";
-        print OUTFILE "    <loc>http://lmzr.club.fr/$file</loc>\n";
+        print OUTFILE "    <loc>http://mazure.fr/$file</loc>\n";
     }
     my $dir = $file;
     $dir =~ s{/.*$}{};
@@ -88,8 +88,7 @@ sub loop_on_dirs {
     my @list = readdir(DIR);
     closedir(DIR);
     foreach ( @list ) {
-        next if ( /^\./ || $_ eq "robin" || $_ eq "photos" ||$_ eq "sources" || $_ eq "kessel"
-                        || $_ eq "css" || $_ eq "tools" || $_ eq "images");
+        next if ( /^\./ || $_ eq "sources" || $_ eq "css" || $_ eq "tools" || $_ eq "images");
         if ( -d "$basedir/$_" ) {
             loop_on_files("$_");
         } else {
