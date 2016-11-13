@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Test Driven Development</TITLE>
 <PATH>links/tdd.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>11</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Test-driven_development</A><L>en</L><F>HTML</F></X></ITEM>
@@ -31,6 +31,7 @@
     <ITEM><ARTICLE><X><T>The Cycles of TDD</T><A>http://blog.cleancoder.com/uncle-bob/2014/12/17/TheCyclesOfTDD.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>The coding cycle levels: the three laws of TDD for the seconds cycle, Red/Green/Refactor for the minutes cycle, the specific/generic transform for the 10 minutes cycles, and the Clean Architecture for the hours cycle.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The MODE-B Imperative</T><A>http://blog.cleancoder.com/uncle-bob/2015/02/21/ModeBImperative.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE><COMMENT>Uncle Bob wrote a PDP8 emulator and explains the difference between the very long code / compile / test loop of that time, which required carefulness and deliberateness, and the same loop which must be keep very short today.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Test-Driven Development is Stupid</T><A>http://geometrian.com/programming/tutorials/testing/test-first.php</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ian</FIRSTNAME><LASTNAME>Mallett</LASTNAME></AUTHOR><COMMENT>The guy writes against TDD, he gets some buzz and a lot of hate mails, then he understands he does not know what is TDD.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Dijkstra's Algorithm</T><A>http://blog.cleancoder.com/uncle-bob/2016/10/26/DijkstrasAlg.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE><COMMENT>An example of using TDD. The exercise is interesting: the whole algorithm is done in a single final step&#x2026;</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Brett L. Schuchert</TITLE>
       <ITEM><BLIST><TITLE>RPN calculator in Java using Eclipse</TITLE>
         <ITEM><ARTICLE><X><T>Getting Started with Tdd in Java using Eclipse</T><A>http://vimeo.com/10569751</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>51</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Brett</FIRSTNAME><MIDDLENAME>L.</MIDDLENAME><LASTNAME>Schuchert</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>3</MONTH><DAY>30</DAY></DATE><COMMENT>A rather slow but clear introduction to TDD using Java and Eclipse : creating a RPN calculator.</COMMENT></ARTICLE></ITEM>
