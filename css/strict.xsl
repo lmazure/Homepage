@@ -192,17 +192,6 @@
 </xsl:template>
 
 <xsl:template match="X">
-  <xsl:if test="starts-with(./A,'https://www.youtube.com')">
-    <xsl:element name="img">
-      <xsl:attribute name="src"><xsl:text>https://www.youtube.com/favicon.ico</xsl:text></xsl:attribute>
-      <xsl:attribute name="alt"><xsl:text>YouTube</xsl:text></xsl:attribute>
-      <xsl:attribute name="title"><xsl:text>YouTube</xsl:text></xsl:attribute>
-      <xsl:attribute name="border"><xsl:text>0</xsl:text></xsl:attribute>
-      <xsl:attribute name="width"><xsl:text>16</xsl:text></xsl:attribute>
-      <xsl:attribute name="height"><xsl:text>16</xsl:text></xsl:attribute>
-      <xsl:attribute name="class">inlinedimage</xsl:attribute>
-    </xsl:element>
-  </xsl:if>
   <xsl:element name="a">
     <xsl:attribute name="href">
       <xsl:value-of select="./A"/>
