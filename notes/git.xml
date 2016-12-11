@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Git</TITLE>
+<PATH>notes/git.xml</PATH>
+<DATE><YEAR>2016</YEAR><MONTH>12</MONTH><DAY>11</DAY></DATE>
+<CONTENT>
+
+<DEFINITIONTABLE>
+<ROW>
+<TERM><CODEROUTINE>git init</CODEROUTINE></TERM>
+<DESC>create an empty Git repository</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>git add .</CODEROUTINE></TERM>
+<DESC>add the content of the current directory to the index</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>git rm &lt;file&gt;</CODEROUTINE></TERM>
+<DESC>remove &lt;file&gt; from the index, or from the working tree and the index</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>git commit -m &lt;msg&gt;</CODEROUTINE></TERM>
+<DESC>store the current contents of the index in a new commit along with message &lt;msg&gt;</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>git status</CODEROUTINE></TERM>
+<DESC>display paths that have differences between the index file and the current HEAD commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git</DESC>
+</ROW>
+</DEFINITIONTABLE>
+</CONTENT>
+<X><T>links</T><A>../links/coding.html#git</A><L>en</L><F>HTML</F></X>
+</PAGE>
+
