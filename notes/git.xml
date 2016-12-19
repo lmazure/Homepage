@@ -3,31 +3,61 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>12</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2016</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
-
 <DEFINITIONTABLE>
 <ROW>
 <TERM><CODEROUTINE>git init</CODEROUTINE></TERM>
 <DESC>create an empty Git repository</DESC>
 </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+<ROW>
+<TERM><CODEROUTINE>git add &lt;file&gt;</CODEROUTINE></TERM>
+<DESC>update &lt;file&gt; in the index using the current content found in the working tree</DESC>
+</ROW>
 <ROW>
 <TERM><CODEROUTINE>git add .</CODEROUTINE></TERM>
-<DESC>add the content of the current directory to the index</DESC>
+<DESC>update the content of the current directory in the index</DESC>
 </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
 <ROW>
 <TERM><CODEROUTINE>git rm &lt;file&gt;</CODEROUTINE></TERM>
 <DESC>remove &lt;file&gt; from the index, or from the working tree and the index</DESC>
 </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
 <ROW>
 <TERM><CODEROUTINE>git commit -m &lt;msg&gt;</CODEROUTINE></TERM>
 <DESC>store the current contents of the index in a new commit along with message &lt;msg&gt;</DESC>
 </ROW>
 <ROW>
+<TERM><CODEROUTINE>-a</CODEROUTINE></TERM>
+<DESC>automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected</DESC>
+</ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+<ROW>
 <TERM><CODEROUTINE>git status</CODEROUTINE></TERM>
 <DESC>display paths that have differences between the index file and the current HEAD commit, paths that have differences between the working tree and the index file, and paths in the working tree that are not tracked by Git</DESC>
 </ROW>
 </DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+<ROW>
+<TERM><CODEROUTINE>git log</CODEROUTINE></TERM>
+<DESC>show commit logs</DESC>
+</ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BLIST><TITLE>gitignore</TITLE>
+<ITEM>It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.ignore</CODEFILENAME> file of that directory.</ITEM>
+</BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#git</A><L>en</L><F>HTML</F></X>
 </PAGE>
