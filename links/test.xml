@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>1</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -41,6 +41,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>.NET</TITLE>
         <ITEM><X><T>NUnit</T><A>http://www.nunit.org</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>NCrunch</T><A>http://www.ncrunch.net</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>JavaScript</TITLE>
         <ITEM><X><T>QUnit</T><A>http://qunitjs.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -112,6 +113,13 @@
         <ITEM><X status='obsolete'><T>Chickenfoot</T><A>http://groups.csail.mit.edu/uid/chickenfoot/index.php</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Comparison tests</TITLE>
+      <ITEM><CLIST><TITLE>Scientist</TITLE>
+        <ITEM><X><T>Ruby</T><A>https://github.com/github/scientist</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>.Net</T><A>https://github.com/github/Scientist.net</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>PHP</T><A>https://github.com/daylerees/scientist</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
+    </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Load tests</TITLE>
       <ITEM><X><T>The Grinder</T><A>http://grinder.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
@@ -141,7 +149,6 @@
       <ITEM><X><T>Wink</T><A>http://www.debugmode.com/wink/</A><L>en</L><F>HTML</F></X>: recording a film of the screen</ITEM>
     </BLIST></ITEM>
     <ITEM><X><T>EICAR Anti-Virus / Anti-Malware test file</T><A>http://www.eicar.org/anti_virus_test_file.htm</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Venus</T><A>http://www.venusjs.org</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>TMAP</T><A>http://www.tmap.net/en</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Elisabeth Hendrickson's cheat sheet</T><A>http://testobsessed.com/wp-content/uploads/2011/04/testheuristicscheatsheetv1.pdf</A><L>en</L><F>PDF</F></X></ITEM>
     <ITEM><X><T>Virtual PC Images to test IE</T><A>https://modern.ie/en-us/virtualization-tools</A><L>en</L><F>HTML</F></X></ITEM>
@@ -332,6 +339,7 @@
       <ITEM><ARTICLE><X><T>Tools to unit test your JavaScript</T><ST>Using QUnit, YUI Test, and JSTestDriver</ST><A>http://www.ibm.com/developerworks/library/wa-tools/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sebastiano</FIRSTNAME><LASTNAME>Armeli-Battana</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>4</MONTH><DAY>10</DAY></DATE><COMMENT>A presentation of QUnit, YUI Test, and JSTestDriver.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>JS Unit Testing</T><A>https://www.youtube.com/watch?v=-IYqgx8JxlU</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>55</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Seth</FIRSTNAME><LASTNAME>McLaughlin</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>16</DAY></DATE><COMMENT>A presentation of Venus.js and a demo of Venus.js and Mocha.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Cost of Testing</T><A>http://googletesting.blogspot.com/2009/10/cost-of-testing.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mi&#x161;ko</FIRSTNAME><LASTNAME>Hevery</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>A personal evaluation of the cost of writing unit tests and their benefits.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Testing Experimental Code in Production with Scientist.NET</T><ST>A .NET port of the Ruby library allows for experimental testing of code that's gone to production.</ST><A>https://visualstudiomagazine.com/articles/2016/11/01/testing-experimental-code.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE><COMMENT>A short presentation of Scientist, a library to compare the output of two different implementations.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Selenium</TITLE>
         <ITEM><ARTICLE><X><T>Automate acceptance tests with Selenium</T><ST>How to use the Selenium test tool for functional testing of a Ruby on Rails and Ajax application</ST><A>http://www.scribd.com/doc/924886/Automate-Acceptance-Tests-With-Selenium</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christian</FIRSTNAME><LASTNAME>Hellsten</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE><COMMENT>A short presentation of Selenium to test Ajax applications.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality='-1'><T>Selenium: The in-browser acceptance testing tool</T><A>https://www.youtube.com/watch?v=78mts_sKNGs</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>41</MINUTE><SECOND>0</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Huggins</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>Jason tried to demonstrate how a commit in Subversion could trigger CruiseControl which would run the new build accross several OSes and Browsers and generate Flash videos of the automated tests. But the presentation is very unclear and the demo failed&#x2026;</COMMENT></ARTICLE></ITEM>
