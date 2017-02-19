@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java Generics</TITLE>
 <PATH>notes/javagenerics.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 
 Generic type declaration: <CODEROUTINE>public class Box&lt;T&gt;</CODEROUTINE>
@@ -29,7 +29,7 @@ The class is used as: <CODEROUTINE>Box&lt;Integer&gt; integerBox = new Box&lt;In
 <ITEM>N: Number</ITEM>
 <ITEM>T: Type</ITEM>
 <ITEM>V: Value</ITEM>
-<ITEM>S,U,V&#x2026;: - 2nd, 3rd, 4th&#x2026; types</ITEM>
+<ITEM>S,U,V&#x2026;: 2nd, 3rd, 4th&#x2026; types</ITEM>
 </BLIST>
 
 Type parameters can also be declared within method and constructor signatures to create generic methods and generic constructors. 
@@ -58,7 +58,7 @@ will not accept a parameter of type <CODEROUTINE>Box&lt;Double&gt;</CODEROUTINE>
 <ITEM>upper bound: <CODEROUTINE>&lt;? extends Animal&gt;</CODEROUTINE> means an unknown type that is a subtype of <CODEROUTINE>Animal</CODEROUTINE>, possibly <CODEROUTINE>Animal</CODEROUTINE> itself</ITEM>
 <ITEM>lower bound: <CODEROUTINE>&lt;? super Animal&gt;</CODEROUTINE> means an unknown type that is a supertype of <CODEROUTINE>Animal</CODEROUTINE>, possibly <CODEROUTINE>Animal</CODEROUTINE> itself</ITEM>
 <ITEM>unbounded wildcard  <CODEROUTINE>&lt;?&gt;</CODEROUTINE>, this is the same as <CODEROUTINE>&lt;? extends Object&gt;</CODEROUTINE></ITEM></BLIST></ITEM>
-<ITEM><CODESAMPLE>public void boxTest(Box&lt;? Extends Number&gt; b){<BR/>
+<ITEM><CODESAMPLE>public void boxTest(Box&lt;? extends Number&gt; b){<BR/>
 <TAB/>&#x2026;<BR/>
 }</CODESAMPLE>
 will accept a parameter of type <CODEROUTINE>Box&lt;Double&gt;</CODEROUTINE>.<BR/>
@@ -82,3 +82,4 @@ For instance, <CODEROUTINE>Box&lt;String&gt;</CODEROUTINE> is translated to type
 
 </CONTENT>
 </PAGE>
+
