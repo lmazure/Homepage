@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Firefox</TITLE>
 <PATH>notes/firefox.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 
 It is possible to delete remembered data (e.g. in the autocompletion of the URL, of the search field, of the form fields&#x2026;) by typing <KEY ID='Del'/> when the line is selected.<BR/>
@@ -117,7 +117,8 @@ find</DESC></ROW>
 </TERM><DESC>
 find again</DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Shift'/><KEY ID='F3'/>
+<MODIFIERKEY ID='Shift'/><KEY ID='F3'/><BR/>
+<MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Ctrl'/><KEY ID='G'/>
 </TERM><DESC>
 find previous</DESC></ROW>
 <ROW><TERM>
@@ -179,6 +180,21 @@ open all bookmarks in background tabs
 scroll line by line
 </DESC></ROW>
 <ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='D'/>
+</TERM><DESC>
+bookmark current page
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='B'/>
+</TERM><DESC>
+toggle list of bookmarks
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='H'/>
+</TERM><DESC>
+toggle history
+</DESC></ROW>
+<ROW><TERM>
 <MODIFIERKEY ID='Ctrl'/><KEY ID='J'/>
 </TERM><DESC>
 display the download window
@@ -189,7 +205,7 @@ display the download window
 display the inspector
 </DESC></ROW>
 </DEFINITIONTABLE>
-<X><T>mozilla.com</T><A>http://support.mozilla.com/en-US/kb/Keyboard%20shortcuts</A><L>en</L><F>PDF</F></X><BR/>
+<X><T>mozilla.com</T><A>https://support.mozilla.org/t5/Basic-Browsing/Keyboard-shortcuts-Perform-common-Firefox-tasks-quickly/ta-p/3866</A><L>en</L><F>PDF</F></X><BR/>
 <BR/>
 
 <U>special URLs</U>
