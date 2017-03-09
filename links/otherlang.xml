@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Languages</TITLE>
 <PATH>links/otherlang.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>1</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -12,17 +12,10 @@
     <ITEM><X><T>Scratch</T><A>http://scratch.mit.edu</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
-    <ITEM><BLIST><TITLE>RedMonk Programming Language Rankings</TITLE>
-      <ITEM><ARTICLE><X><T>RedMonk Programming Language Rankings: CoffeeScript and Java Make Gains</T><A>http://www.readwriteweb.com/hack/2012/02/redmonk-programming-language-r.php</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joe</FIRSTNAME><LASTNAME>Brockmeier</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>The current popularity of languages.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>The RedMonk Programming Language Rankings: June 2014</T><A>http://redmonk.com/sogrady/2014/06/13/language-rankings-6-14/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stephen</FIRSTNAME><LASTNAME>O'Grady</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>Update.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>The RedMonk Programming Language Rankings: June 2015</T><A>http://redmonk.com/sogrady/2015/07/01/language-rankings-6-15/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stephen</FIRSTNAME><LASTNAME>O'Grady</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE><COMMENT>Update.</COMMENT></ARTICLE></ITEM>
-    </BLIST></ITEM>
     <ITEM><ARTICLE><X protection='payed_registration'><T>Computing Trends Lead to New Programming Languages</T><A>http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=6228573</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sixto</FIRSTNAME><LASTNAME>Ortiz</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH></DATE><COMMENT>Some languages targeting some particular domains: Dart, Chapel, Haxe, F#, Ceylon, and X10.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Dark Path</T><A>http://blog.cleancoder.com/uncle-bob/2017/01/11/TheDarkPath.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>1</MONTH><DAY>11</DAY></DATE><COMMENT>Unce Bob is against language features aiming at avoiding some bugs, he prefers to rely on tests&#x2026;</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Types and Tests</T><A>http://blog.cleancoder.com/uncle-bob/2017/01/13/TypesAndTests.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>1</MONTH><DAY>13</DAY></DATE><COMMENT>Answering to some comments of his previous dubious blog.</COMMENT></ARTICLE></ITEM>
-    <ITEM><BLIST><TITLE>Clojure</TITLE>
-      <ITEM><ARTICLE><X><T>Uncle Bob Martin presents Clojure (Chicago Java Users Group 2013-10-16 Meetup)</T><A>https://www.youtube.com/watch?v=SYeDxWKftfA</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>30</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>15</DAY></DATE><COMMENT>An introduction.</COMMENT></ARTICLE></ITEM>
-    </BLIST></ITEM>
+    <ITEM><ARTICLE><X><T>Retiring Python as a Teaching Language</T><A>http://prog21.dadgum.com/203.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Hague</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>After Python, JavaScript is now the language that James Hague would advise to use for learning programming.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>D</TITLE>
       <ITEM><ARTICLE><X><T>Three Cool Things About D - The Case for the D Programing Language</T><A>https://www.youtube.com/watch?v=RlVpPstLPEc</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>25</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Andrei</FIRSTNAME><LASTNAME>Alexandrescu</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE><COMMENT>A presentation of D which tries to be a better C++.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -70,6 +63,11 @@
       <ITEM><ARTICLE><X><T>Java.next: Concurrency in Clojure</T><ST>How Clojure abstracts concurrency and shared state</ST><A>http://www.ibm.com/developerworks/library/j-jn14/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Neal</FIRSTNAME><LASTNAME>Ford</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE><COMMENT>After an explanation of the epochal time model, Ford describes atoms, software transaction memory and the <CODEROUTINE>reducers</CODEROUTINE> library..</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java.next: Java 8 as Java.next</T><ST>Evaluating Java 8 as a suitable Java replacement</ST><A>http://www.ibm.com/developerworks/library/j-jn15/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Neal</FIRSTNAME><LASTNAME>Ford</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>28</DAY></DATE><COMMENT>Java 8's <CODEROUTINE>stream</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java.next: Choosing your next JVM language</T><A>http://www.ibm.com/developerworks/library/j-jn16/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Neal</FIRSTNAME><LASTNAME>Ford</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>13</DAY></DATE><COMMENT>Pick the language you prefer, ensure discipline for large project if you are using a multiparadigm language, use functional programming for the lower layers.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>RedMonk Programming Language Rankings</TITLE>
+      <ITEM><ARTICLE><X><T>RedMonk Programming Language Rankings: CoffeeScript and Java Make Gains</T><A>http://www.readwriteweb.com/hack/2012/02/redmonk-programming-language-r.php</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joe</FIRSTNAME><LASTNAME>Brockmeier</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>The current popularity of languages.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>The RedMonk Programming Language Rankings: June 2014</T><A>http://redmonk.com/sogrady/2014/06/13/language-rankings-6-14/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stephen</FIRSTNAME><LASTNAME>O'Grady</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>Update.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>The RedMonk Programming Language Rankings: June 2015</T><A>http://redmonk.com/sogrady/2015/07/01/language-rankings-6-15/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stephen</FIRSTNAME><LASTNAME>O'Grady</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE><COMMENT>Update.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>

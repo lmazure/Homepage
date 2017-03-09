@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -41,6 +41,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>.NET</TITLE>
         <ITEM><X><T>NUnit</T><A>http://www.nunit.org</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Fixie</T><A>http://fixie.github.io</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>NCrunch</T><A>http://www.ncrunch.net</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>JavaScript</TITLE>
@@ -104,9 +105,7 @@
         <ITEM><X><T>WebTest</T><A>http://webtest.canoo.com/webtest/manual/WebTestHome.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Watir</T><A>http://watir.com</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>LiquidTest</T><A>http://www.jadeliquid.com/liquidtest/</A><L>en</L><F>HTML</F></X></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>AJAX</TITLE>
-        <ITEM><X><T>QEngine</T><A>http://www.adventnet.com/products/qengine/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Test &amp; Feedback</T><A>https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Selenium</T><A>http://seleniumhq.org</A><L>en</L><F>HTML</F></X>:
           <X><T>SeleniumGRID</T><A>http://seleniumgrid.thoughtworks.com</A><L>en</L><F>HTML</F></X>,
           <X><T>Elemental Selenium</T><A>http://elementalselenium.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -180,7 +179,7 @@
     <ITEM><ARTICLE><X><T>Introducing Unit Testing in Legacy Code - Richard Blewett</T><A>http://vimeo.com/user22258446/review/79190026/78aa155e2a</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>24</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Richard</FIRSTNAME><LASTNAME>Blewett</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>Some techniques (introducing an interface, using Fakes&#x2026;) to enable unit testing of legacy code.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>When to Mock</T><A>http://blog.8thlight.com/uncle-bob/2014/05/10/WhenToMock.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>10</DAY></DATE><COMMENT>Mock at the boundaries and write your own mocks.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Little Mocker</T><A>http://blog.8thlight.com/uncle-bob/2014/05/14/TheLittleMocker.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>14</DAY></DATE><COMMENT>The difference between Dummy, Stub, Spy, Mock, and Fake.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Why Most Unit Testing is Waste</T><A>http://www.rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><MIDDLENAME>O</MIDDLENAME><LASTNAME>Coplien</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>2</MONTH></DATE><COMMENT>An analysis of doing proper testing with some very surprising ideas: throw away tests that haven't failed in a year, prefer integration tests to unit tests&#x2026;</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Why Most Unit Testing is Waste</T><A>http://www.rbcs-us.com/documents/Why-Most-Unit-Testing-is-Waste.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><MIDDLENAME>O.</MIDDLENAME><LASTNAME>Coplien</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>2</MONTH></DATE><COMMENT>An analysis of doing proper testing with some very surprising ideas: throw away tests that haven't failed in a year, prefer integration tests to unit tests&#x2026;</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>TestBash 2.0 - A-Galumphing We Go James Bach</T><A>http://vimeo.com/64762883</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>40</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE><COMMENT>Galumphing is simply adding inert variations in test procedure to find bugs.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>UnitTest</T><A>http://martinfowler.com/bliki/UnitTest.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE><COMMENT>The common traits of the different definitions of "unit tests", mocking or not the collaborators of the tested unit, duration of the test run and when to execute them.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Creating Maintainable Automated Acceptance Test Suites</T><A>https://www.youtube.com/watch?v=X9ap-zH0Gkc</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>2</MINUTE><SECOND>5</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jez</FIRSTNAME><LASTNAME>Humble</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Badri</FIRSTNAME><LASTNAME>Janakiraman</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>(<X><T>slides</T><A>http://www.slideshare.net/jezhumble/creating-maintainable-automated-acceptance-tests</A><L>en</L><F>HTML</F></X>) A lot of advice based on fives principles: treat acceptance tests like production code, always interact with the SUT like a user would, continuously curate your user journeys, collective ownership of acceptance tests, acceptance tests own their data.</COMMENT></ARTICLE></ITEM>
@@ -253,6 +252,7 @@
       <ITEM><ARTICLE><X><T>When Should a Test Be Automated?</T><A>http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.43.5177&amp;rep=rep1&amp;type=pdf</A><L>en</L><F>PDF</F></X><X><T>When Should a Test Be Automated?</T><A>http://www.stickyminds.com/sitewide.asp?Function=edetail&amp;ObjectType=ART&amp;ObjectId=2010</A><L>en</L><F>Word</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Marick</LASTNAME></AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>Some ideas about the factors to be taken into account to decide for automated tests vs manual tests.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Why Automated Testing for Web Apps?</T><A>http://www.oraclejavamagazine-digital.com/javamagazine/premiere2011?pg=36#pg36</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Nilson</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>9</MONTH></DATE><COMMENT>A list of tools, very quickly described, for unit tests, test automation, and continuous integration of Web applications.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Testing like the TSA</T><A>https://signalvnoise.com/posts/3159-testing-like-the-tsa</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><MIDDLENAME>Heinemeier</MIDDLENAME><LASTNAME>Hansson</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE><COMMENT>Some pragmatic advice on writing tests, rather than blindly applying TDD.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Testing Like the TSA</T><A>http://blog.cleancoder.com/uncle-bob/2017/03/06/TestingLikeTheTSA.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE><COMMENT>A (late) answer to the previous blog entry.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>SelfTestingCode</T><A>http://martinfowler.com/bliki/SelfTestingCode.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE><COMMENT>The advantages of having a test suite able to detect the most serious bugs.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Rails Conf 2013 The Magic Tricks of Testing by Sandi Metz</T><A>https://www.youtube.com/watch?v=URSWYvyc42M</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>32</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sandi</FIRSTNAME><LASTNAME>Metz</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>30</DAY></DATE><COMMENT>An effective simple explanation of the unit tests to be written and how to write them, based on query vs command and incoming vs internal vs outgoing.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>GTAC</TITLE>
