@@ -131,10 +131,7 @@
       <xsl:if test="(position()>2) and (position()=last())" >
         <xsl:text>, and </xsl:text>
       </xsl:if>
-      <xsl:for-each select="NAMEPREFIX/text() | FIRSTNAME/text() | MIDDLENAME/text() | LASTNAME/text() | NAMESUFFIX/text() | GIVENNAME/text()">
-        <xsl:value-of select="."/>
-        <xsl:if test="not(position() = last())"><xsl:text> </xsl:text></xsl:if>
-      </xsl:for-each>
+      <xsl:apply-templates select="."/>
     </xsl:for-each>
   </xsl:if>
   <xsl:if test="count(./DATE)=1">
@@ -397,6 +394,13 @@
   <xsl:apply-templates select="MONTH"/>
   <xsl:apply-templates select="DAY"/>
   <xsl:apply-templates select="YEAR"/>
+</xsl:template>
+
+<xsl:template match="AUTHOR">
+  <xsl:for-each select="NAMEPREFIX/text() | FIRSTNAME/text() | MIDDLENAME/text() | LASTNAME/text() | NAMESUFFIX/text() | GIVENNAME/text()">
+    <xsl:value-of select="."/>
+    <xsl:if test="not(position() = last())"><xsl:text> </xsl:text></xsl:if>
+  </xsl:for-each>
 </xsl:template>
 
 <xsl:template match="MONTH">
