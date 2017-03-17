@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><U><B>Install and update</B></U></TITLE>
@@ -118,7 +118,7 @@ Location: Create project a external location<BR/>
 
 <BLIST><TITLE><U><B>Bookmarks</B></U></TITLE>
 <ITEM>add a boomark on the current line:<BR/>
-right-click on the left margin of the Editor and select <CODEMENU>Add Bookmark&#x2026;</CODEMENU> or<CODEMENU>Edit<CODEMENU>Add Bookmark&#x2026;</CODEMENU></CODEMENU> in the menubar<BR/>
+right-click on the left margin of the Editor and select <CODEMENU>Add Bookmark&#x2026;</CODEMENU> or <CODEMENU>Edit<CODEMENU>Add Bookmark&#x2026;</CODEMENU></CODEMENU> in the menubar<BR/>
 and type the name of the bookmark</ITEM>
 <ITEM>display the Bookmark View: <BR/>
 in the menubar, select <CODEMENU>Windows<CODEMENU>Show view<CODEMENU>Other&#x2026;</CODEMENU></CODEMENU></CODEMENU><BR/>
@@ -145,6 +145,8 @@ in Editor window
 <DESC>search</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='G'/></TERM>
 <DESC>find occurrences of the selection in the workspace</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F'/></TERM>
+<DESC>reformat the code</DESC></ROW>
 </DEFINITIONTABLE>
 in Search window
 <DEFINITIONTABLE>

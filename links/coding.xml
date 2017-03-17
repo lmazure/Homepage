@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -46,11 +46,12 @@
       <ITEM><X><T>Darcs</T><A>http://darcs.net</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>mercurial</T><A>http://www.selenic.com/mercurial</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Dimensions CM</T><A>http://www.serena.com/index.php/en/products/featured-products/dimensions-cm/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><CLIST><TITLE><ANCHOR>tfs</ANCHOR>TFS</TITLE>
-      <ITEM><X><T>Search Syntax</T><A>https://msdn.microsoft.com/en-us/library/cc668120.aspx</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><BLIST><TITLE><ANCHOR>tfs</ANCHOR>TFS</TITLE>
+        <ITEM><X><T>Example Queries</T><A>https://msdn.microsoft.com/en-us/library/cc668120.aspx</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Work Item Web Search Syntax</T><A>https://msdn.microsoft.com/en-us/library/cc668120.aspx</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Visual Studio Team Foundation Server Branching and Merging Guide</T><A>http://vsarbranchingguide.codeplex.com/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/tfs.html</A><L>en</L><F>HTML</F></X></ITEM>
-      </CLIST></ITEM>
+      </BLIST></ITEM>
       <ITEM><CLIST><TITLE>comparisons</TITLE>
       <ITEM><X quality='1'><T>Better SCM</T><A>http://better-scm.shlomifish.org</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
@@ -253,6 +254,10 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Code reviews</TITLE>
       <ITEM><X><T>Macadamian checklist</T><A>http://archive.is/voACj</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><BLIST><TITLE>C#</TITLE>
+        <ITEM><X><T>Ted Graham</T><A>https://weblogs.asp.net/tgraham/44763</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Mohammed Hameed</T><A>https://www.codeproject.com/reference/593751/WebControls/WebControls/?fid=1834048</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Games</TITLE>
       <ITEM><X><T>CodinGame</T><A>https://www.codingame.com</A><L>fr</L><F>HTML</F></X></ITEM>
@@ -501,6 +506,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Commenting the code</TITLE>
       <ITEM><ARTICLE><X><T>Why You Shouldn't Comment (or Document) Code</T><A>http://visualstudiomagazine.com/articles/2013/06/01/roc-rocks.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Peter</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>Do not comment how the code works, but comment only its intends and write Really Obvious Code.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>No Comment: Why Commenting Code Is Still a Bad Idea</T><A>https://visualstudiomagazine.com/articles/2013/07/26/why-commenting-code-is-still-bad.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Peter</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE><COMMENT>Answers to the comments on the previous article, but there is almost nothing new here.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Necessary Comments</T><A>http://blog.cleancoder.com/uncle-bob/2017/02/23/NecessaryComments.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE><COMMENT>It is sometimes really necessary to comment code.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Reducing Incidental Complexity in Our Code and in Our Teaching</T><A>http://blog.8thlight.com/ryan-verner/2013/10/09/reducing-incidental-complexity-in-our-code-and-in-our-teaching.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ryan</FIRSTNAME><LASTNAME>Verner</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>Some thoughts about the fact that the code we write should be simpler.</COMMENT></ARTICLE></ITEM>
@@ -508,6 +514,7 @@
     <ITEM><ARTICLE><X><T>How Long Is Too Long?</T><A>http://blog.8thlight.com/dariusz-pasciak/2014/09/11/how-long-is-too-long-source-code.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dariusz</FIRSTNAME><LASTNAME>Pasciak</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>Source code files should have a maximum allowed number of lines.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Hunting for great names in programming</T><A>https://m.signalvnoise.com/hunting-for-great-names-in-programming-16f624c8fc03</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><MIDDLENAME>Heinemeier</MIDDLENAME><LASTNAME>Hansson</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE><COMMENT>About the pleasure to choose good names for variables, methods and classes.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>What will your legacy [code] be?</T><A>https://8thlight.com/blog/colin-jones/2016/08/30/what-will-your-legacy-code-be.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Colin</FIRSTNAME><LASTNAME>Jones</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE><COMMENT>Thinking about legacy code, the one we inherit and the one we leave.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>SelfEncapsulation</T><A>https://martinfowler.com/bliki/SelfEncapsulation.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE><COMMENT>Martin explains that self-encapsulation, according to him, has little interest except in some particular cases.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 </LLIST>
 </CONTENT>
