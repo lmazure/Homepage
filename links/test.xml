@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -329,7 +329,10 @@
           <ITEM><ARTICLE><X><T>Mocking on the Edge - Isolation at the system level</T><A>http://osherove.com/videos/2009/8/25/mocking-on-the-edge-isolation-at-the-system-level.html</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>49</MINUTE><SECOND>53</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Roy</FIRSTNAME><LASTNAME>Osherove</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR></DATE><COMMENT>A presentation of Typemock Open-AOP API and how to use it for stubbing Sharepoint and Silverlight.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
-      <ITEM><ARTICLE><X><T>Using Test Oracles in Automation</T><A>https://www.youtube.com/watch?v=Yusd_ogkiaQ</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>29</MINUTE><SECOND>28</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><LASTNAME>Hoffman</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE><COMMENT>This presentation presents some basic, but nevertheless interesting, ideas about strategies to determinate if an automated test succeeded or failed: no oracle, true oracle, consistency, self-referential, and heuristic.</COMMENT></ARTICLE></ITEM>
+      <ITEM><BLIST><TITLE>Oracles</TITLE>
+        <ITEM><ARTICLE><X><T>Using Test Oracles in Automation</T><A>https://www.youtube.com/watch?v=Yusd_ogkiaQ</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>29</MINUTE><SECOND>28</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><LASTNAME>Hoffman</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE><COMMENT>This presentation presents some basic, but nevertheless interesting, ideas about strategies to determinate if an automated test succeeded or failed: no oracle, true oracle, consistency, self-referential, and heuristic.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Testing with Simple and Combinatorial Oracles</T><A>http://xp123.com/articles/testing-with-combinatorial-oracles/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bill</FIRSTNAME><LASTNAME>Wake</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE><COMMENT>Some ideas of oracles.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
       <ITEM><ARTICLE><X><T>Test Automation Frameworks</T><A>http://safsdev.sourceforge.net/FRAMESDataDrivenTestAutomationFrameworks.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Carl</FIRSTNAME><LASTNAME>Nagle</LASTNAME></AUTHOR><COMMENT>A presentation of keyword driven automation and an architecture of a framework for such testing.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Does my button look big in this? Building testable AJAX Applications</T><A>https://www.youtube.com/watch?v=SziACN56nxQ</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>50</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Connors</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Joe</FIRSTNAME><LASTNAME>Walnes</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE><COMMENT>An application split into MVC components is easier to test automatically (the View may still be manually tested).</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>YUI Theater &#x2014; Ron Adams: &#x201C;Automated Integration Testing with YUI Test, Selenium and Hudson&#x201D;</T><A>http://www.yuiblog.com/blog/2009/11/05/video-adams-yuiconf2009/</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>46</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Ron</FIRSTNAME><LASTNAME>Adams</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>11</MONTH><DAY>5</DAY></DATE><COMMENT>A presentation of a TDD environment: unit test framework (YUITest) + test driver (Selenium) + continuous integration (Hudson).</COMMENT></ARTICLE></ITEM>
