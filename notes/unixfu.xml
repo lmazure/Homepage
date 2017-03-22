@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -139,6 +139,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <ROW><TERM><CODEROUTINE><X><T>cut</T><A>javascript:do_reference("man/linux/1/cut")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>extract sections of lines</DESC></ROW>
 <ROW><TERM><CODEROUTINE>cut -f12</CODEROUTINE></TERM><DESC>extract the 12<SUP>th</SUP> field</DESC></ROW>
 <ROW><TERM><CODEROUTINE>cut -d" "</CODEROUTINE></TERM><DESC>use space instead of tab as the field delimiter</DESC></ROW>
+<ROW><TERM><CODEROUTINE>cut -c-200</CODEROUTINE></TERM><DESC>print the 200 first characters</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
