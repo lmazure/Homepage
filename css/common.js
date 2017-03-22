@@ -70,23 +70,6 @@ function do_reference(str) {
 
 // ---------------------------------------------------------------------------------------------------------------
 
-function create_alpha_page_cb(url) {
-    var letters="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var w=100.0/letters.length;
-    frames["frame21"].document.writeln('<TABLE WIDTH="100%" BGCOLOR="#E2FFE2"><TR>')
-    for (var i=0; i < letters.length; i++ ) {
-        frames["frame21"].document.writeln('<TD ALIGN="CENTER" BGCOLOR="#404080" WIDTH="'
-                                           +w
-                                           +'%"><A HREF="'
-                                           +url
-                                           +'#'
-                                           +letters.charAt(i)
-                                           +'" TARGET="frame22"><FONT COLOR="white">'
-                                           +letters.charAt(i)
-                                           +'</FONT></A></TD>');
-  }
-  frames["frame21"].document.writeln('<TR></TABLE>');
-}
 function dump() {
     var parentLocation = parent.location.href;
     var pathLength = parentLocation.lastIndexOf("/");
@@ -117,12 +100,3 @@ function initialize() {
   
 window.onload=initialize;
 
-function create_alpha_page(title, url) {
-    document.write("<HTML><HEAD><TITLE>"
-                   +title
-                   +"</TITLE><LINK REL='STYLESHEET TYPE='text/css' HREF='../css/standard' TITLE='standard'></HEAD>"
-                   +"<FRAMESET ROWS='24,*' ONLOAD='create_alpha_page_cb(" +'"' +url +'"' +");'>"
-                   +"<FRAME SRC='about:blank' NAME='frame21' MARGINWIDTH='1' MARGINHEIGHT='1' FRAMEBORDER='0' NORESIZE SCROLLING='no'>"
-                   +"<FRAME SRC='" +url +"' NAME='frame22' MARGINWIDTH='1' MARGINHEIGHT='1' FRAMEBORDER='0' NORESIZE'>"
-                   +"</FRAMESET></HTML>");
-}

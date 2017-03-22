@@ -22,6 +22,50 @@
     </xsl:if>
     </head>
     <body>
+      <xsl:if test="@special='indexed'">
+        <nav class="navbar navbar-inverse ">
+          <div class="container-fluid">
+             <ul class="nav navbar-nav">
+               <li class="active"><A HREF="#0">0</A></li>
+               <li><A HREF="#1">1</A></li>
+               <li><A HREF="#2">2</A></li>
+               <li><A HREF="#3">3</A></li>
+               <li><A HREF="#4">4</A></li>
+               <li><A HREF="#5">5</A></li>
+               <li><A HREF="#6">6</A></li>
+               <li><A HREF="#7">7</A></li>
+               <li><A HREF="#8">8</A></li>
+               <li><A HREF="#9">9</A></li>
+               <li><A HREF="#A">A</A></li>
+               <li><A HREF="#B">B</A></li>
+               <li><A HREF="#C">C</A></li>
+               <li><A HREF="#D">D</A></li>
+               <li><A HREF="#E">E</A></li>
+               <li><A HREF="#F">F</A></li>
+               <li><A HREF="#G">G</A></li>
+               <li><A HREF="#H">H</A></li>
+               <li><A HREF="#I">I</A></li>
+               <li><A HREF="#J">J</A></li>
+               <li><A HREF="#K">K</A></li>
+               <li><A HREF="#L">L</A></li>
+               <li><A HREF="#M">M</A></li>
+               <li><A HREF="#N">N</A></li>
+               <li><A HREF="#O">O</A></li>
+               <li><A HREF="#P">P</A></li>
+               <li><A HREF="#Q">Q</A></li>
+               <li><A HREF="#R">R</A></li>
+               <li><A HREF="#S">S</A></li>
+               <li><A HREF="#T">T</A></li>
+               <li><A HREF="#U">U</A></li>
+               <li><A HREF="#V">V</A></li>
+               <li><A HREF="#W">W</A></li>
+               <li><A HREF="#X">X</A></li>
+               <li><A HREF="#Y">Y</A></li>
+               <li><A HREF="#Z">Z</A></li>
+            </ul>
+          </div>
+        </nav>
+      </xsl:if>
       <header>
         <h1><xsl:value-of select="/PAGE/TITLE"/></h1>
       </header>
@@ -36,8 +80,9 @@
       <hr id="footerseparator"/>
       <footer>
         <div class="row">
-          <div style="font-size:300%;text-align:center;" class="col-sm-6"><a href="../hack/map.html"><span  class="glyphicon glyphicon-align-left"></span></a></div>
-          <div style="font-size:300%;text-align:center;" class="col-sm-6"><a href="javascript:do_email()" target="_self"><span class="glyphicon glyphicon-envelope"></span></a></div>
+          <div style="font-size:300%;text-align:center;" class="col-sm-4"><a href="../hack/map.html"><span  class="glyphicon glyphicon-align-justify"></span></a></div>
+          <div style="font-size:300%;text-align:center;" class="col-sm-4"><a href="javascript:do_email()" target="_self"><span class="glyphicon glyphicon-envelope"></span></a></div>
+          <div style="font-size:300%;text-align:center;" class="col-sm-4"><a href="javascript:do_search()" target="_self"><span  class="glyphicon glyphicon-search"></span></a></div>
         </div>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -201,56 +246,42 @@
       </xsl:element>
     </xsl:element>
   </xsl:for-each>
-  <xsl:for-each select="./LISTEN">
-    <xsl:element name="a">
-      <xsl:attribute name="href"><xsl:value-of select="./A"/></xsl:attribute>
-      <xsl:element name="img">
-        <xsl:attribute name="src"><xsl:text>../images/listen.gif</xsl:text></xsl:attribute>
-        <xsl:attribute name="alt"><xsl:value-of select="./F"/><xsl:text> stream</xsl:text></xsl:attribute>
-        <xsl:attribute name="title"><xsl:value-of select="./F"/><xsl:text> stream</xsl:text></xsl:attribute>
-        <xsl:attribute name="border"><xsl:text>0</xsl:text></xsl:attribute>
-        <xsl:attribute name="width"><xsl:text>11</xsl:text></xsl:attribute>
-        <xsl:attribute name="height"><xsl:text>9</xsl:text></xsl:attribute>
-        <xsl:attribute name="class">inlinedimage</xsl:attribute>
-      </xsl:element>
-    </xsl:element>
-  </xsl:for-each>
   <xsl:choose>
     <xsl:when test="@quality='2'">
-      <img src="../images/thumbup.gif" alt="very good" title="very good" width="16" height="16" class="inlinedimage"/>
-      <img src="../images/thumbup.gif" alt="very good" title="very good" width="16" height="16" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text>
     </xsl:when>
     <xsl:when test="@quality='1'">
-      <img src="../images/thumbup.gif" alt="good" title="good" width="16" height="16" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text>
     </xsl:when>
     <xsl:when test="@quality='-1'">
-      <img src="../images/thumbdown.gif" alt="bad" title="bad" width="16" height="16" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text>
     </xsl:when>
     <xsl:when test="@quality='-2'">
-      <img src="../images/thumbdown.gif" alt="very bad" title="very bad" width="16" height="16" class="inlinedimage"/>
-      <img src="../images/thumbdown.gif" alt="very bad" title="very bad" width="16" height="16" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@status='dead' or @status='zombie'">
-      <img src="../images/dead.gif" alt="dead link" title="dead link" width="6" height="14" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x2020;</xsl:text>
     </xsl:when>
     <xsl:when test="@status='obsolete'">
-      <img src="../images/obsolete.gif" alt="obsolete" title="obsolete" width="6" height="14" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x2021;</xsl:text>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@protection='firewall'">
-      <img src="../images/firewall.png" alt="protected behind a firewall" title="protected behind a firewall" width="16" height="16" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f525;</xsl:text>
     </xsl:when>
     <xsl:when test="@protection='free_registration'">
-      <img src="../images/free_registration.png" alt="free registration required" title="free registration required" width="16" height="16" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f193;</xsl:text>
     </xsl:when>
     <xsl:when test="@protection='payed_registration'">
-      <img src="../images/payed_registration.png" alt="payed registration required" title="payed registration required" width="16" height="16" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f4b0;</xsl:text>
     </xsl:when>
     <xsl:when test="@protection='protected'">
-      <img src="../images/lock.png" alt="protected" title="protected" width="16" height="16" class="inlinedimage"/>
+      <xsl:text disable-output-escaping='yes'> &amp;#x1f512;</xsl:text>
     </xsl:when>
   </xsl:choose>
 </xsl:template>
