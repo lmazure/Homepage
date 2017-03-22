@@ -7,6 +7,7 @@
   <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
   <html>
     <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <link rel="icon" type="image/png" href="../icon.png" />
@@ -14,7 +15,6 @@
     <title>
       <xsl:value-of select="/PAGE/TITLE"/>
     </title>
-    <script src="../css/common.js"></script>
     <xsl:if test="count(/PAGE/SCRIPT)=1">
       <script type="text/javascript">
         <xsl:value-of disable-output-escaping="yes" select="/PAGE/SCRIPT"/>
@@ -33,6 +33,16 @@
         </xsl:if>
         <xsl:apply-templates select="/PAGE/CONTENT"/>
       </section>
+      <hr id="footerseparator"/>
+      <footer>
+        <div class="row">
+          <div style="font-size:300%;text-align:center;" class="col-sm-6"><a href="../hack/map.html"><span  class="glyphicon glyphicon-align-left"></span></a></div>
+          <div style="font-size:300%;text-align:center;" class="col-sm-6"><a href="javascript:do_email()" target="_self"><span class="glyphicon glyphicon-envelope"></span></a></div>
+        </div>
+      </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+      <script src="../css/common.js"></script>
     </body>
   </html>
 </xsl:template>
