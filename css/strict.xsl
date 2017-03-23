@@ -80,6 +80,13 @@
       </section>
       <hr id="footerseparator"/>
       <footer>
+        <xsl:text>See also: </xsl:text>
+          <xsl:for-each select="/PAGE/X">
+            <xsl:apply-templates select="."/>
+            <xsl:if test="not(position()=last())" >
+              <xsl:text> | </xsl:text>
+            </xsl:if>
+          </xsl:for-each>
         <div class="row">
           <div style="font-size:300%;text-align:center;" class="col-sm-4"><a href="../hack/map.html"><span  class="glyphicon glyphicon-align-justify"></span></a></div>
           <div style="font-size:300%;text-align:center;" class="col-sm-4"><a href="javascript:do_email()" target="_self"><span class="glyphicon glyphicon-envelope"></span></a></div>
@@ -147,15 +154,15 @@
 </xsl:template>
 
 <xsl:template match="CODESAMPLE">
-  <table class="file"><tr><td><code>
+  <div class="file"><code>
     <xsl:apply-templates/>
-  </code></td></tr></table>
+  </code></div>
 </xsl:template>
 
 <xsl:template match="TEXTBLOCK">
-  <table class="textblock"><tr><td>
+  <div class="textblock">
     <xsl:apply-templates/>
-  </td></tr></table>
+  </div>
 </xsl:template>
 
 <xsl:template match="CODEROUTINE">
