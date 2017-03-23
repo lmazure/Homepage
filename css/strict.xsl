@@ -249,40 +249,38 @@
   </xsl:for-each>
   <xsl:choose>
     <xsl:when test="@quality='2'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text>
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text>
+      <span title="very good"><xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text><xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='1'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text>
+      <span title="good"><xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-1'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text>
+      <span title="bad"><xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-2'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text>
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text>
+      <span title="very bad"><xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text><xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@status='dead' or @status='zombie'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x2020;</xsl:text>
+      <span title="dead link"><xsl:text disable-output-escaping='yes'> &amp;#x2020;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@status='obsolete'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x2021;</xsl:text>
+      <span title="obsolete"><xsl:text disable-output-escaping='yes'> &amp;#x2021;</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@protection='firewall'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f525;</xsl:text>
+      <span title="protected behind a firewall"><xsl:text disable-output-escaping='yes'> &amp;#x1f525;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='free_registration'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f193;</xsl:text>
+      <span title="free registration required"><xsl:text disable-output-escaping='yes'> &amp;#x1f193;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='payed_registration'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f4b0;</xsl:text>
+      <span title="payed registration required"><xsl:text disable-output-escaping='yes'> &amp;#x1f4b0;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='protected'">
-      <xsl:text disable-output-escaping='yes'> &amp;#x1f512;</xsl:text>
+      <span title="protected"><xsl:text disable-output-escaping='yes'> &amp;#x1f512;</xsl:text></span>
     </xsl:when>
   </xsl:choose>
 </xsl:template>
