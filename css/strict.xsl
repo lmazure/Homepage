@@ -80,17 +80,27 @@
       </section>
       <hr id="footerseparator"/>
       <footer>
-        <xsl:text>See also: </xsl:text>
-          <xsl:for-each select="/PAGE/X">
-            <xsl:apply-templates select="."/>
-            <xsl:if test="not(position()=last())" >
-              <xsl:text> | </xsl:text>
-            </xsl:if>
-          </xsl:for-each>
         <div class="row">
-          <div style="font-size:300%;text-align:center;" class="col-sm-4"><a href="../hack/map.html"><span  class="glyphicon glyphicon-align-justify"></span></a></div>
-          <div style="font-size:300%;text-align:center;" class="col-sm-4"><a href="javascript:do_email()" target="_self"><span class="glyphicon glyphicon-envelope"></span></a></div>
-          <div style="font-size:300%;text-align:center;" class="col-sm-4"><a href="javascript:do_search()" target="_self"><span  class="glyphicon glyphicon-search"></span></a></div>
+          <div class="col-sm-6">
+            <xsl:if test="count(/PAGE/X)>0">
+              <xsl:text>See also: </xsl:text>
+              <xsl:for-each select="/PAGE/X">
+                <xsl:apply-templates select="."/>
+                <xsl:if test="not(position()=last())" >
+                  <xsl:text> | </xsl:text>
+                </xsl:if>
+              </xsl:for-each>
+            </xsl:if>
+          </div>
+          <div class="col-sm-6 text-right">
+            <xsl:text>Last update: </xsl:text>
+            <xsl:apply-templates select="/PAGE/DATE"/>
+          </div>
+        </div>
+        <div class="row">
+          <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="../hack/map.html"><span  class="glyphicon glyphicon-align-justify"></span></a></div>
+          <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="javascript:do_email()" target="_self"><span class="glyphicon glyphicon-envelope"></span></a></div>
+          <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="javascript:do_search()" target="_self"><span  class="glyphicon glyphicon-search"></span></a></div>
         </div>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
