@@ -97,10 +97,16 @@
             <xsl:apply-templates select="/PAGE/DATE"/>
           </div>
         </div>
+        <div class="row" id="searchPanel" style="display:none">
+          <form name="search" onsubmit="do_search(); return false;">
+            <div class="col-sm-6 centered text-center"><input size="32" name="terms" type="text"/></div>
+            <div class="col-sm-6 centered text-center"><input value="Search" onclick="do_search();" type="button"/></div>
+          </form>
+        </div>
         <div class="row">
           <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="../hack/map.html"><span  class="glyphicon glyphicon-align-justify"></span></a></div>
           <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="javascript:do_email()" target="_self"><span class="glyphicon glyphicon-envelope"></span></a></div>
-          <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="javascript:do_search()" target="_self"><span  class="glyphicon glyphicon-search"></span></a></div>
+          <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="javascript:display_search()" target="_self"><span  class="glyphicon glyphicon-search"></span></a></div>
         </div>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
