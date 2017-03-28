@@ -23,50 +23,6 @@
     </xsl:if>
     </head>
     <body>
-      <xsl:if test="@special='indexed'">
-        <nav class="navbar navbar-inverse ">
-          <div class="container-fluid">
-             <ul class="nav navbar-nav">
-               <li class="active"><A HREF="#0">0</A></li>
-               <li><A HREF="#1">1</A></li>
-               <li><A HREF="#2">2</A></li>
-               <li><A HREF="#3">3</A></li>
-               <li><A HREF="#4">4</A></li>
-               <li><A HREF="#5">5</A></li>
-               <li><A HREF="#6">6</A></li>
-               <li><A HREF="#7">7</A></li>
-               <li><A HREF="#8">8</A></li>
-               <li><A HREF="#9">9</A></li>
-               <li><A HREF="#A">A</A></li>
-               <li><A HREF="#B">B</A></li>
-               <li><A HREF="#C">C</A></li>
-               <li><A HREF="#D">D</A></li>
-               <li><A HREF="#E">E</A></li>
-               <li><A HREF="#F">F</A></li>
-               <li><A HREF="#G">G</A></li>
-               <li><A HREF="#H">H</A></li>
-               <li><A HREF="#I">I</A></li>
-               <li><A HREF="#J">J</A></li>
-               <li><A HREF="#K">K</A></li>
-               <li><A HREF="#L">L</A></li>
-               <li><A HREF="#M">M</A></li>
-               <li><A HREF="#N">N</A></li>
-               <li><A HREF="#O">O</A></li>
-               <li><A HREF="#P">P</A></li>
-               <li><A HREF="#Q">Q</A></li>
-               <li><A HREF="#R">R</A></li>
-               <li><A HREF="#S">S</A></li>
-               <li><A HREF="#T">T</A></li>
-               <li><A HREF="#U">U</A></li>
-               <li><A HREF="#V">V</A></li>
-               <li><A HREF="#W">W</A></li>
-               <li><A HREF="#X">X</A></li>
-               <li><A HREF="#Y">Y</A></li>
-               <li><A HREF="#Z">Z</A></li>
-            </ul>
-          </div>
-        </nav>
-      </xsl:if>
       <header>
         <h1><xsl:value-of select="/PAGE/TITLE"/></h1>
       </header>
@@ -112,6 +68,11 @@
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script src="../css/common.js"></script>
+      <xsl:if test="@special='indexed'">
+        <script>
+          $(document).ready(function() { window.onLoad = create_index();} )
+         </script>
+      </xsl:if>
     </body>
   </html>
 </xsl:template>

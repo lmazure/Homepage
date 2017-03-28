@@ -1,3 +1,22 @@
+function create_index() {
+    var letters="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var w=100.0/letters.length;
+    str = '<TABLE WIDTH="100%" BGCOLOR="#E2FFE2"><TR>';
+    for (var i=0; i < letters.length; i++ ) {
+        str += '<TD ALIGN="CENTER" BGCOLOR="#404080" WIDTH="'
+                                           + w
+                                           + '%"><A HREF="#'
+                                           + letters.charAt(i)
+                                           + '"><FONT COLOR="white">'
+                                           + letters.charAt(i)
+                                           + '</FONT></A></TD>';
+  }
+  str += '<TR></TABLE>';
+  $( "body" ).prepend(str);
+}
+
+// ---------------------------------------------------------------------------------------------------------------
+
 function do_email() {
     window.location = "mailto:"
                       + "lmazure.website%40gmail.com"
