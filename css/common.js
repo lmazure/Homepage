@@ -1,17 +1,17 @@
 function create_index() {
-    var letters="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var w=100.0/letters.length;
-    str = '<TABLE WIDTH="100%" BGCOLOR="#E2FFE2"><TR>';
-    for (var i=0; i < letters.length; i++ ) {
-        str += '<TD ALIGN="CENTER" BGCOLOR="#404080" WIDTH="'
-                                           + w
-                                           + '%"><A HREF="#'
-                                           + letters.charAt(i)
-                                           + '"><FONT COLOR="white">'
-                                           + letters.charAt(i)
-                                           + '</FONT></A></TD>';
-  }
-  str += '<TR></TABLE>';
+    var letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var w = 100.0/letters.length;
+    str = '<table id="navigationBar" width="100%"><TR>';
+    for (var i = 0; i < letters.length; i++ ) {
+        str += '<td align="center" width="'
+               + w
+               + '%"><a href="#'
+               + letters.charAt(i)
+               + '">'
+               + letters.charAt(i)
+               + '</a></td>';
+    }
+  str += '<tr></table>';
   $( "body" ).prepend(str);
 }
 
@@ -29,8 +29,8 @@ function do_email() {
 // ---------------------------------------------------------------------------------------------------------------
 
 function display_search() {
-	$("#searchPanel").slideToggle({ progress: function() {
-  	  scrollTo(0,document.body.scrollHeight);
+    $("#searchPanel").slideToggle({ progress: function() {
+      scrollTo(0,document.body.scrollHeight);
     }});
 }
 
