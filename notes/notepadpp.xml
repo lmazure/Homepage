@@ -3,12 +3,16 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Notepad++</TITLE>
 <PATH>notes/notepadpp.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
 <ROW><TERM><KEY ID='F3'/></TERM>
 <DESC>find next</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/></TERM>
+<DESC>lowercase the selection</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='U'/></TERM>
+<DESC>uppercase the selection</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='G'/></TERM>
 <DESC>go to line</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Q'/></TERM>
