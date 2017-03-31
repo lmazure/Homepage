@@ -7,7 +7,6 @@
   <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
   <html>
     <head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
@@ -36,8 +35,8 @@
       </section>
       <hr id="footerseparator"/>
       <footer>
-        <div class="row">
-          <div class="col-sm-6">
+        <div style="display:grid;">
+          <div style="grid-column:1;grid-row:1;">
             <xsl:if test="count(/PAGE/X)>0">
               <xsl:text>See also: </xsl:text>
               <xsl:for-each select="/PAGE/X">
@@ -48,25 +47,30 @@
               </xsl:for-each>
             </xsl:if>
           </div>
-          <div class="col-sm-6 text-right">
+          <div style="grid-column:2;grid-row:1;text-align:right;">
             <xsl:text>Last update: </xsl:text>
             <xsl:apply-templates select="/PAGE/DATE"/>
           </div>
         </div>
-        <div class="row" id="searchPanel" style="display:none">
-          <form name="search" onsubmit="do_search(); return false;">
-            <div class="col-sm-6 centered text-center"><input size="32" name="terms" type="text"/></div>
-            <div class="col-sm-6 centered text-center"><input value="Search" onclick="do_search();" type="button"/></div>
+        <div id="searchPanel" style="display:none">
+          <form style="display:grid;" name="search" onsubmit="do_search(); return false;">
+            <input style="grid-column:1/span 3;grid-row:1;" size="32" name="terms" type="text"/>
+            <input style="grid-column:4;grid-row:1;" value="Search" onclick="do_search();" type="button"/>
           </form>
         </div>
-        <div class="row">
-          <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="../hack/map.html"><span  class="glyphicon glyphicon-align-justify"></span></a></div>
-          <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="javascript:do_email()" target="_self"><span class="glyphicon glyphicon-envelope"></span></a></div>
-          <div style="font-size:300%;text-align:center;" class="col-xs-4"><a href="javascript:display_search()" target="_self"><span  class="glyphicon glyphicon-search"></span></a></div>
+        <div style="display:grid;">
+          <div style="grid-column:1;grid-row:1;font-size:300%;text-align:center;">
+            <a href="../hack/map.html"><xsl:text disable-output-escaping='yes'>&amp;#x1f4c1;</xsl:text></a>
+          </div>
+          <div style="grid-column:2;grid-row:1;font-size:300%;text-align:center;">
+            <a target="_self" href="javascript:do_email()"><xsl:text disable-output-escaping='yes'>&amp;#x2709;&amp;#xfe0f;</xsl:text></a>
+          </div>
+          <div style="grid-column:3;grid-row:1;font-size:300%;text-align:center;">
+            <a target="_self" href="javascript:display_search()"><xsl:text disable-output-escaping='yes'>&amp;#x1f50e;</xsl:text></a>
+          </div>
         </div>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
       <script src="../css/common.js"></script>
       <xsl:if test="@special='indexed'">
         <script>
