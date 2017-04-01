@@ -9,12 +9,12 @@
     <head>
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/png" href="../icon.png" />
     <xsl:comment>[if IE]&gt;&lt;link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/&gt;&lt;![endif]</xsl:comment>
     <title>
       <xsl:value-of select="/PAGE/TITLE"/>
     </title>
-    <script src="../css/common.js"></script>
     <xsl:if test="count(/PAGE/SCRIPT)=1">
       <script type="text/javascript">
         <xsl:value-of disable-output-escaping="yes" select="/PAGE/SCRIPT"/>
@@ -35,9 +35,9 @@
       </section>
       <hr id="footerseparator"/>
       <footer>
-        <table class="footertable">
-          <tr>
-            <td>
+        <div style="display:grid;">
+          <div style="grid-column:1;grid-row:1;">
+            <xsl:if test="count(/PAGE/X)>0">
               <xsl:text>See also: </xsl:text>
               <xsl:for-each select="/PAGE/X">
                 <xsl:apply-templates select="."/>
@@ -45,49 +45,38 @@
                   <xsl:text> | </xsl:text>
                 </xsl:if>
               </xsl:for-each>
-            </td>
-            <td>
-              <a href="javascript:do_search()">search</a>
-            </td>
-          </tr>
-          <xsl:apply-templates select="document('../hack/map.xml')/PAGE/CONTENT/BLIST//X[substring(A,4,string-length(A)-7)=substring($filepath,1,string-length($filepath)-3)]/parent::*" mode="map">
-            <xsl:with-param name="target">_self</xsl:with-param>
-          </xsl:apply-templates>
-          <xsl:apply-templates select="document('../hack/map.xml')/PAGE/CONTENT/BLIST//X[substring(A,4,string-length(A)-7)=concat(substring-before($filepath ,'/'),'/list_',substring(substring-after($filepath,'/'),1,string-length(substring-after($filepath,'/'))-3))]/parent::*" mode="map">
-            <xsl:with-param name="target">_parent</xsl:with-param>
-          </xsl:apply-templates>
-          <tr>
-            <td>
-              <xsl:text>Last update: </xsl:text>
-              <xsl:apply-templates select="/PAGE/DATE"/>
-            </td>
-            <td>
-              <xsl:text>Version: </xsl:text>
-              <xsl:choose>
-                <xsl:when test="system-property('xsl:vendor-url')='http://xml.apache.org/xalan-j'" >
-                  <xsl:element name="a">
-                   <xsl:attribute name="href">
-                      <xsl:text>../</xsl:text>
-                      <xsl:value-of select = "$filepath"/> 
-                    </xsl:attribute>
-                    <xsl:text>XML</xsl:text>
-                  </xsl:element>
-                </xsl:when>
-                <xsl:otherwise>
-                  <xsl:element name="a">
-                    <xsl:attribute name="href">
-                      <xsl:text>../</xsl:text>
-                      <xsl:value-of select = "substring($filepath,1,string-length($filepath)-3)"/> 
-                      <xsl:text>html</xsl:text>
-                    </xsl:attribute>
-                    <xsl:text>HTML</xsl:text>
-                  </xsl:element>
-                </xsl:otherwise>
-              </xsl:choose>
-            </td>
-          </tr>
-        </table>
+            </xsl:if>
+          </div>
+          <div style="grid-column:2;grid-row:1;text-align:right;">
+            <xsl:text>Last update: </xsl:text>
+            <xsl:apply-templates select="/PAGE/DATE"/>
+          </div>
+        </div>
+        <div id="searchPanel" style="display:none">
+          <form style="display:grid;" name="search" onsubmit="do_search(); return false;">
+            <input style="grid-column:1/span 3;grid-row:1;" size="32" name="terms" type="text"/>
+            <input style="grid-column:4;grid-row:1;" value="Search" onclick="do_search();" type="button"/>
+          </form>
+        </div>
+        <div style="display:grid;">
+          <div style="grid-column:1;grid-row:1;font-size:300%;text-align:center;">
+            <a href="../hack/map.html"><xsl:text disable-output-escaping='yes'>&amp;#x1f4c1;</xsl:text></a>
+          </div>
+          <div style="grid-column:2;grid-row:1;font-size:300%;text-align:center;">
+            <a target="_self" href="javascript:do_email()"><xsl:text disable-output-escaping='yes'>&amp;#x2709;&amp;#xfe0f;</xsl:text></a>
+          </div>
+          <div style="grid-column:3;grid-row:1;font-size:300%;text-align:center;">
+            <a target="_self" href="javascript:display_search()"><xsl:text disable-output-escaping='yes'>&amp;#x1f50e;</xsl:text></a>
+          </div>
+        </div>
       </footer>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+      <script src="../css/common.js"></script>
+      <xsl:if test="@special='indexed'">
+        <script>
+          $(document).ready(function() { window.onLoad = create_index();} )
+         </script>
+      </xsl:if>
     </body>
   </html>
 </xsl:template>
@@ -246,56 +235,40 @@
       </xsl:element>
     </xsl:element>
   </xsl:for-each>
-  <xsl:for-each select="./LISTEN">
-    <xsl:element name="a">
-      <xsl:attribute name="href"><xsl:value-of select="./A"/></xsl:attribute>
-      <xsl:element name="img">
-        <xsl:attribute name="src"><xsl:text>../images/listen.gif</xsl:text></xsl:attribute>
-        <xsl:attribute name="alt"><xsl:value-of select="./F"/><xsl:text> stream</xsl:text></xsl:attribute>
-        <xsl:attribute name="title"><xsl:value-of select="./F"/><xsl:text> stream</xsl:text></xsl:attribute>
-        <xsl:attribute name="border"><xsl:text>0</xsl:text></xsl:attribute>
-        <xsl:attribute name="width"><xsl:text>11</xsl:text></xsl:attribute>
-        <xsl:attribute name="height"><xsl:text>9</xsl:text></xsl:attribute>
-        <xsl:attribute name="class">inlinedimage</xsl:attribute>
-      </xsl:element>
-    </xsl:element>
-  </xsl:for-each>
   <xsl:choose>
     <xsl:when test="@quality='2'">
-      <img src="../images/thumbup.gif" alt="very good" title="very good" width="16" height="16" class="inlinedimage"/>
-      <img src="../images/thumbup.gif" alt="very good" title="very good" width="16" height="16" class="inlinedimage"/>
+      <span title="very good"><xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text><xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='1'">
-      <img src="../images/thumbup.gif" alt="good" title="good" width="16" height="16" class="inlinedimage"/>
+      <span title="good"><xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-1'">
-      <img src="../images/thumbdown.gif" alt="bad" title="bad" width="16" height="16" class="inlinedimage"/>
+      <span title="bad"><xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-2'">
-      <img src="../images/thumbdown.gif" alt="very bad" title="very bad" width="16" height="16" class="inlinedimage"/>
-      <img src="../images/thumbdown.gif" alt="very bad" title="very bad" width="16" height="16" class="inlinedimage"/>
+      <span title="very bad"><xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text><xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@status='dead' or @status='zombie'">
-      <img src="../images/dead.gif" alt="dead link" title="dead link" width="6" height="14" class="inlinedimage"/>
+      <span title="dead link"><xsl:text disable-output-escaping='yes'> &amp;#x2020;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@status='obsolete'">
-      <img src="../images/obsolete.gif" alt="obsolete" title="obsolete" width="6" height="14" class="inlinedimage"/>
+      <span title="obsolete"><xsl:text disable-output-escaping='yes'> &amp;#x2021;</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@protection='firewall'">
-      <img src="../images/firewall.png" alt="protected behind a firewall" title="protected behind a firewall" width="16" height="16" class="inlinedimage"/>
+      <span title="protected behind a firewall"><xsl:text disable-output-escaping='yes'> &amp;#x1f525;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='free_registration'">
-      <img src="../images/free_registration.png" alt="free registration required" title="free registration required" width="16" height="16" class="inlinedimage"/>
+      <span title="free registration required"><xsl:text disable-output-escaping='yes'> &amp;#x1f193;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='payed_registration'">
-      <img src="../images/payed_registration.png" alt="payed registration required" title="payed registration required" width="16" height="16" class="inlinedimage"/>
+      <span title="payed registration required"><xsl:text disable-output-escaping='yes'> &amp;#x1f4b0;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='protected'">
-      <img src="../images/lock.png" alt="protected" title="protected" width="16" height="16" class="inlinedimage"/>
+      <span title="protected"><xsl:text disable-output-escaping='yes'> &amp;#x1f512;</xsl:text></span>
     </xsl:when>
   </xsl:choose>
 </xsl:template>
@@ -576,90 +549,6 @@
       <xsl:otherwise><xsl:value-of select="@ID"/></xsl:otherwise>
     </xsl:choose>
   </span>
-</xsl:template>
-
-<xsl:template match="*" mode="map">
-  <xsl:param name="target">_self</xsl:param>  
-  <tr>
-    <td>
-      <xsl:text>Pages above: </xsl:text>
-      <xsl:element name="a">
-        <xsl:attribute name="href">../perso/main.html</xsl:attribute>
-        <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>homepage</xsl:element>
-
-      <xsl:choose>
-        <xsl:when test="count(./self::TITLE)=1">
-          <xsl:for-each select="./parent::*/parent::*/ancestor::*[self::ITEM]">
-            <xsl:text>&gt;</xsl:text>
-            <xsl:call-template name="map_item">
-              <xsl:with-param name="target"><xsl:value-of select="$target"/></xsl:with-param>
-            </xsl:call-template>
-          </xsl:for-each>
-        </xsl:when>
-        <xsl:otherwise>
-          <xsl:for-each select="./ancestor::*[self::ITEM]">
-            <xsl:text>&gt;</xsl:text>
-            <xsl:call-template name="map_item">
-              <xsl:with-param name="target"><xsl:value-of select="$target"/></xsl:with-param>
-            </xsl:call-template>
-          </xsl:for-each>
-        </xsl:otherwise>
-      </xsl:choose>
-    </td>
-    <td>
-      <xsl:element name="a">
-        <xsl:attribute name="href">../hack/map.html</xsl:attribute>
-        <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>map</xsl:element>
-
-    </td>
-  </tr>
-  <tr>
-    <td>
-      <xsl:text>Pages below: </xsl:text>
-      <xsl:if test="count(./self::TITLE)=1" >
-        <xsl:for-each select="./parent::*/child::*[self::ITEM]">
-          <xsl:call-template name="map_item">
-            <xsl:with-param name="target"><xsl:value-of select="$target"/></xsl:with-param>
-          </xsl:call-template>
-          <xsl:if test="not(position()=last())" >
-            <xsl:text> | </xsl:text>
-          </xsl:if>
-        </xsl:for-each>
-      </xsl:if>
-    </td>
-    <td>
-      <xsl:element name="a">
-        <xsl:attribute name="href">javascript:do_email()</xsl:attribute>
-        <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>contact me</xsl:element>
-    </td>
-  </tr>
-</xsl:template>
-
-<xsl:template name="map_item">
-  <xsl:param name="target">_self</xsl:param>  
-  <xsl:choose>
-    <xsl:when test="count(./X)=1">
-      <xsl:element name="a">
-        <xsl:attribute name="href">
-          <xsl:value-of select="./X/A"/>
-        </xsl:attribute>
-        <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>
-        <xsl:value-of select="./X/T"/>
-      </xsl:element>
-    </xsl:when>
-    <xsl:when test="count(./BLIST/TITLE/X)=1">
-      <xsl:element name="a">
-        <xsl:attribute name="href">
-          <xsl:value-of select="./BLIST/TITLE/X/A"/>
-        </xsl:attribute>
-        <xsl:attribute name="target"><xsl:value-of select="$target"/></xsl:attribute>
-        <xsl:value-of select="./BLIST/TITLE/X/T"/>
-      </xsl:element>
-    </xsl:when>
-    <xsl:otherwise>
-      <xsl:value-of select="./BLIST/TITLE"/>
-    </xsl:otherwise>
-  </xsl:choose>
 </xsl:template>
 
 </xsl:stylesheet>

@@ -1,9 +1,28 @@
 body {
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 	background-color: #F3FFF3;
 }
 
 header {
 	text-align: center;
+}
+
+ul
+{
+	margin-left: 10px;
+	padding-left: 5px;
+}
+
+a
+{
+	text-decoration:none
+}
+
+#navigationBar  {
+	background-color: #404080;
+}
+#navigationBar  a {
+	color: white;
 }
 
 #unmaintained {
@@ -79,10 +98,10 @@ code {
 	border-width: 2px 2px 2px 2px;
 	border-radius: 8px; 
 	padding: 1px 1px;
-	width: 100%;
 }
 
 .table {
+	width: auto;
 	border: 2px solid black;
 	border-collapse: collapse
 }
@@ -96,19 +115,4 @@ code {
 	vertical-align: bottom;
 	display: inline-block;
 	padding: 0px 1px 2px 1px;
-}
-	
-.footertable {
-	 border-collapse: collapse;
-	 width: 100%
-}
-
-.footertable tr td:first-child {
-	padding: 0;
-	text-align: left
-}
-
-.footertable tr td:first-child  + td { /* IE8 does not support last-child */
-	padding: 0;
-	text-align: right
 }

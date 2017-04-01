@@ -3,16 +3,15 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Site map</TITLE>
 <PATH>hack/map.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 
-<BLIST>
-  <ITEM><X><T>Homepage</T><A>../perso/main.html</A><L>en</L><F>HTML</F></X></ITEM>
+<BLIST><TITLE><X><T>Homepage</T><A>../perso/main.html</A><L>en</L><F>HTML</F></X></TITLE>
   <ITEM><BLIST><TITLE>Links / articles</TITLE>
     <ITEM><X><T>Basics</T><A>../links/search.html</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><BLIST><TITLE><X><T>Computing</T><A>../links/info.html</A><L>en</L><F>HTML</F></X></TITLE>
-      <ITEM><X><T>Companies</T><A>../links/list_companies.html</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Homepages</T><A>../links/list_homepages.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Companies</T><A>../links/companies.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Homepages</T><A>../links/homepages.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE><X><T>Site building</T><A>../links/build.html</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>Browsers</T><A>../links/browsers.html</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
@@ -431,8 +430,8 @@
       <ITEM><X><T>Google</T><A>../notes/google.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Miscellaneous</TITLE>
-      <ITEM><X><T>Abr&#xE9;viations fran&#xE7;aises</T><A>../notes/list_abbrevfr.html</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>English abbreviations</T><A>../notes/list_abbreven.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Abr&#xE9;viations fran&#xE7;aises</T><A>../notes/abbrevfr.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>English abbreviations</T><A>../notes/abbreven.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>GE abbreviations</T><A>../notes/abbrevge.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>KIKA abbreviations</T><A>../notes/abbrevkika.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Eurofins abbreviations</T><A>../notes/abbreveurofins.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -622,11 +621,10 @@
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>About this site</TITLE>
     <ITEM><X><T>Hits</T><A>../perso/hits.html</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Article index by authors</T><A>../content_tables/list_author.html</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Article index by titles</T><A>../content_tables/list_article.html</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Article index by URLs</T><A>../content_tables/list_url.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Article index by authors</T><A>../content_tables/author.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Article index by titles</T><A>../content_tables/article.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Article index by URLs</T><A>../content_tables/url.html</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Weblog</T><A>../perso/weblog.htm</A><L>fr</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>XML schema</T><A>../perso/schema.doc</A><L>en</L><F>Word</F></X></ITEM>
     <ITEM><X><T>Map</T><A>../hack/map.html</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
 </BLIST>

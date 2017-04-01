@@ -1,11 +1,19 @@
-
-function URLencode(sStr) {
-    return escape(sStr).
-             replace(/\+/g, '%2B').
-                replace(/\"/g,'%22').
-                   replace(/\'/g, '%27').
-                      replace(/\//g,'%2F');
-  }
+function create_index() {
+    var letters = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    var w = 100.0/letters.length;
+    str = '<table id="navigationBar" width="100%"><TR>';
+    for (var i = 0; i < letters.length; i++ ) {
+        str += '<td align="center" width="'
+               + w
+               + '%"><a href="#'
+               + letters.charAt(i)
+               + '">'
+               + letters.charAt(i)
+               + '</a></td>';
+    }
+  str += '<tr></table>';
+  $( "body" ).prepend(str);
+}
 
 // ---------------------------------------------------------------------------------------------------------------
 
@@ -20,20 +28,25 @@ function do_email() {
 
 // ---------------------------------------------------------------------------------------------------------------
 
+function display_search() {
+    $("#searchPanel").slideToggle({ progress: function() {
+      scrollTo(0,document.body.scrollHeight);
+    }});
+}
+
+// ---------------------------------------------------------------------------------------------------------------
+
 function do_search() {
-    window.open('../hack/search.htm','_blank','width=500,height=180');
-}
-
-// ---------------------------------------------------------------------------------------------------------------
-
-function do_disclaimer() {
-    window.open('../hack/disclaim.htm','_blank','width=900,height=600,scrollbars');
-}
-
-// ---------------------------------------------------------------------------------------------------------------
-
-function do_help() {
-    window.open('../hack/help.htm','_blank','width=900,height=600,scrollbars');
+  var request = "http://www.google.com/search?as_sitesearch=mazure.fr&q=";
+  var terms = document.search.terms.value.split(" ");
+  for (i = 0; i < terms.length; i++)
+  {
+    if (terms[i]!="") { // to avoid additional space characters
+      if (i>0) request += "+";
+      request += terms[i];
+    }
+  }
+  open(request, '_self');
 }
 
 // ---------------------------------------------------------------------------------------------------------------
@@ -70,37 +83,7 @@ function do_reference(str) {
 
 // ---------------------------------------------------------------------------------------------------------------
 
-function create_alpha_page_cb(url) {
-    var letters="0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-    var w=100.0/letters.length;
-    frames["frame21"].document.writeln('<TABLE WIDTH="100%" BGCOLOR="#E2FFE2"><TR>')
-    for (var i=0; i < letters.length; i++ ) {
-        frames["frame21"].document.writeln('<TD ALIGN="CENTER" BGCOLOR="#404080" WIDTH="'
-                                           +w
-                                           +'%"><A HREF="'
-                                           +url
-                                           +'#'
-                                           +letters.charAt(i)
-                                           +'" TARGET="frame22"><FONT COLOR="white">'
-                                           +letters.charAt(i)
-                                           +'</FONT></A></TD>');
-  }
-  frames["frame21"].document.writeln('<TR></TABLE>');
-}
-function dump() {
-    var parentLocation = parent.location.href;
-    var pathLength = parentLocation.lastIndexOf("/");
-    if ( parentLocation.substring(pathLength+1, pathLength+6) == "list_" ) {
-        var anchors = document.getElementsByTagName("a");
-        for ( var i=0; i<anchors.length; i++ ) {
-            if ( anchors[i].target == "_self" ) {
-                anchors[i].target = "_parent";
-            }
-        }
-    }
-}
-
-function toto() {
+function initialize() {
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
   (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
   m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
@@ -109,20 +92,6 @@ function toto() {
   ga('create', 'UA-45789787-1', 'neuf.fr');
   ga('send', 'pageview');
 }
-
-function initialize() {
-  dump();
-  toto();
-}
   
 window.onload=initialize;
 
-function create_alpha_page(title, url) {
-    document.write("<HTML><HEAD><TITLE>"
-                   +title
-                   +"</TITLE><LINK REL='STYLESHEET TYPE='text/css' HREF='../css/standard' TITLE='standard'></HEAD>"
-                   +"<FRAMESET ROWS='24,*' ONLOAD='create_alpha_page_cb(" +'"' +url +'"' +");'>"
-                   +"<FRAME SRC='about:blank' NAME='frame21' MARGINWIDTH='1' MARGINHEIGHT='1' FRAMEBORDER='0' NORESIZE SCROLLING='no'>"
-                   +"<FRAME SRC='" +url +"' NAME='frame22' MARGINWIDTH='1' MARGINHEIGHT='1' FRAMEBORDER='0' NORESIZE'>"
-                   +"</FRAMESET></HTML>");
-}
