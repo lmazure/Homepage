@@ -135,15 +135,15 @@
 </xsl:template>
 
 <xsl:template match="CODESAMPLE">
-  <div class="file"><code>
+  <table class="file"><tr><td><code>
     <xsl:apply-templates/>
-  </code></div>
+  </code></td></tr></table>
 </xsl:template>
 
 <xsl:template match="TEXTBLOCK">
-  <div class="textblock">
+  <table class="textblock"><tr><td>
     <xsl:apply-templates/>
-  </div>
+  </td></tr></table>
 </xsl:template>
 
 <xsl:template match="CODEROUTINE">
