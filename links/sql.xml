@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>SQL</TITLE>
 <PATH>links/sql.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>4</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -17,6 +17,7 @@
     <ITEM><X><T>personal notes</T><A>../notes/sql.html</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
+    <ITEM><ARTICLE><X><T>Surrogate Keys</T><A>http://www.kimballgroup.com/1998/05/surrogate-keys/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ralph</FIRSTNAME><LASTNAME>Kimball</LASTNAME></AUTHOR><DATE><YEAR>1998</YEAR><MONTH>5</MONTH><DAY>2</DAY></DATE><COMMENT>The reasons for using surrogate keys instead of natural keys in a reporting database.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Introduction to Structured Query Language</T><A>http://www.dbbm.fiocruz.br/class/Lecture/d17/sql/jhoffman/sqltut.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Hoffman</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>5</MONTH><DAY>14</DAY></DATE><COMMENT>This is a good short introduction to SQL.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Practical database design, Part 1</T><ST>Keys and datatypes</ST><A>http://www.ibm.com/developerworks/web/library/wa-dbdsgn1.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Philipp</FIRSTNAME><MIDDLENAME>K.</MIDDLENAME><LASTNAME>Janert</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE><COMMENT>The author describes the use of surrogate keys and the choice of data types.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Practical database design, Part 2</T><ST>Normalization, history, and event logging</ST><A>http://www.ibm.com/developerworks/web/library/wa-dbdsgn2.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Philipp</FIRSTNAME><MIDDLENAME>K.</MIDDLENAME><LASTNAME>Janert</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>24</DAY></DATE><COMMENT>A quick presentation of the Normal Forms. This is probably too short to have any real teaching value, except to know the existence of these forms. The author describes some other uses of databases: history and logs.</COMMENT></ARTICLE></ITEM>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>4</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>4</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -57,6 +57,14 @@
         <ITEM><X><T>T.S.T.</T><A>http://tst.codeplex.com</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><X><T>personal notes</T><A>../notes/unittest.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Mocking</TITLE>
+      <ITEM><BLIST><TITLE>.NET</TITLE>
+        <ITEM><X><T>Moq</T><A>https://github.com/moq</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Java</TITLE>
+        <ITEM><X><T>Mockito</T><A>http://site.mockito.org</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mutation testing</TITLE>
       <ITEM><BLIST><TITLE>Java</TITLE>

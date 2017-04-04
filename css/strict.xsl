@@ -60,13 +60,13 @@
         </div>
         <div style="display:grid;">
           <div style="grid-column:1;grid-row:1;font-size:300%;text-align:center;">
-            <a href="../hack/map.html"><xsl:text disable-output-escaping='yes'>&amp;#x1f4c1;</xsl:text></a>
+            <a  title="site map" href="../hack/map.html"><xsl:text disable-output-escaping='yes'>&amp;#x1f4c1;</xsl:text></a>
           </div>
           <div style="grid-column:2;grid-row:1;font-size:300%;text-align:center;">
-            <a target="_self" href="javascript:do_email()"><xsl:text disable-output-escaping='yes'>&amp;#x2709;&amp;#xfe0f;</xsl:text></a>
+            <a  title="contact" target="_self" href="javascript:do_email()"><xsl:text disable-output-escaping='yes'>&amp;#x2709;&amp;#xfe0f;</xsl:text></a>
           </div>
           <div style="grid-column:3;grid-row:1;font-size:300%;text-align:center;">
-            <a target="_self" href="javascript:display_search()"><xsl:text disable-output-escaping='yes'>&amp;#x1f50e;</xsl:text></a>
+            <a  title="site search" target="_self" href="javascript:display_search()"><xsl:text disable-output-escaping='yes'>&amp;#x1f50e;</xsl:text></a>
           </div>
         </div>
       </footer>
@@ -226,7 +226,6 @@
       <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
       <xsl:element name="img">
         <xsl:attribute name="src"><xsl:text>../images/feed.jpg</xsl:text></xsl:attribute>
-        <xsl:attribute name="alt"><xsl:value-of select="./F"/><xsl:text> feed</xsl:text></xsl:attribute>
         <xsl:attribute name="title"><xsl:value-of select="./F"/><xsl:text> feed</xsl:text></xsl:attribute>
         <xsl:attribute name="border"><xsl:text>0</xsl:text></xsl:attribute>
         <xsl:attribute name="width"><xsl:text>16</xsl:text></xsl:attribute>
