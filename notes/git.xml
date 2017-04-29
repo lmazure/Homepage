@@ -78,16 +78,36 @@
 <BR/>
 <DEFINITIONTABLE>
 <ROW>
+<TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;</CODEROUTINE></TERM>
+<DESC>create a repository which is the clone of a bare repository</DESC>
+</ROW>
+<ROW>
 <TERM><CODEROUTINE>git clone --bare &lt;path to directory containing .git&gt;</CODEROUTINE></TERM>
 <DESC>create a bare repository which is the clone of a repository</DESC>
 </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
 <ROW>
-<TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;</CODEROUTINE></TERM>
-<DESC>create a repository which is the clone of a bare repository</DESC></ROW>
+<TERM><CODEROUTINE>git branch &lt;new branch&gt;</CODEROUTINE></TERM>
+<DESC>create a new branch</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>git branch</CODEROUTINE></TERM>
+<DESC>list the branch, the current one is prefixed with <CODEROUTINE>*</CODEROUTINE></DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>git checkout &lt;branch&gt;</CODEROUTINE></TERM>
+<DESC>switch to another branch</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>git merge &lt;branch&gt;</CODEROUTINE></TERM>
+<DESC>merge a branch in the workspace</DESC>
+</ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BLIST><TITLE>gitignore</TITLE>
-<ITEM>It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.ignore</CODEFILENAME> file of that directory.</ITEM>
+<ITEM>It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.gitignore</CODEFILENAME> file of that directory.</ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#git</A><L>en</L><F>HTML</F></X>
