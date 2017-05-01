@@ -5,84 +5,89 @@
 <PATH>notes/svn.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
-
 <U><B>Tortoise SVN</B></U>
 <BLIST>
-<ITEM>install Tortoise SVN 1.6.7</ITEM>
-<ITEM>go in <CODEFILENAME>g:</CODEFILENAME></ITEM>
-<ITEM>create the directory <CODEFILENAME>laurent_svn_repository</CODEFILENAME></ITEM>
-<ITEM>go in it</ITEM>
-<ITEM>create the directory <CODEFILENAME>my_project</CODEFILENAME></ITEM>
-<ITEM>right click and select <CODEMENU>TortoiseSVN<CODEMENU>Create repository here</CODEMENU></CODEMENU></ITEM>
+  <ITEM>install Tortoise SVN 1.6.7</ITEM>
+  <ITEM>go in <CODEFILENAME>g:</CODEFILENAME></ITEM>
+  <ITEM>create the directory <CODEFILENAME>laurent_svn_repository</CODEFILENAME></ITEM>
+  <ITEM>go in it</ITEM>
+  <ITEM>create the directory <CODEFILENAME>my_project</CODEFILENAME></ITEM>
+  <ITEM>right click and select <CODEMENU>TortoiseSVN<CODEMENU>Create repository here</CODEMENU></CODEMENU></ITEM>
 </BLIST>
-
 <BLIST>
-<ITEM>somewhere else on the filesystem, create a directory <CODEFILENAME>tempo</CODEFILENAME></ITEM>
-<ITEM>go in it</ITEM>
-<ITEM>create the 3 directories <CODEFILENAME>branches</CODEFILENAME>, <CODEFILENAME>tags</CODEFILENAME> and <CODEFILENAME>trunk</CODEFILENAME></ITEM>
-<ITEM>go in the <CODEFILENAME>trunk</CODEFILENAME> directory</ITEM>
-<ITEM>copy the source hierarchy in it</ITEM>
-<ITEM>go back to where the <CODEFILENAME>tempo</CODEFILENAME> directory is created</ITEM>
-<ITEM>right click and select <CODEMENU>TortoiseSVN<CODEMENU>Import&#x2026;</CODEMENU></CODEMENU></ITEM>
-<ITEM>select the URL: <CODEROUTINE>file:///G:/laurent_svn_repository/my_project</CODEROUTINE></ITEM>
-<ITEM>type the import commit comment</ITEM>
-<ITEM>click on <CODEMENU>OK</CODEMENU></ITEM>
+  <ITEM>somewhere else on the filesystem, create a directory <CODEFILENAME>tempo</CODEFILENAME></ITEM>
+  <ITEM>go in it</ITEM>
+  <ITEM>create the 3 directories <CODEFILENAME>branches</CODEFILENAME>, <CODEFILENAME>tags</CODEFILENAME> and <CODEFILENAME>trunk</CODEFILENAME></ITEM>
+  <ITEM>go in the <CODEFILENAME>trunk</CODEFILENAME> directory</ITEM>
+  <ITEM>copy the source hierarchy in it</ITEM>
+  <ITEM>go back to where the <CODEFILENAME>tempo</CODEFILENAME> directory is created</ITEM>
+  <ITEM>right click and select <CODEMENU>TortoiseSVN<CODEMENU>Import&#x2026;</CODEMENU></CODEMENU></ITEM>
+  <ITEM>select the URL: <CODEROUTINE>file:///G:/laurent_svn_repository/my_project</CODEROUTINE></ITEM>
+  <ITEM>type the import commit comment</ITEM>
+  <ITEM>click on <CODEMENU>OK</CODEMENU></ITEM>
 </BLIST>
-
 <U><B>Eclipse</B></U>
 <BLIST>
-<ITEM>add <CODEROUTINE>http://subclipse.tigris.org/update_1.6.x</CODEROUTINE> to the update sites </ITEM>
-<ITEM>retrieve the packages from it</ITEM>
+  <ITEM>add <CODEROUTINE>http://subclipse.tigris.org/update_1.6.x</CODEROUTINE> to the update sites </ITEM>
+  <ITEM>retrieve the packages from it</ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>solution 1</U></TITLE>
-<ITEM>open "SVN Repositories" View</ITEM>
-<ITEM>right-click and select <CODEMENU>New<CODEMENU>Repository location&#x2026;</CODEMENU></CODEMENU></ITEM>
-<ITEM>set the location URL to <CODEROUTINE>file:///G:/laurent_svn_repository/my_project</CODEROUTINE></ITEM>
-<ITEM>expand the created repository</ITEM>
-<ITEM>right-click on the <CODEFILENAME>trunk</CODEFILENAME> directory and select <CODEMENU>Checkout&#x2026;</CODEMENU></ITEM>
-<ITEM><BLIST><TITLE>in the "Check out from SVN" dialog</TITLE>
-<ITEM>select <CODEMENU>Check out as a project configured using the New Project Wizard</CODEMENU></ITEM>
-<ITEM>click on <CODEMENU>Finish</CODEMENU></ITEM>
+  <ITEM>open "SVN Repositories" View</ITEM>
+  <ITEM>right-click and select <CODEMENU>New<CODEMENU>Repository location&#x2026;</CODEMENU></CODEMENU></ITEM>
+  <ITEM>set the location URL to <CODEROUTINE>file:///G:/laurent_svn_repository/my_project</CODEROUTINE></ITEM>
+  <ITEM>expand the created repository</ITEM>
+  <ITEM>right-click on the <CODEFILENAME>trunk</CODEFILENAME> directory and select <CODEMENU>Checkout&#x2026;</CODEMENU></ITEM>
+  <ITEM><BLIST><TITLE>in the "Check out from SVN" dialog</TITLE>
+  <ITEM>select <CODEMENU>Check out as a project configured using the New Project Wizard</CODEMENU></ITEM>
+  <ITEM>click on <CODEMENU>Finish</CODEMENU></ITEM>
 </BLIST></ITEM>
-<ITEM><BLIST><TITLE>in the "New Project" Dialog</TITLE>
-<ITEM>select <CODEMENU>Java<CODEMENU>Java Project</CODEMENU></CODEMENU></ITEM>
-<ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
-<ITEM>type the project name in <CODEMENU>Project Name</CODEMENU></ITEM>
-<ITEM>select <CODEMENU>Use project folder as root for sources and class files</CODEMENU></ITEM>
-<ITEM>click on <CODEMENU>Finish</CODEMENU></ITEM>
-</BLIST></ITEM>
+  <ITEM><BLIST><TITLE>in the "New Project" Dialog</TITLE>
+    <ITEM>select <CODEMENU>Java<CODEMENU>Java Project</CODEMENU></CODEMENU></ITEM>
+    <ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
+    <ITEM>type the project name in <CODEMENU>Project Name</CODEMENU></ITEM>
+    <ITEM>select <CODEMENU>Use project folder as root for sources and class files</CODEMENU></ITEM>
+   <ITEM>click on <CODEMENU>Finish</CODEMENU></ITEM>
+  </BLIST></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>solution 2</U></TITLE>
-<ITEM><CODEMENU>File<CODEMENU>New<CODEMENU>Project&#x2026;</CODEMENU></CODEMENU></CODEMENU></ITEM>
-<ITEM><BLIST><TITLE>in the "New Project" Dialog</TITLE>
-<ITEM>select <CODEMENU>SVN<CODEMENU>Checkout Projects from SVN</CODEMENU></CODEMENU></ITEM>
-<ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
-<ITEM>select <CODEMENU>Create a new repository location</CODEMENU></ITEM>
-<ITEM>set the location URL to <CODEROUTINE>file:///G:/laurent_svn_repository/my_project</CODEROUTINE></ITEM>
-<ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
-<ITEM>select the <CODEMENU>trunk</CODEMENU> directory</ITEM>
-<ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
-<ITEM>select <CODEMENU>Check out as a project configured using the New Project Wizard</CODEMENU></ITEM>
-<ITEM>click on <CODEMENU>Finish</CODEMENU></ITEM>
+  <ITEM><CODEMENU>File<CODEMENU>New<CODEMENU>Project&#x2026;</CODEMENU></CODEMENU></CODEMENU></ITEM>
+  <ITEM><BLIST><TITLE>in the "New Project" Dialog</TITLE>
+  <ITEM>select <CODEMENU>SVN<CODEMENU>Checkout Projects from SVN</CODEMENU></CODEMENU></ITEM>
+  <ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
+  <ITEM>select <CODEMENU>Create a new repository location</CODEMENU></ITEM>
+  <ITEM>set the location URL to <CODEROUTINE>file:///G:/laurent_svn_repository/my_project</CODEROUTINE></ITEM>
+  <ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
+  <ITEM>select the <CODEMENU>trunk</CODEMENU> directory</ITEM>
+  <ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
+  <ITEM>select <CODEMENU>Check out as a project configured using the New Project Wizard</CODEMENU></ITEM>
+  <ITEM>click on <CODEMENU>Finish</CODEMENU></ITEM>
 </BLIST></ITEM>
-<ITEM><BLIST><TITLE>in the "New Project" Dialog</TITLE>
-<ITEM>select <CODEMENU>Java<CODEMENU>Java Project</CODEMENU></CODEMENU></ITEM>
-<ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
-<ITEM>type the project name in <CODEMENU>Project Name</CODEMENU></ITEM>
-<ITEM>select <CODEMENU>Use project folder as root for sources and class files</CODEMENU></ITEM>
-<ITEM>click on <CODEMENU>Finish</CODEMENU></ITEM>
-</BLIST></ITEM>
+  <ITEM><BLIST><TITLE>in the "New Project" Dialog</TITLE>
+    <ITEM>select <CODEMENU>Java<CODEMENU>Java Project</CODEMENU></CODEMENU></ITEM>
+    <ITEM>click on <CODEMENU>Next</CODEMENU></ITEM>
+    <ITEM>type the project name in <CODEMENU>Project Name</CODEMENU></ITEM>
+    <ITEM>select <CODEMENU>Use project folder as root for sources and class files</CODEMENU></ITEM>
+    <ITEM>click on <CODEMENU>Finish</CODEMENU></ITEM>
+  </BLIST></ITEM>
 </BLIST>
-
-Copy a tag:
-<CODESAMPLE>svn copy "https://svn.eurofins.local/EOL/tags/EOL-2014-12a-RC2" "https://svn.eurofins.local/EOL/tags/EOL-2014-12a" -m "issue #97713: Create SVN tag for EOL-2014-12a"</CODESAMPLE>
-
+<BLIST><TITLE><U><B>Command line</B></U></TITLE>
+  <ITEM>Update the current directory to head
+  <CODESAMPLE>svn update</CODESAMPLE></ITEM>
+  <ITEM>Display the diff of the current directoy
+  <CODESAMPLE>svn diff</CODESAMPLE></ITEM>
+  <ITEM>Display the log of a file/directory
+  <CODESAMPLE>svn diff <I>file/dir</I></CODESAMPLE></ITEM>
+  <ITEM>Commit a file/dir
+  <CODESAMPLE>svn commit -m "I have done blabla..." <I>file/dir</I></CODESAMPLE></ITEM>
+  <ITEM>Display the log of the current directory
+  <CODESAMPLE>svn log</CODESAMPLE></ITEM>
+  <ITEM>Display the log of a file/directory
+  <CODESAMPLE>svn log <I>file/dir</I></CODESAMPLE></ITEM>
+  <ITEM>Copy a tag
+  <CODESAMPLE>svn copy "https://svn.eurofins.local/EOL/tags/EOL-2014-12a-RC2" "https://svn.eurofins.local/EOL/tags/EOL-2014-12a" -m "issue #97713: Create SVN tag for EOL-2014-12a"</CODESAMPLE></ITEM>
+  <ITEM>Define the new location of the repository
+  <CODESAMPLE>svn relocate file:///cygdrive/f/svn_repository/my_project/trunk my_workspace_dir</CODESAMPLE></ITEM>
+</BLIST>
 </CONTENT>
-
 <X><T>Links</T><A>../links/coding.html#svn</A><L>en</L><F>HTML</F></X>
-
 </PAGE>
-
-
