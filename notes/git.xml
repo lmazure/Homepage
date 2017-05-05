@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -45,6 +45,14 @@
 <ROW>
 <TERM><CODEROUTINE>-a</CODEROUTINE></TERM>
 <DESC>automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>--amend</CODEROUTINE></TERM>
+<DESC>replace the tip of the current branch by creating a new commit</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>--amend --reset-author</CODEROUTINE></TERM>
+<DESC>declare that the authorship of the new commit belongs to the committer</DESC>
 </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -103,6 +111,13 @@
 <ROW>
 <TERM><CODEROUTINE>git merge &lt;branch&gt;</CODEROUTINE></TERM>
 <DESC>merge a branch in the workspace</DESC>
+</ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+<ROW>
+<TERM><CODEROUTINE>git --global --edit</CODEROUTINE></TERM>
+<DESC>open an editor to edit the gobal configuration file</DESC>
 </ROW>
 </DEFINITIONTABLE>
 <BR/>
