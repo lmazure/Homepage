@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -81,6 +81,13 @@
 <ROW>
 <TERM><CODEROUTINE>git log</CODEROUTINE></TERM>
 <DESC>show commit logs</DESC>
+</ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+<ROW>
+<TERM><CODEROUTINE>git pull</CODEROUTINE></TERM>
+<DESC>incorporate changes of the remote repository into the current branch, it is the same as <CODEROUTINE>git fetch</CODEROUTINE> followed by <CODEROUTINE>git merge FETCH_HEAD</CODEROUTINE>.</DESC>
 </ROW>
 </DEFINITIONTABLE>
 <BR/>
