@@ -12,14 +12,15 @@ my $lib_dir;
 if ( $hostname eq "Kirikou" ) { $lib_dir = "C:/Users/Laurent/Documents/lib"; }
 if ( $hostname eq "bianca" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
 if ( $hostname eq "samsung" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
-if ( $hostname eq "LU01LAP161" ) { $lib_dir = "C:/Users/blam/lib"; }
+if ( $hostname eq "INFOLOGIC-LMA" ) { $lib_dir = "H:/Documents/tools/lib"; }
 die("don't know where are the Java libraries") if ( ! defined($lib_dir) );
 
 print "$0\n";
 my $base_dir = $0;
 $base_dir =~ s{^(.*)\\[^\\]*\\[^\\]*$}{$1};
 my $xalan_dir = $lib_dir."/xalan-j_2_7_1";
-my $start_dir = $base_dir;
+my $start_dir = "..";
+#my $start_dir = $base_dir;
 my $xlst_file = $start_dir."/css/strict.xsl";
 my $map_file = $start_dir."/hack/map.xml";
 
@@ -38,7 +39,8 @@ sub to_html {
        ( stat($infile)->mtime >= stat($outfile)->mtime ) ||
        ( stat($xlst_file)->mtime >= stat($outfile)->mtime ) ||
        ( stat($map_file)->mtime >= stat($outfile)->mtime ) ) {
-    my @cmds = ("java",
+    #my @cmds = ("/cygdrive/c/java/prg/jdk18_64/bin/java.exe",
+    my @cmds = ("java.exe",
         "-cp",
         "$xalan_dir/xalan.jar",
         "org.apache.xalan.xslt.Process",
