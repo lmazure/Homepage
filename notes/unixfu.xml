@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -42,7 +42,8 @@
 <BR/>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>grep</T><A>javascript:do_reference("man/linux/1/grep")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print lines matching a pattern</DESC></ROW>
-<ROW><TERM><CODEROUTINE>grep -r</CODEROUTINE><BR/><CODEROUTINE>grep -R</CODEROUTINE><BR/><CODEROUTINE>grep --recursive</CODEROUTINE><BR/><CODEROUTINE>grep -d recurse</CODEROUTINE><BR/><CODEROUTINE>grep -directories=recurse</CODEROUTINE><BR/></TERM><DESC>perform a recursive <CODEROUTINE>grep</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -r</CODEROUTINE><BR/><CODEROUTINE>grep -R</CODEROUTINE><BR/><CODEROUTINE>grep --recursive</CODEROUTINE><BR/><CODEROUTINE>grep -d recurse</CODEROUTINE><BR/><CODEROUTINE>grep -directories=recurse</CODEROUTINE></TERM><DESC>perform a recursive <CODEROUTINE>grep</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -a</CODEROUTINE><BR/><CODEROUTINE>grep --test</CODEROUTINE><BR/><CODEROUTINE>grep --binary-files=text</CODEROUTINE></TERM><DESC>process a binary file as if it were text</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -i</CODEROUTINE></TERM><DESC>case independent search</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -w</CODEROUTINE></TERM><DESC>restrict to match of whole words (letters, digits and underscore)</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -x</CODEROUTINE></TERM><DESC>restrict to match of whole line</DESC></ROW>
