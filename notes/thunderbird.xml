@@ -3,13 +3,22 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Thunderbird</TITLE>
 <PATH>notes/thunderbird.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 
-<BLIST><TITLE><U>Thunderbird</U></TITLE>
+<BLIST>
 <ITEM>display the address book from the command line
 <CODESAMPLE>"C:\Program Files\Mozilla Thunderbird\thunderbird.exe" -addressbook</CODESAMPLE></ITEM>
 </BLIST>
+
+<U>shortcuts</U>
+<DEFINITIONTABLE>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='M'/>
+</TERM><DESC>
+Mode/copy a message into the same folder as the previous one
+</DESC></ROW>
+</DEFINITIONTABLE>
 
 </CONTENT>
 </PAGE>

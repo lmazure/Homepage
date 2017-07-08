@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -316,6 +316,9 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>IDEs</TITLE>
       <ITEM><BLIST><TITLE>Eclipse</TITLE>
+        <ITEM><ARTICLE><X><T>Conquer medieval kingdoms with CodeRuler</T><ST>Stretch your Java programming skills with this new animated graphical simulator</ST><A>http://www.cse.lehigh.edu/~munoz/CSE497/assignments/files/coderuler.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sing</FIRSTNAME><LASTNAME>Li</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>Code your own warlord&#x2026;</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Eclipse Plugins Exposed, Part 1: A First Glimpse</T><A>http://www.onjava.com/pub/a/onjava/2005/02/09/eclipse.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Emmanuel</FIRSTNAME><LASTNAME>Proulx</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE><COMMENT>This description is not clear at all, but maybe the author just wants to give an idea about the plugin creation workflow&#x2026;</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Implementing Web user interfaces for Eclipse components</T><ST>Leveraging RIA technologies in Eclipse-based components</ST><A>http://www.ibm.com/developerworks/opensource/library/os-eclipse-webui/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Ma</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>How to instantiate an SWT browser widget and communicate between Eclipse and this widget:<BR/>- a quick and dirty solution uses Javascript from Eclipse to the Browser, and the Browser status for the other direction<BR/>- a cleaner one is using Jetty and HTTP requests</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE>Introduction</TITLE>
           <ITEM><ARTICLE><X><T>Getting started with the Eclipse Platform</T><ST>Using Eclipse plug-ins to edit, compile, and debug your app</ST><A>http://www.ibm.com/developerworks/opensource/library/os-ecov/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Gallardo</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>11</MONTH><DAY>11</DAY></DATE><COMMENT>An overview of Eclipse.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X status='dead'><T>Mastering Eclipse V3.4, Part 1: The Eclipse IDE workbench</T><A>http://www.ibm.com/developerworks/opensource/library/os-eclipse-master1/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Prashant</FIRSTNAME><LASTNAME>Deva</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE><COMMENT>The workbench, the editors and views, the workspaces, the projects, the customisation of toolbars and menus, and the preferences.</COMMENT></ARTICLE></ITEM>
@@ -337,21 +340,21 @@
             <ITEM><ARTICLE><X status='dead'><T>Build GUIs with the Eclipse Visual Editor project</T><ST>A graphical tool for building graphical interfaces</ST><A>http://www.ibm.com/developerworks/opensource/library/os-ecvisual/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Gallardo</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE><COMMENT>A presentation of the Visual Editor with two short examples: one with AWT/Swing and the other with SWT.</COMMENT></ARTICLE></ITEM>
           </BLIST></ITEM>
         </BLIST></ITEM>
-        <ITEM><ARTICLE><X><T>Conquer medieval kingdoms with CodeRuler</T><ST>Stretch your Java programming skills with this new animated graphical simulator</ST><A>http://www.cse.lehigh.edu/~munoz/CSE497/assignments/files/coderuler.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sing</FIRSTNAME><LASTNAME>Li</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>Code your own warlord&#x2026;</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Eclipse Plugins Exposed, Part 1: A First Glimpse</T><A>http://www.onjava.com/pub/a/onjava/2005/02/09/eclipse.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Emmanuel</FIRSTNAME><LASTNAME>Proulx</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE><COMMENT>This description is not clear at all, but maybe the author just wants to give an idea about the plugin creation workflow&#x2026;</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Implementing Web user interfaces for Eclipse components</T><ST>Leveraging RIA technologies in Eclipse-based components</ST><A>http://www.ibm.com/developerworks/opensource/library/os-eclipse-webui/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Ma</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>How to instantiate an SWT browser widget and communicate between Eclipse and this widget:<BR/>- a quick and dirty solution uses Javascript from Eclipse to the Browser, and the Browser status for the other direction<BR/>- a cleaner one is using Jetty and HTTP requests</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE>History</TITLE>
           <ITEM><BLIST><TITLE>3.1</TITLE>
-            <ITEM><ARTICLE><X status='dead'><T>Java generics support in Eclipse V3.1</T><A>http://www.ibm.com/developerworks/opensource/library/os-ecljgs</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Neal</FIRSTNAME><LASTNAME>Ford</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE><COMMENT>A description of the Eclipse3.1 features aimed at supporting Java generics.</COMMENT></ARTICLE></ITEM>
+            <ITEM><ARTICLE><X status='dead'><T>Java generics support in Eclipse V3.1</T><A>http://www.ibm.com/developerworks/opensource/library/os-ecljgs</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Neal</FIRSTNAME><LASTNAME>Ford</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE><COMMENT>A description of the Eclipse 3.1 features aimed at supporting Java generics.</COMMENT></ARTICLE></ITEM>
           </BLIST></ITEM>
-          <ITEM><BLIST><TITLE>3.2</TITLE>
+          <ITEM><BLIST><TITLE>3.2 Callisto</TITLE>
             <ITEM><ARTICLE><X><T>What's New in Eclipse 3.2 Java Development Tools</T><A>http://www.onjava.com/pub/a/onjava/2006/06/28/whats-new-in-eclipse-3-2-java-development-tools.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ed</FIRSTNAME><LASTNAME>Burnette</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE><COMMENT>A quick overview of the new features of 3.2.</COMMENT></ARTICLE></ITEM>
           </BLIST></ITEM>
-          <ITEM><BLIST><TITLE>3.3</TITLE>
+          <ITEM><BLIST><TITLE>3.3 Europa</TITLE>
             <ITEM><ARTICLE><X status='dead'><T>A whirlwind tour of Eclipse Europa</T><ST>Eclipse V3.3 contains significant changes to 21 projects; learn how Europa will boost your productivity</ST><A>http://www.ibm.com/developerworks/opensource/library/os-eclipse-europa/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Chris</FIRSTNAME><LASTNAME>Aniszczyk</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>An overview of the new package.</COMMENT></ARTICLE></ITEM>
           </BLIST></ITEM>
-          <ITEM><BLIST><TITLE>3.4</TITLE>
+          <ITEM><BLIST><TITLE>3.4 Ganymede</TITLE>
            <ITEM><ARTICLE><X><T>Eclipse Ganymede at a glance</T><ST>Learn what is aboard the 24-project release train</ST><A>http://www.ibm.com/developerworks/opensource/library/os-eclipse-ganymede/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Chris</FIRSTNAME><LASTNAME>Aniszczyk</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE><COMMENT>An overview of the new package.</COMMENT></ARTICLE></ITEM>
+          </BLIST></ITEM>
+          <ITEM><BLIST><TITLE>4.7 Oxygen</TITLE>
+            <ITEM><ARTICLE><X><T>Eclipse Oxygen IDE Improvements: General, Java and Git</T><A>https://www.youtube.com/watch?v=Y0-cO9wZj6w</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>10</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Holger</FIRSTNAME><LASTNAME>Voormann</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>26</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
           </BLIST></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
