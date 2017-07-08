@@ -22,9 +22,9 @@
 <DESC>display Call Hierarchy Window</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><KEY ID='R'/></TERM>
 <DESC>list all references of the current symbol</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2191;'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Up'/></TERM>
 <DESC>go to previous reference (in the file) of the current symbol</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2193;'/></TERM>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Down'/></TERM>
 <DESC>go to next reference (in the file) of the current symbol</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/><KEY ID='S'/></TERM>
 <DESC>display the Solution Explorer</DESC></ROW>
@@ -112,7 +112,7 @@ With <CODEMENU>Project<CODEMENU>Exclure du projet</CODEMENU></CODEMENU>, it is p
 <ITEM><X><T>Productivity Power Tools</T><A>http://visualstudiogallery.msdn.microsoft.com/d0d33361-18e2-46c0-8ff2-4adea1e34fef</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>Productivity Power Tools 2012</T><A>http://visualstudiogallery.msdn.microsoft.com/3a96a4dc-ba9c-4589-92c5-640e07332afd</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM>To display a quideline at the 80th column, perform a right click on the 80th column and select <CODEMENU>Guidelines>Add Guideline</CODEMENU>.</ITEM>
-<ITEM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='&#x21DF;'/> and <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='&#x21DE;'/> navigates between tabs.</ITEM>
+<ITEM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='PageDown'/> and <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='PageUp'/> navigates between tabs.</ITEM>
 </BLIST>
 
 <BLIST><TITLE>TFS Power Tools</TITLE>

@@ -49,23 +49,23 @@ View
 Move
 <DEFINITIONTABLE>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='&#x2191;'/></TERM>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Up'/></TERM>
 <DESC>go to the empty cell/filled cell limit above</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='&#x2193;'/></TERM>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Down'/></TERM>
 <DESC>go to the empty cell/filled cell limit below</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='&#x2190;'/></TERM>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Left'/></TERM>
 <DESC>go to the empty cell/filled cell limit on the left</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='&#x2192;'/></TERM>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Right'/></TERM>
 <DESC>go to the empty cell/filled cell limit on the right</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='&#x2196;'/></TERM>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Beginning'/></TERM>
 <DESC>go to cell A1</DESC>
 </ROW>
 <ROW>
@@ -90,11 +90,11 @@ Move
 Sheets
 <DEFINITIONTABLE>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='&#x21DF;'/></TERM>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='PageDown'/></TERM>
 <DESC>move to next sheet</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='&#x21DE;'/></TERM>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='PageUp'/></TERM>
 <DESC>move to previous sheet</DESC>
 </ROW>
 <ROW>
@@ -107,11 +107,11 @@ Sheets
 <DESC>insert a Microsoft Excel 4.0 macro sheet</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x21DF;'/></TERM>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='PageDown'/></TERM>
 <DESC>select the current and next sheet in the workbook</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x21DE;'/></TERM>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='PageUp'/></TERM>
 <DESC>select the current and previous sheet in the workbook</DESC>
 </ROW>
 </DEFINITIONTABLE><BR/>
@@ -234,7 +234,7 @@ Edit
 <DESC>copy the formula from the cell above into the active cell</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Alt'/><KEY ID='&#x2193;'/></TERM>
+<TERM><MODIFIERKEY ID='Alt'/><KEY ID='Down'/></TERM>
 <DESC>allow to select one of the column values</DESC>
 </ROW>
 <ROW>
@@ -350,11 +350,11 @@ outline
 group/ungroup
 <DEFINITIONTABLE>
 <ROW>
-<TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2192;'/></TERM>
+<TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Right'/></TERM>
 <DESC>group rows or columns</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='&#x2190;'/></TERM>
+<TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Left'/></TERM>
 <DESC>ungroup rows or columns</DESC>
 </ROW>
 <ROW>

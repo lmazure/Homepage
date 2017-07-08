@@ -545,6 +545,9 @@
       <xsl:when test="./@ID='Up'"><xsl:text disable-output-escaping='yes'>&amp;uarr;</xsl:text></xsl:when>
       <xsl:when test="./@ID='Right'"><xsl:text disable-output-escaping='yes'>&amp;rarr;</xsl:text></xsl:when>
       <xsl:when test="./@ID='Down'"><xsl:text disable-output-escaping='yes'>&amp;darr;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='Begining'"><xsl:text disable-output-escaping='yes'>&#x2196;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='PageDown'"><xsl:text disable-output-escaping='yes'>&#x21de;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='PageUp'"><xsl:text disable-output-escaping='yes'>&#x21df;</xsl:text></xsl:when>
       <xsl:otherwise><xsl:value-of select="@ID"/></xsl:otherwise>
     </xsl:choose>
   </span>
