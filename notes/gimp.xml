@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Gimp</TITLE>
+<PATH>notes/gimp.xml</PATH>
+<DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>9</DAY></DATE>
+<CONTENT>
+
+<BLIST><TITLE>poor man's identity photo</TITLE>
+  <ITEM>crop the photo to comply with <X><T>the rules</T><A>https://www.service-public.fr/particuliers/vosdroits/F10619</A><L>fr</L><F>HTML</F></X><BR/>
+  in particular the 4.5 cm x 3.5 cm ratio</ITEM>
+  <ITEM>File &gt; Export as...</ITEM>
+  <ITEM>start now from this file</ITEM>
+  <ITEM>Tools &gt; Transform Tools &gt; Rotate...<BR/>
+    rotate the photo of 90°</ITEM>
+  <ITEM>Edit &gt; Copy</ITEM>
+  <ITEM>Layer &gt; Layer Boundary Size...<BR/>
+    set the layer size to<BR/>
+    new width of layer = height of photo x 10.0 / 4.5<BR/>
+    new height of layer = width of photo x 15.0 / 3.5</ITEM>
+  <ITEM>Image > Fit Canvas to Layers</ITEM>
+  <ITEM>Type "m"</ITEM>
+  <ITEM>Edit &gt; Paste</ITEM>
+  <ITEM>use the cursor to move the copy of the image</ITEM>
+  <ITEM>do this 5 times</ITEM>
+  <ITEM>File &gt; Export as...</ITEM>
+  <ITEM>print the photo on 15.0 cm x 10.0 cm paper</ITEM>
+</BLIST>
+
+</CONTENT>
+<X><T>links</T><A>../links/3d.html#gimp</A><L>en</L><F>HTML</F></X>
+</PAGE>
