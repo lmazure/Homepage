@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -236,7 +236,8 @@
           <ITEM><X><T>EclipseColorer</T><A>http://sourceforge.net/projects/eclipsecolorer</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>jMechanic</T><A>http://jmechanic.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
-        <ITEM><X><T>JMP</T><A>http://www.khelekore.org/jmp/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X status='obsolete'><T>JMP</T><A>http://www.khelekore.org/jmp/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>JProfiler</T><A>https://www.ej-technologies.com/products/jprofiler/overview.html</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>JavaScript</TITLE>
         <ITEM><X><T>dynaTrace</T><A>http://ajax.dynatrace.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -261,6 +262,7 @@
     <ITEM><BLIST><TITLE>Games</TITLE>
       <ITEM><X><T>CodinGame</T><A>https://www.codingame.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>codewars</T><A>https://www.codewars.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Competitive Programmer's Handbook</T><A>https://cses.fi/book.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
@@ -515,6 +517,7 @@
       <ITEM><ARTICLE><X><T>No Comment: Why Commenting Code Is Still a Bad Idea</T><A>https://visualstudiomagazine.com/articles/2013/07/26/why-commenting-code-is-still-bad.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Peter</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE><COMMENT>Answers to the comments on the previous article, but there is almost nothing new here.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>No Comment, Part 3: Writing 'Really Obvious Code'</T><A>https://visualstudiomagazine.com/articles/2013/09/01/no-comment-part-3.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Peter</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE><COMMENT>An example of modifying the code to make it more readable.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Necessary Comments</T><A>http://blog.cleancoder.com/uncle-bob/2017/02/23/NecessaryComments.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE><COMMENT>It is sometimes really necessary to comment code.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Code Health: To Comment or Not to Comment?</T><A>https://testing.googleblog.com/2017/07/code-health-to-comment-or-not-to-comment.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dori</FIRSTNAME><LASTNAME>Reuveni</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Bourrillion</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>17</DAY></DATE><COMMENT>Some good basic advice about commenting the code.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><ARTICLE><X><T>Fecophiles</T><A>https://8thlight.com/blog/uncle-bob/2012/01/20/Fecophiles.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>An example of crappy code.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Reducing Incidental Complexity in Our Code and in Our Teaching</T><A>http://blog.8thlight.com/ryan-verner/2013/10/09/reducing-incidental-complexity-in-our-code-and-in-our-teaching.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ryan</FIRSTNAME><LASTNAME>Verner</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>Some thoughts about the fact that the code we write should be simpler.</COMMENT></ARTICLE></ITEM>
