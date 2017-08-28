@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -185,9 +185,13 @@
         <ITEM><ARTICLE><X><T>Detecting Loadable Kernel Modules (LKM)</T><A>http://www.s0ftpj.org/docs/lkm.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Toby</FIRSTNAME><LASTNAME>Miller</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE><COMMENT>This paper explains how to detect LKM rootkits.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Examining Remote OS Detection using LPD Querying</T><A>http://lwn.net/2001/0222/a/sec-lpddetect.php3</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>f0bic</GIVENNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE><COMMENT>How to recognize an OS by sending malformed request to the <CODEROUTINE>lpd</CODEROUTINE> daemon.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='dead' protection='payed_registration'><T>Search Engines as a Security Threat</T><A>http://www2.computer.org/portal/web/csdl/doi/10.1109/2.955094</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Julio</FIRSTNAME><MIDDLENAME>C&#xE9;sar</MIDDLENAME><LASTNAME>Hern&#xE1;ndez</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Jos&#xE9;</FIRSTNAME><MIDDLENAME>Mar&#xED;a</MIDDLENAME><LASTNAME>Sierra</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Arturo</FIRSTNAME><LASTNAME>Ribagorda</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Benjam&#xED;n</FIRSTNAME><LASTNAME>Ramos</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>10</MONTH></DATE><COMMENT>Search engines can help to find vulnerable servers or can be used as anonymous proxies.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Linux kernel file offset pointer handling</T><A>http://isec.pl/vulnerabilities/isec-0016-procleaks.txt</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Starzetz</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>8</MONTH><DAY>04</DAY></DATE><COMMENT>Using a race condition on the file offset management to be able to read kernel memory.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Linux kernel file offset pointer handling</T><A>http://isec.pl/vulnerabilities/isec-0016-procleaks.txt</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Starzetz</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>8</MONTH><DAY>4</DAY></DATE><COMMENT>Using a race condition on the file offset management to be able to read kernel memory.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Cache missing for fun and profit</T><A>http://www.daemonology.net/papers/htt.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Colin</FIRSTNAME><LASTNAME>Percival</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR></DATE><COMMENT>How to measure the memory access times to analyze cache hits/misses and break a cryptographic key.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Burp</TITLE>
+      <ITEM><ARTICLE><X><T>How I Accidentally Framed Myself for a Hacking Frenzy</T><A>http://blog.portswigger.net/2017/08/how-i-accidentally-framed-myself-for.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Kettle</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE><COMMENT>It is not a good idea to release a Burp extension referencing one of your servers.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Adapting Burp Extensions for Tailored Pentesting</T><A>http://blog.portswigger.net/2017/08/adapting-burp-extensions-for-tailored.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Kettle</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>8</MONTH><DAY>23</DAY></DATE><COMMENT>How to get the code of an extension, build it, modify it and, possibly, propose your change.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Advice</TITLE>
       <ITEM><ARTICLE><X status='dead'><T>Create effective passwords</T><ST>Strategies for computer-based systems</ST><A>http://www.ibm.com/developerworks/library/s-pass.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Shimonski</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE><COMMENT>How to avoid bad passwords.</COMMENT></ARTICLE></ITEM>
