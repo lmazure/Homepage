@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -35,6 +35,7 @@
       <ITEM><X><T>1.6</T><A>http://docs.oracle.com/javase/6/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>1.7</T><A>http://docs.oracle.com/javase/7/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>1.8</T><A>http://docs.oracle.com/javase/8/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>1.9</T><A>http://docs.oracle.com/javase/9/index.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><ANCHOR>javadoc</ANCHOR><X><T>javadoc</T><A>http://docs.oracle.com/javase/6/docs/technotes/tools/windows/javadoc.html</A><L>en</L><F>HTML</F></X></TITLE>
       <ITEM><X><T>FAQ</T><A>http://www.oracle.com/technetwork/java/javase/downloads/index-136934.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -68,6 +69,9 @@
       <ITEM><X><T>Doug Leas</T><A>http://g.oswego.edu/dl/html/javaCodingStd.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>AmbySoft</T><A>http://www.ambysoft.com/essays/javaCodingStandards.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Macadamian</T><A>http://www.literateprogramming.com/macadamian.pdf</A><L>en</L><F>PDF</F></X></ITEM>
+      <ITEM><X><T>Electronic Government of Bahrain</T><A>http://gccegov.org/documents/10179/276020/Java_standards_v1.0_%28NEAF%29.pdf</A><L>en</L><F>PDF</F></X></ITEM>
+      <ITEM><X><T>Geotechnical Software Services</T><A>http://geosoft.no/development/javastyle.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Google</T><A>https://google.github.io/styleguide/javaguide.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>test</TITLE>
       <ITEM><X><T>jtest</T><A>http://www.parasoft.com/jtest</A><L>en</L><F>HTML</F></X></ITEM>
@@ -300,6 +304,9 @@
         <ITEM><ARTICLE><X><T>Java 9 Optional API Additions</T><A>http://www.baeldung.com/java-9-optional</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugen</FIRSTNAME><LASTNAME>Paraschiv</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE><COMMENT>The new methods of <CODEROUTINE>Optional</CODEROUTINE>: <CODEROUTINE>or()</CODEROUTINE>, <CODEROUTINE>ifPresentOrElse()</CODEROUTINE>, and <CODEROUTINE>stream()</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>4 Hidden Features in Java 9</T><A>https://blog.idrsolutions.com/2017/05/4-hidden-features-java-9/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kieran</FIRSTNAME><LASTNAME>France</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE><COMMENT><BLIST><TITLE>A quick description of</TITLE><ITEM>the Process API updates</ITEM><ITEM>Ahead-of-Time Compilation</ITEM><ITEM>private methods in interfaces</ITEM><ITEM>Multi-Resolution Images</ITEM></BLIST></COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Faster and Easier Use and Redistribution of Java SE</T><A>https://blogs.oracle.com/java-platform-group/faster-and-easier-use-and-redistribution-of-java-se</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Donald</FIRSTNAME><LASTNAME>Smith</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE><COMMENT>Oracle wants to release a new version of Java SE every six months and will open source some of its commercial products.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Opening Up Java EE - An Update</T><A>https://blogs.oracle.com/theaquarium/opening-up-ee-update</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Delabassee</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE><COMMENT>Oracle moves Java EE to the Eclipse Foundation.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>9 Java Champions on Java 9: Part 1</T><A>https://zeroturnaround.com/rebellabs/9-java-champions-java-9-part-1/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rafael</FIRSTNAME><LASTNAME>Winterhalter</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Martijn</FIRSTNAME><LASTNAME>Verburg</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Trisha</FIRSTNAME><LASTNAME>Gee</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Heinz</FIRSTNAME><LASTNAME>Kabutz</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>Some short opinions about Java 9.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>9 Java Champions on Java 9: Part 2</T><A>https://zeroturnaround.com/rebellabs/9-java-champions-on-java-9-part-2/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Henri</FIRSTNAME><LASTNAME>Tremblay</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mario</FIRSTNAME><LASTNAME>Torre</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bruno</FIRSTNAME><LASTNAME>Souza</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Ritter</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>The continuation of the previous article.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Java 10</TITLE>
         <ITEM><ARTICLE><X><T>Java Type Inference Won't Support Mutability Specification</T><A>https://www.infoq.com/news/2016/12/java-type-inference-mutability</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Abraham</FIRSTNAME><LASTNAME>Mar&#xED;n P&#xE9;rez</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>12</MONTH><DAY>22</DAY></DATE><COMMENT>A description of the cases where type inference would be supported.</COMMENT></ARTICLE></ITEM>

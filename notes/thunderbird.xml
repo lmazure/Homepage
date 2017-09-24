@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Thunderbird</TITLE>
 <PATH>notes/thunderbird.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 
 <BLIST>
@@ -17,6 +17,16 @@
 <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='M'/>
 </TERM><DESC>
 Mode/copy a message into the same folder as the previous one
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><KEY ID='K'/>
+</TERM><DESC>
+<X><T>Search All Messages</T><A>https://support.mozilla.org/en-US/kb/global-search</A><L>en</L><F>HTML</F></X>
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='K'/>
+</TERM><DESC>
+<X><T>Quick filter</T><A>https://support.mozilla.org/en-US/kb/quick-filter-toolbar</A><L>en</L><F>HTML</F></X>
 </DESC></ROW>
 </DEFINITIONTABLE>
 
