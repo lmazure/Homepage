@@ -50,8 +50,8 @@ It is faster that using <CODEROUTINE>malloc</CODEROUTINE>/<CODEROUTINE>free</COD
 <ITEM><CODEROUTINE>__buildin_constant_p</CODEROUTINE> this a compiler intrinsic routine testing if its parameter is a constant<BR/>
 It is useful to write macros optimized when one of their parameters is a hard coded constant.</ITEM>
 <ITEM><CODEROUTINE>__typeof__</CODEROUTINE> this is a macro returning the type of its argument<BR/>
-It is useful when writing macros which are generic for several data types. </ITEM>
-<ITEM><CODEROUTINE>__va_copy</CODEROUTINE> copy a <CODEROUTINE>va_list</CODEROUTINE> (there is no other way to portably walk though a variable parameter list twice) </ITEM>
+It is useful when writing macros which are generic for several data types.</ITEM>
+<ITEM><CODEROUTINE>__va_copy</CODEROUTINE> copy a <CODEROUTINE>va_list</CODEROUTINE> (there is no other way to portably walk though a variable parameter list twice)</ITEM>
 </BLIST>
 
 <BLIST><TITLE>Warnings</TITLE>
@@ -68,11 +68,11 @@ the function must be called before <CODEROUTINE>main</CODEROUTINE>
 <ITEM><CODEROUTINE>destructor</CODEROUTINE><BR/>
 the function must be called after <CODEROUTINE>exit</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>noreturn</CODEROUTINE><BR/>
-the function never returns (this allows some optimization, but also some code check: the compiler will warn if some code is present after calling this function) </ITEM>
+the function never returns (this allows some optimization, but also some code check: the compiler will warn if some code is present after calling this function)</ITEM>
 <ITEM><CODEROUTINE>pure</CODEROUTINE><BR/>
-pure function (no side effect, the function is simply computing a value from its parameter values and/or global variables) </ITEM>
+pure function (no side effect, the function is simply computing a value from its parameter values and/or global variables)</ITEM>
 <ITEM><CODEROUTINE>const</CODEROUTINE><BR/>
-purer function (the function is computing a value from its parameter values) </ITEM>
+purer function (the function is computing a value from its parameter values)</ITEM>
 <ITEM><CODEROUTINE>stdcall</CODEROUTINE><BR/>
 the function itself will correct the stack when returning</ITEM>
 <ITEM><CODEROUTINE>regparm(n)</CODEROUTINE><BR/>

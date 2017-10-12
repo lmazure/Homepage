@@ -35,7 +35,7 @@ type declaration character is <CODEROUTINE>#</CODEROUTINE></ITEM>
 signed 8 bytes integer scaled by 10000 (range [922337203685477.5808,922337203685477.5807]) <BR/>
 type declaration character is <CODEROUTINE>@</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>Decimal</CODEROUTINE><BR/>
-signed 12 bytes integer scaled by a variable power of 10 ranging from 0 to 28 </ITEM>
+signed 12 bytes integer scaled by a variable power of 10 ranging from 0 to 28</ITEM>
 <ITEM><CODEROUTINE>Date</CODEROUTINE><BR/>
 string literals are enclosed within two double quotes
 <CODESAMPLE>#31-Dec-00#</CODESAMPLE>
@@ -226,7 +226,7 @@ End Enum</CODESAMPLE>
 <ITEM><CODEROUTINE>Imp</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>Not</CODEROUTINE><BR/>
 <CODESAMPLE>a = Not b</CODESAMPLE></ITEM>
-<ITEM><CODEROUTINE>Or</CODEROUTINE> both expressions are always evaluated </ITEM>
+<ITEM><CODEROUTINE>Or</CODEROUTINE> both expressions are always evaluated</ITEM>
 <ITEM><CODEROUTINE>OrElse</CODEROUTINE> short-circuiting or</ITEM>
 <ITEM><CODEROUTINE>Xor</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>Eqv</CODEROUTINE> logical equivalence</ITEM>

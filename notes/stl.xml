@@ -64,7 +64,7 @@ cout &lt;&lt; "value type: " &lt;&lt; typeidb(vector&lt;float&gt;::value_type).n
 </DEFINITIONTABLE></ITEM></BLIST>
 
 <BLIST><TITLE><U><B><CODEROUTINE>string</CODEROUTINE></B></U></TITLE>
-<ITEM>The pointer returned by <CODEROUTINE>c_str()</CODEROUTINE> is owned by the <CODEROUTINE>string</CODEROUTINE> object. The array should not be deleted it or modified. The returned pointer is not to be used after a non-<CODEROUTINE>const</CODEROUTINE> member function has been called. </ITEM>
+<ITEM>The pointer returned by <CODEROUTINE>c_str()</CODEROUTINE> is owned by the <CODEROUTINE>string</CODEROUTINE> object. The array should not be deleted it or modified. The returned pointer is not to be used after a non-<CODEROUTINE>const</CODEROUTINE> member function has been called.</ITEM>
 <ITEM>The member function <CODEROUTINE>data()</CODEROUTINE> also returns a <CODEROUTINE>const char *</CODEROUTINE> representation of its object, but the resulting array might not be <CODEROUTINE>null</CODEROUTINE>-terminated.</ITEM>
 </BLIST>
 

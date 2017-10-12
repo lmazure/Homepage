@@ -174,7 +174,7 @@ The <CODEROUTINE>ScheduledExecutorService</CODEROUTINE> interface supplements th
 <ITEM>Using worker threads minimizes the overhead due to thread creation. Thread objects use a significant amount of memory, and in a large-scale application, allocating and deallocating many thread objects creates a significant memory management overhead.</ITEM>
 <ITEM>One common type of thread pool is the fixed thread pool. This type of pool always has a specified number of threads running; if a thread is somehow terminated while it is still in use, it is automatically replaced with a new thread. Tasks are submitted to the pool via an internal queue, which holds extra tasks whenever there are more active tasks than threads. It is created by the <CODEROUTINE>newFixedThreadPool</CODEROUTINE> factory method in <CODEROUTINE>java.util.concurrent.Executors</CODEROUTINE>.</ITEM>
 <ITEM>The <CODEROUTINE>newCachedThreadPool</CODEROUTINE> method creates an executor with an expandable thread pool. This executor is suitable for applications that launch many short-lived tasks.</ITEM>
-<ITEM>The <CODEROUTINE>newSingleThreadExecutor</CODEROUTINE> method creates an executor that executes a single task at a time. </ITEM>
+<ITEM>The <CODEROUTINE>newSingleThreadExecutor</CODEROUTINE> method creates an executor that executes a single task at a time.</ITEM>
 <ITEM>Several factory methods are <CODEROUTINE>ScheduledExecutorService</CODEROUTINE> versions of the above executors.</ITEM>
 </BLIST>
 <BR/>

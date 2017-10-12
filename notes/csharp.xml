@@ -82,7 +82,7 @@ Static constructors are also useful when creating wrapper classes for unmanaged 
 
 <BLIST><TITLE><U><B>Destructors</B></U></TITLE>
 <ITEM>You cannot call or override the <CODEROUTINE>Object.Finalize</CODEROUTINE> method from the C# or C++ programming languages. C# uses destructors as the mechanism for writing finalization code.</ITEM>
-<ITEM>Destructors cannot be defined in structs. They are only used with classes. </ITEM>
+<ITEM>Destructors cannot be defined in structs. They are only used with classes.</ITEM>
 <ITEM>A class can only have one destructor.</ITEM>
 <ITEM>Destructors cannot be inherited or overloaded.</ITEM>
 <ITEM>Destructors cannot be called. They are invoked automatically.</ITEM>
@@ -221,8 +221,8 @@ Del oneMethodDelegate = allMethodsDelegate - d2;</CODESAMPLE></ITEM>
 <ITEM>The local variables and parameters whose scope contains an anonymous method declaration are called outer variables of the anonymous method. For example, in the following code segment, n is an outer variable:
 <CODESAMPLE>int n = 0;<BR/>
 Del d = delegate() { System.Console.WriteLine("Copy #:{0}", ++n); };</CODESAMPLE>
-Unlike local variables, the lifetime of the captured variable extends until the delegates that reference the anonymous methods are eligible for garbage collection. A reference to n is captured at the time the delegate is created. </ITEM>
-<ITEM>An anonymous method cannot access the ref or out parameters of an outer scope. </ITEM>
+Unlike local variables, the lifetime of the captured variable extends until the delegates that reference the anonymous methods are eligible for garbage collection. A reference to n is captured at the time the delegate is created.</ITEM>
+<ITEM>An anonymous method cannot access the ref or out parameters of an outer scope.</ITEM>
 <ITEM>No unsafe code can be accessed within the anonymous-method-block.</ITEM>
 <ITEM>Anonymous methods are not allowed on the left side of the <CODEROUTINE>is</CODEROUTINE> operator.</ITEM>
 </BLIST>
