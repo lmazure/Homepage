@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -208,6 +208,9 @@
         <ITEM><ARTICLE><X><T>Using the Jakarta Commons, Part 2</T><A>http://www.onjava.com/pub/a/onjava/2003/07/09/commons.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vikram</FIRSTNAME><LASTNAME>Goyal</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>7</MONTH><DAY>9</DAY></DATE><COMMENT>A presentation of Codec, Modeler, Betwist, Digester, Jelly and JXPath.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Using the Jakarta Commons, Part 3</T><A>http://www.onjava.com/pub/a/onjava/2003/07/23/commons.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vikram</FIRSTNAME><LASTNAME>Goyal</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE><COMMENT>A presentation of BeanUtils, Logging, Pool and Validator.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Spring</TITLE>
+        <ITEM><ARTICLE><X><T>What's new in Spring Framework 5</T><ST>How Spring 5 leverages Java 8’s functional syntax and a new, reactive programming model</ST><A>https://www.ibm.com/developerworks/java/library/j-whats-new-in-spring-framework-5-theedom/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Theedom</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
       <ITEM><BLIST><TITLE>POI</TITLE>
         <ITEM><ARTICLE><X><T>Read, recycle, and reuse: Reporting made easy with Excel, XML, and Java technologies, Part 1</T><ST>Read Excel files and write them to new files using Java and XML technologies</ST><A>http://www.ibm.com/developerworks/java/library/x-jxmlexl/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shaene</FIRSTNAME><MIDDLENAME>M</MIDDLENAME><LASTNAME>Siders</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>After listing some Java libraries able to read/write Excel files, the author gives an example on using Apache's POI to parse an Excel file.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Read, recycle, and reuse: Reporting made easy with Excel, XML, and Java technologies, Part 2</T><ST>Convert between XML and Excel reporting formats</ST><A>http://www.ibm.com/developerworks/java/library/x-jxmlexl2/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shaene</FIRSTNAME><MIDDLENAME>M</MIDDLENAME><LASTNAME>Siders</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE><COMMENT>The example continues, using XOM to write an XML file and POI to write an Excel file correctly formatted.</COMMENT></ARTICLE></ITEM>
@@ -298,6 +301,7 @@
           <ITEM><ARTICLE><X><T>An alternative to passing through</T><ST>Learn how to recognize and replace pass-through lambdas with method references in your Java code</ST><A>https://www.ibm.com/developerworks/library/j-java8idioms5/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Venkat</FIRSTNAME><LASTNAME>Subramaniam</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>7</DAY></DATE><COMMENT>A good description of replacing lambdas by method references.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Why the perfect lambda expression is just one line</T><ST>Write single-line lambdas for code that is easier to read, test, and reuse</ST><A>https://www.ibm.com/developerworks/library/j-java8idioms6/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Venkat</FIRSTNAME><LASTNAME>Subramaniam</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>8</MONTH><DAY>2</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Functional interfaces</T><ST>Learn how to create custom functional interfaces, and why you should use built-ins whenever possible</ST><A>https://www.ibm.com/developerworks/library/j-java8idioms7/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Venkat</FIRSTNAME><LASTNAME>Subramaniam</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>The subtitle says all.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Java knows your type</T><ST>Learn how to use type inference in lambda expressions, and get tips for improving parameter naming</ST><A>https://www.ibm.com/developerworks/library/j-java8idioms8/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Venkat</FIRSTNAME><LASTNAME>Subramaniam</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>The subtitle says all.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Future</TITLE>
           <ITEM><ARTICLE><X><T>Pattern Matching for Java</T><A>http://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gavin</FIRSTNAME><LASTNAME>Bierman</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>4</MONTH></DATE><COMMENT>The authors describe many possible language features related to pattern matching.</COMMENT></ARTICLE></ITEM>
