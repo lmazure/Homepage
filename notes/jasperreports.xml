@@ -9,11 +9,11 @@
 <BLIST>
 
 <ITEM><BLIST><TITLE>Loading data from a CSV file</TITLE>
-<ITEM> (Outside IReport: Create a CSV file where the first row defines the name of the columns.)</ITEM>
+<ITEM>(Outside IReport: Create a CSV file where the first row defines the name of the columns.)</ITEM>
 <ITEM>Click on the <CODEMENU>Report datasources</CODEMENU> button</ITEM>
 <ITEM>Click on <CODEMENU>new</CODEMENU>, select <CODEMENU>File CSV datasource</CODEMENU> and click on <CODEMENU>Next</CODEMENU></ITEM>
 <ITEM>Type a name, select the file, click on <CODEMENU>Get columns name from the first row of the file</CODEMENU></ITEM>
-<ITEM> (It seems that editing the column names in the datasource definition will break the report execution&#x2026;)</ITEM>
+<ITEM>(It seems that editing the column names in the datasource definition will break the report execution&#x2026;)</ITEM>
 <ITEM>In the <CODEMENU>Report inspector</CODEMENU>, create one field per column, its name must be exactly the column header in the CSV file</ITEM>
 </BLIST></ITEM>
 

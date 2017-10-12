@@ -139,7 +139,7 @@ int <B>feSendEvent</B>(Display *display,<BR/>
 The autorepeat is managed by the X server which generates <CODEROUTINE>KeyPressed</CODEROUTINE> and <CODEROUTINE>KeyReleased</CODEROUTINE> automatically, there are two ways to detect the autorepeat:
 <BLIST>
 <ITEM><CODEROUTINE>XkbSetDetectableAutoRepeat</CODEROUTINE> in the XKEYBOARD extension</ITEM>
-<ITEM> the fact that the time of the <CODEROUTINE>KeyPressed</CODEROUTINE> event is equal to the time of the previous <CODEROUTINE>KeyReleased</CODEROUTINE> event</ITEM>
+<ITEM>the fact that the time of the <CODEROUTINE>KeyPressed</CODEROUTINE> event is equal to the time of the previous <CODEROUTINE>KeyReleased</CODEROUTINE> event</ITEM>
 </BLIST>
 </CONTENT>
 </PAGE>
