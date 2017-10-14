@@ -74,6 +74,18 @@
 <DESC>go to the window above</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 
+<U><B>Numbering</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>:set number</CODEROUTINE><BR/>
+<CODEROUTINE>:set nu</CODEROUTINE></TERM>
+<DESC>display line numbers</DESC></ROW>
+<ROW><TERM><CODEROUTINE>:set nonumber</CODEROUTINE><BR/>
+<CODEROUTINE>:set nonu</CODEROUTINE></TERM>
+<DESC>undisplay line numbers</DESC></ROW>
+<ROW><TERM><CODEROUTINE>:set nu!</CODEROUTINE></TERM>
+<DESC>toggle the display of line numbers</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
 <U><B>Colors</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>:set background=dark</CODEROUTINE></TERM>
@@ -88,8 +100,14 @@
 <DESC>disable syntax highlighting</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 
+<U><B>Miscellaneous</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><KEY ID='%'/></TERM>
+<DESC>move to matching brace or keyword</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+
 the configuration file is <CODEROUTINE>$HOME/.vimrc</CODEROUTINE>.
 </CONTENT>
 <X><T>Links</T><A>../links/coding.html#vi</A><L>en</L><F>HTML</F></X>
 </PAGE>
-
