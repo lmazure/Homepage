@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Tourism</TITLE>
 <PATH>links/tourism.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -42,7 +42,9 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Maps</TITLE>
-      <ITEM><X quality="1"><T>geoportail.fr</T><A>http://www.geoportail.fr</A><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X quality="1"><T>geoportail.fr</T><A>http://www.geoportail.fr</A><L>fr</L><F>HTML</F></X></TITLE>
+        <ITEM><X quality="1"><T>Remonter le temps</T><A>https://remonterletemps.ign.fr</A><L>fr</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
       <ITEM><X quality="1"><T>geoportal.lu</T><A>http://www.geoportal.lu</A><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X quality="1"><T>map.geo.admin.ch</T><A>https://map.geo.admin.ch</A><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Google maps</T><A>http://maps.google.com</A><L>en</L><F>HTML</F></X></ITEM>
