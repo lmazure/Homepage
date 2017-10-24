@@ -7,125 +7,126 @@
 <CONTENT>
 
 <BLIST><TITLE><U><B>Install and update</B></U></TITLE>
-<ITEM>Set up the Proxy:<BR/>
-go in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Install/Update</CODEMENU></CODEMENU></CODEMENU><BR/>
-select <CODEMENU>Enable HTTP proxy connection</CODEMENU><BR/>
-fill <CODEMENU>HTTP proxy host address:</CODEMENU> and <CODEMENU>HTTP proxy host port:</CODEMENU>.
-</ITEM>
-<ITEM>Install new stuff:<BR/>
-go in <CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install&#x2026;</CODEMENU></CODEMENU></CODEMENU><BR/>
-select <CODEMENU>Search for new features to install</CODEMENU> and click <CODEMENU>Next</CODEMENU><BR/>
-select the update site(s) and click <CODEMENU>Finish</CODEMENU><BR/>
-select the feature(s) and click <CODEMENU>Next</CODEMENU><BR/>
-select <CODEMENU>I accept the terms in the license agreement</CODEMENU> and click <CODEMENU>Next</CODEMENU><BR/>
-check that there is enough free disk space and click <CODEMENU>Finish</CODEMENU><BR/>
-wiat for <CODEMENU>Verification</CODEMENU> window and click <CODEMENU>Install All</CODEMENU>
-</ITEM>
+  <ITEM>Set up the Proxy:<BR/>
+    go in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Install/Update</CODEMENU></CODEMENU></CODEMENU><BR/>
+    select <CODEMENU>Enable HTTP proxy connection</CODEMENU><BR/>
+    fill <CODEMENU>HTTP proxy host address:</CODEMENU> and <CODEMENU>HTTP proxy host port:</CODEMENU>.
+  </ITEM>
+  <ITEM>Install new stuff:<BR/>
+    go in <CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install&#x2026;</CODEMENU></CODEMENU></CODEMENU><BR/>
+    select <CODEMENU>Search for new features to install</CODEMENU> and click <CODEMENU>Next</CODEMENU><BR/>
+    select the update site(s) and click <CODEMENU>Finish</CODEMENU><BR/>
+    select the feature(s) and click <CODEMENU>Next</CODEMENU><BR/>
+    select <CODEMENU>I accept the terms in the license agreement</CODEMENU> and click <CODEMENU>Next</CODEMENU><BR/>
+    check that there is enough free disk space and click <CODEMENU>Finish</CODEMENU><BR/>
+    wait for <CODEMENU>Verification</CODEMENU> window and click <CODEMENU>Install All</CODEMENU>
+  </ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>Launch</B></U></TITLE>
-<ITEM>For a unknown reason <CODEROUTINE>-vmargs -Xmx&#x3B1;M</CODEROUTINE> does not work if &#x3B1; is greater than 1024.<BR/>
-But the following command line works:<BR/>
-<CODEROUTINE>eclipse -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODEROUTINE> (but the value <CODEROUTINE>1600</CODEROUTINE> seems to depends on some PC characteristics, which ones?)</ITEM>
+  <ITEM>For a unknown reason <CODEROUTINE>-vmargs -Xmx&#x3B1;M</CODEROUTINE> does not work if &#x3B1; is greater than 1024.<BR/>
+    But the following command line works:<BR/>
+    <CODEROUTINE>eclipse -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODEROUTINE> (but the value <CODEROUTINE>1600</CODEROUTINE> seems to depends on some PC characteristics, which ones?)</ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>Project management</B></U></TITLE>
-<ITEM>create a project on an existing source hierarchy<BR/>
-<CODEMENU>File<CODEMENU>New<CODEMENU>Project&#x2026;<CODEMENU>Java Project</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
-<CODESAMPLE>Project Name: foobar<BR/>
-Location: Create project a external location<BR/>
-<TAB/>Directory: D:\Docs\perso\develop\ptm</CODESAMPLE></ITEM>
+  <ITEM>create a project on an existing source hierarchy<BR/>
+    <CODEMENU>File<CODEMENU>New<CODEMENU>Project&#x2026;<CODEMENU>Java Project</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
+    <CODESAMPLE>Project Name: foobar<BR/>
+    Location: Create project a external location<BR/>
+    <TAB/>Directory: D:\Docs\perso\develop\ptm</CODESAMPLE></ITEM>
 </BLIST>
 
 <U><B>Window navigation</B></U>
 <DEFINITIONTABLE>
-<ROW><TERM><KEY ID='F12'/></TERM>
-<DESC>editor</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F6'/></TERM>
-<DESC>next editor</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F6'/></TERM>
-<DESC>previous editor</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/></TERM>
-<DESC>close current editor</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Q'/></TERM>
-<DESC>go to last edit location</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F7'/></TERM>
-<DESC>next view</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F7'/></TERM>
-<DESC>previous view</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
-<DESC>next perspective</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F8'/></TERM>
-<DESC>previous perspective</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Q'/><KEY ID='X'/></TERM>
-<DESC>display errors</DESC></ROW>
-</DEFINITIONTABLE>
+  <ROW><TERM><KEY ID='F12'/></TERM>
+  <DESC>editor</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F6'/></TERM>
+  <DESC>next editor</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F6'/></TERM>
+  <DESC>previous editor</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/></TERM>
+  <DESC>close current editor</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Q'/></TERM>
+  <DESC>go to last edit location</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F7'/></TERM>
+  <DESC>next view</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F7'/></TERM>
+  <DESC>previous view</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
+  <DESC>next perspective</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F8'/></TERM>
+  <DESC>previous perspective</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Q'/><KEY ID='X'/></TERM>
+  <DESC>display errors</DESC></ROW>
+  </DEFINITIONTABLE>
 <BR/>
 
 <U><B>Unit tests</B></U>
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='X'/><KEY ID='T'/></TERM>
-<DESC>run all JUnit tests of the current source file</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='X'/><KEY ID='T'/></TERM>
+  <DESC>run all JUnit tests of the current source file</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 
 <BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
-<ITEM>define the Java version used by compiler <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Compiler</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select the Java version in <CODEMENU>Compiler compliance level</CODEMENU></ITEM>
+  <ITEM>define the Java version used by compiler <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Compiler</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select the Java version in <CODEMENU>Compiler compliance level</CODEMENU></ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>Edition</B></U></TITLE>
-<ITEM>in Editor window
-<DEFINITIONTABLE>
-<ROW><TERM><KEY ID='F2'/></TERM>
-<DESC>show tooltip</DESC></ROW>
-<ROW><TERM><KEY ID='F3'/></TERM>
-<DESC>display declaration (i.e. source code) of selected item</DESC></ROW>
-<ROW><TERM><KEY ID='F4'/></TERM>
-<DESC>display class hierarchy of selected item</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='H'/></TERM>
-<DESC>display call hierarchy of selected item</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Up'/></TERM>
-<DESC>expand selection to enclosing element</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Right'/></TERM>
-<DESC>expand selection to next element</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Left'/></TERM>
-<DESC>expand selection to previous element</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Down'/></TERM>
-<DESC>restore last selection</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='S'/></TERM>
-<DESC>save</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='S'/></TERM>
-<DESC>save all</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='L'/></TERM>
-<DESC>goto line</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='O'/></TERM>
-<DESC>display Quick Outline</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='/'/><BR/><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
-<DESC>toggle comment</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='I'/></TERM>
-<DESC>correct indentation</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Num *'/></TERM>
-<DESC>expand all folded code</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Num /'/></TERM>
-<DESC>enable/disable code folding</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Q'/></TERM>
-<DESC>enable/disable QuickDiff</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='O'/></TERM>
-<DESC>toggle mark occurrences</DESC></ROW>
-</DEFINITIONTABLE></ITEM>
-<ITEM>configure the folding with <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Editor<CODEMENU>Folding</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>.</ITEM>
+  <ITEM>in Editor window
+    <DEFINITIONTABLE>
+      <ROW><TERM><KEY ID='F2'/></TERM>
+      <DESC>show tooltip</DESC></ROW>
+      <ROW><TERM><KEY ID='F3'/></TERM>
+      <DESC>display declaration (i.e. source code) of selected item</DESC></ROW>
+      <ROW><TERM><KEY ID='F4'/></TERM>
+      <DESC>display class hierarchy of selected item</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='H'/></TERM>
+      <DESC>display call hierarchy of selected item</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Up'/></TERM>
+      <DESC>expand selection to enclosing element</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Right'/></TERM>
+      <DESC>expand selection to next element</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Left'/></TERM>
+      <DESC>expand selection to previous element</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Down'/></TERM>
+      <DESC>restore last selection</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='S'/></TERM>
+      <DESC>save</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='S'/></TERM>
+      <DESC>save all</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='L'/></TERM>
+      <DESC>goto line</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='O'/></TERM>
+      <DESC>display Quick Outline</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='/'/><BR/><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
+      <DESC>toggle comment</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='I'/></TERM>
+      <DESC>correct indentation</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Num *'/></TERM>
+      <DESC>expand all folded code</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Num /'/></TERM>
+      <DESC>enable/disable code folding</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Q'/></TERM>
+      <DESC>enable/disable QuickDiff</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='O'/></TERM>
+      <DESC>toggle mark occurrences</DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>configure the folding with <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Editor<CODEMENU>Folding</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>.</ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>Bookmarks</B></U></TITLE>
-<ITEM>add a boomark on the current line:<BR/>
-right-click on the left margin of the Editor and select <CODEMENU>Add Bookmark&#x2026;</CODEMENU> or <CODEMENU>Edit<CODEMENU>Add Bookmark&#x2026;</CODEMENU></CODEMENU> in the menubar<BR/>
-and type the name of the bookmark</ITEM>
-<ITEM>display the Bookmark View: <BR/>
-in the menubar, select <CODEMENU>Windows<CODEMENU>Show view<CODEMENU>Other&#x2026;</CODEMENU></CODEMENU></CODEMENU><BR/>
-select <CODEMENU>General<CODEMENU>Bookmarks</CODEMENU></CODEMENU></ITEM>
-<ITEM>delete a bookmark:<BR/>
-right-click on the left margin of the Editor and select <CODEMENU>Delete Bookmark</CODEMENU> or<BR/>
-select the boomark in the Bookmark View and type <KEY ID='Del'/></ITEM>
+  <ITEM>add a boomark on the current line:<BR/>
+    right-click on the left margin of the Editor and select <CODEMENU>Add Bookmark&#x2026;</CODEMENU> or <CODEMENU>Edit<CODEMENU>Add Bookmark&#x2026;</CODEMENU></CODEMENU> in the menubar<BR/>
+    and type the name of the bookmark</ITEM>
+  <ITEM>display the Bookmark View: <BR/>
+    in the menubar, select <CODEMENU>Windows<CODEMENU>Show view<CODEMENU>Other&#x2026;</CODEMENU></CODEMENU></CODEMENU><BR/>
+    select <CODEMENU>General<CODEMENU>Bookmarks</CODEMENU></CODEMENU></ITEM>
+  <ITEM>delete a bookmark:<BR/>
+    right-click on the left margin of the Editor and select <CODEMENU>Delete Bookmark</CODEMENU> or<BR/>
+    select the boomark in the Bookmark View and type <KEY ID='Del'/></ITEM>
 </BLIST>
 
 <U><B>Search</B></U><BR/>
@@ -288,49 +289,52 @@ double click on <CODEMENU>Javadoc location</CODEMENU> and type <CODEROUTINE>file
 </BLIST>
 
 <BLIST><TITLE><U><B>Customization</B></U></TITLE>
-<ITEM>key binding customization<BR/>
-<CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Workbench<CODEMENU>Keys</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
-</ITEM>
+  <ITEM>key binding customization<BR/>
+    <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Workbench<CODEMENU>Keys</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+  </ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>Help</B></U></TITLE>
-<ITEM>
-<DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='L'/></TERM>
-<DESC>display the list of shortcuts</DESC></ROW>
-</DEFINITIONTABLE></ITEM>
+  <ITEM><DEFINITIONTABLE>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='L'/></TERM>
+      <DESC>display the list of shortcuts</DESC></ROW>
+    </DEFINITIONTABLE></ITEM>
+</BLIST>
+
+<BLIST><TITLE><U><B>JavaFx</B></U></TITLE>
+  <ITEM>use <X><T>e(fx)clipse</T><A>https://www.eclipse.org/efxclipse/index.html</A><L>en</L><F>HTML</F></X><BR/>
+    The packages are installable from <X><T>http://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</T><A>http://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</A><L>en</L><F>HTML</F></X>.
+  </ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>FindBugs</B></U></TITLE>
-<ITEM>
-<BLIST><TITLE>Installing FindBugs</TITLE>
-<ITEM><CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install&#x2026;</CODEMENU></CODEMENU></CODEMENU></ITEM>
-<ITEM>select  <CODEMENU>Search for new features to install</CODEMENU></ITEM>
-<ITEM>click on <CODEMENU>New Remote Site&#x2026;</CODEMENU></ITEM>
-<ITEM>Name:  FindBugs update site<BR/>
-URL: http://findbugs.cs.umd.edu/eclipse</ITEM>
-<ITEM>select <CODEMENU>FindBugs update site</CODEMENU> and click <CODEMENU>Finish</CODEMENU></ITEM>
-<ITEM>in the Search Results Window, select <CODEMENU>FindBugs Feature</CODEMENU> and click <CODEMENU>Next</CODEMENU></ITEM>
-<ITEM>select <CODEMENU>I accept the terms of the license agreement</CODEMENU> and click <CODEMENU>Next</CODEMENU></ITEM>
-<ITEM>click <CODEMENU>Finish</CODEMENU></ITEM>
-<ITEM>in the Verification Window, click <CODEMENU>Install</CODEMENU></ITEM>
-<ITEM>restart Eclipse</ITEM>
-</BLIST></ITEM>
-<ITEM>
-<BLIST><TITLE>Using FindBugs</TITLE>
-<ITEM>right click on a Java project and select <CODEMENU>Find Bugs<CODEMENU>Find Bugs</CODEMENU></CODEMENU></ITEM>
-</BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Installing FindBugs</TITLE>
+    <ITEM><CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install&#x2026;</CODEMENU></CODEMENU></CODEMENU></ITEM>
+    <ITEM>select <CODEMENU>Search for new features to install</CODEMENU></ITEM>
+    <ITEM>click on <CODEMENU>New Remote Site&#x2026;</CODEMENU></ITEM>
+    <ITEM>Name:  FindBugs update site<BR/>
+      URL: http://findbugs.cs.umd.edu/eclipse</ITEM>
+    <ITEM>select <CODEMENU>FindBugs update site</CODEMENU> and click <CODEMENU>Finish</CODEMENU></ITEM>
+    <ITEM>in the Search Results Window, select <CODEMENU>FindBugs Feature</CODEMENU> and click <CODEMENU>Next</CODEMENU></ITEM>
+    <ITEM>select <CODEMENU>I accept the terms of the license agreement</CODEMENU> and click <CODEMENU>Next</CODEMENU></ITEM>
+    <ITEM>click <CODEMENU>Finish</CODEMENU></ITEM>
+    <ITEM>in the Verification Window, click <CODEMENU>Install</CODEMENU></ITEM>
+    <ITEM>restart Eclipse</ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Using FindBugs</TITLE>
+    <ITEM>right click on a Java project and select <CODEMENU>Find Bugs<CODEMENU>Find Bugs</CODEMENU></CODEMENU></ITEM>
+  </BLIST></ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>MAT</B></U></TITLE>
-<ITEM>command line to start Eclipse/MAT in order to have enough memory to parse a 2GB heapdump:<BR/>
-<CODESAMPLE>MemoryAnalyzer.exe -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODESAMPLE>
-</ITEM>
+  <ITEM>command line to start Eclipse/MAT in order to have enough memory to parse a 2GB heapdump:<BR/>
+  <CODESAMPLE>MemoryAnalyzer.exe -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODESAMPLE>
+  </ITEM>
 </BLIST>
 
 <BLIST><TITLE><U><B>JavaScript</B></U></TITLE>
-<ITEM><CODEMENU>Window<CODEMENU>Open Perspective<CODEMENU>JavaScript</CODEMENU></CODEMENU></CODEMENU><BR/>
-once the perspective is displayed, in the <CODEMENU>Script Explorer</CODEMENU> view, right-click on the project and select <CODEMENU>Configure<CODEMENU>Add JavaScript support&#x2026;</CODEMENU></CODEMENU></ITEM>
+  <ITEM><CODEMENU>Window<CODEMENU>Open Perspective<CODEMENU>JavaScript</CODEMENU></CODEMENU></CODEMENU><BR/>
+    once the perspective is displayed, in the <CODEMENU>Script Explorer</CODEMENU> view, right-click on the project and select <CODEMENU>Configure<CODEMENU>Add JavaScript support&#x2026;</CODEMENU></CODEMENU></ITEM>
 </BLIST>
 
 </CONTENT>

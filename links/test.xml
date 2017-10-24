@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>8</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -78,6 +78,7 @@
       <ITEM><X><T>FitNesse</T><A>http://fitnesse.org</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Cucumber</T><A>https://cucumber.io</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Concordion</T><A>http://concordion.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Gauge</T><A>https://getgauge.io</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE>.NET</TITLE>
         <ITEM><X><T>SpecFlow</T><A>http://www.specflow.org</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
@@ -109,6 +110,9 @@
       <ITEM><BLIST><TITLE>Java</TITLE>
         <ITEM><X><T>Marathon</T><A>http://marathonman.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Abbot</T><A>http://abbot.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Jubula</T><A>http://www.eclipse.org/jubula/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>SWTBot</T><A>http://www.eclipse.org/swtbot/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>RedDeer</T><A>https://github.com/eclipse/reddeer</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Web</TITLE>
         <ITEM><X><T>WebTest</T><A>http://webtest.canoo.com/webtest/manual/WebTestHome.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -128,7 +132,12 @@
         <ITEM><X><T>PHP</T><A>https://github.com/daylerees/scientist</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
     </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Service testing</TITLE>
+      <ITEM><X><T>SoapUI</T><A>https://www.soapui.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>REST Assured</T><A>http://rest-assured.io</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Load tests</TITLE>
+      <ITEM><X><T>JMeter</T><A>http://jmeter.apache.org</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>The Grinder</T><A>http://grinder.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Web application tests</TITLE>
