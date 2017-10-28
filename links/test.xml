@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -21,6 +21,9 @@
       <ITEM><X><T>Pairwise Testing</T><A>http://www.pairwise.org</A><L>en</L><F>HTML</F></X>: combinatorial test case generation</ITEM>
       <ITEM><X><T>Lorem Ipsum</T><A>http://www.lipsum.com</A><L>en</L><F>HTML</F></X>: generate sample text</ITEM>
       <ITEM><X><T>Random User Generator</T><A>http://randomuser.me</A><L>en</L><F>HTML</F></X>: generate random persons</ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Management of manual tests</TITLE>
+      <ITEM><X><T>TestRail</T><A>http://www.gurock.com/testrail/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Unit tests</TITLE>
       <ITEM><X><T>The Art Of Unit Testing</T><A>http://artofunittesting.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -136,6 +139,7 @@
     <ITEM><BLIST><TITLE>Load tests</TITLE>
       <ITEM><X><T>JMeter</T><A>http://jmeter.apache.org</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>The Grinder</T><A>http://grinder.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Gatling</T><A>https://gatling.io/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Web application tests</TITLE>
       <ITEM><X><T>Sauce Labs</T><A>http://saucelabs.com</A><L>en</L><F>HTML</F></X></ITEM>

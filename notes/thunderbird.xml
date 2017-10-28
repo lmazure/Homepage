@@ -3,12 +3,18 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Thunderbird</TITLE>
 <PATH>notes/thunderbird.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 
 <BLIST>
-<ITEM>display the address book from the command line
-<CODESAMPLE>"C:\Program Files\Mozilla Thunderbird\thunderbird.exe" -addressbook</CODESAMPLE></ITEM>
+  <ITEM>display the address book from the command line
+    <CODESAMPLE>"C:\Program Files\Mozilla Thunderbird\thunderbird.exe" -addressbook</CODESAMPLE></ITEM>
+  <ITEM><BLIST><TITLE>Rebuilding the Global Database</TITLE>
+    <ITEM>Quit Thunderbird.</ITEM>
+    <ITEM>Delete the <CODEFILENAME>global-messages-db.sqlite</CODEFILENAME> file in the Thunderbird profile.</ITEM>
+    <ITEM>Start Thunderbird.</ITEM>
+    <ITEM>The re-indexing starts automatically. Search results will be incomplete until the indexing is complete. The indexing progress can be monitored through with <CODEMENU>Tools<CODEMENU>Activity Manager</CODEMENU></CODEMENU>.</ITEM>
+  </BLIST></ITEM>
 </BLIST>
 
 <U>shortcuts</U>

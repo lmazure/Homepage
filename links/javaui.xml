@@ -3,13 +3,12 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java - User Interface</TITLE>
 <PATH>links/javaui.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 
 <LLIST>
   <ITEM><SLIST>
-    <ITEM><X><T>2D</T><A>http://java.sun.com/products/java-media/2D/</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>3D</T><A>http://java.sun.com/products/java-media/3D/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Client technologies</T><A>https://docs.oracle.com/javase/8/javase-clienttechnologies.htm</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
     <ITEM><ARTICLE><X quality="-2"><T>Java Desktop Development</T><A>http://www.onjava.com/pub/a/onjava/2004/02/18/desktop.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrei</FIRSTNAME><LASTNAME>Cioroianu</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE><COMMENT>100% bullshit, 0% information. Microsoft bashing, out-of-date information&#x2026; You probably already know more about AWT, Swing and SWT than contained in this article.</COMMENT></ARTICLE></ITEM>
@@ -80,6 +79,9 @@
       <ITEM><ARTICLE><X status='dead'><T>Using the Eclipse GUI outside the Eclipse Workbench, Part 1: Using JFace and SWT in stand-alone mode</T><ST>Building a simple file explorer application</ST><A>http://www.ibm.com/developerworks/opensource/library/os-ecgui1</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adrian</FIRSTNAME><MIDDLENAME>Van</MIDDLENAME><LASTNAME>Emmenis</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>How to use TreeViewer and TableViewer.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status='dead'><T>Using the Eclipse GUI outside the Eclipse Workbench, Part 2: Using the JFace image registry</T><ST>Adding icons to a simple file explorer application</ST><A>http://www.ibm.com/developerworks/java/library/os-ecgui2</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adrian</FIRSTNAME><MIDDLENAME>Van</MIDDLENAME><LASTNAME>Emmenis</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>How to display and sort in the previous viewers.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status='dead'><T>Using the Eclipse GUI outside the Eclipse Workbench, Part 3: Adding actions, menus, and toolbars</T><ST>Completing the simple file explorer application</ST><A>http://www.ibm.com/developerworks/java/library/os-ecgui3</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adrian</FIRSTNAME><MIDDLENAME>Van</MIDDLENAME><LASTNAME>Emmenis</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>3</MONTH><DAY>4</DAY></DATE><COMMENT>How to implement a bar menu or a popup menu.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>JavaFX</TITLE>
+      <ITEM><ARTICLE><X><T>Getting Started with JavaFX </T><A>https://docs.oracle.com/javafx/2/get_started/jfxpub-get_started.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gail</FIRSTNAME><LASTNAME>Chappell</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Nancy</FIRSTNAME><LASTNAME>Hildebrandt</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH></DATE><COMMENT>A short introductory tutorial to JavaFX.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Other toolkits</TITLE>
       <ITEM><ARTICLE><X><T>Egads! An actual Swing Tree-Table!</T><A>http://weblogs.java.net/blog/timboudreau/archive/2008/06/egads_an_actual.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Boudreau</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>6</MONTH><DAY>3</DAY></DATE><COMMENT>A new TreeTable (aka Outline) implementation is now in NetBeans.</COMMENT></ARTICLE></ITEM>
