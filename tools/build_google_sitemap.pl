@@ -9,13 +9,14 @@ my $outfile = "$basedir/gsitemap.xml";
 sub handle_file {
     my $file = shift;
     return if ( /\.xml$/ );
+    return if ( $file eq "ToDo.txt" );
     if ( /\.html$/ ) {
         my $source = $file;
         $source =~ s/.html$/.xml/;
         if ( ! -f "$basedir/$source" ) {
             print "$file is ignored\n";
             return;
-	  }
+	    }
         open(SOURCE,"$basedir/$source") or die("cannot open source file $basedir/$source ($!)");
         for (my $i=0; $i<4; $i++) {
             <SOURCE>;
@@ -62,6 +63,8 @@ sub handle_file {
     } elsif ( $dir eq "robots.txt") {
         print OUTFILE "    <changefreq>monthly</changefreq>\n";
     } elsif ( $dir eq "favicon.ico") {
+        print OUTFILE "    <changefreq>yearly</changefreq>\n";
+    } elsif ( $dir eq "icon.png") {
         print OUTFILE "    <changefreq>yearly</changefreq>\n";
     } elsif ( $dir eq "icon.png") {
         print OUTFILE "    <changefreq>yearly</changefreq>\n";
