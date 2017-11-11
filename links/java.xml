@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -291,7 +291,8 @@
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Streams</TITLE>
           <ITEM><ARTICLE><X><T>API Stream &#x2013; Une nouvelle fa&#xE7;on de g&#xE9;rer les Collections en Java 8</T><A>http://blog.ippon.fr/2014/03/17/api-stream-une-nouvelle-facon-de-gerer-les-collections-en-java-8/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Luc</FIRSTNAME><LASTNAME>Cl&#xE9;ment</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>An overview of <CODEROUTINE>Stream</CODEROUTINE>s.</COMMENT></ARTICLE></ITEM>
-          <ITEM><BLIST><TITLE>Java Streams</TITLE>
+          <ITEM><ARTICLE><X><T>JDK 8: Lessons Learnt With Lambdas and Streams - Simon Ritter</T><A>https://www.youtube.com/watch?v=w0Fd5PfI8TQ</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>50</MINUTE><SECOND>48</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Ritter</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE><COMMENT>A few, but good, pieces of advice for using Streams.</COMMENT></ARTICLE></ITEM>
+          <ITEM><BLIST><TITLE>Brian Goetz's Java Streams</TITLE>
             <ITEM><ARTICLE><X quality='1'><T>An introduction to the java.util.stream library</T><ST>Run functional-style queries on collections and other data sets</ST><A>http://www.ibm.com/developerworks/java/library/j-java-streams-1-brian-goetz/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>An introduction to streams.</COMMENT></ARTICLE></ITEM>
             <ITEM><ARTICLE><X quality='1'><T>Aggregating with Streams</T><ST>Slice, dice, and chop data with ease</ST><A>http://www.ibm.com/developerworks/java/library/j-java-streams-2-brian-goetz/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>Using <CODEROUTINE>Collector</CODEROUTINE> to perform the reduction.</COMMENT></ARTICLE></ITEM>
             <ITEM><ARTICLE><X quality='1'><T>Streams under the hood</T><ST>Understand java.util.stream internals</ST><A>http://www.ibm.com/developerworks/java/library/j-java-streams-3-brian-goetz/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>Some details to know in order to get good performance: <CODEROUTINE>Spliterator</CODEROUTINE>, stream flags, encounter order&#x2026;</COMMENT></ARTICLE></ITEM>
