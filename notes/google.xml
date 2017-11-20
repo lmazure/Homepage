@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Google</TITLE>
 <PATH>notes/google.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><U><B>customization</B></U></TITLE>
@@ -20,6 +20,18 @@
 <ITEM>https://www.youtube.com/feeds/videos.xml?channel_id=<I>channel ID</I></ITEM>
 <ITEM>https://www.youtube.com/feeds/videos.xml?user=<I>user ID</I></ITEM>
 </BLIST>
+
+<U><B>Hangouts</B></U>
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='Return'/></TERM>
+<DESC>add a newline withou sending the message</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='N'/></TERM>
+<DESC>start a new conversation</DESC>
+</ROW>
+</DEFINITIONTABLE>
 
 </CONTENT>
 <X><T>links</T><A>../links/search.html#google</A><L>en</L><F>HTML</F></X>
