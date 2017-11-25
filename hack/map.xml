@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Site map</TITLE>
 <PATH>hack/map.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 
 <BLIST><TITLE><X><T>Homepage</T><A>../perso/main.html</A><L>en</L><F>HTML</F></X></TITLE>
@@ -301,7 +301,6 @@
         <ITEM><BLIST><TITLE><X><T>JIRA</T><A>../notes/jira.html</A><L>en</L><F>HTML</F></X></TITLE>
           <ITEM><X><T>Scripts</T><A>../notes/jiracode.html</A><L>en</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
-
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Dynamic analyzers</TITLE>
         <ITEM><X><T>Purify</T><A>../notes/purify.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -421,7 +420,9 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Other tools</TITLE>
       <ITEM><X><T>OpenOffice.org</T><A>../notes/openoffice.html</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>LibreOffice</T><A>../notes/libreoffice.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><BLIST><TITLE><X><T>LibreOffice</T><A>../notes/libreoffice.html</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>Customization</T><A>../notes/libreofficecust.html</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
       <ITEM><BLIST><TITLE><X><T>Acroread</T><A>../notes/adobread.html</A><L>fr</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>shortcuts</T><A>../notes/acroread.htm</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
