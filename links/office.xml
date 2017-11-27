@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Office</TITLE>
 <PATH>links/office.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -36,9 +36,11 @@
         <ITEM><X><T>shortcuts</T><A>http://office.microsoft.com/en-us/communicator-help/office-communicator-2007-keyboard-shortcuts-HA010236675.aspx</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
     </BLIST></ITEM>
-    <ITEM><CLIST>
-      <ITEM><X><T>OpenOffice.org</T><A>http://www.openoffice.org</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>LibreOffice</T><A>http://www.libreoffice.org</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><CLIST><TITLE><X><T>OpenOffice.org</T><A>http://www.openoffice.org</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><X><T>personal notes</T><A>../notes/openoffice.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><CLIST><TITLE><X><T>LibreOffice</T><A>http://www.libreoffice.org</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><X><T>personal notes</T><A>../notes/libreoffice.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><BLIST><TITLE>Online suite</TITLE>
       <ITEM><BLIST><TITLE><X><T>Google docs</T><A>http://docs.google.com</A><L>en</L><F>HTML</F></X> (<X><T>blog</T><A>http://google-d-s.blogspot.com/</A><L>en</L><F>HTML</F><FEED><A>http://google-d-s.blogspot.com/atom.xml</A><F>RSS</F></FEED></X>)</TITLE>
