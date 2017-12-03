@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 
 <LLIST>
@@ -50,7 +50,7 @@
       <ITEM><X><T>PGP</T><A>http://www.pgpi.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>GnuPG</T><A>https://www.gnupg.org</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><CLIST><TITLE>one-way hash functions</TITLE>
+    <ITEM><CLIST><TITLE>One-way hash functions</TITLE>
       <ITEM>MD5
         (<X><T>RFC 1321</T><A>javascript:do_reference('rfc/1321')</A><L>en</L><F>HTML</F></X>,
         <X><T>Ronald L. Rivest</T><A>http://userpages.umbc.edu/%7Emabzug1/cs/md5/md5.html</A><L>en</L><F>HTML</F></X>)</ITEM>
@@ -72,7 +72,10 @@
       <ITEM><ANCHOR>burp</ANCHOR><X><T>Burp</T><A>http://www.portswigger.net</A><L>en</L><F>HTML</F><FEED><A>http://blog.portswigger.net/feeds/posts/default</A><F>RSS</F></FEED></X>:
         a Web proxy allowing snooping, replay&#x2026;(<X><T>personal notes</T><A>../notes/burp.html</A><L>en</L><F>HTML</F></X>)</ITEM>
     </BLIST></ITEM>
-    <ITEM><X><T>Bruce Schneier</T><A>http://www.schneier.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><CLIST><TITLE>News</TITLE>
+      <ITEM><X><T>Bruce Schneier</T><A>http://www.schneier.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>The Daily Swig</T><A>https://portswigger.net/daily-swig</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
     <ITEM><X><T>Have I been pwned?</T><A>https://haveibeenpwned.com</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Personal notes</T><A>../notes/cracking.html</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
