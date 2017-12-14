@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <SLIST>
   <ITEM><BLIST><TITLE><U><B>Tortoise SVN</B></U></TITLE>
@@ -80,12 +80,14 @@
     <CODESAMPLE>svn commit -m "I have done blabla..." <I>file/dir</I></CODESAMPLE></ITEM>
     <ITEM>Display the log of the current directory
     <CODESAMPLE>svn log</CODESAMPLE></ITEM>
-    <ITEM>Display the log of a file/directory
+    <ITEM>Display the log of a working copy of a file/directory
     <CODESAMPLE>svn log <I>file/dir</I></CODESAMPLE></ITEM>
+    <ITEM>Display the log of a repository
+    <CODESAMPLE>svn log file:///cygdrive/m/svn_repository/my_project/trunk</CODESAMPLE></ITEM>
     <ITEM>Copy a tag
     <CODESAMPLE>svn copy "https://svn.eurofins.local/EOL/tags/EOL-2014-12a-RC2" "https://svn.eurofins.local/EOL/tags/EOL-2014-12a" -m "issue #97713: Create SVN tag for EOL-2014-12a"</CODESAMPLE></ITEM>
     <ITEM>Define the new location of the repository
-    <CODESAMPLE>svn relocate file:///cygdrive/f/svn_repository/my_project/trunk my_workspace_dir</CODESAMPLE></ITEM>
+    <CODESAMPLE>svn relocate file:///cygdrive/m/svn_repository/my_project/trunk my_workspace_dir</CODESAMPLE></ITEM>
     <ITEM>Perform a side-by-side comparison (on Linux/cygwin)
     <CODESAMPLE>svn --diff-cmd "diff" --extensions "-y -W 250 --suppress-common-lines" diff</CODESAMPLE></ITEM>
   </BLIST></ITEM>
