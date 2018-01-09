@@ -3,9 +3,8 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
-
 <LLIST>
   <ITEM><SLIST>
     <ITEM><CLIST><TITLE>hacker sites</TITLE>
@@ -231,6 +230,7 @@
         <ITEM><ARTICLE><X><T>L'attaque SPECTRE</T><A>http://david.monniaux.free.fr/dotclear/index.php/post/2018/01/04/L-attaque-SPECTRE</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Monniaux</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE><COMMENT>A very basic, but clear, description of the problem.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality ='-1'><T>L'attaque MELTDOWN</T><A>http://david.monniaux.free.fr/dotclear/index.php/post/2018/01/05/L-attaque-MELTDOWN</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Monniaux</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE><COMMENT>The same for Meltdown. The author should have merged the two articles since they contain mostly the same words!</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Spectre &amp; Meltdown - Computerphile</T><A>https://www.youtube.com/watch?v=I5mRwzVvFGE</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>13</MINUTE><SECOND>44</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Bagley</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE><COMMENT>A simple explanation of the Spectre attack.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Why Raspberry Pi isn’t vulnerable to Spectre or Meltdown</T><A>https://www.raspberrypi.org/blog/why-raspberry-pi-isnt-vulnerable-to-spectre-or-meltdown/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eben</FIRSTNAME><LASTNAME>Upton</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE><COMMENT>A basic and clear explanation of CPU optimizations and how Meltdown and Spectre exploit them.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Other methods</TITLE>
         <ITEM><ARTICLE><X><T>Perl CGI problems</T><A>http://www.phrack.org/issues.html?issue=55&amp;id=7</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>rain.forest.puppy</GIVENNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>9</MONTH><DAY>9</DAY></DATE><COMMENT>rfp explains how to break a web server because of insecure CGI Perl scripts: embedded nul, unescaped backslash and pipes commands.</COMMENT></ARTICLE></ITEM>
