@@ -13,6 +13,7 @@ if ( $hostname eq "Kirikou" ) { $lib_dir = "C:/Users/Laurent/Documents/lib"; }
 if ( $hostname eq "bianca" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
 if ( $hostname eq "samsung" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
 if ( $hostname eq "INFOLOGIC-LMA" ) { $lib_dir = "H:/Documents/tools/lib"; }
+if ( $hostname eq "DESKTOP-Q2NPTQ8" ) { $lib_dir = "H:/Documents/tools/lib"; }
 die("don't know where are the Java libraries") if ( ! defined($lib_dir) );
 
 print "$0\n";
