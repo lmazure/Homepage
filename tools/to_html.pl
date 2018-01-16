@@ -13,7 +13,7 @@ if ( $hostname eq "Kirikou" ) { $lib_dir = "C:/Users/Laurent/Documents/lib"; }
 if ( $hostname eq "bianca" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
 if ( $hostname eq "samsung" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
 if ( $hostname eq "INFOLOGIC-LMA" ) { $lib_dir = "H:/Documents/tools/lib"; }
-if ( $hostname eq "DESKTOP-Q2NPTQ8" ) { $lib_dir = "H:/Documents/tools/lib"; }
+if ( $hostname eq "gilgamesh" ) { $lib_dir = "H:/Documents/tools/lib"; }
 die("don't know where are the Java libraries") if ( ! defined($lib_dir) );
 
 print "$0\n";
@@ -40,8 +40,8 @@ sub to_html {
        ( stat($infile)->mtime >= stat($outfile)->mtime ) ||
        ( stat($xlst_file)->mtime >= stat($outfile)->mtime ) ||
        ( stat($map_file)->mtime >= stat($outfile)->mtime ) ) {
-    #my @cmds = ("/cygdrive/c/java/prg/jdk18_64/bin/java.exe",
-    my @cmds = ("java.exe",
+    my @cmds = ("/cygdrive/h/Documents/tools/jre/jre-9/bin/java.exe",
+    #my @cmds = ("java.exe",
         "-cp",
         "$xalan_dir/xalan.jar",
         "org.apache.xalan.xslt.Process",
