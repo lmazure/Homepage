@@ -273,7 +273,7 @@
 </xsl:template>
 
 <xsl:template match="ANCHOR">
-  <xsl:element name="div">
+  <xsl:element name="span">
     <xsl:attribute name="id">
       <xsl:value-of select="."/>
     </xsl:attribute>
