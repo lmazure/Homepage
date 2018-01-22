@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Hardware</TITLE>
 <PATH>links/hardware.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -38,6 +38,7 @@
       <ITEM><ARTICLE><X><T>Amdahl's Law in the Multicore Era</T><A>https://www.youtube.com/watch?v=KfgWmQpzD74</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>52</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><MIDDLENAME>D.</MIDDLENAME><LASTNAME>Hill</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>Some approximations of CPU performance depending on their architecture: symmetric cores, asymmetric cores, or dynamic sequential/parallel switch. The models are simple and the conclusion obvious: programs needs to be more parallel and CPU must be faster to handle the sequential parts of programs.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Processeurs : la fin de la loi de Moore… et le début de l’incertitude</T><A>https://www.silicon.fr/fin-loi-de-moore-debut-incertitude-139238.html</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Reynald</FIRSTNAME><LASTNAME>Fléchaux</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality='1'><T>EUV Lithography Finally Ready for Chip Manufacturing</T><ST>This long-awaited technology will extend the life of Moore’s Law</ST><A>https://spectrum.ieee.org/semiconductors/nanotechnology/euv-lithography-finally-ready-for-chip-manufacturing</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Samuel</FIRSTNAME><MIDDLENAME>K.</MIDDLENAME><LASTNAME>Moore</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE><COMMENT>Extreme ultraviolet lithography should be available this year, but there are still some challenges.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>CPUs Are Out of Order - Computerphile</T><A>https://www.youtube.com/watch?v=_qvOlL8nhN4</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>15</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Bagley</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>19</DAY></DATE><COMMENT>A basic explanation of why a CPU reorders the operations.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Hard drive</TITLE>
       <ITEM><ARTICLE><X status='dead'><T>Detect Drive Failure Before It Happens Hack #57 - Monitor the condition of your disk drives for predictions of failure</T><A>http://downloads.techrepublic.com.com/download.aspx?docid=173177</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jim</FIRSTNAME><LASTNAME>Aspinwall</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR></DATE><COMMENT>Some tools to access SMART data and to recover a crashed disk.</COMMENT></ARTICLE></ITEM>
