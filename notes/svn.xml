@@ -74,7 +74,7 @@
     <CODESAMPLE>svn update</CODESAMPLE></ITEM>
     <ITEM>Display the diff of the current directoy
     <CODESAMPLE>svn diff</CODESAMPLE></ITEM>
-    <ITEM>Display the log of a file/directory
+    <ITEM>Display the diff of a file/directory
     <CODESAMPLE>svn diff <I>file/dir</I></CODESAMPLE></ITEM>
     <ITEM>Perform a side-by-side comparison (on Linux/cygwin)
     <CODESAMPLE>svn --diff-cmd "diff" --extensions "-y -W 250 --suppress-common-lines" diff</CODESAMPLE></ITEM>
