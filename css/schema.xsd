@@ -112,7 +112,7 @@
     <xs:element ref="KEY"/>
     <xs:element ref="MODIFIERKEY"/>
     <xs:element ref="IMAGE"/>
-    <xs:element ref="AUTHOR"/>
+    <xs:element name="AUTHOR" type="person"/>
   </xs:choice>
 </xs:complexType>
 
