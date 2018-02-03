@@ -79,7 +79,7 @@
     <ITEM>Perform a side-by-side comparison (on Linux/cygwin)
     <CODESAMPLE>svn --diff-cmd "diff" --extensions "-y -W 250 --suppress-common-lines" diff</CODESAMPLE></ITEM>
     <ITEM>Commit a file/dir
-    <CODESAMPLE>svn commit -m "I have done blabla..." <I>file/dir</I></CODESAMPLE></ITEM>
+    <CODESAMPLE>svn commit -m "I have done blabla&#x2026;" <I>file/dir</I></CODESAMPLE></ITEM>
     <ITEM>Display the log of the current directory
     <CODESAMPLE>svn log</CODESAMPLE></ITEM>
     <ITEM>Display the log of a working copy of a file/directory
