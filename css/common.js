@@ -66,7 +66,7 @@ function do_reference(str) {
         //url = "http://www.zvon.org/tmRFC/RFC"+a[1]+"/Output/index.html";
         url = "http://www.ietf.org/rfc/rfc"+a[1]+".txt";
     } else if ( a[0] == "man" && a[1] == "linux" ) {
-        url = "http://man-wiki.net/index.php/"+a[2]+":"+a[3];
+        url = "http://man7.org/linux/man-pages/man"+a[2]+"/"+a[3]+"."+a[2]+".html";
     } else if ( a[0] == "man" && a[1] == "macosx" ) {
         url = "http://developer.apple.com/documentation/Darwin/Reference/ManPages/man"+a[2]+"/"+a[3]+"."+a[2]+".html";
     } else if ( a[0] == "man" && a[1] == "x11" ) {

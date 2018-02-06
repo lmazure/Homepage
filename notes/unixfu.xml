@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -50,6 +50,9 @@
 <ROW><TERM><CODEROUTINE>grep -E</CODEROUTINE><BR/><CODEROUTINE>egrep</CODEROUTINE></TERM><DESC>use extended regular expressions</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -F</CODEROUTINE><BR/><CODEROUTINE>fgrep</CODEROUTINE></TERM><DESC>use fixed strings</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -I</CODEROUTINE></TERM><DESC>binary files do not match</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep --exclude=GLOB</CODEROUTINE></TERM><DESC>exclude files whose name matches GLOB</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep --exclude-dir=GLOB</CODEROUTINE></TERM><DESC>exclude directories whose name matches GLOB</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep --include=GLOB</CODEROUTINE></TERM><DESC>search only files whose name matches GLOB</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -d read</CODEROUTINE><BR/><CODEROUTINE>grep --directories=read</CODEROUTINE></TERM><DESC>read directories (the default)</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -d skip</CODEROUTINE><BR/><CODEROUTINE>grep --directories=skip</CODEROUTINE></TERM><DESC>ignore directories</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -D read</CODEROUTINE><BR/><CODEROUTINE>grep --directories=read</CODEROUTINE></TERM><DESC>read devices, FIFOs, and sockets (the default)</DESC></ROW>
