@@ -290,6 +290,25 @@
 
 <xsl:template match="TABLE">
   <table class="table">
+    <xsl:for-each select="./HEADERROW">
+      <tr>
+        <xsl:for-each select="./CELL">
+          <xsl:element name="th">
+            <xsl:if test="@width>1">
+              <xsl:attribute name="colspan">
+                <xsl:value-of select="@width"/>
+              </xsl:attribute>
+            </xsl:if>
+            <xsl:if test="@height>1">
+              <xsl:attribute name="rowspan">
+                <xsl:value-of select="@height"/>
+              </xsl:attribute>
+            </xsl:if>
+            <xsl:apply-templates select="."/>
+          </xsl:element>
+        </xsl:for-each>
+      </tr>
+    </xsl:for-each>
     <xsl:for-each select="./ROW">
       <tr>
         <xsl:for-each select="./CELL">
