@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Notepad++</TITLE>
 <PATH>notes/notepadpp.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 
 <DEFINITIONTABLE>
@@ -21,6 +21,8 @@
 <DESC>lowercase the selection</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='U'/></TERM>
 <DESC>uppercase the selection</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Alt'/><KEY ID='U'/></TERM>
+<DESC>uppercase the first letter of the words of the selection</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='G'/></TERM>
 <DESC>go to line</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Q'/></TERM>
