@@ -53,9 +53,9 @@
           </div>
         </div>
         <div id="searchPanel" style="display:none">
-          <form style="display:grid;" name="search" onsubmit="do_search(); return false;">
-            <input style="grid-column:1/span 3;grid-row:1;" size="32" name="terms" type="text"/>
-            <input style="grid-column:4;grid-row:1;" value="Search" onclick="do_search();" type="button"/>
+          <form id="panel" style="display:grid;" name="search" onsubmit="do_search(); return false;">
+            <input id="text" style="grid-column:1/span 3;grid-row:1;" size="32" name="terms" type="text"/>
+            <input id="button" style="grid-column:4;grid-row:1;" value="Search" onclick="do_search();" type="button"/>
           </form>
         </div>
         <div style="display:grid;">

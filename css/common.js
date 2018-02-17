@@ -29,9 +29,16 @@ function do_email() {
 // ---------------------------------------------------------------------------------------------------------------
 
 function display_search() {
-    $("#searchPanel").slideToggle({ progress: function() {
-      scrollTo(0,document.body.scrollHeight);
-    }});
+    $("#searchPanel").slideToggle({
+        progress: function() {
+            scrollTo(0,document.body.scrollHeight);
+        },
+        done: function() {
+            if ($("#searchPanel").is(":visible")) {
+                $("#searchPanel>#panel>#text").focus();	
+            }
+        }
+    });
 }
 
 // ---------------------------------------------------------------------------------------------------------------
@@ -39,14 +46,13 @@ function display_search() {
 function do_search() {
   var request = "http://www.google.com/search?as_sitesearch=mazure.fr&q=";
   var terms = document.search.terms.value.split(" ");
-  for (i = 0; i < terms.length; i++)
-  {
+  for (i = 0; i < terms.length; i++) {
     if (terms[i]!="") { // to avoid additional space characters
       if (i>0) request += "+";
       request += terms[i];
     }
   }
-  open(request, '_self');
+  open(request, '_blank');
 }
 
 // ---------------------------------------------------------------------------------------------------------------
