@@ -5,7 +5,6 @@
 <PATH>notes/meddra.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE>MedDRA is a terminology for coding all medical information obtained during all phases of development and marketing:</TITLE>
 <ITEM>Symptoms</ITEM>
 <ITEM>Signs</ITEM>
@@ -15,12 +14,10 @@
 <ITEM>Investigations/Procedures</ITEM>
 <ITEM>Medical/Social History</ITEM>
 </BLIST>
-
 <BLIST><TITLE>Excluded from MedDRA</TITLE>
 <ITEM>term qualifiers -frequent, rare, mild, severe (there are exceptions)</ITEM>
 <ITEM>numerical values -potassium value of 3.0 mg/dL</ITEM>
 </BLIST>
-
 <BLIST><TITLE>MedDRA is organized with the following hierarchy (numbers are for MEdDRA 8.1):</TITLE>
 <ITEM>System Organ Class (SOC) 26</ITEM>
 <ITEM>High-Level Group Terms (HLGT) 332</ITEM>
@@ -32,7 +29,6 @@
 <ITEM>Quasi-synonym</ITEM></BLIST>
 62950</ITEM>
 </BLIST>
-
 <BLIST><TITLE>The 26 SOC:</TITLE>
 <ITEM>Blood and lymphatic system disorders</ITEM>
 <ITEM>Cardiac disorders</ITEM>
@@ -61,15 +57,12 @@
 <ITEM>Surgical and medical procedures</ITEM>
 <ITEM>Vascular disorders</ITEM>
 </BLIST>
-
 The dictionary allows multiaxial coding: certains PT terms can be found in more than one SOC. But, in each SOC, each PT is represented by only one HLT and one HLGT. Each PT has a primary pathway that must be used for the initial analysis.<BR/>
-
 <BLIST><TITLE>LLT may be a non-current term</TITLE>
 <ITEM>Ambiguous, vague, misspelled, outdated terms</ITEM>
 <ITEM>Terms derived from other terminologies that do not comply with MedDRA rules</ITEM>
 <ITEM>Flagged as non-current</ITEM>
 </BLIST>
-
 <BLIST><TITLE>MedDRA also supports Special Search Categories (SSC) that contain clinical concepts relative to a similar etiology that cross SOCs. They generally group PTs relevant to a disease or a syndrome. In MedDRA 7.0:</TITLE>
 <ITEM>Bone Marrow Depression</ITEM>
 <ITEM>Cardiac Ischaemia</ITEM>
@@ -84,7 +77,6 @@ The dictionary allows multiaxial coding: certains PT terms can be found in more 
 <ITEM>Upper GI Bleeding/Perforation</ITEM>
 <ITEM>Vasculitis</ITEM>
 </BLIST>
-
 <BLIST><TITLE>MaeDRA aslo contains Standardized MedDRA Queries (SMQs). They will eventually replace SSCs. The result for a COOPERATIVE effort between CIOMS and ICH (MSSO). They are groupings of MedDRA terms, ordinarily at the Preferred Term (PT) level, that relate to a defined medical condition or area of interest. Terms included in a given SMQ may relate to relevant signs, symptoms, diagnoses, syndromes, physical findings, laboratory and other physiologic test data&#x2026; In Production (as of 2005-10-11)</TITLE>
 <ITEM>Acute Renal Failure</ITEM>
 <ITEM>HaemolyticDisorders</ITEM>
@@ -93,7 +85,6 @@ The dictionary allows multiaxial coding: certains PT terms can be found in more 
 <ITEM>Severe Cutaneous Adverse Reactions</ITEM>
 <ITEM>Torsades de Pointes/QT Prolongation</ITEM>
 </BLIST>
-
 <BLIST><TITLE>Some details</TITLE>
 <ITEM>British English spelling is used at the PT level and above. American spellings are included at the LLT level<BR/>
 Capitalization is used for the first letter of each term, proper names, and abbreviations</ITEM>
@@ -107,10 +98,8 @@ Initially assigned alphabetically by term. New terms are assigned sequentially<B
 Codes are never reused<BR/>
 "Codes" are not really coded information, do not reflect organization of dictionary: codes are just identification numbers</ITEM>
 </BLIST>
-
 The dictionary is updated twice a year. Major updates are indicated by an increment of the first digit, minor ones by an increment of the second.<BR/>
 <BR/>
 If a patient experiences a recurring given AE, this one is counted only once with a severity equal to the greatest severity of all occurrences.
-
 </CONTENT>
 </PAGE>

@@ -5,7 +5,6 @@
 <PATH>notes/wordvbsample.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 suppress all duplicated paragraphs (to be used, for example, for a sorted extraction of identifiers)
 <CODESAMPLE>
 Sub suppressDuplicates()<BR/>
@@ -23,9 +22,7 @@ Sub suppressDuplicates()<BR/>
 <TAB/>Next par<BR/>
 End Sub
 </CODESAMPLE>
-
 <BR/>
-
 extract all the occurrences of "[&#x2026;]" and put them into a new document
 <CODESAMPLE>
 Sub extract()<BR/>
@@ -58,9 +55,7 @@ Sub extract()<BR/>
 <TAB/>End With<BR/>
 End Sub
 </CODESAMPLE>
-
 <BR/>
-
 select all the texts of style <CODEROUTINE>foobar</CODEROUTINE>
 <CODESAMPLE>
 Selection.Find.ClearFormatting<BR/>
@@ -80,9 +75,7 @@ End With<BR/>
 Selection.Find.Execute<BR/>
 WordBasic.SelectSimilarFormatting
 </CODESAMPLE>
-
 <BR/>
-
 retrieve the reference of a document in the headers
 <CODESAMPLE>
 Dim sect As Section<BR/>
@@ -100,9 +93,7 @@ For Each sect In actDoc.Sections<BR/>
 Next sect<BR/>
 actDoc.Close (wdDoNotSaveChanges)
 </CODESAMPLE>
-
 <BR/>
-
 hyperlink the JIRA references
 <CODESAMPLE>
 Sub hyperlinkJIRA()<BR/>
@@ -131,9 +122,7 @@ Sub hyperlinkJIRA()<BR/>
 <TAB/>End With<BR/>
 End Sub
 </CODESAMPLE>
-
 <BR/>
-
 hyperlink the document references
 <CODESAMPLE>
 Sub hyperlinkDocs()<BR/>
@@ -184,9 +173,7 @@ Sub hyperlinkDocs()<BR/>
 <TAB/>End With<BR/>
 End Sub
 </CODESAMPLE>
-
 <BR/>
-
 check that the paragraphs are correctly outlined (e.g. that there is not a title 3 just after a title 1)<BR/>
 the bad paragraphs are listed in a new document
 <CODESAMPLE>
@@ -211,9 +198,7 @@ Sub CheckOutline()<BR/>
 <BR/>
 End Sub
 </CODESAMPLE>
-
 <BR/>
-
 highlight in turquoise all the bookmarks which point toward a stricken through text<BR/>
  do no run this macro on the real document: in order to perform its tasks, it modifies the bookmarks<BR/>
 run this macro on a throwable copy of the document
@@ -237,9 +222,7 @@ Sub findObsoleteBookmark()<BR/>
 <BR/>
 End Sub<BR/>
 </CODESAMPLE>
-
 <BR/>
-
 find all the sea green texts and set them to the automatic color
 <CODESAMPLE>
 With ActiveDocument.Content.Find<BR/>
@@ -271,7 +254,6 @@ With ActiveDocument.Content.Find<BR/>
 <TAB/>Loop<BR/>
 End With
 </CODESAMPLE>
-
 </CONTENT>
 <X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>
 <X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>

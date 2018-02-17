@@ -5,40 +5,30 @@
 <PATH>notes/awk.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
-
 <BLIST>
-
 <ITEM><CODEROUTINE>next</CODEROUTINE><BR/>
 stop to process the current record (no more match will be tried) and loop on the next one</ITEM>
-
 <ITEM><CODEROUTINE>exit</CODEROUTINE><BR/>
 outside of the <CODEROUTINE>END</CODEROUTINE> clause, go to the end clause<BR/>
 in the <CODEROUTINE>END</CODEROUTINE> clause, exit of the script<BR/>
  (to really exit: outside the <CODEROUTINE>END</CODEROUTINE> clause, record a flag and call <CODEROUTINE>exit</CODEROUTINE>; at the beginning of the <CODEROUTINE>END</CODEROUTINE> clause, test the flag and call <CODEROUTINE>exit</CODEROUTINE> if it is set)</ITEM>
-
 <ITEM><U>environment variables:</U><BR/>
 the shell variable <CODEROUTINE>$HOME</CODEROUTINE> can be retrieved with the syntax <CODEROUTINE>ENVIRON["HOME"]</CODEROUTINE>.</ITEM>
-
 <ITEM><U>numbers</U><BR/>
 translate a hexadecimal string into an integer
 <CODESAMPLE>value = strtonum("0x"str);</CODESAMPLE></ITEM>
-
 <ITEM><BLIST><TITLE><U>examples:</U></TITLE>
-
 <ITEM>count the number of lines in C files
 <CODESAMPLE><PROMPT/>find . -name '*.c' | xargs -n 1 wc -l | awk ' { sum += $1 } \<BR/>
 <TAB/>END { print sum }'</CODESAMPLE></ITEM>
-
 <ITEM>count the number of word instances
 <CODESAMPLE><PROMPT/>cat /tmp/spr | awk ' \<BR/>
 <TAB/>{ a[$1]++; } \<BR/>
 <TAB/>END { for ( v in a ) { print v, a[v]; }; }'</CODESAMPLE></ITEM>
-
 <ITEM>delete the oldest files in order to reach a max total size
 <CODESAMPLE><PROMPT/>find . -type f -exec stat -c '%Z %s %n' {} \; | \<BR/>
 <TAB/>sort -nr | \<BR/>
 <TAB/>awk '{ totalSize += $2 ; if ( totalSize &gt; 300000000 ) system("/bin/rm "$3); }'</CODESAMPLE></ITEM>
-
 <ITEM>reformating DDTS dates
 <CODESAMPLE>#!/bin/sh<BR/>
 output_file=$1<BR/>
@@ -85,7 +75,6 @@ echo &gt;&gt; $output_file<BR/>
 echo "*** mailing list ***" &gt;&gt; $output_file<BR/>
 sort -u $tmp_file &gt;&gt; $output_file<BR/>
 rm $tmp_file</CODESAMPLE></ITEM>
-
 <ITEM>computing the memory used by a process on Linux<BR/>
 <CODESAMPLE><PROMPT/>cat /proc/pid/maps | awk -f toto</CODESAMPLE>
 where toto contains:
@@ -99,13 +88,8 @@ where toto contains:
 <TAB/>sum = sum + _diff; }<BR/>
 END  { print "==&gt; ",sum;}</CODESAMPLE>
 </ITEM>
-
 </BLIST></ITEM>
-
 </BLIST>
-
 </CONTENT>
-
 <X><T>links</T><A>../links/unix.html#awk</A><L>en</L><F>HTML</F></X>
-
 </PAGE>

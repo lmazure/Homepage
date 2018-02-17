@@ -5,7 +5,6 @@
 <PATH>notes/cpp.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><B>Preprocessor <CODEROUTINE>define</CODEROUTINE>s</B></TITLE>
 <ITEM><CODEROUTINE>__cplusplus</CODEROUTINE> Defines C++ programs only.</ITEM>
 <ITEM><CODEROUTINE>__DATE__</CODEROUTINE> The date of compilation. As a string literal in the form Mmm dd yyyy.</ITEM>
@@ -15,18 +14,15 @@
 <ITEM><CODEROUTINE>__TIME__</CODEROUTINE> The time of compilation. As a string literal in the form hh:mm:ss.</ITEM>
 <ITEM><CODEROUTINE>__TIMESTAMP__</CODEROUTINE> The date and time of the last modification of the current source file in the form: Day Mon dd hh:mm:ss yyyy.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B>Aggregates</B></TITLE>
 <ITEM>An aggregate is an array or an object of a class with no constructor, no private or protected members, no base classes, and no virtual functions.</ITEM>
 <ITEM>An aggregate can be initialized with a brace-enclosed, comma-separated list of initializers. If the aggregate contains subaggregates, this rule applies recursively. If there are fewer initializers in the list than there are members of the aggregate, then the aggregate is padded with zeros of the appropriate types. So this means that
 <CODESAMPLE>char buf[64] = { '\0' };</CODESAMPLE>
 set the whole buffer to zero.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B>Object slicing</B></TITLE>
 <ITEM>Object slicing occurs when upcasting an object instead of a pointer or reference. The compiler will use the copy constructor of the base class to create a temporary object. This means that the virtual methods will be the ones of the base class, not the ones of the derived class.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B>Allocating a zero-sized array</B></TITLE>
 <ITEM>When creating an array
 <CODESAMPLE>int* p = new FooBar[sz];</CODESAMPLE>
@@ -37,7 +33,6 @@ This implies that
 <CODESAMPLE>int* p = new FooBar[0];</CODESAMPLE>
 returns a unique adress (i.e. it does not return <CODEROUTINE>0</CODEROUTINE>).</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B>Construction/destruction of static objects</B></TITLE>
 <ITEM>Initialization of a local object with storage class static is done the first time control passes through its declaration (only). Where a static variable is initialized with an expression that is not a constant-expression, default initialization to <CODEROUTINE>0</CODEROUTINE> of the appropriate type happens before its block is first entered.
 <CODESAMPLE>foo(int i)<BR/>
@@ -48,11 +43,9 @@ returns a unique adress (i.e. it does not return <CODEROUTINE>0</CODEROUTINE>).<
 The first call with the value <CODEROUTINE>3</CODEROUTINE> will return <CODEROUTINE>4</CODEROUTINE> and will leave <CODEROUTINE>s</CODEROUTINE> equal to <CODEROUTINE>7</CODEROUTINE>.</ITEM>
 <ITEM>The destructor for a local static object will be executed if and only if the variable was constructed. The destructor must be called either immediately before or as part of the calls of the <CODEROUTINE>atexit()</CODEROUTINE> functions. Exactly when is undefined.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B>Nested class</B></TITLE>
 <ITEM>A nested class is a class declared within another.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B>Local class</B></TITLE>
 <ITEM>A local class is a class declared within a function definition. The scope of its name is its enclosing scope. Declarations in a local class can use only type names, static variables, extern variables and functions and enumerators from its enclosing scope.
 <CODESAMPLE>int x;<BR/>
@@ -71,7 +64,6 @@ void f()<BR/>
 }</CODESAMPLE>
 The enclosing function has no special access to members of the local class, it obeys the usual access rules. Member functions of a local class must be defined within their class definition. A local class may not have static data members.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B>Cats</B></TITLE>
 <ITEM><CODEROUTINE>static_cast&lt;type&gt;(expression)</CODEROUTINE><BR/>
 type conversion relies on static (compile-time) type information<BR/>
@@ -87,7 +79,6 @@ failed casts of references throw an exception</ITEM>
 cast whatever you want (e.g. a pointer into an integral type)<BR/>
 usually implementation independent</ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>links</T><A>../links/cpp.html</A><L>en</L><F>HTML</F></X>
 </PAGE>

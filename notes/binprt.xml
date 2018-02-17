@@ -5,7 +5,6 @@
 <PATH>notes/binprt.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
-
 Quick 'n dirty code to print integers in binary format:
 <CODESAMPLE>
 const char *binaryString8(int8_t v)<BR/>
@@ -42,7 +41,6 @@ define_formatter(16)<BR/>
 define_formatter(32)<BR/>
 define_formatter(64)
 </CODESAMPLE><BR/>
-
 Quick 'n dirtier code to dump a memory buffer in hexadecimal format:
 <CODESAMPLE>
 void binary_dump(void *buffer, size_t size) {<BR/>
@@ -53,7 +51,5 @@ void binary_dump(void *buffer, size_t size) {<BR/>
 <TAB/>fprintf(stderr,"\n");<BR/>
 }
 </CODESAMPLE><BR/>
-
 </CONTENT>
-
 </PAGE>

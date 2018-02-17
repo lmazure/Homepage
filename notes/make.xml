@@ -24,7 +24,6 @@ or
 <CODESAMPLE>variable := $(variable) more</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>discrepancies between <CODEROUTINE>clearmake -C gnu</CODEROUTINE> and <CODEROUTINE>make</CODEROUTINE></B></U></TITLE>
 <ITEM><CODEROUTINE>clearmake</CODEROUTINE> accepts that there is no space after <CODEROUTINE>ifeq</CODEROUTINE> but <CODEROUTINE>make</CODEROUTINE> fails
 <CODESAMPLE> ifeq($(AW_VER),AW_4.3)<BR/>
@@ -34,7 +33,6 @@ else<BR/>
 endif</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#make</A><L>en</L><F>HTML</F></X>
 </PAGE>

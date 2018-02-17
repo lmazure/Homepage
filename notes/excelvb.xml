@@ -5,7 +5,6 @@
 <PATH>notes/excelvb.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><B><U>file</U></B></TITLE>
 <ITEM>open a file in read only mode
 <CODESAMPLE>
@@ -15,7 +14,6 @@ Set sourceWorkbook = ActiveWorkbook</CODESAMPLE></ITEM>
 <ITEM>close a file
 <CODESAMPLE>sourceWorkbook.Close</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>display</U></B></TITLE>
 <ITEM>hide a column
 <CODESAMPLE>
@@ -23,7 +21,6 @@ Columns("B:B").Hidden = True
 </CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>cut 'n paste</U></B></TITLE>
 <ITEM>to get the cut 'n paste status, test the value of <CODEROUTINE>Application.CutCopyMode</CODEROUTINE>:<BR/>
 <CODEROUTINE>False</CODEROUTINE>: not in Cut or Copy mode<BR/>
@@ -33,7 +30,6 @@ Columns("B:B").Hidden = True
 <ITEM>to paste only the values<BR/>
 <CODEROUTINE>masterSheet.Range("B1").PasteSpecial xlPasteValues</CODEROUTINE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>filter</U></B></TITLE>
 <ITEM><CODEROUTINE>ShowAllData</CODEROUTINE> works only when there is currently some filtering
 <CODESAMPLE>
@@ -109,7 +105,6 @@ Next r
 </CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>sort</U></B></TITLE>
 <ITEM>a simple example
 <CODESAMPLE>Dim l_status, l_priority As Integer<BR/>
@@ -121,7 +116,6 @@ Range("A:BA").Sort Key1:=Cells(1, l_priority), Order1:=xlAscending, _<BR/>
 <TAB/>Header:=xlYes</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>navigation</U></B></TITLE>
 <ITEM><CODEROUTINE>SpecialCells(xlLastCell)</CODEROUTINE> returns sometimes an incorrect value (larger that the real last cell), use <CODEROUTINE>UsedRange</CODEROUTINE> to force a recomputation and get the right value.
 <CODESAMPLE>
@@ -130,7 +124,6 @@ n = ActiveSheet.Cells.SpecialCells(xlLastCell).Row
 </CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>sheets</U></B></TITLE>
 <ITEM>create a temporary sheet and delete it without a confirmation message
 <CODESAMPLE>
@@ -156,7 +149,6 @@ Application.DisplayAlerts = True</CODESAMPLE>
 <CODESAMPLE>masterSheet.Move Before:=Sheets(1)</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>format</U></B></TITLE>
 <ITEM>row height
 <CODESAMPLE>For i = 2 To Sheets("summary").Cells.SpecialCells(xlCellTypeLastCell).Row<BR/>
@@ -170,12 +162,10 @@ Rows("1:1").HorizontalAlignment = xlLeft<BR/>
 Rows("1:1").VerticalAlignment = xlBottom<BR/>
 Rows("1:1").WrapText = True</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>filter</U></B></TITLE>
 <ITEM>autofilter
 <CODESAMPLE>Range("A1:P1").AutoFilter</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>values/formulas</U></B></TITLE>
 <ITEM>use the <CODEROUTINE>Value</CODEROUTINE> property of a <CODEROUTINE>Range</CODEROUTINE> to define the values of some cells
 <CODESAMPLE>For i = 2 To Sheets("imp").Cells.SpecialCells(xlCellTypeLastCell).Row<BR/>
@@ -224,7 +214,6 @@ use instead
 <CODESAMPLE>Range("A1").FormulaR1C1Local = "3.1"</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>comment</U></B></TITLE>
 <ITEM>macro to add or complete the comment of a cell
 <CODESAMPLE>Private Sub addComment(rng As Range, str As String)<BR/>
@@ -238,7 +227,6 @@ use instead
 <BR/>
 End Sub</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>screen refresh</U></B></TITLE>
 <ITEM>stop the automatic refresh of the screen
 <CODESAMPLE>Application.ScreenUpdating = False</CODESAMPLE></ITEM>
@@ -250,7 +238,6 @@ End Sub</CODESAMPLE></ITEM>
 &#x2026;<BR/>
 Application.Calculation = xlCalculationAutomatic</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>graphs</U></B></TITLE>
 <ITEM>It seems that graphs must be fully set up before displaying them (by setting their <CODEROUTINE>Location</CODEROUTINE>), this should be verified&#x2026;
 <CODESAMPLE>Dim chart As Variant<BR/>
@@ -264,7 +251,6 @@ chart.HasDataTable = False<BR/>
 chart.HasTitle = False<BR/>
 chart.Location Where:=xlLocationAsObject, Name:="Root Cause Analysis"</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>pivot tables</U></B></TITLE>
 <ITEM>use autofilter to filter the data (this one - 31 columns in sheet "summary" - must be copied in a new sheet in order to the pivot table to give the right results), then generate a pivot table of the number of bugs per bug types
 <CODESAMPLE>Selection.AutoFilter Field:=11, Criteria1:="0"<BR/>
@@ -311,7 +297,6 @@ For n = ptable.TableRange1.Row To ptable.TableRange1.Rows.Count<BR/>
 Next n<BR/>
 Print #1, "&lt;/TABLE&gt;"</CODESAMPLE></ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>
 <X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>

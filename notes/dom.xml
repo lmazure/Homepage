@@ -5,7 +5,6 @@
 <PATH>notes/dom.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 The different types of <CODEROUTINE>Node</CODEROUTINE>s are:
 <TABLE>
 <ROW><CELL><CODEROUTINE>Document</CODEROUTINE></CELL>
@@ -57,13 +56,11 @@ The different types of <CODEROUTINE>Node</CODEROUTINE>s are:
 <ROW><CELL><CODEROUTINE>Notation</CODEROUTINE></CELL>
 <CELL>no children</CELL></ROW>
 </TABLE><BR/>
-
 <BLIST><TITLE>DOM also specifies two interfaces</TITLE>
 <ITEM><CODEROUTINE>NodeList</CODEROUTINE>: an ordered list of <CODEROUTINE>Node</CODEROUTINE>s</ITEM>
 <ITEM><CODEROUTINE>NamedNodeMap</CODEROUTINE>: an unordered set of <CODEROUTINE>Node</CODEROUTINE>s referenced by their name attribute</ITEM>
 </BLIST>
 <CODEROUTINE>NodeList</CODEROUTINE>s and <CODEROUTINE>NamedNodeMap</CODEROUTINE>s: they are updated when the document structure is changed.<BR/>
-
 <BLIST><TITLE>DOM can be used in two ways:</TITLE>
 <ITEM>Using the proper interfaces by casting, but this has a performance penalty</ITEM>
 <ITEM>Always using <CODEROUTINE>Node</CODEROUTINE>.<BR/>
@@ -85,9 +82,6 @@ The attributes <CODEROUTINE>nodeName</CODEROUTINE>, <CODEROUTINE>nodeValue</CODE
 </TABLE>
 </ITEM>
 </BLIST>
-
 </CONTENT>
-
 <X><T>links</T><A>../links/xml.html#dom</A><L>en</L><F>HTML</F></X>
-
 </PAGE>

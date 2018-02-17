@@ -5,7 +5,6 @@
 <PATH>notes/dynloader.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>dlopen</T><A>javascript:do_reference("man/linux/3/dlopen")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>load a dynamic library file</DESC></ROW>
 <ROW><TERM><CODEROUTINE><X><T>dlclose</T><A>javascript:do_reference("man/linux/3/dlopen")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>unload a dynamic library file (an increment mechanism is used, unload is effectively performed only when the increment reaches zero)</DESC></ROW>
@@ -14,9 +13,6 @@
 <ROW><TERM><CODEROUTINE><X><T>dladdr</T><A>javascript:do_reference("man/linux/3/dladdr")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>(GNU extension) return the name of a symbol given its address</DESC></ROW>
 <ROW><TERM><CODEROUTINE><X><T>dlerror</T><A>javascript:do_reference("man/linux/3/dlerror")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return a human readable string describing the most recent error </DESC></ROW>
 </DEFINITIONTABLE>
-
 See <X><T>here</T><A>lhijack.html</A><L>en</L><F>HTML</F></X> for an example of use.
-
 </CONTENT>
-
 </PAGE>

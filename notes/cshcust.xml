@@ -5,7 +5,6 @@
 <PATH>notes/cshcust.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 <B><U>the usual stuff</U></B>
 <CODESAMPLE>
 alias cp '/bin/cp -i'<BR/>
@@ -37,6 +36,5 @@ alias ct cleartool<BR/>
 alias cmk 'clearmake \!* | &amp; tee build_log_`echo "\!*" | sed "s+[ /]+.+g"`_`date "+%a%d%b%y-%T"`'<BR/>
 alias xt "cleartool lsvtree -graphical \!*"<BR/>
 </CODESAMPLE>
-
 </CONTENT>
 </PAGE>

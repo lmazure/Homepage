@@ -5,7 +5,6 @@
 <PATH>notes/bypassxdm.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
-
 <U>step 1</U><BR/>
 You need to grant X server access to an account, lets say <I>foobar</I>. Add the following lines in <CODEFILENAME>/etc/X11/xdm/Xsetup_0</CODEFILENAME> (this is the file executed by xdm just before displaying the login window):
 <CODESAMPLE>/usr/X11R6/bin/xauth generate :0<BR/>
@@ -66,6 +65,5 @@ e=`encode $2`<BR/>
 xse -window $win -display :0.0 $e "&lt;Key&gt;Return"<BR/>
 </CODESAMPLE>
 This works on Fedora Core 2, the mechanism to get the xdm logging window will probably have to be modified for other distributions.
-
 </CONTENT>
 </PAGE>

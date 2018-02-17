@@ -5,7 +5,6 @@
 <PATH>notes/xpath.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 XPath is a language for addressing parts of an XML document.<BR/>
 It is used by XSLT and XPointer<BR/>
 The specification is <X><T>http://www.w3.org/TR/xpath</T><A>http://www.w3.org/TR/xpath</A><L>en</L><F>HTML</F></X>.<BR/>
@@ -130,9 +129,6 @@ The <CODEROUTINE>ancestor</CODEROUTINE>, <CODEROUTINE>descendant</CODEROUTINE>, 
 The <CODEROUTINE>div</CODEROUTINE> operator performs floating-point division, the <CODEROUTINE>mod</CODEROUTINE> operator returns the remainder from a truncating division. The <CODEROUTINE>floor</CODEROUTINE> function returns the largest (closest to positive infinity) number that is not greater than the argument and that is an integer. The <CODEROUTINE>ceiling</CODEROUTINE> function returns the smallest (closest to negative infinity) number that is not less than the argument and that is an integer.<BR/>
 <CODEROUTINE>//BBB[position() mod 2 = 0 ]</CODEROUTINE> select even <CODEROUTINE>BBB</CODEROUTINE> elements<BR/>
 <CODEROUTINE>//BBB[ position() = floor(last() div 2 + 0.5) or position() = ceiling(last() div 2 + 0.5) ]</CODEROUTINE> select middle BBB element(s)<BR/>
-
 </CONTENT>
-
 <X><T>links</T><A>../links/xml.html#xpath</A><L>en</L><F>HTML</F></X>
-
 </PAGE>

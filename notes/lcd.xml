@@ -5,7 +5,6 @@
 <PATH>notes/lcd.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 <BLIST>
 <ITEM>create a CD ISO image
 <CODESAMPLE><PROMPT/>mkisofs -r -o foo.iso root_dir_of_data</CODESAMPLE></ITEM>
@@ -24,8 +23,6 @@ and burn with (old Red Hat releases)
 <CODESAMPLE><PROMPT/>cdrecord -dev=2,0,0 -blank=fast</CODESAMPLE>
 <CODESAMPLE><PROMPT/>cdrecord -dev=2,0,0 -blank=all</CODESAMPLE></ITEM>
 </BLIST>
-
 </CONTENT>
 </PAGE>
-
 

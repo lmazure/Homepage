@@ -5,17 +5,12 @@
 <PATH>notes/gcc.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE>Compilation stages</TITLE>
-
 <ITEM>display the compiler version and copyrights
 <CODESAMPLE><PROMPT/>g++ --version</CODESAMPLE></ITEM>
-
 <ITEM>return the compiler version number
 <CODESAMPLE><PROMPT/>g++ -dumpversion</CODESAMPLE></ITEM>
-
 <ITEM>use the <CODEROUTINE>-v</CODEROUTINE> flag to see the flags gcc/g++ uses when calling its subprocesses</ITEM>
-
 <ITEM><BLIST><TITLE>Preprocessor</TITLE>
 <ITEM>get the list of predefined defines
 <CODESAMPLE><PROMPT/>cpp -dM /dev/null</CODESAMPLE></ITEM>
@@ -26,7 +21,6 @@
 <ITEM><CODEROUTINE>__FUNCTION__</CODEROUTINE> function name as it appears in the source code<BR/>
 <CODEROUTINE>__PRETTY_FUNCTION__</CODEROUTINE> pretty printed function name in a language specific fashion</ITEM>
 </BLIST></ITEM>
-
 <ITEM><BLIST><TITLE>Compiler</TITLE>
 <ITEM>for AMD/Intel CPUs<BR/>
 compile in 32 bits mode (<CODEROUTINE>long</CODEROUTINE>s and pointers are 32 bits)
@@ -36,14 +30,11 @@ compile in 64 bits mode (<CODEROUTINE>long</CODEROUTINE>s and pointers are 64 bi
 <ITEM>create a shared library
 <CODESAMPLE><PROMPT/>gcc -shared sample.c -o sample.so</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 <ITEM><BLIST><TITLE>Linker</TITLE>
 <ITEM>pass <CODEROUTINE>option</CODEROUTINE> as an option to the linker
 <CODESAMPLE><PROMPT/>gcc -Xlinker option</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 </BLIST>
-
 <BLIST><TITLE>Builts-ins</TITLE>
 <ITEM><CODEROUTINE>alloca</CODEROUTINE> allocates some memory on the stack (exists in many other implementations other than gcc)<BR/>
 It is faster that using <CODEROUTINE>malloc</CODEROUTINE>/<CODEROUTINE>free</CODEROUTINE>, but the limit on the stack size may be low on some machine (this is done in order to catch early infinite recrusions) and there is no way to test for a failed allocation (the program will simply crash when trying to write data in a too large address).</ITEM>
@@ -53,14 +44,11 @@ It is useful to write macros optimized when one of their parameters is a hard co
 It is useful when writing macros which are generic for several data types.</ITEM>
 <ITEM><CODEROUTINE>__va_copy</CODEROUTINE> copy a <CODEROUTINE>va_list</CODEROUTINE> (there is no other way to portably walk though a variable parameter list twice)</ITEM>
 </BLIST>
-
 <BLIST><TITLE>Warnings</TITLE>
 <ITEM>use <CODEROUTINE>-Wall -W</CODEROUTINE> to get most warning messages (<CODEROUTINE>-W</CODEROUTINE> has been deprecated by <CODEROUTINE>-Wextra</CODEROUTINE> with gcc3.x)</ITEM>
 <ITEM>use <CODEROUTINE>-fmessage-length=0</CODEROUTINE> to be able to parse easily the warning messages</ITEM>
 </BLIST>
-
 <BLIST><TITLE>Attributes</TITLE>
-
 <ITEM><BLIST><TITLE>Function attributes</TITLE>
 <ITEM><CODEROUTINE>constructor</CODEROUTINE><BR/>
 the function must be called before <CODEROUTINE>main</CODEROUTINE>
@@ -82,7 +70,6 @@ the function will no be instrumented when the code is compiled with <CODEROUTINE
 <ITEM><CODEROUTINE>deprecated</CODEROUTINE><BR/>
 generates a deprecation warning every time this function is used</ITEM>
 </BLIST></ITEM>
-
 <ITEM><BLIST><TITLE>Type attributes</TITLE>
 <ITEM><CODEROUTINE>unused</CODEROUTINE><BR/>
 avoid a warning indicating that a variable of this type is unused</ITEM>
@@ -102,7 +89,6 @@ envelope_type;</CODESAMPLE></ITEM>
 <ITEM><CODEROUTINE>aligned (alignment)</CODEROUTINE><BR/>
 specify a minimum alignment (in bytes) for variables of this type</ITEM>
 </BLIST></ITEM>
-
 <ITEM><BLIST><TITLE>Variable attributes</TITLE>
 <ITEM><CODEROUTINE>unused</CODEROUTINE><BR/>
 avoid a warning indicating that the variable is unused
@@ -120,11 +106,8 @@ __attribute__ ((unused)) <BR/>
 generates a deprecation warning every time this variable is used</ITEM>
 </BLIST></ITEM>
 
-
 </BLIST>
-
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#gcc</A><L>en</L><F>HTML</F></X>
 </PAGE>
-
 

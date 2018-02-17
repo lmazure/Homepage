@@ -5,7 +5,6 @@
 <PATH>notes/rpm.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><U><B>install</B></U></TITLE>
 <ITEM>
 install a package<BR/>
@@ -16,21 +15,18 @@ install a package only if a previous version is already present<BR/>
 <CODESAMPLE><PROMPT/>rpm -F foobar.rpm [ toto.rpm &#x2026; ]</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>uninstall</B></U></TITLE>
 <ITEM>
 uninstall the foobar package<BR/>
 <CODESAMPLE><PROMPT/>rpm -e foobar</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>extract a file</B></U></TITLE>
 <ITEM>
 extract a file from a RPM<BR/>
 <CODESAMPLE><PROMPT/>rpm2cpio foobar.rpm | cpio -iumd thefile</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>query on a package</B></U></TITLE>
 <ITEM>
 list the capabilities provided by a package<BR/>
@@ -66,7 +62,6 @@ list the files present in the uninstalled RPM package<BR/>
 </BLIST>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>query on the machine</B></U></TITLE>
 <ITEM>
 return the list of all the installed packages <BR/>
@@ -77,7 +72,6 @@ indicate from which package is a given file <BR/>
 <CODESAMPLE><PROMPT/>rpm -qf /usr/include/string.h </CODESAMPLE>
 </ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>links</T><A>../links/life.html#rpm</A><L>en</L><F>HTML</F></X>
 </PAGE>

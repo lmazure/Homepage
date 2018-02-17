@@ -5,9 +5,7 @@
 <PATH>notes/cvs.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 <BLIST>
-
 <ITEM><BLIST><TITLE>Access a new repository</TITLE>
 <ITEM>local repository
 <CODESAMPLE><PROMPT/>cvs -d /usr/local/cvs command</CODESAMPLE></ITEM>
@@ -25,10 +23,8 @@ and can be removed from <CODEFILENAME>~/.cvspass</CODEFILENAME> with
 <ITEM>the <CODEROUTINE>-d</CODEROUTINE> flag can be replaced by defining the environment variable <CODEROUTINE>CVSROOT</CODEROUTINE>
 <CODESAMPLE><PROMPT/>CVSROOT=:pserver:jrandom@cvs.foobar.com:/usr/local/cvs; export CVSROOT</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 <ITEM>create a project
 <CODESAMPLE><PROMPT/>cvs import -m "log msg" projname vendortag releasetag</CODESAMPLE></ITEM>
-
 <ITEM><BLIST><TITLE>Checking out a working copy</TITLE>
 <ITEM><CODESAMPLE><PROMPT/>cvs checkout myproj</CODESAMPLE>
 or
@@ -40,7 +36,6 @@ or
 <ITEM>list all the modukes
 <CODESAMPLE><PROMPT/>cvs co -c</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 <ITEM><BLIST><TITLE>Creating/removing elements</TITLE>
 <ITEM>creating a file requires two steps: first the <CODEROUTINE>add</CODEROUTINE> command on it, then <CODEROUTINE>commit</CODEROUTINE>:
 <CODESAMPLE><PROMPT/>cvs add newfile.c<BR/>
@@ -82,17 +77,14 @@ mv: newdir/CVS: cannot overwrite directory <I>(this is not a problem)</I><BR/>
 <PROMPT/>cvs commit -m "moved foo.c and bar.txt from olddir to newdir"<BR/>
 <PROMPT/>cvs update -P</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 <ITEM>status 
 <CODESAMPLE><PROMPT/>cvs status hello.c</CODESAMPLE></ITEM>
-
 <ITEM><BLIST><TITLE>History</TITLE>
 <ITEM>dump the log of the file
 <CODESAMPLE><PROMPT/>cvs log hello.c</CODESAMPLE></ITEM>
 <ITEM>for each file of the file, indicate whan, who and on which revision the change has been done 
 <CODESAMPLE><PROMPT/>cvs annotate hello.c</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 <ITEM><BLIST><TITLE>Update</TITLE>
 <ITEM><CODESAMPLE><PROMPT/>cvs update</CODESAMPLE></ITEM>
 <ITEM>to a given revision
@@ -100,7 +92,6 @@ mv: newdir/CVS: cannot overwrite directory <I>(this is not a problem)</I><BR/>
 <ITEM>to a given tag
 <CODESAMPLE><PROMPT/>cvs update -r MyTag</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 <ITEM><BLIST><TITLE>Diff</TITLE>
 <ITEM><CODESAMPLE><PROMPT/>cvs diff</CODESAMPLE></ITEM>
 <ITEM>use <CODESAMPLE>-c</CODESAMPLE> to perform a context diff
@@ -109,19 +100,16 @@ mv: newdir/CVS: cannot overwrite directory <I>(this is not a problem)</I><BR/>
 <CODESAMPLE><PROMPT/>cvs diff -r 1.218.2.14 toto.c</CODESAMPLE> or both versions
 <CODESAMPLE><PROMPT/>cvs diff -r 1.218.2.14 -r 1.218.2.13 toto.c</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 <ITEM><BLIST><TITLE>tkdiff</TITLE>
 <ITEM>compare a file with its repository revision
 <CODESAMPLE><PROMPT/>tkdiff hello.c</CODESAMPLE></ITEM>
 <ITEM>compare two text files
 <CODESAMPLE><PROMPT/>tkdiff foo bar</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 <ITEM>commit 
 <CODESAMPLE><PROMPT/>cvs commit -m "print goodbye too" hello.c</CODESAMPLE>
 or
 <CODESAMPLE><PROMPT/>cvs ci -m "print goodbye too" hello.c</CODESAMPLE></ITEM>
-
 <ITEM><BLIST><TITLE>Tag</TITLE>
 <ITEM>a tag name starts with a letter and contain letters, digits, hyphens (<CODEROUTINE>-</CODEROUTINE>), and underscores (<CODEROUTINE>_</CODEROUTINE>).</ITEM>
 <ITEM>CVS has two different kinds of tags:<BR/>
@@ -140,19 +128,13 @@ or
 <ITEM>delete a tag
 <CODESAMPLE><PROMPT/>cvs rtag -d MyTag MyProject</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 <ITEM><BLIST><TITLE>Help</TITLE>
 <ITEM>return the version of the client and of the server 
 <CODESAMPLE><PROMPT/>cvs version </CODESAMPLE></ITEM>
 <ITEM>return the list of synonyms
 <CODESAMPLE><PROMPT/>cvs --help-synonyms</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-
 </BLIST>
-
 </CONTENT>
-
 <X><T>Links</T><A>../links/coding.html#cvs</A><L>en</L><F>HTML</F></X>
-
 </PAGE>
-

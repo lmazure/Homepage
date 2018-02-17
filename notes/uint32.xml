@@ -5,7 +5,6 @@
 <PATH>notes/uint32.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-
 If the compiler is not C99 compliant:
 <CODESAMPLE>
 #include &lt;limits.h&gt;<BR/>
@@ -35,7 +34,5 @@ typedef long int16_t; <BR/>
 #else /* ULONG_MAX, UINT_MAX, USHRT_MAX = 0xFFFF */<BR/>
 #error INTERNAL ERROR : Cannot find a 16-bit integral type<BR/>
 #endif /* ULONG_MAX, UINT_MAX, USHRT_MAX = 0xFFFF */</CODESAMPLE>
-
 </CONTENT>
-
 </PAGE>
