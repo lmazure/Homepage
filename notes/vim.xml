@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Vim</TITLE>
 <PATH>notes/vim.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 
 <U><B>Command line</B></U>
@@ -38,6 +38,18 @@
 <DESC>redo</DESC></ROW>
 <ROW><TERM><KEY ID='U'/></TERM>
 <DESC>undo latest changes on the line</DESC></ROW>
+</DEFINITIONTABLE><BR/>
+
+<U><B>Cut 'n paste</B></U>
+<DEFINITIONTABLE>
+<ROW><TERM><KEY ID='v'/><BR/>
+move the cursor at the end of the region to copy<BR/>
+<KEY ID='y'/></TERM>
+<DESC>copy characters</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='P'/></TERM>
+<DESC>paste before the cursor</DESC></ROW>
+<ROW><TERM><KEY ID='P'/></TERM>
+<DESC>paste after the cursor</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 
 <U><B>Search</B></U>
