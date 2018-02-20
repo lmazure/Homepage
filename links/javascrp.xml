@@ -3,9 +3,8 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript</TITLE>
 <PATH>links/javascrp.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
-
 <LLIST>
   <ITEM><SLIST>
     <ITEM><X><T>ECMA-262 standard</T><A>http://www.ecma-international.org/publications/standards/Ecma-262.htm</A><L>en</L><F>HTML</F></X></ITEM>
@@ -83,7 +82,6 @@
     <ITEM><ARTICLE><X><T>Fluent 2012: Gary Flake, "Bookmarklets as Applications"</T><A>https://www.youtube.com/watch?v=e5dJVfipkhY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>15</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Gary</FIRSTNAME><MIDDLENAME>William</MIDDLENAME><LASTNAME>Flake</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>5</MONTH><DAY>31</DAY></DATE><COMMENT>The technical tricks used by Clipboard.com to capture a part of a page and redisplay it in their site.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Understand memory leaks in JavaScript applications</T><ST>Detect and address memory issues</ST><A>http://www.ibm.com/developerworks/library/wa-jsmemory/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Dolmar</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Ariya Hidayat: Next-Generation JavaScript Language Tooling</T><A>https://www.youtube.com/watch?v=uElc4ZUE6qo</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>27</MINUTE><SECOND>32</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Ariya</FIRSTNAME><LASTNAME>Hidayat</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE><COMMENT>Some tools for static analysis (finding code patterns, computing cyclomatic complexity), code transformation and dynamic analysis (code coverage, performance).</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Use JavaScript closures efficiently</T><ST>Avoid memory leaks in your Node.js apps</ST><A>http://www.ibm.com/developerworks/library/wa-use-javascript-closures-efficiently/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Dawson</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Gireesh</FIRSTNAME><LASTNAME>Punathil</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>2</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>node.js vs Java nashorn</T><A>http://pieroxy.net/blog/2015/06/29/node_js_vs_java_nashorn.html</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>pieroxy</GIVENNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>Some performance measurement of Nashorn and node.js.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>DOMException: The play() request was interrupted</T><A>https://developers.google.com/web/updates/2017/06/play-request-was-interrupted</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>François</FIRSTNAME><LASTNAME>Beaufort</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>16</DAY></DATE><COMMENT>How to properly use <CODEROUTINE>video.play()</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Abortable fetch</T><A>https://developers.google.com/web/updates/2017/09/abortable-fetch</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jake</FIRSTNAME><LASTNAME>Archibald</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>The <CODEROUTINE>AbortController</CODEROUTINE> and <CODEROUTINE>AbortSignal</CODEROUTINE> API is at last defined, Firefox has already implemented it.</COMMENT></ARTICLE></ITEM>
@@ -142,6 +140,8 @@
         <ITEM><ARTICLE><X><T>First Stable Build of NodeJs on Windows Released</T><A>http://blogs.msdn.com/b/interoperability/archive/2011/11/07/first-stable-build-of-nodejs-on-windows-released.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Claudio</FIRSTNAME><LASTNAME>Caldato</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Developing mobile apps with Node.js and MongoDB, Part 1: A team's methods and results</T><ST>Speeding time to value of systems of engagement</ST><A>http://www.ibm.com/developerworks/java/library/mo-nodejs-1/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Zach</FIRSTNAME><LASTNAME>Cross</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Aga</FIRSTNAME><LASTNAME>Pochec</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Santiago</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Divit</FIRSTNAME><LASTNAME>Singh</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE><COMMENT>Some IBM interns prototype a new implementation of IBM Passes using Node.js and MongoDB, getting more performance than using Java and DB2.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Developing mobile apps with Node.js and MongoDB, Part 2: Hints and tips</T><ST>Avoiding the pitfalls of using an alternative stack</ST><A>http://www.ibm.com/developerworks/java/library/mo-nodejs-2/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Zach</FIRSTNAME><LASTNAME>Cross</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Aga</FIRSTNAME><LASTNAME>Pochec</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Santiago</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Divit</FIRSTNAME><LASTNAME>Singh</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE><COMMENT>Some pieces of advice when using Node.js.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Use JavaScript closures efficiently</T><ST>Avoid memory leaks in your Node.js apps</ST><A>http://www.ibm.com/developerworks/library/wa-use-javascript-closures-efficiently/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Dawson</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Gireesh</FIRSTNAME><LASTNAME>Punathil</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>2</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Use the Node.js event loop effectively</T><ST>How to avoid unexpected results in your Node.js apps</ST><A>https://www.ibm.com/developerworks/library/wa-node-single-threaded-event-loop/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Doug</FIRSTNAME><LASTNAME>Tidwell</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE><COMMENT>A very very basic introduction to the event loop and callbacks.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>AJAX</TITLE>
@@ -214,10 +214,7 @@
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
-
 </CONTENT>
-
 <X><T>HTML</T><A>html.html</A><L>en</L><F>HTML</F></X>
-
 </PAGE>
 
