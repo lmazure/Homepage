@@ -5,7 +5,6 @@
 <PATH>notes/clojure.xml</PATH>
 <DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
 <ITEM>Ratio type:
 <CODESAMPLE>(/ 22 7)<BR/>
@@ -72,7 +71,6 @@ everything else evaluates to true in a boolean context</ITEM>
 (symbol? 'hello)<BR/>
 <PROMPT/>true</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Data structures</B></U></TITLE>
 <ITEM><BLIST><TITLE><U><B>Map</B></U></TITLE>
 <ITEM>Empty map:
@@ -168,7 +166,6 @@ the single quote indicates that this is not a function call, but an actual list
 <PROMPT/>:a</CODESAMPLE></ITEM>
 </BLIST></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Functions</B></U></TITLE>
 <ITEM>To define your own functions, use <CODEROUTINE>defn</CODEROUTINE>
 <CODESAMPLE>(defn name doc-string? attr-map? [params*] body)</CODESAMPLE>
@@ -221,7 +218,6 @@ is equivalent to
 <CODESAMPLE>(trampoline f)</CODESAMPLE>
 <CODESAMPLE>(trampoline f &amp; args)</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Libraries</B></U></TITLE>
 <ITEM>When you require a library named <CODEROUTINE>foo.bar.quux</CODEROUTINE>, Clojure looks for a file named <CODEROUTINE>foo/bar/quux.clj</CODEROUTINE> on the <CODEROUTINE>CLASSPATH</CODEROUTINE>.
 <CODESAMPLE>(require 'foo.bar.quux)<BR/>
@@ -243,7 +239,6 @@ is equivalent to
 <ITEM><CODEROUTINE>:reload</CODEROUTINE> flag forces a library to reload
 <CODESAMPLE>(use :reload 'foo.bar.quux)</CODESAMPLE></ITEM>
 </BLIST>
-
 <CODEROUTINE>(not x)</CODEROUTINE> returns <CODEROUTINE>true</CODEROUTINE> if x is logical false, <CODEROUTINE>false</CODEROUTINE> otherwise.<BR/>
 <CODEROUTINE>(or)</CODEROUTINE><CODEROUTINE>(or x)</CODEROUTINE><CODEROUTINE>(or x &amp; next)</CODEROUTINE> evaluates expressions one at a time, from left to right. If a form returns a logical true value, <CODEROUTINE>or</CODEROUTINE> returns that value and doesn't
 evaluate any of the other expressions, otherwise it returns the value of the last expression. <CODEROUTINE>(or)</CODEROUTINE> returns <CODEROUTINE>nil</CODEROUTINE>.<BR/>
@@ -253,8 +248,6 @@ evaluate any of the other expressions, otherwise it returns the value of the las
 <CODEROUTINE>(first coll)</CODEROUTINE> returns the first item in the collection. Calls <CODEROUTINE>seq</CODEROUTINE> on its argument. If coll is <CODEROUTINE>nil</CODEROUTINE>, returns <CODEROUTINE>nil</CODEROUTINE>.<BR/>
 <CODEROUTINE>(rest coll)</CODEROUTINE> returns a possibly empty seq of the items after the first. Calls <CODEROUTINE>seq</CODEROUTINE> on its argument.<BR/>
 <CODEROUTINE>(cons x seq)</CODEROUTINE> returns a new seq where x is the first element and seq is the rest.<BR/>
-
 </CONTENT>
 <X><T>links</T><A>../links/lisp.html#clojure</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

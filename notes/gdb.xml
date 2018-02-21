@@ -5,7 +5,6 @@
 <PATH>notes/gdb.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
-
 <U><B>run</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>file &lt;prog&gt;</CODEROUTINE></TERM>
@@ -46,8 +45,6 @@ to run the process without the last specified arguments, use before <CODEROUTINE
 <ROW><TERM><CODEROUTINE>return &lt;value&gt;</CODEROUTINE></TERM>
 <DESC>continue to run the debugged process until it reaches the calling routine, <CODEROUTINE>value</CODEROUTINE> is the returned value</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
-
 <U><B>stack</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>bt</CODEROUTINE><BR/>
@@ -71,7 +68,6 @@ to run the process without the last specified arguments, use before <CODEROUTINE
 <ROW><TERM><CODEROUTINE>list &lt;n&gt;</CODEROUTINE></TERM>
 <DESC>display 10 lines around line number n</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>examination</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>info stack</CODEROUTINE></TERM>
@@ -96,7 +92,6 @@ to run the process without the last specified arguments, use before <CODEROUTINE
 <ROW><TERM><CODEROUTINE>undisplay &lt;expr&gt;</CODEROUTINE></TERM>
 <DESC>stop to display the expression <CODEROUTINE>expr</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>source</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>dir &lt;path&gt;</CODEROUTINE></TERM>
@@ -108,7 +103,6 @@ adding a directory already present in the source path moves it at the beginning<
 <ROW><TERM><CODEROUTINE>show directories</CODEROUTINE></TERM>
 <DESC>print the source path</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>breakpoints</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>break file.c:105</CODEROUTINE></TERM>
@@ -127,7 +121,6 @@ but, in order to get access to the list of all symbols, we have to start the pro
 <ROW><TERM><CODEROUTINE>delete &lt;n&gt;</CODEROUTINE></TERM>
 <DESC>remove the breakpoint/watchpoint number <CODEROUTINE>n</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>info</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>list</CODEROUTINE></TERM>
@@ -143,7 +136,6 @@ but, in order to get access to the list of all symbols, we have to start the pro
 <ROW><TERM><CODEROUTINE>info function &lt;regexp&gt;</CODEROUTINE></TERM>
 <DESC>show the signatures of functions whose name matches a regexp</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>interaction with the shell</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>pwd</CODEROUTINE></TERM>
@@ -159,7 +151,6 @@ but, in order to get access to the list of all symbols, we have to start the pro
 <ROW><TERM><CODEROUTINE>show environment &lt;var&gt;</CODEROUTINE></TERM>
 <DESC>show the value of the environment variable for the next run of the application</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>misceallaneous</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>quit</CODEROUTINE></TERM>
@@ -167,7 +158,6 @@ but, in order to get access to the list of all symbols, we have to start the pro
 <ROW><TERM><CODEROUTINE>source &lt;file&gt;</CODEROUTINE></TERM>
 <DESC>execute the commands of file <CODEROUTINE>file</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>automated launching</B></U><BR/>
 When debugging a process forked from another, the usual solution is to
 <BLIST>
@@ -193,9 +183,6 @@ sleep(3);
 <ITEM>start the parent process.</ITEM>
 </BLIST>
 The debugger will automatically start on the child process.
-
-
 </CONTENT>
 <X><T>Links</T><A>../links/coding.html#gdb</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

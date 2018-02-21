@@ -5,7 +5,6 @@
 <PATH>notes/wikipedia.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><U><B>format</B></U></TITLE>
 <ITEM>sections
 <DEFINITIONTABLE>
@@ -114,7 +113,6 @@ It is also possible to use the attributes <CODEROUTINE>colspan</CODEROUTINE> and
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
-
 <U><B>Category:</B></U><BR/>
 <CODEROUTINE>[[Category:foobar]]</CODEROUTINE> indicates that a page is in the category <CODEROUTINE>foobar</CODEROUTINE>. A category name can contain a space.<BR/>
 A page can be in several categories.<BR/>
@@ -124,18 +122,15 @@ Adding a category to a category page makes it a sub-category.<BR/>
 A category can he hidden by adding <CODEROUTINE>__HIDDENCAT__</CODEROUTINE> on the category page.<BR/>
 Use the <CODEROUTINE>[[:category:foobar]]</CODEROUTINE> and <CODEROUTINE>[[:category:foobar|text]]</CODEROUTINE> to point toward a category page.<BR/>
 <BR/>
-
 <U><B>Templates for fr.wikipedia.org:</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>{{homonymie}}</CODEROUTINE></TERM><DESC>homonymy</DESC></ROW>
 <ROW><TERM><CODEROUTINE>{{sigles n lettres}}</CODEROUTINE></TERM><DESC>add a table pointing toward acronym summary pages</DESC></ROW>
 <ROW><TERM><CODEROUTINE>{{&#xE9;bauche}}</CODEROUTINE></TERM><DESC>stub page</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>Counter:</B></U><BR/>
 Use http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=<I>login</I>&amp;dbname=<I>wiki</I><BR/>
 for example <X><T>http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=Kolmigabrouil&amp;dbname=frwiki_p</T><A>http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=Kolmigabrouil&amp;dbname=frwiki_p</A><L>en</L><F>HTML</F></X><BR/>
-
 <BLIST><TITLE>My accounts:</TITLE>
   <ITEM><BLIST><TITLE>French</TITLE>
     <ITEM><X><T>Wikip&#xE9;dia</T><A>http://fr.wikipedia.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
@@ -154,8 +149,6 @@ for example <X><T>http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=K
       <X><T>contrib</T><A>http://en.wikiquote.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>reference</T><A>http://en.wikipedia.org/wiki/Wikipedia:How_to_edit_a_page</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

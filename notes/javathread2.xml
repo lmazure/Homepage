@@ -5,7 +5,6 @@
 <PATH>notes/javathread2.xml</PATH>
 <DATE><YEAR>2015</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
-
 <U><B>Processes vs threads</B></U><BR/>
 Each process has its private set of run-time resources, in particular memory.<BR/>
 New processes can be created using a <CODEROUTINE>ProcessBuilder</CODEROUTINE> object.<BR/>
@@ -51,7 +50,6 @@ The first idiom is more general, because the Runnable object can subclass a clas
 <BR/>
 <U><B>Interruption</B></U><BR/>
 A thread sends an interrupt by invoking <CODEROUTINE>interrupt</CODEROUTINE> on the Thread object for the thread to be interrupted.<BR/>
-
 If the thread is frequently invoking methods that throw <CODEROUTINE>InterruptedException</CODEROUTINE>, it simply returns from the <CODEROUTINE>run</CODEROUTINE> method after it catches that exception.<BR/>
 If a thread goes a long time without invoking a method that throws <CODEROUTINE>InterruptedException</CODEROUTINE>, it must periodically invoke <CODEROUTINE>Thread.interrupted</CODEROUTINE>, which returns true if an interrupt has been received.<BR/>
 <BR/>
@@ -73,7 +71,6 @@ Memory consistency is based on the <I>happens-before</I> relation on memory oper
 </BLIST><BR/>
 <BR/>
 <BR/>
-
 <U><B>Synchronization</B></U><BR/>
 <BLIST>
 <ITEM>Locks In Synchronized Methods<BR/>
@@ -93,7 +90,6 @@ A thread can acquire a lock that it already owns. Allowing a thread to acquire t
 </BLIST>
 <BR/>
 <BR/>
-
 <U><B>Atomic Access</B></U><BR/>
 <BLIST>
 <ITEM>Reads and writes are atomic for reference variables and for most primitive variables (all types except <CODEROUTINE>long</CODEROUTINE> and <CODEROUTINE>double</CODEROUTINE>).</ITEM>
@@ -102,22 +98,18 @@ A thread can acquire a lock that it already owns. Allowing a thread to acquire t
 </BLIST>
 <BR/>
 <BR/>
-
 <U><B>Deadlock</B></U><BR/>
 Deadlock describes a situation where two or more threads are blocked forever, waiting for each other. 
 <BR/>
 <BR/>
-
 <U><B>Starvation</B></U><BR/>
 Starvation describes a situation where a thread is unable to gain regular access to shared resources and is unable to make progress. This happens when shared resources are made unavailable for long periods by "greedy" threads. 
 <BR/>
 <BR/>
-
 <U><B>Livelock</B></U><BR/>
 A thread often acts in response to the action of another thread. If the other thread's action is also a response to the action of another thread, then livelock may result.
 <BR/>
 <BR/>
-
 <U><B>Guarded blocks</B></U><BR/>
 A guarded block is a block beginning by polling a condition that must be true before the block can proceed.  Use <CODEROUTINE>Object.wait</CODEROUTINE> to suspend the current thread. The invocation of wait does not return until another thread has issued a notification that some special event may have occurred though not necessarily the event this thread is waiting for: 
 <CODESAMPLE>public synchronized guardedJoy() {<BR/>
@@ -136,8 +128,6 @@ When wait is invoked, the thread releases the lock and suspends execution. At so
 Some time after the second thread has released the lock, the first thread reacquires the lock and resumes by returning from the invocation of <CODEROUTINE>wait</CODEROUTINE>.
 <BR/>
 <BR/>
-
-
 <U><B>Immutable Objects</B></U><BR/>
 <BLIST><TITLE>A Strategy for Defining Immutable Objects</TITLE>
 <ITEM>Don't provide "setter" methods, i.e. methods that modify fields or objects referred to by fields.</ITEM>
@@ -149,12 +139,10 @@ Some time after the second thread has released the lock, the first thread reacqu
 </BLIST>
 <BR/>
 <BR/>
-
 <U><B>Lock Objects</B></U><BR/>
 Some sophisticated locking idioms are supported by the java.util.concurrent.locks package. 
 <BR/>
 <BR/>
-
 <U><B>Executor interfaces</B></U><BR/>
 <BLIST>
 <ITEM><CODEROUTINE>Executor</CODEROUTINE> Interface<BR/>
@@ -167,8 +155,6 @@ The <CODEROUTINE>ScheduledExecutorService</CODEROUTINE> interface supplements th
 </BLIST>
 <BR/>
 <BR/>
-
-
 <U><B>Thread pools</B></U><BR/>
 <BLIST>
 <ITEM>Using worker threads minimizes the overhead due to thread creation. Thread objects use a significant amount of memory, and in a large-scale application, allocating and deallocating many thread objects creates a significant memory management overhead.</ITEM>
@@ -179,8 +165,6 @@ The <CODEROUTINE>ScheduledExecutorService</CODEROUTINE> interface supplements th
 </BLIST>
 <BR/>
 <BR/>
-
-
 <U><B>Concurrent Collections</B></U><BR/>
 <BLIST>
 <ITEM><CODEROUTINE>BlockingQueue</CODEROUTINE> defines a first-in-first-out data structure that blocks or times out when you attempt to add to a full queue, or retrieve from an empty queue.</ITEM>
@@ -189,14 +173,9 @@ The <CODEROUTINE>ScheduledExecutorService</CODEROUTINE> interface supplements th
 </BLIST>
 <BR/>
 <BR/>
-
-
-
 <U><B>Atomic Variables</B></U><BR/>
 The <CODEROUTINE>java.util.concurrent.atomic</CODEROUTINE> package defines classes that support atomic operations on single variables. All classes have get and set methods that work like reads and writes on volatile variables. That is, a set has a happens-before relationship with any subsequent get on the same variable. The atomic <CODEROUTINE>compareAndSet</CODEROUTINE> method also has these memory consistency features, as do the simple atomic arithmetic methods that apply to integer atomic variables.<BR/>
 <BR/>
 <BR/>
-
 </CONTENT>
 </PAGE>
-

@@ -5,21 +5,18 @@
 <PATH>notes/prolint.xml</PATH>
 <DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><B><U>Syntax</U></B></TITLE>
 <ITEM>
 use the <CODEROUTINE>%ENVVAR%</CODEROUTINE> to insert the value of an environment variable in a <CODEROUTINE>.lnt</CODEROUTINE> file<BR/>
 example: <CODEROUTINE>%TOPDIR%/tools/prolin/base.lnt</CODEROUTINE> to include the <CODEROUTINE>base.lnt</CODEROUTINE> file 
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>Adding warnings</U></B></TITLE>
 <ITEM>
 define a short 2 / int 4 / long 8 / pointer 8 memory model:<BR/>
 <CODESAMPLE>-sb8 -sc1 -ss2 -si4 -sl8 -sf4 -sld16 -sp8 -spD8 -spP8 -smp8 -smpD8 -smpP8 -sw8</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>Avoiding warnings</U></B></TITLE>
 <ITEM>syntaxes:
 <DEFINITIONTABLE>
@@ -185,7 +182,6 @@ kill it with
 // the next one avoids the issue with the 'public slots:' declaration<BR/>
 -d"QUObject=QUObject/*lint --e{1736}*/" // Redundant access specifier</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>License management</U></B></TITLE>
 <ITEM>in order to use <CODEROUTINE>prola</CODEROUTINE>, you must be in the ProLint directory</ITEM>
 <ITEM>list the current licence usage
@@ -195,7 +191,6 @@ kill it with
 <ITEM>disable a user given his UID
 <CODESAMPLE><PROMPT/>prola disable -user="uid10288"</CODESAMPLE></ITEM>
 </BLIST>
-
 <B><U>Review of the Prolint comments</U></B><BR/>
 For the time being, this is trivial method:
 <CODESAMPLE><PROMPT/>grep -R -I -w lint | filter</CODESAMPLE>
@@ -223,9 +218,5 @@ while (&lt;&gt;) {<BR/>
 print $previousLine;
 </CODESAMPLE>
 </CONTENT>
-
 <X><T>Links</T><A>../links/coding.html#prolint</A><L>en</L><F>HTML</F></X>
-
 </PAGE>
-
-

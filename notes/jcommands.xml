@@ -5,7 +5,6 @@
 <PATH>notes/jcommands.xml</PATH>
 <DATE><YEAR>2012</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><B><U>java</U></B></TITLE>
 <ITEM>syntax:<BR/>
 <CODEROUTINE>java [ options ] class [ argument &#x2026; ]</CODEROUTINE><BR/>
@@ -24,12 +23,10 @@ Append the letter k or K to indicate kilobytes, or m or M to indicate megabytes.
 <ITEM><CODEROUTINE>-Xss<I>n</I></CODEROUTINE> set the thread stack size</ITEM>
 <ITEM><CODEROUTINE>-D<I>property</I>=<I>value</I></CODEROUTINE> set a system property value</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>javac</U></B></TITLE>
 <ITEM>detail the deprecated features used by the file being compiled
 <CODESAMPLE>javac -deprecation foobar.java</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>javap</U></B></TITLE>
 <ITEM>dump the package, protected and public classes and members of a class:
 <CODESAMPLE>javap javax.swing.DefaultListRenderer</CODESAMPLE></ITEM>
@@ -48,11 +45,9 @@ and look for <CODEROUTINE>minor version</CODEROUTINE> and <CODEROUTINE>major ver
 </TABLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>keytool</U></B></TITLE>
 <ITEM>manage keys and certificates</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>javaws</U></B></TITLE>
 <ITEM>start Java Web Start Launcher on the specified JNLP URL
 <CODESAMPLE>javaws &lt;url&gt;</CODESAMPLE></ITEM>
@@ -64,42 +59,34 @@ and look for <CODEROUTINE>minor version</CODEROUTINE> and <CODEROUTINE>major ver
 <ITEM>clear the user cache
 <CODESAMPLE>javaws -Xclearcache</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>jconsole</U></B></TITLE>
 <ITEM>the monitored process must be started with the <CODEROUTINE>-Dcom.sun.management.jmxremote</CODEROUTINE> option</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>jps</U></B></TITLE>
 <ITEM>list the running JVMs, the class containing the <CODEROUTINE>main</CODEROUTINE> method and name and the arguments passed to the <CODEROUTINE>main</CODEROUTINE> method.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>jstack</U></B></TITLE>
 <ITEM>dump the stacks of all the threads of a process</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>jmap</U></B></TITLE>
 <ITEM>create a heapdump of a process:<BR/>
 <CODEROUTINE>jmap -dump:file="C:\Documents and setting\&#x2026;\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
 <ITEM>create a heapdump containing only the non-garbageable objects:<BR/>
 <CODEROUTINE>jmap -dump:live,file="C:\Documents and setting\&#x2026;\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>jhat</U></B></TITLE>
 <ITEM>analyse a heapdump and start a browser to allow to access the data<BR/>
 the server is reachable at http://localhost:7000</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>jstat</U></B></TITLE>
 <ITEM>return some JVM statistics</ITEM>
 <ITEM>track the usage of the perm gen space for one minute with an update every 500 ms<BR/>
 <CODEROUTINE>jstat -gcpermcapacity <I>pid</I> 500 120</CODEROUTINE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>jinfo</U></B></TITLE>
 <ITEM>return the properties and Java virtual machine command line flags<BR/>
 <CODEROUTINE>jinfo <I>pid</I></CODEROUTINE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>classpath</U></B></TITLE>
 <ITEM><CODEROUTINE>$CLASSPATH</CODEROUTINE> contains directories and JAR files to be appended to the default path (which is <CODEROUTINE>.;$JAVA/lib/classes.zip</CODEROUTINE>)<BR/>
 the elements are separated by <CODEROUTINE>:</CODEROUTINE> on Unix and <CODEROUTINE>;</CODEROUTINE> on Windows</ITEM>
@@ -110,10 +97,6 @@ the elements are separated by <CODEROUTINE>:</CODEROUTINE> on Unix and <CODEROUT
 <CODESAMPLE>java -classpath "D:\Docs\perso\ftp-1.2.2\ftp.jar;D:\Docs\perso\mystuff" MyMain</CODESAMPLE></ITEM></BLIST>
 <CODEROUTINE>-classpath</CODEROUTINE> can be abbreviated into <CODEROUTINE>-cp</CODEROUTINE></ITEM>
 </BLIST>
-
 </CONTENT>
-
 <X><T>Oracle's documentation</T><A>http://docs.oracle.com/javase/7/docs/technotes/tools/</A><L>en</L><F>HTML</F></X>
-
 </PAGE>
-

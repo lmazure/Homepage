@@ -5,7 +5,6 @@
 <PATH>notes/lsyscall.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><B><U>file</U></B></TITLE>
 <ITEM>create/open/close
 <DEFINITIONTABLE>
@@ -61,7 +60,6 @@
 <ROW><TERM><CODEROUTINE><X><T>pselect</T><A>javascript:do_reference("man/linux/2/pselect")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>watch signals and file handles for read/write/exception change status</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>environment</U></B></TITLE>
 <ITEM>current directory
 <DEFINITIONTABLE>
@@ -71,7 +69,6 @@
 <ROW><TERM><CODEROUTINE><X><T>chroot</T><A>javascript:do_reference("man/linux/2/chroot")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change the root directory (given its name)</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>memory</U></B></TITLE>
 <ITEM><DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>getpagesize</T><A>javascript:do_reference("man/linux/2/getpagesize")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return size (i.e. number of bytes) of a page</DESC></ROW>
@@ -88,7 +85,6 @@
 <ROW><TERM><CODEROUTINE><X><T>munlockall</T><A>javascript:do_reference("man/linux/2/munlockall")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>unlock all process pages from core memory</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>process management</U></B></TITLE>
 <ITEM><DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>execve</T><A>javascript:do_reference("man/linux/2/execve")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execl</T><A>javascript:do_reference("man/linux/2/execl")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execlp</T><A>javascript:do_reference("man/linux/2/execlp")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execle</T><A>javascript:do_reference("man/linux/2/execle")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execv</T><A>javascript:do_reference("man/linux/2/execv")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/><CODEROUTINE><X><T>execvp</T><A>javascript:do_reference("man/linux/2/execvp")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>execute a program</DESC></ROW>
@@ -96,7 +92,6 @@
 <ROW><TERM><CODEROUTINE><X><T>ptrace</T><A>javascript:do_reference("man/linux/2/ptrace")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>observe and control the execution of another process</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>misc.</U></B></TITLE>
 <ITEM><DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>time</T><A>javascript:do_reference("man/linux/2/time")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>get time</DESC></ROW>
@@ -105,8 +100,5 @@
 <ROW><TERM><CODEROUTINE><X><T>adjtimex</T><A>javascript:do_reference("man/linux/2/adjtimex")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>set/get clock adjustement</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
-
 </CONTENT>
-
 </PAGE>
-

@@ -5,7 +5,6 @@
 <PATH>notes/valgrind.xml</PATH>
 <DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
-
 <B><U>installation</U></B> (using csh)
 <CODESAMPLE><PROMPT/>bzip2 -d valgrind-3.1.0.tar.bz2<BR/>
 <PROMPT/>tar xvf valgrind-3.1.0.tar<BR/>
@@ -66,18 +65,12 @@ in the process's address space, so the A bits must be updated if <CODEROUTINE>mm
 <CODESAMPLE> valgrind --tool=memcheck --trace-children=yes --num-callers=20 --log-file=/tmp/vglog --leak-check=full --leak-resolution=high
 --error-limit=no foobar</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>Massif</U></B></TITLE>
 <ITEM><DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>--depth=&lt;number&gt;</CODEROUTINE></TERM><DESC>default is to list the 3 calling routines for each memory allocation</DESC></ROW>
 <ROW><TERM><CODEROUTINE>--format=[text|html]</CODEROUTINE></TERM><DESC>default is to produce a text file</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
-
 </CONTENT>
-
 <X><T>Links</T><A>../links/coding.html#valgrind</A><L>en</L><F>HTML</F></X>
-
 </PAGE>
-
-

@@ -5,7 +5,6 @@
 <PATH>notes/javadoc.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
-
 <DEFINITIONTABLE>
 <ROW><TERM>@author</TERM><DESC>defines the overview, package or class author</DESC></ROW>
 <ROW><TERM>@deprecated</TERM><DESC>adds a comment indicating that this API should no longer be used</DESC></ROW>
@@ -29,7 +28,6 @@ this can be used for the main description, @return, @param and @throws</DESC></R
 <ROW><TERM>{@value <I>package.class#field</I>}</TERM><DESC>replaced by the value of a static field</DESC></ROW>
 <ROW><TERM>@version <I>version-text</I></TERM><DESC>replaced by the value of the -version option when this one is used</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <BLIST><TITLE>Javadoc comments can be attached to:</TITLE>
 <ITEM>class</ITEM>
 <ITEM>interface</ITEM>
@@ -50,4 +48,3 @@ Tags can also be used inline by putting them between curly braces (they are call
 </CONTENT>
 <X><T>links</T><A>../links/java.html#javadoc</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

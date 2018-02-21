@@ -5,7 +5,6 @@
 <PATH>notes/vim.xml</PATH>
 <DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
-
 <U><B>Command line</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>vim file</CODEROUTINE></TERM>
@@ -27,7 +26,6 @@
 <ROW><TERM><CODEROUTINE>vim -R file</CODEROUTINE></TERM>
 <DESC>open the file in read only mode</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>Undo/redo</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><KEY ID='U'/><BR/>
@@ -39,7 +37,6 @@
 <ROW><TERM><KEY ID='U'/></TERM>
 <DESC>undo latest changes on the line</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>Cut 'n paste</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><KEY ID='v'/><BR/>
@@ -51,7 +48,6 @@ move the cursor at the end of the region to copy<BR/>
 <ROW><TERM><KEY ID='P'/></TERM>
 <DESC>paste after the cursor</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>Search</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><KEY ID='*'/></TERM>
@@ -63,7 +59,6 @@ move the cursor at the end of the region to copy<BR/>
 <ROW><TERM><CODEROUTINE>:nohlsearch</CODEROUTINE></TERM>
 <DESC>hide the current search result highlighting</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B><X><T>Windows</T><A>http://vimdoc.sourceforge.net/htmldoc/windows.html</A><L>en</L><F>HTML</F></X></B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='S'/></TERM>
@@ -85,7 +80,6 @@ move the cursor at the end of the region to copy<BR/>
 <MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='K'/></TERM>
 <DESC>go to the window above</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>Numbering</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>:set number</CODEROUTINE><BR/>
@@ -97,7 +91,6 @@ move the cursor at the end of the region to copy<BR/>
 <ROW><TERM><CODEROUTINE>:set nu!</CODEROUTINE></TERM>
 <DESC>toggle the display of line numbers</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>Colors</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>:set background=dark</CODEROUTINE></TERM>
@@ -111,14 +104,11 @@ move the cursor at the end of the region to copy<BR/>
 <ROW><TERM><CODEROUTINE>:syntax off</CODEROUTINE></TERM>
 <DESC>disable syntax highlighting</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>Miscellaneous</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><KEY ID='%'/></TERM>
 <DESC>move to matching brace or keyword</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
-
 the configuration file is <CODEROUTINE>$HOME/.vimrc</CODEROUTINE>.
 </CONTENT>
 <X><T>Links</T><A>../links/coding.html#vi</A><L>en</L><F>HTML</F></X>

@@ -5,9 +5,7 @@
 <PATH>notes/x11samples.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
-
 <SLIST>
-
 <ITEM>
 Example of creation of a pulldown menu
 <CODESAMPLE>
@@ -64,7 +62,6 @@ XtAddCallback(isButton,<BR/>
 XtManageChild(expendPatternOptionMenu);
 </CODESAMPLE>
 </ITEM>
-
 <ITEM>
 Avoid some resize problems (when the buttons are added and removed dynamically to an option menu):
 <CODESAMPLE>
@@ -76,7 +73,6 @@ button=XtVaCreateManagedWidget("button",<BR/>
 <TAB/><TAB/>NULL);<BR/>
 </CODESAMPLE>
 </ITEM>
-
 <ITEM>
 Retrieve the string which is currently selected
 <CODESAMPLE>
@@ -90,10 +86,7 @@ XmStringFree(str);<BR/>
 std::cout &lt;&lt; text &lt;&lt; std::endl;
 </CODESAMPLE>
 </ITEM>
-
 </SLIST>
-
 </CONTENT>
 <X><T>links</T><A>../links/x11.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

@@ -5,7 +5,6 @@
 <PATH>notes/perlfile.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><B><U>glob</U></B></TITLE>
 <ITEM>list the HTML files in a directory
 <CODESAMPLE>
@@ -24,7 +23,6 @@ foreach my $f ( glob( $dirsource."/*.jpeg" ) ) {<BR/>
 </CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>file name parsing</U></B></TITLE>
 <ITEM>get the directory and base names of a file
 <CODESAMPLE>
@@ -69,8 +67,6 @@ $fullname = "/usr/local/src/perl-5.6.1.tar.gz";<BR/>
 </CODESAMPLE>
 </ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>links</T><A>../links/perl.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

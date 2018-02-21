@@ -6,7 +6,6 @@
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 If you really need to have integer types having a given number of bytes, use the following types defined in stdint.h.
-
 <TABLE><ROW><CELL>name</CELL><CELL>size</CELL><CELL>signed?</CELL><CELL>fscanf format</CELL><CELL>fprintf format</CELL><CELL>min value</CELL><CELL>max value</CELL><CELL>macro for constant definition</CELL></ROW>
 <ROW><CELL>int8_t</CELL><CELL>8 bits</CELL><CELL>signed</CELL><CELL>SCNd8<BR/>SCNi8</CELL><CELL>PRId8<BR/>PRIi8</CELL><CELL>INT8_MIN</CELL><CELL>INT8_MAX</CELL><CELL>INT8_C</CELL></ROW>
 <ROW><CELL>uint8_t</CELL><CELL>8 bits</CELL><CELL>unsigned</CELL><CELL>SCNo8<BR/>SCNu8<BR/>SCNx8</CELL><CELL>PRIo8<BR/>PRIu8<BR/>PRIx8<BR/>PRIX8</CELL><CELL>0</CELL><CELL>UINT8_MAX</CELL><CELL>UINT8_C</CELL></ROW>
@@ -25,8 +24,6 @@ printf("The integer value is %020" PRIu32 "\n", val);</CODESAMPLE>
 <BR/>
 The macros defining constant are defined in stdint.h. They are defined by C99, but they are not available in C++. Here is an example how to use them:<BR/>
 <CODESAMPLE>uint32_t val = UINT32_C(17);</CODESAMPLE>
-
-
 Note:
 <BLIST><TITLE><CODEROUTINE>stdint.h</CODEROUTINE> and <CODEROUTINE>inttypes.h</CODEROUTINE> also define:</TITLE>
 <ITEM><BLIST><TITLE>Minimum-width integer types:</TITLE>
@@ -58,13 +55,10 @@ uint_fastn_t is a fast unsigned integer type with a width of at least n.</ITEM>
 <ITEM>uintmax_t: an unsigned integer type capable of representing any value of any signed integer type</ITEM>
 </BLIST></ITEM>
 </BLIST>
-
 The macros defining the min and max values (e.g. INT_FAST8_MAX, INTMAX_MIN&#x2026;) and the scanf and printf formats (e.g. PRIdFAST8, PRIoMAX&#x2026;) are also available for the previous types.<BR/>
 <BR/>
 strtoimax and strtoumax routines should be used to parse a string into a intmax_t or uintmax_t. <BR/>
 <BR/>
 INTMAX_C and UINTMAX_C macros should be used to define intmax_t or uintmax_t constants.
-
 </CONTENT>
 </PAGE>
-

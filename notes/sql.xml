@@ -5,8 +5,6 @@
 <PATH>notes/sql.xml</PATH>
 <DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
-
-
 <BLIST><TITLE><U><B>Command categories</B></U></TITLE>
 <ITEM>
 DML - Data Manipulation Language: used to insert, modify, delete, and update data in database.<BR/>
@@ -30,14 +28,12 @@ TCL - Transactional Control Language: used to manage different transactions occu
 Examples: COMMIT, SAVE POINT, ROLLBACK statements
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Database creation</B></U></TITLE>
 <ITEM>
 syntax
 <CODESAMPLE>CREATE DATABASE <I>database_name</I></CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Table creation</B></U></TITLE>
 <ITEM>
 syntax
@@ -106,7 +102,6 @@ Amount double);</CODESAMPLE>
 </ITEM>
 </BLIST></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Table update</B></U></TITLE>
 <ITEM>
 add a column
@@ -131,14 +126,12 @@ state that a column is a foreign key
 <CODESAMPLE>ALTER TABLE Orders ADD FOREIGN KEY (customer_sid) REFERENCES Customer(SID);</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Table deletion</B></U></TITLE>
 <ITEM>
 syntax
 <CODESAMPLE>DROP TABLE <I>table_name</I>;</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Data insertion</B></U></TITLE>
 <ITEM>
 syntax
@@ -157,7 +150,6 @@ example
 VALUES ('Rasmussen', 'Storgt 67');</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Data update</B></U></TITLE>
 <ITEM>
 syntax
@@ -170,7 +162,6 @@ SET Address = 'Stien 12', City = 'Stavanger'<BR/>
 WHERE LastName = 'Rasmussen';</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Data deletion</B></U></TITLE>
 <ITEM>
 syntax
@@ -186,7 +177,6 @@ or
 <CODESAMPLE>TRUNCATE TABLE <I>table_name</I>;</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Data retrieval</B></U></TITLE>
 <ITEM>
 retrieve the values from some columns
@@ -373,7 +363,6 @@ FROM StoreInformation</CODESAMPLE>
 </ITEM></BLIST>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Join</B></U> (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Join_(SQL)</A><L>en</L><F>HTML</F></X>)</TITLE>
 <ITEM>inner join<BR/>
 explicit syntax
@@ -423,7 +412,6 @@ implicit syntax
 FROM employee, department;</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Set operation</B></U> (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Set_operations_(SQL)</A><L>en</L><F>HTML</F></X>)</TITLE>
 <ITEM>union<BR/>
 combines the results of two SQL queries into a single table<BR/>
@@ -456,7 +444,6 @@ FROM ORDER<BR/>
 WHERE Quantity BETWEEN 50 AND 75;</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Views</B></U></TITLE>
 <ITEM>syntax
 <CODESAMPLE>CREATE VIEW <I>viewName</I> AS SQL <I>Statement</I>;</CODESAMPLE>
@@ -469,7 +456,6 @@ WHERE A1.storeName = A2.storeName
 GROUP BY A1.regionName;</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Indexes</B></U></TITLE>
 <ITEM>syntax
 <CODESAMPLE>CREATE INDEX <I>indexName</I> ON <I>tableName</I> (<I>columnName</I>);</CODESAMPLE>
@@ -483,7 +469,6 @@ ON customer (lastName);</CODESAMPLE>
 ON customer (city, country);</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Aggregate functions</B></U></TITLE>
 <ITEM><BLIST><TITLE>count</TITLE>
 <ITEM><CODEROUTINE>COUNT(*)</CODEROUTINE> returns the number of rows of the table
@@ -513,7 +498,6 @@ returns the total sum of a column
 <CODESAMPLE>SELECT AVG(<I>column</I>) FROM <I>table</I>;</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <U><B>Functions</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>CURDATE()</CODEROUTINE></TERM><DESC>returns the current date</DESC></ROW>
@@ -525,7 +509,6 @@ returns the total sum of a column
 <ROW><TERM><CODEROUTINE>LTRIM(<I>str</I>)</CODEROUTINE></TERM><DESC>remove white spaces from the beginning of <I>str</I></DESC></ROW>
 <ROW><TERM><CODEROUTINE>RTRIM(<I>str</I>)</CODEROUTINE></TERM><DESC>remove white spaces at the end of <I>str</I></DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <BLIST><TITLE><U><B>Commit/rollback</B></U></TITLE>
 <ITEM><CODEROUTINE>BEGIN</CODEROUTINE> starts a new transaction
 </ITEM>
@@ -540,7 +523,6 @@ returns the total sum of a column
 <ITEM><CODEROUTINE>RELEASE SAVEPOINT <I>savepointName</I></CODEROUTINE> deletes a savepoint
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>tricks</B></U></TITLE>
 <ITEM><X><T>ranks</T><A>http://www.1keydata.com/sql/sql-rank.html</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>median</T><A>http://www.1keydata.com/sql/sql-median.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -549,7 +531,6 @@ returns the total sum of a column
 <ITEM><X><T>percent to total</T><A>http://www.1keydata.com/sql/sql-percent-to-total.html</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>cumulative percent to total</T><A>http://www.1keydata.com/sql/sql-cumulative-percent-to-total.html</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>JDBC</B></U></TITLE>
 <ITEM>
 types of drivers (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/JDBC_driver</A><L>en</L><F>HTML</F></X>)
@@ -560,7 +541,6 @@ types of drivers (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/JDBC_driver
 <ROW><TERM>type 4</TERM><DESC>Native-Protocol Driver</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Informix</B></U></TITLE>
 <ITEM>
 display information about the tables
@@ -575,7 +555,6 @@ update table information
 <CODESAMPLE><PROMPT/>update statistics high;</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Postgres</B></U></TITLE>
 <ITEM>
 display the list of patients
@@ -590,7 +569,6 @@ change the lock status of series <CODEROUTINE>s105</CODEROUTINE>.
 <CODESAMPLE><PROMPT/><X><T>psql</T><A>http://www.postgresql.org/docs/current/static/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "update series_environment set series_lock ='Yes' where series_id = 's105';"</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>MySQL</B></U></TITLE>
 <ITEM>
 login
@@ -621,8 +599,6 @@ display the definition of a table
 <CODESAMPLE> describe <I>table</I>;</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>links</T><A>../links/sql.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

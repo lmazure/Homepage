@@ -5,7 +5,6 @@
 <PATH>notes/perlsample.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
-
 format a string into HTML
 <CODESAMPLE>
 sub to_html {<BR/>
@@ -16,9 +15,7 @@ sub to_html {<BR/>
 <TAB/>return $txt;<BR/>
 }<BR/>
 </CODESAMPLE>
-
 <BR/>
-
 quick 'n dirty routine to send a HTML file by mail on Solaris 2.8
 <CODESAMPLE>
 # ---------------------------------------------------------------------<BR/>
@@ -113,9 +110,7 @@ sub send_attached_html_file {<BR/>
 <TAB/>return;<BR/>
 }<BR/>
 </CODESAMPLE>
-
 <BR/>
-
 recursive copy of a referenced file archive (using UNC file names)
 <CODESAMPLE>#!/bin/perl -w<BR/>
 <BR/>
@@ -167,9 +162,7 @@ while ( m/K3[0-9]{4}/gcs ) {<BR/>
 <TAB/><TAB/>dircopy("$sourceDirectory\\$ref","$targetDirectory\\$ref");<BR/>
 <TAB/>}<BR/>
 }</CODESAMPLE>
-
 <BR/>
-
 suppress source files of compressed files
 <CODESAMPLE>#!/bin/perl -w<BR/>
 <BR/>
@@ -212,9 +205,7 @@ sub scan_dir {<BR/>
 }<BR/>
 <BR/>
 scan_dir($ARGV[0]);</CODESAMPLE>
-
 <BR/>
-
 renaming files with long file names
 <CODESAMPLE>#!/bin/perl -w<BR/>
 <BR/>
@@ -272,8 +263,6 @@ sub scan_dir {<BR/>
 }<BR/>
 <BR/>
 scan_dir($ARGV[0]);</CODESAMPLE>
-
 </CONTENT>
 <X><T>links</T><A>../links/perl.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

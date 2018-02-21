@@ -5,7 +5,6 @@
 <PATH>notes/ladmin.xml</PATH>
 <DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><U><B>Vulcan Nerve Pinch</B></U></TITLE>
 <ITEM>
 enable it with
@@ -29,7 +28,6 @@ enable it with
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Users/groups</B></U></TITLE>
 <ITEM><BLIST><TITLE>End user</TITLE>
 <ITEM><CODEROUTINE><X><T>chsh</T><A>javascript:do_reference("man/linux/1/chsh")</A><L>en</L><F>HTML</F></X></CODEROUTINE> change login shell</ITEM>
@@ -41,7 +39,6 @@ enable it with
 <ITEM><CODEROUTINE><X><T>vigr</T><A>javascript:do_reference("man/linux/8/vigr")</A><L>en</L><F>HTML</F></X></CODEROUTINE> edit the file<CODEFILENAME><X><T>/etc/group</T><A>javascript:do_reference("man/linux/5/group")</A><L>en</L><F>HTML</F></X></CODEFILENAME></ITEM>
 <ITEM><CODEROUTINE><X><T>visudo</T><A>javascript:do_reference("man/linux/8/visudo")</A><L>en</L><F>HTML</F></X></CODEROUTINE> edit the file <CODEFILENAME><X><T>/etc/sudoers</T><A>javascript:do_reference("man/linux/5/sudoers")</A><L>en</L><F>HTML</F></X></CODEFILENAME></ITEM>
 </BLIST></ITEM></BLIST>
-
 <BLIST><TITLE><U><B>Network</B></U></TITLE>
 <ITEM><BLIST><TITLE>DNS</TITLE>
 <ITEM>
@@ -72,7 +69,6 @@ before this, use <CODEROUTINE>redhat-config-network</CODEROUTINE>
 </BLIST>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Hardware analysis</B></U></TITLE>
 <ITEM>
 report the temperature, number of errors, lifetime&#x2026; of a ATA/IDE/SCSI3 hard drive
@@ -102,7 +98,6 @@ report the temperature, number of errors, lifetime&#x2026; of a ATA/IDE/SCSI3 ha
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>System analysis</B></U></TITLE>
 <ITEM>
 The messages log by the system are in <CODEFILENAME>/var/log</CODEFILENAME>.
@@ -252,7 +247,6 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>javascript:
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>File system analysis</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
@@ -340,7 +334,6 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>javascript:
 </BLIST>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Libraries</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
@@ -348,9 +341,5 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>javascript:
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
-
 </CONTENT>
 </PAGE>
-
-
-

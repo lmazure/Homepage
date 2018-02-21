@@ -5,7 +5,6 @@
 <PATH>notes/visualstudio.xml</PATH>
 <DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
-
 <DEFINITIONTABLE>
 <ROW><TERM><KEY ID='F6'/></TERM>
 <DESC>build the solution</DESC></ROW>
@@ -48,7 +47,6 @@
 <DESC>reformat the code</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 launch
 <DEFINITIONTABLE>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F5'/></TERM>
@@ -59,7 +57,6 @@ launch
 <DESC>stop the debugged application</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 unit tests
 <DEFINITIONTABLE>
 <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/><KEY ID='T'/></TERM>
@@ -72,7 +69,6 @@ unit tests
 <DESC>execute all tests of the solution in debug mode</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 debug
 <DEFINITIONTABLE>
 <ROW><TERM><KEY ID='F11'/></TERM>
@@ -99,7 +95,6 @@ debug
 <DESC>enable/disable breakpoint</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 In order to see all the files which are on the filesystem, even those not included in the project : <CODEMENU>Projet<CODEMENU>Afficher tous les fichiers</CODEMENU></CODEMENU> then<BR/>
 - with a right click a file and selecting <CODEMENU>Inclure dans le projet</CODEMENU>, or<BR/>
 - with <CODEMENU>Project<CODEMENU>Inclure dans le project</CODEMENU></CODEMENU><BR/>
@@ -107,19 +102,15 @@ the file will be included in the project.<BR/>
 <BR/>
 With <CODEMENU>Project<CODEMENU>Exclure du projet</CODEMENU></CODEMENU>, it is possible to exclude a file from the project.
 <BR/>
-
 <BLIST><TITLE>Productivity Power Tools</TITLE>
 <ITEM><X><T>Productivity Power Tools</T><A>http://visualstudiogallery.msdn.microsoft.com/d0d33361-18e2-46c0-8ff2-4adea1e34fef</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM><X><T>Productivity Power Tools 2012</T><A>http://visualstudiogallery.msdn.microsoft.com/3a96a4dc-ba9c-4589-92c5-640e07332afd</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM>To display a quideline at the 80th column, perform a right click on the 80th column and select <CODEMENU>Guidelines>Add Guideline</CODEMENU>.</ITEM>
 <ITEM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='PageDown'/> and <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='PageUp'/> navigates between tabs.</ITEM>
 </BLIST>
-
 <BLIST><TITLE>TFS Power Tools</TITLE>
 <ITEM><X><T>Team Foundation Server 2012 Power Tools</T><A>http://visualstudiogallery.msdn.microsoft.com/b1ef7eb2-e084-4cb8-9bc7-06c3bad9148f</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>C#</T><A>../notes/csharp.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

@@ -5,15 +5,12 @@
 <PATH>notes/uml.xml</PATH>
 <DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
-
 <B><U>history</U></B><BR/>
 <BLIST><TITLE>Created by the Three Amigos</TITLE>
 <ITEM>James Rumbaugh - OMT</ITEM>
 <ITEM>Grady Booch - Booch method</ITEM>
 <ITEM>Ivar Jacobson - OOSE</ITEM>
 </BLIST>
-
-
 <B><U>use case diagram</U></B><BR/>
 <BLIST><TITLE>Inter use cases relations</TITLE>
 <ITEM>&#xab;include&#xbb; (dotted arrow): the pointing use case A includes the pointed use case B<BR/>
@@ -29,8 +26,6 @@ the pointing use case A is a specialization of the pointed use case B</ITEM>
 Actor relation<BR/>
 The only possible relationship between actors is the generalization (standard generalization symbol).<BR/>
 <BR/>
-
-
 <B><U>class diagram / object diagram</U></B><BR/>
 class<BR/>
 box with three parts
@@ -89,8 +84,6 @@ The realization (of a type or of a parameterized class) is indicated by a hollow
 <ITEM>&#x2026;</ITEM>
 </BLIST>
 <BR/>
-
-
 <B><U>sequence diagram</U></B><BR/>
 The lines have a rectangle header. This header uses the "object : class" syntax. class is optional (but the : must still be present). object is optional (but the : must still be present). <BR/>
 <BR/>
@@ -101,17 +94,11 @@ A synchronous call is indicated by a filled solid arrowhead <BR/>
 An asynchronous call is indicated by a stick arrowhead (was indicated by a half stick arrowhead in UML1.3). <BR/>
 The return value (if there is such a value) is indicated by a dotted arrow with stick arrowhead. <BR/>
 <BR/>
-
-
 <B><U>collaboration diagram (known as communication diagrams in UML2)</U></B><BR/>
 The messages are numbered 1, 1.1, 1.1.1, 1.1.2, 1.2, 2&#x2026;.<BR/>
 <BR/>
-
-
 <B><U>state machine diagram</U></B><BR/>
 <BR/>
-
-
 <B><U>package diagrams</U></B><BR/>
 A package is shown as a large rectangle with a small rectangle (a "tab") attached to the left side of the top of the large rectangle.<BR/>
 The contents of the package may be shown within the large rectangle. Contents may also be shown by branching lines to contained elements, drawn outside of the package. A plus sign within a circle is drawn at the end attached to the container. The visibility of a package element outside the package may be indicated by preceding the name of the element by a visibility symbol<BR/>
@@ -122,4 +109,3 @@ Generalization symbols can appear, e.g. from an abstract package to a realizatio
 </CONTENT>
 <X><T>Links</T><A>../links/uml.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

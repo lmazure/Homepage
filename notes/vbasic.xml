@@ -5,12 +5,10 @@
 <PATH>notes/vbasic.xml</PATH>
 <DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><B><U>Syntax</U></B></TITLE>
 <ITEM>to cut a statement into several lines, use _ as the last character of the partial lines</ITEM>
 <ITEM>use <CODEROUTINE>&amp;H</CODEROUTINE> to define an integer constant in hexadecimal, e.g. <CODEROUTINE>&amp;H2026</CODEROUTINE>.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>Types</U></B></TITLE>
 <ITEM><CODEROUTINE>Byte</CODEROUTINE><BR/>
 unsigned 1 byte integer (range [0,255])</ITEM>
@@ -51,8 +49,6 @@ It is possible to defines variable as string of a given length.<BR/>
 </ITEM>
 <ITEM><CODEROUTINE>Variant</CODEROUTINE></ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Variables</U></B></TITLE>
 <ITEM>a type character defines the type of the preceding identifier<BR/>
 when a type character is used, the type declaration (e.g. <CODEROUTINE>As</CODEROUTINE>) is optional, if present, it must agree with the type character<BR/>
@@ -122,8 +118,6 @@ it is possible to declare all variables of a function or procedure as static by 
 </ITEM>
 <ITEM><CODEROUTINE>typeName(var)</CODEROUTINE> return a string which is the type of the variable <CODEROUTINE>var</CODEROUTINE></ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Arrays</U></B></TITLE>
 <ITEM><CODESAMPLE>Dim cusName(10) as String</CODESAMPLE>
 declare an array that consists of 10 elements if the statement Option Base 1 appear in the declaration area, of 11 elements otherwise
@@ -170,8 +164,6 @@ data(typ, impact, sev, col) = data(typ, impact, sev, col) + 1
 </CODESAMPLE>
 </ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Enums</U></B></TITLE>
 <ITEM>use the <CODEROUTINE>Enum</CODEROUTINE>
 <CODESAMPLE>Public Enum taskPriority<BR/>
@@ -194,7 +186,6 @@ End Enum</CODESAMPLE>
 End Enum</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>Operators</U></B></TITLE>
 <ITEM><CODEROUTINE>+</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>-</CODEROUTINE></ITEM>
@@ -204,8 +195,6 @@ End Enum</CODESAMPLE>
 <ITEM><CODEROUTINE>Mod</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>+</CODEROUTINE> and <CODEROUTINE>&amp;</CODEROUTINE> string concatenation</ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Comparison operators</U></B></TITLE>
 <ITEM><CODEROUTINE>&lt;</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>&lt;=</CODEROUTINE></ITEM>
@@ -217,8 +206,6 @@ End Enum</CODESAMPLE>
 </ITEM>
 <ITEM><CODEROUTINE>Like</CODEROUTINE></ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Boolean operators</U></B></TITLE>
 <ITEM><CODEROUTINE>And</CODEROUTINE> both expressions are always evaluated</ITEM>
 <ITEM><CODEROUTINE>AndAlso</CODEROUTINE> short-circuiting and</ITEM>
@@ -232,11 +219,7 @@ End Enum</CODESAMPLE>
 <ITEM><CODEROUTINE>Eqv</CODEROUTINE> logical equivalence</ITEM>
 <ITEM><CODEROUTINE>Imp</CODEROUTINE> logical implication</ITEM>
 </BLIST>
-
-
-
 <BLIST><TITLE><B><U>Flow control</U></B></TITLE>
-
 <ITEM>test<BR/>
 <CODESAMPLE>
 If CommandBars("Standard").Visible Then<BR/>
@@ -251,7 +234,6 @@ Else<BR/>
 End If
 </CODESAMPLE>
 </ITEM>
-
 <ITEM>loop<BR/>
 <CODESAMPLE>
 For j = 2 To 10 Step 2<BR/>
@@ -259,7 +241,6 @@ For j = 2 To 10 Step 2<BR/>
 Next j
 </CODESAMPLE>
 </ITEM>
-
 <ITEM>do while/until
 <CODESAMPLE>Do While condition<BR/>
 <TAB/>Block of one or more VB statements<BR/>
@@ -274,7 +255,6 @@ Loop</CODESAMPLE>
 <TAB/>Block of one or more VB statements<BR/>
 Loop Until condition</CODESAMPLE>
 </ITEM>
-
 <ITEM>loop on a collection content
 <CODESAMPLE>
 For Each c In col<BR/>
@@ -282,7 +262,6 @@ For Each c In col<BR/>
 Next c
 </CODESAMPLE>
 </ITEM>
-
 <ITEM>case
 <CODESAMPLE>Dim grade As String<BR/>
 Private Sub Compute_Click( )<BR/>
@@ -331,7 +310,6 @@ Private Sub Compute_Click()<BR/>
 <TAB/><TAB/><TAB/>comment.Caption = "Excellence"<BR/>
 <TAB/>End Select<BR/>
 End Sub</CODESAMPLE></ITEM>
-
 <ITEM>break from a loop, function, procedure, or property
 <CODESAMPLE>
 For &#x2026; To<BR/>
@@ -376,7 +354,6 @@ Property &#x2026;<BR/>
 End Property
 </CODESAMPLE>
 </ITEM>
-
 <ITEM>goto<BR/>
 <CODESAMPLE>
 goto foobar<BR/>
@@ -385,8 +362,6 @@ foobar:
 </CODESAMPLE>
 </ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Error handling</U></B></TITLE>
 <ITEM><CODESAMPLE>On Error GoTo <I>line</I></CODESAMPLE>
 If a run-time error occurs, control branches to <I>line</I>.<BR/>
@@ -396,7 +371,6 @@ When a run-time error occurs, control goes to the statement immediately followin
 <ITEM><CODESAMPLE>On Error GoTo 0</CODESAMPLE>
 Disables any enabled error handler in the current procedure.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>Functions</U></B></TITLE>
 <ITEM>The general format of a function is as follows:
 <CODESAMPLE>[Public|Friend|Private] [Static] Function functionName (Arg As dataType,&#x2026;&#x2026;&#x2026;.) As dataType<BR/>
@@ -412,7 +386,6 @@ The return value is defined by setting the <CODEROUTINE>functionName</CODEROUTIN
 <ITEM><CODEROUTINE>Exit function</CODEROUTINE> exits from the function.
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>Procedure</U></B></TITLE>
 <ITEM>The general format of a procedure is as follows:
 <CODESAMPLE>[Public|Friend|Private] [Static] Sub routineName (Arg As dataType,&#x2026;)<BR/>
@@ -422,8 +395,6 @@ End Sub</CODESAMPLE>
 <ITEM><CODEROUTINE>Exit sub</CODEROUTINE> exits from the routine.
 </ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Function/procedure parameters</U></B></TITLE>
 <ITEM>A parameter can be declared as optional by using the <CODEROUTINE>Optional</CODEROUTINE> keyword.</ITEM>
 <ITEM>A default value can be provided for an optional parameter
@@ -451,16 +422,12 @@ End Sub</CODESAMPLE>
 When calling a routine/procedure with <CODEROUTINE>Call</CODEROUTINE>, the parentheses must be present.
 </ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Class</U></B></TITLE>
 <ITEM>create an object
 <CODESAMPLE>Dim oCE As New MyClass</CODESAMPLE></ITEM>
 <ITEM>indicate that a class implements an interface or another class
 <CODESAMPLE>Implements MyOtherClass</CODESAMPLE></ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Collections</U></B></TITLE>
 <ITEM>use the <CODEROUTINE>Item</CODEROUTINE> method to access the elements<BR/>
 <CODESAMPLE>Documents.Item(1)</CODESAMPLE></ITEM>
@@ -472,8 +439,6 @@ When calling a routine/procedure with <CODEROUTINE>Call</CODEROUTINE>, the paren
 elements</ITEM>
 <ITEM>use <CODEROUTINE>Add</CODEROUTINE> and <CODEROUTINE>Remove</CODEROUTINE> methods to add or remove an element</ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Files</U></B></TITLE>
 <ITEM>writing a file
 <CODESAMPLE>Open "c:\My Documents\sample.txt" For Output As #1<BR/>
@@ -486,7 +451,6 @@ Input #1, var<BR/>
 Close #1</CODESAMPLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>FileSystemObject</U></B></TITLE>
 <ITEM>it is defined in the Scripting Runtime Library
 </ITEM>
@@ -598,8 +562,6 @@ For Each dir In folder.SubFolders<BR/>
 Next dir</CODESAMPLE>
 </ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Numerics</U></B></TITLE>
 <ITEM><CODEROUTINE>IsNumeric</CODEROUTINE> test if an expression can be evaluated as a number</ITEM>
 <ITEM><CODEROUTINE>Int</CODEROUTINE> return the integer value of a Double for positive values<BR/>
@@ -616,7 +578,6 @@ v = Val("Nothing")<BR/>
 Print v  ' Could not convert, prints 0<BR/>
 </CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>String manipulation</U></B></TITLE>
 <ITEM>use <CODEROUTINE>""</CODEROUTINE> to insert a <CODEROUTINE>"</CODEROUTINE> in a constant string<BR/>
 <CODESAMPLE>str = "the ""foobar"" word"</CODESAMPLE>
@@ -681,8 +642,6 @@ given delimiter
 <CODEROUTINE>Space(number)</CODEROUTINE> return a string that consists of a specified number of spaces
 </ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Date manipulation</U></B></TITLE>
 <ITEM><CODEROUTINE>IsDate(expr)</CODEROUTINE> test if an expression can be translated into a date
 </ITEM>
@@ -705,9 +664,6 @@ given delimiter
 <CODEROUTINE>Second(val)</CODEROUTINE> return the seconds of a date
 </ITEM>
 </BLIST>
-
-
-
 <BLIST><TITLE><B><U>Associative array</U></B></TITLE>
 <ITEM>add "Microsoft Scripting Runtime" in the project references</ITEM>
 <ITEM>use the <CODEROUTINE>Dictionary</CODEROUTINE> class (take care, this class also exists in Word)</ITEM>
@@ -760,8 +716,6 @@ For i = 0 To dict.Count - 1<BR/>
 Next i
 </CODESAMPLE></ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Versioning</U></B></TITLE>
 <ITEM><CODEROUTINE>ScriptEngine</CODEROUTINE> return the scripting language in use. It can return one of the following strings:
 <BLIST>
@@ -773,8 +727,6 @@ Next i
 <ITEM><CODEROUTINE>ScriptEngineMajorVersion</CODEROUTINE> return the major version number of the scripting engine in use</ITEM>
 <ITEM><CODEROUTINE>ScriptEngineMinorVersion</CODEROUTINE> return the minor version number of the scripting engine in use</ITEM>
 </BLIST>
-
-
 <BLIST><TITLE><B><U>Application management</U></B></TITLE>
 <ITEM>start an application
 <CODESAMPLE>Shell "notepad", vbNormalFocus</CODESAMPLE></ITEM>
@@ -793,9 +745,6 @@ If (VarType(inputFile) = vbString) Then<BR/>
 <TAB/>&#x2026; use theInputFile &#x2026; <BR/>
 End If</CODESAMPLE></ITEM>
 </BLIST>
-
-
-
 <BLIST><TITLE><B><U>Message box</U></B></TITLE>
 <ITEM>displays a message in a dialog box, waits for the user to click a button, and return an integer indicating which button the user clicked. 
 <CODESAMPLE>MsgBox(prompt[, buttons] [, title] [, helpfile, context])</CODESAMPLE>
@@ -816,13 +765,10 @@ text
 box. 
 <CODESAMPLE>InputBox(prompt[, title] [, default] [, xpos] [, ypos] [, helpfile, context])</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>Debugging</U></B></TITLE>
 <ITEM>print a message in the <I>immediate</I> window
 <CODESAMPLE>Debug.Print "Total Unread items = " &amp; oFldr.UnReadItemCount</CODESAMPLE></ITEM>
 </BLIST>
-
-
 </CONTENT>
 <X><T>links</T><A>../links/vbasic.html</A><L>en</L><F>HTML</F></X>
 <X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>
@@ -833,5 +779,3 @@ box.
 <X><T>Excel macro samples</T><A>excelsample.html</A><L>en</L><F>HTML</F></X>
 <X><T>Outlook macro samples</T><A>outlooksample.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-
-

@@ -5,7 +5,6 @@
 <PATH>notes/c.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><B>memory categories</B></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
@@ -28,7 +27,6 @@ they are stored in some sections of the executable file
 </BLIST></DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><CODEROUTINE>const</CODEROUTINE> correctness</B></TITLE>
 <ITEM>It is illegal to assign a pointer to a pointer to an <CODEROUTINE>int</CODEROUTINE> (<CODEROUTINE>pp</CODEROUTINE>) to a pointer to a pointer to a <CODEROUTINE>const int</CODEROUTINE> (<CODEROUTINE>ppc</CODEROUTINE>). Otherwise a <CODEROUTINE>const int</CODEROUTINE> could later be assigned to <CODEROUTINE>ppc</CODEROUTINE> and modified through <CODEROUTINE>pp</CODEROUTINE>. Here is an example:
 <CODESAMPLE>#include &lt;stdio.h&gt;<BR/>
@@ -50,29 +48,24 @@ int main(int argc, char **argv) {<BR/>
   return 0;<BR/>
 }</CODESAMPLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U><X><T><CODEROUTINE>&lt;stdint.h&gt;</CODEROUTINE></T><A>http://www.opengroup.org/onlinepubs/007904975/basedefs/stdint.h.html</A><L>en</L><F>HTML</F></X></U></B></TITLE>
 <ITEM><CODEROUTINE>int8_t</CODEROUTINE>, <CODEROUTINE>uint8_t</CODEROUTINE>, <CODEROUTINE>int16_t</CODEROUTINE>&#x2026; define types of a given sizes</ITEM>
 <ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>&#x2026; define types having at least a given size (the compiler will choose the types the most adequate for performance -e.g. it will use words if the CPU manipulate words faster than half-words - )</ITEM>
 <ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>&#x2026; define types having at least a given size (the compiler will choose the types the most adequate for the registers, this is useful for loop indexes for example)</ITEM>
 <ITEM><CODEROUTINE>intptr_t</CODEROUTINE>, <CODEROUTINE>uintptr_t</CODEROUTINE> define types large enough to contain a pointer</ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U><X><T><CODEROUTINE>&lt;stddef.h&gt;</CODEROUTINE></T><A>http://www.opengroup.org/onlinepubs/007904975/basedefs/stddef.h.html</A><L>en</L><F>HTML</F></X></U></B></TITLE>
 <ITEM><CODEROUTINE>ptrdiff_t</CODEROUTINE> difference between two pointers</ITEM>
 <ITEM><CODEROUTINE>wchar_t</CODEROUTINE> wide character</ITEM>
 <ITEM><CODEROUTINE>size_t</CODEROUTINE> result of a size_of<BR/>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><B><U>Swapping</U></B></TITLE>
 <ITEM>The Internet standards specify big-endian integers.<BR/>
 <CODEROUTINE>htonl</CODEROUTINE> and <CODEROUTINE>ntohl</CODEROUTINE> are used to convert 32-bit integers.<BR/>
 <CODEROUTINE>htons</CODEROUTINE> and <CODEROUTINE>ntohs</CODEROUTINE> are used for 16-bit integers.<BR/>
 There is no standard set of functions for 64-bit integers, but Linux provides the macros: <CODEROUTINE>bswap_16</CODEROUTINE>, <CODEROUTINE>bswap_32</CODEROUTINE>, and <CODEROUTINE>bswap_64</CODEROUTINE>.</ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>links</T><A>../links/c.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

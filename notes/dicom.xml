@@ -5,13 +5,11 @@
 <PATH>notes/dicom.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE>When analyzing DICOM changes:</TITLE>
 <ITEM>look at the changes described on <X><T>David Clunie's site</T><A>http://www.dclunie.com/dicom-status/status.html</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM>when you have found between which DICOM versions the change occurred, navigate in the <X><T>NEMA FTP site</T><A>ftp://medical.nema.org/medical/dicom/</A><L>en</L><F>HTML</F></X></ITEM>
 <ITEM>read the readme file for the year the change has been performed (this readme file describes the supplements and correction proposals applied part per part, but it seems to be absent after 2003)</ITEM>
 </BLIST>
-
 <U><B>Organization of the standard (2004)</B></U>
 <DEFINITIONTABLE>
 <ROW><TERM>1</TERM><DESC>Introduction and Overview</DESC></ROW>
@@ -32,7 +30,6 @@
 <ROW><TERM>18</TERM><DESC>Web Access to DICOM Persistent Objects (WADO)</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 A DICOM file is a list of fields.
 <BLIST><TITLE>Each field is composed by:</TITLE>
 <ITEM><BLIST><TITLE>for explicit encodings</TITLE>
@@ -49,7 +46,6 @@ A DICOM file is a list of fields.
 <ITEM>a group number (two bytes)</ITEM>
 <ITEM>an element number (two bytes)</ITEM>
 </BLIST>
-
 Value Representations (defined in part 5 of the standard)
 <DEFINITIONTABLE>
 <ROW><TERM>AE</TERM><DESC>Application Entity</DESC></ROW>
@@ -81,7 +77,6 @@ Value Representations (defined in part 5 of the standard)
 <ROW><TERM>UT</TERM><DESC>Unlimited Text</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 Some common fields (the whole list constitutes the part 6 of the standard)
 <DEFINITION2TABLE>
 <ROW><TERM1>(0008,0008)</TERM1><TERM2>CS</TERM2><DESC>Image Type</DESC></ROW>
@@ -109,7 +104,6 @@ Some common fields (the whole list constitutes the part 6 of the standard)
 <ROW><TERM1>(0028,0301)</TERM1><TERM2>CS</TERM2><DESC>Burned in Annotation</DESC></ROW>
 </DEFINITION2TABLE>
 <BR/>
-
 <U><B>List of modalities (&#xA7;C.7.3.1.1.1 in PS 3.3 2004)</B></U><BR/>
 (stored in (0008,0060))
 <DEFINITIONTABLE>
@@ -169,7 +163,6 @@ Some common fields (the whole list constitutes the part 6 of the standard)
 <ROW><TERM>XC</TERM><DESC>External-camera Photography</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 Standard SOP classes (&#xA7;B5 in PS3.3 2003)
 <DEFINITIONTABLE>
 <ROW><TERM>1.2.840.10008.5.1.1.27</TERM><DESC>Stored Print Storage</DESC></ROW>
@@ -239,7 +232,6 @@ Standard SOP classes (&#xA7;B5 in PS3.3 2003)
 <ROW><TERM>1.2.840.10008.5.1.4.1.1.481.7</TERM><DESC>RT Treatment Summary Record Storage</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 Transfer syntaxes (Annex A in PS3.6 2003)
 <DEFINITIONTABLE>
 <ROW><TERM>1.2.840.10008.1.2</TERM><DESC>Implicit VR Little Endian: Default Transfer Syntax for DICOM</DESC></ROW>
@@ -272,7 +264,6 @@ Transfer syntaxes (Annex A in PS3.6 2003)
 <ROW><TERM>1.2.840.10008.1.2.5</TERM><DESC>RLE Lossless </DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 Pixel pipeline
 <TABLE>
 <ROW><CELL>manufacturer dependant pixel values</CELL><CELL></CELL></ROW>
@@ -298,10 +289,7 @@ or<BR/>
 <ROW><CELL>p-values<BR/>
 device independent perceptually linear space</CELL><CELL></CELL></ROW>
 </TABLE><BR/>
-
 Overlay planes are embedded when the value of (60xx,0102) is strictly positive. This feature has been dropped from DICOM 2006.<BR/>
-
 </CONTENT>
 <X><T>links</T><A>../links/dicom.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

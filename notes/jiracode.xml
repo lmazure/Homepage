@@ -5,7 +5,6 @@
 <PATH>notes/jiracode.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
-
 API
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>jira1.addComment</CODEROUTINE></TERM>
@@ -48,7 +47,6 @@ API
 <DESC>Updates an issue in JIRA from a Hashtable object</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 Here is a program that will add a code review comment to all requests anterior or equal to a given build number.
 <CODESAMPLE>package com.kika.JIRACodeReviewDriver;<BR/>
 <BR/>
@@ -316,7 +314,6 @@ public class Test<BR/>
 <TAB/>}<BR/>
 }</CODESAMPLE>
 <BR/>
-
 Code to set a custom field
 <CODESAMPLE>Vector&lt;String&gt; v = new Vector&lt;String&gt;(1);<BR/>
 v.add(fieldValue); <BR/>
@@ -327,8 +324,5 @@ parameters.add(a_loginToken); <BR/>
 parameters.add(requestID); <BR/>
 parameters.add(map); <BR/>
 /* Map&lt;String,Object&gt; modifiedIssue = (Map&lt;String,Object&gt;) */ a_rpcClient.execute("jira1.updateIssue", parameters);</CODESAMPLE>
-
-
 </CONTENT>
 </PAGE>
-

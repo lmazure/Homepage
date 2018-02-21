@@ -5,10 +5,8 @@
 <PATH>notes/tfs.xml</PATH>
 <DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
-
 <CODESAMPLE><PROMPT/>tf="/cygdrive/c/Program Files (x86)/Microsoft Visual Studio 11.0/Common7/IDE/TF.exe"</CODESAMPLE><BR/>
 <BR/>
-
 create a workspace <I>foobar</I><BR/>
 <CODESAMPLE><PROMPT/>cd "$tfsdir"<BR/>
 <PROMPT/>mkdir <I>foobar</I><BR/>
@@ -16,26 +14,21 @@ create a workspace <I>foobar</I><BR/>
 <PROMPT/>"$tf" workspace /new <I>foobar</I> /collection:http://alm.eurofins.local/tfs/eurofinscollection<BR/>
 <PROMPT/>"$tf" get "eCommerce/EOL/Trunk" /recursive</CODESAMPLE><BR/>
 <BR/>
-
 list the workspaces on the current computer<BR/>
 <CODESAMPLE><PROMPT/>"$tf" workspaces</CODESAMPLE><BR/>
 <BR/>
-
 delete a workspace <I>foobar</I><BR/>
 <CODESAMPLE><PROMPT/>"$tf" workspace /delete <I>foobar</I><BR/>
 <PROMPT/>cd "$tfsdir"<BR/>
 <PROMPT/>rm -fr <I>foobar</I></CODESAMPLE><BR/>
 <BR/>
-
 get last changeset included in label EOL-2015-12-RC3<BR/>
 <CODESAMPLE><PROMPT/>cd "$tfsdir"<BR/>
 <PROMPT/>"$tf" history . /stopafter:1 /noprompt /r /version:LEOL-2015-12-RC3</CODESAMPLE><BR/>
 <BR/>
-
 create a label:<BR/>
 right click on $/eCommerce/EOL/Trunk and select <CODEMENU>Advanced<CODEMENU>Apply Label&#x2026;</CODEMENU></CODEMENU><BR/>
 <BR/>
-
 search:<BR/>
 <DEFINITIONTABLE>
 <ROW><TERM>tags:teal bozo</TERM>
@@ -43,9 +36,6 @@ search:<BR/>
 <ROW><TERM>tags:coding_policy -S=Done -S=Removed</TERM>
 <DESC>Work Items with the "coding_policy" tag and which are not Done or Removed</DESC></ROW>
 </DEFINITIONTABLE>
-
-
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#tfs</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

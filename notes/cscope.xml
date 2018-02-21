@@ -5,13 +5,11 @@
 <PATH>notes/cscope.xml</PATH>
 <DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
-
 build the database:
 <CODESAMPLE>
 <PROMPT/>find /vobs-awa/AW4.3_src/src -name '*.[ch]' -print &gt; cscope.files<BR/>
 <PROMPT/>cscope -b -q
 </CODESAMPLE><BR/>
-
 start the browser:
 <CODESAMPLE>
 <PROMPT/>cscope -d
@@ -34,9 +32,6 @@ start the browser:
 <DESC>exit</DESC>
 </ROW>
 </DEFINITIONTABLE><BR/>
-
 </CONTENT>
-
 <X><T>Links</T><A>../links/coding.html#cscope</A><L>en</L><F>HTML</F></X>
-
 </PAGE>

@@ -5,7 +5,6 @@
 <PATH>notes/word.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><U>open/save/close documents</U></TITLE>
 <ITEM>
 always ask how the files should be loaded (e.g. HTML vs raw text)<BR/>
@@ -43,7 +42,6 @@ enable/disable macros execution when opening a document<BR/>
 when typing a text in Word, instead of cutting 'n pasting in Outlook (which many times garbages the text format), use <CODEMENU>File<CODEMENU>Send to<CODEMENU>Mail Recipient</CODEMENU></CODEMENU></CODEMENU>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>master document</U></TITLE>
 <ITEM><BLIST><TITLE>Create a master Document (Word 2007, this is similar but buggy with large documents for Word 2003)</TITLE>
   <ITEM>Display in outline mode</ITEM>
@@ -56,7 +54,6 @@ when typing a text in Word, instead of cutting 'n pasting in Outlook (which many
   <ITEM>Save</ITEM>
 </BLIST></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>edition</U></TITLE>
 <ITEM>
 insert a horizontal line<BR/>
@@ -107,11 +104,9 @@ configure a text zone to be the continuation of another one<BR/>
 </NLIST>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>Table</U></TITLE>
 <ITEM>To insert a tab in a table, use <MODIFIERKEY ID='Ctrl'/><KEY ID='Tab'/>.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>formulas</U></TITLE>
 <ITEM>operators
 <DEFINITIONTABLE>
@@ -238,7 +233,6 @@ y is negative. Rounds x to that number of places to the left of the decimal. Y m
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>table of content / index</U></TITLE>
 <ITEM>
 <BLIST><TITLE>When updating a document typed in a French version of Word where the headings have been defined as <CODEROUTINE>TITRE1</CODEROUTINE>, <CODEROUTINE>TITRE2</CODEROUTINE>, <CODEROUTINE>TITRE3</CODEROUTINE>&#x2026; in an English version of Word, the Content Table will be lost. To regenerate it, perform the following:</TITLE>
@@ -248,7 +242,6 @@ y is negative. Rounds x to that number of places to the left of the decimal. Y m
 </BLIST>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>find/replace</U></TITLE>
 <ITEM>
 it is possible to use the format shortcut (<MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='B'/>&#x2026;) in the Find/Replace window
@@ -280,7 +273,6 @@ the following codes can be used to find/replace
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>style</U></TITLE>
 <ITEM>
 reset the default styles to a correct value
@@ -296,7 +288,6 @@ reset the default styles to a correct value
 </BLIST>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>ruler</U></TITLE>
 <ITEM>
 When working with the ruler, press the Alt key to display the distances.
@@ -323,7 +314,6 @@ To create a tab stop, just click on the ruler.<BR/>
 To change the type of tab stop, click on the current tab stop type (at the left of the horizontal ruler).
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>statistics</U></TITLE>
 <ITEM>
 display the statistics toolbar<BR/>
@@ -331,21 +321,18 @@ display the statistics toolbar<BR/>
 the bar allows to select one metric (word, characters - excluding spaces -, characters - including spaces -, pages, and paragraphs) and a button to refresh it.
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>change tracking</U></TITLE>
 <ITEM>
 compare two documents<BR/>
 <CODEMENU>Tools menu<CODEMENU>Track Changes<CODEMENU>Compare Documents</CODEMENU></CODEMENU></CODEMENU>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>printing</U></TITLE>
 <ITEM>
 number the lines on the printed document<BR/>
 <CODEMENU>File<CODEMENU>Page Setup<CODEMENU>Layout<CODEMENU>Line Numbers (select the right "Apply to:")</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>customization</U></TITLE>
 <ITEM>
 enable/disable Tab and Backspace to indent/outdent a paragraph:<BR/>
@@ -367,23 +354,17 @@ To disable the dynamic shortenings of the command dropdowns, select <CODEMENU>Ou
 To display the shortcuts in the tooltips, select <CODEMENU>Outils<CODEMENU>Personnaliser&#x2026;<CODEMENU>Options<CODEMENU>Afficher les touches de raccourci dans les Info-bulles</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>Unicode</U></TITLE>
 <ITEM><BLIST><TITLE>Use one of the following fonts:</TITLE>
 <ITEM>Arial Unicode MS</ITEM>
 <ITEM>Lucide Sans Unicode</ITEM></BLIST></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U>strange</U></TITLE>
 <ITEM>
 insert 3 paragraphs of 5 sentences "Servez &#xE0; ce monsieur une bi&#xE8;re et des kiwis".<BR/>
 type "=rand(3,5)" and press <KEY ID='Enter'/>.
 </ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>links</T><A>../links/office.html#word</A><L>en</L><F>HTML</F></X>
 </PAGE>
-
-
-

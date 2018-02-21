@@ -5,9 +5,7 @@
 <PATH>notes/win2000.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
-
 <BLIST>
-
 <ITEM>
 To disable the dynamic shortening of the lists in the Start Menu:<BR/>
 <CODEMENU>Right click<CODEMENU>Propri&#xE9;t&#xE9;s<CODEMENU>Menu D&#xE9;marrer</CODEMENU></CODEMENU></CODEMENU><BR/>
@@ -15,36 +13,29 @@ Select <CODEMENU>Menu D&#xE9;marrer Classique</CODEMENU><BR/>
 Click on <CODEMENU>Personnaliser&#x2026;</CODEMENU><BR/>
 Unselect <CODEMENU>Utiliser des menus personnalis&#xE9;s</CODEMENU>
 </ITEM>
-
 <ITEM>
 <CODEROUTINE>cmd.exe</CODEROUTINE> replaces <CODEROUTINE>command.com</CODEROUTINE>.
 </ITEM>
-
 <ITEM>
 <CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
 </ITEM>
-
 <ITEM>
 <CODEROUTINE>&amp;&amp;</CODEROUTINE> command following this symbol runs only if the command preceding the symbol succeeds<BR/>
 <CODEROUTINE>||</CODEROUTINE> command following this symbol runs only if the command preceding the symbol fails<BR/>
 <CODEROUTINE>&amp;</CODEROUTINE> separates multiple commands on the command line
 </ITEM>
-
 <ITEM>
 find a file whose name contains Ondine
 <CODESAMPLE>dir c:\ /s /b | find "Ondine"</CODESAMPLE>
 </ITEM>
-
 <ITEM>
 recursively loop on the <CODEROUTINE>*.htm</CODEROUTINE> file to find a string
 <CODESAMPLE>for /r %f in (*.htm) do find "foobar" "%f"</CODESAMPLE>
 </ITEM>
-
 <ITEM>
 recursively loop on files to compress them
 <CODESAMPLE>for /r %f in (*.*) do "C:\Program Files\7-Zip\7z.exe" a -tzip "%f.zip" "%f"</CODESAMPLE>
 </ITEM>
-
 <ITEM>
 to change the letter of a drive:<BR/>
 start <CODEROUTINE>compmgmt.msc</CODEROUTINE><BR/>
@@ -54,30 +45,24 @@ select <CODEMENU>Modifier la lettre et les chemins d'acc&#xE8;s&#x2026;</CODEMEN
 in the newly displayed dialog, click on <CODEMENU>Modifer&#x2026;</CODEMENU><BR/>
 select the new letter and apply
 </ITEM>
-
 <ITEM>
 to shutdown the computer in 10 minutes
 <CODESAMPLE>shutdown /t 600 /s</CODESAMPLE>
 </ITEM>
-
 <ITEM>
 to reboot a machine in RDP
 <CODESAMPLE>shutdown -t 0 -r -f</CODESAMPLE>
 </ITEM>
-
 <ITEM>
 to create a large file
 <CODESAMPLE>fsutil file createnew &lt;filename&gt; &lt;length&gt;</CODESAMPLE>
 </ITEM>
-
 </BLIST>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>help</CODEROUTINE></TERM><DESC>display the list of the command</DESC></ROW>
 <ROW><TERM><CODEROUTINE>help foobar</CODEROUTINE></TERM><DESC>display help about command <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>cacls &lt;file&gt;</CODEROUTINE></TERM><DESC>display the ACLs of file</DESC></ROW>
 <ROW><TERM><CODEROUTINE>cacls &lt;file&gt; /g ftp:c david:c</CODEROUTINE></TERM>
@@ -102,7 +87,6 @@ edit the ACLs instead of reseting them
 <ROW><TERM><CODEROUTINE>cacls &lt;dir&gt; &lt;operations&gt; /t</CODEROUTINE></TERM><DESC>change recursively the ACLs of sub-directories and files</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>find "string" file</CODEROUTINE></TERM><DESC>search a string in a file<BR/>e.g. <CODEROUTINE>find "blockquote" *</CODEROUTINE></DESC></ROW>
 <ROW><TERM><CODEROUTINE>/v</CODEROUTINE></TERM><DESC>display all the lines not containing the string</DESC></ROW>
@@ -110,7 +94,6 @@ edit the ACLs instead of reseting them
 <ROW><TERM><CODEROUTINE>/n</CODEROUTINE></TERM><DESC>prepend each line by its number in the file</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>findstr "string" file</CODEROUTINE></TERM><DESC>search a string in a file<BR/>perform a recursive search<BR/><CODEROUTINE>findstr /m /s "foobar" *.*</CODEROUTINE><BR/>the usual wild characters are supported
 <DEFINITIONTABLE>
@@ -136,7 +119,6 @@ edit the ACLs instead of reseting them
 this is the same as the <CODEROUTINE>find</CODEROUTINE> command</ITEM></BLIST></DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>ipconfig /all</CODEROUTINE></TERM><DESC>display the full network configuration</DESC></ROW>
 <ROW><TERM><CODEROUTINE>ipconfig /displaynfs</CODEROUTINE></TERM><DESC>display the content of the DNS cache</DESC></ROW>
@@ -147,7 +129,6 @@ this is the same as the <CODEROUTINE>find</CODEROUTINE> command</ITEM></BLIST></
 <ROW><TERM><CODEROUTINE>nslookup <I>host</I></CODEROUTINE></TERM><DESC>return the IP address of <I>host</I></DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>attrib</CODEROUTINE></TERM><DESC>list the attributes of a file</DESC></ROW>
 <ROW><TERM><CODEROUTINE>attrib +r</CODEROUTINE></TERM><DESC>set the read only attribute of a file</DESC></ROW>
@@ -162,7 +143,6 @@ this is the same as the <CODEROUTINE>find</CODEROUTINE> command</ITEM></BLIST></
 <ROW><TERM><CODEROUTINE>/d</CODEROUTINE></TERM><DESC>also process folders</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>xcopy</CODEROUTINE></TERM><DESC>copy a directory<BR/>
 e.g. <CODEROUTINE>xcopy dir_source/data dir_target/data /S /E</CODEROUTINE><BR/>
@@ -177,7 +157,6 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
 <ROW><TERM><CODEROUTINE>/w</CODEROUTINE></TERM><DESC>display a prompt before copying the file (the copy can be cancelled with <MODIFIERKEY ID='Ctrl'/><KEY ID='C'/>)</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>copy</CODEROUTINE></TERM><DESC>copy a file</DESC></ROW>
 <ROW><TERM><CODEROUTINE>/v</CODEROUTINE></TERM><DESC>check that sectors written on disk are correct</DESC></ROW>
@@ -191,20 +170,16 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
 <ROW><TERM><CODEROUTINE>copy foo.bar+*.bar</CODEROUTINE></TERM><DESC>concatenate all the files into <CODEROUTINE>foo.bar</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>regsvr32</CODEROUTINE></TERM><DESC>register or unregister a DLL or an ActiveX control</DESC></ROW>
 <ROW><TERM><CODEROUTINE>/u</CODEROUTINE></TERM><DESC>unregister</DESC></ROW>
 <ROW><TERM><CODEROUTINE>/s</CODEROUTINE></TERM><DESC>run silently and do not display any message box</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 In order to know which process uses a given file, use <X><T>Handle</T><A>http://technet.microsoft.com/en-us/sysinternals/bb896655</A><L>fr</L><F>HTML</F></X> of <X><T>SysInternals</T><A>http://www.sysinternals.com</A><L>fr</L><F>HTML</F></X>.<BR/>
 <BR/>
 Format a large hard drive in FAT32: use <X><T>guiformat.exe</T><A>http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm</A><L>en</L><F>HTML</F></X>.<BR/>
 <BR/>
-
 </CONTENT>
 <X><T>links</T><A>../links/windows.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

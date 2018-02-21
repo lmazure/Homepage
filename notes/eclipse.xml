@@ -5,7 +5,6 @@
 <PATH>notes/eclipse.xml</PATH>
 <DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><U><B>Install and update</B></U></TITLE>
   <ITEM>Set up the Proxy:<BR/>
     go in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Install/Update</CODEMENU></CODEMENU></CODEMENU><BR/>
@@ -22,13 +21,11 @@
     wait for <CODEMENU>Verification</CODEMENU> window and click <CODEMENU>Install All</CODEMENU>
   </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Launch</B></U></TITLE>
   <ITEM>For a unknown reason <CODEROUTINE>-vmargs -Xmx&#x3B1;M</CODEROUTINE> does not work if &#x3B1; is greater than 1024.<BR/>
     But the following command line works:<BR/>
     <CODEROUTINE>eclipse -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODEROUTINE> (but the value <CODEROUTINE>1600</CODEROUTINE> seems to depends on some PC characteristics, which ones?)</ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Project management</B></U></TITLE>
   <ITEM>create a project on an existing source hierarchy<BR/>
     <CODEMENU>File<CODEMENU>New<CODEMENU>Project&#x2026;<CODEMENU>Java Project</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
@@ -36,7 +33,6 @@
     Location: Create project a external location<BR/>
     <TAB/>Directory: D:\Docs\perso\develop\ptm</CODESAMPLE></ITEM>
 </BLIST>
-
 <U><B>Window navigation</B></U>
 <DEFINITIONTABLE>
   <ROW><TERM><KEY ID='F12'/></TERM>
@@ -61,18 +57,15 @@
   <DESC>display errors</DESC></ROW>
   </DEFINITIONTABLE>
 <BR/>
-
 <U><B>Unit tests</B></U>
 <DEFINITIONTABLE>
   <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='X'/><KEY ID='T'/></TERM>
   <DESC>run all JUnit tests of the current source file</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
-
 <BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
   <ITEM>define the Java version used by compiler <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Compiler</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select the Java version in <CODEMENU>Compiler compliance level</CODEMENU></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Edition</B></U></TITLE>
   <ITEM>in Editor window
     <DEFINITIONTABLE>
@@ -116,7 +109,6 @@
   </ITEM>
   <ITEM>configure the folding with <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Editor<CODEMENU>Folding</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>.</ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Bookmarks</B></U></TITLE>
   <ITEM>add a boomark on the current line:<BR/>
     right-click on the left margin of the Editor and select <CODEMENU>Add Bookmark&#x2026;</CODEMENU> or <CODEMENU>Edit<CODEMENU>Add Bookmark&#x2026;</CODEMENU></CODEMENU> in the menubar<BR/>
@@ -128,7 +120,6 @@
     right-click on the left margin of the Editor and select <CODEMENU>Delete Bookmark</CODEMENU> or<BR/>
     select the boomark in the Bookmark View and type <KEY ID='Del'/></ITEM>
 </BLIST>
-
 <U><B>Search</B></U><BR/>
 in Editor window
 <DEFINITIONTABLE>
@@ -154,7 +145,6 @@ in Search window
 <ROW><TERM><KEY ID='F5'/></TERM>
 <DESC>update the search</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <U><B>Code generation</B></U><BR/>
 <BLIST>
 <ITEM>set the field name prefixes in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Code Style</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
@@ -162,7 +152,6 @@ in Search window
 <ITEM>generate the constructor with <CODEMENU>Source<CODEMENU>Generate Constructor using Fields&#x2026;</CODEMENU></CODEMENU></ITEM>
 <ITEM>generate the setters and/or getters <CODEMENU>Source<CODEMENU>Generate Getters and Setters&#x2026;</CODEMENU></CODEMENU></ITEM>
 </BLIST>
-
 <U><B>Refactoring</B></U><BR/>
 In Editor window
 <DEFINITIONTABLE>
@@ -179,12 +168,10 @@ In Editor window
 <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
 <DESC>change method signature</DESC></ROW>
 </DEFINITIONTABLE><BR/>
-
 <BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
 <ITEM>define the Java version used by compiler<BR/>
 <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Compiler</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select the Java version in <CODEMENU>Compiler compliance level</CODEMENU></ITEM>
 </BLIST>
-
 <U><B>Running/debugging applications</B></U><BR/>
 In Editor window
 <DEFINITIONTABLE>
@@ -246,7 +233,6 @@ in Debug window
 <ITEM>for each thread, look at the lock waited for and to who owns it</ITEM>
 </BLIST>
 <BR/>
-
 <BLIST><TITLE><U><B>Application creation</B></U></TITLE>
 <ITEM><BLIST><TITLE>Create a JAR file</TITLE>
 <ITEM>Right click on the project name in the <CODEMENU>Project Explorer</CODEMENU> and select <CODEMENU>Export</CODEMENU>.</ITEM>
@@ -256,7 +242,6 @@ in Debug window
 <ITEM>Select the class containing the <CODEMENU>Main</CODEMENU> method to generate in the <CODEMENU>Main class</CODEMENU> field and click <CODEMENU>Finish</CODEMENU>.</ITEM>
 </BLIST></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Javadoc</B></U></TITLE>
 <ITEM>in Editor window
 <DEFINITIONTABLE>
@@ -287,26 +272,22 @@ double click on <CODEMENU>Source attachment</CODEMENU> and type <CODEROUTINE>C:/
 double click on <CODEMENU>Javadoc location</CODEMENU> and type <CODEROUTINE>file://C:/Documents and Settings/Laurent/Mes documents/docs/JDK 1.5.0/api</CODEROUTINE></ITEM>
 </BLIST></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Customization</B></U></TITLE>
   <ITEM>key binding customization<BR/>
     <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Workbench<CODEMENU>Keys</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
   </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>Help</B></U></TITLE>
   <ITEM><DEFINITIONTABLE>
       <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='L'/></TERM>
       <DESC>display the list of shortcuts</DESC></ROW>
     </DEFINITIONTABLE></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>JavaFx</B></U></TITLE>
   <ITEM>use <X><T>e(fx)clipse</T><A>https://www.eclipse.org/efxclipse/index.html</A><L>en</L><F>HTML</F></X><BR/>
     The packages are installable from <X><T>http://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</T><A>http://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</A><L>en</L><F>HTML</F></X>.
   </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>FindBugs</B></U></TITLE>
   <ITEM><BLIST><TITLE>Installing FindBugs</TITLE>
     <ITEM><CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install&#x2026;</CODEMENU></CODEMENU></CODEMENU></ITEM>
@@ -325,19 +306,15 @@ double click on <CODEMENU>Javadoc location</CODEMENU> and type <CODEROUTINE>file
     <ITEM>right click on a Java project and select <CODEMENU>Find Bugs<CODEMENU>Find Bugs</CODEMENU></CODEMENU></ITEM>
   </BLIST></ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>MAT</B></U></TITLE>
   <ITEM>command line to start Eclipse/MAT in order to have enough memory to parse a 2GB heapdump:<BR/>
   <CODESAMPLE>MemoryAnalyzer.exe -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODESAMPLE>
   </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>JavaScript</B></U></TITLE>
   <ITEM><CODEMENU>Window<CODEMENU>Open Perspective<CODEMENU>JavaScript</CODEMENU></CODEMENU></CODEMENU><BR/>
     once the perspective is displayed, in the <CODEMENU>Script Explorer</CODEMENU> view, right-click on the project and select <CODEMENU>Configure<CODEMENU>Add JavaScript support&#x2026;</CODEMENU></CODEMENU></ITEM>
 </BLIST>
-
 </CONTENT>
 <X><T>Links</T><A>../links/coding.html#eclipse</A><L>en</L><F>HTML</F></X>
 </PAGE>
-

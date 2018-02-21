@@ -5,7 +5,6 @@
 <PATH>notes/lxproc.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
-
 <BLIST><TITLE><U><B>process analysis</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
@@ -149,7 +148,6 @@ in the file <CODEFILENAME>/etc/security/limits.conf</CODEFILENAME></ITEM>
 </BLIST>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>profiling</B></U></TITLE>
 <ITEM>profile a binary:<BR/>
 compile and link all the code with <CODEROUTINE>-pg</CODEROUTINE>
@@ -164,7 +162,6 @@ setenv LD_PROFILE libMyLib.so<BR/>
 <X><T>sprof</T><A>javascript:do_reference("man/linux/1/sprof")</A><L>en</L><F>HTML</F></X> /path_to_lib/$LD_PROFILE $LD_PROFILE_OUTPUT/$LD_PROFILE.profile</CODESAMPLE>
 (this gives the number of calls, but no timing)</ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>miscellaneous</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
@@ -173,14 +170,9 @@ setenv LD_PROFILE libMyLib.so<BR/>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
-
 <BLIST><TITLE><U><B>miscellaneous</B></U></TITLE>
 <ITEM>Many of these tools use <X><T>libelf</T><A>http://directory.fsf.org/libs/misc/libelf.html</A><L>en</L><F>HTML</F></X> to parse the ELF files.
 </ITEM>
 </BLIST>
-
 </CONTENT>
 </PAGE>
-
-
-

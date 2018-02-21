@@ -5,14 +5,12 @@
 <PATH>notes/excelsample.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
-
 fix the URLs incorrectly handled by Excel 2002
 <CODESAMPLE>
 Sub fix_url()<BR/>
 <TAB/>Selection.Hyperlinks(1).Address = Replace(Selection.Hyperlinks(1).Address, "/", "\\")<BR/>
 End Sub<BR/>
 </CODESAMPLE><BR/>
-
 add hyperlinks toward indexed photos
 <CODESAMPLE>
 Sub hyperlinkPhoto()<BR/>
@@ -21,7 +19,6 @@ Sub hyperlinkPhoto()<BR/>
 <TAB/>Next i<BR/>
 End Sub<BR/>
 </CODESAMPLE><BR/>
-
 hyperlink the SPRs
 <CODESAMPLE>
 Option Explicit<BR/>
@@ -57,7 +54,6 @@ Sub hyperlinkDDTS()<BR/>
 <TAB/>Next i<BR/>
 End Sub<BR/>
 </CODESAMPLE><BR/>
-
 hyperlink the requests in JIRA
 <CODESAMPLE>
 Option Explicit<BR/>
@@ -89,7 +85,6 @@ Sub hyperlinkJIRA()<BR/>
 <TAB/>Next i<BR/>
 End Sub
 </CODESAMPLE><BR/>
-
 compare two sheets in two different files
 <CODESAMPLE>
 Option Explicit<BR/>
@@ -139,7 +134,6 @@ Sub compare()<BR/>
 <TAB/>End If<BR/>
 End Sub
 </CODESAMPLE><BR/>
-
 merge two sheets according to a key present on both of them
 <CODESAMPLE>Option Explicit<BR/>
 <BR/>
@@ -255,7 +249,6 @@ Sub merge()<BR/>
 <TAB/>Application.ScreenUpdating = True<BR/>
 End Sub
 </CODESAMPLE><BR/>
-
 create a graph of frequencies from an Excel database
 <CODESAMPLE> Option Explicit<BR/>
 <BR/>
@@ -334,10 +327,8 @@ Sub CreateRootCauseGraph()<BR/>
 <TAB/>Application.ScreenUpdating = True<BR/>
 <TAB/><BR/>
 End Sub</CODESAMPLE>
-
 </CONTENT>
 <X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>
 <X><T>Visual Basic Editor</T><A>vbeditor.html</A><L>en</L><F>HTML</F></X>
 <X><T>Visual Basic in Excel</T><A>excelvb.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
-
