@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>SQL</TITLE>
 <PATH>notes/sql.xml</PATH>
-<DATE><YEAR>2012</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 
 
@@ -48,8 +48,6 @@ syntax
 &#x2026;<BR/>
 <I>column_nameN</I> <I>data_type</I><BR/>
 )</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>CREATE TABLE Persons<BR/>
 (<BR/>
@@ -114,8 +112,6 @@ Amount double);</CODESAMPLE>
 add a column
 <CODESAMPLE>ALTER TABLE <I>table_name</I><BR/>
 ADD <I>column_name</I> <I>datatype</I>;</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>ALTER TABLE Person ADD City varchar(30);</CODESAMPLE>
 </ITEM>
@@ -123,8 +119,6 @@ example
 add a column
 <CODESAMPLE>ALTER TABLE <I>table_name</I><BR/>
 DROP COLUMN <I>column_name</I>;</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>ALTER TABLE Person DROP COLUMN Address;</CODESAMPLE>
 </ITEM>
@@ -150,8 +144,6 @@ syntax
 syntax
 <CODESAMPLE>INSERT INTO <I>table_name</I><BR/>
 VALUES (<I>value1</I>, <I>value2</I>,&#x2026;);</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>INSERT INTO Persons<BR/>
 VALUES ('Hetland', 'Camilla', 'Hagabakka 24', 'Sandnes');</CODESAMPLE>
@@ -160,8 +152,6 @@ VALUES ('Hetland', 'Camilla', 'Hagabakka 24', 'Sandnes');</CODESAMPLE>
 it is possible to indicate the columns into which inserting data
 <CODESAMPLE>INSERT INTO <I>table_name</I> (<I>column1</I>, <I>column2</I>,&#x2026;)<BR/>
 VALUES (value1, value2,&#x2026;);</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>INSERT INTO Persons (LastName, Address)<BR/>
 VALUES ('Rasmussen', 'Storgt 67');</CODESAMPLE>
@@ -174,8 +164,6 @@ syntax
 <CODESAMPLE>UPDATE <I>table_name</I><BR/>
 SET <I>column_name</I> = <I>new_value</I><BR/>
 WHERE <I>column_name</I> = <I>some_value</I>;</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>UPDATE Person<BR/>
 SET Address = 'Stien 12', City = 'Stavanger'<BR/>
@@ -188,8 +176,6 @@ WHERE LastName = 'Rasmussen';</CODESAMPLE>
 syntax
 <CODESAMPLE>DELETE FROM <I>table_name</I>
 WHERE <I>column_name</I> = <I>some_value</I>;</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>DELETE FROM Person WHERE LastName = 'Rasmussen';</CODESAMPLE>
 </ITEM>
@@ -206,8 +192,6 @@ or
 retrieve the values from some columns
 <CODESAMPLE>SELECT <I>column_name1</I>, <I>column_name2</I>&#x2026;
 FROM <I>table_name</I>;</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>SELECT LastName,FirstName FROM Persons;</CODESAMPLE>
 </ITEM>
@@ -234,19 +218,23 @@ WHERE <I>column</I> <I>operator</I> <I>value</I></CODESAMPLE>
 <ROW><TERM><CODEROUTINE>IN</CODEROUTINE></TERM><DESC>If you know the exact value you want to return for at least one of the columns</DESC></ROW>
 </DEFINITIONTABLE>
 <CODEROUTINE>AND</CODEROUTINE> and <CODEROUTINE>OR</CODEROUTINE> can be used to combine criterion, <CODEROUTINE>AND</CODEROUTINE> has higher precedence than <CODEROUTINE>OR</CODEROUTINE>, but parentheses should be used anyway
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>SELECT * FROM Persons WHERE<BR/>
 (FirstName='Tove' OR FirstName='Stephen')<BR/>
 AND LastName='Svendson'</CODESAMPLE>
 </ITEM>
 <ITEM>
+NULL cannot be used in comparison expression<BR/>
+IS NULL or IS NOT NULL must be used
+<CODESAMPLE>SELECT * FROM Persons<BR/>
+WHERE LastName IS NULL</CODESAMPLE>
+<CODESAMPLE>SELECT * FROM Persons<BR/>
+WHERE LastName IS NOT NULL</CODESAMPLE>
+</ITEM>
+<ITEM>
 IN syntax
 <CODESAMPLE>SELECT <I>column_name</I> FROM <I>table_name</I><BR/>
 WHERE <I>column_name</I> IN (<I>value1</I>,<I>value2</I>,..);</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>SELECT * FROM Persons<BR/>
 WHERE LastName IN ('Hansen','Pettersen');</CODESAMPLE>
@@ -256,8 +244,6 @@ BETWEEN syntax
 <CODESAMPLE>SELECT <I>column_name</I> FROM <I>table_name</I><BR/>
 WHERE <I>column_name</I><BR/>
 BETWEEN <I>value1</I> AND <I>value2</I>;</CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>SELECT * FROM Persons WHERE LastName <BR/>
 BETWEEN 'Hansen' AND 'Pettersen';</CODESAMPLE>
@@ -306,8 +292,6 @@ it is possible to define table aliases
 <ITEM>
 it is possible to define column aliases
 <CODESAMPLE>SELECT <I>column</I> AS <I>column_alias</I> FROM <I>table</I></CODESAMPLE>
-</ITEM>
-<ITEM>
 example
 <CODESAMPLE>SELECT name, birth, CURDATE(), (YEAR(CURDATE())-YEAR(birth)) - (RIGHT(CURDATE(),5)&lt;RIGHT(birth,5)) AS age<BR/>
 FROM pet ORDER BY age;</CODESAMPLE>
@@ -315,8 +299,7 @@ FROM pet ORDER BY age;</CODESAMPLE>
 </ITEM>
 <ITEM><BLIST><TITLE>group by</TITLE>
 <ITEM>
-<CODEROUTINE>GROUP BY</CODEROUTINE> is used when we are selecting multiple columns from a table (or tables) and at least one arithmetic operator appears in the <CODEROUTINE>SELECT</CODEROUTINE> statement. When that happens, we need to <CODEROUTINE>GROUP BY</CODEROUTINE> all the other selected columns, i.e., all columns except the one(s) operated on by the arithmetic operator.</ITEM>
-<ITEM>
+<CODEROUTINE>GROUP BY</CODEROUTINE> is used when we are selecting multiple columns from a table (or tables) and at least one arithmetic operator appears in the <CODEROUTINE>SELECT</CODEROUTINE> statement. When that happens, we need to <CODEROUTINE>GROUP BY</CODEROUTINE> all the other selected columns, i.e., all columns except the one(s) operated on by the arithmetic operator.
 <CODESAMPLE>SELECT storeName, SUM(sales)<BR/>
 FROM storeInformation<BR/>
 GROUP BY storeName;</CODESAMPLE>
@@ -324,8 +307,7 @@ GROUP BY storeName;</CODESAMPLE>
 </ITEM>
 <ITEM><BLIST><TITLE>having</TITLE>
 <ITEM>
-<CODEROUTINE>HAVING</CODEROUTINE> is used to write conditions containing aggregate functions</ITEM>
-<ITEM>
+<CODEROUTINE>HAVING</CODEROUTINE> is used to write conditions containing aggregate functions
 <CODESAMPLE>SELECT storeName, SUM(sales)<BR/>
 FROM storeInformation<BR/>
 GROUP BY storeName<BR/>
