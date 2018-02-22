@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <SLIST>
   <ITEM><BLIST><TITLE><U><B>Tortoise SVN</B></U></TITLE>
@@ -80,6 +80,8 @@
     <CODESAMPLE>svn --diff-cmd "diff" --extensions "-y -W 250 --suppress-common-lines" diff</CODESAMPLE></ITEM>
     <ITEM>Commit a file/dir
     <CODESAMPLE>svn commit -m "I have done blabla&#x2026;" <I>file/dir</I></CODESAMPLE></ITEM>
+    <ITEM>Revert all files
+    <CODESAMPLE>svn revert -R .</CODESAMPLE></ITEM>
     <ITEM>Display the log of the current directory
     <CODESAMPLE>svn log</CODESAMPLE></ITEM>
     <ITEM>Display the log of a working copy of a file/directory
