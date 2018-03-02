@@ -1,0 +1,26 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>npm</TITLE>
+<PATH>notes/npm.xml</PATH>
+<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE>
+<CONTENT>
+<BLIST>
+<ITEM>
+Return the npm global path
+<CODESAMPLE><PROMPT/>npm root -g</CODESAMPLE>
+</ITEM>
+<ITEM>
+Set the proxy
+<CODESAMPLE><PROMPT/>npm config set proxy 10.99.0.211:3128<BR/>
+<PROMPT/>npm config set https-proxy 10.99.0.211:3128</CODESAMPLE>
+</ITEM>
+<ITEM>
+Unset the proxy
+<CODESAMPLE><PROMPT/>npm config rm proxy<BR/>
+<PROMPT/>npm config rm https-proxy</CODESAMPLE>
+</ITEM>
+</BLIST>
+</CONTENT>
+<X><T>links</T><A>../links/life.html#apt</A><L>en</L><F>HTML</F></X>
+</PAGE>
