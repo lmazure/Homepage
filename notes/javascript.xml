@@ -5,69 +5,67 @@
 <PATH>notes/javascript.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-<U><B>Boolean</B></U><BR/>
-<BLIST> 
-<ITEM>All the following lines of code create Boolean objects with an initial value of false:
-<CODESAMPLE>var myBoolean=new Boolean();<BR/>
-var myBoolean=new Boolean(0); <BR/>
-var myBoolean=new Boolean(null); <BR/>
-var myBoolean=new Boolean("");<BR/>
-var myBoolean=new Boolean(false); <BR/>
-var myBoolean=new Boolean(NaN);</CODESAMPLE>
-And all the following lines of code create Boolean objects with an initial value of true:
-<CODESAMPLE>var myBoolean=new Boolean(true); <BR/>
-var myBoolean=new Boolean("true");<BR/>
-var myBoolean=new Boolean("false");<BR/>
-var myBoolean=new Boolean("Richard");</CODESAMPLE></ITEM>
+<BLIST><TITLE><U><B>Types</B></U></TITLE>
+  <ITEM>Number: Double precision 64-bit floating point values. It can be used to represent both, integers and fractions.</ITEM>
+  <ITEM>String: Represents a sequence of Unicode characters</ITEM>
+  <ITEM>Boolean: Represents logical values, true and false</ITEM>
+  <ITEM>Null: Represents an intentional absence of an object value</ITEM>
+  <ITEM>Undefined: Denotes value given to all uninitialized variables</ITEM>
 </BLIST>
-<BR/>
-<U><B>Arrays</B></U><BR/>
-<BLIST> 
-<ITEM>Array Creation<BR/>
-<BLIST> 
-<ITEM>regular array (add an optional integer argument to control array's size)
-<CODESAMPLE>var myCars=new Array();<BR/>
-myCars[0]="Saab";<BR/>
-myCars[1]="Volvo";<BR/>
-myCars[2]="BMW";</CODESAMPLE></ITEM>
-<ITEM>condensed array
-<CODESAMPLE>var myCars=new Array("Saab","Volvo","BMW");</CODESAMPLE></ITEM>
-<ITEM>literal array
-<CODESAMPLE>var myCars=["Saab","Volvo","BMW"];</CODESAMPLE></ITEM>
-</BLIST></ITEM>
+<BLIST><TITLE><U><B>Boolean</B></U></TITLE>
+  <ITEM>All the following lines of code create Boolean objects with an initial value of false:
+  <CODESAMPLE>var myBoolean=new Boolean();<BR/>
+  var myBoolean=new Boolean(0); <BR/>
+  var myBoolean=new Boolean(null); <BR/>
+  var myBoolean=new Boolean("");<BR/>
+  var myBoolean=new Boolean(false); <BR/>
+  var myBoolean=new Boolean(NaN);</CODESAMPLE>
+  And all the following lines of code create Boolean objects with an initial value of true:
+  <CODESAMPLE>var myBoolean=new Boolean(true); <BR/>
+  var myBoolean=new Boolean("true");<BR/>
+  var myBoolean=new Boolean("false");<BR/>
+  var myBoolean=new Boolean("Richard");</CODESAMPLE></ITEM>
 </BLIST>
-<BR/>
-<U><B>Regular Expressions</B></U><BR/>
-<BLIST> 
-<ITEM>Syntax<BR/>
-<CODESAMPLE>var txt=new RegExp(pattern,modifiers);</CODESAMPLE>
-or
-<CODESAMPLE>var txt=/pattern/modifiers;</CODESAMPLE></ITEM>
-<ITEM>Modifiers<BR/>
-<CODEROUTINE>i</CODEROUTINE> - case-insensitive matching<BR/>
-<CODEROUTINE>g</CODEROUTINE> - global match (find all matches rather than stopping after the first match)<BR/>
-<CODEROUTINE>m</CODEROUTINE> - multiline matching<BR/>
-</ITEM>
+<BLIST><TITLE><U><B>Arrays</B></U></TITLE>
+  <ITEM><BLIST><TITLE>Array Creation</TITLE>
+    <ITEM>regular array (add an optional integer argument to control array's size)
+    <CODESAMPLE>var myCars=new Array();<BR/>
+    myCars[0]="Saab";<BR/>
+    myCars[1]="Volvo";<BR/>
+    myCars[2]="BMW";</CODESAMPLE></ITEM>
+    <ITEM>condensed array
+    <CODESAMPLE>var myCars=new Array("Saab","Volvo","BMW");</CODESAMPLE></ITEM>
+    <ITEM>literal array
+    <CODESAMPLE>var myCars=["Saab","Volvo","BMW"];</CODESAMPLE></ITEM>
+  </BLIST></ITEM>
 </BLIST>
-<BR/>
-<U><B>Popup Boxes</B></U><BR/>
-<BLIST> 
-<ITEM>Alert Box<BR/>
-An alert box is often used if you want to make sure information comes through to the user.<BR/>
-When an alert box pops up, the user will have to click "OK" to proceed.
-<CODESAMPLE>alert("sometext");</CODESAMPLE></ITEM>
-<ITEM>Confirm Box<BR/>
-A confirm box is often used if you want the user to verify or accept something. <BR/>
-When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. <BR/>
-If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
-<CODESAMPLE>confirm("sometext");</CODESAMPLE></ITEM>
-<ITEM>Prompt Box<BR/>
-A prompt box is often used if you want the user to input a value before entering a page.<BR/>
-When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.<BR/>
-If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
-<CODESAMPLE>prompt("sometext","defaultvalue");</CODESAMPLE></ITEM>
+<BLIST><TITLE><U><B>Regular Expressions</B></U></TITLE>
+  <ITEM>Syntax<BR/>
+  <CODESAMPLE>var txt=new RegExp(pattern,modifiers);</CODESAMPLE>
+  or
+  <CODESAMPLE>var txt=/pattern/modifiers;</CODESAMPLE></ITEM>
+  <ITEM>Modifiers<BR/>
+  <CODEROUTINE>i</CODEROUTINE> - case-insensitive matching<BR/>
+  <CODEROUTINE>g</CODEROUTINE> - global match (find all matches rather than stopping after the first match)<BR/>
+  <CODEROUTINE>m</CODEROUTINE> - multiline matching<BR/>
+  </ITEM>
 </BLIST>
-<BR/>
+<BLIST><TITLE><U><B>Popup Boxes</B></U></TITLE>
+  <ITEM>Alert Box<BR/>
+  An alert box is often used if you want to make sure information comes through to the user.<BR/>
+  When an alert box pops up, the user will have to click "OK" to proceed.
+  <CODESAMPLE>alert("sometext");</CODESAMPLE></ITEM>
+  <ITEM>Confirm Box<BR/>
+  A confirm box is often used if you want the user to verify or accept something. <BR/>
+  When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. <BR/>
+  If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
+  <CODESAMPLE>confirm("sometext");</CODESAMPLE></ITEM>
+  <ITEM>Prompt Box<BR/>
+  A prompt box is often used if you want the user to input a value before entering a page.<BR/>
+  When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.<BR/>
+  If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+  <CODESAMPLE>prompt("sometext","defaultvalue");</CODESAMPLE></ITEM>
+</BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/javascrp.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
