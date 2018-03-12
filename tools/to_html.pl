@@ -40,8 +40,8 @@ sub to_html {
        ( stat($infile)->mtime >= stat($outfile)->mtime ) ||
        ( stat($xlst_file)->mtime >= stat($outfile)->mtime ) ||
        ( stat($map_file)->mtime >= stat($outfile)->mtime ) ) {
-    #my @cmds = ("/cygdrive/h/Documents/tools/jre/jre-9/bin/java.exe",
-    my @cmds = ("java.exe",
+    my @cmds = ("/cygdrive/h/Documents/tools/jre/jre-9/bin/java.exe",
+    #my @cmds = ("java.exe",
         "-cp",
         "$xalan_dir/xalan.jar",
         "org.apache.xalan.xslt.Process",
