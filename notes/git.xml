@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -151,6 +151,12 @@ this is the default</DESC>
 <BR/>
 <DEFINITIONTABLE>
 <ROW>
+<TERM><CODEROUTINE>git push</CODEROUTINE></TERM>
+<DESC>push commits made on a local branch to a remote repository in the branch of same name.</DESC>
+</ROW>
+</DEFINITIONTABLE>
+<BR/><DEFINITIONTABLE>
+<ROW>
 <TERM><CODEROUTINE>git clean -f</CODEROUTINE></TERM>
 <DESC>recursively remove files that are not under version control</DESC>
 </ROW>
@@ -172,6 +178,10 @@ this is the default</DESC>
 <ROW>
 <TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;</CODEROUTINE></TERM>
 <DESC>create a repository which is the clone of a bare repository</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;  &lt;my directory name&gt;</CODEROUTINE></TERM>
+<DESC>create a repository with name &lt;my directory name&gt; which is the clone of a bare repository (if &lt;my directory name&gt; is not specified, the name of the remote repository is used)</DESC>
 </ROW>
 <ROW>
 <TERM><CODEROUTINE>git clone --bare &lt;path to directory containing .git&gt;</CODEROUTINE></TERM>
@@ -216,7 +226,7 @@ this is the default</DESC>
 <DEFINITIONTABLE>
 <ROW>
 <TERM><CODEROUTINE>git --global --edit</CODEROUTINE></TERM>
-<DESC>open an editor to edit the gobal configuration file</DESC>
+<DESC>open an editor to edit the global configuration file</DESC>
 </ROW>
 </DEFINITIONTABLE>
 <BR/>

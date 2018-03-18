@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <SLIST>
   <ITEM><BLIST><TITLE><U><B>Tortoise SVN</B></U></TITLE>
@@ -94,6 +94,20 @@
     <CODESAMPLE>svn relocate file:///cygdrive/m/svn_repository/my_project/trunk working_copy</CODESAMPLE></ITEM>
     <ITEM>Define the new location of the repository (assuming the current directory is the working copy)
     <CODESAMPLE>svn relocate file:///cygdrive/m/svn_repository/my_project/trunk</CODESAMPLE></ITEM>
+    <ITEM>Set the value of a property on a file/directory
+    <CODESAMPLE>svn propset &lt;property name&gt; &lt;property value&gt; &lt;file/directory name&gt;</CODESAMPLE>
+    for example
+    <CODESAMPLE>svn propset svn:ignore "*" tmpdir</CODESAMPLE></ITEM>
+    <ITEM>Get the value of a property of a file/directory
+    <CODESAMPLE>svn propget &lt;property name&gt; &lt;file/directory name&gt;</CODESAMPLE>
+    for example
+    <CODESAMPLE>svn propget svn:ignore tmpdir</CODESAMPLE></ITEM>
+    <ITEM>Remove a property of a file/directory
+    <CODESAMPLE>svn propdel &lt;property name&gt; &lt;file/directory name&gt;</CODESAMPLE>
+    for example
+    <CODESAMPLE>svn propdel svn:ignore tmpdir</CODESAMPLE></ITEM>
+    <ITEM><CODEROUTINE>svn:ignore</CODEROUTINE> is the property defining the elements ignored in a directory</ITEM>
+    <ITEM><CODEROUTINE>svn:global-ignores</CODEROUTINE> is the property defining the elements ignored in a directory and its sub-directories</ITEM>
   </BLIST></ITEM>
 </SLIST>
 </CONTENT>
