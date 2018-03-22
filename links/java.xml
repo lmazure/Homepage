@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -31,6 +31,7 @@
       <ITEM><X><T>7</T><A>http://docs.oracle.com/javase/7/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>8</T><A>http://docs.oracle.com/javase/8/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>9</T><A>http://docs.oracle.com/javase/9/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>10</T><A>http://docs.oracle.com/javase/10/index.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><ANCHOR>javadoc</ANCHOR><X><T>javadoc</T><A>http://docs.oracle.com/javase/6/docs/technotes/tools/windows/javadoc.html</A><L>en</L><F>HTML</F></X></TITLE>
       <ITEM><X><T>FAQ</T><A>http://www.oracle.com/technetwork/java/javase/downloads/index-136934.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -266,6 +267,7 @@
         <ITEM><ARTICLE><X><T>Pattern Matching for Java</T><A>http://cr.openjdk.java.net/~briangoetz/amber/pattern-match.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gavin</FIRSTNAME><LASTNAME>Bierman</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>4</MONTH></DATE><COMMENT>The authors describe many possible language features related to pattern matching.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Pattern Matching for Java -- Runtime and Translation</T><A>http://cr.openjdk.java.net/~briangoetz/amber/pattern-match-translation.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Rose</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>6</MONTH></DATE><COMMENT>An analysis of the implementation, at the compilation level, of pattern matching.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Project Loom: Fibers and Continuations for the Java Virtual Machine</T><A>http://cr.openjdk.java.net/~rpressler/loom/Loom-Proposal.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ron</FIRSTNAME><LASTNAME>Pressler</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE><COMMENT>Some initial thoughts about implementing fibers in Java.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Java Nestmates Makes Progress</T><A>https://www.infoq.com/news/2018/03/Nestmates</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>15</DAY></DATE><COMMENT>The problem with the way nested classes are currently implemented and the proposal of JEP 181 to add Nest-Based Access Control.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Java 5</TITLE>
         <ITEM><ARTICLE><X><T>Readable Java 1.5</T><A>http://www.onjava.com/pub/a/onjava/2003/09/24/readable_java.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stephen</FIRSTNAME><LASTNAME>Jungels</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>9</MONTH><DAY>29</DAY></DATE><COMMENT>A discussion about the readability of loop on collection content, generics and variance in Java 1.5.</COMMENT></ARTICLE></ITEM>
