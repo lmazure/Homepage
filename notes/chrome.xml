@@ -5,7 +5,7 @@
 <PATH>notes/chrome.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
-<U>shortcuts</U>
+<U>shortcuts</U> (<X><T>full list</T><A>https://support.google.com/chrome/answer/157179</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
 <ROW><TERM>
 <MODIFIERKEY ID='Ctrl'/><KEY ID='N'/>
@@ -16,6 +16,11 @@ open a new window
 <MODIFIERKEY ID='Ctrl'/><KEY ID='T'/>
 </TERM><DESC>
 open a new tab
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='T'/>
+</TERM><DESC>
+reopen last closed tab
 </DESC></ROW>
 <ROW><TERM>
 <MODIFIERKEY ID='Ctrl'/><KEY ID='J'/>
