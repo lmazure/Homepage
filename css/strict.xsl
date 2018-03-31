@@ -22,10 +22,10 @@
     </xsl:if>
     </head>
     <body>
-      <header>
+      <header id="header">
         <h1><xsl:value-of select="/PAGE/TITLE"/></h1>
       </header>
-      <section>
+      <section id="content">
         <xsl:if test="@status='unmaintained'">
           <div id="unmaintained">
             <xsl:text>This page is unmaintained. It may contain out-of-date data, broken links...</xsl:text>
@@ -33,8 +33,8 @@
         </xsl:if>
         <xsl:apply-templates select="/PAGE/CONTENT"/>
       </section>
-      <hr id="footerseparator"/>
-      <footer>
+      <hr id="footerSeparator"/>
+      <footer id="footer">
         <div style="display:grid;">
           <div style="grid-column:1;grid-row:1;">
             <xsl:if test="count(/PAGE/X)>0">
