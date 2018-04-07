@@ -23,7 +23,6 @@ my $xalan_dir = $lib_dir."/xalan-j_2_7_1";
 my $start_dir = "..";
 #my $start_dir = $base_dir;
 my $xlst_file = $start_dir."/css/strict.xsl";
-my $map_file = $start_dir."/hack/map.xml";
 
 sub to_html {
   my $infile = shift;
@@ -38,8 +37,7 @@ sub to_html {
   $outfile =~ s/\.xml$/\.html/;
   if ( ( ! -f $outfile ) ||
        ( stat($infile)->mtime >= stat($outfile)->mtime ) ||
-       ( stat($xlst_file)->mtime >= stat($outfile)->mtime ) ||
-       ( stat($map_file)->mtime >= stat($outfile)->mtime ) ) {
+       ( stat($xlst_file)->mtime >= stat($outfile)->mtime ) ) {
     #my @cmds = ("/cygdrive/h/Documents/tools/jre/jre-9/bin/java.exe",
     my @cmds = ("java.exe",
         "-cp",
