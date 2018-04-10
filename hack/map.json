@@ -1,0 +1,653 @@
+{ "root" :
+  { "title" : "Homepage", "page" : "perso/main.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+    { "title" : "Links / articles", "children" : [
+      { "title" : "Basics", "page" : "links/search.html", "languages" : ["en"], "formats" : ["HTML"] },
+      { "title" : "Computing", "page" : "links/info.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+        { "title" : "Companies", "page" : "links/companies.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Homepages", "page" : "links/homepages.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Site building", "page" : "links/build.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Browsers", "page" : "links/browsers.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Languages", "page" : "links/otherlang.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Java", "page" : "links/java.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Basics", "page" : "links/javabasics.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "User Interface", "page" : "links/javaui.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Multi-threading", "page" : "links/javamt.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "JavaScript", "page" : "links/javascrp.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Libraries", "page" : "links/jslib.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "TypeScript", "page" : "links/typescript.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "C#", "page" : "links/csharp.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "F#", "page" : "links/fsharp.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "C++", "page" : "links/cpp.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Visual Basic", "page" : "links/vbasic.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "SQL", "page" : "links/sql.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Perl", "page" : "links/perl.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Python", "page" : "links/python.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Ruby", "page" : "links/ruby.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "C", "page" : "links/c.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "*sh", "page" : "links/shell.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "PHP", "page" : "links/php.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Tcl", "page" : "links/tcltk.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Lisp", "page" : "links/lisp.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Prolog", "page" : "links/prolog.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Fortran", "page" : "links/fortran.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "PostScript", "page" : "links/ps.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Formats", "children" : [
+          { "title" : "HTML", "page" : "links/html.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "XML", "page" : "links/xml.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Unicode", "page" : "links/unicode.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "OS", "children" : [
+          { "title" : "Unix", "page" : "links/unix.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Solaris", "page" : "links/solaris.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Linux", "page" : "links/linux.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Windows", "page" : "links/windows.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "MacOS", "page" : "links/macos.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Other OS", "page" : "links/palmos.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Life cycle", "page" : "links/life.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "User needs / specifications", "page" : "links/spec.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Design", "page" : "links/design.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "UML", "page" : "links/uml.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "BDD", "page" : "links/bdd.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "DDD", "page" : "links/ddd.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Design patterns", "page" : "links/dp.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Coding", "page" : "links/coding.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "TDD", "page" : "links/tdd.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Components", "page" : "links/compo.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "X11", "page" : "links/x11.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Testing", "page" : "links/test.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "BBST course", "page" : "links/bbst.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Operations", "page" : "links/operations.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Open source", "page" : "links/free.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Quality", "page" : "links/quality.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Security", "page" : "links/cracking.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Office", "page" : "links/office.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Artificial intelligence", "page" : "links/ai.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "2D/3D graphics", "page" : "links/3d.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "CAD/CAM", "page" : "links/cadcam.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Tools", "page" : "links/tools.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Hardware", "page" : "links/hardware.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Management", "page" : "links/management.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Computer science books", "page" : "links/sfbooks.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Medical", "page" : "links/medical.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+        { "title" : "Imaging", "page" : "links/medimag.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "DICOM", "page" : "links/dicom.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Market", "page" : "links/medimagmarket.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Clinical trials", "page" : "links/clinicaltrial.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "EDC", "page" : "links/edc.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "CDISC", "page" : "links/cdisc.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Market", "page" : "links/clintrials.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Pharma", "page" : "links/pharma.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Entertainment", "children" : [
+        { "title" : "News", "page" : "links/news.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Encyclopedia", "page" : "links/data.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Mathematics", "page" : "links/math.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Numbers", "page" : "links/numbers.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Geometry", "page" : "links/geometry.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Physics", "page" : "links/physics.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Chemistry", "page" : "links/chemistry.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Space", "page" : "links/space.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Living beings", "page" : "links/livingbeings.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Health information", "page" : "links/health.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Ecology", "page" : "links/ecology.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Language", "page" : "links/lang.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Tourism", "page" : "links/tourism.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Daily life", "page" : "links/day.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Job", "page" : "links/job.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "House", "page" : "links/house.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Art", "children" : [
+          { "title" : "Books", "page" : "links/books.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Music", "page" : "links/music.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Films", "page" : "links/film.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Theater", "page" : "links/theater.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Painting", "page" : "links/painting.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Photography", "page" : "links/photo.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Sculpture", "page" : "links/sculpture.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Humour", "page" : "links/humor.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Games", "page" : "links/games.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Minecraft", "page" : "links/minecraft.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Cooking", "page" : "links/cooking.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Sports", "page" : "links/sport.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Weird", "page" : "links/weird.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "My work", "children" : [
+        { "title" : "Mensi", "page" : "links/mensi.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "GE Healthcare", "page" : "links/gems.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "KIKA", "page" : "links/kika.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Eurofins Scientific", "page" : "links/eurofins.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Infologic", "page" : "links/infologic.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] }
+    ] },
+    { "title" : "Notes", "children" : [
+      { "title" : "Operating systems", "children" : [
+        { "title" : "Unix", "page" : "notes/unix.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "New notes", "page" : "notes/unix2.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "File utilities", "page" : "notes/unixfu.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Process utilities", "page" : "notes/unixpu.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Network utilities", "page" : "notes/lnetutil.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Command line utilities", "page" : "notes/unixclu.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Terminal capabilities", "page" : "notes/term.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Dynamic loader", "page" : "notes/dynloader.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Code review of the system calls", "page" : "notes/syscallrev.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Dump of the stack", "page" : "notes/stackdump.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Linux", "page" : "notes/linux.htm", "languages" : ["fr"], "formats" : ["HTML"], "children" : [
+          { "title" : "New notes", "page" : "notes/linux2.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Process examination", "page" : "notes/lxproc.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "System administration", "page" : "notes/ladmin.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Burning CDs", "page" : "notes/lcd.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "rpm", "page" : "notes/rpm.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "apt", "page" : "notes/apt.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "gcc", "page" : "notes/gcc.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Versioning", "page" : "notes/gccversion.doc", "languages" : ["en"], "formats" : ["Word"] }
+          ] },
+          { "title" : "glibc", "page" : "notes/glibc.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "System calls", "page" : "notes/lsyscall.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Retrieving a filename from fileno or FILE*", "page" : "notes/filename.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Hijacking a system call", "page" : "notes/lhijack.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "XFS corrupter", "page" : "notes/corrupter.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Solaris", "page" : "notes/solaris.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Process examination", "page" : "notes/process.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Hijacking a system call", "page" : "notes/hijack.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Finding the name of a routine given its address for a running process", "page" : "notes/adrlookup.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Windows", "page" : "notes/win2000.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "List of commands", "page" : "notes/doslist.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "DOS notes", "page" : "notes/olddos.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Old notes", "page" : "notes/windows.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "MacOS", "page" : "notes/macos.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Languages", "children" : [
+        { "title" : "Java", "page" : "notes/java.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "New notes", "page" : "notes/java2.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Commands", "page" : "notes/jcommands.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Data", "page" : "notes/javadata.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Input/output", "page" : "notes/javaio.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "New notes", "page" : "notes/javaio2.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Swing", "page" : "notes/javaswing.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "New notes", "page" : "notes/swing2.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "JList", "page" : "notes/jlist.htm", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "JTree", "page" : "notes/jtree.htm", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "JTable", "page" : "notes/jtable.htm", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Java 2D", "page" : "notes/java2D.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "System intercations", "page" : "notes/jsystem.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Multithreading", "page" : "notes/javathread2.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Old notes", "page" : "notes/javathread.htm", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Generics", "page" : "notes/javagenerics.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "JVM", "page" : "notes/jvm.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Javadoc", "page" : "notes/javadoc.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "JavaScript", "page" : "notes/javascript.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Old notes", "page" : "notes/js.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "TypeScript", "page" : "notes/typescript.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "C#", "page" : "notes/csharp.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Clojure", "page" : "notes/clojure.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "C++", "page" : "notes/cpp.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "iostream", "page" : "notes/iostream.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "STL", "page" : "notes/stl.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Visual Basic", "page" : "notes/vbasic.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Macro samples", "page" : "notes/vbsample.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "SQL", "page" : "notes/sql.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Perl", "page" : "notes/perl.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "String handling", "page" : "notes/perlstring.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "File handling", "page" : "notes/perlfile.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Networking", "page" : "notes/perlnet.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Samples", "page" : "notes/perlsample.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Manipulating bookmarked text in a RTF file", "page" : "notes/rtfbm.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Driving DDTS", "page" : "notes/autosrb.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Python", "page" : "notes/python.htm", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "C", "page" : "notes/c.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "types", "page" : "notes/ctypes.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Defining integer types of given sizes", "page" : "notes/uint32.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Printing integers in binary format", "page" : "notes/binprt.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "bash", "page" : "notes/bash2.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Old notes", "page" : "notes/bash.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "csh", "page" : "notes/csh.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "csh customisation", "page" : "notes/cshcust.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Automated window creation for shell commands", "page" : "notes/cshautowin.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "ksh", "page" : "notes/ksh.htm", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "awk", "page" : "notes/awk.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "sed", "page" : "notes/sed.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "m4", "page" : "notes/m4.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Tcl", "page" : "notes/tcl.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Expect", "page" : "notes/expect.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] }
+      ] },
+      { "title" : "Formats", "children" : [
+        { "title" : "HTML", "page" : "notes/html.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Characters", "page" : "notes/htmlchar.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "XHTML", "page" : "notes/xhtml.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "HTTPD methods", "page" : "notes/httpdmethods.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "HTTPD codes", "page" : "notes/httpdcodes.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "CSS", "page" : "notes/css.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "XML", "page" : "notes/xml.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "DTD", "page" : "notes/dtd.doc", "languages" : ["en"], "formats" : ["Word"] },
+          { "title" : "XSLT", "page" : "notes/xslt.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "XPath", "page" : "notes/xpath.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "DOM", "page" : "notes/dom.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Unicode", "page" : "notes/unicode.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Development tools", "children" : [
+        { "title" : "Text editors", "children" : [
+          { "title" : "vim", "page" : "notes/vim.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "vi customisation", "page" : "notes/vicust.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "emacs", "page" : "notes/emacs.htm", "languages" : ["fr"], "formats" : ["HTML"], "children" : [
+            { "title" : "New notes", "page" : "notes/emacsnew.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "emacs customisation", "page" : "notes/emacscust.htm", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Notepad++", "page" : "notes/notepadpp.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Build", "children" : [
+          { "title" : "make", "page" : "notes/make.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Debuggers", "children" : [
+          { "title" : "dbx", "page" : "notes/dbx.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "gdb", "page" : "notes/gdb.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "IDE", "children" : [
+          { "title" : "Eclipse", "page" : "notes/eclipse.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Together", "page" : "notes/together.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Visual Studio", "page" : "notes/visualstudio.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Visual Studio with ReSharper", "page" : "notes/vsresharper.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] }
+        ] },
+        { "title" : "Configuration management", "children" : [
+          { "title" : "ClearCase", "page" : "notes/clcase.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Scripts", "page" : "notes/ccscripts.htm", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "CVS", "page" : "notes/cvs.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Subversion", "page" : "notes/svn.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "TFS", "page" : "notes/tfs.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Git", "page" : "notes/git.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Package managers", "children" : [
+          { "title" : "npm", "page" : "notes/npm.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Bug trackers", "children" : [
+          { "title" : "DDTS", "page" : "notes/ddts.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Scripts", "page" : "notes/ddtssrb.htm", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "JIRA", "page" : "notes/jira.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Scripts", "page" : "notes/jiracode.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] }
+        ] },
+        { "title" : "Dynamic analyzers", "children" : [
+          { "title" : "Purify", "page" : "notes/purify.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Valgrind", "page" : "notes/valgrind.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Static analyzers", "children" : [
+          { "title" : "ProLint", "page" : "notes/prolint.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Code navigation", "children" : [
+          { "title" : "Cscope", "page" : "notes/cscope.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Tests", "children" : [
+          { "title" : "Burp", "page" : "notes/burp.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] }
+      ] },
+      { "title" : "Coding", "children" : [
+        { "title" : "X11", "page" : "notes/x11.htm", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Tools", "page" : "notes/xtools.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "X11 sample code", "page" : "notes/xsample.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "X11 sample code (part 2)", "page" : "notes/x11samples.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "X11 event routines", "page" : "notes/xevent.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "X11 pixmap routines", "page" : "notes/xpixmap.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "X11 color routines", "page" : "notes/xcolor.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "X11 debug code", "page" : "notes/xdebug.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Obsolete X11 routines", "page" : "notes/xobso.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Bypassing xdm", "page" : "notes/bypassxdm.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Stupid little scripts", "children" : [
+          { "title" : "Verification of the include syntax", "page" : "notes/verifinclude2.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Verification of the include syntax (old version)", "page" : "notes/verifinclude.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Finding obsolete filenames in an executable", "page" : "notes/obsofile.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Finding obsolete X resources", "page" : "notes/obsox.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Finding unused methods", "page" : "notes/deadcode.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Finding useless forward declarations", "page" : "notes/forwdecl.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "How to get rid of unused includes?", "page" : "notes/include.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Cracking", "page" : "notes/cracking.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "JasperReports", "page" : "notes/jasperreports.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Development processes/quality", "children" : [
+        { "title" : "References", "children" : [
+          { "title" : "Standards", "page" : "notes/normes.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Definitions", "page" : "notes/definitions.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "ISO 9126", "page" : "notes/iso9126.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "ISO 9241", "page" : "notes/iso9241.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Methodologies", "children" : [
+          { "title" : "Six Sigma DFSS", "page" : "notes/dfss.doc", "languages" : ["en"], "formats" : ["Word"] },
+          { "title" : "Six Sigma DMAIC", "page" : "notes/dmaic.doc", "languages" : ["en"], "formats" : ["Word"] },
+          { "title" : "Lean Manufacturing", "page" : "notes/lean.doc", "languages" : ["en"], "formats" : ["Word"] },
+          { "title" : "CAP", "page" : "notes/cap.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Seven tools", "page" : "quality/seventools.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "8D", "page" : "quality/8D.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "CAPA - Corrective Action Preventive Action", "page" : "notes/capa.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "5W", "page" : "notes/5W.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Mess", "page" : "quality/mess.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Tools", "children" : [
+          { "title" : "Flowcharts", "page" : "quality/flowchart.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Check Sheets", "page" : "quality/checksheet.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Pareto Diagrams", "page" : "quality/pareto.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Cause and Effect Diagrams", "page" : "quality/fishbone.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Histograms", "page" : "quality/histogram.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Scatter Diagrams", "page" : "quality/scatter.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Control Charts", "page" : "quality/controlchart.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Run Charts", "page" : "quality/runchart.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "FMEA", "page" : "quality/fmea.doc", "languages" : ["en"], "formats" : ["Word"] },
+          { "title" : "FTA", "page" : "quality/FTA.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "DOE", "page" : "quality/DOE.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Kano Model", "page" : "quality/kano.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "COPQ", "page" : "quality/COPQ.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Software methodologies", "children" : [
+          { "title" : "Extreme Programming", "page" : "notes/xp.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "CMM", "page" : "notes/cmm.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "UML", "page" : "notes/uml.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Software reviews", "page" : "notes/softreview.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Unit Testing", "page" : "notes/unittest.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] }
+      ] },
+      { "title" : "Medical", "children" : [
+        { "title" : "FDA", "page" : "notes/fda.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "DICOM", "page" : "notes/dicom.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "CDISC", "page" : "notes/cdisc.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "IHE", "page" : "notes/ihe.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "HIPAA", "page" : "notes/hipaa.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Phases of drug development", "page" : "notes/clinicalphasing.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "MedDRQ", "page" : "notes/meddra.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Qualification of Analytical Instruments for Use in the Pharmaceutical Industry", "page" : "quality/pharmaqualif.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Microsoft Office", "children" : [
+        { "title" : "Word", "page" : "notes/word.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Shortcuts", "page" : "notes/wordsc.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Visual Basic", "page" : "notes/wordvb.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Customization", "page" : "notes/wordcust.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Macro samples", "page" : "notes/wordvbsample.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Old macro samples", "page" : "notes/wordsample.htm", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Shortcut dump", "page" : "notes/worddumpsc.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] }
+        ] },
+        { "title" : "Excel", "page" : "notes/excel.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Shortcuts", "page" : "notes/excelsc.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Functions", "page" : "notes/excelfct.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Visual Basic", "page" : "notes/excelvb.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Macro samples", "page" : "notes/excelsample.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "PowerPoint", "page" : "notes/powerpoint.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Shortcuts", "page" : "notes/powerpointsc.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Outlook", "page" : "notes/outlook.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Shortcuts", "page" : "notes/outlooksc.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Macro samples", "page" : "notes/outlooksample.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Visual Basic Editor", "page" : "notes/vbeditor.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Project", "page" : "notes/project.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Other tools", "children" : [
+        { "title" : "OpenOffice.org", "page" : "notes/openoffice.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "LibreOffice", "page" : "notes/libreoffice.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Customization", "page" : "notes/libreofficecust.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Acroread", "page" : "notes/adobread.html", "languages" : ["fr"], "formats" : ["HTML"], "children" : [
+          { "title" : "shortcuts", "page" : "notes/acroread.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Firefox", "page" : "notes/firefox.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Chrome", "page" : "notes/chrome.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Thunderbird", "page" : "notes/thunderbird.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Gimp", "page" : "notes/gimp.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Minitab", "page" : "notes/minitab.htm", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Wikipedia", "page" : "notes/wikipedia.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Google", "page" : "notes/google.html", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Miscellaneous", "children" : [
+        { "title" : "Abréviations françaises", "page" : "notes/abbrevfr.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "English abbreviations", "page" : "notes/abbreven.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "GE abbreviations", "page" : "notes/abbrevge.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "KIKA abbreviations", "page" : "notes/abbrevkika.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Eurofins abbreviations", "page" : "notes/abbreveurofins.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Chronologie", "page" : "notes/chrono.html", "languages" : ["fr"], "formats" : ["HTML"] }
+      ] }
+    ] },
+    { "title" : "Cooking", "children" : [
+      { "title" : "Cocktails", "children" : [
+        { "title" : "El capitan", "page" : "bouffe/027.htm", "languages" : ["fr"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Breakfast", "children" : [
+        { "title" : "Drop scones", "page" : "bouffe/002.htm", "languages" : ["en"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Appetizers", "children" : [
+        { "title" : "Tapénade", "page" : "bouffe/008.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Tsatsiki", "page" : "bouffe/032.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Pruneaux, figues et bananes bardées", "page" : "bouffe/020.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Fenouils à la grecque", "page" : "bouffe/0141.html", "languages" : ["fr"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Starters", "children" : [
+        { "title" : "Rouleaux d'aubergines farcis au bleu, à l'ail nouveau et aux amandes", "page" : "bouffe/007.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Flans de petits pois au chèvre et au curry", "page" : "bouffe/042.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Médaillons de saumon cru à l'arabesque de courgette", "page" : "bouffe/010.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Champiñones rellenos - champignons farcis", "page" : "bouffe/0132.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Tartare de saumon à la crème de câpres", "page" : "bouffe/021.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Terrine aux trois poissons", "page" : "bouffe/083.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Salade de pamplemousse aux crevettes", "page" : "bouffe/023.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Salade de haricots verts et de feta au basilic", "page" : "bouffe/0137.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Aigre-doux de volaille et d'endives au miel de romarin", "page" : "bouffe/053.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Salade au roquefort", "page" : "bouffe/024.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Soufflé au fromage", "page" : "bouffe/033.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Pottages", "children" : [
+          { "title" : "Potage Crécy", "page" : "bouffe/013.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Potage de pays aux marrons", "page" : "bouffe/019.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Potage au potiron", "page" : "bouffe/100.htm", "languages" : ["fr"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Tarts", "children" : [
+          { "title" : "Tarte moelleuse aux poireaux et au maroilles", "page" : "bouffe/025.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte aux poireaux et au chèvre", "page" : "bouffe/072.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Quiche de crevettes au pistou de persil", "page" : "bouffe/070.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Quiche aux tomates, au basilic et à la mozzarella", "page" : "bouffe/0139.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Quiche aux courgettes aillées", "page" : "bouffe/0145.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte provençale à la mozzarella", "page" : "bouffe/0142.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte à la tomate", "page" : "bouffe/0161.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cheese and onion oat flan", "page" : "bouffe/003.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Cakes", "children" : [
+          { "title" : "Cake au parmesan", "page" : "bouffe/048.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cakes courgette-feta", "page" : "bouffe/062.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cake marin au brocoli", "page" : "bouffe/064.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cake au saumon et vermouth", "page" : "bouffe/0120.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cake au saumon, à l'aneth et aux baies rouges", "page" : "bouffe/0135.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cake aux noix et aux champignons de Paris", "page" : "bouffe/065.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cake aux olives et aux lardons", "page" : "bouffe/073.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cake italien à la mozzarella et au basilic", "page" : "bouffe/087.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cake aux pruneaux et aux poireaux", "page" : "bouffe/102.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cake aux lardons, poulet et olives", "page" : "bouffe/0119.html", "languages" : ["fr"], "formats" : ["HTML"] }
+        ] }
+      ] },
+      { "title" : "Main dishes", "children" : [
+        { "title" : "Omelette à la nori sauvage", "page" : "bouffe/095.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Œufs brouillés à la tomate", "page" : "bouffe/094.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Galettes-crêpes de sarrasin", "page" : "bouffe/0108.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Crêpes farcies façon pizzaïolo", "page" : "bouffe/060.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Gratin de cannellonis à la crème", "page" : "bouffe/0115.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Terrine niçoise", "page" : "bouffe/092.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Nice crumble", "page" : "bouffe/0122.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Gratin de courgettes à la provençale", "page" : "bouffe/0124.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Tomates farcies au boulghour", "page" : "bouffe/0121.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Chou braisé aux lardons", "page" : "bouffe/0152.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Tajines aux poires rôties", "page" : "bouffe/001.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Gratin d'agneau à l'italienne", "page" : "bouffe/0113.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Curry de porc aux fruits tropicaux", "page" : "bouffe/055.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Porc aux épices à l'indonésienne", "page" : "bouffe/0153.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Rôti de porc aux pommes", "page" : "bouffe/0146.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Filet de porc au lait", "page" : "bouffe/0156.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Blanquette de veau à l'ancienne", "page" : "bouffe/093.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Osso-buco", "page" : "bouffe/0151.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Bœuf bourguignon (1)", "page" : "bouffe/069.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Bœuf bourguignon (2)", "page" : "bouffe/0148.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Bœuf à la hongroise", "page" : "bouffe/075.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Langue de bœuf braisée au madère", "page" : "bouffe/0127.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Lapin aux herbes", "page" : "bouffe/009.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Lapin bonne femme", "page" : "bouffe/014.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Lapin confit au miel et au carvi", "page" : "bouffe/043.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Lapin Ronsard", "page" : "bouffe/063.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Lapin sauté à la provençale", "page" : "bouffe/091.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Lapin sauté à la crème", "page" : "bouffe/076.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Gibelotte de lapin", "page" : "bouffe/0129.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Arrière de lapin rôti à la moutarde", "page" : "bouffe/0143.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Dinde au miel et noix de cajou", "page" : "bouffe/022.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Canard au miel et au thym", "page" : "bouffe/028.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Croustillant de volaille à l'orange", "page" : "bouffe/047.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Gratin d'épinards et poulet au bleu", "page" : "bouffe/077.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Poulet aux herbes et citron confit", "page" : "bouffe/085.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Tajine de poulet aux fruits secs et citrons confits", "page" : "bouffe/0134.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Émincé de poulet au lait de coco et basilic", "page" : "bouffe/086.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Brochette de poulet à la grecque", "page" : "bouffe/0138.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Sauté de blanc de poulet et petits légumes à la coriandre", "page" : "bouffe/090.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Tourte au poulet et aux champignons", "page" : "bouffe/0117.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Fricassée à la hongroise", "page" : "bouffe/0110.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Sauté d'oie aux noisettes grillées", "page" : "bouffe/029.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Lotte à l'armoricaine", "page" : "bouffe/039.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Papillotes de bars farcis à l'oseille et aux champignons", "page" : "bouffe/049.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Papillotes de cabillaud aux herbes", "page" : "bouffe/0131.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Dorade rose en robe d'épices", "page" : "bouffe/098.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Brochettes de saumonette et riz à la cardamome", "page" : "bouffe/0109.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Blanquette de soles et crevettes à la vanille", "page" : "bouffe/058.htm", "languages" : ["fr"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Accompaniments", "children" : [
+        { "title" : "Purée de carottes", "page" : "bouffe/017.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Purée de céleris-raves", "page" : "bouffe/0150.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Spätzles", "page" : "bouffe/0133.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Aubergines sautées", "page" : "bouffe/0140.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Chou blanc à la crème", "page" : "bouffe/0144.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Gratin de courgettes et quinoa", "page" : "bouffe/0147.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Gratin dauphinois", "page" : "bouffe/0154.html", "languages" : ["fr"], "formats" : ["HTML"] }
+      ] },
+      { "title" : "Desserts", "children" : [
+        { "title" : "Moelleux poires-amandes", "page" : "bouffe/0112.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Clafoutis meringué aux pommes", "page" : "bouffe/015.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Clafoutis aux poires et raisins secs", "page" : "bouffe/105.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Cocotte de pudding au pain d'épices", "page" : "bouffe/101.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Far framboises et vanille", "page" : "bouffe/045.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Flan levé aux mirabelles", "page" : "bouffe/046.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Flan aux pommes", "page" : "bouffe/0136.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Leche asada", "page" : "bouffe/051.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Fiadone de vache", "page" : "bouffe/012.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Pain perdu", "page" : "bouffe/030.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Pasteis de nata", "page" : "bouffe/0107.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Tian de fraises au basilic", "page" : "bouffe/084.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Bananes flambées à l'orange", "page" : "bouffe/103.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Pomme en œufs aux fruits secs", "page" : "bouffe/0125.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Glace aux fraises", "page" : "bouffe/054.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Cakes", "children" : [
+          { "title" : "Gâteau américain aux carottes et à la noisette", "page" : "bouffe/088.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Gâteau aux carottes (cuisine kascher)", "page" : "bouffe/0155.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Petits gâteaux aux carottes (Inde)", "page" : "bouffe/0157.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Gâteau de potiron", "page" : "bouffe/0149.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Gâteau Alexandra", "page" : "bouffe/006.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Gâteau tigré choco-amandes", "page" : "bouffe/078.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Gâteau au fromage blanc, coulis de framboises", "page" : "bouffe/059.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Gâteau frais aux pommes et aux amandes", "page" : "bouffe/068.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Irish brack", "page" : "bouffe/004.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Date loaf", "page" : "bouffe/011.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Fig loaf", "page" : "bouffe/0130.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Banana-fruit breads", "page" : "bouffe/005.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Cake au citron", "page" : "bouffe/0158.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Cheesecake au citron", "page" : "bouffe/0126.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Moelleux aux pommes et aux pistaches", "page" : "bouffe/081.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Muffins aux pommes", "page" : "bouffe/0160.html", "languages" : ["fr"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Biscuits", "children" : [
+          { "title" : "Canistrelli", "page" : "bouffe/026.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Canistrelli au citron", "page" : "bouffe/0159.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cookies", "page" : "bouffe/0162.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Falculelles", "page" : "bouffe/050.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Pyramides à la noix de coco", "page" : "bouffe/034.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Chocolate chip biscuits", "page" : "bouffe/035.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Cinnamon crisps", "page" : "bouffe/040.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Ginger nuts", "page" : "bouffe/041.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Langues de chat", "page" : "bouffe/056.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Tarts", "children" : [
+          { "title" : "Tarte en cage à la ricotta", "page" : "bouffe/0116.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte aux noix, à la cassonade et au miel", "page" : "bouffe/016.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte de potiron au chocolat et aux épices", "page" : "bouffe/061.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte Tatin", "page" : "bouffe/067.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte grand-mère", "page" : "bouffe/079.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte aux poires tout chocolat au Grand Marnier", "page" : "bouffe/018.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte rustique tout chocolat", "page" : "bouffe/066.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte aux abricots à la crème de Pithiviers", "page" : "bouffe/052.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte aux pommes et aux mirabelles", "page" : "bouffe/0123.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte des îles à la banane parfumée de muscade", "page" : "bouffe/038.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte rhubarbe et orange", "page" : "bouffe/082.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte à l'orange", "page" : "bouffe/0114.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte au citron meringuée", "page" : "bouffe/031.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte au citron", "page" : "bouffe/074.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte de ricotta aux framboises", "page" : "bouffe/089.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte aux abricots à la ricotta", "page" : "bouffe/0118.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Tarte au crumble de pommes et fruits rouges", "page" : "bouffe/099.htm", "languages" : ["fr"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Crumbles", "children" : [
+          { "title" : "Crumble aux prunes et pruneaux", "page" : "bouffe/096.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Crumble aux pommes et raisins secs", "page" : "bouffe/044.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Crumble aux fruits d'automne et aux épices", "page" : "bouffe/104.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Crumble au citron", "page" : "bouffe/0106.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Cheese crumble", "page" : "bouffe/0111.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Nutty plum crumble", "page" : "bouffe/057.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] }
+      ] },
+      { "title" : "Bases", "children" : [
+        { "title" : "Pâte brisée", "page" : "bouffe/036.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Pâte brisée pâtissière", "page" : "bouffe/037.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Pâte sablée", "page" : "bouffe/097.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Sauce tomate classique et une variante", "page" : "bouffe/0128.html", "languages" : ["fr"], "formats" : ["HTML"] }
+      ] }
+    ] },
+    { "title" : "About me", "page" : "perso/perso.html", "languages" : ["fr"], "formats" : ["HTML"], "children" : [
+      { "title" : "Curriculum vitæ français", "page" : "perso/cvf.html", "languages" : ["fr"], "formats" : ["HTML"] },
+      { "title" : "English curriculum vitæ", "page" : "perso/cve.html", "languages" : ["fr"], "formats" : ["HTML"] },
+      { "title" : "Signatures", "page" : "perso/sig.html", "languages" : ["en", "fr"], "formats" : ["HTML"] }
+    ] },
+    { "title" : "About this site", "children" : [
+      { "title" : "Hits", "page" : "perso/hits.html", "languages" : ["en"], "formats" : ["HTML"] },
+      { "title" : "Article index by authors", "page" : "content_tables/author.html", "languages" : ["en"], "formats" : ["HTML"] },
+      { "title" : "Article index by titles", "page" : "content_tables/article.html", "languages" : ["en"], "formats" : ["HTML"] },
+      { "title" : "Article index by URLs", "page" : "content_tables/url.html", "languages" : ["en"], "formats" : ["HTML"] },
+      { "title" : "Weblog", "page" : "perso/weblog.htm", "languages" : ["fr"], "formats" : ["HTML"] },
+      { "title" : "Map", "page" : "hack/map.html", "languages" : ["en"], "formats" : ["HTML"] }
+    ] }
+] } }
+
