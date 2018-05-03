@@ -5,54 +5,56 @@
 <PATH>links/dicom.xml</PATH>
 <DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
-<CLIST>
-  <ITEM><X><T>NEMA</T><A>http://medical.nema.org/</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X quality='2'><T>DICOM base, supplements and corrections</T><A>http://www.dclunie.com/dicom-status/status.html</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>comp.protocols.dicom newsgroup</T><A>http://groups.google.com/group/comp.protocols.dicom</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>personal notes</T><A>../notes/dicom.html</A><L>en</L><F>HTML</F></X></ITEM>
-</CLIST>
-<BLIST><TITLE>DICOM image repositories</TITLE>
-  <ITEM><X><T>S&#xE9;bastien Barr&#xE9;</T><A>http://www.barre.nom.fr/medical/samples/</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Rubo Medical</T><A>http://www.rubomedical.com/dicomfiles/index.html</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>CTN</T><A>http://wuerlim.wustl.edu/research/dicom/imagesets.html</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-<BLIST><TITLE>List of DICOM image repositories</TITLE>
-  <ITEM><X><T>GDCM</T><A>http://sourceforge.net/apps/mediawiki/gdcm/index.php?title=Sample_DataSet</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Arnold School of Public Health</T><A>http://www.sph.sc.edu/comd/rorden/dicom.html#linkimg</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>David Clunie</T><A>http://www.dclunie.com/medical-image-faq/html/part8.html#DICOMImageSamples</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-<BLIST><TITLE>List of Conformance Statement repositories</TITLE>
-  <ITEM><X><T>David Clunie</T><A>http://www.dclunie.com/medical-image-faq/html/part8.html#DICOMConformanceStatementSites</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-<BLIST><TITLE>Tools</TITLE>
-  <ITEM><X><T>DVTk</T><A>http://www.dvtk.org</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>dcm4che</T><A>http://www.dcm4che.org</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>ClearCanvas</T><A>http://www.clearcanvas.ca</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><BLIST><TITLE>Viewers</TITLE>
-    <ITEM><X><T>idoimaging.com</T><A>http://www.idoimaging.com</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>OsiriX</T><A>http://www.osirix-viewer.com</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>MRIcron</T><A>http://www.cabiatl.com/mricro/mricron</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Offis</T><A>http://dicom.offis.de/</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>MIPAV</T><A>http://mipav.cit.nih.gov</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>JDICOM</T><A>http://members.chello.at/petra.kirchdorfer/jdicom/</A><L>en</L><F>HTML</F></X></ITEM>
+<LLIST>
+  <ITEM><SLIST>
+    <ITEM><CLIST>
+      <ITEM><X><T>NEMA</T><A>http://medical.nema.org/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X quality='2'><T>DICOM base, supplements and corrections</T><A>http://www.dclunie.com/dicom-status/status.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>comp.protocols.dicom newsgroup</T><A>http://groups.google.com/group/comp.protocols.dicom</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>personal notes</T><A>../notes/dicom.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><BLIST><TITLE>DICOM image repositories</TITLE>
+      <ITEM><X><T>S&#xE9;bastien Barr&#xE9;</T><A>http://www.barre.nom.fr/medical/samples/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Rubo Medical</T><A>http://www.rubomedical.com/dicom_files/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>CTN</T><A>http://wuerlim.wustl.edu/research/dicom/imagesets.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>List of DICOM image repositories</TITLE>
+      <ITEM><X><T>Arnold School of Public Health</T><A>http://www.sph.sc.edu/comd/rorden/dicom.html#linkimg</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>David Clunie</T><A>http://www.dclunie.com/medical-image-faq/html/part8.html#DICOMImageSamples</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>List of Conformance Statement repositories</TITLE>
+      <ITEM><X><T>David Clunie</T><A>http://www.dclunie.com/medical-image-faq/html/part8.html#DICOMConformanceStatementSites</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Tools</TITLE>
+      <ITEM><X><T>DVTk</T><A>http://www.dvtk.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>dcm4che</T><A>http://www.dcm4che.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>ClearCanvas</T><A>http://www.clearcanvas.ca</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><BLIST><TITLE>Viewers</TITLE>
+        <ITEM><X><T>idoimaging.com</T><A>http://www.idoimaging.com</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>OsiriX</T><A>http://www.osirix-viewer.com</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>MRIcron</T><A>http://www.cabiatl.com/mricro/mricron</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Offis</T><A>http://dicom.offis.de/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>MIPAV</T><A>http://mipav.cit.nih.gov</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>JDICOM</T><A>http://members.chello.at/petra.kirchdorfer/jdicom/</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>DICOM toolkits</TITLE>
+      <ITEM><X><T>GDCM</T><A>http://sourceforge.net/projects/gdcm/</A><L>en</L><F>HTML</F></X>
+      (<X><T>mailing list</T><A>http://www.creatis.insa-lyon.fr/mailman/listinfo/dcmlib</A><L>en</L><F>HTML</F></X>)</ITEM>
+      <ITEM><X><T>DCMTK</T><A>http://dicom.offis.de/dcmtk.php.en</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>3D Slicer</T><A>http://www.slicer.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Leadtools</T><A>http://www.leadtools.com/sdk/medical/dicom.htm</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+  </SLIST></ITEM>
+  <ITEM><BLIST><TITLE>Articles</TITLE>
+    <ITEM><BLIST><TITLE>Structured Reports</TITLE>
+      <ITEM><ARTICLE><X><T>DICOM Structured Reporting</T><A>http://www.dclunie.com/pixelmed/DICOMSR.book.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>Clunie</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>A detailed explanation of the standard.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>DICOM Structured Reporting and Cancer Clinical Trials Results</T><A>http://la-press.com/article.php?article_id=240</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR></DATE><COMMENT>A description of DICOM SR and its possible use for clinical trials.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Cross-enterprise Document Sharing for Imaging</TITLE>
+      <ITEM><ARTICLE><X protection='free_registration'><T>IHE's XDS-I profile may help with CD import dilemma</T><A>http://www.auntminnie.com/index.asp?Sec=sup&amp;Sub=pac&amp;Pag=dis&amp;ItemId=85422</A><L>en</L><F>HTML</F></X><DATE><YEAR>2009</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE><COMMENT>Dr. Nicola Strickland advises to avoid CDs and to use instead XDS-I, if your PACS supports it&#x2026;</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
   </BLIST></ITEM>
-</BLIST>
-<BLIST><TITLE>DICOM toolkits</TITLE>
-  <ITEM><X><T>GDCM</T><A>http://sourceforge.net/projects/gdcm/</A><L>en</L><F>HTML</F></X>
-(<X><T>mailing list</T><A>http://www.creatis.insa-lyon.fr/mailman/listinfo/dcmlib</A><L>en</L><F>HTML</F></X>)</ITEM>
-  <ITEM><X><T>DCMTK</T><A>http://dicom.offis.de/dcmtk.php.en</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>3D Slicer</T><A>http://www.slicer.org</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Leadtools</T><A>http://www.leadtools.com/sdk/medical/dicom.htm</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-<LINE/>
-<BLIST><TITLE>Articles</TITLE>
-  <ITEM><BLIST><TITLE>Structured Reports</TITLE>
-    <ITEM><ARTICLE><X><T>DICOM Structured Reporting</T><A>http://www.dclunie.com/pixelmed/DICOMSR.book.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>Clunie</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>A detailed explanation of the standard.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>DICOM Structured Reporting and Cancer Clinical Trials Results</T><A>http://la-press.com/article.php?article_id=240</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR></DATE><COMMENT>A description of DICOM SR and its possible use for clinical trials.</COMMENT></ARTICLE></ITEM>
-  </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>Cross-enterprise Document Sharing for Imaging</TITLE>
-    <ITEM><ARTICLE><X protection='free_registration'><T>IHE's XDS-I profile may help with CD import dilemma</T><A>http://www.auntminnie.com/index.asp?Sec=sup&amp;Sub=pac&amp;Pag=dis&amp;ItemId=85422</A><L>en</L><F>HTML</F></X><DATE><YEAR>2009</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE><COMMENT>Dr. Nicola Strickland advises to avoid CDs and to use instead XDS-I, if your PACS supports it&#x2026;</COMMENT></ARTICLE></ITEM>
-  </BLIST></ITEM>
-</BLIST>
+</LLIST>
 </CONTENT>
 </PAGE>
