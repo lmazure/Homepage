@@ -8,7 +8,6 @@
   <html>
     <head>
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
-    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/png" href="../icon.png" />
     <xsl:comment>[if IE]&gt;&lt;link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/&gt;&lt;![endif]</xsl:comment>
@@ -60,13 +59,13 @@
         </div>
         <div style="display:grid;">
           <div style="grid-column:1;grid-row:1;font-size:300%;text-align:center;">
-            <a  title="site map" href="../hack/map.html"><xsl:text disable-output-escaping='yes'>&amp;#x1f4c1;</xsl:text></a>
+            <a  title="site map" href="../hack/map.html">&#x1f4c1;</a>
           </div>
           <div style="grid-column:2;grid-row:1;font-size:300%;text-align:center;">
-            <a  title="contact" target="_self" href="javascript:do_email()"><xsl:text disable-output-escaping='yes'>&amp;#x2709;&amp;#xfe0f;</xsl:text></a>
+            <a  title="contact" target="_self" href="javascript:do_email()">&#x2709;&#xfe0f;</a>
           </div>
           <div style="grid-column:3;grid-row:1;font-size:300%;text-align:center;">
-            <a  title="site search" target="_self" href="javascript:display_search()"><xsl:text disable-output-escaping='yes'>&amp;#x1f50e;</xsl:text></a>
+            <a  title="site search" target="_self" href="javascript:display_search()">&#x1f50e;</a>
           </div>
         </div>
       </footer>
@@ -101,7 +100,7 @@
         </xsl:attribute>
         <xsl:attribute name="title"><xsl:text>mirror</xsl:text></xsl:attribute>
         <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
-        <xsl:text disable-output-escaping='yes'>M</xsl:text>
+        <xsl:text>M</xsl:text>
       </xsl:element>
     </xsl:if>
     <xsl:if test="(position()=last()) and (position()>1)" >
@@ -129,7 +128,7 @@
     <xsl:text>)</xsl:text>
   </xsl:if>
   <xsl:if test="count(./COMMENT)=1">
-    <xsl:text disable-output-escaping='yes'> &amp;#x25BA; </xsl:text>
+    <xsl:text> &#x25BA; </xsl:text>
     <xsl:apply-templates select="./COMMENT"/>
   </xsl:if>
 </xsl:template>
@@ -168,13 +167,13 @@
         </xsl:choose>
       </xsl:attribute>
       <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
-      <xsl:text disable-output-escaping='yes'>&amp;#x25c8;</xsl:text>
+      <xsl:text>&#x25c8;</xsl:text>
     </xsl:element>
   </code>
 </xsl:template>
 
 <xsl:template match="CODEMENU">
-  <span class="codemenu"><xsl:if test="name(..)='CODEMENU'"><xsl:text disable-output-escaping='yes'> &amp;#x25BA; </xsl:text></xsl:if><xsl:apply-templates/></span>
+  <span class="codemenu"><xsl:if test="name(..)='CODEMENU'"><xsl:text> &#x25BA; </xsl:text></xsl:if><xsl:apply-templates/></span>
 </xsl:template>
 
 <xsl:template match="X">
@@ -236,38 +235,38 @@
   </xsl:for-each>
   <xsl:choose>
     <xsl:when test="@quality='2'">
-      <span title="very good"><xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text><xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text></span>
+      <span title="very good"><xsl:text> &#x1f44d; &#x1f44d;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='1'">
-      <span title="good"><xsl:text disable-output-escaping='yes'> &amp;#x1f44d;</xsl:text></span>
+      <span title="good"><xsl:text> &#x1f44d;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-1'">
-      <span title="bad"><xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text></span>
+      <span title="bad"><xsl:text> &#x1f44e;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-2'">
-      <span title="very bad"><xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text><xsl:text disable-output-escaping='yes'> &amp;#x1f44e;</xsl:text></span>
+      <span title="very bad"><xsl:text> &#x1f44e; &#x1f44e;</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@status='dead' or @status='zombie'">
-      <span title="dead link"><xsl:text disable-output-escaping='yes'> &amp;#x2020;</xsl:text></span>
+      <span title="dead link"><xsl:text> &#x2020;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@status='obsolete'">
-      <span title="obsolete"><xsl:text disable-output-escaping='yes'> &amp;#x2021;</xsl:text></span>
+      <span title="obsolete"><xsl:text> &#x2021;</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@protection='firewall'">
-      <span title="protected behind a firewall"><xsl:text disable-output-escaping='yes'> &amp;#x1f525;</xsl:text></span>
+      <span title="protected behind a firewall"><xsl:text> &#x1f525;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='free_registration'">
-      <span title="free registration required"><xsl:text disable-output-escaping='yes'> &amp;#x1f193;</xsl:text></span>
+      <span title="free registration required"><xsl:text> &#x1f193;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='payed_registration'">
-      <span title="payed registration required"><xsl:text disable-output-escaping='yes'> &amp;#x1f4b0;</xsl:text></span>
+      <span title="payed registration required"><xsl:text> &#x1f4b0;</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='protected'">
-      <span title="protected"><xsl:text disable-output-escaping='yes'> &amp;#x1f512;</xsl:text></span>
+      <span title="protected"><xsl:text> &#x1f512;</xsl:text></span>
     </xsl:when>
   </xsl:choose>
 </xsl:template>
@@ -547,7 +546,7 @@
 
 <xsl:template match="TAB">&#xA0;&#xA0;&#xA0;&#xA0;</xsl:template>
 
-<xsl:template match="TABCHAR"><xsl:text disable-output-escaping='yes'>&amp;perp;</xsl:text></xsl:template>
+<xsl:template match="TABCHAR"><xsl:text>&#8869;</xsl:text></xsl:template>
 
 <xsl:template match="PROMPT">#&gt; </xsl:template>
 
@@ -560,13 +559,13 @@
 <xsl:template match="KEY">
   <span class="key">
     <xsl:choose>
-      <xsl:when test="./@ID='Left'"><xsl:text disable-output-escaping='yes'>&amp;larr;</xsl:text></xsl:when>
-      <xsl:when test="./@ID='Up'"><xsl:text disable-output-escaping='yes'>&amp;uarr;</xsl:text></xsl:when>
-      <xsl:when test="./@ID='Right'"><xsl:text disable-output-escaping='yes'>&amp;rarr;</xsl:text></xsl:when>
-      <xsl:when test="./@ID='Down'"><xsl:text disable-output-escaping='yes'>&amp;darr;</xsl:text></xsl:when>
-      <xsl:when test="./@ID='Begining'"><xsl:text disable-output-escaping='yes'>&#x2196;</xsl:text></xsl:when>
-      <xsl:when test="./@ID='PageDown'"><xsl:text disable-output-escaping='yes'>&#x21de;</xsl:text></xsl:when>
-      <xsl:when test="./@ID='PageUp'"><xsl:text disable-output-escaping='yes'>&#x21df;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='Left'"><xsl:text>&#x2190;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='Up'"><xsl:text>&#x2191;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='Right'"><xsl:text>&#x2192;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='Down'"><xsl:text>&#x2193;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='Begining'"><xsl:text>&#x2196;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='PageDown'"><xsl:text>&#x21de;</xsl:text></xsl:when>
+      <xsl:when test="./@ID='PageUp'"><xsl:text>&#x21df;</xsl:text></xsl:when>
       <xsl:otherwise><xsl:value-of select="@ID"/></xsl:otherwise>
     </xsl:choose>
   </span>

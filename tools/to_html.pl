@@ -19,7 +19,7 @@ die("don't know where are the Java libraries") if ( ! defined($lib_dir) );
 print "$0\n";
 my $base_dir = $0;
 $base_dir =~ s{^(.*)\\[^\\]*\\[^\\]*$}{$1};
-my $xalan_dir = $lib_dir."/xalan-j_2_7_1";
+my $saxon_dir = $lib_dir."/SaxonHE9-8-0-12J";
 my $start_dir = "..";
 #my $start_dir = $base_dir;
 my $xlst_file = $start_dir."/css/strict.xsl";
@@ -40,15 +40,11 @@ sub to_html {
        ( stat($xlst_file)->mtime >= stat($outfile)->mtime ) ) {
     #my @cmds = ("/cygdrive/h/Documents/tools/jre/jre-9/bin/java.exe",
     my @cmds = ("java.exe",
-        "-cp",
-        "$xalan_dir/xalan.jar",
-        "org.apache.xalan.xslt.Process",
-        "-IN",
-        "$infile",
-        "-XSL",
-        "$xlst_file",
-        "-OUT",
-        "$outfile");
+        "-jar",
+        "$saxon_dir/saxon9he.jar",
+        "-s:$infile",
+        "-xsl:$xlst_file",
+        "-o:$outfile");
     if (system(@cmds)) {
         unlink $outfile;
         die("run Java ($!)");
