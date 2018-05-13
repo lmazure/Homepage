@@ -643,9 +643,9 @@
     ] },
     { "title" : "About this site", "children" : [
       { "title" : "Hits", "page" : "perso/hits.html", "languages" : ["en"], "formats" : ["HTML"] },
-      { "title" : "Article index by authors", "page" : "content_tables/author.html", "languages" : ["en"], "formats" : ["HTML"] },
-      { "title" : "Article index by titles", "page" : "content_tables/article.html", "languages" : ["en"], "formats" : ["HTML"] },
-      { "title" : "Article index by URLs", "page" : "content_tables/url.html", "languages" : ["en"], "formats" : ["HTML"] },
+      { "title" : "Article index sorted by authors", "page" : "content_tables/content.html?sort=author", "languages" : ["en"], "formats" : ["HTML"] },
+      { "title" : "Article index sorted by titles", "page" : "content_tables/content.html?sort=article", "languages" : ["en"], "formats" : ["HTML"] },
+      { "title" : "Article index sorted by URLs", "page" : "content_tables/content.html?sort=link", "languages" : ["en"], "formats" : ["HTML"] },
       { "title" : "Weblog", "page" : "perso/weblog.htm", "languages" : ["fr"], "formats" : ["HTML"] },
       { "title" : "Map", "page" : "hack/map.html", "languages" : ["en"], "formats" : ["HTML"] }
     ] }
