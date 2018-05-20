@@ -61,7 +61,7 @@
           <div style="grid-column:1;grid-row:1;font-size:300%;text-align:center;">
             <xsl:element name="a">
               <xsl:attribute name="href">
-                <xsl:text>../hack/map.html?page=</xsl:text>
+                <xsl:text>../content/map.html?page=</xsl:text>
                 <xsl:value-of select = "substring($filepath,1,string-length($filepath)-3)"/>
                 <xsl:text>html</xsl:text>
               </xsl:attribute>
