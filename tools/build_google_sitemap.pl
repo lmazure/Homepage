@@ -1,9 +1,10 @@
-#!/usr/bin/perl -w
+#!/bin/perl -w
 
 use strict;
 
 my $basedir = $0;
-$basedir =~ s{^(.*)\\[^\\]*\\[^\\]*$}{$1};
+#$basedir =~ s{^(.*)\\[^\\]*\\[^\\]*$}{$1};
+$basedir = "..";
 my $outfile = "$basedir/gsitemap.xml";
 
 sub handle_file {
@@ -42,29 +43,23 @@ sub handle_file {
         print OUTFILE "    <changefreq>monthly</changefreq>\n";
     } elsif ( $dir eq "bouffe") {
         print OUTFILE "    <changefreq>monthly</changefreq>\n";
-    } elsif ( $dir eq "tastes") {
-        print OUTFILE "    <changefreq>monthly</changefreq>\n";
     } elsif ( $dir eq "quality") {
         print OUTFILE "    <changefreq>monthly</changefreq>\n";
     } elsif ( $dir eq "notes") {
         print OUTFILE "    <changefreq>weekly</changefreq>\n";
     } elsif ( $dir eq "links") {
         print OUTFILE "    <changefreq>weekly</changefreq>\n";
-    } elsif ( $dir eq "content_tables") {
+    } elsif ( $dir eq "content") {
+        print OUTFILE "    <changefreq>weekly</changefreq>\n";
+    } elsif ( $dir eq "scripts") {
         print OUTFILE "    <changefreq>weekly</changefreq>\n";
     } elsif ( $dir eq "attic") {
         print OUTFILE "    <changefreq>never</changefreq>\n";
-    } elsif ( $dir eq "hardcore") {
-        print OUTFILE "    <changefreq>yearly</changefreq>\n";
-    } elsif ( $dir eq "hack") {
-        print OUTFILE "    <changefreq>yearly</changefreq>\n";
     } elsif ( $dir eq "index.htm") {
         print OUTFILE "    <changefreq>monthly</changefreq>\n";
     } elsif ( $dir eq "robots.txt") {
         print OUTFILE "    <changefreq>monthly</changefreq>\n";
     } elsif ( $dir eq "favicon.ico") {
-        print OUTFILE "    <changefreq>yearly</changefreq>\n";
-    } elsif ( $dir eq "icon.png") {
         print OUTFILE "    <changefreq>yearly</changefreq>\n";
     } elsif ( $dir eq "icon.png") {
         print OUTFILE "    <changefreq>yearly</changefreq>\n";

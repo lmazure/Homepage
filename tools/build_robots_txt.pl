@@ -1,9 +1,10 @@
-#!/usr/bin/perl -w
+#!/bin/perl -w
 
 use strict;
 
 my $basedir = $0;
-$basedir =~ s{^(.*)\\[^\\]*\\[^\\]*$}{$1};
+#$basedir =~ s{^(.*)\\[^\\]*\\[^\\]*$}{$1};
+$basedir = "..";
 my $outfile = "$basedir/robots.txt";
 
 sub scan_dir {
