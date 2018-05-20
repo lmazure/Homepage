@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -165,6 +165,7 @@
           <ITEM><ARTICLE><X><T>Applying Strategy Pattern in C++ Applications</T><A>http://www.codeguru.com/cpp_mfc/strategy.shtml</A><L>en</L><F>HTML</F></X><X><T>Applying Strategy Pattern in C++ Applications</T><A>http://www.codeproject.com/KB/architecture/strategy.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kulathu</FIRSTNAME><LASTNAME>Sarma</LASTNAME></AUTHOR><DATE><YEAR>1998</YEAR><MONTH>11</MONTH><DAY>27</DAY></DATE><COMMENT>This is a rather good description to the strategy pattern, but I believe this paper contains several errors (e.g. using templates does not reduce footprint).</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X status='dead'><T>An Example of the Strategy Pattern</T><A>http://industriallogic.com/patterns/examples/strategy.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ralph</FIRSTNAME><MIDDLENAME>Richard</MIDDLENAME><LASTNAME>Cook</LASTNAME></AUTHOR><COMMENT>A short C++ example of the strategy pattern.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Strategy Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Strategy.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Minka</LASTNAME></AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>11</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Strategy Pattern in .NET</T><A>https://visualstudiomagazine.com/articles/2012/02/22/strategy-pattern-in-net.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>2</MONTH><DAY>22</DAY></DATE><COMMENT>A simple C# example.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Template Method: Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.</TITLE>
           <ITEM><ARTICLE><X><T>Template Method</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/templateMethod.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
