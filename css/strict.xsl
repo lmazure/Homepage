@@ -59,7 +59,14 @@
         </div>
         <div style="display:grid;">
           <div style="grid-column:1;grid-row:1;font-size:300%;text-align:center;">
-            <a  title="site map" href="../hack/map.html">&#x1f4c1;</a>
+            <xsl:element name="a">
+              <xsl:attribute name="href">
+                <xsl:text>../hack/map.html?page=</xsl:text>
+                <xsl:value-of select = "substring($filepath,1,string-length($filepath)-3)"/>
+                <xsl:text>html</xsl:text>
+              </xsl:attribute>
+              <xsl:text>&#x1f4c1;</xsl:text>
+            </xsl:element>
           </div>
           <div style="grid-column:2;grid-row:1;font-size:300%;text-align:center;">
             <a  title="contact" target="_self" href="javascript:do_email()">&#x2709;&#xfe0f;</a>
