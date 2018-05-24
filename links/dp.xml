@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -46,6 +46,7 @@
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Prototype: Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.</TITLE>
           <ITEM><ARTICLE><X><T>Prototype</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/prototype.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Create Object Clones Through the Prototype Pattern in .NET</T><A>https://visualstudiomagazine.com/articles/2013/05/31/the-prototype-pattern-in-net.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>31</DAY></DATE><COMMENT>A simple C# example.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Product Trader: Let clients create objects by naming an abstract superclass and by providing a specification.</TITLE>
           <ITEM><ARTICLE><X><T>Product Trader</T><A>http://www.riehle.org/computer-science/research/1996/plop-1996-product-trader.html</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Dirk</FIRSTNAME><LASTNAME>Ba&#xFC;mer</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Dirk</FIRSTNAME><LASTNAME>Riehle</LASTNAME></AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>This is a complete description of the role pattern with the pros, cons, C++ and Smalltalk examples&#x2026;</COMMENT></ARTICLE></ITEM>
@@ -126,6 +127,7 @@
         <ITEM><BLIST><TITLE>Chain of Responsibility: Avoid coupling the sender of a request to its receiver by giving more than one object a chance to handle the request. Chain the receiving objects and pass the request along the chain until an object handles it.</TITLE>
           <ITEM><ARTICLE><X><T>Chain of Responsibility</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/chainOfResponsibility.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Chain of Responsibility Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/CoR.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Minka</LASTNAME></AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>19</DAY></DATE><COMMENT>A good short presentation of the pattern, no UML diagram nor code example is provided.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Chain of Responsibility Pattern in .NET</T><A>https://visualstudiomagazine.com/articles/2013/07/11/chain-of-responsibility-pattern.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>12</DAY></DATE><COMMENT>A simple C# example.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Command (a.k.a. Action or Transaction): Encapsulate a request as an object, thereby letting you parameterize clients with different requests, queue or log requests, and support undoable operations.</TITLE>
           <ITEM><ARTICLE><X><T>Command</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/command.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
