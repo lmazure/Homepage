@@ -3,12 +3,16 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='C'/></TERM>
 <DESC>copy</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='X'/></TERM>
+<DESC>cut</DESC>
 </ROW>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='V'/></TERM>
@@ -20,6 +24,10 @@ Writer
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
 <DESC>paste special</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
+<DESC>paste unformatted text</DESC>
 </ROW>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='B'/></TERM>
@@ -83,6 +91,17 @@ Calc
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
 <DESC>add a comment</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+Impress
+<DEFINITIONTABLE>
+<ROW>
+<TERM><KEY ID='F5'/></TERM>
+<DESC>display first slide full screen</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Shift'/><KEY ID='F5'/></TERM>
+<DESC>display current slide full screen</DESC>
 </ROW>
 </DEFINITIONTABLE><BR/>
 <BLIST><TITLE>Macros</TITLE>
