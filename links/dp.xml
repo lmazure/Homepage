@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -68,6 +68,7 @@
           <ITEM><ARTICLE><X><T>Bridge Pattern - Bridging the gap between Interface and Implementation</T><A>http://www.codeguru.com/cpp_mfc/bridge.shtml</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kulathu</FIRSTNAME><LASTNAME>Sarma</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE><COMMENT>This other Sarma paper is also a good description, but, this time (see in strategy pattern) , I have no negative comments&#x2026;</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X status='dead'><T>An Example of the Bridge Pattern</T><A>http://industriallogic.com/patterns/examples/bridge.html</A><L>en</L><F>HTML</F></X><COMMENT>A very short C++ example found in MFC (<CODEROUTINE>CFile</CODEROUTINE>).</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X status='dead'><T>Getting the Handle of Handles</T><A>http://www.acm.org/crossroads/xrds2-2/ovp.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>G.</FIRSTNAME><MIDDLENAME>Bowden</MIDDLENAME><LASTNAME>Wise</LASTNAME></AUTHOR><DATE><YEAR>1995</YEAR></DATE><COMMENT>Not described as a design pattern, but this article is still a good presentation of possible uses of a bridge.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Bridge Pattern in the .NET Framework</T><A>https://visualstudiomagazine.com/articles/2013/11/07/the-net-bridge-pattern.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE><COMMENT>A simple C# example.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Bureaucracy: Define a self-constrained hierarchical structure which maintains its inner consistency, accepts interaction with clients on any level of the hierarchy, and scales for application design.</TITLE>
           <ITEM><ARTICLE><X><T>Bureaucracy</T><A>http://www.riehle.org/computer-science/research/1996/europlop-1996-bureaucracy.html</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Dirk</FIRSTNAME><LASTNAME>Riehle</LASTNAME></AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This pattern is very complex. In my mind, it is not very generic, so I would consider this as a design rather than a design pattern. But this is a good example of the composition of several patterns. The author proposes a way (using roles) to handle this type of complex pattern compositions. But, this is maybe only a joke&#x2026;</COMMENT></ARTICLE></ITEM>
@@ -148,6 +149,7 @@
         <ITEM><BLIST><TITLE>Mediator: Define an object that encapsulates how a set of objects interact. Mediator promotes loose coupling by keeping objects from referring to each other explicitly, and it lets you vary their interaction independently.</TITLE>
           <ITEM><ARTICLE><X><T>Mediator</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/mediator.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Mediator Pattern</T><A>http://www.castle-cadenza.demon.co.uk/mediat.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shaun</FIRSTNAME><LASTNAME>Parry</LASTNAME></AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>All Talk: Using the Mediator Pattern in .NET Framework</T><A>https://visualstudiomagazine.com/articles/2014/12/11/mediator-pattern-net-framework.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>12</MONTH><DAY>11</DAY></DATE><COMMENT>A simple C# example.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Memento (a.k.a. Token): Without violating encapsulation, capture and externalize an object's internal state so that the object can be restored to this state later.</TITLE>
           <ITEM><ARTICLE><X><T>Memento</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/memento.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
@@ -158,6 +160,7 @@
           <ITEM><ARTICLE><X><T>Observer Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Observer.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Minka</LASTNAME></AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Observer Pattern</T><A>http://www.castle-cadenza.demon.co.uk/observe.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shaun</FIRSTNAME><LASTNAME>Parry</LASTNAME></AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi implementation.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>The Event Notification Pattern - Integrating Implicit Invocation with Object-Orientation</T><A>http://www.riehle.org/computer-science/research/1996/tapos-1996-event.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Dirk</FIRSTNAME><LASTNAME>Riehle</LASTNAME></AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A small variation of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Observer Pattern in .NET</T><A>https://visualstudiomagazine.com/articles/2013/08/14/the-observer-pattern-in-net.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>8</MONTH><DAY>14</DAY></DATE><COMMENT>A simple C# example.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Specification: Specify if a candidate object matches some criteria.</TITLE>
           <ITEM><ARTICLE><X><T>Specifications</T><A>http://martinfowler.com/apsupp/spec.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><COMMENT>A detailed description of the pattern and, also, its extensions into subsumption and partially filled specifications.</COMMENT></ARTICLE></ITEM>
@@ -174,6 +177,7 @@
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Template Method: Define the skeleton of an algorithm in an operation, deferring some steps to subclasses. Template method lets subclasses redefine certain steps of an algorithm without changing the algorithm's structure.</TITLE>
           <ITEM><ARTICLE><X><T>Template Method</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/templateMethod.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Template Method Pattern in the .NET Framework</T><A>https://visualstudiomagazine.com/articles/2013/12/06/template--method-pattern-in-dot-net.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE><COMMENT>A simple C# example.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Visitor: Represent an operation to be performed on the elements of an object structure. Visitor lets you define a new operation without changing the classes of the elements on which it operates.</TITLE>
           <ITEM><ARTICLE><X><T>Visitor</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/visitor.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
