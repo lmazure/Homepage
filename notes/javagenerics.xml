@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java Generics</TITLE>
 <PATH>notes/javagenerics.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 Generic type declaration: <CODEROUTINE>public class Box&lt;T&gt;</CODEROUTINE>
 <CODEROUTINE>T</CODEROUTINE> is a type variable or a formal type parameter 
@@ -22,12 +22,12 @@ Generic type declaration: <CODEROUTINE>public class Box&lt;T&gt;</CODEROUTINE>
 The class is used as: <CODEROUTINE>Box&lt;Integer&gt; integerBox = new Box&lt;Integer&gt;();</CODEROUTINE><BR/>
 <BR/>
 <BLIST><TITLE>The most commonly used type parameter names are</TITLE>
-<ITEM>E: Element (for a Collection)</ITEM>
-<ITEM>K: Key</ITEM>
-<ITEM>N: Number</ITEM>
-<ITEM>T: Type</ITEM>
-<ITEM>V: Value</ITEM>
-<ITEM>S,U,V&#x2026;: 2nd, 3rd, 4th&#x2026; types</ITEM>
+  <ITEM>E: Element (for a Collection)</ITEM>
+  <ITEM>K: Key</ITEM>
+  <ITEM>N: Number</ITEM>
+  <ITEM>T: Type</ITEM>
+  <ITEM>V: Value</ITEM>
+  <ITEM>S,U,V&#x2026;: 2nd, 3rd, 4th&#x2026; types</ITEM>
 </BLIST>
 Type parameters can also be declared within method and constructor signatures to create generic methods and generic constructors. 
 <CODESAMPLE>public static &lt;U&gt; void fillBoxes(U u, List&lt;Box&lt;U&gt;&gt; boxes) {<BR/>
@@ -39,21 +39,25 @@ The method is used as <CODEROUTINE>Box.fillBoxes(red, crayonBoxes);</CODEROUTINE
 This feature, known as type inference, allows you to invoke a generic method as you would an ordinary method, without specifying a type between angle brackets.<BR/>
 <BR/>
 <BLIST><TITLE><U><B>Bounded Type Parameters</B></U></TITLE>
-<ITEM>It is possible to restrict the kinds of types that are allowed to be passed to a type parameter. For example, a method that operates on numbers might only want to accept instances of <CODEROUTINE>Number</CODEROUTINE> or its subclasses. This is what bounded type parameters are for.<BR/>
+  <ITEM>It is possible to restrict the kinds of types that are allowed to be passed to a type parameter. For example, a method that operates on numbers might only want to accept instances of <CODEROUTINE>Number</CODEROUTINE> or its subclasses. This is what bounded type parameters are for.<BR/>
 To declare a bounded type parameter, list the type parameter's name, followed by the <CODEROUTINE>extends</CODEROUTINE> keyword, followed by its upper bound. Note that, in this context, <CODEROUTINE>extends</CODEROUTINE> is used in a general sense to mean either "extends" (as in classes) or "implements" (as in interfaces). 
 <CODESAMPLE>public &lt;U extends Number&gt; void inspect(U u){<BR/>
 <TAB/>&#x2026;<BR/>
 }</CODESAMPLE></ITEM>
-<ITEM>To specify additional interfaces that must be implemented, use the &amp; character, as in: <CODEROUTINE>&lt;U extends Number &amp; MyInterface&gt;</CODEROUTINE>.</ITEM>
-<ITEM><CODESAMPLE>public void boxTest(Box&lt;Number&gt; b){<BR/>
+  <ITEM>To specify additional interfaces that must be implemented, use the &amp; character, as in: <CODEROUTINE>&lt;U extends Number &amp; MyInterface&gt;</CODEROUTINE>.</ITEM>
+  <ITEM><CODESAMPLE>public void boxTest(Box&lt;Number&gt; b){<BR/>
 <TAB/>&#x2026;<BR/>
 }</CODESAMPLE>
 will not accept a parameter of type <CODEROUTINE>Box&lt;Double&gt;</CODEROUTINE></ITEM>
-<ITEM><BLIST><TITLE>Wildcards</TITLE>
-<ITEM>upper bound: <CODEROUTINE>&lt;? extends Animal&gt;</CODEROUTINE> means an unknown type that is a subtype of <CODEROUTINE>Animal</CODEROUTINE>, possibly <CODEROUTINE>Animal</CODEROUTINE> itself</ITEM>
-<ITEM>lower bound: <CODEROUTINE>&lt;? super Animal&gt;</CODEROUTINE> means an unknown type that is a supertype of <CODEROUTINE>Animal</CODEROUTINE>, possibly <CODEROUTINE>Animal</CODEROUTINE> itself</ITEM>
-<ITEM>unbounded wildcard  <CODEROUTINE>&lt;?&gt;</CODEROUTINE>, this is the same as <CODEROUTINE>&lt;? extends Object&gt;</CODEROUTINE></ITEM></BLIST></ITEM>
-<ITEM><CODESAMPLE>public void boxTest(Box&lt;? extends Number&gt; b){<BR/>
+  <ITEM><BLIST><TITLE>Wildcards</TITLE>
+    <ITEM>Upper bound: <CODEROUTINE>&lt;? extends Animal&gt;</CODEROUTINE> means an unknown type that is a subtype of <CODEROUTINE>Animal</CODEROUTINE>, possibly <CODEROUTINE>Animal</CODEROUTINE> itself (covariance)</ITEM>
+    <ITEM>Lower bound: <CODEROUTINE>&lt;? super Animal&gt;</CODEROUTINE> means an unknown type that is a supertype of <CODEROUTINE>Animal</CODEROUTINE>, possibly <CODEROUTINE>Animal</CODEROUTINE> itself (contravariance)</ITEM>
+    <ITEM>Unbounded wildcard: <CODEROUTINE>&lt;?&gt;</CODEROUTINE>, this is the same as <CODEROUTINE>&lt;? extends Object&gt;</CODEROUTINE></ITEM>
+    <ITEM>Use covariance when intend to take generic values out of a structure.<BR/>
+Use contravariance when intend to put generic values into a structure.<BR/>
+Use invariance when intend to do both.</ITEM>
+  </BLIST></ITEM>
+  <ITEM><CODESAMPLE>public void boxTest(Box&lt;? extends Number&gt; b){<BR/>
 <TAB/>&#x2026;<BR/>
 }</CODESAMPLE>
 will accept a parameter of type <CODEROUTINE>Box&lt;Double&gt;</CODEROUTINE>.<BR/>
