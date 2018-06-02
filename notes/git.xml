@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -13,221 +13,225 @@
 <ITEM>upstream repository</ITEM>
 </BLIST>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git init</CODEROUTINE></TERM>
-<DESC>create an empty local repository</DESC>
-</ROW>
-<ROW>
-<TERM><CODESAMPLE>mkdir projet.git<BR/>
-cd projet.git<BR/>
-git --bare init</CODESAMPLE></TERM>
-<DESC>create an empty server repository</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git init</CODEROUTINE></TERM>
+    <DESC>create an empty local repository</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>mkdir projet.git<BR/>
+      cd projet.git<BR/>
+      git --bare init</CODESAMPLE></TERM>
+    <DESC>create an empty server repository</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git add &lt;file&gt;</CODEROUTINE></TERM>
-<DESC>update &lt;file&gt; in the index using the current content found in the working tree</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git add .</CODEROUTINE></TERM>
-<DESC>update the content of the current directory in the index</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;</CODEROUTINE></TERM>
+    <DESC>create a repository which is the clone of a bare repository</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;  &lt;my directory name&gt;</CODEROUTINE></TERM>
+    <DESC>create a repository with name &lt;my directory name&gt; which is the clone of a bare repository (if &lt;my directory name&gt; is not specified, the name of the remote repository is used)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clone --bare &lt;path to directory containing .git&gt;</CODEROUTINE></TERM>
+    <DESC>create a bare repository which is the clone of a repository</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git remote -v</CODEROUTINE></TERM>
+    <DESC>list the upsteam and downstream repositories</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git config --get remote.origin.url</CODEROUTINE></TERM>
+    <DESC>display the URL the local repository has been cloned from</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git remote -v rm origin</CODEROUTINE></TERM>
+    <DESC>remove the tracking of the remote "origin"</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git rm &lt;file&gt;</CODEROUTINE></TERM>
-<DESC>remove &lt;file&gt; from the index, or from the working tree and the index</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git add &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>update &lt;file&gt; in the index using the current content found in the working tree</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git add .</CODEROUTINE></TERM>
+    <DESC>update the content of the current directory in the index</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git commit -m &lt;msg&gt;</CODEROUTINE></TERM>
-<DESC>store the current contents of the index in a new commit along with message &lt;msg&gt;</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>-a</CODEROUTINE></TERM>
-<DESC>automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>--amend</CODEROUTINE></TERM>
-<DESC>replace the tip of the current branch by creating a new commit</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>--amend --reset-author</CODEROUTINE></TERM>
-<DESC>declare that the authorship of the new commit belongs to the committer</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git rm &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>remove &lt;file&gt; from the index, or from the working tree and the index</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git diff</CODEROUTINE></TERM>
-<DESC>display the differences between the workspace and the index</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git diff --cached</CODEROUTINE></TERM>
-<DESC>display the differences between the index and the local repository</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git commit -m &lt;msg&gt;</CODEROUTINE></TERM>
+    <DESC>store the current contents of the index in a new commit along with message &lt;msg&gt;</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-a</CODEROUTINE></TERM>
+    <DESC>automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--amend</CODEROUTINE></TERM>
+    <DESC>replace the tip of the current branch by creating a new commit</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--amend --reset-author</CODEROUTINE></TERM>
+    <DESC>declare that the authorship of the new commit belongs to the committer</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git status</CODEROUTINE></TERM>
-<DESC>display
-<BLIST><ITEM>paths that have differences between the index file and the current HEAD commit</ITEM>
-<ITEM>paths that have differences between the working tree and the index file, and</ITEM>
-<ITEM>paths in the working tree that are not tracked by Git</ITEM></BLIST></DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff</CODEROUTINE></TERM>
+    <DESC>display the differences between the workspace and the index</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --cached</CODEROUTINE></TERM>
+    <DESC>display the differences between the index and the local repository</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git log</CODEROUTINE></TERM>
-<DESC>show commit logs</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>-&lt;n&gt;</CODEROUTINE></TERM>
-<DESC>limits the log to the n last commits</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>-p</CODEROUTINE><BR/>
-<CODEROUTINE>--patch</CODEROUTINE></TERM>
-<DESC>show the code changes in each commit</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git status</CODEROUTINE></TERM>
+    <DESC>display
+      <BLIST><ITEM>paths that have differences between the index file and the current HEAD commit</ITEM>
+      <ITEM>paths that have differences between the working tree and the index file, and</ITEM>
+      <ITEM>paths in the working tree that are not tracked by Git</ITEM></BLIST></DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git reset &lt;commit&gt;</CODEROUTINE></TERM>
-<DESC>reset current HEAD to a previous commit<BR/>
-if no commit is specified, the current HEAD is used</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>--soft</CODEROUTINE></TERM>
-<DESC>does not touch the index file or the working tree</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>--mixed</CODEROUTINE></TERM>
-<DESC>resets the index but not the working tree<BR/>
-this is the default</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>--hard</CODEROUTINE></TERM>
-<DESC>resets the index and the working tree</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log</CODEROUTINE></TERM>
+    <DESC>show commit logs</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-&lt;n&gt;</CODEROUTINE></TERM>
+    <DESC>limits the log to the n last commits</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-p</CODEROUTINE><BR/>
+      <CODEROUTINE>--patch</CODEROUTINE></TERM>
+    <DESC>show the code changes in each commit</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git blame &lt;file&gt;</CODEROUTINE></TERM>
-<DESC>annotate each line of the file with information from the revision which last modified the line</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>-M</CODEROUTINE></TERM>
-<DESC>detects moved or copied lines within a file</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>-w</CODEROUTINE></TERM>
-<DESC>ignores whitespaces</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git reset &lt;commit&gt;</CODEROUTINE></TERM>
+    <DESC>reset current HEAD to a previous commit<BR/>
+      if no commit is specified, the current HEAD is used</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--soft</CODEROUTINE></TERM>
+    <DESC>does not touch the index file or the working tree</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--mixed</CODEROUTINE></TERM>
+    <DESC>resets the index but not the working tree<BR/>
+      this is the default</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--hard</CODEROUTINE></TERM>
+    <DESC>resets the index and the working tree</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git fetch</CODEROUTINE></TERM>
-<DESC>download objects and refs from upstream repository into local repository.</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git blame &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>annotate each line of the file with information from the revision which last modified the line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-M</CODEROUTINE></TERM>
+    <DESC>detects moved or copied lines within a file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-w</CODEROUTINE></TERM>
+    <DESC>ignores whitespaces</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git pull</CODEROUTINE></TERM>
-<DESC>incorporate changes of the remote repository into the current branch, it is the same as <CODEROUTINE>git fetch</CODEROUTINE> followed by <CODEROUTINE>git merge FETCH_HEAD</CODEROUTINE>.</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git fetch</CODEROUTINE></TERM>
+    <DESC>download objects and refs from upstream repository into local repository.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git push</CODEROUTINE></TERM>
-<DESC>push commits made on a local branch to a remote repository in the branch of same name.</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git pull</CODEROUTINE></TERM>
+    <DESC>incorporate changes of the remote repository into the current branch, it is the same as <CODEROUTINE>git fetch</CODEROUTINE> followed by <CODEROUTINE>git merge FETCH_HEAD</CODEROUTINE>.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git push</CODEROUTINE></TERM>
+    <DESC>push commits made on a local branch to a remote repository in the branch of same name.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/><DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git clean -f</CODEROUTINE></TERM>
-<DESC>recursively remove files that are not under version control</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git clean -f -d</CODEROUTINE></TERM>
-<DESC>recursively remove files and directories that are not under version control</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git clean -n</CODEROUTINE></TERM>
-<DESC>list the files that would be removed</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git clean -n - d</CODEROUTINE></TERM>
-<DESC>list the files and directories that would be removed</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clean -f</CODEROUTINE></TERM>
+    <DESC>recursively remove files that are not under version control</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clean -f -d</CODEROUTINE></TERM>
+    <DESC>recursively remove files and directories that are not under version control</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clean -n</CODEROUTINE></TERM>
+    <DESC>list the files that would be removed</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clean -n - d</CODEROUTINE></TERM>
+    <DESC>list the files and directories that would be removed</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;</CODEROUTINE></TERM>
-<DESC>create a repository which is the clone of a bare repository</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;  &lt;my directory name&gt;</CODEROUTINE></TERM>
-<DESC>create a repository with name &lt;my directory name&gt; which is the clone of a bare repository (if &lt;my directory name&gt; is not specified, the name of the remote repository is used)</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git clone --bare &lt;path to directory containing .git&gt;</CODEROUTINE></TERM>
-<DESC>create a bare repository which is the clone of a repository</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git remote -v</CODEROUTINE></TERM>
-<DESC>list the upsteam and downstream repositories</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git remote -v rm origin</CODEROUTINE></TERM>
-<DESC>remove the tracking of the remote "origin"</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git branch &lt;new branch&gt;</CODEROUTINE></TERM>
+    <DESC>create a new branch</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git branch</CODEROUTINE></TERM>
+    <DESC>list the branch, the current one is prefixed with <CODEROUTINE>*</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git checkout &lt;branch&gt;</CODEROUTINE></TERM>
+    <DESC>switch to another branch</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git merge &lt;branch&gt;</CODEROUTINE></TERM>
+    <DESC>merge a branch in the workspace</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git branch &lt;new branch&gt;</CODEROUTINE></TERM>
-<DESC>create a new branch</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git branch</CODEROUTINE></TERM>
-<DESC>list the branch, the current one is prefixed with <CODEROUTINE>*</CODEROUTINE></DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git checkout &lt;branch&gt;</CODEROUTINE></TERM>
-<DESC>switch to another branch</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>git merge &lt;branch&gt;</CODEROUTINE></TERM>
-<DESC>merge a branch in the workspace</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git gc</CODEROUTINE></TERM>
+    <DESC>compress file revision and remove uneachable objects</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git gc</CODEROUTINE></TERM>
-<DESC>compress file revision and remove uneachable objects</DESC>
-</ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>git --global --edit</CODEROUTINE></TERM>
-<DESC>open an editor to edit the global configuration file</DESC>
-</ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git --global --edit</CODEROUTINE></TERM>
+    <DESC>open an editor to edit the global configuration file</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BLIST><TITLE>gitignore</TITLE>
