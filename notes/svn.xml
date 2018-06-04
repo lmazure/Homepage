@@ -70,24 +70,30 @@
     </BLIST></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE><U><B>Command line</B></U></TITLE>
+    <ITEM>Create a repository
+    <CODESAMPLE>svnadmin create &lt;dir&gt;</CODESAMPLE></ITEM>
+    <ITEM>Perform a checkout (&lt;myDir&gt; will be created)
+    <CODESAMPLE>svn co file:///cygdrive/m/laurent_svn_repository/Java\ sandbox/ &lt;myDir&gt;</CODESAMPLE></ITEM>
     <ITEM>Update the current directory to head
     <CODESAMPLE>svn update</CODESAMPLE></ITEM>
     <ITEM>Display the diff of the current directory
     <CODESAMPLE>svn diff</CODESAMPLE></ITEM>
     <ITEM>Display the diff of a file/directory
-    <CODESAMPLE>svn diff <I>file/dir</I></CODESAMPLE></ITEM>
+    <CODESAMPLE>svn diff &lt;file/dir&gt;</CODESAMPLE></ITEM>
     <ITEM>Perform a side-by-side comparison (on Linux/cygwin)
     <CODESAMPLE>svn --diff-cmd "diff" --extensions "-y -W 250 --suppress-common-lines" diff</CODESAMPLE></ITEM>
     <ITEM>Display a revision of a file
     <CODESAMPLE>svn cat --revision=123 &lt;file&gt;</CODESAMPLE></ITEM>
     <ITEM>Commit a file/dir
-    <CODESAMPLE>svn commit -m "I have done blabla&#x2026;" <I>file/dir</I></CODESAMPLE></ITEM>
+    <CODESAMPLE>svn commit -m "I have done blabla&#x2026;" &lt;file/dir&gt;</CODESAMPLE></ITEM>
+    <ITEM>Commit the current directory
+    <CODESAMPLE>svn commit -m "I have done blabla&#x2026;"</CODESAMPLE></ITEM>
     <ITEM>Revert all files
     <CODESAMPLE>svn revert -R .</CODESAMPLE></ITEM>
     <ITEM>Display the log of the current directory
     <CODESAMPLE>svn log</CODESAMPLE></ITEM>
     <ITEM>Display the log of a working copy of a file/directory
-    <CODESAMPLE>svn log <I>file/dir</I></CODESAMPLE></ITEM>
+    <CODESAMPLE>svn log &lt;file/dir&gt;</CODESAMPLE></ITEM>
     <ITEM>Display the log of a repository
     <CODESAMPLE>svn log file:///cygdrive/m/svn_repository/my_project/trunk</CODESAMPLE></ITEM>
     <ITEM>Copy a tag

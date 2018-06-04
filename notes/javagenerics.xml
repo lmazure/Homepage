@@ -61,7 +61,7 @@ Use invariance when intend to do both.</ITEM>
 <TAB/>&#x2026;<BR/>
 }</CODESAMPLE>
 will accept a parameter of type <CODEROUTINE>Box&lt;Double&gt;</CODEROUTINE>.<BR/>
-Bounded type parameters limit the kinds of types that can be passed into a type parameter; they can specify an upper bound only.</ITEM>
+Bounded type parameters limit the kinds of types that can be passed into a type parameter.</ITEM>
 </BLIST>
 <U><B>Type Erasure</B></U><BR/>
 When a generic type is instantiated, the compiler translates those types by a technique called type erasure, a process where the compiler removes all information related to type parameters and type arguments within a class or method. Type erasure enables Java applications that use generics to maintain binary compatibility with Java libraries and applications that were created before generics. 
