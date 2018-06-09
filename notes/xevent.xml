@@ -38,19 +38,19 @@ exposeCB(Widget w, <BR/>
 <TAB/>DrawingParameters *dp = (DrawingParameters*)clientData;<BR/>
 <BR/>
 <TAB/>// Display Pixmap<BR/>
-<TAB/>fprintf(stderr, "---&gt; Display Pixmap&#x2026;\n");<BR/>
+<TAB/>fprintf(stderr, "---&gt; Display Pixmap…\n");<BR/>
 <TAB/><X><T>XCopyArea</T><A>http://www.x.org/archive/X11R7.5/doc/man/man3/XCopyArea.3.html</A><L>en</L><F>HTML</F></X>(XtDisplay(w), dp-&gt;id, XtWindow(w), dp-&gt;gc, <BR/>
 <TAB/><TAB/>0, 0, dp-&gt;width, dp-&gt;height, 0, 0) ; <BR/>
 }<BR/>
 <BR/>
 {<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 <TAB/><X><T>XtAddEventHandler</T><A>http://www.x.org/archive/X11R7.5/doc/man/man3/XtAddEventHandler.3.html</A><L>en</L><F>HTML</F></X>(shell,<BR/>
 <TAB/><TAB/>ExposureMask, <BR/>
 <TAB/><TAB/>False, <BR/>
 <TAB/><TAB/>exposeCB, <BR/>
 <TAB/><TAB/>XtPointer(&amp;dp)); <BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 }</CODESAMPLE>
 <BR/>
 Get an event in the event queue without remove it <BR/>

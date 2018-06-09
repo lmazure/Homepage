@@ -27,7 +27,7 @@ The class is used as: <CODEROUTINE>Box&lt;Integer&gt; integerBox = new Box&lt;In
   <ITEM>N: Number</ITEM>
   <ITEM>T: Type</ITEM>
   <ITEM>V: Value</ITEM>
-  <ITEM>S,U,V&#x2026;: 2nd, 3rd, 4th&#x2026; types</ITEM>
+  <ITEM>S,U,V…: 2nd, 3rd, 4th… types</ITEM>
 </BLIST>
 Type parameters can also be declared within method and constructor signatures to create generic methods and generic constructors. 
 <CODESAMPLE>public static &lt;U&gt; void fillBoxes(U u, List&lt;Box&lt;U&gt;&gt; boxes) {<BR/>
@@ -42,11 +42,11 @@ This feature, known as type inference, allows you to invoke a generic method as 
   <ITEM>It is possible to restrict the kinds of types that are allowed to be passed to a type parameter. For example, a method that operates on numbers might only want to accept instances of <CODEROUTINE>Number</CODEROUTINE> or its subclasses. This is what bounded type parameters are for.<BR/>
 To declare a bounded type parameter, list the type parameter's name, followed by the <CODEROUTINE>extends</CODEROUTINE> keyword, followed by its upper bound. Note that, in this context, <CODEROUTINE>extends</CODEROUTINE> is used in a general sense to mean either "extends" (as in classes) or "implements" (as in interfaces). 
 <CODESAMPLE>public &lt;U extends Number&gt; void inspect(U u){<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 }</CODESAMPLE></ITEM>
   <ITEM>To specify additional interfaces that must be implemented, use the &amp; character, as in: <CODEROUTINE>&lt;U extends Number &amp; MyInterface&gt;</CODEROUTINE>.</ITEM>
   <ITEM><CODESAMPLE>public void boxTest(Box&lt;Number&gt; b){<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 }</CODESAMPLE>
 will not accept a parameter of type <CODEROUTINE>Box&lt;Double&gt;</CODEROUTINE></ITEM>
   <ITEM><BLIST><TITLE>Wildcards</TITLE>
@@ -58,7 +58,7 @@ Use contravariance when intend to put generic values into a structure.<BR/>
 Use invariance when intend to do both.</ITEM>
   </BLIST></ITEM>
   <ITEM><CODESAMPLE>public void boxTest(Box&lt;? extends Number&gt; b){<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 }</CODESAMPLE>
 will accept a parameter of type <CODEROUTINE>Box&lt;Double&gt;</CODEROUTINE>.<BR/>
 Bounded type parameters limit the kinds of types that can be passed into a type parameter.</ITEM>
@@ -69,7 +69,7 @@ For instance, <CODEROUTINE>Box&lt;String&gt;</CODEROUTINE> is translated to type
 <CODESAMPLE>public class MyClass&lt;E&gt; {<BR/>
 <TAB/>public static void myMethod(Object item) {<BR/>
 <TAB/><TAB/>if (item instanceof E) {  //Compiler error<BR/>
-<TAB/><TAB/><TAB/>&#x2026;<BR/>
+<TAB/><TAB/><TAB/>…<BR/>
 <TAB/><TAB/>}<BR/>
 <TAB/><TAB/>E item2 = new E();   //Compiler error<BR/>
 <TAB/><TAB/>E[] iArray = new E[10]; //Compiler error<BR/>

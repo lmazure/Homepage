@@ -7,11 +7,11 @@
 <CONTENT>
 for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
-&#x2026;<BR/>
+…<BR/>
 for (PhotoListMetaDataListener l : a_listOfMetaDataListeners) l.photoListMetaDataChanged(f);</CODESAMPLE>
 is the same as
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
-&#x2026;<BR/>
+…<BR/>
 for (int i=0; i&lt;a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataListeners.get(i).photoListMetaDataChanged(f);</CODESAMPLE>
 <BR/>
 <U><B>Autoboxing</B></U><BR/>

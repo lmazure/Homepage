@@ -22,7 +22,7 @@ fso = CreateObject("Scripting.FileSystemObject")<BR/>
 Set dir1 = fso.GetFolder("\\Srvuranus\pm\K3\doc archive")<BR/>
 For Each dir2 In dir1.SubFolders<BR/>
 <TAB/>If (Left(dir2.Name, 3) = "K30") Then<BR/>
-<TAB/><TAB/>&#x2026;<BR/>
+<TAB/><TAB/>…<BR/>
 <TAB/>End If<BR/>
 Next dir2<BR/>
 </CODESAMPLE>

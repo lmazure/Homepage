@@ -16,7 +16,7 @@
 <TAB/>final BufferedReader reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));<BR/>
 <TAB/>int n = 0; <BR/>
 <TAB/>while ( (line=reader.readLine()) != null ) {<BR/>
-<TAB/><TAB/>&#x2026;<BR/>
+<TAB/><TAB/>…<BR/>
 <TAB/>}<BR/>
 } catch (IOException e1) {<BR/>
 <TAB/>System.err.println("failed to run psql: "+e1.getMessage());<BR/>

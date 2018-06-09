@@ -207,7 +207,7 @@ void&#xA0;erDumpStack(std::ostream&#xA0;&amp;strm,<BR/>
 &#xA0;&#xA0;&#xA0;//&#xA0;<BR/>
 &#xA0;&#xA0;&#xA0;//&#xA0;SOME&#xA0;EXPLANATIONS:<BR/>
 &#xA0;&#xA0;&#xA0;//&#xA0;------------------<BR/>
-&#xA0;&#xA0;&#xA0;//&#xA0;I&#xA0;use&#xA0;the&#xA0;fact&#xA0;that&#xA0;with&#xA0;POSIX,&#xA0;the&#xA0;file&#xA0;descriptor&#xA0;for&#xA0;a&#xA0;new&#xA0;open,&#xA0;dup,&#x2026;<BR/>
+&#xA0;&#xA0;&#xA0;//&#xA0;I&#xA0;use&#xA0;the&#xA0;fact&#xA0;that&#xA0;with&#xA0;POSIX,&#xA0;the&#xA0;file&#xA0;descriptor&#xA0;for&#xA0;a&#xA0;new&#xA0;open,&#xA0;dup,…<BR/>
 &#xA0;&#xA0;&#xA0;//&#xA0;will&#xA0;be&#xA0;the&#xA0;smallest&#xA0;available&#xA0;file&#xA0;descriptor.&#xA0;So,&#xA0;if&#xA0;we&#xA0;close&#xA0;the&#xA0;file<BR/>
 &#xA0;&#xA0;&#xA0;//&#xA0;descriptor&#xA0;2&#xA0;and&#xA0;open&#xA0;a&#xA0;FILE*,&#xA0;its&#xA0;file&#xA0;descriptor&#xA0;will&#xA0;be&#xA0;2!<BR/>
 &#xA0;&#xA0;&#xA0;//<BR/>

@@ -9,17 +9,17 @@ navigation
 <DEFINITION2TABLE>
 <ROW>
 <TERM1><CODEROUTINE>OFFSET(reference,rows,cols[,height,width])</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>DECALER(r&#xE9;f;lignes;colonnes[;hauteur;largeur])</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>DECALER(réf;lignes;colonnes[;hauteur;largeur])</CODEROUTINE></TERM2>
 <DESC>return a reference to a range that is a specified number of rows and columns from a cell or range of cells. The number of rows and the number of columns to be returned can be specified</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>COLUMN(reference)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>COLONNE(r&#xE9;f&#xE9;rence)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>COLONNE(référence)</CODEROUTINE></TERM2>
 <DESC>return the column number of the given reference if reference is a range of cells, and if COLUMN is entered as a horizontal array, return the column numbers of reference as a horizontal array reference cannot refer to multiple areas<BR/>if no reference is given, return the column number of the current cell</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>ROW(reference)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>LIGNE(r&#xE9;f&#xE9;rence)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>LIGNE(référence)</CODEROUTINE></TERM2>
 <DESC>return the row number of a reference<BR/>if no reference is given, return the row number of the current cell</DESC>
 </ROW>
 <ROW>
@@ -34,7 +34,7 @@ navigation
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>AREAS(reference)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>ZONES(r&#xE9;f&#xE9;rence)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>ZONES(référence)</CODEROUTINE></TERM2>
 <DESC>return the number of areas in a reference. An area is a range of contiguous cells or a single cell</DESC>
 </ROW>
 <ROW>
@@ -54,7 +54,7 @@ sheet_text is the text specifying the name of the worksheet to be used as the ex
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>CELL(info_type,reference)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>CELLULE(type_info;r&#xE9;f&#xE9;rence)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>CELLULE(type_info;référence)</CODEROUTINE></TERM2>
 <DESC>return information about the formatting, location, or contents of the upper-left cell in a reference
 <BLIST>
 <ITEM>"address"/"adresse" Reference of the first cell in reference, as text.</ITEM>
@@ -63,9 +63,9 @@ sheet_text is the text specifying the name of the worksheet to be used as the ex
 <ITEM>"contents"/"contenu" Contents of the upper-left cell in reference.</ITEM>
 <ITEM>"filename"/"nomfichier" Filename (including full path) of the file that contains reference, as text. Returns empty text ("") if the worksheet that contains reference has not yet been saved.</ITEM>
 <ITEM>"format"/"format" Text value corresponding to the number format of the cell. The text values for the various formats are shown in the following table. Returns "-" at the end of the text value if the cell is formatted in color for negative values. Returns "()" at the end of the text value if the cell is formatted with parentheses for positive or all values.</ITEM>
-<ITEM>"parentheses"/"parenth&#xE8;ses" 1 if the cell is formatted with parentheses for positive or all values; otherwise returns 0.</ITEM>
-<ITEM>"prefix"/"pr&#xE9;fixe" Text value corresponding to the "label prefix" of the cell. Returns single quotation mark (') if the cell contains left-aligned text, double quotation mark (") if the cell contains right-aligned text, caret (^) if the cell contains centered text, backslash (\) if the cell contains fill-aligned text, and empty text ("") if the cell contains anything else.</ITEM>
-<ITEM>"protect"/"prot&#xE9;g&#xE9;" 0 if the cell is not locked, and 1 if the cell is locked.</ITEM>
+<ITEM>"parentheses"/"parenthèses" 1 if the cell is formatted with parentheses for positive or all values; otherwise returns 0.</ITEM>
+<ITEM>"prefix"/"préfixe" Text value corresponding to the "label prefix" of the cell. Returns single quotation mark (') if the cell contains left-aligned text, double quotation mark (") if the cell contains right-aligned text, caret (^) if the cell contains centered text, backslash (\) if the cell contains fill-aligned text, and empty text ("") if the cell contains anything else.</ITEM>
+<ITEM>"protect"/"protégé" 0 if the cell is not locked, and 1 if the cell is locked.</ITEM>
 <ITEM>"row"/"ligne" Row number of the cell in reference.</ITEM>
 <ITEM>"type"/"type" Text value corresponding to the type of data in the cell. Returns "b" for blank if the cell is empty, "l" for label if the cell contains a text constant, and "v" for value if the cell contains anything else.</ITEM>
 <ITEM>"width"/"largeur" Column width of the cell rounded off to an integer. Each unit of column width is equal to the width of one character in the default font size.</ITEM></BLIST></DESC>
@@ -91,7 +91,7 @@ lookup
 specified value in a specified order</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>CHOOSE(index_num,value1,value2,&#x2026;)</CODEROUTINE></TERM1>
+<TERM1><CODEROUTINE>CHOOSE(index_num,value1,value2,…)</CODEROUTINE></TERM1>
 <TERM2><CODEROUTINE>CHOISIR</CODEROUTINE></TERM2>
 <DESC>uses index_num to return a value from the list of value arguments</DESC>
 </ROW>
@@ -132,13 +132,13 @@ string manipulation
 <DESC>return a numeric code from the first character in a text string</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>CONCATENATE(text1,text2,&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>CONCATENER(texte1;texte2;&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>CONCATENATE(text1,text2,…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>CONCATENER(texte1;texte2;…)</CODEROUTINE></TERM2>
 <DESC>join several text strings into one text string</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>DOLLAR(number,decimals)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>FRANC(nombre;d&#xE9;cimales)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>FRANC(nombre;décimales)</CODEROUTINE></TERM2>
 <DESC>convert a number to text using Currency format, with the decimals rounded to the specified place</DESC>
 </ROW>
 <ROW>
@@ -148,7 +148,7 @@ string manipulation
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>FIND(find_text,within_text[,start_num])</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>TROUVE(texte_cherch&#xE9;;texte[;no_d&#xE9;part])</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>TROUVE(texte_cherché;texte[;no_départ])</CODEROUTINE></TERM2>
 <DESC>find one text string with another text string, and returns the number of
 the starting position of find_text, from the leftmost character of
 within_text.<BR/>
@@ -156,12 +156,12 @@ If the string is not present, return a <CODEROUTINE>#VALUE!</CODEROUTINE> error.
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>FINDB(find_text,within_text,start_num)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>TROUVERB(texte_cherch&#xE9;;texte;no_d&#xE9;part)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>TROUVERB(texte_cherché;texte;no_départ)</CODEROUTINE></TERM2>
 <DESC>find one text string (double-byte characters) with another text string, and returns the number of the starting position of find_text, from the leftmost character of within_text</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>FIXED(number,decimals,no_commas)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>CTXT(nombre;d&#xE9;cimales;no_s&#xE9;parateur)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>CTXT(nombre;décimales;no_séparateur)</CODEROUTINE></TERM2>
 <DESC>round a number to a specified number of decimals, formats the number in
 decimal format using a period and commas, and returns the result as text</DESC>
 </ROW>
@@ -192,12 +192,12 @@ decimal format using a period and commas, and returns the result as text</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>MID(text,start_num,num_chars)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>STXT(texte;no_d&#xE9;part;no_car)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>STXT(texte;no_départ;no_car)</CODEROUTINE></TERM2>
 <DESC>return a specific number of characters from a text string, starting at the specified position</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>MIDB(text,start_num,num_bytes)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>MIDB(texte;no_d&#xE9;part;no_octets)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>MIDB(texte;no_départ;no_octets)</CODEROUTINE></TERM2>
 <DESC>return a specific number of characters from a text string, starting at the specified position</DESC>
 </ROW>
 <ROW>
@@ -208,12 +208,12 @@ that follow any character other than a letter</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>REPLACE(old_text,start_num,num_chars,new_text)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>REMPLACER(ancien_texte;no_d&#xE9;part;no_car;nouveau_texte)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>REMPLACER(ancien_texte;no_départ;no_car;nouveau_texte)</CODEROUTINE></TERM2>
 <DESC>replace part of a text string with a different text string based on the specified number of characters</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>REPLACEB(old_text,start_num,num_bytes,new_text)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>REMPLACERB(ancien_texte;no_d&#xE9;part;no_car;nouveau_texte)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>REMPLACERB(ancien_texte;no_départ;no_car;nouveau_texte)</CODEROUTINE></TERM2>
 <DESC>replace part of a text string with a different text string, based on the specified number of bytes</DESC>
 </ROW>
 <ROW>
@@ -233,13 +233,13 @@ that follow any character other than a letter</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>SEARCH(find_text,within_text,start_num)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>CHERCHE(texte_cherch&#xE9;;texte;no_d&#xE9;part)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>CHERCHE(texte_cherché;texte;no_départ)</CODEROUTINE></TERM2>
 <DESC>return the number of the character at which a specific character or text
 string is first found, reading from left to right</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>SEARCD(find_text,within_text,start_num)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>CHERCHERB(texte_cherch&#xE9;;texte;no_d&#xE9;part)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>CHERCHERB(texte_cherché;texte;no_départ)</CODEROUTINE></TERM2>
 <DESC>return the number of the double-byte character at which a specific character or text string is first found, reading from left to right</DESC>
 </ROW>
 <ROW>
@@ -317,8 +317,8 @@ computation
 <DESC>return the absolute value of a number</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>PRODUCT(number1,number2&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>PRODUIT(nombre1;nombre2&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>PRODUCT(number1,number2…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PRODUIT(nombre1;nombre2…)</CODEROUTINE></TERM2>
 <DESC>return the product of the number</DESC>
 </ROW>
 <ROW>
@@ -337,23 +337,23 @@ computation
 <DESC>return the square root of ( number * &#x03C0;)</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2…)</CODEROUTINE></TERM2>
 <DESC>multiply corresponding components in the arrays and return the sum of those products</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>SUMPRODUCT(array1,array2…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMMEPROD(matrice1;matrice2…)</CODEROUTINE></TERM2>
 <DESC>multiply corresponding components in the arrays and return the sum of those products</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>QUOTIENT(numerator,denominator)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>QUOTIENT(num&#xE9;rateur;d&#xE9;nominateur)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>QUOTIENT(numérateur;dénominateur)</CODEROUTINE></TERM2>
 <DESC>return the integer portion of a division</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>MOD(numerator,denominator)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>MOD(num&#xE9;rateur;d&#xE9;nominateur)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>MOD(numérateur;dénominateur)</CODEROUTINE></TERM2>
 <DESC>return the remainder after numerator is divided by divisor</DESC>
 </ROW>
 <ROW>
@@ -362,13 +362,13 @@ computation
 <DESC>return the factorial of a number</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>GCD(number1,number2&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>PGCD(nombre1;nombre2&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>GCD(number1,number2…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PGCD(nombre1;nombre2…)</CODEROUTINE></TERM2>
 <DESC>return the greatest common divisor of two or more integers</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>LCM(number1,number2&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>PPCM(nombre1;nombre2&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>LCM(number1,number2…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>PPCM(nombre1;nombre2…)</CODEROUTINE></TERM2>
 <DESC>return the least common multiple of two or more integers</DESC>
 </ROW>
 <ROW>
@@ -741,22 +741,22 @@ the second argument can be:
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>CHIDIST(probability,degrees_of_freedom)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>LOI.KHIDEUX(x;degr&#xE9;s_libert&#xE9;)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>LOI.KHIDEUX(x;degrés_liberté)</CODEROUTINE></TERM2>
 <DESC>compute the critical value for a Chi<SUP>2</SUP> test</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>CHIINV(critical_value,degrees_of_freedom)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>KHIDEUX.INVERSE(probabilit&#xE9;;degr&#xE9;s_libert&#xE9;)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>KHIDEUX.INVERSE(probabilité;degrés_liberté)</CODEROUTINE></TERM2>
 <DESC>compute a probability value given a critical value</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>CHITEST(actual_range,expected_range)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>TEST.KHIDEUX(plage_r&#xE9;elle;plage_attendue)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>TEST.KHIDEUX(plage_réelle;plage_attendue)</CODEROUTINE></TERM2>
 <DESC>return the test of independance (i.e. <CODEROUTINE>CHIDIST(sum of the differences;degrees of freedom)</CODEROUTINE>)</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>DEVSQ(number1,number2,&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>SOMME.CARRES.ECARTS(nombre1;nombre2;&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>DEVSQ(number1,number2,…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>SOMME.CARRES.ECARTS(nombre1;nombre2;…)</CODEROUTINE></TERM2>
 <DESC>return the sum of square of deviations of data points from their sample mean</DESC>
 </ROW>
 <ROW>
@@ -908,7 +908,7 @@ date/time
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>WEEKDAY</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>JOURSEM(num&#xE9;ro_de_s&#xE9;rie;type_retour)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>JOURSEM(numéro_de_série;type_retour)</CODEROUTINE></TERM2>
 <DESC>return the day of a week of a date</DESC>
 </ROW>
 <ROW>
@@ -955,31 +955,31 @@ Interval can be:
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>NETWORKDAYS(start_date,end_date,holidays)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>NB.JOURS.OUVRES(date_d&#xE9;but;date_fin;jours_f&#xE9;ri&#xE9;s)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>NB.JOURS.OUVRES(date_début;date_fin;jours_fériés)</CODEROUTINE></TERM2>
 <DESC>(Analysis ToolPak)<BR/>
 return the number of whole working days between start_date and end_date. Working days exclude weekends and any dates identified in holidays.</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>WORKDAY(start_date,days,holidays)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>SERIE.JOUR.OUVRE(date_d&#xE9;but;nb_jours;jours_f&#xE9;ri&#xE9;s)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>SERIE.JOUR.OUVRE(date_début;nb_jours;jours_fériés)</CODEROUTINE></TERM2>
 <DESC>(Analysis ToolPak)<BR/>
 return a number that represents a date that is the indicated number of working days before or after a date (the starting date). Working days exclude weekends and any dates identified as holidays.</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>EDATE(start_date,months)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>MOIS.DECALER(date_d&#xE9;part;mois)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>MOIS.DECALER(date_départ;mois)</CODEROUTINE></TERM2>
 <DESC>(Analysis ToolPak)<BR/>
 return the serial number that represents the date that is the indicated number of months before or after a specified date</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>EOMONTH(start_date,months)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>FIN.MOIS(date_d&#xE9;part;mois)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>FIN.MOIS(date_départ;mois)</CODEROUTINE></TERM2>
 <DESC>(Analysis ToolPak)<BR/>
 return the serial number for the last day of the month that is the indicated number of months before or after start_date</DESC>
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>YEARFRAC(start_date,end_date,basis)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>FRACTION.ANNEE(date_d&#xE9;but;date_fin;base)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>FRACTION.ANNEE(date_début;date_fin;base)</CODEROUTINE></TERM2>
 <DESC>(Analysis ToolPak)<BR/>
 calculate the fraction of the year represented by the number of whole days between two dates (the start_date and the end_date).</DESC>
 </ROW>
@@ -1002,13 +1002,13 @@ logical
 <DESC>return the logical value FALSE</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>OR(logical1,logical2,&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>OU(valeur_logique1;valeur_logique2,&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>OR(logical1,logical2,…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>OU(valeur_logique1;valeur_logique2,…)</CODEROUTINE></TERM2>
 <DESC>return TRUE if any argument is TRUE</DESC>
 </ROW>
 <ROW>
-<TERM1><CODEROUTINE>AND(logical1,logical2,&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>ET(valeur_logique1;valeur_logique2;&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>AND(logical1,logical2,…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>ET(valeur_logique1;valeur_logique2;…)</CODEROUTINE></TERM2>
 <DESC>return TRUE if all its arguments are TRUE</DESC>
 </ROW>
 </DEFINITION2TABLE>
@@ -1115,8 +1115,8 @@ convert an octal number to hexadecimal</DESC>
 pivot table
 <DEFINITION2TABLE>
 <ROW>
-<TERM1><CODEROUTINE>GETPIVOTDATA(data_field,pivot_table,field1,item1,field2,item2,&#x2026;)</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>LIREDONNEESTABCROISDYNAMIQUE(champ_donn&#xE9;es;tableau_crois&#xE9;_dyn;champ1;&#xE9;l&#xE9;ment1;champ2;&#xE9;l&#xE9;ment2;&#x2026;)</CODEROUTINE></TERM2>
+<TERM1><CODEROUTINE>GETPIVOTDATA(data_field,pivot_table,field1,item1,field2,item2,…)</CODEROUTINE></TERM1>
+<TERM2><CODEROUTINE>LIREDONNEESTABCROISDYNAMIQUE(champ_données;tableau_croisé_dyn;champ1;élément1;champ2;élément2;…)</CODEROUTINE></TERM2>
 <DESC>return data stored in a PivotTable report</DESC>
 </ROW>
 </DEFINITION2TABLE><BR/>
@@ -1144,7 +1144,7 @@ misc.
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>COUNTIF</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>NB.SI(plage;crit&#xE8;re)</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>NB.SI(plage;critère)</CODEROUTINE></TERM2>
 <DESC>count the number of cells within a range that meet the given criteria</DESC>
 </ROW>
 <ROW>
@@ -1159,7 +1159,7 @@ misc.
 </ROW>
 <ROW>
 <TERM1><CODEROUTINE>SUMIF(range,criteria[,sum_range])</CODEROUTINE></TERM1>
-<TERM2><CODEROUTINE>SOMME.SI(plage;crit&#xE8;re[;somme_plage])</CODEROUTINE></TERM2>
+<TERM2><CODEROUTINE>SOMME.SI(plage;critère[;somme_plage])</CODEROUTINE></TERM2>
 <DESC>conditional sum</DESC>
 </ROW>
 <ROW>

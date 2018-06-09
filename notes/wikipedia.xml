@@ -68,7 +68,7 @@
 <ROW><TERM><CODEROUTINE>[[foobar|title]]</CODEROUTINE></TERM><DESC>link toward page <I>foobar</I> with the text of the link being <I>title</I></DESC></ROW>
 <ROW><TERM><CODEROUTINE>[[foobar#quux]]</CODEROUTINE></TERM><DESC>link toward anchor <I>quux</I> in page <I>foobar</I></DESC></ROW>
 <ROW><TERM><CODEROUTINE>[[#quux]]</CODEROUTINE></TERM><DESC>link toward anchor <I>quux</I> in the current page</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;span id="kloox"&gt;&#x2026; &lt;/span&gt;</CODEROUTINE></TERM><DESC>define anchor <I>kloox</I></DESC></ROW>
+<ROW><TERM><CODEROUTINE>&lt;span id="kloox"&gt;… &lt;/span&gt;</CODEROUTINE></TERM><DESC>define anchor <I>kloox</I></DESC></ROW>
 <ROW><TERM><CODEROUTINE>[http://example.com an example]</CODEROUTINE></TERM><DESC>external link as a named link</DESC></ROW>
 <ROW><TERM><CODEROUTINE>http://example.com</CODEROUTINE></TERM><DESC>external link as a unnamed link (only used within article
 body for footnotes)</DESC></ROW>
@@ -81,7 +81,7 @@ body for footnotes)</DESC></ROW>
 The classical HTML tags <CODEROUTINE>&lt;table&gt;</CODEROUTINE>, <CODEROUTINE>&lt;tr&gt;</CODEROUTINE>, <CODEROUTINE>&lt;th&gt;</CODEROUTINE>, and <CODEROUTINE>&lt;td&gt;</CODEROUTINE> can be used.
 <CODESAMPLE>
 &lt;table class="wikitable"&gt;<BR/>
-&lt;tr&gt;&lt;th&gt;Num&#xE9;ro&lt;/th&gt;&lt;th&gt;Intitul&#xE9;&lt;/th&gt;&lt;/tr&gt;<BR/>
+&lt;tr&gt;&lt;th&gt;Numéro&lt;/th&gt;&lt;th&gt;Intitulé&lt;/th&gt;&lt;/tr&gt;<BR/>
 &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Introduction and Overview&lt;/td&gt;&lt;/tr&gt;<BR/>
 &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Conformance&lt;/td&gt;&lt;/tr&gt;<BR/>
 &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Information Object Definitions&lt;/td&gt;&lt;/tr&gt;<BR/>
@@ -90,14 +90,14 @@ The classical HTML tags <CODEROUTINE>&lt;table&gt;</CODEROUTINE>, <CODEROUTINE>&
 It is possible to use the attribute <CODEROUTINE>border</CODEROUTINE>
 <CODESAMPLE>
 &lt;table border="1"&gt;<BR/>
-&#x2026;<BR/>
+…<BR/>
 &lt;/table&gt;
 </CODESAMPLE>
 It is also possible to use the attributes <CODEROUTINE>colspan</CODEROUTINE> and <CODEROUTINE>rowspan</CODEROUTINE> for the cells
 <CODESAMPLE>
-&#x2026;<BR/>
+…<BR/>
 &lt;td rowspan=4&gt;foobar&lt;/td&gt;<BR/>
-&#x2026;
+…
 </CODESAMPLE>
 </ITEM>
 <ITEM>redirection
@@ -126,14 +126,14 @@ Use the <CODEROUTINE>[[:category:foobar]]</CODEROUTINE> and <CODEROUTINE>[[:cate
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>{{homonymie}}</CODEROUTINE></TERM><DESC>homonymy</DESC></ROW>
 <ROW><TERM><CODEROUTINE>{{sigles n lettres}}</CODEROUTINE></TERM><DESC>add a table pointing toward acronym summary pages</DESC></ROW>
-<ROW><TERM><CODEROUTINE>{{&#xE9;bauche}}</CODEROUTINE></TERM><DESC>stub page</DESC></ROW>
+<ROW><TERM><CODEROUTINE>{{ébauche}}</CODEROUTINE></TERM><DESC>stub page</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 <U><B>Counter:</B></U><BR/>
 Use http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=<I>login</I>&amp;dbname=<I>wiki</I><BR/>
 for example <X><T>http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=Kolmigabrouil&amp;dbname=frwiki_p</T><A>http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=Kolmigabrouil&amp;dbname=frwiki_p</A><L>en</L><F>HTML</F></X><BR/>
 <BLIST><TITLE>My accounts:</TITLE>
   <ITEM><BLIST><TITLE>French</TITLE>
-    <ITEM><X><T>Wikip&#xE9;dia</T><A>http://fr.wikipedia.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
+    <ITEM><X><T>Wikipédia</T><A>http://fr.wikipedia.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
       <X><T>contrib</T><A>http://fr.wikipedia.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Wikiquote</T><A>http://fr.wikiquote.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
       <X><T>contrib</T><A>http://fr.wikiquote.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>

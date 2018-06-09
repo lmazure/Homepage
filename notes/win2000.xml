@@ -8,10 +8,10 @@
 <BLIST>
 <ITEM>
 To disable the dynamic shortening of the lists in the Start Menu:<BR/>
-<CODEMENU>Right click<CODEMENU>Propri&#xE9;t&#xE9;s<CODEMENU>Menu D&#xE9;marrer</CODEMENU></CODEMENU></CODEMENU><BR/>
-Select <CODEMENU>Menu D&#xE9;marrer Classique</CODEMENU><BR/>
-Click on <CODEMENU>Personnaliser&#x2026;</CODEMENU><BR/>
-Unselect <CODEMENU>Utiliser des menus personnalis&#xE9;s</CODEMENU>
+<CODEMENU>Right click<CODEMENU>Propriétés<CODEMENU>Menu Démarrer</CODEMENU></CODEMENU></CODEMENU><BR/>
+Select <CODEMENU>Menu Démarrer Classique</CODEMENU><BR/>
+Click on <CODEMENU>Personnaliser…</CODEMENU><BR/>
+Unselect <CODEMENU>Utiliser des menus personnalisés</CODEMENU>
 </ITEM>
 <ITEM>
 <CODEROUTINE>cmd.exe</CODEROUTINE> replaces <CODEROUTINE>command.com</CODEROUTINE>.
@@ -41,8 +41,8 @@ to change the letter of a drive:<BR/>
 start <CODEROUTINE>compmgmt.msc</CODEROUTINE><BR/>
 click on <CODEMENU>Stockage<CODEMENU>Gestion des disques</CODEMENU></CODEMENU><BR/>
 right-click on the line corresponding to the disk<BR/>
-select <CODEMENU>Modifier la lettre et les chemins d'acc&#xE8;s&#x2026;</CODEMENU><BR/>
-in the newly displayed dialog, click on <CODEMENU>Modifer&#x2026;</CODEMENU><BR/>
+select <CODEMENU>Modifier la lettre et les chemins d'accès…</CODEMENU><BR/>
+in the newly displayed dialog, click on <CODEMENU>Modifer…</CODEMENU><BR/>
 select the new letter and apply
 </ITEM>
 <ITEM>
@@ -163,8 +163,8 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
 <ROW><TERM><CODEROUTINE>/v</CODEROUTINE></TERM><DESC>check that sectors written on disk are correct</DESC></ROW>
 <ROW><TERM><CODEROUTINE>/a</CODEROUTINE></TERM><DESC>for a source file, the data are copied up to the first end-of-file mark(<MODIFIERKEY ID='Ctrl'/><KEY ID='Z'/>)<BR/>for a target file, a end-of-file mark is added as the last character in the file</DESC></ROW>
 <ROW><TERM><CODEROUTINE>/b</CODEROUTINE></TERM><DESC>for a source file, the file must be entirely copied including the end-of-file marks<BR/>for a target file, does not add a end-of-file mark at the end of the file</DESC></ROW>
-<ROW><TERM><CODEROUTINE>copy foo+bar[+&#x2026;] target</CODEROUTINE></TERM><DESC>concatenate the source files into a single target file</DESC></ROW>
-<ROW><TERM><CODEROUTINE>copy foo+bar[+&#x2026;]</CODEROUTINE></TERM><DESC>concatenate the files into <CODEROUTINE>foo</CODEROUTINE></DESC></ROW>
+<ROW><TERM><CODEROUTINE>copy foo+bar[+…] target</CODEROUTINE></TERM><DESC>concatenate the source files into a single target file</DESC></ROW>
+<ROW><TERM><CODEROUTINE>copy foo+bar[+…]</CODEROUTINE></TERM><DESC>concatenate the files into <CODEROUTINE>foo</CODEROUTINE></DESC></ROW>
 <ROW><TERM><CODEROUTINE>copy *.suf target</CODEROUTINE></TERM><DESC>concatenate the files in target</DESC></ROW>
 <ROW><TERM><CODEROUTINE>copy *.ref+*.tex *.doc</CODEROUTINE></TERM><DESC>concatenate the file pairs <CODEROUTINE>*.ref+*.tex</CODEROUTINE> in files <CODEROUTINE>*.doc</CODEROUTINE></DESC></ROW>
 <ROW><TERM><CODEROUTINE>copy *.ref+*.tex target</CODEROUTINE></TERM><DESC>concatenate all the files into <CODEROUTINE>target</CODEROUTINE></DESC></ROW>

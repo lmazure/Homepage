@@ -9,7 +9,7 @@
 <ITEM>open a file in read only mode
 <CODESAMPLE>
 Dim sourceWorkbook As Workbook<BR/>
-Workbooks.Open ("&#x2026;"), ReadOnly:=True<BR/>
+Workbooks.Open ("…"), ReadOnly:=True<BR/>
 Set sourceWorkbook = ActiveWorkbook</CODESAMPLE></ITEM>
 <ITEM>close a file
 <CODESAMPLE>sourceWorkbook.Close</CODESAMPLE></ITEM>
@@ -110,7 +110,7 @@ Next r
 <CODESAMPLE>Dim l_status, l_priority As Integer<BR/>
 l_status = 4<BR/>
 l_priority = 5<BR/>
-&#x2026; <BR/>
+… <BR/>
 Range("A:BA").Sort Key1:=Cells(1, l_priority), Order1:=xlAscending, _<BR/>
 <TAB/>Key2:=Cells(1, l_status), Order2:=xlDescending, _<BR/>
 <TAB/>Header:=xlYes</CODESAMPLE>
@@ -129,7 +129,7 @@ n = ActiveSheet.Cells.SpecialCells(xlLastCell).Row
 <CODESAMPLE>
 Dim tempo As Worksheet<BR/>
 Set tempo = Sheets.Add<BR/>
-&#x2026; <BR/>
+… <BR/>
 Application.DisplayAlerts = False<BR/>
 tempo.Delete<BR/>
 Application.DisplayAlerts = True</CODESAMPLE>
@@ -182,7 +182,7 @@ Dim str() As String<BR/>
 Dim i As Integer<BR/>
 str = Split(report.Cells(line, col).Value, vbLf)<BR/>
 For i = 0 To UBound(str)<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 Next i
 </CODESAMPLE>
 </ITEM>
@@ -190,7 +190,7 @@ Next i
 Test if a cell is not empty
 <CODESAMPLE>
 If (Not IsEmpty(stats.Cells(line, col).Value)) Then<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 End If
 </CODESAMPLE>
 </ITEM>
@@ -235,11 +235,11 @@ End Sub</CODESAMPLE></ITEM>
 <ITEM><CODEROUTINE>Application.ScreenRefresh</CODEROUTINE> does not exist (as in Word)</ITEM>
 <ITEM>to have a faster macro execution, disable the formula updates (if adequate) during the macro run
 <CODESAMPLE>Application.Calculation = xlCalculationManual<BR/>
-&#x2026;<BR/>
+…<BR/>
 Application.Calculation = xlCalculationAutomatic</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>graphs</U></B></TITLE>
-<ITEM>It seems that graphs must be fully set up before displaying them (by setting their <CODEROUTINE>Location</CODEROUTINE>), this should be verified&#x2026;
+<ITEM>It seems that graphs must be fully set up before displaying them (by setting their <CODEROUTINE>Location</CODEROUTINE>), this should be verified…
 <CODESAMPLE>Dim chart As Variant<BR/>
 Set chart = Charts.Add<BR/>
 chart.ChartType = xlColumnClustered<BR/>

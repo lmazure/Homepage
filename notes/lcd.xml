@@ -17,7 +17,7 @@
 <CODESAMPLE><PROMPT/>cdrecord -scanbus</CODESAMPLE>
 and burn with (old Red Hat releases)
 <CODESAMPLE><PROMPT/>cdrecord -v -dev=x,y,z foo.iso</CODESAMPLE></ITEM>
-<ITEM>burn a DVD ISO image on latest RedHat releases (I set the speed to 1 to avoid some DVD corruption problems&#x2026;)
+<ITEM>burn a DVD ISO image on latest RedHat releases (I set the speed to 1 to avoid some DVD corruption problems…)
 <CODESAMPLE><PROMPT/>sudo cdrecord -v dev=ATA:1,0,0 -dao -speed 1 toto.iso</CODESAMPLE></ITEM>
 <ITEM>blank a R/W CD
 <CODESAMPLE><PROMPT/>cdrecord -dev=2,0,0 -blank=fast</CODESAMPLE>

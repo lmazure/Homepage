@@ -103,11 +103,11 @@ data type<BR/>
 <CODEROUTINE>isEmpty</CODEROUTINE> test if a variable has been initialized
 <CODESAMPLE>Dim table<BR/>
 For i = 1 to oldDoc.Tables<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 <TAB/>If (isEmpty(table)) Then<BR/>
 <TAB/><TAB/>Set table = newDoc.table(1)<BR/>
 <TAB/>End If<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 End i</CODESAMPLE>
 </ITEM>
 <ITEM><CODEROUTINE>VarType foobar</CODEROUTINE> return the type of the variable <CODEROUTINE>Variant</CODEROUTINE> <CODEROUTINE>foobar</CODEROUTINE>: <CODEROUTINE>vbEmpty</CODEROUTINE> (uninitialized), <CODEROUTINE>vbNull</CODEROUTINE> (no valid data), <CODEROUTINE>vbInteger</CODEROUTINE>, <CODEROUTINE>vbLong</CODEROUTINE>, <CODEROUTINE>vbSingle</CODEROUTINE>, <CODEROUTINE>vbDouble</CODEROUTINE>, <CODEROUTINE>vbCurrency</CODEROUTINE>, <CODEROUTINE>vbDate</CODEROUTINE>, <CODEROUTINE>vbString</CODEROUTINE>, <CODEROUTINE>vbObject</CODEROUTINE>, <CODEROUTINE>vbError</CODEROUTINE>, <CODEROUTINE>vbBoolean</CODEROUTINE>, <CODEROUTINE>vbDataObject</CODEROUTINE>, <CODEROUTINE>vbDecimal</CODEROUTINE>, <CODEROUTINE>vbByte</CODEROUTINE> and <CODEROUTINE>vbUserDefinedType</CODEROUTINE>. If the variable contains an array, the returned value is <CODEROUTINE>vbArray</CODEROUTINE> + one of the preceding types. For an array of <CODEROUTINE>Variant</CODEROUTINE>s, <CODEROUTINE>vbArray+VbVariant</CODEROUTINE> is returned.
@@ -159,7 +159,7 @@ A = Array(10,20,30) </CODESAMPLE>
 <ITEM>multidimensional array
 <CODESAMPLE>
 Dim data(4, 6, 5, 3) As Integer<BR/>
-&#x2026; <BR/>
+… <BR/>
 data(typ, impact, sev, col) = data(typ, impact, sev, col) + 1
 </CODESAMPLE>
 </ITEM>
@@ -258,7 +258,7 @@ Loop Until condition</CODESAMPLE>
 <ITEM>loop on a collection content
 <CODESAMPLE>
 For Each c In col<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 Next c
 </CODESAMPLE>
 </ITEM>
@@ -312,52 +312,52 @@ Private Sub Compute_Click()<BR/>
 End Sub</CODESAMPLE></ITEM>
 <ITEM>break from a loop, function, procedure, or property
 <CODESAMPLE>
-For &#x2026; To<BR/>
-<TAB/>&#x2026;<BR/>
+For … To<BR/>
+<TAB/>…<BR/>
 <TAB/>Exit For<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 Next
 </CODESAMPLE>
 <CODESAMPLE>
-For Each &#x2026;<BR/>
-<TAB/>&#x2026;<BR/>
+For Each …<BR/>
+<TAB/>…<BR/>
 <TAB/>Exit For<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 Next
 </CODESAMPLE>
 <CODESAMPLE>
-Do &#x2026;<BR/>
-<TAB/>&#x2026;<BR/>
+Do …<BR/>
+<TAB/>…<BR/>
 <TAB/>Exit Do<BR/>
-<TAB/>&#x2026;<BR/>
-Loop &#x2026;
+<TAB/>…<BR/>
+Loop …
 </CODESAMPLE>
 <CODESAMPLE>
-Function &#x2026;<BR/>
-<TAB/>&#x2026;<BR/>
+Function …<BR/>
+<TAB/>…<BR/>
 <TAB/>Exit Function<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 End Function
 </CODESAMPLE>
 <CODESAMPLE>
-Sub &#x2026;<BR/>
-<TAB/>&#x2026;<BR/>
+Sub …<BR/>
+<TAB/>…<BR/>
 <TAB/>Exit Sub<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 End Sub
 </CODESAMPLE>
 <CODESAMPLE>
-Property &#x2026;<BR/>
-<TAB/>&#x2026;<BR/>
+Property …<BR/>
+<TAB/>…<BR/>
 <TAB/>Exit Property<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 End Property
 </CODESAMPLE>
 </ITEM>
 <ITEM>goto<BR/>
 <CODESAMPLE>
 goto foobar<BR/>
-&#x2026;<BR/>
+…<BR/>
 foobar:
 </CODESAMPLE>
 </ITEM>
@@ -373,8 +373,8 @@ Disables any enabled error handler in the current procedure.</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Functions</U></B></TITLE>
 <ITEM>The general format of a function is as follows:
-<CODESAMPLE>[Public|Friend|Private] [Static] Function functionName (Arg As dataType,&#x2026;&#x2026;&#x2026;.) As dataType<BR/>
-&#x2026;<BR/>
+<CODESAMPLE>[Public|Friend|Private] [Static] Function functionName (Arg As dataType,……….) As dataType<BR/>
+…<BR/>
 End Function</CODESAMPLE> 
 <CODEROUTINE>Public</CODEROUTINE> the procedure is accessible to all other procedures in all modules. If used in a module that contains an Option
 Private, the procedure is not available outside the project.<BR/>
@@ -388,8 +388,8 @@ The return value is defined by setting the <CODEROUTINE>functionName</CODEROUTIN
 </BLIST>
 <BLIST><TITLE><B><U>Procedure</U></B></TITLE>
 <ITEM>The general format of a procedure is as follows:
-<CODESAMPLE>[Public|Friend|Private] [Static] Sub routineName (Arg As dataType,&#x2026;)<BR/>
-&#x2026;<BR/>
+<CODESAMPLE>[Public|Friend|Private] [Static] Sub routineName (Arg As dataType,…)<BR/>
+…<BR/>
 End Sub</CODESAMPLE>
 </ITEM>
 <ITEM><CODEROUTINE>Exit sub</CODEROUTINE> exits from the routine.
@@ -399,15 +399,15 @@ End Sub</CODESAMPLE>
 <ITEM>A parameter can be declared as optional by using the <CODEROUTINE>Optional</CODEROUTINE> keyword.</ITEM>
 <ITEM>A default value can be provided for an optional parameter
 <CODESAMPLE>Public Sub Display(Optional number as Long = -1) <BR/>
-&#x2026;<BR/>
+…<BR/>
 End Sub</CODESAMPLE>
 </ITEM>
 <ITEM>The existence of an optional Variant parameter can be tested with <CODEROUTINE>IsMissing</CODEROUTINE>
 <CODESAMPLE>Public Sub Display(Optional number as Variant)<BR/>
 If IsMissing(number) then<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 Else<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 End If<BR/>
 End Sub</CODESAMPLE>
 </ITEM>
@@ -415,7 +415,7 @@ End Sub</CODESAMPLE>
 <CODEROUTINE>ByRef</CODEROUTINE> indicates that the attribute is passed by reference (the default)<BR/>
 <CODEROUTINE>ByVal</CODEROUTINE> indicates that the attribute is passed by value
 <CODESAMPLE>Private Sub copyToMaster(ByRef masterSheet As Worksheet)<BR/>
-&#x2026; <BR/>
+… <BR/>
 End Sub</CODESAMPLE>
 </ITEM>
 <ITEM>When calling a routine/procedure without <CODEROUTINE>Call</CODEROUTINE>, the parentheses must not be present.<BR/>
@@ -557,7 +557,7 @@ Set fso = CreateObject("Scripting.FileSystemObject")<BR/>
 Set folder = fso.GetFolder("D:\Docs\human resources\timesheets")<BR/>
 For Each dir In folder.SubFolders<BR/>
 <TAB/>For Each file In dir.Files<BR/>
-<TAB/><TAB/>&#x2026;<BR/>
+<TAB/><TAB/>…<BR/>
 <TAB/>Next file<BR/>
 Next dir</CODESAMPLE>
 </ITEM>
@@ -622,7 +622,7 @@ given delimiter
 <ITEM><CODEROUTINE>Chr(val)</CODEROUTINE> return a string containing the character defined by the character code <CODEROUTINE>val</CODEROUTINE><BR/>
 <CODEROUTINE>ChrW(val)</CODEROUTINE> return a string containing the character defined by the Unicode value <CODEROUTINE>val</CODEROUTINE><BR/>
 <CODEROUTINE>ChrB(val)</CODEROUTINE> return a string containing the character defined by the byte <CODEROUTINE>val</CODEROUTINE><BR/>
-(this is not really clear&#x2026;)
+(this is not really clear…)
 </ITEM>
 <ITEM><CODEROUTINE>Asc(string)</CODEROUTINE> return the character code of the first letter of string<BR/>
 <CODEROUTINE>AscB(string)</CODEROUTINE> return the first byte of the first letter of string<BR/>
@@ -691,7 +691,7 @@ Set dict = New Scripting.Dictionary<BR/>
 dict.Add "ACTI", 1<BR/>
 dict.Add "ADMI", 1<BR/>
 dict.Add "BUIL", 1<BR/>
-&#x2026; <BR/>
+… <BR/>
 <TAB/>Set rg = ActiveDocument.range(c2.range.Start, c2.range.End - 1)<BR/>
 <TAB/>Dim txt As String<BR/>
 <TAB/>txt = rg.Text<BR/>
@@ -707,7 +707,7 @@ dict.Add "BUIL", 1<BR/>
 <CODESAMPLE>Dim dict As Scripting.Dictionary<BR/>
 Dim i As Integer<BR/>
 Dim t As String<BR/>
-&#x2026; <BR/>
+… <BR/>
 For i = 0 To dict.Count - 1<BR/>
 <TAB/>t = dictSRS(0).Keys(i) <BR/>
 <TAB/>Selection.InsertAfter (t) <BR/>
@@ -742,7 +742,7 @@ Dim inputFile As Variant, theInputFile As Variant<BR/>
 inputFile = browseForFileUsingExcel("Word file", "*.rtf;*.doc", "Input file")<BR/>
 If (VarType(inputFile) = vbString) Then<BR/>
 <TAB/>theInputFile = inputFile<BR/>
-<TAB/>&#x2026; use theInputFile &#x2026; <BR/>
+<TAB/>… use theInputFile … <BR/>
 End If</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Message box</U></B></TITLE>
@@ -751,7 +751,7 @@ End If</CODESAMPLE></ITEM>
 Buttons can be <CODEROUTINE>vbOKOnly</CODEROUTINE>, <CODEROUTINE>vbOkCancel</CODEROUTINE>, <CODEROUTINE>vbYesNo</CODEROUTINE>, <CODEROUTINE>vbYesNoCancel</CODEROUTINE>, <CODEROUTINE>vbAbortRetryIgnore</CODEROUTINE>
  or <CODEROUTINE>vbRetryCancel</CODEROUTINE>.<BR/>
 Icons can be <CODEROUTINE>vbQuestion</CODEROUTINE>, <CODEROUTINE>vbInformation</CODEROUTINE>, <CODEROUTINE>vbExclamation</CODEROUTINE> or <CODEROUTINE>vbCritical</CODEROUTINE>. <BR/>
-<CODEROUTINE>vbDefaultButton1</CODEROUTINE>, <CODEROUTINE>vbDefaultButton2</CODEROUTINE>&#x2026; can be used to define the default button. <BR/>
+<CODEROUTINE>vbDefaultButton1</CODEROUTINE>, <CODEROUTINE>vbDefaultButton2</CODEROUTINE>… can be used to define the default button. <BR/>
 <CODESAMPLE>Msgbox "Do you want to save changes?",
 vbYesNo+vbExclamation+vbDefaultButton1, "Front Page"</CODESAMPLE>
 The returned value indicates the clicked button: <CODEROUTINE>vbOK</CODEROUTINE>, <CODEROUTINE>vbYes</CODEROUTINE>, <CODEROUTINE>vbNo</CODEROUTINE>, <CODEROUTINE>vbAbort</CODEROUTINE>, <CODEROUTINE>vbRetry</CODEROUTINE>, <CODEROUTINE>vbCancel</CODEROUTINE>

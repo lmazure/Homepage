@@ -43,7 +43,7 @@ example: <CODESAMPLE>a = /*lint --e(413) */ *(int *)0 + *(char *)0;</CODESAMPLE>
 example: <CODESAMPLE>//lint -e{715} suppress "k not referenced"<BR/>
 void f( int n, unsigned u, int k )<BR/>
 {<BR/>
-&#x2026;<BR/>
+…<BR/>
 }
 </CODESAMPLE>
 the inhibition is recorded in the statement tree</DESC>
@@ -66,7 +66,7 @@ this cannot be used in a macro</DESC>
 <CODESAMPLE>class FooBar<BR/>
 {<BR/>
 <TAB/>public:<BR/>
-<TAB/><TAB/>&#x2026;<BR/>
+<TAB/><TAB/>…<BR/>
 <TAB/>private:<BR/>
 <TAB/><TAB/>FooBar( const FooBar &amp;i_other);<BR/>
 <TAB/><TAB/>/*lint -esym(1526,FooBar::FooBar)*/<BR/>
@@ -173,7 +173,7 @@ On Linux, a quick 'n dirty hack is to create the <CODEROUTINE>stl_config.h</CODE
 #define __STL_NEED_EXPLICIT<BR/>
 #define __STL_BEGIN_NAMESPACE<BR/>
 #define __STL_END_NAMESPACE</CODESAMPLE>
-there is still a warning with the <CODEROUTINE>list</CODEROUTINE>s: <CODEROUTINE>Error 1036: ambiguous reference to constructor; candidates: '_List_iterator&lt;basic_string&lt;char,&#x2026;</CODEROUTINE><BR/>
+there is still a warning with the <CODEROUTINE>list</CODEROUTINE>s: <CODEROUTINE>Error 1036: ambiguous reference to constructor; candidates: '_List_iterator&lt;basic_string&lt;char,…</CODEROUTINE><BR/>
 kill it with
 <CODESAMPLE>-efunc(1036,_List_iterator&lt;*,*,*&gt;::_List_iterator&lt;*&gt;)</CODESAMPLE></ITEM>
 <ITEM>Qt

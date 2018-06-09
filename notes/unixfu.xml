@@ -64,7 +64,7 @@
 <ROW><TERM><CODEROUTINE>grep -B &lt;n&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -C &lt;n&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>n</CODEROUTINE> lines after the match</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -B &lt;n&gt; -C &lt;m&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>m</CODEROUTINE> lines after the match</DESC></ROW>
-<ROW><TERM><CODEROUTINE>grep "a[[:space:]]+b"</CODEROUTINE></TERM><DESC>search <CODEROUTINE>a</CODEROUTINE> followed by one or more spaces, tabs&#x2026; and finally by <CODEROUTINE>b</CODEROUTINE><BR/>
+<ROW><TERM><CODEROUTINE>grep "a[[:space:]]+b"</CODEROUTINE></TERM><DESC>search <CODEROUTINE>a</CODEROUTINE> followed by one or more spaces, tabs… and finally by <CODEROUTINE>b</CODEROUTINE><BR/>
 <BLIST><TITLE>The named character classes are:</TITLE>
 <ITEM><CODEROUTINE>[:alnum:]</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>[:alpha:]</CODEROUTINE></ITEM>
@@ -204,7 +204,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <ROW><TERM><CODEROUTINE>find . -empty</CODEROUTINE></TERM><DESC>true if the entry is an empty directory or an empty regular file</DESC></ROW>
 <ROW><TERM><CODEROUTINE>find . -mount</CODEROUTINE><BR/><CODEROUTINE>find . -xdev</CODEROUTINE></TERM><DESC>do not scan other filesystems</DESC></ROW>
 <ROW><TERM><CODEROUTINE>find . \( -name 'l' -o -name 'll' \) -print</CODEROUTINE></TERM><DESC>example of using the <CODEROUTINE>or</CODEROUTINE> operator</DESC></ROW>
-<ROW><TERM><CODEROUTINE>find . -noleaf</CODEROUTINE></TERM><DESC>do not optimize by assuming that directories contain two fewer subdirectories than their hard link count (necessary for some filesystems: MSDOS, CDROM, AFS&#x2026;)</DESC></ROW>
+<ROW><TERM><CODEROUTINE>find . -noleaf</CODEROUTINE></TERM><DESC>do not optimize by assuming that directories contain two fewer subdirectories than their hard link count (necessary for some filesystems: MSDOS, CDROM, AFS…)</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>

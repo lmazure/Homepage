@@ -8,11 +8,11 @@
 <BLIST><TITLE><U><B>install</B></U></TITLE>
 <ITEM>
 install a package<BR/>
-<CODESAMPLE><PROMPT/>rpm -i foobar.rpm [ toto.rpm &#x2026; ]</CODESAMPLE>
+<CODESAMPLE><PROMPT/>rpm -i foobar.rpm [ toto.rpm … ]</CODESAMPLE>
 </ITEM>
 <ITEM>
 install a package only if a previous version is already present<BR/>
-<CODESAMPLE><PROMPT/>rpm -F foobar.rpm [ toto.rpm &#x2026; ]</CODESAMPLE>
+<CODESAMPLE><PROMPT/>rpm -F foobar.rpm [ toto.rpm … ]</CODESAMPLE>
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>uninstall</B></U></TITLE>
@@ -45,7 +45,7 @@ list the files present in the package<BR/>
 <CODESAMPLE><PROMPT/>rpm -ql foobar</CODESAMPLE>
 </ITEM>
 <ITEM>
-list the files with their lengths, owner groups&#x2026;<BR/>
+list the files with their lengths, owner groups…<BR/>
 <CODESAMPLE><PROMPT/>rpm -ql --dump foobar</CODESAMPLE>
 </ITEM>
 <ITEM>

@@ -55,10 +55,10 @@ With modes, an element can be processed multiple times, each time producing a di
 <TAB/>&lt;xsl:apply-templates select="//CCC" mode="blue"/&gt;<BR/>
 &lt;/xsl:template&gt;<BR/>
 &lt;xsl:template match="CCC" mode="red"&gt;<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 &lt;/xsl:template&gt;<BR/>
 &lt;xsl:template match="CCC" mode="blue"&gt;<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 &lt;/xsl:template&gt;<BR/>
 &lt;/xsl:stylesheet&gt;
 </CODESAMPLE>
@@ -80,10 +80,10 @@ Attributes can be processed in the same way as elements.
 You can also select elements, which contain or do not contain the given attribute.
 <CODESAMPLE>
 &lt;xsl:template match="car[@checked]"&gt;<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 &lt;/xsl:template&gt;<BR/>
 &lt;xsl:template match="car[not(@checked)]"&gt;<BR/>
-<TAB/>&#x2026;<BR/>
+<TAB/>…<BR/>
 &lt;/xsl:template&gt;
 </CODESAMPLE>
 <BR/>
@@ -121,7 +121,7 @@ Test on the parent node and location in the parent node
 <CODESAMPLE>
 &lt;xsl:choose&gt;<BR/>
 <TAB/>&lt;xsl:when test="name(..)='ARTICLE' and count(preceding-sibling::*)=1"&gt;<BR/>
-<TAB/><TAB/>&lt;!-- case of second, third&#x2026; node in an article --&gt;<BR/>
+<TAB/><TAB/>&lt;!-- case of second, third… node in an article --&gt;<BR/>
 <TAB/><TAB/>&lt;xsl:text&gt;M&lt;/xsl:text&gt;<BR/>
 <TAB/>&lt;/xsl:when&gt;<BR/>
 <TAB/>&lt;xsl:otherwise&gt;<BR/>

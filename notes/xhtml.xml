@@ -12,19 +12,19 @@
 </BLIST>
 <BLIST><TITLE><B>Transition from HTML to XHTML</B></TITLE>
 <ITEM>
-<CODESAMPLE>&lt;CENTER&gt;&#x2026;&lt;CENTER&gt; </CODESAMPLE>
+<CODESAMPLE>&lt;CENTER&gt;…&lt;CENTER&gt; </CODESAMPLE>
 can be replaced by
-<CODESAMPLE>&lt;span style="text-align: center"&gt;&#x2026;&lt;/span&gt;</CODESAMPLE>
+<CODESAMPLE>&lt;span style="text-align: center"&gt;…&lt;/span&gt;</CODESAMPLE>
 </ITEM>
 <ITEM>
-<CODESAMPLE>&lt;STRIKE&gt;&#x2026;&lt;STRIKE&gt; </CODESAMPLE>
+<CODESAMPLE>&lt;STRIKE&gt;…&lt;STRIKE&gt; </CODESAMPLE>
 can be replaced by
-<CODESAMPLE>&lt;span style="text-decoration: line-through"&gt;&#x2026;&lt;/span&gt;</CODESAMPLE>
+<CODESAMPLE>&lt;span style="text-decoration: line-through"&gt;…&lt;/span&gt;</CODESAMPLE>
 </ITEM>
 <ITEM>
-<CODESAMPLE>&lt;A href="&#x2026;" target="_blank"&gt;&#x2026;&lt;A&gt; </CODESAMPLE>
+<CODESAMPLE>&lt;A href="…" target="_blank"&gt;…&lt;A&gt; </CODESAMPLE>
 can be replaced by
-<CODESAMPLE>&lt;a href="&#x2026;" onclick="window.open(this.href,'_blank');return false;"&gt;&#x2026;&lt;/a&gt;</CODESAMPLE>
+<CODESAMPLE>&lt;a href="…" onclick="window.open(this.href,'_blank');return false;"&gt;…&lt;/a&gt;</CODESAMPLE>
 </ITEM>
 <ITEM>
 <CODESAMPLE>&lt;img align="absmiddle" src="thumbup.gif"&gt; </CODESAMPLE>

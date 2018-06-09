@@ -68,7 +68,7 @@ Attributes are specified by <CODEROUTINE>@</CODEROUTINE> prefix.<BR/>
 Values of attributes can be used as selection criteria. Function <CODEROUTINE>normalize-space</CODEROUTINE> removes leading and trailing spaces and replaces sequences of whitespace characters by a single space.<BR/>
 <CODEROUTINE>//BBB[@id='b1']</CODEROUTINE> select <CODEROUTINE>BBB</CODEROUTINE> elements which have attribute <CODEROUTINE>id</CODEROUTINE> with value <CODEROUTINE>b1</CODEROUTINE><BR/>
 <CODEROUTINE>//BBB[normalize-space(@name)='bbb']</CODEROUTINE> select <CODEROUTINE>BBB</CODEROUTINE> elements which have attribute name with value <CODEROUTINE>bbb</CODEROUTINE>, leading and trailing spaces are removed before comparison<BR/>
-<CODEROUTINE>&lt;xsl:if test="normalize-space(.)"&gt;&#x2026;&lt;/xsl:if&gt;</CODEROUTINE> matches only with non empty nodes<BR/>
+<CODEROUTINE>&lt;xsl:if test="normalize-space(.)"&gt;…&lt;/xsl:if&gt;</CODEROUTINE> matches only with non empty nodes<BR/>
 <BR/>
 Function <CODEROUTINE>count()</CODEROUTINE> counts the number of selected elements<BR/>
 <CODEROUTINE>//*[count(BBB)=2]</CODEROUTINE> select elements which have two children <CODEROUTINE>BBB</CODEROUTINE><BR/>

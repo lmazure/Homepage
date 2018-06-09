@@ -8,7 +8,7 @@
 <BLIST><TITLE><B><U>stack dump</U></B></TITLE>
 <ITEM>return the call stack
 <CODESAMPLE>#include &lt;execinfo.h&gt;<BR/>
-&#x2026;<BR/>
+…<BR/>
 void *array[10];<BR/>
 size_t size = <X><T>backtrace</T><A>http://www.gnu.org/software/libc/manual/html_node/Backtraces.html</A><L>en</L><F>HTML</F></X>(array, 10);<BR/>
 char **strings = <X><T>backtrace_symbols</T><A>http://www.gnu.org/software/libc/manual/html_node/Backtraces.html</A><L>en</L><F>HTML</F></X>(array, size);<BR/>

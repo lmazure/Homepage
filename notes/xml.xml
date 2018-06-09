@@ -18,7 +18,7 @@ An element without content can take a special syntax:<BR/>
 <BR/>
 Element names can contain letters, digits, hyphens, underscores, colons or dots. A colon can be used only in a special case where it separates so called namespace. Names must not start with a number or punctuation character. Element names starting with xml, XML or other combination of cases of this string are reserved for the standard.<BR/>
 <BR/>
-An element can have none, one or several attributes. Permitted characters are the same as for element names. The name of attribute is separated from its value by <CODEROUTINE>=</CODEROUTINE>. There can be spaces around the <CODEROUTINE>=</CODEROUTINE>.The attribute value must be given inside single-quotes <CODEROUTINE>'&#x2026;'</CODEROUTINE> or double-quotes <CODEROUTINE>"&#x2026;"</CODEROUTINE>.<BR/>
+An element can have none, one or several attributes. Permitted characters are the same as for element names. The name of attribute is separated from its value by <CODEROUTINE>=</CODEROUTINE>. There can be spaces around the <CODEROUTINE>=</CODEROUTINE>.The attribute value must be given inside single-quotes <CODEROUTINE>'…'</CODEROUTINE> or double-quotes <CODEROUTINE>"…"</CODEROUTINE>.<BR/>
 <BR/>
 Characters <CODEROUTINE>&lt;</CODEROUTINE> and <CODEROUTINE>&amp;</CODEROUTINE> cannot be used in text as they are used in markup. There must be replaced by <CODEROUTINE>&amp;lt;</CODEROUTINE> and <CODEROUTINE>&amp;amp;</CODEROUTINE>.<BR/>
 Characters <CODEROUTINE>&gt;</CODEROUTINE>, <CODEROUTINE>"</CODEROUTINE>, and <CODEROUTINE>'</CODEROUTINE> can be also substituted by <CODEROUTINE>&amp;gt;</CODEROUTINE>, <CODEROUTINE>&amp;quot;</CODEROUTINE> and <CODEROUTINE>&amp;apos;</CODEROUTINE>.<BR/>

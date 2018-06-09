@@ -5,7 +5,7 @@
 <PATH>notes/verifinclude2.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
-Some software development tools (correctly) assume that the <CODEROUTINE>#include &lt;&#x2026;&gt;</CODEROUTINE> syntax is used for system/language headers and the <CODEROUTINE>#include "&#x2026;"</CODEROUTINE> syntax is used for the developer's own headers. So, if the wrong include syntax is used, they fail to properly handle the code. For example, this is a problem with static code analyzers that ignore warnings when the angle brackets are used and that display them when the double quotes are used. This trivial script helps to catch the incorrect include syntaxes.<BR/>
+Some software development tools (correctly) assume that the <CODEROUTINE>#include &lt;…&gt;</CODEROUTINE> syntax is used for system/language headers and the <CODEROUTINE>#include "…"</CODEROUTINE> syntax is used for the developer's own headers. So, if the wrong include syntax is used, they fail to properly handle the code. For example, this is a problem with static code analyzers that ignore warnings when the angle brackets are used and that display them when the double quotes are used. This trivial script helps to catch the incorrect include syntaxes.<BR/>
 You can use this script with <CODEROUTINE>find . -type | xargs -n 1000 the_script</CODEROUTINE><BR/>
 The old version of this script is available <X><T>here</T><A>verifinclude.html</A><L>en</L><F>HTML</F></X>.<BR/>
 <BR/>
