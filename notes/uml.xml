@@ -13,13 +13,13 @@
 </BLIST>
 <B><U>use case diagram</U></B><BR/>
 <BLIST><TITLE>Inter use cases relations</TITLE>
-<ITEM>&#xab;include&#xbb; (dotted arrow): the pointing use case A includes the pointed use case B<BR/>
+<ITEM>«include» (dotted arrow): the pointing use case A includes the pointed use case B<BR/>
 i.e. every time A is performed, B is performed as a part of B<BR/>
 a user case can include more than one other use cases, but the temporal sequence cannot be represented</ITEM>
-<ITEM>&#xab;extend&#xbb; (dotted arrow): the pointing use case A is a variation of the pointed use case B<BR/>
+<ITEM>«extend» (dotted arrow): the pointing use case A is a variation of the pointed use case B<BR/>
 the extension occurs at one or more extension points of B (extension points are listed in the "extension points" compartment of a use case)<BR/>
 the condition of the extension and the corresponding extension points are optionally shown in a Note attached to the corresponding
-&#xab;extend&#xbb; relationship.</ITEM>
+«extend» relationship.</ITEM>
 <ITEM>generalization (standard generalization symbol)<BR/>
 the pointing use case A is a specialization of the pointed use case B</ITEM>
 </BLIST>
@@ -41,7 +41,7 @@ Navigability is only from the class toward the attribute.
 A class-scope attribute is shown by underlining the name and type expression string; otherwise, the attribute is instance-scope.
 A nonchangeable attribute is specified with the property <CODEROUTINE>{frozen}</CODEROUTINE>.</ITEM>
 <ITEM>operations<BR/>
-Syntax: <CODEROUTINE>&#xab;stereotype&#xbb; visibility name ( parameter-list ): return-type-expression { property-strings }</CODEROUTINE><BR/>
+Syntax: <CODEROUTINE>«stereotype» visibility name ( parameter-list ): return-type-expression { property-strings }</CODEROUTINE><BR/>
 The colon and the return-type are omitted if the operation does not return a value.<BR/>
 <CODEROUTINE>parameter-list</CODEROUTINE> is a comma-separated list of formal parameters, each specified using the syntax: <CODEROUTINE>kind name : type-expression = default-value</CODEROUTINE>
 <BLIST><ITEM><CODEROUTINE>kind</CODEROUTINE> is <CODEROUTINE>in</CODEROUTINE>, <CODEROUTINE>out</CODEROUTINE>, or <CODEROUTINE>inout</CODEROUTINE>, with the default <CODEROUTINE>in</CODEROUTINE> if absent.</ITEM>
@@ -52,7 +52,7 @@ The concurrency semantics of an operation are specified by a property string of 
 An operation that does not modify the system state (one that has no side effects) is specified by the property <CODEROUTINE>{query}</CODEROUTINE>.<BR/>
 If this class does not implement the operation, the operation may be marked as <CODEROUTINE>{abstract}</CODEROUTINE> or
 the operation signature may be italicized.</ITEM></BLIST>
-Classes can be stereotyped as &#xab;type&#xbb; (specifying the operations without defining their implementation) and &#xab;implementationClass&#xbb;.<BR/>
+Classes can be stereotyped as «type» (specifying the operations without defining their implementation) and «implementationClass».<BR/>
 If Class B is attached to Class A by an anchor line with the anchor symbol (a plus sign within a circle) on Class A, then Class B is declared within the Namespace of Class A.<BR/>
 Parametrized class: A small dashed rectangle is superimposed on the upper right-hand corner of the rectangle for the class (or to the symbol for another modeling element). The dashed rectangle contains a parameter list of formal parameters for the class and their implementation types.<BR/>
 <BR/>
@@ -102,8 +102,8 @@ The messages are numbered 1, 1.1, 1.1.1, 1.1.2, 1.2, 2….<BR/>
 <B><U>package diagrams</U></B><BR/>
 A package is shown as a large rectangle with a small rectangle (a "tab") attached to the left side of the top of the large rectangle.<BR/>
 The contents of the package may be shown within the large rectangle. Contents may also be shown by branching lines to contained elements, drawn outside of the package. A plus sign within a circle is drawn at the end attached to the container. The visibility of a package element outside the package may be indicated by preceding the name of the element by a visibility symbol<BR/>
-A keyword string may be placed above the package name. The predefined stereotypes are &#xab;facade&#xbb;, &#xab;framework&#xbb;, &#xab;stub&#xbb;, and &#xab;topLevel&#xbb;.<BR/>
-Relationships may be drawn between package symbols to show relationships between some of the elements in the packages. An import or access relationship between two packages is drawn as a dashed arrow with open arrowhead, labeled with the string &#xab;import&#xbb; or &#xab;access&#xbb;. (Note that the relationships are not transitive.)<BR/>
+A keyword string may be placed above the package name. The predefined stereotypes are «facade», «framework», «stub», and «topLevel».<BR/>
+Relationships may be drawn between package symbols to show relationships between some of the elements in the packages. An import or access relationship between two packages is drawn as a dashed arrow with open arrowhead, labeled with the string «import» or «access». (Note that the relationships are not transitive.)<BR/>
 A package can have properties, e.g. {abstract} if the package only contains interfaces.<BR/>
 Generalization symbols can appear, e.g. from an abstract package to a realization package. This implies an implicit dependency.<BR/>
 </CONTENT>

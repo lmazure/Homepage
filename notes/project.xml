@@ -6,7 +6,7 @@
 <DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B><U>Computation</U></B></TITLE>
-<ITEM>Durée = Travail &#xF7; Unités de ressource</ITEM>
+<ITEM>Durée = Travail ÷ Unités de ressource</ITEM>
 <ITEM>
 <U>Types of tasks</U><BR/>
 What is the value modified by Project when another one is modified?
@@ -76,12 +76,12 @@ The import does not work properly if the Excel cells contains newlines (the text
 If the column titles are the correct ones in Excel, Project will automatically recognize them<BR/>
 <BR/>
 <BLIST><TITLE><B><U>User Interface</U></B></TITLE>
-<ITEM><BLIST><TITLE>Indicate that task &#x3B2; is linked to a task &#x3B1;</TITLE>
+<ITEM><BLIST><TITLE>Indicate that task β is linked to a task α</TITLE>
 <ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the graphical view<BR/>
-put the cursor on top of task &#x3B1;<BR/>
+put the cursor on top of task α<BR/>
 left click<BR/>
 move the cursor toward the top or the bottom<BR/>
-move the cursor on top of task &#x3B2;<BR/>
+move the cursor on top of task β<BR/>
 release the mouse button</ITEM>
 <ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view<BR/>
 select the tasks (e.g. by using <MODIFIERKEY ID='Ctrl'/>click)<BR/>
@@ -97,9 +97,9 @@ select the tasks (e.g. by using <MODIFIERKEY ID='Ctrl'/>click)<BR/>
 type <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></ITEM>
 </BLIST></ITEM>
 <ITEM>On the <CODEROUTINE>Organigramme des tâches</CODEROUTINE> view<BR/>
-put the cursor on top of task &#x3B1;<BR/>
+put the cursor on top of task α<BR/>
 left click<BR/>
-move the cursor on top of task &#x3B2;<BR/>
+move the cursor on top of task β<BR/>
 release the mouse button</ITEM>
 <ITEM>Change the task orders:<BR/>
 on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view<BR/>

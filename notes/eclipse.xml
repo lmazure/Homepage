@@ -22,7 +22,7 @@
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Launch</B></U></TITLE>
-  <ITEM>For a unknown reason <CODEROUTINE>-vmargs -Xmx&#x3B1;M</CODEROUTINE> does not work if &#x3B1; is greater than 1024.<BR/>
+  <ITEM>For a unknown reason <CODEROUTINE>-vmargs -XmxαM</CODEROUTINE> does not work if α is greater than 1024.<BR/>
     But the following command line works:<BR/>
     <CODEROUTINE>eclipse -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODEROUTINE> (but the value <CODEROUTINE>1600</CODEROUTINE> seems to depends on some PC characteristics, which ones?)</ITEM>
 </BLIST>

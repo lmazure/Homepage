@@ -15,7 +15,7 @@ in order to support Java, define a new suffix rule
 <CODESAMPLE>
 .SUFFIXES : .java .class<BR/>
 .java.class:<BR/>
-<TAB/> javac -g $&#x3C;</CODESAMPLE>
+<TAB/> javac -g $&lt;</CODESAMPLE>
 </ITEM>
 <ITEM>
 append a string to a variable

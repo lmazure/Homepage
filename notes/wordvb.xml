@@ -22,7 +22,7 @@ see page <X><T>Built-in dialog box argument lists</T><A>http://msdn.microsoft.co
 </ITEM>
 <ITEM>
 <CODESAMPLE>Selection.Find.MatchWildcards = True<BR/>
-Selection.Find.Text = "[a-z]"</CODESAMPLE> matches é,è, &#xA1;, ù…
+Selection.Find.Text = "[a-z]"</CODESAMPLE> matches é,è, ù…
 </ITEM>
 <ITEM>
 <CODESAMPLE>Selection.Find.MatchWildcards = True<BR/>
@@ -203,8 +203,8 @@ End Sub</CODESAMPLE></ITEM>
 <TAB/>Dim s As String<BR/>
 <TAB/>formatForExcel = str<BR/>
 <TAB/>formatForExcel = Replace(formatForExcel, """", """""")<BR/>
-<TAB/>formatForExcel = Replace(formatForExcel, "&#x201C;", """""")<BR/>
-<TAB/>formatForExcel = Replace(formatForExcel, "&#x201D;", """""")<BR/>
+<TAB/>formatForExcel = Replace(formatForExcel, "“", """""")<BR/>
+<TAB/>formatForExcel = Replace(formatForExcel, "”", """""")<BR/>
 <TAB/>formatForExcel = Replace(formatForExcel, Chr(171), """""")<BR/>
 <TAB/>formatForExcel = Replace(formatForExcel, Chr(187), """""")<BR/>
 <TAB/>formatForExcel = """" &amp; formatForExcel &amp; """" &amp; vbTab<BR/>

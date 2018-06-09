@@ -692,8 +692,8 @@ Sub Customize()<BR/>
 <TAB/>For Each entry In AutoCorrect.Entries<BR/>
 <TAB/><TAB/>entry.Delete<BR/>
 <TAB/>Next entry<BR/>
-<TAB/>AutoCorrect.Entries.Add Name:="&#xB2;co", Value:="Cordialement," &amp; vbCr &amp; "Laurent"<BR/>
-<TAB/>AutoCorrect.Entries.Add Name:="&#xB2;ca", Value:="Regards," &amp; vbCr &amp; "Laurent"<BR/>
+<TAB/>AutoCorrect.Entries.Add Name:="²co", Value:="Cordialement," &amp; vbCr &amp; "Laurent"<BR/>
+<TAB/>AutoCorrect.Entries.Add Name:="²ca", Value:="Regards," &amp; vbCr &amp; "Laurent"<BR/>
 <TAB/>AutoCorrect.ReplaceText = True<BR/>
 <BR/>
 <TAB/>' avoid the other autocorrections<BR/>
@@ -737,7 +737,7 @@ Sub Customize()<BR/>
 <TAB/>Application.DisplayAutoCompleteTips = False<BR/>
 <BR/>
 <TAB/>' define the user<BR/>
-<TAB/>Application.UserName = "Laurent Mazur&#233;"<BR/>
+<TAB/>Application.UserName = "Laurent Mazuré"<BR/>
 <TAB/>Application.UserInitials = "LM"<BR/>
 <TAB/>Application.UserAddress = ""<BR/>
 End Sub<BR/>
