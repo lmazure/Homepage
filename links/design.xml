@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -116,11 +116,20 @@
       <ITEM><ARTICLE><X><T>Visualization Mnemonics for Software Principles</T><A>http://www.daedtech.com/visualization-mnemonics-for-software-principles</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Erik</FIRSTNAME><LASTNAME>Dietrich</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>15</DAY></DATE><COMMENT>This blog entry will not teach the software first principles (SOLID + law of Demeter), but tells some funny stories to remember them.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>What Is Assumed When Deferring Database Decisions?</T><A>https://blog.8thlight.com/patrick-gombert/2016/04/18/deferring-database.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrick</FIRSTNAME><LASTNAME>Gombert</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE><COMMENT>The choice of the database is not really a technical detail, the data access patterns of the application limit the choice of the database.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>SOLID</TITLE>
-        <ITEM><ARTICLE><X><T>Open Close Principle</T><A>http://www.oodesign.com/open-close-principle.html</A><L>en</L><F>HTML</F></X><COMMENT>A simple example of the Open Close Principle.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>The Single Responsibility Principle</T><A>https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>8</DAY></DATE><COMMENT>Group together what change together, separate things that change for different reasons, and remember that changes are requested by different persons.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>The Open Closed Principle</T><A>https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE><COMMENT>You should be able to extend the behavior of a system without having to modify that system. This is what plugins achieve.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>SOLID Deconstruction</T><A>http://yowconference.com.au/slides/yow2013/Henney-SOLIDDeconstruction.pdf</A><L>en</L><F>PDF</F></X><X><T>SOLID Deconstruction</T><A>https://github.com/newmana/solid-deconstructed/blob/master/Henney-SOLIDDeconstruction.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Jakub</FIRSTNAME><LASTNAME>Holý</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>Yet another presentation of the SOLID principles.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>ScreenCast sur Interface Segregation Principle</T><A>https://www.youtube.com/watch?v=4D3AkCg6x7I</A><L>fr</L><F>Flash Video</F><DURATION><MINUTE>5</MINUTE><SECOND>27</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sab</FIRSTNAME><LASTNAME>Buisson</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>1</MONTH><DAY>18</DAY></DATE><COMMENT>Cleaning up some code to respect the ISP.</COMMENT></ARTICLE></ITEM>
+        <ITEM><BLIST><TITLE>Single Responsibility Principle</TITLE>
+          <ITEM><ARTICLE><X><T>The Single Responsibility Principle</T><A>https://blog.cleancoder.com/uncle-bob/2014/05/08/SingleReponsibilityPrinciple.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>8</DAY></DATE><COMMENT>Group together what change together, separate things that change for different reasons, and remember that changes are requested by different persons.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Open Close Principle</TITLE>
+          <ITEM><ARTICLE><X><T>Open Close Principle</T><A>http://www.oodesign.com/open-close-principle.html</A><L>en</L><F>HTML</F></X><COMMENT>A simple example of the Open Close Principle.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Open Closed Principle</T><A>https://blog.cleancoder.com/uncle-bob/2014/05/12/TheOpenClosedPrinciple.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE><COMMENT>You should be able to extend the behavior of a system without having to modify that system. This is what plugins achieve.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Dependency Inversion Principle</TITLE>
+          <ITEM><ARTICLE><X><T>DIP in the Wild</T><A>https://www.martinfowler.com/articles/dipInTheWild.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brett</FIRSTNAME><MIDDLENAME>L.</MIDDLENAME><LASTNAME>Schuchert</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE><COMMENT>Some clear examples of dependency inversion and the difference between DIP, Inversion of Control and Dependency Injection.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Interface Segregation Principle</TITLE>
+          <ITEM><ARTICLE><X><T>ScreenCast sur Interface Segregation Principle</T><A>https://www.youtube.com/watch?v=4D3AkCg6x7I</A><L>fr</L><F>Flash Video</F><DURATION><MINUTE>5</MINUTE><SECOND>27</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sab</FIRSTNAME><LASTNAME>Buisson</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>1</MONTH><DAY>18</DAY></DATE><COMMENT>Cleaning up some code to respect the ISP.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Law of Demeter</TITLE>
         <ITEM><ARTICLE><X><T>The Genius of the Law of Demeter</T><A>https://javadevguy.wordpress.com/2017/05/14/the-genius-of-the-law-of-demeter/</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>JavaDevGuy</GIVENNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>5</MONTH><DAY>14</DAY></DATE><COMMENT>A description of the law of Demeter.</COMMENT></ARTICLE></ITEM>
