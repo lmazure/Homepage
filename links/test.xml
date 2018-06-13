@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -271,6 +271,7 @@
         <ITEM><ARTICLE><X><T>Testing on the Toilet: Only Verify State-Changing Method Calls</T><A>https://testing.googleblog.com/2017/12/testing-on-toilet-only-verify-state.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dillon</FIRSTNAME><LASTNAME>Bly</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Trenk</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>11</DAY></DATE><COMMENT>When checking calls done on a mock, only the ones changing state should be verified.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Testing on the Toilet: Keep Cause and Effect Clear</T><A>https://testing.googleblog.com/2017/01/testing-on-toilet-keep-cause-and-effect.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Yu</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>11</DAY></DATE><COMMENT>You should keep the Act part of the test near its Assert part.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Testing on the Toilet: Cleanly Create Test Data</T><A>https://testing.googleblog.com/2018/02/testing-on-toilet-cleanly-create-test.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Yu</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>For arranging test data, create a helper with adequate default values, and write tests that do not rely on these default values and set all the values they require.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Testing on the Toilet: Keep Tests Focused</T><A>https://testing.googleblog.com/2018/06/testing-on-toilet-keep-tests-focused.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Yu</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE><COMMENT>A test should check only one scenario.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>AAFTT (Agile Alliance's Functional Testing Tool) 2007</TITLE>
