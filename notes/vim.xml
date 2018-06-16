@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Vim</TITLE>
 <PATH>notes/vim.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <U><B>Command line</B></U>
 <DEFINITIONTABLE>
@@ -50,8 +50,18 @@ move the cursor at the end of the region to copy<BR/>
 </DEFINITIONTABLE><BR/>
 <U><B>Search</B></U>
 <DEFINITIONTABLE>
+<ROW><TERM><KEY ID='/'/></TERM>
+<DESC>search forward</DESC></ROW>
+<ROW><TERM><KEY ID='?'/></TERM>
+<DESC>search backward</DESC></ROW>
 <ROW><TERM><KEY ID='*'/></TERM>
-<DESC>search for the word under the cursor</DESC></ROW>
+<DESC>search forward for the word under the cursor</DESC></ROW>
+<ROW><TERM><KEY ID='#'/></TERM>
+<DESC>search backward for the word under the cursor</DESC></ROW>
+<ROW><TERM><KEY ID='n'/></TERM>
+<DESC>next match</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='n'/></TERM>
+<DESC>previous match</DESC></ROW>
 <ROW><TERM><CODEROUTINE>:set hlsearch</CODEROUTINE></TERM>
 <DESC>enable search result highlighting</DESC></ROW>
 <ROW><TERM><CODEROUTINE>:set noh[lsearch]</CODEROUTINE></TERM>
