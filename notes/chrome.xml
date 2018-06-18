@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>notes/chrome.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <U>shortcuts</U> (<X><T>full list</T><A>https://support.google.com/chrome/answer/157179</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -27,7 +27,22 @@ reopen last closed tab
 </TERM><DESC>
 display the downloads
 </DESC></ROW>
+<ROW><TERM>
+<KEY ID='F12'/><BR/>
+<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I'/>
+</TERM><DESC>
+toggle the developer tools
+</DESC></ROW>
 </DEFINITIONTABLE>
+<BR/>
+<BLIST>
+  <ITEM><BLIST><TITLE>Generate a full size screenshot</TITLE>
+    <ITEM>Type <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I'/> to display the developer tools</ITEM>
+    <ITEM>Type <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='M'/> in the developer tool window to display the device toolbar</ITEM>
+    <ITEM>Select the correct device.</ITEM>
+    <ITEM>In the dropdown menu, select <CODEMENU>Capture a full size screenshot</CODEMENU>.</ITEM>
+  </BLIST></ITEM>
+</BLIST>
 <BR/>
 <U>Extensions</U>
 <TABLE>
