@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -140,6 +140,7 @@
     <ITEM><BLIST><TITLE>Class loaders</TITLE>
       <ITEM><ARTICLE><X><T>Java programming dynamics, Part 1: Classes and class loading</T><ST>A look at classes and what goes on as they're loaded by a JVM</ST><A>http://www.ibm.com/developerworks/java/library/j-dyn0429/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dennis</FIRSTNAME><MIDDLENAME>M.</MIDDLENAME><LASTNAME>Sosnoski</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>4</MONTH><DAY>29</DAY></DATE><COMMENT>A presentation of the class loaders, but more theoretical than applicable.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Cracking Java byte-code encryption</T><ST>Why Java obfuscation schemes based on byte-code encryption won't work</ST><A>http://www.javaworld.com/javaworld/javaqa/2003-05/01-qa-0509-jcrypt.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vladimir</FIRSTNAME><LASTNAME>Roubtsov</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>The title says everything: just hack <CODEROUTINE>java.lang.ClassLoader.defineClass()</CODEROUTINE> in your JRE.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Class sharing in Eclipse OpenJ9</T><ST>Reduce your memory footprint and improve startup performance with the shared class feature</ST><A>https://www.ibm.com/developerworks/library/j-class-sharing-openj9/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Corrie</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Hang</FIRSTNAME><LASTNAME>Shao</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>6</DAY></DATE><COMMENT>A detailed introduction to OpenJ9's shared classes cache.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Bytecodes</TITLE>
       <ITEM><ARTICLE><X><T>Java programming dynamics, Part 4: Class transformation with Javassist</T><ST>Using Javassist to transform methods in bytecode</ST><A>http://www.ibm.com/developerworks/java/library/j-dyn0916.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dennis</FIRSTNAME><MIDDLENAME>M.</MIDDLENAME><LASTNAME>Sosnoski</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE><COMMENT>After a short presentation of Javassist, the author gives an example of its use by patching methods to measure method execution timings.</COMMENT></ARTICLE></ITEM>
