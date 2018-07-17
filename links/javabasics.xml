@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><CLIST><TITLE>tutorials</TITLE>
@@ -12,6 +12,7 @@
     <ITEM><X><T>Collections</T><A>https://docs.oracle.com/javase/tutorial/collections/TOC.html</A><L>en</L><F>HTML</F></X></ITEM>
   </CLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
+    <ITEM><ARTICLE><X quality='1'><T>Programming With Assertions</T><A>https://docs.oracle.com/javase/8/docs/technotes/guides/language/assert.html</A><L>en</L><F>HTML</F></X><COMMENT>A detailed description of <CODEROUTINE>assert</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Java theory and practice: Hashing it out</T><ST>Defining hashCode() and equals() effectively and correctly</ST><A>http://www.ibm.com/developerworks/java/library/j-jtp05273.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE><COMMENT>When and how to define the <CODEROUTINE>hashCode()</CODEROUTINE> and <CODEROUTINE>equals()</CODEROUTINE> methods.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Java theory and practice: To mutate or not to mutate?</T><ST>Immutable objects can greatly simplify your life</ST><A>http://www.ibm.com/developerworks/java/library/j-jtp02183.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE><COMMENT>The advantage of immutable objects and how to implement them.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Diagnosing Java code: Design for easy code maintenance</T><ST>Avoid unnecessary mutation and access to make code robust and easier to maintain</ST><A>http://www.ibm.com/developerworks/java/library/j-djc01153.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>E.</MIDDLENAME><LASTNAME>Allen</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>1</MONTH></DATE><COMMENT>Immutability, <CODEROUTINE>final</CODEROUTINE> and unit test help code maintenance. But the maintenance issue is much more that the few points described in this article.</COMMENT></ARTICLE></ITEM>
