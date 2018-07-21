@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript Libraries</TITLE>
 <PATH>links/jslib.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -162,6 +162,9 @@
         <ITEM><ARTICLE><X><T>Implementing time travel with Redux</T><ST>Extend the book-search application</ST><A>http://www.ibm.com/developerworks/library/wa-manage-state-with-redux-p4-david-geary/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Geary</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE><COMMENT>Implementing history backward/forward by exploiting the fact that the application depends only on the state and using higher-order reducers.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Using Redux with Angular</T><ST>Explore the Redux ecosystem</ST><A>http://www.ibm.com/developerworks/library/wa-manage-state-with-redux-p5-david-geary/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Geary</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE><COMMENT>The previous example is now shown implemented with Angular 2 and an Chrome extension to debug Redux applications.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>PWACompat</TITLE>
+      <ITEM><ARTICLE><X><T>PWACompat: the Web App Manifest for all browsers</T><A>https://developers.google.com/web/updates/2018/07/pwacompat</A><L>en</L><F>HTML</F></X><DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>17</DAY></DATE><COMMENT>A presentation of PWACompat, a library managing differences between how Browsers handle Web App Manifests.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
