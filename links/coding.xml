@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -291,6 +291,8 @@
     <ITEM><ARTICLE><X><T>Code Health: Reduce Nesting, Reduce Complexity</T><A>https://testing.googleblog.com/2017/06/code-health-reduce-nesting-reduce.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Elliott</FIRSTNAME><LASTNAME>Karpilovsky</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>5</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Code Health: Obsessed With Primitives?</T><A>https://testing.googleblog.com/2017/11/obsessed-with-primitives.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marc</FIRSTNAME><LASTNAME>Eaddy</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE><COMMENT>It is better to use classes rather than raw primitives.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>A Common Mistake When Caching Nullable Values</T><ST>It looks like there's a bug with the way Eclipse implemented modularity support. Let's see what happens when you try to cache nullable values in a non-modular project.</ST><A>https://dzone.com/articles/a-common-mistake-when-caching-nullable-values</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Lukas</FIRSTNAME><LASTNAME>Eder</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE><COMMENT>The problem of caching the <CODEROUTINE>null</CODEROUTINE> value.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Integers and Estimates</T><A>http://blog.cleancoder.com/uncle-bob/2018/06/21/IntegersAndEstimates.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE><COMMENT>A meaningless mixture of diophantine equations, Hilbert's Entscheidungsproblem and workload estimation.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Too Clean?</T><A>http://blog.cleancoder.com/uncle-bob/2018/08/13/TooClean.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>13</DAY></DATE><COMMENT>Allowing for some slight mess in the code is helpful.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Hackable Projects</TITLE>
       <ITEM><ARTICLE><X><T>Hackable Projects - Pillar 1: Code Health</T><A>https://testing.googleblog.com/2016/08/hackable-projects.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT>A list of miscellaneous good coding practices.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Hackable Projects - Pillar 2: Debuggability</T><A>https://testing.googleblog.com/2016/10/hackable-projects-pillar-2-debuggability.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>Run test locally, debuging mobile apps, proper logging, monitoring, testing small parts.</COMMENT></ARTICLE></ITEM>
