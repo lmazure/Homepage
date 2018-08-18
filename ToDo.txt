@@ -1,18 +1,9 @@
-﻿
+﻿- bug : Jakob Østergaard ne devrait pas être le dernier par ordre alphabétique
 
-- javascript:do_reference(%22man/linux/8/logrotate%22) route to a suspicious site
+- MathJax :
+exemple : https://www.tuhh.de/MathJax/test/sample-mml.html
 
 - tronquer les URLs trop longs dans les tables de contenu
-
-- <CODEROUTINE> and <CODEFILE> overlap
-see for example file:///G:/html_mobile/notes/csharp.html
-
-- <CODEFILES>
-  * should not be full width --  go back to using TABLEs??
-  * have their first line which is indented
-  * have their last line that ovelaps on the rounded border
-
-- write a nice map and access to it
 
 - vérifier
 Big Risks Come in Small Packages
@@ -35,11 +26,3 @@ Why the future doesn't need us / Why the Future Doesn't Need Us
 - implémenter KEYWORDS
 
 - afficher les articles, twitter, homepage, linkedin... d'un author quand on clique sur son nom
-==================================================================================================================
-
-- corruption des caractères Unicode
-c'est un bug de Xalan, voir :
-https://stackoverflow.com/questions/32152196/xalan-transformer-transform-breaks-unicode-6-astral-characters
-https://issues.apache.org/jira/secure/attachment/12919209/XALANJ-2419-tests-v3.txt
-https://issues.apache.org/jira/browse/XALANJ-2560
-https://stackoverflow.com/questions/11952289/serializing-supplementary-unicode-characters-into-xml-documents-with-java
