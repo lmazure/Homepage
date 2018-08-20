@@ -1,10 +1,20 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
-<TITLE>Windows 2000 / XP / Seven</TITLE>
+<TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
+<DEFINITIONTABLE>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Windows'/><KEY ID='Right'/></TERM>
+<DESC>display the new virtual desktop</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Windows'/><KEY ID='Left'/></TERM>
+<DESC>display the previous virtual desktop</DESC>
+</ROW>
+</DEFINITIONTABLE>
 <BLIST>
 <ITEM>
 To disable the dynamic shortening of the lists in the Start Menu:<BR/>
