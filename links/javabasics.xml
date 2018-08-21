@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><CLIST><TITLE>tutorials</TITLE>
@@ -70,6 +70,11 @@
         <ITEM><ARTICLE><X status='dead'><T>Diagnosing Java code: Java generics without the pain, Part 3</T><ST>Overcoming the limitations of generics in the JSR-14 prototype compiler</ST><A>https://www.ibm.com/developerworks/java/library/j-djc04093.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>E.</MIDDLENAME><LASTNAME>Allen</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>4</MONTH><DAY>9</DAY></DATE><COMMENT>Two issues of generic types: how to ensure that the generic class is instantiated with a type having the right constructor and polymorphic recursion.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='dead'><T>Diagnosing Java code: Java generics without the pain, Part 4</T><ST>How generic types can conquer mischievous mixins</ST><A>https://www.ibm.com/developerworks/java/library/j-djc05133.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>E.</MIDDLENAME><LASTNAME>Allen</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>5</MONTH><DAY>13</DAY></DATE><COMMENT>Mixins (class parameterized by their parent class) have similar issues.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Lambda expressions</TITLE>
+      <ITEM><ARTICLE><X><T>It’s Java Jim, But Not As We Know It by Simon Ritter</T><A>https://www.youtube.com/watch?v=bhSBpNXwa60</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>15</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Ritter</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>11</MONTH><DAY>10</DAY></DATE><COMMENT>Using lambda expressions to do some lambda calculus.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality='-1'><T>The Factory Pattern Using Lambda Expressions in Java 8</T><ST>The factory pattern is one of the best known patterns in Java. If you're using lambda expressions, you can use those to implement the pattern, though beware scaling.</ST><A>https://dzone.com/articles/factory-pattern-using-lambda-expression-in-java-8</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Monika</FIRSTNAME><LASTNAME>Goel</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>A simplistic usage of Lambdas.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality='-2'><T>Leveraging Lambda Expressions for Lazy Evaluation in Java</T><ST>Want to learn more about the lazy evaluation in Java? Check out this tutorial on how to use lambda expressions for the purpose of lazy loading data and lazy evaluation.</ST><A>https://dzone.com/articles/leveraging-lambda-expressions-for-lazy-evaluation</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Grzegorz</FIRSTNAME><LASTNAME>Piwowarek</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>28</DAY></DATE><COMMENT>This article aims at presenting a classical cached and thread-safe evaluation of a lambda expression, but it contains errors spotted by a reader and the double-checked lock implementation is still not correct.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Regular expressions</TITLE>
       <ITEM><ARTICLE><X status='dead'><T>Magic with Merlin: Parse sequences of characters with the new regex library</T><ST>Moving beyond StreamTokenizer and StringTokenizer for pattern matching</ST><A>https://www.ibm.com/developerworks/java/library/j-mer0827.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Zukowski</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>8</MONTH></DATE><COMMENT>The <CODEROUTINE>Matcher</CODEROUTINE> and <CODEROUTINE>Pattern</CODEROUTINE> class support the Perl 5 regexp syntax.</COMMENT></ARTICLE></ITEM>
