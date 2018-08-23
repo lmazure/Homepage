@@ -80,6 +80,8 @@
         </div>
       </footer>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["£[","£]"]]}});</script>
+      <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML-full"></script>
       <script src="../scripts/common.js"></script>
       <xsl:if test="@special='indexed'">
         <script>
@@ -184,6 +186,12 @@
 
 <xsl:template match="CODEMENU">
   <span class="codemenu"><xsl:if test="name(..)='CODEMENU'"><xsl:text> &#x25BA; </xsl:text></xsl:if><xsl:apply-templates/></span>
+</xsl:template>
+
+<xsl:template match="MATH">
+  <xsl:text>£[</xsl:text>
+  <xsl:value-of select="."/>
+  <xsl:text>£]</xsl:text>
 </xsl:template>
 
 <xsl:template match="X">
