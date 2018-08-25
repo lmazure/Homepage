@@ -74,30 +74,30 @@
     <CODESAMPLE>svnadmin create &lt;dir&gt;</CODESAMPLE></ITEM>
     <ITEM>Perform a checkout (&lt;myDir&gt; will be created)
     <CODESAMPLE>svn co file:///cygdrive/m/laurent_svn_repository/Java\ sandbox/ &lt;myDir&gt;</CODESAMPLE></ITEM>
-	<ITEM><BLIST><TITLE>Commit</TITLE>
+    <ITEM><BLIST><TITLE>Commit</TITLE>
       <ITEM>Commit a file/dir
       <CODESAMPLE>svn commit -m "I have done blabla…" &lt;file/dir&gt;</CODESAMPLE></ITEM>
       <ITEM>Commit the current directory
       <CODESAMPLE>svn commit -m "I have done blabla…"</CODESAMPLE></ITEM>
-	</BLIST></ITEM>
+    </BLIST></ITEM>
     <ITEM>Revert all files
     <CODESAMPLE>svn revert -R .</CODESAMPLE></ITEM>
-	<ITEM><BLIST><TITLE>Display the diffs</TITLE>
+    <ITEM><BLIST><TITLE>Display the diffs</TITLE>
       <ITEM>Display the diff of the current directory
       <CODESAMPLE>svn diff</CODESAMPLE></ITEM>
       <ITEM>Display the diff of a file/directory
       <CODESAMPLE>svn diff &lt;file/dir&gt;</CODESAMPLE></ITEM>
       <ITEM>Perform a side-by-side comparison (on Linux/cygwin)
       <CODESAMPLE>svn --diff-cmd "diff" --extensions "-y -W 250 --suppress-common-lines" diff</CODESAMPLE></ITEM>
-	</BLIST></ITEM>
-	<ITEM><BLIST><TITLE>Display the log</TITLE>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Display the log</TITLE>
       <ITEM>Display the log of the current directory
       <CODESAMPLE>svn log</CODESAMPLE></ITEM>
       <ITEM>Display the log of a working copy of a file/directory
       <CODESAMPLE>svn log &lt;file/dir&gt;</CODESAMPLE></ITEM>
       <ITEM>Display the log of a repository
       <CODESAMPLE>svn log file:///cygdrive/m/svn_repository/my_project/trunk</CODESAMPLE></ITEM>
-	</BLIST></ITEM>
+    </BLIST></ITEM>
     <ITEM>Update the current directory to head
     <CODESAMPLE>svn update</CODESAMPLE></ITEM>
     <ITEM>Display a revision of a file
@@ -108,20 +108,20 @@
     <CODESAMPLE>svn cleanup</CODESAMPLE></ITEM>
     <ITEM>Verify the integrity of the repository
     <CODESAMPLE>svnadmin verify /cygdrive/m/laurent_svn_repository/homepage</CODESAMPLE></ITEM>
-	<ITEM><BLIST><TITLE>Relocate</TITLE>
+    <ITEM><BLIST><TITLE>Relocate</TITLE>
       <ITEM>Define the new location of the repository
       <CODESAMPLE>svn relocate file:///cygdrive/m/svn_repository/my_project/trunk working_copy</CODESAMPLE></ITEM>
       <ITEM>Define the new location of the repository (assuming the current directory is the working copy)
       <CODESAMPLE>svn relocate file:///cygdrive/m/svn_repository/my_project/trunk</CODESAMPLE></ITEM>
-	</BLIST></ITEM>
+    </BLIST></ITEM>
     <ITEM>Add a file/directory in the local repository
     <CODESAMPLE>svn add &lt;file/dir&gt;</CODESAMPLE></ITEM>
     <ITEM>Delete a file from the local repository
     <CODESAMPLE>svn delete &lt;file&gt;<BR/>
-	svn del &lt;file&gt;<BR/>
-	svn remove &lt;file&gt;<BR/>
-	svn rm &lt;file&gt;</CODESAMPLE></ITEM>
-	<ITEM><BLIST><TITLE>Properties</TITLE>
+    svn del &lt;file&gt;<BR/>
+    svn remove &lt;file&gt;<BR/>
+    svn rm &lt;file&gt;</CODESAMPLE></ITEM>
+    <ITEM><BLIST><TITLE>Properties</TITLE>
       <ITEM>Set the value of a property on a file/directory
       <CODESAMPLE>svn propset &lt;property name&gt; &lt;property value&gt; &lt;file/directory name&gt;</CODESAMPLE>
       for example
@@ -134,7 +134,7 @@
       <CODESAMPLE>svn propdel &lt;property name&gt; &lt;file/directory name&gt;</CODESAMPLE>
       for example
       <CODESAMPLE>svn propdel svn:ignore tmpdir</CODESAMPLE></ITEM>
-	</BLIST></ITEM>
+    </BLIST></ITEM>
     <ITEM><CODEROUTINE>svn:ignore</CODEROUTINE> is the property defining the elements ignored in a directory</ITEM>
     <ITEM><CODEROUTINE>svn:global-ignores</CODEROUTINE> is the property defining the elements ignored in a directory and its sub-directories</ITEM>
   </BLIST></ITEM>
