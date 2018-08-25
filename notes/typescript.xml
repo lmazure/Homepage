@@ -5,12 +5,12 @@
 <PATH>notes/typescript.xml</PATH>
 <DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
-<U><CODEROUTINE>for ... of</CODEROUTINE></U><BR/>
+<U><CODEROUTINE>for … of</CODEROUTINE></U><BR/>
 An object is iterable if it has an implementation for the <CODEROUTINE>Symbol.iterator</CODEROUTINE> property.
-Some built-in types like <CODEROUTINE>Array</CODEROUTINE>, <CODEROUTINE>Map</CODEROUTINE>, <CODEROUTINE>Set</CODEROUTINE>, <CODEROUTINE>String</CODEROUTINE>, <CODEROUTINE>Int32Array</CODEROUTINE>, <CODEROUTINE>Uint32Array</CODEROUTINE>... have their <CODEROUTINE>Symbol.iterator</CODEROUTINE> property already implemented.
+Some built-in types like <CODEROUTINE>Array</CODEROUTINE>, <CODEROUTINE>Map</CODEROUTINE>, <CODEROUTINE>Set</CODEROUTINE>, <CODEROUTINE>String</CODEROUTINE>, <CODEROUTINE>Int32Array</CODEROUTINE>, <CODEROUTINE>Uint32Array</CODEROUTINE>… have their <CODEROUTINE>Symbol.iterator</CODEROUTINE> property already implemented.
 <CODEROUTINE>Symbol.iterator</CODEROUTINE> function on an object is responsible for returning the list of values to iterate on.<BR/>
-<U><CODEROUTINE>for ... in</CODEROUTINE></U><BR/>
-<CODEROUTINE>for ... in</CODEROUTINE> loops on the properties of an object.<BR/>
+<U><CODEROUTINE>for … in</CODEROUTINE></U><BR/>
+<CODEROUTINE>for … in</CODEROUTINE> loops on the properties of an object.<BR/>
 </CONTENT>
 <X><T>links</T><A>../links/typescript.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
