@@ -125,9 +125,9 @@
       <xs:element name="TITLE" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="PATH" type="xs:string" minOccurs="1" maxOccurs="1"/>
       <xs:element name="DATE" type="fullDate" minOccurs="1" maxOccurs="1"/>
-      <xs:element ref="SCRIPT" minOccurs="0" maxOccurs="1"/>
       <xs:element ref="CONTENT" minOccurs="1" maxOccurs="1"/>
       <xs:element ref="X" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="SCRIPT" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
     <xs:attribute name="special">
      <xs:simpleType>
