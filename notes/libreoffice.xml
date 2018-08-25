@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -82,7 +82,7 @@ Writer
 <DESC>toggle full screen display</DESC>
 </ROW>
 </DEFINITIONTABLE><BR/>
-Calc
+Calc shortcuts
 <DEFINITIONTABLE>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
@@ -91,6 +91,17 @@ Calc
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
 <DESC>add a comment</DESC>
+</ROW>
+</DEFINITIONTABLE><BR/>
+Calc Functions
+<DEFINITIONTABLE>
+<ROW>
+<TERM><CODEROUTINE>AUJOURDHUI()</CODEROUTINE></TERM>
+<DESC>return the current date</DESC>
+</ROW>
+<ROW>
+<TERM><CODEROUTINE>MAINTENANT()</CODEROUTINE></TERM>
+<DESC>return the current date and time</DESC>
 </ROW>
 </DEFINITIONTABLE><BR/>
 Impress
