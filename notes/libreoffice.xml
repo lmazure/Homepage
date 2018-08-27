@@ -3,8 +3,11 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
+<BLIST><TITLE>General</TITLE>
+<ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM>Shortcuts
 <DEFINITIONTABLE>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='C'/></TERM>
@@ -18,8 +21,10 @@
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='V'/></TERM>
 <DESC>paste</DESC>
 </ROW>
-</DEFINITIONTABLE><BR/>
-Writer
+</DEFINITIONTABLE></ITEM>
+</BLIST><BR/>
+<BLIST><TITLE>Writer</TITLE>
+<ITEM>Shortcuts
 <DEFINITIONTABLE>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
@@ -81,8 +86,10 @@ Writer
 <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
 <DESC>toggle full screen display</DESC>
 </ROW>
-</DEFINITIONTABLE><BR/>
-Calc shortcuts
+</DEFINITIONTABLE></ITEM>
+</BLIST><BR/>
+<BLIST><TITLE>Calc</TITLE>
+<ITEM>Shortcuts
 <DEFINITIONTABLE>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
@@ -92,8 +99,8 @@ Calc shortcuts
 <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
 <DESC>add a comment</DESC>
 </ROW>
-</DEFINITIONTABLE><BR/>
-Calc Functions
+</DEFINITIONTABLE></ITEM>
+<ITEM>Functions
 <DEFINITIONTABLE>
 <ROW>
 <TERM><CODEROUTINE>AUJOURDHUI()</CODEROUTINE></TERM>
@@ -103,8 +110,10 @@ Calc Functions
 <TERM><CODEROUTINE>MAINTENANT()</CODEROUTINE></TERM>
 <DESC>return the current date and time</DESC>
 </ROW>
-</DEFINITIONTABLE><BR/>
-Impress
+</DEFINITIONTABLE></ITEM>
+</BLIST><BR/>
+<BLIST><TITLE>Impress</TITLE>
+<ITEM>Shortcuts
 <DEFINITIONTABLE>
 <ROW>
 <TERM><KEY ID='F5'/></TERM>
@@ -114,7 +123,8 @@ Impress
 <TERM><MODIFIERKEY ID='Shift'/><KEY ID='F5'/></TERM>
 <DESC>display current slide full screen</DESC>
 </ROW>
-</DEFINITIONTABLE><BR/>
+</DEFINITIONTABLE></ITEM>
+</BLIST><BR/>
 <BLIST><TITLE>Macros</TITLE>
 <ITEM>Record the Python source files in <CODEFILENAME>C:\Users\&lt;user&gt;\AppData\Roaming\LibreOffice\4\user\Scripts\python</CODEFILENAME></ITEM>
 <ITEM>Run the macro with <CODEMENU>Outils<CODEMENU>Macros<CODEMENU>Gérer les macros<CODEMENU>Python…</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select <CODEMENU>Mes macros</CODEMENU></ITEM>
