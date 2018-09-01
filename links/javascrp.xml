@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript</TITLE>
 <PATH>links/javascrp.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -91,7 +91,6 @@
     <ITEM><ARTICLE><X><T>DOMException: The play() request was interrupted</T><A>https://developers.google.com/web/updates/2017/06/play-request-was-interrupted</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>François</FIRSTNAME><LASTNAME>Beaufort</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>16</DAY></DATE><COMMENT>How to properly use <CODEROUTINE>video.play()</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Abortable fetch</T><A>https://developers.google.com/web/updates/2017/09/abortable-fetch</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jake</FIRSTNAME><LASTNAME>Archibald</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>The <CODEROUTINE>AbortController</CODEROUTINE> and <CODEROUTINE>AbortSignal</CODEROUTINE> API is at last defined, Firefox has already implemented it.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>#SmooshGate FAQ</T><A>https://developers.google.com/web/updates/2018/03/smooshgate</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mathias</FIRSTNAME><LASTNAME>Bynens</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>19</DAY></DATE><COMMENT>The story of <CODEROUTINE>Array.prototype.flatten</CODEROUTINE> breaking MooTols.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Emscripting a C library to Wasm</T><A>https://developers.google.com/web/updates/2018/03/emscripting-a-c-library</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Surma</GIVENNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT>An introduction to Emscripten by using WebP codec as en example.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Tutorials</TITLE>
       <ITEM><ARTICLE><X><T>Scoping</T><A>https://www.youtube.com/watch?v=vXWOKZVdRaI</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>45</MINUTE><SECOND>57</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kiro</FIRSTNAME><LASTNAME>Risk</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>An explanation of JavaScript hoisting.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Object Oriented Programming</T><A>https://www.youtube.com/watch?v=5vsrq-9VhZs</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>50</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kiro</FIRSTNAME><LASTNAME>Risk</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>How to perform some common OOP patterns in JavaScript: defining a class, deriving a class, calling a method of the super-class from a derived class…</COMMENT></ARTICLE></ITEM>
@@ -119,6 +118,10 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>JSON</TITLE>
       <ITEM><ARTICLE><X><T>Video: Douglas Crockford — The JSON Saga</T><A>https://www.youtube.com/watch?v=-C-JoyNuQJs</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>49</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><LASTNAME>Crockford</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>7</MONTH><DAY>27</DAY></DATE><COMMENT>A humorous tale of JSON history, by the person who created it.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>WebAssembly</TITLE>
+      <ITEM><ARTICLE><X><T>Emscripting a C library to Wasm</T><A>https://developers.google.com/web/updates/2018/03/emscripting-a-c-library</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Surma</GIVENNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT>An introduction to Emscripten by using WebP codec as an example.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Extending the browser with WebAssembly</T><A>https://developers.google.com/web/updates/2018/08/wasm-av1</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Danilo</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE><COMMENT>The same, but less detailed, with the AV1 codec.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mashups</TITLE>
       <ITEM><ARTICLE><X><T>Mashups: The new breed of Web app</T><ST>An introduction to mashups</ST><A>https://www.ibm.com/developerworks/xml/library/x-mashups.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Duane</FIRSTNAME><LASTNAME>Merrill</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE><COMMENT>A good introduction to mashups: the technological part is the repetition of the usual stuff, but the description of the challenges is interesting.</COMMENT></ARTICLE></ITEM>

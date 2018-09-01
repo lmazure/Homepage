@@ -3,10 +3,20 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>notes/chrome.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <U>shortcuts</U> (<X><T>full list</T><A>https://support.google.com/chrome/answer/157179</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
+<ROW><TERM>
+<KEY ID='F6'/>
+</TERM><DESC>
+rotate focus between the Omnibox, the bookmarks bar, and the website
+</DESC></ROW>
+<ROW><TERM>
+<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='B'/>
+</TERM><DESC>
+toggle display of the bookmark bar
+</DESC></ROW>
 <ROW><TERM>
 <MODIFIERKEY ID='Ctrl'/><KEY ID='N'/>
 </TERM><DESC>
@@ -31,7 +41,7 @@ display the downloads
 <KEY ID='F12'/><BR/>
 <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I'/>
 </TERM><DESC>
-toggle the developer tools
+toggle display of the developer tools
 </DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>

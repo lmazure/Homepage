@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
 <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -35,6 +35,14 @@
 <DESC>paste unformatted text</DESC>
 </ROW>
 <ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Space'/></TERM>
+<DESC>insert a non-breaking space</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='-'/></TERM>
+<DESC>insert a non-breaking dash</DESC>
+</ROW>
+<ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='B'/></TERM>
 <DESC>bold</DESC>
 </ROW>
@@ -64,11 +72,27 @@
 </ROW>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='1'/></TERM>
-<DESC>set style to Title 1</DESC>
+<DESC>set style to Heading 1</DESC>
 </ROW>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='2'/></TERM>
-<DESC>set style to Title 2</DESC>
+<DESC>set style to Heading 2</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='3'/></TERM>
+<DESC>set style to Heading 3</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='4'/></TERM>
+<DESC>set style to Heading 4</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='5'/></TERM>
+<DESC>set style to Heading 5</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='0'/></TERM>
+<DESC>set style to Text Body</DESC>
 </ROW>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F10'/></TERM>
