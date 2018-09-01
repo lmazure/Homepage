@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <SLIST>
   <ITEM><BLIST><TITLE><U><B>Tortoise SVN</B></U></TITLE>
@@ -114,13 +114,17 @@
       <ITEM>Define the new location of the repository (assuming the current directory is the working copy)
       <CODESAMPLE>svn relocate file:///cygdrive/m/svn_repository/my_project/trunk</CODESAMPLE></ITEM>
     </BLIST></ITEM>
-    <ITEM>Add a file/directory in the local repository
-    <CODESAMPLE>svn add &lt;file/dir&gt;</CODESAMPLE></ITEM>
-    <ITEM>Delete a file from the local repository
-    <CODESAMPLE>svn delete &lt;file&gt;<BR/>
-    svn del &lt;file&gt;<BR/>
-    svn remove &lt;file&gt;<BR/>
-    svn rm &lt;file&gt;</CODESAMPLE></ITEM>
+    <ITEM><BLIST><TITLE>Adding/removing files</TITLE>
+      <ITEM>Add a file/directory in the local repository
+      <CODESAMPLE>svn add &lt;file/dir&gt;</CODESAMPLE></ITEM>
+      <ITEM>Add all new files (except the ignored ones) in the local repository
+      <CODESAMPLE>svn add --force .</CODESAMPLE></ITEM>
+      <ITEM>Delete a file from the local repository
+      <CODESAMPLE>svn delete &lt;file&gt;<BR/>
+      svn del &lt;file&gt;<BR/>
+      svn remove &lt;file&gt;<BR/>
+      svn rm &lt;file&gt;</CODESAMPLE></ITEM>
+    </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Properties</TITLE>
       <ITEM>Set the value of a property on a file/directory
       <CODESAMPLE>svn propset &lt;property name&gt; &lt;property value&gt; &lt;file/directory name&gt;</CODESAMPLE>
