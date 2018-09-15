@@ -3,12 +3,26 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>npm</TITLE>
 <PATH>notes/npm.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST>
 <ITEM>
 Return the npm global path
 <CODESAMPLE><PROMPT/>npm root -g</CODESAMPLE>
+</ITEM>
+<ITEM><BLIST><TITLE><CODEROUTINE>-save</CODEROUTINE> options</TITLE>
+<ITEM>
+Install <CODEROUTINE>foobar</CODEROUTINE> as a development dependency, it will be recorded in the <CODEROUTINE>devDependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
+<CODESAMPLE><PROMPT/>npm install --save-dev foobar</CODESAMPLE>
+</ITEM>
+<ITEM>
+Install <CODEROUTINE>foobar</CODEROUTINE> as a deployment dependency, it will be recorded in the <CODEROUTINE>dependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
+<CODESAMPLE><PROMPT/>npm install --save foobar</CODESAMPLE>
+</ITEM>
+<ITEM>
+Install <CODEROUTINE>foobar</CODEROUTINE> without updating <CODEFILENAME>package.json</CODEFILENAME>
+<CODESAMPLE><PROMPT/>npm install foobar</CODESAMPLE>
+</ITEM></BLIST>
 </ITEM>
 <ITEM>
 Set the proxy
@@ -22,5 +36,4 @@ Unset the proxy
 </ITEM>
 </BLIST>
 </CONTENT>
-<X><T>links</T><A>../links/life.html#apt</A><L>en</L><F>HTML</F></X>
 </PAGE>
