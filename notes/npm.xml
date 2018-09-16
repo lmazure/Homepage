@@ -3,37 +3,44 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>npm</TITLE>
 <PATH>notes/npm.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <BLIST>
-<ITEM>
-Return the npm global path
-<CODESAMPLE><PROMPT/>npm root -g</CODESAMPLE>
-</ITEM>
-<ITEM><BLIST><TITLE><CODEROUTINE>-save</CODEROUTINE> options</TITLE>
-<ITEM>
-Install <CODEROUTINE>foobar</CODEROUTINE> as a development dependency, it will be recorded in the <CODEROUTINE>devDependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
-<CODESAMPLE><PROMPT/>npm install --save-dev foobar</CODESAMPLE>
-</ITEM>
-<ITEM>
-Install <CODEROUTINE>foobar</CODEROUTINE> as a deployment dependency, it will be recorded in the <CODEROUTINE>dependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
-<CODESAMPLE><PROMPT/>npm install --save foobar</CODESAMPLE>
-</ITEM>
-<ITEM>
-Install <CODEROUTINE>foobar</CODEROUTINE> without updating <CODEFILENAME>package.json</CODEFILENAME>
-<CODESAMPLE><PROMPT/>npm install foobar</CODESAMPLE>
-</ITEM></BLIST>
-</ITEM>
-<ITEM>
-Set the proxy
-<CODESAMPLE><PROMPT/>npm config set proxy 10.99.0.211:3128<BR/>
-<PROMPT/>npm config set https-proxy 10.99.0.211:3128</CODESAMPLE>
-</ITEM>
-<ITEM>
-Unset the proxy
-<CODESAMPLE><PROMPT/>npm config rm proxy<BR/>
-<PROMPT/>npm config rm https-proxy</CODESAMPLE>
-</ITEM>
+  <ITEM>Create a <CODEFILENAME>package.json</CODEFILENAME> file
+    <CODESAMPLE><PROMPT/>npm init</CODESAMPLE>
+  </ITEM>
+  <ITEM>Return the npm global path
+    <CODESAMPLE><PROMPT/>npm root -g</CODESAMPLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE><CODEROUTINE>-save</CODEROUTINE> options</TITLE>
+    <ITEM>Install <CODEROUTINE>foobar</CODEROUTINE> as a development dependency, it will be recorded in the <CODEROUTINE>devDependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
+      <CODESAMPLE><PROMPT/>npm install --save-dev foobar</CODESAMPLE>
+    </ITEM>
+    <ITEM>Install <CODEROUTINE>foobar</CODEROUTINE> as a deployment dependency, it will be recorded in the <CODEROUTINE>dependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
+      <CODESAMPLE><PROMPT/>npm install --save foobar</CODESAMPLE>
+    </ITEM>
+    <ITEM>Install <CODEROUTINE>foobar</CODEROUTINE> without updating <CODEFILENAME>package.json</CODEFILENAME>
+      <CODESAMPLE><PROMPT/>npm install foobar</CODESAMPLE>
+      alias
+      <CODESAMPLE><PROMPT/>npm i foobar</CODESAMPLE>
+    </ITEM></BLIST>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Security audit</TITLE>
+    <ITEM>Run an audit
+      <CODESAMPLE><PROMPT/>npm audit</CODESAMPLE>
+    </ITEM>
+    <ITEM>Run an audit and automatically install any compatible updates to vulnerable dependencies
+      <CODESAMPLE><PROMPT/>npm audit fix</CODESAMPLE>
+    </ITEM></BLIST>
+  </ITEM>
+  <ITEM>Set the proxy
+    <CODESAMPLE><PROMPT/>npm config set proxy 10.99.0.211:3128<BR/>
+    <PROMPT/>npm config set https-proxy 10.99.0.211:3128</CODESAMPLE>
+  </ITEM>
+  <ITEM>Unset the proxy
+    <CODESAMPLE><PROMPT/>npm config rm proxy<BR/>
+    <PROMPT/>npm config rm https-proxy</CODESAMPLE>
+  </ITEM>
 </BLIST>
 </CONTENT>
 </PAGE>

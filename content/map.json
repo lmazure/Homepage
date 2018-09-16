@@ -154,8 +154,6 @@
           { "title" : "Process examination", "page" : "notes/lxproc.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "System administration", "page" : "notes/ladmin.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Burning CDs", "page" : "notes/lcd.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "rpm", "page" : "notes/rpm.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "apt", "page" : "notes/apt.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "gcc", "page" : "notes/gcc.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
             { "title" : "Versioning", "page" : "notes/gccversion.doc", "languages" : ["en"], "formats" : ["Word"] }
           ] },
@@ -294,6 +292,8 @@
           { "title" : "Git", "page" : "notes/git.html", "languages" : ["en"], "formats" : ["HTML"] }
         ] },
         { "title" : "Package managers", "children" : [
+          { "title" : "rpm", "page" : "notes/rpm.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "apt", "page" : "notes/apt.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "npm", "page" : "notes/npm.html", "languages" : ["en"], "formats" : ["HTML"] }
         ] },
         { "title" : "Bug trackers", "children" : [
