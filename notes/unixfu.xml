@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>ls</T><A>javascript:do_reference("man/linux/1/ls")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display directory/file information</DESC></ROW>
@@ -44,6 +44,7 @@
 <ROW><TERM><CODEROUTINE>grep -i</CODEROUTINE></TERM><DESC>case independent search</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -w</CODEROUTINE></TERM><DESC>restrict to match of whole words (letters, digits and underscore)</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -x</CODEROUTINE></TERM><DESC>restrict to match of whole line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>grep -v</CODEROUTINE><BR/><CODEROUTINE>grep --invert-match</CODEROUTINE></TERM><DESC>select non-matching lines</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -E</CODEROUTINE><BR/><CODEROUTINE>egrep</CODEROUTINE></TERM><DESC>use extended regular expressions</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -F</CODEROUTINE><BR/><CODEROUTINE>fgrep</CODEROUTINE></TERM><DESC>use fixed strings</DESC></ROW>
 <ROW><TERM><CODEROUTINE>grep -I</CODEROUTINE></TERM><DESC>binary files do not match</DESC></ROW>
