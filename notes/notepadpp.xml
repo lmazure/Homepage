@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Notepad++</TITLE>
 <PATH>notes/notepadpp.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW><TERM><KEY ID='F11'/></TERM>
@@ -11,6 +11,10 @@
 <ROW><TERM><KEY ID='F12'/></TERM>
 <DESC>toggle PostIt mode</DESC></ROW>
 <ROW><TERM><KEY ID='F3'/></TERM>
+<DESC>find</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F'/></TERM>
+<DESC>find in files</DESC></ROW>
+<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F'/></TERM>
 <DESC>find next</DESC></ROW>
 <ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F3'/></TERM>
 <DESC>find previous</DESC></ROW>
