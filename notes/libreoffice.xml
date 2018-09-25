@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
 <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -24,6 +24,8 @@
 </DEFINITIONTABLE></ITEM>
 </BLIST><BR/>
 <BLIST><TITLE>Writer</TITLE>
+<ITEM>Open a new window on the current document<BR/>
+<CODEMENU>Fenêtre<CODEMENU>Nouvelle fenêtre</CODEMENU></CODEMENU></ITEM>
 <ITEM>Shortcuts
 <DEFINITIONTABLE>
 <ROW>
@@ -69,6 +71,11 @@
 <ROW>
 <TERM><MODIFIERKEY ID='Shift'/><KEY ID='F12'/></TERM>
 <DESC>toggle bullets</DESC>
+</ROW>
+<ROW>
+<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F12'/></TERM>
+<DESC>insert table<BR/>
+if some text is selected, convert it to a table</DESC>
 </ROW>
 <ROW>
 <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='1'/></TERM>

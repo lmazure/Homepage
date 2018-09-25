@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>ls</T><A>javascript:do_reference("man/linux/1/ls")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display directory/file information</DESC></ROW>
@@ -183,6 +183,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>sdiff</T><A>javascript:do_reference("man/linux/1/sdiff")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and merge them interactively</DESC></ROW>
 <ROW><TERM><CODEROUTINE>sdiff -s</CODEROUTINE></TERM><DESC>ignore common lines</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sdiff -w &lt;n&gt;<BR/>sdiff --width=&lt;n&gt;</CODEROUTINE></TERM><DESC>output at most <CODEROUTINE>n</CODEROUTINE> (default 130) columns per line</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>

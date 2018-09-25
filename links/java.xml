@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -190,7 +190,6 @@
     <ITEM><BLIST><TITLE>Libraries</TITLE>
       <ITEM><ARTICLE><X><T>Java FTP client libraries reviewed</T><A>http://www.javaworld.com/javaworld/jw-04-2003/jw-0404-ftp.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jean-Pierre</FIRSTNAME><LASTNAME>Norguet</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>4</MONTH><DAY>4</DAY></DATE><COMMENT>A benchmark of some FTP libraries and the issues of this protocol.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Build better Web applications with Google Sitebricks</T><ST>Create a sample Java Web application using Maven, Sitebricks, and Guice</ST><A>https://www.ibm.com/developerworks/web/library/wa-sitebricks/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Galpin</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>A presentation of Sitebricks being used with Maven and Guice.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Eliminate Java verbosity the easy way</T><A>https://www.ibm.com/developerworks/java/library/os-lombok/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><MIDDLENAME>M.</MIDDLENAME><LASTNAME>Carey</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>An introduction to Lombok, a utility that generates <CODEROUTINE>toString()</CODEROUTINE>, <CODEROUTINE>equals()</CODEROUTINE>, <CODEROUTINE>hashCode()</CODEROUTINE>, getters, setters, synchronization, exception handling…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Web Swinging</T><A>http://today.java.net/pub/a/today/2006/10/11/web-swinging.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Richard</FIRSTNAME><LASTNAME>Bair</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE><COMMENT>A presentation of SwingX-WS which can be used to generate HTTP requests and parse the answers by using a high level API.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>SMS-Powered Applications</T><A>http://www.onjava.com/pub/a/onjava/2004/06/09/sms.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dejan</FIRSTNAME><LASTNAME>Bosanac</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE><COMMENT>A good introduction of the SMPP API used to send and receive SMSes.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Generate PDF files from Java applications dynamically</T><ST>A step-by-step guide to iText, an open source library that makes PDF creation easy</ST><A>https://www.ibm.com/developerworks/opensource/library/os-javapdf/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Amit</FIRSTNAME><LASTNAME>Tuli</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>1</MONTH><DAY>26</DAY></DATE><COMMENT>A short introduction to iText.</COMMENT></ARTICLE></ITEM>
@@ -203,6 +202,10 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Spring</TITLE>
         <ITEM><ARTICLE><X><T>What's new in Spring Framework 5</T><ST>How Spring 5 leverages Java 8’s functional syntax and a new, reactive programming model</ST><A>https://www.ibm.com/developerworks/java/library/j-whats-new-in-spring-framework-5-theedom/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Theedom</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Lombok</TITLE>
+        <ITEM><ARTICLE><X><T>Eliminate Java verbosity the easy way</T><A>https://www.ibm.com/developerworks/java/library/os-lombok/index.html</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><MIDDLENAME>M.</MIDDLENAME><LASTNAME>Carey</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>An introduction to Lombok, a utility that generates <CODEROUTINE>toString()</CODEROUTINE>, <CODEROUTINE>equals()</CODEROUTINE>, <CODEROUTINE>hashCode()</CODEROUTINE>, getters, setters, synchronization, exception handling…</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Using Lombok’s @Getter for Boolean Fields</T><A>https://www.baeldung.com/lombok-getter-boolean</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugen</FIRSTNAME><LASTNAME>Paraschiv</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>POI</TITLE>
         <ITEM><ARTICLE><X><T>Read, recycle, and reuse: Reporting made easy with Excel, XML, and Java technologies, Part 1</T><ST>Read Excel files and write them to new files using Java and XML technologies</ST><A>https://www.ibm.com/developerworks/java/library/x-jxmlexl/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shaene</FIRSTNAME><MIDDLENAME>M</MIDDLENAME><LASTNAME>Siders</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>After listing some Java libraries able to read/write Excel files, the author gives an example on using Apache's POI to parse an Excel file.</COMMENT></ARTICLE></ITEM>

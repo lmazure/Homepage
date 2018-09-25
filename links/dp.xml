@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -43,6 +43,7 @@
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Inversion of control</TITLE>
           <ITEM><ARTICLE><X><T>Inversion of Control Containers and the Dependency Injection pattern</T><A>http://martinfowler.com/articles/injection.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>A very good introduction to the design pattern: after presenting several kinds of dependy injection (constructor injection, setter injection, and interface injection), Martin Fowler lists some pros and cons for each one and compares dependency injection to using a service locator.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Don't call us, we'll call you: Inversion of Control Containers</T><A>https://8thlight.com/blog/sam-szreter/2018/07/24/inversion-of-control-container.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Szreter</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT>An explanation of dependency injection and a simplistic Java DI container.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Prototype: Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.</TITLE>
           <ITEM><ARTICLE><X><T>Prototype</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/prototype.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
