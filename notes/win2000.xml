@@ -7,65 +7,65 @@
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Windows'/><KEY ID='Right'/></TERM>
-<DESC>display the new virtual desktop</DESC>
+  <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Windows'/><KEY ID='Right'/></TERM>
+  <DESC>display the new virtual desktop</DESC>
 </ROW>
 <ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Windows'/><KEY ID='Left'/></TERM>
-<DESC>display the previous virtual desktop</DESC>
+  <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Windows'/><KEY ID='Left'/></TERM>
+  <DESC>display the previous virtual desktop</DESC>
 </ROW>
 </DEFINITIONTABLE>
 <BLIST>
-<ITEM>
-To disable the dynamic shortening of the lists in the Start Menu:<BR/>
-<CODEMENU>Right click<CODEMENU>Propriétés<CODEMENU>Menu Démarrer</CODEMENU></CODEMENU></CODEMENU><BR/>
-Select <CODEMENU>Menu Démarrer Classique</CODEMENU><BR/>
-Click on <CODEMENU>Personnaliser…</CODEMENU><BR/>
-Unselect <CODEMENU>Utiliser des menus personnalisés</CODEMENU>
+<ITEM>To disable the dynamic shortening of the lists in the Start Menu:<BR/>
+  <CODEMENU>Right click<CODEMENU>Propriétés<CODEMENU>Menu Démarrer</CODEMENU></CODEMENU></CODEMENU><BR/>
+  Select <CODEMENU>Menu Démarrer Classique</CODEMENU><BR/>
+  Click on <CODEMENU>Personnaliser…</CODEMENU><BR/>
+  Unselect <CODEMENU>Utiliser des menus personnalisés</CODEMENU>
 </ITEM>
 <ITEM>
-<CODEROUTINE>cmd.exe</CODEROUTINE> replaces <CODEROUTINE>command.com</CODEROUTINE>.
+  <CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
 </ITEM>
 <ITEM>
-<CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
+  <CODEROUTINE>&amp;&amp;</CODEROUTINE> command following this symbol runs only if the command preceding the symbol succeeds<BR/>
+  <CODEROUTINE>||</CODEROUTINE> command following this symbol runs only if the command preceding the symbol fails<BR/>
+  <CODEROUTINE>&amp;</CODEROUTINE> separates multiple commands on the command line
 </ITEM>
-<ITEM>
-<CODEROUTINE>&amp;&amp;</CODEROUTINE> command following this symbol runs only if the command preceding the symbol succeeds<BR/>
-<CODEROUTINE>||</CODEROUTINE> command following this symbol runs only if the command preceding the symbol fails<BR/>
-<CODEROUTINE>&amp;</CODEROUTINE> separates multiple commands on the command line
+<ITEM><BLIST><TITLE>User management with PowerShell</TITLE>
+  <ITEM>enable a local user
+    <CODESAMPLE><X><T>Enable-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Enable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+  </ITEM>
+  <ITEM>disable a local user
+    <CODESAMPLE><X><T>Disable-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Disable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+  </ITEM>
+  <ITEM>return status of a local user
+    <CODESAMPLE><X><T>Get-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Get-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+  </ITEM>
+</BLIST></ITEM>
+<ITEM>find a file whose name contains Ondine
+  <CODESAMPLE>dir c:\ /s /b | find "Ondine"</CODESAMPLE>
 </ITEM>
-<ITEM>
-find a file whose name contains Ondine
-<CODESAMPLE>dir c:\ /s /b | find "Ondine"</CODESAMPLE>
+<ITEM>recursively loop on the <CODEROUTINE>*.htm</CODEROUTINE> files to find a string
+  <CODESAMPLE>for /r %f in (*.htm) do find "foobar" "%f"</CODESAMPLE>
 </ITEM>
-<ITEM>
-recursively loop on the <CODEROUTINE>*.htm</CODEROUTINE> file to find a string
-<CODESAMPLE>for /r %f in (*.htm) do find "foobar" "%f"</CODESAMPLE>
+<ITEM>recursively loop on files to compress them
+  <CODESAMPLE>for /r %f in (*.*) do "C:\Program Files\7-Zip\7z.exe" a -tzip "%f.zip" "%f"</CODESAMPLE>
 </ITEM>
-<ITEM>
-recursively loop on files to compress them
-<CODESAMPLE>for /r %f in (*.*) do "C:\Program Files\7-Zip\7z.exe" a -tzip "%f.zip" "%f"</CODESAMPLE>
+<ITEM>to change the letter of a drive:<BR/>
+  start <CODEROUTINE>compmgmt.msc</CODEROUTINE><BR/>
+  click on <CODEMENU>Stockage<CODEMENU>Gestion des disques</CODEMENU></CODEMENU><BR/>
+  right-click on the line corresponding to the disk<BR/>
+  select <CODEMENU>Modifier la lettre et les chemins d'accès…</CODEMENU><BR/>
+  in the newly displayed dialog, click on <CODEMENU>Modifer…</CODEMENU><BR/>
+  select the new letter and apply
 </ITEM>
-<ITEM>
-to change the letter of a drive:<BR/>
-start <CODEROUTINE>compmgmt.msc</CODEROUTINE><BR/>
-click on <CODEMENU>Stockage<CODEMENU>Gestion des disques</CODEMENU></CODEMENU><BR/>
-right-click on the line corresponding to the disk<BR/>
-select <CODEMENU>Modifier la lettre et les chemins d'accès…</CODEMENU><BR/>
-in the newly displayed dialog, click on <CODEMENU>Modifer…</CODEMENU><BR/>
-select the new letter and apply
+<ITEM>to shutdown the computer in 10 minutes
+  <CODESAMPLE>shutdown /t 600 /s</CODESAMPLE>
 </ITEM>
-<ITEM>
-to shutdown the computer in 10 minutes
-<CODESAMPLE>shutdown /t 600 /s</CODESAMPLE>
+<ITEM>to reboot a machine in RDP
+  <CODESAMPLE>shutdown -t 0 -r -f</CODESAMPLE>
 </ITEM>
-<ITEM>
-to reboot a machine in RDP
-<CODESAMPLE>shutdown -t 0 -r -f</CODESAMPLE>
-</ITEM>
-<ITEM>
-to create a large file
-<CODESAMPLE>fsutil file createnew &lt;filename&gt; &lt;length&gt;</CODESAMPLE>
+<ITEM>to create a large file
+  <CODESAMPLE>fsutil file createnew &lt;filename&gt; &lt;length&gt;</CODESAMPLE>
 </ITEM>
 </BLIST>
 <DEFINITIONTABLE>
