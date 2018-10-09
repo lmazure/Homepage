@@ -6,142 +6,146 @@
 <DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
-<ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM>Shortcuts
-<DEFINITIONTABLE>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='C'/></TERM>
-<DESC>copy</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='X'/></TERM>
-<DESC>cut</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='V'/></TERM>
-<DESC>paste</DESC>
-</ROW>
-</DEFINITIONTABLE></ITEM>
+  <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM>Shortcuts
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='C'/></TERM>
+        <DESC>copy</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='X'/></TERM>
+        <DESC>cut</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='V'/></TERM>
+        <DESC>paste</DESC>
+        </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
 </BLIST><BR/>
 <BLIST><TITLE>Writer</TITLE>
-<ITEM>Open a new window on the current document<BR/>
-<CODEMENU>Fenêtre<CODEMENU>Nouvelle fenêtre</CODEMENU></CODEMENU></ITEM>
-<ITEM>Shortcuts
-<DEFINITIONTABLE>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
-<DESC>paste special</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
-<DESC>paste unformatted text</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Space'/></TERM>
-<DESC>insert a non-breaking space</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='-'/></TERM>
-<DESC>insert a non-breaking dash</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='B'/></TERM>
-<DESC>bold</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='I'/></TERM>
-<DESC>italic</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/></TERM>
-<DESC>underline</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='P'/></TERM>
-<DESC>superscript</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='B'/></TERM>
-<DESC>subscript</DESC>
-</ROW>
-<ROW>
-<TERM><KEY ID='F12'/></TERM>
-<DESC>toggle numbering</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Shift'/><KEY ID='F12'/></TERM>
-<DESC>toggle bullets</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F12'/></TERM>
-<DESC>insert table<BR/>
-if some text is selected, convert it to a table</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='1'/></TERM>
-<DESC>set style to Heading 1</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='2'/></TERM>
-<DESC>set style to Heading 2</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='3'/></TERM>
-<DESC>set style to Heading 3</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='4'/></TERM>
-<DESC>set style to Heading 4</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='5'/></TERM>
-<DESC>set style to Heading 5</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='0'/></TERM>
-<DESC>set style to Text Body</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F10'/></TERM>
-<DESC>toggle formatting display</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
-<DESC>add a comment</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='R'/></TERM>
-<DESC>toggle display of horizontal ruler</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
-<DESC>toggle full screen display</DESC>
-</ROW>
-</DEFINITIONTABLE></ITEM>
+  <ITEM>Open a new window on the current document<BR/>
+    <CODEMENU>Fenêtre<CODEMENU>Nouvelle fenêtre</CODEMENU></CODEMENU></ITEM>
+  <ITEM>Shortcuts
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
+        <DESC>paste special</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
+        <DESC>paste unformatted text</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Space'/></TERM>
+        <DESC>insert a non-breaking space</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='-'/></TERM>
+        <DESC>insert a non-breaking dash</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='B'/></TERM>
+        <DESC>bold</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='I'/></TERM>
+        <DESC>italic</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/></TERM>
+        <DESC>underline</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='P'/></TERM>
+        <DESC>superscript</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='B'/></TERM>
+        <DESC>subscript</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY ID='F12'/></TERM>
+        <DESC>toggle numbering</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Shift'/><KEY ID='F12'/></TERM>
+        <DESC>toggle bullets</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F12'/></TERM>
+        <DESC>insert table<BR/>
+          if some text is selected, convert it to a table</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='1'/></TERM>
+        <DESC>set style to Heading 1</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='2'/></TERM>
+        <DESC>set style to Heading 2</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='3'/></TERM>
+        <DESC>set style to Heading 3</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='4'/></TERM>
+        <DESC>set style to Heading 4</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='5'/></TERM>
+        <DESC>set style to Heading 5</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='0'/></TERM>
+        <DESC>set style to Text Body</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F10'/></TERM>
+        <DESC>toggle formatting display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
+        <DESC>add a comment</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='R'/></TERM>
+        <DESC>toggle display of horizontal ruler</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
+        <DESC>toggle full screen display</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
 </BLIST><BR/>
 <BLIST><TITLE>Calc</TITLE>
-<ITEM>Shortcuts
-<DEFINITIONTABLE>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
-<DESC>paste special</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
-<DESC>add a comment</DESC>
-</ROW>
-</DEFINITIONTABLE></ITEM>
-<ITEM>Functions
-<DEFINITIONTABLE>
-<ROW>
-<TERM><CODEROUTINE>AUJOURDHUI()</CODEROUTINE></TERM>
-<DESC>return the current date</DESC>
-</ROW>
-<ROW>
-<TERM><CODEROUTINE>MAINTENANT()</CODEROUTINE></TERM>
-<DESC>return the current date and time</DESC>
-</ROW>
-</DEFINITIONTABLE></ITEM>
+  <ITEM>Shortcuts
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
+        <DESC>paste special</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
+        <DESC>add a comment</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Functions
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>AUJOURDHUI()</CODEROUTINE></TERM>
+        <DESC>return the current date</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>MAINTENANT()</CODEROUTINE></TERM>
+        <DESC>return the current date and time</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
 </BLIST><BR/>
 <BLIST><TITLE>Impress</TITLE>
   <ITEM>Shortcuts
@@ -162,8 +166,13 @@ if some text is selected, convert it to a table</DESC>
   </ITEM>
 </BLIST><BR/>
 <BLIST><TITLE>Macros</TITLE>
-    <ITEM>Record the Python source files in <CODEFILENAME>C:\Users\&lt;user&gt;\AppData\Roaming\LibreOffice\4\user\Scripts\python</CODEFILENAME></ITEM>
-    <ITEM>Run the macro with <CODEMENU>Outils<CODEMENU>Macros<CODEMENU>Gérer les macros<CODEMENU>Python…</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select <CODEMENU>Mes macros</CODEMENU></ITEM>
+  <ITEM>To display the menu to record macros<BR/>
+    <CODEMENU>Outils<CODEMENU>Option...</CODEMENU></CODEMENU><BR/>
+    In the Options dialog: <CODEMENU>LibreOffice<CODEMENU>Avancé</CODEMENU></CODEMENU>.<BR/>
+    Select <CODEMENU>Activer l’enregistreur de macro</CODEMENU>.
+  </ITEM>
+  <ITEM>Record the Python source files in <CODEFILENAME>C:\Users\&lt;user&gt;\AppData\Roaming\LibreOffice\4\user\Scripts\python</CODEFILENAME></ITEM>
+  <ITEM>Run the macro with <CODEMENU>Outils<CODEMENU>Macros<CODEMENU>Gérer les macros<CODEMENU>Python…</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select <CODEMENU>Mes macros</CODEMENU></ITEM>
 </BLIST><BR/>
 <BLIST><TITLE>Problems</TITLE>
   <ITEM>The underlining of spelling mistakes is no more displayed:<BR/>
