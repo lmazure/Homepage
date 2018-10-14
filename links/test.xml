@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -274,6 +274,7 @@
       <ITEM><ARTICLE><X><T>What Test Engineers do at Google: Building Test Infrastructure</T><A>https://testing.googleblog.com/2016/11/what-test-engineers-do-at-google.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jochen</FIRSTNAME><LASTNAME>Wuttke</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE><COMMENT>A longer example of a Test Engineer task: setting up a test framework for an application performing numerous RPC calls.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Discomfort as a Tool for Change</T><A>https://testing.googleblog.com/2017/02/discomfort-as-tool-for-change.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Gladfelter</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE><COMMENT>SETIs are responsible to ensure that the whole product is working correctly, for example by lobbying for having API owners creating fakes of their APIs which results into the fact that they will create APIs easier to use.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Evolution of GTAC and Engineering Productivity</T><A>https://testing.googleblog.com/2017/07/evolution-of-gtac-and-engineering.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>12</DAY></DATE><COMMENT>The GTAC conferences are stopped and will be replaced by something else.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Efficacy Presubmit</T><A>https://testing.googleblog.com/2018/09/efficacy-presubmit.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Peter</FIRSTNAME><LASTNAME>Spragins</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE><COMMENT>Using machine learning to select the tests to execute before accepting a commit.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Testing on the Toilet</TITLE>
         <ITEM><ARTICLE><X><T>Testing on the Toilet: Testing State vs. Testing Interactions</T><A>https://testing.googleblog.com/2013/03/testing-on-toilet-testing-state-vs.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Trenk</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE><COMMENT>After explaining the difference between testing states and testing interactions, the author explains that we should test states except in some particular cases.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Testing on the Toilet: Don’t Overuse Mocks</T><A>https://testing.googleblog.com/2013/05/testing-on-toilet-dont-overuse-mocks.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Trenk</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>A description of some risks when using too much mocks.</COMMENT></ARTICLE></ITEM>
