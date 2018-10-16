@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -63,7 +63,7 @@
         <ITEM><X><T>Moq</T><A>https://github.com/moq</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Java</TITLE>
-        <ITEM><X><T>Mockito</T><A>http://site.mockito.org</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Mockito</T><A>https://site.mockito.org</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mutation testing</TITLE>
@@ -257,7 +257,6 @@
       <ITEM><ARTICLE><X><T>The Google Test and Development Environment - Pt. 1: Office and Equipment</T><A>https://testing.googleblog.com/2013/12/the-google-test-and-development.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Anthony</FIRSTNAME><LASTNAME>Vallone</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE><COMMENT>The offices and equipements at Google.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Google Test and Development Environment - Pt. 2: Dogfooding and Office Software</T><A>https://testing.googleblog.com/2014/01/the-google-test-and-development.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Anthony</FIRSTNAME><LASTNAME>Vallone</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE><COMMENT>Google is using a lot dogfood.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Google Test and Development Environment - Pt. 3: Code, Build, and Test</T><A>https://testing.googleblog.com/2014/01/the-google-test-and-development_21.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Anthony</FIRSTNAME><LASTNAME>Vallone</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE><COMMENT>Some little information about Google's build and test environment.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>When/how to use Mockito Answer</T><A>https://testing.googleblog.com/2014/03/whenhow-to-use-mockito-answer.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Hongfei</FIRSTNAME><LASTNAME>Ding</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE><COMMENT>A short description of using Mockito's <CODEROUTINE>Answer</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>ThreadSanitizer: Slaughtering Data Races</T><A>https://testing.googleblog.com/2014/06/threadsanitizer-slaughtering-data-races.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dmitry</FIRSTNAME><LASTNAME>Vyukov</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>Some marketing for ThreadSanitizer, a detector of data races.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Measuring Coverage at Google</T><A>https://testing.googleblog.com/2014/07/measuring-coverage-at-google.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marko</FIRSTNAME><LASTNAME>Ivanković</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>7</MONTH><DAY>14</DAY></DATE><COMMENT>Some little feedback about the use of code coverage measurement at Google.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Chrome - Firefox WebRTC Interop Test - Pt 1</T><A>https://testing.googleblog.com/2014/08/chrome-firefox-webrtc-interop-test-pt-1.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>8</MONTH><DAY>26</DAY></DATE><COMMENT>The setup of a test checking Chrome/Firefox WebRTC connection.</COMMENT></ARTICLE></ITEM>
@@ -435,6 +434,10 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Jasmine</TITLE>
         <ITEM><ARTICLE><X><T>Testing JavaScript Using the Jasmine Framework</T><A>http://www.htmlgoodies.com/beyond/javascript/testing-javascript-using-the-jasmine-framework.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Gravelle</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>9</MONTH></DATE><COMMENT>A short introduction to writing JavaScript unit tests using Jasmine.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Mockito</TITLE>
+        <ITEM><ARTICLE><X><T>When/how to use Mockito Answer</T><A>https://testing.googleblog.com/2014/03/whenhow-to-use-mockito-answer.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Hongfei</FIRSTNAME><LASTNAME>Ding</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE><COMMENT>A short description of using Mockito's <CODEROUTINE>Answer</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Introduction to PowerMock</T><A>https://www.baeldung.com/intro-to-powermock</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugen</FIRSTNAME><LASTNAME>Paraschiv</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE><COMMENT>A short description of PowerMockito, a PowerMock’s Mockito extension enabling to mock final, private or static methods.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Mutation testing</TITLE>
     <ITEM><ARTICLE><X><T>Mutation Testing</T><A>http://blog.cleancoder.com/uncle-bob/2016/06/10/MutationTesting.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE><COMMENT>An introduction to mutation testing.</COMMENT></ARTICLE></ITEM>
