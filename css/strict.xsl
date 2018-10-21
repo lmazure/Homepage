@@ -15,7 +15,7 @@
       <xsl:value-of select="/PAGE/TITLE"/>
     </title>
     <xsl:if test="count(/PAGE/SCRIPT)=1">
-      <script type="text/javascript">
+      <script type="module">
         <xsl:value-of disable-output-escaping="yes" select="/PAGE/SCRIPT"/>
       </script>
     </xsl:if>
@@ -84,7 +84,7 @@
         <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["£[","£]"]]}});</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML-full"></script>
       </xsl:if>
-      <script src="../scripts/common.js"></script>
+      <script src="../scripts/common.js" type="module"></script>
       <xsl:if test="@special='indexed'">
         <script>
           $(document).ready(function() { window.onLoad = create_index();} )
@@ -550,10 +550,6 @@
 
 <xsl:template match="SUB">
   <sub><xsl:apply-templates/></sub>
-</xsl:template>
-
-<xsl:template match="SCRIPT">
-  <script><xsl:value-of disable-output-escaping="yes" select="."/></script>
 </xsl:template>
 
 <xsl:template match="BR">
