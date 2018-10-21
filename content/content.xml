@@ -8,7 +8,7 @@
 </CONTENT>
 <SCRIPT>
 import ContentBuilder from "../scripts/common.js";
-function postInitialize() {
+window.postInitialize = function() {
     var builder = new ContentBuilder();
     builder.buildContent();
 }

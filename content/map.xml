@@ -8,7 +8,7 @@
 </CONTENT>
 <SCRIPT>
 import { MapBuilder } from "../scripts/common.js";
-function postInitialize() {
+window.postInitialize = function() {
     var builder = new MapBuilder();
     builder.buildMap();
 }
