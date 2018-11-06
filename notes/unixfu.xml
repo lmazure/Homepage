@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>ls</T><A>javascript:do_reference("man/linux/1/ls")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display directory/file information</DESC></ROW>
@@ -176,14 +176,23 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>cmp</T><A>javascript:do_reference("man/linux/1/cmp")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>compare <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and indicate the offset and line number of the first difference</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>sdiff</T><A>javascript:do_reference("man/linux/1/sdiff")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and merge them interactively</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sdiff -s</CODEROUTINE></TERM><DESC>ignore common lines</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sdiff -w &lt;n&gt;<BR/>sdiff --width=&lt;n&gt;</CODEROUTINE></TERM><DESC>output at most <CODEROUTINE>n</CODEROUTINE> (default 130) columns per line</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODEROUTINE>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>-E</CODEROUTINE><BR/><CODEROUTINE>--ignore-tab-expansion</CODEROUTINE></TERM><DESC>ignore the distinction between tabs and spaces</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-Z</CODEROUTINE><BR/><CODEROUTINE>--ignore-trailing-space</CODEROUTINE></TERM><DESC>ignore white space at line end</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-b</CODEROUTINE><BR/><CODEROUTINE>--ignore-space-change</CODEROUTINE></TERM><DESC>ignore white space at line end and consider all other sequences of one or more white space characters within a line to be equivalent</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-w</CODEROUTINE> (for <CODEROUTINE>diff</CODEROUTINE>)<BR/><CODEROUTINE>-W</CODEROUTINE> (for <CODEROUTINE>sdiff</CODEROUTINE>)<BR/><CODEROUTINE>--ignore-space-change</CODEROUTINE></TERM><DESC>ignore differences even if one line has white space where the other line has none</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>sdiff</T><A>javascript:do_reference("man/linux/1/sdiff")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and merge them interactively</DESC></ROW>
-<ROW><TERM><CODEROUTINE>sdiff -s</CODEROUTINE></TERM><DESC>ignore common lines</DESC></ROW>
-<ROW><TERM><CODEROUTINE>sdiff -w &lt;n&gt;<BR/>sdiff --width=&lt;n&gt;</CODEROUTINE></TERM><DESC>output at most <CODEROUTINE>n</CODEROUTINE> (default 130) columns per line</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>cmp</T><A>javascript:do_reference("man/linux/1/cmp")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>compare <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and indicate the offset and line number of the first difference</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
