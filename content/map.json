@@ -6,7 +6,11 @@
       { "title" : "Homepages", "page" : "links/homepages.html", "languages" : ["en"], "formats" : ["HTML"] },
       { "title" : "Computing", "page" : "links/info.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
         { "title" : "Site building", "page" : "links/build.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
-          { "title" : "Browsers", "page" : "links/browsers.html", "languages" : ["en"], "formats" : ["HTML"] }
+          { "title" : "Browsers", "page" : "links/browsers.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Chrome", "page" : "links/chrome.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Firefox", "page" : "links/firefox.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Internet Explorer / Edge", "page" : "links/ie.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] }
         ] },
         { "title" : "Languages", "page" : "links/otherlang.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
           { "title" : "Java", "page" : "links/java.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [

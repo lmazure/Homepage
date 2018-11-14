@@ -12,7 +12,7 @@ my $lib_dir;
 if ( $hostname eq "Kirikou" ) { $lib_dir = "C:/Users/Laurent/Documents/lib"; }
 if ( $hostname eq "bianca" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
 if ( $hostname eq "samsung" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
-if ( $hostname eq "INFOLOGIC-LMA" ) { $lib_dir = "H:/Documents/tools/lib"; }
+if ( $hostname eq "INFOLOGIC-LMA" ) { $lib_dir = "/cygdrive/h/Documents/tools/lib"; }
 if ( $hostname eq "gilgamesh" ) { $lib_dir = "H:/Documents/tools/lib"; }
 die("don't know where are the Java libraries") if ( ! defined($lib_dir) );
 
@@ -23,6 +23,11 @@ my $saxon_dir = $lib_dir."/SaxonHE9-8-0-12J";
 my $start_dir = "..";
 #my $start_dir = $base_dir;
 my $xlst_file = $start_dir."/css/strict.xsl";
+my $java_path = "/cygdrive/h/Documents/tools/jre/jre-9/bin/java.exe";
+
+if ( ! -f $java_path ) {
+        die("Java ($java_path) does not exist");
+}
 
 sub to_html {
   my $infile = shift;
@@ -38,8 +43,8 @@ sub to_html {
   if ( ( ! -f $outfile ) ||
        ( stat($infile)->mtime >= stat($outfile)->mtime ) ||
        ( stat($xlst_file)->mtime >= stat($outfile)->mtime ) ) {
-    #my @cmds = ("/cygdrive/h/Documents/tools/jre/jre-9/bin/java.exe",
-    my @cmds = ("java.exe",
+    my @cmds = ("$java_path",
+    #my @cmds = ("java.exe",
         "-jar",
         "$saxon_dir/saxon9he.jar",
         "-s:$infile",
@@ -47,7 +52,7 @@ sub to_html {
         "-o:$outfile");
     if (system(@cmds)) {
         unlink $outfile;
-        die("run Java ($!)");
+        die("run Java (@cmds) failed ($!)");
     }
     if (-z $outfile) {
         unlink $outfile;
