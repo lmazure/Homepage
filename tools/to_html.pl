@@ -12,7 +12,7 @@ my $lib_dir;
 if ( $hostname eq "Kirikou" ) { $lib_dir = "C:/Users/Laurent/Documents/lib"; }
 if ( $hostname eq "bianca" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
 if ( $hostname eq "samsung" ) { $lib_dir = "C:/Documents and Settings/Laurent/Mes documents/lib"; }
-if ( $hostname eq "INFOLOGIC-LMA" ) { $lib_dir = "/cygdrive/h/Documents/tools/lib"; }
+if ( $hostname eq "INFOLOGIC-LMA" ) { $lib_dir = "H:/Documents/tools/lib"; }
 if ( $hostname eq "gilgamesh" ) { $lib_dir = "H:/Documents/tools/lib"; }
 die("don't know where are the Java libraries") if ( ! defined($lib_dir) );
 
