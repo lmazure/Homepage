@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -117,6 +117,10 @@
       <ROW>
         <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
         <DESC>toggle full screen display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
+        <DESC>toggle field shading</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F9'/></TERM>
