@@ -3,17 +3,19 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>links/chrome.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><BLIST><TITLE><ANCHOR>chrome</ANCHOR>Chrome</TITLE>
-      <ITEM><X><T>download</T><A>http://www.google.com/chrome</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>blog</T><A>http://chrome.blogspot.com</A><L>en</L><F>HTML</F><FEED><A>http://feeds2.feedburner.com/blogspot/Egta</A><F>RSS</F></FEED></X></ITEM>
+      <ITEM><X><T>download</T><A>https://www.google.com/chrome</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>blog</T><A>https://chrome.blogspot.com</A><L>en</L><F>HTML</F><FEED><A>https://feeds2.feedburner.com/blogspot/Egta</A><F>RSS</F></FEED></X></ITEM>
       <ITEM><X><T>Chrome Platform Status</T><A>https://www.chromestatus.com</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Chromium</T><A>http://www.chromium.org</A><L>en</L><F>HTML</F></X>:
+      <ITEM><X><T>Chromium</T><A>https://www.chromium.org</A><L>en</L><F>HTML</F></X>:
         <X><T>blog</T><A>https://blog.chromium.org</A><L>en</L><F>HTML</F><FEED><A>https://blog.chromium.org/feeds/posts/default</A><F>RSS</F></FEED></X></ITEM>
-      <ITEM><X><T>developer tools</T><A>https://developers.google.com/chrome-developer-tools/</A><L>en</L><F>HTML</F></X>:
+      <ITEM><X><T>Developers</T><A>https://developers.google.com</A><L>en</L><F>HTML</F></X>:
+        <X><T>blog</T><A>https://developers.google.com/web/updates/</A><L>en</L><F>HTML</F><FEED><A>https://developers.google.com/web/updates/rss.xml</A><F>RSS</F></FEED></X></ITEM>
+      <ITEM><X><T>developer tools</T><A>https://developers.google.com/web/tools/chrome-devtools/</A><L>en</L><F>HTML</F></X>:
         <X><T>shortcuts</T><A>https://developers.google.com/chrome-developer-tools/docs/shortcuts</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>personal notes</T><A>../notes/chrome.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
@@ -61,6 +63,7 @@
     <ITEM><ARTICLE><X><T>New in Chrome 63</T><A>https://developers.google.com/web/updates/2017/12/nic63</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Pete</FIRSTNAME><LASTNAME>LePage</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>7</DAY></DATE><COMMENT>Dynamic module imports, async iterators and generators, defining over-scroll behavior, change in the dialogs for permission requests.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Enter AudioWorklet</T><A>https://developers.google.com/web/updates/2017/12/audio-worklet</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Hongchan</FIRSTNAME><LASTNAME>Choi</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE><COMMENT>A short description of <CODEROUTINE>AudioWorkletProcessor</CODEROUTINE> and <CODEROUTINE>AudioWorkletNode</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Preloading modules</T><A>https://developers.google.com/web/updates/2017/12/modulepreload</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sérgio</FIRSTNAME><LASTNAME>Gomes</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE><COMMENT>Chrome 64 adds the <CODEROUTINE>&lt;link rel="modulepreload"&gt;</CODEROUTINE> syntax for preloading modules.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Disabling hardware noise suppression</T><A>https://developers.google.com/web/updates/2017/12/disabling-hardware-noise-suppression</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Oskar</FIRSTNAME><LASTNAME>Sundbom</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE><COMMENT>Google wants us to test the impact of hardware noise suppression on the sound quality of WebRTC.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Device Memory API</T><A>https://developers.google.com/web/updates/2017/12/device-memory</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Philip</FIRSTNAME><LASTNAME>Walton</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE><COMMENT>A presentation of the Device Memory API and several ways to use it.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Further protecting users from deceptive or confusing inline installation</T><A>https://blog.chromium.org/2018/01/further-protecting-users-from-deceptive.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nav</FIRSTNAME><LASTNAME>Jagpal</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Benjamin</FIRSTNAME><LASTNAME>Ackerman</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE><COMMENT>Google is using machine learning to detect deceptive extension installations.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>CSS Paint API</T><A>https://developers.google.com/web/updates/2018/01/paintapi</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Surma</GIVENNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A short description of the CSS Paint API.</COMMENT></ARTICLE></ITEM>
@@ -118,6 +121,7 @@
     <ITEM><ARTICLE><X><T>Signed HTTP Exchanges</T><A>https://developers.google.com/web/updates/2018/11/signed-exchanges</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kinuko</FIRSTNAME><LASTNAME>Yasuda</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE><COMMENT>An origin trial for Signed HTTP Exchange, a mechanism to publish a Web Package from a site other that its origin, is started.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Further protections from harmful ad experiences on the web</T><A>https://blog.chromium.org/2018/11/further-protections-from-harmful-ad.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vivek</FIRSTNAME><LASTNAME>Sekhar</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>5</DAY></DATE><COMMENT>Google creates a black list of sites with abusive ads, Chrome will remove all ads on these ones.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Notifying users of unclear subscription pages</T><A>https://blog.chromium.org/2018/11/notifying-users-of-unclear-subscription.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Emily</FIRSTNAME><LASTNAME>Schechter</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Giacomo</FIRSTNAME><LASTNAME>Gnecchi Ruscone</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Badr</FIRSTNAME><LASTNAME>Salmi El Idrissi</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>8</DAY></DATE><COMMENT>Google wants to fight hidden billing, but I do not understand how Chrome can automatically detect that.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Web Audio, Autoplay Policy and Games</T><A>https://developers.google.com/web/updates/2018/11/web-audio-autoplay</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tom</FIRSTNAME><LASTNAME>Greenaway</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mounir</FIRSTNAME><LASTNAME>Lamouri</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Hongchan</FIRSTNAME><LASTNAME>Choi</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>27</DAY></DATE><COMMENT>The rules for allowing autoplay have been slightly changed after having received some feedback from the Web developers.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Security</TITLE>
       <ITEM><ARTICLE><X><T>Security in Depth: Local Web Pages</T><A>https://blog.chromium.org/2008/12/security-in-depth-local-web-pages.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>What should be the limitations imposed to local pages?</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Security in Depth: The Password Manager</T><A>https://blog.chromium.org/2008/12/security-in-depth-password-manager.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Steele</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>The rational for Chrome Password Manager implementation.</COMMENT></ARTICLE></ITEM>
