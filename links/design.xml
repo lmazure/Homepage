@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -111,6 +111,7 @@
     <ITEM><ARTICLE><X><T>Event Sourcing vs. Blockchain</T><ST>Want to know the difference between event sourcing and blockchain? Check out this post on the differences and use cases for these evolving technologies.</ST><A>https://dzone.com/articles/event-sourcing-vs-blockchain-1</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Frans</FIRSTNAME><LASTNAME>van Buul</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT>This article clearly explains something that is obvious for those who know the two architectural patterns.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Microservices Aren’t Magic: Handling Timeouts</T><A>https://8thlight.com/blog/colin-jones/2018/09/18/microservices-arent-magic-handling-timeouts.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Colin</FIRSTNAME><LASTNAME>Jones</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE><COMMENT>Some options for handling timeouts.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Exponential Backoff And Jitter</T><A>https://aws.amazon.com/blogs/architecture/exponential-backoff-and-jitter/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marc</FIRSTNAME><LASTNAME>Brooker</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>3</MONTH><DAY>4</DAY></DATE><COMMENT>Adding randomness to the delay between the network request retries enhances performance. But the simulation here is a very particular condition where all the initial requests are performed at the same time. Most of the time, a server load does not have such a repartition, requests are more distributed along the time.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>What to Look for at RubyConf 2018: Jeremy Hanna and Molly Struve Previewed Their Talks at 8th Light</T><A>https://8thlight.com/blog/nicole-carpenter/2018/11/13/what-to-look-for-at-rubyconf-2018.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicole</FIRSTNAME><LASTNAME>Carpenter</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE><COMMENT>Some basic and well-known advice on implementing server services.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Model Driven Development</TITLE>
       <ITEM><ARTICLE><X quality='-1'><T>Model-Driven Development</T><A>https://msdn.microsoft.com/en-us/library/aa964145.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joseph</FIRSTNAME><LASTNAME>Hofstader</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>11</MONTH></DATE><COMMENT>An unclear description of MDD.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
