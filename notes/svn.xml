@@ -91,6 +91,8 @@
       <CODESAMPLE>svn diff &lt;file/dir&gt;</CODESAMPLE></ITEM>
       <ITEM>Perform a side-by-side comparison (on Linux/cygwin)
       <CODESAMPLE>svn --diff-cmd "diff" --extensions "-y -W 250 --suppress-common-lines" diff</CODESAMPLE></ITEM>
+      <ITEM>display the diff of a given commit
+      <CODESAMPLE>svn diff -c 42 &lt;file/dir&gt;</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Display the log</TITLE>
       <ITEM>Display the log of the current directory
@@ -99,6 +101,14 @@
       <CODESAMPLE>svn log &lt;file/dir&gt;</CODESAMPLE></ITEM>
       <ITEM>Display the log of a repository
       <CODESAMPLE>svn log file:///cygdrive/m/svn_repository/my_project/trunk</CODESAMPLE></ITEM>
+      <ITEM>Display the information about commit 42
+      <CODESAMPLE>svn log -c 42</CODESAMPLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Blame</TITLE>
+      <ITEM>Annotate each line with author and revision
+      <CODESAMPLE>svn [blame|praise|annotate|ann] &lt;file&gt;</CODESAMPLE></ITEM>
+      <ITEM>Annotate each line with author and revision, ignoring white space changes
+      <CODESAMPLE>svn blame [--extensions|-x] -b &lt;file&gt;</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM>Update the current directory to head
     <CODESAMPLE>svn update</CODESAMPLE></ITEM>
