@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <SLIST>
   <ITEM><BLIST><TITLE><U><B>Tortoise SVN</B></U></TITLE>
@@ -144,6 +144,8 @@
       <CODESAMPLE>svn copy file:///cygdrive/m/svn_repository/my_project/trunk  file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; -m "Branch creation comment"</CODESAMPLE></ITEM>
       <ITEM>Check out branch &lt;branch name&gt;
       <CODESAMPLE>svn co file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; &lt;directory name&gt;</CODESAMPLE></ITEM>
+      <ITEM>Merge trunk into current work directory (which contains the checkout of a branch)
+      <CODESAMPLE>svn merge ^/trunk</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Properties</TITLE>
       <ITEM>Set the value of a property on a file/directory
