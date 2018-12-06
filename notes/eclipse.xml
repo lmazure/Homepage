@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Install and update</B></U></TITLE>
   <ITEM>Set up the Proxy:<BR/>
@@ -61,6 +61,8 @@
 <BR/>
 <U><B>Unit tests</B></U>
 <DEFINITIONTABLE>
+  <ROW><TERM><CODEMENU>File<CODEMENU>New<CODEMENU>JUnit Test Case</CODEMENU></CODEMENU></CODEMENU></TERM>
+  <DESC>create JUnit tests for the current class</DESC></ROW>
   <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='X'/><KEY ID='T'/></TERM>
   <DESC>run all JUnit tests of the current source file</DESC></ROW>
 </DEFINITIONTABLE>

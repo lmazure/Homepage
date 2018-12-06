@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <SLIST>
   <ITEM><BLIST><TITLE><U><B>Tortoise SVN</B></U></TITLE>
@@ -71,9 +71,11 @@
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE><U><B>Command line</B></U></TITLE>
     <ITEM>Create a repository
-    <CODESAMPLE>svnadmin create &lt;dir&gt;</CODESAMPLE></ITEM>
+      <CODESAMPLE>svnadmin create &lt;dir&gt;</CODESAMPLE></ITEM>
     <ITEM>Perform a checkout (&lt;myDir&gt; will be created)
-    <CODESAMPLE>svn co file:///cygdrive/m/laurent_svn_repository/Java\ sandbox/ &lt;myDir&gt;</CODESAMPLE></ITEM>
+      <CODESAMPLE>svn co file:///cygdrive/m/laurent_svn_repository/Java\ sandbox/ &lt;myDir&gt;</CODESAMPLE></ITEM>
+    <ITEM>Display repository, branch… of the current directory (i.e. working copy)
+      <CODESAMPLE>svn info</CODESAMPLE></ITEM>
     <ITEM><BLIST><TITLE>Commit</TITLE>
       <ITEM>Commit a file/dir
       <CODESAMPLE>svn commit -m "I have done blabla…" &lt;file/dir&gt;</CODESAMPLE></ITEM>
@@ -89,6 +91,8 @@
       <CODESAMPLE>svn diff &lt;file/dir&gt;</CODESAMPLE></ITEM>
       <ITEM>Perform a side-by-side comparison (on Linux/cygwin)
       <CODESAMPLE>svn --diff-cmd "diff" --extensions "-y -W 250 --suppress-common-lines" diff</CODESAMPLE></ITEM>
+      <ITEM>display the diff of a given commit
+      <CODESAMPLE>svn diff -c 42 &lt;file/dir&gt;</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Display the log</TITLE>
       <ITEM>Display the log of the current directory
@@ -97,6 +101,14 @@
       <CODESAMPLE>svn log &lt;file/dir&gt;</CODESAMPLE></ITEM>
       <ITEM>Display the log of a repository
       <CODESAMPLE>svn log file:///cygdrive/m/svn_repository/my_project/trunk</CODESAMPLE></ITEM>
+      <ITEM>Display the information about commit 42
+      <CODESAMPLE>svn log -c 42</CODESAMPLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Blame</TITLE>
+      <ITEM>Annotate each line with author and revision
+      <CODESAMPLE>svn [blame|praise|annotate|ann] &lt;file&gt;</CODESAMPLE></ITEM>
+      <ITEM>Annotate each line with author and revision, ignoring white space changes
+      <CODESAMPLE>svn blame [--extensions|-x] -b &lt;file&gt;</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM>Update the current directory to head
     <CODESAMPLE>svn update</CODESAMPLE></ITEM>
@@ -124,6 +136,14 @@
       svn del &lt;file&gt;<BR/>
       svn remove &lt;file&gt;<BR/>
       svn rm &lt;file&gt;</CODESAMPLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Branches</TITLE>
+      <ITEM>List the branches
+      <CODESAMPLE>svn ls file:///cygdrive/m/svn_repository/my_project/branches</CODESAMPLE></ITEM>
+      <ITEM>Create a branch &lt;branch name&gt; from trunk
+      <CODESAMPLE>svn copy file:///cygdrive/m/svn_repository/my_project/trunk  file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; -m "Branch creation comment"</CODESAMPLE></ITEM>
+      <ITEM>Check out branch &lt;branch name&gt;
+      <CODESAMPLE>svn co file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; &lt;directory name&gt;</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Properties</TITLE>
       <ITEM>Set the value of a property on a file/directory
