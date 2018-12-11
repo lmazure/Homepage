@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <SLIST>
   <ITEM><BLIST><TITLE><U><B>Tortoise SVN</B></U></TITLE>
@@ -76,6 +76,8 @@
       <CODESAMPLE>svn co file:///cygdrive/m/laurent_svn_repository/Java\ sandbox/ &lt;myDir&gt;</CODESAMPLE></ITEM>
     <ITEM>Display repository, branch… of the current directory (i.e. working copy)
       <CODESAMPLE>svn info</CODESAMPLE></ITEM>
+    <ITEM>Display status of working copy files and directories
+      <CODESAMPLE>svn status</CODESAMPLE></ITEM>
     <ITEM><BLIST><TITLE>Commit</TITLE>
       <ITEM>Commit a file/dir
       <CODESAMPLE>svn commit -m "I have done blabla…" &lt;file/dir&gt;</CODESAMPLE></ITEM>
@@ -137,6 +139,8 @@
       svn remove &lt;file&gt;<BR/>
       svn rm &lt;file&gt;</CODESAMPLE></ITEM>
     </BLIST></ITEM>
+    <ITEM>Renaming a file
+    <CODESAMPLE>svn [move|mv] &lt;old name&gt; &lt;new name&gt;</CODESAMPLE></ITEM>
     <ITEM><BLIST><TITLE>Branches</TITLE>
       <ITEM>List the branches
       <CODESAMPLE>svn ls file:///cygdrive/m/svn_repository/my_project/branches</CODESAMPLE></ITEM>
