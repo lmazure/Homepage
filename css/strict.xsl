@@ -407,10 +407,9 @@
 </xsl:template>
 
 <xsl:template match="AUTHOR">
-  <xsl:element name="a">
-    <xsl:attribute name="target"><xsl:text>_self</xsl:text></xsl:attribute>
-    <xsl:attribute name="href">
-	  <xsl:text>javascript:do_person(</xsl:text>
+  <xsl:element name="span">
+    <xsl:attribute name="onClick">
+	  <xsl:text>do_person(event,</xsl:text>
 	  <xsl:choose>
         <xsl:when test="count(./NAMEPREFIX)=1">
 		  <xsl:text>"</xsl:text>
