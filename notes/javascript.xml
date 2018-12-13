@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript</TITLE>
 <PATH>notes/javascript.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
   <ITEM>Number: Double precision 64-bit floating point values. It can be used to represent both, integers and fractions.</ITEM>
@@ -65,6 +65,13 @@
   When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.<BR/>
   If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
   <CODESAMPLE>prompt("sometext","defaultvalue");</CODESAMPLE></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Events</B></U></TITLE>
+  <ITEM><BLIST><TITLE><CODEROUTINE>MouseEvent</CODEROUTINE></TITLE>
+    <ITEM><CODEROUTINE>pageX</CODEROUTINE> / <CODEROUTINE>pageY</CODEROUTINE>: Relative to the top left of the fully rendered content area in the browser. This point could be anywhere in the browser window and can actually change location if there are embedded scrollable pages embedded within pages and the user moves a scrollbar.</ITEM>
+    <ITEM><CODEROUTINE>screenX</CODEROUTINE> / <CODEROUTINE>screenY</CODEROUTINE>: Relative to the top left of the physical screen, this reference point only moves if you increase or decrease the number of monitors or the monitor resolution.</ITEM>
+    <ITEM><CODEROUTINE>clientX</CODEROUTINE> / <CODEROUTINE>clientY</CODEROUTINE>: Relative to the upper left edge of the content area (the viewport) of the browser window. This point does not move even if the user moves a scrollbar from within the browser.</ITEM>
+  </BLIST></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/javascrp.html</A><L>en</L><F>HTML</F></X>
