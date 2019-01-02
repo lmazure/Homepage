@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -48,7 +48,9 @@
         <ITEM><X><T>Eclipse Collections</T><A>https://www.eclipse.org/collections/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>ORM</TITLE>
-        <ITEM><X><T>Hibernate</T><A>http://hibernate.org/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><CLIST><TITLE><X><T>Hibernate</T><A>http://hibernate.org/</A><L>en</L><F>HTML</F></X></TITLE>
+          <ITEM><X><T>High-Performance Hibernate Tutorial</T><A>https://vladmihalcea.com/tutorials/hibernate/</A><L>en</L><F>HTML</F></X></ITEM>
+		</CLIST></ITEM>
         <ITEM><X><T>MyBatis</T><A>http://blog.mybatis.org/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><X><T>Guava</T><A>http://code.google.com/p/guava-libraries/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -78,7 +80,6 @@
     <ITEM><ARTICLE><X><T>Developing iPhone Applications using Java</T><A>https://www.youtube.com/watch?v=s8nMpi5-P-I</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>1</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Arno</FIRSTNAME><LASTNAME>Puder</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>14</DAY></DATE><COMMENT>The technical solution described here is too simplistic: the performance would be awful, you have to reimplement Cocoa in Java…</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='zombie'><T>Approaches to Mocking</T><A>http://www.onjava.com/pub/a/onjava/2004/02/11/mocks.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Stewart</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>2</MONTH><DAY>2</DAY></DATE><COMMENT>An introduction on using mocks (aka stubs) in Java: static mocks, dynamic mocks, AOP.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Java theory and practice: Coaxing J2EE out of the container</T><ST>Projects like Somnifugi JMS blur the boundary between J2EE and J2SE</ST><A>https://www.ibm.com/developerworks/java/library/j-jtp04204.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE><COMMENT>The stand alone implementation of some J2EE components (JMS, JNDI) and using JMX.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Java Puzzlers Episode VI: The Phantom-Reference Menace, Attack of the Clone, &amp; Revenge of the Shift</T><A>https://www.youtube.com/watch?v=wDN_EYUvUq0</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>13</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Joshua</FIRSTNAME><LASTNAME>Bloch</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bill</FIRSTNAME><LASTNAME>Pugh</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE><COMMENT>Eight Java puzzles.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Project PlaySIM: Experimenting with Java Card™ 3 System Prog</T><A>https://www.youtube.com/watch?v=aCM9KN2pzQE</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>23</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Arseneau</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Fritjof</FIRSTNAME><LASTNAME>Engelhardtsen</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>6</MONTH><DAY>5</DAY></DATE><COMMENT>PlaySIM is a hardware prototyping platform: a daughter board for the SunSPOT platform is used to emulate a Java Card 3 SIM card.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>5 things you didn't know about … everyday Java tools</T><ST>Java tools for everyday things, like parsing, timing, and sound</ST><A>https://www.ibm.com/developerworks/java/library/j-5things12/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ted</FIRSTNAME><LASTNAME>Neward</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>9</MONTH><DAY>14</DAY></DATE><COMMENT>Random stuff: StAX, ServiceLoader, Scanner, Timer, and JavaSound.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Have Java's Security Issues Gotten out of Hand</T><A>http://ieeexplore.ieee.org/stamp/stamp.jsp?arnumber=06383153</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Lee</FIRSTNAME><LASTNAME>Garber</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>12</MONTH></DATE><COMMENT>Vulnerabilities are found over and over again in Oracle's JVM.</COMMENT></ARTICLE></ITEM>
@@ -365,6 +366,10 @@
     <ITEM><BLIST><TITLE>Maven</TITLE>
       <ITEM><ARTICLE><X><T>5 things you didn't know about … Apache Maven</T><ST>Tips for managing the project life cycle with Maven</ST><A>https://www.ibm.com/developerworks/java/library/j-5things13/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steven</FIRSTNAME><LASTNAME>Haines</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE><COMMENT>Defining an executable JAR, customizing MANIFEST.MF, dumping the dependency tree, using profiles, and writing a plug-in.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>5 things you didn't know about ... Apache Maven plugins</T><ST>Tips for mastering modern Maven plugins</ST><A>https://www.ibm.com/developerworks/library/j-5things16/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Theedom</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>Signing a JAR/WAR, deploying in a container, installing a JAR from a local directory, storing the build artifacts on GitHub, identifying unused dependencies, purging the local repository, adding a timestamp, and printing Maven property values.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Puzzles</TITLE>
+      <ITEM><ARTICLE><X><T>Java Puzzlers Episode VI: The Phantom-Reference Menace, Attack of the Clone, &amp; Revenge of the Shift</T><A>https://www.youtube.com/watch?v=wDN_EYUvUq0</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>13</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Joshua</FIRSTNAME><LASTNAME>Bloch</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bill</FIRSTNAME><LASTNAME>Pugh</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE><COMMENT>Eight Java puzzles.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>How to Find Missing Number on Integer Array of 1 to 100 - BitSet Example</T><A>https://javarevisited.blogspot.com/2014/11/how-to-find-missing-number-on-integer-array-java.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Javin</FIRSTNAME><LASTNAME>Paul</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>28</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
