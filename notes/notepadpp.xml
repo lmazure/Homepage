@@ -3,55 +3,109 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Notepad++</TITLE>
 <PATH>notes/notepadpp.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
-<ROW><TERM><KEY ID='F11'/></TERM>
-<DESC>toggle full screen mode</DESC></ROW>
-<ROW><TERM><KEY ID='F12'/></TERM>
-<DESC>toggle PostIt mode</DESC></ROW>
-<ROW><TERM><KEY ID='F3'/></TERM>
-<DESC>find</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F'/></TERM>
-<DESC>find in files</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F'/></TERM>
-<DESC>find next</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F3'/></TERM>
-<DESC>find previous</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='I'/></TERM>
-<DESC>incremental search</DESC></ROW>
-<ROW><TERM><KEY ID='F4'/></TERM>
-<DESC>next search result</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F4'/></TERM>
-<DESC>previous search result</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/></TERM>
-<DESC>lowercase the selection</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='U'/></TERM>
-<DESC>uppercase the selection</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><KEY ID='U'/></TERM>
-<DESC>uppercase the first letter of the words of the selection</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='G'/></TERM>
-<DESC>go to line</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Q'/></TERM>
-<DESC>block comment/uncomment (toggle)</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/></TERM>
-<DESC>block comment</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='K'/></TERM>
-<DESC>block uncomment</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Up'/></TERM>
-<DESC>move current line up</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Down'/></TERM>
-<DESC>move current line down</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/></TERM>
-<DESC>duplicate the current line</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F2'/></TERM>
-<DESC>toggle bookmark</DESC></ROW>
-<ROW><TERM><KEY ID='F2'/></TERM>
-<DESC>go to next bookmark</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></TERM>
-<DESC>go to previous bookmark</DESC></ROW>
-<ROW><TERM><CODEMENU>Edit<CODEMENU>Line Operations<CODEMENU>Sort Lines Lexicographically Ascending</CODEMENU></CODEMENU></CODEMENU></TERM>
-<DESC>sort lines</DESC></ROW>
+  <ROW>
+    <TERM><KEY ID='F11'/></TERM>
+    <DESC>toggle full screen mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY ID='F12'/></TERM>
+    <DESC>toggle PostIt mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Up'/></TERM>
+    <DESC>insert multi-line cursor on the previous line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Down'/></TERM>
+    <DESC>insert multi-line cursor on the next line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY ID='F3'/></TERM>
+    <DESC>find</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F'/></TERM>
+    <DESC>find in files</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F'/></TERM>
+    <DESC>find next</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Shift'/><KEY ID='F3'/></TERM>
+    <DESC>find previous</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='I'/></TERM>
+    <DESC>incremental search</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY ID='F4'/></TERM>
+    <DESC>next search result</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Shift'/><KEY ID='F4'/></TERM>
+    <DESC>previous search result</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='U'/></TERM>
+    <DESC>lowercase the selection</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='U'/></TERM>
+    <DESC>uppercase the selection</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Alt'/><KEY ID='U'/></TERM>
+    <DESC>uppercase the first letter of the words of the selection</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='G'/></TERM>
+    <DESC>go to line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='Q'/></TERM>
+    <DESC>block comment/uncomment (toggle)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/></TERM>
+    <DESC>block comment</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='K'/></TERM>
+    <DESC>block uncomment</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Up'/></TERM>
+    <DESC>move current line up</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Down'/></TERM>
+    <DESC>move current line down</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='D'/></TERM>
+    <DESC>duplicate the current line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F2'/></TERM>
+    <DESC>toggle bookmark</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY ID='F2'/></TERM>
+    <DESC>go to next bookmark</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></TERM>
+    <DESC>go to previous bookmark</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEMENU>Edit<CODEMENU>Line Operations<CODEMENU>Sort Lines Lexicographically Ascending</CODEMENU></CODEMENU></CODEMENU></TERM>
+    <DESC>sort lines</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
 <X><T>Links</T><A>../links/coding.html#notepadpp</A><L>en</L><F>HTML</F></X>
