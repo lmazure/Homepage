@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -18,7 +18,7 @@
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
     <ITEM><BLIST><TITLE>Introduction</TITLE>
-      <ITEM><ARTICLE><X status='dead' quality='2'><T>Design Patterns: Abstraction and Reuse of Object-Oriented Design</T><A>http://www.ifs.uni-linz.ac.at/~ecoop/cd/papers/0707/07070406.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Erich</FIRSTNAME><LASTNAME>Gamma</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Richard</FIRSTNAME><LASTNAME>Helm</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ralph</FIRSTNAME><LASTNAME>Johnson</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Vlissides</LASTNAME></AUTHOR><DATE><YEAR>1993</YEAR></DATE><COMMENT>This is the original paper by the gang of four. If you do not know what design patterns are, you must read this and then go to the store and buy their book. The appendix contains three patterns: <CODEROUTINE>AbstractFactory</CODEROUTINE>, <CODEROUTINE>Strategy</CODEROUTINE> and <CODEROUTINE>Wrapper</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality='2'><T>Design Patterns: Abstraction and Reuse of Object-Oriented Design</T><A>https://mafiadoc.com/queue/design-patterns-abstraction-and-reuse-of-object-oriented-design_599f27741723dd0f406eeb10.html</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Erich</FIRSTNAME><LASTNAME>Gamma</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Richard</FIRSTNAME><LASTNAME>Helm</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ralph</FIRSTNAME><LASTNAME>Johnson</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Vlissides</LASTNAME></AUTHOR><DATE><YEAR>1993</YEAR></DATE><COMMENT>This is the original paper by the gang of four. If you do not know what design patterns are, you must read this and then go to the store and buy their book. The appendix contains three patterns: <CODEROUTINE>AbstractFactory</CODEROUTINE>, <CODEROUTINE>Strategy</CODEROUTINE> and <CODEROUTINE>Wrapper</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status='dead'><T>Software Design Patterns: Common Questions and Answers</T><A>http://eprints.kfupm.edu.sa/65561/1/65561.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><MIDDLENAME>O.</MIDDLENAME><LASTNAME>Coplien</LASTNAME></AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>This is a small design pattern FAQ.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A Little About Patterns.</T><A>https://blog.cleancoder.com/uncle-bob/2014/06/30/ALittleAboutPatterns.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>A very basic introduction to Design Patterns and why they are still relevant.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -28,6 +28,7 @@
           <ITEM><ARTICLE><X><T>Abstract Factory</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/abstractFactory.html</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Abstract Factory Design Pattern</T><A>http://www.castle-cadenza.demon.co.uk/abfact.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shaun</FIRSTNAME><LASTNAME>Parry</LASTNAME></AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Creating Truly Maintainable Class Factories</T><A>http://www.drdobbs.com/creating-truly-maintainable-class-factor/184401309</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Early</FIRSTNAME><LASTNAME>Ehlinger</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>11</MONTH></DATE><COMMENT>A factory implementation using dynamic library loading.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Abstract Factory Pattern in Java</T><A>https://www.baeldung.com/java-abstract-factory-pattern</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugen</FIRSTNAME><LASTNAME>Paraschiv</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>2</DAY></DATE><COMMENT>A short description of the pattern with little explanation.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Builder: Separate the construction of a complex object from its representation so that the same construction process can create different representations.</TITLE>
           <ITEM><ARTICLE><X><T>Builder</T><A>http://pages.cpsc.ucalgary.ca/%7Ekremer/patterns/builder.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
