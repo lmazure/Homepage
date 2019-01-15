@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -111,6 +111,7 @@
       <ITEM><ARTICLE><X><T>5 things you didn't know about … Java performance monitoring, Part 1</T><ST>Java performance profiling with JConsole and VisualVM</ST><A>https://www.ibm.com/developerworks/java/library/j-5things7.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ted</FIRSTNAME><LASTNAME>Neward</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>A very basic introduction to <CODEROUTINE>JConsole</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>5 things you didn't know about … Java performance monitoring, Part 2</T><ST>Java process monitoring with the JDK's built-in profilers</ST><A>https://www.ibm.com/developerworks/java/library/j-5things8.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ted</FIRSTNAME><LASTNAME>Neward</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>8</MONTH><DAY>13</DAY></DATE><COMMENT><CODEROUTINE>jps</CODEROUTINE>, <CODEROUTINE>jstat</CODEROUTINE>, <CODEROUTINE>jstack</CODEROUTINE>, <CODEROUTINE>jmap</CODEROUTINE>, and <CODEROUTINE>jhat</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Faster problem solving in Java with heuristic search</T><ST>Learn about a Java implementation of a popular search algorithm for artificial intelligence</ST><A>https://www.ibm.com/developerworks/library/j-ai-search/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Matthew</FIRSTNAME><LASTNAME>Hatem</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ethan</FIRSTNAME><LASTNAME>Burns</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Wheeler</FIRSTNAME><LASTNAME>Ruml</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>16</DAY></DATE><COMMENT>A description of A*, a heuristic search algorithm, in Java and its optimization by reducing memory consumption, using High Performance Primitive Collections, and recycling objects to avoid garbage collection.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Processing Large Files in Java</T><A>https://stuartmarks.wordpress.com/2019/01/11/processing-large-files-in-java/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stuart</FIRSTNAME><LASTNAME>Marks</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>11</DAY></DATE><COMMENT>The author describes some optimizations he did on a program parsing a big file.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Memory management</TITLE>
       <ITEM><ARTICLE><X><T>Java theory and practice: Whose object is it, anyway?</T><ST>Garbage collection reduces the need to track object ownership -- but it doesn't eliminate it</ST><A>https://www.ibm.com/developerworks/library/j-jtp06243/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>24</DAY></DATE><COMMENT>Use immutable objects or defensive copying, otherwise you will have to clearly document which classes own the objects to avoid tricky bugs.</COMMENT></ARTICLE></ITEM>
