@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TypeScript</TITLE>
 <PATH>links/typescript.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -36,6 +36,7 @@
       <ITEM><ARTICLE><X><T>Announcing TypeScript 3.1</T><A>https://blogs.msdn.microsoft.com/typescript/2018/09/27/announcing-typescript-3-1/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE><COMMENT>In addition to the RC: possibility to indicate the TypeScript version to use with the <CODEROUTINE>typesVersions</CODEROUTINE> field in <CODEROUTINE>package.json</CODEROUTINE>, and a refactoring that transform promises into <CODEROUTINE>async</CODEROUTINE>/<CODEROUTINE>await</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 3.2 RC</T><A>https://blogs.msdn.microsoft.com/typescript/2018/11/15/announcing-typescript-3-2-rc/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>15</DAY></DATE><COMMENT>Better control of <CODEROUTINE>bind</CODEROUTINE>, <CODEROUTINE>call</CODEROUTINE>, and <CODEROUTINE>apply</CODEROUTINE> calls, typing spread and rest parameters, and <CODEROUTINE>BigInt</CODEROUTINE> support.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 3.2</T><A>https://blogs.msdn.microsoft.com/typescript/2018/11/29/announcing-typescript-3-2/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE><COMMENT>In addition of the RC: mechanism of looking up in node_modules folders to find a base config file, <CODEROUTINE>--showConfig</CODEROUTINE> to display the effective <CODEROUTINE>tsconfig.json</CODEROUTINE>…</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Announcing TypeScript 3.3 RC</T><A>https://blogs.msdn.microsoft.com/typescript/2019/01/23/announcing-typescript-3-3-rc/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>More intelligent type check of parameters for unions of method types and improved build time for incremental build of composite projects.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
