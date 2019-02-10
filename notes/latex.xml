@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LaTeX</TITLE>
 <PATH>notes/latex.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE>\alpha A</CODEROUTINE></TERM><DESC><MATH>\alpha A</MATH></DESC></ROW>
@@ -94,6 +94,9 @@
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>x\mathbin{=}x</CODEROUTINE></TERM><DESC>spacing of a binary operator <MATH>x\mathbin{=}x</MATH></DESC></ROW>
+<ROW><TERM><CODEROUTINE>x\mathrel{=}x</CODEROUTINE></TERM><DESC>spacing of a binary relation <MATH>x\mathrel{=}x</MATH></DESC></ROW>
+<ROW><TERM><CODEROUTINE>a\stackrel{top}{binrel}b\stackrel{R}{=}c</CODEROUTINE></TERM><DESC>symbol over an operator <MATH>a\stackrel{top}{binrel}b\stackrel{R}{=}c</MATH></DESC></ROW>
 <ROW><TERM><CODEROUTINE>real^{real}={non\mbox{-}real}</CODEROUTINE></TERM><DESC>dash <MATH>real^{real}={non\mbox{-}real}</MATH></DESC></ROW>
 <ROW><TERM><CODEROUTINE>\infty</CODEROUTINE></TERM><DESC>infinity <MATH>\infty</MATH></DESC></ROW>
 <ROW><TERM><CODEROUTINE>\left(-\frac{1}{2}\right)</CODEROUTINE></TERM><DESC>parentheses <MATH>\left(-\frac{1}{2}\right)</MATH></DESC></ROW>
