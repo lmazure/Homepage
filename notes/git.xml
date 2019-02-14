@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -99,8 +99,16 @@
     <DESC>replace the tip of the current branch by creating a new commit</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>--amend -m "an updated commit message"</CODEROUTINE></TERM>
+    <DESC>change the commit message</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>--amend --reset-author</CODEROUTINE></TERM>
     <DESC>declare that the authorship of the new commit belongs to the committer</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--amend  --author="John &lt;John@foo.bar&gt;"</CODEROUTINE></TERM>
+    <DESC>declare that the authorship of the new commit belongs to the specified name/email.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -215,6 +223,10 @@
   <ROW>
     <TERM><CODEROUTINE>--hard</CODEROUTINE></TERM>
     <DESC>resets the index and the working tree</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git reset --hard HEAD~2</CODEROUTINE></TERM>
+    <DESC>delete the last two commits from the local repository</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

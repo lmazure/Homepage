@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -27,6 +27,38 @@
 <BLIST><TITLE>Writer</TITLE>
   <ITEM>Open a new window on the current document<BR/>
     <CODEMENU>Fenêtre<CODEMENU>Nouvelle fenêtre</CODEMENU></CODEMENU></ITEM>
+  <ITEM>Display
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F10'/></TERM>
+        <DESC>toggle formatting display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='R'/></TERM>
+        <DESC>toggle display of horizontal ruler</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
+        <DESC>toggle full screen display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
+        <DESC>toggle field shading</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F9'/></TERM>
+        <DESC>toggle field display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY ID='F5'/></TERM>
+        <DESC>toggle navigator display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F5'/></TERM>
+        <DESC>display go to page navigator</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
   <ITEM>Formating
     <DEFINITIONTABLE>
       <ROW>
@@ -101,26 +133,6 @@
       <ROW>
         <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='0'/></TERM>
         <DESC>set style to Text Body</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F10'/></TERM>
-        <DESC>toggle formatting display</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='R'/></TERM>
-        <DESC>toggle display of horizontal ruler</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
-        <DESC>toggle full screen display</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
-        <DESC>toggle field shading</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F9'/></TERM>
-        <DESC>toggle field display</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
