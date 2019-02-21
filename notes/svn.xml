@@ -73,7 +73,7 @@
     <ITEM>Create a repository
       <CODESAMPLE>svnadmin create &lt;dir&gt;</CODESAMPLE></ITEM>
     <ITEM>Perform a checkout (&lt;myDir&gt; will be created)
-      <CODESAMPLE>svn co file:///cygdrive/m/laurent_svn_repository/Java\ sandbox/ &lt;myDir&gt;</CODESAMPLE></ITEM>
+      <CODESAMPLE>svn co file:///cygdrive/m/laurent_svn_repository/Java\ sandbox/trunk &lt;myDir&gt;</CODESAMPLE></ITEM>
     <ITEM>Display repository, branch… of the current directory (i.e. working copy)
       <CODESAMPLE>svn info</CODESAMPLE></ITEM>
     <ITEM>Display status of working copy files and directories

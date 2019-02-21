@@ -292,8 +292,8 @@ in Debug window
 <BLIST><TITLE><U><B>Maven</B></U></TITLE>
   <ITEM><BLIST><TITLE>Configure the location of the local repository</TITLE>
     <ITEM>Create the directories <CODEFILENAME>C:\foobar\maven2</CODEFILENAME> and <CODEFILENAME>C:\foobar\maven2\repository</CODEFILENAME>.</ITEM>
-	<ITEM>Create the file <CODEFILENAME>C:\foobar\maven2\settings.xml</CODEFILENAME> containing
-	<CODESAMPLE>&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"<BR/>
+    <ITEM>Create the file <CODEFILENAME>C:\foobar\maven2\settings.xml</CODEFILENAME> containing
+    <CODESAMPLE>&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"<BR/>
 <TAB/>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"<BR/>
 <TAB/>xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;<BR/>
 <TAB/><TAB/><B>&lt;localRepository&gt;F:\foobar\maven2\repository&lt;/localRepository&gt;</B><BR/>
