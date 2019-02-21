@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>links/chrome.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -149,6 +149,7 @@
     <ITEM><ARTICLE><X><T>Constructable Stylesheets: seamless reusable styles </T><A>https://developers.google.com/web/updates/2019/02/constructable-stylesheets</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Miller</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>15</DAY></DATE><COMMENT>It is now possible to construct a Style Sheet using <CODEROUTINE>replace()</CODEROUTINE> or <CODEROUTINE>replaceSync()</CODEROUTINE>, and attach it to Shadow Roots and Documents using the <CODEROUTINE>adoptedStyleSheets</CODEROUTINE> property.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Get Ready for Priority Hints</T><A>https://developers.google.com/web/updates/2019/02/priority-hints</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Yoav</FIRSTNAME><LASTNAME>Weiss</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Jeremy</FIRSTNAME><LASTNAME>Wagner</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>15</DAY></DATE><COMMENT>A detailed description of Priority Hints, a Chrome 73 feature enabling the developer to tune resource loading priorities.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Trusted Types help prevent Cross-Site Scripting</T><A>https://developers.google.com/web/updates/2019/02/trusted-types</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Krzysztof</FIRSTNAME><LASTNAME>Kotowicz</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>15</DAY></DATE><COMMENT>Chrome experiments with a mechanism to sanitize strings before injecting them in the DOM.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Trust is Good, Observation is Better—Intersection Observer v2</T><A>https://developers.google.com/web/updates/2019/02/intersectionobserver-v2</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Steiner</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>15</DAY></DATE><COMMENT>The new version of <CODEROUTINE>IntersectionObserver</CODEROUTINE> supports testing the visibility of a DOM element. This is aimed at detecting clickjacking used for generating ad clicks.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Security</TITLE>
       <ITEM><ARTICLE><X><T>Security in Depth: Local Web Pages</T><A>https://blog.chromium.org/2008/12/security-in-depth-local-web-pages.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>What should be the limitations imposed to local pages?</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Security in Depth: The Password Manager</T><A>https://blog.chromium.org/2008/12/security-in-depth-password-manager.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Steele</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>The rational for Chrome Password Manager implementation.</COMMENT></ARTICLE></ITEM>
