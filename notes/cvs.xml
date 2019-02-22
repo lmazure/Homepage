@@ -77,12 +77,12 @@ mv: newdir/CVS: cannot overwrite directory <I>(this is not a problem)</I><BR/>
 <PROMPT/>cvs commit -m "moved foo.c and bar.txt from olddir to newdir"<BR/>
 <PROMPT/>cvs update -P</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-<ITEM>status 
+<ITEM>status
 <CODESAMPLE><PROMPT/>cvs status hello.c</CODESAMPLE></ITEM>
 <ITEM><BLIST><TITLE>History</TITLE>
 <ITEM>dump the log of the file
 <CODESAMPLE><PROMPT/>cvs log hello.c</CODESAMPLE></ITEM>
-<ITEM>for each file of the file, indicate whan, who and on which revision the change has been done 
+<ITEM>for each file of the file, indicate whan, who and on which revision the change has been done
 <CODESAMPLE><PROMPT/>cvs annotate hello.c</CODESAMPLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Update</TITLE>
@@ -106,7 +106,7 @@ mv: newdir/CVS: cannot overwrite directory <I>(this is not a problem)</I><BR/>
 <ITEM>compare two text files
 <CODESAMPLE><PROMPT/>tkdiff foo bar</CODESAMPLE></ITEM>
 </BLIST></ITEM>
-<ITEM>commit 
+<ITEM>commit
 <CODESAMPLE><PROMPT/>cvs commit -m "print goodbye too" hello.c</CODESAMPLE>
 or
 <CODESAMPLE><PROMPT/>cvs ci -m "print goodbye too" hello.c</CODESAMPLE></ITEM>
@@ -129,7 +129,7 @@ or
 <CODESAMPLE><PROMPT/>cvs rtag -d MyTag MyProject</CODESAMPLE></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Help</TITLE>
-<ITEM>return the version of the client and of the server 
+<ITEM>return the version of the client and of the server
 <CODESAMPLE><PROMPT/>cvs version </CODESAMPLE></ITEM>
 <ITEM>return the list of synonyms
 <CODESAMPLE><PROMPT/>cvs --help-synonyms</CODESAMPLE></ITEM>

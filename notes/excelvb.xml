@@ -45,17 +45,17 @@ Range("A1:A1").AutoFilter Field:=12, Criteria1:="1"
 </ITEM>
 <ITEM>filter empty values
 <CODESAMPLE>
-Range("A1:A1").AutoFilter Field:=10, Criteria1:="=" 
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="="
 </CODESAMPLE>
 </ITEM>
 <ITEM>filter non-empty values
 <CODESAMPLE>
-Range("A1:A1").AutoFilter Field:=10, Criteria1:="&lt;&gt;" 
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="&lt;&gt;"
 </CODESAMPLE>
 </ITEM>
 <ITEM>filter values equal "foobar"
 <CODESAMPLE>
-Range("A1:A1").AutoFilter Field:=10, Criteria1:="=foobar" 
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="=foobar"
 </CODESAMPLE>
 </ITEM>
 <ITEM>filter values non equal to "foobar"
@@ -66,17 +66,17 @@ There is a bug with <CODEROUTINE>Criteria1:="&lt;&gt;3.2"</CODEROUTINE> which re
 </ITEM>
 <ITEM>filter values containing "foobar"
 <CODESAMPLE>
-Range("A1:A1").AutoFilter Field:=10, Criteria1:="=*foobar*" 
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="=*foobar*"
 </CODESAMPLE>
 </ITEM>
 <ITEM>filter values beginning with "foobar"
 <CODESAMPLE>
-Range("A1:A1").AutoFilter Field:=10, Criteria1:="=foobar*" 
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="=foobar*"
 </CODESAMPLE>
 </ITEM>
 <ITEM>filter values ending with "foobar"
 <CODESAMPLE>
-Range("A1:A1").AutoFilter Field:=10, Criteria1:="=*foobar" 
+Range("A1:A1").AutoFilter Field:=10, Criteria1:="=*foobar"
 </CODESAMPLE>
 </ITEM>
 <ITEM>when filtering on a column containing a boolean expression, the macro recorder generates

@@ -16,7 +16,7 @@
 </ITEM>
 <ITEM>
 <CODEROUTINE>void *ios::operator void *() const</CODEROUTINE><BR/>
-A stream derived from <CODEROUTINE>ios</CODEROUTINE> can be casted to a pointer. This pointer is null if any of the error flags <CODEROUTINE>failbit</CODEROUTINE> or <CODEROUTINE>badbit</CODEROUTINE> is set. Otherwise a non-zero pointer (not intended to be referenced - just to indicate success) is returned. 
+A stream derived from <CODEROUTINE>ios</CODEROUTINE> can be casted to a pointer. This pointer is null if any of the error flags <CODEROUTINE>failbit</CODEROUTINE> or <CODEROUTINE>badbit</CODEROUTINE> is set. Otherwise a non-zero pointer (not intended to be referenced - just to indicate success) is returned.
 </ITEM>
 <ITEM>
 <CODEROUTINE>bool ios::operator!() const</CODEROUTINE><BR/>
