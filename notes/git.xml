@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -155,8 +155,8 @@
     <DESC>all changes already added to the index are left intact</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git stash push [--include-untracked|--all]</CODEROUTINE></TERM>
-    <DESC><CODEROUTINE>--include-untracked</CODEROUTINE>: all untracked files are also stashed and then cleaned up with <CODEROUTINE>git clean</CODEROUTINE><BR/><CODEROUTINE>--all</CODEROUTINE>: the ignored files are stashed and cleaned in addition to the untracked files</DESC>
+    <TERM><CODEROUTINE>git stash push [--include-untracked|--all]</CODEROUTINE><BR/><CODEROUTINE>git stash -u</CODEROUTINE><BR/><CODEROUTINE>git stash -a</CODEROUTINE></TERM>
+    <DESC><CODEROUTINE>--include-untracked</CODEROUTINE>, <CODEROUTINE>-u</CODEROUTINE>: all untracked files are also stashed and then cleaned up with <CODEROUTINE>git clean</CODEROUTINE><BR/><CODEROUTINE>--all</CODEROUTINE>, <CODEROUTINE>-a</CODEROUTINE>: the ignored files are stashed and cleaned in addition to the untracked files</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash list</CODEROUTINE></TERM>
@@ -339,7 +339,14 @@
 </DEFINITIONTABLE>
 <BR/>
 <BLIST><TITLE>gitignore</TITLE>
-<ITEM>It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.gitignore</CODEFILENAME> file of that directory.</ITEM>
+  <ITEM>It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.gitignore</CODEFILENAME> file of that directory.</ITEM>
+</BLIST>
+<BR/>
+<BLIST><TITLE>changing the author of old commits</TITLE>
+  <ITEM><CODEROUTINE>git rebase -i &lt;commit&gt;</CODEROUTINE> where &lt;commit&gt; is the commit before the first one to be edited. Use <CODEROUTINE>git rebase -i --root</CODEROUTINE> if the first commit must be edited.</ITEM>
+  <ITEM>In the list of commits, change <CODEROUTINE>pick</CODEROUTINE> to <CODEROUTINE>edit</CODEROUTINE> for the commits to be edited.</ITEM>
+  <ITEM>When the interactive rebase pauses, <CODEROUTINE>git commit --amend --author="Author Name &lt;email@address.com&gt;"</CODEROUTINE>, then <CODEROUTINE>git rebase --continue</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>git push -f</CODEROUTINE>.</ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#git</A><L>en</L><F>HTML</F></X>
