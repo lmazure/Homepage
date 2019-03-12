@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -18,7 +18,7 @@
         <ITEM><X><T>personal notes</T><A>../notes/clcase.htm</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><CLIST><TITLE><ANCHOR>cvs</ANCHOR><X><T>CVS</T><A>http://cvs.nongnu.org</A><L>en</L><F>HTML</F></X></TITLE>
-        <ITEM><X><T>tkcvs</T><A>http://www.twobarleycorns.net/tkcvs.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>tkcvs</T><A>https://tkcvs.sourceforge.io/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/cvs.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><X><T>RCS</T><A>http://www.cs.purdue.edu/homes/trinkle/RCS/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -137,7 +137,6 @@
       <ITEM><X><T>Source-Navigator</T><A>http://sourcenav.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Anjuta</T><A>http://anjuta.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE><ANCHOR>visualstudio</ANCHOR>Visual Studio</TITLE>
-        <ITEM><X><T>VS2012 ALM VM</T><A>https://blogs.msdn.com/b/briankel/archive/2011/09/16/visual-studio-11-application-lifecycle-management-virtual-machine-and-hands-on-labs-demo-scripts.aspx</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>VS2012 shortcuts</T><A>https://visualstudioshortcuts.com/2012/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>VS2013 shortcuts</T><A>https://visualstudioshortcuts.com/2013/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>VS2015 shortcuts</T><A>https://visualstudioshortcuts.com/2015/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -172,20 +171,18 @@
       </CLIST></ITEM>
       <ITEM><X><T>dmalloc</T><A>http://dmalloc.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>ccmalloc</T><A>http://cs.ecs.baylor.edu/~donahoo/tools/ccmalloc/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X status='dead'><T>Electric Fence</T><A>http://perens.com/FreeSoftware/ElectricFence/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Electric Fence</T><A>https://github.com/kallisti5/ElectricFence</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Boehm Collector</T><A>http://www.hboehm.info/gc/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>LeakTracer</T><A>http://www.andreasen.org/LeakTracer/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>MemWatch</T><A>http://sourceforge.net/projects/memwatch/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Memprof</T><A>http://www.secretlabs.de/projects/memprof/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>mpatrol</T><A>http://mpatrol.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Visual C++ BoundsChecker</T><A>http://www.borland.com/products/devpartner/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>AddressSanitizer (aka ASan)</T><A>http://code.google.com/p/address-sanitizer/wiki/AddressSanitizer</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Static analyzers</TITLE>
       <ITEM><BLIST><TITLE>C</TITLE>
         <ITEM><X><T>splint</T><A>http://www.splint.org/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>smatch</T><A>http://smatch.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>QA·C</T><A>http://www.programmingresearch.com/qac_main.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>slam</T><A>http://research.microsoft.com/slam/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>SonarQube</T><A>https://www.sonarqube.org</A><L>en</L><F>HTML</F></X>: duplicated code, coding standards, unit tests, code complexity, potential bugs, code coverage…</ITEM>
       </BLIST></ITEM>
@@ -289,7 +286,7 @@
     </BLIST></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
-    <ITEM><ARTICLE><X><T>Fecophiles</T><A>https://8thlight.com/blog/uncle-bob/2012/01/20/Fecophiles.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>An example of crappy code.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Fecophiles</T><A>https://blog.cleancoder.com/uncle-bob/2012/01/20/Fecophiles.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>An example of crappy code.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Reducing Incidental Complexity in Our Code and in Our Teaching</T><A>http://blog.8thlight.com/ryan-verner/2013/10/09/reducing-incidental-complexity-in-our-code-and-in-our-teaching.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ryan</FIRSTNAME><LASTNAME>Verner</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>Some thoughts about the fact that the code we write should be simpler.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>ComposedRegex</T><A>http://martinfowler.com/bliki/ComposedRegex.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT>Spliting a regular expression into pieces to make it readable.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>How Long Is Too Long?</T><A>http://blog.8thlight.com/dariusz-pasciak/2014/09/11/how-long-is-too-long-source-code.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dariusz</FIRSTNAME><LASTNAME>Pasciak</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>Source code files should have a maximum allowed number of lines.</COMMENT></ARTICLE></ITEM>
@@ -307,7 +304,7 @@
       <ITEM><ARTICLE><X><T>Hackable Projects - Pillar 3: Infrastructure</T><A>https://testing.googleblog.com/2016/11/hackable-projects-pillar-3.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>11</MONTH><DAY>10</DAY></DATE><COMMENT>About the build and test environment: fast build and tests, presubmit queues, easy reverts, performance tests.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Configuration management</TITLE>
-      <ITEM><ARTICLE><X><T>The New Breed of Version Control Systems</T><A>http://www.onlamp.com/pub/a/onlamp/2004/01/29/scm_overview.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shlomi</FIRSTNAME><LASTNAME>Fish</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE><COMMENT>A short description of the current open source version control systems.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status='dead'><T>The New Breed of Version Control Systems</T><A>http://www.onlamp.com/pub/a/onlamp/2004/01/29/scm_overview.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shlomi</FIRSTNAME><LASTNAME>Fish</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE><COMMENT>A short description of the current open source version control systems.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Comments on Open Source Software / Free Software (OSS/FS) Software Configuration Management (SCM) / Revision-Control Systems</T><A>http://www.dwheeler.com/essays/scm.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>Wheeler</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>5</MONTH><DAY>18</DAY></DATE><COMMENT>A good overview of the current source management tools.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Microsoft’s Branching and Merging Guidelines</T><A>http://www.infoq.com/news/2012/04/Branching-Guide</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Allen</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>Microsoft released a guide on branch management.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Code Health: Providing Context with Commit Messages and Bug Reports</T><A>https://testing.googleblog.com/2017/09/code-health-providing-context-with.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Chris</FIRSTNAME><LASTNAME>Lewis</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>The title says all: writing informative commit comments and bug reports will help the future developers understand the code changes.</COMMENT></ARTICLE></ITEM>
@@ -315,7 +312,7 @@
         <ITEM><ARTICLE><X><T>Open Source Development with CVS</T><A>http://cvsbook.red-bean.com/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Karl</FIRSTNAME><LASTNAME>Fogel</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Moshe</FIRSTNAME><LASTNAME>Bar</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>7</MONTH></DATE><COMMENT>A free book teaching CVS.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Subversion</TITLE>
-        <ITEM><ARTICLE><X><T>Single-User Subversion</T><A>http://www.onlamp.com/pub/a/onlamp/2002/10/31/subversion.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rafael</FIRSTNAME><LASTNAME>Garcia-Suarez</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE><COMMENT>An introduction to Subversion.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X status='dead'><T>Single-User Subversion</T><A>http://www.onlamp.com/pub/a/onlamp/2002/10/31/subversion.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rafael</FIRSTNAME><LASTNAME>Garcia-Suarez</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE><COMMENT>An introduction to Subversion.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Using and hacking Subclipse - the Subversion plugin for Eclipse</T><A>http://www.oracle.com/technetwork/articles/entarch/subclipse-092758.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugene</FIRSTNAME><LASTNAME>Kuleshov</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Installation de Subversion sur Windows</T><A>http://ericreboisson.developpez.com/tutoriels/install-subversion/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Reboisson</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE><COMMENT>Installing Subversion, the Windows service, and TortoiseSVN.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
@@ -332,7 +329,7 @@
         <ITEM><ARTICLE><X><T>Google I/O 2009 - Mercurial on BigTable</T><A>https://www.youtube.com/watch?v=ri796Hx8las</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>47</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jacob</FIRSTNAME><LASTNAME>Lee</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>A description on the Mercurial implementation done on top of Google's Bigtable.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Team Foundation Server</TITLE>
-        <ITEM><ARTICLE><X quality='1'><T>diff/merge configuration in Team Foundation - common Command and Argument values</T><A>http://blogs.msdn.com/b/jmanning/archive/2006/02/20/diff-merge-configuration-in-team-foundation-common-command-and-argument-values.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Manning</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>How to configure diff and merge tools in Visual Studio for Team Foundation Server.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X quality='1' status='dead'><T>diff/merge configuration in Team Foundation - common Command and Argument values</T><A>http://blogs.msdn.com/b/jmanning/archive/2006/02/20/diff-merge-configuration-in-team-foundation-common-command-and-argument-values.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Manning</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>How to configure diff and merge tools in Visual Studio for Team Foundation Server.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Cloaking in TFS</T><A>http://blogs.msdn.com/b/fai/archive/2008/10/02/cloaking-in-tfs.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Faister</GIVENNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Introducing Microsoft Visual Studio Team Foundation Server 2010, Part I</T><A>http://www.codeguru.com/cpp/article.php/c18481</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jani</FIRSTNAME><LASTNAME>Jarvinen</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT>An overview of TFS.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Benefiting from Team Foundation Server Work Items</T><A>http://www.codeguru.com/csharp/.net/article.php/c18505</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jani</FIRSTNAME><LASTNAME>Jarvinen</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>What are Work Items and how to use them.</COMMENT></ARTICLE></ITEM>
@@ -435,6 +432,7 @@
             <ITEM><ARTICLE><X quality='-1'><T>Eclipse 2018-12 is coming on December 19, 2018 (Trailer)</T><A>https://www.youtube.com/watch?v=79EoseM0GUI</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>1</MINUTE><SECOND>48</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Holger</FIRSTNAME><LASTNAME>Voormann</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>What is this interest of such a trailer?</COMMENT></ARTICLE></ITEM>
             <ITEM><ARTICLE><X><T>+++ Coming on December 19, 2018 +++ Eclipse 2018-12 IDE Improvements: General and Git</T><A>https://www.youtube.com/watch?v=TM9DBinKQdI</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>4</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Holger</FIRSTNAME><LASTNAME>Voormann</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>11</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
             <ITEM><ARTICLE><X><T>+++ Coming on December 19, 2018 +++ Eclipse 2018-12 IDE Improvements: Java and Gradle</T><A>https://www.youtube.com/watch?v=aM3UUycl1rs</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>6</MINUTE><SECOND>40</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Holger</FIRSTNAME><LASTNAME>Voormann</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+            <ITEM><ARTICLE><X><T>Eclipse 2019-03 is coming on March 20, 2019 (Trailer)</T><A>https://www.youtube.com/watch?v=McUQcvAPR2U</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>1</MINUTE><SECOND>58</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Holger</FIRSTNAME><LASTNAME>Voormann</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>10</DAY></DATE><COMMENT>A few minor improvements.</COMMENT></ARTICLE></ITEM>
           </BLIST></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
