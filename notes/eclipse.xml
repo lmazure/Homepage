@@ -173,12 +173,12 @@ In Editor window
 <DEFINITIONTABLE>
   <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/></TERM>
   <DESC>run last launched</DESC></ROW>
-  <ROW><TERM><KEY ID='F11'/>
-  </TERM><DESC>debug last launched</DESC></ROW>
+  <ROW><TERM><KEY ID='F11'/></TERM>
+  <DESC>debug last launched</DESC></ROW>
   <ROW><TERM><KEY ID='F5'/></TERM>
   <DESC>step into</DESC></ROW>
-  <ROW><TERM><KEY ID='F6'/>
-  </TERM><DESC>step over</DESC></ROW>
+  <ROW><TERM><KEY ID='F6'/></TERM>
+  <DESC>step over</DESC></ROW>
   <ROW><TERM><KEY ID='F7'/></TERM>
   <DESC>return</DESC></ROW>
   <ROW><TERM><KEY ID='F8'/></TERM>
@@ -240,14 +240,10 @@ in Debug window
 <BLIST><TITLE><U><B>Javadoc</B></U></TITLE>
   <ITEM>in Editor window
     <DEFINITIONTABLE>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></TERM>
-        <DESC>open external Javadoc</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
-        <DESC>insert Javadoc comment</DESC>
-      </ROW>
+      <ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></TERM>
+      <DESC>open external Javadoc</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
+      <DESC>insert Javadoc comment</DESC></ROW>
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM><BLIST><TITLE>Declare the Javadoc command</TITLE>
