@@ -138,7 +138,7 @@
         <ITEM>paths that have differences between the working tree and the index file, and</ITEM>
         <ITEM>paths in the working tree that are not tracked by Git</ITEM>
       </BLIST>
-	</DESC>
+    </DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -263,7 +263,7 @@
   <ROW>
     <TERM><CODEROUTINE>git pull</CODEROUTINE></TERM>
     <DESC>
-	  <BLIST><TITLE>incorporate changes of the remote repository into the current branch, it is the same as</TITLE>
+      <BLIST><TITLE>incorporate changes of the remote repository into the current branch, it is the same as</TITLE>
         <ITEM><CODEROUTINE>git fetch</CODEROUTINE> scoped to the local branch that HEAD is pointed at</ITEM>
         <ITEM>followed by <CODEROUTINE>git merge FETCH_HEAD</CODEROUTINE>.</ITEM>
       </BLIST>

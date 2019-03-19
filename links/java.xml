@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -26,6 +26,7 @@
       <ITEM><X><T>8</T><A>https://docs.oracle.com/javase/8/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>9</T><A>https://docs.oracle.com/javase/9/index.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>10</T><A>https://docs.oracle.com/javase/10/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>11</T><A>https://docs.oracle.com/en/java/javase/11/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><ANCHOR>javadoc</ANCHOR><X><T>javadoc</T><A>https://docs.oracle.com/javase/10/javadoc/toc.htm</A><L>en</L><F>HTML</F></X></TITLE>
       <ITEM><X><T>personal notes</T><A>../notes/javadoc.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -156,6 +157,7 @@
       <ITEM><ARTICLE><X><T>Java programming dynamics, Part 5: Transforming classes on-the-fly</T><ST>Learn how to modify classes as they're being loaded by Javassist</ST><A>https://www.ibm.com/developerworks/java/library/j-dyn0203.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dennis</FIRSTNAME><MIDDLENAME>M.</MIDDLENAME><LASTNAME>Sosnoski</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>2</MONTH><DAY>3</DAY></DATE><COMMENT>A combination of byte code manipulation and class loading interception, in order to patch classes as they are loaded.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status='zombie'><T>Using the ASM Toolkit for Bytecode Manipulation</T><A>http://www.onjava.com/pub/a/onjava/2004/10/06/asm1.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugene</FIRSTNAME><LASTNAME>Kuleshov</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE><COMMENT>A presentation of ASM, a toolkit to parse, modify and generate bytecodes.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status='zombie'><T>Create and Read J2SE 5.0 Annotations with the ASM Bytecode Toolkit</T><A>http://www.onjava.com/pub/a/onjava/2004/10/20/asm.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugene</FIRSTNAME><LASTNAME>Kuleshov</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>20</DAY></DATE><COMMENT>This toolkit also handles annotations, enabling management of Java 1.5 annotations with earlier JREs.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>CGLib: The Missing Manual</T><A>https://dzone.com/articles/cglib-missing-manual</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rafael</FIRSTNAME><LASTNAME>Winterhalter</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>7</DAY></DATE><COMMENT>A fast-paced overview of cglib.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>JDK 11 and Proxies in a World Past sun.misc.Unsafe</T><ST>Java 11 is making changes to the Unsafe class. See what's being deprecated and how that's going to affect proxies for future projects.</ST><A>https://dzone.com/articles/jdk-11-and-proxies-in-a-world-past-sunmiscunsafe</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rafael</FIRSTNAME><LASTNAME>Winterhalter</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>4</MONTH><DAY>22</DAY></DATE><COMMENT>cglib will not be usable anymore, the author gives some short explanations on using Byte Buddy to replace it.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Obfuscation</TITLE>
         <ITEM><ARTICLE><X><T>The New Obfuscation</T><A>http://today.java.net/pub/a/today/2004/10/22/obfuscation.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Tyma</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE><COMMENT>The interest of obfuscation and some obfuscating methods.</COMMENT></ARTICLE></ITEM>
