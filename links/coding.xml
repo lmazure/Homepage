@@ -59,7 +59,7 @@
       </CLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Continuous integration</TITLE>
-      <ITEM><X><T>Hudson</T><A>http://wiki.hudson-ci.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Hudson</T><A>http://hudson-ci.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>CruiseControl</T><A>http://cruisecontrol.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Jenkins</T><A>https://jenkins.io</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
@@ -139,9 +139,7 @@
         <ITEM><X><T>VS2013 shortcuts</T><A>https://visualstudioshortcuts.com/2013/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>VS2015 shortcuts</T><A>https://visualstudioshortcuts.com/2015/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>VS2017 shortcuts</T><A>https://visualstudioshortcuts.com/2017/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><CLIST><TITLE><X quality='1'><T>ReSharper</T><A>http://www.jetbrains.com/resharper</A><L>en</L><F>HTML</F></X></TITLE>
-          <ITEM><X><T>Help</T><A>https://www.jetbrains.com/resharper/webhelp80</A><L>fr</L><F>HTML</F></X></ITEM>
-        </CLIST></ITEM>
+        <ITEM><X quality='1'><T>ReSharper</T><A>http://www.jetbrains.com/resharper</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/visualstudio.html</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE><ANCHOR>vscode</ANCHOR><X><T>VS Code</T><A>https://code.visualstudio.com/</A><L>en</L><F>HTML</F></X></TITLE>
@@ -194,9 +192,6 @@
         <ITEM><X><T>Flawfinder</T><A>http://www.dwheeler.com/flawfinder/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Klocwork</T><A>http://www.klocwork.com</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>C++</TITLE>
-        <ITEM><X><T>QA·C++</T><A>http://www.programmingresearch.com/qacpp_main.html</A><L>en</L><F>HTML</F></X></ITEM>
-      </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Java</TITLE>
         <ITEM><X><T>PMD</T><A>https://pmd.github.io/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>CheckStyle</T><A>http://checkstyle.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
@@ -214,8 +209,8 @@
         <ITEM><X><T>JHLint</T><A>http://jshint.com</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Multi-language</TITLE>
-        <ITEM><X><T>Coverity</T><A>http://www.coverity.com/products/coverity-save.html</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>CAST</T><A>http://www.castsoftware.com</A><L>en</L><F>HTML</F></X>: <X><T>doc</T><A>http://doc.castsoftware.com/help/index.jsp</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Coverity</T><A>https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>CAST</T><A>http://www.castsoftware.com</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>List</TITLE>
         <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/List_of_tools_for_static_code_analysis</A><L>en</L><F>HTML</F></X></ITEM>
@@ -327,7 +322,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Team Foundation Server</TITLE>
         <ITEM><ARTICLE><X quality='1' status='dead'><T>diff/merge configuration in Team Foundation - common Command and Argument values</T><A>http://blogs.msdn.com/b/jmanning/archive/2006/02/20/diff-merge-configuration-in-team-foundation-common-command-and-argument-values.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Manning</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>How to configure diff and merge tools in Visual Studio for Team Foundation Server.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Cloaking in TFS</T><A>http://blogs.msdn.com/b/fai/archive/2008/10/02/cloaking-in-tfs.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Faister</GIVENNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X status='dead'><T>Cloaking in TFS</T><A>http://blogs.msdn.com/b/fai/archive/2008/10/02/cloaking-in-tfs.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Faister</GIVENNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Introducing Microsoft Visual Studio Team Foundation Server 2010, Part I</T><A>http://www.codeguru.com/cpp/article.php/c18481</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jani</FIRSTNAME><LASTNAME>Jarvinen</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT>An overview of TFS.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Benefiting from Team Foundation Server Work Items</T><A>http://www.codeguru.com/csharp/.net/article.php/c18505</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jani</FIRSTNAME><LASTNAME>Jarvinen</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>What are Work Items and how to use them.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Unit and Load Testing With Team Foundation Server 2010</T><A>http://www.codeguru.com/csharp/.net/article.php/c18555</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jani</FIRSTNAME><LASTNAME>Jarvinen</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>Running unit tests, Web tests, and load tests in TFS.</COMMENT></ARTICLE></ITEM>
@@ -341,12 +336,12 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Build</TITLE>
-      <ITEM><ARTICLE><X><T>Building the PostgreSQL BuildFarm</T><A>http://www.onlamp.com/pub/a/onlamp/2005/02/24/pg_buildfarm.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Dunstan</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE><COMMENT>A description of the Internet-distributed PostgreSQL build farm. The article probably dives too much in some details, but it nevertheless gives a good idea of the whole mechanism.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status='dead'><T>Building the PostgreSQL BuildFarm</T><A>http://www.onlamp.com/pub/a/onlamp/2005/02/24/pg_buildfarm.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Dunstan</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE><COMMENT>A description of the Internet-distributed PostgreSQL build farm. The article probably dives too much in some details, but it nevertheless gives a good idea of the whole mechanism.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality='-1'><T>A (Long Overdue) BuildMaster Introduction</T><A>http://thedailywtf.com/Articles/A-%28Long-Overdue%29-BuildMaster-Introduction.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Papadimoulis</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE><COMMENT>A presentation of BuildMaster, the author describes the Software Delivery Process model, but there is no real description of the software features.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Mask of the Red Build</T><A>http://blog.typemock.com/2013/12/26/mask-of-the-red-build</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gil</FIRSTNAME><LASTNAME>Zilberfeld</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>26</DAY></DATE><COMMENT>The reasons why builds must always be green.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Gulp, Grunt, Whatever</T><A>https://ponyfoo.com/articles/gulp-grunt-whatever</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolás</FIRSTNAME><LASTNAME>Bevacqua</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>An introduction to Gulp and a comparison with Grunt.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Ant</TITLE>
-        <ITEM><ARTICLE><X quality='-1'><T>Improve Your Build Process with Ant</T><A>http://www.onlamp.com/pub/a/php/2005/12/20/php_ant.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Kimsal</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE><COMMENT>An introduction to Ant, but I think that this article is not very clear.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X quality='-1' status='dead'><T>Improve Your Build Process with Ant</T><A>http://www.onlamp.com/pub/a/php/2005/12/20/php_ant.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Kimsal</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE><COMMENT>An introduction to Ant, but I think that this article is not very clear.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>gulp</TITLE>
         <ITEM><ARTICLE><X><T>Gulp js Tutorial For Beginners</T><A>https://appdividend.com/2018/03/09/gulp-js-tutorial-beginners/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Krunal</FIRSTNAME><LASTNAME>Lathiya</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE><COMMENT>An introduction to gulp with simple examples: less, sass, minification and watching file updates.</COMMENT></ARTICLE></ITEM>
@@ -373,8 +368,8 @@
     <ITEM><BLIST><TITLE>IDEs</TITLE>
       <ITEM><BLIST><TITLE>Eclipse</TITLE>
         <ITEM><ARTICLE><X><T>Conquer medieval kingdoms with CodeRuler</T><ST>Stretch your Java programming skills with this new animated graphical simulator</ST><A>http://www.cse.lehigh.edu/~munoz/CSE497/assignments/files/coderuler.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sing</FIRSTNAME><LASTNAME>Li</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>Code your own warlord…</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X status='zombie'><T>Eclipse Plugins Exposed, Part 1: A First Glimpse</T><A>http://www.onjava.com/pub/a/onjava/2005/02/09/eclipse.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Emmanuel</FIRSTNAME><LASTNAME>Proulx</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE><COMMENT>This description is not clear at all, but maybe the author just wants to give an idea about the plugin creation workflow…</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Implementing Web user interfaces for Eclipse components</T><ST>Leveraging RIA technologies in Eclipse-based components</ST><A>https://www.ibm.com/developerworks/opensource/library/os-eclipse-webui/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Ma</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>How to instantiate an SWT browser widget and communicate between Eclipse and this widget:<BR/>- a quick and dirty solution uses Javascript from Eclipse to the Browser, and the Browser status for the other direction<BR/>- a cleaner one is using Jetty and HTTP requests</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X status='dead'><T>Eclipse Plugins Exposed, Part 1: A First Glimpse</T><A>http://www.onjava.com/pub/a/onjava/2005/02/09/eclipse.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Emmanuel</FIRSTNAME><LASTNAME>Proulx</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE><COMMENT>This description is not clear at all, but maybe the author just wants to give an idea about the plugin creation workflow…</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X status='dead'><T>Implementing Web user interfaces for Eclipse components</T><ST>Leveraging RIA technologies in Eclipse-based components</ST><A>https://www.ibm.com/developerworks/opensource/library/os-eclipse-webui/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Ma</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>How to instantiate an SWT browser widget and communicate between Eclipse and this widget:<BR/>- a quick and dirty solution uses Javascript from Eclipse to the Browser, and the Browser status for the other direction<BR/>- a cleaner one is using Jetty and HTTP requests</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Scripting Eclipse – just rapid prototyping?</T><A>http://www.eclipse.org/community/eclipse_newsletter/2017/october/article3.php</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christian</FIRSTNAME><LASTNAME>Pontesegger</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH></DATE><COMMENT>A description of the Eclipse Advanced Scripting Environment (EASE).</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE>Introduction</TITLE>
           <ITEM><ARTICLE><X><T>Getting started with the Eclipse Platform</T><ST>Using Eclipse plug-ins to edit, compile, and debug your app</ST><A>https://www.ibm.com/developerworks/opensource/library/os-ecov/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Gallardo</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>11</MONTH><DAY>11</DAY></DATE><COMMENT>An overview of Eclipse.</COMMENT></ARTICLE></ITEM>
