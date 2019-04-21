@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Install and update</B></U></TITLE>
   <ITEM>Set up the Proxy:<BR/>
@@ -101,6 +101,8 @@
       <DESC>enable/disable QuickDiff</DESC></ROW>
       <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='O'/></TERM>
       <DESC>toggle mark occurrences</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='A'/></TERM>
+      <DESC>toggle Block Selection Mode</DESC></ROW>
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM>configure the folding with <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Editor<CODEMENU>Folding</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>.</ITEM>
