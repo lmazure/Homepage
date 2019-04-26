@@ -349,7 +349,7 @@ WHEN <I>condition2</I> THEN <I>result2</I><BR/>
 [ELSE <I>resultN</I>]<BR/>
 END<BR/>
 FROM <I>tableName</I></CODESAMPLE>
-<CODEROUTINE>ELSE</CODEROUTINE> is optionnal
+<CODEROUTINE>ELSE</CODEROUTINE> is optional
 </ITEM>
 <ITEM>example
 <CODESAMPLE>SELECT storeName, CASE storeName<BR/>

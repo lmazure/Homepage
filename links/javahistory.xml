@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java history</TITLE>
 <PATH>links/javahistory.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -48,6 +48,7 @@
         <ITEM><ARTICLE><X><T>Tired of Null Pointer Exceptions? Consider Using Java SE 8's Optional!</T><A>http://www.oracle.com/technetwork/articles/java/java8-optional-2175753.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Raoul-Gabriel</FIRSTNAME><LASTNAME>Urla</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH></DATE><COMMENT>A good explanation on how to use <CODEROUTINE>Optional</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Java 8’s new Optional type is worthless</T><A>https://medium.com/@bgourlie/java-8-s-new-optional-type-is-worthless-448a00fa672d</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>W.</FIRSTNAME><MIDDLENAME>Brian</MIDDLENAME><LASTNAME>Gourlie</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Optional Anti-Patterns</T><ST>Optionals have proven so useful that some devs have taken them out of their native habitat. Here are anti-patterns and code smells to avoid.</ST><A>https://dzone.com/articles/optional-anti-patterns</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Przemyslaw</FIRSTNAME><LASTNAME>Magda</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>13</DAY></DATE><COMMENT>Some examples of bad code are contrived, I wonder if someone already wrote such code.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>A look at the Optional datatype in Java and some anti-patterns when using it</T><A>https://medium.freecodecamp.org/optional-in-java-and-anti-patterns-using-it-7d87038362ba</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mervyn</FIRSTNAME><LASTNAME>McCreight</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mehmet</FIRSTNAME><GIVENNAME>Emin</GIVENNAME><LASTNAME>Tok</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT>Some more realistic examples of improperly using <CODEROUTINE>Optional</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Streams</TITLE>
         <ITEM><ARTICLE><X><T>API Stream – Une nouvelle façon de gérer les Collections en Java 8</T><A>http://blog.ippon.fr/2014/03/17/api-stream-une-nouvelle-facon-de-gerer-les-collections-en-java-8/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Luc</FIRSTNAME><LASTNAME>Clément</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>An overview of <CODEROUTINE>Stream</CODEROUTINE>s.</COMMENT></ARTICLE></ITEM>
