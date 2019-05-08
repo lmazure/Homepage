@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -27,7 +27,39 @@
 <BLIST><TITLE>Writer</TITLE>
   <ITEM>Open a new window on the current document<BR/>
     <CODEMENU>Fenêtre<CODEMENU>Nouvelle fenêtre</CODEMENU></CODEMENU></ITEM>
-  <ITEM>Shortcuts
+  <ITEM>Display
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F10'/></TERM>
+        <DESC>toggle formatting display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='R'/></TERM>
+        <DESC>toggle display of horizontal ruler</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
+        <DESC>toggle full screen display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
+        <DESC>toggle field shading</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F9'/></TERM>
+        <DESC>toggle field display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY ID='F5'/></TERM>
+        <DESC>toggle navigator display</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F5'/></TERM>
+        <DESC>display go to page navigator</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Formating
     <DEFINITIONTABLE>
       <ROW>
         <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
@@ -102,29 +134,17 @@
         <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='0'/></TERM>
         <DESC>set style to Text Body</DESC>
       </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F10'/></TERM>
-        <DESC>toggle formatting display</DESC>
-      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Change tracking
+    <DEFINITIONTABLE>
       <ROW>
         <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='C'/></TERM>
         <DESC>add a comment</DESC>
       </ROW>
       <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='R'/></TERM>
-        <DESC>toggle display of horizontal ruler</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
-        <DESC>toggle full screen display</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F8'/></TERM>
-        <DESC>toggle field shading</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F9'/></TERM>
-        <DESC>toggle field display</DESC>
+        <TERM><CODEMENU>Edition<CODEMENU>Suivi des modifications<CODEMENU>Enregistrer</CODEMENU></CODEMENU></CODEMENU><BR/><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='E'/></TERM>
+        <DESC>enable/disable change tracking</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
@@ -175,18 +195,15 @@
 </BLIST><BR/>
 <BLIST><TITLE>Macros</TITLE>
   <ITEM>To display the menu to record macros<BR/>
-    <CODEMENU>Outils<CODEMENU>Option...</CODEMENU></CODEMENU><BR/>
+    <CODEMENU>Outils<CODEMENU>Option…</CODEMENU></CODEMENU><BR/>
     In the Options dialog: <CODEMENU>LibreOffice<CODEMENU>Avancé</CODEMENU></CODEMENU>.<BR/>
     Select <CODEMENU>Activer l’enregistreur de macro</CODEMENU>.
   </ITEM>
   <ITEM><BLIST><TITLE>Organisation of macros</TITLE>
-    <ITEM><BLIST><TITLE>library container:<BR/>
-	  each document is a library container<BR/>
-	  the application itself acts as two library containers, <CODEROUTINE>LibreOffice Macros</CODEROUTINE> for macros distributed with LibreOffice and <CODEROUTINE>My Macros</CODEROUTINE> for personal macros.</TITLE>
+    <ITEM><BLIST><TITLE>library container:<BR/>each document is a library container<BR/>the application itself acts as two library containers, <CODEROUTINE>LibreOffice Macros</CODEROUTINE> for macros distributed with LibreOffice and <CODEROUTINE>My Macros</CODEROUTINE> for personal macros.</TITLE>
       <ITEM><BLIST><TITLE>library</TITLE>
         <ITEM><BLIST><TITLE>module</TITLE>
-          <ITEM><BLIST><TITLE>macro</TITLE>
-          </BLIST></ITEM>
+          <ITEM>macro</ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>

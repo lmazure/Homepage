@@ -167,6 +167,16 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE><X><T>wc</T><A>javascript:do_reference("man/linux/1/wc")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print counts for each file, and a total line if more than one file is specified<BR/>if there is no file, or the file name is -, read from the standard input<BR/>by default, print newline, word, and byte counts<BR/>the order is: newline, word, character, byte, maximum line length</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-c</CODEROUTINE><BR/><CODEROUTINE>--bytes</CODEROUTINE></TERM><DESC>print the byte counts</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-m</CODEROUTINE><BR/><CODEROUTINE>--chars</CODEROUTINE></TERM><DESC>print the character counts</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-l</CODEROUTINE><BR/><CODEROUTINE>--lines</CODEROUTINE></TERM><DESC>print the newline counts</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-L</CODEROUTINE><BR/><CODEROUTINE>--max-line-length</CODEROUTINE></TERM><DESC>print the maximum line length</DESC></ROW>
+<ROW><TERM><CODEROUTINE>-w</CODEROUTINE><BR/><CODEROUTINE>--words</CODEROUTINE></TERM><DESC>print the word counts</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>diff</T><A>javascript:do_reference("man/linux/1/diff")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE></DESC></ROW>
 <ROW><TERM><CODEROUTINE>diff -r</CODEROUTINE><BR/><CODEROUTINE>diff --recursive</CODEROUTINE></TERM><DESC>perform a recursive diff</DESC></ROW>
 <ROW><TERM><CODEROUTINE>diff -s</CODEROUTINE><BR/><CODEROUTINE>diff --report-identical-files</CODEROUTINE></TERM><DESC>indicate names of files which are identical</DESC></ROW>
@@ -178,7 +188,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <DEFINITIONTABLE>
 <ROW><TERM><CODEROUTINE><X><T>sdiff</T><A>javascript:do_reference("man/linux/1/sdiff")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and merge them interactively</DESC></ROW>
 <ROW><TERM><CODEROUTINE>sdiff -s</CODEROUTINE></TERM><DESC>ignore common lines</DESC></ROW>
-<ROW><TERM><CODEROUTINE>sdiff -w &lt;n&gt;<BR/>sdiff --width=&lt;n&gt;</CODEROUTINE></TERM><DESC>output at most <CODEROUTINE>n</CODEROUTINE> (default 130) columns per line</DESC></ROW>
+<ROW><TERM><CODEROUTINE>sdiff -w &lt;n&gt;</CODEROUTINE><BR/><CODEROUTINE>sdiff --width=&lt;n&gt;</CODEROUTINE></TERM><DESC>output at most <CODEROUTINE>n</CODEROUTINE> (default 130) columns per line</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>

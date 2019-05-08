@@ -3,7 +3,7 @@
     { "title" : "Links / articles", "children" : [
       { "title" : "Basics", "page" : "links/search.html", "languages" : ["en"], "formats" : ["HTML"] },
       { "title" : "Companies", "page" : "links/companies.html", "languages" : ["en"], "formats" : ["HTML"] },
-      { "title" : "Homepages", "page" : "links/homepages.html", "languages" : ["en"], "formats" : ["HTML"] },
+      { "title" : "Persons", "page" : "links/persons.html", "languages" : ["en"], "formats" : ["HTML"] },
       { "title" : "Computing", "page" : "links/info.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
         { "title" : "Site building", "page" : "links/build.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
           { "title" : "Browsers", "page" : "links/browsers.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
@@ -16,7 +16,8 @@
           { "title" : "Java", "page" : "links/java.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
             { "title" : "Basics", "page" : "links/javabasics.html", "languages" : ["en"], "formats" : ["HTML"] },
             { "title" : "User Interface", "page" : "links/javaui.html", "languages" : ["en"], "formats" : ["HTML"] },
-            { "title" : "Multi-threading", "page" : "links/javamt.html", "languages" : ["en"], "formats" : ["HTML"] }
+            { "title" : "Multi-threading", "page" : "links/javamt.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "History", "page" : "links/javahistory.html", "languages" : ["en"], "formats" : ["HTML"] }
           ] },
           { "title" : "JavaScript", "page" : "links/javascrp.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
             { "title" : "Libraries", "page" : "links/jslib.html", "languages" : ["en"], "formats" : ["HTML"] }
@@ -104,6 +105,7 @@
           ] },
           { "title" : "Physics", "page" : "links/physics.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Chemistry", "page" : "links/chemistry.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Geology", "page" : "links/geology.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Geography", "page" : "links/geography.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Space", "page" : "links/space.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Living beings", "page" : "links/livingbeings.html", "languages" : ["en"], "formats" : ["HTML"] },
@@ -176,7 +178,8 @@
         { "title" : "Windows", "page" : "notes/win2000.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
           { "title" : "List of commands", "page" : "notes/doslist.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "DOS notes", "page" : "notes/olddos.htm", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Old notes", "page" : "notes/windows.htm", "languages" : ["en"], "formats" : ["HTML"] }
+          { "title" : "Old notes", "page" : "notes/windows.htm", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Cygwin", "page" : "notes/cygwin.html", "languages" : ["en"], "formats" : ["HTML"] }
         ] },
         { "title" : "MacOS", "page" : "notes/macos.html", "languages" : ["en"], "formats" : ["HTML"] }
       ] },
@@ -607,7 +610,8 @@
           { "title" : "Cake au citron", "page" : "bouffe/0158.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Cheesecake au citron", "page" : "bouffe/0126.html", "languages" : ["fr"], "formats" : ["HTML"] },
           { "title" : "Moelleux aux pommes et aux pistaches", "page" : "bouffe/081.htm", "languages" : ["fr"], "formats" : ["HTML"] },
-          { "title" : "Muffins aux pommes", "page" : "bouffe/0160.html", "languages" : ["fr"], "formats" : ["HTML"] }
+          { "title" : "Muffins aux pommes", "page" : "bouffe/0160.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Pain d'épices", "page" : "bouffe/0164.html", "languages" : ["fr"], "formats" : ["HTML"] }
         ] },
         { "title" : "Biscuits", "children" : [
           { "title" : "Canistrelli", "page" : "bouffe/026.htm", "languages" : ["fr"], "formats" : ["HTML"] },
@@ -644,6 +648,7 @@
           { "title" : "Crumble aux pommes et raisins secs", "page" : "bouffe/044.htm", "languages" : ["fr"], "formats" : ["HTML"] },
           { "title" : "Crumble aux fruits d'automne et aux épices", "page" : "bouffe/104.htm", "languages" : ["fr"], "formats" : ["HTML"] },
           { "title" : "Crumble au citron", "page" : "bouffe/0106.html", "languages" : ["fr"], "formats" : ["HTML"] },
+          { "title" : "Crumble au citron", "page" : "bouffe/0163.html", "languages" : ["fr"], "formats" : ["HTML"] },
           { "title" : "Cheese crumble", "page" : "bouffe/0111.html", "languages" : ["fr"], "formats" : ["HTML"] },
           { "title" : "Nutty plum crumble", "page" : "bouffe/057.htm", "languages" : ["en"], "formats" : ["HTML"] }
         ] }

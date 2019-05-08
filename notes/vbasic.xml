@@ -44,7 +44,7 @@ string literals are enclosed within two double quotes
 type declaration character is <CODEROUTINE>$</CODEROUTINE><BR/>
 string literals are enclosed within two double quotes<BR/>
 <CODESAMPLE>"Doe, John"</CODESAMPLE>
-It is possible to defines variable as string of a given length.<BR/> 
+It is possible to defines variable as string of a given length.<BR/>
 <CODESAMPLE>Dim foo as String * 13</CODESAMPLE>
 </ITEM>
 <ITEM><CODEROUTINE>Variant</CODEROUTINE></ITEM>
@@ -145,7 +145,7 @@ enlarges the array <CODEROUTINE>varArray</CODEROUTINE> by 10 elements without lo
 <ITEM>
 redefine the default lower bound for array subscripts (0 is the default) at the beginning of a module:
 <CODESAMPLE>Option Base 0</CODESAMPLE>
-or 
+or
 <CODESAMPLE>Option Base 1</CODESAMPLE>
 </ITEM>
 <ITEM>trick to initialize an array of strings
@@ -375,7 +375,7 @@ Disables any enabled error handler in the current procedure.</ITEM>
 <ITEM>The general format of a function is as follows:
 <CODESAMPLE>[Public|Friend|Private] [Static] Function functionName (Arg As dataType,……….) As dataType<BR/>
 …<BR/>
-End Function</CODESAMPLE> 
+End Function</CODESAMPLE>
 <CODEROUTINE>Public</CODEROUTINE> the procedure is accessible to all other procedures in all modules. If used in a module that contains an Option
 Private, the procedure is not available outside the project.<BR/>
 <CODEROUTINE>Private</CODEROUTINE> the procedure is accessible only to other procedures in the module where it is declared.<BR/>
@@ -596,7 +596,7 @@ given delimiter
 <ITEM><CODEROUTINE>Mid(string, start[, length])</CODEROUTINE>, <CODEROUTINE>Left(string, length)</CODEROUTINE> and <CODEROUTINE>Right(string, length)</CODEROUTINE> extract a substring from a string
 </ITEM>
 <ITEM><CODEROUTINE>Len(string)</CODEROUTINE> return the length (number of characters) of a string<BR/>
-<CODEROUTINE>LenB(string)</CODEROUTINE> return the number of bytes of a string 
+<CODEROUTINE>LenB(string)</CODEROUTINE> return the number of bytes of a string
 </ITEM>
 <ITEM>
 <CODEROUTINE>Replace(expression, find, replace[, start[, count[, compare]]]))</CODEROUTINE> return a string where instance of a substring have been replaced by another substring
@@ -746,7 +746,7 @@ If (VarType(inputFile) = vbString) Then<BR/>
 End If</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Message box</U></B></TITLE>
-<ITEM>displays a message in a dialog box, waits for the user to click a button, and return an integer indicating which button the user clicked. 
+<ITEM>displays a message in a dialog box, waits for the user to click a button, and return an integer indicating which button the user clicked.
 <CODESAMPLE>MsgBox(prompt[, buttons] [, title] [, helpfile, context])</CODESAMPLE>
 Buttons can be <CODEROUTINE>vbOKOnly</CODEROUTINE>, <CODEROUTINE>vbOkCancel</CODEROUTINE>, <CODEROUTINE>vbYesNo</CODEROUTINE>, <CODEROUTINE>vbYesNoCancel</CODEROUTINE>, <CODEROUTINE>vbAbortRetryIgnore</CODEROUTINE>
  or <CODEROUTINE>vbRetryCancel</CODEROUTINE>.<BR/>
@@ -762,7 +762,7 @@ input
 text or
 click a button, and return a String containing the contents of the
 text
-box. 
+box.
 <CODESAMPLE>InputBox(prompt[, title] [, default] [, xpos] [, ypos] [, helpfile, context])</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Debugging</U></B></TITLE>

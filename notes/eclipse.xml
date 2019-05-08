@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Install and update</B></U></TITLE>
   <ITEM>Set up the Proxy:<BR/>
@@ -59,14 +59,6 @@
   <DESC>display the Open Resource dialog</DESC></ROW>
   </DEFINITIONTABLE>
 <BR/>
-<U><B>Unit tests</B></U>
-<DEFINITIONTABLE>
-  <ROW><TERM><CODEMENU>File<CODEMENU>New<CODEMENU>JUnit Test Case</CODEMENU></CODEMENU></CODEMENU></TERM>
-  <DESC>create JUnit tests for the current class</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='X'/><KEY ID='T'/></TERM>
-  <DESC>run all JUnit tests of the current source file</DESC></ROW>
-</DEFINITIONTABLE>
-<BR/>
 <BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
   <ITEM>define the Java version used by compiler <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Compiler</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select the Java version in <CODEMENU>Compiler compliance level</CODEMENU></ITEM>
 </BLIST>
@@ -109,6 +101,8 @@
       <DESC>enable/disable QuickDiff</DESC></ROW>
       <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='O'/></TERM>
       <DESC>toggle mark occurrences</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='A'/></TERM>
+      <DESC>toggle Block Selection Mode</DESC></ROW>
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM>configure the folding with <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Editor<CODEMENU>Folding</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>.</ITEM>
@@ -127,22 +121,22 @@
 <U><B>Search</B></U><BR/>
 in Editor window
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F'/></TERM>
-<DESC>find/replace</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/></TERM>
-<DESC>find next</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='K'/></TERM>
-<DESC>find previous</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='J'/></TERM>
-<DESC>incremental find next</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
-<DESC>incremental find previous</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='H'/></TERM>
-<DESC>search</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='G'/></TERM>
-<DESC>find occurrences of the selection in the workspace</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F'/></TERM>
-<DESC>reformat the code</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F'/></TERM>
+  <DESC>find/replace</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/></TERM>
+  <DESC>find next</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='K'/></TERM>
+  <DESC>find previous</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='J'/></TERM>
+  <DESC>incremental find next</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
+  <DESC>incremental find previous</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='H'/></TERM>
+  <DESC>search</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='G'/></TERM>
+  <DESC>find occurrences of the selection in the workspace</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F'/></TERM>
+  <DESC>reformat the code</DESC></ROW>
 </DEFINITIONTABLE>
 in Search window
 <DEFINITIONTABLE>
@@ -151,130 +145,135 @@ in Search window
 </DEFINITIONTABLE><BR/>
 <U><B>Code generation</B></U><BR/>
 <BLIST>
-<ITEM>set the field name prefixes in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Code Style</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
-<ITEM>type the fields</ITEM>
-<ITEM>generate the constructor with <CODEMENU>Source<CODEMENU>Generate Constructor using Fields…</CODEMENU></CODEMENU></ITEM>
-<ITEM>generate the setters and/or getters <CODEMENU>Source<CODEMENU>Generate Getters and Setters…</CODEMENU></CODEMENU></ITEM>
+  <ITEM>set the field name prefixes in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Code Style</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
+  <ITEM>type the fields</ITEM>
+  <ITEM>generate the constructor with <CODEMENU>Source<CODEMENU>Generate Constructor using Fields…</CODEMENU></CODEMENU></ITEM>
+  <ITEM>generate the setters and/or getters <CODEMENU>Source<CODEMENU>Generate Getters and Setters…</CODEMENU></CODEMENU></ITEM>
 </BLIST>
 <U><B>Refactoring</B></U><BR/>
 In Editor window
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='T'/></TERM>
-<DESC>display refactoring menu</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='R'/></TERM>
-<DESC>rename</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
-<DESC>move</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='S'/></TERM>
-<DESC>change local variable into field</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='M'/></TERM>
-<DESC>extract method (transform the current selection into a new method)</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
-<DESC>change method signature</DESC></ROW>
-</DEFINITIONTABLE><BR/>
+  <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='T'/></TERM>
+  <DESC>display refactoring menu</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='R'/></TERM>
+  <DESC>rename</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
+  <DESC>move</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='S'/></TERM>
+  <DESC>change local variable into field</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='M'/></TERM>
+  <DESC>extract method (transform the current selection into a new method)</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='C'/></TERM>
+  <DESC>change method signature</DESC></ROW>
+  </DEFINITIONTABLE><BR/>
 <BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
-<ITEM>define the Java version used by compiler<BR/>
-<CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Compiler</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select the Java version in <CODEMENU>Compiler compliance level</CODEMENU></ITEM>
+  <ITEM>define the Java version used by compiler<BR/>
+  <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Compiler</CODEMENU></CODEMENU></CODEMENU></CODEMENU> and select the Java version in <CODEMENU>Compiler compliance level</CODEMENU></ITEM>
 </BLIST>
 <U><B>Running/debugging applications</B></U><BR/>
 In Editor window
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/></TERM>
-<DESC>run last launched</DESC></ROW>
-<ROW><TERM><KEY ID='F11'/>
-</TERM><DESC>debug last launched</DESC></ROW>
-<ROW><TERM><KEY ID='F5'/></TERM>
-<DESC>step into</DESC></ROW>
-<ROW><TERM><KEY ID='F6'/>
-</TERM><DESC>step over</DESC></ROW>
-<ROW><TERM><KEY ID='F7'/></TERM>
-<DESC>return</DESC></ROW>
-<ROW><TERM><KEY ID='F8'/></TERM>
-<DESC>resume</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='D'/></TERM>
-<DESC>display variable</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I'/></TERM><DESC>
-inspect expression
-</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='B'/></TERM>
-<DESC>toggle breakpoint</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/></TERM>
+  <DESC>run last launched</DESC></ROW>
+  <ROW><TERM><KEY ID='F11'/></TERM>
+  <DESC>debug last launched</DESC></ROW>
+  <ROW><TERM><KEY ID='F5'/></TERM>
+  <DESC>step into</DESC></ROW>
+  <ROW><TERM><KEY ID='F6'/></TERM>
+  <DESC>step over</DESC></ROW>
+  <ROW><TERM><KEY ID='F7'/></TERM>
+  <DESC>return</DESC></ROW>
+  <ROW><TERM><KEY ID='F8'/></TERM>
+  <DESC>resume</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='D'/></TERM>
+  <DESC>display variable</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='I'/></TERM>
+  <DESC>inspect expression</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='B'/></TERM>
+  <DESC>toggle breakpoint</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 in Debug window
 <DEFINITIONTABLE>
-<ROW><TERM><CODEMENU>Drop to Frame</CODEMENU></TERM>
-<DESC>reenter the current stack frame in debug mode</DESC></ROW>
+  <ROW><TERM><CODEMENU>Drop to Frame</CODEMENU></TERM>
+  <DESC>reenter the current stack frame in debug mode</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BLIST><TITLE>Create a run configuration</TITLE>
-<ITEM><CODEMENU>Run<CODEMENU>Run…</CODEMENU></CODEMENU></ITEM>
-<ITEM>select <CODEMENU>Java application</CODEMENU> and click <CODEMENU>New</CODEMENU></ITEM>
-<ITEM>define its name in the <CODEMENU>Name</CODEMENU> field and fill all the necessary parameters</ITEM>
+  <ITEM><CODEMENU>Run<CODEMENU>Run…</CODEMENU></CODEMENU></ITEM>
+  <ITEM>select <CODEMENU>Java application</CODEMENU> and click <CODEMENU>New</CODEMENU></ITEM>
+  <ITEM>define its name in the <CODEMENU>Name</CODEMENU> field and fill all the necessary parameters</ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>Run an application</TITLE>
-<ITEM><CODEMENU>Run<CODEMENU>Run…</CODEMENU></CODEMENU> and select the run configuration</ITEM>
-<ITEM>select the main class and <CODEMENU>Run<CODEMENU>Run As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
-<ITEM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/> run last launched</ITEM>
-<ITEM>in the "Java Browser > Types" view, select the main class and <CODEMENU>right click<CODEMENU>Run<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
-<ITEM>in the "Debug > Debug" view, select process and <CODEMENU>right click<CODEMENU>Relaunch</CODEMENU></CODEMENU></ITEM>
+  <ITEM><CODEMENU>Run<CODEMENU>Run…</CODEMENU></CODEMENU> and select the run configuration</ITEM>
+  <ITEM>select the main class and <CODEMENU>Run<CODEMENU>Run As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
+  <ITEM><MODIFIERKEY ID='Ctrl'/><KEY ID='F11'/> run last launched</ITEM>
+  <ITEM>in the "Java Browser > Types" view, select the main class and <CODEMENU>right click<CODEMENU>Run<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
+  <ITEM>in the "Debug > Debug" view, select process and <CODEMENU>right click<CODEMENU>Relaunch</CODEMENU></CODEMENU></ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>Debug an application</TITLE>
-<ITEM><CODEMENU>Run<CODEMENU>Debug…</CODEMENU></CODEMENU></ITEM>
-<ITEM>select the main class and <CODEMENU>Run<CODEMENU>Debug As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
-<ITEM><KEY ID='F11'/> debug last launched</ITEM>
-<ITEM>in the "Java Browser > Types" view, select the main class and <CODEMENU>right click<CODEMENU>Debug<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
+  <ITEM><CODEMENU>Run<CODEMENU>Debug…</CODEMENU></CODEMENU></ITEM>
+  <ITEM>select the main class and <CODEMENU>Run<CODEMENU>Debug As<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
+  <ITEM><KEY ID='F11'/> debug last launched</ITEM>
+  <ITEM>in the "Java Browser > Types" view, select the main class and <CODEMENU>right click<CODEMENU>Debug<CODEMENU>Java Application</CODEMENU></CODEMENU></CODEMENU></ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>Adjusting console size</TITLE>
-<ITEM>Use <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Run/Debug<CODEMENU>Console<CODEMENU>Limit console output</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU> and <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Run/Debug<CODEMENU>Console<CODEMENU>Console buffer size</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
+  <ITEM>Use <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Run/Debug<CODEMENU>Console<CODEMENU>Limit console output</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU> and <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Run/Debug<CODEMENU>Console<CODEMENU>Console buffer size</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>Solve a deadlock</TITLE>
-<ITEM>in the Debug View, select <CODEMENU>View menu<CODEMENU>Java<CODEMENU>Show Monitors</CODEMENU></CODEMENU></CODEMENU></ITEM>
-<ITEM>suspend the threads</ITEM>
-<ITEM>for each thread, look at the lock waited for and to who owns it</ITEM>
+  <ITEM>in the Debug View, select <CODEMENU>View menu<CODEMENU>Java<CODEMENU>Show Monitors</CODEMENU></CODEMENU></CODEMENU></ITEM>
+  <ITEM>suspend the threads</ITEM>
+  <ITEM>for each thread, look at the lock waited for and to who owns it</ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE><U><B>Application creation</B></U></TITLE>
-<ITEM><BLIST><TITLE>Create a JAR file</TITLE>
-<ITEM>Right click on the project name in the <CODEMENU>Project Explorer</CODEMENU> and select <CODEMENU>Export</CODEMENU>.</ITEM>
-<ITEM>Select <CODEMENU>Java<CODEMENU>JAR file</CODEMENU></CODEMENU> and click <CODEMENU>Next</CODEMENU>.</ITEM>
-<ITEM>Select the file to generate in the <CODEMENU>JAR file</CODEMENU> field and click <CODEMENU>Next</CODEMENU>.</ITEM>
-<ITEM>Click <CODEMENU>Next</CODEMENU>.</ITEM>
-<ITEM>Select the class containing the <CODEMENU>Main</CODEMENU> method to generate in the <CODEMENU>Main class</CODEMENU> field and click <CODEMENU>Finish</CODEMENU>.</ITEM>
-</BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Create a JAR file</TITLE>
+    <ITEM>Right click on the project name in the <CODEMENU>Project Explorer</CODEMENU> and select <CODEMENU>Export</CODEMENU>.</ITEM>
+    <ITEM>Select <CODEMENU>Java<CODEMENU>JAR file</CODEMENU></CODEMENU> and click <CODEMENU>Next</CODEMENU>.</ITEM>
+    <ITEM>Select the file to generate in the <CODEMENU>JAR file</CODEMENU> field and click <CODEMENU>Next</CODEMENU>.</ITEM>
+    <ITEM>Click <CODEMENU>Next</CODEMENU>.</ITEM>
+    <ITEM>Select the class containing the <CODEMENU>Main</CODEMENU> method to generate in the <CODEMENU>Main class</CODEMENU> field and click <CODEMENU>Finish</CODEMENU>.</ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Javadoc</B></U></TITLE>
-<ITEM>in Editor window
-<DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></TERM>
-<DESC>open external Javadoc</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
-<DESC>insert Javadoc comment</DESC></ROW>
-</DEFINITIONTABLE></ITEM>
-<ITEM><BLIST><TITLE>Declare the Javadoc command</TITLE>
-<ITEM>Eclipse 3.0:<BR/>
-<CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Javadoc</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
-<ITEM>Eclipse 3.1<BR/>
-Fill the field <CODEMENU>Javadoc command</CODEMENU> in <CODEMENU>Project<CODEMENU>Generate Javadoc…</CODEMENU></CODEMENU></ITEM>
-</BLIST></ITEM>
-<ITEM>generate the documentation<BR/>
-<CODEMENU>Project<CODEMENU>Generate Javadoc…</CODEMENU></CODEMENU></ITEM>
-<ITEM><BLIST><TITLE>Define the location of the JDK Javadoc</TITLE>
-<ITEM>Eclipse 3.0:<BR/>
-<CODEMENU>Windows<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Installed JREs</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
-double click on a JRE<BR/>
-<CODEMENU>Javadoc URL: file:/D:/Docs/documentation/java/1.5.0/docs/api/</CODEMENU></ITEM>
-<ITEM>Eclipse 3.1:<BR/>
-<CODEMENU>Windows<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Installed JREs</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
-double click on a JRE<BR/>
-unselect <CODEMENU>Use default system libraries</CODEMENU><BR/>
-expand <CODEROUTINE>C:\Program Files\Java\jre1.5.0\lib\rt.jar</CODEROUTINE><BR/>
-double click on <CODEMENU>Source attachment</CODEMENU> and type <CODEROUTINE>C:/Program Files/Java/jdk1.5.0/src.zip</CODEROUTINE><BR/>
-double click on <CODEMENU>Javadoc location</CODEMENU> and type <CODEROUTINE>file://C:/Documents and Settings/Laurent/Mes documents/docs/JDK 1.5.0/api</CODEROUTINE></ITEM>
-</BLIST></ITEM>
+  <ITEM>in Editor window
+    <DEFINITIONTABLE>
+      <ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F2'/></TERM>
+      <DESC>open external Javadoc</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='J'/></TERM>
+      <DESC>insert Javadoc comment</DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Declare the Javadoc command</TITLE>
+    <ITEM>Eclipse 3.0:<BR/>
+      <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Javadoc</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
+    </ITEM>
+    <ITEM>Eclipse 3.1<BR/>
+      Fill the field <CODEMENU>Javadoc command</CODEMENU> in <CODEMENU>Project<CODEMENU>Generate Javadoc…</CODEMENU></CODEMENU>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM>generate the documentation<BR/>
+    <CODEMENU>Project<CODEMENU>Generate Javadoc…</CODEMENU></CODEMENU>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Define the location of the JDK Javadoc</TITLE>
+    <ITEM>Eclipse 3.0:<BR/>
+      <CODEMENU>Windows<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Installed JREs</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
+      double click on a JRE<BR/>
+      <CODEMENU>Javadoc URL: file:/D:/Docs/documentation/java/1.5.0/docs/api/</CODEMENU>
+    </ITEM>
+    <ITEM>Eclipse 3.1:<BR/>
+      <CODEMENU>Windows<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Installed JREs</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
+      double click on a JRE<BR/>
+      unselect <CODEMENU>Use default system libraries</CODEMENU><BR/>
+      expand <CODEROUTINE>C:\Program Files\Java\jre1.5.0\lib\rt.jar</CODEROUTINE><BR/>
+      double click on <CODEMENU>Source attachment</CODEMENU> and type <CODEROUTINE>C:/Program Files/Java/jdk1.5.0/src.zip</CODEROUTINE><BR/>
+      double click on <CODEMENU>Javadoc location</CODEMENU> and type <CODEROUTINE>file://C:/Documents and Settings/Laurent/Mes documents/docs/JDK 1.5.0/api</CODEROUTINE>
+    </ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Customization</B></U></TITLE>
   <ITEM>key binding customization<BR/>
@@ -286,6 +285,40 @@ double click on <CODEMENU>Javadoc location</CODEMENU> and type <CODEROUTINE>file
       <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='L'/></TERM>
       <DESC>display the list of shortcuts</DESC></ROW>
     </DEFINITIONTABLE></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Maven</B></U></TITLE>
+  <ITEM><BLIST><TITLE>Configure the location of the local repository</TITLE>
+    <ITEM>Create the directories <CODEFILENAME>C:\foobar\maven2</CODEFILENAME> and <CODEFILENAME>C:\foobar\maven2\repository</CODEFILENAME>.</ITEM>
+    <ITEM>Create the file <CODEFILENAME>C:\foobar\maven2\settings.xml</CODEFILENAME> containing
+    <CODESAMPLE>&lt;settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"<BR/>
+<TAB/>xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"<BR/>
+<TAB/>xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 https://maven.apache.org/xsd/settings-1.0.0.xsd"&gt;<BR/>
+<TAB/><TAB/><B>&lt;localRepository&gt;F:\foobar\maven2\repository&lt;/localRepository&gt;</B><BR/>
+&lt;/settings&gt;</CODESAMPLE></ITEM>
+    <ITEM>In <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Maven<CODEMENU>User settings</CODEMENU></CODEMENU></CODEMENU></CODEMENU>, set <CODEROUTINE>User Settings</CODEROUTINE> to <CODEFILENAME>C:\foobar\maven2\settings.xml</CODEFILENAME></ITEM>
+  </BLIST></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>JUnit</B></U></TITLE>
+  <ITEM>
+    <DEFINITIONTABLE>
+      <ROW><TERM><CODEMENU>File<CODEMENU>New<CODEMENU>JUnit Test Case</CODEMENU></CODEMENU></CODEMENU></TERM>
+      <DESC>create JUnit tests for the current class</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='X'/><KEY ID='T'/></TERM>
+      <DESC>run all JUnit tests of the current source file</DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>To solve the problem of unkown import files, delete <CODEFILENAME>src/module-info.java</CODEFILENAME></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Git</B></U></TITLE>
+  <ITEM><BLIST><TITLE>Create a Git repository and the initial commit</TITLE>
+    <ITEM>Right-click on the project and <CODEMENU>Team<CODEMENU>Share projet…</CODEMENU></CODEMENU></ITEM>
+    <ITEM>In the <CODEMENU>Share Project</CODEMENU> dialog, check <CODEMENU>Use or create repository in parent folder of project</CODEMENU></ITEM>
+    <ITEM>Check the project</ITEM>
+    <ITEM>Click on <CODEMENU>Create Repository</CODEMENU></ITEM>
+    <ITEM>Click on <CODEMENU>Finish</CODEMENU></ITEM>
+    <ITEM>Right-click on the project and <CODEMENU>Team<CODEMENU>Add to Index</CODEMENU></CODEMENU></ITEM>
+    <ITEM>In the <CODEMENU>Git Staging</CODEMENU> view, click on <CODEMENU>Commit</CODEMENU></ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>JavaFx</B></U></TITLE>
   <ITEM>use <X><T>e(fx)clipse</T><A>https://www.eclipse.org/efxclipse/index.html</A><L>en</L><F>HTML</F></X><BR/>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <SLIST>
   <ITEM><BLIST><TITLE><U><B>Tortoise SVN</B></U></TITLE>
@@ -73,9 +73,11 @@
     <ITEM>Create a repository
       <CODESAMPLE>svnadmin create &lt;dir&gt;</CODESAMPLE></ITEM>
     <ITEM>Perform a checkout (&lt;myDir&gt; will be created)
-      <CODESAMPLE>svn co file:///cygdrive/m/laurent_svn_repository/Java\ sandbox/ &lt;myDir&gt;</CODESAMPLE></ITEM>
+      <CODESAMPLE>svn co file:///cygdrive/m/laurent_svn_repository/Java\ sandbox/trunk &lt;myDir&gt;</CODESAMPLE></ITEM>
     <ITEM>Display repository, branch… of the current directory (i.e. working copy)
       <CODESAMPLE>svn info</CODESAMPLE></ITEM>
+    <ITEM>Display status of working copy files and directories
+      <CODESAMPLE>svn status</CODESAMPLE></ITEM>
     <ITEM><BLIST><TITLE>Commit</TITLE>
       <ITEM>Commit a file/dir
       <CODESAMPLE>svn commit -m "I have done blabla…" &lt;file/dir&gt;</CODESAMPLE></ITEM>
@@ -137,6 +139,8 @@
       svn remove &lt;file&gt;<BR/>
       svn rm &lt;file&gt;</CODESAMPLE></ITEM>
     </BLIST></ITEM>
+    <ITEM>Renaming a file
+    <CODESAMPLE>svn [move|mv] &lt;old name&gt; &lt;new name&gt;</CODESAMPLE></ITEM>
     <ITEM><BLIST><TITLE>Branches</TITLE>
       <ITEM>List the branches
       <CODESAMPLE>svn ls file:///cygdrive/m/svn_repository/my_project/branches</CODESAMPLE></ITEM>
@@ -144,6 +148,8 @@
       <CODESAMPLE>svn copy file:///cygdrive/m/svn_repository/my_project/trunk  file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; -m "Branch creation comment"</CODESAMPLE></ITEM>
       <ITEM>Check out branch &lt;branch name&gt;
       <CODESAMPLE>svn co file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; &lt;directory name&gt;</CODESAMPLE></ITEM>
+      <ITEM>Merge trunk into current work directory (which contains the checkout of a branch)
+      <CODESAMPLE>svn merge ^/trunk</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Properties</TITLE>
       <ITEM>Set the value of a property on a file/directory

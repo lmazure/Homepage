@@ -3,105 +3,118 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>CSS</TITLE>
 <PATH>notes/css.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
-The CSS syntax is made up of three parts: a selector, a property and a value:
-<CODESAMPLE>selector {property: value}</CODESAMPLE><BR/>
-<BR/>
-If  the value is multiple words, put quotes around the value:
-<CODESAMPLE>p {font-family: "sans serif"}</CODESAMPLE><BR/>
-<BR/>
-If you wish to specify more than one property, you must separate each property with a semicolon. The example below shows how to define a center aligned paragraph, with a red text color:
-<CODESAMPLE>p {text-align:center;color:red}</CODESAMPLE><BR/>
-To make the style definitions more readable, you can describe one property on each line, like this:
-<CODESAMPLE>p<BR/>
-{<BR/>
-text-align: center; <BR/>
-color: black; <BR/>
-font-family: arial<BR/>
-}</CODESAMPLE><BR/>
-<BR/>
-You can group selectors. Separate each selector with a comma. In the example below we have grouped all the header elements. All header elements will be displayed in green text color:
-<CODESAMPLE>h1,h2,h3,h4,h5,h6<BR/>
-{<BR/>
-color: green<BR/>
-}</CODESAMPLE><BR/>
-Comments are used to explain your code, and may help you when you edit the source code at a later date. A comment will be ignored by browsers. A CSS comment begins with "/*", and ends with "*/", like this:
-<CODESAMPLE>/* This is a comment */<BR/>
-p<BR/>
-{<BR/>
-text-align: center; <BR/>
-/* This is another comment */<BR/>
-color: black; <BR/>
-font-family: arial<BR/>
-}</CODESAMPLE><BR/>
+<BLIST><TITLE><B><U>Syntax</U></B></TITLE>
+  <ITEM>The CSS syntax is made up of three parts: a selector, a property and a value:
+  <CODESAMPLE>selector {property: value}</CODESAMPLE></ITEM>
+  <ITEM>If  the value is multiple words, put quotes around the value:
+  <CODESAMPLE>p {font-family: "sans serif"}</CODESAMPLE></ITEM>
+  <ITEM>If you wish to specify more than one property, you must separate each property with a semicolon. The example below shows how to define a center aligned paragraph, with a red text color:
+  <CODESAMPLE>p {text-align:center;color:red}</CODESAMPLE></ITEM>
+  <ITEM>To make the style definitions more readable, you can describe one property on each line, like this:
+  <CODESAMPLE>p<BR/>
+  {<BR/>
+  text-align: center; <BR/>
+  color: black; <BR/>
+  font-family: arial<BR/>
+  }</CODESAMPLE></ITEM>
+  <ITEM>You can group selectors. Separate each selector with a comma. In the example below we have grouped all the header elements. All header elements will be displayed in green text color:
+  <CODESAMPLE>h1,h2,h3,h4,h5,h6<BR/>
+  {<BR/>
+  color: green<BR/>
+  }</CODESAMPLE></ITEM>
+  <ITEM>Comments are used to explain your code, and may help you when you edit the source code at a later date. A comment will be ignored by browsers. A CSS comment begins with "/*", and ends with "*/", like this:
+  <CODESAMPLE>/* This is a comment */<BR/>
+  p<BR/>
+  {<BR/>
+  text-align: center; <BR/>
+  /* This is another comment */<BR/>
+  color: black; <BR/>
+  font-family: arial<BR/>
+  }</CODESAMPLE></ITEM>
+</BLIST>
 <BR/>
 <BLIST><TITLE><B><U>Selectors</U></B></TITLE>
-<ITEM><B>Type selector</B></ITEM>
-<ITEM><B>Class selector</B>
-With the class selector you can define different styles for the same type of HTML element.
-<CODESAMPLE>p.right {text-align: right}<BR/>
-p.center {text-align: center}</CODESAMPLE>
-You have to use the class attribute in your HTML document:
-<CODESAMPLE>&lt;p class="right"&gt;<BR/>
-This paragraph will be right-aligned.<BR/>
-&lt;/p&gt;<BR/>
-<BR/>
-&lt;p class="center"&gt; <BR/>
-This paragraph will be center-aligned.<BR/>
-&lt;/p&gt;</CODESAMPLE>
-To apply more than one class per given element, the syntax is:
-<CODESAMPLE>&lt;p class="center bold"&gt; <BR/>
-This is a paragraph.<BR/>
-&lt;/p&gt;</CODESAMPLE>
-The paragraph above will be styled by the class "center" and the class "bold".<BR/>
-You can also omit the tag name in the selector to define a style that will be used by all HTML elements that have a certain class. In the example below, all HTML elements with class="center" will be center-aligned:
-<CODESAMPLE>.center {text-align: center}</CODESAMPLE>
-In the code below both the h1 element and the p element have class="center". This means that both elements will follow the rules in the ".center" selector:  
-<CODESAMPLE>&lt;h1 class="center"&gt;<BR/>
-This heading will be center-aligned<BR/>
-&lt;/h1&gt;<BR/>
-<BR/>
-&lt;p class="center"&gt;<BR/>
-This paragraph will also be center-aligned.<BR/>
-&lt;/p&gt;</CODESAMPLE></ITEM>
-<ITEM><B>ID selector</B>
-You can also define styles for HTML elements with the ID selector. The ID selector is defined as a #.<BR/>
-The style rule below will match the element that has an id attribute with a value of "green":
-<CODESAMPLE>#green {color: green}</CODESAMPLE>
-The style rule below will match the p element that has an id with a value of "para1":
-<CODESAMPLE>p#para1<BR/>
-{<BR/>
-text-align: center;<BR/>
-color: red<BR/>
-}</CODESAMPLE></ITEM>
-<ITEM><B>Descendant selector</B>
-The rule below will only select &lt;em&gt; elements that are descendants of &lt;p&gt; elements. If this rule is applied, the &lt;em&gt; element within the &lt;h1&gt; will not be colored blue.
-<CODESAMPLE>p em {color: blue; }</CODESAMPLE></ITEM>
-<ITEM><B>Child selector</B>
-Using the following rule you can target any &lt;em&gt; element that is a child of the &lt;div&gt;. Other &lt;em&gt; elements that are descendants but not direct children of the &lt;div&gt; will not be targeted.
-<CODESAMPLE>div > em { color: blue; }</CODESAMPLE>
-or
-<CODESAMPLE>div>em { color: blue; }</CODESAMPLE></ITEM>
-<ITEM><B>Universal selector</B>
-Universal selectors are used to select any element. For example, the rule below will color all HTML elements on a page blue - regardless of their position in the document tree.
-<CODESAMPLE>* {color: blue; }</CODESAMPLE></ITEM>
-<ITEM><B>Adjacent sibling selector</B>
-Using the following rule, you can target any &lt;h3&gt; that follows an &lt;h2&gt;:
-<CODESAMPLE>h2 + h3 {margin: -1em; }</CODESAMPLE></ITEM>
-<ITEM><B>Attributes selector</B>
-You can also apply styles to HTML elements with particular attributes. <BR/>
-The style rule below will match all input elements that have a type attribute with a value of "text":
-<CODESAMPLE>input[type="text"] {background-color: blue}</CODESAMPLE></ITEM>
+  <ITEM><B>Type selector</B></ITEM>
+  <ITEM><B>Class selector</B>
+    With the class selector you can define different styles for the same type of HTML element.
+    <CODESAMPLE>p.right {text-align: right}<BR/>
+    p.center {text-align: center}</CODESAMPLE>
+    You have to use the class attribute in your HTML document:
+    <CODESAMPLE>&lt;p class="right"&gt;<BR/>
+    This paragraph will be right-aligned.<BR/>
+    &lt;/p&gt;<BR/>
+    <BR/>
+    &lt;p class="center"&gt; <BR/>
+    This paragraph will be center-aligned.<BR/>
+    &lt;/p&gt;</CODESAMPLE>
+    To apply more than one class per given element, the syntax is:
+    <CODESAMPLE>&lt;p class="center bold"&gt; <BR/>
+    This is a paragraph.<BR/>
+    &lt;/p&gt;</CODESAMPLE>
+    The paragraph above will be styled by the class "center" and the class "bold".<BR/>
+    You can also omit the tag name in the selector to define a style that will be used by all HTML elements that have a certain class. In the example below, all HTML elements with class="center" will be center-aligned:
+    <CODESAMPLE>.center {text-align: center}</CODESAMPLE>
+    In the code below both the h1 element and the p element have class="center". This means that both elements will follow the rules in the ".center" selector:
+    <CODESAMPLE>&lt;h1 class="center"&gt;<BR/>
+    This heading will be center-aligned<BR/>
+    &lt;/h1&gt;<BR/>
+    <BR/>
+    &lt;p class="center"&gt;<BR/>
+    This paragraph will also be center-aligned.<BR/>
+    &lt;/p&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM><B>ID selector</B>
+    You can also define styles for HTML elements with the ID selector. The ID selector is defined as a #.<BR/>
+    The style rule below will match the element that has an id attribute with a value of "green":
+    <CODESAMPLE>#green {color: green}</CODESAMPLE>
+    The style rule below will match the p element that has an id with a value of "para1":
+    <CODESAMPLE>p#para1<BR/>
+    {<BR/>
+    text-align: center;<BR/>
+    color: red<BR/>
+    }</CODESAMPLE>
+  </ITEM>
+  <ITEM><B>Descendant selector</B>
+    The rule below will only select &lt;em&gt; elements that are descendants of &lt;p&gt; elements. If this rule is applied, the &lt;em&gt; element within the &lt;h1&gt; will not be colored blue.
+    <CODESAMPLE>p em {color: blue; }</CODESAMPLE>
+  </ITEM>
+  <ITEM><B>Child selector</B>
+    Using the following rule you can target any &lt;em&gt; element that is a child of the &lt;div&gt;. Other &lt;em&gt; elements that are descendants but not direct children of the &lt;div&gt; will not be targeted.
+    <CODESAMPLE>div > em { color: blue; }</CODESAMPLE>
+    or
+    <CODESAMPLE>div>em { color: blue; }</CODESAMPLE>
+  </ITEM>
+  <ITEM><B>Universal selector</B>
+    Universal selectors are used to select any element. For example, the rule below will color all HTML elements on a page blue - regardless of their position in the document tree.
+    <CODESAMPLE>* {color: blue; }</CODESAMPLE>
+  </ITEM>
+  <ITEM><B>Adjacent sibling selector</B>
+    Using the following rule, you can target any &lt;h3&gt; that follows an &lt;h2&gt;:
+    <CODESAMPLE>h2 + h3 {margin: -1em; }</CODESAMPLE>
+  </ITEM>
+  <ITEM><B>Attributes selector</B>
+    You can also apply styles to HTML elements with particular attributes. <BR/>
+    The style rule below will match all input elements that have a type attribute with a value of "text":
+    <CODESAMPLE>input[type="text"] {background-color: blue}</CODESAMPLE>
+  </ITEM>
 </BLIST>
-<BLIST><TITLE><B><U>Pritority</U></B></TITLE>
-<ITEM><BLIST><TITLE>The priority order is:</TITLE>
-<ITEM>Inline style (inside an HTML element)</ITEM>
-<ITEM>Internal style sheet (inside the &lt;head&gt; tag)</ITEM>
-<ITEM>External style sheet</ITEM>
-<ITEM>Browser default</ITEM>
+<BLIST><TITLE><B><U>Priority</U></B></TITLE>
+  <ITEM><BLIST><TITLE>The priority order is:</TITLE>
+  <ITEM>Inline style (inside an HTML element)</ITEM>
+  <ITEM>Internal style sheet (inside the &lt;head&gt; tag)</ITEM>
+  <ITEM>External style sheet</ITEM>
+  <ITEM>Browser default</ITEM>
 </BLIST>
 But if the external style sheet link is placed below the internal style sheet in HTML &lt;head&gt;, the external style sheet will override the internal style sheet.</ITEM>
+</BLIST>
+<BLIST><TITLE><B><U>Properties</U></B></TITLE>
+  <ITEM><BLIST><TITLE><CODEROUTINE>position</CODEROUTINE></TITLE>
+    <ITEM><CODEROUTINE>relative</CODEROUTINE>: the computed position value is relative. The <CODEROUTINE>top</CODEROUTINE> and <CODEROUTINE>bottom</CODEROUTINE> properties specify the vertical offset from its normal position; the <CODEROUTINE>left</CODEROUTINE> and <CODEROUTINE>right</CODEROUTINE> properties specify the horizontal offset.</ITEM>
+    <ITEM><CODEROUTINE>absolute</CODEROUTINE>/<CODEROUTINE>fixed</CODEROUTINE>:the  computed position value is absolute or fixed. The <CODEROUTINE>top</CODEROUTINE>, <CODEROUTINE>right</CODEROUTINE>, <CODEROUTINE>bottom</CODEROUTINE>, and <CODEROUTINE>left</CODEROUTINE> properties specify offsets from the edges of the element's containing block. (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset.</ITEM>
+    <ITEM><CODEROUTINE>sticky</CODEROUTINE>: the computed position value is sticky. It's treated as relatively positioned until its containing block crosses a specified threshold (such as setting <CODEROUTINE>top</CODEROUTINE> to value other than <CODEROUTINE>auto</CODEROUTINE>) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its containing block.</ITEM>
+  </BLIST></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/html.html#CSS</A><L>en</L><F>HTML</F></X>

@@ -349,7 +349,7 @@ WHEN <I>condition2</I> THEN <I>result2</I><BR/>
 [ELSE <I>resultN</I>]<BR/>
 END<BR/>
 FROM <I>tableName</I></CODESAMPLE>
-<CODEROUTINE>ELSE</CODEROUTINE> is optionnal
+<CODEROUTINE>ELSE</CODEROUTINE> is optional
 </ITEM>
 <ITEM>example
 <CODESAMPLE>SELECT storeName, CASE storeName<BR/>
@@ -363,7 +363,7 @@ FROM StoreInformation</CODESAMPLE>
 </ITEM></BLIST>
 </ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>Join</B></U> (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Join_(SQL)</A><L>en</L><F>HTML</F></X>)</TITLE>
+<BLIST><TITLE><U><B>Join</B></U> (<X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Join_(SQL)</A><L>en</L><F>HTML</F></X>)</TITLE>
 <ITEM>inner join<BR/>
 explicit syntax
 <CODESAMPLE>SELECT Employees.Name, Orders.Product<BR/>
@@ -412,7 +412,7 @@ implicit syntax
 FROM employee, department;</CODESAMPLE>
 </ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>Set operation</B></U> (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/Set_operations_(SQL)</A><L>en</L><F>HTML</F></X>)</TITLE>
+<BLIST><TITLE><U><B>Set operation</B></U> (<X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Set_operations_(SQL)</A><L>en</L><F>HTML</F></X>)</TITLE>
 <ITEM>union<BR/>
 combines the results of two SQL queries into a single table<BR/>
 duplicate records are automatically removed unless <CODEROUTINE>UNION ALL</CODEROUTINE> is used
@@ -533,7 +533,7 @@ returns the total sum of a column
 </BLIST>
 <BLIST><TITLE><U><B>JDBC</B></U></TITLE>
 <ITEM>
-types of drivers (<X><T>Wikipedia</T><A>http://en.wikipedia.org/wiki/JDBC_driver</A><L>en</L><F>HTML</F></X>)
+types of drivers (<X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/JDBC_driver</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
 <ROW><TERM>type 1</TERM><DESC>JDBC-ODBC bridge</DESC></ROW>
 <ROW><TERM>type 2</TERM><DESC>Native-API Driver</DESC></ROW>

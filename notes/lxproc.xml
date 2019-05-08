@@ -151,9 +151,9 @@ in the file <CODEFILENAME>/etc/security/limits.conf</CODEFILENAME></ITEM>
 <BLIST><TITLE><U><B>profiling</B></U></TITLE>
 <ITEM>profile a binary:<BR/>
 compile and link all the code with <CODEROUTINE>-pg</CODEROUTINE>
-(the profiling does not work with shared libraries, so the libraries which are interesting should be statically linked) 
+(the profiling does not work with shared libraries, so the libraries which are interesting should be statically linked)
 <CODESAMPLE>/path_to_bin/myBin<BR/>
-<X><T>gprof</T><A>javascript:do_reference("man/linux/1/gprof")</A><L>en</L><F>HTML</F></X> -z /path_to_bin/myBin gmon.out</CODESAMPLE></ITEM> 
+<X><T>gprof</T><A>javascript:do_reference("man/linux/1/gprof")</A><L>en</L><F>HTML</F></X> -z /path_to_bin/myBin gmon.out</CODESAMPLE></ITEM>
 <ITEM>profile a shared library:<BR/>
 <CODESAMPLE>setenv LD_PROFILE_OUTPUT /tmp/prof.001<BR/>
 mkdir $LD_PROFILE_OUTPUT<BR/>

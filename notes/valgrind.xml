@@ -38,7 +38,7 @@
 <ROW><TERM><CODEROUTINE>--trace-children=[yes|no]</CODEROUTINE></TERM><DESC>default is to not trace the children</DESC></ROW>
 <ROW><TERM><CODEROUTINE>--track-fds=[yes|no]</CODEROUTINE></TERM><DESC>default is to not list open file descriptors</DESC></ROW>
 <ROW><TERM><CODEROUTINE>--demangle=[yes|no]</CODEROUTINE></TERM><DESC>default is to demangle the C++ names</DESC></ROW>
-<ROW><TERM><CODEROUTINE>--num-callers=&lt;number&gt;</CODEROUTINE></TERM><DESC>default is to backtrace 4 routines<BR/>maximum value is 
+<ROW><TERM><CODEROUTINE>--num-callers=&lt;number&gt;</CODEROUTINE></TERM><DESC>default is to backtrace 4 routines<BR/>maximum value is
 50</DESC></ROW>
 <ROW><TERM><CODEROUTINE>--error-limit=[yes|no]</CODEROUTINE></TERM><DESC>when enabled (this is the default), Valgrind stops reporting errors after 30000 in total, or 300 different ones, have been seen; this avoids the error tracking machinery from becoming a huge performance overhead in programs with many errors.</DESC></ROW>
 </DEFINITIONTABLE></ITEM>

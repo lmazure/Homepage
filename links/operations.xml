@@ -3,13 +3,21 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Operations</TITLE>
 <PATH>links/operations.xml</PATH>
-<DATE><YEAR>2015</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <LLIST>
-  <ITEM><CLIST><TITLE>monitoring tools</TITLE>
-    <ITEM><X><T>Nagios</T><A>http://www.nagios.org</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Opsview</T><A>http://www.opsview.com</A><L>en</L><F>HTML</F></X></ITEM>
-  </CLIST></ITEM>
+  <ITEM><SLIST>
+    <ITEM><CLIST><TITLE>automation</TITLE>
+      <ITEM><X><T>Chef</T><A>https://www.chef.io/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Puppet</T><A>https://puppet.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Ansible</T><A>https://www.ansible.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>SaltStack</T><A>https://www.saltstack.com/</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><CLIST><TITLE>monitoring tools</TITLE>
+      <ITEM><X><T>Nagios</T><A>https://www.nagios.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Opsview</T><A>https://www.opsview.com</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
+  </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
     <ITEM><ARTICLE><X><T>Provenance for System Troubleshooting</T><A>https://www.youtube.com/watch?v=Q7HPPEPxpxs</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>4</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Marc</FIRSTNAME><LASTNAME>Chiarini</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>Recording the provenance of the current system status (i.e. recording all the files, pipes, memory maps… interactions) in order to be able to analyze it to find out the root cause of a problem. I am not convinced that this is workable.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>BlueGreenDeployment</T><A>http://martinfowler.com/bliki/BlueGreenDeployment.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>Cycling staging / production between two systems.</COMMENT></ARTICLE></ITEM>

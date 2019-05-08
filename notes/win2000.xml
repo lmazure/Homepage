@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -187,6 +187,11 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
 <ROW><TERM><CODEROUTINE>/s</CODEROUTINE></TERM><DESC>run silently and do not display any message box</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
+<DEFINITIONTABLE>
+<ROW><TERM><CODEROUTINE>rmdir</CODEROUTINE><BR/><CODEROUTINE>rd</CODEROUTINE></TERM><DESC>delete an empty directory</DESC></ROW>
+<ROW><TERM><CODEROUTINE>rmdir /s</CODEROUTINE></TERM><DESC>delete a possibly empty directory</DESC></ROW>
+<ROW><TERM><CODEROUTINE>rmdir /s /q</CODEROUTINE></TERM><DESC>delete a possibly empty directory without prompting</DESC></ROW>
+</DEFINITIONTABLE>
 In order to know which process uses a given file, use <X><T>Handle</T><A>http://technet.microsoft.com/en-us/sysinternals/bb896655</A><L>fr</L><F>HTML</F></X> of <X><T>SysInternals</T><A>http://www.sysinternals.com</A><L>fr</L><F>HTML</F></X>.<BR/>
 <BR/>
 Format a large hard drive in FAT32: use <X><T>guiformat.exe</T><A>http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm</A><L>en</L><F>HTML</F></X>.<BR/>

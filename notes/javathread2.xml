@@ -45,7 +45,7 @@ The first idiom is more general, because the Runnable object can subclass a clas
 <BR/>
 <BR/>
 <U><B>Sleep</B></U><BR/>
-<CODEROUTINE>Thread.sleep</CODEROUTINE> causes the current thread to suspend execution for a specified period. Sleep time can be specified in milisecond or nanoseconds. These sleep times are not guaranteed to be precise.<BR/> 
+<CODEROUTINE>Thread.sleep</CODEROUTINE> causes the current thread to suspend execution for a specified period. Sleep time can be specified in milisecond or nanoseconds. These sleep times are not guaranteed to be precise.<BR/>
 <BR/>
 <BR/>
 <U><B>Interruption</B></U><BR/>
@@ -99,11 +99,11 @@ A thread can acquire a lock that it already owns. Allowing a thread to acquire t
 <BR/>
 <BR/>
 <U><B>Deadlock</B></U><BR/>
-Deadlock describes a situation where two or more threads are blocked forever, waiting for each other. 
+Deadlock describes a situation where two or more threads are blocked forever, waiting for each other.
 <BR/>
 <BR/>
 <U><B>Starvation</B></U><BR/>
-Starvation describes a situation where a thread is unable to gain regular access to shared resources and is unable to make progress. This happens when shared resources are made unavailable for long periods by "greedy" threads. 
+Starvation describes a situation where a thread is unable to gain regular access to shared resources and is unable to make progress. This happens when shared resources are made unavailable for long periods by "greedy" threads.
 <BR/>
 <BR/>
 <U><B>Livelock</B></U><BR/>
@@ -111,7 +111,7 @@ A thread often acts in response to the action of another thread. If the other th
 <BR/>
 <BR/>
 <U><B>Guarded blocks</B></U><BR/>
-A guarded block is a block beginning by polling a condition that must be true before the block can proceed.  Use <CODEROUTINE>Object.wait</CODEROUTINE> to suspend the current thread. The invocation of wait does not return until another thread has issued a notification that some special event may have occurred though not necessarily the event this thread is waiting for: 
+A guarded block is a block beginning by polling a condition that must be true before the block can proceed.  Use <CODEROUTINE>Object.wait</CODEROUTINE> to suspend the current thread. The invocation of wait does not return until another thread has issued a notification that some special event may have occurred though not necessarily the event this thread is waiting for:
 <CODESAMPLE>public synchronized guardedJoy() {<BR/>
 <TAB/>while(!joy) {<BR/>
 <TAB/><TAB/>try {<BR/>
@@ -120,7 +120,7 @@ A guarded block is a block beginning by polling a condition that must be true be
 <TAB/>}<BR/>
 }</CODESAMPLE>
 Why is this version of guardedJoy synchronized? Suppose <CODEROUTINE>d</CODEROUTINE> is the object we're using to invoke wait. When a thread invokes <CODEROUTINE>d.wait</CODEROUTINE>, it must own the intrinsic lock for <CODEROUTINE>d</CODEROUTINE> otherwise an error is thrown. Invoking wait inside a synchronized method is a simple way to acquire the intrinsic lock.<BR/>
-When wait is invoked, the thread releases the lock and suspends execution. At some future time, another thread will acquire the same lock and invoke <CODEROUTINE>Object.notifyAll</CODEROUTINE>, informing all threads waiting on that lock that something important has happened: 
+When wait is invoked, the thread releases the lock and suspends execution. At some future time, another thread will acquire the same lock and invoke <CODEROUTINE>Object.notifyAll</CODEROUTINE>, informing all threads waiting on that lock that something important has happened:
 <CODESAMPLE>public synchronized notifyJoy() {<BR/>
 <TAB/>joy = true;<BR/>
 <TAB/>notifyAll();<BR/>
@@ -133,14 +133,14 @@ Some time after the second thread has released the lock, the first thread reacqu
 <ITEM>Don't provide "setter" methods, i.e. methods that modify fields or objects referred to by fields.</ITEM>
 <ITEM>Make all fields final and private.</ITEM>
 <ITEM>Don't allow subclasses to override methods. The simplest way to do this is to declare the class as final. A more sophisticated approach is to make the constructor private and construct instances in factory methods.</ITEM>
-<ITEM>If the instance fields include references to mutable objects, don't allow those objects to be changed: 
+<ITEM>If the instance fields include references to mutable objects, don't allow those objects to be changed:
 <BLIST><ITEM>Don't provide methods that modify the mutable objects.</ITEM>
 <ITEM>Don't share references to the mutable objects. Never store references to external, mutable objects passed to the constructor; if necessary, create copies, and store references to the copies. Similarly, create copies of your internal mutable objects when necessary to avoid returning the originals in your methods.</ITEM></BLIST></ITEM>
 </BLIST>
 <BR/>
 <BR/>
 <U><B>Lock Objects</B></U><BR/>
-Some sophisticated locking idioms are supported by the java.util.concurrent.locks package. 
+Some sophisticated locking idioms are supported by the java.util.concurrent.locks package.
 <BR/>
 <BR/>
 <U><B>Executor interfaces</B></U><BR/>
@@ -148,7 +148,7 @@ Some sophisticated locking idioms are supported by the java.util.concurrent.lock
 <ITEM><CODEROUTINE>Executor</CODEROUTINE> Interface<BR/>
 The <CODEROUTINE>Executor</CODEROUTINE> interface provides a single method, <CODEROUTINE>execute</CODEROUTINE>, designed to be a drop-in replacement for a common thread-creation idiom. If <CODEROUTINE>r</CODEROUTINE> is a <CODEROUTINE>Runnable</CODEROUTINE> object, and <CODEROUTINE>e</CODEROUTINE> is an <CODEROUTINE>Executor</CODEROUTINE> object you can replace <CODEROUTINE>(new Thread(r)).start();</CODEROUTINE> with <CODEROUTINE>e.execute(r);</CODEROUTINE></ITEM>
 <ITEM><CODEROUTINE>ExecutorService</CODEROUTINE> Interface<BR/>
-The <CODEROUTINE>ExecutorService</CODEROUTINE> interface supplements execute with a similar, but more versatile <CODEROUTINE>submit</CODEROUTINE> method. Like <CODEROUTINE>execute</CODEROUTINE>, <CODEROUTINE>submit</CODEROUTINE> accepts <CODEROUTINE>Runnable</CODEROUTINE> objects, but also accepts <CODEROUTINE>Callable</CODEROUTINE> objects, which allow the task to return a value. The <CODEROUTINE>submit</CODEROUTINE> method returns a <CODEROUTINE>Future</CODEROUTINE> object, which is used to retrieve the <CODEROUTINE>Callable</CODEROUTINE> return value and to manage the status of both <CODEROUTINE>Callable</CODEROUTINE> and <CODEROUTINE>Runnable</CODEROUTINE> tasks. 
+The <CODEROUTINE>ExecutorService</CODEROUTINE> interface supplements execute with a similar, but more versatile <CODEROUTINE>submit</CODEROUTINE> method. Like <CODEROUTINE>execute</CODEROUTINE>, <CODEROUTINE>submit</CODEROUTINE> accepts <CODEROUTINE>Runnable</CODEROUTINE> objects, but also accepts <CODEROUTINE>Callable</CODEROUTINE> objects, which allow the task to return a value. The <CODEROUTINE>submit</CODEROUTINE> method returns a <CODEROUTINE>Future</CODEROUTINE> object, which is used to retrieve the <CODEROUTINE>Callable</CODEROUTINE> return value and to manage the status of both <CODEROUTINE>Callable</CODEROUTINE> and <CODEROUTINE>Runnable</CODEROUTINE> tasks.
 <CODEROUTINE>ExecutorService</CODEROUTINE> also provides methods for submitting large collections of <CODEROUTINE>Callable</CODEROUTINE> objects. Finally, <CODEROUTINE>ExecutorService</CODEROUTINE> provides a number of methods for managing the shutdown of the executor. To support immediate shutdown, tasks should handle interrupts correctly.</ITEM>
 <ITEM><CODEROUTINE>ScheduledExecutorService</CODEROUTINE> Interface<BR/>
 The <CODEROUTINE>ScheduledExecutorService</CODEROUTINE> interface supplements the methods of its parent <CODEROUTINE>ExecutorService</CODEROUTINE> with schedule, which executes a <CODEROUTINE>Runnable</CODEROUTINE> or <CODEROUTINE>Callable</CODEROUTINE> task after a specified delay. In addition, the interface defines <CODEROUTINE>scheduleAtFixedRate</CODEROUTINE> and <CODEROUTINE>scheduleWithFixedDelay</CODEROUTINE>, which executes specified tasks repeatedly, at defined intervals.</ITEM>
