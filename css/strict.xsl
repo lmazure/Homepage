@@ -417,7 +417,7 @@
 		  <xsl:text>"</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
-		  <xsl:text>null</xsl:text>
+		  <xsl:text>undefined</xsl:text>
 		</xsl:otherwise>
 	  </xsl:choose>
 	  <xsl:text>,</xsl:text>
@@ -428,7 +428,7 @@
 		  <xsl:text>"</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
-		  <xsl:text>null</xsl:text>
+		  <xsl:text>undefined</xsl:text>
 		</xsl:otherwise>
 	  </xsl:choose>
 	  <xsl:text>,</xsl:text>
@@ -439,7 +439,7 @@
 		  <xsl:text>"</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
-		  <xsl:text>null</xsl:text>
+		  <xsl:text>undefined</xsl:text>
 		</xsl:otherwise>
 	  </xsl:choose>
 	  <xsl:text>,</xsl:text>
@@ -450,7 +450,7 @@
 		  <xsl:text>"</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
-		  <xsl:text>null</xsl:text>
+		  <xsl:text>undefined</xsl:text>
 		</xsl:otherwise>
 	  </xsl:choose>
 	  <xsl:text>,</xsl:text>
@@ -461,7 +461,7 @@
 		  <xsl:text>"</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
-		  <xsl:text>null</xsl:text>
+		  <xsl:text>undefined</xsl:text>
 		</xsl:otherwise>
 	  </xsl:choose>
 	  <xsl:text>,</xsl:text>
@@ -472,7 +472,7 @@
 		  <xsl:text>"</xsl:text>
 		</xsl:when>
 		<xsl:otherwise>
-		  <xsl:text>null</xsl:text>
+		  <xsl:text>undefined</xsl:text>
 		</xsl:otherwise>
 	  </xsl:choose>
 	  <xsl:text>)</xsl:text>
