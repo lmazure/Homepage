@@ -7,7 +7,7 @@
 <CONTENT>
 </CONTENT>
 <SCRIPT>
-import { MapBuilder } from "../scripts/common.js";
+import { MapBuilder } from "../scripts/MapBuilder.js";
 window.postInitialize = function() {
     var builder = new MapBuilder();
     builder.buildMap();

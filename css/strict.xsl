@@ -409,73 +409,50 @@
 <xsl:template match="AUTHOR">
   <xsl:element name="span">
     <xsl:attribute name="onClick">
-	  <xsl:text>do_person(event,</xsl:text>
+	  <xsl:text>do_person(event, {</xsl:text>
 	  <xsl:choose>
         <xsl:when test="count(./NAMEPREFIX)=1">
-		  <xsl:text>"</xsl:text>
+		  <xsl:text>n ameprefix:"</xsl:text>
 		  <xsl:value-of select="./NAMEPREFIX"/>
-		  <xsl:text>"</xsl:text>
+		  <xsl:text>",</xsl:text>
 		</xsl:when>
-		<xsl:otherwise>
-		  <xsl:text>undefined</xsl:text>
-		</xsl:otherwise>
 	  </xsl:choose>
-	  <xsl:text>,</xsl:text>
 	  <xsl:choose>
         <xsl:when test="count(./FIRSTNAME)=1">
-		  <xsl:text>"</xsl:text>
+		  <xsl:text> firstname:"</xsl:text>
 		  <xsl:value-of select="./FIRSTNAME"/>
-		  <xsl:text>"</xsl:text>
+		  <xsl:text>",</xsl:text>
 		</xsl:when>
-		<xsl:otherwise>
-		  <xsl:text>undefined</xsl:text>
-		</xsl:otherwise>
 	  </xsl:choose>
-	  <xsl:text>,</xsl:text>
 	  <xsl:choose>
         <xsl:when test="count(./MIDDLENAME)=1">
-		  <xsl:text>"</xsl:text>
+		  <xsl:text> middlename:"</xsl:text>
 		  <xsl:value-of select="./MIDDLENAME"/>
-		  <xsl:text>"</xsl:text>
+		  <xsl:text>",</xsl:text>
 		</xsl:when>
-		<xsl:otherwise>
-		  <xsl:text>undefined</xsl:text>
-		</xsl:otherwise>
 	  </xsl:choose>
-	  <xsl:text>,</xsl:text>
 	  <xsl:choose>
         <xsl:when test="count(./LASTNAME)=1">
-		  <xsl:text>"</xsl:text>
+		  <xsl:text> lastname:"</xsl:text>
 		  <xsl:value-of select="./LASTNAME"/>
-		  <xsl:text>"</xsl:text>
+		  <xsl:text>",</xsl:text>
 		</xsl:when>
-		<xsl:otherwise>
-		  <xsl:text>undefined</xsl:text>
-		</xsl:otherwise>
 	  </xsl:choose>
-	  <xsl:text>,</xsl:text>
 	  <xsl:choose>
         <xsl:when test="count(./NAMESUFFIX)=1">
-		  <xsl:text>"</xsl:text>
+		  <xsl:text> namesuffix:"</xsl:text>
 		  <xsl:value-of select="./NAMESUFFIX"/>
-		  <xsl:text>"</xsl:text>
+		  <xsl:text>",</xsl:text>
 		</xsl:when>
-		<xsl:otherwise>
-		  <xsl:text>undefined</xsl:text>
-		</xsl:otherwise>
 	  </xsl:choose>
-	  <xsl:text>,</xsl:text>
 	  <xsl:choose>
         <xsl:when test="count(./GIVENNAME)=1">
-		  <xsl:text>"</xsl:text>
+		  <xsl:text> givenname:"</xsl:text>
 		  <xsl:value-of select="./GIVENNAME"/>
-		  <xsl:text>"</xsl:text>
+		  <xsl:text>",</xsl:text>
 		</xsl:when>
-		<xsl:otherwise>
-		  <xsl:text>undefined</xsl:text>
-		</xsl:otherwise>
 	  </xsl:choose>
-	  <xsl:text>)</xsl:text>
+	  <xsl:text> })</xsl:text>
 	</xsl:attribute>
     <xsl:for-each select="NAMEPREFIX/text() | FIRSTNAME/text() | MIDDLENAME/text() | LASTNAME/text() | NAMESUFFIX/text() | GIVENNAME/text()">
       <xsl:value-of select="."/>

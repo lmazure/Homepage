@@ -7,7 +7,7 @@
 <CONTENT>
 </CONTENT>
 <SCRIPT>
-import ContentBuilder from "../scripts/common.js";
+import ContentBuilder from "../scripts/ContentBuilder.js";
 window.postInitialize = function() {
     var builder = new ContentBuilder();
     builder.buildContent();
