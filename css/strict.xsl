@@ -412,42 +412,42 @@
 	  <xsl:text>do_person(event, {</xsl:text>
 	  <xsl:choose>
         <xsl:when test="count(./NAMEPREFIX)=1">
-		  <xsl:text>n ameprefix:"</xsl:text>
+		  <xsl:text>namePrefix:"</xsl:text>
 		  <xsl:value-of select="./NAMEPREFIX"/>
 		  <xsl:text>",</xsl:text>
 		</xsl:when>
 	  </xsl:choose>
 	  <xsl:choose>
         <xsl:when test="count(./FIRSTNAME)=1">
-		  <xsl:text> firstname:"</xsl:text>
+		  <xsl:text> firstName:"</xsl:text>
 		  <xsl:value-of select="./FIRSTNAME"/>
 		  <xsl:text>",</xsl:text>
 		</xsl:when>
 	  </xsl:choose>
 	  <xsl:choose>
         <xsl:when test="count(./MIDDLENAME)=1">
-		  <xsl:text> middlename:"</xsl:text>
+		  <xsl:text> middleName:"</xsl:text>
 		  <xsl:value-of select="./MIDDLENAME"/>
 		  <xsl:text>",</xsl:text>
 		</xsl:when>
 	  </xsl:choose>
 	  <xsl:choose>
         <xsl:when test="count(./LASTNAME)=1">
-		  <xsl:text> lastname:"</xsl:text>
+		  <xsl:text> lastName:"</xsl:text>
 		  <xsl:value-of select="./LASTNAME"/>
 		  <xsl:text>",</xsl:text>
 		</xsl:when>
 	  </xsl:choose>
 	  <xsl:choose>
         <xsl:when test="count(./NAMESUFFIX)=1">
-		  <xsl:text> namesuffix:"</xsl:text>
+		  <xsl:text> nameSuffix:"</xsl:text>
 		  <xsl:value-of select="./NAMESUFFIX"/>
 		  <xsl:text>",</xsl:text>
 		</xsl:when>
 	  </xsl:choose>
 	  <xsl:choose>
         <xsl:when test="count(./GIVENNAME)=1">
-		  <xsl:text> givenname:"</xsl:text>
+		  <xsl:text> givenName:"</xsl:text>
 		  <xsl:value-of select="./GIVENNAME"/>
 		  <xsl:text>",</xsl:text>
 		</xsl:when>
