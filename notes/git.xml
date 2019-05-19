@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -126,6 +126,10 @@
   <ROW>
     <TERM><CODEROUTINE>git diff --cached</CODEROUTINE></TERM>
     <DESC>display the differences between the index and the local repository</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --name-only</CODEROUTINE></TERM>
+    <DESC>display only the filenames</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
