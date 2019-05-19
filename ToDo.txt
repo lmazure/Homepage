@@ -3,6 +3,12 @@
 
 ------------------------------------------------------------
 
+- remplacer les
+<script language="JavaScript" src="../scripts/common.js"></script>
+par
+<script src="../scripts/common.js"  type="module"></script>
+
+
 - corriger le support des MIDDLENAMEs multiples (Boyter dans links/humor.xml)
 
 - persons.xml :
