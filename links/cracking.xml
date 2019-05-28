@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -295,6 +295,10 @@
       <ITEM><BLIST><TITLE>Port Smash</TITLE>
         <ITEM><ARTICLE><X><T>What's Behind Port Smash? - Computerphile</T><A>https://www.youtube.com/watch?v=k6PzjGwyKuY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>14</MINUTE><SECOND>5</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Bagley</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE><COMMENT>A basic description of hyperthreading and how Port Smash works.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>CSS timing</TITLE>
+        <ITEM><ARTICLE><X><T>A timing attack with CSS selectors and Javascript</T><A>https://blog.sheddow.xyz/css-timing-attack/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sigurd</FIRSTNAME><LASTNAME>Kolltveit</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE><COMMENT>Timing CSS evaluation time of a page using <CODEROUTINE>jQuery(location.hash)</CODEROUTINE> to extract some information from the page.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Abusing jQuery for CSS powered timing attacks</T><A>https://portswigger.net/blog/abusing-jquery-for-css-powered-timing-attacks</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gareth</FIRSTNAME><LASTNAME>Heyes</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE><COMMENT>The details of using the attack on redhat.com.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Burp</TITLE>
       <ITEM><ARTICLE><X><T>Introducing Burp Infiltrator</T><A>http://blog.portswigger.net/2016/07/introducing-burp-infiltrator.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dafydd</FIRSTNAME><LASTNAME>Stuttard</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>7</MONTH><DAY>26</DAY></DATE><COMMENT>A short description of Burp Infiltrator, a tool instrumenting an application to detect that Burp scanner can control some parameters of calls to unsafe APIs.</COMMENT></ARTICLE></ITEM>
