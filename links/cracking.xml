@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -197,6 +197,7 @@
       <ITEM><ARTICLE><X><T>Secure Copy Vulnerability (SCP) - Computerphile</T><A>https://www.youtube.com/watch?v=fcesKgfSPq4</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>9</MINUTE><SECOND>36</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Bagley</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>18</DAY></DATE><COMMENT>The description of a very old security hole found in <CODEROUTINE>scp</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>XS-Searching Google’s bug tracker to find out vulnerable source code</T><ST>Or how side-channel timing attacks aren’t that impractical</ST><A>https://medium.com/@luanherrera/xs-searching-googles-bug-tracker-to-find-out-vulnerable-source-code-50d8135b7549</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Luan</FIRSTNAME><LASTNAME>Herrera</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>19</DAY></DATE><COMMENT>Using timing to extract information from monorail.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>XSS without parentheses and semi-colons</T><A>https://portswigger.net/blog/xss-without-parentheses-and-semi-colons</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gareth</FIRSTNAME><LASTNAME>Heyes</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE><COMMENT>The title says all: injecting JavaScript expressions containing no parentheses nor semi-colons.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Provoking browser quirks with behavioural fuzzing</T><A>https://portswigger.net/blog/provoking-browser-quirks-with-behavioural-fuzzing</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gareth</FIRSTNAME><LASTNAME>Heyes</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>Using fuzz testing to detect improper handling of some characters in the HTML parser and in the JavaScript parser.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>SQL injection</TITLE>
         <ITEM><ARTICLE><X><T>SQL Injection Attacks by Example</T><A>http://www.unixwiz.net/techtips/sql-injection.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Friedl</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>A basic, detailed, and slow description of a SQL injection attack.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Bobby Tables</T><A>https://blog.cleancoder.com/uncle-bob/2017/12/03/BobbyTables.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE><COMMENT>SQL is too dangerous, it should not be used anymore.</COMMENT></ARTICLE></ITEM>
