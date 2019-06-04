@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>6</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -181,6 +181,7 @@
       <ITEM><ARTICLE><X status='dead'><T>Diagnosing Java Code: Improve the performance of your Java code</T><ST>Tail-recursive transformations can speed up your apps, but not all JVMs can perform the task</ST><A>https://www.ibm.com/developerworks/java/library/j-diag8.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>E.</MIDDLENAME><LASTNAME>Allen</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>5</MONTH></DATE><COMMENT>The advice is obvious: if you care about performance, use loops instead of recursions. The remainder of this article is not clear and has no interest.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Design</TITLE>
+      <ITEM><ARTICLE><X><T>Double Dispatch in DDD</T><A>https://www.baeldung.com/ddd-double-dispatch</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Wojtyna</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE><COMMENT>How to dispatch method calls depending on the receiver and argument types, but the example is too simple to prove the value of the pattern.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Functional programming</TITLE>
         <ITEM><ARTICLE><X status='dead'><T>Lisp and Java</T><A>http://www.onjava.com/pub/a/onjava/2004/03/24/lisp.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Milstein</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE><COMMENT>The author seems to discover the notion of functors…</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='zombie'><T>Functional programming in the Java language</T><ST>Use closures and higher order functions to write modular Java code</ST><A>https://www.ibm.com/developerworks/java/library/j-fp/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Abhijit</FIRSTNAME><LASTNAME>Belapurkar</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>7</MONTH><DAY>13</DAY></DATE><COMMENT>Yet another presentation of functors (here called closures).</COMMENT></ARTICLE></ITEM>
