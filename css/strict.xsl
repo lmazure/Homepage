@@ -15,7 +15,7 @@
       <xsl:value-of select="/PAGE/TITLE"/>
     </title>
     <xsl:if test="count(/PAGE/SCRIPT)=1">
-      <script type="text/javascript">
+      <script type="module">
         <xsl:value-of disable-output-escaping="yes" select="/PAGE/SCRIPT"/>
       </script>
     </xsl:if>
@@ -84,7 +84,7 @@
         <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["£[","£]"]]}});</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML-full"></script>
       </xsl:if>
-      <script src="../scripts/common.js"></script>
+      <script src="../scripts/common.js" type="module"></script>
       <xsl:if test="@special='indexed'">
         <script>
           $(document).ready(function() { window.onLoad = create_index();} )
@@ -407,10 +407,47 @@
 </xsl:template>
 
 <xsl:template match="AUTHOR">
-  <xsl:for-each select="NAMEPREFIX/text() | FIRSTNAME/text() | MIDDLENAME/text() | LASTNAME/text() | NAMESUFFIX/text() | GIVENNAME/text()">
-    <xsl:value-of select="."/>
-    <xsl:if test="not(position() = last())"><xsl:text> </xsl:text></xsl:if>
-  </xsl:for-each>
+  <xsl:element name="span">
+    <xsl:attribute name="class">author</xsl:attribute>
+    <xsl:attribute name="onClick">
+      <xsl:text>do_person(event, {</xsl:text>
+      <xsl:choose>
+        <xsl:when test="count(./NAMEPREFIX)=1">
+          <xsl:text>namePrefix:"</xsl:text><xsl:value-of select="./NAMEPREFIX"/><xsl:text>",</xsl:text>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="count(./FIRSTNAME)=1">
+          <xsl:text>firstName:"</xsl:text><xsl:value-of select="./FIRSTNAME"/><xsl:text>",</xsl:text>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="count(./MIDDLENAME)=1">
+          <xsl:text>middleName:"</xsl:text><xsl:value-of select="./MIDDLENAME"/><xsl:text>",</xsl:text>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="count(./LASTNAME)=1">
+          <xsl:text>lastName:"</xsl:text><xsl:value-of select="./LASTNAME"/><xsl:text>",</xsl:text>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="count(./NAMESUFFIX)=1">
+          <xsl:text>nameSuffix:"</xsl:text><xsl:value-of select="./NAMESUFFIX"/><xsl:text>",</xsl:text>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:choose>
+        <xsl:when test="count(./GIVENNAME)=1">
+          <xsl:text>givenName:"</xsl:text><xsl:value-of select="./GIVENNAME"/><xsl:text>"</xsl:text>
+        </xsl:when>
+      </xsl:choose>
+      <xsl:text> })</xsl:text>
+    </xsl:attribute>
+    <xsl:for-each select="NAMEPREFIX/text() | FIRSTNAME/text() | MIDDLENAME/text() | LASTNAME/text() | NAMESUFFIX/text() | GIVENNAME/text()">
+      <xsl:value-of select="."/>
+      <xsl:if test="not(position() = last())"><xsl:text> </xsl:text></xsl:if>
+    </xsl:for-each>
+  </xsl:element>
 </xsl:template>
 
 <xsl:template match="MONTH">
@@ -550,10 +587,6 @@
 
 <xsl:template match="SUB">
   <sub><xsl:apply-templates/></sub>
-</xsl:template>
-
-<xsl:template match="SCRIPT">
-  <script><xsl:value-of disable-output-escaping="yes" select="."/></script>
 </xsl:template>
 
 <xsl:template match="BR">

@@ -15,7 +15,7 @@ ul
 
 a
 {
-	text-decoration:none
+	text-decoration: none
 }
 
 #navigationBar  {
@@ -43,6 +43,11 @@ a
 	background-color: black;
 	height: 2px;
 	border: 0;
+}
+
+span.author {
+	cursor: pointer;
+	color: #00A000
 }
 
 span.linksubtitle {
@@ -115,4 +120,10 @@ code {
 	vertical-align: bottom;
 	display: inline-block;
 	padding: 0px 1px 2px 1px;
+}
+
+.personPopup {
+	overflow: auto;
+	background-color: #FFFFFF;
+	position: absolute; 
 }
