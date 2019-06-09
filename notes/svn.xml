@@ -150,6 +150,14 @@
       <CODESAMPLE>svn co file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; &lt;directory name&gt;</CODESAMPLE></ITEM>
       <ITEM>Merge trunk into current work directory (which contains the checkout of a branch)
       <CODESAMPLE>svn merge ^/trunk</CODESAMPLE></ITEM>
+      <ITEM>merge a branch on trunk<BR/>
+        in a checkout of trunk with no local edit<BR/>
+        <CODESAMPLE>svn update</CODESAMPLE>
+        <CODESAMPLE>svn merge --reintegrate ^/branches/my-branch</CODESAMPLE>
+        check the merge result<BR/>
+        <CODESAMPLE>svn commit -m "Merge my-branch into trunk"</CODESAMPLE>
+        the branch is no longer usable for further work, it's not able to correctly absorb new trunk changes, nor can it be properly reintegrated to trunk again, so it is better to delete the branch<BR/>
+        <CODESAMPLE>svn delete ^/branches/my-branch -m "Remove my-branch, reintegrated with trunk in r123."</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Properties</TITLE>
       <ITEM>Set the value of a property on a file/directory
