@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>6</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -288,6 +288,12 @@
     <ITEM><BLIST><TITLE>Puzzles</TITLE>
       <ITEM><ARTICLE><X><T>Java Puzzlers Episode VI: The Phantom-Reference Menace, Attack of the Clone, &amp; Revenge of the Shift</T><A>https://www.youtube.com/watch?v=wDN_EYUvUq0</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>13</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Joshua</FIRSTNAME><LASTNAME>Bloch</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bill</FIRSTNAME><LASTNAME>Pugh</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE><COMMENT>Eight Java puzzles.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>How to Find Missing Number on Integer Array of 1 to 100 - BitSet Example</T><A>https://javarevisited.blogspot.com/2014/11/how-to-find-missing-number-on-integer-array-java.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Javin</FIRSTNAME><LASTNAME>Paul</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>28</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Non-Volatile Memory and Java</TITLE>
+      <ITEM><ARTICLE><X><T>Non-Volatile Memory and Java</T><A>https://medium.com/@mwolczko/non-volatile-memory-and-java-7ba80f1e730c</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mario</FIRSTNAME><LASTNAME>Wolczko</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT>A description of Intel’s Optane, a Non-Volatile DIMM.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Non-Volatile Memory and Java: Part 2</T><A>https://medium.com/@mwolczko/non-volatile-memory-and-java-part-2-c15954c04e11</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mario</FIRSTNAME><LASTNAME>Wolczko</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bill</FIRSTNAME><LASTNAME>Bridge</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>19</DAY></DATE><COMMENT>How the software will handle NVRAM and the consistency problem that another thread may see data not yet persisted, may persist some other data, and hence we would get inconsistent persisted data in case of a power failure.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Non-Volatile Memory and Java: Part 3</T><A>https://medium.com/@mwolczko/non-volatile-memory-and-java-part-3-ebe305ef4bc4</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mario</FIRSTNAME><LASTNAME>Wolczko</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE><COMMENT>The impact of NVRAM on software: handling hardware errors, the fact that restarting the application will no more be the simple solution to solve a problem since the saved data may be incorrect…</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Non-Volatile Memory and Java: Part 4</T><A>https://medium.com/@mwolczko/non-volatile-memory-and-java-part-4-17f7a7f78f1e</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mario</FIRSTNAME><LASTNAME>Wolczko</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE><COMMENT>Some problems with how Java could exploit NVRAM, in particular the problem of type evolution.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
