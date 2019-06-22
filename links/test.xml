@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -208,6 +208,7 @@
     <ITEM><ARTICLE><X><T>On the Quality of Qualitative Measures</T><A>http://kaner.com/?p=409</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Cem</FIRSTNAME><LASTNAME>Kaner</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>28</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Should tests be ordered or not?</T><A>https://blog.frankel.ch/should-tests-be-ordered-or-not/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolas</FIRSTNAME><LASTNAME>Fränkel</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE><COMMENT>The author claims that tests can be ordered, but some arguments are biased (e.g. of course integration tests must be run after unit tests).</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality='-1'><T>Test Driving a Blockchain Application: A Simple Example</T><A>https://www.typemock.com/test-driving-a-blockchain-application-a-simple-example</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Farinelli</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE><COMMENT>Some basic ideas about a test strategy for verifying a blockchain, but these is nothing noticeable here.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Want to introduce fewer bugs? Test through these five cases.</T><A>https://www.donedone.com/five-test-cases-for-fewer-bugs/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ka Wai</FIRSTNAME><LASTNAME>Cheung</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>29</DAY></DATE><COMMENT>Test the following cases: null, 0, 1, 3 and "a lot".</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Context-driven testing</TITLE>
       <ITEM><ARTICLE><X quality='2'><T>Test Automation Snake Oil</T><A>http://www.satisfice.com/articles/test_automation_snake_oil.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>James gives a realistic view of automatic testing.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Insapience of Anti-Automationism</T><A>http://context-driven-testing.com/?p=69</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Cem</FIRSTNAME><LASTNAME>Kaner</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>Cem Kaner is debunking the claims that there is a real separation between automated test and manual tests, and that checking is not testing.</COMMENT></ARTICLE></ITEM>
