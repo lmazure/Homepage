@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -104,6 +104,7 @@
           <X><T>Elemental Selenium</T><A>http://elementalselenium.com</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X status='obsolete'><T>Chickenfoot</T><A>http://groups.csail.mit.edu/uid/chickenfoot/index.php</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Cypress</T><A>https://www.cypress.io</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Taiko</T><A>https://taiko.gauge.org/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Comparison tests</TITLE>
@@ -169,6 +170,7 @@
       <ITEM><BLIST><TITLE>Mockito</TITLE>
         <ITEM><ARTICLE><X><T>When/how to use Mockito Answer</T><A>https://testing.googleblog.com/2014/03/whenhow-to-use-mockito-answer.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Hongfei</FIRSTNAME><LASTNAME>Ding</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE><COMMENT>A short description of using Mockito's <CODEROUTINE>Answer</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Introduction to PowerMock</T><A>https://www.baeldung.com/intro-to-powermock</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugen</FIRSTNAME><LASTNAME>Paraschiv</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE><COMMENT>A short description of PowerMockito, a PowerMock’s Mockito extension enabling to mock final, private or static methods.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Mockito Strict Stubbing and The UnnecessaryStubbingException</T><A>https://www.baeldung.com/mockito-unnecessary-stubbing-exception</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>7</DAY></DATE><COMMENT>A description of Strict Stubbing and how to disable it.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Oracles</TITLE>
