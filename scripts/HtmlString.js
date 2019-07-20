@@ -61,4 +61,5 @@ export default class HtmlString {
         return unsafe.replace(/"/g, "&quot;");
     }
 }
+
 //# sourceMappingURL=HtmlString.js.map

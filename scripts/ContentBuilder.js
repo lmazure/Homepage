@@ -235,8 +235,8 @@ export default class ContentBuilder {
     static getUrlCellFromLink(link) {
         return this.getTitleOrUrlFromLink(link, false);
     }
-    static getTitleOrUrlFromLink(link, flag) {
-        const url = HtmlString.buildFromTag("a", flag ? link.title + ((link.subtitle !== undefined) ? (" — " + link.subtitle) : "")
+    static getTitleOrUrlFromLink(link, displayTitleInsteadOfUrl) {
+        const url = HtmlString.buildFromTag("a", displayTitleInsteadOfUrl ? link.title + ((link.subtitle !== undefined) ? (" — " + link.subtitle) : "")
             : link.url, "href", link.url, "title", "language: "
             + link.languages.join(" ")
             + " | format: "
@@ -305,7 +305,7 @@ export default class ContentBuilder {
         fullString = this.appendSpaceAndPostfixToHtmlString(fullString, author.nameSuffix);
         return this.appendSpaceAndPostfixToHtmlString(fullString, author.givenName);
     }
-    static articleToHtmlString(link) {
+    static linkToHtmlString(link) {
         return ContentBuilder.getTitleOrUrlFromLink(link, true);
     }
     static durationToHtmlString(duration) {
@@ -392,4 +392,5 @@ export default class ContentBuilder {
 window.contentBuilderSwitchSort = (sort) => {
     ContentBuilder.prototype.switchSort(sort);
 };
+
 //# sourceMappingURL=ContentBuilder.js.map

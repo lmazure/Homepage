@@ -87,4 +87,5 @@ MapBuilder.toggleDivName = "toggleDiv";
 window.handleMapNodeClick = (index) => {
     MapBuilder.prototype.handleNodeClick(index);
 };
+
 //# sourceMappingURL=MapBuilder.js.map

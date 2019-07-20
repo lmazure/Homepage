@@ -160,6 +160,7 @@ window.do2_person = (event, author) => {
         document.getElementById("footer").insertAdjacentElement("afterend", personPopup);
     }
     const description = HtmlString.buildFromTag("h1", ContentBuilder.authorToHtmlString(author));
+    let links = HtmlString.buildEmpty();
     let articles = HtmlString.buildEmpty();
     for (let a of personPopupAuthors) {
         if ((a.namePrefix === author.namePrefix) &&
@@ -168,11 +169,21 @@ window.do2_person = (event, author) => {
             (a.lastName === author.lastName) &&
             (a.nameSuffix === author.nameSuffix) &&
             (a.givenName === author.givenName)) {
+            if (a.links !== undefined) {
+                for (let link of a.links) {
+                    links.appendTag("li", ContentBuilder.linkToHtmlString(link));
+                }
+            }
             for (let art of a.articles) {
-                articles.appendTag("li", ContentBuilder.articleToHtmlString(art.links[0]));
+                articles.appendTag("li", ContentBuilder.linkToHtmlString(art.links[0]));
             }
         }
     }
+    if (!links.isEmpty()) {
+        description.appendTag("h2", "Links");
+        description.appendTag("ul", links);
+    }
+    description.appendTag("h2", "Articles");
     description.appendTag("ul", articles);
     const clickHandler = function (e) {
         window.removeEventListener("click", clickHandler);
@@ -194,4 +205,5 @@ window.do2_person = (event, author) => {
     }
     personPopup.style.visibility = "visible";
 };
+
 //# sourceMappingURL=common.js.map
