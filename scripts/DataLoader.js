@@ -1,7 +1,6 @@
 export class DataLoader {
     constructor(callback) {
         let mapRoot;
-        let adBook;
         const p1 = DataLoader.getJson("../content/author.json")
             .then((data) => { this.authors = data.authors; })
             .catch((error) => console.log("Failed to load author.json", error));
@@ -11,12 +10,9 @@ export class DataLoader {
         const p3 = DataLoader.getJson("../content/map.json")
             .then((data) => { mapRoot = data.root; })
             .catch((error) => console.log("Failed to load map.json", error));
-        const p4 = DataLoader.getJson("../content/adbook.json")
-            .then((data) => { adBook = data.adbook; })
-            .catch((error) => console.log("Failed to load adbook.json", error));
-        const promises = [p1, p2, p3, p4];
+        const promises = [p1, p2, p3];
         Promise.all(promises)
-            .then(() => this.postprocessData(mapRoot, adBook))
+            .then(() => this.postprocessData(mapRoot))
             .then(() => callback(this.authors, this.articles, this.links, this.referringPages))
             .catch((error) => console.log("Failed to process data", error));
     }
@@ -38,7 +34,7 @@ export class DataLoader {
             request.send();
         });
     }
-    postprocessData(rootNode, adBook) {
+    postprocessData(rootNode) {
         this.links = [];
         for (let article of this.articles) {
             if (article.authorIndexes !== undefined) {
@@ -67,12 +63,6 @@ export class DataLoader {
         });
         this.referringPages = [];
         this.postProcessData_InserReferingPage(rootNode);
-        for (let record of adBook) {
-            const author = this.getAuthor(record.author);
-            if (author !== null) {
-                author.links = record.links;
-            }
-        }
     }
     postProcessData_InserReferingPage(node) {
         this.referringPages[node.page] = node;

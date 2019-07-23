@@ -203,6 +203,7 @@ window.do2_person = (event, author) => {
     else {
         personPopup.style.left = (event.pageX - personPopup.offsetWidth) + "px";
     }
+    personPopup.scrollTop = 0;
     personPopup.style.visibility = "visible";
 };
 
