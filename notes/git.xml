@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -222,6 +222,10 @@
   <ROW>
     <TERM><CODEROUTINE>git show &lt;commit&gt;</CODEROUTINE></TERM>
     <DESC>show the log message and textual diff</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE> git show &lt;commit&gt;:&lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>display a given version of a file</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
