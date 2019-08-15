@@ -21,21 +21,19 @@ export class MapBuilder {
         mapRequest.send();
     }
     handleNodeClick(index) {
-        if ($("#" + MapBuilder.spanDivName + index).is(":visible")) {
-            MapBuilder.hideNode(index);
+        const spanElement = document.getElementById(MapBuilder.spanDivName + index);
+        const toggleElement = document.getElementById(MapBuilder.toggleDivName + index);
+        if (window.getComputedStyle(spanElement).display === "none") {
+            // node is hidden -> show it
+            spanElement.style.display = "block";
+            toggleElement.innerHTML = MapBuilder.openedNodeSymbol;
         }
         else {
-            MapBuilder.showNode(index);
+            // node is visible -> hide it
+            spanElement.style.display = "none";
+            toggleElement.innerHTML = MapBuilder.closedNodeSymbol;
         }
         return (false);
-    }
-    static hideNode(index) {
-        $("#" + MapBuilder.spanDivName + index).hide();
-        document.getElementById(MapBuilder.toggleDivName + index).innerHTML = MapBuilder.closedNodeSymbol;
-    }
-    static showNode(index) {
-        $("#" + MapBuilder.spanDivName + index).show();
-        document.getElementById(MapBuilder.toggleDivName + index).innerHTML = MapBuilder.openedNodeSymbol;
     }
     initNodeOpenStatus(node, page) {
         let oneChildIsOpen = false;

@@ -1,4 +1,3 @@
-/// <reference path ="lib/jquery.d.ts"/>
 /// <reference path ="lib/google.analytics.d.ts"/>
 import HtmlString from "./HtmlString.js";
 import { DataLoader } from "./DataLoader.js";
@@ -27,7 +26,7 @@ window.create_index = () => {
             + "</a></td>";
     }
     str += "<tr></table>";
-    $("body").prepend(str);
+    document.body.insertAdjacentHTML("afterbegin", str);
 };
 // ---------------------------------------------------------------------------------------------------------------
 window.do_email = () => {
@@ -40,21 +39,19 @@ window.do_email = () => {
 };
 // ---------------------------------------------------------------------------------------------------------------
 window.display_search = () => {
-    $("#searchPanel").slideToggle({
-        done: function () {
-            if ($("#searchPanel").is(":visible")) {
-                $("#searchPanel>#panel>#text").focus();
-            }
-        },
-        progress: function () {
-            scrollTo(0, document.body.scrollHeight);
-        },
-    });
+    const searchPanel = document.getElementById("searchPanel");
+    if (isHidden(searchPanel)) {
+        searchPanel.style.display = "block";
+        scrollTo(0, document.body.scrollHeight);
+    }
+    else {
+        searchPanel.style.display = "none";
+    }
 };
 // ---------------------------------------------------------------------------------------------------------------
 window.do_search = () => {
     let request = "http://www.google.com/search?as_sitesearch=mazure.fr&q=";
-    const terms = ($("#searchPanel>#panel>#text").val()).split(" ");
+    const terms = document.getElementById("searchText").value.split(" ");
     for (let i = 0; i < terms.length; i++) {
         if (terms[i] !== "") { // to avoid additional space characters
             if (i > 0) {
@@ -206,5 +203,10 @@ window.do2_person = (event, author) => {
     personPopup.scrollTop = 0;
     personPopup.style.visibility = "visible";
 };
+// ---------------------------------------------------------------------------------------------------------------
+function isHidden(element) {
+    const style = window.getComputedStyle(element);
+    return (style.display === "none");
+}
 
 //# sourceMappingURL=common.js.map

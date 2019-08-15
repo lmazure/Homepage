@@ -52,9 +52,9 @@
           </div>
         </div>
         <div id="searchPanel" style="display:none">
-          <form id="panel" style="display:grid;" name="search" onsubmit="do_search(); return false;">
-            <input id="text" style="grid-column:1/span 3;grid-row:1;" size="32" name="terms" type="text"/>
-            <input id="button" style="grid-column:4;grid-row:1;" value="Search" onclick="do_search();" type="button"/>
+          <form id="searchForm" style="display:grid;" name="search" onsubmit="do_search(); return false;">
+            <input id="searchText" style="grid-column:1/span 3;grid-row:1;" size="32" name="terms" type="text"/>
+            <input id="searchButton" style="grid-column:4;grid-row:1;" value="Search" onclick="do_search();" type="button"/>
           </form>
         </div>
         <div style="display:grid;">
@@ -79,7 +79,6 @@
           </div>
         </div>
       </footer>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
       <xsl:if test="count(/PAGE//MATH)>0">
         <script type="text/x-mathjax-config"> MathJax.Hub.Config({tex2jax: {inlineMath: [["$","$"],["£[","£]"]]}});</script>
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/MathJax.js?config=TeX-AMS_HTML-full"></script>
