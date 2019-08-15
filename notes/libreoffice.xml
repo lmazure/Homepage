@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -158,6 +158,10 @@
 <BLIST><TITLE>Calc</TITLE>
   <ITEM>Shortcuts
     <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Y'/></TERM>
+        <DESC>repeat last edit</DESC>
+      </ROW>
       <ROW>
         <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
         <DESC>paste special</DESC>
