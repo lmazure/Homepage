@@ -16,12 +16,6 @@
 </ROW>
 </DEFINITIONTABLE>
 <BLIST>
-<ITEM>To disable the dynamic shortening of the lists in the Start Menu:<BR/>
-  <CODEMENU>Right click<CODEMENU>Propriétés<CODEMENU>Menu Démarrer</CODEMENU></CODEMENU></CODEMENU><BR/>
-  Select <CODEMENU>Menu Démarrer Classique</CODEMENU><BR/>
-  Click on <CODEMENU>Personnaliser…</CODEMENU><BR/>
-  Unselect <CODEMENU>Utiliser des menus personnalisés</CODEMENU>
-</ITEM>
 <ITEM>
   <CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
 </ITEM>
