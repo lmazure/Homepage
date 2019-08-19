@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><CLIST><TITLE>tutorials</TITLE>
@@ -91,6 +91,9 @@
       <ITEM><ARTICLE><X quality='-1'><T>The Factory Pattern Using Lambda Expressions in Java 8</T><ST>The factory pattern is one of the best known patterns in Java. If you're using lambda expressions, you can use those to implement the pattern, though beware scaling.</ST><A>https://dzone.com/articles/factory-pattern-using-lambda-expression-in-java-8</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Monika</FIRSTNAME><LASTNAME>Goel</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>A simplistic usage of Lambdas.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality='-2'><T>Leveraging Lambda Expressions for Lazy Evaluation in Java</T><ST>Want to learn more about the lazy evaluation in Java? Check out this tutorial on how to use lambda expressions for the purpose of lazy loading data and lazy evaluation.</ST><A>https://dzone.com/articles/leveraging-lambda-expressions-for-lazy-evaluation</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Grzegorz</FIRSTNAME><LASTNAME>Piwowarek</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT>This article aims at presenting a classical cached and thread-safe evaluation of a lambda expression, but it contains errors spotted by a reader and the double-checked lock implementation is still not correct.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Functional Exceptions In Java</T><A>https://8thlight.com/blog/brian-gerstle/2019/01/22/fnl-exceptions-in-java.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Gerstle</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>22</DAY></DATE><COMMENT>The author describes how to handle exceptions in lambda expressions.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Optional</TITLE>
+      <ITEM><ARTICLE><X><T>Optional Is a Law-breaking Monad but a Good Type</T><A>https://medium.com/97-things/optional-is-a-law-breaking-monad-but-a-good-type-7667eb821081</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>18</DAY></DATE><COMMENT><CODEROUTINE>Optional</CODEROUTINE> does not respect the rules of a monad, but it is better like this.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Regular expressions</TITLE>
       <ITEM><ARTICLE><X status='dead'><T>Magic with Merlin: Parse sequences of characters with the new regex library</T><ST>Moving beyond StreamTokenizer and StringTokenizer for pattern matching</ST><A>https://www.ibm.com/developerworks/java/library/j-mer0827.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Zukowski</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>8</MONTH></DATE><COMMENT>The <CODEROUTINE>Matcher</CODEROUTINE> and <CODEROUTINE>Pattern</CODEROUTINE> class support the Perl 5 regexp syntax.</COMMENT></ARTICLE></ITEM>
