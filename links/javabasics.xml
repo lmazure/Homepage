@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><CLIST><TITLE>tutorials</TITLE>
@@ -117,6 +117,7 @@
       <ITEM><ARTICLE><X><T>The New NIO, aka JSR-203</T><A>https://www.youtube.com/watch?v=yNRS1ssLPdQ</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>2</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Alan</FIRSTNAME><LASTNAME>Bateman</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Carl</FIRSTNAME><LASTNAME>Quinn</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>5</MONTH><DAY>16</DAY></DATE><COMMENT>The new I/O features that will be implemented in Java 1.7: file system, socket channel, asynchronous I/O…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Efficient data transfer through zero copy</T><ST>Zero copy, zero overhead</ST><A>https://www.ibm.com/developerworks/linux/library/j-zerocopy/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sathish</FIRSTNAME><MIDDLENAME>K.</MIDDLENAME><LASTNAME>Palaniappan</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Pramod</FIRSTNAME><MIDDLENAME>B.</MIDDLENAME><LASTNAME>Nagaraja</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE><COMMENT>Using the <CODEROUTINE>FileChannel.transfertTo()</CODEROUTINE> routine to exploit Linux kernel zero-copy mechanism.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Apprentice Blog of the Week: Did Java Break My byte?</T><A>http://blog.8thlight.com/dave-torre/2014/09/10/did-java-break-my-byte.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Torre</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The danger of using <CODEROUTINE>InputStream.read()</CODEROUTINE> which treats bytes as unsigned.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Watching a Directory for Changes</T><A>https://docs.oracle.com/javase/tutorial/essential/io/notification.html</A><L>en</L><F>HTML</F></X><COMMENT>How to use <CODEROUTINE>WatchService</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Networking</TITLE>
       <ITEM><ARTICLE><X><T>Jini: New technology for a networked world</T><A>http://www.javaworld.com/jw-06-1999/jw-06-jiniology.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bill</FIRSTNAME><LASTNAME>Venners</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE><COMMENT>This article is an introduction to Jini.</COMMENT></ARTICLE></ITEM>
