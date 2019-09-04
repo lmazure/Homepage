@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>links/chrome.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>9</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -184,6 +184,8 @@
     <ITEM><ARTICLE><X><T>A Contact Picker for the Web</T><A>https://developers.google.com/web/updates/2019/08/contact-picker</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Pete</FIRSTNAME><LASTNAME>LePage</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE><COMMENT>The Contact Picker API is beginning its trial phase.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Chrome 77 Beta: New performance metrics, new form capabilities, capabilities in origin trials and more</T><A>https://blog.chromium.org/2019/08/chrome-77-beta-new-performance-metrics.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>9</DAY></DATE><COMMENT>Two new performance metrics (Largest Contentful Paint and First Input Timing), the <CODEROUTINE>formdata</CODEROUTINE> event, the Contact Picker API…</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Native File System API: Simplifying access to local files</T><A>https://developers.google.com/web/updates/2019/08/native-file-system</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Pete</FIRSTNAME><LASTNAME>LePage</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE><COMMENT>A description of the new Native File System API.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Potential uses for the Privacy Sandbox</T><A>https://blog.chromium.org/2019/08/potential-uses-for-privacy-sandbox.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Justin</FIRSTNAME><LASTNAME>Schuh</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE><COMMENT>A list of ideas to improve privacy.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Get started with GPU Compute on the Web</T><A>https://developers.google.com/web/updates/2019/08/get-started-with-gpu-compute-on-the-web</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>François</FIRSTNAME><LASTNAME>Beaufort</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>28</DAY></DATE><COMMENT>A presentation of the current status of the WebGPU API by implementing a simple matrix multiplication.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Security</TITLE>
       <ITEM><ARTICLE><X><T>Security in Depth: Local Web Pages</T><A>https://blog.chromium.org/2008/12/security-in-depth-local-web-pages.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>What should be the limitations imposed to local pages?</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Security in Depth: The Password Manager</T><A>https://blog.chromium.org/2008/12/security-in-depth-password-manager.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Steele</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>The rational for Chrome Password Manager implementation.</COMMENT></ARTICLE></ITEM>
@@ -294,6 +296,7 @@
       <ITEM><ARTICLE><X><T>The Chromium Chronicle: Fighting Test Flakiness</T><A>https://developers.google.com/web/updates/2019/05/chromium-chronicle-2</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vasilii</FIRSTNAME><LASTNAME>Sukhanov</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE><COMMENT>Some advice about writing tests.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Chromium Chronicle: Code Coverage in Gerrit</T><A>https://developers.google.com/web/updates/2019/06/chromium-chronicle-3</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Yuke</FIRSTNAME></AUTHOR><AUTHOR><FIRSTNAME>Roberto</FIRSTNAME></AUTHOR><AUTHOR><FIRSTNAME>Sajjad</FIRSTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE><COMMENT>How to enable code coverage.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Chromium Chronicle: Test your Web Platform Features with WPT</T><A>https://developers.google.com/web/updates/2019/07/chromium-chronicle-4</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE><COMMENT>How to write <X><T>web-platform-tests</T><A>https://web-platform-tests.org</A><L>en</L><F>HTML</F></X>.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>The Chromium Chronicle: Coding Outside the Sandbox</T><A>https://developers.google.com/web/updates/2019/08/chromium-chronicle-5</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ade</FIRSTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>27</DAY></DATE><COMMENT>Don’t manipulate untrustworthy data using C/C++ in a process which is not sandboxed.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
