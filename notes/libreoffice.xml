@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -59,7 +59,7 @@
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
-  <ITEM>Formating
+  <ITEM>Editing
     <DEFINITIONTABLE>
       <ROW>
         <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='V'/></TERM>
@@ -77,6 +77,19 @@
         <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='-'/></TERM>
         <DESC>insert a non-breaking dash</DESC>
       </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F2'/></TERM>
+        <DESC>display the dialog to insert a field</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F12'/></TERM>
+        <DESC>insert table<BR/>
+          if some text is selected, convert it to a table</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Formating
+    <DEFINITIONTABLE>
       <ROW>
         <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='B'/></TERM>
         <DESC>bold</DESC>
@@ -104,11 +117,6 @@
       <ROW>
         <TERM><MODIFIERKEY ID='Shift'/><KEY ID='F12'/></TERM>
         <DESC>toggle bullets</DESC>
-      </ROW>
-      <ROW>
-        <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F12'/></TERM>
-        <DESC>insert table<BR/>
-          if some text is selected, convert it to a table</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='1'/></TERM>
