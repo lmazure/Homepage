@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TypeScript</TITLE>
 <PATH>links/typescript.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -48,6 +48,7 @@
       <ITEM><ARTICLE><X><T>Announcing TypeScript 3.6 RC</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-3-6-rc/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>16</DAY></DATE><COMMENT>The same as for the beta, with the addition of better unicode support for identifiers, transforming <CODEROUTINE>import.meta</CODEROUTINE> to <CODEROUTINE>context.meta</CODEROUTINE> when targeting <CODEROUTINE>system</CODEROUTINE>, more powerful ambient contexts, incremental build APIs for build tools.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 3.6</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-3-6/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>28</DAY></DATE><COMMENT>The same as for the Release Candidate plus an improved playground.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 3.7 Beta</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-3-7-beta/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>Optional chaining (<CODEROUTINE>?.</CODEROUTINE> operator), nullish coalescing (<CODEROUTINE>??.</CODEROUTINE> operator), assertion signatures, functions returning <CODEROUTINE>never</CODEROUTINE>, recursive type aliases, support of <CODEROUTINE>--declaration</CODEROUTINE> with <CODEROUTINE>--allowJs</CODEROUTINE>, editing a project with dependencies not built will use the TS files, detecting <CODEROUTINE>if</CODEROUTINE>s incorrectly testing the definition of a function instead of calling it…</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Announcing TypeScript 3.7 RC</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-3-7-rc/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>24</DAY></DATE><COMMENT>The same as the beta, plus the removal of the <CODEROUTINE>typeArguments</CODEROUTINE> property from the <CODEROUTINE>TypeReference</CODEROUTINE> interface.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
