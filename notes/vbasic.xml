@@ -749,7 +749,7 @@ End If</CODESAMPLE></ITEM>
 <ITEM>displays a message in a dialog box, waits for the user to click a button, and return an integer indicating which button the user clicked.
 <CODESAMPLE>MsgBox(prompt[, buttons] [, title] [, helpfile, context])</CODESAMPLE>
 Buttons can be <CODEROUTINE>vbOKOnly</CODEROUTINE>, <CODEROUTINE>vbOkCancel</CODEROUTINE>, <CODEROUTINE>vbYesNo</CODEROUTINE>, <CODEROUTINE>vbYesNoCancel</CODEROUTINE>, <CODEROUTINE>vbAbortRetryIgnore</CODEROUTINE>
- or <CODEROUTINE>vbRetryCancel</CODEROUTINE>.<BR/>
+or <CODEROUTINE>vbRetryCancel</CODEROUTINE>.<BR/>
 Icons can be <CODEROUTINE>vbQuestion</CODEROUTINE>, <CODEROUTINE>vbInformation</CODEROUTINE>, <CODEROUTINE>vbExclamation</CODEROUTINE> or <CODEROUTINE>vbCritical</CODEROUTINE>. <BR/>
 <CODEROUTINE>vbDefaultButton1</CODEROUTINE>, <CODEROUTINE>vbDefaultButton2</CODEROUTINE>… can be used to define the default button. <BR/>
 <CODESAMPLE>Msgbox "Do you want to save changes?",

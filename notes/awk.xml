@@ -11,7 +11,7 @@ stop to process the current record (no more match will be tried) and loop on the
 <ITEM><CODEROUTINE>exit</CODEROUTINE><BR/>
 outside of the <CODEROUTINE>END</CODEROUTINE> clause, go to the end clause<BR/>
 in the <CODEROUTINE>END</CODEROUTINE> clause, exit of the script<BR/>
- (to really exit: outside the <CODEROUTINE>END</CODEROUTINE> clause, record a flag and call <CODEROUTINE>exit</CODEROUTINE>; at the beginning of the <CODEROUTINE>END</CODEROUTINE> clause, test the flag and call <CODEROUTINE>exit</CODEROUTINE> if it is set)</ITEM>
+(to really exit: outside the <CODEROUTINE>END</CODEROUTINE> clause, record a flag and call <CODEROUTINE>exit</CODEROUTINE>; at the beginning of the <CODEROUTINE>END</CODEROUTINE> clause, test the flag and call <CODEROUTINE>exit</CODEROUTINE> if it is set)</ITEM>
 <ITEM><U>environment variables:</U><BR/>
 the shell variable <CODEROUTINE>$HOME</CODEROUTINE> can be retrieved with the syntax <CODEROUTINE>ENVIRON["HOME"]</CODEROUTINE>.</ITEM>
 <ITEM><U>numbers</U><BR/>

@@ -9,7 +9,7 @@ The script I use to customize LibreOffice to my needs:
 <CODESAMPLE>import uno<BR/>
 <BR/>
 def sortCommaSeparatedList( ) : <BR/>
- <BR/>
+<BR/>
 <TAB/>xModel = XSCRIPTCONTEXT.getDocument();<BR/>
 <TAB/>xSelectionSupplier = xModel.getCurrentController();<BR/>
 <TAB/>xIndexAccess = xSelectionSupplier.getSelection();<BR/>

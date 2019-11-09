@@ -78,7 +78,7 @@ everything else evaluates to true in a boolean context</ITEM>
 <PROMPT/>{}</CODESAMPLE></ITEM>
 <ITEM>Some examples of literals:
 <CODESAMPLE>{:first-name "Charlie"<BR/>
- :last-name "McFishwich"}<BR/>
+:last-name "McFishwich"}<BR/>
 <PROMPT/>#&lt;core$_GT_ clojure.core$_GT_@15cfd851&gt;</CODESAMPLE>
 <CODESAMPLE>{"string-key" +}<BR/>
 <PROMPT/>{"string-key" #&lt;core$_PLUS_ clojure.core$_PLUS_@658d00be&gt;</CODESAMPLE></ITEM>
@@ -190,7 +190,7 @@ Different arities of the same function can call one another, so you can easily c
 Default username is 'world'."<BR/>
 ([] (greeting "world"))<BR/>
 ([username] (str "Hello, " username)))<BR/>
- (greeting)<BR/>
+(greeting)<BR/>
 <PROMPT/>"Hello, world"</CODESAMPLE></ITEM>
 <ITEM>You can create a function with variable arity by including an ampersand in the parameter list. Clojure will bind the name after the ampersand to a sequence of all the remaining parameters.
 <CODESAMPLE> (defn date [person-1 person-2 &amp; chaperones]<BR/>
@@ -234,7 +234,7 @@ is equivalent to
 <ITEM><CODEROUTINE>use</CODEROUTINE> performs <CODEROUTINE>require</CODEROUTINE> and <CODEROUTINE>refer</CODEROUTINE> in a single step
 <CODESAMPLE>(use 'foo.bar.quux)<BR/>
 <PROMPT/>nil<BR/>
- (take 10 fibs)<BR/>
+(take 10 fibs)<BR/>
 <PROMPT/>(0 1 1 2 3 5 8 13 21 34)</CODESAMPLE></ITEM>
 <ITEM><CODEROUTINE>:reload</CODEROUTINE> flag forces a library to reload
 <CODESAMPLE>(use :reload 'foo.bar.quux)</CODESAMPLE></ITEM>

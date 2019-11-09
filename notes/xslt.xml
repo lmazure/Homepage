@@ -34,7 +34,7 @@ Parts of XML document to which templates should be applied are determined by loc
 Processing always starts with the template <CODEROUTINE>match="/"</CODEROUTINE> . This matches the root node. Many stylesheets do not contain this element explicitly. When this template is not explicitly given, the implicit template and instruction
 <CODESAMPLE>
 &lt;xsl:template match="/"&gt;<BR/>
-     &lt;xsl:apply-templates/&gt;<BR/>
+&lt;xsl:apply-templates/&gt;<BR/>
 &lt;/xsl:template&gt;
 </CODESAMPLE>
 is used.<BR/>
