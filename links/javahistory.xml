@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java history</TITLE>
 <PATH>links/javahistory.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -99,7 +99,10 @@
       <ITEM><ARTICLE><X><T>9 Java Champions on Java 9: Part 2</T><A>https://zeroturnaround.com/rebellabs/9-java-champions-on-java-9-part-2/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Henri</FIRSTNAME><LASTNAME>Tremblay</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mario</FIRSTNAME><LASTNAME>Torre</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bruno</FIRSTNAME><LASTNAME>Souza</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Ritter</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>The continuation of the previous article.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java 9: Cleaning up your default methods using private interface methods</T><A>https://www.deadcoderising.com/java-9-cleaning-up-your-default-methods-using-private-interface-methods/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marius</FIRSTNAME><LASTNAME>Herring</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Compact Strings in Java 9</T><A>https://www.baeldung.com/java-9-compact-string</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugen</FIRSTNAME><LASTNAME>Paraschiv</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>A description of compact Strings.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Java 9 Reactive Streams</T><A>https://www.baeldung.com/java-9-reactive-streams</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugen</FIRSTNAME><LASTNAME>Paraschiv</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE><COMMENT>An introduction to <CODEROUTINE>Flow.Publisher</CODEROUTINE>, <CODEROUTINE>Flow.Subscriber</CODEROUTINE> and <CODEROUTINE>Flow.Processor</CODEROUTINE>, but the comments report some errors.</COMMENT></ARTICLE></ITEM>
+      <ITEM><BLIST><TITLE>Reactive Streams</TITLE>
+        <ITEM><ARTICLE><X><T>Reactive Streams in Java 9</T><ST>Let's take a deep dive into Reactive Streams in JDK 9, their defining philosophy of asynchronous communication, and how best to use them in your code.</ST><A>https://dzone.com/articles/reactive-streams-in-java-9</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Justin</FIRSTNAME><LASTNAME>Albano</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>2</MONTH><DAY>10</DAY></DATE><COMMENT>An explanation of the need for the API and its presentation.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X quality='-1'><T>Java 9 Reactive Streams</T><A>https://www.baeldung.com/java-9-reactive-streams</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eugen</FIRSTNAME><LASTNAME>Paraschiv</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE><COMMENT>A short introduction to <CODEROUTINE>Flow.Publisher</CODEROUTINE>, <CODEROUTINE>Flow.Subscriber</CODEROUTINE> and <CODEROUTINE>Flow.Processor</CODEROUTINE>, but the comments report some errors.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Java 10</TITLE>
       <ITEM><ARTICLE><X><T>JEP draft: Time-Based Release Versioning</T><A>http://openjdk.java.net/jeps/8192828</A><L>en</L><F>HTML</F></X><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE><COMMENT>A proposal for changing the way the Java SE /JDK version is numbered.</COMMENT></ARTICLE></ITEM>
