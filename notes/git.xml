@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -207,8 +207,20 @@
     <DESC>limits the log to the n last commits</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--since="2 day"</CODEROUTINE></TERM>
-    <DESC>limits the log to commits of the last two days</DESC>
+    <TERM><CODEROUTINE>--committer=-&lt;email&gt;</CODEROUTINE></TERM>
+    <DESC>filter on a given committer</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--pretty="%cI %s"</CODEROUTINE></TERM>
+    <DESC>show the commit date and the commit subject</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--stat</CODEROUTINE></TERM>
+    <DESC>indicates the modified files with a graph of the stats of the changes</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--shortstat</CODEROUTINE></TERM>
+    <DESC>indicates the numbers of modified files, added and deleted lines</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>-p</CODEROUTINE><BR/>
@@ -228,7 +240,7 @@
     <DESC>show the log message and textual diff</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE> git show &lt;commit&gt;:&lt;file&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git show &lt;commit&gt;:&lt;file&gt;</CODEROUTINE></TERM>
     <DESC>display a given version of a file</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -360,7 +372,7 @@
   <ITEM>It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.gitignore</CODEFILENAME> file of that directory.</ITEM>
 </BLIST>
 <BR/>
-<BLIST><TITLE>changing the author of old commits</TITLE>
+<BLIST><TITLE>Changing the author of old commits</TITLE>
   <ITEM><CODEROUTINE>git rebase -i &lt;commit&gt;</CODEROUTINE> where &lt;commit&gt; is the commit before the first one to be edited. Use <CODEROUTINE>git rebase -i --root</CODEROUTINE> if the first commit must be edited.</ITEM>
   <ITEM>In the list of commits, change <CODEROUTINE>pick</CODEROUTINE> to <CODEROUTINE>edit</CODEROUTINE> for the commits to be edited.</ITEM>
   <ITEM>When the interactive rebase pauses, <CODEROUTINE>git commit --amend --author="Author Name &lt;email@address.com&gt;"</CODEROUTINE>, then <CODEROUTINE>git rebase --continue</CODEROUTINE>.</ITEM>
