@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -54,7 +54,7 @@
         <ITEM><X><T>Visual Studio Team Foundation Server Branching and Merging Guide</T><A>https://archive.codeplex.com/?p=vsarbranchingguide</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/tfs.html</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
-      <ITEM><CLIST><TITLE>comparisons</TITLE>
+      <ITEM><CLIST><TITLE>Comparisons</TITLE>
       <ITEM><X quality='1'><T>Better SCM</T><A>http://better-scm.shlomifish.org</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
     </BLIST></ITEM>
@@ -260,7 +260,7 @@
       <ITEM><X><T>Simian</T><A>http://www.harukizaemon.com/simian/</A><L>en</L><F>HTML</F></X>: detection of code duplication</ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Code reviews</TITLE>
-      <ITEM><BLIST><TITLE>tools</TITLE>
+      <ITEM><BLIST><TITLE>Tools</TITLE>
         <ITEM><X><T>Crucible</T><A>https://www.atlassian.com/software/crucible</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Checklits</TITLE>
@@ -518,6 +518,7 @@
       <ITEM><ARTICLE><X><T>Your code sucks, and I hate you</T><ST>The Social Dynamics of Code Reviews</ST><A>https://jml.io/pages/your-code-sucks-and-i-hate-you.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonatha</FIRSTNAME><LASTNAME>Lange</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>9</MONTH><DAY>15</DAY></DATE><COMMENT>Some evangelism for doing code reviews and some advice on how to perform them.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Code Health: Too Many Comments on Your Code Reviews?</T><A>https://testing.googleblog.com/2017/06/code-health-too-many-comments-on-your.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tom</FIRSTNAME><LASTNAME>O'Neill</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>19</DAY></DATE><COMMENT>A short list of good pieces of advice.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Code Health: Understanding Code In Review</T><A>https://testing.googleblog.com/2018/05/code-health-understanding-code-in-review.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Max</FIRSTNAME><LASTNAME>Kanat-Alexander</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE><COMMENT>Don't waste time reviewing code that is hard to understand, just ask for it to be clarified.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Code Health: Respectful Reviews == Useful Reviews</T><A>https://testing.googleblog.com/2019/11/code-health-respectful-reviews-useful.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Liz</FIRSTNAME><LASTNAME>Kammer</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Maggie</FIRSTNAME><LASTNAME>Hodges</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ambar</FIRSTNAME><LASTNAME>Murillo</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>A short list of tips for code reviews.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Compilers</TITLE>
       <ITEM><ARTICLE><X><T>Get to know GCC 4</T><ST>What's new in the GNU Compiler Collection release series</ST><A>https://www.ibm.com/developerworks/linux/library/l-gcc4</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>M.</FIRSTNAME><MIDDLENAME>Tim</MIDDLENAME><LASTNAME>Jones</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE><COMMENT>A short description of the GCC4 releases.</COMMENT></ARTICLE></ITEM>
