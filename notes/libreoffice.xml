@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -85,6 +85,14 @@
         <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F12'/></TERM>
         <DESC>insert table<BR/>
           if some text is selected, convert it to a table</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Up'/></TERM>
+        <DESC>move current line up</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Down'/></TERM>
+        <DESC>move current line down</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
