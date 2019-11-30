@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Life cycle</TITLE>
 <PATH>links/life.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -14,16 +14,16 @@
           <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Structured_Systems_Analysis_and_Design_Method</A><L>en</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
       </BLIST></ITEM>
-      <ITEM><CLIST><TITLE>spiral</TITLE>
+      <ITEM><CLIST><TITLE>Spiral</TITLE>
         <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Spiral_model</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><CLIST><TITLE>RAD</TITLE>
         <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Rapid_application_development</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
-      <ITEM><CLIST><TITLE>iterative</TITLE>
+      <ITEM><CLIST><TITLE>Iterative</TITLE>
         <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Iterative_and_incremental_development</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
-      <ITEM><CLIST><TITLE>cleanroom</TITLE>
+      <ITEM><CLIST><TITLE>Cleanroom</TITLE>
         <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Cleanroom_Software_Engineering</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><CLIST><TITLE>RUP</TITLE>
@@ -54,7 +54,7 @@
         <ITEM><CLIST><TITLE>DSDM</TITLE>
           <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Dynamic_Systems_Development_Method</A><L>en</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
-        <ITEM><CLIST><TITLE>lean</TITLE>
+        <ITEM><CLIST><TITLE>Lean</TITLE>
           <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Lean_software_development</A><L>en</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
         <ITEM><CLIST><TITLE>Crystal clear</TITLE>
@@ -100,7 +100,7 @@
       <ITEM><X><T>ODC</T><A>http://researcher.watson.ibm.com/researcher/view_project.php?id=480</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Issue tracking</TITLE>
-      <ITEM><CLIST><TITLE>list</TITLE>
+      <ITEM><CLIST><TITLE>List</TITLE>
         <ITEM><X><T>tigris.org</T><A>http://issuetrack.tigris.org</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><ANCHOR>ddts</ANCHOR>ddts: <X><T>personal notes</T><A>../notes/ddts.htm</A><L>en</L><F>HTML</F></X></ITEM>
@@ -172,6 +172,8 @@
     <ITEM><ARTICLE><X><T>A Year’s Worth</T><A>https://medium.com/@kentbeck_7670/a-years-worth-c1cbc3085e9d</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE><COMMENT>Trying to represent a one-year roadmap as a bubble chart.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Really Know Your Tools</T><ST>Great programmers all possess deep knowledge of their primary tools. If you’re not expert in yours, invest the time you need. Here’s a start.</ST><A>https://blogs.oracle.com/javamagazine/really-know-your-tools</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Binstock</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>16</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Decisions, Decisions or Why Baskets of Options Dominate</T><A>https://medium.com/@kentbeck_7670/decisions-decisions-or-why-baskets-of-options-dominate-9ac63658b593</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>5</DAY></DATE><COMMENT>After explaining that a group of options is better than an option on a group, Kent Beck applies this to roadmaps, product launches and key results.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Inefficient Efficiency</T><A>https://medium.com/@kentbeck_7670/inefficient-efficiency-5b3ab5294791</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>26</DAY></DATE><COMMENT>We tend to optimize throughput, while we should optimize latency.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Take Notes As You Code—Lots of ’em!</T><ST>A small discipline that pays huge rewards</ST><A>https://blogs.oracle.com/javamagazine/take-notes-as-you-code-lots-of-em</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Binstock</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE><COMMENT>The author advices to take notes: todo list, glossary, recording decisions, and breadcrumbs.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Development processes</TITLE>
       <ITEM><BLIST><TITLE>Project life cycles</TITLE>
         <ITEM><ARTICLE><X status='dead'><T>Software Life Cycle</T><A>http://www.engineering.wright.edu/~thartrum/CEG460FA09/chap15.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Bernd</FIRSTNAME><LASTNAME>Bruegge</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Allen</FIRSTNAME><LASTNAME>Dutoit</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>A university presentation of waterfall, V and spiral life cycle models.</COMMENT></ARTICLE></ITEM>
