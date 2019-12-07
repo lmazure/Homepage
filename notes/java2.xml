@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>notes/java2.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
@@ -12,7 +12,7 @@ for (PhotoListMetaDataListener l : a_listOfMetaDataListeners) l.photoListMetaDat
 is the same as
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
 …<BR/>
-for (int i=0; i&lt;a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataListeners.get(i).photoListMetaDataChanged(f);</CODESAMPLE>
+for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataListeners.get(i).photoListMetaDataChanged(f);</CODESAMPLE>
 <BR/>
 <U><B>Autoboxing</B></U><BR/>
 Autoboxing allows to use an <CODEROUTINE>int</CODEROUTINE> in place of an <CODEROUTINE>Integer</CODEROUTINE> and vice-versa.<BR/>
@@ -37,23 +37,21 @@ This should be used sparingly since it pollutes the namespace of the class.<BR/>
 <U><B>Strings</B></U><BR/>
 <SLIST>
 <ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
-<ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters</ITEM>
-<ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE></ITEM>
+<ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
+<ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
 </SLIST>
 <BR/>
 <U><B>Modifiers</B></U><BR/>
 <NLIST><TITLE>The Java Language Specification suggests ordering the modifiers as:</TITLE>
-<ITEM>public</ITEM>
-<ITEM>protected</ITEM>
-<ITEM>private</ITEM>
-<ITEM>abstract</ITEM>
-<ITEM>static</ITEM>
-<ITEM>final</ITEM>
-<ITEM>transient</ITEM>
-<ITEM>volatile</ITEM>
-<ITEM>synchronized</ITEM>
-<ITEM>native</ITEM>
-<ITEM>strictfp</ITEM>
+  <ITEM>public / protected / private</ITEM>
+  <ITEM>abstract</ITEM>
+  <ITEM>default</ITEM>
+  <ITEM>static</ITEM>
+  <ITEM>final</ITEM>
+  <ITEM>transient / volatile</ITEM>
+  <ITEM>synchronized</ITEM>
+  <ITEM>native</ITEM>
+  <ITEM>strictfp</ITEM>
 </NLIST>
 <CODEROUTINE>strictfp</CODEROUTINE><BR/>
 <CODEROUTINE>strictfp</CODEROUTINE> is a keyword to force Java to store intermediary results in floating point calculation using IEEE 754 (instead of a possible greater precision provided by the machine).<BR/>
