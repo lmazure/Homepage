@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>SQL</TITLE>
 <PATH>links/sql.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2019</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -12,7 +12,7 @@
     <ITEM><X><T>PostgreSQL</T><A>http://www.postgresql.org/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>H2</T><A>http://www.h2database.com</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>T-SQL Analyzer</T><A>http://www.ubitsoft.com/products/t-sql-analyzer/</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><CLIST><TITLE>tutorials</TITLE>
+    <ITEM><CLIST><TITLE>Tutorials</TITLE>
       <ITEM><X><T>W3 Schools</T><A>http://www.w3schools.com/sql/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>1keydata.com</T><A>http://www.1keydata.com/sql/sql.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
@@ -26,6 +26,7 @@
     <ITEM><ARTICLE><X status='dead'><T>Hierarchical SQL</T><A>http://www.onlamp.com/pub/a/onlamp/2004/08/05/hierarchical_sql.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joe</FIRSTNAME><LASTNAME>Celko</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE><COMMENT>The author explains a possible solution to represent a tree in a SQL database.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Using the Zero Resource Model for database management in WebSphere sMash</T><A>https://www.ibm.com/developerworks/websphere/techjournal/1203_lobo/1203_lobo.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Arun</FIRSTNAME><LASTNAME>Lobo</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE><COMMENT>A very short introduction to ZRM: defining the schema, configuring the access to the database, how to use the Groovy/PHP API and the REST API.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Three things you should never put in your database</T><A>http://www.revsys.com/blog/2012/may/01/three-things-you-should-never-put-your-database/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Frank</FIRSTNAME><LASTNAME>Wiles</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE><COMMENT>BLOBs, ephemeral data and logs should not be stored in the database.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Understanding Weak Isolation Is a Serious Problem</T><A>http://www.bailis.org/blog/understanding-weak-isolation-is-a-serious-problem/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Peter</FIRSTNAME><LASTNAME>Bailis</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE><COMMENT>The author recommends improving our understanding, at the application level, of using weak isolation.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>ETL is dying</T><A>https://tombreur.wordpress.com/2017/02/19/etl-is-dying/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tom</FIRSTNAME><LASTNAME>Breur</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>19</DAY></DATE><COMMENT>The author claims that traditional ETL tools will be replaced data pipelines coded in a programming language.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Informix</TITLE>
       <ITEM><ARTICLE><X status='dead'><T>Informix Unleashed</T><A>http://www.podgoretsky.com/ftp/docs/DB/Informix%20Unleashed/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Bentley</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Donat</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Sandy</FIRSTNAME><LASTNAME>Emerson</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ron</FIRSTNAME><LASTNAME>Flannery</LASTNAME></AUTHOR><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
