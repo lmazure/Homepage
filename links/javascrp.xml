@@ -3,31 +3,31 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript</TITLE>
 <PATH>links/javascrp.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><X><T>ECMA-262 standard</T><A>http://www.ecma-international.org/publications/standards/Ecma-262.htm</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><CLIST><TITLE>tutorials</TITLE>
+    <ITEM><CLIST><TITLE>Tutorials</TITLE>
       <ITEM><X status='obsolete'><T>Voodoo's Introduction to Javascript</T><A>http://oopweb.com/JavaScript/Documents/jsintro/Volume/tutorial.htm</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>W3 Schools</T><A>http://www.w3schools.com/js</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>JavaScript Garden</T><A>http://bonsaiden.github.com/JavaScript-Garden/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>javascript.info</T><A>http://javascript.info</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>The Principles of Object-Oriented JavaScript</T><A>https://ebooks-it.org/1593275404-ebook.htm</A><L>en</L><F>PDF</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><CLIST><TITLE>profiling</TITLE>
+    <ITEM><CLIST><TITLE>Profiling</TITLE>
       <ITEM><X><T>spy-js</T><A>http://spy-js.com</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><CLIST><TITLE>code documentation</TITLE>
+    <ITEM><CLIST><TITLE>Code documentation</TITLE>
       <ITEM><X><T>JSDoc</T><A>https://github.com/jsdoc3/jsdoc</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>FAQ</TITLE>
       <ITEM><X><T>Meta-FAQ</T><A>http://www.faqs.org/faqs/computer-lang/java/javascript/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><CLIST><TITLE>directory</TITLE>
+    <ITEM><CLIST><TITLE>Directory</TITLE>
       <ITEM><X><T>The JavaScript Source</T><A>http://javascript.internet.com</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><CLIST><TITLE>minifiers</TITLE>
+    <ITEM><CLIST><TITLE>Minifiers</TITLE>
       <ITEM><X status='obsolete'><T>JSMin</T><A>http://crockford.com/javascript/jsmin</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Dojo ShrinkSafe</T><A>http://shrinksafe.dojotoolkit.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Dean Edwards Packer</T><A>http://dean.edwards.name/packer/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -40,10 +40,10 @@
       <ITEM><X status='obsolete'><T>Rhino</T><A>http://www.mozilla.org/rhino/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Nashorn</T><A>http://openjdk.java.net/projects/nashorn/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><CLIST><TITLE>demos</TITLE>
+    <ITEM><CLIST><TITLE>Demos</TITLE>
       <ITEM><X><T>Chrome Experiments</T><A>http://www.chromeexperiments.com</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><CLIST><TITLE>mashups</TITLE>
+    <ITEM><CLIST><TITLE>Mashups</TITLE>
       <ITEM><X><T>ProgrammableWeb</T><A>http://www.programmableweb.com</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><X><T>json.org</T><A>http://www.json.org</A><L>en</L><F>HTML</F></X></ITEM>
@@ -93,6 +93,7 @@
     <ITEM><ARTICLE><X><T>Abortable fetch</T><A>https://developers.google.com/web/updates/2017/09/abortable-fetch</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jake</FIRSTNAME><LASTNAME>Archibald</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>The <CODEROUTINE>AbortController</CODEROUTINE> and <CODEROUTINE>AbortSignal</CODEROUTINE> API is at last defined, Firefox has already implemented it.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>#SmooshGate FAQ</T><A>https://developers.google.com/web/updates/2018/03/smooshgate</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mathias</FIRSTNAME><LASTNAME>Bynens</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>19</DAY></DATE><COMMENT>The story of <CODEROUTINE>Array.prototype.flatten</CODEROUTINE> breaking MooTols.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Coding Challenge #125: Fourier Series</T><A>https://www.youtube.com/watch?v=Mm2eYfj0SgA</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>28</MINUTE><SECOND>46</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Shiffman</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>WebSockets for fun and profit</T><A>https://stackoverflow.blog/2019/12/18/websockets-for-fun-and-profit/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Max</FIRSTNAME><LASTNAME>Pekarsky</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE><COMMENT>An introduction to WebSockets. It speaks only positively about this technology, the comments give a less biased opinion.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Tutorials</TITLE>
       <ITEM><ARTICLE><X><T>Scoping</T><A>https://www.youtube.com/watch?v=vXWOKZVdRaI</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>45</MINUTE><SECOND>57</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kiro</FIRSTNAME><LASTNAME>Risk</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>An explanation of JavaScript hoisting.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Object Oriented Programming</T><A>https://www.youtube.com/watch?v=5vsrq-9VhZs</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>50</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kiro</FIRSTNAME><LASTNAME>Risk</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>How to perform some common OOP patterns in JavaScript: defining a class, deriving a class, calling a method of the super-class from a derived class…</COMMENT></ARTICLE></ITEM>
