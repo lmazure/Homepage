@@ -43,6 +43,8 @@ window.display_search = () => {
     if (isHidden(searchPanel)) {
         searchPanel.style.display = "block";
         scrollTo(0, document.body.scrollHeight);
+        const searchText = document.getElementById("searchText");
+        searchText.focus();
     }
     else {
         searchPanel.style.display = "none";

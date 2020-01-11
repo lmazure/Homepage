@@ -186,8 +186,8 @@ export default class ContentBuilder {
     static getTitleCellFromLink(link) {
         const title = HtmlString.buildFromString(link.title);
         if (link.subtitle !== undefined) {
-            title.appendEmptyTag("br")
-                .appendString(link.subtitle);
+            title.appendString(" \u{2014} ")
+                .appendString(link.subtitle.join(" \u{2014} "));
         }
         return title;
     }
@@ -385,6 +385,9 @@ export default class ContentBuilder {
     static statusToHtmlString(status) {
         if ((status === "dead") || (status === "zombie")) {
             return HtmlString.buildFromTag("span", "\u{2020}", "title", "dead link");
+        }
+        else if (status === "obsolete") {
+            return HtmlString.buildFromTag("span", "\u{2021}", "title", "obsolete");
         }
         throw "illegal call to buildContentText.statusToHtmlString() (unknown value = \"" + status + "\")";
     }

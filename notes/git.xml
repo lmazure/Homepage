@@ -376,8 +376,20 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>git --global --edit</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git config --global --edit</CODEROUTINE></TERM>
     <DESC>open an editor to edit the global configuration file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git config --global user.name "John Doe"</CODEROUTINE></TERM>
+    <DESC>set the name in the global configuration file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git config --global user.email johndoe@example.com</CODEROUTINE></TERM>
+    <DESC>set the email in the global configuration file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git config user.name "John Doe"</CODEROUTINE></TERM>
+    <DESC>set the name in the local repository configuration file</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
