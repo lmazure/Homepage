@@ -9,6 +9,8 @@
 <ROW><CELL width='2'>Informational 1xx</CELL></ROW>
 <ROW><CELL>100</CELL><CELL>Continue</CELL></ROW>
 <ROW><CELL>101</CELL><CELL>Switching Protocols</CELL></ROW>
+<ROW><CELL>102</CELL><CELL>Processing (WebDAV RFC 2518)</CELL></ROW>
+<ROW><CELL>103</CELL><CELL>Early Hints (experimental RFC 8297)</CELL></ROW>
 <ROW><CELL width='2'>Successful 2xx</CELL></ROW>
 <ROW><CELL>200</CELL><CELL>OK</CELL></ROW>
 <ROW><CELL>201</CELL><CELL>Created</CELL></ROW>
@@ -17,6 +19,10 @@
 <ROW><CELL>204</CELL><CELL>No Content</CELL></ROW>
 <ROW><CELL>205</CELL><CELL>Reset Content</CELL></ROW>
 <ROW><CELL>206</CELL><CELL>Partial Content</CELL></ROW>
+<ROW><CELL>207</CELL><CELL>Multi-Status (WebDAV <X><T>RFC 2518</T><A>javascript:do_reference("rfc/2518")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>208</CELL><CELL>Already Reported (WebDAV <X><T>RFC 2518</T><A>javascript:do_reference("rfc/2518")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>210</CELL><CELL>Content Different (WebDAV <X><T>RFC 2518</T><A>javascript:do_reference("rfc/2518")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>226</CELL><CELL>IM Used (RFC 3229)</CELL></ROW>
 <ROW><CELL width='2'>Redirection 3xx</CELL></ROW>
 <ROW><CELL>300</CELL><CELL>Multiple Choices</CELL></ROW>
 <ROW><CELL>301</CELL><CELL>Moved Permanently</CELL></ROW>
@@ -26,6 +32,8 @@
 <ROW><CELL>305</CELL><CELL>Use Proxy</CELL></ROW>
 <ROW><CELL>306</CELL><CELL>(Unused)</CELL></ROW>
 <ROW><CELL>307</CELL><CELL>Temporary Redirect</CELL></ROW>
+<ROW><CELL>308</CELL><CELL>Permanent Redirect</CELL></ROW>
+<ROW><CELL>310</CELL><CELL>Too many Redirects</CELL></ROW>
 <ROW><CELL width='2'>Client Error 4xx</CELL></ROW>
 <ROW><CELL>400</CELL><CELL>Bad Request</CELL></ROW>
 <ROW><CELL>401</CELL><CELL>Unauthorized</CELL></ROW>
@@ -45,14 +53,48 @@
 <ROW><CELL>415</CELL><CELL>Unsupported Media Type</CELL></ROW>
 <ROW><CELL>416</CELL><CELL>Requested Range Not Satisfiable</CELL></ROW>
 <ROW><CELL>417</CELL><CELL>Expectation Failed</CELL></ROW>
+<ROW><CELL>418</CELL><CELL>I’m a teapot (<X><T>RFC 2324</T><A>javascript:do_reference("rfc/2324")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>421</CELL><CELL>Bad mapping / Misdirected Request</CELL></ROW>
+<ROW><CELL>422</CELL><CELL>Unprocessable entity (WebDAV)</CELL></ROW>
+<ROW><CELL>423</CELL><CELL>Locked (WebDAV)</CELL></ROW>
+<ROW><CELL>424</CELL><CELL>Method failure (WebDAV)</CELL></ROW>
+<ROW><CELL>425</CELL><CELL>Unordered Collection (WebDAV <X><T>RFC 3648</T><A>javascript:do_reference("rfc/3648")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>426</CELL><CELL>Upgrade Required (<X><T>RFC 2817</T><A>javascript:do_reference("rfc/2817")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>428</CELL><CELL>Precondition Required (<X><T>RFC 6585</T><A>javascript:do_reference("rfc/6585")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>429</CELL><CELL>Too Many Requests (<X><T>RFC 6585</T><A>javascript:do_reference("rfc/6585")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>431</CELL><CELL>Request Header Fields Too Large (<X><T>RFC 6585</T><A>javascript:do_reference("rfc/6585")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>449</CELL><CELL>Retry With (Microsoft)</CELL></ROW>
+<ROW><CELL>450</CELL><CELL>Blocked by Windows Parental Controls (Microsoft)</CELL></ROW>
+<ROW><CELL>451</CELL><CELL>Unavailable For Legal Reasons</CELL></ROW>
+<ROW><CELL>456</CELL><CELL>Unrecoverable Error (WebDAV)</CELL></ROW>
+<ROW><CELL>444</CELL><CELL>No Response (Nginx)</CELL></ROW>
+<ROW><CELL>495</CELL><CELL>SSL Certificate Error (Nginx)</CELL></ROW>
+<ROW><CELL>496</CELL><CELL>SSL Certificate Required (Nginx)</CELL></ROW>
+<ROW><CELL>497</CELL><CELL>HTTP Request Sent to HTTPS Port (Nginx)</CELL></ROW>
+<ROW><CELL>498</CELL><CELL>Token expired/invalid (Nginx)</CELL></ROW>
+<ROW><CELL>499</CELL><CELL>Client Closed Request (Nginx)</CELL></ROW>
 <ROW><CELL width='2'>Server Error 5xx</CELL></ROW>
 <ROW><CELL>500</CELL><CELL>Internal Server Error</CELL></ROW>
 <ROW><CELL>501</CELL><CELL>Not Implemented</CELL></ROW>
-<ROW><CELL>502</CELL><CELL>Bad Gateway</CELL></ROW>
+<ROW><CELL>502</CELL><CELL>Bad Gateway / Proxy Error</CELL></ROW>
 <ROW><CELL>503</CELL><CELL>Service Unavailable</CELL></ROW>
 <ROW><CELL>504</CELL><CELL>Gateway Timeout</CELL></ROW>
 <ROW><CELL>505</CELL><CELL>HTTP Version Not Supported</CELL></ROW>
+<ROW><CELL>506</CELL><CELL>Variant Also Negotiates (<X><T>RFC 2295</T><A>javascript:do_reference("rfc/2295")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>507</CELL><CELL>Insufficient storage (WebDAV)</CELL></ROW>
+<ROW><CELL>508</CELL><CELL>Loop detected (WebDAV <X><T>RFC 5842</T><A>javascript:do_reference("rfc/5842")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>509</CELL><CELL>Bandwidth Limit Exceeded</CELL></ROW>
+<ROW><CELL>510</CELL><CELL>Not extended (<X><T>RFC 2774</T><A>javascript:do_reference("rfc/2774")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>511</CELL><CELL>Network authentication required (<X><T>RFC 6585</T><A>javascript:do_reference("rfc/6585")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>520</CELL><CELL>Unknown Error (Cloudflare)</CELL></ROW>
+<ROW><CELL>521</CELL><CELL>Web Server Is Down (Cloudflare)</CELL></ROW>
+<ROW><CELL>522</CELL><CELL>Connection Timed Out (Cloudflare)</CELL></ROW>
+<ROW><CELL>523</CELL><CELL>Origin Is Unreachable (Cloudflare)</CELL></ROW>
+<ROW><CELL>524</CELL><CELL>A Timeout Occurred (Cloudflare)</CELL></ROW>
+<ROW><CELL>525</CELL><CELL>SSL Handshake Failed (Cloudflare)</CELL></ROW>
+<ROW><CELL>526</CELL><CELL>Invalid SSL Certificate (Cloudflare)</CELL></ROW>
+<ROW><CELL>527</CELL><CELL>Railgun Error (Cloudflare)</CELL></ROW>
 </TABLE>
 </CONTENT>
-<X><T>standard</T><A>http://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</A><L>en</L><F>HTML</F></X>
+<X><T>standard</T><A>https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
