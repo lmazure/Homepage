@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Life cycle</TITLE>
 <PATH>links/life.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -75,10 +75,6 @@
         <ITEM><X><T>Trello</T><A>https://trello.com</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Redmine</T><A>https://www.redmine.org/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
-    </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>Workload estimation</TITLE>
-    <ITEM>COCOMO: <X><T>USC</T><A>http://sunset.usc.edu/research/COCOMOII/cocomo81_pgm/cocomo81.html</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM>COCOMO II: <X><T>CSE</T><A>http://sunset.usc.edu/csse/research/COCOMOII/cocomo_main.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Documentation</TITLE>
       <ITEM><X><T>DITA</T><A>http://dita.xml.org</A><L>en</L><F>HTML</F></X></ITEM>
@@ -162,6 +158,7 @@
     <ITEM><ARTICLE><X><T>Towards an understanding of technical debt</T><A>http://laughingmeme.org/2016/01/10/towards-an-understanding-of-technical-debt/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kellan</FIRSTNAME><LASTNAME>Elliott-McCrea</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>Trying to define the meaning of the "technical debt" term.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Moving Past the Scaling Myth</T><A>https://michaelfeathers.silvrback.com/the-myth-of-scaling</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Feathers</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE><COMMENT>It is illusory to believe that a process or architecture can fit all scales.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Flaw at the Heart of Bimodal IT</T><A>http://continuousdelivery.com/2016/04/the-flaw-at-the-heart-of-bimodal-it/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jez</FIRSTNAME><LASTNAME>Humble</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>3</DAY></DATE><COMMENT>Some comments on the Bimodal IT model.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>COCOMO: Not worth serious attention</T><A>http://shape-of-code.coding-guidelines.com/2016/05/19/cocomo-how-not-to-fit-a-model-to-data/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Derek</FIRSTNAME><LASTNAME>Jones</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE><COMMENT>The author found errors in the calculation of <AUTHOR><FIRSTNAME>Barry</FIRSTNAME><LASTNAME>Boehm</LASTNAME></AUTHOR>'s COCOMO 81 .</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>BoiledCarrot</T><A>https://martinfowler.com/bliki/BoiledCarrot.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>23</DAY></DATE><COMMENT>We need to analyze why some software development techniques failed.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Three A's of Responding to Bugs</T><A>https://blog.8thlight.com/doug-bradbury/2016/07/06/three-a-s-of-responding-to-bugs.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Doug</FIRSTNAME><LASTNAME>Bradbury</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>7</MONTH><DAY>6</DAY></DATE><COMMENT>How to react to a user reporting a bug: Acknowledge, Apologize, and Amend.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>ParallelChange</T><A>https://martinfowler.com/bliki/ParallelChange.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Danilo</FIRSTNAME><LASTNAME>Sato</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>13</DAY></DATE><COMMENT>The Parallel Change, a.k.a. Expand and Contract, pattern is used to manage incompatible changes.</COMMENT></ARTICLE></ITEM>
