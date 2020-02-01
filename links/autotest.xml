@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -177,6 +177,7 @@
       <ITEM><ARTICLE><X><T>Test Desiderata 6/12: Tests Should be Deterministic</T><A>https://www.youtube.com/watch?v=PwWyp-wpFiw</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>6</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Kelly</FIRSTNAME><LASTNAME>Sutton</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>Tests should should be deterministic, with an exemple of a flaky test.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Test Desiderata 7/12: Tests Should Be Automated</T><A>https://www.youtube.com/watch?v=YQlmP08dj6g</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>6</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Kelly</FIRSTNAME><LASTNAME>Sutton</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>16</DAY></DATE><COMMENT>Tests should should be automated, there is a trade-off between automated tests and manual tests.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Test Desiderata 8/12: Tests Should Be Isolated (from each other)</T><A>https://www.youtube.com/watch?v=HApI2cspQus</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>5</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Kelly</FIRSTNAME><LASTNAME>Sutton</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>Tests should should use only locally initialized state or should leave the global state exactly as it was.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Test Desiderata 9/12 Tests Should Be Composable</T><A>https://www.youtube.com/watch?v=Wf3WXYaMt8E</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>4</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Kelly</FIRSTNAME><LASTNAME>Sutton</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>30</DAY></DATE><COMMENT>Production code should be composable, tests should also be, so there is no need to test the cross-product of some data conbinations.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mocking</TITLE>
       <ITEM><ARTICLE><X><T>Working with Microsoft Moles Framework</T><A>https://www.codeguru.com/csharp/.net/article.php/c18491</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joydip</FIRSTNAME><LASTNAME>Kanjilal</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>A description on how to start with Moles, a framework to mock .NET methods.</COMMENT></ARTICLE></ITEM>

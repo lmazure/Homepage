@@ -14,13 +14,14 @@ is the same as
 …<BR/>
 for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataListeners.get(i).photoListMetaDataChanged(f);</CODESAMPLE>
 <BR/>
-<U><B>Autoboxing</B></U><BR/>
-Autoboxing allows to use an <CODEROUTINE>int</CODEROUTINE> in place of an <CODEROUTINE>Integer</CODEROUTINE> and vice-versa.<BR/>
-Supported types are: <CODEROUTINE>Boolean</CODEROUTINE>, <CODEROUTINE>Byte</CODEROUTINE>, <CODEROUTINE>Character</CODEROUTINE>, <CODEROUTINE>Short</CODEROUTINE>, <CODEROUTINE>Integer</CODEROUTINE>, <CODEROUTINE>Long</CODEROUTINE>, <CODEROUTINE>Float</CODEROUTINE>, and <CODEROUTINE>Double</CODEROUTINE>.<BR/>
-If the program tries to autounbox <CODEROUTINE>null</CODEROUTINE>, it will throw a <CODEROUTINE>NullPointerException</CODEROUTINE>.<BR/>
-The <CODEROUTINE>==</CODEROUTINE> operator performs reference identity comparisons on <CODEROUTINE>Integer</CODEROUTINE> expressions and value equality comparisons on <CODEROUTINE>int</CODEROUTINE> expressions.<BR/>
-The performance costs associated with boxing and unboxing must not be forgotten.<BR/>
-<BR/>
+<BLIST><TITLE><U><B>Autoboxing</B></U></TITLE>
+  <ITEM>Autoboxing allows to use an <CODEROUTINE>int</CODEROUTINE> in place of an <CODEROUTINE>Integer</CODEROUTINE> and vice-versa.<BR/>
+    Supported types are: <CODEROUTINE>Boolean</CODEROUTINE>, <CODEROUTINE>Byte</CODEROUTINE>, <CODEROUTINE>Character</CODEROUTINE>, <CODEROUTINE>Short</CODEROUTINE>, <CODEROUTINE>Integer</CODEROUTINE>, <CODEROUTINE>Long</CODEROUTINE>, <CODEROUTINE>Float</CODEROUTINE>, and <CODEROUTINE>Double</CODEROUTINE>.<BR/>
+    If the program tries to autounbox <CODEROUTINE>null</CODEROUTINE>, it will throw a <CODEROUTINE>NullPointerException</CODEROUTINE>.<BR/>
+    The <CODEROUTINE>==</CODEROUTINE> operator performs reference identity comparisons on <CODEROUTINE>Integer</CODEROUTINE> expressions and value equality comparisons on <CODEROUTINE>int</CODEROUTINE> expressions.<BR/>
+    The performance costs associated with boxing and unboxing must not be forgotten.
+  </ITEM>
+</BLIST>
 <U><B>Static Import</B></U><BR/>
 The static import construct allows unqualified access to static members without inheriting from the type containing the static members. Instead, the program imports the members, either individually:
 <CODESAMPLE>import static java.lang.Math.PI;<BR/>
@@ -34,15 +35,13 @@ Once the static members have been imported, they may be used without qualificati
 )<BR/>
 This should be used sparingly since it pollutes the namespace of the class.<BR/>
 <BR/>
-<U><B>Strings</B></U><BR/>
-<SLIST>
-<ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
-<ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
-<ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
-</SLIST>
-<BR/>
-<U><B>Modifiers</B></U><BR/>
-<NLIST><TITLE>The Java Language Specification suggests ordering the modifiers as:</TITLE>
+<BLIST><TITLE><U><B>Strings</B></U></TITLE>
+  <ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
+  <ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
+  <ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Modifiers</B></U></TITLE>
+<ITEM><NLIST><TITLE>The Java Language Specification suggests ordering the modifiers as:</TITLE>
   <ITEM>public / protected / private</ITEM>
   <ITEM>abstract</ITEM>
   <ITEM>default</ITEM>
@@ -52,8 +51,41 @@ This should be used sparingly since it pollutes the namespace of the class.<BR/>
   <ITEM>synchronized</ITEM>
   <ITEM>native</ITEM>
   <ITEM>strictfp</ITEM>
-</NLIST>
-<CODEROUTINE>strictfp</CODEROUTINE><BR/>
-<CODEROUTINE>strictfp</CODEROUTINE> is a keyword to force Java to store intermediary results in floating point calculation using IEEE 754 (instead of a possible greater precision provided by the machine).<BR/>
+</NLIST></ITEM>
+<ITEM><CODEROUTINE>strictfp</CODEROUTINE><BR/>
+<CODEROUTINE>strictfp</CODEROUTINE> is a keyword to force Java to store intermediary results in floating point calculation using IEEE 754 (instead of a possible greater precision provided by the machine).</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>JUnit</B></U><BR/></TITLE>
+  <ITEM>to create a test suite as a list of test classes:
+    <CODESAMPLE>
+    package data.internet.test;<BR/>
+    <BR/>
+    import org.junit.platform.runner.JUnitPlatform;<BR/>
+    import org.junit.platform.suite.api.SelectClasses;<BR/>
+    import org.junit.runner.RunWith;<BR/>
+    <BR/>
+    @RunWith(JUnitPlatform.class)<BR/>
+    @SelectClasses({SynchronousSiteDataRetrieverTest.class,<BR/>
+    <TAB/>AsynchronousSiteDataRetrieverTest.class,<BR/>
+    <TAB/>CachedSiteDataRetrieverTest.class})<BR/>
+    public class AllSiteRetrieverTests {<BR/>
+    }</CODESAMPLE>
+  </ITEM>
+  <ITEM>to create a test suite as a list of test packages:
+    <CODESAMPLE>
+    package test;<BR/>
+    <BR/>
+    import org.junit.platform.runner.JUnitPlatform;<BR/>
+    import org.junit.platform.suite.api.SelectPackages;<BR/>
+    import org.junit.runner.RunWith;<BR/>
+    <BR/>
+    @RunWith(JUnitPlatform.class)<BR/>
+    @SelectPackages({"data.internet.test",<BR/>
+    <TAB/>"data.jsongenerator.test",<BR/>
+    <TAB/>"data.test"})<BR/>
+    public class AllTests {<BR/>
+    }</CODESAMPLE>
+  </ITEM>
+  </BLIST>
 </CONTENT>
 </PAGE>
