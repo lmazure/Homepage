@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>links/chrome.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -212,6 +212,8 @@
     <ITEM><ARTICLE><X><T>Introducing android-browser-helper, a library for building Trusted Web Activities</T><A>https://developers.google.com/web/updates/2020/01/twa-android-browser-helper</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andre</FIRSTNAME><LASTNAME>Bandarra</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Multi-Origin Trusted Web Activities</T><A>https://developers.google.com/web/updates/2020/01/twa-multi-origin</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andre</FIRSTNAME><LASTNAME>Bandarra</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>Technical details on how to set up a TWA so it can use multiple origins.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Rethinking Payment Request for iOS Chrome</T><A>https://blog.chromium.org/2020/01/rethinking-payment-request-for-ios.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Danyao</FIRSTNAME><LASTNAME>Wang</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE><COMMENT>The basic-card payment handler will be removed from the Payment Request API.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>New in Chrome 80</T><A>https://developers.google.com/web/updates/2020/02/nic80</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Pete</FIRSTNAME><LASTNAME>LePage</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>Module workers, optional chaining, periodic background sync, Contact Picker API, Get Installed Related Apps, Content Indexing API, Notification Triggers.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Protecting users from insecure downloads in Google Chrome</T><A>https://blog.chromium.org/2020/02/protecting-users-from-insecure.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joe</FIRSTNAME><LASTNAME>DeBlasio</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>Insecure downloads from an HTTPS page will gradually be blocked.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Security</TITLE>
       <ITEM><ARTICLE><X><T>Security in Depth: Local Web Pages</T><A>https://blog.chromium.org/2008/12/security-in-depth-local-web-pages.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>What should be the limitations imposed to local pages?</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Security in Depth: The Password Manager</T><A>https://blog.chromium.org/2008/12/security-in-depth-password-manager.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Steele</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>The rational for Chrome Password Manager implementation.</COMMENT></ARTICLE></ITEM>
@@ -340,6 +342,7 @@
       <ITEM><ARTICLE><X><T>The Chromium Chronicle: Preprocessing Source</T><A>https://developers.google.com/web/updates/2019/10/chromium-chronicle-7</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Dawson</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE><COMMENT>A trick to preprocess a file in order to be able to examinate it.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Chromium Chronicle: GWP-ASan: Detect bugs in the wild</T><A>https://developers.google.com/web/updates/2019/11/chromium-chronicle-8</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vlad</FIRSTNAME><LASTNAME>Tsyrklevich</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE><COMMENT>How to use GWP-ASan, a tool to detect heap memory errors in production.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Chromium Chronicle: ClusterFuzz</T><A>https://developers.google.com/web/updates/2019/12/chromium-chronicle-9</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adrian</FIRSTNAME><LASTNAME>Taylor</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE><COMMENT>A very short introduction ot ClusterFuzz.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>The Chromium Chronicle: Catching UI Regressions with Pixel Tests</T><A>https://developers.google.com/web/updates/2020/02/chromium-chronicle</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sven</FIRSTNAME><LASTNAME>Zheng</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>Using Skia Gold to detect regressions at the pixel level.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
