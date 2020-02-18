@@ -3,12 +3,12 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><BLIST><TITLE>Unit tests</TITLE>
-      <ITEM><X><T>The Art Of Unit Testing</T><A>http://artofunittesting.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>The Art Of Unit Testing</T><A>https://www.artofunittesting.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Wikipedia list</T><A>https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE>Java</TITLE>
         <ITEM><X><T>JUnit</T><A>https://junit.org</A><L>en</L><F>HTML</F></X>:
@@ -67,6 +67,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Java</TITLE>
         <ITEM><X><T>JBehave</T><A>https://jbehave.org</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>JGiven</T><A>http://jgiven.org</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Ruby</TITLE>
         <ITEM><X><T>RSpec</T><A>https://rspec.info</A><L>en</L><F>HTML</F></X></ITEM>
@@ -105,7 +106,7 @@
         </CLIST></ITEM>
         <ITEM><X><T>Protractor</T><A>https://www.protractortest.org</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Cypress</T><A>https://www.cypress.io</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Taiko</T><A>https://taiko.gauge.org/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Taiko</T><A>https://taiko.dev/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Comparison tests</TITLE>
@@ -219,6 +220,9 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Fit</TITLE>
         <ITEM><ARTICLE><X quality='-1'><T>Using Fit: An Open-Source Testing Framework</T><A>https://www.youtube.com/watch?v=oLRBzDqucjQ</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>54</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Rick</FIRSTNAME><LASTNAME>Mugridge</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE><COMMENT>This description of Fit is not clear: instead of speaking of the mechanisms of Fit (such as the fixtures between the storytests and the AUT), Mugridge spends his time trying to convince the audience about the interest of storytests, but his discourse is messy.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>JGiven</TITLE>
+        <ITEM><ARTICLE><X quality='-2'><T>Acceptance Tests in Java With JGiven</T><ST>Learn more about acceptance tests in Java, and why you should learn them right now.</ST><A>https://dzone.com/articles/acceptance-tests-in-java-with-jgiven</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marco</FIRSTNAME><LASTNAME>Schulz</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>2</DAY></DATE><COMMENT>A bad article: poor English, the code samples are badly laid out, the explanations are unclear.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mutation testing</TITLE>

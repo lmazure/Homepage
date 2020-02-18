@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>links/chrome.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -11,12 +11,15 @@
       <ITEM><X><T>download</T><A>https://www.google.com/chrome</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>blog</T><A>https://chrome.blogspot.com</A><L>en</L><F>HTML</F><FEED><A>https://feeds2.feedburner.com/blogspot/Egta</A><F>RSS</F></FEED></X></ITEM>
       <ITEM><X><T>Chrome Platform Status</T><A>https://www.chromestatus.com</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Chromium</T><A>https://www.chromium.org</A><L>en</L><F>HTML</F></X>:
-        <X><T>blog</T><A>https://blog.chromium.org</A><L>en</L><F>HTML</F><FEED><A>https://blog.chromium.org/feeds/posts/default</A><F>RSS</F></FEED></X></ITEM>
-      <ITEM><X><T>Developers</T><A>https://developers.google.com</A><L>en</L><F>HTML</F></X>:
-        <X><T>blog</T><A>https://developers.google.com/web/updates/</A><L>en</L><F>HTML</F><FEED><A>https://developers.google.com/web/updates/rss.xml</A><F>RSS</F></FEED></X></ITEM>
-      <ITEM><X><T>developer tools</T><A>https://developers.google.com/web/tools/chrome-devtools/</A><L>en</L><F>HTML</F></X>:
-        <X><T>shortcuts</T><A>https://developers.google.com/chrome-developer-tools/docs/shortcuts</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>Chromium</T><A>https://www.chromium.org</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>blog</T><A>https://blog.chromium.org</A><L>en</L><F>HTML</F><FEED><A>https://blog.chromium.org/feeds/posts/default</A><F>RSS</F></FEED></X></ITEM>
+      </CLIST></ITEM> 
+      <ITEM><CLIST><TITLE><X><T>Developers</T><A>https://developers.google.com</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>blog</T><A>https://developers.google.com/web/updates/</A><L>en</L><F>HTML</F><FEED><A>https://developers.google.com/web/updates/rss.xml</A><F>RSS</F></FEED></X></ITEM>
+      </CLIST></ITEM> 
+      <ITEM><CLIST><TITLE><X><T>developer tools</T><A>https://developers.google.com/web/tools/chrome-devtools/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>shortcuts</T><A>https://developers.google.com/chrome-developer-tools/docs/shortcuts</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM> 
       <ITEM><X><T>personal notes</T><A>../notes/chrome.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
   </SLIST></ITEM>
@@ -217,6 +220,7 @@
     <ITEM><ARTICLE><X><T>Protecting users from insecure downloads in Google Chrome</T><A>https://blog.chromium.org/2020/02/protecting-users-from-insecure.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joe</FIRSTNAME><LASTNAME>DeBlasio</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>Insecure downloads from an HTTPS page will gradually be blocked.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Videos with fewer intrusive ads</T><A>https://blog.chromium.org/2020/02/videos-with-fewer-intrusive-ads.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>James</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>Some new rules in the Better Ads Standards for ads in video content.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Adding notification permission data to the Chrome User Experience Report</T><A>https://developers.google.com/web/updates/2020/02/notification-permission-data-in-crux</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>PJ</FIRSTNAME><LASTNAME>Mclachlan</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Rick</FIRSTNAME><LASTNAME>Viscomi</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Chrome 81: Near Field Communications, Augmented Reality, and More</T><A>https://blog.chromium.org/2020/02/chrome-81-near-field-communications.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE><COMMENT>Web NFC, WebXR Hit Test…</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Security</TITLE>
       <ITEM><ARTICLE><X><T>Security in Depth: Local Web Pages</T><A>https://blog.chromium.org/2008/12/security-in-depth-local-web-pages.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>What should be the limitations imposed to local pages?</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Security in Depth: The Password Manager</T><A>https://blog.chromium.org/2008/12/security-in-depth-password-manager.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Steele</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>The rational for Chrome Password Manager implementation.</COMMENT></ARTICLE></ITEM>
