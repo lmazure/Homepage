@@ -7,7 +7,7 @@
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
-    <ITEM><X><T>Oracle</T><A>http://www.oracle.com/technetwork/java/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Oracle</T><A>https://www.oracle.com/technetwork/java/index.html</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>tryjshell.org</T><A>https://tryjshell.org/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><CLIST><TITLE>Information</TITLE>
       <ITEM><X><T>DZone</T><A>https://dzone.com/java-jdk-development-tutorials-tools-news</A><L>en</L><F>HTML</F></X></ITEM>
@@ -20,7 +20,7 @@
     <ITEM><CLIST><TITLE>Freeware</TITLE>
       <ITEM><X status='obsolete'><T>Kaffe</T><A>https://github.com/kaffe/kaffe</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><X><T>archive</T><A>http://www.oracle.com/technetwork/java/archive-139210.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>archive</T><A>https://www.oracle.com/technetwork/java/archive-139210.html</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><CLIST><TITLE>JDK docs</TITLE>
       <ITEM><X><T>5</T><A>https://docs.oracle.com/javase/1.5.0/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>6</T><A>https://docs.oracle.com/javase/6/docs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -83,7 +83,7 @@
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
     <ITEM><ARTICLE><X quality='-1' status='zombie'><T>2D animation with image-based paths</T><ST>Take the heavy coding out of fixed-object animation</ST><A>https://www.ibm.com/developerworks/java/library/j-animat/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Barry</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>Feigenbaum</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Tom</FIRSTNAME><LASTNAME>Brunet</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>The paths of some sprites is recorded using some color encoding. Not a big deal…</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Getting the Bugs Out: A Conversation With Bug Fixer Brian Harry</T><A>http://www.oracle.com/technetwork/articles/javase/harry-qa-137699.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Janice</FIRSTNAME><MIDDLENAME>J.</MIDDLENAME><LASTNAME>Heiss</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>4</MONTH></DATE><COMMENT>The interview of a guy who killed hundreds of bugs in the JDK.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Getting the Bugs Out: A Conversation With Bug Fixer Brian Harry</T><A>https://www.oracle.com/technetwork/articles/javase/harry-qa-137699.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Janice</FIRSTNAME><MIDDLENAME>J.</MIDDLENAME><LASTNAME>Heiss</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>4</MONTH></DATE><COMMENT>The interview of a guy who killed hundreds of bugs in the JDK.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Developing iPhone Applications using Java</T><A>https://www.youtube.com/watch?v=s8nMpi5-P-I</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>1</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Arno</FIRSTNAME><LASTNAME>Puder</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>14</DAY></DATE><COMMENT>The technical solution described here is too simplistic: the performance would be awful, you have to reimplement Cocoa in Java…</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Approaches to Mocking</T><A>http://www.onjava.com/pub/a/onjava/2004/02/11/mocks.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Stewart</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>2</MONTH><DAY>2</DAY></DATE><COMMENT>An introduction on using mocks (aka stubs) in Java: static mocks, dynamic mocks, AOP.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Java theory and practice: Coaxing J2EE out of the container</T><ST>Projects like Somnifugi JMS blur the boundary between J2EE and J2SE</ST><A>https://www.ibm.com/developerworks/java/library/j-jtp04204.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE><COMMENT>The stand alone implementation of some J2EE components (JMS, JNDI) and using JMX.</COMMENT></ARTICLE></ITEM>
@@ -139,7 +139,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Memory leaks</TITLE>
         <ITEM><ARTICLE><X status='dead'><T>Bitter Java - Chapter 6: Bitter Memories</T><A>http://jacques.dsc.ufcg.edu.br/cursos/map/recursos/BitterJava.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>Tate</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>5</MONTH></DATE><COMMENT>An introduction to Java memory leaks (unintentional object retention) and how to find and fix them.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Memory Leaks, Be Gone</T><A>http://www.oracle.com/technetwork/articles/entarch/memory-leaks-091917.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Staffan</FIRSTNAME><LASTNAME>Larsen</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>Some advertisement for the JRockit Memory Leak Detector.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Memory Leaks, Be Gone</T><A>https://www.oracle.com/technetwork/articles/entarch/memory-leaks-091917.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Staffan</FIRSTNAME><LASTNAME>Larsen</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>Some advertisement for the JRockit Memory Leak Detector.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How to Fix Memory Leaks in Java</T><A>http://java.dzone.com/news/how-fix-memory-leaks-java</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Veljko</FIRSTNAME><LASTNAME>Krunic</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE><COMMENT>A good tutorial on how to analyze memory leaks.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
@@ -286,7 +286,7 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tools</TITLE>
-      <ITEM><ARTICLE><X><T>Using JConsole to Monitor Applications</T><A>http://www.oracle.com/technetwork/articles/java/jconsole-1564139.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mandy</FIRSTNAME><LASTNAME>Chung</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>12</MONTH></DATE><COMMENT>An overview of JConsole.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Using JConsole to Monitor Applications</T><A>https://www.oracle.com/technetwork/articles/java/jconsole-1564139.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mandy</FIRSTNAME><LASTNAME>Chung</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>12</MONTH></DATE><COMMENT>An overview of JConsole.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java postmortem diagnostics, Part 1: Introduction to JSR 326 and Apache Kato</T><ST>Learn how the Apache Kato project can help you analyze the causes of JVM failure</ST><A>https://www.ibm.com/developerworks/java/library/j-kato.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Pilkington</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE><COMMENT>A high level introduction to post-mortem analysis.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Maven</TITLE>
