@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>notes/java2.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
@@ -85,6 +85,8 @@ This should be used sparingly since it pollutes the namespace of the class.<BR/>
     <TAB/>"data.test"})<BR/>
     public class AllTests {<BR/>
     }</CODESAMPLE>
+    but this is in fact a JUnit 4 test suite.<BR/>
+    Test suites do not exist in JUnit 5, see <X><T>here</T><A>https://bugs.eclipse.org/bugs/show_bug.cgi?id=511183</A><L>en</L><F>HTML</F></X>
   </ITEM>
   </BLIST>
 </CONTENT>
