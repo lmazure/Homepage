@@ -85,9 +85,7 @@
       </xsl:if>
       <script src="../scripts/common.js" type="module"></script>
       <xsl:if test="@special='indexed'">
-        <script>
-          $(document).ready(function() { window.onLoad = create_index();} )
-         </script>
+        <script>document.addEventListener("DOMContentLoaded", function(e) { window.onLoad = create_index();});</script>
       </xsl:if>
     </body>
   </html>
