@@ -139,9 +139,6 @@ window.do_person = (event, author) => {
     if (personPopupAuthors == null) {
         const loader = new DataLoader((authors, articles, links, referringPages) => {
             personPopupAuthors = authors;
-            // this.articles = articles;
-            // this.links = links;
-            // this.referringPages = referringPages;
             window.do2_person(event, author);
         });
     }
@@ -185,10 +182,20 @@ window.do2_person = (event, author) => {
     description.appendTag("h2", "Articles");
     description.appendTag("ul", articles);
     const clickHandler = function (e) {
-        window.removeEventListener("click", clickHandler);
-        personPopup.style.visibility = "hidden";
+        undisplay();
     };
     window.addEventListener("click", clickHandler);
+    const keyupHandler = function (e) {
+        if (e.key === "Escape") {
+            undisplay();
+        }
+    };
+    window.addEventListener("keyup", keyupHandler);
+    const undisplay = function () {
+        window.removeEventListener("click", clickHandler);
+        window.removeEventListener("keyup", keyupHandler);
+        personPopup.style.visibility = "hidden";
+    };
     personPopup.innerHTML = description.getHtml();
     if ((event.clientY + personPopup.offsetHeight) < document.documentElement.clientHeight) {
         personPopup.style.top = event.pageY + "px";
