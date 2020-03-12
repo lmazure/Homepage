@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>2D/3D graphics</TITLE>
 <PATH>links/3d.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -12,15 +12,15 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Libraries</TITLE>
       <ITEM>OpenGL:
-        <X><T>OpenGL.org</T><A>http://www.opengl.org/</A><L>en</L><F>HTML</F></X>,
-        <X><T>Mesa</T><A>http://www.mesa3d.org/</A><L>en</L><F>HTML</F></X>,
+        <X><T>OpenGL.org</T><A>https://www.opengl.org/</A><L>en</L><F>HTML</F></X>,
+        <X><T>Mesa</T><A>https://www.mesa3d.org/</A><L>en</L><F>HTML</F></X>,
         <X><T>Lightweight Java Game Library</T><A>https://github.com/LWJGL</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>vtk</T><A>http://www.vtk.org/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>vtk</T><A>https://vtk.org/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tools</TITLE>
       <ITEM><X><T>xv</T><A>http://www.trilon.com/xv/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>ImageMagick</T><A>http://www.imagemagick.org/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><BLIST><TITLE><ANCHOR>gimp</ANCHOR><X><T>gimp</T><A>http://www.gimp.org/</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><X><T>ImageMagick</T><A>https://imagemagick.org/index.php</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><BLIST><TITLE><ANCHOR>gimp</ANCHOR><X><T>gimp</T><A>https://www.gimp.org/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>Grokking the GIMP</T><A>http://gimp-savvy.com/BOOK/index.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>GIMP Developer FAQ</T><A>http://www.rru.com/%7Emeo/gimp/faq-dev.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/gimp.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -28,22 +28,27 @@
       <ITEM><X><T>PTAssembler</T><A>http://www.tawbaware.com/ptasmblr.htm</A><L>en</L><F>HTML</F></X>: a software to stitch pictures together</ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Formats</TITLE>
-      <ITEM><X><T>EXIF</T><A>http://www.exif.org/</A><L>en</L><F>HTML</F></X>:
-        <X><T>drewnoakes.com</T><A>http://www.drewnoakes.com/code/exif/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>EXIF</T><A>https://www.exif.org/</A><L>en</L><F>HTML</F></X>:
+        <X><T>drewnoakes.com</T><A>https://www.drewnoakes.com/code/exif/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><ANCHOR>SVG</ANCHOR><X><T>SVG</T><A>https://www.w3.org/TR/SVG/</A><L>en</L><F>HTML</F></X>:
-        <X><T>Batik</T><A>http://xml.apache.org/batik/</A><L>en</L><F>HTML</F></X></ITEM>
+        <X><T>Batik</T><A>https://xmlgraphics.apache.org/batik/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><ANCHOR>PGML</ANCHOR><X><T>PGML</T><A>https://www.w3.org/TR/1998/NOTE-PGML</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Segmentation</TITLE>
-      <ITEM><X><T>ITK</T><A>http://www.itk.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>ITK</T><A>https://itk.org/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Fonts</TITLE>
-      <ITEM><X><T>FAQ</T><A>http://nwalsh.com/comp.fonts/FAQ/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>FAQ</T><A>https://nwalsh.com/comp.fonts/FAQ/index.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
-    <ITEM><X><T>allRGB</T><A>http://allrgb.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>allRGB</T><A>https://allrgb.com</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Shadertoy</T><A>https://www.shadertoy.com/</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
+    <ITEM><ARTICLE><X><T>Interactive Ray Tracing: A Better Way to Program 3D</T><A>https://www.youtube.com/watch?v=rfgz90Y93c0</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>29</SECOND></DURATION></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>McCombe</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>A demo and a few explanations on Caustic's accelerator card and software: an optimized ray database.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Over 32000 planks ;-) Blender / Bullet Physics / SmallLuxGPU OpenCL</T><A>https://www.youtube.com/watch?v=143k1fqPukk</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>1</MINUTE><SECOND>58</SECOND></DURATION></X><AUTHOR><GIVENNAME>Phymec</GIVENNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE><COMMENT>A simulation of the falling of a kapla tower.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X quality='2'><T>Festive chainmail physics simulation test -- Blender Bullet Physics SmallLuxGPU</T><A>https://www.youtube.com/watch?v=MhTGX_ou1EM</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>3</MINUTE><SECOND>33</SECOND></DURATION></X><AUTHOR><GIVENNAME>Phymec</GIVENNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>9</MONTH><DAY>23</DAY></DATE><COMMENT>This simulation is incredibly realistic.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>The Advanced Cave Culling Algorithm™, or, making Minecraft faster</T><A>http://tomcc.github.io/2014/08/31/visibility-1.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tommaso</FIRSTNAME><LASTNAME>Checchi</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE><COMMENT>A description of the algorithm which improved a lot Minecraft 1.8 framerate.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Principles of Lighting and Rendering with John Carmack at QuakeCon 2013 part 1</T><A>https://www.youtube.com/watch?v=VUxcVzpeFqc</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>19</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Carmack</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>8</MONTH><DAY>2</DAY></DATE><COMMENT>Some well-known facts about the physics of light.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>OpenGL</TITLE>
       <ITEM><ARTICLE><X status='zombie'><T>OpenGL Optimizer White Paper</T><A>http://www.sgi.co.jp/software/optimizer/whitepaper.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>1997</YEAR></DATE><COMMENT>This paper lists and desribes the modules of OpenGL Optimizer: high order representations, tessellation simplifiers, multiprocessing harness, scene graph…</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -61,10 +66,6 @@
       <ITEM><ARTICLE><X><T>SVG in Internet Explorer and at Google</T><A>https://www.youtube.com/watch?v=AT0zgcNczFY</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>45</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Brad</FIRSTNAME><LASTNAME>Neuberg</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>Some SVG demos and an introduction to SVG Web, a JavaScript library enabling the support of SVG on many Browsers.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Scalable Vector Graphics in HTML5</T><ST>Basic concepts and usage</ST><A>https://www.ibm.com/developerworks/library/wa-scalable/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jeremy</FIRSTNAME><MIDDLENAME>J.</MIDDLENAME><LASTNAME>Wischusen</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE><COMMENT>Yet another introduction to SVG.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
-    <ITEM><ARTICLE><X><T>Interactive Ray Tracing: A Better Way to Program 3D</T><A>https://www.youtube.com/watch?v=rfgz90Y93c0</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>29</SECOND></DURATION></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>McCombe</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>A demo and a few explanations on Caustic's accelerator card and software: an optimized ray database.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Over 32000 planks ;-) Blender / Bullet Physics / SmallLuxGPU OpenCL</T><A>https://www.youtube.com/watch?v=143k1fqPukk</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>1</MINUTE><SECOND>58</SECOND></DURATION></X><AUTHOR><GIVENNAME>Phymec</GIVENNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE><COMMENT>A simulation of the falling of a kapla tower.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X quality='2'><T>Festive chainmail physics simulation test -- Blender Bullet Physics SmallLuxGPU</T><A>https://www.youtube.com/watch?v=MhTGX_ou1EM</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>3</MINUTE><SECOND>33</SECOND></DURATION></X><AUTHOR><GIVENNAME>Phymec</GIVENNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>9</MONTH><DAY>23</DAY></DATE><COMMENT>This simulation is incredibly realistic.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>The Advanced Cave Culling Algorithm™, or, making Minecraft faster</T><A>http://tomcc.github.io/2014/08/31/visibility-1.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tommaso</FIRSTNAME><LASTNAME>Checchi</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE><COMMENT>A description of the algorithm which improved a lot Minecraft 1.8 framerate.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 </LLIST>
 </CONTENT>

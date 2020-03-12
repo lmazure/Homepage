@@ -524,12 +524,12 @@ returns the total sum of a column
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>tricks</B></U></TITLE>
-<ITEM><X><T>ranks</T><A>http://www.1keydata.com/sql/sql-rank.html</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>median</T><A>http://www.1keydata.com/sql/sql-median.html</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>rank</T><A>http://www.1keydata.com/sql/sql-rank.html</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>running totals</T><A>http://www.1keydata.com/sql/sql-running-totals.html</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>percent to total</T><A>http://www.1keydata.com/sql/sql-percent-to-total.html</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM><X><T>cumulative percent to total</T><A>http://www.1keydata.com/sql/sql-cumulative-percent-to-total.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>ranks</T><A>https://www.1keydata.com/sql/sql-rank.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>median</T><A>https://www.1keydata.com/sql/sql-median.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>rank</T><A>https://www.1keydata.com/sql/sql-rank.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>running totals</T><A>https://www.1keydata.com/sql/sql-running-totals.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>percent to total</T><A>https://www.1keydata.com/sql/sql-percent-to-total.html</A><L>en</L><F>HTML</F></X></ITEM>
+<ITEM><X><T>cumulative percent to total</T><A>https://www.1keydata.com/sql/sql-cumulative-percent-to-total.html</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>JDBC</B></U></TITLE>
 <ITEM>
@@ -558,15 +558,15 @@ update table information
 <BLIST><TITLE><U><B>Postgres</B></U></TITLE>
 <ITEM>
 display the list of patients
-<CODESAMPLE><PROMPT/>echo "select patient_id, patient_name from patient_folder;" | <X><T>psql</T><A>http://www.postgresql.org/docs/current/static/app-psql.html</A><L>en</L><F>HTML</F></X> -U postgres -At ctmr_sdc_db</CODESAMPLE>
+<CODESAMPLE><PROMPT/>echo "select patient_id, patient_name from patient_folder;" | <X><T>psql</T><A>https://www.postgresql.org/docs/current/app-psql.html</A><L>en</L><F>HTML</F></X> -U postgres -At ctmr_sdc_db</CODESAMPLE>
 </ITEM>
 <ITEM>
 display the lock status of series <CODEROUTINE>s105</CODEROUTINE>.
-<CODESAMPLE><PROMPT/><X><T>psql</T><A>http://www.postgresql.org/docs/current/static/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "select series_lock from series_environment where series_id = 's105';" </CODESAMPLE>
+<CODESAMPLE><PROMPT/><X><T>psql</T><A>https://www.postgresql.org/docs/current/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "select series_lock from series_environment where series_id = 's105';" </CODESAMPLE>
 </ITEM>
 <ITEM>
 change the lock status of series <CODEROUTINE>s105</CODEROUTINE>.
-<CODESAMPLE><PROMPT/><X><T>psql</T><A>http://www.postgresql.org/docs/current/static/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "update series_environment set series_lock ='Yes' where series_id = 's105';"</CODESAMPLE>
+<CODESAMPLE><PROMPT/><X><T>psql</T><A>https://www.postgresql.org/docs/current/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "update series_environment set series_lock ='Yes' where series_id = 's105';"</CODESAMPLE>
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>MySQL</B></U></TITLE>
