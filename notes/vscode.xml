@@ -3,21 +3,53 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
-<ROW><TERM><KEY ID='F12'/></TERM>
-<DESC>go to definition</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Alt'/><KEY ID='F12'/></TERM>
-<DESC>peek definition</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><MODIFIERKEY ID='Alt'/><KEY ID='F12'/></TERM>
-<DESC>find all references</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='F12'/></TERM>
-<DESC>peek all references</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F4'/></TERM>
-<DESC>close an editor</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><KEY ID='Z'/></TERM>
-<DESC>toggle the zen mode</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='O'/></TERM>
+    <DESC>open a file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='S'/></TERM>
+    <DESC>save</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><KEY ID='S'/></TERM>
+    <DESC>save all</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='F4'/></TERM>
+    <DESC>close an editor</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Up'/><BR/>
+      <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Down'/><BR/>
+      <MODIFIERKEY ID='Alt'/>left click</TERM>
+    <DESC>multi-edition</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY ID='F12'/></TERM>
+    <DESC>go to definition</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Alt'/><KEY ID='F12'/></TERM>
+    <DESC>peek definition</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='F12'/></TERM>
+    <DESC>find all references</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Shift'/><KEY ID='F12'/></TERM>
+    <DESC>peek all references</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><KEY ID='Z'/></TERM>
+    <DESC>toggle the zen mode</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
 <X><T>Links</T><A>../links/coding.html#vscode</A><L>en</L><F>HTML</F></X>
