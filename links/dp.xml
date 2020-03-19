@@ -121,7 +121,7 @@
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Behavioral patterns</TITLE>
-        <ITEM><BLIST><TITLE>Active Object (a.k.a.Concurrent Object or Actor): Decouple method execution from method invocation to enhance concurrency and simplify synchronized access to an object that resides in its own thread of control.</TITLE>
+        <ITEM><BLIST><TITLE>Active Object (a.k.a. Concurrent Object or Actor): Decouple method execution from method invocation to enhance concurrency and simplify synchronized access to an object that resides in its own thread of control.</TITLE>
           <ITEM><ARTICLE><X><T>Active Object</T><ST>An Object Behavioral Pattern for Concurrent Programming</ST><A>http://www.cs.wustl.edu/~schmidt/PDF/Act-Obj.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>R.</FIRSTNAME><MIDDLENAME>Greg</MIDDLENAME><LASTNAME>Lavender</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Schmidt</LASTNAME></AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A complete description of the pattern with some information on a C++ implementation.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Atomizer (a.k.a. Serializer): Read arbitrarily complex object structures from and write them to varying data structure-based backends. Efficiently store and retrieve objects from different backends, such as flat files, relational databases, and RPC buffers.</TITLE>
