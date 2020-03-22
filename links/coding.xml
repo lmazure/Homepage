@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -140,11 +140,10 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Debuggers</TITLE>
-      <ITEM><CLIST><TITLE><ANCHOR>gdb</ANCHOR>gdb</TITLE>
-        <ITEM><X><T>RedHat</T><A>http://sources.redhat.com/gdb/download/onlinedocs/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>GNU</T><A>http://www.gnu.org/software/gdb/documentation/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><BLIST><TITLE><ANCHOR>gdb</ANCHOR><X><T>gdb</T><A>http://www.sourceware.org/gdb/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>rr</T><A>https://rr-project.org</A><L>en</L><F>HTML</F></X>: lightweight recording &amp; deterministic debugging</ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/gdb.html</A><L>en</L><F>HTML</F></X></ITEM>
-      </CLIST></ITEM>
+      </BLIST></ITEM>
       <ITEM><CLIST><TITLE>ddd</TITLE>
         <ITEM><X><T>GNU</T><A>http://www.gnu.org/software/ddd/</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
@@ -227,7 +226,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Profilers</TITLE>
       <ITEM><X><T>gprof</T><A>http://sourceware.org/binutils/docs-2.18/gprof/index.html</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>oprofile</T><A>http://oprofile.sourceforge.io/news/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>oprofile</T><A>https://oprofile.sourceforge.io/news/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>GlowCode</T><A>https://www.glowcode.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X status='obsolete'><T>FunctionCheck</T><A>https://sourceforge.net/projects/fnccheck/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE>Java</TITLE>
@@ -501,7 +500,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Design by contract</TITLE>
       <ITEM><ARTICLE><X><T>Building bug-free O-O software: An introduction to Design by Contract</T><A>https://www.eiffel.com/developers/design_by_contract_in_detail.html</A><L>en</L><F>HTML</F></X><COMMENT>A presentation of design by contract.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Contracts: From Analysis to C++ Implementation</T><A>http://www.swe.uni-linz.ac.at/publications/pdf/TR-SE-99.04.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>R.</FIRSTNAME><LASTNAME>Plösch</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>J.</FIRSTNAME><LASTNAME>Pichler</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH></DATE><COMMENT>The authors describe how they automatically transfer the assertions from a Python prototype to the C++ implementation.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Contracts: From Analysis to C++ Implementation</T><A>https://www.researchgate.net/publication/3814829_Contracts_from_analysis_to_C_implementation/</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>R.</FIRSTNAME><LASTNAME>Plösch</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>J.</FIRSTNAME><LASTNAME>Pichler</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH></DATE><COMMENT>The authors describe how they automatically transfer the assertions from a Python prototype to the C++ implementation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status='dead'><T>Using Design by Contract in C</T><A>http://www.onlamp.com/pub/a/onlamp/2004/10/28/design_by_contract_in_c.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Charlie</FIRSTNAME><LASTNAME>Mills</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE><COMMENT>An introduction to DBC for C.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Code review</TITLE>
