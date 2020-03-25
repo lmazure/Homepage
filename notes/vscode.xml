@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -67,6 +67,14 @@
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Alt'/><KEY ID='Left'/></TERM>
+    <DESC>go to previous edit location</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Alt'/><KEY ID='Right'/></TERM>
+    <DESC>go to next edit location</DESC>
+  </ROW>
   <ROW>
     <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Up'/><BR/>
       <MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='Down'/><BR/>
