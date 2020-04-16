@@ -243,6 +243,7 @@
         </xs:complexType>
       </xs:element>
       <xs:element name="DURATION" type="duration" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="DATE" type="partialDate" minOccurs="0" maxOccurs="1"/>
     </xs:sequence>
     <xs:attribute name="status">
      <xs:simpleType>
