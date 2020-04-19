@@ -81,7 +81,7 @@ First_Name varchar(30));</CODESAMPLE>
 <ITEM>
 <CODEROUTINE>CHECK</CODEROUTINE> ensures that all values in a column satisfy certain conditions
 <CODESAMPLE>CREATE TABLE Customer<BR/>
-(SID integer CHECK (SID > 0),<BR/>
+(SID integer CHECK (SID &gt; 0),<BR/>
 Last_Name varchar (30) NOT NULL,<BR/>
 First_Name varchar(30));</CODESAMPLE>
 </ITEM>

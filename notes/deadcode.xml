@@ -13,11 +13,11 @@ This is a quick 'n dirty script to find some C++ methods that are never used. Th
 find . -type f \( -name '*.c' -o -name '*.h' -o -name '*.icc' -o -name '*.cc' \) -exec /tmp/remccom.sed {} \; |\<BR/>
 <TAB/>grep '[A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*' |\<BR/>
 <TAB/>perl -pe 's/^.*?([A-Za-z_][A-Za-z0-9_]*::[A-Za-z_][A-Za-z0-9_]*).*$/\1/' |\<BR/>
-<TAB/>sort -u > /tmp/the_routines
+<TAB/>sort -u &gt; /tmp/the_routines
 <BR/>
 find . -type f \( -name '*.c' -o -name '*.h' -o -name '*.icc' -o -name '*.cc' \) -exec /tmp/remccom.sed {} \; |\<BR/>
 <TAB/>perl -a -F"/[^A-Za-z0-9_]/" -ne 'print join("\n",@F),"\n"' |\<BR/>
-<TAB/>grep '[A-Za-z0-9_]' > /tmp/the_full_list<BR/>
+<TAB/>grep '[A-Za-z0-9_]' &gt; /tmp/the_full_list<BR/>
 <BR/>
 for word in ` cat /tmp/the_routines `<BR/>
 do<BR/>

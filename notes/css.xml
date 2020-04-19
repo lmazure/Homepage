@@ -82,7 +82,7 @@
   </ITEM>
   <ITEM><B>Child selector</B>
     Using the following rule you can target any &lt;em&gt; element that is a child of the &lt;div&gt;. Other &lt;em&gt; elements that are descendants but not direct children of the &lt;div&gt; will not be targeted.
-    <CODESAMPLE>div > em { color: blue; }</CODESAMPLE>
+    <CODESAMPLE>div &gt; em { color: blue; }</CODESAMPLE>
     or
     <CODESAMPLE>div>em { color: blue; }</CODESAMPLE>
   </ITEM>

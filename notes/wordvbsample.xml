@@ -85,7 +85,7 @@ Dim str As String<BR/>
 Documents.Open FileName:=file1.Path, ReadOnly:=True<BR/>
 Set actDoc = ActiveDocument<BR/>
 For Each sect In actDoc.Sections<BR/>
-<TAB/>If (sect.Headers(wdHeaderFooterPrimary).range.Tables.Count >= 1) Then<BR/>
+<TAB/>If (sect.Headers(wdHeaderFooterPrimary).range.Tables.Count &gt;= 1) Then<BR/>
 <TAB/><TAB/>n = sect.Headers(wdHeaderFooterPrimary).range.Tables(1).Columns.Count<BR/>
 <TAB/><TAB/>str = sect.Headers(wdHeaderFooterPrimary).range.Tables(1).Cell(1, n).range.text<BR/>
 <TAB/><TAB/>…<BR/>

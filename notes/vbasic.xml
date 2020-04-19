@@ -632,8 +632,8 @@ given delimiter
   <ITEM><CODEROUTINE>Str(number)</CODEROUTINE> convert an integer or float into a string<BR/>
   the first character is reserved for the sign, so there is always a space at the beginning for positive numbers<BR/>
   to avoid this, use <CODEROUTINE>FormatNumber(incr,0)</CODEROUTINE> instead of <CODEROUTINE>Str(incr)</CODEROUTINE></ITEM>
-  <ITEM><CODEROUTINE>Format(Format(expression[, format[, firstdayofweek[, firstweekofyear]]]))</CODEROUTINE> convert a value into a string</ITEM >
-  <ITEM><CODEROUTINE>FormatNumber(Expression[,NumDigitsAfterDecimal [,IncludeLeadingDigit [,UseParensForNegativeNumbers [,GroupDigits]]]])</CODEROUTINE> convert a number into a string</ITEM >
+  <ITEM><CODEROUTINE>Format(Format(expression[, format[, firstdayofweek[, firstweekofyear]]]))</CODEROUTINE> convert a value into a string</ITEM>
+  <ITEM><CODEROUTINE>FormatNumber(Expression[,NumDigitsAfterDecimal [,IncludeLeadingDigit [,UseParensForNegativeNumbers [,GroupDigits]]]])</CODEROUTINE> convert a number into a string</ITEM>
   <ITEM><CODEROUTINE>FormatPercent(Expression[,NumDigitsAfterDecimal [,IncludeLeadingDigit [,UseParensForNegativeNumbers [,GroupDigits]]]])</CODEROUTINE> convert a percentage into a string</ITEM>
   <ITEM><CODEROUTINE>FormatDateTime(Date[,NamedFormat])</CODEROUTINE> convert a date into a string</ITEM>
   <ITEM><CODEROUTINE>FormatCurrency(Expression[,NumDigitsAfterDecimal [,IncludeLeadingDigit [,UseParensForNegativeNumbers [,GroupDigits]]]])</CODEROUTINE> convert a currency into a string</ITEM></BLIST>
