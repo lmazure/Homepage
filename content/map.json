@@ -99,7 +99,9 @@
         { "title" : "Pharma", "page" : "links/pharma.html", "languages" : ["en"], "formats" : ["HTML"] }
       ] },
       { "title" : "Entertainment", "children" : [
-        { "title" : "News", "page" : "links/news.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "News", "page" : "links/news.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "COVID-19", "page" : "links/covid19.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
         { "title" : "Encyclopedia", "page" : "links/data.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
           { "title" : "Mathematics", "page" : "links/math.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
             { "title" : "Numbers", "page" : "links/numbers.html", "languages" : ["en"], "formats" : ["HTML"] },
@@ -662,10 +664,12 @@
         ] }
       ] },
       { "title" : "Bases", "children" : [
+        { "title" : "Sauce tomate classique et une variante", "page" : "bouffe/0128.html", "languages" : ["fr"], "formats" : ["HTML"] },
         { "title" : "Pâte brisée", "page" : "bouffe/036.htm", "languages" : ["fr"], "formats" : ["HTML"] },
         { "title" : "Pâte brisée pâtissière", "page" : "bouffe/037.htm", "languages" : ["fr"], "formats" : ["HTML"] },
         { "title" : "Pâte sablée", "page" : "bouffe/097.htm", "languages" : ["fr"], "formats" : ["HTML"] },
-        { "title" : "Sauce tomate classique et une variante", "page" : "bouffe/0128.html", "languages" : ["fr"], "formats" : ["HTML"] }
+        { "title" : "Pâte à choux", "page" : "bouffe/0168.html", "languages" : ["fr"], "formats" : ["HTML"] },
+        { "title" : "Pamplemousse curd", "page" : "bouffe/0169.html", "languages" : ["fr"], "formats" : ["HTML"] }
       ] }
     ] },
     { "title" : "About me", "page" : "perso/perso.html", "languages" : ["fr"], "formats" : ["HTML"], "children" : [
