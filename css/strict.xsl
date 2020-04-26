@@ -201,11 +201,15 @@
     <xsl:attribute name="title">
       <xsl:text>language: </xsl:text>
       <xsl:for-each select="./L"><xsl:value-of select="."/><xsl:text> </xsl:text></xsl:for-each>
-      <xsl:text>| format: </xsl:text>
+      <xsl:text>&#xA;format: </xsl:text>
       <xsl:for-each select="./F"><xsl:value-of select="."/><xsl:text> </xsl:text></xsl:for-each>
       <xsl:if test="count(./DURATION)=1">
-        <xsl:text>| duration: </xsl:text>
+        <xsl:text>&#xA;duration: </xsl:text>
         <xsl:apply-templates select="./DURATION"/>
+      </xsl:if>
+      <xsl:if test="count(./DATE)=1">
+        <xsl:text>&#xA;publication date: </xsl:text>
+        <xsl:apply-templates select="./DATE"/>
       </xsl:if>
     </xsl:attribute>
     <xsl:choose>
