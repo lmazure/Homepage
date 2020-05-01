@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TypeScript</TITLE>
 <PATH>links/typescript.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>4</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -52,6 +52,7 @@
       <ITEM><ARTICLE><X><T>Announcing TypeScript 3.7</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-3-7/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>5</DAY></DATE><COMMENT>The same as the RC, plus the <CODEROUTINE>useDefineForClassFields</CODEROUTINE> flag to declare public class fields with <CODEROUTINE>Object.defineProperty</CODEROUTINE> and improved error messages for deep hierarchies of objects.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 3.8 Beta</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-3-8-beta/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT><CODEROUTINE>import type</CODEROUTINE>, <CODEROUTINE>export type</CODEROUTINE> and the <CODEROUTINE>importsNotUsedAsValues</CODEROUTINE> compilation flag allow a better management of type imports, <CODEROUTINE>export * as</CODEROUTINE>, top-level <CODEROUTINE>await</CODEROUTINE>, support of some new JSDoc tags…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 3.9 Beta</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-3-9-beta/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>27</DAY></DATE><COMMENT>Fixed type inference in <CODEROUTINE>Promise.all</CODEROUTINE>, speed improvements, <CODEROUTINE>@ts-expect-error</CODEROUTINE> can be used to unit test errors, improved detection of uncalled functions, refactoring now respects newlines…</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Announcing TypeScript 3.9 RC</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-3-9-rc/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>4</MONTH><DAY>28</DAY></DATE><COMMENT>The same as for the Beta, plus some quick fixes for missing return expressions</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
