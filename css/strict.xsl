@@ -110,9 +110,27 @@
         <xsl:attribute name="href">
           <xsl:value-of select="./A"/>
         </xsl:attribute>
-        <xsl:attribute name="title"><xsl:text>mirror</xsl:text></xsl:attribute>
+        <xsl:attribute name="title">
+          <xsl:text>c͟o͟p͟y͟</xsl:text>
+          <xsl:text>&#xA;title: </xsl:text>
+          <xsl:for-each select="./T"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
+          <xsl:text>&#xA;URL: </xsl:text>
+          <xsl:for-each select="./A"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
+          <xsl:text>&#xA;language: </xsl:text>
+          <xsl:for-each select="./L"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
+          <xsl:text>&#xA;format: </xsl:text>
+          <xsl:for-each select="./F"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
+          <xsl:if test="count(./DURATION)=1">
+            <xsl:text>&#xA;duration: </xsl:text>
+            <xsl:apply-templates select="./DURATION"/>
+          </xsl:if>
+          <xsl:if test="count(./DATE)=1">
+            <xsl:text>&#xA;publication date: </xsl:text>
+            <xsl:apply-templates select="./DATE"/>
+          </xsl:if>
+        </xsl:attribute>
         <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
-        <xsl:text>M</xsl:text>
+        <xsl:text>&#x29C9;</xsl:text>
       </xsl:element>
     </xsl:if>
     <xsl:if test="(position()=last()) and (position()>1)" >
@@ -201,9 +219,9 @@
     </xsl:attribute>
     <xsl:attribute name="title">
       <xsl:text>language: </xsl:text>
-      <xsl:for-each select="./L"><xsl:value-of select="."/><xsl:text> </xsl:text></xsl:for-each>
+      <xsl:for-each select="./L"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
       <xsl:text>&#xA;format: </xsl:text>
-      <xsl:for-each select="./F"><xsl:value-of select="."/><xsl:text> </xsl:text></xsl:for-each>
+      <xsl:for-each select="./F"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
       <xsl:if test="count(./DURATION)=1">
         <xsl:text>&#xA;duration: </xsl:text>
         <xsl:apply-templates select="./DURATION"/>
