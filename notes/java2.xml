@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>notes/java2.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>5</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
@@ -54,6 +54,28 @@ This should be used sparingly since it pollutes the namespace of the class.<BR/>
 </NLIST></ITEM>
 <ITEM><CODEROUTINE>strictfp</CODEROUTINE><BR/>
 <CODEROUTINE>strictfp</CODEROUTINE> is a keyword to force Java to store intermediary results in floating point calculation using IEEE 754 (instead of a possible greater precision provided by the machine).</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Lambda expressions</B></U><BR/></TITLE>
+  <ITEM>A method reference can be of four types:
+    <TABLE>
+      <ROW>
+        <CELL>Reference to a static method</CELL>
+        <CELL><CODEROUTINE>ContainingClass::staticMethodName</CODEROUTINE></CELL>
+      </ROW>
+      <ROW>
+        <CELL>Reference to an instance method of a particular object</CELL>
+        <CELL><CODEROUTINE>containingObject::instanceMethodName</CODEROUTINE></CELL>
+      </ROW>
+      <ROW>
+        <CELL>Reference to an instance method of an arbitrary object of a particular type</CELL>
+        <CELL><CODEROUTINE>ContainingType::methodName</CODEROUTINE></CELL>
+      </ROW>
+      <ROW>
+        <CELL>Reference to a constructor</CELL>
+        <CELL><CODEROUTINE>ClassName::new</CODEROUTINE></CELL>
+      </ROW>
+    </TABLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>JUnit</B></U><BR/></TITLE>
   <ITEM>to create a test suite as a list of test classes:
