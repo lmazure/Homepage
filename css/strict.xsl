@@ -68,14 +68,14 @@
               <xsl:attribute name="id">
                 <xsl:text>goToMap</xsl:text>
               </xsl:attribute>
-              <xsl:text>&#x1f4c1;</xsl:text>
+              <xsl:text>🧭</xsl:text>
             </xsl:element>
           </div>
           <div style="grid-column:2;grid-row:1;font-size:300%;text-align:center;">
-            <a id="doEmail" title="contact" target="_self" href="javascript:do_email()">&#x2709;&#xfe0f;</a>
+            <a id="doEmail" title="contact" target="_self" href="javascript:do_email()">✉️</a>
           </div>
           <div style="grid-column:3;grid-row:1;font-size:300%;text-align:center;">
-            <a id="displaySearch" title="site search" target="_self" href="javascript:display_search()">&#x1f50e;</a>
+            <a id="displaySearch" title="site search" target="_self" href="javascript:display_search()">🔎</a>
           </div>
         </div>
       </footer>
@@ -161,6 +161,18 @@
     <xsl:text> &#x25BA; </xsl:text>
     <xsl:apply-templates select="./COMMENT"/>
   </xsl:if>
+</xsl:template>
+
+<xsl:template match="KEYWORD">
+  <xsl:element name="span">
+    <xsl:attribute name="class">keyword</xsl:attribute>
+    <xsl:attribute name="onClick">
+      <xsl:text>do_keyword(event, "</xsl:text>
+      <xsl:value-of select="./KEYID"/>
+      <xsl:text>")</xsl:text>
+    </xsl:attribute>
+    <xsl:value-of select="KEYEDTEXT"/>
+  </xsl:element>
 </xsl:template>
 
 <xsl:template match="CODESAMPLE">
@@ -618,8 +630,6 @@
 </xsl:template>
 
 <xsl:template match="TAB">&#xA0;&#xA0;&#xA0;&#xA0;</xsl:template>
-
-<xsl:template match="TABCHAR"><xsl:text>&#8869;</xsl:text></xsl:template>
 
 <xsl:template match="PROMPT">#&gt; </xsl:template>
 

@@ -50,6 +50,12 @@ span.author {
 	color: #700000
 }
 
+span.keyword {
+	cursor: pointer;
+	text-decoration:underline;
+	text-decoration-style:dotted
+}
+
 span.linksubtitle {
 	font-style: oblique
 }
@@ -123,6 +129,13 @@ code {
 }
 
 .personPopup {
+	overflow: auto;
+	background-color: #FFFFFF;
+	position: absolute; 
+}
+
+
+.keywordPopup {
 	overflow: auto;
 	background-color: #FFFFFF;
 	position: absolute; 

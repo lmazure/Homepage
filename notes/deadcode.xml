@@ -126,12 +126,12 @@ s/.[^"'/]*//<BR/>
 b loop
 </CODESAMPLE>
 <BR/>
-Here is the same thing for the <CODEROUTINE>#define</CODEROUTINE>s
+Here is the same thing for the <CODEROUTINE>#define</CODEROUTINE>s (⊥ represents the tab character)
 <CODESAMPLE>
 #!/bin/ksh<BR/>
 <BR/>
 find . -type f \( -name '*.c' -o -name '*.h' -o -name '*.icc' -o -name '*.cc' \) -exec egrep '^[ \t]*#define[ \t]+[A-Za-z0-9_]+' {} \; |\<BR/>
-<TAB/>sed 's/^[ <TABCHAR/>]*#define[ <TABCHAR/>]*\([A-Za-z0-9_]*\).*$/\1/' |\<BR/>
+<TAB/>sed 's/^[ ⊥]*#define[ ⊥]*\([A-Za-z0-9_]*\).*$/\1/' |\<BR/>
 <TAB/>sort -u &gt; /tmp/the_defines<BR/>
 <BR/>
 find . -type f \( -name '*.c' -o -name '*.h' -o -name '*.icc' -o -name '*.cc' \) -exec perl -a -F"/[^A-Za-z0-9_]/" -ne 'print join("\n",@F),"\n"' {} \; |\<BR/>

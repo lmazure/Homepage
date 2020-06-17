@@ -193,6 +193,53 @@ window.do2_person = (event, author) => {
     personPopup.style.visibility = "visible";
 };
 // ---------------------------------------------------------------------------------------------------------------
+let keywordPopup = null;
+window.do_keyword = (event, keyId) => {
+    event.stopPropagation();
+    window.do2_keyword(event, keyId);
+};
+window.do2_keyword = (event, keyId) => {
+    if (keywordPopup === null) {
+        keywordPopup = document.createElement("div");
+        keywordPopup.style.width = "40%";
+        keywordPopup.style.height = "40%";
+        keywordPopup.onclick = function (e) { e.stopPropagation(); };
+        keywordPopup.classList.add("keywordPopup");
+        document.getElementById("footer").insertAdjacentElement("afterend", keywordPopup);
+    }
+    const description = HtmlString.buildFromTag("h1", keyId);
+    const clickHandler = function (e) {
+        undisplay();
+    };
+    window.addEventListener("click", clickHandler);
+    const keyupHandler = function (e) {
+        if (e.key === "Escape") {
+            undisplay();
+        }
+    };
+    window.addEventListener("keyup", keyupHandler);
+    const undisplay = function () {
+        window.removeEventListener("click", clickHandler);
+        window.removeEventListener("keyup", keyupHandler);
+        keywordPopup.style.visibility = "hidden";
+    };
+    keywordPopup.innerHTML = description.getHtml();
+    if ((event.clientY + keywordPopup.offsetHeight) < document.documentElement.clientHeight) {
+        keywordPopup.style.top = event.pageY + "px";
+    }
+    else {
+        keywordPopup.style.top = (event.pageY - keywordPopup.offsetHeight) + "px";
+    }
+    if ((event.clientX + keywordPopup.offsetWidth) < document.documentElement.clientWidth) {
+        keywordPopup.style.left = event.pageX + "px";
+    }
+    else {
+        keywordPopup.style.left = (event.pageX - keywordPopup.offsetWidth) + "px";
+    }
+    keywordPopup.scrollTop = 0;
+    keywordPopup.style.visibility = "visible";
+};
+// ---------------------------------------------------------------------------------------------------------------
 function isHidden(element) {
     const style = window.getComputedStyle(element);
     return (style.display === "none");

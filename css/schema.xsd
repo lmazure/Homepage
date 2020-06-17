@@ -114,6 +114,7 @@
     <xs:element ref="MODIFIERKEY"/>
     <xs:element ref="IMAGE"/>
     <xs:element name="AUTHOR" type="person"/>
+    <xs:element name="KEYWORD"/>
   </xs:choice>
 </xs:complexType>
 
@@ -281,6 +282,15 @@
   </xs:complexType>
 </xs:element>
 
+<xs:element name="KEYWORD">
+  <xs:complexType>
+    <xs:sequence>
+      <xs:element name="KEYID" type="xs:string" minOccurs="1" maxOccurs="1"/>
+      <xs:element name="KEYEDTEXT" type="content" minOccurs="1" maxOccurs="1"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:element>
+
 <xs:element name="LINE"/>
 
 <xs:element name="ANCHOR" type="xs:string"/>
@@ -356,7 +366,6 @@
     <xs:sequence maxOccurs="unbounded">
       <xs:element ref="PROMPT" minOccurs="0"/>
       <xs:element ref="TAB" minOccurs="0" maxOccurs="unbounded"/>
-      <xs:element ref="TABCHAR" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element ref="BR" minOccurs="0" maxOccurs="1"/>
       <xs:element name="I" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
       <xs:element name="B" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
@@ -390,8 +399,6 @@
 <xs:element name="PROMPT"/>
 
 <xs:element name="TAB"/>
-
-<xs:element name="TABCHAR"/>
 
 <xs:element name="BR"/>
 
