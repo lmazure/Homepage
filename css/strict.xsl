@@ -268,21 +268,14 @@
     </xsl:choose>
     <span class="linktitle"><xsl:value-of select="./T"/></span>
     <xsl:for-each select="./ST">
-      <xsl:text> &#8212; </xsl:text><span class="linksubtitle"><xsl:value-of select="."/></span>
+      <xsl:text> — </xsl:text><span class="linksubtitle"><xsl:value-of select="."/></span>
     </xsl:for-each>
   </xsl:element>
   <xsl:for-each select="./FEED">
     <xsl:element name="a">
       <xsl:attribute name="href"><xsl:value-of select="./A"/></xsl:attribute>
       <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
-      <xsl:element name="img">
-        <xsl:attribute name="src"><xsl:text>../images/feed.jpg</xsl:text></xsl:attribute>
-        <xsl:attribute name="title"><xsl:value-of select="./F"/><xsl:text> feed</xsl:text></xsl:attribute>
-        <xsl:attribute name="border"><xsl:text>0</xsl:text></xsl:attribute>
-        <xsl:attribute name="width"><xsl:text>16</xsl:text></xsl:attribute>
-        <xsl:attribute name="height"><xsl:text>16</xsl:text></xsl:attribute>
-        <xsl:attribute name="class">inlinedimage</xsl:attribute>
-      </xsl:element>
+      <xsl:text>📡</xsl:text>
     </xsl:element>
   </xsl:for-each>
   <xsl:choose>

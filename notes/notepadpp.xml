@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Notepad++</TITLE>
 <PATH>notes/notepadpp.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 Display
 <DEFINITIONTABLE>
@@ -30,6 +30,10 @@ Edit
   <ROW>
     <TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Alt'/><KEY ID='S'/></TERM>
     <DESC>save as</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/></TERM>
+    <DESC>reload from disk</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='Up'/></TERM>
@@ -141,5 +145,5 @@ Search in files
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
-<X><T>Links</T><A>../links/coding.html#notepadpp</A><L>en</L><F>HTML</F></X>
+<X><T>Links</T><A>../links/ide.html#notepadpp</A><L>en</L><F>HTML</F></X>
 </PAGE>

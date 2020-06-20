@@ -87,38 +87,26 @@
         { "title" : "Management", "page" : "links/management.html", "languages" : ["en"], "formats" : ["HTML"] },
         { "title" : "Computer science books", "page" : "links/sfbooks.html", "languages" : ["en"], "formats" : ["HTML"] }
       ] },
-      { "title" : "Medical", "page" : "links/medical.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
-        { "title" : "Imaging", "page" : "links/medimag.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
-          { "title" : "DICOM", "page" : "links/dicom.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Market", "page" : "links/medimagmarket.html", "languages" : ["en"], "formats" : ["HTML"] }
+      { "title" : "Encyclopedia", "page" : "links/data.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+        { "title" : "Mathematics", "page" : "links/math.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Numbers", "page" : "links/numbers.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Geometry", "page" : "links/geometry.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Graph", "page" : "links/graph.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Mathematicians", "page" : "links/mathematicians.html", "languages" : ["en"], "formats" : ["HTML"] }
         ] },
-        { "title" : "Clinical trials", "page" : "links/clinicaltrial.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
-          { "title" : "EDC", "page" : "links/edc.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "CDISC", "page" : "links/cdisc.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Market", "page" : "links/clintrials.html", "languages" : ["en"], "formats" : ["HTML"] }
-        ] },
-        { "title" : "Pharma", "page" : "links/pharma.html", "languages" : ["en"], "formats" : ["HTML"] }
+        { "title" : "Physics", "page" : "links/physics.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Chemistry", "page" : "links/chemistry.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Geology", "page" : "links/geology.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Geography", "page" : "links/geography.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Economy", "page" : "links/economy.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Space", "page" : "links/space.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Living beings", "page" : "links/livingbeings.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Health information", "page" : "links/health.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Ecology", "page" : "links/ecology.html", "languages" : ["en"], "formats" : ["HTML"] }
       ] },
       { "title" : "Entertainment", "children" : [
         { "title" : "News", "page" : "links/news.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
           { "title" : "COVID-19", "page" : "links/covid19.html", "languages" : ["en"], "formats" : ["HTML"] }
-        ] },
-        { "title" : "Encyclopedia", "page" : "links/data.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
-          { "title" : "Mathematics", "page" : "links/math.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
-            { "title" : "Numbers", "page" : "links/numbers.html", "languages" : ["en"], "formats" : ["HTML"] },
-            { "title" : "Geometry", "page" : "links/geometry.html", "languages" : ["en"], "formats" : ["HTML"] },
-            { "title" : "Graph", "page" : "links/graph.html", "languages" : ["en"], "formats" : ["HTML"] },
-            { "title" : "Mathematicians", "page" : "links/mathematicians.html", "languages" : ["en"], "formats" : ["HTML"] }
-          ] },
-          { "title" : "Physics", "page" : "links/physics.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Chemistry", "page" : "links/chemistry.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Geology", "page" : "links/geology.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Geography", "page" : "links/geography.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Economy", "page" : "links/economy.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Space", "page" : "links/space.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Living beings", "page" : "links/livingbeings.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Health information", "page" : "links/health.html", "languages" : ["en"], "formats" : ["HTML"] },
-          { "title" : "Ecology", "page" : "links/ecology.html", "languages" : ["en"], "formats" : ["HTML"] }
         ] },
         { "title" : "Language", "page" : "links/lang.html", "languages" : ["en"], "formats" : ["HTML"] },
         { "title" : "Tourism", "page" : "links/tourism.html", "languages" : ["en"], "formats" : ["HTML"] },
@@ -144,11 +132,25 @@
         { "title" : "Weird", "page" : "links/weird.html", "languages" : ["en"], "formats" : ["HTML"] }
       ] },
       { "title" : "My work", "children" : [
-        { "title" : "Mensi", "page" : "links/mensi.html", "languages" : ["en"], "formats" : ["HTML"] },
-        { "title" : "GE Healthcare", "page" : "links/gems.html", "languages" : ["en"], "formats" : ["HTML"] },
-        { "title" : "KIKA", "page" : "links/kika.html", "languages" : ["en"], "formats" : ["HTML"] },
-        { "title" : "Eurofins Scientific", "page" : "links/eurofins.html", "languages" : ["en"], "formats" : ["HTML"] },
-        { "title" : "Infologic", "page" : "links/infologic.html", "languages" : ["en"], "formats" : ["HTML"] }
+        { "title" : "My employers", "children" : [
+          { "title" : "Mensi", "page" : "links/mensi.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "GE Healthcare", "page" : "links/gems.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "KIKA", "page" : "links/kika.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Eurofins Scientific", "page" : "links/eurofins.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Infologic", "page" : "links/infologic.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
+        { "title" : "Medical", "page" : "links/medical.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Imaging", "page" : "links/medimag.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "DICOM", "page" : "links/dicom.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Market", "page" : "links/medimagmarket.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Clinical trials", "page" : "links/clinicaltrial.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "EDC", "page" : "links/edc.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "CDISC", "page" : "links/cdisc.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Market", "page" : "links/clintrials.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
+          { "title" : "Pharma", "page" : "links/pharma.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] }
       ] }
     ] },
     { "title" : "Notes", "children" : [
