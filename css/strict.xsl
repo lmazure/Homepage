@@ -114,6 +114,8 @@
           <xsl:text>c͟o͟p͟y͟</xsl:text>
           <xsl:text>&#xA;title: </xsl:text>
           <xsl:for-each select="./T"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
+          <xsl:text>&#xA;subtitle: </xsl:text>
+          <xsl:for-each select="./ST"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
           <xsl:text>&#xA;URL: </xsl:text>
           <xsl:for-each select="./A"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
           <xsl:text>&#xA;language: </xsl:text>
