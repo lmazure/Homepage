@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -11,7 +11,7 @@
       <ITEM><X><T>Satisfice</T><A>https://www.satisfice.com</A><L>en</L><F>HTML</F></X>:
         <X><T>James Bach's blog</T><A>https://www.satisfice.com/blog</A><L>en</L><F>HTML</F><FEED><A>https://www.satisfice.com/blog/feed/</A><F>RSS</F></FEED></X></ITEM>
       <ITEM><X><T>Cem Kaner</T><A>http://www.kaner.com</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Test Obsessed</T><A>http://testobsessed.com</A><L>en</L><F>HTML</F></X>(<AUTHOR><FIRSTNAME>Elisabeth</FIRSTNAME><LASTNAME>Hendrickson</LASTNAME></AUTHOR>)</ITEM>
+      <ITEM><X><T>Test Obsessed</T><A>https://testobsessed.com</A><L>en</L><F>HTML</F></X>(<AUTHOR><FIRSTNAME>Elisabeth</FIRSTNAME><LASTNAME>Hendrickson</LASTNAME></AUTHOR>)</ITEM>
       <ITEM><X><T>GTAC</T><A>https://developers.google.com/google-test-automation-conference/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>ISTQB</T><A>http://www.istqb.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Context-Driven-Testing</T><A>http://context-driven-testing.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -39,7 +39,7 @@
     </BLIST></ITEM>
     <ITEM><X><T>EICAR Anti-Virus / Anti-Malware test file</T><A>http://www.eicar.org/anti_virus_test_file.htm</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>TMAP</T><A>http://www.tmap.net/en</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Elisabeth Hendrickson's cheat sheet</T><A>http://testobsessed.com/wp-content/uploads/2011/04/testheuristicscheatsheetv1.pdf</A><L>en</L><F>PDF</F></X></ITEM>
+    <ITEM><X><T>Elisabeth Hendrickson's cheat sheet</T><A>https://testobsessed.com/wp-content/uploads/2011/04/testheuristicscheatsheetv1.pdf</A><L>en</L><F>PDF</F></X></ITEM>
     <ITEM><X><T>Virtual PC Images to test IE</T><A>https://developer.microsoft.com/en-us/microsoft-edge/tools/vms/</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
@@ -77,6 +77,7 @@
     <ITEM><ARTICLE><X><T>Should tests be ordered or not?</T><A>https://blog.frankel.ch/should-tests-be-ordered-or-not/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolas</FIRSTNAME><LASTNAME>Fränkel</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE><COMMENT>The author claims that tests can be ordered, but some arguments are biased (e.g. of course integration tests must be run after unit tests).</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>First-Class Tests.</T><A>http://blog.cleancoder.com/uncle-bob/2017/05/05/TestDefinitions.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE><COMMENT>The definitions of different types of tests and the fact that the tests should be first class citizens, hence should be decoupled from the production code.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality='-1'><T>Test Driving a Blockchain Application: A Simple Example</T><A>https://www.typemock.com/test-driving-a-blockchain-application-a-simple-example</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Farinelli</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE><COMMENT>Some basic ideas about a test strategy for verifying a blockchain, but these is nothing noticeable here.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Testopsies Dissecting Your Testing - James Bach and Michael Bolton</T><A>https://www.youtube.com/watch?v=dz2g_LUt2Wk</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Bolton</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>Recording videos during test sessions and analyzing them to better understand our testing process.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Context-driven testing</TITLE>
       <ITEM><ARTICLE><X quality='2'><T>Test Automation Snake Oil</T><A>https://www.satisfice.com/articles/test_automation_snake_oil.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>James gives a realistic view of automatic testing.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Insapience of Anti-Automationism</T><A>http://context-driven-testing.com/?p=69</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Cem</FIRSTNAME><LASTNAME>Kaner</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>Cem Kaner is debunking the claims that there is a real separation between automated test and manual tests, and that checking is not testing.</COMMENT></ARTICLE></ITEM>
@@ -88,7 +89,7 @@
       <ITEM><ARTICLE><X><T>Agility for Testers</T><A>http://www.testobsessed.com/wp-content/uploads/2011/04/aftpnsqc2004.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Elisabeth</FIRSTNAME><LASTNAME>Hendrickson</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH></DATE><COMMENT>Hendrickson shares her experience of being a tester in an XP team: this is a very practical and interesting paper…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality='1'><T>Agile Testing</T><A>https://www.youtube.com/watch?v=bqrOnIECCSg</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>2</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Elisabeth</FIRSTNAME><LASTNAME>Hendrickson</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE><COMMENT>The same information as in the article above, but, here, you get additionally her full dynamism.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status='dead'><T>scrum testing</T><A>http://discuss.joelonsoftware.com/default.asp?joel.3.423167.15</A><L>en</L><F>HTML</F></X><DATE><YEAR>2006</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>An interesting group discussion on Scrum and QA.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Exploratory Testing in an Agile Context</T><A>http://testobsessed.com/wp-content/uploads/2011/08/ETinAgile-agile2011-final.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Elisabeth</FIRSTNAME><LASTNAME>Hendrickson</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR></DATE><COMMENT>A tutorial explaining some ways to perform exploratory testing.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Exploratory Testing in an Agile Context</T><A>https://testobsessed.com/wp-content/uploads/2011/08/ETinAgile-agile2011-final.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Elisabeth</FIRSTNAME><LASTNAME>Hendrickson</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR></DATE><COMMENT>A tutorial explaining some ways to perform exploratory testing.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>AAFTT (Agile Alliance's Functional Testing Tool) 2007</TITLE>
       <ITEM><ARTICLE><X status='dead'><T>Does It Work? Are We Done? Is It Right? (Keep It Light!)</T><A>http://video.google.com/videoplay?docid=-3256499677006040213</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>5</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jim</FIRSTNAME><LASTNAME>Shore</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH></DATE><COMMENT>(The transcript is available in <X><T>Does It Work? Are We Done? Is It Right? (Keep It Light!)</T><A>http://www.jamesshore.com/Blog/Does-It-Work-Are-We-Done.html</A><L>en</L><F>HTML</F></X>) TDD is the solution to minimize waste when checking if the software works properly and it is complete.</COMMENT></ARTICLE></ITEM>

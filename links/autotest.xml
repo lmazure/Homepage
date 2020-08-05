@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>6</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -23,7 +23,7 @@
         <ITEM><X><T>NCrunch</T><A>https://www.ncrunch.net</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>JavaScript</TITLE>
-        <ITEM><X><T>QUnit</T><A>http://qunitjs.com</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>QUnit</T><A>https://qunitjs.com/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X status='obsolete'><T>YUI Test</T><A>https://yuilibrary.com/yui/docs/test/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Mocha</T><A>https://mochajs.org</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Sinon</T><A>https://sinonjs.org</A><L>en</L><F>HTML</F></X></ITEM>
@@ -209,14 +209,14 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tools</TITLE>
       <ITEM><BLIST><TITLE>xUnit</TITLE>
-        <ITEM><ARTICLE><X><T>Automated Testing Patterns and Smells</T><A>https://www.youtube.com/watch?v=Pq6LHFM4JvE</A><L>en</L><F>MP4</F><DURATION><MINUTE>59</MINUTE><SECOND>34</SECOND></DURATION><DATE><YEAR>2008</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE></X><AUTHOR><FIRSTNAME>Gerard</FIRSTNAME><LASTNAME>Meszaros</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE><COMMENT>How to detect and fix issues in unit tests: code smells (tests difficult to understand, tests containing coding errors, tests difficult / impossible to write), behavior smells (tests failing when they should succeed - erratic test, fragile test -, tests succeeding when they should fail), and project smells</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Automated Testing Patterns and Smells</T><A>https://www.youtube.com/watch?v=Pq6LHFM4JvE</A><L>en</L><F>MP4</F><DURATION><MINUTE>59</MINUTE><SECOND>34</SECOND></DURATION><DATE><YEAR>2008</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE></X><AUTHOR><FIRSTNAME>Gerard</FIRSTNAME><LASTNAME>Meszaros</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE><COMMENT>How to detect and fix issues in unit tests: code smells (tests difficult to understand, tests containing coding errors, tests difficult / impossible to write), behavior smells (tests failing when they should succeed - erratic test, fragile test -, tests succeeding when they should fail), and project smells.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>JUnit</TITLE>
         <ITEM><ARTICLE><X><T>Test Infected:</T><ST>Programmers Love Writing Tests</ST><A>http://members.pingnet.ch/gamma/junit.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Gamma</LASTNAME></AUTHOR><COMMENT>The two authors describe the return of investment of unit testing and propose their own tool for Java: JUnit.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Incremental development with Ant and JUnit</T><A>http://carfield.com.hk/document/java/articles/ant+junit.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Malcolm</FIRSTNAME><LASTNAME>Davis</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>11</MONTH></DATE><COMMENT>The author describes how he used Ant for his build process, this one includes automatic unit tests with JUnit.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='zombie'><T>JUnit antipatterns</T><ST>How to resolve</ST><A>https://www.ibm.com/developerworks/opensource/library/os-junit/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Garrett</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>7</MONTH><DAY>19</DAY></DATE><COMMENT>Some common testing errors: testing only the expected case, forgetting boundary situations, breaking encapsulation, and too much test complexity.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality='1'><T>JUnit 5 by Marc Philipp</T><A>https://www.youtube.com/watch?v=0qI6_NKFQsY</A><L>en</L><F>MP4</F><DURATION><MINUTE>51</MINUTE><SECOND>22</SECOND></DURATION><DATE><YEAR>2017</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE></X><AUTHOR><FIRSTNAME>Marc</FIRSTNAME><LASTNAME>Philipp</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>23</DAY></DATE><COMMENT>A detailed presentation of JUnit 5, describing the differences with JUnit 4 and giving a rational of the changes.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>The top five reasons you should be using JUnit 5 right now!</T><A>https://developer.ibm.com/dwblog/2017/top-five-reasons-to-use-junit-5-java/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Perry</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>4</MONTH><DAY>17</DAY></DATE><COMMENT>An overview of the most important improvements in JUnit 5.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X status='dead'><T>The top five reasons you should be using JUnit 5 right now!</T><A>https://developer.ibm.com/dwblog/2017/top-five-reasons-to-use-junit-5-java/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Perry</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>4</MONTH><DAY>17</DAY></DATE><COMMENT>An overview of the most important improvements in JUnit 5.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>What’s new in JUnit 5.4</T><A>https://www.jworks.io/whats-new-in-junit-5-4/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Erik</FIRSTNAME><LASTNAME>Pragt</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Know for Sure with Property-Based Testing</T><ST>How do you test your code against thousands of values?</ST><A>https://blogs.oracle.com/javamagazine/know-for-sure-with-property-based-testing</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Johannes</FIRSTNAME><LASTNAME>Link</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>20</DAY></DATE><COMMENT>An introduction to jqwik, a library to generate test data.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>JUnit 5.6 Makes Testing Easy with New Features</T><ST>New features such as the ability to define test execution order and run tests in parallel make this an important release.</ST><A>https://blogs.oracle.com/javamagazine/junit-5-6-makes-testing-easy-with-new-features</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>ErMert</FIRSTNAME><LASTNAME>Çalişkanik</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>5</MONTH><DAY>4</DAY></DATE><COMMENT>Some features added since JUnit 5.0: order of execution, defining timeouts, conditional test execution, programmatic extensions, and running tests in parallel.</COMMENT></ARTICLE></ITEM>
@@ -242,6 +242,9 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mutation testing</TITLE>
       <ITEM><ARTICLE><X><T>Mutation Testing</T><A>https://blog.cleancoder.com/uncle-bob/2016/06/10/MutationTesting.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE><COMMENT>An introduction to mutation testing.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Fuzz testing</TITLE>
+      <ITEM><ARTICLE><X><T>Zurich Go Meetup: Go-Fuzz: Practical Fuzzing with Go</T><A>https://www.youtube.com/watch?v=3J9qbvOfklg</A><L>en</L><F>MP4</F><DURATION><MINUTE>26</MINUTE><SECOND>55</SECOND></DURATION><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>19</DAY></DATE></X><AUTHOR><FIRSTNAME>Roberto</FIRSTNAME><LASTNAME>Clapis</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE><COMMENT>A presentation of Go-Fuzz and some advice on how to use it.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Performance testing</TITLE>
       <ITEM><ARTICLE><X><T>Using open source tools for performance testing</T><A>https://www.youtube.com/watch?v=k9h51BM2h4w</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>4</MINUTE><SECOND>37</SECOND></DURATION><DATE><YEAR>2007</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE></X><AUTHOR><FIRSTNAME>Goranka</FIRSTNAME><LASTNAME>Bjedov</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>Some generalities about performance testing of Web applications: description of the different types of performances tests, architecture of a performance test environment, in-house vs vendor vs open source performance tools, keeping all the data for a while…</COMMENT></ARTICLE></ITEM>
