@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -151,6 +151,7 @@
       <ITEM><ARTICLE><X><T>How to Design Great APIs - Parse Developer Day 2013</T><A>https://www.youtube.com/watch?v=qCdpTji8nxo</A><L>en</L><F>MP4</F><DURATION><MINUTE>32</MINUTE><SECOND>54</SECOND></DURATION><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Lacker</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE><COMMENT><BLIST><TITLE>An API must be</TITLE><ITEM>intuitive (homogeneity, ugliness of dangerous calls)</ITEM><ITEM>documented (reference docs, tutorials, quick-starts)</ITEM><ITEM>opinionated (dictatorship of design philosophy)</ITEM></BLIST></COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Don't Make Me Remember Things</T><A>https://blog.8thlight.com/rob-looby/2016/01/28/dont-make-me-remember-things.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Looby</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE><COMMENT>Designing an API in a way the developer does not have to remember about possible pitfalls.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Code Health: Make Interfaces Hard to Misuse</T><A>https://testing.googleblog.com/2018/07/code-health-make-interfaces-hard-to.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marek</FIRSTNAME><LASTNAME>Kiszkis</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE><COMMENT>Design an API so its users to do have take care of constraints that should be instead managed inside the library.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Testing on the Toilet: Avoid Hardcoding Values for Better Libraries</T><A>https://testing.googleblog.com/2020/08/testing-on-toilet-avoid-hardcoding.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adel</FIRSTNAME><LASTNAME>Saoud</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE><COMMENT>Some warning about using hardcoded values in a library.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>ORM</TITLE>
       <ITEM><ARTICLE><X><T>Dance you Imps!</T><A>https://blog.cleancoder.com/uncle-bob/2013/10/01/Dance-You-Imps.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>Object-Relational Mapping is a misnomer, ORMs are data structure migrators. An object is an abstraction of behaviour, not an abstraction of data. They should represent business objects, not database tables.</COMMENT></ARTICLE></ITEM>
