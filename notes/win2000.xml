@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>6</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -18,6 +18,9 @@
 <BLIST>
 <ITEM>
   <CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
+</ITEM>
+<ITEM>
+  <CODEROUTINE>tasklist /v | findstr javaw.exe</CODEROUTINE> lists the <CODEROUTINE>javaw.exe</CODEROUTINE> processes running.
 </ITEM>
 <ITEM>
   <CODEROUTINE>&amp;&amp;</CODEROUTINE> command following this symbol runs only if the command preceding the symbol succeeds<BR/>
