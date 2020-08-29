@@ -149,6 +149,17 @@
     <DESC>peek all references</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID=','/></TERM>
+    <DESC>display setting</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><MODIFIERKEY ID='Ctrl'/><KEY ID='T'/><BR/>
+      <CODEMENU>File<CODEMENU>Preferences<CODEMENU>Color Theme</CODEMENU></CODEMENU></CODEMENU></TERM>
+    <DESC>display the theme picker (navigate with <KEY ID='Up'/>/<KEY ID='Down'/>, the theme is interactively applied)</DESC>
+  </ROW>
+</DEFINITIONTABLE>
 </CONTENT>
 <X><T>Links</T><A>../links/ide.html#vscode</A><L>en</L><F>HTML</F></X>
 </PAGE>

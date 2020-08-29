@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -15,55 +15,63 @@
   <DESC>display the previous virtual desktop</DESC>
 </ROW>
 </DEFINITIONTABLE>
-<BLIST>
-<ITEM>
-  <CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
-</ITEM>
-<ITEM>
-  <CODEROUTINE>tasklist /v | findstr javaw.exe</CODEROUTINE> lists the <CODEROUTINE>javaw.exe</CODEROUTINE> processes running.
-</ITEM>
-<ITEM>
-  <CODEROUTINE>&amp;&amp;</CODEROUTINE> command following this symbol runs only if the command preceding the symbol succeeds<BR/>
-  <CODEROUTINE>||</CODEROUTINE> command following this symbol runs only if the command preceding the symbol fails<BR/>
-  <CODEROUTINE>&amp;</CODEROUTINE> separates multiple commands on the command line
-</ITEM>
-<ITEM><BLIST><TITLE>User management with PowerShell</TITLE>
-  <ITEM>enable a local user
-    <CODESAMPLE><X><T>Enable-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Enable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+  <BLIST>
+  <ITEM>
+    <CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
   </ITEM>
-  <ITEM>disable a local user
-    <CODESAMPLE><X><T>Disable-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Disable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+  <ITEM>
+    <CODEROUTINE>tasklist /v | findstr javaw.exe</CODEROUTINE> lists the <CODEROUTINE>javaw.exe</CODEROUTINE> processes running.
   </ITEM>
-  <ITEM>return status of a local user
-    <CODESAMPLE><X><T>Get-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Get-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+  <ITEM><BLIST><TITLE>retrieve the command line of a process</TITLE>
+    <ITEM>open the Task Manager</ITEM>
+    <ITEM>display the details tab</ITEM>
+    <ITEM>add the Command Line column if it is not already displayed</ITEM>
+    <ITEM>select the line of the process</ITEM>
+    <ITEM>copy</ITEM>
+    <ITEM>paste in a text editor to get the whole line</ITEM>
+  </BLIST></ITEM>
+  <ITEM>
+    <CODEROUTINE>&amp;&amp;</CODEROUTINE> command following this symbol runs only if the command preceding the symbol succeeds<BR/>
+    <CODEROUTINE>||</CODEROUTINE> command following this symbol runs only if the command preceding the symbol fails<BR/>
+    <CODEROUTINE>&amp;</CODEROUTINE> separates multiple commands on the command line
   </ITEM>
-</BLIST></ITEM>
-<ITEM>find a file whose name contains Ondine
-  <CODESAMPLE>dir c:\ /s /b | find "Ondine"</CODESAMPLE>
-</ITEM>
-<ITEM>recursively loop on the <CODEROUTINE>*.htm</CODEROUTINE> files to find a string
-  <CODESAMPLE>for /r %f in (*.htm) do find "foobar" "%f"</CODESAMPLE>
-</ITEM>
-<ITEM>recursively loop on files to compress them
-  <CODESAMPLE>for /r %f in (*.*) do "C:\Program Files\7-Zip\7z.exe" a -tzip "%f.zip" "%f"</CODESAMPLE>
-</ITEM>
-<ITEM>to change the letter of a drive:<BR/>
-  start <CODEROUTINE>compmgmt.msc</CODEROUTINE><BR/>
-  click on <CODEMENU>Stockage<CODEMENU>Gestion des disques</CODEMENU></CODEMENU><BR/>
-  right-click on the line corresponding to the disk<BR/>
-  select <CODEMENU>Modifier la lettre et les chemins d'accès…</CODEMENU><BR/>
-  in the newly displayed dialog, click on <CODEMENU>Modifer…</CODEMENU><BR/>
-  select the new letter and apply
-</ITEM>
-<ITEM>to shutdown the computer in 10 minutes
-  <CODESAMPLE>shutdown /t 600 /s</CODESAMPLE>
-</ITEM>
-<ITEM>to reboot a machine in RDP
-  <CODESAMPLE>shutdown -t 0 -r -f</CODESAMPLE>
-</ITEM>
-<ITEM>to create a large file
-  <CODESAMPLE>fsutil file createnew &lt;filename&gt; &lt;length&gt;</CODESAMPLE>
-</ITEM>
+  <ITEM><BLIST><TITLE>User management with PowerShell</TITLE>
+    <ITEM>enable a local user
+      <CODESAMPLE><X><T>Enable-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Enable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+    </ITEM>
+    <ITEM>disable a local user
+      <CODESAMPLE><X><T>Disable-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Disable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+    </ITEM>
+    <ITEM>return status of a local user
+      <CODESAMPLE><X><T>Get-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Get-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM>find a file whose name contains Ondine
+    <CODESAMPLE>dir c:\ /s /b | find "Ondine"</CODESAMPLE>
+  </ITEM>
+  <ITEM>recursively loop on the <CODEROUTINE>*.htm</CODEROUTINE> files to find a string
+    <CODESAMPLE>for /r %f in (*.htm) do find "foobar" "%f"</CODESAMPLE>
+  </ITEM>
+  <ITEM>recursively loop on files to compress them
+    <CODESAMPLE>for /r %f in (*.*) do "C:\Program Files\7-Zip\7z.exe" a -tzip "%f.zip" "%f"</CODESAMPLE>
+  </ITEM>
+  <ITEM>to change the letter of a drive:<BR/>
+    start <CODEROUTINE>compmgmt.msc</CODEROUTINE><BR/>
+    click on <CODEMENU>Stockage<CODEMENU>Gestion des disques</CODEMENU></CODEMENU><BR/>
+    right-click on the line corresponding to the disk<BR/>
+    select <CODEMENU>Modifier la lettre et les chemins d'accès…</CODEMENU><BR/>
+    in the newly displayed dialog, click on <CODEMENU>Modifer…</CODEMENU><BR/>
+    select the new letter and apply
+  </ITEM>
+  <ITEM>to shutdown the computer in 10 minutes
+    <CODESAMPLE>shutdown /t 600 /s</CODESAMPLE>
+  </ITEM>
+  <ITEM>to reboot a machine in RDP
+    <CODESAMPLE>shutdown -t 0 -r -f</CODESAMPLE>
+  </ITEM>
+  <ITEM>to create a large file
+    <CODESAMPLE>fsutil file createnew &lt;filename&gt; &lt;length&gt;</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE>help</CODEROUTINE></TERM><DESC>display the list of the command</DESC></ROW>
