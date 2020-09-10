@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript</TITLE>
 <PATH>notes/javascript.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
   <ITEM>Number: Double precision 64-bit floating point values. It can be used to represent both, integers and fractions.</ITEM>
@@ -38,6 +38,9 @@
     <ITEM>literal array
     <CODESAMPLE>var myCars=["Saab","Volvo","BMW"];</CODESAMPLE></ITEM>
   </BLIST></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Objects</B></U></TITLE>
+  <ITEM>The <CODEROUTINE>delete</CODEROUTINE> operator removes a property from an object.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Regular Expressions</B></U></TITLE>
   <ITEM>Syntax<BR/>

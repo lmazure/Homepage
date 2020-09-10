@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -392,6 +392,7 @@
     <ITEM><BLIST><TITLE>Metrics</TITLE>
       <ITEM><ARTICLE><X><T>Software Remodeling: Improving Design and Implementation Quality - Using audits, metrics and refactoring in Borland® Together® ControlCenter™</T><A>../attic/tgr_softwareremodeling.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Richard</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Gronback</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>1</MONTH></DATE><COMMENT>Why static code analysis and software metrics are a good complement of human code reviews and can help to drive refactoring.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>In pursuit of code quality: Monitoring cyclomatic complexity</T><ST>What to do when code complexity is off the charts</ST><A>https://www.ibm.com/developerworks/java/library/j-cq03316/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Glover</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE><COMMENT>A very basic introduction to cyclomatic complexity and some tools computing it. The CC computation formula is not even given.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Introducing the Polyglot Code Explorer</T><A>https://blog.korny.info/2020/09/06/introducing-the-polyglot-code-explorer.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kornelis</FIRSTNAME><LASTNAME>Sietsma</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE><COMMENT>Using some simple and language neutral metrics to analyse a code base.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Formal verification</TITLE>
       <ITEM><ARTICLE><X><T>Digital Design: Beyond Trial and Error</T><A>https://www.youtube.com/watch?v=QOcyGZvKkgU</A><L>en</L><F>MP4</F><DURATION><MINUTE>52</MINUTE><SECOND>44</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Fred</FIRSTNAME><LASTNAME>Furtek</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE><COMMENT>Fred Furtek proposes a new methodology for performing formal verification in the case of concurrency. This one combines boolean expressions and regular expressions. The idea seems interesting, but it is realistic for real, i.e. non trivial, systems?</COMMENT></ARTICLE></ITEM>
