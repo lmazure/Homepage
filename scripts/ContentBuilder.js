@@ -1,4 +1,4 @@
-import HtmlString from "./HtmlString.js";
+import { HtmlString } from "./HtmlString.js";
 import { DataLoader } from "./DataLoader.js";
 var ContentSort;
 (function (ContentSort) {
@@ -6,7 +6,7 @@ var ContentSort;
     ContentSort["Author"] = "author";
     ContentSort["Link"] = "link";
 })(ContentSort || (ContentSort = {}));
-export default class ContentBuilder {
+export class ContentBuilder {
     constructor() {
         switch (window.location.search) {
             case "?sort=link": // TODO utiliser linkParameterString

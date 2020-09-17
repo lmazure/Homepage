@@ -1,4 +1,4 @@
-import HtmlString from "./HtmlString.js";
+import { HtmlString } from "./HtmlString.js";
 export class MapBuilder {
     constructor() {
         this.divCounter = 0;

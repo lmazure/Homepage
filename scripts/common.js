@@ -1,7 +1,8 @@
 /// <reference path ="lib/google.analytics.d.ts"/>
-import HtmlString from "./HtmlString.js";
+import { HtmlString } from "./HtmlString.js";
 import { DataLoader } from "./DataLoader.js";
-import ContentBuilder from "./ContentBuilder.js";
+import { ContentBuilder } from "./ContentBuilder.js";
+import { Popup } from "./Popup.js";
 // ---------------------------------------------------------------------------------------------------------------
 // ---------------------------------------------------------------------------------------------------------------
 function escapeHtml(unsafe) {
@@ -112,12 +113,12 @@ window.onload = () => {
     }
 };
 // ---------------------------------------------------------------------------------------------------------------
-let personPopup = null;
+let popup = null;
 let personPopupAuthors = null;
 window.do_person = (event, author) => {
     event.stopPropagation();
     if (personPopupAuthors == null) {
-        const loader = new DataLoader((authors, articles, links, referringPages) => {
+        const loader = new DataLoader((authors, articles, links, referringPages, keywords) => {
             personPopupAuthors = authors;
             window.do2_person(event, author);
         });
@@ -127,13 +128,8 @@ window.do_person = (event, author) => {
     }
 };
 window.do2_person = (event, author) => {
-    if (personPopup === null) {
-        personPopup = document.createElement("div");
-        personPopup.style.width = "40%";
-        personPopup.style.height = "40%";
-        personPopup.onclick = function (e) { e.stopPropagation(); };
-        personPopup.classList.add("personPopup");
-        document.getElementById("footer").insertAdjacentElement("afterend", personPopup);
+    if (popup === null) {
+        popup = new Popup();
     }
     const description = HtmlString.buildFromTag("h1", ContentBuilder.authorToHtmlString(author));
     let links = HtmlString.buildEmpty();
@@ -159,85 +155,54 @@ window.do2_person = (event, author) => {
         description.appendTag("h2", "Links");
         description.appendTag("ul", links);
     }
-    description.appendTag("h2", "Articles");
-    description.appendTag("ul", articles);
-    const clickHandler = function (e) {
-        undisplay();
-    };
-    window.addEventListener("click", clickHandler);
-    const keyupHandler = function (e) {
-        if (e.key === "Escape") {
-            undisplay();
-        }
-    };
-    window.addEventListener("keyup", keyupHandler);
-    const undisplay = function () {
-        window.removeEventListener("click", clickHandler);
-        window.removeEventListener("keyup", keyupHandler);
-        personPopup.style.visibility = "hidden";
-    };
-    personPopup.innerHTML = description.getHtml();
-    if ((event.clientY + personPopup.offsetHeight) < document.documentElement.clientHeight) {
-        personPopup.style.top = event.pageY + "px";
+    if (!articles.isEmpty()) {
+        description.appendTag("h2", "Articles");
+        description.appendTag("ul", articles);
     }
-    else {
-        personPopup.style.top = (event.pageY - personPopup.offsetHeight) + "px";
-    }
-    if ((event.clientX + personPopup.offsetWidth) < document.documentElement.clientWidth) {
-        personPopup.style.left = event.pageX + "px";
-    }
-    else {
-        personPopup.style.left = (event.pageX - personPopup.offsetWidth) + "px";
-    }
-    personPopup.scrollTop = 0;
-    personPopup.style.visibility = "visible";
+    popup.display(event, description);
 };
 // ---------------------------------------------------------------------------------------------------------------
-let keywordPopup = null;
+let keywordPopupKeywords = null;
 window.do_keyword = (event, keyId) => {
     event.stopPropagation();
-    window.do2_keyword(event, keyId);
+    if (personPopupAuthors == null) {
+        const loader = new DataLoader((authors, articles, links, referringPages, keywords) => {
+            keywordPopupKeywords = keywords;
+            window.do2_keyword(event, keyId);
+        });
+    }
+    else {
+        window.do2_keyword(event, keyId);
+    }
 };
 window.do2_keyword = (event, keyId) => {
-    if (keywordPopup === null) {
-        keywordPopup = document.createElement("div");
-        keywordPopup.style.width = "40%";
-        keywordPopup.style.height = "40%";
-        keywordPopup.onclick = function (e) { e.stopPropagation(); };
-        keywordPopup.classList.add("keywordPopup");
-        document.getElementById("footer").insertAdjacentElement("afterend", keywordPopup);
+    if (popup === null) {
+        popup = new Popup();
     }
-    const description = HtmlString.buildFromTag("h1", keyId);
-    const clickHandler = function (e) {
-        undisplay();
-    };
-    window.addEventListener("click", clickHandler);
-    const keyupHandler = function (e) {
-        if (e.key === "Escape") {
-            undisplay();
+    const description = HtmlString.buildEmpty();
+    let links = HtmlString.buildEmpty();
+    let articles = HtmlString.buildEmpty();
+    for (let k of keywordPopupKeywords) {
+        if (k.id === keyId) {
+            if (k.links !== undefined) {
+                for (let link of k.links) {
+                    links.appendTag("li", ContentBuilder.linkToHtmlString(link));
+                }
+            }
+            for (let art of k.articles) {
+                articles.appendTag("li", ContentBuilder.linkToHtmlString(art.links[0]));
+            }
         }
-    };
-    window.addEventListener("keyup", keyupHandler);
-    const undisplay = function () {
-        window.removeEventListener("click", clickHandler);
-        window.removeEventListener("keyup", keyupHandler);
-        keywordPopup.style.visibility = "hidden";
-    };
-    keywordPopup.innerHTML = description.getHtml();
-    if ((event.clientY + keywordPopup.offsetHeight) < document.documentElement.clientHeight) {
-        keywordPopup.style.top = event.pageY + "px";
     }
-    else {
-        keywordPopup.style.top = (event.pageY - keywordPopup.offsetHeight) + "px";
+    if (!links.isEmpty()) {
+        description.appendTag("h2", "Links");
+        description.appendTag("ul", links);
     }
-    if ((event.clientX + keywordPopup.offsetWidth) < document.documentElement.clientWidth) {
-        keywordPopup.style.left = event.pageX + "px";
+    if (!articles.isEmpty()) {
+        description.appendTag("h2", "Articles");
+        description.appendTag("ul", articles);
     }
-    else {
-        keywordPopup.style.left = (event.pageX - keywordPopup.offsetWidth) + "px";
-    }
-    keywordPopup.scrollTop = 0;
-    keywordPopup.style.visibility = "visible";
+    popup.display(event, description);
 };
 // ---------------------------------------------------------------------------------------------------------------
 function isHidden(element) {

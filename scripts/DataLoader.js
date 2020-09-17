@@ -10,10 +10,13 @@ export class DataLoader {
         const p3 = DataLoader.getJson("../content/map.json")
             .then((data) => { mapRoot = data.root; })
             .catch((error) => console.log("Failed to load map.json", error));
-        const promises = [p1, p2, p3];
+        const p4 = DataLoader.getJson("../content/keyword.json")
+            .then((data) => { this.keywords = data.keywords; })
+            .catch((error) => console.log("Failed to load keyword.json", error));
+        const promises = [p1, p2, p3, p4];
         Promise.all(promises)
             .then(() => this.postprocessData(mapRoot))
-            .then(() => callback(this.authors, this.articles, this.links, this.referringPages))
+            .then(() => callback(this.authors, this.articles, this.links, this.referringPages, this.keywords))
             .catch((error) => console.log("Failed to process data", error));
     }
     static getJson(url) {
@@ -39,6 +42,7 @@ export class DataLoader {
         for (let article of this.articles) {
             if (article.authorIndexes !== undefined) {
                 article.authors = article.authorIndexes.map(i => this.authors[i]);
+                // TODO delete article.authorIndexes
                 for (let author of article.authors) {
                     if (author.articles === undefined) {
                         author.articles = [article];
@@ -63,6 +67,10 @@ export class DataLoader {
         });
         this.referringPages = [];
         this.postProcessData_InserReferingPage(rootNode);
+        for (let keyword of this.keywords) {
+            keyword.articles = keyword.articleIndexes.map(i => this.articles[i]);
+            // TODO delete keyword.articleIndexes
+        }
     }
     postProcessData_InserReferingPage(node) {
         this.referringPages[node.page] = node;

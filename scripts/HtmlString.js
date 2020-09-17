@@ -1,4 +1,4 @@
-export default class HtmlString {
+export class HtmlString {
     constructor() {
         this.html = "";
     }
