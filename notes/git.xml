@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -108,23 +108,23 @@
     <DESC>store the current contents of the index in a new commit along with message &lt;msg&gt;</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>-a</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git commit -a</CODEROUTINE></TERM>
     <DESC>automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--amend</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git commit --amend</CODEROUTINE></TERM>
     <DESC>replace the tip of the current branch by creating a new commit</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--amend -m "an updated commit message"</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git commit --amend -m "an updated commit message"</CODEROUTINE></TERM>
     <DESC>change the commit message</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--amend --reset-author</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git commit --amend --reset-author</CODEROUTINE></TERM>
     <DESC>declare that the authorship of the new commit belongs to the committer</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--amend --author="John &lt;John@foo.bar&gt;"</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git commit --amend --author="John &lt;John@foo.bar&gt;"</CODEROUTINE></TERM>
     <DESC>declare that the authorship of the new commit belongs to the specified name/email.</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -218,31 +218,37 @@
     <DESC>show commit logs</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>-&lt;n&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log -&lt;n&gt;</CODEROUTINE></TERM>
     <DESC>limits the log to the n last commits</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--committer=&lt;email&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log --since "2020-09-05 00:00" --until "2020-09-06 24:00"</CODEROUTINE></TERM>
+    <DESC>limits the log between two datetimes</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --committer=&lt;email&gt;</CODEROUTINE></TERM>
     <DESC>filter on a given committer</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--pretty="%cI %s"</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log --pretty="%cI %s"</CODEROUTINE></TERM>
     <DESC>show the commit date and the commit subject</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--stat</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log --stat</CODEROUTINE></TERM>
     <DESC>indicates the modified files with a graph of the stats of the changes</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--shortstat</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log --shortstat</CODEROUTINE></TERM>
     <DESC>indicates the numbers of modified files, added and deleted lines</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>-p</CODEROUTINE><BR/><CODEROUTINE>--patch</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log -p</CODEROUTINE><BR/>
+          <CODEROUTINE>git log --patch</CODEROUTINE></TERM>
     <DESC>show the code changes in each commit</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>-U&lt;n&gt;</CODEROUTINE><BR/><CODEROUTINE>--unified=&lt;n&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log -U&lt;n&gt;</CODEROUTINE><BR/>
+          <CODEROUTINE>git log --unified=&lt;n&gt;</CODEROUTINE></TERM>
     <DESC>generate diffs with n lines of context instead of the usual 3. Implies -p</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -264,15 +270,15 @@
     <DESC>reset current HEAD to a previous commit<BR/>if no commit is specified, the current HEAD is used</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--soft</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git reset --soft</CODEROUTINE></TERM>
     <DESC>does not touch the index file or the working tree</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--mixed</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git reset --mixed</CODEROUTINE></TERM>
     <DESC>resets the index but not the working tree<BR/>this is the default</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>--hard</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git reset --hard</CODEROUTINE></TERM>
     <DESC>resets the index and the working tree</DESC>
   </ROW>
   <ROW>
@@ -287,11 +293,11 @@
     <DESC>annotate each line of the file with information from the revision which last modified the line</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>-M</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git blame -M</CODEROUTINE></TERM>
     <DESC>detects moved or copied lines within a file</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>-w</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git blame -w</CODEROUTINE></TERM>
     <DESC>ignores whitespaces</DESC>
   </ROW>
 </DEFINITIONTABLE>
