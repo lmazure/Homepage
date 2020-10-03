@@ -282,38 +282,32 @@
   </xsl:for-each>
   <xsl:choose>
     <xsl:when test="@quality='2'">
-      <span title="very good"><xsl:text> &#x1f44d; &#x1f44d;</xsl:text></span>
+      <span title="very good"><xsl:text> 👍 👍</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='1'">
-      <span title="good"><xsl:text> &#x1f44d;</xsl:text></span>
+      <span title="good"><xsl:text> 👍</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-1'">
-      <span title="bad"><xsl:text> &#x1f44e;</xsl:text></span>
+      <span title="bad"><xsl:text> 👎</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-2'">
-      <span title="very bad"><xsl:text> &#x1f44e; &#x1f44e;</xsl:text></span>
+      <span title="very bad"><xsl:text> 👎 👎</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@status='dead' or @status='zombie'">
-      <span title="dead link"><xsl:text> &#x2020;</xsl:text></span>
+      <span title="dead link"><xsl:text> †</xsl:text></span>
     </xsl:when>
     <xsl:when test="@status='obsolete'">
-      <span title="obsolete"><xsl:text> &#x2021;</xsl:text></span>
+      <span title="obsolete"><xsl:text> ‡</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
-    <xsl:when test="@protection='firewall'">
-      <span title="protected behind a firewall"><xsl:text> &#x1f525;</xsl:text></span>
-    </xsl:when>
     <xsl:when test="@protection='free_registration'">
-      <span title="free registration required"><xsl:text> &#x1f193;</xsl:text></span>
+      <span title="free registration required"><xsl:text> 🆓</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='payed_registration'">
-      <span title="payed registration required"><xsl:text> &#x1f4b0;</xsl:text></span>
-    </xsl:when>
-    <xsl:when test="@protection='protected'">
-      <span title="protected"><xsl:text> &#x1f512;</xsl:text></span>
+      <span title="payed registration required"><xsl:text> 💰</xsl:text></span>
     </xsl:when>
   </xsl:choose>
 </xsl:template>

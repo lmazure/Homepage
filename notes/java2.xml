@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>notes/java2.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>5</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
@@ -35,11 +35,6 @@ Once the static members have been imported, they may be used without qualificati
 )<BR/>
 This should be used sparingly since it pollutes the namespace of the class.<BR/>
 <BR/>
-<BLIST><TITLE><U><B>Strings</B></U></TITLE>
-  <ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
-  <ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
-  <ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
-</BLIST>
 <BLIST><TITLE><U><B>Modifiers</B></U></TITLE>
 <ITEM><NLIST><TITLE>The Java Language Specification suggests ordering the modifiers as:</TITLE>
   <ITEM>public / protected / private</ITEM>
@@ -52,6 +47,11 @@ This should be used sparingly since it pollutes the namespace of the class.<BR/>
   <ITEM>native</ITEM>
   <ITEM>strictfp</ITEM>
 </NLIST></ITEM>
+<BLIST><TITLE><U><B>Strings</B></U></TITLE>
+  <ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
+  <ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
+  <ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
+</BLIST>
 <ITEM><CODEROUTINE>strictfp</CODEROUTINE><BR/>
 <CODEROUTINE>strictfp</CODEROUTINE> is a keyword to force Java to store intermediary results in floating point calculation using IEEE 754 (instead of a possible greater precision provided by the machine).</ITEM>
 </BLIST>
@@ -77,6 +77,259 @@ This should be used sparingly since it pollutes the namespace of the class.<BR/>
     </TABLE>
   </ITEM>
 </BLIST>
+<BLIST><TITLE><U><B>Functional interfaces</B></U><BR/></TITLE>
+ <ITEM><CODEROUTINE>@FunctionalInterface</CODEROUTINE> is an informative annotation type used to indicate that an interface with exactly one abstract method.</ITEM>
+  <ITEM><DEFINITIONTABLE>
+    <ROW>
+      <TERM><CODEROUTINE>Supplier&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a supplier of results.<BR/>
+        <CODEROUTINE>T get()</CODEROUTINE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>BooleanSupplier</CODEROUTINE></TERM>
+      <DESC>Represents a supplier of boolean-valued results.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>DoubleSupplier</CODEROUTINE></TERM>
+      <DESC>Represents a supplier of double-valued results.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>IntSupplier</CODEROUTINE></TERM>
+      <DESC>Represents a supplier of int-valued results.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>LongSupplier</CODEROUTINE></TERM>
+      <DESC>Represents a supplier of long-valued results.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>Predicate&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a predicate (boolean-valued function) of one argument.<BR/>
+        <CODEROUTINE>boolean test(T t)</CODEROUTINE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>DoublePredicate</CODEROUTINE></TERM>
+      <DESC>Represents a predicate with one double-valued argument.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>IntPredicate</CODEROUTINE></TERM>
+      <DESC>Represents a predicate with one int-valued argument.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>LongPredicate</CODEROUTINE></TERM>
+      <DESC>Represents a predicate with one long-valued argument.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>BiPredicate&lt;T,U&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a predicate with two arguments.<BR/>
+        <CODEROUTINE>boolean test(T t, U u)</CODEROUTINE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>Consumer&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents an operation that accepts a single input argument and returns no result.<BR/>
+        <CODEROUTINE>void accept(T t)</CODEROUTINE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>DoubleConsumer</CODEROUTINE></TERM>
+      <DESC>Represents an operation that accepts a single double-valued argument and returns no result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>IntConsumer</CODEROUTINE></TERM>
+      <DESC>Represents an operation that accepts a single int-valued argument and returns no result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>LongConsumer</CODEROUTINE></TERM>
+      <DESC>Represents an operation that accepts a single long-valued argument and returns no result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>BiConsumer&lt;T,U&gt;</CODEROUTINE></TERM>
+      <DESC>Represents an operation that accepts two input arguments and returns no result.<BR/>
+        <CODEROUTINE>void accept(T t, U u)</CODEROUTINE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>ObjDoubleConsumer&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents an operation that accepts an object-valued and a double-valued argument, and returns no result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>ObjIntConsumer&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents an operation that accepts an object-valued and a int-valued argument, and returns no result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>ObjLongConsumer&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents an operation that accepts an object-valued and a long-valued argument, and returns no result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>Function&lt;T,R&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts one argument and produces a result.<BR/>
+        <CODEROUTINE>R apply(T t)</CODEROUTINE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>DoubleFunction&lt;R&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts a double-valued argument and produces a result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>DoubleToIntFunction</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts a double-valued argument and produces an int-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>DoubleToLongFunction</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts a double-valued argument and produces a long-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>IntToDoubleFunction</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts an int-valued argument and produces a double-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>IntFunction&lt;R&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts an int-valued argument and produces a result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>IntToLongFunction</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts an int-valued argument and produces a long-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>LongFunction&lt;R&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts a long-valued argument and produces a result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>LongToDoubleFunction</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts a long-valued argument and produces a double-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>LongToIntFunction</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts a long-valued argument and produces an int-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>BiFunction&lt;T,U,R&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts two arguments and produces a result.<BR/>
+        <CODEROUTINE>R apply(T t, U u)</CODEROUTINE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>ToDoubleFunction&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that produces a double-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>ToIntFunction&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that produces an int-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>ToLongFunction&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that produces a long-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>ToDoubleBiFunction&lt;T,U&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts two arguments and produces a double-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>ToIntBiFunction&lt;T,U&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts two arguments and produces an int-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>ToLongBiFunction&lt;T,U&gt;</CODEROUTINE></TERM>
+      <DESC>Represents a function that accepts two arguments and produces a long-valued result.</DESC>
+    </ROW>
+        <ROW>
+      <TERM><CODEROUTINE>UnaryOperator&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents an operation on a single operand that produces a result of the same type as its operand.<BR/>
+        <CODEROUTINE>T apply(T t)</CODEROUTINE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>DoubleUnaryOperator</CODEROUTINE></TERM>
+      <DESC>Represents an operation on a single double-valued operand that produces a double-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>IntUnaryOperator</CODEROUTINE></TERM>
+      <DESC>Represents an operation on a single int-valued operand that produces an int-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>LongUnaryOperator</CODEROUTINE></TERM>
+      <DESC>Represents an operation on a single long-valued operand that produces a long-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>BinaryOperator&lt;T&gt;</CODEROUTINE></TERM>
+      <DESC>Represents an operation upon two operands of the same type, producing a result of the same type as the operands.<BR/>
+        <CODEROUTINE>T apply(T t, T u)</CODEROUTINE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>DoubleBinaryOperator</CODEROUTINE></TERM>
+      <DESC>Represents an operation upon two double-valued operands and producing a double-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>IntBinaryOperator</CODEROUTINE></TERM>
+      <DESC>Represents an operation upon two int-valued operands and producing an int-valued result.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>LongBinaryOperator</CODEROUTINE></TERM>
+      <DESC>Represents an operation upon two long-valued operands and producing a long-valued result.</DESC>
+    </ROW>
+  </DEFINITIONTABLE></ITEM>
+</BLIST>
+<ITEM><U><B>Optional</B></U><BR/>
+  <DEFINITIONTABLE>
+    <ROW>
+      <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; of​(T value)</CODEROUTINE></TERM>
+      <DESC>Returns an <CODEROUTINE>Optional</CODEROUTINE> describing the given non-null value.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; ofNullable​(T value)</CODEROUTINE></TERM>
+      <DESC>Returns an <CODEROUTINE>Optional</CODEROUTINE> describing the given value, if non-null, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; empty()</CODEROUTINE></TERM>
+      <DESC>Returns an empty <CODEROUTINE>Optional</CODEROUTINE> instance.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>boolean isEmpty()</CODEROUTINE></TERM>
+      <DESC>If a value is not present, returns true, otherwise false.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>boolean isPresent()</CODEROUTINE></TERM>
+      <DESC>If a value is present, returns true, otherwise false.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>T get()</CODEROUTINE></TERM>
+      <DESC>If a value is present, returns the value, otherwise throws <CODEROUTINE>NoSuchElementException</CODEROUTINE>.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>T orElse​(T other)</CODEROUTINE></TERM>
+      <DESC>If a value is present, returns the value, otherwise returns other.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>T orElseGet​(Supplier&lt;? extends T&gt; supplier)</CODEROUTINE></TERM>
+      <DESC>If a value is present, returns the value, otherwise returns the result produced by the supplying function.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>Optional&lt;T&gt; or​(Supplier&lt;? extends Optional&lt;? extends T&gt;&gt; supplier)</CODEROUTINE></TERM>
+      <DESC>If a value is present, returns an Optional describing the value, otherwise returns an Optional produced by the supplying function.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>T orElseThrow()</CODEROUTINE></TERM>
+      <DESC>If a value is present, returns the value, otherwise throws <CODEROUTINE>NoSuchElementException</CODEROUTINE>.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>&lt;X extends Throwable&gt; T	orElseThrow​(Supplier&lt;? extends X&gt; exceptionSupplier)</CODEROUTINE></TERM>
+      <DESC>If a value is present, returns the value, otherwise throws an exception produced by the exception supplying function.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>void ifPresentOrElse​(Consumer&lt;? super T&gt; action, Runnable emptyAction)</CODEROUTINE></TERM>
+      <DESC>If a value is present, performs the given action with the value, otherwise performs the given empty-based action.<BR/>
+      <CODESAMPLE>employee.ifPresentOrElse(<BR/>
+        <TAB/>emp -&gt; log.debug("Found Employee: {}",emp.getName()),<BR/>
+        <TAB/>() -&gt; log.error("Employee not found"));</CODESAMPLE></DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>Optional&lt;T&gt;	filter​(Predicate&lt;? super T&gt; predicate)</CODEROUTINE></TERM>
+      <DESC>If a value is present, and the value matches the given predicate, returns an <CODEROUTINE>Optional</CODEROUTINE> describing the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; 	map​(Function&lt;? super T,​? extends U&gt; mapper)</CODEROUTINE></TERM>
+      <DESC>If a value is present, returns an Optional describing (as if by <CODEROUTINE>ofNullable(T)</CODEROUTINE>) the result of applying the given mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; 	flatMap​(Function&lt;? super T,​? extends Optional&lt;? extends U&gt;&gt; mapper)</CODEROUTINE></TERM>
+      <DESC>If a value is present, returns the result of applying the given <CODEROUTINE>Optional</CODEROUTINE>-bearing mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+    </ROW>
+  </DEFINITIONTABLE>
+</ITEM>
 <BLIST><TITLE><U><B>JUnit</B></U><BR/></TITLE>
   <ITEM>to create a test suite as a list of test classes:
     <CODESAMPLE>

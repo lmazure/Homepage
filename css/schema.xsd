@@ -221,11 +221,17 @@
       </xs:element>
       <xs:element name="ST" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="A" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="L" type="xs:language"  minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="L" minOccurs="1" maxOccurs="2">
+        <xs:simpleType>
+         <xs:restriction base="xs:string">
+           <xs:pattern value="en|fr"/>
+         </xs:restriction>
+        </xs:simpleType>
+      </xs:element>
       <xs:element name="F" minOccurs="1" maxOccurs="unbounded">
         <xs:simpleType>
          <xs:restriction base="xs:string">
-           <xs:pattern value="HTML|PDF|Flash Video|Word|txt|PostScript|PowerPoint|MP4|HTML|MP3|RealMedia|Windows Media Player|Flash"/>
+           <xs:pattern value="Flash|Flash Video|HTML|MP3|MP4|PDF|PostScript|PowerPoint|RealMedia|txt|Windows Media Player|Word"/>
          </xs:restriction>
         </xs:simpleType>
       </xs:element>
@@ -256,7 +262,7 @@
     <xs:attribute name="protection">
      <xs:simpleType>
        <xs:restriction base="xs:string">
-         <xs:pattern value="firewall|payed_registration|free_registration"/>
+         <xs:pattern value="payed_registration|free_registration"/>
        </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
