@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Install and update</B></U></TITLE>
   <ITEM>Set up the Proxy:<BR/>
@@ -113,6 +113,10 @@
       <DESC>toggle line wrap</DESC></ROW>
       <ROW><TERM><MODIFIERKEY ID='Alt'/><MODIFIERKEY ID='Shift'/><KEY ID='A'/></TERM>
       <DESC>toggle Block Selection Mode</DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='X'/></TERM>
+      <DESC>convert selection to uppercase </DESC></ROW>
+      <ROW><TERM><MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='Y'/></TERM>
+      <DESC>convert selection to lowercase </DESC></ROW>
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM>configure the folding with <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Editor<CODEMENU>Folding</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>.</ITEM>

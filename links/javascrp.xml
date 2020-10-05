@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript</TITLE>
 <PATH>links/javascrp.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -49,8 +49,8 @@
     <ITEM><X><T>personal notes</T><A>../notes/javascript.html</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles</TITLE>
-    <ITEM><ARTICLE><X><T>XML and Java: A potent partnership, Part 3</T><A>https://www.javaworld.com/article/2076465/xml-and-java--a-potent-partnership--part-3.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Todd</FIRSTNAME><LASTNAME>Sundsted</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH></DATE><COMMENT>This is an introduction to Rhino, a JavaScript interpreter written in Java.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Pnglets</T><A>https://www.elf.org/pnglets/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Roger</FIRSTNAME><MIDDLENAME>E</MIDDLENAME><LASTNAME>Critchlow</LASTNAME><NAMESUFFIX>Jr.</NAMESUFFIX></AUTHOR><DATE><YEAR>1999</YEAR></DATE><COMMENT>Some (client side) JavaScript code to write PNG images on the flight.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>XML and Java: A potent partnership, Part 3</T><A>https://www.javaworld.com/article/2076465/xml-and-java--a-potent-partnership--part-3.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Todd</FIRSTNAME><LASTNAME>Sundsted</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH></DATE><COMMENT>This is an introduction to Rhino, a JavaScript interpreter written in Java.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Javascript Closures</T><A>http://jibbering.com/faq/notes/closures/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Richard</FIRSTNAME><LASTNAME>Cornford</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH></DATE><COMMENT>A detailed description of closures.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status='dead'><T>Scope chain of JScript Functions</T><A>https://blogs.msdn.microsoft.com/b/jscript/archive/2007/07/26/scope-chain-of-jscript-functions.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Don</FIRSTNAME><LASTNAME>Raman</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>7</MONTH><DAY>26</DAY></DATE><COMMENT>A shorter explanation of the scope chain.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Errors and AJAX</T><A>https://www.xml.com/pub/a/2005/05/11/ajax-error.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joshua</FIRSTNAME><LASTNAME>Gitlin</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE><COMMENT>The author describes an implementation logging the client side JavaScript errors on the server, so they can be analyzed and fixed.</COMMENT></ARTICLE></ITEM>
@@ -220,6 +220,7 @@
         <ITEM><ARTICLE><X><T>Crockford on JavaScript - Section 8: Programming Style &amp; Your Brain</T><A>https://www.youtube.com/watch?v=taaEzHI9xyY</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>6</MINUTE><SECOND>46</SECOND></DURATION><DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE></X><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><LASTNAME>Crockford</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>11</MONTH><DAY>3</DAY></DATE><COMMENT>JSLint: avoiding some bugs by limiting oneself to some safe coding styles.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Douglas Crockford: Monads and Gonads (YUIConf Evening Keynote)</T><A>https://www.youtube.com/watch?v=dkZFtimgAcM</A><L>en</L><F>MP4</F><DURATION><MINUTE>54</MINUTE><SECOND>27</SECOND></DURATION><DATE><YEAR>2012</YEAR><MONTH>12</MONTH><DAY>13</DAY></DATE></X><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><LASTNAME>Crockford</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE><COMMENT>Using Monads in JavaScript: the Identity Monad, the Ajax Monad, the Maybe Monad, the Promise Monad.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Douglas Crockford: The Better Parts - JSConfUY 2014</T><A>https://www.youtube.com/watch?v=bo36MrBfTk4</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>52</SECOND></DURATION><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>4</DAY></DATE></X><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><LASTNAME>Crockford</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>15</DAY></DATE><COMMENT>Miscellaneous ideas: JSLint, ES6, some opinion changes on some JS features, a new numerical type (DEC64), JSON…</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>The Better Parts. Douglas Crockford. JS Fest 2018</T><A>https://www.youtube.com/watch?v=XFTOG895C7c</A><L>en</L><F>MP4</F><DURATION><MINUTE>55</MINUTE><SECOND>58</SECOND></DURATION><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>12</DAY></DATE></X><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><LASTNAME>Crockford</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>30</DAY></DATE><COMMENT>The usual talk about the good and bad parts of JavaScript, in particular ES6.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Debuggers</TITLE>
