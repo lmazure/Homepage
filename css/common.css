@@ -93,24 +93,6 @@ code {
 	font-family: monospace;
 }
 
-.file {
-	background-color: #F1F1F1;
-	border-color: #555;
-	border-style: solid;
-	border-width: 2px 2px 2px 2px;
-	border-radius: 8px; 
-	padding: 1px 1px;
-}
-
-.textblock {
-	background-color: #C2D69B;
-	border-color: #090;
-	border-style: solid;
-	border-width: 2px 2px 2px 2px;
-	border-radius: 8px; 
-	padding: 1px 1px;
-}
-
 .table {
 	width: auto;
 	border: 2px solid black;
@@ -120,6 +102,29 @@ code {
 .table tr td {
 	padding: 5px 5px;
 	border: 1px solid grey;
+}
+
+.file {
+	background-color: #F1F1F1;
+	border-color: #555;
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-radius: 8px; 
+	padding: 1px 1px;
+}
+
+.file tr td {
+	padding: 5px 5px;
+	border: 0px solid grey;
+}
+
+.textblock {
+	background-color: #C2D69B;
+	border-color: #090;
+	border-style: solid;
+	border-width: 2px 2px 2px 2px;
+	border-radius: 8px; 
+	padding: 1px 1px;
 }
 
 .inlinedimage {
