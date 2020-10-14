@@ -280,11 +280,12 @@
 <xs:element name="ARTICLE">
   <xs:complexType>
     <xs:sequence>
-        <xs:element ref="X" minOccurs="1" maxOccurs="unbounded"/>
-        <xs:element name="AUTHOR" minOccurs="0" maxOccurs="unbounded" type="person"/>
-        <xs:element name="DATE" type="partialDate" minOccurs="0" maxOccurs="1"/>
-        <xs:element name="COMMENT" type="content" minOccurs="1" maxOccurs="1"/>
+      <xs:element ref="X" minOccurs="1" maxOccurs="unbounded"/>
+      <xs:element name="AUTHOR" minOccurs="0" maxOccurs="unbounded" type="person"/>
+      <xs:element name="DATE" type="partialDate" minOccurs="0" maxOccurs="1"/>
+      <xs:element name="COMMENT" type="content" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
+    <xs:attribute name="pred" type="xs:string"/>
   </xs:complexType>
 </xs:element>
 
@@ -342,7 +343,7 @@
               <xs:complexType>
                 <xs:complexContent>
                   <xs:extension base="content">
-                     <xs:attribute name="width" type="xs:nonNegativeInteger"/>
+                    <xs:attribute name="width" type="xs:nonNegativeInteger"/>
                     <xs:attribute name="height" type="xs:nonNegativeInteger"/>
                   </xs:extension>
                 </xs:complexContent>
