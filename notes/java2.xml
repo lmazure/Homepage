@@ -23,37 +23,37 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
   </ITEM>
 </BLIST>
 <U><B>Static Import</B></U><BR/>
-The static import construct allows unqualified access to static members without inheriting from the type containing the static members. Instead, the program imports the members, either individually:
-<CODESAMPLE>import static java.lang.Math.PI;<BR/>
-import static java.lang.Math.cos;</CODESAMPLE>
-or en masse:
-<CODESAMPLE>import static java.lang.Math.*;</CODESAMPLE>
-Once the static members have been imported, they may be used without qualification:
-<CODESAMPLE>double r = cos(PI * theta);</CODESAMPLE>
-(instead of
-<CODESAMPLE>double r = Math.cos(Math.PI * theta);</CODESAMPLE>
-)<BR/>
-This should be used sparingly since it pollutes the namespace of the class.<BR/>
+  The static import construct allows unqualified access to static members without inheriting from the type containing the static members. Instead, the program imports the members, either individually:
+  <CODESAMPLE>import static java.lang.Math.PI;<BR/>
+  import static java.lang.Math.cos;</CODESAMPLE>
+  or en masse:
+  <CODESAMPLE>import static java.lang.Math.*;</CODESAMPLE>
+  Once the static members have been imported, they may be used without qualification:
+  <CODESAMPLE>double r = cos(PI * theta);</CODESAMPLE>
+  (instead of
+  <CODESAMPLE>double r = Math.cos(Math.PI * theta);</CODESAMPLE>
+  )<BR/>
+  This should be used sparingly since it pollutes the namespace of the class.<BR/>
 <BR/>
 <BLIST><TITLE><U><B>Modifiers</B></U></TITLE>
-<ITEM><NLIST><TITLE>The Java Language Specification suggests ordering the modifiers as:</TITLE>
-  <ITEM>public / protected / private</ITEM>
-  <ITEM>abstract</ITEM>
-  <ITEM>default</ITEM>
-  <ITEM>static</ITEM>
-  <ITEM>final</ITEM>
-  <ITEM>transient / volatile</ITEM>
-  <ITEM>synchronized</ITEM>
-  <ITEM>native</ITEM>
-  <ITEM>strictfp</ITEM>
-</NLIST></ITEM>
-<BLIST><TITLE><U><B>Strings</B></U></TITLE>
-  <ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
-  <ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
-  <ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
-</BLIST>
-<ITEM><CODEROUTINE>strictfp</CODEROUTINE><BR/>
-<CODEROUTINE>strictfp</CODEROUTINE> is a keyword to force Java to store intermediary results in floating point calculation using IEEE 754 (instead of a possible greater precision provided by the machine).</ITEM>
+  <ITEM><NLIST><TITLE>The Java Language Specification suggests ordering the modifiers as:</TITLE>
+    <ITEM>public / protected / private</ITEM>
+    <ITEM>abstract</ITEM>
+    <ITEM>default</ITEM>
+    <ITEM>static</ITEM>
+    <ITEM>final</ITEM>
+    <ITEM>transient / volatile</ITEM>
+    <ITEM>synchronized</ITEM>
+    <ITEM>native</ITEM>
+    <ITEM>strictfp</ITEM>
+  </NLIST></ITEM>
+  <ITEM><BLIST><TITLE><U><B>Strings</B></U></TITLE>
+    <ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
+    <ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
+    <ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
+  </BLIST></ITEM>
+  <ITEM><CODEROUTINE>strictfp</CODEROUTINE><BR/>
+    <CODEROUTINE>strictfp</CODEROUTINE> is a keyword to force Java to store intermediary results in floating point calculation using IEEE 754 (instead of a possible greater precision provided by the machine).</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Lambda expressions</B></U><BR/></TITLE>
   <ITEM>A method reference can be of four types:
@@ -78,7 +78,7 @@ This should be used sparingly since it pollutes the namespace of the class.<BR/>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Functional interfaces</B></U><BR/></TITLE>
- <ITEM><CODEROUTINE>@FunctionalInterface</CODEROUTINE> is an informative annotation type used to indicate that an interface with exactly one abstract method.</ITEM>
+  <ITEM><CODEROUTINE>@FunctionalInterface</CODEROUTINE> is an informative annotation type used to indicate that an interface with exactly one abstract method.</ITEM>
   <ITEM><DEFINITIONTABLE>
     <ROW>
       <TERM><CODEROUTINE>Supplier&lt;T&gt;</CODEROUTINE></TERM>
@@ -263,73 +263,72 @@ This should be used sparingly since it pollutes the namespace of the class.<BR/>
     </ROW>
   </DEFINITIONTABLE></ITEM>
 </BLIST>
-<ITEM><U><B>Optional</B></U><BR/>
-  <DEFINITIONTABLE>
-    <ROW>
-      <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; of​(T value)</CODEROUTINE></TERM>
-      <DESC>Returns an <CODEROUTINE>Optional</CODEROUTINE> describing the given non-null value.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; ofNullable​(T value)</CODEROUTINE></TERM>
-      <DESC>Returns an <CODEROUTINE>Optional</CODEROUTINE> describing the given value, if non-null, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; empty()</CODEROUTINE></TERM>
-      <DESC>Returns an empty <CODEROUTINE>Optional</CODEROUTINE> instance.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>boolean isEmpty()</CODEROUTINE></TERM>
-      <DESC>If a value is not present, returns true, otherwise false.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>boolean isPresent()</CODEROUTINE></TERM>
-      <DESC>If a value is present, returns true, otherwise false.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>T get()</CODEROUTINE></TERM>
-      <DESC>If a value is present, returns the value, otherwise throws <CODEROUTINE>NoSuchElementException</CODEROUTINE>.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>T orElse​(T other)</CODEROUTINE></TERM>
-      <DESC>If a value is present, returns the value, otherwise returns other.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>T orElseGet​(Supplier&lt;? extends T&gt; supplier)</CODEROUTINE></TERM>
-      <DESC>If a value is present, returns the value, otherwise returns the result produced by the supplying function.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>Optional&lt;T&gt; or​(Supplier&lt;? extends Optional&lt;? extends T&gt;&gt; supplier)</CODEROUTINE></TERM>
-      <DESC>If a value is present, returns an Optional describing the value, otherwise returns an Optional produced by the supplying function.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>T orElseThrow()</CODEROUTINE></TERM>
-      <DESC>If a value is present, returns the value, otherwise throws <CODEROUTINE>NoSuchElementException</CODEROUTINE>.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>&lt;X extends Throwable&gt; T	orElseThrow​(Supplier&lt;? extends X&gt; exceptionSupplier)</CODEROUTINE></TERM>
-      <DESC>If a value is present, returns the value, otherwise throws an exception produced by the exception supplying function.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>void ifPresentOrElse​(Consumer&lt;? super T&gt; action, Runnable emptyAction)</CODEROUTINE></TERM>
-      <DESC>If a value is present, performs the given action with the value, otherwise performs the given empty-based action.<BR/>
-      <CODESAMPLE>employee.ifPresentOrElse(<BR/>
-        <TAB/>emp -&gt; log.debug("Found Employee: {}",emp.getName()),<BR/>
-        <TAB/>() -&gt; log.error("Employee not found"));</CODESAMPLE></DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>Optional&lt;T&gt;	filter​(Predicate&lt;? super T&gt; predicate)</CODEROUTINE></TERM>
-      <DESC>If a value is present, and the value matches the given predicate, returns an <CODEROUTINE>Optional</CODEROUTINE> describing the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; 	map​(Function&lt;? super T,​? extends U&gt; mapper)</CODEROUTINE></TERM>
-      <DESC>If a value is present, returns an Optional describing (as if by <CODEROUTINE>ofNullable(T)</CODEROUTINE>) the result of applying the given mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; 	flatMap​(Function&lt;? super T,​? extends Optional&lt;? extends U&gt;&gt; mapper)</CODEROUTINE></TERM>
-      <DESC>If a value is present, returns the result of applying the given <CODEROUTINE>Optional</CODEROUTINE>-bearing mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
-    </ROW>
-  </DEFINITIONTABLE>
-</ITEM>
+<U><B>Optional</B></U>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; of​(T value)</CODEROUTINE></TERM>
+    <DESC>Returns an <CODEROUTINE>Optional</CODEROUTINE> describing the given non-null value.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; ofNullable​(T value)</CODEROUTINE></TERM>
+    <DESC>Returns an <CODEROUTINE>Optional</CODEROUTINE> describing the given value, if non-null, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; empty()</CODEROUTINE></TERM>
+    <DESC>Returns an empty <CODEROUTINE>Optional</CODEROUTINE> instance.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>boolean isEmpty()</CODEROUTINE></TERM>
+    <DESC>If a value is not present, returns true, otherwise false.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>boolean isPresent()</CODEROUTINE></TERM>
+    <DESC>If a value is present, returns true, otherwise false.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>T get()</CODEROUTINE></TERM>
+    <DESC>If a value is present, returns the value, otherwise throws <CODEROUTINE>NoSuchElementException</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>T orElse​(T other)</CODEROUTINE></TERM>
+    <DESC>If a value is present, returns the value, otherwise returns other.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>T orElseGet​(Supplier&lt;? extends T&gt; supplier)</CODEROUTINE></TERM>
+    <DESC>If a value is present, returns the value, otherwise returns the result produced by the supplying function.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Optional&lt;T&gt; or​(Supplier&lt;? extends Optional&lt;? extends T&gt;&gt; supplier)</CODEROUTINE></TERM>
+    <DESC>If a value is present, returns an Optional describing the value, otherwise returns an Optional produced by the supplying function.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>T orElseThrow()</CODEROUTINE></TERM>
+    <DESC>If a value is present, returns the value, otherwise throws <CODEROUTINE>NoSuchElementException</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>&lt;X extends Throwable&gt; T orElseThrow​(Supplier&lt;? extends X&gt; exceptionSupplier)</CODEROUTINE></TERM>
+    <DESC>If a value is present, returns the value, otherwise throws an exception produced by the exception supplying function.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>void ifPresentOrElse​(Consumer&lt;? super T&gt; action, Runnable emptyAction)</CODEROUTINE></TERM>
+    <DESC>If a value is present, performs the given action with the value, otherwise performs the given empty-based action.<BR/>
+    <CODESAMPLE>employee.ifPresentOrElse(<BR/>
+      <TAB/>emp -&gt; log.debug("Found Employee: {}",emp.getName()),<BR/>
+      <TAB/>() -&gt; log.error("Employee not found"));</CODESAMPLE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Optional&lt;T&gt; filter​(Predicate&lt;? super T&gt; predicate)</CODEROUTINE></TERM>
+    <DESC>If a value is present, and the value matches the given predicate, returns an <CODEROUTINE>Optional</CODEROUTINE> describing the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; map​(Function&lt;? super T,​? extends U&gt; mapper)</CODEROUTINE></TERM>
+    <DESC>If a value is present, returns an Optional describing (as if by <CODEROUTINE>ofNullable(T)</CODEROUTINE>) the result of applying the given mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; flatMap​(Function&lt;? super T,​? extends Optional&lt;? extends U&gt;&gt; mapper)</CODEROUTINE></TERM>
+    <DESC>If a value is present, returns the result of applying the given <CODEROUTINE>Optional</CODEROUTINE>-bearing mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
 <BLIST><TITLE><U><B>JUnit</B></U><BR/></TITLE>
   <ITEM>to create a test suite as a list of test classes:
     <CODESAMPLE>
@@ -363,6 +362,6 @@ This should be used sparingly since it pollutes the namespace of the class.<BR/>
     but this is in fact a JUnit 4 test suite.<BR/>
     Test suites do not exist in JUnit 5, see <X><T>here</T><A>https://bugs.eclipse.org/bugs/show_bug.cgi?id=511183</A><L>en</L><F>HTML</F></X>
   </ITEM>
-  </BLIST>
+</BLIST>
 </CONTENT>
 </PAGE>

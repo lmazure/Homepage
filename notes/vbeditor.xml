@@ -8,43 +8,43 @@
 all windows
 <DEFINITIONTABLE>
 <ROW><TERM>
-<KEY ID='F1'/>
+<KEY id='F1'/>
 </TERM><DESC>
 help<BR/>
-(put the cursor just after the method/property name and type <KEY ID='F1'/> to have help on it)
+(put the cursor just after the method/property name and type <KEY id='F1'/> to have help on it)
 </DESC></ROW>
 <ROW><TERM>
-<KEY ID='F2'/>
+<KEY id='F2'/>
 </TERM><DESC>
 view Object Browser
 </DESC></ROW>
 <ROW><TERM>
-<KEY ID='F7'/>
+<KEY id='F7'/>
 </TERM><DESC>
 view Code Window
 </DESC></ROW>
 <ROW><TERM>
-<KEY ID='F4'/>
+<KEY id='F4'/>
 </TERM><DESC>
 view Properties Window
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='R'/>
+<MODIFIERKEY id='Ctrl'/><KEY id='R'/>
 </TERM><DESC>
 view Project Window
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='L'/>
+<MODIFIERKEY id='Ctrl'/><KEY id='L'/>
 </TERM><DESC>
 view call stack
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='G'/>
+<MODIFIERKEY id='Ctrl'/><KEY id='G'/>
 </TERM><DESC>
 view Immediate Window
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Alt'/><KEY ID='F11'/>
+<MODIFIERKEY id='Alt'/><KEY id='F11'/>
 </TERM><DESC>
 switch to originating application
 </DESC></ROW>
@@ -53,48 +53,48 @@ switch to originating application
 edit window
 <DEFINITIONTABLE>
 <ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='Space'/>
+<MODIFIERKEY id='Ctrl'/><KEY id='Space'/>
 </TERM><DESC>
 complete word
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='J'/>
+<MODIFIERKEY id='Ctrl'/><KEY id='J'/>
 </TERM><DESC>
 after <CODEROUTINE>foo</CODEROUTINE>, list the properties/methods beginning by <I>foo</I><BR/>
 after <CODEROUTINE>foo.</CODEROUTINE>, list the properties/methods of <CODEROUTINE>foo</CODEROUTINE>
 </DESC></ROW>
 <ROW><TERM>
-<KEY ID='Tab'/>
+<KEY id='Tab'/>
 </TERM><DESC>
 indent
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Shift'/><KEY ID='Tab'/>
+<MODIFIERKEY id='Shift'/><KEY id='Tab'/>
 </TERM><DESC>
 outdent
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Shift'/><KEY ID='F2'/>
+<MODIFIERKEY id='Shift'/><KEY id='F2'/>
 </TERM><DESC>
 go to definition of identifier below cursor
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='F'/>
+<MODIFIERKEY id='Ctrl'/><KEY id='F'/>
 </TERM><DESC>
 find text
 </DESC></ROW>
 <ROW><TERM>
-<KEY ID='F3'/>
+<KEY id='F3'/>
 </TERM><DESC>
 find next occurrence of text
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Shift'/><KEY ID='F3'/>
+<MODIFIERKEY id='Shift'/><KEY id='F3'/>
 </TERM><DESC>
 find previous occurrence of text
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='H'/>
+<MODIFIERKEY id='Ctrl'/><KEY id='H'/>
 </TERM><DESC>
 replace text
 </DESC></ROW>
@@ -103,7 +103,7 @@ replace text
 watch window
 <DEFINITIONTABLE>
 <ROW><TERM>
-<KEY ID='Del'/>
+<KEY id='Del'/>
 </TERM><DESC>
 delete selected watch
 </DESC></ROW>
@@ -112,33 +112,33 @@ delete selected watch
 debug
 <DEFINITIONTABLE>
 <ROW><TERM>
-<KEY ID='F8'/>
+<KEY id='F8'/>
 </TERM><DESC>
 step into
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Shift'/><KEY ID='F8'/>
+<MODIFIERKEY id='Shift'/><KEY id='F8'/>
 </TERM><DESC>
 step over
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Ctrl'/><MODIFIERKEY ID='Shift'/><KEY ID='F8'/>
+<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F8'/>
 </TERM><DESC>
 step out
 </DESC></ROW>
 <ROW><TERM>
-<KEY ID='F5'/>
+<KEY id='F5'/>
 </TERM><DESC>
 continue
 </DESC></ROW>
 <ROW><TERM>
-<KEY ID='F9'/><BR/>
+<KEY id='F9'/><BR/>
 left click in margin
 </TERM><DESC>
 set/remove breakpoint
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY ID='Shift'/><KEY ID='F9'/>
+<MODIFIERKEY id='Shift'/><KEY id='F9'/>
 </TERM><DESC>
 watch selected variable
 </DESC></ROW>

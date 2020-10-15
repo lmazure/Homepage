@@ -598,10 +598,6 @@
   <small><xsl:apply-templates/></small>
 </xsl:template>
 
-<xsl:template match="STRIKE">
-  <span style="text-decoration: line-through"><xsl:apply-templates/></span>
-</xsl:template>
-
 <xsl:template match="SUP">
   <sup><xsl:apply-templates/></sup>
 </xsl:template>

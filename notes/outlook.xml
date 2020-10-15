@@ -9,7 +9,7 @@
 <ITEM>
 Performing a right button drag 'n drop allows to select between a copy or a move of the mail</ITEM>
 <ITEM>
-It is possible to delete some email addresses recorded and proposed when typing in the <CODEMENU>To</CODEMENU> or <CODEMENU>Cc</CODEMENU> field by typing on <KEY ID='Del'/></ITEM>
+It is possible to delete some email addresses recorded and proposed when typing in the <CODEMENU>To</CODEMENU> or <CODEMENU>Cc</CODEMENU> field by typing on <KEY id='Del'/></ITEM>
 <ITEM>
 Automatically flag insertions in answered mail: <BR/>
 <CODEMENU>Tools<CODEMENU>Options…<CODEMENU>Preferences<CODEMENU>E-mail Options<CODEMENU>Mark my comments with</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>
@@ -38,8 +38,8 @@ open the sent mail<BR/>
 <ITEM>
 Display the search menubar in the mail box<BR/>
 <CODEMENU>Barre de menu "Standard"<CODEMENU>Rechercher</CODEMENU></CODEMENU>,<BR/>
-<KEY ID='F3'/>, or<BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='E'/>
+<KEY id='F3'/>, or<BR/>
+<MODIFIERKEY id='Ctrl'/><KEY id='E'/>
 </ITEM>
 <ITEM>
 Display the mail raw header<BR/>
@@ -49,7 +49,7 @@ the raw header is displayed at the bottom of the option window
 </ITEM>
 <ITEM>
 Left-click on column header: define the column as primary sorting criteria<BR/>
-<MODIFIERKEY ID='Shift'/> + left-click on column header: define the column as secondary sorting criteria
+<MODIFIERKEY id='Shift'/> + left-click on column header: define the column as secondary sorting criteria
 </ITEM>
 <ITEM>
 Group the mail by thread<BR/>

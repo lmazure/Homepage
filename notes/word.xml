@@ -11,7 +11,7 @@ always ask how the files should be loaded (e.g. HTML vs raw text)<BR/>
 <CODEMENU>Tools<CODEMENU>Options…<CODEMENU>General<CODEMENU>Confirm conversion at Open</CODEMENU></CODEMENU></CODEMENU></CODEMENU>
 </ITEM>
 <ITEM>
-when holding down the <MODIFIERKEY ID='Shift'/> key to click on the <CODEMENU>File</CODEMENU> menu, <CODEMENU>Close</CODEMENU> is replaced by <CODEMENU>Close All</CODEMENU> and <CODEMENU>Save</CODEMENU> by <CODEMENU>Save All</CODEMENU>.
+when holding down the <MODIFIERKEY id='Shift'/> key to click on the <CODEMENU>File</CODEMENU> menu, <CODEMENU>Close</CODEMENU> is replaced by <CODEMENU>Close All</CODEMENU> and <CODEMENU>Save</CODEMENU> by <CODEMENU>Save All</CODEMENU>.
 </ITEM>
 <ITEM>
 protect a document from unauthorized reading by a password<BR/>
@@ -34,7 +34,7 @@ enable/disable macros execution when opening a document<BR/>
 <ITEM>click on <CODEMENU>Add to List</CODEMENU></ITEM>
 <ITEM>click on <CODEMENU>Find Now</CODEMENU></ITEM>
 <ITEM>the filter remains active while navigating the directories (but the directories are not filtered themselves)</ITEM>
-<ITEM>once in the correct directory, use <MODIFIERKEY ID='Shift'/>right click to select all the files</ITEM>
+<ITEM>once in the correct directory, use <MODIFIERKEY id='Shift'/>right click to select all the files</ITEM>
 <ITEM>click on <CODEMENU>Open</CODEMENU></ITEM>
 </BLIST>
 </ITEM>
@@ -77,7 +77,7 @@ insert a JavaScript in a document so it will usable in the HTML version
 </NLIST>
 </ITEM>
 <ITEM>
-it is possible to copy the same string in several table cells at the same type, you just have to select more than one cell before typing <MODIFIERKEY ID='Ctrl'/><KEY ID='C'/>
+it is possible to copy the same string in several table cells at the same type, you just have to select more than one cell before typing <MODIFIERKEY id='Ctrl'/><KEY id='C'/>
 </ITEM>
 <ITEM>
 <NLIST>
@@ -105,7 +105,7 @@ configure a text zone to be the continuation of another one<BR/>
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U>Table</U></TITLE>
-<ITEM>To insert a tab in a table, use <MODIFIERKEY ID='Ctrl'/><KEY ID='Tab'/>.</ITEM>
+<ITEM>To insert a tab in a table, use <MODIFIERKEY id='Ctrl'/><KEY id='Tab'/>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U>formulas</U></TITLE>
 <ITEM>operators
@@ -244,7 +244,7 @@ y is negative. Rounds x to that number of places to the left of the decimal. Y m
 </BLIST>
 <BLIST><TITLE><U>find/replace</U></TITLE>
 <ITEM>
-it is possible to use the format shortcut (<MODIFIERKEY ID='Ctrl'/><KEY ID='U'/>, <MODIFIERKEY ID='Ctrl'/><KEY ID='B'/>…) in the Find/Replace window
+it is possible to use the format shortcut (<MODIFIERKEY id='Ctrl'/><KEY id='U'/>, <MODIFIERKEY id='Ctrl'/><KEY id='B'/>…) in the Find/Replace window
 </ITEM>
 <ITEM>
 the following codes can be used to find/replace
@@ -362,7 +362,7 @@ To display the shortcuts in the tooltips, select <CODEMENU>Outils<CODEMENU>Perso
 <BLIST><TITLE><U>strange</U></TITLE>
 <ITEM>
 insert 3 paragraphs of 5 sentences "Servez à ce monsieur une bière et des kiwis".<BR/>
-type "=rand(3,5)" and press <KEY ID='Enter'/>.
+type "=rand(3,5)" and press <KEY id='Enter'/>.
 </ITEM>
 </BLIST>
 </CONTENT>

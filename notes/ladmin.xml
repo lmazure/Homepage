@@ -12,19 +12,19 @@ enable it with
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="R"/></TERM><DESC>use raw keyboard events</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="K"/></TERM><DESC>kill current VT in use</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="E"/></TERM><DESC>terminate all running processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="I"/></TERM><DESC>kill all processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="L"/></TERM><DESC>kill all processes (including <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="B"/></TERM><DESC>reboot</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="S"/></TERM><DESC>sync all drives</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="U"/></TERM><DESC>umount all filesystems</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="O"/></TERM><DESC>turn the machine off</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="P"/></TERM><DESC>dump processor's registers</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="T"/></TERM><DESC>dump current tasks</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="M"/></TERM><DESC>dump some memory info</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="0"/> up to <MODIFIERKEY ID="Alt"/><MODIFIERKEY ID="SysRq"/><KEY ID="9"/></TERM><DESC>set kernel log level and redirect it to console</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='R'/></TERM><DESC>use raw keyboard events</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='K'/></TERM><DESC>kill current VT in use</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='E'/></TERM><DESC>terminate all running processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='I'/></TERM><DESC>kill all processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='L'/></TERM><DESC>kill all processes (including <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='B'/></TERM><DESC>reboot</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='S'/></TERM><DESC>sync all drives</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='U'/></TERM><DESC>umount all filesystems</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='O'/></TERM><DESC>turn the machine off</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='P'/></TERM><DESC>dump processor's registers</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='T'/></TERM><DESC>dump current tasks</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='M'/></TERM><DESC>dump some memory info</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='0'/> up to <MODIFIERKEY id='Alt'/><MODIFIERKEY id='SysRq'/><KEY id='9'/></TERM><DESC>set kernel log level and redirect it to console</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>

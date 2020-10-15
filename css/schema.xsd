@@ -103,7 +103,6 @@
     <xs:element ref="U"/>
     <xs:element ref="B"/>
     <xs:element ref="I"/>
-    <xs:element ref="STRIKE"/>
     <xs:element ref="SMALL"/>
     <xs:element ref="SUB"/>
     <xs:element ref="SUP"/>
@@ -201,8 +200,6 @@
 <xs:element name="I" type="content"/>
 
 <xs:element name="SMALL" type="content"/>
-
-<xs:element name="STRIKE" type="content"/>
 
 <xs:element name="SUB" type="xs:string"/>
 
@@ -411,13 +408,13 @@
 
 <xs:element name="KEY">
   <xs:complexType>
-    <xs:attribute name="ID" type="xs:string"/>
+    <xs:attribute name="id" type="xs:string"/>
   </xs:complexType>
 </xs:element>
 
 <xs:element name="MODIFIERKEY">
   <xs:complexType>
-    <xs:attribute name="ID" type="xs:string"/>
+    <xs:attribute name="id" type="xs:string"/>
   </xs:complexType>
 </xs:element>
 

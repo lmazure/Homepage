@@ -247,10 +247,10 @@ xl.Selection.Rows.AutoFit</CODESAMPLE><BR/>
 <CODESAMPLE>StatusBar = "Please wait…" </CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Macro interruption</U></B></TITLE>
-<ITEM>use <MODIFIERKEY ID='Ctrl'/><KEY ID='Break'/> to stop a macro</ITEM>
-<ITEM>disable <MODIFIERKEY ID='Ctrl'/><KEY ID='Break'/>
+<ITEM>use <MODIFIERKEY id='Ctrl'/><KEY id='Break'/> to stop a macro</ITEM>
+<ITEM>disable <MODIFIERKEY id='Ctrl'/><KEY id='Break'/>
 <CODESAMPLE>Application.EnableCancelKey = wdCancelDisabled</CODESAMPLE></ITEM>
-<ITEM>re-enable <MODIFIERKEY ID='Ctrl'/><KEY ID='Break'/>
+<ITEM>re-enable <MODIFIERKEY id='Ctrl'/><KEY id='Break'/>
 <CODESAMPLE>Application.EnableCancelKey = wdCancelInterrupt</CODESAMPLE></ITEM>
 </BLIST>
 </CONTENT>

@@ -28,39 +28,39 @@
 </DEFINITIONTABLE><BR/>
 <U><B>Undo/redo</B></U>
 <DEFINITIONTABLE>
-<ROW><TERM><KEY ID='U'/><BR/>
+<ROW><TERM><KEY id='U'/><BR/>
 <CODEROUTINE>:u[ndo]</CODEROUTINE></TERM>
 <DESC>undo</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='R'/><BR/>
+<ROW><TERM><MODIFIERKEY id='Ctrl'/><KEY id='R'/><BR/>
 <CODEROUTINE>:red[o]</CODEROUTINE></TERM>
 <DESC>redo</DESC></ROW>
-<ROW><TERM><KEY ID='U'/></TERM>
+<ROW><TERM><KEY id='U'/></TERM>
 <DESC>undo latest changes on the line</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 <U><B>Cut 'n paste</B></U>
 <DEFINITIONTABLE>
-<ROW><TERM><KEY ID='V'/><BR/>
+<ROW><TERM><KEY id='V'/><BR/>
 move the cursor at the end of the region to copy<BR/>
-<KEY ID='Y'/></TERM>
+<KEY id='Y'/></TERM>
 <DESC>copy characters</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='P'/></TERM>
+<ROW><TERM><MODIFIERKEY id='Shift'/><KEY id='P'/></TERM>
 <DESC>paste before the cursor</DESC></ROW>
-<ROW><TERM><KEY ID='P'/></TERM>
+<ROW><TERM><KEY id='P'/></TERM>
 <DESC>paste after the cursor</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 <U><B>Search</B></U>
 <DEFINITIONTABLE>
-<ROW><TERM><KEY ID='/'/></TERM>
+<ROW><TERM><KEY id='/'/></TERM>
 <DESC>search forward</DESC></ROW>
-<ROW><TERM><KEY ID='?'/></TERM>
+<ROW><TERM><KEY id='?'/></TERM>
 <DESC>search backward</DESC></ROW>
-<ROW><TERM><KEY ID='*'/></TERM>
+<ROW><TERM><KEY id='*'/></TERM>
 <DESC>search forward for the word under the cursor</DESC></ROW>
-<ROW><TERM><KEY ID='#'/></TERM>
+<ROW><TERM><KEY id='#'/></TERM>
 <DESC>search backward for the word under the cursor</DESC></ROW>
-<ROW><TERM><KEY ID='N'/></TERM>
+<ROW><TERM><KEY id='N'/></TERM>
 <DESC>next match</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Shift'/><KEY ID='N'/></TERM>
+<ROW><TERM><MODIFIERKEY id='Shift'/><KEY id='N'/></TERM>
 <DESC>previous match</DESC></ROW>
 <ROW><TERM><CODEROUTINE>:set hlsearch</CODEROUTINE></TERM>
 <DESC>enable search result highlighting</DESC></ROW>
@@ -71,23 +71,23 @@ move the cursor at the end of the region to copy<BR/>
 </DEFINITIONTABLE><BR/>
 <U><B><X><T>Windows</T><A>http://vimdoc.sourceforge.net/htmldoc/windows.html</A><L>en</L><F>HTML</F></X></B></U>
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='S'/></TERM>
+<ROW><TERM><MODIFIERKEY id='Ctrl'/><KEY id='W'/> <KEY id='S'/></TERM>
 <DESC>split the window horizontally in two</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='Left'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='H'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='H'/></TERM>
+<ROW><TERM><MODIFIERKEY id='Ctrl'/><KEY id='W'/> <KEY id='Left'/><BR/>
+<MODIFIERKEY id='Ctrl'/><KEY id='W'/> <MODIFIERKEY id='Ctrl'/><KEY id='H'/><BR/>
+<MODIFIERKEY id='Ctrl'/><KEY id='W'/> <KEY id='H'/></TERM>
 <DESC>go to the left window</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='Right'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='L'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='L'/></TERM>
+<ROW><TERM><MODIFIERKEY id='Ctrl'/><KEY id='W'/> <KEY id='Right'/><BR/>
+<MODIFIERKEY id='Ctrl'/><KEY id='W'/> <MODIFIERKEY id='Ctrl'/><KEY id='L'/><BR/>
+<MODIFIERKEY id='Ctrl'/><KEY id='W'/> <KEY id='L'/></TERM>
 <DESC>go to the right window</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='Down'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='J'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='J'/></TERM>
+<ROW><TERM><MODIFIERKEY id='Ctrl'/><KEY id='W'/> <KEY id='Down'/><BR/>
+<MODIFIERKEY id='Ctrl'/><KEY id='W'/> <MODIFIERKEY id='Ctrl'/><KEY id='J'/><BR/>
+<MODIFIERKEY id='Ctrl'/><KEY id='W'/> <KEY id='J'/></TERM>
 <DESC>go to the window below</DESC></ROW>
-<ROW><TERM><MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='Up'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <MODIFIERKEY ID='Ctrl'/><KEY ID='K'/><BR/>
-<MODIFIERKEY ID='Ctrl'/><KEY ID='W'/> <KEY ID='K'/></TERM>
+<ROW><TERM><MODIFIERKEY id='Ctrl'/><KEY id='W'/> <KEY id='Up'/><BR/>
+<MODIFIERKEY id='Ctrl'/><KEY id='W'/> <MODIFIERKEY id='Ctrl'/><KEY id='K'/><BR/>
+<MODIFIERKEY id='Ctrl'/><KEY id='W'/> <KEY id='K'/></TERM>
 <DESC>go to the window above</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 <U><B>Numbering</B></U>
@@ -116,7 +116,7 @@ move the cursor at the end of the region to copy<BR/>
 </DEFINITIONTABLE><BR/>
 <U><B>Miscellaneous</B></U>
 <DEFINITIONTABLE>
-<ROW><TERM><KEY ID='%'/></TERM>
+<ROW><TERM><KEY id='%'/></TERM>
 <DESC>move to matching brace or keyword</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 the configuration file is <CODEROUTINE>$HOME/.vimrc</CODEROUTINE>.

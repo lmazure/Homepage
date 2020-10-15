@@ -110,7 +110,7 @@ adding a directory already present in the source path moves it at the beginning<
 <ROW><TERM><CODEROUTINE>break foobar</CODEROUTINE></TERM>
 <DESC>set a breakpoint at the beginning of routine <CODEROUTINE>foobar</CODEROUTINE><BR/>
 but, in order to get access to the list of all symbols, we have to start the program (<CODEROUTINE>break main</CODEROUTINE> then <CODEROUTINE>run</CODEROUTINE>) before</DESC></ROW>
-<ROW><TERM><CODEROUTINE>break 'ValueHandler2::getSt </CODEROUTINE><KEY ID="Tab"/></TERM>
+<ROW><TERM><CODEROUTINE>break 'ValueHandler2::getSt </CODEROUTINE><KEY id='Tab'/></TERM>
 <DESC>autocompletion of the routine name</DESC></ROW>
 <ROW><TERM><CODEROUTINE>info breakpoints</CODEROUTINE></TERM>
 <DESC>list the breakpoints</DESC></ROW>
