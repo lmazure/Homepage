@@ -93,6 +93,9 @@
 </xsl:template>
 
 <xsl:template match="ARTICLE">
+  <xsl:if test="@pred">
+    <xsl:text>↪</xsl:text>
+  </xsl:if>
   <xsl:for-each select="./X">
     <xsl:if test="position()=2" >
       <xsl:text> (</xsl:text>
