@@ -624,8 +624,8 @@
 <xsl:template match="MODIFIERKEY">
   <span class="modifierkey">
     <xsl:choose>
-      <xsl:when test="./@ID='Windows'"><xsl:text>⊞Win</xsl:text></xsl:when>
-      <xsl:otherwise><xsl:value-of select="@ID"/></xsl:otherwise>
+      <xsl:when test="./@id='Windows'"><xsl:text>⊞Win</xsl:text></xsl:when>
+      <xsl:otherwise><xsl:value-of select="@id"/></xsl:otherwise>
     </xsl:choose>
   </span>
 </xsl:template>
@@ -633,14 +633,14 @@
 <xsl:template match="KEY">
   <span class="key">
     <xsl:choose>
-      <xsl:when test="./@ID='Left'"><xsl:text>←</xsl:text></xsl:when>
-      <xsl:when test="./@ID='Up'"><xsl:text>↑</xsl:text></xsl:when>
-      <xsl:when test="./@ID='Right'"><xsl:text>→</xsl:text></xsl:when>
-      <xsl:when test="./@ID='Down'"><xsl:text>↓</xsl:text></xsl:when>
-      <xsl:when test="./@ID='Begining'"><xsl:text>↖</xsl:text></xsl:when>
-      <xsl:when test="./@ID='PageDown'"><xsl:text>⇞</xsl:text></xsl:when>
-      <xsl:when test="./@ID='PageUp'"><xsl:text>⇟</xsl:text></xsl:when>
-      <xsl:otherwise><xsl:value-of select="@ID"/></xsl:otherwise>
+      <xsl:when test="./@id='Left'"><xsl:text>←</xsl:text></xsl:when>
+      <xsl:when test="./@id='Up'"><xsl:text>↑</xsl:text></xsl:when>
+      <xsl:when test="./@id='Right'"><xsl:text>→</xsl:text></xsl:when>
+      <xsl:when test="./@id='Down'"><xsl:text>↓</xsl:text></xsl:when>
+      <xsl:when test="./@id='Begining'"><xsl:text>↖</xsl:text></xsl:when>
+      <xsl:when test="./@id='PageDown'"><xsl:text>⇞</xsl:text></xsl:when>
+      <xsl:when test="./@id='PageUp'"><xsl:text>⇟</xsl:text></xsl:when>
+      <xsl:otherwise><xsl:value-of select="@id"/></xsl:otherwise>
     </xsl:choose>
   </span>
 </xsl:template>
