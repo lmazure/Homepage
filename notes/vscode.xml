@@ -3,12 +3,20 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='P'/></TERM>
     <DESC>show command pallete</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='B'/></TERM>
+    <DESC>hide/show left panel</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='J'/></TERM>
+    <DESC>hide/show bottom panel</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><MODIFIERKEY id='Ctrl'/><KEY id='S'/></TERM>
@@ -51,6 +59,22 @@
   <ROW>
     <TERM><MODIFIERKEY id='Alt'/><KEY id='Z'/></TERM>
     <DESC>toggle word wrap</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id=')'/></TERM>
+    <DESC>fold</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='^'/></TERM>
+    <DESC>unfold</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><MODIFIERKEY id='Ctrl'/><KEY id='à'/></TERM>
+    <DESC>fold all</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><MODIFIERKEY id='Ctrl'/><KEY id='J'/></TERM>
+    <DESC>unfold all</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><KEY id='Z'/></TERM>
