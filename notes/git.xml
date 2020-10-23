@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -250,6 +250,10 @@
     <TERM><CODEROUTINE>git log -U&lt;n&gt;</CODEROUTINE><BR/>
           <CODEROUTINE>git log --unified=&lt;n&gt;</CODEROUTINE></TERM>
     <DESC>generate diffs with n lines of context instead of the usual 3. Implies -p</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --pretty="%ce,%cd" --date=short > commits.csv</CODEROUTINE></TERM>
+    <DESC>dump the authors and dates of the commits in a file</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

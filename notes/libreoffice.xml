@@ -204,19 +204,78 @@
         <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='C'/></TERM>
         <DESC>add a comment</DESC>
       </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F2'/></TERM>
+        <DESC>display the function wizard</DESC>
+      </ROW>
     </DEFINITIONTABLE>
   </ITEM>
-  <ITEM>Functions
-    <DEFINITIONTABLE>
+  <ITEM>Information functions
+    <DEFINITION2TABLE>
       <ROW>
-        <TERM><CODEROUTINE>AUJOURDHUI()</CODEROUTINE></TERM>
+        <TERM1><CODEROUTINE>N(Value)</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>N(valeur)</CODEROUTINE></TERM2>
+        <DESC>return the numeric value of the given parameter<BR/>returns 0 if parameter is text or FALSE<BR/>returns the error value in case of an error</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>ISNA(Value)</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>ESTNA(valeur)</CODEROUTINE></TERM2>
+        <DESC>return TRUE if a cell contains #N/A<BR/>return FALSE if an error occurs</DESC>
+      </ROW>
+    </DEFINITION2TABLE>
+  </ITEM>
+  <ITEM>String functions
+    <DEFINITION2TABLE>
+      <ROW>
+        <TERM1><CODEROUTINE>LEFT("Text"[; Number])</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>GAUCHE("Texte"[;nombre])</CODEROUTINE></TERM2>
+        <DESC>return the first characters of a text<BR/>If <CODEROUTINE>Number</CODEROUTINE> is ommitted, one character is returned.</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>LEFTB("Text"[; Number_bytes])</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>GAUCHEB("Texte"[; nombre_octets])</CODEROUTINE></TERM2>
+        <DESC>return the first characters of a DBCS text<BR/>If <CODEROUTINE>Number</CODEROUTINE> is ommitted, one character is returned.</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>RIGHT("Text"[; Number])</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>DROITE("Texte"[;nombre])</CODEROUTINE></TERM2>
+        <DESC>return the last characters of a text<BR/>If <CODEROUTINE>Number</CODEROUTINE> is ommitted, one character is returned.</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>RIGHTB("Text"[; Number_bytes])</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>DROITEB("Texte"[; nombre_octets])</CODEROUTINE></TERM2>
+        <DESC>return the last characters of a DBCS text<BR/>If <CODEROUTINE>Number</CODEROUTINE> is ommitted, one character is returned.</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>LEN("Text")</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>NBCAR("Texte";nombre)</CODEROUTINE></TERM2>
+        <DESC>return the length of a text</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>LENB("Text")</CODEROUTINE></TERM1>
+        <TERM2></TERM2>
+        <DESC>return the length of a DBCS text</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>VALUE("Text")</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>CNUM("Texte";nombre)</CODEROUTINE></TERM2>
+        <DESC>convert a text into a number</DESC>
+      </ROW>
+    </DEFINITION2TABLE>
+  </ITEM>
+  <ITEM>Date functions
+    <DEFINITION2TABLE>
+      <ROW>
+        <TERM1><CODEROUTINE>TODAY()</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>AUJOURDHUI()</CODEROUTINE></TERM2>
         <DESC>return the current date</DESC>
       </ROW>
       <ROW>
-        <TERM><CODEROUTINE>MAINTENANT()</CODEROUTINE></TERM>
+        <TERM1><CODEROUTINE>NOW()</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>MAINTENANT()</CODEROUTINE></TERM2>
         <DESC>return the current date and time</DESC>
       </ROW>
-    </DEFINITIONTABLE>
+    </DEFINITION2TABLE>
   </ITEM>
   <ITEM>to move a column: select the column, then drag 'n drop one ot its cells while pressing <MODIFIERKEY id='Alt'/>
   </ITEM>
