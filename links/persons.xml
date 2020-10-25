@@ -3,7 +3,7 @@
 <PAGE special='indexed' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Persons</TITLE>
 <PATH>links/persons.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -92,7 +92,7 @@
       <ITEM><X><T>videos</T><A>https://martinfowler.com/videos.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><AUTHOR><FIRSTNAME>Alan</FIRSTNAME><LASTNAME>Fraser</LASTNAME></AUTHOR></TITLE>
-      <ITEM><X><T>homepage</T><A>https://myducksoup.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status='dead'><T>homepage</T><A>https://myducksoup.com/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><ANCHOR>G</ANCHOR>
     <CLIST><TITLE><AUTHOR><FIRSTNAME>Jean-Loup</FIRSTNAME><LASTNAME>Gailly</LASTNAME></AUTHOR></TITLE>
@@ -182,7 +182,7 @@
       <ITEM><X><T>homepage</T><A>http://alumni.media.mit.edu/~tpminka</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><AUTHOR><FIRSTNAME>Marvin</FIRSTNAME><LASTNAME>Minsky</LASTNAME></AUTHOR></TITLE>
-      <ITEM><X><T>homepage</T><A>http://web.media.mit.edu/~minsky</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>homepage</T><A>https://web.media.mit.edu/~minsky</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><AUTHOR><FIRSTNAME>Sjoerd</FIRSTNAME><LASTNAME>Mullender</LASTNAME></AUTHOR></TITLE>
       <ITEM><X><T>homepage</T><A>https://homepages.cwi.nl/~sjoerd/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -411,8 +411,8 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Pierre</FIRSTNAME><LASTNAME>Rabhi</LASTNAME></AUTHOR></TITLE>
       <ITEM><ARTICLE><X><T>Le système Pierre Rabhi</T><A>https://www.monde-diplomatique.fr/2018/08/MALET/58981</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jean-Baptiste</FIRSTNAME><LASTNAME>Malet</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>8</MONTH></DATE><COMMENT>A biography of <AUTHOR><FIRSTNAME>Pierre</FIRSTNAME><LASTNAME>Rabhi</LASTNAME></AUTHOR>.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Pierre Rabhi</T><A>https://www.monde-diplomatique.fr/2018/11/A/59203</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Pierre</FIRSTNAME><LASTNAME>Rhabi</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH></DATE><COMMENT>The answer of <AUTHOR><FIRSTNAME>Pierre</FIRSTNAME><LASTNAME>Rabhi</LASTNAME></AUTHOR> to the previous article.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Retour sur « Le système Pierre Rabhi »</T><A>https://www.monde-diplomatique.fr/2018/11/MALET/59190</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jean-Baptiste</FIRSTNAME><LASTNAME>Malet</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>8</MONTH></DATE><COMMENT>The answer to the answer.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE pred='https://www.monde-diplomatique.fr/2018/08/MALET/58981'><X><T>Pierre Rabhi</T><A>https://www.monde-diplomatique.fr/2018/11/A/59203</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Pierre</FIRSTNAME><LASTNAME>Rhabi</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH></DATE><COMMENT>The answer of <AUTHOR><FIRSTNAME>Pierre</FIRSTNAME><LASTNAME>Rabhi</LASTNAME></AUTHOR> to the previous article.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE pred='https://www.monde-diplomatique.fr/2018/11/A/59203'><X><T>Retour sur « Le système Pierre Rabhi »</T><A>https://www.monde-diplomatique.fr/2018/11/MALET/59190</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jean-Baptiste</FIRSTNAME><LASTNAME>Malet</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH></DATE><COMMENT>The answer to the answer.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>S.</MIDDLENAME><LASTNAME>Raymond</LASTNAME></AUTHOR></TITLE>
       <ITEM><ARTICLE><X><T>ESR interview (part I)</T><A>https://lwn.net/1999/features/CL-esr.phtml</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>ChangeLog</GIVENNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>S.</MIDDLENAME><LASTNAME>Raymond</LASTNAME></AUTHOR> speaks about his future paper "The magic Cauldron", LinuxWorld, Aikido, the definition of "good software" and <AUTHOR><FIRSTNAME>Ken</FIRSTNAME><LASTNAME>Thompson</LASTNAME></AUTHOR>'s comment on Linux.</COMMENT></ARTICLE></ITEM>
@@ -424,6 +424,9 @@
       <ITEM><ARTICLE><X><T>The Hope Diamond (with 3blue1brown) - Numberphile Podcast</T><A>https://www.youtube.com/watch?v=A0RH93XvSyU</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Grant</FIRSTNAME><LASTNAME>Sanderson</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Grant</FIRSTNAME><LASTNAME>Sanderson</LASTNAME></AUTHOR> explains how he came to producing math videos.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Q&amp;A with Grant (3blue1brown), windy walk edition</T><A>https://www.youtube.com/watch?v=Agbh95KyWxY</A><L>en</L><F>MP4</F><DURATION><MINUTE>19</MINUTE><SECOND>5</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Grant</FIRSTNAME><LASTNAME>Sanderson</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Accidental Streamer (with 3blue1brown) - Numberphile Podcast</T><A>https://www.youtube.com/watch?v=FGyKocI8_yQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>33</MINUTE><SECOND>5</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Grant</FIRSTNAME><LASTNAME>Sanderson</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>4</MONTH><DAY>19</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Grant</FIRSTNAME><LASTNAME>Sanderson</LASTNAME></AUTHOR> has started YouTube live streams for students.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Bobby</FIRSTNAME><LASTNAME>Seagull</LASTNAME></AUTHOR></TITLE>
+      <ITEM><ARTICLE><X><T>Quiz Shows and Math Anxiety - with Bobby Seagull</T><A>https://podcastaddict.com/episode/114234180</A><L>en</L><F>MP3</F><DURATION><HOUR>1</HOUR><MINUTE>24</MINUTE><SECOND>26</SECOND></DURATION></X><X><T>Quiz Shows and Math Anxiety (with Bobby Seagull) - Numberphile Podcast</T><A>https://www.youtube.com/watch?v=IdfAUW_y8Lck</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>24</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Bobby</FIRSTNAME><LASTNAME>Seagull</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Brady</FIRSTNAME><LASTNAME>Haran</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Bobby</FIRSTNAME><LASTNAME>Seagull</LASTNAME></AUTHOR> speaks about himself.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Singh</LASTNAME></AUTHOR></TITLE>
       <ITEM><ARTICLE><X quality='1'><T>The Math Storyteller (with Simon Singh) - Numberphile Podcast</T><A>https://www.youtube.com/watch?v=kOttzKC33Vk</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>11</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Singh</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Brady</FIRSTNAME><LASTNAME>Haran</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>Some interesting information about <AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Singh</LASTNAME></AUTHOR>.</COMMENT></ARTICLE></ITEM>
@@ -464,7 +467,7 @@
       <ITEM><ARTICLE><X><T>resignation and postmortem</T><A>https://www.jwz.org/gruntle/nomo.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>3</MONTH></DATE><COMMENT><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR> explains why he resigned from Netscape.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Free software! Free night life!</T><A>https://www.salon.com/2000/02/10/zawinski/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Leonard</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>2</MONTH><DAY>10</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR> is buying a night club.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Duct Tape Programmer</T><A>https://www.joelonsoftware.com/items/2009/09/23.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joel</FIRSTNAME><LASTNAME>Spolsky</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>23</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Joel</FIRSTNAME><LASTNAME>Spolsky</LASTNAME></AUTHOR> praises <AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR> and similar duct-tape developers.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>that "duct tape" silliness</T><A>https://www.jwz.org/blog/2009/09/that-duct-tape-silliness/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH></DATE><COMMENT><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR>'s comment on the previous blog.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE pred='https://www.joelonsoftware.com/items/2009/09/23.html'><X><T>that "duct tape" silliness</T><A>https://www.jwz.org/blog/2009/09/that-duct-tape-silliness/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH></DATE><COMMENT><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR>'s comment on the previous blog.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><LASTNAME>Zuckerberg</LASTNAME></AUTHOR></TITLE>
       <ITEM><ARTICLE><X><T>Lessons in Philanthropy 2017</T><A>https://m.facebook.com/notes/mark-zuckerberg/lessons-in-philanthropy-2017/10155543109576634</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><LASTNAME>Zuckerberg</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Priscilla</FIRSTNAME><LASTNAME>Chan</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>13</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><LASTNAME>Zuckerberg</LASTNAME></AUTHOR> and <AUTHOR><FIRSTNAME>Priscilla</FIRSTNAME><LASTNAME>Chan</LASTNAME></AUTHOR> explain what they try to achieve with their charity company. This is typical US spirit…</COMMENT></ARTICLE></ITEM>
