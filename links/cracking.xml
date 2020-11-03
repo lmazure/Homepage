@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -208,6 +208,7 @@
       <ITEM><ARTICLE><X><T>HTTP Desync Attacks: Request Smuggling Reborn</T><A>https://portswigger.net/blog/http-desync-attacks-request-smuggling-reborn</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Kettle</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE><COMMENT>How to exploit the fact that servers of different layers handle invalid HTTP requests differently.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A look at the Windows 10 exploit Google Zero disclosed this week</T><ST>This privilege escalation vulnerability has lurked within Windows for 20 years.</ST><A>https://arstechnica.com/information-technology/2019/08/a-look-at-the-windows-10-exploit-google-zero-disclosed-this-week/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jim</FIRSTNAME><LASTNAME>Salter</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>15</DAY></DATE><COMMENT>A high-level description of the bug in MSCTF.DLL.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>DNS Cache Poisoning - Computerphile</T><A>https://www.youtube.com/watch?v=7MT1F0O3_Yw</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>3</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE><COMMENT>A high-level description of DNS poisoning.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>The First Internet Worm (Morris Worm) - Computerphile</T><A>https://www.youtube.com/watch?v=2QwMv0_Rkec</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Julian</FIRSTNAME><LASTNAME>Onions</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>30</DAY></DATE><COMMENT>Yet another telling of the Robert Morris Internet Worm, but this one does not go in the details.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>SQL injection</TITLE>
         <ITEM><ARTICLE><X><T>SQL Injection Attacks by Example</T><A>http://www.unixwiz.net/techtips/sql-injection.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Friedl</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>A basic, detailed, and slow description of a SQL injection attack.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Bobby Tables</T><A>https://blog.cleancoder.com/uncle-bob/2017/12/03/BobbyTables.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE><COMMENT>SQL is too dangerous, it should not be used anymore.</COMMENT></ARTICLE></ITEM>
