@@ -11,20 +11,28 @@
     <DESC>show command pallete</DESC>
   </ROW>
   <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='M'/></TERM>
+    <DESC>show/hide errors and warnings</DESC>
+  </ROW>
+  <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='B'/></TERM>
-    <DESC>hide/show left panel</DESC>
+    <DESC>show/hide left panel</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='J'/></TERM>
-    <DESC>hide/show bottom panel</DESC>
+    <DESC>show/hide bottom panel</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><MODIFIERKEY id='Ctrl'/><KEY id='S'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='S'/></TERM>
     <DESC>keyboard shortcuts</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='E'/></TERM>
+    <DESC>show/hide file explorer</DESC>
+  </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='O'/></TERM>
     <DESC>open a file</DESC>
@@ -38,7 +46,7 @@
     <DESC>go to file</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><MODIFIERKEY id='Ctrl'/><KEY id='O'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='O'/></TERM>
     <DESC>open folder</DESC>
   </ROW>
   <ROW>
@@ -46,7 +54,7 @@
     <DESC>save</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><KEY id='S'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='S'/></TERM>
     <DESC>save all</DESC>
   </ROW>
   <ROW>
@@ -69,15 +77,15 @@
     <DESC>unfold</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><MODIFIERKEY id='Ctrl'/><KEY id='à'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='à'/></TERM>
     <DESC>fold all</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><MODIFIERKEY id='Ctrl'/><KEY id='J'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='J'/></TERM>
     <DESC>unfold all</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><KEY id='Z'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='Z'/></TERM>
     <DESC>toggle the zen mode</DESC>
   </ROW>
   <ROW>
@@ -137,7 +145,7 @@
     <DESC>previous editor</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><KEY id='O'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='O'/></TERM>
     <DESC>open active file in new window</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -146,10 +154,6 @@
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='G'/></TERM>
     <DESC>go to line</DESC>
-  </ROW>
-  <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F'/></TERM>
-    <DESC>search in files</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F'/></TERM>
@@ -161,7 +165,12 @@
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='H'/></TERM>
-    <DESC>replace</DESC></ROW>
+    <DESC>replace</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F'/></TERM>
+    <DESC>search in files</DESC>
+  </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='H'/></TERM>
     <DESC>replace in files</DESC>
@@ -184,10 +193,28 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='G'/></TERM>
+    <DESC>show/hide source code management</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='D'/></TERM>
+    <DESC>show/hide launch and debug</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='X'/></TERM>
+    <DESC>show/hide manage extensions</DESC>
+  </ROW>
+  <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id=','/></TERM>
     <DESC>display setting</DESC></ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/><MODIFIERKEY id='Ctrl'/><KEY id='T'/><BR/>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='T'/><BR/>
       <CODEMENU>File<CODEMENU>Preferences<CODEMENU>Color Theme</CODEMENU></CODEMENU></CODEMENU></TERM>
     <DESC>display the theme picker (navigate with <KEY id='Up'/>/<KEY id='Down'/>, the theme is interactively applied)</DESC>
   </ROW>
