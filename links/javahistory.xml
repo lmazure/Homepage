@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java history</TITLE>
 <PATH>links/javahistory.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -148,11 +148,12 @@
       <ITEM><ARTICLE><X><T>Java 14 - Preview Features and their APIs</T><A>https://delabassee.com/Java14-Preview-API/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Delabassee</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE><COMMENT>Preview APIs are now properly handled and cannot be used witout the <CODEROUTINE>--enable-preview</CODEROUTINE> flag.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Records</TITLE>
         <ITEM><ARTICLE><X quality='1'><T>Records Come to Java</T><ST>A first look at how Java 14’s data records will change the way you code</ST><A>https://blogs.oracle.com/javamagazine/records-come-to-java</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>A clear explanation of the usage of <CODEROUTINE>record</CODEROUTINE>'s current implementation and the rational for it.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Serializable Records</T><A>https://inside.java/2020/07/20/serializablerecords/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Chris</FIRSTNAME><LASTNAME>Hegarty</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Buckley</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE><COMMENT>The diferences when serializing/deserializing a record vs. a standard object.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Serializable Records</T><A>https://inside.java/2020/07/20/serializablerecords/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Chris</FIRSTNAME><LASTNAME>Hegarty</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Buckley</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE><COMMENT>The differences when serializing/deserializing a record vs. a standard object.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Java 15</TITLE>
       <ITEM><ARTICLE><X><T>Inside Java 15: Fourteen JEPs in five buckets</T><ST>Hidden classes, sealed classes, text blocks, records, and EdDSA: There’s lots of goodness in JDK 15.</ST><A>https://blogs.oracle.com/javamagazine/inside-java-15-fourteen-jeps-in-five-buckets</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alan</FIRSTNAME><LASTNAME>Zeichick</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>28</DAY></DATE><COMMENT>The list of new features, previews, and removals.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Diving into Java records: Serialization, marshaling, and bean state validation</T><ST>Existing frameworks and libraries that access instance variables through getters and setters won’t work with records. Here’s what to do.</ST><A>https://blogs.oracle.com/javamagazine/diving-into-java-records-serialization-marshaling-and-bean-state-validation</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Frank</FIRSTNAME><LASTNAME>Kiwy</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>Some technical details of records: how to use annotations on them, how is performed the deserialisation, the fact that most marshaling/unmarshaling libraries will not work, and how to use bean validation.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>

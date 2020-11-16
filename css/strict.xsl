@@ -201,21 +201,6 @@
 <xsl:template match="CODEFILENAME">
   <code>
     <xsl:apply-templates/>
-    <xsl:element name="a">
-      <xsl:attribute name="href">
-        <xsl:text>file://</xsl:text>
-        <xsl:choose>
-          <xsl:when test="count(./X)>=1">
-            <xsl:value-of select="./X/T"/>
-          </xsl:when>
-          <xsl:otherwise>
-            <xsl:value-of select="."/>
-          </xsl:otherwise>
-        </xsl:choose>
-      </xsl:attribute>
-      <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
-      <xsl:text>&#x25c8;</xsl:text>
-    </xsl:element>
   </code>
 </xsl:template>
 
