@@ -19,14 +19,71 @@
   <DESC>display the previous virtual desktop</DESC>
 </ROW>
 </DEFINITIONTABLE>
-  <BLIST>
+File explorer
+<DEFINITIONTABLE>
+<ROW>
+  <TERM><KEY id='Left'/><BR/>
+        <KEY id='Backspace'/></TERM>
+  <DESC>navigate history backward</DESC>
+</ROW>
+<ROW>
+  <TERM><KEY id='Right'/></TERM>
+  <DESC>navigate history forward</DESC>
+</ROW>
+<ROW>
+  <TERM><KEY id='Up'/></TERM>
+  <DESC>go to parent directory</DESC>
+</ROW>
+<ROW>
+  <TERM><KEY id='F5'/></TERM>
+  <DESC>refresh</DESC>
+</ROW>
+<ROW>
+  <TERM><KEY id='F2'/></TERM>
+  <DESC>rename an item</DESC>
+</ROW>
+<ROW>
+  <TERM><KEY id='F3'/></TERM>
+  <DESC>find a folder or a file</DESC>
+</ROW>
+<ROW>
+  <TERM><KEY id='Del'/></TERM>
+  <DESC>delete an item and put it in the Recycle Bin</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id='Shift'/><KEY id='Del'/></TERM>
+  <DESC>delete an item without placing it in the Recycle Bin</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id='Alt'/><KEY id='Enter'/><BR/>
+        <MODIFIERKEY id='Alt'/>left double-click</TERM>
+  <DESC>display item properties</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id='Shift'/>DnD</TERM>
+  <DESC>move a file</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id='Ctrl'/>DnD</TERM>
+  <DESC>copy a file</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/>DnD</TERM>
+  <DESC>create a shortcut</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id='Ctrl'/>left double-click</TERM>
+  <DESC>open a folder in another window</DESC>
+</ROW>
+</DEFINITIONTABLE>
+<BLIST>
   <ITEM>
     <CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
   </ITEM>
   <ITEM>
     <CODEROUTINE>tasklist /v | findstr javaw.exe</CODEROUTINE> lists the <CODEROUTINE>javaw.exe</CODEROUTINE> processes running.
   </ITEM>
-  <ITEM><BLIST><TITLE>retrieve the command line of a process</TITLE>
+  <ITEM><BLIST><TITLE>Retrieve the command line of a process</TITLE>
     <ITEM>open the Task Manager</ITEM>
     <ITEM>display the details tab</ITEM>
     <ITEM>add the Command Line column if it is not already displayed</ITEM>
@@ -206,8 +263,6 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
   <ROW><TERM><CODEROUTINE>rmdir /s /q</CODEROUTINE></TERM><DESC>delete a possibly empty directory without prompting</DESC></ROW>
 </DEFINITIONTABLE>
 In order to know which process uses a given file, use <X><T>Handle</T><A>https://docs.microsoft.com/en-us/sysinternals/downloads/handle</A><L>en</L><F>HTML</F></X> of <X><T>SysInternals</T><A>https://docs.microsoft.com/en-us/sysinternals/</A><L>en</L><F>HTML</F></X>.<BR/>
-<BR/>
-Format a large hard drive in FAT32: use <X><T>guiformat.exe</T><A>http://www.ridgecrop.demon.co.uk/index.htm?guiformat.htm</A><L>en</L><F>HTML</F></X>.<BR/>
 <BR/>
 <DEFINITIONTABLE>
 <ROW>

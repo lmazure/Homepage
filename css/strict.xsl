@@ -625,6 +625,7 @@
       <xsl:when test="./@id='Begining'"><xsl:text>↖</xsl:text></xsl:when>
       <xsl:when test="./@id='PageDown'"><xsl:text>⇞</xsl:text></xsl:when>
       <xsl:when test="./@id='PageUp'"><xsl:text>⇟</xsl:text></xsl:when>
+      <xsl:when test="./@id='Backspace'"><xsl:text>⟵</xsl:text></xsl:when>
       <xsl:otherwise><xsl:value-of select="@id"/></xsl:otherwise>
     </xsl:choose>
   </span>
