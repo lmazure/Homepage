@@ -227,7 +227,7 @@ Specify zero input parameters with empty parentheses:
 The body of a statement lambda can consist of any number of statements; however, in practice there are typically no more than two or three.<BR/>
 Statement lambdas, like anonymous methods, cannot be used to create expression trees.<BR/>
 The return value must be with <CODEROUTINE>return</CODEROUTINE>.<BR/>
-<CODESAMPLE>(int x, string s) =&gt; s.Length &gt; x</CODESAMPLE> vs <CODESAMPLE>(int x, string s) =&gt; { return (s.Length &gt; x);}</CODESAMPLE></ITEM>
+<CODESAMPLE>(int x, string s) =&gt; s.Length &gt; x</CODESAMPLE> vs. <CODESAMPLE>(int x, string s) =&gt; { return (s.Length &gt; x);}</CODESAMPLE></ITEM>
 <ITEM>Type Inference in Lambdas<BR/>
 When writing lambdas, you often do not have to specify a type for the input parameters because the compiler can infer the type based on the lambda body, the underlying delegate type, and other factors.
 <BLIST>
