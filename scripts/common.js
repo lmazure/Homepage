@@ -179,7 +179,7 @@ window.do2_keyword = (event, keyId) => {
     if (popup === null) {
         popup = new Popup();
     }
-    const description = HtmlString.buildEmpty();
+    const description = HtmlString.buildFromTag("h1", keyId);
     let links = HtmlString.buildEmpty();
     let articles = HtmlString.buildEmpty();
     for (let k of keywordPopupKeywords) {
