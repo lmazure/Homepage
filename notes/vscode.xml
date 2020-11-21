@@ -58,8 +58,13 @@
     <DESC>save all</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F4'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F4'/><BR/>
+          <MODIFIERKEY id='Ctrl'/><KEY id='W'/></TERM>
     <DESC>close an editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='W'/></TERM>
+    <DESC>close all editors</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
