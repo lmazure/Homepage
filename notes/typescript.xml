@@ -3,8 +3,36 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TypeScript</TITLE>
 <PATH>notes/typescript.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
+<U><B>Duck typing</B></U><BR/>
+It is possible to pass paramaters having a type that is a superset of the exepected type
+<CODESAMPLE>
+interface Point1D {<BR/>
+    x: number;<BR/>
+}<BR/>
+interface Point2D {<BR/>
+    x: number;<BR/>
+    y: number;<BR/>
+}<BR/>
+interface Point3D {<BR/>
+    x: number;<BR/>
+    y: number;<BR/>
+    z: number;<BR/>
+}<BR/>
+var point1D: Point1D = { x: 0 }<BR/>
+var point2D: Point2D = { x: 0, y: 10 }<BR/>
+var point3D: Point3D = { x: 0, y: 10, z: 20 }<BR/>
+function iTakePoint2D(point: Point2D) { /* do something */ }<BR/>
+iTakePoint2D(point2D); // OK<BR/>
+iTakePoint2D(point3D); // OK<BR/>
+iTakePoint2D(point1D); // KO y is missing
+</CODESAMPLE>
+<U><B>Equality</B></U><BR/>
+<CODEROUTINE>==</CODEROUTINE> test equality with type coercition<BR/>
+<CODEROUTINE>===</CODEROUTINE> test equality without type coercition<BR/>
+do not use <CODEROUTINE>==</CODEROUTINE>, except for testing for <CODEROUTINE>null</CODEROUTINE> or <CODEROUTINE>undefined</CODEROUTINE><BR/>
+to test if a variable is defined at the global level, use <CODEROUTINE>if (typeof someglobal !== 'undefined') { … }</CODEROUTINE><BR/>
 <U><CODEROUTINE>for … of</CODEROUTINE></U><BR/>
 An object is iterable if it has an implementation for the <CODEROUTINE>Symbol.iterator</CODEROUTINE> property.
 Some built-in types like <CODEROUTINE>Array</CODEROUTINE>, <CODEROUTINE>Map</CODEROUTINE>, <CODEROUTINE>Set</CODEROUTINE>, <CODEROUTINE>String</CODEROUTINE>, <CODEROUTINE>Int32Array</CODEROUTINE>, <CODEROUTINE>Uint32Array</CODEROUTINE>… have their <CODEROUTINE>Symbol.iterator</CODEROUTINE> property already implemented.

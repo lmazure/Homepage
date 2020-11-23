@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -60,16 +60,20 @@ File explorer
   <DESC>display item properties</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Shift'/>DnD</TERM>
+  <TERM><MODIFIERKEY id='Shift'/>left DnD</TERM>
   <DESC>move a file</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Ctrl'/>DnD</TERM>
+  <TERM><MODIFIERKEY id='Ctrl'/>left DnD</TERM>
   <DESC>copy a file</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/>DnD</TERM>
+  <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/>left DnD</TERM>
   <DESC>create a shortcut</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id='Shift'/>right DnD</TERM>
+  <DESC>display a dialog to select move / copy / shortcut</DESC>
 </ROW>
 <ROW>
   <TERM><MODIFIERKEY id='Ctrl'/>left double-click</TERM>
