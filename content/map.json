@@ -97,7 +97,9 @@
           { "title" : "Statistics", "page" : "links/statistics.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Mathematicians", "page" : "links/mathematicians.html", "languages" : ["en"], "formats" : ["HTML"] }
         ] },
-        { "title" : "Physics", "page" : "links/physics.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Physics", "page" : "links/physics.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Quantum physics", "page" : "links/quantum.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
         { "title" : "Chemistry", "page" : "links/chemistry.html", "languages" : ["en"], "formats" : ["HTML"] },
         { "title" : "Geology", "page" : "links/geology.html", "languages" : ["en"], "formats" : ["HTML"] },
         { "title" : "Geography", "page" : "links/geography.html", "languages" : ["en"], "formats" : ["HTML"] },
