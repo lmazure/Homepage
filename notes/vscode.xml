@@ -3,11 +3,12 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='P'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='P'/><BR/>
+      <CODEROUTINE>Show All Commands</CODEROUTINE></TERM>
     <DESC>show command pallete</DESC>
   </ROW>
   <ROW>
@@ -28,7 +29,14 @@
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+File
 <DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='N'/><BR/>
+      double left click on tab menubar<BR/>
+      <CODEROUTINE>New Untitled File</CODEROUTINE></TERM>
+    <DESC>open new empty editor</DESC>
+  </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='E'/></TERM>
     <DESC>show file explorer</DESC>
@@ -42,7 +50,9 @@
     <DESC>open a recent file</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='E'/><BR/><MODIFIERKEY id='Ctrl'/><KEY id='P'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='E'/><BR/>
+      <MODIFIERKEY id='Ctrl'/><KEY id='P'/><BR/>
+      <CODEROUTINE>Go to file...</CODEROUTINE></TERM>
     <DESC>go to file</DESC>
   </ROW>
   <ROW>
@@ -59,7 +69,7 @@
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F4'/><BR/>
-          <MODIFIERKEY id='Ctrl'/><KEY id='W'/></TERM>
+      <MODIFIERKEY id='Ctrl'/><KEY id='W'/></TERM>
     <DESC>close an editor</DESC>
   </ROW>
   <ROW>
@@ -236,6 +246,10 @@
     <DESC>display the theme picker (navigate with <KEY id='Up'/>/<KEY id='Down'/>, the theme is interactively applied)</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+<BLIST><TITLE>Keyboard Shortcuts</TITLE>
+  <ITEM>Type the string definition of a shortcut (e.g. "ctrl + n"), to find where it is used.</ITEM>
+</BLIST>
 </CONTENT>
 <X><T>Links</T><A>../links/ide.html#vscode</A><L>en</L><F>HTML</F></X>
 </PAGE>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -260,6 +260,23 @@
         <TERM1><CODEROUTINE>VALUE("Text")</CODEROUTINE></TERM1>
         <TERM2><CODEROUTINE>CNUM("Texte")</CODEROUTINE></TERM2>
         <DESC>convert a text into a number</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>CHAR(Number)</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>CAR(nombre)</CODEROUTINE></TERM2>
+        <DESC>convert a number into a character according to the current code table (codes greater than 127 depend on the system's character mapping)<BR/>
+          The number must be between 1 and 255.<BR/>
+          <CODEROUTINE>=CHAR(100)</CODEROUTINE> returns the character <CODEROUTINE>d</CODEROUTINE>.</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>UNICODE("Text")</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>UNICODE("Texte")</CODEROUTINE></TERM2>
+        <DESC>return the numeric code for the first Unicode character in a text string</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>UNICHAR(number)</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>UNICAR(nombre)</CODEROUTINE></TERM2>
+        <DESC>convert a code number into a Unicode character or letter</DESC>
       </ROW>
     </DEFINITION2TABLE>
   </ITEM>
