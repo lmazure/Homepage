@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -148,6 +148,26 @@ File
     <TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='Shift'/><KEY id='Down'/></TERM>
     <DESC>copy line down</DESC>
   </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='C'/><BR/>
+      <CODEROUTINE>Add Line Comment</CODEROUTINE></TERM>
+    <DESC>comment the selected lines</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='U'/><BR/>
+      <CODEROUTINE>Remove Line Comment</CODEROUTINE></TERM>
+    <DESC>uncomment the selected lines</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id=':'/><BR/>
+      <CODEROUTINE>Toggle Line Comment</CODEROUTINE></TERM>
+    <DESC>toggle the line comment on the selected lines</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='A'/><BR/>
+      <CODEROUTINE>Toggle Block Comment</CODEROUTINE></TERM>
+    <DESC>toggle the block comment on the selected lines</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
@@ -192,7 +212,8 @@ File
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='H'/></TERM>
-    <DESC>replace</DESC>
+    <DESC>replace<BR/>
+    use <CODEROUTINE>$0</CODEROUTINE> to insert the full string, <CODEROUTINE>$1</CODEROUTINE> the first group… <CODEROUTINE>$$</CODEROUTINE> to insert <CODEROUTINE>$</CODEROUTINE></DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F'/></TERM>
