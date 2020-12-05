@@ -19,9 +19,9 @@
 <ROW><CELL>204</CELL><CELL>No Content</CELL></ROW>
 <ROW><CELL>205</CELL><CELL>Reset Content</CELL></ROW>
 <ROW><CELL>206</CELL><CELL>Partial Content</CELL></ROW>
-<ROW><CELL>207</CELL><CELL>Multi-Status (WebDAV <X><T>RFC 2518</T><A>javascript:do_reference("rfc/2518")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
-<ROW><CELL>208</CELL><CELL>Already Reported (WebDAV <X><T>RFC 2518</T><A>javascript:do_reference("rfc/2518")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
-<ROW><CELL>210</CELL><CELL>Content Different (WebDAV <X><T>RFC 2518</T><A>javascript:do_reference("rfc/2518")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>207</CELL><CELL>Multi-Status (WebDAV <X><T>RFC 2518</T><A>https://www.ietf.org/rfc/rfc2518.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>208</CELL><CELL>Already Reported (WebDAV <X><T>RFC 2518</T><A>https://www.ietf.org/rfc/rfc2518.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>210</CELL><CELL>Content Different (WebDAV <X><T>RFC 2518</T><A>https://www.ietf.org/rfc/rfc2518.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
 <ROW><CELL>226</CELL><CELL>IM Used (RFC 3229)</CELL></ROW>
 <ROW><CELL width='2'>Redirection 3xx</CELL></ROW>
 <ROW><CELL>300</CELL><CELL>Multiple Choices</CELL></ROW>
@@ -53,16 +53,16 @@
 <ROW><CELL>415</CELL><CELL>Unsupported Media Type</CELL></ROW>
 <ROW><CELL>416</CELL><CELL>Requested Range Not Satisfiable</CELL></ROW>
 <ROW><CELL>417</CELL><CELL>Expectation Failed</CELL></ROW>
-<ROW><CELL>418</CELL><CELL>I’m a teapot (<X><T>RFC 2324</T><A>javascript:do_reference("rfc/2324")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>418</CELL><CELL>I’m a teapot (<X><T>RFC 2324</T><A>https://www.ietf.org/rfc/rfc2324.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
 <ROW><CELL>421</CELL><CELL>Bad mapping / Misdirected Request</CELL></ROW>
 <ROW><CELL>422</CELL><CELL>Unprocessable entity (WebDAV)</CELL></ROW>
 <ROW><CELL>423</CELL><CELL>Locked (WebDAV)</CELL></ROW>
 <ROW><CELL>424</CELL><CELL>Method failure (WebDAV)</CELL></ROW>
-<ROW><CELL>425</CELL><CELL>Unordered Collection (WebDAV <X><T>RFC 3648</T><A>javascript:do_reference("rfc/3648")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
-<ROW><CELL>426</CELL><CELL>Upgrade Required (<X><T>RFC 2817</T><A>javascript:do_reference("rfc/2817")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
-<ROW><CELL>428</CELL><CELL>Precondition Required (<X><T>RFC 6585</T><A>javascript:do_reference("rfc/6585")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
-<ROW><CELL>429</CELL><CELL>Too Many Requests (<X><T>RFC 6585</T><A>javascript:do_reference("rfc/6585")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
-<ROW><CELL>431</CELL><CELL>Request Header Fields Too Large (<X><T>RFC 6585</T><A>javascript:do_reference("rfc/6585")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>425</CELL><CELL>Unordered Collection (WebDAV <X><T>RFC 3648</T><A>https://www.ietf.org/rfc/rfc3648.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>426</CELL><CELL>Upgrade Required (<X><T>RFC 2817</T><A>https://www.ietf.org/rfc/rfc2817.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>428</CELL><CELL>Precondition Required (<X><T>RFC 6585</T><A>https://www.ietf.org/rfc/rfc6585.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>429</CELL><CELL>Too Many Requests (<X><T>RFC 6585</T><A>https://www.ietf.org/rfc/rfc6585.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>431</CELL><CELL>Request Header Fields Too Large (<X><T>RFC 6585</T><A>https://www.ietf.org/rfc/rfc6585.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
 <ROW><CELL>449</CELL><CELL>Retry With (Microsoft)</CELL></ROW>
 <ROW><CELL>450</CELL><CELL>Blocked by Windows Parental Controls (Microsoft)</CELL></ROW>
 <ROW><CELL>451</CELL><CELL>Unavailable For Legal Reasons</CELL></ROW>
@@ -80,12 +80,12 @@
 <ROW><CELL>503</CELL><CELL>Service Unavailable</CELL></ROW>
 <ROW><CELL>504</CELL><CELL>Gateway Timeout</CELL></ROW>
 <ROW><CELL>505</CELL><CELL>HTTP Version Not Supported</CELL></ROW>
-<ROW><CELL>506</CELL><CELL>Variant Also Negotiates (<X><T>RFC 2295</T><A>javascript:do_reference("rfc/2295")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>506</CELL><CELL>Variant Also Negotiates (<X><T>RFC 2295</T><A>https://www.ietf.org/rfc/rfc2295.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
 <ROW><CELL>507</CELL><CELL>Insufficient storage (WebDAV)</CELL></ROW>
-<ROW><CELL>508</CELL><CELL>Loop detected (WebDAV <X><T>RFC 5842</T><A>javascript:do_reference("rfc/5842")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>508</CELL><CELL>Loop detected (WebDAV <X><T>RFC 5842</T><A>https://www.ietf.org/rfc/rfc5842.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
 <ROW><CELL>509</CELL><CELL>Bandwidth Limit Exceeded</CELL></ROW>
-<ROW><CELL>510</CELL><CELL>Not extended (<X><T>RFC 2774</T><A>javascript:do_reference("rfc/2774")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
-<ROW><CELL>511</CELL><CELL>Network authentication required (<X><T>RFC 6585</T><A>javascript:do_reference("rfc/6585")</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>510</CELL><CELL>Not extended (<X><T>RFC 2774</T><A>https://www.ietf.org/rfc/rfc2774.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
+<ROW><CELL>511</CELL><CELL>Network authentication required (<X><T>RFC 6585</T><A>https://www.ietf.org/rfc/rfc6585.txt</A><L>en</L><F>HTML</F></X>)</CELL></ROW>
 <ROW><CELL>520</CELL><CELL>Unknown Error (Cloudflare)</CELL></ROW>
 <ROW><CELL>521</CELL><CELL>Web Server Is Down (Cloudflare)</CELL></ROW>
 <ROW><CELL>522</CELL><CELL>Connection Timed Out (Cloudflare)</CELL></ROW>

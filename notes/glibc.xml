@@ -16,7 +16,7 @@ for (size_t i = 0; i &lt; size; i++) std::cout &lt;&lt; strings[i] &lt;&lt; std:
 free(strings);</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>system analysis</U></B></TITLE>
-<ITEM>use <CODEROUTINE><X><T>statfs</T><A>javascript:do_reference("man/linux/2/statfs")</A><L>en</L><F>HTML</F></X></CODEROUTINE> or <CODEROUTINE><X><T>statvfs</T><A>javascript:do_reference("man/linux/2/statvfs")</A><L>en</L><F>HTML</F></X></CODEROUTINE> to get information about a mounted file paritition.</ITEM>
+<ITEM>use <CODEROUTINE><X><T>statfs</T><A>https://man7.org/linux/man-pages/man2/statfs.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> or <CODEROUTINE><X><T>statvfs</T><A>https://man7.org/linux/man-pages/man2/statvfs.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> to get information about a mounted file paritition.</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>I/O</U></B></TITLE>
 <ITEM>use <CODEROUTINE>fcntl</CODEROUTINE> with the <CODEROUTINE>O_DIRECT</CODEROUTINE> flag to perform direct I/Os (bypassing the filesystem cache). The transfer is synchronous (when <CODEROUTINE>read</CODEROUTINE> or <CODEROUTINE>write</CODEROUTINE> returns, data is guaranteed to be transferred). Under Linux 2.4 transfer sizes, and the alignment of user buffer and file offset must all be multiples of the logical block size of the file system. Under Linux 2.6 alignment to 512-byte boundaries suffices.</ITEM>

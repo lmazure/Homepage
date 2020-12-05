@@ -6,7 +6,7 @@
 <DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>ls</T><A>javascript:do_reference("man/linux/1/ls")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display directory/file information</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>ls</T><A>https://man7.org/linux/man-pages/man1/ls.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display directory/file information</DESC></ROW>
   <ROW><TERM><CODEROUTINE>ls -d</CODEROUTINE></TERM><DESC>list directory entries instead of contents, and do not dereference symbolic links</DESC></ROW>
   <ROW><TERM><CODEROUTINE>ls -1</CODEROUTINE></TERM><DESC>list one file per line</DESC></ROW>
   <ROW><TERM><CODEROUTINE>ls --color=never</CODEROUTINE></TERM><DESC>never use color display</DESC></ROW>
@@ -16,20 +16,20 @@
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>mkdir</T><A>javascript:do_reference("man/linux/1/mkdir")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>create a directory</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>mkdir</T><A>https://man7.org/linux/man-pages/man1/mkdir.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>create a directory</DESC></ROW>
   <ROW><TERM><CODEROUTINE>mkdir -p</CODEROUTINE><BR/><CODEROUTINE>mkdir --parents</CODEROUTINE></TERM><DESC>automatically create the intermediary directories</DESC></ROW>
   <ROW><TERM><CODEROUTINE>mkdir -m</CODEROUTINE><BR/><CODEROUTINE>mkdir --mode=&lt;mode&gt;</CODEROUTINE></TERM><DESC>set permission mode (as in <CODEROUTINE>chmod</CODEROUTINE>), not <CODEROUTINE>rwxrwxrwx - umask</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>dirname</T><A>javascript:do_reference("man/linux/1/dirname")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>strip non-directory suffix from file name</DESC></ROW>
-  <ROW><TERM><CODEROUTINE><X><T>basename</T><A>javascript:do_reference("man/linux/1/basename")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>strip directory and suffix from filenames</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>dirname</T><A>https://man7.org/linux/man-pages/man1/dirname.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>strip non-directory suffix from file name</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>basename</T><A>https://man7.org/linux/man-pages/man1/basename.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>strip directory and suffix from filenames</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>df</T><A>javascript:do_reference("man/linux/1/df")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>report usage of all the file systems</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>df</T><A>https://man7.org/linux/man-pages/man1/df.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>report usage of all the file systems</DESC></ROW>
   <ROW><TERM><CODEROUTINE>df /foo/bar</CODEROUTINE></TERM><DESC>report usage of file system <CODEROUTINE>/foo/bar</CODEROUTINE></DESC></ROW>
   <ROW><TERM><CODEROUTINE>df -k</CODEROUTINE></TERM><DESC>report disk space in kilobytes</DESC></ROW>
   <ROW><TERM><CODEROUTINE>df -l</CODEROUTINE></TERM><DESC>list only local file systems</DESC></ROW>
@@ -38,7 +38,7 @@
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>grep</T><A>javascript:do_reference("man/linux/1/grep")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print lines matching a pattern</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>grep</T><A>https://man7.org/linux/man-pages/man1/grep.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print lines matching a pattern</DESC></ROW>
   <ROW><TERM><CODEROUTINE>grep -r</CODEROUTINE><BR/><CODEROUTINE>grep -R</CODEROUTINE><BR/><CODEROUTINE>grep --recursive</CODEROUTINE><BR/><CODEROUTINE>grep -d recurse</CODEROUTINE><BR/><CODEROUTINE>grep -directories=recurse</CODEROUTINE></TERM><DESC>perform a recursive <CODEROUTINE>grep</CODEROUTINE></DESC></ROW>
   <ROW><TERM><CODEROUTINE>grep -a</CODEROUTINE><BR/><CODEROUTINE>grep --test</CODEROUTINE><BR/><CODEROUTINE>grep --binary-files=text</CODEROUTINE></TERM><DESC>process a binary file as if it were text</DESC></ROW>
   <ROW><TERM><CODEROUTINE>grep -i</CODEROUTINE></TERM><DESC>case independent search</DESC></ROW>
@@ -97,7 +97,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>cat</T><A>javascript:do_reference("man/linux/1/cat")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>concatenate files</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>cat</T><A>https://man7.org/linux/man-pages/man1/cat.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>concatenate files</DESC></ROW>
   <ROW><TERM><CODEROUTINE>cat -v</CODEROUTINE></TERM><DESC>display special characters with the <CODEROUTINE>^</CODEROUTINE> and <CODEROUTINE>M-</CODEROUTINE> notations except tab and LFD</DESC></ROW>
   <ROW><TERM><CODEROUTINE>cat -T</CODEROUTINE></TERM><DESC>display tabs as <CODEROUTINE>^I</CODEROUTINE></DESC></ROW>
   <ROW><TERM><CODEROUTINE>cat -t</CODEROUTINE></TERM><DESC>same as <CODEROUTINE>-vT</CODEROUTINE></DESC></ROW>
@@ -105,12 +105,12 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>tac</T><A>javascript:do_reference("man/linux/1/tac")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>concatenate files in reverse</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>tac</T><A>https://man7.org/linux/man-pages/man1/tac.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>concatenate files in reverse</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>split &lt;file&gt; [&lt;prefix&gt;]</T><A>javascript:do_reference("man/linux/1/split")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>split a file into pieces<BR/>the default prefix is x</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>split &lt;file&gt; [&lt;prefix&gt;]</T><A>https://man7.org/linux/man-pages/man1/split.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>split a file into pieces<BR/>the default prefix is x</DESC></ROW>
   <ROW><TERM><CODEROUTINE>split -d</CODEROUTINE></TERM><DESC>use numeric suffixes starting at 0, instead of alphabetic</DESC></ROW>
   <ROW><TERM><CODEROUTINE>split -a 4</CODEROUTINE><BR/><CODEROUTINE>split --suffix-length=4</CODEROUTINE></TERM><DESC>generate suffixes of length 4 (the defaul length is 2)</DESC></ROW>
   <ROW><TERM><CODEROUTINE>split -b 256k</CODEROUTINE><BR/><CODEROUTINE>split --bytes=256k</CODEROUTINE></TERM><DESC>generate file of 256K</DESC></ROW>
@@ -118,7 +118,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>tail</T><A>javascript:do_reference("man/linux/1/tail")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>file display the 10 last lines of file</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>tail</T><A>https://man7.org/linux/man-pages/man1/tail.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>file display the 10 last lines of file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tail -105</CODEROUTINE></TERM><DESC>display the 105 last lines</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tail +105</CODEROUTINE></TERM><DESC>display the last lines starting at the 105th one</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tail -c78</CODEROUTINE></TERM><DESC>display the 78 last characters</DESC></ROW>
@@ -129,7 +129,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>head</T><A>javascript:do_reference("man/linux/1/head")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display the 10 first lines of file</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>head</T><A>https://man7.org/linux/man-pages/man1/head.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display the 10 first lines of file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>head -23</CODEROUTINE><BR/><CODEROUTINE>head -lines 23</CODEROUTINE></TERM><DESC>display the 23 first lines</DESC></ROW>
   <ROW><TERM><CODEROUTINE>head -c 23</CODEROUTINE></TERM><DESC>display the 23 first characters</DESC></ROW>
   <ROW><TERM><CODEROUTINE>head -n -23</CODEROUTINE></TERM><DESC>display all but the 23 last lines</DESC></ROW>
@@ -138,7 +138,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>dd</T><A>javascript:do_reference("man/linux/1/dd")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>convert files</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>dd</T><A>https://man7.org/linux/man-pages/man1/dd.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>convert files</DESC></ROW>
   <ROW><TERM><CODEROUTINE>dd if=infoobar of=outfoobar count=1 ibs=12345</CODEROUTINE></TERM><DESC>get the first 12345 bytes of a file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>dd if=infoobar of=outfoobar skip=1 ibs=12345</CODEROUTINE></TERM><DESC>get the end of a file starting at offset 12345</DESC></ROW>
   <ROW><TERM><CODEROUTINE>dd if=/dev/zero of=foobar bs=2000M count=1</CODEROUTINE></TERM><DESC>quickly create a file of 2G</DESC></ROW>
@@ -146,7 +146,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>cut</T><A>javascript:do_reference("man/linux/1/cut")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>extract sections of lines</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>cut</T><A>https://man7.org/linux/man-pages/man1/cut.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>extract sections of lines</DESC></ROW>
   <ROW><TERM><CODEROUTINE>cut -f12</CODEROUTINE></TERM><DESC>extract the 12<SUP>th</SUP> field</DESC></ROW>
   <ROW><TERM><CODEROUTINE>cut -d" "</CODEROUTINE></TERM><DESC>use space instead of tab as the field delimiter</DESC></ROW>
   <ROW><TERM><CODEROUTINE>cut -c-200</CODEROUTINE></TERM><DESC>print the 200 first characters</DESC></ROW>
@@ -154,12 +154,12 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>sort</T><A>javascript:do_reference("man/linux/1/sort")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>sort lines of text</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>sort</T><A>https://man7.org/linux/man-pages/man1/sort.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>sort lines of text</DESC></ROW>
   <ROW><TERM><CODEROUTINE>sort -n</CODEROUTINE></TERM><DESC>sort strings as numerical values</DESC></ROW>
   <ROW><TERM><CODEROUTINE>sort -t.</CODEROUTINE></TERM><DESC>use <CODEROUTINE>.</CODEROUTINE> as the field separator</DESC></ROW>
   <ROW><TERM><CODEROUTINE>sort -k3</CODEROUTINE></TERM><DESC>sort key starts at the 3<SUP>rd</SUP> field</DESC></ROW>
   <ROW><TERM><CODEROUTINE>sort -k3,5</CODEROUTINE></TERM><DESC>sort key starts at the 3<SUP>rd</SUP> field and ends at the 5<SUP>th</SUP> field</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>sort -u</CODEROUTINE></TERM><DESC>output only first of lines with equal keys (take care, the remainder of the lines may be different, pipe into <CODEROUTINE><X><T>uniq</T><A>javascript:do_reference("man/linux/1/uniq")</A><L>en</L><F>HTML</F></X></CODEROUTINE> if necessary)</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>sort -u</CODEROUTINE></TERM><DESC>output only first of lines with equal keys (take care, the remainder of the lines may be different, pipe into <CODEROUTINE><X><T>uniq</T><A>https://man7.org/linux/man-pages/man1/uniq.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> if necessary)</DESC></ROW>
   <ROW><TERM><CODEROUTINE>sort -r</CODEROUTINE></TERM><DESC>sort in reverse order</DESC></ROW>
   <ROW><TERM><CODEROUTINE>sort -c</CODEROUTINE></TERM><DESC>check for ordering, do not sort</DESC></ROW>
   <ROW><TERM><CODEROUTINE>sort -c -u</CODEROUTINE></TERM><DESC>check for strict ordering, do not sort</DESC></ROW>
@@ -167,7 +167,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>uniq</T><A>javascript:do_reference("man/linux/1/uniq")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>remove duplicated lines from a sorted file</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>uniq</T><A>https://man7.org/linux/man-pages/man1/uniq.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>remove duplicated lines from a sorted file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>uniq -c</CODEROUTINE></TERM><DESC>prefix lines by the number of occurrences</DESC></ROW>
   <ROW><TERM><CODEROUTINE>uniq -d</CODEROUTINE></TERM><DESC>print only duplicated lines</DESC></ROW>
   <ROW><TERM><CODEROUTINE>uniq -u</CODEROUTINE></TERM><DESC>print only unique lines</DESC></ROW>
@@ -175,7 +175,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>wc</T><A>javascript:do_reference("man/linux/1/wc")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print counts for each file, and a total line if more than one file is specified<BR/>if there is no file, or the file name is -, read from the standard input<BR/>by default, print newline, word, and byte counts<BR/>the order is: newline, word, character, byte, maximum line length</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>wc</T><A>https://man7.org/linux/man-pages/man1/wc.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print counts for each file, and a total line if more than one file is specified<BR/>if there is no file, or the file name is -, read from the standard input<BR/>by default, print newline, word, and byte counts<BR/>the order is: newline, word, character, byte, maximum line length</DESC></ROW>
   <ROW><TERM><CODEROUTINE>-c</CODEROUTINE><BR/><CODEROUTINE>--bytes</CODEROUTINE></TERM><DESC>print the byte counts</DESC></ROW>
   <ROW><TERM><CODEROUTINE>-m</CODEROUTINE><BR/><CODEROUTINE>--chars</CODEROUTINE></TERM><DESC>print the character counts</DESC></ROW>
   <ROW><TERM><CODEROUTINE>-l</CODEROUTINE><BR/><CODEROUTINE>--lines</CODEROUTINE></TERM><DESC>print the newline counts</DESC></ROW>
@@ -185,7 +185,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>diff</T><A>javascript:do_reference("man/linux/1/diff")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>diff</T><A>https://man7.org/linux/man-pages/man1/diff.1.html</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE></DESC></ROW>
   <ROW><TERM><CODEROUTINE>diff -r</CODEROUTINE><BR/><CODEROUTINE>diff --recursive</CODEROUTINE></TERM><DESC>perform a recursive diff</DESC></ROW>
   <ROW><TERM><CODEROUTINE>diff -s</CODEROUTINE><BR/><CODEROUTINE>diff --report-identical-files</CODEROUTINE></TERM><DESC>indicate names of files which are identical</DESC></ROW>
   <ROW><TERM><CODEROUTINE>diff -y</CODEROUTINE><BR/><CODEROUTINE>diff --side-by-side</CODEROUTINE></TERM><DESC>side by side display (as for <CODEROUTINE>sdiff</CODEROUTINE>)</DESC></ROW>
@@ -194,7 +194,7 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>sdiff</T><A>javascript:do_reference("man/linux/1/sdiff")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and merge them interactively</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>sdiff</T><A>https://man7.org/linux/man-pages/man1/sdiff.1.html</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>find differences between <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and merge them interactively</DESC></ROW>
   <ROW><TERM><CODEROUTINE>sdiff -s</CODEROUTINE></TERM><DESC>ignore common lines</DESC></ROW>
   <ROW><TERM><CODEROUTINE>sdiff -w &lt;n&gt;</CODEROUTINE><BR/><CODEROUTINE>sdiff --width=&lt;n&gt;</CODEROUTINE></TERM><DESC>output at most <CODEROUTINE>n</CODEROUTINE> (default 130) columns per line</DESC></ROW>
 </DEFINITIONTABLE>
@@ -210,12 +210,12 @@ Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODERO
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>cmp</T><A>javascript:do_reference("man/linux/1/cmp")</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>compare <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and indicate the offset and line number of the first difference</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>cmp</T><A>https://man7.org/linux/man-pages/man1/cmp.1.html</A><L>en</L><F>HTML</F></X> &lt;file1&gt; &lt;file2&gt;</CODEROUTINE></TERM><DESC>compare <CODEROUTINE>file1</CODEROUTINE> and <CODEROUTINE>file2</CODEROUTINE> and indicate the offset and line number of the first difference</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>find</T><A>javascript:do_reference("man/linux/1/find")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>look for files</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>find</T><A>https://man7.org/linux/man-pages/man1/find.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>look for files</DESC></ROW>
   <ROW><TERM><CODEROUTINE>-P</CODEROUTINE></TERM><DESC>never follow symbolic links (this is the default)<BR/>(i.e. the symbolic link is used to perform the tests)</DESC></ROW>
   <ROW><TERM><CODEROUTINE>-L</CODEROUTINE></TERM><DESC>follow symbolic links<BR/>(i.e. the pointed file/directory is used to perform the tests)<BR/>this implies <CODEROUTINE>-noleaf</CODEROUTINE><BR/><CODEROUTINE>-lname</CODEROUTINE> and <CODEROUTINE>-ilname</CODEROUTINE> always return false</DESC></ROW>
   <ROW><TERM><CODEROUTINE>-H</CODEROUTINE></TERM><DESC>follow symbolic links only for the command line arguments, but not for the scanned directories</DESC></ROW>
@@ -252,12 +252,12 @@ Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODERO
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>file</T><A>javascript:do_reference("man/linux/1/file")</A><L>en</L><F>HTML</F></X> &lt;file&gt;</CODEROUTINE></TERM><DESC>return the type of <CODEROUTINE>file</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>file</T><A>https://man7.org/linux/man-pages/man1/file.1.html</A><L>en</L><F>HTML</F></X> &lt;file&gt;</CODEROUTINE></TERM><DESC>return the type of <CODEROUTINE>file</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>stat</T><A>javascript:do_reference("man/linux/1/stat")</A><L>en</L><F>HTML</F></X> &lt;file&gt;</CODEROUTINE></TERM><DESC>display information about <CODEROUTINE>file</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>stat</T><A>https://man7.org/linux/man-pages/man1/stat.1.html</A><L>en</L><F>HTML</F></X> &lt;file&gt;</CODEROUTINE></TERM><DESC>display information about <CODEROUTINE>file</CODEROUTINE></DESC></ROW>
   <ROW><TERM><CODEROUTINE>stat -c &lt;format&gt;</CODEROUTINE></TERM><DESC>specifies the output format
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE>%A</CODEROUTINE></TERM><DESC>Access rights in human readable form</DESC></ROW>
@@ -293,27 +293,27 @@ Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODERO
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>chmod</T><A>javascript:do_reference("man/linux/1/chmod")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change file access permissions</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>chmod</T><A>https://man7.org/linux/man-pages/man1/chmod.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>change file access permissions</DESC></ROW>
   <ROW><TERM><CODEROUTINE>chmod -s file</CODEROUTINE></TERM><DESC>unset the user and group setuid bits</DESC></ROW>
   <ROW><TERM><CODEROUTINE>chmod u+s file</CODEROUTINE></TERM><DESC>set the user setuid bit</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>dos2unix</T><A>javascript:do_reference("man/linux/1/dos2unix")</A><L>en</L><F>HTML</F></X> foobqr</CODEROUTINE></TERM><DESC>convert <CODEROUTINE>foobar</CODEROUTINE> from DOS encoding into Unix encoding</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>dos2unix</T><A>https://linux.die.net/man/1/dos2unix</A><L>en</L><F>HTML</F></X> foobqr</CODEROUTINE></TERM><DESC>convert <CODEROUTINE>foobar</CODEROUTINE> from DOS encoding into Unix encoding</DESC></ROW>
   <ROW><TERM><CODEROUTINE>dos2unix -c mac foobar</CODEROUTINE></TERM><DESC>convert <CODEROUTINE>foobar</CODEROUTINE> from Mac encoding into Unix encoding</DESC></ROW>
-  <ROW><TERM><CODEROUTINE><X><T>unix2dos</T><A>javascript:do_reference("man/linux/1/unix2dos")</A><L>en</L><F>HTML</F></X> foobar</CODEROUTINE></TERM><DESC>convert <CODEROUTINE>foobar</CODEROUTINE> from Unix encoding into DOS encoding</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>unix2dos</T><A>https://linux.die.net/man/1/unix2dos</A><L>en</L><F>HTML</F></X> foobar</CODEROUTINE></TERM><DESC>convert <CODEROUTINE>foobar</CODEROUTINE> from Unix encoding into DOS encoding</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>iconv</T><A>javascript:do_reference("man/linux/1/iconv")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>convert encoding of given files from one encoding to another</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>iconv</T><A>https://man7.org/linux/man-pages/man1/iconv.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>convert encoding of given files from one encoding to another</DESC></ROW>
   <ROW><TERM><CODEROUTINE>iconv --from-code=ISO-8859-1 --to-code=UTF-8 &lt; old_file &gt; new_file</CODEROUTINE></TERM><DESC>convert a file from ISO-8859-1 to UTF-8</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>tar</T><A>javascript:do_reference("man/linux/1/tar")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>archiving utility</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>tar</T><A>https://man7.org/linux/man-pages/man1/tar.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>archiving utility</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tar -c</CODEROUTINE><BR/><CODEROUTINE>tar --create</CODEROUTINE></TERM><DESC>create an archive file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tar -x</CODEROUTINE><BR/><CODEROUTINE>tar --extract</CODEROUTINE><BR/><CODEROUTINE>tar --get</CODEROUTINE></TERM><DESC>extract files from an archive file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tar -t</CODEROUTINE><BR/><CODEROUTINE>tar --list</CODEROUTINE></TERM><DESC>list content of an archive file</DESC></ROW>
@@ -323,18 +323,18 @@ Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODERO
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>getfacl</T><A>javascript:do_reference("man/linux/1/getfacl")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return the ACL rights of <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
-  <ROW><TERM><CODEROUTINE><X><T>setfacl</T><A>javascript:do_reference("man/linux/1/setfacl")</A><L>en</L><F>HTML</F></X></CODEROUTINE> -m u:tommy:r file</TERM><DESC>give <CODEROUTINE>tommy</CODEROUTINE> read access to <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>getfacl</T><A>https://man7.org/linux/man-pages/man1/getfacl.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return the ACL rights of <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>setfacl</T><A>https://man7.org/linux/man-pages/man1/setfacl.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> -m u:tommy:r file</TERM><DESC>give <CODEROUTINE>tommy</CODEROUTINE> read access to <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>logrotate</T><A>javascript:do_reference("man/linux/8/logrotate")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>rotate/compress/delete/mail some logfiles</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>logrotate</T><A>https://man7.org/linux/man-pages/man8/logrotate.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>rotate/compress/delete/mail some logfiles</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>du</T><A>javascript:do_reference("man/linux/1/du")</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>compute disk space usage</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>du</T><A>https://man7.org/linux/man-pages/man1/du.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>compute disk space usage</DESC></ROW>
   <ROW><TERM><CODEROUTINE>du -s</CODEROUTINE></TERM><DESC>display only a total for each argument</DESC></ROW>
   <ROW><TERM><CODEROUTINE>du -k</CODEROUTINE></TERM><DESC>display sizes in kilobytes</DESC></ROW>
   <ROW><TERM><CODEROUTINE>du -b</CODEROUTINE></TERM><DESC>display apparent sizes in bytes</DESC></ROW>

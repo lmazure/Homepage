@@ -18,20 +18,20 @@
 <ITEM>10.9 Mavericks</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>file management</B></U></TITLE>
-<ITEM>to copy files/directories while preserving metadata and resource forks, use <CODEROUTINE><X><T>ditto</T><A>javascript:do_reference("man/macosx/1/ditto")</A><L>en</L><F>HTML</F></X></CODEROUTINE> or <CODEROUTINE><X><T>/Developer/Tools/CpMac</T><A>javascript:do_reference("man/macosx/1/CpMac")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/>
-starting at MacOS 10.4, the <CODEROUTINE><X><T>cp</T><A>javascript:do_reference("man/macosx/1/cp")</A><L>en</L><F>HTML</F></X></CODEROUTINE> preserves metadata and resource forks, <CODEROUTINE>/Developer/Tools/CpMac</CODEROUTINE> will be deprecated</ITEM>
-<ITEM>to move files/directories while preserving metadata and resource forks, use <CODEROUTINE><X><T>/Developer/Tools/MvMac</T><A>javascript:do_reference("man/macosx/1/MvMac")</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/>
-starting at MacOS 10.4, the <CODEROUTINE><X><T>mv</T><A>javascript:do_reference("man/macosx/1/mv")</A><L>en</L><F>HTML</F></X></CODEROUTINE> preserves metadata and resource forks, <CODEROUTINE>/Developer/Tools/MvMac</CODEROUTINE> will be deprecated</ITEM>
+<ITEM>to copy files/directories while preserving metadata and resource forks, use <CODEROUTINE>ditto</CODEROUTINE> or <CODEROUTINE>/Developer/Tools/CpMac</CODEROUTINE><BR/>
+starting at MacOS 10.4, the <CODEROUTINE>cp</CODEROUTINE> preserves metadata and resource forks, <CODEROUTINE>/Developer/Tools/CpMac</CODEROUTINE> will be deprecated</ITEM>
+<ITEM>to move files/directories while preserving metadata and resource forks, use <CODEROUTINE>/Developer/Tools/MvMac</CODEROUTINE><BR/>
+starting at MacOS 10.4, the <CODEROUTINE>mv</CODEROUTINE> preserves metadata and resource forks, <CODEROUTINE>/Developer/Tools/MvMac</CODEROUTINE> will be deprecated</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>applications</B></U></TITLE>
-<ITEM><CODESAMPLE><X><T>open</T><A>javascript:do_reference("man/macosx/1/open")</A><L>en</L><F>HTML</F></X> file 1 [ file2 […] ]</CODESAMPLE>
+<ITEM><CODESAMPLE>open file 1 [ file2 […] ]</CODESAMPLE>
 open the files with the adequate applications<BR/>
 the files can be specified as URLs<BR/>
 the application can be specified with the <CODEROUTINE>-a application</CODEROUTINE> option</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>CD/DVD</B></U></TITLE>
 <ITEM>convert a DMG image into an ISO image
-<CODESAMPLE><X><T>hdiutil</T><A>javascript:do_reference("man/macosx/1/hdiutil")</A><L>en</L><F>HTML</F></X> convert /path/to/filename.dmg -format UDTO -o /path/to/savefile.iso</CODESAMPLE></ITEM>
+<CODESAMPLE>hdiutil convert /path/to/filename.dmg -format UDTO -o /path/to/savefile.iso</CODESAMPLE></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>Links</T><A>../links/macos.html</A><L>en</L><F>HTML</F></X>
