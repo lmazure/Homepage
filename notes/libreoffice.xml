@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -108,6 +108,10 @@
         <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Alt'/><KEY id='Down'/></TERM>
         <DESC>move current line down</DESC>
       </ROW>
+      <ROW>
+        <TERM><KEY id='F3'/></TERM>
+        <DESC>replace the previous word by the corresponding autotext</DESC>
+      </ROW>
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM>Formating
@@ -187,6 +191,14 @@
   <ITEM><NLIST><TITLE>Enable real time spell checking</TITLE>
     <ITEM><CODEMENU>Outils<CODEMENU>Options…</CODEMENU></CODEMENU></ITEM>
     <ITEM>Check <CODEMENU>Paramètres linguistiques<CODEMENU>Linguistique<CODEMENU>Options<CODEMENU>Vérifier l'orthographe au cours de la frappe</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
+  </NLIST></ITEM>
+  <ITEM><NLIST><TITLE>Create an autotext</TITLE>
+    <ITEM>Select some text (it can contain graphics, tables...)</ITEM>
+    <ITEM>Type <MODIFIERKEY id='Ctrl'/><KEY id='F3'/></ITEM>
+    <ITEM>Select a category</ITEM>
+    <ITEM>Type a name. A shortcut is proposed, it can be modified.</ITEM>
+    <ITEM>Click <CODEMENU>AutoText<CODEMENU>New</CODEMENU></CODEMENU>.</ITEM>
+    <ITEM>Click <CODEMENU>Close</CODEMENU>.</ITEM>
   </NLIST></ITEM>
 </BLIST><BR/>
 <BLIST><TITLE>Calc</TITLE>
@@ -291,6 +303,20 @@
         <TERM1><CODEROUTINE>NOW()</CODEROUTINE></TERM1>
         <TERM2><CODEROUTINE>MAINTENANT()</CODEROUTINE></TERM2>
         <DESC>return the current date and time</DESC>
+      </ROW>
+    </DEFINITION2TABLE>
+  </ITEM>
+  <ITEM>Statistical functions
+    <DEFINITION2TABLE>
+      <ROW>
+        <TERM1><CODEROUTINE>HARMEAN(Number1; Number2; ...; Number30)</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>MOYENNE.HARMONIQUE(nombre1;nombre2;...;nombre30)</CODEROUTINE></TERM2>
+        <DESC>return the harmonic mean</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>TRIMMEAN(Data; Alpha)</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>MOYENNE.REDUITE(données;alpha)</CODEROUTINE></TERM2>
+        <DESC>return the mean of a data set without the <CODEROUTINE>Alpha</CODEROUTINE> percent of data at the margins</DESC>
       </ROW>
     </DEFINITION2TABLE>
   </ITEM>
