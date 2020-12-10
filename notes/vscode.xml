@@ -3,8 +3,23 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
+<BLIST><TITLE>CLI</TITLE>
+  <ITEM><SLIST><TITLE>Print command line help</TITLE>
+    <ITEM><CODEROUTINE>Code.exe --help</CODEROUTINE></ITEM>
+  </SLIST></ITEM>
+  <ITEM><SLIST><TITLE>Print version</TITLE>
+    <ITEM><CODEROUTINE>Code.exe --version</CODEROUTINE></ITEM>
+  </SLIST></ITEM>
+  <ITEM><SLIST><TITLE>Wait for the files to be closed before returning</TITLE>
+    <ITEM><CODEROUTINE>Code.exe --wait file1 file2</CODEROUTINE></ITEM>
+  </SLIST></ITEM>
+  <ITEM><SLIST><TITLE>Specify the directory that user data is kept in</TITLE>
+    <ITEM><CODEROUTINE>Code.exe  --user-data-dir H:\Documents\tools\VSCode\myDataDir</CODEROUTINE></ITEM>
+  </SLIST></ITEM>
+</BLIST>
+<BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='P'/><BR/>
@@ -52,7 +67,7 @@ File
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='E'/><BR/>
       <MODIFIERKEY id='Ctrl'/><KEY id='P'/><BR/>
-      <CODEROUTINE>Go to file...</CODEROUTINE></TERM>
+      <CODEROUTINE>Go to file…</CODEROUTINE></TERM>
     <DESC>go to file</DESC>
   </ROW>
   <ROW>
@@ -226,6 +241,16 @@ File
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+<BLIST><TITLE>Comparison of two files</TITLE>
+  <ITEM><NLIST><TITLE>Using the UI</TITLE>
+    <ITEM>right click on the first file and select <CODEMENU>Select for Compare</CODEMENU></ITEM>
+    <ITEM>right click on the second file and select <CODEMENU>Select for Compare with Selected</CODEMENU></ITEM>
+  </NLIST></ITEM>
+  <ITEM><SLIST><TITLE>Using the CLI</TITLE>
+    <ITEM><CODEROUTINE>Code.exe --diff file1 file2</CODEROUTINE></ITEM>
+  </SLIST></ITEM>
+</BLIST>
+<BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id='Alt'/><KEY id='F12'/></TERM>
@@ -270,7 +295,7 @@ File
 </DEFINITIONTABLE>
 <BR/>
 <BLIST><TITLE>Keyboard Shortcuts</TITLE>
-  <ITEM>Type the string definition of a shortcut (e.g. "ctrl + n"), to find where it is used.</ITEM>
+  <ITEM>Type the string definition of a shortcut (e.g. <CODEROUTINE>ctrl + n</CODEROUTINE>), to find where it is used.</ITEM>
 </BLIST>
 </CONTENT>
 <X><T>Links</T><A>../links/ide.html#vscode</A><L>en</L><F>HTML</F></X>
