@@ -218,12 +218,20 @@
     <DESC>show commit logs</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>--</CODEROUTINE></TERM>
+    <DESC>separate paths from revisions</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --full-history -- myfile</CODEROUTINE></TERM>
+    <DESC>display the log of a file even if this one does not exist anymore</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git log -&lt;n&gt;</CODEROUTINE></TERM>
-    <DESC>limits the log to the n last commits</DESC>
+    <DESC>limit the log to the n last commits</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --since "2020-09-05 00:00" --until "2020-09-06 24:00"</CODEROUTINE></TERM>
-    <DESC>limits the log between two datetimes</DESC>
+    <DESC>limit the log between two datetimes</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --committer=&lt;regex&gt;</CODEROUTINE></TERM>
@@ -239,11 +247,11 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --stat</CODEROUTINE></TERM>
-    <DESC>indicates the modified files with a graph of the stats of the changes</DESC>
+    <DESC>indicate the modified files with a graph of the stats of the changes</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --shortstat</CODEROUTINE></TERM>
-    <DESC>indicates the numbers of modified files, added and deleted lines</DESC>
+    <DESC>indicate the numbers of modified files, added and deleted lines</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log -p</CODEROUTINE><BR/>
@@ -253,7 +261,7 @@
   <ROW>
     <TERM><CODEROUTINE>git log -U&lt;n&gt;</CODEROUTINE><BR/>
           <CODEROUTINE>git log --unified=&lt;n&gt;</CODEROUTINE></TERM>
-    <DESC>generate diffs with n lines of context instead of the usual 3. Implies -p</DESC>
+    <DESC>generate diffs with n lines of context instead of the usual 3. Implies <CODEROUTINE>-p</CODEROUTINE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --pretty="%ce,%cd" --date=short > commits.csv</CODEROUTINE></TERM>
@@ -279,15 +287,15 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --soft</CODEROUTINE></TERM>
-    <DESC>does not touch the index file or the working tree</DESC>
+    <DESC>do not touch the index file or the working tree</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --mixed</CODEROUTINE></TERM>
-    <DESC>resets the index but not the working tree<BR/>this is the default</DESC>
+    <DESC>reset the index but not the working tree<BR/>this is the default</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --hard</CODEROUTINE></TERM>
-    <DESC>resets the index and the working tree</DESC>
+    <DESC>reset the index and the working tree</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --hard HEAD~2</CODEROUTINE></TERM>
