@@ -148,50 +148,19 @@
 
 <xs:element name="CONTENT" type="content"/>
 
-<xs:element name="BLIST">
-  <xs:complexType>
-    <xs:sequence>
-      <xs:element name="TITLE" type="content" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="ITEM" type="content" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
+<xs:complexType name="List">
+  <xs:sequence>
+    <xs:element name="TITLE" type="content" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="SUBTITLE" type="content" minOccurs="0" maxOccurs="1"/>
+    <xs:element name="ITEM" type="content" minOccurs="1" maxOccurs="unbounded"/>
+  </xs:sequence>
+</xs:complexType>
 
-<xs:element name="SLIST">
-  <xs:complexType>
-    <xs:sequence>
-      <xs:element name="TITLE" type="content" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="ITEM" type="content" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
-
-<xs:element name="NLIST">
-  <xs:complexType>
-    <xs:sequence>
-      <xs:element name="TITLE" type="content" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="ITEM" type="content" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
-
-<xs:element name="CLIST">
-  <xs:complexType>
-    <xs:sequence>
-      <xs:element name="TITLE" type="content" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="ITEM" type="content" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
-
-<xs:element name="LLIST">
-  <xs:complexType>
-    <xs:sequence>
-      <xs:element name="TITLE" type="content" minOccurs="0" maxOccurs="1"/>
-      <xs:element name="ITEM" type="content" minOccurs="1" maxOccurs="unbounded"/>
-    </xs:sequence>
-  </xs:complexType>
-</xs:element>
+<xs:element name="BLIST" type="List"/>
+<xs:element name="SLIST" type="List"/>
+<xs:element name="NLIST" type="List"/>
+<xs:element name="CLIST" type="List"/>
+<xs:element name="LLIST" type="List"/>
 
 <xs:element name="U" type="content"/>
 

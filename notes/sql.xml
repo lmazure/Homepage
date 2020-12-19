@@ -189,7 +189,7 @@ example
 retrieve the values of all columns
 <CODESAMPLE>SELECT * FROM Persons;</CODESAMPLE>
 </ITEM>
-<ITEM><BLIST><TITLE>where</TITLE>
+<ITEM><BLIST><TITLE><CODEROUTINE>where</CODEROUTINE></TITLE>
 <ITEM>
 retrieve the values corresponding to a criterion
 <CODESAMPLE>SELECT <I>column_name1</I>, <I>column_name2</I>…
@@ -257,7 +257,7 @@ avoid to return duplicate data
 FROM <I>table_name</I>;</CODESAMPLE>
 The opposite of <CODEROUTINE>DISTINCT</CODEROUTINE> is <CODEROUTINE>ALL</CODEROUTINE>.
 </ITEM>
-<ITEM><BLIST><TITLE>order by</TITLE>
+<ITEM><BLIST><TITLE><CODEROUTINE>order by</CODEROUTINE></TITLE>
 <ITEM>
 sorting the returned data
 <CODESAMPLE>SELECT Company, OrderNumber FROM Orders
@@ -274,7 +274,7 @@ it is possible to sort by ascending (<CODEROUTINE>ASC</CODEROUTINE>, the default
 ORDER BY Company DESC, OrderNumber ASC;</CODESAMPLE>
 </ITEM></BLIST>
 </ITEM>
-<ITEM><BLIST><TITLE>alias</TITLE>
+<ITEM><BLIST><TITLE>Alias</TITLE>
 <ITEM>
 it is possible to define table aliases
 <CODESAMPLE>SELECT <I>column</I> FROM <I>table</I> AS <I>table_alias</I></CODESAMPLE>
@@ -287,7 +287,7 @@ example
 FROM pet ORDER BY age;</CODESAMPLE>
 </ITEM></BLIST>
 </ITEM>
-<ITEM><BLIST><TITLE>group by</TITLE>
+<ITEM><BLIST><TITLE><CODEROUTINE>group by</CODEROUTINE></TITLE>
 <ITEM>
 <CODEROUTINE>GROUP BY</CODEROUTINE> is used when we are selecting multiple columns from a table (or tables) and at least one arithmetic operator appears in the <CODEROUTINE>SELECT</CODEROUTINE> statement. When that happens, we need to <CODEROUTINE>GROUP BY</CODEROUTINE> all the other selected columns, i.e., all columns except the one(s) operated on by the arithmetic operator.
 <CODESAMPLE>SELECT storeName, SUM(sales)<BR/>
@@ -295,7 +295,7 @@ FROM storeInformation<BR/>
 GROUP BY storeName;</CODESAMPLE>
 </ITEM></BLIST>
 </ITEM>
-<ITEM><BLIST><TITLE>having</TITLE>
+<ITEM><BLIST><TITLE><CODEROUTINE>having</CODEROUTINE></TITLE>
 <ITEM>
 <CODEROUTINE>HAVING</CODEROUTINE> is used to write conditions containing aggregate functions
 <CODESAMPLE>SELECT storeName, SUM(sales)<BR/>
@@ -470,7 +470,7 @@ ON customer (city, country);</CODESAMPLE>
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Aggregate functions</B></U></TITLE>
-<ITEM><BLIST><TITLE>count</TITLE>
+<ITEM><BLIST><TITLE><CODEROUTINE>count</CODEROUTINE></TITLE>
 <ITEM><CODEROUTINE>COUNT(*)</CODEROUTINE> returns the number of rows of the table
 <CODESAMPLE>SELECT COUNT(*) FROM <I>table</I>;</CODESAMPLE>
 </ITEM>

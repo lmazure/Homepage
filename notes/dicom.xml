@@ -32,12 +32,12 @@
 <BR/>
 A DICOM file is a list of fields.
 <BLIST><TITLE>Each field is composed by:</TITLE>
-<ITEM><BLIST><TITLE>for explicit encodings</TITLE>
+<ITEM><BLIST><SUBTITLE>for explicit encodings</SUBTITLE>
 <ITEM>tag</ITEM>
 <ITEM>VR (Value Representation)</ITEM>
 <ITEM>length</ITEM>
 <ITEM>value</ITEM></BLIST></ITEM>
-<ITEM><BLIST><TITLE>for implicit encodings</TITLE>
+<ITEM><BLIST><SUBTITLE>for implicit encodings</SUBTITLE>
 <ITEM>tag</ITEM>
 <ITEM>length</ITEM>
 <ITEM>value</ITEM></BLIST></ITEM>

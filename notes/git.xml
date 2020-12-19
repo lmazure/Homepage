@@ -329,7 +329,7 @@
   <ROW>
     <TERM><CODEROUTINE>git pull</CODEROUTINE></TERM>
     <DESC>
-      <BLIST><TITLE>incorporate changes of the remote repository into the current branch, it is the same as</TITLE>
+      <BLIST><SUBTITLE>incorporate changes of the remote repository into the current branch, it is the same as</SUBTITLE>
         <ITEM><CODEROUTINE>git fetch</CODEROUTINE> scoped to the local branch that HEAD is pointed at</ITEM>
         <ITEM>followed by <CODEROUTINE>git merge FETCH_HEAD</CODEROUTINE>.</ITEM>
       </BLIST>
@@ -419,7 +419,7 @@
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
-<BLIST><TITLE>gitignore</TITLE>
+<BLIST><TITLE><CODEFILENAME>.gitignore</CODEFILENAME></TITLE>
   <ITEM>It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.gitignore</CODEFILENAME> file of that directory.</ITEM>
 </BLIST>
 <BR/>

@@ -493,6 +493,9 @@
   <xsl:if test="count(./TITLE)>0">
     <xsl:apply-templates select="./TITLE"/><br/>
   </xsl:if>
+  <xsl:if test="count(./SUBTITLE)>0">
+    <xsl:apply-templates select="./SUBTITLE"/><br/>
+  </xsl:if>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
        <xsl:apply-templates select="./ITEM"/>
@@ -503,6 +506,12 @@
 <xsl:template match="BLIST">
   <xsl:if test="count(./TITLE)>0">
     <xsl:apply-templates select="./TITLE"/>
+    <xsl:if test="count(./SUBTITLE)>0">
+      <br/>
+    </xsl:if>
+  </xsl:if>
+  <xsl:if test="count(./SUBTITLE)>0">
+    <xsl:apply-templates select="./SUBTITLE"/>
   </xsl:if>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
@@ -514,6 +523,12 @@
 <xsl:template match="NLIST">
   <xsl:if test="count(./TITLE)>0">
     <xsl:apply-templates select="./TITLE"/>
+    <xsl:if test="count(./SUBTITLE)>0">
+      <br/>
+    </xsl:if>
+  </xsl:if>
+  <xsl:if test="count(./SUBTITLE)>0">
+    <xsl:apply-templates select="./SUBTITLE"/>
   </xsl:if>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
@@ -525,6 +540,12 @@
 <xsl:template match="CLIST">
   <xsl:if test="count(./TITLE)>0">
     <xsl:apply-templates select="./TITLE"/>:
+    <xsl:if test="count(./SUBTITLE)>0">
+      <xsl:text> — </xsl:text>
+    </xsl:if>
+  </xsl:if>
+  <xsl:if test="count(./SUBTITLE)>0">
+    <xsl:apply-templates select="./SUBTITLE"/>
   </xsl:if>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
@@ -536,6 +557,12 @@
 <xsl:template match="LLIST">
   <xsl:if test="count(./TITLE)>0">
     <h2><xsl:apply-templates select="./TITLE"/></h2>
+    <xsl:if test="count(./SUBTITLE)>0">
+      <br/>
+    </xsl:if>
+  </xsl:if>
+  <xsl:if test="count(./SUBTITLE)>0">
+    <xsl:apply-templates select="./SUBTITLE"/>
   </xsl:if>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
