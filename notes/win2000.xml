@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -17,6 +17,14 @@
 <ROW>
   <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Windows'/><KEY id='Left'/></TERM>
   <DESC>display the previous virtual desktop</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id='Windows'/><KEY id=';'/></TERM>
+  <DESC>display the emoji panel</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id='Windows'/><KEY id='+'/></TERM>
+  <DESC>display the magnifier</DESC>
 </ROW>
 </DEFINITIONTABLE>
 File explorer
