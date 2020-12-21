@@ -3,12 +3,14 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java - User Interface</TITLE>
 <PATH>links/javaui.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><X><T>Client technologies</T><A>https://docs.oracle.com/javase/8/javase-clienttechnologies.htm</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>JavaFX</T><A>https://gluonhq.com/products/javafx/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><CLIST><TITLE><X><T>JavaFX</T><A>https://gluonhq.com/products/javafx/</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><X><T>Jenkov's tutorial</T><A>http://tutorials.jenkov.com/javafx/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>Magic with Merlin: Swinging audio</T><ST>Implement audio cues to improve your user interface</ST><A>https://www.ibm.com/developerworks/java/library/j-mer0730/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Zukowski</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>7</MONTH></DATE><COMMENT>How to add audio feedback to a user interface.</COMMENT></ARTICLE></ITEM>
