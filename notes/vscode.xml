@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -239,7 +239,8 @@ File
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F'/></TERM>
-    <DESC>search</DESC>
+    <DESC>search<BR/>
+    use the regexp <CODEROUTINE>\xa0</CODEROUTINE> to find non breaking spaces</DESC>
   </ROW>
   <ROW>
     <TERM><KEY id='F3'/></TERM>
@@ -250,6 +251,20 @@ File
     <DESC>replace<BR/>
     groups are defined by <CODEROUTINE>(</CODEROUTINE> and <CODEROUTINE>)</CODEROUTINE><BR/>
     use <CODEROUTINE>$0</CODEROUTINE> to insert the full string, <CODEROUTINE>$1</CODEROUTINE> the first group… <CODEROUTINE>$$</CODEROUTINE> to insert <CODEROUTINE>$</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F'/></TERM>
+    <DESC>search in files</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id='F4'/><BR/>
+    <CODEROUTINE>Focus Next Search Result</CODEROUTINE></TERM>
+    <DESC>select next search match</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Shift'/><KEY id='F4'/><BR/>
+    <CODEROUTINE>Focus Previous Search Result</CODEROUTINE></TERM>
+    <DESC>select previous search match</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F'/></TERM>

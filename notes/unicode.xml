@@ -5,58 +5,113 @@
 <PATH>notes/unicode.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-<BLIST><TITLE>17 planes, each of 65536 code points</TITLE>
-<ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
-<ITEM>Plane 1 (10000-1FFFF): Supplementary Multilingual Plane (SMP)</ITEM>
-<ITEM>Plane 2 (20000-2FFFF): Supplementary Ideographic Plane (SIP)</ITEM>
-<ITEM>Planes 3 → 13 (30000-DFFFF) are unassigned</ITEM>
-<ITEM>Plane 14 (E0000-EFFFF): Supplementary Special-purpose Plane (SSP)</ITEM>
-<ITEM>Plane 15 (F0000-FFFFF): Private Use Area (PUA)</ITEM>
-<ITEM>Plane 16 (100000-10FFFF): Private Use Area (PUA)</ITEM>
+<BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
+  <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
+  <ITEM>Plane 1 (10000-1FFFF): Supplementary Multilingual Plane (SMP)</ITEM>
+  <ITEM>Plane 2 (20000-2FFFF): Supplementary Ideographic Plane (SIP)</ITEM>
+  <ITEM>Planes 3 → 13 (30000-DFFFF) are unassigned</ITEM>
+  <ITEM>Plane 14 (E0000-EFFFF): Supplementary Special-purpose Plane (SSP)</ITEM>
+  <ITEM>Plane 15 (F0000-FFFFF): Private Use Area (PUA)</ITEM>
+  <ITEM>Plane 16 (100000-10FFFF): Private Use Area (PUA)</ITEM>
 </BLIST>
-<BLIST><TITLE>CJK</TITLE>
-<ITEM>the simplified vs. traditional Chinese is fully independent of the BMP vs. SIP<BR/>
-<BLIST><TITLE>Examples</TITLE>
-<ITEM>the traditional character is in the BMP: <X><T>&#x58C8;</T><A>http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=58C8</A><L>en</L><F>HTML</F></X><BR/>
-the simplified character is in the SIP: <X><T>&#x21484;</T><A>http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=21484</A><L>en</L><F>HTML</F></X></ITEM>
-<ITEM>the traditional character is in the BMP: <X><T>&#x939D;</T><A>http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=939D</A><L>en</L><F>HTML</F></X><BR/>
-the simplified character is in the SIP: <X><T>&#x28C4F;</T><A>http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=28C4F</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST></ITEM>
+<BLIST><TITLE><B>CJK</B></TITLE>
+  <ITEM>the simplified vs. traditional Chinese is fully independent of the BMP vs. SIP<BR/>
+  <BLIST><TITLE>Examples</TITLE>
+    <ITEM>the traditional character is in the BMP: <X><T>&#x58C8;</T><A>http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=58C8</A><L>en</L><F>HTML</F></X><BR/>
+      the simplified character is in the SIP: <X><T>&#x21484;</T><A>http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=21484</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM>the traditional character is in the BMP: <X><T>&#x939D;</T><A>http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=939D</A><L>en</L><F>HTML</F></X><BR/>
+      the simplified character is in the SIP: <X><T>&#x28C4F;</T><A>http://www.unicode.org/cgi-bin/GetUnihanData.pl?codepoint=28C4F</A><L>en</L><F>HTML</F></X></ITEM>
+  </BLIST></ITEM>
 </BLIST>
-General Category values
+<B>General Category values</B>
 <DEFINITIONTABLE>
-<ROW><TERM>major class / subclass</TERM><DESC>description</DESC></ROW>
-<ROW><TERM>Lu</TERM><DESC>Letter, uppercase</DESC></ROW>
-<ROW><TERM>Ll</TERM><DESC>Letter, lowercase</DESC></ROW>
-<ROW><TERM>Lt</TERM><DESC>Letter, titlecase</DESC></ROW>
-<ROW><TERM>Lm</TERM><DESC>Letter, modifier</DESC></ROW>
-<ROW><TERM>Lo</TERM><DESC>Letter, other</DESC></ROW>
-<ROW><TERM>Mn</TERM><DESC>Mark, nonspacing</DESC></ROW>
-<ROW><TERM>Mc</TERM><DESC>Mark, spacing combining</DESC></ROW>
-<ROW><TERM>Me</TERM><DESC>Mark, enclosing</DESC></ROW>
-<ROW><TERM>Nd</TERM><DESC>Number, decimal digit</DESC></ROW>
-<ROW><TERM>Nl</TERM><DESC>Number, letter</DESC></ROW>
-<ROW><TERM>No</TERM><DESC>Number, other</DESC></ROW>
-<ROW><TERM>Zs</TERM><DESC>Separator, space</DESC></ROW>
-<ROW><TERM>Zl</TERM><DESC>Separator, line</DESC></ROW>
-<ROW><TERM>Zp</TERM><DESC>Separator, paragraph</DESC></ROW>
-<ROW><TERM>Cc</TERM><DESC>Other, control</DESC></ROW>
-<ROW><TERM>Cf</TERM><DESC>Other, format</DESC></ROW>
-<ROW><TERM>Cs</TERM><DESC>Other, surrogate</DESC></ROW>
-<ROW><TERM>Co</TERM><DESC>Other, private use</DESC></ROW>
-<ROW><TERM>Cn</TERM><DESC>Other, not assigned (including noncharacters) </DESC></ROW>
-<ROW><TERM>Pc</TERM><DESC>Punctuation, connector</DESC></ROW>
-<ROW><TERM>Pd</TERM><DESC>Punctuation, dash</DESC></ROW>
-<ROW><TERM>Ps</TERM><DESC>Punctuation, open</DESC></ROW>
-<ROW><TERM>Pe</TERM><DESC>Punctuation, close</DESC></ROW>
-<ROW><TERM>Pi</TERM><DESC>Punctuation, initial quote (may behave like Ps or Pe depending on usage)</DESC></ROW>
-<ROW><TERM>Pf</TERM><DESC>Punctuation, final quote (may behave like Ps or Pe depending on usage)</DESC></ROW>
-<ROW><TERM>Po</TERM><DESC>Punctuation, other</DESC></ROW>
-<ROW><TERM>Sm</TERM><DESC>Symbol, math</DESC></ROW>
-<ROW><TERM>Sc</TERM><DESC>Symbol, currency</DESC></ROW>
-<ROW><TERM>Sk</TERM><DESC>Symbol, modifier</DESC></ROW>
-<ROW><TERM>So</TERM><DESC>Symbol, other</DESC></ROW>
+  <ROW><TERM>major class / subclass</TERM><DESC>description</DESC></ROW>
+  <ROW><TERM>Lu</TERM><DESC>Letter, uppercase</DESC></ROW>
+  <ROW><TERM>Ll</TERM><DESC>Letter, lowercase</DESC></ROW>
+  <ROW><TERM>Lt</TERM><DESC>Letter, titlecase</DESC></ROW>
+  <ROW><TERM>Lm</TERM><DESC>Letter, modifier</DESC></ROW>
+  <ROW><TERM>Lo</TERM><DESC>Letter, other</DESC></ROW>
+  <ROW><TERM>Mn</TERM><DESC>Mark, nonspacing</DESC></ROW>
+  <ROW><TERM>Mc</TERM><DESC>Mark, spacing combining</DESC></ROW>
+  <ROW><TERM>Me</TERM><DESC>Mark, enclosing</DESC></ROW>
+  <ROW><TERM>Nd</TERM><DESC>Number, decimal digit</DESC></ROW>
+  <ROW><TERM>Nl</TERM><DESC>Number, letter</DESC></ROW>
+  <ROW><TERM>No</TERM><DESC>Number, other</DESC></ROW>
+  <ROW><TERM>Zs</TERM><DESC>Separator, space</DESC></ROW>
+  <ROW><TERM>Zl</TERM><DESC>Separator, line</DESC></ROW>
+  <ROW><TERM>Zp</TERM><DESC>Separator, paragraph</DESC></ROW>
+  <ROW><TERM>Cc</TERM><DESC>Other, control</DESC></ROW>
+  <ROW><TERM>Cf</TERM><DESC>Other, format</DESC></ROW>
+  <ROW><TERM>Cs</TERM><DESC>Other, surrogate</DESC></ROW>
+  <ROW><TERM>Co</TERM><DESC>Other, private use</DESC></ROW>
+  <ROW><TERM>Cn</TERM><DESC>Other, not assigned (including noncharacters) </DESC></ROW>
+  <ROW><TERM>Pc</TERM><DESC>Punctuation, connector</DESC></ROW>
+  <ROW><TERM>Pd</TERM><DESC>Punctuation, dash</DESC></ROW>
+  <ROW><TERM>Ps</TERM><DESC>Punctuation, open</DESC></ROW>
+  <ROW><TERM>Pe</TERM><DESC>Punctuation, close</DESC></ROW>
+  <ROW><TERM>Pi</TERM><DESC>Punctuation, initial quote (may behave like Ps or Pe depending on usage)</DESC></ROW>
+  <ROW><TERM>Pf</TERM><DESC>Punctuation, final quote (may behave like Ps or Pe depending on usage)</DESC></ROW>
+  <ROW><TERM>Po</TERM><DESC>Punctuation, other</DESC></ROW>
+  <ROW><TERM>Sm</TERM><DESC>Symbol, math</DESC></ROW>
+  <ROW><TERM>Sc</TERM><DESC>Symbol, currency</DESC></ROW>
+  <ROW><TERM>Sk</TERM><DESC>Symbol, modifier</DESC></ROW>
+  <ROW><TERM>So</TERM><DESC>Symbol, other</DESC></ROW>
 </DEFINITIONTABLE>
+<BR/>
+<B>Surrogate pairs in UTF16</B><BR/>
+The intervals of values are disjoints :
+<BLIST>
+  <ITEM>valid BMP characters (0x0000–0xD7FF, 0xE000–0xFFFF)</ITEM>
+  <ITEM>high surrogates (0xD800–0xDBFF)</ITEM>
+  <ITEM>low surrogates (0xDC00–0xDFFF)</ITEM>
+</BLIST>
+<BLIST><TITLE>To represent a character U out of the BMP</TITLE>
+  <ITEM>0x10000 is subtracted from the code point (U), leaving a 20-bit number (U') in the hex number range 0x00000–0xFFFFF.</ITEM>
+  <ITEM>The high ten bits are added to 0xD800 to give the first 16-bit code unit or high surrogate (W1), which will be in the range 0xD800–0xDBFF.</ITEM>
+  <ITEM>The low ten bits are added to 0xDC00 to give the second 16-bit code unit or low surrogate (W2), which will be in the range 0xDC00–0xDFFF.</ITEM>
+</BLIST>
+<CODESAMPLE>
+U' = yyyyyyyyyyxxxxxxxxxx // U - 0x10000<BR/>
+W1 = 110110yyyyyyyyyy // 0xD800 + yyyyyyyyyy<BR/>
+W2 = 110111xxxxxxxxxx // 0xDC00 + xxxxxxxxxx
+</CODESAMPLE>
+<BR/>
+<B>Combining character sequences</B><BR/>
+A non-combining code point may be followed by an arbitrary number of combining code points to form a single combining character sequence, which is really a composite character.<BR/>
+Certain characters are only available as a combination of multiple code points, while some, the ones that are expected to be the most used, are also available as a single precomposed code point. The order of the combined code points may also vary, but all code points combinations leading to the same abstract character are still canonically equivalent.<BR/>
+While a combining character sequence can be arbitrarily big, the Unicode standard also introduces the concept of a stream-safe string, where a combining character sequence is at most 31 code points long, which is largely above what is sufficient for any linguistic use<BR/>
+Example with Emoji<BR/>
+👩🏽 is defined as
+<TABLE>
+<ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
+<ROW><CELL>️🏽</CELL><CELL>U+1F3FD</CELL><CELL>EMOJI MODIFIER FITZPATRICK TYPE-4</CELL></ROW>
+</TABLE>
+👮🏽‍♀️ is defined as
+<TABLE>
+<ROW><CELL>️👮</CELL><CELL>U+1F46E</CELL><CELL>POLICE OFFICER</CELL></ROW>
+<ROW><CELL>️🏽</CELL><CELL>U+1F3FD</CELL><CELL>EMOJI MODIFIER FITZPATRICK TYPE-4</CELL></ROW>
+<ROW><CELL>️‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+<ROW><CELL>️♀</CELL><CELL>U+2640</CELL><CELL>FEMALE SIGN</CELL></ROW>
+<ROW><CELL>️️</CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+</TABLE>
+🏳️‍🌈 is defined as
+<TABLE>
+<ROW><CELL>🏳</CELL><CELL>U+1F3F3</CELL><CELL>WAVING WHITE FLAG</CELL></ROW>
+<ROW><CELL>️</CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+<ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+<ROW><CELL>🌈</CELL><CELL>U+1F308</CELL><CELL>RAINBOW</CELL></ROW>
+</TABLE>
+👩‍❤️‍💋‍👨 is defined as
+<TABLE>
+<ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
+<ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+<ROW><CELL>❤</CELL><CELL>U+2764</CELL><CELL>HEAVY BLACK HEART</CELL></ROW>
+<ROW><CELL>️ </CELL><CELL>+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+<ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+<ROW><CELL>💋</CELL><CELL>U+1F48B</CELL><CELL>KISS MARK</CELL></ROW>
+<ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+<ROW><CELL>👨</CELL><CELL>U+1F468</CELL><CELL>MAN</CELL></ROW>
+</TABLE>
 </CONTENT>
 <X><T>links</T><A>../links/unicode.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
