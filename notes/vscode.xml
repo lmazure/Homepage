@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -95,23 +95,32 @@ File
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><KEY id='Z'/></TERM>
+    <TERM><MODIFIERKEY id='Alt'/><KEY id='Z'/><BR/>
+      <CODEROUTINE>Toggle Word Wrap</CODEROUTINE></TERM>
     <DESC>toggle word wrap</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id=')'/></TERM>
+    <TERM><CODEROUTINE>Toggle Render Whitespace</CODEROUTINE></TERM>
+    <DESC>displa/undisplay space characters</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id=')'/><BR/>
+      <CODEROUTINE>Fold</CODEROUTINE></TERM>
     <DESC>fold</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='^'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='^'/><BR/>
+      <CODEROUTINE>Unfold</CODEROUTINE></TERM>
     <DESC>unfold</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='à'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='à'/><BR/>
+      <CODEROUTINE>Fold All</CODEROUTINE></TERM>
     <DESC>fold all</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='J'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='J'/><BR/>
+      <CODEROUTINE>Unfold All</CODEROUTINE></TERM>
     <DESC>unfold all</DESC>
   </ROW>
   <ROW>
@@ -285,6 +294,21 @@ File
     <ITEM><CODEROUTINE>Code.exe --diff file1 file2</CODEROUTINE></ITEM>
   </SLIST></ITEM>
 </BLIST>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>Transform to Lowercase</CODEROUTINE></TERM>
+    <DESC>convert selection to lowercase</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Transform to Uppercase</CODEROUTINE></TERM>
+    <DESC>convert selection to lowercase</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Transform to Title Case</CODEROUTINE></TERM>
+    <DESC>convert selection to titlecase</DESC>
+  </ROW>
+</DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
