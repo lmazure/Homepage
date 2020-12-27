@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -93,6 +93,7 @@ File
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Display
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id='Alt'/><KEY id='Z'/><BR/>
@@ -101,8 +102,28 @@ File
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>Toggle Render Whitespace</CODEROUTINE></TERM>
-    <DESC>displa/undisplay space characters</DESC>
+    <DESC>display/undisplay space characters</DESC>
   </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='Z'/></TERM>
+    <DESC>toggle the zen mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Num +'/></TERM>
+    <DESC>zoom in</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Num -'/></TERM>
+    <DESC>zoom out</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Num 0'/></TERM>
+    <DESC>reset zoom</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Folding
+<DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id=')'/><BR/>
       <CODEROUTINE>Fold</CODEROUTINE></TERM>
@@ -124,20 +145,45 @@ File
     <DESC>unfold all</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='Z'/></TERM>
-    <DESC>toggle the zen mode</DESC>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='&amp;'/><BR/>
+      <CODEROUTINE>Fold Level 1</CODEROUTINE></TERM>
+    <DESC>Fold level 1</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Num +'/></TERM>
-    <DESC>zoom in</DESC>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='é'/><BR/>
+      <CODEROUTINE>Fold Level 2</CODEROUTINE></TERM>
+    <DESC>Fold level 2</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Num -'/></TERM>
-    <DESC>zoom out</DESC>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='"'/><BR/>
+      <CODEROUTINE>Fold Level 3</CODEROUTINE></TERM>
+    <DESC>Fold level 3</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Num 0'/></TERM>
-    <DESC>reset zoom</DESC>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id="'"/><BR/>
+      <CODEROUTINE>Fold Level 4</CODEROUTINE></TERM>
+    <DESC>Fold level 4</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='('/><BR/>
+      <CODEROUTINE>Fold Level 5</CODEROUTINE></TERM>
+    <DESC>Fold level 5</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='-'/><BR/>
+      <CODEROUTINE>Fold Level 6</CODEROUTINE></TERM>
+    <DESC>Fold level 6</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='è'/><BR/>
+      <CODEROUTINE>Fold Level 7</CODEROUTINE></TERM>
+    <DESC>Fold level 7</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='_'/><BR/>
+      <CODEROUTINE>Fold All Regions</CODEROUTINE></TERM>
+    <DESC>Fold all regions<BR/>
+      a region is between a comment containing <CODEROUTINE>#region <I>Region Name</I></CODEROUTINE> and a comment containing <CODEROUTINE>#endregion</CODEROUTINE></DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -175,6 +221,14 @@ File
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='D'/><BR/>
       <CODEROUTINE>Move Selection to Next Find Match</CODEROUTINE></TERM>
     <DESC>unselect the last selection and add the next found match the current selection</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Sort Lines Ascending</CODEROUTINE></TERM>
+    <DESC>sort lines in increasing order</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Sort Lines Descending</CODEROUTINE></TERM>
+    <DESC>sort lines in decreasing order</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Alt'/><KEY id='Up'/></TERM>
@@ -237,6 +291,7 @@ File
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Search/replace
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='G'/></TERM>
