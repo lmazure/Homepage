@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Standards</TITLE>
 <PATH>notes/normes.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <SLIST>
 <ITEM><X><T>RFC2119: Key words for use in RFCs to Indicate Requirement Levels</T><A>https://www.ietf.org/rfc/rfc2119.txt</A><L>en</L><F>HTML</F></X></ITEM>
@@ -99,16 +99,8 @@
   <ITEM>ISO/IEC 90003:2004<BR/>
     Software engineering - Guidelines for the application of ISO 9001:2000 to computer software<BR/>
     Ingénierie du logiciel - Lignes directrices pour l'application de l'ISO 9001:2000 aux logiciels informatiques</ITEM>
-  <ITEM><BLIST><TITLE><X><T>ISO/IEC 9126</T><A>iso9126.html</A><L>en</L><F>HTML</F></X></TITLE>
-    <ITEM>ISO/IEC 9126-1:2001<BR/>
-      Software engineering -- Product quality -- Part 1: Quality model</ITEM>
-    <ITEM>ISO/IEC TR 9126-2:2003<BR/>
-      Software engineering -- Product quality -- Part 2: External metrics</ITEM>
-    <ITEM>ISO/IEC TR 9126-3:2003<BR/>
-      Software engineering -- Product quality -- Part 3: Internal metrics</ITEM>
-    <ITEM>ISO/IEC TR 9126-4:2004<BR/>
-      Software engineering -- Product quality -- Part 4: Quality in use metrics</ITEM>
-  </BLIST></ITEM>
+  <ITEM><X><T>ISO/IEC 9126</T><A>iso9126.html</A><L>en</L><F>HTML</F></X><BR/>
+    Software engineering — Product quality</ITEM>
   <ITEM><BLIST><TITLE>ISO/IEC 14598 - Information Engineering - Evaluation of software products</TITLE>
     <ITEM>Part 1: General Overview</ITEM>
     <ITEM>Part 2: Planning and management</ITEM>
@@ -117,64 +109,52 @@
     <ITEM>Part 5: Third party evaluation</ITEM>
     <ITEM>Part 6: Evaluation modules</ITEM>
   </BLIST></ITEM>
-  <ITEM>ISO/IEC 25000:2014<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Guide to SQuaRE</ITEM>
-  <ITEM>ISO/IEC 25001:2014<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Planning and management</ITEM>
-  <ITEM>ISO/IEC 25010:2011<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- System and software quality models</ITEM>
-  <ITEM>ISO/IEC CD 25011<BR/>
-    Information technology -- Service Quality Requirement and Evaluation(SQuaRE) -- IT Service Quality Model</ITEM>
-  <ITEM>ISO/IEC 25012:2008<BR/>
-    Software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Data quality model</ITEM>
-  <ITEM>ISO/IEC 25020:2007<BR/>
-    Software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Measurement reference model and guide</ITEM>
-  <ITEM>ISO/IEC 25021:2012<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Quality measure elements</ITEM>
-  <ITEM>ISO/IEC CD 25022<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Measurement of quality in use</ITEM>
-  <ITEM>ISO/IEC CD 25023<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Measurement of system and software product quality</ITEM>
-  <ITEM>ISO/IEC CD 25024<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Measurement of data quality</ITEM>
-  <ITEM>ISO/IEC 25030:2007<BR/>
-    Software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Quality requirements</ITEM>
-  <ITEM>ISO/IEC 25040:2011<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Evaluation process</ITEM>
-  <ITEM>ISO/IEC 25041:2012<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Evaluation guide for developers, acquirers and independent evaluators</ITEM>
-  <ITEM>ISO/IEC 25045:2010<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Evaluation module for recoverability</ITEM>
-  <ITEM>ISO/IEC 25051:2014<BR/>
-    Software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Requirements for quality of Ready to Use Software Product (RUSP) and instructions for testing</ITEM>
-  <ITEM>ISO/IEC TR 25060:2010<BR/>
-    Systems and software engineering -- Systems and software product Quality Requirements and Evaluation (SQuaRE) -- Common Industry Format (CIF) for usability: General framework for usability-related information</ITEM>
-  <ITEM>ISO/IEC 25062:2006<BR/>
-    Software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Common Industry Format (CIF) for usability test reports</ITEM>
-  <ITEM>ISO/IEC 25063:2014<BR/>
-    Systems and software engineering -- Systems and software product Quality Requirements and Evaluation (SQuaRE) -- Common Industry Format (CIF) for usability: Context of use description</ITEM>
-  <ITEM>ISO/IEC 25064:2013<BR/>
-    Systems and software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Common Industry Format (CIF) for usability: User needs report</ITEM>
-  <ITEM>ISO/IEC CD 25066<BR/>
-    Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Common industry Format for Usability -- Evaluation Report</ITEM>
+  <ITEM><BLIST><TITLE>ISO/IEC 25000 series (a.k.a. SQuaRE ⁠—System and Software Quality Requirements and Evaluation⁠—)</TITLE>
+    <ITEM>ISO/IEC 25000:2014<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Guide to SQuaRE</ITEM>
+    <ITEM>ISO/IEC 25001:2014<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Planning and management</ITEM>
+    <ITEM>ISO/IEC 25010:2011<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- System and software quality models</ITEM>
+    <ITEM>ISO/IEC CD 25011<BR/>
+      Information technology -- Service Quality Requirement and Evaluation(SQuaRE) -- IT Service Quality Model</ITEM>
+    <ITEM>ISO/IEC 25012:2008<BR/>
+      Software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Data quality model</ITEM>
+    <ITEM>ISO/IEC 25020:2007<BR/>
+      Software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Measurement reference model and guide</ITEM>
+    <ITEM>ISO/IEC 25021:2012<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Quality measure elements</ITEM>
+    <ITEM>ISO/IEC CD 25022<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Measurement of quality in use</ITEM>
+    <ITEM>ISO/IEC CD 25023<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Measurement of system and software product quality</ITEM>
+    <ITEM>ISO/IEC CD 25024<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Measurement of data quality</ITEM>
+    <ITEM>ISO/IEC 25030:2007<BR/>
+      Software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Quality requirements</ITEM>
+    <ITEM>ISO/IEC 25040:2011<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Evaluation process</ITEM>
+    <ITEM>ISO/IEC 25041:2012<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Evaluation guide for developers, acquirers and independent evaluators</ITEM>
+    <ITEM>ISO/IEC 25045:2010<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Evaluation module for recoverability</ITEM>
+    <ITEM>ISO/IEC 25051:2014<BR/>
+      Software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Requirements for quality of Ready to Use Software Product (RUSP) and instructions for testing</ITEM>
+    <ITEM>ISO/IEC TR 25060:2010<BR/>
+      Systems and software engineering -- Systems and software product Quality Requirements and Evaluation (SQuaRE) -- Common Industry Format (CIF) for usability: General framework for usability-related information</ITEM>
+    <ITEM>ISO/IEC 25062:2006<BR/>
+      Software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Common Industry Format (CIF) for usability test reports</ITEM>
+    <ITEM>ISO/IEC 25063:2014<BR/>
+      Systems and software engineering -- Systems and software product Quality Requirements and Evaluation (SQuaRE) -- Common Industry Format (CIF) for usability: Context of use description</ITEM>
+    <ITEM>ISO/IEC 25064:2013<BR/>
+      Systems and software engineering -- Software product Quality Requirements and Evaluation (SQuaRE) -- Common Industry Format (CIF) for usability: User needs report</ITEM>
+    <ITEM>ISO/IEC CD 25066<BR/>
+      Systems and software engineering -- Systems and software Quality Requirements and Evaluation (SQuaRE) -- Common industry Format for Usability -- Evaluation Report</ITEM>
+  </BLIST></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE><U><B>Software</B></U></TITLE>
-  <ITEM><BLIST><TITLE><X><T>ISO 9241</T><A>iso9241.html</A><L>en</L><F>HTML</F></X></TITLE>
-    <ITEM>ISO 9241-1:1997<BR/>
-      Ergonomic requirements for office work with visual display terminals (VDTs) -- Part 1: General introduction</ITEM>
-    <ITEM>ISO 9241-2:1992<BR/>
-      Ergonomic requirements for office work with visual display terminals (VDTs) -- Part 2: Guidance on task requirements</ITEM>
-    <ITEM>ISO 9241-3:1992<BR/>
-      Ergonomic requirements for office work with visual display terminals (VDTs) -- Part 3: Visual display requirements</ITEM>
-    <ITEM>ISO 9241-4:1998<BR/>
-      Ergonomic requirements for office work with visual display terminals (VDTs) -- Part 4: Keyboard requirements</ITEM>
-    <ITEM>ISO 9241-5:1998<BR/>
-      Ergonomic requirements for office work with visual display terminals (VDTs) -- Part 5: Workstation layout and postural requirements</ITEM>
-    <ITEM>ISO 9241-6:1999<BR/>
-      Ergonomic requirements for office work with visual display terminals (VDTs) -- Part 6: Guidance on the work environment</ITEM>
-    <ITEM>ISO 9241-7:1998<BR/>
-      Ergonomic requirements for office work with visual display terminals (VDTs) -- Part 7: Requirements for display with reflections</ITEM>
-  </BLIST></ITEM>
+  <ITEM><X><T>ISO 9241</T><A>iso9241.html</A><L>en</L><F>HTML</F></X><BR/>
+    Ergonomics of Human System Interaction</ITEM>
   <ITEM>IEEE 730-1998<BR/>
     Standard for Software Quality Assurance Plans</ITEM>
   <ITEM>IEC 829:1998<BR/>
@@ -239,7 +219,7 @@
   <ITEM>ISO 17432:2004<BR/>
     Health informatics -- Messages and communication -- Web access to DICOM persistent objects<BR/>
     Informatique de santé -- Messages et communication -- Accès au web pour les objets persistants DICOM<BR/>
-    This is a copy of DICOM PS 3.18 (WADO) because the the work was actually done jointly by two committees (one DICOM and one ISO)</ITEM>
+    This is a copy of DICOM PS 3.18 (WADO) because the work was actually done jointly by two committees (one DICOM and one ISO)</ITEM>
   <ITEM>ISO/DIS 21090<BR/>
     Health Informatics -- Harmonized data types for information interchange</ITEM>
 </BLIST></ITEM>
