@@ -167,5 +167,4 @@ function isHidden(element) {
     const style = window.getComputedStyle(element);
     return (style.display === "none");
 }
-
 //# sourceMappingURL=common.js.map

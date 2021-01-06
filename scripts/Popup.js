@@ -40,5 +40,4 @@ export class Popup {
         this.popup.style.visibility = "hidden";
     }
 }
-
 //# sourceMappingURL=Popup.js.map

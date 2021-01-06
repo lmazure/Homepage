@@ -407,5 +407,4 @@ export class ContentBuilder {
 window.contentBuilderSwitchSort = (sort) => {
     ContentBuilder.prototype.switchSort(sort);
 };
-
 //# sourceMappingURL=ContentBuilder.js.map

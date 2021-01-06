@@ -3,9 +3,13 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>npm</TITLE>
 <PATH>notes/npm.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST>
+  <ITEM>isplay the npm version
+    <CODESAMPLE><PROMPT/>npm --version<BR/>
+        <PROMPT/>npm -v</CODESAMPLE>
+  </ITEM>
   <ITEM>Create a <CODEFILENAME>package.json</CODEFILENAME> file
     <CODESAMPLE><PROMPT/>npm init</CODESAMPLE>
   </ITEM>
@@ -14,7 +18,8 @@
   </ITEM>
   <ITEM><BLIST><TITLE><CODEROUTINE>-save</CODEROUTINE> options</TITLE>
     <ITEM>Install <CODEROUTINE>foobar</CODEROUTINE> as a development dependency, it will be recorded in the <CODEROUTINE>devDependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
-      <CODESAMPLE><PROMPT/>npm install --save-dev foobar</CODESAMPLE>
+      <CODESAMPLE><PROMPT/>npm install --save-dev foobar<BR/>
+        <PROMPT/>npm install -D foobar</CODESAMPLE>
     </ITEM>
     <ITEM>Install <CODEROUTINE>foobar</CODEROUTINE> as a deployment dependency, it will be recorded in the <CODEROUTINE>dependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
       <CODESAMPLE><PROMPT/>npm install --save foobar</CODESAMPLE>
