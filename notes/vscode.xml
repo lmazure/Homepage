@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -394,6 +394,36 @@ Search/replace
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='D'/></TERM>
     <DESC>show launch and debug</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='B'/><BR/>
+    <CODEROUTINE>Tasks: Run Build Task</CODEROUTINE></TERM>
+    <DESC>display the selector to run a build task</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F5'/><BR/>
+    <CODEROUTINE>Run: Start Without Debugging</CODEROUTINE></TERM>
+    <DESC>launch the program</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id='F5'/><BR/>
+    <CODEROUTINE>Debug: Start Debugging</CODEROUTINE></TERM>
+    <DESC>launch the program in debug mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id='F5'/><BR/>
+    <CODEROUTINE>Debug: Continue</CODEROUTINE></TERM>
+    <DESC>continue the program in debug mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Shift'/><KEY id='F5'/><BR/>
+    <CODEROUTINE>Debug: Stop</CODEROUTINE></TERM>
+    <DESC>stop the program in debug mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F5'/><BR/>
+    <CODEROUTINE>Debug: Restart</CODEROUTINE></TERM>
+    <DESC>relaunch the program in debug mode</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
