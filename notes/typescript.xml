@@ -6,6 +6,8 @@
 <DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><CODEROUTINE>tsc</CODEROUTINE></TITLE>
+  <ITEM>display the version<BR/>
+    <CODESAMPLE>tsc --version</CODESAMPLE></ITEM>
   <ITEM><CODEFILENAME>tsconfig.json</CODEFILENAME><BR/>
     The presence of a <CODEFILENAME>tsconfig.json</CODEFILENAME> file in a directory indicates that the directory is the root of a TypeScript project.<BR/>
     If <CODEROUTINE>tsc</CODEROUTINE> is launched with no input file, it will look for <CODEFILENAME>tsconfig.json</CODEFILENAME> or <CODEFILENAME>jsconfig.json</CODEFILENAME>.<BR/>
@@ -15,7 +17,7 @@
 </BLIST>
 <BR/>
 <U><B>Duck typing</B></U><BR/>
-It is possible to pass paramaters having a type that is a superset of the expected type
+It is possible to pass parameters having a type that is a superset of the expected type
 <CODESAMPLE>
 interface Point1D {<BR/>
 <TAB/>x: number;<BR/>
