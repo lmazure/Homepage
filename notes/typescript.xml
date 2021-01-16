@@ -19,25 +19,25 @@
 <U><B>Duck typing</B></U><BR/>
 It is possible to pass parameters having a type that is a superset of the expected type
 <CODESAMPLE>
-interface Point1D {<BR/>
-<TAB/>x: number;<BR/>
-}<BR/>
-interface Point2D {<BR/>
-<TAB/>x: number;<BR/>
-    y: number;<BR/>
-}<BR/>
-interface Point3D {<BR/>
-<TAB/>x: number;<BR/>
-<TAB/>y: number;<BR/>
-<TAB/>z: number;<BR/>
-}<BR/>
-var point1D: Point1D = { x: 0 }<BR/>
-var point2D: Point2D = { x: 0, y: 10 }<BR/>
-var point3D: Point3D = { x: 0, y: 10, z: 20 }<BR/>
-function iTakePoint2D(point: Point2D) { /* do something */ }<BR/>
-iTakePoint2D(point2D); // OK<BR/>
-iTakePoint2D(point3D); // OK<BR/>
-iTakePoint2D(point1D); // KO y is missing
+  interface Point1D {<BR/>
+  <TAB/>x: number;<BR/>
+  }<BR/>
+  interface Point2D {<BR/>
+  <TAB/>x: number;<BR/>
+  <TAB/>y: number;<BR/>
+  }<BR/>
+  interface Point3D {<BR/>
+  <TAB/>x: number;<BR/>
+  <TAB/>y: number;<BR/>
+  <TAB/>z: number;<BR/>
+  }<BR/>
+  var point1D: Point1D = { x: 0 }<BR/>
+  var point2D: Point2D = { x: 0, y: 10 }<BR/>
+  var point3D: Point3D = { x: 0, y: 10, z: 20 }<BR/>
+  function iTakePoint2D(point: Point2D) { /* do something */ }<BR/>
+  iTakePoint2D(point2D); // OK<BR/>
+  iTakePoint2D(point3D); // OK<BR/>
+  iTakePoint2D(point1D); // KO y is missing
 </CODESAMPLE>
 <BR/>
 <U><B>Equality</B></U><BR/>
