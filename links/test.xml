@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -25,6 +25,7 @@
       <ITEM><X><T>TestRail</T><A>https://www.gurock.com/testrail</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>TestLink</T><A>https://testlink.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Squash</T><A>https://www.squashtest.com/</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Xray</T><A>https://www.getxray.app/</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>HTTP snooping</TITLE>
       <ITEM><X><T>Fiddler</T><A>https://www.telerik.com/fiddler</A><L>en</L><F>HTML</F></X></ITEM>
@@ -97,7 +98,8 @@
       <ITEM><ARTICLE><X status='dead'><T>Does It Work? Are We Done? Is It Right? (Keep It Light!)</T><A>http://video.google.com/videoplay?docid=-3256499677006040213</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>5</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jim</FIRSTNAME><LASTNAME>Shore</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH></DATE><COMMENT>(The transcript is available in <X><T>Does It Work? Are We Done? Is It Right? (Keep It Light!)</T><A>http://www.jamesshore.com/Blog/Does-It-Work-Are-We-Done.html</A><L>en</L><F>HTML</F></X>) TDD is the solution to minimize waste when checking if the software works properly and it is complete.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Exploratory testing</TITLE>
-      <ITEM><ARTICLE><X><T>Exploratory Testing Explained</T><A>https://www.satisfice.com/articles/et-article.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>4</MONTH><DAY>16</DAY></DATE><COMMENT>James describes what he calls Exploratory Testing: having bright minds executing tests designed on the fly. I can only agree with him: this works only if the tester is good.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>What is Exploratory Testing? Techniques with Examples</T><A>https://www.guru99.com/exploratory-testing.html</A><L>en</L><F>HTML</F></X><COMMENT>A short presentation of Exploratory Testing</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Exploratory Testing Explained</T><A>https://www.satisfice.com/articles/et-article.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>4</MONTH><DAY>16</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR> describes what he calls Exploratory Testing: having bright minds executing tests designed on the fly. I can only agree with him: this works only if the tester is good.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Testing Without a Map</T><ST>You don’t always need to wait for complete specifications to start your testing effort.</ST><A>https://www.developsense.com/articles/2005-01-TestingWithoutAMap.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Bolton</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>1</MONTH></DATE><COMMENT>A short introduction to Exploratory Testing and the HICCUPPS heuristics.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Exploratory Testing</T><A>https://www.youtube.com/watch?v=kBufzgjYAQE</A><L>en</L><F>MP4</F><DURATION><MINUTE>53</MINUTE><SECOND>36</SECOND></DURATION><DATE><YEAR>2012</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE></X><AUTHOR><FIRSTNAME>Jon</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE><COMMENT>(The slides are available in <X><T>Breaking Down (and building up) Exploratory Testing Skill</T><A>http://cfs7.tistory.com/upload_control/download.blog?fhandle=YmxvZzk3ODE0QGZzNy50aXN0b3J5LmNvbTovYXR0YWNoLzAvOS5wZGY%3D&amp;filename=ET_dynamics_Google_3_06.pdf</A><L>en</L><F>PDF</F></X>.) Jon Bach gives some information about exploratory testing. He lists 14 usable tactics ("MRQ COMP GRABC R&amp;R?"). This is a good brain teaser, but the presentation is rather messy.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>FEW HICCUPPS</T><A>https://www.developsense.com/blog/2012/07/few-hiccupps/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Bolton</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE><COMMENT>Michael Boston completes his list of heuristics.</COMMENT></ARTICLE></ITEM>
