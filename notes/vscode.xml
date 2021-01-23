@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -439,6 +439,18 @@ Search/replace
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='T'/><BR/>
       <CODEMENU>File<CODEMENU>Preferences<CODEMENU>Color Theme</CODEMENU></CODEMENU></CODEMENU></TERM>
     <DESC>display the theme picker (navigate with <KEY id='Up'/>/<KEY id='Down'/>, the theme is interactively applied)</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Emmet
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>Emmet: Balance (outward)</CODEROUTINE></TERM>
+    <DESC>select the outer node scope</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Emmet: Balance (inward)</CODEROUTINE></TERM>
+    <DESC>select the inner node scope</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
