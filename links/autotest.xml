@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -133,6 +133,7 @@
     <ITEM><BLIST><TITLE>Web application tests</TITLE>
       <ITEM><X><T>Sauce Labs</T><A>https://saucelabs.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>BrowserStack</T><A>https://www.browserstack.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Cross Browser Testing</T><A>https://crossbrowsertesting.com</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Test coverage</TITLE>
       <ITEM><BLIST><TITLE>C/C++</TITLE>
@@ -250,6 +251,10 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>JGiven</TITLE>
         <ITEM><ARTICLE><X quality='-2'><T>Acceptance Tests in Java With JGiven</T><ST>Learn more about acceptance tests in Java, and why you should learn them right now.</ST><A>https://dzone.com/articles/acceptance-tests-in-java-with-jgiven</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marco</FIRSTNAME><LASTNAME>Schulz</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>2</DAY></DATE><COMMENT>A bad article: poor English, the code samples are badly laid out, the explanations are unclear.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Cucumber</TITLE>
+        <ITEM><ARTICLE><X><T>A Case Against Cucumber</T><A>https://8thlight.com/blog/kevin-liddle/2013/09/18/a-case-against-cucumber.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Liddle</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Why I recommend against using Cucumber</T><A>https://www.codewithjason.com/recommend-against-cucumber/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Swett</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>3</DAY></DATE><COMMENT>Cucumber can be used stupdily, but even when used as intended it only adds maintenance cost and complexity compared to bare Capybara.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mutation testing</TITLE>
