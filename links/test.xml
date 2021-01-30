@@ -3,18 +3,20 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><BLIST><TITLE>Generalities</TITLE>
-      <ITEM><X><T>Satisfice</T><A>https://www.satisfice.com</A><L>en</L><F>HTML</F></X>:
-        <X><T>James Bach's blog</T><A>https://www.satisfice.com/blog</A><L>en</L><F>HTML</F><FEED><A>https://www.satisfice.com/blog/feed/</A><F>RSS</F></FEED></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>Satisfice</T><A>https://www.satisfice.com</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>James Bach's blog</T><A>https://www.satisfice.com/blog</A><L>en</L><F>HTML</F><FEED><A>https://www.satisfice.com/blog/feed/</A><F>RSS</F></FEED></X></ITEM>
+      </CLIST></ITEM>
       <ITEM><X><T>Cem Kaner</T><A>http://www.kaner.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Test Obsessed</T><A>https://testobsessed.com</A><L>en</L><F>HTML</F></X> (<AUTHOR><FIRSTNAME>Elisabeth</FIRSTNAME><LASTNAME>Hendrickson</LASTNAME></AUTHOR>)</ITEM>
       <ITEM><X><T>GTAC</T><A>https://developers.google.com/google-test-automation-conference/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>ISTQB</T><A>https://www.istqb.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Context-Driven-Testing</T><A>https://context-driven-testing.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>La taverne du testeur</T><A>https://latavernedutesteur.fr/</A><L>en</L><F>HTML</F><FEED><A>https://latavernedutesteur.fr/feed/</A><F>RSS</F></FEED></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Specialty sites</TITLE>
       <ITEM><X><T>Pairwise Testing</T><A>http://www.pairwise.org</A><L>en</L><F>HTML</F></X>: combinatorial test case generation</ITEM>
@@ -24,7 +26,10 @@
     <ITEM><BLIST><TITLE>Management of manual tests</TITLE>
       <ITEM><X><T>TestRail</T><A>https://www.gurock.com/testrail</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>TestLink</T><A>https://testlink.org/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Squash</T><A>https://www.squashtest.com/</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>Squash</T><A>https://www.squashtest.com/</A><L>en</L><L>fr</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>forum</T><A>https://forum.squashtest.com/index.php</A><L>fr</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>sources</T><A>https://bitbucket.org/squashtest/</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
       <ITEM><X><T>Xray</T><A>https://www.getxray.app/</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>HTTP snooping</TITLE>
