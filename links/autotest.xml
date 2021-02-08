@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -228,6 +228,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tools</TITLE>
       <ITEM><ARTICLE><X><T>Puppeteer vs Selenium vs Playwright, a speed comparison</T><A>https://blog.checklyhq.com/puppeteer-vs-selenium-vs-playwright-speed-comparison/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Giovanni</FIRSTNAME><LASTNAME>Rago</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE><COMMENT>A small performance benchmark comparing Puppeteer, Playwright, WebDriverIO/WebDriver, and WebDriverIO/DevTools.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE pred='https://blog.checklyhq.com/puppeteer-vs-selenium-vs-playwright-speed-comparison/'><X><T>Cypress vs Selenium vs Playwright vs Puppeteer speed comparison</T><A>https://blog.checklyhq.com/cypress-vs-selenium-vs-playwright-vs-puppeteer-speed-comparison/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Giovanni</FIRSTNAME><LASTNAME>Rago</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>27</DAY></DATE><COMMENT>The continuation of the previous benchmark: Cypress as also be tested and a longer scenario has been added.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>xUnit</TITLE>
         <ITEM><ARTICLE><X><T>Automated Testing Patterns and Smells</T><A>https://www.youtube.com/watch?v=Pq6LHFM4JvE</A><L>en</L><F>MP4</F><DURATION><MINUTE>59</MINUTE><SECOND>34</SECOND></DURATION><DATE><YEAR>2008</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE></X><AUTHOR><FIRSTNAME>Gerard</FIRSTNAME><LASTNAME>Meszaros</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE><COMMENT>How to detect and fix issues in unit tests: code smells (tests difficult to understand, tests containing coding errors, tests difficult / impossible to write), behavior smells (tests failing when they should succeed - erratic test, fragile test -, tests succeeding when they should fail), and project smells.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
