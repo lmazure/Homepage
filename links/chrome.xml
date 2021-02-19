@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>links/chrome.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -267,6 +267,7 @@
     <ITEM><ARTICLE><X><T>Limiting Private API availability in Chromium</T><A>https://blog.chromium.org/2021/01/limiting-private-api-availability-in.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jochen</FIRSTNAME><LASTNAME>Eisinger</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>Starting March 15, private Chrome APIs will be usable only in Chrome.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Better content sharing with Custom Tabs</T><A>https://blog.chromium.org/2021/01/better-content-sharing-with-custom-tabs.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andre</FIRSTNAME><LASTNAME>Bandarra</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Chirag</FIRSTNAME><LASTNAME>Desai</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>22</DAY></DATE><COMMENT>Chrome will automatically add a share button on applications using Custom Tabs.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Chrome 89 Beta: Advanced Hardware Interactions, Web Sharing on Desktop, and More</T><A>https://blog.chromium.org/2021/01/chrome-89-beta-advanced-hardware.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE><COMMENT>Some features are enabled on some OSes (WebHID API, Web NFC, Web Serial API, Web Sharing), support of AVIF images, COOP reporting API…</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Heads Up: Restriction on SharedArrayBuffers are coming in M91</T><A>https://blog.chromium.org/2021/02/restriction-on-sharedarraybuffers.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>Some APIs will be accessible only if the page uses cross-origin isolation.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Security</TITLE>
       <ITEM><ARTICLE><X><T>Security in Depth: Local Web Pages</T><A>https://blog.chromium.org/2008/12/security-in-depth-local-web-pages.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>What should be the limitations imposed to local pages?</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Security in Depth: The Password Manager</T><A>https://blog.chromium.org/2008/12/security-in-depth-password-manager.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Barth</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Steele</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>The rational for Chrome Password Manager implementation.</COMMENT></ARTICLE></ITEM>
