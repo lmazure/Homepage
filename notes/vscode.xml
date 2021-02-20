@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -94,6 +94,11 @@ File
   <ROW>
     <TERM><CODEROUTINE>Change File Encoding</CODEROUTINE></TERM>
     <DESC>reload the file with another encoding</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='Shift'/><KEY id='C'/><BR/>
+      <CODEROUTINE>File: Copy Path of Active File</CODEROUTINE></TERM>
+    <DESC>copy the full path of the file in the clipboard</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
