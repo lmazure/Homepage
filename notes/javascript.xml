@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>JavaScript</TITLE>
 <PATH>notes/javascript.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
   <ITEM>Number: Double precision 64-bit floating point values. It can be used to represent both, integers and fractions.</ITEM>
@@ -75,6 +75,42 @@
     <ITEM><CODEROUTINE>screenX</CODEROUTINE> / <CODEROUTINE>screenY</CODEROUTINE>: Relative to the top left of the physical screen, this reference point only moves if you increase or decrease the number of monitors or the monitor resolution.</ITEM>
     <ITEM><CODEROUTINE>clientX</CODEROUTINE> / <CODEROUTINE>clientY</CODEROUTINE>: Relative to the upper left edge of the content area (the viewport) of the browser window. This point does not move even if the user moves a scrollbar from within the browser.</ITEM>
   </BLIST></ITEM>
+</BLIST>
+<U><B>Template literals (a.k.a. template strings)</B></U>
+<CODESAMPLE>console.log(`Current value is ${value}`)</CODESAMPLE><BR/>
+<BR/>
+<U><B>nullish coalescing operator (<CODEROUTINE>??</CODEROUTINE>)</B></U><BR/>
+The nullish coalescing operator (<CODEROUTINE>??</CODEROUTINE>) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.<BR/>
+This can be contrasted with the logical OR (<CODEROUTINE>||</CODEROUTINE>) operator, which returns the right-hand side operand if the left operand is any falsy value, not only null or undefined. In other words, if you use <CODEROUTINE>||</CODEROUTINE> to provide some default value to another variable foo, you may encounter unexpected behaviors if you consider some falsy values as usable (e.g., <CODEROUTINE>''</CODEROUTINE> or <CODEROUTINE>0</CODEROUTINE>).<BR/>
+<BR/>
+<U><B>optional chaining operator (<CODEROUTINE>?.</CODEROUTINE>)</B></U><BR/>
+The optional chaining operator (<CODEROUTINE>?.</CODEROUTINE>) functions similarly to the <CODEROUTINE>.</CODEROUTINE> chaining operator, except that instead of causing an error if a reference is nullish (null or undefined), the expression short-circuits with a return value of undefined. When used with function calls, it returns undefined if the given function does not exist.<BR/>
+<CODESAMPLE>myVar.myFunc?.()<BR/>
+myVar.myArray?.[0]</CODESAMPLE>
+<BR/>
+<U><B>Styling console output</B></U><BR/>
+You can use the <CODEROUTINE>%c</CODEROUTINE> directive to apply a CSS style to console output:<BR/>
+<CODESAMPLE>console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");</CODESAMPLE>
+<BR/>
+<U><B>Declaring properties with a variable of the same name</B></U><BR/>
+<CODESAMPLE>const firstName = "John";<BR/>
+const lastName = "Doe";<BR/>
+const person = {<BR/>
+<TAB/>firstName: firstName,<BR/>
+<TAB/>lastName: lastName<BR/>
+};</CODESAMPLE>
+can be written<BR/>
+<CODESAMPLE>const person = {<BR/>
+<TAB/>firstName,<BR/>
+<TAB/>lastName<BR/>
+};</CODESAMPLE>
+<BR/>
+<U><B><CODEROUTINE>script</CODEROUTINE>'s <CODEROUTINE>defer</CODEROUTINE> and <CODEROUTINE>async</CODEROUTINE></B></U><BR/>
+<CODESAMPLE>&lt;script src="sample.js" defer&gt;&lt;/script&gt;</CODESAMPLE>
+<BLIST>
+  <ITEM>If <CODEROUTINE>async</CODEROUTINE> is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing)</ITEM>
+  <ITEM>If <CODEROUTINE>async</CODEROUTINE> is not present and <CODEROUTINE>defer</CODEROUTINE> is present: The script is executed when the page has finished parsing</ITEM>
+  <ITEM>If neither <CODEROUTINE>async</CODEROUTINE> or <CODEROUTINE>defer</CODEROUTINE> is present: The script is fetched and executed immediately, before the browser continues parsing the page</ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/javascrp.html</A><L>en</L><F>HTML</F></X>

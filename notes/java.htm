@@ -297,53 +297,6 @@ cast).
 </u></b>A non-static inner class can access its outer class instance by
 using the syntax <span style="font-family: monospace;">OuterClassName.this</span>.<b><u><br>
 </u></b></p>
-<p><b><u>exceptions</u></b>
-<br>
-The base case of exceptions is <tt>Throwable</tt>. It has two
-sub-classes:
-</p>
-<ul>
-  <li> <tt>Error&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </tt>compile
-time
-and system
-errors</li>
-  <li> <tt>Exception&nbsp;&nbsp; </tt>run-time issues</li>
-</ul>
-<u><tt>Exception</tt>:</u>
-<br>
-<tt>Exception()</tt> the default constructor
-<br>
-<tt>Exception(String s)</tt> constructor defining the detailed messsage
-<br>
-<tt>String getMessage()</tt> returns the detailed message
-<br>
-<tt>String toString()</tt> returns a short description and the detailed
-message
-<br>
-<tt>void printStackTrace()</tt> prints on System.err the stack trace
-where the exception was created
-<br>
-<tt>void printStackTrace(PrintStream s)</tt> prints on s the stack
-trace where the exception was created
-<br>
-<tt>void fillInStackTrace()</tt> resets the stack trace to the current
-call stack
-<p><tt>RuntimeException</tt> is a subclass of <tt>Exception</tt>. The
-compiler
-does not impose the code to catch them.
-</p>
-<p>When overriding a method, we can only throw the same exceptions (or
-subclasses of the exceptions)&nbsp; than for the base class. But we can
-declare to throw less exceptions. This is not true for constructors
-which
-can throw any exception with no constraint relatively to the base
-class.
-</p>
-<p>A drawback of the Java exceptions: an exception is lost if another
-one
-is thrown in the finally block.
-<br>
-&nbsp;
 <br>
 <span style="font-family: monospace;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 try { </span><br style="font-family: monospace;">

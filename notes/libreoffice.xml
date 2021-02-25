@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -227,7 +227,9 @@
       <ROW>
         <TERM1><CODEROUTINE>N(Value)</CODEROUTINE></TERM1>
         <TERM2><CODEROUTINE>N(valeur)</CODEROUTINE></TERM2>
-        <DESC>return the numeric value of the given parameter<BR/>returns 0 if parameter is text or FALSE<BR/>returns the error value in case of an error</DESC>
+        <DESC>return the numeric value of the given parameter<BR/>
+          return 0 if parameter is text or FALSE<BR/>
+          return the error value in case of an error</DESC>
       </ROW>
       <ROW>
         <TERM1><CODEROUTINE>ISNA(Value)</CODEROUTINE></TERM1>
@@ -324,6 +326,9 @@
   </ITEM>
   <ITEM>to compare two files: open the newest file, then <CODEMENU>Edit<CODEMENU>Track Changes<CODEMENU>Compare Document</CODEMENU></CODEMENU></CODEMENU>.
   </ITEM>
+  <ITEM><BLIST><TITLE>extensions</TITLE>
+    <ITEM><X><T>Copy only visible cells</T><A>https://extensions.libreoffice.org/en/extensions/show/copy-only-visible-cells</A><L>en</L><F>HTML</F></X>: The hidden rows or columns will not be copied.</ITEM>
+  </BLIST></ITEM>
 </BLIST><BR/>
 <BLIST><TITLE>Impress</TITLE>
   <ITEM>Shortcuts

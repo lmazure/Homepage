@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>notes/java2.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
@@ -47,13 +47,24 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
     <ITEM>native</ITEM>
     <ITEM>strictfp</ITEM>
   </NLIST></ITEM>
-  <ITEM><BLIST><TITLE><U><B>Strings</B></U></TITLE>
-    <ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
-    <ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
-    <ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
-  </BLIST></ITEM>
   <ITEM><CODEROUTINE>strictfp</CODEROUTINE><BR/>
     <CODEROUTINE>strictfp</CODEROUTINE> is a keyword to force Java to store intermediary results in floating point calculation using IEEE 754 (instead of a possible greater precision provided by the machine).</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Strings</B></U></TITLE>
+  <ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
+  <ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
+  <ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Exceptions</B></U><BR/></TITLE>
+  <ITEM><BLIST><TITLE>Class hierarchy</TITLE>
+    <ITEM><BLIST><TITLE><CODEROUTINE>Throwable</CODEROUTINE></TITLE>
+      <ITEM><CODEROUTINE>Error</CODEROUTINE>: indicates serious problems that a reasonable application should not try to catch</ITEM>
+      <ITEM><BLIST><TITLE><CODEROUTINE>Exception</CODEROUTINE>: conditions that a reasonable application might want to catch</TITLE>
+        <ITEM><CODEROUTINE>RuntimeException</CODEROUTINE>: represents exceptions that a program shouldn't generally expect to occur, but could potentially recover from, it is likely to be a programming error rather than an error due to invalid user input or a badly configured environment</ITEM>
+      </BLIST></ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+  <ITEM><CODEROUTINE>Error</CODEROUTINE>s and <CODEROUTINE>RuntimeException</CODEROUTINE>s are unchecked exceptions (methods don't explicitly have to declare that they can throw an unchecked exception; callers don't have to handle them explicitly)</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Lambda expressions</B></U><BR/></TITLE>
   <ITEM>A method reference can be of four types:
