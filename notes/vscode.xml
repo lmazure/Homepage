@@ -92,6 +92,12 @@ File
     <DESC>close all editors</DESC>
   </ROW>
   <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='F'/><BR/>
+      <CODEROUTINE>Workspaces: Close Workspace</CODEROUTINE></TERM>
+    <DESC>close workspace<BR/>
+      close folder</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>Change File Encoding</CODEROUTINE></TERM>
     <DESC>reload the file with another encoding</DESC>
   </ROW>
@@ -289,6 +295,10 @@ Folding
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='O'/></TERM>
     <DESC>open active file in new window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='N'/></TERM>
+    <DESC>new window</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='*'/></TERM>

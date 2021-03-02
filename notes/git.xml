@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -33,50 +33,63 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;</CODEROUTINE></TERM>
-    <DESC>create a repository which is the clone of a bare repository</DESC>
+    <DESC>Create a repository which is the clone of a bare repository.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clone &lt;bare repository directory&gt; &lt;my directory name&gt;</CODEROUTINE></TERM>
-    <DESC>create a repository with name &lt;my directory name&gt; which is the clone of a bare repository (if &lt;my directory name&gt; is not specified, the name of the remote repository is used)</DESC>
+    <DESC>Create a repository with name &lt;my directory name&gt; which is the clone of a bare repository (if &lt;my directory name&gt; is not specified, the name of the remote repository is used).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clone --bare &lt;path to directory containing .git&gt;</CODEROUTINE></TERM>
-    <DESC>create a bare repository which is the clone of a repository</DESC>
+    <DESC>Create a bare repository which is the clone of a repository.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clone --single-branch</CODEROUTINE></TERM>
+    <DESC>Clone only the history leading to the tip of a single branch, either specified by the <CODEROUTINE>--branch</CODEROUTINE> option or the primary branch remote’s HEAD points at.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clone --depth &lt;depth&gt;</CODEROUTINE></TERM>
+    <DESC>Create a shallow clone with a history truncated to the specified number of commits. Imply <CODEROUTINE>--single-branch</CODEROUTINE> unless <CODEROUTINE>--no-single-branch</CODEROUTINE> is given to fetch the histories near the tips of all branches.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE> git clone quux@foobar.com:myprojet<BR/>
+      git fetch --depth 100</CODESAMPLE></TERM>
+    <DESC>Workaround to clone a repository which is too big to be transfered.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote</CODEROUTINE></TERM>
-    <DESC>list the upsteam and downstream repositories</DESC>
+    <DESC>List the upsteam and downstream repositories.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote -v</CODEROUTINE></TERM>
-    <DESC>the same more verbose and with remote url after name</DESC>
+    <DESC>The same more verbose and with remote URL after name.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote add &lt;remotename&gt; &lt;url&gt;</CODEROUTINE></TERM>
-    <DESC>adds a remote named &lt;remotename&gt; for the repository at &lt;url&gt;</DESC>
+    <DESC>Add a remote named &lt;remotename&gt; for the repository at &lt;url&gt;.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git config --get remote.origin.url</CODEROUTINE></TERM>
-    <DESC>display the URL the local repository has been cloned from</DESC>
+    <DESC>Display the URL the local repository has been cloned from.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote -v rm origin</CODEROUTINE></TERM>
-    <DESC>remove the tracking of the remote "origin"</DESC>
+    <DESC>Remove the tracking of the remote "origin".</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git ls-files</CODEROUTINE></TERM>
-    <DESC>list files which are in the workspace or in the index</DESC>
+    <DESC>List files which are in the workspace or in the index.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git ls-files -m</CODEROUTINE></TERM>
-    <DESC>list modified files</DESC>
+    <DESC>List modified files.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git ls-files -o</CODEROUTINE></TERM>
-    <DESC>list files which are in the workspace and not in the index</DESC>
+    <DESC>List files which are in the workspace and not in the index.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -327,6 +340,20 @@
     <TERM><CODEROUTINE>git fetch</CODEROUTINE></TERM>
     <DESC>download objects and refs from upstream repository into local repository.</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git fetch --depth=&lt;depth&gt;</CODEROUTINE></TERM>
+    <DESC>limit fetching to the specified number of commits from the tip of each remote branch history<BR/>
+      tags for the deepened commits are not fetched</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git fetch --deepen=&lt;depth&gt;</CODEROUTINE></TERM>
+    <DESC>similar to <CODEROUTINE>--depth</CODEROUTINE>, except it specifies the number of commits from the current shallow boundary instead of from the tip of each remote branch history</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git fetch --unshallow</CODEROUTINE></TERM>
+    <DESC>If the source repository is complete, convert a shallow repository to a complete one, removing all the limitations imposed by shallow repositories.<BR/>
+      If the source repository is shallow, fetch as much as possible so that the current repository has the same history as the source repository.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
@@ -357,20 +384,24 @@
 </DEFINITIONTABLE>
 <BR/><DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>git clean -f</CODEROUTINE></TERM>
-    <DESC>recursively remove files that are not under version control</DESC>
+    <TERM><CODEROUTINE>git clean -d</CODEROUTINE></TERM>
+    <DESC>recurse into untracked directories</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git clean -f -d</CODEROUTINE></TERM>
-    <DESC>recursively remove files and directories that are not under version control</DESC>
+    <TERM><CODEROUTINE>git clean -f</CODEROUTINE><BR/>
+      <CODEROUTINE>git clean --force</CODEROUTINE></TERM>
+    <DESC>perform the deletion if the Git configuration variable <CODEROUTINE>clean.requireForce</CODEROUTINE> is not set to <CODEROUTINE>false</CODEROUTINE><BR/>
+      untracked nested git repositories (directories with a <CODEROUTINE>.git</CODEROUTINE> subdirectory) are ignored unless a second <CODEROUTINE>-f</CODEROUTINE> is given</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git clean -n</CODEROUTINE></TERM>
-    <DESC>list the files that would be removed</DESC>
+    <TERM><CODEROUTINE>git clean -i</CODEROUTINE><BR/>
+      <CODEROUTINE>git clean --interactive</CODEROUTINE></TERM>
+    <DESC>show what would be done and clean files interactively</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git clean -n - d</CODEROUTINE></TERM>
-    <DESC>list the files and directories that would be removed</DESC>
+    <TERM><CODEROUTINE>git clean -n</CODEROUTINE><BR/>
+      <CODEROUTINE>git clean --dry-run</CODEROUTINE></TERM>
+    <DESC>does not remove anything, list the files and directories that would be removed</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
