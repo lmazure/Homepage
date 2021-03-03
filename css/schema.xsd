@@ -187,10 +187,10 @@
       </xs:element>
       <xs:element name="ST" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="A" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
-      <xs:element name="L" minOccurs="1" maxOccurs="2">
+      <xs:element name="L" minOccurs="1" maxOccurs="3">
         <xs:simpleType>
          <xs:restriction base="xs:string">
-           <xs:pattern value="en|fr"/>
+           <xs:pattern value="de|en|fr"/>
          </xs:restriction>
         </xs:simpleType>
       </xs:element>
