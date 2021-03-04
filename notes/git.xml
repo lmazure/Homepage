@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -15,18 +15,18 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git --version</CODEROUTINE></TERM>
-    <DESC>print the version of Git</DESC>
+    <DESC>Print the version of Git.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git init</CODEROUTINE></TERM>
-    <DESC>create an empty local repository</DESC>
+    <DESC>Create an empty local repository.</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>mkdir projet.git<BR/>cd projet.git<BR/>git --bare init</CODESAMPLE></TERM>
-    <DESC>create an empty server repository</DESC>
+    <DESC>Create an empty server repository.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -52,11 +52,6 @@
     <DESC>Create a shallow clone with a history truncated to the specified number of commits. Imply <CODEROUTINE>--single-branch</CODEROUTINE> unless <CODEROUTINE>--no-single-branch</CODEROUTINE> is given to fetch the histories near the tips of all branches.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODESAMPLE> git clone quux@foobar.com:myprojet<BR/>
-      git fetch --depth 100</CODESAMPLE></TERM>
-    <DESC>Workaround to clone a repository which is too big to be transfered.</DESC>
-  </ROW>
-  <ROW>
     <TERM><CODEROUTINE>git remote</CODEROUTINE></TERM>
     <DESC>List the upsteam and downstream repositories.</DESC>
   </ROW>
@@ -77,6 +72,14 @@
     <DESC>Remove the tracking of the remote "origin".</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BLIST>
+  <ITEM>Workaround to clone a repository which is too big to be transfered.
+    <CODESAMPLE>git clone quux@foobar.com:myprojet<BR/>
+      git fetch --depth 100</CODESAMPLE>
+    Later on, when high bandwidth is available, get the whole repo with
+    <CODESAMPLE>git fetch --unshallow</CODESAMPLE>
+  </ITEM>
+</BLIST>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
@@ -181,108 +184,113 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git stash</CODEROUTINE><BR/><CODEROUTINE>git stash push</CODEROUTINE></TERM>
-    <DESC>save local modifications away and revert the working directory to match the HEAD commit (in the working tree and in the index)</DESC>
+    <DESC>Save local modifications away and revert the working directory to match the HEAD commit (in the working tree and in the index).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash push --message &lt;message&gt;</CODEROUTINE><BR/><CODEROUTINE>git stash push -m &lt;message&gt;</CODEROUTINE></TERM>
-    <DESC>attach a description to the stashed state</DESC>
+    <DESC>Attach a description to the stashed state.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash push --keep-index</CODEROUTINE></TERM>
-    <DESC>all changes already added to the index are left intact</DESC>
+    <DESC>All changes already added to the index are left intact.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git stash push [--include-untracked|--all]</CODEROUTINE><BR/><CODEROUTINE>git stash -u</CODEROUTINE><BR/><CODEROUTINE>git stash -a</CODEROUTINE></TERM>
-    <DESC><CODEROUTINE>--include-untracked</CODEROUTINE>, <CODEROUTINE>-u</CODEROUTINE>: all untracked files are also stashed and then cleaned up with <CODEROUTINE>git clean</CODEROUTINE><BR/><CODEROUTINE>--all</CODEROUTINE>, <CODEROUTINE>-a</CODEROUTINE>: the ignored files are stashed and cleaned in addition to the untracked files</DESC>
+    <TERM><CODEROUTINE>git stash push [--include-untracked|--all]</CODEROUTINE><BR/>
+      <CODEROUTINE>git stash -u</CODEROUTINE><BR/><CODEROUTINE>git stash -a</CODEROUTINE></TERM>
+    <DESC><CODEROUTINE>--include-untracked</CODEROUTINE>, <CODEROUTINE>-u</CODEROUTINE>: all untracked files are also stashed and then cleaned up with <CODEROUTINE>git clean</CODEROUTINE><BR/><CODEROUTINE>--all</CODEROUTINE>, <CODEROUTINE>-a</CODEROUTINE>: the ignored files are stashed and cleaned in addition to the untracked files.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash list</CODEROUTINE></TERM>
-    <DESC>list the stashed entries</DESC>
+    <DESC>List the stashed entries.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash apply [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>restore the entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present)</DESC>
+    <DESC>Restore the entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash apply --index [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>try to reinstate not only the working tree’s changes, but also the index’s ones</DESC>
+    <DESC>Try to reinstate not only the working tree’s changes, but also the index’s ones.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash drop [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present)</DESC>
+    <DESC>Remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash pop [--index] [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>apply and remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present)</DESC>
+    <DESC>Apply and remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash branch &lt;branchname&gt; [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>create and check out a new branch &lt;branchname&gt; starting from the commit at which &lt;stash&gt; was created, apply the changes recorded in &lt;stash&gt; to the new working tree and index</DESC>
+    <DESC>Create and check out a new branch &lt;branchname&gt; starting from the commit at which &lt;stash&gt; was created, apply the changes recorded in &lt;stash&gt; to the new working tree and index.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash clear</CODEROUTINE></TERM>
-    <DESC>remove all stash entries</DESC>
+    <DESC>Remove all stash entries.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git log</CODEROUTINE></TERM>
-    <DESC>show commit logs</DESC>
+    <DESC>Show commit logs.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --full-history</CODEROUTINE></TERM>
+    <DESC>Do not prune some history as the default mode (useful to see the merges).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>--</CODEROUTINE></TERM>
-    <DESC>separate paths from revisions</DESC>
+    <DESC>Separate paths from revisions.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --full-history -- myfile</CODEROUTINE></TERM>
-    <DESC>display the log of a file even if this one does not exist anymore</DESC>
+    <DESC>Display the log of a file even if this one does not exist anymore.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log -&lt;n&gt;</CODEROUTINE></TERM>
-    <DESC>limit the log to the n last commits</DESC>
+    <DESC>Limit the log to the n last commits.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --since "2020-09-05 00:00" --until "2020-09-06 24:00"</CODEROUTINE></TERM>
-    <DESC>limit the log between two datetimes</DESC>
+    <DESC>Limit the log between two datetimes.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --committer=&lt;regex&gt;</CODEROUTINE></TERM>
-    <DESC>filter on a given committer (if there are several <CODEROUTINE>--committer</CODEROUTINE> flags, return commits of committers matching any of the regexps)</DESC>
+    <DESC>Filter on a given committer (if there are several <CODEROUTINE>--committer</CODEROUTINE> flags, return commits of committers matching any of the regexps).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --author=&lt;regex&gt;</CODEROUTINE></TERM>
-    <DESC>filter on a given author (if there are several <CODEROUTINE>--author</CODEROUTINE> flags, return commits of authors matching any of the regexps)</DESC>
+    <DESC>Filter on a given author (if there are several <CODEROUTINE>--author</CODEROUTINE> flags, return commits of authors matching any of the regexps).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --pretty="%cI %s"</CODEROUTINE></TERM>
-    <DESC>show the commit date and the commit subject</DESC>
+    <DESC>Show the commit date and the commit subject.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --pretty="%ce,%cd" --date=short > commits.csv</CODEROUTINE></TERM>
+    <DESC>Dump the authors and dates of the commits in a file.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --stat</CODEROUTINE></TERM>
-    <DESC>indicate the modified files with a graph of the stats of the changes</DESC>
+    <DESC>Indicate the modified files with a graph of the stats of the changes.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --shortstat</CODEROUTINE></TERM>
-    <DESC>indicate the numbers of modified files, added and deleted lines</DESC>
+    <DESC>Indicate the numbers of modified files, added and deleted lines.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log -p</CODEROUTINE><BR/>
           <CODEROUTINE>git log --patch</CODEROUTINE></TERM>
-    <DESC>show the code changes in each commit</DESC>
+    <DESC>Show the code changes in each commit.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log -U&lt;n&gt;</CODEROUTINE><BR/>
           <CODEROUTINE>git log --unified=&lt;n&gt;</CODEROUTINE></TERM>
-    <DESC>generate diffs with n lines of context instead of the usual 3. Implies <CODEROUTINE>-p</CODEROUTINE></DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git log --pretty="%ce,%cd" --date=short > commits.csv</CODEROUTINE></TERM>
-    <DESC>dump the authors and dates of the commits in a file</DESC>
+    <DESC>Generate diffs with n lines of context instead of the usual 3. Implies <CODEROUTINE>-p</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git whatchanged</CODEROUTINE></TERM>
-    <DESC>list the last commits: hash, author, date, and list of impacted files</DESC>
+    <DESC>List the last commits: hash, author, date, and list of impacted files.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
