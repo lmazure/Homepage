@@ -251,7 +251,7 @@
       <xs:element name="DATE" type="partialDate" minOccurs="0" maxOccurs="1"/>
       <xs:element name="COMMENT" type="content" minOccurs="1" maxOccurs="1"/>
     </xs:sequence>
-    <xs:attribute name="pred" type="xs:string"/>
+    <xs:attribute name="predecessor" type="xs:string"/>
   </xs:complexType>
 </xs:element>
 
