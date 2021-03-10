@@ -3,12 +3,13 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TypeScript</TITLE>
 <PATH>links/typescript.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><X><T>typescriptlang.org</T><A>https://www.typescriptlang.org/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>DefinitelyTyped</T><A>http://definitelytyped.org/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>The TypeScript Handbook</T><A>https://www.typescriptlang.org/docs/handbook/intro.html</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>TypeScript Deep Dive</T><A>https://basarat.gitbooks.io/typescript/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>tutorialspoint's tutorial</T><A>https://www.tutorialspoint.com/typescript/index.htm</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>personal notes</T><A>../notes/typescript.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -65,6 +66,7 @@
       <ITEM><ARTICLE><X><T>Announcing TypeScript 4.1</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-1/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>19</DAY></DATE><COMMENT>The same as the RC, except for some details in the breaking changes: changes in <CODEROUTINE>lib.d.ts</CODEROUTINE> and management of unmatched parameters are added, simultaneous usage of <CODEROUTINE>--declaration</CODEROUTINE> and <CODEROUTINE>--outFile</CODEROUTINE> is removed.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 4.2 Beta</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-2-beta/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>Rest elements in the middle of tuples, improved messages thanks to the preservation of alias information, template literal types, stricter checks for the <CODEROUTINE>in</CODEROUTINE> operator, <CODEROUTINE>--noPropertyAccessFromIndexSignature</CODEROUTINE>, <CODEROUTINE>abstract</CODEROUTINE> on constructor signatures, <CODEROUTINE>--explainFiles</CODEROUTINE> displays why each file is included…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 4.2 RC</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-2-rc/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>Template literal types have been removed from 4.2, uncalled function checks now apply within &amp;&amp; and || expressions.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Announcing the New TypeScript Handbook</T><A>https://devblogs.microsoft.com/typescript/announcing-the-new-typescript-handbook/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Orta</FIRSTNAME><LASTNAME>Therox</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>5</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
