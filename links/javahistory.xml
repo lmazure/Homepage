@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java history</TITLE>
 <PATH>links/javahistory.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -54,7 +54,7 @@
       <ITEM><ARTICLE><X><T>Lambda: A Peek Under the Hood</T><A>https://www.youtube.com/watch?v=f9UvX2xhxa8</A><L>en</L><F>MP4</F><DURATION><MINUTE>59</MINUTE><SECOND>5</SECOND></DURATION><DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE><COMMENT>An explanation on how are implemented lambdas and the rational for this implementation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java 8 - Interfaces fonctionnelles</T><A>https://blog.ippon.fr/2014/03/18/java-8-interfaces-fonctionnelles/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alexis</FIRSTNAME><LASTNAME>Seigneurin</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE><COMMENT>An overview of Functional Interfaces.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java 8 - Gestion du temps</T><A>https://blog.ippon.fr/2014/03/19/java-8-gestion-du-temps/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Pierre</FIRSTNAME><LASTNAME>Templier</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>19</DAY></DATE><COMMENT>A short overview of <CODEROUTINE>java.time</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Java 8 language changes</T><ST>Learn how Lambda expressions and changes to interface classes make Java 8 a new language</ST><A>https://www.ibm.com/developerworks/library/j-java8lambdas/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dennis</FIRSTNAME><LASTNAME>Sosnoski</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>A short overview of lambda expressions.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status='zombie'><T>Java 8 language changes</T><ST>Learn how Lambda expressions and changes to interface classes make Java 8 a new language</ST><A>https://www.ibm.com/developerworks/library/j-java8lambdas/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dennis</FIRSTNAME><LASTNAME>Sosnoski</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>A short overview of lambda expressions.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>8 Great Java 8 Features No One's Talking about</T><A>https://www.infoq.com/articles/Java-8-Quiet-Features/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tal</FIRSTNAME><LASTNAME>Weiss</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE><COMMENT><CODEROUTINE>StampedLock</CODEROUTINE>, <CODEROUTINE>LongAdder</CODEROUTINE>, <CODEROUTINE>Arrays.parallelSort()</CODEROUTINE>, the new date/time API, <CODEROUTINE>Process. destroyForcibly()</CODEROUTINE> and <CODEROUTINE>Process. isAlive()</CODEROUTINE>, the exact <CODEROUTINE>Math</CODEROUTINE> methods, <CODEROUTINE>SecureRandom.getInstanceStrong()</CODEROUTINE>, and <CODEROUTINE>Optional&lt;T&gt;</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Optional</TITLE>
         <ITEM><ARTICLE><X><T>Tired of Null Pointer Exceptions? Consider Using Java SE 8's Optional!</T><A>https://oracle.com/technical-resources/articles/java/java8-optional.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Raoul-Gabriel</FIRSTNAME><LASTNAME>Urla</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH></DATE><COMMENT>A good explanation on how to use <CODEROUTINE>Optional</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
@@ -160,6 +160,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Java 16</TITLE>
       <ITEM><ARTICLE><X><T>Transforming Data Transformation in Java with Local Records</T><A>https://billykorando.com/2021/03/10/java-local-records/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Billy</FIRSTNAME><LASTNAME>Korando</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>10</DAY></DATE><COMMENT>A short presentation of the advantages of using <CODEROUTINE>record</CODEROUTINE>s as 'data carrier' classes.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Episode 15 “Java 16 is Here!” with Mikael Vidstedt</T><A>https://inside.java/2021/03/16/podcast-015/</A><L>en</L><F>MP4</F><DURATION><MINUTE>33</MINUTE><SECOND>30</SECOND></DURATION></X><X><T>Inside Java Episode 15 “Java 16 is Here!” with Mikael Vidstedt</T><A>https://www.youtube.com/watch?v=L0tOTN7Dkso</A><L>en</L><F>MP4</F><DURATION><MINUTE>33</MINUTE><SECOND>34</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mikael</FIRSTNAME><LASTNAME>Vidstedt</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Chad</FIRSTNAME><LASTNAME>Arimura</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>16</DAY></DATE><COMMENT>Information about the changes in Java 16.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
