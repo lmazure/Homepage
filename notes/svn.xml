@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Subversion</TITLE>
 <PATH>notes/svn.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <SLIST>
   <ITEM><BLIST><TITLE><U><B>Tortoise SVN</B></U></TITLE>
@@ -120,7 +120,8 @@
     <ITEM>Update the current directory to head
     <CODESAMPLE>svn update</CODESAMPLE></ITEM>
     <ITEM>Display a revision of a file
-    <CODESAMPLE>svn cat --revision=123 &lt;file&gt;</CODESAMPLE></ITEM>
+      <CODESAMPLE>svn cat -r 123 &lt;file&gt;<BR/>
+        svn cat --revision=123 &lt;file&gt;</CODESAMPLE></ITEM>
     <ITEM>Copy a tag
     <CODESAMPLE>svn copy "https://svn.eurofins.local/EOL/tags/EOL-2014-12a-RC2" "https://svn.eurofins.local/EOL/tags/EOL-2014-12a" -m "issue #97713: Create SVN tag for EOL-2014-12a"</CODESAMPLE></ITEM>
     <ITEM>Clean up the working copy (i.e. remove locks and resume unfinished operation)
