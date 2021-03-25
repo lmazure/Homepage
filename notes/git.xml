@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -226,6 +226,21 @@
   <ROW>
     <TERM><CODEROUTINE>git stash clear</CODEROUTINE></TERM>
     <DESC>Remove all stash entries.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git worktree add &lt;path&gt; &lt;branchname&gt;</CODEROUTINE></TERM>
+    <DESC>Create a worktree in directory &lt;path&gt; for branch &lt;branchname&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git worktree list</CODEROUTINE></TERM>
+    <DESC>List details of each working tree. The main working tree is listed first.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git worktree remove &lt;worktree&gt;</CODEROUTINE></TERM>
+    <DESC>Remove a worktree. The main working tree cannot be removed.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
