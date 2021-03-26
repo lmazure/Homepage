@@ -120,6 +120,19 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE>git status</CODEROUTINE></TERM>
+    <DESC>
+      <BLIST><TITLE>Display</TITLE>
+        <ITEM>paths that have differences between the index file and the current HEAD commit</ITEM>
+        <ITEM>paths that have differences between the working tree and the index file, and</ITEM>
+        <ITEM>paths in the working tree that are not tracked by Git</ITEM>
+      </BLIST>
+    </DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
     <TERM><CODEROUTINE>git commit -m &lt;msg&gt;</CODEROUTINE></TERM>
     <DESC>store the current contents of the index in a new commit along with message &lt;msg&gt;</DESC>
   </ROW>
@@ -159,88 +172,12 @@
     <DESC>display only the filenames</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git diff &lt;commit 1&gt; &lt;commit 2&lt; &lt;file&lt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git diff &lt;commit 1&gt; &lt;commit 2&gt; &lt;file&gt;</CODEROUTINE></TERM>
     <DESC>compare two revisions of a file</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt;:&lt;file 1&gt; &lt;commit 2&gt;:&lt;file 2&gt;</CODEROUTINE></TERM>
     <DESC>compare two different files in two different revisions</DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
-  <ROW>
-    <TERM><CODEROUTINE>git status</CODEROUTINE></TERM>
-    <DESC>
-      <BLIST><TITLE>Display</TITLE>
-        <ITEM>paths that have differences between the index file and the current HEAD commit</ITEM>
-        <ITEM>paths that have differences between the working tree and the index file, and</ITEM>
-        <ITEM>paths in the working tree that are not tracked by Git</ITEM>
-      </BLIST>
-    </DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
-  <ROW>
-    <TERM><CODEROUTINE>git stash</CODEROUTINE><BR/><CODEROUTINE>git stash push</CODEROUTINE></TERM>
-    <DESC>Save local modifications away and revert the working directory to match the HEAD commit (in the working tree and in the index).</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash push --message &lt;message&gt;</CODEROUTINE><BR/><CODEROUTINE>git stash push -m &lt;message&gt;</CODEROUTINE></TERM>
-    <DESC>Attach a description to the stashed state.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash push --keep-index</CODEROUTINE></TERM>
-    <DESC>All changes already added to the index are left intact.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash push [--include-untracked|--all]</CODEROUTINE><BR/>
-      <CODEROUTINE>git stash -u</CODEROUTINE><BR/><CODEROUTINE>git stash -a</CODEROUTINE></TERM>
-    <DESC><CODEROUTINE>--include-untracked</CODEROUTINE>, <CODEROUTINE>-u</CODEROUTINE>: all untracked files are also stashed and then cleaned up with <CODEROUTINE>git clean</CODEROUTINE><BR/><CODEROUTINE>--all</CODEROUTINE>, <CODEROUTINE>-a</CODEROUTINE>: the ignored files are stashed and cleaned in addition to the untracked files.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash list</CODEROUTINE></TERM>
-    <DESC>List the stashed entries.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash apply [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Restore the entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash apply --index [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Try to reinstate not only the working tree’s changes, but also the index’s ones.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash drop [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash pop [--index] [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Apply and remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash branch &lt;branchname&gt; [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Create and check out a new branch &lt;branchname&gt; starting from the commit at which &lt;stash&gt; was created, apply the changes recorded in &lt;stash&gt; to the new working tree and index.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git stash clear</CODEROUTINE></TERM>
-    <DESC>Remove all stash entries.</DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
-  <ROW>
-    <TERM><CODEROUTINE>git worktree add &lt;path&gt; &lt;branchname&gt;</CODEROUTINE></TERM>
-    <DESC>Create a worktree in directory &lt;path&gt; for branch &lt;branchname&gt;.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git worktree list</CODEROUTINE></TERM>
-    <DESC>List details of each working tree. The main working tree is listed first.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git worktree remove &lt;worktree&gt;</CODEROUTINE></TERM>
-    <DESC>Remove a worktree. The main working tree cannot be removed.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -312,11 +249,89 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git show &lt;commit&gt;</CODEROUTINE></TERM>
-    <DESC>show the log message and textual diff</DESC>
+    <DESC>Show the log message and textual diff</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git show &lt;commit&gt;:&lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>display a given version of a file</DESC>
+    <DESC>Display a given version of a file</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git blame &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Annotate each line of the file with information from the revision which last modified the line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git blame -M</CODEROUTINE></TERM>
+    <DESC>Detect moved or copied lines within a file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git blame -w</CODEROUTINE></TERM>
+    <DESC>Ignore whitespaces</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git stash</CODEROUTINE><BR/><CODEROUTINE>git stash push</CODEROUTINE></TERM>
+    <DESC>Save local modifications away and revert the working directory to match the HEAD commit (in the working tree and in the index).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash push --message &lt;message&gt;</CODEROUTINE><BR/><CODEROUTINE>git stash push -m &lt;message&gt;</CODEROUTINE></TERM>
+    <DESC>Attach a description to the stashed state.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash push --keep-index</CODEROUTINE></TERM>
+    <DESC>All changes already added to the index are left intact.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash push [--include-untracked|--all]</CODEROUTINE><BR/>
+      <CODEROUTINE>git stash -u</CODEROUTINE><BR/><CODEROUTINE>git stash -a</CODEROUTINE></TERM>
+    <DESC><CODEROUTINE>--include-untracked</CODEROUTINE>, <CODEROUTINE>-u</CODEROUTINE>: all untracked files are also stashed and then cleaned up with <CODEROUTINE>git clean</CODEROUTINE><BR/><CODEROUTINE>--all</CODEROUTINE>, <CODEROUTINE>-a</CODEROUTINE>: the ignored files are stashed and cleaned in addition to the untracked files.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash list</CODEROUTINE></TERM>
+    <DESC>List the stashed entries.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash apply [&lt;stash&gt;]</CODEROUTINE></TERM>
+    <DESC>Restore the entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash apply --index [&lt;stash&gt;]</CODEROUTINE></TERM>
+    <DESC>Try to reinstate not only the working tree’s changes, but also the index’s ones.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash drop [&lt;stash&gt;]</CODEROUTINE></TERM>
+    <DESC>Remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash pop [--index] [&lt;stash&gt;]</CODEROUTINE></TERM>
+    <DESC>Apply and remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash branch &lt;branchname&gt; [&lt;stash&gt;]</CODEROUTINE></TERM>
+    <DESC>Create and check out a new branch &lt;branchname&gt; starting from the commit at which &lt;stash&gt; was created, apply the changes recorded in &lt;stash&gt; to the new working tree and index.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash clear</CODEROUTINE></TERM>
+    <DESC>Remove all stash entries.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git worktree add &lt;path&gt; &lt;branchname&gt;</CODEROUTINE></TERM>
+    <DESC>Create a worktree in directory &lt;path&gt; for branch &lt;branchname&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git worktree list</CODEROUTINE></TERM>
+    <DESC>List details of each working tree. The main working tree is listed first.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git worktree remove &lt;worktree&gt;</CODEROUTINE></TERM>
+    <DESC>Remove a worktree. The main working tree cannot be removed.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -340,21 +355,6 @@
   <ROW>
     <TERM><CODEROUTINE>git reset --hard HEAD~2</CODEROUTINE></TERM>
     <DESC>delete the last two commits from the local repository</DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
-  <ROW>
-    <TERM><CODEROUTINE>git blame &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>annotate each line of the file with information from the revision which last modified the line</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git blame -M</CODEROUTINE></TERM>
-    <DESC>detects moved or copied lines within a file</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git blame -w</CODEROUTINE></TERM>
-    <DESC>ignores whitespaces</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
