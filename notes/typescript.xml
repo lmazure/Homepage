@@ -3,17 +3,19 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TypeScript</TITLE>
 <PATH>notes/typescript.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><CODEROUTINE>tsc</CODEROUTINE></TITLE>
   <ITEM>display the version<BR/>
     <CODESAMPLE>tsc --version</CODESAMPLE></ITEM>
-  <ITEM><CODEFILENAME>tsconfig.json</CODEFILENAME><BR/>
-    The presence of a <CODEFILENAME>tsconfig.json</CODEFILENAME> file in a directory indicates that the directory is the root of a TypeScript project.<BR/>
-    If <CODEROUTINE>tsc</CODEROUTINE> is launched with no input file, it will look for <CODEFILENAME>tsconfig.json</CODEFILENAME> or <CODEFILENAME>jsconfig.json</CODEFILENAME>.<BR/>
-    <CODEFILENAME>jsconfig.json</CODEFILENAME> is for JavaScript projects, it is the same as <CODEFILENAME>jsconfig.json</CODEFILENAME> except for some JavaScript-related compiler flags enabled by default.<BR/>
-    <CODEROUTINE>tsc</CODEROUTINE> can be invoked with <CODEROUTINE>--project</CODEROUTINE>/<CODEROUTINE>-p</CODEROUTINE> to specify the path of a directory containing a <CODEFILENAME>tsconfig.json</CODEFILENAME> file or the path to a valid .json file containing the configurations.
-  </ITEM>
+  <ITEM><BLIST><TITLE><CODEFILENAME>tsconfig.json</CODEFILENAME></TITLE>
+    <ITEM>The presence of a <CODEFILENAME>tsconfig.json</CODEFILENAME> file in a directory indicates that the directory is the root of a TypeScript project.<BR/>
+      If <CODEROUTINE>tsc</CODEROUTINE> is launched with no input file, it will look for <CODEFILENAME>tsconfig.json</CODEFILENAME> or <CODEFILENAME>jsconfig.json</CODEFILENAME>.<BR/>
+      <CODEFILENAME>jsconfig.json</CODEFILENAME> is for JavaScript projects, it is the same as <CODEFILENAME>jsconfig.json</CODEFILENAME> except for some JavaScript-related compiler flags enabled by default.</ITEM>
+    <ITEM><CODEROUTINE>tsc</CODEROUTINE> can be invoked with <CODEROUTINE>--project</CODEROUTINE>/<CODEROUTINE>-p</CODEROUTINE> to specify the path of a directory containing a <CODEFILENAME>tsconfig.json</CODEFILENAME> file or the path to a valid .json file containing the configurations.</ITEM>
+    <ITEM>generate the default <CODEFILENAME>tsconfig.json</CODEFILENAME><BR/>
+      <CODESAMPLE>tsc --init</CODESAMPLE></ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BR/>
 <U><B>Duck typing</B></U><BR/>
@@ -39,6 +41,12 @@ It is possible to pass parameters having a type that is a superset of the expect
   iTakePoint2D(point3D); // OK<BR/>
   iTakePoint2D(point1D); // KO y is missing
 </CODESAMPLE>
+<BR/>
+<U><B>Postfix <CODEROUTINE>!</CODEROUTINE>: Non-null Assertion Operator</B></U><BR/>
+The <CODEROUTINE>!</CODEROUTINE> postfix operator removes <CODEROUTINE>null</CODEROUTINE> and <CODEROUTINE>undefined</CODEROUTINE> from a type without doing any checking.
+<CODESAMPLE>function liveDangerously(x?: number | undefined) {<BR/>
+<TAB/>console.log(x!.toFixed());<BR/>
+}</CODESAMPLE>
 <BR/>
 <U><B>Equality</B></U><BR/>
 <CODEROUTINE>==</CODEROUTINE> test equality with type coercition<BR/>

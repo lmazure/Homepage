@@ -270,6 +270,19 @@
     <TERM><CODEROUTINE>git blame -w</CODEROUTINE></TERM>
     <DESC>Ignore whitespaces</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git blame -f</CODEROUTINE><BR/>
+      <CODEROUTINE>git blame --show-name</CODEROUTINE></TERM>
+    <DESC>Show the filename in the original commit (by default the filename is shown if there is any line that came from a file with a different name, due to rename detection)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git blame --date=format:%Y%d</CODEROUTINE></TERM>
+    <DESC>Define a format for the dates</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git blame --show-email</CODEROUTINE></TERM>
+    <DESC>Show the author email instead of author name</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
