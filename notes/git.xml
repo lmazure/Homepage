@@ -134,50 +134,50 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git commit -m &lt;msg&gt;</CODEROUTINE></TERM>
-    <DESC>store the current contents of the index in a new commit along with message &lt;msg&gt;</DESC>
+    <DESC>Store the current contents of the index in a new commit along with message &lt;msg&gt;.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit -a</CODEROUTINE></TERM>
-    <DESC>automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected</DESC>
+    <DESC>Automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit --amend</CODEROUTINE></TERM>
-    <DESC>replace the tip of the current branch by creating a new commit</DESC>
+    <DESC>Replace the tip of the current branch by creating a new commit.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit --amend -m "an updated commit message"</CODEROUTINE></TERM>
-    <DESC>change the commit message</DESC>
+    <DESC>Change the commit message.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit --amend --reset-author</CODEROUTINE></TERM>
-    <DESC>declare that the authorship of the new commit belongs to the committer</DESC>
+    <DESC>Declare that the authorship of the new commit belongs to the committer.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit --amend --author="John &lt;John@foo.bar&gt;"</CODEROUTINE></TERM>
-    <DESC>declare that the authorship of the new commit belongs to the specified name/email.</DESC>
+    <DESC>Declare that the authorship of the new commit belongs to the specified name/email.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git diff</CODEROUTINE></TERM>
-    <DESC>display the differences between the workspace and the index</DESC>
+    <DESC>Display the differences between the workspace and the index.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff --cached</CODEROUTINE></TERM>
-    <DESC>display the differences between the index and the local repository</DESC>
+    <DESC>Display the differences between the index and the local repository.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff --name-only</CODEROUTINE></TERM>
-    <DESC>display only the filenames</DESC>
+    <DESC>Display only the filenames.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt; &lt;commit 2&gt; &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>compare two revisions of a file</DESC>
+    <DESC>Compare two revisions of a file.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt;:&lt;file 1&gt; &lt;commit 2&gt;:&lt;file 2&gt;</CODEROUTINE></TERM>
-    <DESC>compare two different files in two different revisions</DESC>
+    <DESC>Compare two different files in two different revisions.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -351,39 +351,39 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git reset &lt;commit&gt;</CODEROUTINE></TERM>
-    <DESC>reset current HEAD to a previous commit<BR/>if no commit is specified, the current HEAD is used</DESC>
+    <DESC>Reset current HEAD to a previous commit<BR/>if no commit is specified, the current HEAD is used.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --soft</CODEROUTINE></TERM>
-    <DESC>do not touch the index file or the working tree</DESC>
+    <DESC>Do not touch the index file or the working tree.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --mixed</CODEROUTINE></TERM>
-    <DESC>reset the index but not the working tree<BR/>this is the default</DESC>
+    <DESC>Reset the index but not the working tree<BR/>this is the default.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --hard</CODEROUTINE></TERM>
-    <DESC>reset the index and the working tree</DESC>
+    <DESC>Reset the index and the working tree.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --hard HEAD~2</CODEROUTINE></TERM>
-    <DESC>delete the last two commits from the local repository</DESC>
+    <DESC>Delete the last two commits from the local repository.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git fetch</CODEROUTINE></TERM>
-    <DESC>download objects and refs from upstream repository into local repository.</DESC>
+    <DESC>Download objects and refs from upstream repository into local repository.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git fetch --depth=&lt;depth&gt;</CODEROUTINE></TERM>
-    <DESC>limit fetching to the specified number of commits from the tip of each remote branch history<BR/>
-      tags for the deepened commits are not fetched</DESC>
+    <DESC>Limit fetching to the specified number of commits from the tip of each remote branch history.<BR/>
+      Tags for the deepened commits are not fetched.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git fetch --deepen=&lt;depth&gt;</CODEROUTINE></TERM>
-    <DESC>similar to <CODEROUTINE>--depth</CODEROUTINE>, except it specifies the number of commits from the current shallow boundary instead of from the tip of each remote branch history</DESC>
+    <DESC>Similar to <CODEROUTINE>--depth</CODEROUTINE>, except it specifies the number of commits from the current shallow boundary instead of from the tip of each remote branch history.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git fetch --unshallow</CODEROUTINE></TERM>
@@ -396,7 +396,7 @@
   <ROW>
     <TERM><CODEROUTINE>git pull</CODEROUTINE></TERM>
     <DESC>
-      <BLIST><SUBTITLE>incorporate changes of the remote repository into the current branch, it is the same as</SUBTITLE>
+      <BLIST><SUBTITLE>Incorporate changes of the remote repository into the current branch, it is the same as</SUBTITLE>
         <ITEM><CODEROUTINE>git fetch</CODEROUTINE> scoped to the local branch that HEAD is pointed at</ITEM>
         <ITEM>followed by <CODEROUTINE>git merge FETCH_HEAD</CODEROUTINE>.</ITEM>
       </BLIST>
@@ -404,102 +404,111 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git pull --rebase</CODEROUTINE></TERM>
-    <DESC>perform a rebase instead of a merge</DESC>
+    <DESC>Perform a rebase instead of a merge.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git push &lt;remotename&gt; &lt;branchname&gt;</CODEROUTINE></TERM>
-    <DESC>push commits made on a local branch to a remote repository in the branch of same name.</DESC>
+    <DESC>Push commits made on a local branch to a remote repository in the branch of same name.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>-u</CODEROUTINE><BR/><CODEROUTINE>--set-upstream</CODEROUTINE></TERM>
-    <DESC>for every branch that is up to date or successfully pushed, add upstream (tracking) reference</DESC>
+    <DESC>For every branch that is up to date or successfully pushed, add upstream (tracking) reference.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/><DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git clean -d</CODEROUTINE></TERM>
-    <DESC>recurse into untracked directories</DESC>
+    <DESC>Recurse into untracked directories.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clean -f</CODEROUTINE><BR/>
       <CODEROUTINE>git clean --force</CODEROUTINE></TERM>
-    <DESC>perform the deletion if the Git configuration variable <CODEROUTINE>clean.requireForce</CODEROUTINE> is not set to <CODEROUTINE>false</CODEROUTINE><BR/>
-      untracked nested git repositories (directories with a <CODEROUTINE>.git</CODEROUTINE> subdirectory) are ignored unless a second <CODEROUTINE>-f</CODEROUTINE> is given</DESC>
+    <DESC>Perform the deletion if the Git configuration variable <CODEROUTINE>clean.requireForce</CODEROUTINE> is not set to <CODEROUTINE>false</CODEROUTINE>.<BR/>
+      Untracked nested git repositories (directories with a <CODEROUTINE>.git</CODEROUTINE> subdirectory) are ignored unless a second <CODEROUTINE>-f</CODEROUTINE> is given. </DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clean -i</CODEROUTINE><BR/>
       <CODEROUTINE>git clean --interactive</CODEROUTINE></TERM>
-    <DESC>show what would be done and clean files interactively</DESC>
+    <DESC>Show what would be done and clean files interactively.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clean -n</CODEROUTINE><BR/>
       <CODEROUTINE>git clean --dry-run</CODEROUTINE></TERM>
-    <DESC>does not remove anything, list the files and directories that would be removed</DESC>
+    <DESC>Does not remove anything, list the files and directories that would be removed.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git branch &lt;new branch&gt;</CODEROUTINE></TERM>
-    <DESC>create a new branch</DESC>
+    <DESC>Create a new branch.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git branch</CODEROUTINE></TERM>
-    <DESC>list the branches, the current one is prefixed with <CODEROUTINE>*</CODEROUTINE></DESC>
+    <DESC>List the branches, the current one is prefixed with <CODEROUTINE>*</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git checkout &lt;branch&gt;</CODEROUTINE></TERM>
-    <DESC>switch to another branch</DESC>
+    <DESC>Switch to another branch.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git merge &lt;branch&gt;</CODEROUTINE></TERM>
-    <DESC>merge a branch in the workspace</DESC>
+    <DESC>Merge a branch in the workspace.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git mergetool</CODEROUTINE></TERM>
-    <DESC>perform merge conflict resolution with a tool</DESC>
+    <DESC>Perform merge conflict resolution with a tool.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git mergetool --tool-help</CODEROUTINE></TERM>
-    <DESC>list the supported merge tools, indicating which ones are available</DESC>
+    <DESC>List the supported merge tools, indicating which ones are available.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git gc</CODEROUTINE></TERM>
-    <DESC>compress file revision and remove uneachable objects</DESC>
+    <DESC>Compress file revision and remove uneachable objects</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE>git config -l</CODEROUTINE><BR/>
+      <CODEROUTINE>git config --list</CODEROUTINE></TERM>
+    <DESC>List all variables set in config file with their values.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git config --global --list</CODEROUTINE></TERM>
-    <DESC>display the global configuration</DESC>
+    <DESC>Display the global configuration.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git config -l --show-origin</CODEROUTINE></TERM>
+    <DESC>List all variables set in config file with, their values, and the files in which they are defined.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git config --global --edit</CODEROUTINE></TERM>
-    <DESC>open an editor to edit the global configuration file</DESC>
+    <DESC>Open an editor to edit the global configuration file.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git config --global user.name "John Doe"</CODEROUTINE></TERM>
-    <DESC>set the name in the global configuration file</DESC>
+    <DESC>Set the name in the global configuration file.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git config --global user.email johndoe@example.com</CODEROUTINE></TERM>
-    <DESC>set the email in the global configuration file</DESC>
+    <DESC>Set the email in the global configuration file.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git config --system user.email johndoe@example.com</CODEROUTINE></TERM>
-    <DESC>set the email in the system-wide configuration file</DESC>
+    <DESC>Set the email in the system-wide configuration file.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git config user.name "John Doe"</CODEROUTINE><BR/>
       <CODEROUTINE>git config user.name "John Doe"</CODEROUTINE></TERM>
-    <DESC>set the name in the local repository configuration file</DESC>
+    <DESC>Set the name in the local repository configuration file.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

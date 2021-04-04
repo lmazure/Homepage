@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -219,6 +219,10 @@
       <ROW>
         <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F2'/></TERM>
         <DESC>display the function wizard</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F8'/></TERM>
+        <DESC>toggle the highlight of cells containing values</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
