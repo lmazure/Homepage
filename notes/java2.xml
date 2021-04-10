@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>notes/java2.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
@@ -54,6 +54,15 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
   <ITEM><CODEROUTINE>String</CODEROUTINE>: immutable sequence of characters</ITEM>
   <ITEM><CODEROUTINE>StringBuffer</CODEROUTINE>: thread-safe, mutable sequence of characters (Java 1.0)</ITEM>
   <ITEM><CODEROUTINE>StringBuilder</CODEROUTINE>: non thread-safe, mutable sequence of characters, faster than <CODEROUTINE>StringBuffer</CODEROUTINE> (Java 1.5)</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Varargs</B></U><BR/></TITLE>
+  <ITEM>example
+    <CODESAMPLE>void foo(int... x) {<BR/>
+    <TAB/>for (int i = 0; i &lt; x.length; i++) {<BR/>
+    <TAB/><TAB/>System.out.println(x[i]);<BR/>
+    <TAB/>}<BR/>
+    }</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Exceptions</B></U><BR/></TITLE>
   <ITEM><BLIST><TITLE>Class hierarchy</TITLE>

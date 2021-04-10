@@ -76,6 +76,9 @@ W1 = 110110yyyyyyyyyy // 0xD800 + yyyyyyyyyy<BR/>
 W2 = 110111xxxxxxxxxx // 0xDC00 + xxxxxxxxxx
 </CODESAMPLE>
 <BR/>
+<B>Replacement character</B><BR/>
+U+FFFD � REPLACEMENT CHARACTER is used to replace an unknown, unrecognized, or unrepresentable character<BR/>
+<BR/>
 <B>Combining character sequences</B><BR/>
 A non-combining code point may be followed by an arbitrary number of combining code points to form a single combining character sequence, which is really a composite character.<BR/>
 Certain characters are only available as a combination of multiple code points, while some, the ones that are expected to be the most used, are also available as a single precomposed code point. The order of the combined code points may also vary, but all code points combinations leading to the same abstract character are still canonically equivalent.<BR/>
