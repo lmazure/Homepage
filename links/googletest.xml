@@ -3,9 +3,12 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing at Google</TITLE>
 <PATH>links/googletest.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <LLIST>
+  <ITEM><BLIST>
+    <ITEM><X><T>Google Testing Blog</T><A>https://testing.googleblog.com/</A><L>en</L><F>HTML</F><FEED><A>http://googletesting.blogspot.com/atom.xml</A><F>Atom</F></FEED></X></ITEM>
+  </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>Test Sizes</T><A>https://testing.googleblog.com/2010/12/test-sizes.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Stewart</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>12</MONTH><DAY>13</DAY></DATE><COMMENT>The description of how Google defines test sizes (small vs. medium vs. large).</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>How Google Tests Software</T><A>https://testing.googleblog.com/2011/01/how-google-tests-software.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Whittaker</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>1</MONTH><DAY>25</DAY></DATE><COMMENT>A description of the Engineering Productivity organisation.</COMMENT></ARTICLE></ITEM>
@@ -62,6 +65,7 @@
     <ITEM><ARTICLE><X quality='-1'><T>COOL to be a TE @ Google</T><A>https://testing.googleblog.com/2020/05/cool-to-be-te-google.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Anantha</FIRSTNAME><LASTNAME>Keesara</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>5</MONTH><DAY>8</DAY></DATE><COMMENT>Some bullshit propaganda for tester positions at Google.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Fixing a Test Hourglass</T><A>https://testing.googleblog.com/2020/11/fixing-test-hourglass.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alan</FIRSTNAME><LASTNAME>Myrvold</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>9</DAY></DATE><COMMENT>An example of using a hermetic test environment to solve testing issues.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Test Flakiness - One of the main challenges of automated testing</T><A>https://testing.googleblog.com/2020/12/test-flakiness-one-of-main-challenges.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>George</FIRSTNAME><LASTNAME>Pirocanac</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE><COMMENT>A list of possible causes of test flakiness.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Mutation Testing</T><A>https://testing.googleblog.com/2021/04/mutation-testing.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Goran</FIRSTNAME><LASTNAME>Petrović</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Goran</FIRSTNAME><LASTNAME>Petrovic</LASTNAME></AUTHOR> explains how he created, analyzed, and improved his mutation testing tool.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Testing on the Toilet</TITLE>
       <ITEM><ARTICLE><X><T>Testing on the Toilet: Testing State vs. Testing Interactions</T><A>https://testing.googleblog.com/2013/03/testing-on-toilet-testing-state-vs.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Trenk</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE><COMMENT>After explaining the difference between testing states and testing interactions, the author explains that we should test states except in some particular cases.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Testing on the Toilet: Don’t Overuse Mocks</T><A>https://testing.googleblog.com/2013/05/testing-on-toilet-dont-overuse-mocks.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Trenk</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>A description of some risks when using too much mocks.</COMMENT></ARTICLE></ITEM>

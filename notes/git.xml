@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -283,6 +283,10 @@
     <TERM><CODEROUTINE>git blame --show-email</CODEROUTINE></TERM>
     <DESC>Show the author email instead of author name</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git blame -l</CODEROUTINE></TERM>
+    <DESC>indicate all (40) characters of the revision</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
@@ -471,7 +475,14 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git gc</CODEROUTINE></TERM>
-    <DESC>Compress file revision and remove uneachable objects</DESC>
+    <DESC>Compress file revision and remove uneachable objects.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git submodule add https://github.com/chaconinc/DbConnector</CODEROUTINE></TERM>
+    <DESC>Add an existing Git repository as a submodule.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
