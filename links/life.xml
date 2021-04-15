@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Life cycle</TITLE>
 <PATH>links/life.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -60,8 +60,8 @@
           <ITEM><X><T>Wikipedia</T><A>https://fr.wikipedia.org/wiki/Crystal_clear</A><L>fr</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
         <ITEM><CLIST><TITLE>SAFe</TITLE>
-          <ITEM><X><T>site</T><A>https://www.scaledagileframework.com/</A><L>fr</L><F>HTML</F></X></ITEM>
-          <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Scaled_agile_framework</A><L>fr</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>site</T><A>https://www.scaledagileframework.com/</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Scaled_agile_framework</A><L>en</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
@@ -86,13 +86,20 @@
       <ITEM><X><T>DocBook</T><A>https://www.docbook.org/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Distribution</TITLE>
-      <ITEM><CLIST><TITLE><ANCHOR>rpm</ANCHOR><X><T>rpm</T><A>https://rpm.org/</A><L>en</L><F>HTML</F></X></TITLE>
-        <ITEM><X><T>personal notes</T><A>../notes/rpm.html</A><L>en</L><F>HTML</F></X></ITEM>
-      </CLIST></ITEM>
-      <ITEM><CLIST><TITLE><ANCHOR>apt</ANCHOR>apt</TITLE>
-        <ITEM><X><T>HOWTO</T><A>https://debian.org/doc/manuals/apt-howto/index.en.html</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>personal notes</T><A>../notes/apt.html</A><L>en</L><F>HTML</F></X></ITEM>
-      </CLIST></ITEM>
+      <ITEM><BLIST><TITLE>Windows</TITLE>
+        <ITEM><X><T>Chocolatey</T><A>https://chocolatey.org/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Ninite</T><A>https://ninite.com/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Scoop</T><A>https://scoop.sh/</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Linux</TITLE>
+        <ITEM><CLIST><TITLE><ANCHOR>rpm</ANCHOR><X><T>rpm</T><A>https://rpm.org/</A><L>en</L><F>HTML</F></X></TITLE>
+          <ITEM><X><T>personal notes</T><A>../notes/rpm.html</A><L>en</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
+        <ITEM><CLIST><TITLE><ANCHOR>apt</ANCHOR>apt</TITLE>
+          <ITEM><X><T>HOWTO</T><A>https://debian.org/doc/manuals/apt-howto/index.en.html</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>personal notes</T><A>../notes/apt.html</A><L>en</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
+      </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Code escrow</TITLE>
       <ITEM><X><T>LOGITAS</T><A>http://www.logitas.com</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
@@ -115,7 +122,7 @@
       <ITEM><X><T>Track+</T><A>https://www.trackplus.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>GNATS</T><A>http://www.gnu.org/software/gnats</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>MantisBT</T><A>https://www.mantisbt.org/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>DoneDone</T><A>https://www.getdonedone.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>DoneDone</T><A>https://www.donedone.com/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tool integration</TITLE>
       <ITEM><X><T>VectorCAST</T><A>https://www.vectorcast.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -262,14 +269,14 @@
           <ITEM><ARTICLE><X status='dead'><T>Agile v. FDA</T><A>http://forums.construx.com/forums/t/432.aspx</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE><COMMENT>An interesting forum discussion about FDA and agility.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>The Tech Startup CEO’s Guide to Good Development Practice</TITLE><SUBTITLE>a presentation of common practices for people who know little about software development</SUBTITLE>
-          <ITEM><ARTICLE><X><T>The Tech Startup CEO’s Guide to Good Development Practice. Part 1: Daily Practices</T><A>https://medium.com/swlh/the-startup-ceos-guide-to-good-development-practice-part-1-daily-practices-b2c7ffa452c</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Dyson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>Daily standup, Test Driven Development, Pair/Mob Programming, Refactoring/Rework, Continuous Integration/Continuous Delivery, and Visible Work (Kanban board).</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>The Startup CEO’s Guide to Good Development Practice. Part 1: Daily Practices</T><A>https://medium.com/swlh/the-startup-ceos-guide-to-good-development-practice-part-1-daily-practices-b2c7ffa452c</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Dyson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>Daily standup, Test Driven Development, Pair/Mob Programming, Refactoring/Rework, Continuous Integration/Continuous Delivery, and Visible Work (Kanban board).</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>The Tech Startup CEO’s Guide to Good Development Practice. Part 2: Weekly/Monthly Practices</T><A>https://pauldyson.net/the-tech-startup-ceos-guide-to-good-development-practice-part-2-weekly-monthly-practices-44209af5fc99</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Dyson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE><COMMENT>Planning Meeting/Sprint Review, Reprioritisation, User Stories, and Sustainable Pace.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>The Tech Startup CEO’s Guide to Good Development Practice. Part 3: Long Cycle and Ad hoc Practices</T><A>https://pauldyson.net/the-tech-startup-ceos-guide-to-good-development-practice-part-3-long-cycle-and-ad-hoc-practices-e54fea48f5e3</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Dyson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE><COMMENT>Managing Technical Debt, Retrospectives, and Roadmap.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>The Tech Startup CEO’s Guide to Good Development Practice. Part 4: Adopting and Adapting Practices</T><A>https://pauldyson.net/the-tech-startup-ceos-guide-to-good-development-practice-part-4-adopting-and-adapting-practices-bdb1e4561c</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Dyson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>7</DAY></DATE><COMMENT>Adopting and adapting these practices.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Defect management</TITLE>
-        <ITEM><ARTICLE><X><T>Tracking Bugs</T><A>https://weblogs.asp.net/scottgu/archive/2004/11/03/251930.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Guthrie</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>11</MONTH><DAY>3</DAY></DATE><COMMENT>A description of Microsoft tracking tool and of their bug management process.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Tracking Bugs</T><A>https://weblogs.asp.net/scottgu/251930</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Guthrie</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>11</MONTH><DAY>3</DAY></DATE><COMMENT>A description of Microsoft tracking tool and of their bug management process.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='dead'><T>Bugsquad/TriageGuide/FrequentlyAskedQuestions</T><A>http://live.gnome.org/Bugsquad_2fTriageGuide_2fFrequentlyAskedQuestions</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Olav</FIRSTNAME><LASTNAME>Vitters</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>7</MONTH><DAY>28</DAY></DATE><COMMENT>A description of the Gnome bug triage.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='dead'><T>How to Decide What Bugs to Fix When, Part 1</T><A>http://www.onlamp.com/pub/a/onlamp/2005/08/11/fixingbugs.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Berkun</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE><COMMENT>First, basic way to classify bugs: Must Fix; Might Fix; Won't Fix. Second, use more realistic Severity &amp; Priority classification with the software version, unique bug ID, finder name…</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE predecessor='http://www.onlamp.com/pub/a/onlamp/2005/08/11/fixingbugs.html'><X status='dead'><T>How to Decide What Bugs to Fix When, Part 2</T><A>http://www.onlamp.com/pub/a/onlamp/2005/08/11/fixingbugs2.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Berkun</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE><COMMENT>Third, defined exit criteria (number of bugs of such type, performance criteria, acceptance test cases…). Fourth, planned improvements.</COMMENT></ARTICLE></ITEM>

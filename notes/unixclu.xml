@@ -3,12 +3,13 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix command line utilities</TITLE>
 <PATH>notes/unixclu.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE><X><T>xargs</T><A>https://man7.org/linux/man-pages/man1/xargs.1.html</A><L>en</L><F>HTML</F></X> &lt;command&gt;</CODEROUTINE></TERM><DESC>build and execute command</DESC></ROW>
   <ROW><TERM><CODEROUTINE>cat foobar | xargs -n 1 ls -l</CODEROUTINE></TERM><DESC>long list of files defined in <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
   <ROW><TERM><CODEROUTINE>xargs -P &lt;n&gt;</CODEROUTINE><BR/><CODEROUTINE>xargs --max-procs=&lt;n&gt;</CODEROUTINE></TERM><DESC>run up to &lt;n&gt; process simultaneously<BR/>take care with shared resources, in particular the output could be garbaged</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>cat foobar | xargs -I{} echo quux {} toto</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-I</CODEROUTINE> defines a string whose occurrences will be replaced in the command line</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>

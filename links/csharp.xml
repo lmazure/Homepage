@@ -3,12 +3,12 @@
 <PAGE status="unmaintained" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>C#</TITLE>
 <PATH>links/csharp.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><X><T>French FAQ</T><A>https://dotnet.developpez.com/faq/csharp/</A><L>fr</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>C# Language Specification</T><A>http://www.ecma-international.org/publications/files/ECMA-ST/ECMA-334.pdf</A><L>en</L><F>PDF</F></X></ITEM>
+    <ITEM><X><T>C# Language Specification</T><A>https://www.ecma-international.org/publications-and-standards/standards/ecma-334/</A><L>en</L><F>PDF</F></X></ITEM>
     <ITEM><X><T>mono</T><A>https://www.mono-project.com</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><CLIST><TITLE>IDEs</TITLE>
       <ITEM><X><T>SharpDevelop</T><A>https://github.com/icsharpcode</A><L>en</L><F>HTML</F></X></ITEM>
@@ -89,6 +89,9 @@
           <ITEM><ARTICLE><X><T>Exploring C# 7 - Pattern Matching</T><A>https://www.youtube.com/watch?v=QzjZUt-APWg</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Josh</FIRSTNAME><LASTNAME>Varty</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>Two possible syntaxes for doing class matching on an object.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>8.0</TITLE>
+        <ITEM><ARTICLE><X><T>What's Cool in C# 8 and .NET Core 3</T><ST>You're missing out on some cool features if you're building applications in .NET Core 3 and not exploiting the new features in C# 8. Here's what Peter thinks are the ones you'll find most useful.</ST><A>https://visualstudiomagazine.com/articles/2021/04/08/csharp-8-net-core-3.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Peter</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>A short list of C#8 features.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
       <ITEM><BLIST><TITLE>9.0</TITLE>
         <ITEM><ARTICLE><X><T>Welcome to C# 9.0</T><A>https://devblogs.microsoft.com/dotnet/welcome-to-c-9-0/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mads</FIRSTNAME><LASTNAME>Torgersen</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE><COMMENT>The features of the new release.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
@@ -141,7 +144,7 @@
       <ITEM><ARTICLE><X status='dead'><T>Better code with C# code contracts</T><A>http://www.develop.com/csharpcodecontracts</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><LASTNAME>Blomsma</LASTNAME></AUTHOR><COMMENT>A good short overview of Code Contracts.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Thomas Ball - Advances in Code Contracts for .NET</T><A>https://vimeo.com/43549131</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>1</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Ball</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>6</MONTH><DAY>6</DAY></DATE><COMMENT>A presentation of Code Contracts, how to use them with Pex, their improvements with Roslin…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Code Contracts User Manual</T><A>https://www.microsoft.com/en-us/research/project/code-contracts/?from=http%3A%2F%2Fresearch.microsoft.com%2Fen-us%2Fprojects%2Fcontracts%2Fuserdoc.pdf</A><L>en</L><F>PDF</F></X><DATE><YEAR>2013</YEAR><MONTH>8</MONTH><DAY>14</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X status='dead'><T>Code Contracts is the next coding practice you should learn and use</T><A>http://codebetter.com/patricksmacchia/2013/12/18/code-contracts-is-the-next-coding-practice-you-should-learn-and-use/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrick</FIRSTNAME><LASTNAME>Smacchia</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE><COMMENT>Some proselytism on Code Contracts, but ideas are not well structured.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Code Contracts is the next coding practice you should learn and use</T><A>http://codebetter.com/patricksmacchia/2013/12/18/code-contracts-is-the-next-coding-practice-you-should-learn-and-use/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrick</FIRSTNAME><LASTNAME>Smacchia</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE><COMMENT>Some proselytism on Code Contracts, but ideas are not well structured.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>ASP.NET</TITLE>
       <ITEM><ARTICLE><X><T>IIS and ASP.NET: The Application Pool</T><A>https://www.developer.com/net/asp/article.php/2245511/IIS-and-ASPNET-The-Application-Pool.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Thiru</FIRSTNAME><LASTNAME>Thangarathinam</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>8</MONTH><DAY>6</DAY></DATE><COMMENT>A presentation of IIS Application pool.</COMMENT></ARTICLE></ITEM>
