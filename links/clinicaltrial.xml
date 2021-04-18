@@ -3,7 +3,7 @@
 <PAGE status='unmaintained' xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Clinical Trials</TITLE>
 <PATH>links/clinicaltrial.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -29,11 +29,10 @@
       <ITEM><X quality='1'><T>CDISC</T><A>https://www.cdisc.org/standards/glossary</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>CenterWatch</T><A>https://www.centerwatch.com/health-associations/glossary</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><X><T>CRFQ</T><A>https://hssp-cohort.wikispaces.com/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>CDE Browser</T><A>https://cdebrowser.nci.nih.gov/cdebrowserClient/cdeBrowser.html</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><CLIST><TITLE>Miscellaneous</TITLE>
       <ITEM><X><T>decidemedical</T><A>https://www.decidemedical.com</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Data Management Biomédical</T><A>http://www.dmb-asso.org</A><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Data Management Biomédical</T><A>https://www.dmb-asso.org/</A><L>fr</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><BLIST><TITLE>Scorings</TITLE>
       <ITEM><X><T>Orthopaedic Scores</T><A>http://www.orthopaedicscore.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -63,7 +62,7 @@
       <ITEM><BLIST><TITLE>EHR/EDC connection</TITLE>
         <ITEM><BLIST><TITLE>RFD</TITLE>
           <ITEM><ARTICLE><X><T>Clinical Research Data Capture Fields</T><A>https://wiki.ihe.net/index.php?title=Clinical_Research_Data_Capture_Fields</A><L>en</L><F>HTML</F></X><COMMENT>Some information about the Clinical Research Data Capture Fields which builds on top of RFD.</COMMENT></ARTICLE></ITEM>
-          <ITEM><ARTICLE><X><T>CDISC Showcases Interoperability Prototype between Medical Research and Healthcare</T><A>https://www.businesswire.com/news/home/20070410005821/en/CDISC-Showcases-Interoperability-Prototype-Medical-Research-Healthcare#.Uzx00lddBDs</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR><MONTH>4</MONTH><DAY>10</DAY></DATE><COMMENT>CDISC and IHE work together to obtain EHR/EDC interoperability.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X status='zombie'><T>CDISC Showcases Interoperability Prototype between Medical Research and Healthcare</T><A>https://www.businesswire.com/news/home/20070410005821/en/CDISC-Showcases-Interoperability-Prototype-Medical-Research-Healthcare#.Uzx00lddBDs</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR><MONTH>4</MONTH><DAY>10</DAY></DATE><COMMENT>CDISC and IHE work together to obtain EHR/EDC interoperability.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X status='dead'><T>IHE IT Infrastructure Technical Framework Supplement 2007-2008 - Retrieve Form for Data Capture (RFD)</T><A>https://www.ihe.net/Technical_Framework/upload/IHE_ITI_TF_Supplement_RFD_TI_2007_08_15.pdf</A><L>en</L><F>PDF</F></X><DATE><YEAR>2007</YEAR><MONTH>8</MONTH><DAY>15</DAY></DATE><COMMENT>The draft of the RFD profile.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X status='dead'><T>Is the water boiling yet? ~or~ How close are we to an interoperable world between Healthcare and Clinical Research?</T><A>https://www.cdisc.org/newsletter/issues/NOV2008/2008SCDM.pdf</A><L>en</L><F>PDF</F></X><DATE><YEAR>2008</YEAR><MONTH>11</MONTH><DAY>4</DAY></DATE><COMMENT>RFD has been demonstrated at CDISC International Interchange 2008.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
@@ -80,7 +79,7 @@
         <ITEM><ARTICLE><X status='dead'><T>Improving Protocol Quality</T><A>http://www.fast-track.com/pdfs/Model_based_method.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><MIDDLENAME>G.</MIDDLENAME><LASTNAME>Kahn</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Carol</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>Broverman</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Nancy</FIRSTNAME><LASTNAME>Wu</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Wendy</FIRSTNAME><MIDDLENAME>J.</MIDDLENAME><LASTNAME>Farnsworth</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Lenilyn</FIRSTNAME><LASTNAME>Manlapaz-Espiritu</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>4</MONTH></DATE><COMMENT>The authors explain that a formal description and review of a protocol helps improving it (this would be obvious for anyone who has used formal modelling in another area, such as UML in IT…). These are the starting ideas of the FastTrack product.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Medical Imaging Core Laboratories</T><A>https://www.appliedclinicaltrialsonline.com/view/medical-imaging-core-laboratories</A><L>en</L><F>HTML</F></X><DATE><YEAR>2005</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>Imaging core laboratories are playing a larger and larger role in clinical trials and the FDA has produced some guidances for using images as an endpoint.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Medical Statistics - A practical guide - Statistics and the Role of the Statistician in Clinical Trial Research</T><A>../attic/pp_nov05.pdf</A><L>en</L><F>PDF</F></X><DATE><YEAR>2005</YEAR><MONTH>11</MONTH></DATE><COMMENT>An overview of the role of the statistician during a clinical trial.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X status='dead' protection='free_registration'><T>Clarified protocol issued for studies without informed consent</T><A>https://www.auntminnie.com/index.asp?Sec=sup&amp;Sub=car&amp;Pag=dis&amp;ItemId=77884</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE><COMMENT>AHA proposes recommendations when a unconscious patient (hence he cannot give his consent) participates to a clinical trial.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X status='zombie' protection='free_registration'><T>Clarified protocol issued for studies without informed consent</T><A>https://www.auntminnie.com/index.asp?Sec=sup&amp;Sub=car&amp;Pag=dis&amp;ItemId=77884</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE><COMMENT>AHA proposes recommendations when a unconscious patient (hence he cannot give his consent) participates to a clinical trial.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='dead'><T>Exploratory INDs: A Trial Before the Trials</T><A>https://www.bio-itworld.com/issues/2007/dec-jan/cover-story-exploratory-inds/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>May</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>This article describes what are phase 0 trials and why they are currently more and more used.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='dead'><T>Performance Management in Large Cohort Clinical Registry : Confessions of a clinical expert</T><A>http://blog.evidence-performance.com/2008/08/27/confessions-of-a-clinical-trial-manager/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2008</YEAR><MONTH>8</MONTH><DAY>27</DAY></DATE><COMMENT>Some information on managing clinical trials with a large cohort and some thoughts on missing performance metrics.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status='dead'><T>Citeline Finds Trial Trends Don’t Apply to All Diseases</T><A>https://www.bio-itworld.com/ecliniqua/2009/01/26/citeline-tracks-trials.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2009</YEAR><MONTH>1</MONTH><DAY>26</DAY></DATE><COMMENT>Analyzing the number and size of clinical trials for some diseases.</COMMENT></ARTICLE></ITEM>
@@ -118,8 +117,11 @@
           <ITEM><ARTICLE><X><T>Tuskegee Study of Untreated Syphilis in the Negro Male</T><A>https://en.wikipedia.org/wiki/Tuskegee_Study_of_Untreated_Syphilis_in_the_Negro_Male</A><L>en</L><F>HTML</F></X><COMMENT>The Wikipedia article.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>U.S. Public Health Service Syphilis Study at Tuskegee</T><A>https://www.cdc.gov/tuskegee</A><L>en</L><F>HTML</F></X><DATE><YEAR>2008</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>The CDC gives some information on the study, including the text of the presidential apology.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
+        <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Jesse</FIRSTNAME><LASTNAME>Gelsinger</LASTNAME></AUTHOR></TITLE>
+          <ITEM><ARTICLE><X><T>The Biotech Death of Jesse Gelsinger</T><A>https://www.nytimes.com/1999/11/28/magazine/the-biotech-death-of-jesse-gelsinger.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sheryl</FIRSTNAME><MIDDLENAME>Gay</MIDDLENAME><LASTNAME>Stolberg</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>11</MONTH><DAY>28</DAY></DATE><COMMENT>The death of <AUTHOR><FIRSTNAME>Jesse</FIRSTNAME><LASTNAME>Gelsinger</LASTNAME></AUTHOR> who died during a clinical test for a gene therapy to cure OTC-deficiency.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
         <ITEM><BLIST><TITLE>TGN1412</TITLE>
-          <ITEM><ARTICLE><X><T>TGN1412</T><A>https://en.wikipedia.org/wiki/TGN1412</A><L>en</L><F>HTML</F></X><COMMENT>The Wikipedia article.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Theralizumab</T><A>https://en.wikipedia.org/wiki/Theralizumab</A><L>en</L><F>HTML</F></X><COMMENT>The Wikipedia article.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X status='dead'><T>Clinical trial suspension: latest findings</T><A>http://www.mhra.gov.uk/home/idcplg?IdcService=SS_GET_PAGE&amp;ssDocName=CON2023515&amp;ssTargetNodeId=389</A><L>en</L><F>HTML</F></X><DATE><YEAR>2006</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE><COMMENT>The MHRA report on the TGN1412 clinical trials accident (2006, 13<SUP>th</SUP> March).</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>tgAAC94</TITLE>
@@ -129,7 +131,7 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Coding</TITLE>
-      <ITEM><ARTICLE><X><T>Frequently Asked Questions - WHO Drug</T><A>http://www.thesisinc.com/faq-whodrug.html</A><L>en</L><F>HTML</F></X><COMMENT>A short presentation of WHO Drug and the possible issues when coding with it.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Frequently Asked Questions - WHO Drug</T><A>http://www.thesisinc.com/faq-whodrug.html</A><L>en</L><F>HTML</F></X><COMMENT>A short presentation of WHO Drug and the possible issues when coding with it.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>MedDRA - An Introduction</T><A>https://www.rti.org/pubs/meddra_intro.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><MIDDLENAME>J.</MIDDLENAME><LASTNAME>Klepper</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR></DATE><COMMENT>A good presentation of MedDRA.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Imaging</TITLE>
