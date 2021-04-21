@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>links/chrome.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -425,6 +425,7 @@
       <ITEM><ARTICLE><X><T>Migrating Puppeteer to TypeScript</T><A>https://developers.google.com/web/updates/2021/01/puppeteer-typescript</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jack</FIRSTNAME><LASTNAME>Franklin</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE><COMMENT>A high level description of how Puppeteer have been migrated from JavaScript to TypeScript.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Improving DevTools startup time</T><A>https://developers.google.com/web/updates/2021/02/faster-devtools-startup</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Maksim</FIRSTNAME><LASTNAME>Sadym</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>A simple optimization (removing a serialization/deserialization) resulted in a startup time reduced of 13%.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Don’t Copy That Surface</T><A>https://blog.chromium.org/2021/04/dont-copy-that-surface.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Dawson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Dawson</LASTNAME></AUTHOR> analyzed the performance of Chrome running Google Meet and found a costly repetition of alloc/copy/copy/free.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Efficient And Safe Allocations Everywhere!</T><A>https://blog.chromium.org/2021/04/efficient-and-safe-allocations-everywhere.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benoît</FIRSTNAME><LASTNAME>Lizé</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bartek</FIRSTNAME><LASTNAME>Nowierski</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT>A description of <CODEROUTINE>PartitionAlloc</CODEROUTINE>, the memory allocator used in Chromium.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>The Chromium Chronicle</TITLE>
         <ITEM><ARTICLE><X><T>The Chromium Chronicle #1: Task Scheduling Best Practices</T><A>https://developer.chrome.com/blog/chromium-chronicle-1</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gabriel</FIRSTNAME><LASTNAME>Charette</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>16</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>The Chromium Chronicle #2: Fighting Test Flakiness</T><A>https://developer.chrome.com/blog/chromium-chronicle-2</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vasilii</FIRSTNAME><LASTNAME>Sukhanov</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE><COMMENT>Some advice about writing tests.</COMMENT></ARTICLE></ITEM>

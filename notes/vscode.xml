@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -16,7 +16,10 @@
     <ITEM><CODEROUTINE>Code.exe --wait file1 file2</CODEROUTINE></ITEM>
   </SLIST></ITEM>
   <ITEM><SLIST><TITLE>Specify the directory that user data is kept in</TITLE>
-    <ITEM><CODEROUTINE>Code.exe --user-data-dir H:\Documents\tools\VSCode\myDataDir</CODEROUTINE></ITEM>
+    <ITEM><CODEROUTINE>--user-data-dir H:\Documents\tools\VSCode\myDataDir</CODEROUTINE></ITEM>
+  </SLIST></ITEM>
+  <ITEM><SLIST><TITLE>Specify the directory where the extensions are installed</TITLE>
+    <ITEM><CODEROUTINE>--extensions-dir H:\Documents\tools\VSCode\extensions</CODEROUTINE></ITEM>
   </SLIST></ITEM>
 </BLIST>
 <BR/>
