@@ -3,13 +3,29 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix command line utilities</TITLE>
 <PATH>notes/unixclu.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>xargs</T><A>https://man7.org/linux/man-pages/man1/xargs.1.html</A><L>en</L><F>HTML</F></X> &lt;command&gt;</CODEROUTINE></TERM><DESC>build and execute command</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>cat foobar | xargs -n 1 ls -l</CODEROUTINE></TERM><DESC>long list of files defined in <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
-  <ROW><TERM><CODEROUTINE>xargs -P &lt;n&gt;</CODEROUTINE><BR/><CODEROUTINE>xargs --max-procs=&lt;n&gt;</CODEROUTINE></TERM><DESC>run up to &lt;n&gt; process simultaneously<BR/>take care with shared resources, in particular the output could be garbaged</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>cat foobar | xargs -I{} echo quux {} toto</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-I</CODEROUTINE> defines a string whose occurrences will be replaced in the command line</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>xargs</T><A>https://man7.org/linux/man-pages/man1/xargs.1.html</A><L>en</L><F>HTML</F></X> &lt;command&gt;</CODEROUTINE></TERM>
+    <DESC>build and execute command</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>cat foobar | xargs -n 1 ls -l</CODEROUTINE></TERM>
+    <DESC>long list of files defined in <CODEROUTINE>foobar</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>xargs -P &lt;n&gt;</CODEROUTINE><BR/><CODEROUTINE>xargs --max-procs=&lt;n&gt;</CODEROUTINE></TERM>
+    <DESC>run up to &lt;n&gt; process simultaneously<BR/>take care with shared resources, in particular the output could be garbaged</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>cat foobar | xargs -I{} echo quux {} toto</CODEROUTINE></TERM>
+    <DESC>the <CODEROUTINE>-I</CODEROUTINE> defines a string whose occurrences will be replaced in the command line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>find . -name '*.tab' -print0 | xargs -0 -n 1 grep -aE -e '^quux'</CODEROUTINE></TERM>
+    <DESC>use <CODEROUTINE>-print0</CODEROUTINE>/<CODEROUTINE>-0</CODEROUTINE> to manage lines containing a space (here filenames)</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
@@ -20,32 +36,65 @@
 <BR/>
 <BLIST><TITLE><U><B>user information</B></U></TITLE>
 <ITEM><DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>id</T><A>https://man7.org/linux/man-pages/man1/id.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print user identity</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>id</T><A>https://man7.org/linux/man-pages/man1/id.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>print user identity</DESC>
+  </ROW>
 </DEFINITIONTABLE></ITEM>
 <ITEM><DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>logname</T><A>https://man7.org/linux/man-pages/man1/logname.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print current login name</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>logname</T><A>https://man7.org/linux/man-pages/man1/logname.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>print current login name</DESC>
+  </ROW>
 </DEFINITIONTABLE></ITEM>
 <ITEM><DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>whoami</T><A>https://man7.org/linux/man-pages/man1/whoami.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print effective user ID</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>whoami</T><A>https://man7.org/linux/man-pages/man1/whoami.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>print effective user ID</DESC>
+  </ROW>
 </DEFINITIONTABLE></ITEM>
 <ITEM><DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>groups</T><A>https://man7.org/linux/man-pages/man1/groups.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print group names a user is in</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>groups</T><A>https://man7.org/linux/man-pages/man1/groups.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>print group names a user is in</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM><DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>users</T><A>https://man7.org/linux/man-pages/man1/users.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>print login names of users currently logged in</DESC>
+  </ROW>
 </DEFINITIONTABLE></ITEM>
 <ITEM><DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>users</T><A>https://man7.org/linux/man-pages/man1/users.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print login names of users currently logged in</DESC></ROW>
-</DEFINITIONTABLE></ITEM>
-<ITEM><DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>who</T><A>https://man7.org/linux/man-pages/man1/who.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>print who is currently logged in</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>who</T><A>https://man7.org/linux/man-pages/man1/who.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>print who is currently logged in</DESC>
+  </ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE><X><T>date</T><A>https://man7.org/linux/man-pages/man1/date.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display/set current date/time</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>date -r foobar</CODEROUTINE><BR/><CODEROUTINE>date --reference=foobar</CODEROUTINE></TERM><DESC>display modification date/time of file <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
-  <ROW><TERM><CODEROUTINE>date -I</CODEROUTINE><BR/><CODEROUTINE>date --iso-8601</CODEROUTINE></TERM><DESC>display date/time using ISO 8601 format</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>date -R</CODEROUTINE><BR/><CODEROUTINE>date --rfc-822</CODEROUTINE></TERM><DESC>display date/time using RFC 822 format</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>date -u</CODEROUTINE><BR/><CODEROUTINE>date --utc</CODEROUTINE><BR/><CODEROUTINE>date --universal</CODEROUTINE></TERM><DESC>set/display Coordinated Universal Time</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>date</T><A>https://man7.org/linux/man-pages/man1/date.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>display/set current date/time</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>date -r foobar</CODEROUTINE><BR/><CODEROUTINE>date --reference=foobar</CODEROUTINE></TERM>
+    <DESC>display modification date/time of file <CODEROUTINE>foobar</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>date -I</CODEROUTINE><BR/><CODEROUTINE>date --iso-8601</CODEROUTINE>
+    </TERM>
+    <DESC>display date/time using ISO 8601 format</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE>date -R</CODEROUTINE><BR/><CODEROUTINE>date --rfc-822</CODEROUTINE>
+    </TERM>
+    <DESC>display date/time using RFC 822 format</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE>date -u</CODEROUTINE><BR/><CODEROUTINE>date --utc</CODEROUTINE><BR/><CODEROUTINE>date --universal</CODEROUTINE></TERM>
+    <DESC>set/display Coordinated Universal Time</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
 </PAGE>
