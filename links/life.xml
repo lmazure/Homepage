@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Life cycle</TITLE>
 <PATH>links/life.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -59,9 +59,10 @@
         <ITEM><CLIST><TITLE>Crystal clear</TITLE>
           <ITEM><X><T>Wikipedia</T><A>https://fr.wikipedia.org/wiki/Crystal_clear</A><L>fr</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
-        <ITEM><CLIST><TITLE>SAFe</TITLE>
+        <ITEM><CLIST><TITLE><ANCHOR>safe</ANCHOR>SAFe</TITLE>
           <ITEM><X><T>site</T><A>https://www.scaledagileframework.com/</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Scaled_agile_framework</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>personal notes</T><A>../notes/safe.html</A><L>en</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
@@ -261,6 +262,9 @@
           <ITEM><ARTICLE><X><T>Kanban and Scrum - Making the Most of Both</T><A>https://www.infoq.com/minibooks/kanban-scrum-minibook/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Henrik</FIRSTNAME><LASTNAME>Kniberg</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mattias</FIRSTNAME><LASTNAME>Skarin</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE><COMMENT>The first half of the book is a short but effective comparison of Scrum and Kanban. The second is the case study of a production department, in a company using Scrum, starting to use Kanban.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X quality='1'><T>Kanban and Scrum - making the most of both - Henrik Kniberg</T><A>https://vimeo.com/16918747</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>49</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Henrik</FIRSTNAME><LASTNAME>Kniberg</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>11</DAY></DATE><COMMENT>The same author explains Kanban, shortly described some differences and explains that they are not exclusive.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Ditching Scrum for Kanban — The best decision we’ve made as a team</T><A>https://medium.com/cto-school/ditching-scrum-for-kanban-the-best-decision-we-ve-made-as-a-team-cd1167014a6f</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Grant</FIRSTNAME><LASTNAME>Ammons</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE><COMMENT>Scrum improved the team deliveries but broke its morale, Kanban solved this.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>SAFe</TITLE>
+          <ITEM><ARTICLE><X><T>Scaled Agile (SAFe®) qu'est ce que c'est ?</T><A>https://www.youtube.com/watch?v=7FHaWn_Jtxw</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>32</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Marc-Noël</FIRSTNAME><LASTNAME>Fauvel</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>4</MONTH><DAY>4</DAY></DATE><COMMENT>A short introduction fo SAFe.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Agile methods and regulatory environments</TITLE>
           <ITEM><ARTICLE><X status='dead'><T>Agile Methodologies in a Validated Setting</T><A>http://www.jacquette.com/articles/agilevalidation.shtml</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Frank</FIRSTNAME><LASTNAME>Jacquette</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>This article is more pragmatic, but, once again, user acceptance is ignored. I believe the author presumes that there is a validation phase (containing at least the acceptance tests) at the end of the agile cycles/sprints.</COMMENT></ARTICLE></ITEM>
