@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -210,6 +210,7 @@
       <ITEM><ARTICLE><X><T>Why do microservices need an API Gateway?</T><A>https://dev.to/rahul_ramfort/why-do-microservices-need-an-api-gateway-503i</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rahul</FIRSTNAME><LASTNAME>Ramfort</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>A too short desciption of what is an API gateway.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Monolith -> Services: Theory &amp; Practice</T><A>https://medium.com/@kentbeck_7670/monolith-services-theory-practice-617e4546a879</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE><COMMENT>Do not try to quickly switch to microservices, you must first master miniming coupling and increasing cohesion.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The macro problem with microservices</T><A>https://stackoverflow.blog/2020/11/23/the-macro-problem-with-microservices/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ryland</FIRSTNAME><LASTNAME>Goldstein</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>23</DAY></DATE><COMMENT>A presentation/advertisement of Temporal.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality='1'><T>GOTO 2021 • The Problem with Microservices • Dave Farley</T><A>https://www.youtube.com/watch?v=V3NQt5KP7EM</A><L>en</L><F>MP4</F><DURATION><MINUTE>18</MINUTE><SECOND>11</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Farley</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>9</DAY></DATE><COMMENT>A good overview of what is a microservices architecture.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Istio</TITLE>
         <ITEM><ARTICLE><X><T>Istio Circuit Breaker With Outlier Detection</T><ST>The basic intent of outlier detection is to stop sending requests to an unhealthy instance and give it time to recover.</ST><A>https://dzone.com/articles/istio-circuit-breaker-with-outlier-detection</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Samir</FIRSTNAME><LASTNAME>Behara</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE><COMMENT>A short description of using Istio Circuit Breaker to detect a deficient node and to stop using it for a while.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Resilient Microservices With Istio Circuit Breaker</T><ST>In this article, we take a look at how to protect services from an unexpected number of requests or a dependent service outage.</ST><A>https://dzone.com/articles/resilient-microservices-with-istio-circuit-breaker</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Samir</FIRSTNAME><LASTNAME>Behara</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>A short description of using Istio Circuit Breaker to throttle the connections and requests to a node.</COMMENT></ARTICLE></ITEM>

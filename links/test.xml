@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -21,6 +21,7 @@
     <ITEM><BLIST><TITLE>Specialty sites</TITLE>
       <ITEM><X><T>Pairwise Testing</T><A>https://jaccz.github.io/pairwise/</A><L>en</L><F>HTML</F></X>: combinatorial test case generation</ITEM>
       <ITEM><X><T>Lorem Ipsum</T><A>https://www.lipsum.com/</A><L>en</L><F>HTML</F></X>: generate sample text</ITEM>
+      <ITEM><X><T>Random string generator</T><A>http://www.unit-conversion.info/texttools/random-string-generator/</A><L>en</L><F>HTML</F></X>: idem</ITEM>
       <ITEM><X><T>Random User Generator</T><A>https://randomuser.me</A><L>en</L><F>HTML</F></X>: generate random persons</ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Management of manual tests</TITLE>
@@ -110,6 +111,7 @@
       <ITEM><ARTICLE><X><T>Exploratory Testing</T><A>https://www.youtube.com/watch?v=kBufzgjYAQE</A><L>en</L><F>MP4</F><DURATION><MINUTE>53</MINUTE><SECOND>36</SECOND></DURATION><DATE><YEAR>2012</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE></X><AUTHOR><FIRSTNAME>Jon</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE><COMMENT>(The slides are available in <X><T>Breaking Down (and building up) Exploratory Testing Skill</T><A>http://cfs7.tistory.com/upload_control/download.blog?fhandle=YmxvZzk3ODE0QGZzNy50aXN0b3J5LmNvbTovYXR0YWNoLzAvOS5wZGY%3D&amp;filename=ET_dynamics_Google_3_06.pdf</A><L>en</L><F>PDF</F></X>.) <AUTHOR><FIRSTNAME>Jon</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR> gives some information about exploratory testing. He lists 14 usable tactics ("MRQ COMP GRABC R&amp;R?"). This is a good brain teaser, but the presentation is rather messy.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>FEW HICCUPPS</T><A>https://www.developsense.com/blog/2012/07/few-hiccupps/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Bolton</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Bolton</LASTNAME></AUTHOR> completes his list of heuristics.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>ExploratoryTesting</T><A>https://martinfowler.com/bliki/ExploratoryTesting.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE><COMMENT>A short presentation of exploratory testing.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality='-1'><T>Les Tests Exploratoires, Une obligation dans l’agilité ??</T><A>https://latavernedutesteur.fr/2021/02/25/les-tests-exploratoires-une-obligation-dans-lagilite/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Frederic</FIRSTNAME><LASTNAME>Assante Di Capillo</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE><COMMENT>A description of exploratory testing, the proposed organisation is more or less applicable, but the author's definition of exploratory testing is too narrow and there are too many spelling mistakes.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Model-based testing</TITLE>
       <ITEM><ARTICLE><X><T>Unbearable Lightness of Model-Based Testing</T><A>https://www.youtube.com/watch?v=9UkkOtpHpuQ</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>20</MINUTE><SECOND>3</SECOND></DURATION><DATE><YEAR>2012</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE></X><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bach</LASTNAME></AUTHOR> explains that models are always wrong and you will miss bugs if you blindly base your tests on such a model. During the Q&amp;A session, James discusses about some of his favourite subjects: MIPping (mention in passing), blink testing…</COMMENT></ARTICLE></ITEM>

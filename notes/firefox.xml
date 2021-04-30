@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Firefox</TITLE>
 <PATH>notes/firefox.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>4</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <SLIST>
 <ITEM>It is possible to delete remembered data (e.g. in the autocompletion of the URL, of the search field, of the form fields…) by typing <KEY id='Del'/> when the line is selected.</ITEM>
@@ -12,285 +12,227 @@
 <BR/>
 <U>shortcuts</U>
 <DEFINITIONTABLE>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='N'/>
-</TERM><DESC>
-open a new window
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='T'/>
-</TERM><DESC>
-open a new tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='N'/>
-</TERM><DESC>
-undo close window
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='T'/>
-</TERM><DESC>
-undo close tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='1'/>
-</TERM><DESC>
-display the first tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='2'/>
-</TERM><DESC>
-display the second tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='3'/>
-</TERM><DESC>
-display the third tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='4'/>
-</TERM><DESC>
-display the fourth tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='5'/>
-</TERM><DESC>
-display the fifth tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='6'/>
-</TERM><DESC>
-display the sixth tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='7'/>
-</TERM><DESC>
-display the seventh tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='8'/>
-</TERM><DESC>
-display the eight tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='9'/>
-</TERM><DESC>
-display the last tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='E'/>
-</TERM><DESC>
-display tag groups
-</DESC></ROW>
-<ROW><TERM>
-scroll on tabs
-</TERM><DESC>
-scroll the tabs
-</DESC></ROW>
-<ROW><TERM>
-scroll button on a tab
-</TERM><DESC>
-close the tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='W'/>
-</TERM><DESC>
-close current tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='PageDown'/>
-</TERM><DESC>
-display next tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='PageUp'/>
-</TERM><DESC>
-display previous tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='F'/>
-</TERM><DESC>
-find</DESC></ROW>
-<ROW><TERM>
-<KEY id='F3'/><BR/>
-<MODIFIERKEY id='Ctrl'/><KEY id='G'/>
-</TERM><DESC>
-find again</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Shift'/><KEY id='F3'/><BR/>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='G'/>
-</TERM><DESC>
-find previous</DESC></ROW>
-<ROW><TERM>
-<KEY id="'"/>
-</TERM><DESC>
-find link as you type</DESC></ROW>
-<ROW><TERM>
-<KEY id='/'/>
-</TERM><DESC>
-find text as you type</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='E'/><BR/>
-<MODIFIERKEY id='Ctrl'/><KEY id='K'/>
-</TERM><DESC>
-Web search</DESC></ROW>
-<ROW><TERM>
-<KEY id='F5'/><BR/>
-<MODIFIERKEY id='Ctrl'/><KEY id='R'/>
-</TERM><DESC>
-refresh</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='F5'/><BR/>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='R'/>
-</TERM><DESC>
-refresh with cache override</DESC></ROW>
-<ROW><TERM>
-<KEY id='F11'/>
-</TERM><DESC>
-toggle full screen
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/>Click on a link
-</TERM><DESC>
-open in background tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/>Click on a link
-</TERM><DESC>
-open in foreground tab
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Shift'/>Click on a link
-</TERM><DESC>
-open in new window
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Alt'/>Click on a link
-</TERM><DESC>
-save as
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/>Click on a folder of bookmarks
-</TERM><DESC>
-open all bookmarks in background tabs
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Alt'/>Scroll
-</TERM><DESC>
-scroll line by line
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='D'/>
-</TERM><DESC>
-bookmark current page
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='B'/>
-</TERM><DESC>
-toggle list of bookmarks
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='H'/>
-</TERM><DESC>
-toggle history
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='J'/>
-</TERM><DESC>
-display the download window
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='I'/>
-</TERM><DESC>
-display the inspector
-</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='N'/></TERM>
+    <DESC>open a new window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='P'/></TERM>
+    <DESC>open a new private window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='T'/></TERM>
+    <DESC>open a new tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='N'/></TERM>
+    <DESC>undo close window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='T'/></TERM>
+    <DESC>undo close tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='1'/></TERM>
+    <DESC>display the first tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='2'/></TERM>
+    <DESC>display the second tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='3'/></TERM>
+    <DESC>display the third tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='4'/></TERM>
+    <DESC>display the fourth tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='5'/></TERM>
+    <DESC>display the fifth tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='6'/></TERM>
+    <DESC>display the sixth tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='7'/></TERM>
+    <DESC>display the seventh tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='8'/></TERM>
+    <DESC>display the eight tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='9'/></TERM>
+    <DESC>display the last tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='E'/></TERM>
+    <DESC>display tag groups</DESC>
+  </ROW>
+  <ROW>
+    <TERM>scroll on tabs</TERM>
+    <DESC>scroll the tabs</DESC>
+  </ROW>
+  <ROW>
+    <TERM>scroll button on a tab</TERM>
+    <DESC>close the tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='W'/></TERM>
+    <DESC>close current tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='PageDown'/></TERM>
+    <DESC>display next tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='PageUp'/></TERM>
+    <DESC>display previous tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F'/></TERM>
+    <DESC>find</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id='F3'/><BR/>
+      <MODIFIERKEY id='Ctrl'/><KEY id='G'/></TERM>
+    <DESC>find again</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Shift'/><KEY id='F3'/><BR/>
+      <MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='G'/></TERM>
+    <DESC>find previous</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="'"/></TERM>
+    <DESC>find link as you type</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id='/'/></TERM>
+    <DESC>find text as you type</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='E'/><BR/>
+      <MODIFIERKEY id='Ctrl'/><KEY id='K'/></TERM>
+    <DESC>Web search</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id='F5'/><BR/>
+      <MODIFIERKEY id='Ctrl'/><KEY id='R'/></TERM>
+    <DESC>refresh</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F5'/><BR/>
+      <MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='R'/></TERM>
+    <DESC>refresh with cache override</DESC></ROW>
+  <ROW>
+    <TERM><KEY id='F11'/></TERM>
+    <DESC>toggle full screen</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/>Click on a link</TERM>
+    <DESC>open in background tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/>Click on a link</TERM>
+    <DESC>open in foreground tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Shift'/>Click on a link</TERM>
+    <DESC>open in new window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Alt'/>Click on a link</TERM>
+    <DESC>save as</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/>Click on a folder of bookmarks</TERM>
+    <DESC>open all bookmarks in background tabs</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Alt'/>Scroll</TERM>
+    <DESC>scroll line by line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='D'/></TERM>
+    <DESC>bookmark current page</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='B'/></TERM>
+    <DESC>toggle list of bookmarks</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='H'/></TERM>
+    <DESC>toggle history</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='J'/></TERM>
+    <DESC>display the download window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='I'/></TERM>
+    <DESC>display the inspector</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <X><T>mozilla.com</T><A>https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly</A><L>en</L><F>HTML</F></X><BR/>
 <BR/>
 <U>special URLs</U>
 <TABLE>
-<ROW>
-<CELL>about:cache</CELL>
-<CELL>report the size and usage of the memory cache, disk cache and offline cache</CELL>
-</ROW>
-<ROW>
-<CELL>about:cache?device=memory</CELL>
-<CELL>report the content of the memory cache</CELL>
-</ROW>
-<ROW>
-<CELL>about:cache?device=disk</CELL>
-<CELL>report the content of the disk cache</CELL>
-</ROW>
-<ROW>
-<CELL>about:cache?device=offline</CELL>
-<CELL>report the content of the offline cache</CELL>
-</ROW>
+  <ROW>
+    <CELL>about:cache</CELL>
+    <CELL>report the size and usage of the memory cache, disk cache and offline cache</CELL>
+  </ROW>
+  <ROW>
+    <CELL>about:cache?device=memory</CELL>
+    <CELL>report the content of the memory cache</CELL>
+  </ROW>
+  <ROW>
+    <CELL>about:cache?device=disk</CELL>
+    <CELL>report the content of the disk cache</CELL>
+  </ROW>
+  <ROW>
+    <CELL>about:cache?device=offline</CELL>
+    <CELL>report the content of the offline cache</CELL>
+  </ROW>
 </TABLE>
 <BR/>
 <U>configuration</U>
 <TABLE>
-<ROW>
-<CELL>
-layout.spellcheckDefault
-</CELL>
-<CELL>
-1: spell check only in multiple-line text boxes<BR/>
-2: spell check in all text boxes
-</CELL>
-</ROW>
-<ROW>
-<CELL>
-browser.search.openintab
-</CELL>
-<CELL>
-false: search result is in current tab<BR/>
-true: search result is in new tab
-</CELL>
-</ROW>
+  <ROW>
+    <CELL>layout.spellcheckDefault</CELL>
+    <CELL>1: spell check only in multiple-line text boxes<BR/>2: spell check in all text boxes</CELL>
+  </ROW>
+  <ROW>
+    <CELL>browser.search.openintab</CELL>
+    <CELL>false: search result is in current tab<BR/>true: search result is in new tab</CELL>
+  </ROW>
 </TABLE>
 <BR/>
 <U>Firefox extensions</U>
 <TABLE>
-<ROW>
-<CELL>
-<X><T>YSlow</T><A>https://developer.yahoo.com/yslow/</A><L>en</L><F>HTML</F></X>
-</CELL>
-<CELL>
-performance rule checker
-</CELL>
-</ROW>
-<ROW>
-<CELL>
-<X quality='1'><T>DownloadHelper</T><A>https://addons.mozilla.org/en-US/firefox/addon/3006</A><L>en</L><F>HTML</F></X>
-</CELL>
-<CELL>
-yet another video downloader
-</CELL>
-</ROW>
-<ROW>
-<CELL>
-<X><T>ColorfulTabs</T><A>https://addons.mozilla.org/en-US/firefox/addon/1368</A><L>en</L><F>HTML</F></X>
-</CELL>
-<CELL>
-color the tabs
-</CELL>
-</ROW>
-<ROW>
-<CELL>
-<X><T>Flagfox</T><A>https://addons.mozilla.org/en-US/firefox/addon/5791</A><L>en</L><F>HTML</F></X>
-</CELL>
-<CELL>
-display location of the server
-</CELL>
-</ROW>
-<ROW>
-<CELL>
-<X><T>Adblock Plus</T><A>https://addons.mozilla.org/en-US/firefox/addon/1865</A><L>en</L><F>HTML</F></X>
-</CELL>
-<CELL>
-advertisement blocker
-</CELL>
-</ROW>
+  <ROW>
+    <CELL><X><T>YSlow</T><A>https://developer.yahoo.com/yslow/</A><L>en</L><F>HTML</F></X></CELL>
+    <CELL>performance rule checker</CELL>
+  </ROW>
+  <ROW>
+    <CELL><X quality='1'><T>DownloadHelper</T><A>https://addons.mozilla.org/en-US/firefox/addon/3006</A><L>en</L><F>HTML</F></X></CELL>
+    <CELL>yet another video downloader</CELL>
+  </ROW>
+  <ROW>
+    <CELL><X><T>ColorfulTabs</T><A>https://addons.mozilla.org/en-US/firefox/addon/1368</A><L>en</L><F>HTML</F></X></CELL>
+    <CELL>color the tabs</CELL>
+  </ROW>
+  <ROW>
+    <CELL><X><T>Flagfox</T><A>https://addons.mozilla.org/en-US/firefox/addon/5791</A><L>en</L><F>HTML</F></X></CELL>
+    <CELL>display location of the server</CELL>
+  </ROW>
+  <ROW>
+    <CELL><X><T>Adblock Plus</T><A>https://addons.mozilla.org/en-US/firefox/addon/1865</A><L>en</L><F>HTML</F></X></CELL>
+    <CELL>advertisement blocker</CELL>
+  </ROW>
 </TABLE>
 </CONTENT>
 <X><T>links</T><A>../links/firefox.html</A><L>en</L><F>HTML</F></X>
