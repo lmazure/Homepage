@@ -30,16 +30,24 @@
     <DESC>show command pallete</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='M'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='M'/><BR/>
+      <CODEROUTINE>View: Toggle Problems</CODEROUTINE></TERM>
     <DESC>show/hide errors and warnings</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='B'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='B'/><BR/>
+      <CODEROUTINE>View: Toggle Side Bar Visibility</CODEROUTINE></TERM>
     <DESC>show/hide left panel</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='J'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='J'/><BR/>
+      <CODEROUTINE>View: Toggle Panel</CODEROUTINE></TERM>
     <DESC>show/hide bottom panel</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='ù'/><BR/>
+      <CODEROUTINE>View: Toggle Terminal</CODEROUTINE></TERM>
+    <DESC>show/hide terminal</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='S'/></TERM>
@@ -68,6 +76,16 @@ File
     <DESC>open a recent file</DESC>
   </ROW>
   <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Tab'/><BR/>
+      <CODEROUTINE>View: Quick Open Least Recently Used Editor in Group</CODEROUTINE></TERM>
+    <DESC>navigate backward history of file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='Tab'/><BR/>
+      <CODEROUTINE>View: Quick Open Previous Recently Used Editor in Group</CODEROUTINE></TERM>
+    <DESC>navigate forward history of file</DESC>
+  </ROW>
+  <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='E'/><BR/>
       <MODIFIERKEY id='Ctrl'/><KEY id='P'/><BR/>
       <CODEROUTINE>Go to file…</CODEROUTINE></TERM>
@@ -87,7 +105,8 @@ File
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F4'/><BR/>
-      <MODIFIERKEY id='Ctrl'/><KEY id='W'/></TERM>
+      <MODIFIERKEY id='Ctrl'/><KEY id='W'/><BR/>
+      <CODEROUTINE>View: Close Editor</CODEROUTINE></TERM>
     <DESC>close an editor</DESC>
   </ROW>
   <ROW>
@@ -304,7 +323,8 @@ Folding
     <DESC>new window</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='*'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='*'/><BR/>
+      <CODEROUTINE>View: Split Editor</CODEROUTINE></TERM>
     <DESC>split editor vertically</DESC>
   </ROW>
   <ROW>
@@ -324,7 +344,8 @@ Search/replace
     <DESC>go to definition of the symbol where is the cursor</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F'/><BR/>
+      <CODEROUTINE>Find</CODEROUTINE></TERM>
     <DESC>search<BR/>
     use the regexp <CODEROUTINE>\xa0</CODEROUTINE> to find non breaking spaces</DESC>
   </ROW>
@@ -339,7 +360,8 @@ Search/replace
     use <CODEROUTINE>$0</CODEROUTINE> to insert the full string, <CODEROUTINE>$1</CODEROUTINE> the first group… <CODEROUTINE>$$</CODEROUTINE> to insert <CODEROUTINE>$</CODEROUTINE></DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F'/></TERM>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F'/><BR/>
+      <CODEROUTINE>Search: Find in files</CODEROUTINE></TERM>
     <DESC>search in files</DESC>
   </ROW>
   <ROW>

@@ -84,43 +84,44 @@ A non-combining code point may be followed by an arbitrary number of combining c
 Certain characters are only available as a combination of multiple code points, while some, the ones that are expected to be the most used, are also available as a single precomposed code point. The order of the combined code points may also vary, but all code points combinations leading to the same abstract character are still canonically equivalent.<BR/>
 While a combining character sequence can be arbitrarily big, the Unicode standard also introduces the concept of a stream-safe string, where a combining character sequence is at most 31 code points long, which is largely above what is sufficient for any linguistic use<BR/>
 <TABLE>
-<ROW><CELL>code point</CELL><CELL>name</CELL><CELL>acronym</CELL><CELL>HTML</CELL><CELL>French name</CELL></ROW>
-<ROW><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL><CELL>ZWJ</CELL><CELL>&amp;zwj;<BR/>&amp;#8205;</CELL><CELL>liant sans chasse</CELL></ROW>
-<ROW><CELL>U+200C</CELL><CELL>ZERO WIDTH NON-JOINER</CELL><CELL>ZWNJ</CELL><CELL>&amp;zwnj;<BR/>&amp;#8204;</CELL><CELL>antiliant sans chasse</CELL></ROW>
+  <ROW><CELL>code point</CELL><CELL>name</CELL><CELL>acronym</CELL><CELL>HTML</CELL><CELL>French name</CELL></ROW>
+  <ROW><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL><CELL>ZWJ</CELL><CELL>&amp;zwj;<BR/>&amp;#8205;</CELL><CELL>liant sans chasse</CELL></ROW>
+  <ROW><CELL>U+200C</CELL><CELL>ZERO WIDTH NON-JOINER</CELL><CELL>ZWNJ</CELL><CELL>&amp;zwnj;<BR/>&amp;#8204;</CELL><CELL>antiliant sans chasse</CELL></ROW>
 </TABLE>
 <BLIST><TITLE>Examples with Emoji</TITLE>
 <ITEM>👩🏽 is defined as
 <TABLE>
-<ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
-<ROW><CELL>️🏽</CELL><CELL>U+1F3FD</CELL><CELL>EMOJI MODIFIER FITZPATRICK TYPE-4</CELL></ROW>
+  <ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
+  <ROW><CELL>️🏽</CELL><CELL>U+1F3FD</CELL><CELL>EMOJI MODIFIER FITZPATRICK TYPE-4</CELL></ROW>
 </TABLE></ITEM>
 <ITEM>👮🏽‍♀️ is defined as
 <TABLE>
-<ROW><CELL>️👮</CELL><CELL>U+1F46E</CELL><CELL>POLICE OFFICER</CELL></ROW>
-<ROW><CELL>️🏽</CELL><CELL>U+1F3FD</CELL><CELL>EMOJI MODIFIER FITZPATRICK TYPE-4</CELL></ROW>
-<ROW><CELL>️‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
-<ROW><CELL>️♀</CELL><CELL>U+2640</CELL><CELL>FEMALE SIGN</CELL></ROW>
-<ROW><CELL>️️</CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+  <ROW><CELL>️👮</CELL><CELL>U+1F46E</CELL><CELL>POLICE OFFICER</CELL></ROW>
+  <ROW><CELL>️🏽</CELL><CELL>U+1F3FD</CELL><CELL>EMOJI MODIFIER FITZPATRICK TYPE-4</CELL></ROW>
+  <ROW><CELL>️‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>️♀</CELL><CELL>U+2640</CELL><CELL>FEMALE SIGN</CELL></ROW>
+  <ROW><CELL>️️</CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
 </TABLE></ITEM>
 <ITEM>🏳️‍🌈 is defined as
 <TABLE>
-<ROW><CELL>🏳</CELL><CELL>U+1F3F3</CELL><CELL>WAVING WHITE FLAG</CELL></ROW>
-<ROW><CELL>️</CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
-<ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
-<ROW><CELL>🌈</CELL><CELL>U+1F308</CELL><CELL>RAINBOW</CELL></ROW>
+  <ROW><CELL>🏳</CELL><CELL>U+1F3F3</CELL><CELL>WAVING WHITE FLAG</CELL></ROW>
+  <ROW><CELL>️</CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+  <ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>🌈</CELL><CELL>U+1F308</CELL><CELL>RAINBOW</CELL></ROW>
 </TABLE></ITEM>
 <ITEM>👩‍❤️‍💋‍👨 is defined as
 <TABLE>
-<ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
-<ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
-<ROW><CELL>❤</CELL><CELL>U+2764</CELL><CELL>HEAVY BLACK HEART</CELL></ROW>
-<ROW><CELL>️ </CELL><CELL>+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
-<ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
-<ROW><CELL>💋</CELL><CELL>U+1F48B</CELL><CELL>KISS MARK</CELL></ROW>
-<ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
-<ROW><CELL>👨</CELL><CELL>U+1F468</CELL><CELL>MAN</CELL></ROW>
+  <ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
+  <ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>❤</CELL><CELL>U+2764</CELL><CELL>HEAVY BLACK HEART</CELL></ROW>
+  <ROW><CELL>️ </CELL><CELL>+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+  <ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>💋</CELL><CELL>U+1F48B</CELL><CELL>KISS MARK</CELL></ROW>
+  <ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>👨</CELL><CELL>U+1F468</CELL><CELL>MAN</CELL></ROW>
 </TABLE></ITEM>
 </BLIST>
+<X><T>Emoji flag sequences</T><A>https://en.wikipedia.org/wiki/Regional_indicator_symbol#Emoji_flag_sequences</A><L>en</L><F>HTML</F></X>
 </CONTENT>
 <X><T>links</T><A>../links/unicode.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
