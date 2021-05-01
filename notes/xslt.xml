@@ -158,7 +158,7 @@ Dive through a hierarchy of <CODEROUTINE>ITM</CODEROUTINE> nodes to find the des
 &lt;xsl:template match="/MENU//ITM"&gt;<BR/>
 <TAB/>&lt;xsl:choose&gt;<BR/>
 <TAB/><TAB/>&lt;xsl:when test="[the test]"&gt;<BR/>
-<TAB/> <TAB/> <TAB/> [do the job]<BR/>
+<TAB/><TAB/><TAB/> [do the job]<BR/>
 <TAB/><TAB/>&lt;/xsl:when&gt;<BR/>
 <TAB/><TAB/>&lt;xsl:otherwise&gt;<BR/>
 <TAB/><TAB/><TAB/>&lt;xsl:apply-templates select="./ITM"/&gt;<BR/>
