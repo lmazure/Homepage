@@ -70,7 +70,7 @@ insert a diagram<BR/>
 <ITEM>
 insert a JavaScript in a document so it will usable in the HTML version
 <NLIST>
-<ITEM>customize the Insert menu by adding "Insert Script", "Show All Scripts" and "Remove All Scripts" from the Tools>Customize>Commands>Tools category</ITEM>
+<ITEM>customize the Insert menu by adding "Insert Script", "Show All Scripts" and "Remove All Scripts" from the Tools&gt;Customize&gt;Commands&gt;Tools category</ITEM>
 <ITEM>use Insert Script to add a script, this opens the Development Environment</ITEM>
 <ITEM>find where the script has been added (search for "VBscript")</ITEM>
 <ITEM>change the script language from VBScript to JavaScript (simply by replacing the text in the HTML source) and type the script</ITEM>
@@ -185,7 +185,7 @@ Click on <CODEMENU>Table<CODEMENU>Formula…</CODEMENU></CODEMENU> to insert a f
 <DESC>Returns the Boolean opposite of the result. Mostly used with IF formulas. <BR/>
 <CODEROUTINE>{=NOT(1=1)}</CODEROUTINE> = 0<BR/>
 <CODEROUTINE>{=NOT(1=5)}</CODEROUTINE> = 1<BR/>
-If x is defined as 7, <CODEROUTINE>{=NOT(x>10)}</CODEROUTINE> = 1</DESC></ROW>
+If x is defined as 7, <CODEROUTINE>{=NOT(x&gt;10)}</CODEROUTINE> = 1</DESC></ROW>
 <ROW><TERM><CODEROUTINE>OR(x,y)</CODEROUTINE></TERM>
 <DESC>Returns "1" if one or both arguments are true. Returns "0" if both arguments are false. Generally used with IF formulas.<BR/>
 <CODEROUTINE>{=OR(1+2=3, 2=4)}</CODEROUTINE> = 1<BR/>

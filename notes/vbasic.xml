@@ -711,7 +711,7 @@ Dim t As String<BR/>
 For i = 0 To dict.Count - 1<BR/>
 <TAB/>t = dictSRS(0).Keys(i) <BR/>
 <TAB/>Selection.InsertAfter (t) <BR/>
-<TAB/>Selection.InsertAfter (" => ")<BR/>
+<TAB/>Selection.InsertAfter (" =&gt; ")<BR/>
 <TAB/>Selection.InsertAfter (dict.Item(t)) <BR/>
 Next i
 </CODESAMPLE></ITEM>

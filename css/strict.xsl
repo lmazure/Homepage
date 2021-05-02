@@ -453,7 +453,9 @@
       <xsl:text> })</xsl:text>
     </xsl:attribute>
     <xsl:for-each select="NAMEPREFIX/text() | FIRSTNAME/text() | MIDDLENAME/text() | LASTNAME/text() | NAMESUFFIX/text() | GIVENNAME/text()">
+      <xsl:if test="name(parent::*)='GIVENNAME'"><xsl:text>"</xsl:text></xsl:if>
       <xsl:value-of select="."/>
+      <xsl:if test="name(parent::*)='GIVENNAME'"><xsl:text>"</xsl:text></xsl:if>
       <xsl:if test="not(position() = last())"><xsl:text> </xsl:text></xsl:if>
     </xsl:for-each>
   </xsl:element>

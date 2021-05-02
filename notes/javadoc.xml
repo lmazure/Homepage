@@ -12,19 +12,19 @@
 <ROW><TERM>@exception</TERM><DESC>synonym for @throws</DESC></ROW>
 <ROW><TERM>{@inheritDoc}</TERM><DESC>copies documentation from the "nearest" inheritable class or implementable interface<BR/>
 this can be used for the main description, @return, @param and @throws</DESC></ROW>
-<ROW><TERM>{@link <I>package.class#member</I> <I>label</I>}</TERM><DESC>inserts a link with a text label that points to the documentation for the specified package, class or member name of a class</DESC></ROW>
-<ROW><TERM>{@linkplain <I>package.class#member</I> <I>label</I>}</TERM><DESC>same as @link except that the link is displayed using the plain text fond instead of the code font</DESC></ROW>
+<ROW><TERM>{@link <I>package.class#member label</I>}</TERM><DESC>inserts a link with a text label that points to the documentation for the specified package, class or member name of a class</DESC></ROW>
+<ROW><TERM>{@linkplain <I>package.class#member label</I>}</TERM><DESC>same as @link except that the link is displayed using the plain text fond instead of the code font</DESC></ROW>
 <ROW><TERM>@param</TERM><DESC>description of a parameter</DESC></ROW>
 <ROW><TERM>@return</TERM><DESC>return type and permissible range of values</DESC></ROW>
 <ROW><TERM>@see "<I>string</I>"</TERM><DESC>add a "See Also" text</DESC></ROW>
 <ROW><TERM>@see <I>&lt;a href="URL#value"&gt;label&lt;/a&gt;</I></TERM><DESC>add a "See Also" link</DESC></ROW>
-<ROW><TERM>@see <I>package.class#member</I> <I>label</I></TERM><DESC>adds a "See Also" link to a package, class or member name of a class<BR/>
+<ROW><TERM>@see <I>package.class#member label</I></TERM><DESC>adds a "See Also" link to a package, class or member name of a class<BR/>
 <I>label</I> is optional</DESC></ROW>
 <ROW><TERM>@serial</TERM><DESC>used in the doc comment for a default serializable field</DESC></ROW>
 <ROW><TERM>@serialData <I>data-description</I></TERM><DESC>documents the types and order of data in the serialized form</DESC></ROW>
-<ROW><TERM>@serialField <I>field-name</I> <I>field-type</I> <I>field-description</I></TERM><DESC>documents an ObjectStreamField component of a Serializable class's serialPersistentFields member</DESC></ROW>
+<ROW><TERM>@serialField <I>field-name field-type field-description</I></TERM><DESC>documents an ObjectStreamField component of a Serializable class's serialPersistentFields member</DESC></ROW>
 <ROW><TERM>@since <I>since-text</I></TERM><DESC>adds a "Since" heading with the specified <I>since-text</I> to the generated documentation</DESC></ROW>
-<ROW><TERM>@throws <I>class-name</I> <I>description</I></TERM><DESC>adds a "Throws" subheading to the generated documentation, with the <I>class-name</I> and <I>description</I> text</DESC></ROW>
+<ROW><TERM>@throws <I>class-name description</I></TERM><DESC>adds a "Throws" subheading to the generated documentation, with the <I>class-name</I> and <I>description</I> text</DESC></ROW>
 <ROW><TERM>{@value <I>package.class#field</I>}</TERM><DESC>replaced by the value of a static field</DESC></ROW>
 <ROW><TERM>@version <I>version-text</I></TERM><DESC>replaced by the value of the -version option when this one is used</DESC></ROW>
 </DEFINITIONTABLE><BR/>

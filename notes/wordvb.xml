@@ -196,7 +196,7 @@ End With</CODESAMPLE>
 <CODESAMPLE>Private Sub Document_Open()<BR/>
 …<BR/>
 End Sub</CODESAMPLE></ITEM>
-<ITEM>check the security level (<CODEMENU>Tools>Macros>Security</CODEMENU>), otherwise the application may simply ignore the macro</ITEM>
+<ITEM>check the security level (<CODEMENU>Tools&gt;Macros&gt;Security</CODEMENU>), otherwise the application may simply ignore the macro</ITEM>
 </BLIST>
 <U><B>transfer some data to Excel</B></U>
 <CODESAMPLE>Private Function formatForExcel(str As String) As String<BR/>

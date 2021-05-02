@@ -12,7 +12,7 @@
 <TAB/>String line; <BR/>
 <TAB/>String errorMessage = "";<BR/>
 <TAB/>while ( (line=err.readLine()) != null )  errorMessage = errorMessage + "\n" + line; <BR/>
-<TAB/>if (errorMessage.length()>0) System.out.println("error: "+errorMessage); <BR/>
+<TAB/>if (errorMessage.length()&gt;0) System.out.println("error: "+errorMessage); <BR/>
 <TAB/>final BufferedReader reader = new BufferedReader(new InputStreamReader(proc.getInputStream()));<BR/>
 <TAB/>int n = 0; <BR/>
 <TAB/>while ( (line=reader.readLine()) != null ) {<BR/>

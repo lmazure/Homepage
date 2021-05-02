@@ -307,7 +307,8 @@ public class Test<BR/>
 <TAB/><TAB/><TAB/>int a = Integer.parseInt(verA[i]);<BR/>
 <TAB/><TAB/><TAB/>int b = Integer.parseInt(verB[i]);<BR/>
 <TAB/><TAB/><TAB/>if (a&lt;b) return -1;<BR/>
-<TAB/><TAB/><TAB/>if (a&gt;b) return 1;<TAB/><TAB/>   <BR/>
+<TAB/><TAB/><TAB/>if (a&gt;b) return 1;
+<TAB/><TAB/><BR/>
 <TAB/><TAB/>}<BR/>
 <TAB/><TAB/><BR/>
 <TAB/><TAB/>return 0;<BR/>
