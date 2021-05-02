@@ -219,7 +219,7 @@
     <DESC>Show the commit date and the commit subject.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git log --pretty="%ce,%cd" --date=short > commits.csv</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log --pretty="%ce,%cd" --date=short &gt; commits.csv</CODEROUTINE></TERM>
     <DESC>Dump the authors and dates of the commits in a file.</DESC>
   </ROW>
   <ROW>
