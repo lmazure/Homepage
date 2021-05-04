@@ -209,7 +209,7 @@ is equivalent to
 <CODESAMPLE>((fn [a b c] (+ a b c)) 2 4 6)</CODESAMPLE></ITEM>
 <ITEM>to use it for writing <CODEROUTINE>((fn [x] [1 2 x]) 6)</CODEROUTINE>:<BR/>
 <CODEROUTINE>(#([1 2 %]) 6)</CODEROUTINE> becomes <CODEROUTINE>((fn [arg] ([1 2 arg])) 6)</CODEROUTINE> and will not work.<BR/>
-<CODEROUTINE>(#(identity [1 2 %]) 6)</CODEROUTINE> or <CODEROUTINE>(#(-> [1 2 %]) 6)</CODEROUTINE> will do the trick.</ITEM>
+<CODEROUTINE>(#(identity [1 2 %]) 6)</CODEROUTINE> or <CODEROUTINE>(#(-&gt; [1 2 %]) 6)</CODEROUTINE> will do the trick.</ITEM>
 <ITEM>A <I>higher order function</I> is a function that takes another function as an argument.<BR/>
 <CODEROUTINE>map</CODEROUTINE> is a higher order function.</ITEM>
 <ITEM><CODEROUTINE>memoize</CODEROUTINE> returns a memoized version of a function

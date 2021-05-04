@@ -3,18 +3,10 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>notes/chrome.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <U>shortcuts</U> (<X><T>full list</T><A>https://support.google.com/chrome/answer/157179</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
-  <ROW>
-    <TERM><KEY id='F6'/></TERM>
-    <DESC>rotate focus between the Omnibox, the bookmarks bar, and the website</DESC>
-  </ROW>
-  <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='B'/></TERM>
-    <DESC>toggle display of the bookmark bar</DESC>
-  </ROW>
   <ROW>
     <TERM><MODIFIERKEY id='Ctrl'/><KEY id='N'/></TERM>
     <DESC>open a new window</DESC>
@@ -32,9 +24,29 @@
     <DESC>display the downloads</DESC>
   </ROW>
   <ROW>
+    <TERM><KEY id='F6'/></TERM>
+    <DESC>rotate focus between the Omnibox, the bookmarks bar, and the website</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='B'/></TERM>
+    <DESC>toggle display of the bookmark bar</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='O'/></TERM>
+    <DESC>display the Bookmarks Manager</DESC>
+  </ROW>
+  <ROW>
     <TERM><KEY id='F12'/><BR/>
       <MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='I'/></TERM>
     <DESC>toggle display of the developer tools</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Shift'/><KEY id='Esc'/></TERM>
+    <DESC>display the Chrome Task Manager</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='Shift'/><KEY id='I'/></TERM>
+    <DESC>open a feedback form</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

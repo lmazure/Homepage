@@ -16,7 +16,7 @@ my $port = "512";<BR/>
 my $host = "3.249.12.132";<BR/>
 <BR/>
 my $repl;<BR/>
-my $socket = IO::Socket::INET->new(PeerAddr =&gt; $host,PeerPort =&gt; $port,Proto =&gt; "TCP") || die "socket ($!)";<BR/>
+my $socket = IO::Socket::INET-&gt;new(PeerAddr =&gt; $host,PeerPort =&gt; $port,Proto =&gt; "TCP") || die "socket ($!)";<BR/>
 print "socket created\n";<BR/>
 <BR/>
 my $req = "HELO a\r\n";<BR/>
