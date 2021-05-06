@@ -7,85 +7,85 @@
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
-  <TERM><MODIFIERKEY id='Windows'/><KEY id='V'/></TERM>
+  <TERM><MODIFIERKEY id="Windows"/><KEY id="V"/></TERM>
   <DESC>display the clipboard history</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Windows'/><KEY id='Right'/></TERM>
+  <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Windows"/><KEY id="Right"/></TERM>
   <DESC>display the new virtual desktop</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Windows'/><KEY id='Left'/></TERM>
+  <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Windows"/><KEY id="Left"/></TERM>
   <DESC>display the previous virtual desktop</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Windows'/><KEY id=';'/></TERM>
+  <TERM><MODIFIERKEY id="Windows"/><KEY id=";"/></TERM>
   <DESC>display the emoji panel</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Windows'/><KEY id='+'/></TERM>
+  <TERM><MODIFIERKEY id="Windows"/><KEY id="+"/></TERM>
   <DESC>display the magnifier</DESC>
 </ROW>
 </DEFINITIONTABLE>
 File explorer
 <DEFINITIONTABLE>
 <ROW>
-  <TERM><KEY id='Left'/><BR/>
-        <KEY id='Backspace'/></TERM>
+  <TERM><KEY id="Left"/><BR/>
+        <KEY id="Backspace"/></TERM>
   <DESC>navigate history backward</DESC>
 </ROW>
 <ROW>
-  <TERM><KEY id='Right'/></TERM>
+  <TERM><KEY id="Right"/></TERM>
   <DESC>navigate history forward</DESC>
 </ROW>
 <ROW>
-  <TERM><KEY id='Up'/></TERM>
+  <TERM><KEY id="Up"/></TERM>
   <DESC>go to parent directory</DESC>
 </ROW>
 <ROW>
-  <TERM><KEY id='F5'/></TERM>
+  <TERM><KEY id="F5"/></TERM>
   <DESC>refresh</DESC>
 </ROW>
 <ROW>
-  <TERM><KEY id='F2'/></TERM>
+  <TERM><KEY id="F2"/></TERM>
   <DESC>rename an item</DESC>
 </ROW>
 <ROW>
-  <TERM><KEY id='F3'/></TERM>
+  <TERM><KEY id="F3"/></TERM>
   <DESC>find a folder or a file</DESC>
 </ROW>
 <ROW>
-  <TERM><KEY id='Del'/></TERM>
+  <TERM><KEY id="Del"/></TERM>
   <DESC>delete an item and put it in the Recycle Bin</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Shift'/><KEY id='Del'/></TERM>
+  <TERM><MODIFIERKEY id="Shift"/><KEY id="Del"/></TERM>
   <DESC>delete an item without placing it in the Recycle Bin</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Alt'/><KEY id='Enter'/><BR/>
-        <MODIFIERKEY id='Alt'/>left double-click</TERM>
+  <TERM><MODIFIERKEY id="Alt"/><KEY id="Enter"/><BR/>
+        <MODIFIERKEY id="Alt"/>left double-click</TERM>
   <DESC>display item properties</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Shift'/>left DnD</TERM>
+  <TERM><MODIFIERKEY id="Shift"/>left DnD</TERM>
   <DESC>move a file</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Ctrl'/>left DnD</TERM>
+  <TERM><MODIFIERKEY id="Ctrl"/>left DnD</TERM>
   <DESC>copy a file</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/>left DnD<BR/>
-    <MODIFIERKEY id='Alt'/>left DnD</TERM>
+  <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/>left DnD<BR/>
+    <MODIFIERKEY id="Alt"/>left DnD</TERM>
   <DESC>create a shortcut</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Shift'/>right DnD</TERM>
+  <TERM><MODIFIERKEY id="Shift"/>right DnD</TERM>
   <DESC>display a dialog to select move / copy / shortcut</DESC>
 </ROW>
 <ROW>
-  <TERM><MODIFIERKEY id='Ctrl'/>left double-click</TERM>
+  <TERM><MODIFIERKEY id="Ctrl"/>left double-click</TERM>
   <DESC>open a folder in another window</DESC>
 </ROW>
 </DEFINITIONTABLE>
@@ -248,13 +248,13 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
   <ROW><TERM><CODEROUTINE>/p</CODEROUTINE></TERM><DESC>ask for confirmation before each file copy</DESC></ROW>
   <ROW><TERM><CODEROUTINE>/s</CODEROUTINE></TERM><DESC>copy non empty directories and subdirectories (without this flag, <CODEROUTINE>xcopy</CODEROUTINE> copies only a directory)</DESC></ROW>
   <ROW><TERM><CODEROUTINE>/v</CODEROUTINE></TERM><DESC>check each data recording</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>/w</CODEROUTINE></TERM><DESC>display a prompt before copying the file (the copy can be cancelled with <MODIFIERKEY id='Ctrl'/><KEY id='C'/>)</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/w</CODEROUTINE></TERM><DESC>display a prompt before copying the file (the copy can be cancelled with <MODIFIERKEY id="Ctrl"/><KEY id="C"/>)</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE>copy</CODEROUTINE></TERM><DESC>copy a file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>/v</CODEROUTINE></TERM><DESC>check that sectors written on disk are correct</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>/a</CODEROUTINE></TERM><DESC>for a source file, the data are copied up to the first end-of-file mark(<MODIFIERKEY id='Ctrl'/><KEY id='Z'/>)<BR/>for a target file, a end-of-file mark is added as the last character in the file</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/a</CODEROUTINE></TERM><DESC>for a source file, the data are copied up to the first end-of-file mark(<MODIFIERKEY id="Ctrl"/><KEY id="Z"/>)<BR/>for a target file, a end-of-file mark is added as the last character in the file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>/b</CODEROUTINE></TERM><DESC>for a source file, the file must be entirely copied including the end-of-file marks<BR/>for a target file, does not add a end-of-file mark at the end of the file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>copy foo+bar[+…] target</CODEROUTINE></TERM><DESC>concatenate the source files into a single target file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>copy foo+bar[+…]</CODEROUTINE></TERM><DESC>concatenate the files into <CODEROUTINE>foo</CODEROUTINE></DESC></ROW>
@@ -279,7 +279,7 @@ In order to know which process uses a given file, use <X><T>Handle</T><A>https:/
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='Esc'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Esc"/></TERM>
     <DESC>display Task Manager</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -287,7 +287,7 @@ In order to know which process uses a given file, use <X><T>Handle</T><A>https:/
 Special characters
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><KEY id='0'/><KEY id='1'/><KEY id='3'/><KEY id='3'/></TERM>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="0"/><KEY id="1"/><KEY id="3"/><KEY id="3"/></TERM>
     <DESC>…</DESC>
   </ROW>
 </DEFINITIONTABLE>

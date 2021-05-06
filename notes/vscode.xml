@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -25,32 +25,32 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='P'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="P"/><BR/>
       <CODEROUTINE>Show All Commands</CODEROUTINE></TERM>
     <DESC>show command pallete</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='M'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="M"/><BR/>
       <CODEROUTINE>View: Toggle Problems</CODEROUTINE></TERM>
     <DESC>show/hide errors and warnings</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='B'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><BR/>
       <CODEROUTINE>View: Toggle Side Bar Visibility</CODEROUTINE></TERM>
     <DESC>show/hide left panel</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='J'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="J"/><BR/>
       <CODEROUTINE>View: Toggle Panel</CODEROUTINE></TERM>
     <DESC>show/hide bottom panel</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='ù'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="ù"/><BR/>
       <CODEROUTINE>View: Toggle Terminal</CODEROUTINE></TERM>
     <DESC>show/hide terminal</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='S'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="S"/></TERM>
     <DESC>keyboard shortcuts</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -58,63 +58,76 @@
 File
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='N'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="N"/><BR/>
       double left click on tab menubar<BR/>
       <CODEROUTINE>New Untitled File</CODEROUTINE></TERM>
     <DESC>open new empty editor</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='E'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="E"/></TERM>
     <DESC>show file explorer</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='O'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="O"/></TERM>
     <DESC>open a file</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='R'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="R"/></TERM>
     <DESC>open a recent file</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Tab'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num +"/></TERM>
+    <DESC>zoom</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num -"/></TERM>
+    <DESC>unzoom</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num 0"/></TERM>
+    <DESC>reset the zoom</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Tab"/><BR/>
       <CODEROUTINE>View: Quick Open Least Recently Used Editor in Group</CODEROUTINE></TERM>
     <DESC>navigate backward history of file</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='Tab'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Tab"/><BR/>
       <CODEROUTINE>View: Quick Open Previous Recently Used Editor in Group</CODEROUTINE></TERM>
     <DESC>navigate forward history of file</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='E'/><BR/>
-      <MODIFIERKEY id='Ctrl'/><KEY id='P'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="E"/><BR/>
+      <MODIFIERKEY id="Ctrl"/><KEY id="P"/><BR/>
       <CODEROUTINE>Go to file…</CODEROUTINE></TERM>
     <DESC>go to file</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='O'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="O"/></TERM>
     <DESC>open folder</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='S'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="S"/></TERM>
     <DESC>save</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='S'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="S"/></TERM>
     <DESC>save all</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F4'/><BR/>
-      <MODIFIERKEY id='Ctrl'/><KEY id='W'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F4"/><BR/>
+      <MODIFIERKEY id="Ctrl"/><KEY id="W"/><BR/>
       <CODEROUTINE>View: Close Editor</CODEROUTINE></TERM>
     <DESC>close an editor</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='W'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="W"/><BR/>
+      <CODEROUTINE>View: Close All Editors</CODEROUTINE></TERM>
     <DESC>close all editors</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='F'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="F"/><BR/>
       <CODEROUTINE>Workspaces: Close Workspace</CODEROUTINE></TERM>
     <DESC>close workspace<BR/>
       close folder</DESC>
@@ -124,16 +137,21 @@ File
     <DESC>reload the file with another encoding</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='Shift'/><KEY id='C'/><BR/>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="C"/><BR/>
       <CODEROUTINE>File: Copy Path of Active File</CODEROUTINE></TERM>
     <DESC>copy the full path of the file in the clipboard</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="P"/><BR/>
+      <CODEROUTINE>workbench.action.files.copyPathOfActiveFile</CODEROUTINE></TERM>
+    <DESC>copy path of file in active editor</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 Display
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><KEY id='Z'/><BR/>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Z"/><BR/>
       <CODEROUTINE>Toggle Word Wrap</CODEROUTINE></TERM>
     <DESC>toggle word wrap</DESC>
   </ROW>
@@ -142,19 +160,23 @@ Display
     <DESC>display/undisplay space characters</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='Z'/></TERM>
+    <TERM><KEY id="F11"/></TERM>
+    <DESC>toggle full screen</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="Z"/></TERM>
     <DESC>toggle the zen mode</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Num +'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num +"/></TERM>
     <DESC>zoom in</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Num -'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num -"/></TERM>
     <DESC>zoom out</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='Num 0'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num 0"/></TERM>
     <DESC>reset zoom</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -162,62 +184,62 @@ Display
 Folding
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id=')'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id=")"/><BR/>
       <CODEROUTINE>Fold</CODEROUTINE></TERM>
     <DESC>fold</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='^'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="^"/><BR/>
       <CODEROUTINE>Unfold</CODEROUTINE></TERM>
     <DESC>unfold</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='à'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="à"/><BR/>
       <CODEROUTINE>Fold All</CODEROUTINE></TERM>
     <DESC>fold all</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='J'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="J"/><BR/>
       <CODEROUTINE>Unfold All</CODEROUTINE></TERM>
     <DESC>unfold all</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='&amp;'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="&amp;"/><BR/>
       <CODEROUTINE>Fold Level 1</CODEROUTINE></TERM>
     <DESC>Fold level 1</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='é'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="é"/><BR/>
       <CODEROUTINE>Fold Level 2</CODEROUTINE></TERM>
     <DESC>Fold level 2</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='"'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="&quot;"/><BR/>
       <CODEROUTINE>Fold Level 3</CODEROUTINE></TERM>
     <DESC>Fold level 3</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id="'"/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="&apos;"/><BR/>
       <CODEROUTINE>Fold Level 4</CODEROUTINE></TERM>
     <DESC>Fold level 4</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='('/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="("/><BR/>
       <CODEROUTINE>Fold Level 5</CODEROUTINE></TERM>
     <DESC>Fold level 5</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='-'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="-"/><BR/>
       <CODEROUTINE>Fold Level 6</CODEROUTINE></TERM>
     <DESC>Fold level 6</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='è'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="è"/><BR/>
       <CODEROUTINE>Fold Level 7</CODEROUTINE></TERM>
     <DESC>Fold level 7</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='_'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="_"/><BR/>
       <CODEROUTINE>Fold All Regions</CODEROUTINE></TERM>
     <DESC>Fold all regions<BR/>
       a region is between a comment containing <CODEROUTINE>#region <I>Region Name</I></CODEROUTINE> and a comment containing <CODEROUTINE>#endregion</CODEROUTINE></DESC>
@@ -226,36 +248,36 @@ Folding
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><KEY id='Left'/></TERM>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Left"/></TERM>
     <DESC>go to previous edit location</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><KEY id='Right'/></TERM>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Right"/></TERM>
     <DESC>go to next edit location</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Alt'/><KEY id='Up'/><BR/>
-      <MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Alt'/><KEY id='Down'/><BR/>
-      <MODIFIERKEY id='Alt'/>left click</TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Up"/><BR/>
+      <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Down"/><BR/>
+      <MODIFIERKEY id="Alt"/>left click</TERM>
     <DESC>multi-edition</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F2'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F2"/><BR/>
       <CODEROUTINE>Change All Occurrences</CODEROUTINE></TERM>
     <DESC>select all the instances of the current selection</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='L'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="L"/><BR/>
       <CODEROUTINE>Select All Occurrences of Find Match</CODEROUTINE></TERM>
     <DESC>select all the instances of the current selection</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='D'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="D"/><BR/>
       <CODEROUTINE>Add Selection to Next Find Match</CODEROUTINE></TERM>
     <DESC>add the next found match to the current selection</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='D'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="D"/><BR/>
       <CODEROUTINE>Move Selection to Next Find Match</CODEROUTINE></TERM>
     <DESC>unselect the last selection and add the next found match the current selection</DESC>
   </ROW>
@@ -268,38 +290,38 @@ Folding
     <DESC>sort lines in decreasing order</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><KEY id='Up'/></TERM>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Up"/></TERM>
     <DESC>move line up</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><KEY id='Down'/></TERM>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Down"/></TERM>
     <DESC>move line down</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='Shift'/><KEY id='Up'/></TERM>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Up"/></TERM>
     <DESC>copy line up</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='Shift'/><KEY id='Down'/></TERM>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Down"/></TERM>
     <DESC>copy line down</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='C'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="C"/><BR/>
       <CODEROUTINE>Add Line Comment</CODEROUTINE></TERM>
     <DESC>comment the selected lines</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='U'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="U"/><BR/>
       <CODEROUTINE>Remove Line Comment</CODEROUTINE></TERM>
     <DESC>uncomment the selected lines</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id=':'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id=":"/><BR/>
       <CODEROUTINE>Toggle Line Comment</CODEROUTINE></TERM>
     <DESC>toggle the line comment on the selected lines</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='A'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="A"/><BR/>
       <CODEROUTINE>Toggle Block Comment</CODEROUTINE></TERM>
     <DESC>toggle the block comment on the selected lines</DESC>
   </ROW>
@@ -307,28 +329,28 @@ Folding
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='PageDown'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="PageDown"/></TERM>
     <DESC>next editor</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='PageUp'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="PageUp"/></TERM>
     <DESC>previous editor</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <KEY id='O'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="O"/></TERM>
     <DESC>open active file in new window</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='N'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="N"/></TERM>
     <DESC>new window</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='*'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="*"/><BR/>
       <CODEROUTINE>View: Split Editor</CODEROUTINE></TERM>
     <DESC>split editor vertically</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='*'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="*"/></TERM>
     <DESC>split editor horizontally</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -336,50 +358,50 @@ Folding
 Search/replace
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='G'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="G"/></TERM>
     <DESC>display go to line dialog</DESC>
   </ROW>
   <ROW>
-    <TERM><KEY id='F12'/></TERM>
+    <TERM><KEY id="F12"/></TERM>
     <DESC>go to definition of the symbol where is the cursor</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F"/><BR/>
       <CODEROUTINE>Find</CODEROUTINE></TERM>
     <DESC>search<BR/>
     use the regexp <CODEROUTINE>\xa0</CODEROUTINE> to find non breaking spaces</DESC>
   </ROW>
   <ROW>
-    <TERM><KEY id='F3'/></TERM>
+    <TERM><KEY id="F3"/></TERM>
     <DESC>find next</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='H'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="H"/></TERM>
     <DESC>replace<BR/>
     groups are defined by <CODEROUTINE>(</CODEROUTINE> and <CODEROUTINE>)</CODEROUTINE><BR/>
     use <CODEROUTINE>$0</CODEROUTINE> to insert the full string, <CODEROUTINE>$1</CODEROUTINE> the first group… <CODEROUTINE>$$</CODEROUTINE> to insert <CODEROUTINE>$</CODEROUTINE></DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/><BR/>
       <CODEROUTINE>Search: Find in files</CODEROUTINE></TERM>
     <DESC>search in files</DESC>
   </ROW>
   <ROW>
-    <TERM><KEY id='F4'/><BR/>
+    <TERM><KEY id="F4"/><BR/>
     <CODEROUTINE>Focus Next Search Result</CODEROUTINE></TERM>
     <DESC>select next search match</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Shift'/><KEY id='F4'/><BR/>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F4"/><BR/>
     <CODEROUTINE>Focus Previous Search Result</CODEROUTINE></TERM>
     <DESC>select previous search match</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/></TERM>
     <DESC>search in files</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='H'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="H"/></TERM>
     <DESC>replace in files</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -411,57 +433,57 @@ Search/replace
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><KEY id='F12'/></TERM>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="F12"/></TERM>
     <DESC>peek definition</DESC></ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Alt'/><MODIFIERKEY id='Shift'/><KEY id='F12'/></TERM>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="F12"/></TERM>
     <DESC>find all references</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Shift'/><KEY id='F12'/></TERM>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F12"/></TERM>
     <DESC>peek all references</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='G'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/></TERM>
     <DESC>show/hide source code management</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='D'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="D"/></TERM>
     <DESC>show launch and debug</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='B'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="B"/><BR/>
     <CODEROUTINE>Tasks: Run Build Task</CODEROUTINE></TERM>
     <DESC>display the selector to run a build task</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='F5'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F5"/><BR/>
     <CODEROUTINE>Run: Start Without Debugging</CODEROUTINE></TERM>
     <DESC>launch the program</DESC>
   </ROW>
   <ROW>
-    <TERM><KEY id='F5'/><BR/>
+    <TERM><KEY id="F5"/><BR/>
     <CODEROUTINE>Debug: Start Debugging</CODEROUTINE></TERM>
     <DESC>launch the program in debug mode</DESC>
   </ROW>
   <ROW>
-    <TERM><KEY id='F5'/><BR/>
+    <TERM><KEY id="F5"/><BR/>
     <CODEROUTINE>Debug: Continue</CODEROUTINE></TERM>
     <DESC>continue the program in debug mode</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Shift'/><KEY id='F5'/><BR/>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F5"/><BR/>
     <CODEROUTINE>Debug: Stop</CODEROUTINE></TERM>
     <DESC>stop the program in debug mode</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F5'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F5"/><BR/>
     <CODEROUTINE>Debug: Restart</CODEROUTINE></TERM>
     <DESC>relaunch the program in debug mode</DESC>
   </ROW>
@@ -469,16 +491,16 @@ Search/replace
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='X'/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="X"/></TERM>
     <DESC>show manage extensions</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id=','/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id=","/></TERM>
     <DESC>display setting</DESC></ROW>
   <ROW>
-    <TERM><MODIFIERKEY id='Ctrl'/><KEY id='K'/>, <MODIFIERKEY id='Ctrl'/><KEY id='T'/><BR/>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="T"/><BR/>
       <CODEMENU>File<CODEMENU>Preferences<CODEMENU>Color Theme</CODEMENU></CODEMENU></CODEMENU></TERM>
-    <DESC>display the theme picker (navigate with <KEY id='Up'/>/<KEY id='Down'/>, the theme is interactively applied)</DESC>
+    <DESC>display the theme picker (navigate with <KEY id="Up"/>/<KEY id="Down"/>, the theme is interactively applied)</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

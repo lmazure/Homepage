@@ -11,9 +11,9 @@
 <U>Types of tasks</U><BR/>
 What is the value modified by Project when another one is modified?
 <TABLE>
-<ROW><CELL width='2' height='2'></CELL><CELL width='3'>modified value</CELL></ROW>
+<ROW><CELL width="2" height="2"></CELL><CELL width="3">modified value</CELL></ROW>
 <ROW><CELL>duration</CELL><CELL>units</CELL><CELL>workload</CELL></ROW>
-<ROW><CELL height='3'>type of task</CELL><CELL>fixed duration<BR/>Durée fixe</CELL><CELL>workload</CELL><CELL>workload</CELL><CELL>workload</CELL></ROW>
+<ROW><CELL height="3">type of task</CELL><CELL>fixed duration<BR/>Durée fixe</CELL><CELL>workload</CELL><CELL>workload</CELL><CELL>workload</CELL></ROW>
 <ROW><CELL>fixed capacity<BR/>Capacité fixe<BR/>(default)</CELL><CELL>workload</CELL><CELL>duration</CELL><CELL>duration</CELL></ROW>
 <ROW><CELL>fixed workload<BR/>Travail fixe</CELL><CELL>units</CELL><CELL>duration</CELL><CELL>duration</CELL></ROW>
 </TABLE>
@@ -84,17 +84,17 @@ move the cursor toward the top or the bottom<BR/>
 move the cursor on top of task β<BR/>
 release the mouse button</ITEM>
 <ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view<BR/>
-select the tasks (e.g. by using <MODIFIERKEY id='Ctrl'/>click)<BR/>
+select the tasks (e.g. by using <MODIFIERKEY id="Ctrl"/>click)<BR/>
 (it is possible to link more than two tasks; in this case, there are linked one after the other)<BR/>
-type <MODIFIERKEY id='Ctrl'/><KEY id='F2'/></ITEM>
+type <MODIFIERKEY id="Ctrl"/><KEY id="F2"/></ITEM>
 </BLIST></ITEM>
 <ITEM><BLIST><TITLE>Unlink tasks</TITLE>
 <ITEM>On the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the graphical view<BR/>
 double click on the dependence arrow<BR/>
 click on the <CODEMENU>Supprimer</CODEMENU> button of the displayed dialog</ITEM>
 <ITEM>on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view<BR/>
-select the tasks (e.g. by using <MODIFIERKEY id='Ctrl'/>click)<BR/>
-type <MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F2'/></ITEM>
+select the tasks (e.g. by using <MODIFIERKEY id="Ctrl"/>click)<BR/>
+type <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F2"/></ITEM>
 </BLIST></ITEM>
 <ITEM>On the <CODEROUTINE>Organigramme des tâches</CODEROUTINE> view<BR/>
 put the cursor on top of task α<BR/>
@@ -119,68 +119,68 @@ in the <CODEMENU>Mise en forme</CODEMENU> toolbar, <CODEMENU>Afficher<CODEMENU>T
 on the <CODEROUTINE>Diagramme de Gantt</CODEROUTINE> view, in the table view
 <DEFINITIONTABLE>
 <ROW><TERM>
-<KEY id='Ins'/>
+<KEY id="Ins"/>
 </TERM><DESC>
 insert a task before the selected one
 </DESC></ROW>
 <ROW><TERM>
-<KEY id='Del'/>
+<KEY id="Del"/>
 </TERM><DESC>
 delete the selected tasks
 </DESC></ROW>
 <ROW><TERM>
-<KEY id='F2'/>
+<KEY id="F2"/>
 </TERM><DESC>
 edit the field
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Shift'/><KEY id='F2'/><BR/>
+<MODIFIERKEY id="Shift"/><KEY id="F2"/><BR/>
 double right click
 </TERM><DESC>
 display the task editor
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Shift'/><KEY id='F5'/>
+<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F5"/>
 </TERM><DESC>
 center the view on the first selected task
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><KEY id='F2'/>
+<MODIFIERKEY id="Ctrl"/><KEY id="F2"/>
 </TERM><DESC>
 link the selected tasks
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Alt'/><KEY id='F10'/>
+<MODIFIERKEY id="Alt"/><KEY id="F10"/>
 </TERM><DESC>
 display the affectation window
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Alt'/><KEY id='Left'/>
+<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Left"/>
 </TERM><DESC>
 outdent task
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Ctrl'/><MODIFIERKEY id='Alt'/><KEY id='Right'/>
+<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Right"/>
 </TERM><DESC>
 indent task
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Alt'/><MODIFIERKEY id='Shift'/><KEY id='Num -'/>
+<MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Num -"/>
 </TERM><DESC>
 hide subtaks
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Alt'/><MODIFIERKEY id='Shift'/><KEY id='Num +'/>
+<MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Num +"/>
 </TERM><DESC>
 show subtasks
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Alt'/><KEY id='Left'/>
+<MODIFIERKEY id="Alt"/><KEY id="Left"/>
 </TERM><DESC>
 scroll calendar toward the past
 </DESC></ROW>
 <ROW><TERM>
-<MODIFIERKEY id='Alt'/><KEY id='Right'/>
+<MODIFIERKEY id="Alt"/><KEY id="Right"/>
 </TERM><DESC>
 scroll calendar toward the future
 </DESC></ROW>

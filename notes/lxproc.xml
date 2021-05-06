@@ -32,7 +32,7 @@
 <ROW><CELL><CODEROUTINE>session</CODEROUTINE></CELL><CELL></CELL><CELL>session ID</CELL></ROW>
 <ROW><CELL><CODEROUTINE>pid</CODEROUTINE></CELL><CELL></CELL><CELL>process ID</CELL></ROW>
 <ROW><CELL><CODEROUTINE>ppid</CODEROUTINE></CELL><CELL></CELL><CELL>parent process ID</CELL></ROW>
-<ROW><CELL><CODEROUTINE>rss</CODEROUTINE></CELL><CELL height='2'>RSS</CELL><CELL height='3'>resident set size<BR/>the non-swapped physical memory that a task has used (in kiloBytes)</CELL></ROW>
+<ROW><CELL><CODEROUTINE>rss</CODEROUTINE></CELL><CELL height="2">RSS</CELL><CELL height="3">resident set size<BR/>the non-swapped physical memory that a task has used (in kiloBytes)</CELL></ROW>
 <ROW><CELL><CODEROUTINE>rsize</CODEROUTINE></CELL></ROW>
 <ROW><CELL><CODEROUTINE>rsz</CODEROUTINE></CELL><CELL>RSZ</CELL></ROW>
 <ROW><CELL><CODEROUTINE>resident</CODEROUTINE></CELL><CELL></CELL><CELL>resident pages</CELL></ROW>
@@ -43,7 +43,7 @@
 <ROW><CELL><CODEROUTINE>sz</CODEROUTINE></CELL><CELL>SZ</CELL><CELL>size in physical pages of the core image of the process</CELL></ROW>
 <ROW><CELL><CODEROUTINE>uid</CODEROUTINE></CELL><CELL></CELL><CELL>user ID number</CELL></ROW>
 <ROW><CELL><CODEROUTINE>user</CODEROUTINE></CELL><CELL></CELL><CELL>user name</CELL></ROW>
-<ROW><CELL><CODEROUTINE>vsize</CODEROUTINE></CELL><CELL height='2'>VSZ</CELL><CELL height='2'>virtual memory usage (in kiloBytes) of entire process<BR/>vm_lib + vm_exe + vm_data + vm_stack </CELL></ROW>
+<ROW><CELL><CODEROUTINE>vsize</CODEROUTINE></CELL><CELL height="2">VSZ</CELL><CELL height="2">virtual memory usage (in kiloBytes) of entire process<BR/>vm_lib + vm_exe + vm_data + vm_stack </CELL></ROW>
 <ROW><CELL><CODEROUTINE>vsz</CODEROUTINE></CELL></ROW>
 <ROW><CELL><CODEROUTINE>priority</CODEROUTINE></CELL><CELL></CELL><CELL>kernel scheduling priority</CELL></ROW>
 </TABLE>
