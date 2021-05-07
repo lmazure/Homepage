@@ -73,7 +73,7 @@
   </ROW>
 </DEFINITIONTABLE>
 <BLIST>
-  <ITEM>Workaround to clone a repository which is too big to be transfered.
+  <ITEM>Workaround to clone a repository which is too big to be transferred.
     <CODESAMPLE>git clone quux@foobar.com:myprojet<BR/>
       git fetch --depth 100</CODESAMPLE>
     Later on, when high bandwidth is available, get the whole repo with
@@ -475,7 +475,7 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git gc</CODEROUTINE></TERM>
-    <DESC>Compress file revision and remove uneachable objects.</DESC>
+    <DESC>Compress file revision and remove unreachable objects.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

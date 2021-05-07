@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -14,6 +14,10 @@
   </SLIST></ITEM>
   <ITEM><SLIST><TITLE>Wait for the files to be closed before returning</TITLE>
     <ITEM><CODEROUTINE>Code.exe --wait file1 file2</CODEROUTINE></ITEM>
+  </SLIST></ITEM>
+  <ITEM><SLIST><TITLE>Open file at given position</TITLE>
+    <ITEM><CODEROUTINE>Code.exe --wait file1:line</CODEROUTINE></ITEM>
+    <ITEM><CODEROUTINE>Code.exe --wait file1:line:column</CODEROUTINE></ITEM>
   </SLIST></ITEM>
   <ITEM><SLIST><TITLE>Specify the directory that user data is kept in</TITLE>
     <ITEM><CODEROUTINE>--user-data-dir H:\Documents\tools\VSCode\myDataDir</CODEROUTINE></ITEM>
