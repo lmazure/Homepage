@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -113,6 +113,7 @@
     <ITEM><ARTICLE><X><T>Java still rocks the finance industry. Here’s why Java 16 makes it even better.</T><ST>High-speed trades? Quantitative analysis? The investment pays off.</ST><A>https://blogs.oracle.com/javamagazine/finance-quant-forex-java16</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alexa</FIRSTNAME><MIDDLENAME>Weber</MIDDLENAME><LASTNAME>Morales</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE><COMMENT>Some little information about finance IT and the role of Java in it.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Announcing Preview of Microsoft Build of OpenJDK</T><A>https://devblogs.microsoft.com/java/announcing-preview-of-microsoft-build-of-openjdk/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bruno</FIRSTNAME><LASTNAME>Borges</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE><COMMENT>Microsoft is offering a distribution of OpenJDK.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>All our support agents are busy, please hold.</T><A>https://www.youtube.com/watch?v=FxoE3hPRrVI</A><L>en</L><F>MP4</F><DURATION><MINUTE>17</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Stephen</FIRSTNAME><LASTNAME>Fitch</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>20</DAY></DATE><COMMENT>An advertisement for the service offer of Oracle: upgrade services, performance tuning services, and enterprise and third-party services.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>"Failed to write core dump"</T><A>https://inside.java/2021/04/30/failed-writing-core-dump/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joakim</FIRSTNAME><LASTNAME>Nordström</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>30</DAY></DATE><COMMENT>How to configure the JVM to generate or not a core dump.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Tutorials</TITLE>
       <ITEM><ARTICLE><X status="dead"><T>Speaking the Java language without an accent</T><ST>Native fluency for nonnative programmers</ST><A>https://www.ibm.com/developerworks/library/j-noaccent/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Elliotte</FIRSTNAME><MIDDLENAME>Rusty</MIDDLENAME><LASTNAME>Harold</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>Some coding habits that C/C++ developers should modify in order to code in Java as everyone else.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -348,6 +349,7 @@
       <ITEM><ARTICLE><X><T>Java 16 Rundown, First Of Java 17 - Inside Java Newscast #1</T><A>https://www.youtube.com/watch?v=4zP_5vrFg1w</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>43</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE><COMMENT>A quick overview of Java 16 and some first information about Java 17.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Vector API, Record Serialization, And Java 17 - Inside Java Newscast #2</T><A>https://www.youtube.com/watch?v=yQqBqix7yTA</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>A short description of the Vector API, a pointer toward some information about Record Serialization, and improved pseudo-random number generators in Java 17.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Quicker Java and JDK 16 compatibility - Inside Java Newscast #3</T><A>https://www.youtube.com/watch?v=T7-4I_pUlpw</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>22</DAY></DATE><COMMENT>Some features to develop faster in Java and some projects which are now supporting Java 16.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>5 Secret Java API Tricks and Record Semantics - Inside Java Newscast #4</T><A>https://www.youtube.com/watch?v=UYyf0uzOez0</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE><COMMENT><CODEROUTINE>Pattern::asPredicate</CODEROUTINE>, regex named capturing groups, <CODEROUTINE>Predicate::not</CODEROUTINE>, <CODEROUTINE>Comparator::naturalOrder</CODEROUTINE>, autoclosable Streams, and Records are Tuples.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
