@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>TypeScript</TITLE>
 <PATH>links/typescript.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -69,6 +69,7 @@
       <ITEM><ARTICLE><X><T>Announcing TypeScript 4.2 RC</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-2-rc/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>Template literal types have been removed from 4.2, uncalled function checks now apply within <CODEROUTINE>&amp;&amp;</CODEROUTINE> and <CODEROUTINE>||</CODEROUTINE> expressions.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing the New TypeScript Handbook</T><A>https://devblogs.microsoft.com/typescript/announcing-the-new-typescript-handbook/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Orta</FIRSTNAME><LASTNAME>Therox</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>5</DAY></DATE><COMMENT>The title says all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 4.3 Beta</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-3-beta/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE><COMMENT>Different types for reading and writing properties, <CODEROUTINE>override</CODEROUTINE> keyword to declare overriding methods, better checks on template strings, <CODEROUTINE>#private</CODEROUTINE> static members, detection of missing <CODEROUTINE>await</CODEROUTINE> when testing a promise, static index signatures, improved <CODEROUTINE>import</CODEROUTINE> autocompletion, and improved navigation of <CODEROUTINE>@link</CODEROUTINE> tags.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Announcing TypeScript 4.3 RC</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-3-rc/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE><COMMENT>The same as beta plus <CODEROUTINE>ConstructorParameters</CODEROUTINE> type helper now works on <CODEROUTINE>abstract</CODEROUTINE> classes, slightly smarter type-narrowing logic on generic values, <CODEROUTINE>.tsbuildinfo</CODEROUTINE> files are significantly smaller, lasy computation in <CODEROUTINE>--incremental</CODEROUTINE> and <CODEROUTINE>--watch</CODEROUTINE> modes, and Go-to-Definition now goes to non-JavaScript files.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
