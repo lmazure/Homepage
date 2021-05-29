@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
@@ -234,6 +234,11 @@
         <DESC>return the numeric value of the given parameter<BR/>
           return 0 if parameter is text or FALSE<BR/>
           return the error value in case of an error</DESC>
+      </ROW>
+      <ROW>
+        <TERM1><CODEROUTINE>ISBLANK(Value)</CODEROUTINE></TERM1>
+        <TERM2><CODEROUTINE>ESTVIDE(valeur)</CODEROUTINE></TERM2>
+        <DESC>return TRUE if the content of a cell is empty.<BR/>A cell with a formula inside is not empty.</DESC>
       </ROW>
       <ROW>
         <TERM1><CODEROUTINE>ISNA(Value)</CODEROUTINE></TERM1>
