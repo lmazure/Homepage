@@ -1,0 +1,72 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Markdown</TITLE>
+<PATH>notes/markdown.xml</PATH>
+<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE>
+<CONTENT>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODESAMPLE># title 1</CODESAMPLE><BR/>
+      <CODESAMPLE>title 1<BR/>
+        =======</CODESAMPLE></TERM>
+    <DESC>Heading level 1 (<CODEROUTINE>&lt;h1&gt;title 1&lt;/h1&gt;</CODEROUTINE>)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>## title 2</CODESAMPLE><BR/>
+      <CODESAMPLE>title 1<BR/>
+        -------</CODESAMPLE></TERM>
+    <DESC>Heading level 2 (<CODEROUTINE>&lt;h1&gt;title 2&lt;/h1&gt;</CODEROUTINE>)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>### title 3</CODESAMPLE></TERM>
+    <DESC>Heading level 3 (<CODEROUTINE>&lt;h1&gt;title 3&lt;/h1&gt;</CODEROUTINE>)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>#### title 4</CODESAMPLE></TERM>
+    <DESC>Heading level 4 (<CODEROUTINE>&lt;h1&gt;title 4&lt;/h1&gt;</CODEROUTINE>)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>##### title 5</CODESAMPLE></TERM>
+    <DESC>Heading level 5 (<CODEROUTINE>&lt;h1&gt;title 5&lt;/h1&gt;</CODEROUTINE>)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>###### title 6</CODESAMPLE></TERM>
+    <DESC>Heading level 6 (<CODEROUTINE>&lt;h1&gt;title 6&lt;/h1&gt;</CODEROUTINE>)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>paragraph 1<BR/>
+      <BR/>
+      paragraph 2</CODESAMPLE></TERM>
+    <DESC>Use a blank lines to separate the text in paragraphs.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>text&lt;br&gt;</CODESAMPLE></TERM>
+    <DESC>Use &lt;br&gt; or two spaces at the end of a line to insert a line break.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>*text*</CODESAMPLE><BR/>
+      <CODESAMPLE>_text_</CODESAMPLE></TERM>
+    <DESC>Italics (<CODEROUTINE>&lt;em&gt;text&lt;/em&gt;</CODEROUTINE>)<BR/>
+      use <CODEROUTINE>*…*</CODEROUTINE> in the middle of a word</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>**text**</CODESAMPLE><BR/>
+      <CODESAMPLE>__text__</CODESAMPLE></TERM>
+    <DESC>Bold (<CODEROUTINE>&lt;strong&gt;text&lt;/strong&gt;</CODEROUTINE>)<BR/>
+      use <CODEROUTINE>**…**</CODEROUTINE> in the middle of a word</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>***text***</CODESAMPLE><BR/>
+      <CODESAMPLE>___text___</CODESAMPLE></TERM>
+    <DESC>Bold italics (<CODEROUTINE>&lt;strong&gt;&lt;em&gt;text&lt;/em&gt;&lt;/strong&gt;</CODEROUTINE>)<BR/>
+      use <CODEROUTINE>***…***</CODEROUTINE> in the middle of a word</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>[text](url)</CODESAMPLE></TERM>
+    <DESC>HTTP link</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+</CONTENT>
+<X><T>links</T><A>../links/life.html#markdown</A><L>en</L><F>HTML</F></X>
+</PAGE>

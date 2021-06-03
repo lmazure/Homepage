@@ -61,16 +61,21 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker ps</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker ps</CODEROUTINE><BR/>
+      <CODEROUTINE>docker container ls</CODEROUTINE></TERM>
     <DESC>List the running containers.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>docker ps --all</CODEROUTINE><BR/>
-      <CODEROUTINE>docker ps -a</CODEROUTINE></TERM>
+      <CODEROUTINE>docker ps -a</CODEROUTINE><BR/>
+      <CODEROUTINE>docker container ls --all</CODEROUTINE><BR/>
+      <CODEROUTINE>docker container ls -a</CODEROUTINE></TERM>
     <DESC>List all containers (running or not).</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Unreferenced images are images not referenced by any container.<BR/>
+Dangling images are layers that have no relationship to any tagged images.
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>docker images</CODEROUTINE></TERM>
@@ -80,6 +85,10 @@
     <TERM><CODEROUTINE>docker images --all</CODEROUTINE><BR/>
       <CODEROUTINE>docker images -a</CODEROUTINE></TERM>
     <DESC>List all images (top level and intermediate).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker images -f dangling=true</CODEROUTINE></TERM>
+    <DESC>List the dangling images.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

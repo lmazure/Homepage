@@ -85,8 +85,11 @@
     <ITEM><BLIST><TITLE>Documentation</TITLE>
       <ITEM><X><T>DITA</T><A>http://dita.xml.org</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>DocBook</T><A>https://www.docbook.org/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Markdown</T><A>https://www.markdownguide.org/</A><L>en</L><F>HTML</F></X></ITEM>
-    </BLIST></ITEM>
+      <ITEM><CLIST><TITLE><ANCHOR>markdown</ANCHOR>Markdown</TITLE>
+        <ITEM><X><T>Markdown Guide</T><A>https://www.markdownguide.org/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>personal notes</T><A>../notes/markdown.html</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
+  </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Distribution</TITLE>
       <ITEM><BLIST><TITLE>Windows</TITLE>
         <ITEM><X><T>Chocolatey</T><A>https://chocolatey.org/</A><L>en</L><F>HTML</F></X></ITEM>
