@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Unix command line utilities</TITLE>
 <PATH>notes/unixclu.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -25,6 +25,10 @@
   <ROW>
     <TERM><CODEROUTINE>find . -name '*.tab' -print0 | xargs -0 -n 1 grep -aE -e '^quux'</CODEROUTINE></TERM>
     <DESC>use <CODEROUTINE>-print0</CODEROUTINE>/<CODEROUTINE>-0</CODEROUTINE> to manage lines containing a space (here filenames)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-r</CODEROUTINE></TERM>
+    <DESC>if the standard input does not contain any nonblanks, do not run the command; normally, the command is run once even if there is no input.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

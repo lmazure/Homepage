@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -329,6 +329,26 @@ Folding
       <CODEROUTINE>Toggle Block Comment</CODEROUTINE></TERM>
     <DESC>toggle the block comment on the selected lines</DESC>
   </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="F8"/><BR/>
+      <CODEROUTINE>Go to Next Problem (Error, Warning, Info)</CODEROUTINE></TERM>
+    <DESC>go to next problem</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F8"/><BR/>
+      <CODEROUTINE>Go to Next Problem in File (Error, Warning, Info)</CODEROUTINE></TERM>
+    <DESC>go to next problem</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="F8"/><BR/>
+      <CODEROUTINE>Go to Previous Problem (Error, Warning, Info)</CODEROUTINE></TERM>
+    <DESC>go to previous problem</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F8"/><BR/>
+      <CODEROUTINE>Go to Previous Problem in File (Error, Warning, Info)</CODEROUTINE></TERM>
+    <DESC>go to previous problem</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
@@ -517,6 +537,20 @@ Emmet
   <ROW>
     <TERM><CODEROUTINE>Emmet: Balance (inward)</CODEROUTINE></TERM>
     <DESC>select the inner node scope</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Markdown
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="V"/><BR/>
+      <CODEROUTINE>Open Preview</CODEROUTINE></TERM>
+    <DESC>show Markdown preview</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="V"/><BR/>
+      <CODEROUTINE>Open Preview to the Side</CODEROUTINE></TERM>
+    <DESC>show Markdown preview in an editor on the side</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
