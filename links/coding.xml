@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -39,6 +39,7 @@
         <ITEM><X><T>personal notes</T><A>../notes/git.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><BLIST><TITLE>Repositories</TITLE>
           <ITEM><CLIST><TITLE><ANCHOR>gitlab</ANCHOR><X><T>GitLab</T><A>https://about.gitlab.com/</A><L>en</L><F>HTML</F></X></TITLE>
+            <ITEM><X><T>source code</T><A>https://gitlab.com/gitlab-org/gitlab</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>personal notes</T><A>../notes/gitlab.html</A><L>en</L><F>HTML</F></X></ITEM>
           </CLIST></ITEM>
           <ITEM><X><T>BitBucket</T><A>https://bitbucket.org</A><L>en</L><F>HTML</F></X></ITEM>
@@ -310,6 +311,7 @@
       <ITEM><BLIST><TITLE>GitLab</TITLE>
         <ITEM><ARTICLE><X><T>Markdown Guide</T><A>https://about.gitlab.com/handbook/markdown-guide/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marcia</FIRSTNAME><LASTNAME>Ramos</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Craig</FIRSTNAME><LASTNAME>Norris</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>A presentation of kramdown, a superset of Markdown used on <X><T>https://about.GitLab.com</T><A>https://about.GitLab.com</A><L>en</L><F>HTML</F></X>.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GitLab, l'élève qui veut dépasser le maître GitHub</T><A>https://www.journaldunet.com/solutions/dsi/1420355-gitlab-l-alternative-a-github-qui-veut-aller-bien-au-dela/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Antoine</FIRSTNAME><LASTNAME>Crochet-Damais</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>Some information about the current state and offer of the company.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Manage / Reduce CI/CD Minutes Usage on Shared GitLab.com Runners</T><A>https://www.youtube.com/watch?v=GrO-8KtIpRA</A><L>en</L><F>MP4</F><DURATION><MINUTE>26</MINUTE><SECOND>36</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Myers</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>17</DAY></DATE><COMMENT>Some basic advice for saving some CI minutes: defining job rules, scheduling less often, using asset caching, using a docker container with all the dependencies already installed, and using your own GitLab runner.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GitLab Requirements Traceability Walkthrough</T><A>https://www.youtube.com/watch?v=VIiuTQYFVa0</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>25</SECOND></DURATION></X><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>12</DAY></DATE><COMMENT>How to use a traceability matrix to update requirement statuses depending on the test statuses.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Fixing merge conflicts locally for www-gitlab-com</T><A>https://www.youtube.com/watch?v=zYTJ1RND8Tg</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Lauren</FIRSTNAME><LASTNAME>Barker</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>How to use a traceability matrix to update requirement statuses depending on the test statuses.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Compliance Pipeline release video and walkthrough</T><A>https://www.youtube.com/watch?v=upLJ_equomw</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Kerr</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE><COMMENT>It is possible to define a common pipepline template (defining common steps) for several projects using compliance pipeline features.</COMMENT></ARTICLE></ITEM>

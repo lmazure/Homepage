@@ -137,7 +137,8 @@
     <DESC>Store the current contents of the index in a new commit along with message &lt;msg&gt;.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git commit -a</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git commit -a</CODEROUTINE><BR/>
+      <CODEROUTINE>git commit -all</CODEROUTINE></TERM>
     <DESC>Automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.</DESC>
   </ROW>
   <ROW>
@@ -362,7 +363,7 @@
     <TERM><CODEROUTINE>git reset &lt;commit&gt; &lt;pathspec&gt;</CODEROUTINE></TERM>
     <DESC>Reset reset the index &lt;pathspec&gt; entry to a previous commit<BR/>
       if no commit is specified, the current HEAD is used.<BR/>
-      This means that <CODEROUTINE>vit reset &lt;pathspec&gt;</CODEROUTINE> is the opposite of <CODEROUTINE>git add &lt;pathspec&gt;</CODEROUTINE>.</DESC>
+      This means that <CODEROUTINE>git reset &lt;pathspec&gt;</CODEROUTINE> is the opposite of <CODEROUTINE>git add &lt;pathspec&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --soft &lt;commit&gt;</CODEROUTINE></TERM>
@@ -426,8 +427,14 @@
     <DESC>Push commits made on a local branch to a remote repository in the branch of same name.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>-u</CODEROUTINE><BR/><CODEROUTINE>--set-upstream</CODEROUTINE></TERM>
-    <DESC>For every branch that is up to date or successfully pushed, add upstream (tracking) reference.</DESC>
+    <TERM><CODEROUTINE>git push -all</CODEROUTINE></TERM>
+    <DESC>Push all branches.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git push -u origin &lt;branchname&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git push --set-upstream origin &lt;branchname&gt;</CODEROUTINE></TERM>
+    <DESC>For every branch that is up to date or successfully pushed, add upstream (tracking) reference.<BR/>
+      This is to be used when a branch has been created locally and does not exist in the remote repository.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/><DEFINITIONTABLE>
