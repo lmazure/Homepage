@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java history</TITLE>
 <PATH>links/javahistory.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -172,6 +172,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Java 17</TITLE>
       <ITEM><ARTICLE><X><T>A peek into Java 17: Continuing the drive to encapsulate the Java runtime internals</T><ST>The need to encapsulate the runtime is fundamentally caused by Java’s nature as an open programming environment.</ST><A>https://blogs.oracle.com/javamagazine/java-runtime-encapsulation-internals</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>30</DAY></DATE><COMMENT>The timeline of the removal of the access to the JDK internals (except for <CODEROUTINE>sun.misc.Unsafe</CODEROUTINE>) and the fact that this removal process is finished in Java 17.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Pattern matching, switching null, guarded patterns, 26 hours of Java, and Accento</T><A>https://medium.com/nipafx-news/pattern-matching-switching-null-guarded-patterns-26-hours-of-java-and-accento-78fb32d198d5</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>12</DAY></DATE><COMMENT>Some information about Java 17's Pattern Matching for switch.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
