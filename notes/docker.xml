@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
   <DEFINITIONTABLE>
     <ROW>
@@ -71,6 +71,35 @@
       <CODEROUTINE>docker container ls --all</CODEROUTINE><BR/>
       <CODEROUTINE>docker container ls -a</CODEROUTINE></TERM>
     <DESC>List all containers (running or not).</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker logs &lt;container&gt;</CODEROUTINE></TERM>
+    <DESC>Display the logs of a container.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker logs -f &lt;container&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>docker logs --follow &lt;container&gt;</CODEROUTINE></TERM>
+    <DESC>Keep following the logs.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker logs -t &lt;container&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>docker logs --timestamps &lt;container&gt;</CODEROUTINE></TERM>
+    <DESC>Show timestamps.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker logs --since 10m &lt;container&gt;</CODEROUTINE></TERM>
+    <DESC>Display the logs of the last 10 minutes (it is also possible to give a date <CODEROUTINE>2013-01-02T13:23:37Z</CODEROUTINE>).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker logs --until 60m &lt;container&gt;</CODEROUTINE></TERM>
+    <DESC>Display the logs older than 60 minutes (it is also possible to give a date).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker logs --details</CODEROUTINE></TERM>
+    <DESC>Display more details.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
