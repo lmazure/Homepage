@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -350,6 +350,7 @@
       <ITEM><ARTICLE><X status="zombie"><T>Prevent cross-site scripting attacks by encoding HTML responses</T><A>https://www.ibm.com/developerworks/library/se-prevent/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Usha</FIRSTNAME><LASTNAME>Ladkani</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE><COMMENT>A basic description of XSS and how to avoid it.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Attacking Web Applications - Sasha Goldshtein</T><A>https://www.youtube.com/watch?v=2cRMD-oFHQo</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>30</MINUTE><SECOND>41</SECOND></DURATION><DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE></X><AUTHOR><FIRSTNAME>Sasha</FIRSTNAME><LASTNAME>Goldshtein</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>A good presentation of the most common Web security holes: SQL/OS injection, HTTPS, CSRF, XSS…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Security 101: An introduction to software security - Allen Holub</T><A>https://vimeo.com/user22258446/review/78534248/2b2a1094ef</A><L>en</L><F>Flash Video</F><DURATION><HOUR>1</HOUR><MINUTE>29</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Allen</FIRSTNAME><LASTNAME>Holub</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>Some very basic generalities on security.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>5 developer tools for detecting and fixing security vulnerabilities</T><A>https://dev.to/opinionatedpie/5-developer-tools-for-detecting-and-fixing-security-vulnerabilities-h1j</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ingrid</FIRSTNAME><LASTNAME>E.</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE><COMMENT>A too short description of Dependabot, Renovate, Snyk, GitGuardian, and Webhint.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>System administration</TITLE>
         <ITEM><BLIST><TITLE>Know Your Enemy</TITLE>
           <ITEM><ARTICLE><X><T>Know Your Enemy</T><A>http://ouah.lescigales.org/enemy.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Lance</FIRSTNAME><LASTNAME>Spitzner</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE><COMMENT>Lance describes the methodology used by <I>Script Kiddies</I> (a.k.a. crackers) to scan networks and find vulnerable systems.</COMMENT></ARTICLE></ITEM>
