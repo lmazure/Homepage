@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
   <DEFINITIONTABLE>
     <ROW>
@@ -139,6 +139,13 @@ Dangling images are layers that have no relationship to any tagged images.
     <TERM><CODEROUTINE>docker system prune --force</CODEROUTINE><BR/>
       <CODEROUTINE>docker system prune -f</CODEROUTINE></TERM>
     <DESC>Do not prompt for confirmation.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker cp foobar.txt quux:/opt/mydir</CODEROUTINE></TERM>
+    <DESC>Copy the local file foobar.txt in the directory /opt/mydir of container quux.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
