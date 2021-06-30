@@ -35,28 +35,50 @@
 </BLIST>
 <U><B>Window navigation</B></U>
 <DEFINITIONTABLE>
-  <ROW><TERM><KEY id="F12"/></TERM>
-  <DESC>editor</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="F6"/></TERM>
-  <DESC>next editor</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F6"/></TERM>
-  <DESC>previous editor</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="W"/></TERM>
-  <DESC>close current editor</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="Q"/></TERM>
-  <DESC>go to last edit location</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="F7"/></TERM>
-  <DESC>next view</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F7"/></TERM>
-  <DESC>previous view</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="F8"/></TERM>
-  <DESC>next perspective</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F8"/></TERM>
-  <DESC>previous perspective</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Q"/><KEY id="X"/></TERM>
-  <DESC>display errors</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="R"/></TERM>
-  <DESC>display the Open Resource dialog</DESC></ROW>
+  <ROW>
+    <TERM><KEY id="F12"/></TERM>
+    <DESC>editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F6"/></TERM>
+    <DESC>next editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F6"/></TERM>
+    <DESC>previous editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="W"/></TERM>
+    <DESC>close current editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Q"/></TERM>
+    <DESC>go to last edit location</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F7"/></TERM>
+    <DESC>next view</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F7"/></TERM>
+    <DESC>previous view</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F8"/></TERM>
+    <DESC>next perspective</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F8"/></TERM>
+    <DESC>previous perspective</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Q"/><KEY id="X"/></TERM>
+    <DESC>display errors</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="R"/></TERM>
+    <DESC>display the Open Resource dialog</DESC>
+  </ROW>
   </DEFINITIONTABLE>
 <BR/>
 <BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
@@ -65,60 +87,114 @@
 <BLIST><TITLE><U><B>Edition</B></U></TITLE>
   <ITEM>in Editor window
     <DEFINITIONTABLE>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="-"/></TERM>
-      <DESC>unzoom</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="+"/></TERM>
-      <DESC>zoom</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="_"/><BR/><CODEMENU>Window<CODEMENU>Editor<CODEMENU>Toggle Split Editor (Horizontal)</CODEMENU></CODEMENU></CODEMENU></TERM>
-      <DESC>split/unsplit window horizontaly</DESC></ROW>
-      <ROW><TERM><CODEMENU>Window<CODEMENU>Editor<CODEMENU>Toggle Split Editor (Vertical)</CODEMENU></CODEMENU></CODEMENU></TERM>
-      <DESC>split/unsplit window verticaly</DESC></ROW>
-      <ROW><TERM><KEY id="F2"/></TERM>
-      <DESC>show tooltip</DESC></ROW>
-      <ROW><TERM><KEY id="F3"/></TERM>
-      <DESC>display declaration (i.e. source code) of selected item</DESC></ROW>
-      <ROW><TERM><KEY id="F4"/></TERM>
-      <DESC>display class hierarchy of selected item</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="H"/></TERM>
-      <DESC>display call hierarchy of selected item</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Up"/></TERM>
-      <DESC>expand selection to enclosing element</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Right"/></TERM>
-      <DESC>expand selection to next element</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Left"/></TERM>
-      <DESC>expand selection to previous element</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Down"/></TERM>
-      <DESC>restore last selection</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="S"/></TERM>
-      <DESC>save</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="S"/></TERM>
-      <DESC>save all</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="L"/></TERM>
-      <DESC>goto line</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="O"/></TERM>
-      <DESC>display Quick Outline</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="/"/><BR/><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="C"/></TERM>
-      <DESC>toggle comment</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="I"/></TERM>
-      <DESC>correct indentation</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num *"/></TERM>
-      <DESC>expand all folded code</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num /"/></TERM>
-      <DESC>enable/disable code folding</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Q"/></TERM>
-      <DESC>enable/disable QuickDiff</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="O"/></TERM>
-      <DESC>toggle mark occurrences</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Y"/></TERM>
-      <DESC>toggle line wrap</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="A"/></TERM>
-      <DESC>toggle Block Selection Mode</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="X"/></TERM>
-      <DESC>convert selection to uppercase </DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Y"/></TERM>
-      <DESC>convert selection to lowercase </DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/></TERM>
-      <DESC>reformat the code</DESC></ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="-"/></TERM>
+        <DESC>unzoom</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="+"/></TERM>
+        <DESC>zoom</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="_"/><BR/><CODEMENU>Window<CODEMENU>Editor<CODEMENU>Toggle Split Editor (Horizontal)</CODEMENU></CODEMENU></CODEMENU></TERM>
+        <DESC>split/unsplit window horizontaly</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEMENU>Window<CODEMENU>Editor<CODEMENU>Toggle Split Editor (Vertical)</CODEMENU></CODEMENU></CODEMENU></TERM>
+        <DESC>split/unsplit window verticaly</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY id="F2"/></TERM>
+        <DESC>show tooltip</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY id="F3"/></TERM>
+        <DESC>display declaration (i.e. source code) of selected item</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY id="F4"/></TERM>
+        <DESC>display class hierarchy of selected item</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="H"/></TERM>
+        <DESC>display call hierarchy of selected item</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Up"/></TERM>
+        <DESC>expand selection to enclosing element</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Right"/></TERM>
+        <DESC>expand selection to next element</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Left"/></TERM>
+        <DESC>expand selection to previous element</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Down"/></TERM>
+        <DESC>restore last selection</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="S"/></TERM>
+        <DESC>save</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="S"/></TERM>
+        <DESC>save all</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="L"/></TERM>
+        <DESC>goto line</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="O"/></TERM>
+        <DESC>display Quick Outline</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="/"/><BR/><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="C"/></TERM>
+        <DESC>toggle comment</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="I"/></TERM>
+        <DESC>correct indentation</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num *"/></TERM>
+        <DESC>expand all folded code</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num /"/></TERM>
+        <DESC>enable/disable code folding</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Q"/></TERM>
+        <DESC>enable/disable QuickDiff</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="O"/></TERM>
+        <DESC>toggle mark occurrences</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Y"/></TERM>
+        <DESC>toggle line wrap</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="A"/></TERM>
+        <DESC>toggle Block Selection Mode</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="X"/></TERM>
+        <DESC>convert selection to uppercase </DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Y"/></TERM>
+        <DESC>convert selection to lowercase </DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/></TERM>
+        <DESC>reformat the code</DESC>
+      </ROW>
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM>configure the folding with <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Editor<CODEMENU>Folding</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>.</ITEM>
@@ -137,29 +213,49 @@
 <U><B>Search</B></U><BR/>
 in Editor window
 <DEFINITIONTABLE>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="F"/></TERM>
-  <DESC>find/replace</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/></TERM>
-  <DESC>find next</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="K"/></TERM>
-  <DESC>find previous</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="J"/></TERM>
-  <DESC>incremental find next</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="J"/></TERM>
-  <DESC>incremental find previous</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="H"/></TERM>
-  <DESC>search</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/></TERM>
-  <DESC>find occurrences of the selection in the workspace</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="T"/></TERM>
-  <DESC>find a type and display it in an editor</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="H"/></TERM>
-  <DESC>find a type and display it in the type hierarchy</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F"/></TERM>
+    <DESC>find/replace</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/></TERM>
+    <DESC>find next</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="K"/></TERM>
+    <DESC>find previous</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="J"/></TERM>
+    <DESC>incremental find next</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="J"/></TERM>
+    <DESC>incremental find previous</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="H"/></TERM>
+    <DESC>search</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/></TERM>
+    <DESC>find occurrences of the selection in the workspace</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="T"/></TERM>
+    <DESC>find a type and display it in an editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="H"/></TERM>
+    <DESC>find a type and display it in the type hierarchy</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 in Search window
 <DEFINITIONTABLE>
-<ROW><TERM><KEY id="F5"/></TERM>
-<DESC>update the search</DESC></ROW>
+<ROW>
+  <TERM><KEY id="F5"/></TERM>
+  <DESC>update the search</DESC>
+</ROW>
 </DEFINITIONTABLE><BR/>
 <U><B>Code generation</B></U><BR/>
 <BLIST>
@@ -171,18 +267,30 @@ in Search window
 <U><B>Refactoring</B></U><BR/>
 In Editor window
 <DEFINITIONTABLE>
-  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="T"/></TERM>
-  <DESC>display refactoring menu</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="R"/></TERM>
-  <DESC>rename</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="V"/></TERM>
-  <DESC>move</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="S"/></TERM>
-  <DESC>change local variable into field</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="M"/></TERM>
-  <DESC>extract method (transform the current selection into a new method)</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="C"/></TERM>
-  <DESC>change method signature</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="T"/></TERM>
+    <DESC>display refactoring menu</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="R"/></TERM>
+    <DESC>rename</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="V"/></TERM>
+    <DESC>move</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="S"/></TERM>
+    <DESC>change local variable into field</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="M"/></TERM>
+    <DESC>extract method (transform the current selection into a new method)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="C"/></TERM>
+    <DESC>change method signature</DESC>
+  </ROW>
   </DEFINITIONTABLE><BR/>
 <BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
   <ITEM>define the Java version used by compiler<BR/>
@@ -191,30 +299,54 @@ In Editor window
 <U><B>Running/debugging applications</B></U><BR/>
 In Editor window
 <DEFINITIONTABLE>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="F11"/></TERM>
-  <DESC>run last launched</DESC></ROW>
-  <ROW><TERM><KEY id="F11"/></TERM>
-  <DESC>debug last launched</DESC></ROW>
-  <ROW><TERM><KEY id="F5"/></TERM>
-  <DESC>step into</DESC></ROW>
-  <ROW><TERM><KEY id="F6"/></TERM>
-  <DESC>step over</DESC></ROW>
-  <ROW><TERM><KEY id="F7"/></TERM>
-  <DESC>return</DESC></ROW>
-  <ROW><TERM><KEY id="F8"/></TERM>
-  <DESC>resume</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="D"/></TERM>
-  <DESC>display variable</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="I"/></TERM>
-  <DESC>inspect expression</DESC></ROW>
-  <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="B"/></TERM>
-  <DESC>toggle breakpoint</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="X"/><KEY id="T"/></TERM>
+    <DESC>run <CODEROUTINE>main</CODEROUTINE> in current editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F11"/></TERM>
+    <DESC>run last launched</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F11"/></TERM>
+    <DESC>debug last launched</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F5"/></TERM>
+    <DESC>step into</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F6"/></TERM>
+    <DESC>step over</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F7"/></TERM>
+    <DESC>return</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F8"/></TERM>
+    <DESC>resume</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="D"/></TERM>
+    <DESC>display variable</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="I"/></TERM>
+    <DESC>inspect expression</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="B"/></TERM>
+    <DESC>toggle breakpoint</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 in Debug window
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEMENU>Drop to Frame</CODEMENU></TERM>
-  <DESC>reenter the current stack frame in debug mode</DESC></ROW>
+  <ROW>
+    <TERM><CODEMENU>Drop to Frame</CODEMENU></TERM>
+    <DESC>reenter the current stack frame in debug mode</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BLIST><TITLE>Create a run configuration</TITLE>
@@ -260,10 +392,14 @@ in Debug window
 <BLIST><TITLE><U><B>Javadoc</B></U></TITLE>
   <ITEM>in Editor window
     <DEFINITIONTABLE>
-      <ROW><TERM><MODIFIERKEY id="Shift"/><KEY id="F2"/></TERM>
-      <DESC>open external Javadoc</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="J"/></TERM>
-      <DESC>insert Javadoc comment</DESC></ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Shift"/><KEY id="F2"/></TERM>
+        <DESC>open external Javadoc</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="J"/></TERM>
+        <DESC>insert Javadoc comment</DESC>
+      </ROW>
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM><BLIST><TITLE>Declare the Javadoc command</TITLE>
@@ -300,8 +436,10 @@ in Debug window
 </BLIST>
 <BLIST><TITLE><U><B>Help</B></U></TITLE>
   <ITEM><DEFINITIONTABLE>
-      <ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="L"/></TERM>
-      <DESC>display the list of shortcuts</DESC></ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="L"/></TERM>
+        <DESC>display the list of shortcuts</DESC>
+      </ROW>
     </DEFINITIONTABLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Maven</B></U></TITLE>
@@ -319,10 +457,14 @@ in Debug window
 <BLIST><TITLE><U><B>JUnit</B></U></TITLE>
   <ITEM>
     <DEFINITIONTABLE>
-      <ROW><TERM><CODEMENU>File<CODEMENU>New<CODEMENU>JUnit Test Case</CODEMENU></CODEMENU></CODEMENU></TERM>
-      <DESC>create JUnit tests for the current class</DESC></ROW>
-      <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="X"/><KEY id="T"/></TERM>
-      <DESC>run all JUnit tests of the current source file</DESC></ROW>
+      <ROW>
+        <TERM><CODEMENU>File<CODEMENU>New<CODEMENU>JUnit Test Case</CODEMENU></CODEMENU></CODEMENU></TERM>
+        <DESC>create JUnit tests for the current class</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="X"/><KEY id="T"/></TERM>
+        <DESC>run all JUnit tests of the current source file</DESC>
+      </ROW>
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM>To solve the problem of unkown import files, delete <CODEFILENAME>src/module-info.java</CODEFILENAME></ITEM>
