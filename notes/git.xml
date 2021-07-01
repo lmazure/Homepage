@@ -306,7 +306,8 @@
   <ROW>
     <TERM><CODEROUTINE>git stash push [--include-untracked|--all]</CODEROUTINE><BR/>
       <CODEROUTINE>git stash -u</CODEROUTINE><BR/><CODEROUTINE>git stash -a</CODEROUTINE></TERM>
-    <DESC><CODEROUTINE>--include-untracked</CODEROUTINE>, <CODEROUTINE>-u</CODEROUTINE>: all untracked files are also stashed and then cleaned up with <CODEROUTINE>git clean</CODEROUTINE><BR/><CODEROUTINE>--all</CODEROUTINE>, <CODEROUTINE>-a</CODEROUTINE>: the ignored files are stashed and cleaned in addition to the untracked files.</DESC>
+    <DESC><CODEROUTINE>--include-untracked</CODEROUTINE>, <CODEROUTINE>-u</CODEROUTINE>: all untracked files are also stashed and then cleaned up with <CODEROUTINE>git clean</CODEROUTINE><BR/>
+      <CODEROUTINE>--all</CODEROUTINE>, <CODEROUTINE>-a</CODEROUTINE>: the ignored files are stashed and cleaned in addition to the untracked files.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash list</CODEROUTINE></TERM>
@@ -438,6 +439,10 @@
   </ROW>
 </DEFINITIONTABLE>
 <BR/><DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git clean</CODEROUTINE></TERM>
+    <DESC>Delete untracked files from the working tree.</DESC>
+  </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clean -d</CODEROUTINE></TERM>
     <DESC>Recurse into untracked directories.</DESC>
