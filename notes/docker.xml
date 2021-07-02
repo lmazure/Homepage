@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -38,8 +38,19 @@
     <DESC>Assign a name to the container.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>-e &lt;myvar&gt;=&lt;value&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>-p 80:5000</CODEROUTINE><BR/>
+      <CODEROUTINE>--publish 80:5000</CODEROUTINE></TERM>
+    <DESC>Map port 80 of the host to port 5000 of the container.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-e &lt;myvar&gt;=&lt;value&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>-env &lt;myvar&gt;=&lt;value&gt;</CODEROUTINE></TERM>
     <DESC>Set an environment variable in the container.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-e &lt;myvar&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>-env &lt;myvar&gt;</CODEROUTINE></TERM>
+    <DESC>Set an environment variable with its value which is already defined in the local environment in the container.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>--link &lt;name or id&gt;:alias</CODEROUTINE></TERM>
@@ -191,6 +202,21 @@ Dangling images are layers that have no relationship to any tagged images.
   <ROW>
     <TERM><CODEROUTINE>docker cp foobar.txt quux:/opt/mydir</CODEROUTINE></TERM>
     <DESC>Copy the local file foobar.txt in the directory /opt/mydir of container quux.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker login -u &lt;login&gt; -p &lt;password&gt; &lt;server&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>docker login --username &lt;login&gt; --password &lt;password&gt; &lt;server&gt;</CODEROUTINE></TERM>
+    <DESC>Log in to a Docker registry.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker logout &lt;server&gt;</CODEROUTINE></TERM>
+    <DESC>Log out from a Docker registry.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
