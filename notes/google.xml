@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Google</TITLE>
 <PATH>notes/google.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>customization</B></U></TITLE>
   <ITEM><BLIST><TITLE>Search applets</TITLE>
@@ -101,6 +101,22 @@
   <ROW>
     <TERM><KEY id="L"/></TERM>
     <DESC>Open "label as" menu</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="R"/></TERM>
+    <DESC>Reply</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="R"/></TERM>
+    <DESC>Reply in new window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="A"/></TERM>
+    <DESC>Reply to all</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="A"/></TERM>
+    <DESC>Reply to all in new window</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
