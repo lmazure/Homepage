@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Markdown</TITLE>
 <PATH>notes/markdown.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -65,6 +65,14 @@
   <ROW>
     <TERM><CODESAMPLE>[text](url)</CODESAMPLE></TERM>
     <DESC>HTTP link</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>|&#160;Tables&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|&#160;Are&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|&#160;Cool&#160;&#160;|<BR/>
+      |&#160;-------------&#160;|:-------------:|&#160;-----:|<BR/>
+      |&#160;col&#160;3&#160;is&#160;&#160;&#160;&#160;&#160;&#160;|&#160;right-aligned&#160;|&#160;$1600&#160;|<BR/>
+      |&#160;col&#160;2&#160;is&#160;&#160;&#160;&#160;&#160;&#160;|&#160;&#160;&#160;&#160;centered&#160;&#160;&#160;|&#160;&#160;&#160;$12&#160;|</CODESAMPLE></TERM>
+    <DESC>Use pipes to define a table, outer pipes are optional, pipes do not have to be aligned.<BR/>
+      Use colons to define the column alignment.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
