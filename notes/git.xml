@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -487,7 +487,12 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git branch</CODEROUTINE></TERM>
-    <DESC>List the branches, the current one is prefixed with <CODEROUTINE>*</CODEROUTINE>.</DESC>
+    <DESC>List the local branches, the current one is prefixed with <CODEROUTINE>*</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git branch -a</CODEROUTINE><BR/>
+      <CODEROUTINE>git branch --all</CODEROUTINE></TERM>
+    <DESC>List the local and remote branches.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git checkout &lt;branch&gt;</CODEROUTINE></TERM>
@@ -617,6 +622,10 @@ git show-ref | grep ' refs/merge-requests/' | cut -d' ' -f2 | xargs -n1 -r git u
 git push --mirror https://$target_repo/$target_project.git<BR/>
 cd ..<BR/>
 rm -fr $project.git</CODESAMPLE>
+<BR/>
+<BLIST><TITLE>gitbash on Windows</TITLE>
+  <ITEM>to run Python: <CODEROUTINE>winpty python</CODEROUTINE></ITEM>
+</BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#git</A><L>en</L><F>HTML</F></X>
 </PAGE>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -146,6 +146,14 @@ File explorer
   <ITEM>to create a large file
     <CODESAMPLE>fsutil file createnew &lt;filename&gt; &lt;length&gt;</CODESAMPLE>
   </ITEM>
+  <ITEM><BLIST><TITLE>to modify <CODEROUTINE>%PATH%</CODEROUTINE></TITLE>
+    <ITEM>open the Paramètre dialog</ITEM>
+    <ITEM>type PATH</ITEM>
+    <ITEM>select <CODEMENU>Modifier les variables d'envionnement pour votre compte</CODEMENU></ITEM>
+    <ITEM>select Path</ITEM>
+    <ITEM>click on <CODEMENU>Modifier...</CODEMENU></ITEM>
+    <ITEM>do the change</ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE>help</CODEROUTINE></TERM><DESC>display the list of the command</DESC></ROW>
