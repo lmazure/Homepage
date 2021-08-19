@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Google</TITLE>
 <PATH>notes/google.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>customization</B></U></TITLE>
   <ITEM><BLIST><TITLE>Search applets</TITLE>
@@ -29,6 +29,7 @@
     <DESC>Start a new conversation</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
 <U><B>Google docs</B></U>
 <DEFINITIONTABLE>
   <ROW>
@@ -72,8 +73,45 @@
     <DESC>Move the selected lines downwards</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
 <U><B>Gmail</B></U>
 <DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id=","/></TERM>
+    <DESC>Display keyboard shortcuts</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="G"/><KEY id="I"/></TERM>
+    <DESC>Display Inbox</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="G"/><KEY id="S"/></TERM>
+    <DESC>Display Starred messages</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="G"/><KEY id="B"/></TERM>
+    <DESC>Display Snoozed messages</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="G"/><KEY id="T"/></TERM>
+    <DESC>Display Sent messages</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="G"/><KEY id="D"/></TERM>
+    <DESC>Display Draft messages</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="G"/><KEY id="A"/></TERM>
+    <DESC>Display All messages</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="G"/><KEY id="E"/></TERM>
+    <DESC>Display contacts</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="G"/><KEY id="L"/></TERM>
+    <DESC>Display labels for searching</DESC>
+  </ROW>
   <ROW>
     <TERM><KEY id="K"/></TERM>
     <DESC>Display next (toward the future) mail thread</DESC>
@@ -83,7 +121,8 @@
     <DESC>Display previous (toward the past) mail thread</DESC>
   </ROW>
   <ROW>
-    <TERM><KEY id="O"/><BR/><KEY id="Enter"/></TERM>
+    <TERM><KEY id="O"/><BR/>
+      <KEY id="Enter"/></TERM>
     <DESC>Display mail thread</DESC>
   </ROW>
   <ROW>
@@ -103,6 +142,26 @@
     <DESC>Open "label as" menu</DESC>
   </ROW>
   <ROW>
+    <TERM><KEY id="V"/></TERM>
+    <DESC>Open "move" menu</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="C"/></TERM>
+    <DESC>Create a new mail</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="3"/></TERM>
+    <DESC>Delete message</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="E"/></TERM>
+    <DESC>Archive (i.e. remove "Inbox" label)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="Z"/></TERM>
+    <DESC>Cancel last action</DESC>
+  </ROW>
+  <ROW>
     <TERM><KEY id="R"/></TERM>
     <DESC>Reply</DESC>
   </ROW>
@@ -117,6 +176,14 @@
   <ROW>
     <TERM><MODIFIERKEY id="Shift"/><KEY id="A"/></TERM>
     <DESC>Reply to all in new window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F"/></TERM>
+    <DESC>Forward</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F"/></TERM>
+    <DESC>Forward in new window</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
