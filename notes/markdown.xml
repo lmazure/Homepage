@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Markdown</TITLE>
 <PATH>notes/markdown.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -61,6 +61,10 @@
       <CODESAMPLE>___text___</CODESAMPLE></TERM>
     <DESC>Bold italics (<CODEROUTINE>&lt;strong&gt;&lt;em&gt;text&lt;/em&gt;&lt;/strong&gt;</CODEROUTINE>)<BR/>
       use <CODEROUTINE>***…***</CODEROUTINE> in the middle of a word</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>~~text~~</CODESAMPLE></TERM>
+    <DESC>Strikethrough</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>[text](url)</CODESAMPLE></TERM>

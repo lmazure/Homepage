@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Adobe Reader</TITLE>
 <PATH>notes/adobread.xml</PATH>
-<DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U>Printing</U></TITLE>
 <ITEM>
@@ -13,14 +13,135 @@ If Adobe Reader prints some garbage, try<BR/>
 </BLIST>
 Shortcuts
 <DEFINITIONTABLE>
-<ROW>
-<TERM><MODIFIERKEY id="Ctrl"/><KEY id="L"/></TERM>
-<DESC>toggle full screen</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY id="Ctrl"/><KEY id="D"/></TERM>
-<DESC>display the properties of the document</DESC>
-</ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="L"/></TERM>
+    <DESC>toggle full screen</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="D"/></TERM>
+    <DESC>display the properties of the document</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="L"/></TERM>
+    <DESC>full screen</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="H"/></TERM>
+    <DESC>reading mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="0"/></TERM>
+    <DESC>fit to window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="+"/></TERM>
+    <DESC>zoom in</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="-"/></TERM>
+    <DESC>zoom out</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="M"/></TERM>
+    <DESC>zoom</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="+"/></TERM>
+    <DESC>rotate right</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="-"/></TERM>
+    <DESC>rotate left</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F9"/></TERM>
+    <DESC>display/hide menu bar</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F8"/></TERM>
+    <DESC>display/hide toolbars</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F5"/></TERM>
+    <DESC>display/hide sidebar</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F"/></TERM>
+    <DESC>find</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="G"/></TERM>
+    <DESC>next occurrence</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="V"/></TERM>
+    <DESC>switch to text selection mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="G"/></TERM>
+    <DESC>switch to graphic selection mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="Z"/></TERM>
+    <DESC>switch to zoom mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="H"/></TERM>
+    <DESC>switch to hand mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="P"/></TERM>
+    <DESC>print</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="P"/></TERM>
+    <DESC>print setup</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="E"/><BR/>
+      <MODIFIERKEY id="Ctrl"/><KEY id="E"/></TERM>
+    <DESC>help</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="S"/></TERM>
+    <DESC>save a copy</DESC>
+  </ROW>
+  <ROW>
+    <TERM>><MODIFIERKEY id="Ctrl"/><KEY id="O"/></TERM>
+    <DESC>open a document</DESC>
+  </ROW>
+  <ROW>
+    <TERM>><MODIFIERKEY id="Ctrl"/><KEY id="W"/></TERM>
+    <DESC>close the current document</DESC>
+  </ROW>
+  <ROW>
+    <TERM>><MODIFIERKEY id="Ctrl"/><KEY id="D"/></TERM>
+    <DESC>display document summary</DESC>
+  </ROW>
+  <ROW>
+    <TERM>><MODIFIERKEY id="Ctrl"/><KEY id="K"/></TERM>
+    <DESC>preferences</DESC>
+  </ROW>
+  <ROW>
+    <TERM>><MODIFIERKEY id="Ctrl"/><KEY id="Q"/></TERM>
+    <DESC>exit</DESC>
+  </ROW>
+  <ROW>
+    <TERM>><MODIFIERKEY id="Ctrl"/><KEY id="N"/></TERM>
+    <DESC>go to page n</DESC>
+  </ROW>
+  <ROW>
+    <TERM>><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="D"/></TERM>
+    <DESC>go to beginning of document</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="Left"/></TERM>
+    <DESC>previous view</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="Right"/></TERM>
+    <DESC>next view</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
 </PAGE>
