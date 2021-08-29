@@ -373,7 +373,7 @@ Disables any enabled error handler in the current procedure.</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Functions</U></B></TITLE>
 <ITEM>The general format of a function is as follows:
-<CODESAMPLE>[Public|Friend|Private] [Static] Function functionName (Arg As dataType,……….) As dataType<BR/>
+<CODESAMPLE>[Public|Friend|Private] [Static] Function functionName (Arg As dataType,…) As dataType<BR/>
 …<BR/>
 End Function</CODESAMPLE>
 <CODEROUTINE>Public</CODEROUTINE> the procedure is accessible to all other procedures in all modules. If used in a module that contains an Option
