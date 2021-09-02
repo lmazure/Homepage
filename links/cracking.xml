@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -222,6 +222,7 @@
       <ITEM><ARTICLE><X><T>OpenSSL fixes high-severity flaw that allows hackers to crash servers</T><ST>The widely used code library is also purged of a certificate verification bypass.</ST><A>https://arstechnica.com/gadgets/2021/03/openssl-fixes-high-severity-flaw-that-allows-hackers-to-crash-servers/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>Two bugs are fixed: a null pointer dereference and some conditions allowing to bypass the certificate verification.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>5 ways to prevent code injection in JavaScript and Node.js</T><A>https://snyk.io/blog/5-ways-to-prevent-code-injection-in-javascript-and-node-js/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Liran</FIRSTNAME><LASTNAME>Tan</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE><COMMENT>Some basic information about code injection in JavaScript and an advertisement for Snyk.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Affaire Pegasus : comment des téléphones ont-ils pu être contaminés sans action de leur propriétaire ?</T><A>https://www.larecherche.fr/informatique-technologie/affaire-pegasus-comment-des-t%C3%A9l%C3%A9phones-ont-ils-pu-%C3%AAtre-contamin%C3%A9s-sans</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Charles</FIRSTNAME><LASTNAME>Cuvelliez</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Jean-Jacques</FIRSTNAME><LASTNAME>Quisquater</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>9</DAY></DATE><COMMENT>Some information about how Pegasus works.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>SolarWinds and the Holiday Bear Campaign: A Case Study for the Classroom</T><A>https://www.lawfareblog.com/solarwinds-and-holiday-bear-campaign-case-study-classroom</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Chesney</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE><COMMENT>An overview of how Russia's SVR performed the SolarWinds attack.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>SQL injection</TITLE>
         <ITEM><ARTICLE><X><T>SQL Injection Attacks by Example</T><A>http://www.unixwiz.net/techtips/sql-injection.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Friedl</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>A basic, detailed, and slow description of a SQL injection attack.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Bobby Tables</T><A>https://blog.cleancoder.com/uncle-bob/2017/12/03/BobbyTables.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME><GIVENNAME>Uncle Bob</GIVENNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE><COMMENT>SQL is too dangerous, it should not be used anymore.</COMMENT></ARTICLE></ITEM>

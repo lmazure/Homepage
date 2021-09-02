@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -55,7 +55,7 @@
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="S"/></TERM>
-    <DESC>keyboard shortcuts</DESC>
+    <DESC>display keyboard shortcuts</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -551,6 +551,24 @@ Markdown
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="V"/><BR/>
       <CODEROUTINE>Open Preview to the Side</CODEROUTINE></TERM>
     <DESC>show Markdown preview in an editor on the side</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+GitLens
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <KEY id="B"/><BR/>
+      <CODEROUTINE>GitLens: Toggle File Blame</CODEROUTINE></TERM>
+    <DESC>toggle the display (on the left) of the blaming for each code line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <MODIFIERKEY id="Shift"/><KEY id="B"/><BR/>
+      <CODEROUTINE>GitLens: Toggle Code Lens</CODEROUTINE></TERM>
+    <DESC>toggle the display of inlined code blaming</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>GitLens: Toggle File Heatmap</CODEROUTINE></TERM>
+    <DESC>toggle the display of the heatmap</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

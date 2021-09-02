@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -17,12 +17,12 @@
         <ITEM><X><T>Rational</T><A>https://www.ibm.com/us-en/marketplace/rational-clearcase</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/clcase.htm</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
-      <ITEM><CLIST><TITLE><ANCHOR>cvs</ANCHOR><X><T>CVS</T><A>http://cvs.nongnu.org</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><CLIST><TITLE><ANCHOR>cvs</ANCHOR><X status="obsolete"><T>CVS</T><A>http://cvs.nongnu.org</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>tkcvs</T><A>https://tkcvs.sourceforge.io/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/cvs.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
-      <ITEM><X><T>RCS</T><A>https://www.cs.purdue.edu/homes/trinkle/RCS/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>CSSC</T><A>http://cssc.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>RCS</T><A>https://www.cs.purdue.edu/homes/trinkle/RCS/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>CSSC</T><A>http://cssc.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>BitKeeper</T><A>https://www.bitkeeper.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><CLIST><TITLE><ANCHOR>svn</ANCHOR><X><T>subversion</T><A>https://subversion.apache.org/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>TortoiseSVN</T><A>https://tortoisesvn.net/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -49,14 +49,14 @@
           <ITEM><X><T>GitHub</T><A>https://github.com</A><L>en</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
-      <ITEM><X><T>Aegis</T><A>https://sourceforge.net/projects/aegis/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Arch</T><A>http://www.gnu.org/software/gnu-arch/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>monotone</T><A>https://www.monotone.ca/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>Aegis</T><A>https://sourceforge.net/projects/aegis/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>Arch</T><A>http://www.gnu.org/software/gnu-arch/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>monotone</T><A>https://www.monotone.ca/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Perforce</T><A>https://www.perforce.com/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Vesta</T><A>http://www.vestasys.org/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>ArX</T><A>http://www.nongnu.org/arx/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Bazaar</T><A>http://bazaar-vcs.org</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>CVSNT</T><A>https://www.march-hare.com/cvspro/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="dead"><T>Vesta</T><A>http://www.vestasys.org/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>ArX</T><A>http://www.nongnu.org/arx/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>Bazaar</T><A>http://bazaar-vcs.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>CVSNT</T><A>https://www.march-hare.com/cvspro/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Darcs</T><A>http://darcs.net</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>mercurial</T><A>https://www.mercurial-scm.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Dimensions CM</T><A>https://www.microfocus.com/en-us/products/dimensions-cm/overview</A><L>en</L><F>HTML</F></X></ITEM>
@@ -64,7 +64,7 @@
         <ITEM><X><T>personal notes</T><A>../notes/tfs.html</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><CLIST><TITLE>Comparisons</TITLE>
-        <ITEM><X quality="1"><T>Better SCM</T><A>http://better-scm.shlomifish.org</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X status="obsolete" quality="1"><T>Better SCM</T><A>http://better-scm.shlomifish.org</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Continuous integration</TITLE>
@@ -319,7 +319,8 @@
         <ITEM><ARTICLE><X><T>Markdown Guide</T><A>https://about.gitlab.com/handbook/markdown-guide/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marcia</FIRSTNAME><LASTNAME>Ramos</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Craig</FIRSTNAME><LASTNAME>Norris</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>A presentation of kramdown, a superset of Markdown used on <X><T>https://about.GitLab.com</T><A>https://about.GitLab.com</A><L>en</L><F>HTML</F></X>.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GitLab, l'élève qui veut dépasser le maître GitHub</T><A>https://www.journaldunet.com/solutions/dsi/1420355-gitlab-l-alternative-a-github-qui-veut-aller-bien-au-dela/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Antoine</FIRSTNAME><LASTNAME>Crochet-Damais</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>Some information about the current state and offer of the company.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality="-2"><T>Gitlab Project Management: Sprints, User Stories, and Tasks</T><A>https://www.youtube.com/watch?v=ZBjCmOYNb5Q</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Benjamin</FIRSTNAME><LASTNAME>Garrard</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE><COMMENT>A messy description by a guy who does not master the subject.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Use scoped labels in GitLab 11.10 for custom fields and custom workflows</T><A>https://www.youtube.com/watch?v=4BCBby6du3c</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Victor</FIRSTNAME><LASTNAME>Vu</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE><COMMENT>How to define and use scopoed labels.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Use scoped labels in GitLab 11.10 for custom fields and custom workflows</T><A>https://www.youtube.com/watch?v=4BCBby6du3c</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Victor</FIRSTNAME><LASTNAME>Vu</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE><COMMENT>How to define and use scoped labels.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>047 Introduction to GitLab REST API and python-gitlab</T><A>https://www.youtube.com/watch?v=LhVKAwvOg9o</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>36</SECOND></DURATION></X><DATE><YEAR>2020</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE><COMMENT>A short presentation of python-gitlab.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Manage / Reduce CI/CD Minutes Usage on Shared GitLab.com Runners</T><A>https://www.youtube.com/watch?v=GrO-8KtIpRA</A><L>en</L><F>MP4</F><DURATION><MINUTE>26</MINUTE><SECOND>36</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Myers</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>16</DAY></DATE><COMMENT>Some basic advice for saving some CI minutes: defining job rules, scheduling less often, using asset caching, using a docker container with all the dependencies already installed, and using your own GitLab runner.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GitLab Requirements Traceability Walkthrough</T><A>https://www.youtube.com/watch?v=VIiuTQYFVa0</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><LASTNAME>Wood</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>12</DAY></DATE><COMMENT>How to use a traceability matrix to update requirement statuses depending on the test statuses.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Fixing merge conflicts locally for www-gitlab-com</T><A>https://www.youtube.com/watch?v=zYTJ1RND8Tg</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Lauren</FIRSTNAME><LASTNAME>Barker</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>How to use a traceability matrix to update requirement statuses depending on the test statuses.</COMMENT></ARTICLE></ITEM>
