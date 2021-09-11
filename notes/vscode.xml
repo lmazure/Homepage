@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -118,6 +118,12 @@ File
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="S"/></TERM>
     <DESC>save all</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Shift"/><KEY id="Enter"/><BR/>
+      <CODEROUTINE>View: Pin Editor</CODEROUTINE><BR/>
+      <CODEROUTINE>View: Unpin Editor</CODEROUTINE></TERM>
+    <DESC>Pin/unpin the editor</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F4"/><BR/>

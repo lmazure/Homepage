@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -40,6 +40,7 @@
         <ITEM><X><T>personal notes</T><A>../notes/git.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><BLIST><TITLE>Repositories</TITLE>
           <ITEM><CLIST><TITLE><ANCHOR>gitlab</ANCHOR><X><T>GitLab</T><A>https://about.gitlab.com/</A><L>en</L><F>HTML</F></X></TITLE>
+            <ITEM><X><T>status</T><A>https://status.gitlab.com/</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>source code</T><A>https://gitlab.com/gitlab-org/gitlab</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>Java lib</T><A>https://github.com/gitlab4j/gitlab4j-api</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>Python lib</T><A>https://github.com/python-gitlab/python-gitlab</A><L>en</L><F>HTML</F></X></ITEM>
@@ -272,6 +273,7 @@
     <ITEM><ARTICLE><X><T>Mind the platform execution gap</T><ST>Prerequisite capabilities for successful platform strategies</ST><A>https://martinfowler.com/articles/platform-prerequisites.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Cristóbal</FIRSTNAME><LASTNAME>García García</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Chris</FIRSTNAME><LASTNAME>Ford</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>27</DAY></DATE><COMMENT>Some advice for building and exploiting internal developper tools.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>WCF #5: A Most Elegant Data Structure</T><ST>A data structure from the 1960’s is still pretty cool today.</ST><A>https://medium.com/@pragdave/wcf-5-a-most-elegant-data-structure-fff8d43a3f69</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Thomas</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>28</DAY></DATE><COMMENT>A classical description of doubly-linked list.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Lightning Algorithm - Numberphile</T><A>https://www.youtube.com/watch?v=akZ8JJ4gGLs</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>23</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Henderson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE><COMMENT>The description of a program that solves a kind of simple maze and draws a kind of lightning.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Random Numbers with LFSR (Linear Feedback Shift Register) - Computerphile</T><A>https://www.youtube.com/watch?v=Ks1pw1X22y4</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Hackable Projects</TITLE>
       <ITEM><ARTICLE><X><T>Hackable Projects - Pillar 1: Code Health</T><A>https://testing.googleblog.com/2016/08/hackable-projects.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT>A list of miscellaneous good coding practices.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE predecessor="https://testing.googleblog.com/2016/08/hackable-projects.html"><X><T>Hackable Projects - Pillar 2: Debuggability</T><A>https://testing.googleblog.com/2016/10/hackable-projects-pillar-2-debuggability.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>Run test locally, debugging mobile apps, proper logging, monitoring, testing small parts.</COMMENT></ARTICLE></ITEM>
@@ -412,6 +414,7 @@
       <ITEM><ARTICLE><X><T>Code Health: Understanding Code In Review</T><A>https://testing.googleblog.com/2018/05/code-health-understanding-code-in-review.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Max</FIRSTNAME><LASTNAME>Kanat-Alexander</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE><COMMENT>Don't waste time reviewing code that is hard to understand, just ask for it to be clarified.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Code Health: Respectful Reviews == Useful Reviews</T><A>https://testing.googleblog.com/2019/11/code-health-respectful-reviews-useful.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Liz</FIRSTNAME><LASTNAME>Kammer</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Maggie</FIRSTNAME><LASTNAME>Hodges</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ambar</FIRSTNAME><LASTNAME>Murillo</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>A short list of tips for code reviews.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Five Code Review Antipatterns</T><ST>Everyone cares about best practices, but worst practices can sometimes be more illuminating.</ST><A>https://blogs.oracle.com/javamagazine/five-code-review-antipatterns</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Trisha</FIRSTNAME><LASTNAME>Gee</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>5</MONTH><DAY>4</DAY></DATE><COMMENT>Some sound advice for the code review process.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Ship / Show / Ask</T><ST>A modern branching strategy</ST><A>https://martinfowler.com/articles/ship-show-ask.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rouan</FIRSTNAME><LASTNAME>Wilsenach</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>A proposal to differentiate code changes that need no code review, changes that can be reviewed later on, and code that must be discussed before being committed in the product.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Pair programming</TITLE>
       <ITEM><ARTICLE><X><T>On Pair Programming</T><A>https://martinfowler.com/articles/on-pair-programming.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Birgitta</FIRSTNAME><LASTNAME>Böckeler</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Nina</FIRSTNAME><LASTNAME>Siessegger</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>A long list of thoughts and pieces of advice about pair programming.</COMMENT></ARTICLE></ITEM>

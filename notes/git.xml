@@ -359,12 +359,12 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git reset &lt;commit&gt;</CODEROUTINE></TERM>
-    <DESC>Reset reset the index entries for all paths to a previous commit<BR/>
+    <DESC>Reset the index entries for all paths to a previous commit<BR/>
       if no commit is specified, the current HEAD is used.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset &lt;commit&gt; &lt;pathspec&gt;</CODEROUTINE></TERM>
-    <DESC>Reset reset the index &lt;pathspec&gt; entry to a previous commit<BR/>
+    <DESC>Reset the index &lt;pathspec&gt; entry to a previous commit<BR/>
       if no commit is specified, the current HEAD is used.<BR/>
       This means that <CODEROUTINE>git reset &lt;pathspec&gt;</CODEROUTINE> is the opposite of <CODEROUTINE>git add &lt;pathspec&gt;</CODEROUTINE>.</DESC>
   </ROW>
@@ -602,6 +602,11 @@
 <BR/>
 <BLIST><TITLE><CODEFILENAME>.gitkeep</CODEFILENAME></TITLE>
   <ITEM>In order to commit an empty directory, create a <CODEFILENAME>.gitignore</CODEFILENAME> file in it. This is not defined by Git, but it is a common usage.</ITEM>
+</BLIST>
+<BR/>
+<BLIST><TITLE>To remove the last commit locally and on the remote repository (nobody should have pulled meanwhile)</TITLE>
+  <ITEM><CODEROUTINE>git reset --hard HEAD^</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>git push -f</CODEROUTINE></ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>Changing the author of old commits</TITLE>
