@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java history</TITLE>
 <PATH>links/javahistory.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -174,6 +174,7 @@
     <ITEM><BLIST><TITLE>Java 17</TITLE>
       <ITEM><ARTICLE><X><T>A peek into Java 17: Continuing the drive to encapsulate the Java runtime internals</T><ST>The need to encapsulate the runtime is fundamentally caused by Java’s nature as an open programming environment.</ST><A>https://blogs.oracle.com/javamagazine/java-runtime-encapsulation-internals</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>30</DAY></DATE><COMMENT>The timeline of the removal of the access to the JDK internals (except for <CODEROUTINE>sun.misc.Unsafe</CODEROUTINE>) and the fact that this removal process is finished in Java 17.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Pattern matching, switching null, guarded patterns, 26 hours of Java, and Accento</T><A>https://medium.com/nipafx-news/pattern-matching-switching-null-guarded-patterns-26-hours-of-java-and-accento-78fb32d198d5</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE><COMMENT>Some information about Java 17's Pattern Matching for switch.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>It’s time to move your applications to Java 17. Here’s why—and how.</T><ST>What you need to know about code migration from the previous Long-Term-Support versions of the platform: Java 11 and Java 8</ST><A>https://blogs.oracle.com/javamagazine/post/its-time-to-move-your-applications-to-java-17-heres-why-and-heres-how</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Johan</FIRSTNAME><LASTNAME>Janssen</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>27</DAY></DATE><COMMENT>Some useful advice to upgrade an application to Java 17.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>

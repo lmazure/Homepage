@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -328,6 +328,7 @@
         <ITEM><ARTICLE><X><T>Fixing merge conflicts locally for www-gitlab-com</T><A>https://www.youtube.com/watch?v=zYTJ1RND8Tg</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Lauren</FIRSTNAME><LASTNAME>Barker</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>How to use a traceability matrix to update requirement statuses depending on the test statuses.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Compliance Pipeline release video and walkthrough</T><A>https://www.youtube.com/watch?v=upLJ_equomw</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Kerr</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE><COMMENT>It is possible to define a common pipepline template (defining common steps) for several projects using compliance pipeline features.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Commit Virtual 20201: The Next Iteration of DevOps, GitLab CEO Keynote</T><A>https://www.youtube.com/watch?v=Wx8tDVSeidk</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sid</FIRSTNAME><LASTNAME>Sijbrandij</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE><COMMENT>The past and the future (security, AI, devops platforms) of GitLab.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>How Weet integrates localization into the GitLab pipeline with Lokalise</T><A>https://about.gitlab.com/blog/2021/09/13/lessons-weet-learned-lokalise/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR>'s presentation</TITLE>
           <ITEM><ARTICLE><X><T>GITLAB - 1. PRÉSENTATION ET PRINCIPES</T><A>https://www.youtube.com/watch?v=aQl-IKLm_9A</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE><COMMENT>An overview of GitLab.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>GITLAB - 2. DÉPÔT GIT</T><A>https://www.youtube.com/watch?v=ySLhc3qdGEk</A><L>fr</L><F>MP4</F><DURATION><MINUTE>23</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>The Git repository.</COMMENT></ARTICLE></ITEM>
@@ -399,7 +400,7 @@
     <ITEM><BLIST><TITLE>Design by contract</TITLE>
       <ITEM><ARTICLE><X><T>Building bug-free O-O software: An Introduction to Design by Contract</T><A>https://www.eiffel.com/values/design-by-contract/introduction/</A><L>en</L><F>HTML</F></X><COMMENT>A presentation of design by contract.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Contracts: From Analysis to C++ Implementation</T><A>https://www.researchgate.net/publication/3814829_Contracts_from_analysis_to_C_implementation/</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>R.</FIRSTNAME><LASTNAME>Plösch</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>J.</FIRSTNAME><LASTNAME>Pichler</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH></DATE><COMMENT>The authors describe how they automatically transfer the assertions from a Python prototype to the C++ implementation.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X status="dead"><T>Using Design by Contract in C</T><A>http://www.onlamp.com/pub/a/onlamp/2004/10/28/design_by_contract_in_c.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Charlie</FIRSTNAME><LASTNAME>Mills</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE><COMMENT>An introduction to DBC for C.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status="dead"><T>Using Design by Contract in C</T><A>http://www.onlamp.com/pub/a/onlamp/2004/10/28/design_by_contract_in_c.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Charlie</FIRSTNAME><LASTNAME>Mills</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE><COMMENT>An introduction to Design by Contract for C.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Code review</TITLE>
       <ITEM><ARTICLE><X><T>Is Software Inspection Value Added?</T><A>https://www.isixsigma.com/methodology/voc-customer-focus/software-inspection-value-added/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gary</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>Gack</LASTNAME></AUTHOR><COMMENT>A numerical analysis of the ROI of code reviews.</COMMENT></ARTICLE></ITEM>
