@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -127,6 +127,25 @@
     <TERM><CODEROUTINE>-a</CODEROUTINE><BR/>
       <CODEROUTINE>--all</CODEROUTINE></TERM>
     <DESC>List all containers (running or not).</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker volume ls</CODEROUTINE></TERM>
+    <DESC>List all Docker volumes.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker volume create &lt;volume&gt;</CODEROUTINE></TERM>
+    <DESC>Create volume &lt;volume&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker volume rm &lt;volume&gt;</CODEROUTINE></TERM>
+    <DESC>Delete volume &lt;volume&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker volume prune</CODEROUTINE></TERM>
+    <DESC>Remove all unused local volumes (i.e volumes which are not referenced by any containers).</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

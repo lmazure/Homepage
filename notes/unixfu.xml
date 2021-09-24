@@ -324,6 +324,7 @@ Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODERO
   <ROW><TERM><CODEROUTINE>tar -t</CODEROUTINE><BR/><CODEROUTINE>tar --list</CODEROUTINE></TERM><DESC>list content of an archive file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tar -z</CODEROUTINE></TERM><DESC>filter the archive file through gzip</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tar /tmp/data.tar -I /tmp/list</CODEROUTINE></TERM><DESC>archive the files listed in <CODEROUTINE>/tmp/list</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>--strip-components=3</CODEROUTINE></TERM><DESC>when extracting files, strip 3 leading components from file names</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
