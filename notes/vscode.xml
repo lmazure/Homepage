@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -56,6 +56,10 @@
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="S"/></TERM>
     <DESC>display keyboard shortcuts</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Code: Show Release Notes</CODEROUTINE></TERM>
+    <DESC>display the last release notes</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

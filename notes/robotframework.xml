@@ -1,0 +1,68 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
+<TITLE>Robot Framework</TITLE>
+<PATH>notes/robotframework.xml</PATH>
+<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE>
+<CONTENT>
+Install Robot Framework
+<CODESAMPLE>install robotframework</CODESAMPLE>
+<BR/>
+Install SeleniumLibrary
+<CODESAMPLE>pip install robotframework-seleniumlibrary<BR/>
+pip install webdrivermanager<BR/>
+webdrivermanager firefox chrome --linkpath /c/Users/lmazure/bin</CODESAMPLE>
+<BR/>
+Example of Selenium script
+<CODESAMPLE>*** Settings ***<BR/>
+&#160;&#160;&#160;&#160;Documentation&#160;&#160;&#160;&#160;An example to discover Robot Framework<BR/>
+&#160;&#160;&#160;&#160;...<BR/>
+&#160;&#160;&#160;&#160;...&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Some smoke test of my homepage<BR/>
+&#160;&#160;&#160;&#160;Library&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;SeleniumLibrary<BR/>
+&#160;&#160;&#160;&#160;<BR/>
+&#160;&#160;&#160;&#160;*** Keywords ***<BR/>
+&#160;&#160;&#160;&#160;Click Map Link Node<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Arguments]&#160;&#160;&#160;&#160;${linkText}<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Click Link&#160;&#160;&#160;&#160;xpath://A[text()='${linkText}']/following-sibling::A[1]<BR/>
+&#160;&#160;&#160;&#160;<BR/>
+&#160;&#160;&#160;&#160;Click Map Text Node<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Arguments]&#160;&#160;&#160;&#160;${nodeText}<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Click Link&#160;&#160;&#160;&#160;xpath://SPAN[contains(text(),'${nodeText}')]/A<BR/>
+&#160;&#160;&#160;&#160;<BR/>
+&#160;&#160;&#160;&#160;*** Test Cases ***<BR/>
+&#160;&#160;&#160;&#160;Redirection<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Open Browser&#160;&#160;&#160;&#160;https://mazure.fr<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Wait Until Location Is&#160;&#160;&#160;&#160; https://mazure.fr/perso/main.html<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Teardown]&#160;&#160;&#160;&#160;Close Browser<BR/>
+&#160;&#160;&#160;&#160;<BR/>
+&#160;&#160;&#160;&#160;Access to site map<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Open Browser&#160;&#160;&#160;&#160;https://mazure.fr/perso/main.html<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Click Link&#160;&#160;&#160;&#160;id:goToMap<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Title Should Be&#160;&#160;&#160;&#160;Site map<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Teardown]&#160;&#160;&#160;&#160;Close Browser<BR/>
+&#160;&#160;&#160;&#160;<BR/>
+&#160;&#160;&#160;&#160;Open and close site map nodes<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Open Browser&#160;&#160;&#160;&#160;https://mazure.fr/content/map.html<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Wait Until Page Contains&#160;&#160;&#160;&#160;Homepage<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Element Should Not Be Visible&#160;&#160;&#160;&#160;link:Mathematicians<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Click Map Link Node&#160;&#160;&#160;&#160;Homepage<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Element Should Not Be Visible&#160;&#160;&#160;&#160;link:Mathematicians<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;#Click Link&#160;&#160;&#160;&#160;id:toggleDiv1<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Click Map Text Node&#160;&#160;&#160;&#160;Links / articles<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Element Should Not Be Visible&#160;&#160;&#160;&#160;link:Mathematicians<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Click Map Link Node&#160;&#160;&#160;&#160;Encyclopedia<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Element Should Not Be Visible&#160;&#160;&#160;&#160;link:Mathematicians<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Click Map Link Node&#160;&#160;&#160;&#160;Mathematics<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Element Should Be Visible&#160;&#160;&#160;&#160;link:Mathematicians<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Click Map Link Node&#160;&#160;&#160;&#160;Encyclopedia<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;Element Should Not Be Visible&#160;&#160;&#160;&#160;link:Mathematicians<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;[Teardown]&#160;&#160;&#160;&#160;Close Browser</CODESAMPLE>
+<BR/>
+Saving the HTML source in a Selenium script
+<CODESAMPLE>&#160;&#160;&#160;&#160;Library&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;OperatingSystem<BR/>
+…<BR/>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;#${source} =&#160;&#160;&#160;&#160;Get Source<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;#OperatingSystem.Create File&#160;&#160;&#160;&#160;${EXECDIR}/map_source.html&#160;&#160;&#160;&#160;${source}</CODESAMPLE>
+</CONTENT>
+<X><T>Links</T><A>../links/autotest.html#robotframework</A><L>en</L><F>HTML</F></X>
+</PAGE>
