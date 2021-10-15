@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -330,6 +330,8 @@
         <ITEM><ARTICLE><X><T>Commit Virtual 2021: The Next Iteration of DevOps, GitLab CEO Keynote</T><A>https://www.youtube.com/watch?v=Wx8tDVSeidk</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sid</FIRSTNAME><LASTNAME>Sijbrandij</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE><COMMENT>The past and the future (security, AI, devops platforms) of GitLab.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Write a stageless CI/CD pipeline using GitLab 14.2</T><A>https://about.gitlab.com/blog/2021/08/24/stageless-pipelines/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE><COMMENT><CODEROUTINE>needs</CODEROUTINE> can now be used to define dependencies between jobs in the same stage, so it is possible to put all jobs in a single stage.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How Weet integrates localization into the GitLab pipeline with Lokalise</T><A>https://about.gitlab.com/blog/2021/09/13/lessons-weet-learned-lokalise/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Why we spent the last month eliminating PostgreSQL subtransactions</T><A>https://about.gitlab.com/blog/2021/09/29/why-we-spent-the-last-month-eliminating-postgresql-subtransactions/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stan</FIRSTNAME><LASTNAME>Hu</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Grzegorz</FIRSTNAME><LASTNAME>Bizon</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>29</DAY></DATE><COMMENT>A detailed and very technical description of the PostgreSQL problem experienced by GitLab.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>How ten steps over ten years led to the DevOps Platform</T><A>https://about.gitlab.com/blog/2021/10/11/how-ten-steps-over-ten-years-led-to-the-devops-platform/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brendan</FIRSTNAME><LASTNAME>O'Leary</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>Some characteristics of how GitLab works.</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR>'s presentation</TITLE>
           <ITEM><ARTICLE><X><T>GITLAB - 1. PRÉSENTATION ET PRINCIPES</T><A>https://www.youtube.com/watch?v=aQl-IKLm_9A</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE><COMMENT>An overview of GitLab.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>GITLAB - 2. DÉPÔT GIT</T><A>https://www.youtube.com/watch?v=ySLhc3qdGEk</A><L>fr</L><F>MP4</F><DURATION><MINUTE>23</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>The Git repository.</COMMENT></ARTICLE></ITEM>
