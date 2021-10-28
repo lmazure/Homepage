@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -40,6 +40,7 @@
         <ITEM><X><T>personal notes</T><A>../notes/git.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><BLIST><TITLE>Repositories</TITLE>
           <ITEM><CLIST><TITLE><ANCHOR>gitlab</ANCHOR><X><T>GitLab</T><A>https://about.gitlab.com/</A><L>en</L><F>HTML</F></X></TITLE>
+            <ITEM><X><T>GraphiQL</T><A>https://gitlab.com/-/graphql-explorer</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>status</T><A>https://status.gitlab.com/</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>source code</T><A>https://gitlab.com/gitlab-org/gitlab</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>Java lib</T><A>https://github.com/gitlab4j/gitlab4j-api</A><L>en</L><F>HTML</F></X></ITEM>
@@ -333,6 +334,8 @@
         <ITEM><ARTICLE><X><T>Commit Virtual 2021: The Next Iteration of DevOps, GitLab CEO Keynote</T><A>https://www.youtube.com/watch?v=Wx8tDVSeidk</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sid</FIRSTNAME><LASTNAME>Sijbrandij</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE><COMMENT>The past and the future (security, AI, devops platforms) of GitLab.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Write a stageless CI/CD pipeline using GitLab 14.2</T><A>https://about.gitlab.com/blog/2021/08/24/stageless-pipelines/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE><COMMENT><CODEROUTINE>needs</CODEROUTINE> can now be used to define dependencies between jobs in the same stage, so it is possible to put all jobs in a single stage.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How Weet integrates localization into the GitLab pipeline with Lokalise</T><A>https://about.gitlab.com/blog/2021/09/13/lessons-weet-learned-lokalise/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>GitLab's realtime Preview Markdown is an editor for everyone</T><A>https://about.gitlab.com/blog/2021/09/21/introducing-markdown-live-preview/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Parker</FIRSTNAME><LASTNAME>Ennis</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>21</DAY></DATE><COMMENT>GitLab has now a WYSIWYG markdown editor.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>How to incorporate private customer needs into a public product roadmap</T><A>https://about.gitlab.com/blog/2021/09/23/best-practices-customer-feature-request/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christina</FIRSTNAME><LASTNAME>Hupy</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Neil</FIRSTNAME><LASTNAME>McCorrison</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>23</DAY></DATE><COMMENT>The title syas it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Why we spent the last month eliminating PostgreSQL subtransactions</T><A>https://about.gitlab.com/blog/2021/09/29/why-we-spent-the-last-month-eliminating-postgresql-subtransactions/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stan</FIRSTNAME><LASTNAME>Hu</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Grzegorz</FIRSTNAME><LASTNAME>Bizon</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>29</DAY></DATE><COMMENT>A detailed and very technical description of the PostgreSQL problem experienced by GitLab.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How ten steps over ten years led to the DevOps Platform</T><A>https://about.gitlab.com/blog/2021/10/11/how-ten-steps-over-ten-years-led-to-the-devops-platform/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brendan</FIRSTNAME><LASTNAME>O'Leary</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>Some characteristics of how GitLab works.</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR>'s presentation</TITLE>

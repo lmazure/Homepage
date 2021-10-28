@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><CLIST><TITLE>Tutorials</TITLE>
@@ -156,6 +156,7 @@
       <ITEM><ARTICLE><X><T>Java NIO vs. IO</T><A>http://tutorials.jenkov.com/java-nio/nio-vs-io.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2014</YEAR><MONTH>6</MONTH><DAY>23</DAY></DATE><COMMENT>A comparison of IO and NIO.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Apprentice Blog of the Week: Did Java Break My byte?</T><A>https://8thlight.com/blog/dave-torre/2014/09/10/did-java-break-my-byte.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Torre</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The danger of using <CODEROUTINE>InputStream.read()</CODEROUTINE> which treats bytes as unsigned.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A Guide to WatchService in Java NIO2</T><A>https://www.baeldung.com/java-nio2-watchservice</A><L>en</L><F>HTML</F></X><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>18</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Modern file input/output with Java Path API and Files helper methods</T><ST>They’ve been around since Java 7, but not everyone knows how to use the NIO.2 file I/O facilities.</ST><A>https://blogs.oracle.com/javamagazine/post/path-files-input-output</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>9</DAY></DATE><COMMENT>A good overview of Java I/O.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Networking</TITLE>
       <ITEM><ARTICLE><X><T>Jini: New technology for a networked world</T><ST>How Jini raises the level of abstraction for distributed systems programming</ST><A>https://www.infoworld.com/article/2076430/jini--new-technology-for-a-networked-world.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bill</FIRSTNAME><LASTNAME>Venners</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE><COMMENT>This article is an introduction to Jini.</COMMENT></ARTICLE></ITEM>
