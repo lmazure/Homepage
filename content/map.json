@@ -248,7 +248,9 @@
           { "title" : "Manipulating bookmarked text in a RTF file", "page" : "notes/rtfbm.htm", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Driving DDTS", "page" : "notes/autosrb.html", "languages" : ["en"], "formats" : ["HTML"] }
         ] },
-        { "title" : "Python", "page" : "notes/python.htm", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Python", "page" : "notes/python.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Old notes", "page" : "notes/python.htm", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
         { "title" : "C", "page" : "notes/c.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
           { "title" : "types", "page" : "notes/ctypes.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Defining integer types of given sizes", "page" : "notes/uint32.html", "languages" : ["en"], "formats" : ["HTML"] },

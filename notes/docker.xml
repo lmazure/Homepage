@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -68,15 +68,6 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker stop &lt;container&gt;</CODEROUTINE><BR/>
-      <CODEROUTINE>docker container stop &lt;container&gt;</CODEROUTINE></TERM>
-    <DESC>Stop the container <CODEROUTINE>&lt;container&gt;</CODEROUTINE> (it is possible to have several container names <CODEROUTINE>docker stop &lt;container1&gt; &lt;container2&gt; &lt;container3&gt;</CODEROUTINE>).<BR/>
-      The main process inside the container will receive SIGTERM, and after a grace period, SIGKILL.</DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
-  <ROW>
     <TERM><CODEROUTINE>docker start &lt;container&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>docker container start &lt;container&gt;</CODEROUTINE></TERM>
     <DESC>Start a stopped container (it is possible to have several container names <CODEROUTINE>docker start &lt;container1&gt; &lt;container2&gt; &lt;container3&gt;</CODEROUTINE>).</DESC>
@@ -85,6 +76,20 @@
     <TERM><CODEROUTINE>-i</CODEROUTINE><BR/>
       <CODEROUTINE>--interactive</CODEROUTINE></TERM>
     <DESC>Start a stopped container (it is possible to have several container names <CODEROUTINE>docker start &lt;container1&gt; &lt;container2&gt; &lt;container3&gt;</CODEROUTINE>).</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker stop &lt;container&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>docker container stop &lt;container&gt;</CODEROUTINE></TERM>
+    <DESC>Stop the container <CODEROUTINE>&lt;container&gt;</CODEROUTINE> (it is possible to have several container names <CODEROUTINE>docker stop &lt;container1&gt; &lt;container2&gt; &lt;container3&gt;</CODEROUTINE>).<BR/>
+      The main process inside the container will receive SIGTERM, and after a grace period (10 seconds by default), SIGKILL.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-t &lt;n&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>--time &lt;n&gt;</CODEROUTINE></TERM>
+    <DESC>Seconds to wait for stop before sending SIGKILL.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -114,6 +119,10 @@
     <TERM><CODEROUTINE>docker exec &lt;container&gt; &lt;command&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>docker container exec &lt;container&gt; &lt;command&gt;</CODEROUTINE></TERM>
     <DESC>Execute a commmand in a container (e.g. <CODEROUTINE>docker exec mycontainer cat /etc/hosts</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker exec -i &lt;container&gt; sh</CODEROUTINE></TERM>
+    <DESC>Create an interactive shell in a container.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -146,6 +155,10 @@
   <ROW>
     <TERM><CODEROUTINE>docker volume prune</CODEROUTINE></TERM>
     <DESC>Remove all unused local volumes (i.e volumes which are not referenced by any containers).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker volume inspect &lt;volume&gt;</CODEROUTINE></TERM>
+    <DESC>Return information about volume &lt;volume&gt;.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

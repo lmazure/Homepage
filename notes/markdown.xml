@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Markdown</TITLE>
 <PATH>notes/markdown.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -48,23 +48,41 @@
     <TERM><CODESAMPLE>*text*</CODESAMPLE><BR/>
       <CODESAMPLE>_text_</CODESAMPLE></TERM>
     <DESC>Italics (<CODEROUTINE>&lt;em&gt;text&lt;/em&gt;</CODEROUTINE>)<BR/>
-      use <CODEROUTINE>*…*</CODEROUTINE> in the middle of a word</DESC>
+      Use <CODEROUTINE>*…*</CODEROUTINE> in the middle of a word</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>**text**</CODESAMPLE><BR/>
       <CODESAMPLE>__text__</CODESAMPLE></TERM>
     <DESC>Bold (<CODEROUTINE>&lt;strong&gt;text&lt;/strong&gt;</CODEROUTINE>)<BR/>
-      use <CODEROUTINE>**…**</CODEROUTINE> in the middle of a word</DESC>
+      Use <CODEROUTINE>**…**</CODEROUTINE> in the middle of a word</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>***text***</CODESAMPLE><BR/>
       <CODESAMPLE>___text___</CODESAMPLE></TERM>
     <DESC>Bold italics (<CODEROUTINE>&lt;strong&gt;&lt;em&gt;text&lt;/em&gt;&lt;/strong&gt;</CODEROUTINE>)<BR/>
-      use <CODEROUTINE>***…***</CODEROUTINE> in the middle of a word</DESC>
+      Use <CODEROUTINE>***…***</CODEROUTINE> in the middle of a word</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>~~text~~</CODESAMPLE></TERM>
     <DESC>Strikethrough</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>&gt; paragraph 1<BR/>
+      &gt;<BR/>
+      &gt; paragraph 2</CODESAMPLE></TERM>
+    <DESC>Blockquote</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>&gt; paragraph 1<BR/>
+      &gt;<BR/>
+      &gt;&gt; blockquote</CODESAMPLE></TERM>
+    <DESC>Nested blockquote</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>```yaml<BR/>
+      code<BR/>
+      ```</CODESAMPLE></TERM>
+    <DESC>Fenced code block</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>[text](url)</CODESAMPLE></TERM>
@@ -77,6 +95,13 @@
       |&#160;col&#160;2&#160;is&#160;&#160;&#160;&#160;&#160;&#160;|&#160;&#160;&#160;&#160;centered&#160;&#160;&#160;|&#160;&#160;&#160;$12&#160;|</CODESAMPLE></TERM>
     <DESC>Use pipes to define a table, outer pipes are optional, pipes do not have to be aligned.<BR/>
       Use colons to define the column alignment.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>---</CODESAMPLE><BR/>
+      <CODESAMPLE>***</CODESAMPLE><BR/>
+      <CODESAMPLE>___</CODESAMPLE></TERM>
+    <DESC>Horizontal rule<BR/>
+      Put blank lines before and after</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
