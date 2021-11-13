@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -338,6 +338,11 @@ Folding
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="A"/><BR/>
       <CODEROUTINE>Toggle Block Comment</CODEROUTINE></TERM>
     <DESC>toggle the block comment on the selected lines</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="F"/><BR/>
+      <CODEROUTINE>Format Document</CODEROUTINE></TERM>
+    <DESC>reformat the whole document</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="F8"/><BR/>
