@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -538,6 +538,50 @@
   <ROW>
     <TERM><CODEROUTINE>git mergetool --tool-help</CODEROUTINE></TERM>
     <DESC>List the supported merge tools, indicating which ones are available.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git tag</CODEROUTINE><BR/>
+      <CODEROUTINE>git tag -l</CODEROUTINE><BR/>
+      <CODEROUTINE>git tag --list</CODEROUTINE></TERM>
+    <DESC>List the existing tags.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git tag -l &lt;wildcard&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git tag --list &lt;wildcard&gt;</CODEROUTINE></TERM>
+    <DESC>List the existing tags matching a wildcard, e.g.:<BR/>
+      <CODEROUTINE>git tag --list "*.RELEASE"</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git tag -a &lt;tagname&gt; -m &lt;tagcomment&gt;</CODEROUTINE></TERM>
+    <DESC>Create an annotated tag.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git tag &lt;tagname&gt;</CODEROUTINE></TERM>
+    <DESC>Create a lightweight tag.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git tag -a &lt;tagname&gt; &lt;commitchecksum&gt;</CODEROUTINE></TERM>
+    <DESC>Create a tag corresponding to a past commit.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git push origin &lt;tagname&gt;</CODEROUTINE></TERM>
+    <DESC>Push a tag on the remote.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git push origin --tags</CODEROUTINE></TERM>
+    <DESC>Push all tags on the remote.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git tag -d &lt;tagname&gt;</CODEROUTINE></TERM>
+    <DESC>Delete a tag locally.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git push origin :refs/tags/&lt;tagname&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git push origin --delete &lt;tagname&gt;</CODEROUTINE></TERM>
+    <DESC>Delete a tag on the remote.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

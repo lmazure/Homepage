@@ -7,14 +7,6 @@
 <CONTENT>
 <BLIST><TITLE><U><B>functions</B></U></TITLE>
 <ITEM>
-  Verifying the number of command line arguments
-  <CODESAMPLE>if [[ $# -ne 4 ]]; then<BR/>
-    <TAB/>echo "Syntax: $0 &lt;source login&gt; &lt;source password&gt; &lt;target login&gt; &lt;target password&gt;"<BR/>
-    <TAB/>exit 2<BR/>
-    fi
-  </CODESAMPLE>
-</ITEM>
-<ITEM>
   The declaration of a function is
   <CODESAMPLE>function foobar() { command-list; }</CODESAMPLE>
   The <CODEROUTINE>function</CODEROUTINE> keyword is optional. The curly braces around the function body must be separated from the body by blanks or newlines. The command list must be terminated with a semicolon or a newline.
@@ -23,15 +15,6 @@
   The exit status of a function is the exit status of the last command executed in the body. If the <CODEROUTINE>return</CODEROUTINE> keyword is used: with a numeric argument, this one is the function's return status; with no argument, the function's return status is the exit status of the last command executed before the <CODEROUTINE>return</CODEROUTINE>.
 </ITEM>
 <ITEM>
-    Testing the exit status of the previous command
-    <CODESAMPLE>git clone --mirror https://$source_login:$source_password@$source_repo/$source_project.git<BR/>
-        if [[ $? -ne 0 ]]; then<BR/>
-        <TAB/>echo "!! Failed to clone https://$source_repo/$source_project.git"<BR/>
-        <TAB/>exit 2<BR/>
-        fi
-    </CODESAMPLE>
-  </ITEM>
-  <ITEM>
   The function can return a value just by using <CODEROUTINE>echo</CODEROUTINE>.
   <CODESAMPLE>
     #!/bin/bash<BR/>
@@ -46,6 +29,35 @@
   </CODESAMPLE>
 </ITEM>
 </BLIST>
+<BLIST><TITLE><U><B>misc.</B></U></TITLE>
+  <ITEM>
+    Verifying the number of command line arguments
+    <CODESAMPLE>if [[ $# -ne 4 ]]; then<BR/>
+      <TAB/>echo "Syntax: $0 &lt;source login&gt; &lt;source password&gt; &lt;target login&gt; &lt;target password&gt;"<BR/>
+      <TAB/>exit 2<BR/>
+      fi
+    </CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    Testing the exit status of the previous command
+    <CODESAMPLE>git clone --mirror https://$source_login:$source_password@$source_repo/$source_project.git<BR/>
+      if [[ $? -ne 0 ]]; then<BR/>
+      <TAB/>echo "Failed to clone https://$source_repo/$source_project.git"<BR/>
+      <TAB/>exit 2<BR/>
+      fi
+    </CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    Looping on directories
+    <CODESAMPLE>for dir in $( ls -d * )<BR/>
+      do<BR/>
+      <TAB/>cd $dir<BR/>
+      <TAB/>git pull<BR/>
+      <TAB/>cd ..<BR/>
+      done
+    </CODESAMPLE>
+  </ITEM>
+  </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/shell.html#bash</A><L>en</L><F>HTML</F></X>
 </PAGE>

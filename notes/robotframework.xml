@@ -61,8 +61,14 @@ Example of Selenium script
 Saving the HTML source in a Selenium script
 <CODESAMPLE>&#160;&#160;&#160;&#160;Library&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;OperatingSystem<BR/>
 …<BR/>
-    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;#${source} =&#160;&#160;&#160;&#160;Get Source<BR/>
-&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;#OperatingSystem.Create File&#160;&#160;&#160;&#160;${EXECDIR}/map_source.html&#160;&#160;&#160;&#160;${source}</CODESAMPLE>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;${source} =&#160;&#160;&#160;&#160;Get Source<BR/>
+&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;OperatingSystem.Create File&#160;&#160;&#160;&#160;${EXECDIR}/map_source.html&#160;&#160;&#160;&#160;${source}</CODESAMPLE>
+<BR/>
+Declaring test setup and teardown in the settings
+<CODESAMPLE>
+*** Settings ***<BR/>
+Test Setup&#160;&#160;&#160;&#160;Log To Console&#160;&#160;&#160;&#160;test startup<BR/>
+Test Teardown&#160;&#160;&#160;&#160;Log To Console&#160;&#160;&#160;&#160;test shutdown</CODESAMPLE>
 </CONTENT>
 <X><T>Links</T><A>../links/autotest.html#robotframework</A><L>en</L><F>HTML</F></X>
 </PAGE>
