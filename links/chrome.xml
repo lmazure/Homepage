@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Chrome</TITLE>
 <PATH>links/chrome.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -447,6 +447,7 @@
       <ITEM><ARTICLE><X><T>Don’t Copy That Surface</T><A>https://blog.chromium.org/2021/04/dont-copy-that-surface.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Dawson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Dawson</LASTNAME></AUTHOR> analyzed the performance of Chrome running Google Meet and found a costly repetition of alloc/copy/copy/free.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Efficient And Safe Allocations Everywhere!</T><A>https://blog.chromium.org/2021/04/efficient-and-safe-allocations-everywhere.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benoît</FIRSTNAME><LASTNAME>Lizé</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bartek</FIRSTNAME><LASTNAME>Nowierski</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT>A description of <CODEROUTINE>PartitionAlloc</CODEROUTINE>, the memory allocator used in Chromium.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Sparkplug — a non-optimizing JavaScript compiler</T><A>https://v8.dev/blog/sparkplug</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Leszek</FIRSTNAME><LASTNAME>Swirski</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE><COMMENT>A description of Sparkplug, a simple compiler replacing the interpreter before TurboFan, the optimising compiler, is triggered.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Faster Chrome - Let The Compiler do the work</T><A>https://blog.chromium.org/2021/12/faster-chrome-let-the-compiler-do-the-work.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rachel</FIRSTNAME><LASTNAME>Blum</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE><COMMENT>A description of some LLVM improvements that benefited to Chrome speed.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>The Chromium Chronicle</TITLE>
         <ITEM><ARTICLE><X><T>The Chromium Chronicle #1: Task Scheduling Best Practices</T><A>https://developer.chrome.com/blog/chromium-chronicle-1</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gabriel</FIRSTNAME><LASTNAME>Charette</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>16</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>The Chromium Chronicle #2: Fighting Test Flakiness</T><A>https://developer.chrome.com/blog/chromium-chronicle-2</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vasilii</FIRSTNAME><LASTNAME>Sukhanov</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE><COMMENT>Some advice about writing tests.</COMMENT></ARTICLE></ITEM>

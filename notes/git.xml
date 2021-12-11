@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -182,6 +182,11 @@
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt; &lt;commit 2&gt; &lt;file&gt;</CODEROUTINE></TERM>
     <DESC>Compare two revisions of a file.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff &lt;branch 1&gt; &lt;branch 2&gt; -- &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Compare two versions of a file in different branches, <BR/>
+      <CODEROUTINE>git master remotes/origin/hisbranch -- pom.xml</CODEROUTINE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt;:&lt;file 1&gt; &lt;commit 2&gt;:&lt;file 2&gt;</CODEROUTINE></TERM>
