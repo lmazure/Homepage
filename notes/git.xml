@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -191,6 +191,13 @@
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt;:&lt;file 1&gt; &lt;commit 2&gt;:&lt;file 2&gt;</CODEROUTINE></TERM>
     <DESC>Compare two different files in two different revisions.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git apply</CODEROUTINE></TERM>
+    <DESC>Apply a patch.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -535,6 +542,14 @@
   <ROW>
     <TERM><CODEROUTINE>git merge &lt;branch&gt;</CODEROUTINE></TERM>
     <DESC>Merge a branch in the workspace.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git merge &lt;branch&gt; --no-commit --no-ff</CODEROUTINE></TERM>
+    <DESC>Merge a branch in the workspace without committing.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git merge --abort</CODEROUTINE></TERM>
+    <DESC>Cancel the current ongoing merge (if there was a conflict or with the <CODEROUTINE>--no-commit</CODEROUTINE> flag).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git mergetool</CODEROUTINE></TERM>
