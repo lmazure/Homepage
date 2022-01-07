@@ -3,11 +3,21 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
   <ITEM>Test if an element is in a list
     <CODESAMPLE>item in List</CODESAMPLE>
+  </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Set</B></U></TITLE>
+  <ITEM>Create an empty set
+    <CODESAMPLE>s = set()</CODESAMPLE>
+  </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Dictionary</B></U></TITLE>
+  <ITEM>Create an empty dictionary
+    <CODESAMPLE>d = {}</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B><CODEROUTINE>pip</CODEROUTINE></B></U></TITLE>

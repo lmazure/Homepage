@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -159,6 +159,11 @@ File
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="P"/><BR/>
       <CODEROUTINE>workbench.action.files.copyPathOfActiveFile</CODEROUTINE></TERM>
     <DESC>copy path of file in active editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="C"/><BR/>
+      <CODEROUTINE>Open new terminal</CODEROUTINE></TERM>
+    <DESC>open a command window of the operating system</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
