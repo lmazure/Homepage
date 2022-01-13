@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -49,7 +49,7 @@
             <ITEM><X><T>Python lib</T><A>https://github.com/python-gitlab/python-gitlab</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>personal notes</T><A>../notes/gitlab.html</A><L>en</L><F>HTML</F></X></ITEM>
           </CLIST></ITEM>
-          <ITEM><X><T>BitBucket</T><A>https://bitbucket.org</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>Bitbucket</T><A>https://bitbucket.org</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>GitHub</T><A>https://github.com</A><L>en</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
@@ -195,6 +195,7 @@
       <ITEM><X><T>McCabe</T><A>http://www.mccabe.com/iq.htm</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Krakatau</T><A>http://www.powersoftware.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Code Climate</T><A>https://codeclimate.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>GrimoireLab</T><A>https://chaoss.github.io/grimoirelab/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Profilers</TITLE>
       <ITEM><X><T>gprof</T><A>http://sourceware.org/binutils/docs-2.18/gprof/index.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -335,8 +336,8 @@
         <ITEM><ARTICLE><X><T>Fixing merge conflicts locally for www-gitlab-com</T><A>https://www.youtube.com/watch?v=zYTJ1RND8Tg</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Lauren</FIRSTNAME><LASTNAME>Barker</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Compliance Pipeline release video and walkthrough</T><A>https://www.youtube.com/watch?v=upLJ_equomw</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Kerr</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE><COMMENT>It is possible to define a common pipepline template (defining common steps) for several projects using compliance pipeline features.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Commit Virtual 2021: The Next Iteration of DevOps, GitLab CEO Keynote</T><A>https://www.youtube.com/watch?v=Wx8tDVSeidk</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sid</FIRSTNAME><LASTNAME>Sijbrandij</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE><COMMENT>The past and the future (security, AI, devops platforms) of GitLab.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Write a stageless CI/CD pipeline using GitLab 14.2</T><A>https://about.gitlab.com/blog/2021/08/24/stageless-pipelines/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE><COMMENT><CODEROUTINE>needs</CODEROUTINE> can now be used to define dependencies between jobs in the same stage, so it is possible to put all jobs in a single stage.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>How Weet integrates localization into the GitLab pipeline with Lokalise</T><A>https://about.gitlab.com/blog/2021/09/13/lessons-weet-learned-lokalise/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Write a stageless CI/CD pipeline using GitLab 14.2</T><A>https://about.gitlab.com/blog/2021/08/24/stageless-pipelines/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dov</FIRSTNAME><LASTNAME>Hershkovitch</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE><COMMENT><CODEROUTINE>needs</CODEROUTINE> can now be used to define dependencies between jobs in the same stage, so it is possible to put all jobs in a single stage.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>How Weet integrates localization into the GitLab pipeline with Lokalise</T><A>https://about.gitlab.com/blog/2021/09/13/lessons-weet-learned-lokalise/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alexander</FIRSTNAME><LASTNAME>Pereverzevs</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GitLab's realtime Preview Markdown is an editor for everyone</T><A>https://about.gitlab.com/blog/2021/09/21/introducing-markdown-live-preview/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Parker</FIRSTNAME><LASTNAME>Ennis</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>21</DAY></DATE><COMMENT>GitLab has now a WYSIWYG markdown editor.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How to incorporate private customer needs into a public product roadmap</T><A>https://about.gitlab.com/blog/2021/09/23/best-practices-customer-feature-request/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christina</FIRSTNAME><LASTNAME>Hupy</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Neil</FIRSTNAME><LASTNAME>McCorrison</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>23</DAY></DATE><COMMENT>The title syas it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Why we spent the last month eliminating PostgreSQL subtransactions</T><A>https://about.gitlab.com/blog/2021/09/29/why-we-spent-the-last-month-eliminating-postgresql-subtransactions/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stan</FIRSTNAME><LASTNAME>Hu</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Grzegorz</FIRSTNAME><LASTNAME>Bizon</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>29</DAY></DATE><COMMENT>A detailed and very technical description of the PostgreSQL problem experienced by GitLab.</COMMENT></ARTICLE></ITEM>
@@ -346,6 +347,7 @@
         <ITEM><ARTICLE><X><T>Changes to GitLab.com public project CI/CD minute quotas</T><A>https://about.gitlab.com/blog/2021/11/11/public-project-minute-limits/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jackie</FIRSTNAME><LASTNAME>Porter</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>11</DAY></DATE><COMMENT>GitLab is adding CI/CD minute quotas on public projects.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How GitLab automates engineering management</T><A>https://about.gitlab.com/blog/2021/11/16/engineering-managers-automate-their-jobs/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Seth</FIRSTNAME><LASTNAME>Berger</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE><COMMENT>Some examples of scripts used in GitLab to manage epics and issues.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Four new tools for your Visual Studio Code and GitLab tool belt</T><A>https://about.gitlab.com/blog/2021/11/17/vscode-workflow-new-features/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tomas</FIRSTNAME><LASTNAME>Vik</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>17</DAY></DATE><COMMENT>Some improvements of the GitLab VS Code extension: Git patches (managed as GitLab snippets), CI status display, checking out a MR branch, browsing a repository without checking it out.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>2021: Smashing bugs and dropping names</T><A>https://about.gitlab.com/blog/2021/12/14/smashing-bugs-and-dropping-names-in-2021/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Heather</FIRSTNAME><LASTNAME>Simpson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE><COMMENT>The results of this year's bug bounty.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Understand how your teams adopt DevOps with DevOps reports</T><A>https://about.gitlab.com/blog/2021/12/15/devops-adoption/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Orit</FIRSTNAME><LASTNAME>Golowinski</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>15</DAY></DATE><COMMENT>GitLab added some metrics on the usage of their features.</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR>'s presentation</TITLE>
           <ITEM><ARTICLE><X><T>GITLAB - 1. PRÉSENTATION ET PRINCIPES</T><A>https://www.youtube.com/watch?v=aQl-IKLm_9A</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE><COMMENT>An overview of GitLab.</COMMENT></ARTICLE></ITEM>
@@ -368,6 +370,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Bitbucket</TITLE>
         <ITEM><ARTICLE><X><T>An introduction to Bitbucket Pipelines</T><A>https://bitbucket.org/blog/an-introduction-to-bitbucket-pipelines</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kelvin</FIRSTNAME><LASTNAME>Yap</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>30</DAY></DATE><COMMENT>A short introduction of the CI/CD tool in Bitbucket.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>It’s official! Announcing Runners in Bitbucket Pipelines</T><A>https://bitbucket.org/blog/pipelines-runners</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ash</FIRSTNAME><LASTNAME>Moosa</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>9</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Open DevOps: Pushing to Production in Bitbucket Pipelines</T><A>https://www.youtube.com/watch?v=QccHnSWE_BM</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Warren</FIRSTNAME><LASTNAME>Marusiak</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>A demo of using Bitbucket and Jira for deploying in production.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Mercurial</TITLE>
