@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -176,6 +176,11 @@
     <TERM><CODEROUTINE>-t</CODEROUTINE><BR/>
       <CODEROUTINE>--timestamps</CODEROUTINE></TERM>
     <DESC>Show timestamps.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--tail 200</CODEROUTINE><BR/>
+      <CODEROUTINE>-n 200</CODEROUTINE></TERM>
+    <DESC>Display the 200 last lines.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>--since 10m</CODEROUTINE></TERM>
