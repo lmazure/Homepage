@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="ISO-8859-1" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-<!-- definition of the types -->
+<!-- Import xml: namespace -->
+<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
 
+<!-- definition of the types -->
 <xs:complexType name="person">
   <xs:sequence>
     <xs:element name="NAMEPREFIX" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -143,6 +145,7 @@
        </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
+    <xs:attribute ref="xml:lang" use="required" />
   </xs:complexType>
 </xs:element>
 
