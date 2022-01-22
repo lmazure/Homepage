@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -75,7 +75,12 @@
   <ROW>
     <TERM><CODEROUTINE>-i</CODEROUTINE><BR/>
       <CODEROUTINE>--interactive</CODEROUTINE></TERM>
-    <DESC>Start a stopped container (it is possible to have several container names <CODEROUTINE>docker start &lt;container1&gt; &lt;container2&gt; &lt;container3&gt;</CODEROUTINE>).</DESC>
+    <DESC>Attach container's STDIN.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-a</CODEROUTINE><BR/>
+      <CODEROUTINE>--attach</CODEROUTINE></TERM>
+      <DESC>Attach STDOUT/STDERR and forward signals.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
