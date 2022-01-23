@@ -117,6 +117,7 @@
     <xs:element name="AUTHOR" type="person"/>
     <xs:element name="KEYWORD"/>
   </xs:choice>
+  <xs:attribute ref="xml:lang" use="optional" />
 </xs:complexType>
 
 <!-- definition of the tags -->
