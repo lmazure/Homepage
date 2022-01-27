@@ -66,6 +66,8 @@
   <ROW><TERM><CODEROUTINE>grep -B &lt;n&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match</DESC></ROW>
   <ROW><TERM><CODEROUTINE>grep -C &lt;n&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>n</CODEROUTINE> lines after the match</DESC></ROW>
   <ROW><TERM><CODEROUTINE>grep -B &lt;n&gt; -C &lt;m&gt;</CODEROUTINE></TERM><DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>m</CODEROUTINE> lines after the match</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>grep -q</CODEROUTINE><BR/><CODEROUTINE>grep --quiet</CODEROUTINE><BR/><CODEROUTINE>grep --silent</CODEROUTINE></TERM><DESC>quiet mode; do not write anything to standard output; exit immediately with zero status if any match is found, even if an error was detected</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>grep -s</CODEROUTINE><BR/><CODEROUTINE>grep --no-messages</CODEROUTINE></TERM><DESC>suppress error messages about nonexistent or unreadable files</DESC></ROW>
   <ROW><TERM><CODEROUTINE>grep "a[[:space:]]+b"</CODEROUTINE></TERM><DESC>search <CODEROUTINE>a</CODEROUTINE> followed by one or more spaces, tabs… and finally by <CODEROUTINE>b</CODEROUTINE><BR/>
     <BLIST><TITLE>The named character classes are:</TITLE>
       <ITEM><CODEROUTINE>[:alnum:]</CODEROUTINE></ITEM>

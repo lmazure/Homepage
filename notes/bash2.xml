@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Bash</TITLE>
 <PATH>notes/bash2.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>functions</B></U></TITLE>
 <ITEM>
@@ -55,6 +55,13 @@
       <TAB/>git pull<BR/>
       <TAB/>cd ..<BR/>
       done
+    </CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    Test the presence of a string in a file
+    <CODESAMPLE>if grep -q foo myfile; then<BR/>
+      <TAB/>echo "String is present"<BR/>
+    fi
     </CODESAMPLE>
   </ITEM>
   </BLIST>

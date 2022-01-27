@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Markdown</TITLE>
 <PATH>notes/markdown.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -87,6 +87,10 @@
   <ROW>
     <TERM><CODESAMPLE>[text](url)</CODESAMPLE></TERM>
     <DESC>HTTP link</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>[text](url){:target="_blank"}</CODESAMPLE></TERM>
+    <DESC>HTTP link open in another Browser tab</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>|&#160;Tables&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|&#160;Are&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|&#160;Cool&#160;&#160;|<BR/>
