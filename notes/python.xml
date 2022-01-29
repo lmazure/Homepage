@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
   <ITEM>Test if an element is in a list
@@ -29,6 +29,14 @@
   </ITEM>
   <ITEM>upgrade a package
     <CODESAMPLE>pip install --upgrade &lt;package&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>install a package from the default branch of a Git repository
+    <CODESAMPLE>pip install git+https://gitlab.com/opentestfactory/agent</CODESAMPLE>
+    The version (commit ID) is available in <CODEFILENAME>/c/Users/lmazure/AppData/Local/Programs/Python/Python39/lib/site-packages/opentf_agent-*.dist-info/direct_url.json</CODEFILENAME>.<BR/>
+    See <X><T>https://packaging.python.org/en/latest/specifications/direct-url/</T><A>https://packaging.python.org/en/latest/specifications/direct-url/</A><L>en</L><F>HTML</F></X>.
+  </ITEM>
+  <ITEM>install a package from a given branch of a Git repository
+    <CODESAMPLE>pip install git+https://gitlab.com/opentestfactory/agent@rel-1.3.1</CODESAMPLE>
   </ITEM>
   <ITEM>list the installed packages
     <CODESAMPLE>pip list</CODESAMPLE>

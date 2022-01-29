@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -134,13 +134,21 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>docker ps</CODEROUTINE><BR/>
-      <CODEROUTINE>docker container ls</CODEROUTINE></TERM>
+      <CODEROUTINE>docker container ls</CODEROUTINE><BR/>
+      <CODEROUTINE>docker container list</CODEROUTINE></TERM>
     <DESC>List the running containers.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>-a</CODEROUTINE><BR/>
       <CODEROUTINE>--all</CODEROUTINE></TERM>
     <DESC>List all containers (running or not).</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker inspect &lt;container&gt;</CODEROUTINE></TERM>
+    <DESC>Return low level information about a container.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -216,6 +224,13 @@ Dangling images are layers that have no relationship to any tagged images.
   <ROW>
     <TERM><CODEROUTINE>-f dangling=true</CODEROUTINE></TERM>
     <DESC>List the dangling images.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker image rm &lt;image1&gt; &lt;image2&gt; …</CODEROUTINE></TERM>
+    <DESC>Remove some images.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
