@@ -3,13 +3,25 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>apt</TITLE>
 <PATH>notes/apt.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <BLIST>
-<ITEM>
-list the packages
-<CODESAMPLE><PROMPT/>dpkg -l</CODESAMPLE>
-</ITEM>
+  <ITEM>
+    list the packages
+    <CODESAMPLE><PROMPT/>dpkg -l</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    re-synchronize the package index
+    <CODESAMPLE><PROMPT/>apt update</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    update the packages, no package will be removed, a confirmation is asked
+    <CODESAMPLE><PROMPT/>apt upgrade</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    update the packages without confirmation
+    <CODESAMPLE><PROMPT/>apt upgrade -y</CODESAMPLE>
+  </ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/life.html#apt</A><L>en</L><F>HTML</F></X>
