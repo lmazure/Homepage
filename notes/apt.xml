@@ -3,24 +3,30 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>apt</TITLE>
 <PATH>notes/apt.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>
     list the packages
     <CODESAMPLE><PROMPT/>dpkg -l</CODESAMPLE>
   </ITEM>
+</BLIST>
+<BLIST><TITLE>Ubuntu</TITLE>
   <ITEM>
     re-synchronize the package index
-    <CODESAMPLE><PROMPT/>apt update</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>sudo apt update</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    list the upgradable packages
+    <CODESAMPLE><PROMPT/>sudo apt list –upgradable</CODESAMPLE>
   </ITEM>
   <ITEM>
     update the packages, no package will be removed, a confirmation is asked
-    <CODESAMPLE><PROMPT/>apt upgrade</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>sudo apt upgrade</CODESAMPLE>
   </ITEM>
   <ITEM>
     update the packages without confirmation
-    <CODESAMPLE><PROMPT/>apt upgrade -y</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>sudo apt upgrade -y</CODESAMPLE>
   </ITEM>
 </BLIST>
 </CONTENT>

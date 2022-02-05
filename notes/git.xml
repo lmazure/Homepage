@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -106,22 +106,22 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git add &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>update &lt;file&gt; in the index using the current content found in the working tree</DESC>
+    <DESC>Update &lt;file&gt; in the index using the current content found in the working tree.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git add .</CODEROUTINE></TERM>
-    <DESC>update the content of the current directory in the index</DESC>
+    <DESC>Update the content of the current directory in the index.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stage</CODEROUTINE></TERM>
-    <DESC><CODEROUTINE>git stage</CODEROUTINE> is a synonym of <CODEROUTINE>git add</CODEROUTINE></DESC>
+    <DESC><CODEROUTINE>git stage</CODEROUTINE> is a synonym of <CODEROUTINE>git add</CODEROUTINE>.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git rm &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>remove &lt;file&gt; from the index, or from the working tree and the index</DESC>
+    <DESC>Remove &lt;file&gt; from the index, or from the working tree and the index.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -270,6 +270,14 @@
   <ROW>
     <TERM><CODEROUTINE>git show &lt;commit&gt;</CODEROUTINE></TERM>
     <DESC>Show the log message and textual diff</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git show --name-only &lt;commit&gt;</CODEROUTINE></TERM>
+    <DESC>Show the log message and the name of the modified files</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git show --name-status &lt;commit&gt;</CODEROUTINE></TERM>
+    <DESC>Show the log message and the name and status of the modified files</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git show &lt;commit&gt;:&lt;file&gt;</CODEROUTINE></TERM>
@@ -706,7 +714,7 @@ git push --mirror https://$target_repo/$target_project.git<BR/>
 cd ..<BR/>
 rm -fr $project.git</CODESAMPLE>
 <BR/>
-<BLIST><TITLE>gitbash on Windows</TITLE>
+<BLIST><TITLE>Git BASH on Windows</TITLE>
   <ITEM>to run Python: <CODEROUTINE>winpty python</CODEROUTINE></ITEM>
 </BLIST>
 </CONTENT>
