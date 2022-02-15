@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -11,6 +11,7 @@
       <ITEM><X status="obsolete"><T>Fit</T><A>http://fit.c2.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>FitNesse</T><A>http://fitnesse.org</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE><X><T>Cucumber</T><A>https://cucumber.io</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>Gherkin reference</T><A>https://cucumber.io/docs/gherkin/reference/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>changelog</T><A>https://github.com/cucumber/cucumber-jvm/blob/main/CHANGELOG.md</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><X><T>Concordion</T><A>https://concordion.org</A><L>en</L><F>HTML</F></X></ITEM>
@@ -43,7 +44,7 @@
       <ITEM><X><T>Software Automation Framework Support (SAFS)</T><A>http://safsdev.sourceforge.net</A><L>en</L><F>HTML</F></X>: keyword driven tests</ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Fuzz testing</TITLE>
-      <ITEM><X><T>University of Wisconsin</T><A>http://pages.cs.wisc.edu/~bart/fuzz/fuzz.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>University of Wisconsin</T><A>https://pages.cs.wisc.edu/~bart/fuzz/fuzz.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>GUI tests</TITLE>
       <ITEM><X><T>Ranorex</T><A>https://www.ranorex.com/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -161,6 +162,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Cucumber</TITLE>
         <ITEM><ARTICLE><X><T>Why Bother With Cucumber Testing?</T><ST>The disadvantages of using Cucumber and its widespread use as a poor man's integration test.</ST><A>https://www.jackkinsella.ie/articles/why-bother-with-cucumber-testing</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jack</FIRSTNAME><LASTNAME>Kinsella</LASTNAME></AUTHOR><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Top 5 Cucumber Best Practices</T><A>https://www.cloudbees.com/blog/cucumber-best-practices</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Clemens</FIRSTNAME><LASTNAME>Helm</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>A Case Against Cucumber</T><A>https://8thlight.com/blog/kevin-liddle/2013/09/18/a-case-against-cucumber.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Liddle</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Why I recommend against using Cucumber</T><A>https://www.codewithjason.com/recommend-against-cucumber/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Swett</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>3</DAY></DATE><COMMENT>Cucumber can be used stupdily, but even when used as intended it only adds maintenance cost and complexity compared to bare Capybara.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Cucumber Reports</T><A>https://cucumber.io/blog/open-source/cucumber-reports/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Seb</FIRSTNAME><LASTNAME>Rose</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>4</DAY></DATE><COMMENT>Cucumber can now publish HTML reports in the cloud (in <X><T>https://reports.cucumber.io/</T><A>https://reports.cucumber.io/</A><L>en</L><F>HTML</F></X>).</COMMENT></ARTICLE></ITEM>
