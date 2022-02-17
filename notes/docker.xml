@@ -280,7 +280,7 @@ Dangling images are layers that have no relationship to any tagged images.
 <BLIST><TITLE>Notes</TITLE>
   <ITEM>To add something in an Alpine container
     <CODESAMPLE>
-    docker exec -it –user=root mycontainer /bin/sh<BR/>
+    docker exec -it –-user=root mycontainer /bin/sh<BR/>
     apk add curl rm -f /var/cache/apl/*
     </CODESAMPLE>
   </ITEM>

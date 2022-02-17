@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>apt</TITLE>
 <PATH>notes/apt.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>
@@ -13,20 +13,44 @@
 </BLIST>
 <BLIST><TITLE>Ubuntu</TITLE>
   <ITEM>
+    list all available packages
+    <CODESAMPLE><PROMPT/>apt list --all-versions</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    install the package <CODEROUTINE>package name</CODEROUTINE>
+    <CODESAMPLE><PROMPT/>apt install &lt;package name&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    list the installed packages
+    <CODESAMPLE><PROMPT/>apt list --installed</CODESAMPLE>
+  </ITEM>
+  <ITEM>
     re-synchronize the package index
-    <CODESAMPLE><PROMPT/>sudo apt update</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>apt update</CODESAMPLE>
   </ITEM>
   <ITEM>
     list the upgradable packages
-    <CODESAMPLE><PROMPT/>sudo apt list –upgradable</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>apt list –-upgradable</CODESAMPLE>
   </ITEM>
   <ITEM>
     update the packages, no package will be removed, a confirmation is asked
-    <CODESAMPLE><PROMPT/>sudo apt upgrade</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>apt upgrade</CODESAMPLE>
   </ITEM>
   <ITEM>
     update the packages without confirmation
-    <CODESAMPLE><PROMPT/>sudo apt upgrade -y</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>apt upgrade -y</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    update the packages without confirmation
+    <CODESAMPLE><PROMPT/>apt upgrade -y</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    remove the binaries of package the package  <CODEROUTINE>package name</CODEROUTINE>, but not its configuration files
+    <CODESAMPLE><PROMPT/>apt remove &lt;package name&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    remove the binaries and the configuration files of the package <CODEROUTINE>package name</CODEROUTINE>
+    <CODESAMPLE><PROMPT/>apt purge &lt;package name&gt;</CODESAMPLE>
   </ITEM>
 </BLIST>
 </CONTENT>
