@@ -3,29 +3,8 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
-<BLIST><TITLE><U><B>Install and update</B></U></TITLE>
-  <ITEM>Set up the Proxy:<BR/>
-    go in <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Install/Update</CODEMENU></CODEMENU></CODEMENU><BR/>
-    select <CODEMENU>Enable HTTP proxy connection</CODEMENU><BR/>
-    fill <CODEMENU>HTTP proxy host address:</CODEMENU> and <CODEMENU>HTTP proxy host port:</CODEMENU>.
-  </ITEM>
-  <ITEM>Install new stuff:<BR/>
-    go in <CODEMENU>Help<CODEMENU>Software Updates<CODEMENU>Find and Install…</CODEMENU></CODEMENU></CODEMENU><BR/>
-    select <CODEMENU>Search for new features to install</CODEMENU> and click <CODEMENU>Next</CODEMENU><BR/>
-    select the update site(s) and click <CODEMENU>Finish</CODEMENU><BR/>
-    select the feature(s) and click <CODEMENU>Next</CODEMENU><BR/>
-    select <CODEMENU>I accept the terms in the license agreement</CODEMENU> and click <CODEMENU>Next</CODEMENU><BR/>
-    check that there is enough free disk space and click <CODEMENU>Finish</CODEMENU><BR/>
-    wait for <CODEMENU>Verification</CODEMENU> window and click <CODEMENU>Install All</CODEMENU>
-  </ITEM>
-</BLIST>
-<BLIST><TITLE><U><B>Launch</B></U></TITLE>
-  <ITEM>For a unknown reason <CODEROUTINE>-vmargs -XmxαM</CODEROUTINE> does not work if α is greater than 1024.<BR/>
-    But the following command line works:<BR/>
-    <CODEROUTINE>eclipse -vm "C:\Program Files\Java\jdk1.6.0_13\bin\java.exe" -vmargs -Xmx1600m</CODEROUTINE> (but the value <CODEROUTINE>1600</CODEROUTINE> seems to depends on some PC characteristics, which ones?)</ITEM>
-</BLIST>
 <BLIST><TITLE><U><B>Project management</B></U></TITLE>
   <ITEM>create a project on an existing source hierarchy<BR/>
     <CODEMENU>File<CODEMENU>New<CODEMENU>Project…<CODEMENU>Java Project</CODEMENU></CODEMENU></CODEMENU></CODEMENU><BR/>
@@ -195,6 +174,10 @@
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/></TERM>
         <DESC>reformat the code</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="O"/></TERM>
+        <DESC>organize imports</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
@@ -483,7 +466,7 @@ in Debug window
 </BLIST>
 <BLIST><TITLE><U><B>JavaFx</B></U></TITLE>
   <ITEM>use <X><T>e(fx)clipse</T><A>https://www.eclipse.org/efxclipse/index.html</A><L>en</L><F>HTML</F></X><BR/>
-    The packages are installable from <X><T>http://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</T><A>http://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</A><L>en</L><F>HTML</F></X>.
+    The packages are installable from <X><T>https://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</T><A>https://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</A><L>en</L><F>HTML</F></X>.
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>FindBugs</B></U></TITLE>
