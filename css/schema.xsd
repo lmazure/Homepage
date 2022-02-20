@@ -1,8 +1,8 @@
-<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml version="1.0" encoding="ISO-8859-1"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
 <!-- Import xml: namespace -->
-<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="https://www.w3.org/2009/01/xml.xsd" />
+<xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
 
 <!-- definition of the types -->
 <xs:complexType name="person">
@@ -117,7 +117,7 @@
     <xs:element name="AUTHOR" type="person"/>
     <xs:element name="KEYWORD"/>
   </xs:choice>
-  <xs:attribute ref="xml:lang" use="optional" />
+  <xs:attribute ref="xml:lang" use="optional"/>
 </xs:complexType>
 
 <!-- definition of the tags -->
@@ -146,7 +146,7 @@
        </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
-    <xs:attribute ref="xml:lang" use="required" />
+    <xs:attribute ref="xml:lang" use="required"/>
   </xs:complexType>
 </xs:element>
 
