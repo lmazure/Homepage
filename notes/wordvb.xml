@@ -163,7 +163,7 @@ works<BR/>
 (on the same document, <CODEROUTINE>theTable.range.Borders(wdBorderVertical)</CODEROUTINE> is undefined…)
 </ITEM>
 <ITEM>
-When retrieving the content of a cell will <CODEROUTINE>cell.range.Text</CODEROUTINE>, the returned text contains at its end ASCII 13 (carriage return) and ASCII 7 (which is used as an End of Cell indicator). They must be removed (<CODEROUTINE>Replace(cell.range.Text, vbCr &amp; Chr(7), "")</CODEROUTINE> or <CODEROUTINE>Left(cell.range.Text , len(cell.range.Text)-2)</CODEROUTINE>.<BR/>
+When retrieving the content of a cell will <CODEROUTINE>cell.range.Text</CODEROUTINE>, the returned text contains at its end ASCII 13 (carriage return) and ASCII 7 (which is used as an End of Cell indicator). They must be removed (<CODEROUTINE>Replace(cell.range.Text, vbCr &amp; Chr(7), "")</CODEROUTINE> or <CODEROUTINE>Left(cell.range.Text, len(cell.range.Text)-2)</CODEROUTINE>.<BR/>
 When writing in a cell, there is no need to add these two characters, <CODEROUTINE>cell.range.Text = "foobar"</CODEROUTINE> just work well.
 </ITEM>
 </BLIST>
