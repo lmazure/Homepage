@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Cucumber</TITLE>
+<PATH>notes/cucumber.xml</PATH>
+<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>22</DAY></DATE>
+<CONTENT>
+Specify where is the Gecko WebDriver on the Maven command line
+<CODESAMPLE>mvn -Dwebdriver.gecko.driver=c:/Users/lmazure/bin/geckodriver.exe test</CODESAMPLE>
+<BR/>
+<BLIST><TITLE>Define the reports to be generated</TITLE>
+  <ITEM>in the code
+    <CODESAMPLE>@Suite<BR/>
+    @IncludeEngines("cucumber")<BR/>
+    @SelectClasspathResource("prestashoptest")<BR/>
+    @ConfigurationParameter(key = PLUGIN_PROPERTY_NAME,<BR/>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;value="pretty:target/cucumber-reports/Cucumber.txt," +<BR/>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"junit:target/cucumber-reports/Cucumber.xml," +<BR/>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"json:target/cucumber-reports/Cucumber.json," +<BR/>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"html:target/cucumber-reports/Cucumber.html," +<BR/>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"io.qameta.allure.cucumber7jvm.AllureCucumber7Jvm," +<BR/>
+    &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;"timeline:target/cucumber-reports/CucumberTimeline")<BR/>
+    public class RunCucumberTest {<BR/>
+    }</CODESAMPLE>
+  </ITEM>
+  <ITEM>from the command line
+    <CODESAMPLE>mvn test -Dcucumber.plugin="junit:target/cucumber-reports/Cucumber_junit.xml,html:target/cucumber-reports/Cucumber_html.html,timeline:target/cucumber-reports/CucumberTimeline"</CODESAMPLE>
+  </ITEM>
+</BLIST>
+In order to be able to generate Allure report, add the following dependency in <CODEFILENAME>pom.xml</CODEFILENAME>
+<CODESAMPLE>&lt;dependency&gt;<BR/>
+<TAB/>&lt;groupId&gt;io.qameta.allure&lt;/groupId&gt;<BR/>
+<TAB/>&lt;artifactId&gt;allure-cucumber7-jvm&lt;/artifactId&gt;<BR/>
+<TAB/>&lt;version&gt;2.17.2&lt;/version&gt;<BR/>
+&lt;/dependency&gt;</CODESAMPLE>
+</CONTENT>
+<X><T>Links</T><A>../links/autotest.html#cucumber</A><L>en</L><F>HTML</F></X>
+</PAGE>
