@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -69,7 +69,7 @@
       <ITEM><X><T>jsoup</T><A>https://jsoup.org/</A><L>en</L><F>HTML</F></X>: HTML parser</ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Books and 'zines</TITLE>
-      <ITEM><X><T>Thinking in Java</T><A>https://people.inf.elte.hu/delsaai/java/6Eckel%20-%20Thinking%20in%20Java%20(4th%202006)%20p1079.pdf</A><L>en</L><F>PDF</F></X> by <AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Eckel</LASTNAME></AUTHOR>: A free book to learn Java (Java 6).</ITEM>
+      <ITEM><X status="obsolete"><T>Thinking in Java</T><A>https://people.inf.elte.hu/delsaai/java/6Eckel%20-%20Thinking%20in%20Java%20(4th%202006)%20p1079.pdf</A><L>en</L><F>PDF</F></X> by <AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Eckel</LASTNAME></AUTHOR>: A free book to learn Java (Java 6).</ITEM>
       <ITEM><X status="dead"><T>Java Cookbook</T><A>http://1.droppdf.com/files/8o1NF/oreilly-java-coobook-3rd-2014.pdf</A><L>en</L><F>PDF</F></X> by <AUTHOR><FIRSTNAME>Ian</FIRSTNAME><LASTNAME>Darwin</LASTNAME></AUTHOR>: A recipe book (Java 8).</ITEM>
       <ITEM><X><T>Java Magazine</T><A>https://blogs.oracle.com/javamagazine/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
@@ -361,6 +361,7 @@
       <ITEM><ARTICLE><X><T>Episode 18 “Java's steady march towards strong encapsulation” with Alan Bateman</T><A>https://inside.java/2021/06/29/podcast-018/</A><L>en</L><F>MP3</F><DURATION><MINUTE>34</MINUTE><SECOND>33</SECOND></DURATION></X><X><T>“Java's Steady March Towards Strong Encapsulation” with Alan Bateman - Inside Java Podcast 18</T><A>https://www.youtube.com/watch?v=dRX_stwoOgo</A><L>en</L><F>MP4</F><DURATION><MINUTE>34</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Alan</FIRSTNAME><LASTNAME>Bateman</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Chad</FIRSTNAME><LASTNAME>Arimura</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>The usual information about how the access to the internal APIs of the JDK are gradually closed.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Episode 20 “Java 17 is Here! Part 2”</T><A>https://inside.java/2021/09/27/podcast-020/</A><L>en</L><F>MP3</F><DURATION><MINUTE>48</MINUTE><SECOND>49</SECOND></DURATION></X><X><T>“Java 17 is Here! Part 2” - Inside Java Podcast 20</T><A>https://www.youtube.com/watch?v=krmW1wcFvcE</A><L>en</L><F>MP4</F><DURATION><MINUTE>48</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Stuart</FIRSTNAME><LASTNAME>Marks</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Chad</FIRSTNAME><LASTNAME>Arimura</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE><COMMENT>The evolution of Java, the interest of Records, and the deprecation of features.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Episode 21 “JEP 421 and Finalization Deprecation”</T><A>https://inside.java/2022/01/12/podcast-021/</A><L>en</L><F>MP3</F><DURATION><MINUTE>23</MINUTE><SECOND>18</SECOND></DURATION></X><X><T>“JEP 421 and Finalization Deprecation” - Inside Java Podcast 21</T><A>https://www.youtube.com/watch?v=8pUzK_KWgBc</A><L>en</L><F>MP4</F><DURATION><MINUTE>23</MINUTE><SECOND>40</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Brent</FIRSTNAME><LASTNAME>Christian</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Delabassée</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>11</DAY></DATE><COMMENT>Why <CODEROUTINE>Object.finalize()</CODEROUTINE> will be removed, the next step, and the fact that the whole removal timeline is not defined yet.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Episode 22 “JEP 408 - Simple Web Server”</T><A>https://inside.java/2022/03/04/podcast-022/</A><L>en</L><F>MP3</F><DURATION><MINUTE>26</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Julia</FIRSTNAME><LASTNAME>Boes</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Delabassée</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>4</DAY></DATE><COMMENT>A presentation of the Simple Web Server added in JDK 18.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Inside Java Newscast</TITLE>
       <ITEM><ARTICLE><X><T>Java 16 Rundown, First Of Java 17 - Inside Java Newscast #1</T><A>https://www.youtube.com/watch?v=4zP_5vrFg1w</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>43</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE><COMMENT>A quick overview of Java 16 and some first information about Java 17.</COMMENT></ARTICLE></ITEM>

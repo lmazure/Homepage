@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -122,6 +122,11 @@ File
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="S"/></TERM>
     <DESC>save all</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="Enter"/><BR/>
+      <CODEROUTINE>View: Keep Editor</CODEROUTINE></TERM>
+    <DESC>Keep the editor open</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Shift"/><KEY id="Enter"/><BR/>

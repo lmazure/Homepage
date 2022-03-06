@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -186,7 +186,11 @@
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;branch 1&gt; &lt;branch 2&gt; -- &lt;file&gt;</CODEROUTINE></TERM>
     <DESC>Compare two versions of a file in different branches, <BR/>
-      <CODEROUTINE>git master remotes/origin/hisbranch -- pom.xml</CODEROUTINE></DESC>
+      <CODEROUTINE>git diff master remotes/origin/hisbranch -- pom.xml</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff &lt;branch&gt; -- &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Compare the current version of a file with one in a different branch.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt;:&lt;file 1&gt; &lt;commit 2&gt;:&lt;file 2&gt;</CODEROUTINE></TERM>
@@ -259,6 +263,10 @@
     <TERM><CODEROUTINE>git log -U&lt;n&gt;</CODEROUTINE><BR/>
           <CODEROUTINE>git log --unified=&lt;n&gt;</CODEROUTINE></TERM>
     <DESC>Generate diffs with n lines of context instead of the usual 3. Implies <CODEROUTINE>-p</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --graph</CODEROUTINE></TERM>
+    <DESC>Draw a text-based graphical representation.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git whatchanged</CODEROUTINE></TERM>
@@ -560,6 +568,20 @@
     <DESC>Cancel the current ongoing merge (if there was a conflict or with the <CODEROUTINE>--no-commit</CODEROUTINE> flag).</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git cherry-pick &lt;commit&gt;</CODEROUTINE></TERM>
+    <DESC>Cherry pick a commit and commit it.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git cherry-pick &lt;commit&gt; -m 1</CODEROUTINE><BR/>
+      <CODEROUTINE>git cherry-pick &lt;commit&gt; --mainline 1</CODEROUTINE></TERM>
+    <DESC>Use to cherry pick a merge commit, <CODEROUTINE>-m 1</CODEROUTINE> indicates to replay the change relative to the first parent.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git cherry-pick &lt;commit&gt; -n</CODEROUTINE><BR/>
+      <CODEROUTINE>git cherry-pick &lt;commit&gt; --no-commit</CODEROUTINE></TERM>
+    <DESC>Cherry pick a commit, but does not commit it.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git mergetool</CODEROUTINE></TERM>
     <DESC>Perform merge conflict resolution with a tool.</DESC>
   </ROW>
@@ -729,6 +751,12 @@ git show-ref | grep ' refs/merge-requests/' | cut -d' ' -f2 | xargs -n1 -r git u
 git push --mirror https://$target_repo/$target_project.git<BR/>
 cd ..<BR/>
 rm -fr $project.git</CODESAMPLE>
+<BR/>
+<BLIST><TITLE>Git SVN</TITLE>
+  <ITEM>Create a Git repo linked to a SVN repo<BR/>
+    <CODEROUTINE>git svn clone -s file:///cygdrive/m/laurent_svn_repository/homepage</CODEROUTINE>
+  </ITEM>
+</BLIST>
 <BR/>
 <BLIST><TITLE>Git BASH on Windows</TITLE>
   <ITEM>to run Python: <CODEROUTINE>winpty python</CODEROUTINE></ITEM>
