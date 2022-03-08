@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>apt</TITLE>
 <PATH>notes/apt.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>
@@ -41,8 +41,9 @@
     <CODESAMPLE><PROMPT/>apt upgrade -y</CODESAMPLE>
   </ITEM>
   <ITEM>
-    update the packages without confirmation
-    <CODESAMPLE><PROMPT/>apt upgrade -y</CODESAMPLE>
+    update the packages, will remove currently installed packages if this is needed to upgrade the system as a whole
+    <CODESAMPLE><PROMPT/>apt full-upgrade</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>apt dist-upgrade</CODESAMPLE>
   </ITEM>
   <ITEM>
     remove the binaries of package the package  <CODEROUTINE>package name</CODEROUTINE>, but not its configuration files
