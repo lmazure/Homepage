@@ -3,28 +3,45 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Laurent Mazuré</TITLE>
 <PATH>perso/cve.xml</PATH>
-<DATE><YEAR>2016</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 email: <X><T>lmazure.website@gmail.com</T><A>mailto:lmazure.website@gmail.com</A><L>en</L><F>HTML</F></X><BR/>
 homepage: <X><T>https://mazure.fr</T><A>https://mazure.fr</A><L>en</L><F>HTML</F></X><BR/>
-<X><T>French version</T><A>cvf.html</A><L>fr</L><F>HTML</F></X><BR/>
+<I><X><T>afficher la version française</T><A>cvf.html</A><L>fr</L><F>HTML</F></X></I><BR/>
 <BR/>
 <B><U>Education:</U></B><BR/>
 1987-1990: École Centrale Paris, Applied Mathematics option<BR/>
 <BR/>
 <B><U>Experience:</U></B><BR/>
-<B><X><T>Infologic</T><A>https://www.infologic-copilote.fr/</A><L>fr</L><F>HTML</F></X> — Bourg-Lès-Valence, FR</B><BR/>
-Infologic publishes and integrates the Copilote ERP: 600 sites equipped in France, representing more than 20 000 installed stations, mostly in the food industry.
+<B><X><T>Henix</T><A>https://www.henix.com/</A><L>fr</L><F>HTML</F></X> — Montrouge, FR</B><BR/>
+Henix is specialized in software quality: services, education with the <X><T>EQL</T><A>https://www.ecoleql.fr/</A><L>fr</L><F>HTML</F></X> school and software publisher with the <X><T>Squash</T><A>https://www.squashtest.com/?lang=en</A><L>en</L><F>HTML</F></X> suite.
 <TEXTBLOCK>
-  <BLIST><TITLE>Since April 2017: <U>Software Development Manager</U></TITLE>
+  <BLIST><TITLE>Since Mai 2021: <U>Project Director</U></TITLE>
+    <ITEM>Project Manager and Product Owner of Squash AUTOM (management of automated tests) and Squash DEVOPS (integration of automated tests in a CI/CD pipeline)</ITEM>
+  </BLIST>
+</TEXTBLOCK>
+<SMALL>Functional domain: software testing, DevOps<BR/>
+Technologies: Java, Python, microservices<BR/>
+Tools: GitLab, Git, Sonar, Nexus…<BR/>
+Processes/methodologies: Scrum<BR/></SMALL>
+<BR/>
+<B><X><T>Infologic</T><A>https://www.infologic-copilote.fr/</A><L>fr</L><F>HTML</F></X> — Bourg-Lès-Valence, FR</B><BR/>
+Infologic publishes and integrates the Copilote ERP: 600 sites equipped in France, this representing more than 20,000 workstations installed, mainly in the food industry
+<TEXTBLOCK>
+  <BLIST><TITLE>March 2020 → Mai 2020: <U>Test Development Quality Leader</U></TITLE>
+    <ITEM>Management of the tooling team (8 developers in charge of delivering the ERP building blocks)</ITEM>
+    <ITEM>Management of the test team (6 testers)</ITEM>
+    <ITEM>Monitoring of quality improvement initiatives (Sonar, coding rules, functional non-regression tests…)</ITEM>
+  </BLIST>
+  <BLIST><TITLE>April 2017 → March 2020: <U>Software Development Manager</U></TITLE>
     <ITEM>Manager of the development team (55 developers + 6 testers): hiring, trainings, appraisals…</ITEM>
     <ITEM><BLIST><TITLE>Attempt at structuring:</TITLE>
       <ITEM>implementation of a project life cycle</ITEM>
-      <ITEM>support to the project managers for the application of this cycle</ITEM>
-      <ITEM>management of the activities of the tooling team and the QA team</ITEM>
-    </BLIST></ITEM>
+      <ITEM>support to project managers for its application</ITEM>
+      <ITEM>management of the activities of the tooling team and the test team</ITEM>
+    </BLIST>This was rather fruitless, the historical management team being in fact reluctant to change.</ITEM>
     <ITEM>Redefinition of the test methods</ITEM>
-    <ITEM>Support of some quality improvement initiatives (Sonar, coding rules, functional non-regression tests…)</ITEM>
+    <ITEM>Support of some quality improvement initiatives</ITEM>
   </BLIST>
 </TEXTBLOCK>
 <SMALL>Functional domain: ERP, food industry<BR/>
@@ -33,7 +50,7 @@ Tools: Jenkins, Git, Sonar, Selenium…<BR/>
 Processes/methodologies: V-Model<BR/></SMALL>
 <BR/>
 <B><X><T>Eurofins</T><A>https://www.eurofins.com</A><L>en</L><F>HTML</F></X> — Luxembourg, LU</B><BR/>
-Eurofins Scientific, with 16 000 employees and 200 laboratories in 36 countries, is the world leader in food and biopharma product testing, and in the field of environmental laboratory services. It is also one of the global market leaders in agroscience, genomics, pharma discovery services and central laboratory services.
+Eurofins Scientific, with 16,000 employees and 200 laboratories in 36 countries, is the world leader in food and biopharma product testing, and in the field of environmental laboratory services. It is also one of the global market leaders in agroscience, genomics, pharma discovery services and central laboratory services.
 <TEXTBLOCK>
   <BLIST><TITLE>December 2010 → April 2017: <U>Eurofins OnLine Software Development Manager</U></TITLE>
     <ITEM><BLIST><TITLE>Manager of the EOL development team</TITLE>
@@ -57,7 +74,7 @@ KIKA Medical created EDC solutions for its pharmaceutical customers or medical d
 <TEXTBLOCK>
   <BLIST><TITLE>July 2007 → December 2010: <U>Software Development Manager</U></TITLE>
     <ITEM><BLIST><TITLE>Promoted functional manager of the development pole after the introduction of a matrix organization (the two other poles being product management and test)</TITLE>
-      <ITEM>six developers and architects on three projects</ITEM>
+      <ITEM>6 developers and architects on three projects</ITEM>
       <ITEM>resource allocation to the projects, this point being rather delicate after some economic layoffs (July 2008)</ITEM>
       <ITEM>support of project managers: specification writing, management of sub-projects (Oracle performance, mitigation of IT issues…)</ITEM>
     </BLIST></ITEM>
