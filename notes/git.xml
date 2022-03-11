@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -526,6 +526,15 @@
   <ROW>
     <TERM><CODEROUTINE>git branch</CODEROUTINE></TERM>
     <DESC>List the local branches, the current one is prefixed with <CODEROUTINE>*</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git branch -v</CODEROUTINE><BR/>
+      <CODEROUTINE>git branch --verbose</CODEROUTINE></TERM>
+    <DESC>List the local branches, indicating sha1 and commit subject line for each head, and relationship to upstream branch (if any)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git branch -vv</CODEROUTINE></TERM>
+    <DESC>The same with path of the linked worktree (if any) and the name of the upstream branch</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git branch -a</CODEROUTINE><BR/>
