@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>apt</TITLE>
 <PATH>notes/apt.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>
@@ -46,12 +46,32 @@
     <CODESAMPLE><PROMPT/>apt dist-upgrade</CODESAMPLE>
   </ITEM>
   <ITEM>
+    remove packages that were automatically installed to satisfy dependencies for other packages and are now no longer needed
+    <CODESAMPLE><PROMPT/>apt autoremove</CODESAMPLE>
+  </ITEM>
+  <ITEM>
     remove the binaries of package the package  <CODEROUTINE>package name</CODEROUTINE>, but not its configuration files
     <CODESAMPLE><PROMPT/>apt remove &lt;package name&gt;</CODESAMPLE>
   </ITEM>
   <ITEM>
     remove the binaries and the configuration files of the package <CODEROUTINE>package name</CODEROUTINE>
     <CODESAMPLE><PROMPT/>apt purge &lt;package name&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    mark a package as being automatically installed
+    <CODESAMPLE><PROMPT/>apt-mark auto &lt;package name&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    mark a package as being manually installed
+    <CODESAMPLE><PROMPT/>apt-mark manual &lt;package name&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    list the packages that are automatically installed
+    <CODESAMPLE><PROMPT/>apt-mark showauto</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    list the packages that are manually installed
+    <CODESAMPLE><PROMPT/>apt-mark showmanual</CODESAMPLE>
   </ITEM>
 </BLIST>
 </CONTENT>
