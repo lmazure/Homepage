@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Project management</B></U></TITLE>
   <ITEM>create a project on an existing source hierarchy<BR/>
@@ -29,6 +29,10 @@
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="W"/></TERM>
     <DESC>close current editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="W"/></TERM>
+    <DESC>close all editors</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Q"/></TERM>
