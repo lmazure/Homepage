@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Linux</TITLE>
 <PATH>notes/linux2.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW><TERM><CODEFILENAME><X><T>/dev/random</T><A>https://man7.org/linux/man-pages/man4/random.4.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>when read, return random bytes<BR/>if the environment pool is empty, reading <CODEFILENAME>/dev/random</CODEFILENAME> will block until additional environmental noise is gathered</DESC></ROW>
@@ -11,5 +11,7 @@
 <ROW><TERM><CODEFILENAME><X><T>/dev/null</T><A>https://man7.org/linux/man-pages/man4/null.4.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>when written, discard data<BR/>when read, return EOF</DESC></ROW>
 <ROW><TERM><CODEFILENAME><X><T>/dev/zero</T><A>https://man7.org/linux/man-pages/man4/null.4.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>when written, discard data<BR/>when read, return characters equals to zero</DESC></ROW>
 </DEFINITIONTABLE>
+<BR/>
+<CODEFILENAME><X><T>/etc/os-release</T><A>https://man7.org/linux/man-pages/man5/os-release.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME> (if it does not exist, fall back on <CODEFILENAME><X><T>/usr/lib/os-release</T><A>https://man7.org/linux/man-pages/man5/os-release.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME>) contains the description of the OS as a newline-separated list of environment variable assignments (i.e. it can be sourced in a shell script).
 </CONTENT>
 </PAGE>

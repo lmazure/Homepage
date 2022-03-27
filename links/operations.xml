@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Operations</TITLE>
 <PATH>links/operations.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -22,6 +22,7 @@
       <ITEM><X><T>Opsview</T><A>https://www.opsview.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Grafana</T><A>https://grafana.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Dozzle</T><A>https://dozzle.dev/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Ekara</T><A>https://ekara.ip-label.com/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
@@ -42,6 +43,12 @@
     <ITEM><BLIST><TITLE>Kubernetes</TITLE>
       <ITEM><ARTICLE><X quality="1"><T>Kubernetes Tutorial for Beginners [FULL COURSE in 4 Hours]</T><A>https://www.youtube.com/watch?v=X48VuDVv0do</A><L>en</L><F>MP4</F><DURATION><HOUR>3</HOUR><MINUTE>36</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nana</FIRSTNAME><LASTNAME>Janashia</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>A long and clear presentation of Kubernetes.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Successful Kubernetes Development Workflows • Ellen Körbes • GOTO 2021</T><A>https://www.youtube.com/watch?v=9csPAXYEf7M</A><L>en</L><F>MP4</F><DURATION><MINUTE>36</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Ellen</FIRSTNAME><LASTNAME>Körbes</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>16</DAY></DATE><COMMENT>Some advice on development with Kubernetes.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Ekara</TITLE>
+      <ITEM><ARTICLE><X><T>Création d'un parcours dans Ekara Studio</T><A>https://www.youtube.com/watch?v=CLJO2J1S7QM</A><L>fr</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Guy</FIRSTNAME><LASTNAME>Sacilotto</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>30</DAY></DATE><COMMENT>A demonstration of defining a user workflow in Ekara.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Témoignage AAA Data : Nicolas Minos, Directeur SI Adjoint</T><A>https://www.youtube.com/watch?v=uG_OJ8nsSd8</A><L>fr</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nicolas</FIRSTNAME><LASTNAME>Minos</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Nicolas</FIRSTNAME><LASTNAME>Minos</LASTNAME></AUTHOR> is satisfied by Hisi and its use of Ekara.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=uG_OJ8nsSd8"><X><T>Témoignage Groupe Hisi - ip-label</T><A>https://www.youtube.com/watch?v=T76Dc5tb8Ic</A><L>fr</L><F>MP4</F><DURATION><MINUTE>3</MINUTE><SECOND>45</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Venet</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Wais</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>Hisi does some advertisement for Ekara.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Témoignage Squirel : Nahil Molou, Administrateur Mobilité</T><A>https://www.youtube.com/watch?v=JyqGz4JZvS8</A><L>fr</L><F>MP4</F><DURATION><MINUTE>4</MINUTE><SECOND>46</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nahil</FIRSTNAME><LASTNAME>Molou</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE><COMMENT>SNCF is using Ekara, but there is little information here, this is mostly marketing bullshit.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
