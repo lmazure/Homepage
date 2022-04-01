@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -52,7 +52,10 @@
             <ITEM><X><T>personal notes</T><A>../notes/gitlab.html</A><L>en</L><F>HTML</F></X></ITEM>
           </CLIST></ITEM>
           <ITEM><X><T>Bitbucket</T><A>https://bitbucket.org</A><L>en</L><F>HTML</F></X></ITEM>
-          <ITEM><X><T>GitHub</T><A>https://github.com</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><CLIST><TITLE><X><T>GitHub</T><A>https://github.com</A><L>en</L><F>HTML</F></X></TITLE>
+            <ITEM><X><T>status</T><A>https://www.githubstatus.com/</A><L>en</L><F>HTML</F></X></ITEM>
+            <ITEM><X><T>Twitter status</T><A>https://twitter.com/githubstatus</A><L>en</L><F>HTML</F></X></ITEM>
+          </CLIST></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><X status="obsolete"><T>Aegis</T><A>https://sourceforge.net/projects/aegis/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -130,7 +133,7 @@
         <ITEM><X><T>doc</T><A>http://publibfp.dhe.ibm.com/epubs/pdf/i1194270.pdf</A><L>en</L><F>PDF</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/purify.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
-      <ITEM><CLIST><TITLE><ANCHOR>valgrind</ANCHOR><X><T>Valgrind</T><A>https://www.valgrind.org/</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><CLIST><TITLE><ANCHOR>valgrind</ANCHOR><X><T>Valgrind</T><A>https://valgrind.org/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>personal notes</T><A>../notes/valgrind.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><X><T>dmalloc</T><A>https://dmalloc.com/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -163,7 +166,7 @@
         <ITEM><X><T>Parasoft C++test</T><A>https://www.parasoft.com/products/ctest/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>PolySpace</T><A>https://www.mathworks.com/products/polyspace.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Flawfinder</T><A>https://dwheeler.com/flawfinder/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Klocwork</T><A>https://www.klocwork.com/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Klocwork</T><A>https://www.perforce.com/products/klocwork</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Java</TITLE>
         <ITEM><X><T>PMD</T><A>https://pmd.github.io/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -279,6 +282,7 @@
     <ITEM><ARTICLE><X><T>The Lightning Algorithm - Numberphile</T><A>https://www.youtube.com/watch?v=akZ8JJ4gGLs</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>23</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Henderson</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE><COMMENT>The description of a program that solves a kind of simple maze and draws a kind of lightning.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Random Numbers with LFSR (Linear Feedback Shift Register) - Computerphile</T><A>https://www.youtube.com/watch?v=Ks1pw1X22y4</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Code Health: Now You're Thinking With Functions</T><A>https://testing.googleblog.com/2022/02/code-health-now-youre-thinking-with.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Cathal</FIRSTNAME><LASTNAME>Weakliam</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT>The basic: using higher-order functions.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Hit ’em High, Hit ’em Low:</T><ST>Regression Testing and the Saff Squeeze</ST><A>https://medium.com/@kentbeck_7670/hit-em-high-hit-em-low-ffe1991ee8d</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE><COMMENT>Digging out a bug in a failing test by recursively diving in the subroutines, inlining them, and removing code not related to the bug.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Hackable Projects</TITLE>
       <ITEM><ARTICLE><X><T>Hackable Projects - Pillar 1: Code Health</T><A>https://testing.googleblog.com/2016/08/hackable-projects.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT>A list of miscellaneous good coding practices.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE predecessor="https://testing.googleblog.com/2016/08/hackable-projects.html"><X><T>Hackable Projects - Pillar 2: Debuggability</T><A>https://testing.googleblog.com/2016/10/hackable-projects-pillar-2-debuggability.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>Run test locally, debugging mobile apps, proper logging, monitoring, testing small parts.</COMMENT></ARTICLE></ITEM>
@@ -335,6 +339,7 @@
         <ITEM><ARTICLE><X><T>Highlights from Git 2.35</T><A>https://github.blog/2022-01-24-highlights-from-git-2-35/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT><CODEROUTINE>git stash --staged</CODEROUTINE>, new formats for <CODEROUTINE>git describe</CODEROUTINE>, SSH signing is improved, a new <CODEROUTINE>zdiff3</CODEROUTINE> mode for reporting merge conflicts, some performance improvements in <CODEROUTINE>git diff</CODEROUTINE>…</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Inside the Hidden Git Folder - Computerphile</T><A>https://www.youtube.com/watch?v=bSA91XTzeuA</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>32</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Max</FIRSTNAME><LASTNAME>Wilson</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>A basic description of the <CODEFILENAME>.git</CODEFILENAME> folder.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=bSA91XTzeuA"><X quality="-1"><T>Git Version Control _final_new_final.new - Computerphile</T><A>https://www.youtube.com/watch?v=lJu5xwbGgRk</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>57</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Max</FIRSTNAME><LASTNAME>Wilson</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE><COMMENT>A much too simplified description of tags and branches.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=lJu5xwbGgRk"><X quality="-1"><T>Teamwork &amp; Git - Computerphile</T><A>https://www.youtube.com/watch?v=RzYJvSnzlMk</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Max</FIRSTNAME><LASTNAME>Wilson</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>A quick description of the features of Git and GitHub/GitLab to manage team work.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>GitLab</TITLE>
         <ITEM><ARTICLE><X><T>7 ways to speed up your GitLab CI/CD times</T><A>https://blog.sparksuite.com/7-ways-to-speed-up-gitlab-ci-cd-times-29f60aab69f9</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Wes</FIRSTNAME><LASTNAME>Cossick</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>24</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
