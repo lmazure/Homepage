@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><CLIST><TITLE>Tutorials</TITLE>
@@ -129,6 +129,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Type inference</TITLE>
       <ITEM><ARTICLE><X><T>Java Feature Spotlight: Local Variable Type Inference</T><A>https://www.infoq.com/articles/java-local-variable-type-inference/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE><COMMENT>A description of type inference, with a focus on local variable type inference (<CODEROUTINE>var</CODEROUTINE>) and some guidelines to use this one.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Bruce Eckel on simplifying local variable type inference in Java</T><ST>In a local definition (that is, inside a method) the compiler can automatically discover the type. Here’s how it works.</ST><A>https://blogs.oracle.com/javamagazine/java-local-reference-type-inference</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Eckel</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>21</DAY></DATE><COMMENT>A short good overview of <CODEROUTINE>var</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Optional</TITLE>
       <ITEM><ARTICLE><X><T>Optional Is a Law-breaking Monad but a Good Type</T><A>https://medium.com/97-things/optional-is-a-law-breaking-monad-but-a-good-type-7667eb821081</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>18</DAY></DATE><COMMENT><CODEROUTINE>Optional</CODEROUTINE> does not respect the rules of a monad, but it is better like this.</COMMENT></ARTICLE></ITEM>
