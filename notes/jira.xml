@@ -3,32 +3,33 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>JIRA</TITLE>
 <PATH>notes/jira.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 JIRA generated Excel files are in fact HTML files with the .xls extension.<BR/>
 <BR/>
 shortcuts when reviewing a request
 <DEFINITIONTABLE>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="N"/>
-</TERM><DESC>
-next request
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="P"/>
-</TERM><DESC>
-previous request
-</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="N"/></TERM>
+    <DESC>next request</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="P"/></TERM>
+    <DESC>previous request</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 shortcuts when editing a request
 <DEFINITIONTABLE>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="S"/>
-</TERM><DESC>
-submit the form
-</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="S"/></TERM>
+    <DESC>submit the form</DESC>
+  </ROW>
 </DEFINITIONTABLE>
+<BLIST><TITLE>JQL</TITLE>
+  <ITEM>list the tickets not finished of a given person
+    <CODESAMPLE>assignee in (lma) and statusCategory in ("To Do", "In Progress")</CODESAMPLE>
+  </ITEM>
+</BLIST>
 </CONTENT>
 <X><T>Links</T><A>../links/life.html#jira</A><L>en</L><F>HTML</F></X>
 </PAGE>
