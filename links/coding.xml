@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -49,6 +49,7 @@
             <ITEM><X><T>source code</T><A>https://gitlab.com/gitlab-org/gitlab</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>Java lib</T><A>https://github.com/gitlab4j/gitlab4j-api</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>Python lib</T><A>https://github.com/python-gitlab/python-gitlab</A><L>en</L><F>HTML</F></X></ITEM>
+            <ITEM><X><T>Gitlabber</T><A>https://github.com/ezbz/gitlabber</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>personal notes</T><A>../notes/gitlab.html</A><L>en</L><F>HTML</F></X></ITEM>
           </CLIST></ITEM>
           <ITEM><X><T>Bitbucket</T><A>https://bitbucket.org</A><L>en</L><F>HTML</F></X></ITEM>
@@ -140,7 +141,7 @@
       <ITEM><X><T>ccmalloc</T><A>http://cs.ecs.baylor.edu/~donahoo/tools/ccmalloc/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Electric Fence</T><A>https://github.com/kallisti5/ElectricFence</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Boehm Collector</T><A>https://www.hboehm.info/gc/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>LeakTracer</T><A>http://www.andreasen.org/LeakTracer/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>LeakTracer</T><A>https://www.andreasen.org/LeakTracer/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>MemWatch</T><A>https://sourceforge.net/projects/memwatch/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Memprof</T><A>http://www.secretlabs.de/projects/memprof/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>mpatrol</T><A>http://mpatrol.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -350,6 +351,7 @@
         <ITEM><ARTICLE><X quality="-2"><T>Gitlab Project Management: Sprints, User Stories, and Tasks</T><A>https://www.youtube.com/watch?v=ZBjCmOYNb5Q</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Benjamin</FIRSTNAME><LASTNAME>Garrard</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE><COMMENT>A messy description by a guy who does not master the subject.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Use scoped labels in GitLab 11.10 for custom fields and custom workflows</T><A>https://www.youtube.com/watch?v=4BCBby6du3c</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Victor</FIRSTNAME><LASTNAME>Vu</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE><COMMENT>How to define and use scoped labels.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Optimizing our build times with gitlab on AWS</T><A>https://viesure.io/optimizing-our-build-times-with-gitlab-on-aws/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rene</FIRSTNAME><LASTNAME>Schakmann</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE><COMMENT>Some feedback on how to accelerate builds, but this is probably very specific to viesure case.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Pages Access Control</T><A>https://www.youtube.com/watch?v=tSPAr5mQYc8</A><L>en</L><F>MP4</F><DURATION><MINUTE>3</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Vladimir</FIRSTNAME><LASTNAME>Sushlin</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>A demo of how to configure the visibility of the pages.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Send Gitlab CI reports &amp; artifacts via e-mail</T><ST>Most users migrating from Jenkins to Gitlab CI are looking for a way to send emails with the reports when a test fails. While Gitlab CI can notify you that a job has failed (or was successful) it will not attach any files or reports to that email.</ST><A>https://medium.com/devops-with-valentine/send-gitlab-ci-reports-artifacts-via-e-mail-86bc96e66511</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Valentin</FIRSTNAME><LASTNAME>Despa</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>11</DAY></DATE><COMMENT>Using Mailgun to send emails from a GitLab pipeline.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Gitlab CI - De zéro à héro - pour tout le monde</T><A>https://www.youtube.com/watch?v=RSXmQMceyzs</A><L>fr</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>36</MINUTE><SECOND>1</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Philippe</FIRSTNAME><LASTNAME>Charrière</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>27</DAY></DATE><COMMENT>A long demo of GitLab CI/CD.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Create:Source Code Walk Through - Jan 2020</T><A>https://www.youtube.com/watch?v=wTQ3aXJswtM</A><L>en</L><F>MP4</F><DURATION><MINUTE>19</MINUTE><SECOND>14</SECOND></DURATION></X><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE><COMMENT>A short overview of the GitLab features to manage the Git repository and merge requests.</COMMENT></ARTICLE></ITEM>
