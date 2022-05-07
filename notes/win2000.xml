@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>202</YEAR><MONTH>12</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -158,6 +158,14 @@ File explorer
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE>help</CODEROUTINE></TERM><DESC>display the list of the command</DESC></ROW>
   <ROW><TERM><CODEROUTINE>help foobar</CODEROUTINE></TERM><DESC>display help about command <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW><TERM><CODEROUTINE>type foobar.txt</CODEROUTINE></TERM><DESC>displays the contents of the file <CODEROUTINE>foobar.txt</CODEROUTINE></DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW><TERM><CODEROUTINE>start notepad++ foobar.txt</CODEROUTINE></TERM><DESC>launch notepad++ on the file <CODEROUTINE>foobar.txt</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>

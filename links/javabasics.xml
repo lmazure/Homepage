@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><CLIST><TITLE>Tutorials</TITLE>
@@ -42,6 +42,7 @@
       <ITEM><ARTICLE><X><T>String comparisons</T><ST>How Java's String methods, keywords, and operators process comparisons in the String pool</ST><A>https://www.infoworld.com/article/3276354/java-language/java-challengers-2-string-comparisons.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rafael</FIRSTNAME><MIDDLENAME>Chinelato</MIDDLENAME><LASTNAME>Del Nero</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE><COMMENT>Some very basics facts about <CODEROUTINE>String</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Check If a String Contains a Substring</T><A>https://www.baeldung.com/java-string-contains-substring</A><L>en</L><F>HTML</F></X><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>30</DAY></DATE><COMMENT>This article states the obvious.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Quiz yourself: Text blocks and the string indent method in Java</T><ST>Text blocks ease programming long string literals, but you need to know the details.</ST><A>https://blogs.oracle.com/javamagazine/java-text-block-string-indent-whitespace</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>The basics of text blocks.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Quiz yourself: Java’s text blocks and variable-length argument lists</T><ST>When do text blocks contain a leading new line, and when won’t you see a new line?</ST><A>https://blogs.oracle.com/javamagazine/java-text-blocks-variable-length-argument-lists</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE><COMMENT>Another quizz on the same subject.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Integers</TITLE>
       <ITEM><ARTICLE><X><T>Why YOU should use Integer.valueOf(int)</T><A>https://puredanger.github.io/tech.puredanger.com/2007/02/01/valueof/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2007</YEAR><MONTH>2</MONTH><DAY>1</DAY></DATE><COMMENT>Some micro-optimisation by replacing <CODEROUTINE>new Integer()</CODEROUTINE> by <CODEROUTINE>Integer.valueOf()</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>

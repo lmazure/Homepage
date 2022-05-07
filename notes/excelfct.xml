@@ -59,10 +59,10 @@ sheet_text is the text specifying the name of the worksheet to be used as the ex
 <BLIST>
 <ITEM>"address"/"adresse" Reference of the first cell in reference, as text.</ITEM>
 <ITEM>"col"/"col" Column number of the cell in reference.</ITEM>
-<ITEM>"color"/"couleur" 1 if the cell is formatted in color for negative values; otherwise returns 0 (zero).</ITEM>
+<ITEM>"color"/"couleur" 1 if the cell is formatted in colour for negative values; otherwise returns 0 (zero).</ITEM>
 <ITEM>"contents"/"contenu" Contents of the upper-left cell in reference.</ITEM>
 <ITEM>"filename"/"nomfichier" Filename (including full path) of the file that contains reference, as text. Returns empty text ("") if the worksheet that contains reference has not yet been saved.</ITEM>
-<ITEM>"format"/"format" Text value corresponding to the number format of the cell. The text values for the various formats are shown in the following table. Returns "-" at the end of the text value if the cell is formatted in color for negative values. Returns "()" at the end of the text value if the cell is formatted with parentheses for positive or all values.</ITEM>
+<ITEM>"format"/"format" Text value corresponding to the number format of the cell. The text values for the various formats are shown in the following table. Returns "-" at the end of the text value if the cell is formatted in colour for negative values. Returns "()" at the end of the text value if the cell is formatted with parentheses for positive or all values.</ITEM>
 <ITEM>"parentheses"/"parenthèses" 1 if the cell is formatted with parentheses for positive or all values; otherwise returns 0.</ITEM>
 <ITEM>"prefix"/"préfixe" Text value corresponding to the "label prefix" of the cell. Returns single quotation mark (') if the cell contains left-aligned text, double quotation mark (") if the cell contains right-aligned text, caret (^) if the cell contains centered text, backslash (\) if the cell contains fill-aligned text, and empty text ("") if the cell contains anything else.</ITEM>
 <ITEM>"protect"/"protégé" 0 if the cell is not locked, and 1 if the cell is locked.</ITEM>
