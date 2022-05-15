@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -57,15 +57,18 @@
         <ITEM><X><T>Eclipse Collections</T><A>https://www.eclipse.org/collections/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>ORM</TITLE>
-        <ITEM><CLIST><TITLE><X><T>Hibernate</T><A>http://hibernate.org/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><CLIST><TITLE><X><T>Hibernate</T><A>https://hibernate.org/</A><L>en</L><F>HTML</F></X></TITLE>
           <ITEM><X><T>High-Performance Hibernate Tutorial</T><A>https://vladmihalcea.com/tutorials/hibernate/</A><L>en</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
         <ITEM><X><T>MyBatis</T><A>https://blog.mybatis.org/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Java parsers</TITLE>
+        <ITEM><X><T>JavaParser</T><A>http://javaparser.org</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Spoon</T><A>https://spoon.gforge.inria.fr/</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
       <ITEM><X><T>Guava</T><A>https://github.com/google/guava</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>ND4J</T><A>https://index.scala-lang.org/deeplearning4j/nd4j/nd4j-kafka</A><L>en</L><F>HTML</F></X>: N-Dimensional Arrays for Java</ITEM>
       <ITEM><X><T>jOOQ</T><A>https://www.jooq.org</A><L>en</L><F>HTML</F></X>: SQL helper</ITEM>
-      <ITEM><X><T>JavaParser</T><A>http://javaparser.org</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>JNA</T><A>https://github.com/java-native-access/jna</A><L>en</L><F>HTML</F></X>: Java Native Access</ITEM>
       <ITEM><X><T>Ehcache</T><A>https://www.ehcache.org/</A><L>en</L><F>HTML</F></X>: cache management</ITEM>
       <ITEM><X><T>jsoup</T><A>https://jsoup.org/</A><L>en</L><F>HTML</F></X>: HTML parser</ITEM>
@@ -120,6 +123,7 @@
     <ITEM><ARTICLE><X><T>Everything you need to know about OpenJDK’s move to Git and GitHub</T><ST>The move from Mercurial to Git provided an opportunity to consolidate the source code repositories.</ST><A>https://blogs.oracle.com/javamagazine/everything-you-need-to-know-about-openjdks-move-to-git-and-github</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ian</FIRSTNAME><LASTNAME>Darwin</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE><COMMENT>A short history of the revision control tools used for the JDK and how to build it today.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality="-1"><T>Java is criminally underhyped</T><ST>Recent computer science graduate Jackson Roberts never took a single class in Java. That’s just wrong, he says.</ST><A>https://blogs.oracle.com/javamagazine/java-is-criminally-underhyped</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jackson</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>9</DAY></DATE><COMMENT>Some Java proselytism bullshit.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The art of long-term support and what LTS means for the Java ecosystem</T><ST>Here’s what Java 17 has in common with Java 11 and Java 8.</ST><A>https://blogs.oracle.com/javamagazine/java-long-term-support-lts</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Donald</FIRSTNAME><LASTNAME>Smith</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>9</DAY></DATE><COMMENT>Some information about Java LTS releases.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X quality="-1"><T>Bruce Eckel on Java interfaces and sealed classes</T><ST>With the introduction of default and static methods in interfaces, Java lets you write method code in an interface that you might not want to be public.</ST><A>https://blogs.oracle.com/javamagazine/java-interface-sealed-class</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Eckel</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE><COMMENT>A description of interfaces and sealed class with little explanation.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Tutorials</TITLE>
       <ITEM><ARTICLE><X status="zombie"><T>Speaking the Java language without an accent</T><ST>Native fluency for nonnative programmers</ST><A>https://www.ibm.com/developerworks/library/j-noaccent/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Elliotte</FIRSTNAME><MIDDLENAME>Rusty</MIDDLENAME><LASTNAME>Harold</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>Some coding habits that C/C++ developers should modify in order to code in Java as everyone else.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>

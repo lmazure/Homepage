@@ -75,7 +75,7 @@ this cannot be used in a macro</DESC>
 }</CODESAMPLE>
 </ITEM>
 <ITEM><BLIST><TITLE>Header files</TITLE>
-<ITEM>ProLint will generate 1053 errors if the same include file is included with two differents paths<BR/>
+<ITEM>ProLint will generate 1053 errors if the same include file is included with two different paths<BR/>
 <U>example:</U> the source file contains (via the hierarchy of included files)
 <CODESAMPLE>#include "foo/bar.h"<BR/>
 #include "bar.h"</CODESAMPLE>
