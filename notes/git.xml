@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -64,6 +64,11 @@
     <DESC>Run verbosely, but progress is reported as usual on stderr.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git clone --config &lt;key&gt;=&lt;value&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git clone -c &lt;key&gt;=&lt;value&gt;</CODEROUTINE></TERM>
+    <DESC>Set a configuration variable in the created repository, after the repository is initialized, before the remote history is fetched or any files checked out.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git remote</CODEROUTINE></TERM>
     <DESC>List the upsteam and downstream repositories.</DESC>
   </ROW>
@@ -74,6 +79,11 @@
   <ROW>
     <TERM><CODEROUTINE>git remote add &lt;remotename&gt; &lt;url&gt;</CODEROUTINE></TERM>
     <DESC>Add a remote named &lt;remotename&gt; for the repository at &lt;url&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git remote remove &lt;remotename&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git remote rm &lt;remotename&gt;</CODEROUTINE></TERM>
+    <DESC>Remove the remote named &lt;remotename&gt;. All remote-tracking branches and configuration settings for the remote are removed.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git config --get remote.origin.url</CODEROUTINE></TERM>
@@ -90,6 +100,9 @@
       git fetch --depth 100</CODESAMPLE>
     Later on, when high bandwidth is available, get the whole repo with
     <CODESAMPLE>git fetch --unshallow</CODESAMPLE>
+  </ITEM>
+  <ITEM>Clone a directory with file paths/names too long for Windows.
+    <CODESAMPLE>git clone -c core.longpaths=true https://gitlab.com/foo/bar.git</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BR/>
@@ -764,18 +777,13 @@
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
-<BLIST><TITLE><CODEFILENAME>.gitignore</CODEFILENAME></TITLE>
-  <ITEM>It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.gitignore</CODEFILENAME> file of that directory.</ITEM>
-</BLIST>
+It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.gitignore</CODEFILENAME> file of that directory.<BR/>
 <BR/>
-<BLIST><TITLE><CODEFILENAME>.gitkeep</CODEFILENAME></TITLE>
-  <ITEM>In order to commit an empty directory, create a <CODEFILENAME>.gitignore</CODEFILENAME> file in it. This is not defined by Git, but it is a common usage.</ITEM>
-</BLIST>
+In order to commit an empty directory, create a <CODEFILENAME>.gitkeep</CODEFILENAME> file in it. This is not defined by Git, but it is a common usage.<BR/>
 <BR/>
-<BLIST><TITLE>To remove the last commit locally and on the remote repository (nobody should have pulled meanwhile)</TITLE>
-  <ITEM><CODEROUTINE>git reset --hard HEAD^</CODEROUTINE></ITEM>
-  <ITEM><CODEROUTINE>git push -f</CODEROUTINE></ITEM>
-</BLIST>
+To remove the last commit locally and on the remote repository (nobody should have pulled meanwhile)
+  <CODESAMPLE>git reset --hard HEAD^<BR/>
+  git push -f</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Changing the author of old commits</TITLE>
   <ITEM><CODEROUTINE>git rebase -i &lt;commit&gt;</CODEROUTINE> where &lt;commit&gt; is the commit before the first one to be edited. Use <CODEROUTINE>git rebase -i --root</CODEROUTINE> if the first commit must be edited.</ITEM>

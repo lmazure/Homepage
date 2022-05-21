@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -80,7 +80,8 @@ File
     <DESC>open a file</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="R"/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="R"/><BR/>
+      <CODEROUTINE>File: Open Recent…</CODEROUTINE></TERM>
     <DESC>open a recent file</DESC>
   </ROW>
   <ROW>
@@ -312,6 +313,10 @@ Folding
   <ROW>
     <TERM><CODEROUTINE>Sort Lines Descending</CODEROUTINE></TERM>
     <DESC>sort lines in decreasing order</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Delete Duplicate Lines</CODEROUTINE></TERM>
+    <DESC>delete duplicate lines</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="Up"/></TERM>
@@ -585,6 +590,10 @@ GitLens
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <KEY id="B"/><BR/>
       <CODEROUTINE>GitLens: Toggle File Blame</CODEROUTINE></TERM>
     <DESC>toggle the display (on the left) of the blaming for each code line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>GitLens: Toggle Line Blame</CODEROUTINE></TERM>
+    <DESC>toggle the display (at the right of the file line) of the blaming for the current line</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <MODIFIERKEY id="Shift"/><KEY id="B"/><BR/>

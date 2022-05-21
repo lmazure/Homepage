@@ -3,13 +3,17 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Chrome</TITLE>
 <PATH>notes/chrome.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <U>shortcuts</U> (<X><T>full list</T><A>https://support.google.com/chrome/answer/157179</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="N"/></TERM>
     <DESC>open a new window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="N"/></TERM>
+    <DESC>open a new window in incognito mode</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="T"/></TERM>
@@ -59,15 +63,6 @@
   </BLIST></ITEM>
   <ITEM>text fragment <CODEROUTINE>https://example.com#:~:text=illustrative%20examples</CODEROUTINE></ITEM>
 </BLIST>
-<BR/>
-<U>Extensions</U>
-<TABLE>
-  <ROW>
-    <CELL><X status="obsolete"><T>Popchrom</T><A>https://chrome.google.com/extensions/detail/iinhokidgfoomcighckbjmlcndbjmomp</A><L>en</L><F>HTML</F></X></CELL>
-    <CELL>auto-complete text fields by using a customized lookup table<BR/>
-      <I>broken on Chrome 7</I></CELL>
-  </ROW>
-</TABLE>
 </CONTENT>
 <X><T>links</T><A>../links/chrome.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
