@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Bash</TITLE>
 <PATH>notes/bash2.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>functions</B></U></TITLE>
 <ITEM>
@@ -28,6 +28,32 @@
     xse -window $win -display :0.0 $e "&lt;Key&gt;Return"
   </CODESAMPLE>
 </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>HereDoc</B></U></TITLE>
+  <ITEM>Syntax
+    <CODESAMPLE>[COMMAND] &lt;&lt;[-] 'DELIMITER'<BR/>
+      <TAB/>HERE-DOCUMENT<BR/>
+    DELIMITER</CODESAMPLE>
+    Example:
+    <CODESAMPLE>cat &lt;&lt; EOF<BR/>
+      The current working directory is: $PWD<BR/>
+      You are logged in as: $(whoami)<BR/>
+    EOF</CODESAMPLE>
+    ouputs
+    <CODESAMPLE>The current working directory is: /home/linuxize<BR/>
+      You are logged in as: linuxize</CODESAMPLE>
+  </ITEM>
+  <ITEM>Enclose the delimiter in single or double quotes to disable parameter expansion and command substitution
+    <CODESAMPLE>cat &lt;&lt; "EOF"<BR/>
+      The current working directory is: $PWD<BR/>
+      You are logged in as: $(whoami)<BR/>
+    EOF</CODESAMPLE>
+    ouputs
+    <CODESAMPLE>The current working directory is: $PWD<BR/>
+      You are logged in as: $(whoami)</CODESAMPLE>
+  </ITEM>
+  <ITEM>Using <CODEROUTINE>&lt;&lt;-</CODEROUTINE> supresses the tabs at the beginning of the lines (useful when the HereDoc is indented in the bash source)
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>misc.</B></U></TITLE>
   <ITEM>

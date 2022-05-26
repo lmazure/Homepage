@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -83,6 +83,11 @@ File
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="R"/><BR/>
       <CODEROUTINE>File: Open Recent…</CODEROUTINE></TERM>
     <DESC>open a recent file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="R"/><BR/>
+      <CODEROUTINE>File: Reveal in File Explorer</CODEROUTINE></TERM>
+    <DESC>open an OS file explrer with the file being selecter</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num +"/></TERM>

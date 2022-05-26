@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -38,28 +38,8 @@
         <ITEM><X><T>git-hyper-blame</T><A>https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/git-hyper-blame.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>SourceTree</T><A>https://www.sourcetreeapp.com</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Gogs</T><A>https://gogs.io/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Gitea</T><A>https://gitea.io/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/git.html</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><BLIST><TITLE>Repositories</TITLE>
-          <ITEM><CLIST><TITLE><ANCHOR>gitlab</ANCHOR><X><T>GitLab</T><A>https://about.gitlab.com/</A><L>en</L><F>HTML</F></X></TITLE>
-            <ITEM><X><T>Forum</T><A>https://forum.gitlab.com/</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>reddit</T><A>https://www.reddit.com/r/gitlab/</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>keyboard shortcuts</T><A>https://docs.gitlab.com/ee/user/shortcuts.html</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>quick actions</T><A>https://docs.gitlab.com/ee/user/project/quick_actions.html</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>GraphiQL</T><A>https://gitlab.com/-/graphql-explorer</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>status</T><A>https://status.gitlab.com/</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>Twitter status</T><A>https://twitter.com/gitlabstatus</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>source code</T><A>https://gitlab.com/gitlab-org/gitlab</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>Java lib</T><A>https://github.com/gitlab4j/gitlab4j-api</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>Python lib</T><A>https://github.com/python-gitlab/python-gitlab</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>Gitlabber</T><A>https://github.com/ezbz/gitlabber</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>personal notes</T><A>../notes/gitlab.html</A><L>en</L><F>HTML</F></X></ITEM>
-          </CLIST></ITEM>
-          <ITEM><X><T>Bitbucket</T><A>https://bitbucket.org</A><L>en</L><F>HTML</F></X></ITEM>
-          <ITEM><CLIST><TITLE><X><T>GitHub</T><A>https://github.com</A><L>en</L><F>HTML</F></X></TITLE>
-            <ITEM><X><T>status</T><A>https://www.githubstatus.com/</A><L>en</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>Twitter status</T><A>https://twitter.com/githubstatus</A><L>en</L><F>HTML</F></X></ITEM>
-          </CLIST></ITEM>
-        </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><X status="obsolete"><T>Aegis</T><A>https://sourceforge.net/projects/aegis/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X status="obsolete"><T>Arch</T><A>http://www.gnu.org/software/gnu-arch/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -101,6 +81,28 @@
       <ITEM><X><T>tmake</T><A>http://tmake.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Ant</T><A>https://ant.apache.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Maven</T><A>https://maven.apache.org/</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Dev platforms</TITLE>
+      <ITEM><BLIST><TITLE><ANCHOR>gitlab</ANCHOR><X><T>GitLab</T><A>https://about.gitlab.com/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>Forum</T><A>https://forum.gitlab.com/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>reddit</T><A>https://www.reddit.com/r/gitlab/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>keyboard shortcuts</T><A>https://docs.gitlab.com/ee/user/shortcuts.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>quick actions</T><A>https://docs.gitlab.com/ee/user/project/quick_actions.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>GraphiQL</T><A>https://gitlab.com/-/graphql-explorer</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>status</T><A>https://status.gitlab.com/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Twitter status</T><A>https://twitter.com/gitlabstatus</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>source code</T><A>https://gitlab.com/gitlab-org/gitlab</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Java lib</T><A>https://github.com/gitlab4j/gitlab4j-api</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Python lib</T><A>https://github.com/python-gitlab/python-gitlab</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Gitlabber</T><A>https://github.com/ezbz/gitlabber</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Congregate</T><A>https://gitlab.com/gitlab-org/professional-services-automation/tools/migration/congregate</A><L>en</L><F>HTML</F></X>: tool to migrate data from other SCMs into GotLab</ITEM>
+        <ITEM><X><T>personal notes</T><A>../notes/gitlab.html</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
+      <ITEM><X><T>Bitbucket</T><A>https://bitbucket.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><BLIST><TITLE><X><T>GitHub</T><A>https://github.com</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>status</T><A>https://www.githubstatus.com/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Twitter status</T><A>https://twitter.com/githubstatus</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Compilers</TITLE>
       <ITEM><CLIST><TITLE><ANCHOR>gcc</ANCHOR><X><T>gcc</T><A>http://gcc.gnu.org</A><L>en</L><F>HTML</F></X></TITLE>
@@ -286,6 +288,7 @@
     <ITEM><ARTICLE><X><T>Random Numbers with LFSR (Linear Feedback Shift Register) - Computerphile</T><A>https://www.youtube.com/watch?v=Ks1pw1X22y4</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Code Health: Now You're Thinking With Functions</T><A>https://testing.googleblog.com/2022/02/code-health-now-youre-thinking-with.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Cathal</FIRSTNAME><LASTNAME>Weakliam</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT>The basic: using higher-order functions.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Hit ’em High, Hit ’em Low:</T><ST>Regression Testing and the Saff Squeeze</ST><A>https://medium.com/@kentbeck_7670/hit-em-high-hit-em-low-ffe1991ee8d</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE><COMMENT>Digging out a bug in a failing test by recursively diving in the subroutines, inlining them, and removing code not related to the bug.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>The “Dark Yellow Problem” in Design System Color Palettes</T><A>https://medium.com/@lodestar-design/the-dark-yellow-problem-in-design-system-color-palettes-a0db1eedc99d</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Lodestar Design</GIVENNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Hackable Projects</TITLE>
       <ITEM><ARTICLE><X><T>Hackable Projects - Pillar 1: Code Health</T><A>https://testing.googleblog.com/2016/08/hackable-projects.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT>A list of miscellaneous good coding practices.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE predecessor="https://testing.googleblog.com/2016/08/hackable-projects.html"><X><T>Hackable Projects - Pillar 2: Debuggability</T><A>https://testing.googleblog.com/2016/10/hackable-projects-pillar-2-debuggability.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrik</FIRSTNAME><LASTNAME>Höglund</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>Run test locally, debugging mobile apps, proper logging, monitoring, testing small parts.</COMMENT></ARTICLE></ITEM>
@@ -387,6 +390,7 @@
         <ITEM><ARTICLE><X><T>Upcoming changes to user limits on Free tier of GitLab SaaS</T><A>https://about.gitlab.com/blog/2022/03/24/efficient-free-tier/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sid</FIRSTNAME><LASTNAME>Sijbrandij</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE><COMMENT>GitLab continues to remove free features.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>GitLab Heroes unmasked: How a difficult start in coding led to being a valued contributor</T><A>https://about.gitlab.com/blog/2022/04/26/gitlab-heroes-unmasked-lessons-from-early-mistakes/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Rachel</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Niklas</FIRSTNAME><LASTNAME>van Schrick</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Niklas</FIRSTNAME><LASTNAME>van Schrick</LASTNAME></AUTHOR> describes how he started to contribute to GitLab. There is little information here.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Amazon Linux 2 support and distro-specific packages for GitLab</T><A>https://about.gitlab.com/blog/2022/05/02/amazon-linux-2-support-and-distro-specific-packages/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Darwin</FIRSTNAME><LASTNAME>Sanoy</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>2</DAY></DATE><COMMENT>GitLab 15.0 will be officialy supported on Amazon Linux 2, so they must manage the transition from the current kludge that installs EL7 packages.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>GitLab Heroes Unmasked: How I am elevating my company using GitLab</T><A>https://about.gitlab.com/blog/2022/05/12/gitlab-heroes-unmasked-elevating-my-company-using-gitlab/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Lee</FIRSTNAME><LASTNAME>Tickett</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE><COMMENT>A company explains how they replace their current tools by GitLab.</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR>'s presentation</TITLE>
           <ITEM><ARTICLE><X><T>GITLAB - 1. PRÉSENTATION ET PRINCIPES</T><A>https://www.youtube.com/watch?v=aQl-IKLm_9A</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE><COMMENT>An overview of GitLab.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>GITLAB - 2. DÉPÔT GIT</T><A>https://www.youtube.com/watch?v=ySLhc3qdGEk</A><L>fr</L><F>MP4</F><DURATION><MINUTE>23</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>The Git repository.</COMMENT></ARTICLE></ITEM>
