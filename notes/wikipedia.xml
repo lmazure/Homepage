@@ -6,149 +6,148 @@
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>format</B></U></TITLE>
-<ITEM>sections
-<DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>== section ==</CODEROUTINE></TERM><DESC>section level 1</DESC></ROW>
-<ROW><TERM><CODEROUTINE>=== subsection ===</CODEROUTINE></TERM><DESC>section level 2</DESC></ROW>
-<ROW><TERM><CODEROUTINE>==== sub-subsection ====</CODEROUTINE></TERM><DESC>section level 3</DESC></ROW>
-</DEFINITIONTABLE>
-</ITEM>
-<ITEM>semantic
-<DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>''text''</CODEROUTINE></TERM><DESC>emphasize (italic)</DESC></ROW>
-<ROW><TERM><CODEROUTINE>'''text'''</CODEROUTINE></TERM><DESC>emphasize strongly (bold)</DESC></ROW>
-<ROW><TERM><CODEROUTINE>''''text''''</CODEROUTINE></TERM><DESC>emphasize very strongly (bold italic)</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;code&gt;text&lt;/code&gt;</CODEROUTINE></TERM><DESC>computer code</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;del&gt;text&lt;/del&gt;</CODEROUTINE></TERM><DESC>deleted text</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;ins&gt;text&lt;/ins&gt;</CODEROUTINE></TERM><DESC>inserted text</DESC></ROW>
-</DEFINITIONTABLE>
-</ITEM>
-<ITEM>format (prefer semantic over format)
-<DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>&lt;nowiki&gt;text&lt;/nowiki&gt;</CODEROUTINE></TERM><DESC>escape the Wiki markup (including the tags which are also HTML tags)<BR/>only the HTML character references are converted (use &amp;amp;rarr; to get &amp;rarr;)<BR/>newlines and multiple spaces are ignored</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;pre&gt;text&lt;/pre&gt;</CODEROUTINE></TERM><DESC>escape the Wiki markup<BR/>only the HTML character references are converted (use &amp;amp;rarr; to get &amp;rarr;)<BR/>text format is preserved</DESC></ROW>
-<ROW><TERM><CODEROUTINE> text</CODEROUTINE></TERM><DESC>(leading space)<BR/>escape the Wiki markup<BR/>only the HTML character references are converted (use &amp;amp;rarr; to get &amp;rarr;)<BR/>text format is preserved</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;i&gt;text&lt;/i&gt;</CODEROUTINE></TERM><DESC>italics</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;b&gt;text&lt;/b&gt;</CODEROUTINE></TERM><DESC>bold</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;u&gt;text&lt;/u&gt;</CODEROUTINE></TERM><DESC>underline</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;s&gt;text&lt;/s&gt;</CODEROUTINE></TERM><DESC>strike through</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;tt&gt;text&lt;/tt&gt;</CODEROUTINE></TERM><DESC>monospace text</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;center&gt;text&lt;/center&gt;</CODEROUTINE></TERM><DESC>centered text</DESC></ROW>
-<ROW><TERM><CODEROUTINE>:text</CODEROUTINE></TERM><DESC>indent text</DESC></ROW>
-<ROW><TERM><CODEROUTINE>::text</CODEROUTINE></TERM><DESC>indent more text</DESC></ROW>
-<ROW><TERM><CODEROUTINE> text</CODEROUTINE></TERM><DESC>if a line starts with a space, it will be formatted exactly as typed, in a fixed-width font, lines will not wrap</DESC></ROW>
-<ROW><TERM><CODEROUTINE>----</CODEROUTINE></TERM><DESC>horizontal line</DESC></ROW>
-</DEFINITIONTABLE>
-</ITEM>
-<ITEM>lists
-<DEFINITIONTABLE>
-<ROW><TERM><CODESAMPLE>* item 1<BR/>
-** item 1.1<BR/>
-** item 1.2<BR/>
-* item 2<BR/>
-** item 2.1<BR/></CODESAMPLE></TERM><DESC>bulleted list</DESC></ROW>
-<ROW><TERM><CODESAMPLE># item 1<BR/>
-## item 1.1<BR/>
-## item 1.2<BR/>
-# item 2<BR/>
-## item 2.1<BR/></CODESAMPLE></TERM><DESC>numbered list</DESC></ROW>
-<ROW><TERM><CODESAMPLE>* item 1<BR/>
-*# item 1.1<BR/>
-*# item 1.2<BR/>
-*#* item 1.2.3<BR/>
-*#* item 1.2.3<BR/>
-*#* item 1.2.3<BR/>
-* item 2<BR/>
-** item 2.1<BR/></CODESAMPLE></TERM><DESC>mixed list</DESC></ROW>
-</DEFINITIONTABLE>
-</ITEM>
-<ITEM>links<BR/>
-<DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>[[foobar]]</CODEROUTINE></TERM><DESC>link toward page <I>foobar</I></DESC></ROW>
-<ROW><TERM><CODEROUTINE>[[foobar|title]]</CODEROUTINE></TERM><DESC>link toward page <I>foobar</I> with the text of the link being <I>title</I></DESC></ROW>
-<ROW><TERM><CODEROUTINE>[[foobar#quux]]</CODEROUTINE></TERM><DESC>link toward anchor <I>quux</I> in page <I>foobar</I></DESC></ROW>
-<ROW><TERM><CODEROUTINE>[[#quux]]</CODEROUTINE></TERM><DESC>link toward anchor <I>quux</I> in the current page</DESC></ROW>
-<ROW><TERM><CODEROUTINE>&lt;span id="kloox"&gt;… &lt;/span&gt;</CODEROUTINE></TERM><DESC>define anchor <I>kloox</I></DESC></ROW>
-<ROW><TERM><CODEROUTINE>[http://example.com an example]</CODEROUTINE></TERM><DESC>external link as a named link</DESC></ROW>
-<ROW><TERM><CODEROUTINE>http://example.com</CODEROUTINE></TERM><DESC>external link as a unnamed link (only used within article
-body for footnotes)</DESC></ROW>
-<ROW><TERM><CODEROUTINE>[http://example.com]</CODEROUTINE></TERM><DESC>external link as a bare URL (should be avoided)</DESC></ROW>
-<ROW><TERM><CODEROUTINE>[[Media:example.pdf]]</CODEROUTINE></TERM><DESC>link toward file <I>foobar.pdf</I></DESC></ROW>
-<ROW><TERM><CODEROUTINE>[[Media:example.pdf|title]]</CODEROUTINE></TERM><DESC>link toward file <I>foobar.pdf</I> with the text of the link being <I>title</I></DESC></ROW>
-</DEFINITIONTABLE>
-</ITEM>
-<ITEM>tables<BR/>
-The classical HTML tags <CODEROUTINE>&lt;table&gt;</CODEROUTINE>, <CODEROUTINE>&lt;tr&gt;</CODEROUTINE>, <CODEROUTINE>&lt;th&gt;</CODEROUTINE>, and <CODEROUTINE>&lt;td&gt;</CODEROUTINE> can be used.
-<CODESAMPLE>
-&lt;table class="wikitable"&gt;<BR/>
-&lt;tr&gt;&lt;th&gt;Numéro&lt;/th&gt;&lt;th&gt;Intitulé&lt;/th&gt;&lt;/tr&gt;<BR/>
-&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Introduction and Overview&lt;/td&gt;&lt;/tr&gt;<BR/>
-&lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Conformance&lt;/td&gt;&lt;/tr&gt;<BR/>
-&lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Information Object Definitions&lt;/td&gt;&lt;/tr&gt;<BR/>
-&lt;/table&gt;
-</CODESAMPLE>
-It is possible to use the attribute <CODEROUTINE>border</CODEROUTINE>
-<CODESAMPLE>
-&lt;table border="1"&gt;<BR/>
-…<BR/>
-&lt;/table&gt;
-</CODESAMPLE>
-It is also possible to use the attributes <CODEROUTINE>colspan</CODEROUTINE> and <CODEROUTINE>rowspan</CODEROUTINE> for the cells
-<CODESAMPLE>
-…<BR/>
-&lt;td rowspan=4&gt;foobar&lt;/td&gt;<BR/>
-…
-</CODESAMPLE>
-</ITEM>
-<ITEM>redirection
-<DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>#REDIRECT [[Other Page]]</CODEROUTINE></TERM><DESC>automatically redirect toward page <CODEROUTINE>Other Page</CODEROUTINE></DESC></ROW>
-</DEFINITIONTABLE>
-</ITEM>
-<ITEM>shortcuts
-<DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>~~~</CODEROUTINE></TERM><DESC>insert user name</DESC></ROW>
-<ROW><TERM><CODEROUTINE>~~~~</CODEROUTINE></TERM><DESC>insert user name and current date/time</DESC></ROW>
-<ROW><TERM><CODEROUTINE>~~~~~</CODEROUTINE></TERM><DESC>insert current date/time</DESC></ROW>
-</DEFINITIONTABLE>
-</ITEM>
+  <ITEM>sections
+    <DEFINITIONTABLE>
+      <ROW><TERM><CODEROUTINE>== section ==</CODEROUTINE></TERM><DESC>section level 1</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>=== subsection ===</CODEROUTINE></TERM><DESC>section level 2</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>==== sub-subsection ====</CODEROUTINE></TERM><DESC>section level 3</DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>semantic
+    <DEFINITIONTABLE>
+      <ROW><TERM><CODEROUTINE>''text''</CODEROUTINE></TERM><DESC>emphasize (italic)</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>'''text'''</CODEROUTINE></TERM><DESC>emphasize strongly (bold)</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>''''text''''</CODEROUTINE></TERM><DESC>emphasize very strongly (bold italic)</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;code&gt;text&lt;/code&gt;</CODEROUTINE></TERM><DESC>computer code</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;del&gt;text&lt;/del&gt;</CODEROUTINE></TERM><DESC>deleted text</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;ins&gt;text&lt;/ins&gt;</CODEROUTINE></TERM><DESC>inserted text</DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>format (prefer semantic over format)
+    <DEFINITIONTABLE>
+      <ROW><TERM><CODEROUTINE>&lt;nowiki&gt;text&lt;/nowiki&gt;</CODEROUTINE></TERM><DESC>escape the Wiki markup (including the tags which are also HTML tags)<BR/>only the HTML character references are converted (use &amp;amp;rarr; to get &amp;rarr;)<BR/>newlines and multiple spaces are ignored</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;pre&gt;text&lt;/pre&gt;</CODEROUTINE></TERM><DESC>escape the Wiki markup<BR/>only the HTML character references are converted (use &amp;amp;rarr; to get &amp;rarr;)<BR/>text format is preserved</DESC></ROW>
+      <ROW><TERM><CODEROUTINE> text</CODEROUTINE></TERM><DESC>(leading space)<BR/>escape the Wiki markup<BR/>only the HTML character references are converted (use &amp;amp;rarr; to get &amp;rarr;)<BR/>text format is preserved</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;i&gt;text&lt;/i&gt;</CODEROUTINE></TERM><DESC>italics</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;b&gt;text&lt;/b&gt;</CODEROUTINE></TERM><DESC>bold</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;u&gt;text&lt;/u&gt;</CODEROUTINE></TERM><DESC>underline</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;s&gt;text&lt;/s&gt;</CODEROUTINE></TERM><DESC>strike through</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;tt&gt;text&lt;/tt&gt;</CODEROUTINE></TERM><DESC>monospace text</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;center&gt;text&lt;/center&gt;</CODEROUTINE></TERM><DESC>centered text</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>:text</CODEROUTINE></TERM><DESC>indent text</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>::text</CODEROUTINE></TERM><DESC>indent more text</DESC></ROW>
+      <ROW><TERM><CODEROUTINE> text</CODEROUTINE></TERM><DESC>if a line starts with a space, it will be formatted exactly as typed, in a fixed-width font, lines will not wrap</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>----</CODEROUTINE></TERM><DESC>horizontal line</DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>lists
+    <DEFINITIONTABLE>
+      <ROW><TERM><CODESAMPLE>* item 1<BR/>
+      ** item 1.1<BR/>
+      ** item 1.2<BR/>
+      * item 2<BR/>
+      ** item 2.1<BR/></CODESAMPLE></TERM><DESC>bulleted list</DESC></ROW>
+      <ROW><TERM><CODESAMPLE># item 1<BR/>
+      ## item 1.1<BR/>
+      ## item 1.2<BR/>
+      # item 2<BR/>
+      ## item 2.1<BR/></CODESAMPLE></TERM><DESC>numbered list</DESC></ROW>
+      <ROW><TERM><CODESAMPLE>* item 1<BR/>
+      *# item 1.1<BR/>
+      *# item 1.2<BR/>
+      *#* item 1.2.3<BR/>
+      *#* item 1.2.3<BR/>
+      *#* item 1.2.3<BR/>
+      * item 2<BR/>
+      ** item 2.1<BR/></CODESAMPLE></TERM><DESC>mixed list</DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>links<BR/>
+    <DEFINITIONTABLE>
+      <ROW><TERM><CODEROUTINE>[[foobar]]</CODEROUTINE></TERM><DESC>link toward page <I>foobar</I></DESC></ROW>
+      <ROW><TERM><CODEROUTINE>[[foobar|title]]</CODEROUTINE></TERM><DESC>link toward page <I>foobar</I> with the text of the link being <I>title</I></DESC></ROW>
+      <ROW><TERM><CODEROUTINE>[[foobar#quux]]</CODEROUTINE></TERM><DESC>link toward anchor <I>quux</I> in page <I>foobar</I></DESC></ROW>
+      <ROW><TERM><CODEROUTINE>[[#quux]]</CODEROUTINE></TERM><DESC>link toward anchor <I>quux</I> in the current page</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;span id="kloox"&gt;… &lt;/span&gt;</CODEROUTINE></TERM><DESC>define anchor <I>kloox</I></DESC></ROW>
+      <ROW><TERM><CODEROUTINE>[http://example.com an example]</CODEROUTINE></TERM><DESC>external link as a named link</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>http://example.com</CODEROUTINE></TERM><DESC>external link as an unnamed link (only used within article body for footnotes)</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>[http://example.com]</CODEROUTINE></TERM><DESC>external link as a bare URL (should be avoided)</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>[[Media:example.pdf]]</CODEROUTINE></TERM><DESC>link toward file <I>foobar.pdf</I></DESC></ROW>
+      <ROW><TERM><CODEROUTINE>[[Media:example.pdf|title]]</CODEROUTINE></TERM><DESC>link toward file <I>foobar.pdf</I> with the text of the link being <I>title</I></DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>tables<BR/>
+    The classical HTML tags <CODEROUTINE>&lt;table&gt;</CODEROUTINE>, <CODEROUTINE>&lt;tr&gt;</CODEROUTINE>, <CODEROUTINE>&lt;th&gt;</CODEROUTINE>, and <CODEROUTINE>&lt;td&gt;</CODEROUTINE> can be used.
+    <CODESAMPLE>
+      &lt;table class="wikitable"&gt;<BR/>
+      &lt;tr&gt;&lt;th&gt;Numéro&lt;/th&gt;&lt;th&gt;Intitulé&lt;/th&gt;&lt;/tr&gt;<BR/>
+      &lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;td&gt;Introduction and Overview&lt;/td&gt;&lt;/tr&gt;<BR/>
+      &lt;tr&gt;&lt;td&gt;2&lt;/td&gt;&lt;td&gt;Conformance&lt;/td&gt;&lt;/tr&gt;<BR/>
+      &lt;tr&gt;&lt;td&gt;3&lt;/td&gt;&lt;td&gt;Information Object Definitions&lt;/td&gt;&lt;/tr&gt;<BR/>
+      &lt;/table&gt;
+    </CODESAMPLE>
+    It is possible to use the attribute <CODEROUTINE>border</CODEROUTINE>
+    <CODESAMPLE>
+      &lt;table border="1"&gt;<BR/>
+      …<BR/>
+      &lt;/table&gt;
+    </CODESAMPLE>
+    It is also possible to use the attributes <CODEROUTINE>colspan</CODEROUTINE> and <CODEROUTINE>rowspan</CODEROUTINE> for the cells
+    <CODESAMPLE>
+      …<BR/>
+      &lt;td rowspan=4&gt;foobar&lt;/td&gt;<BR/>
+      …
+    </CODESAMPLE>
+  </ITEM>
+  <ITEM>redirection
+    <DEFINITIONTABLE>
+      <ROW><TERM><CODEROUTINE>#REDIRECT [[Other Page]]</CODEROUTINE></TERM><DESC>automatically redirect toward page <CODEROUTINE>Other Page</CODEROUTINE></DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>shortcuts
+    <DEFINITIONTABLE>
+      <ROW><TERM><CODEROUTINE>~~~</CODEROUTINE></TERM><DESC>insert user name</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>~~~~</CODEROUTINE></TERM><DESC>insert user name and current date/time</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>~~~~~</CODEROUTINE></TERM><DESC>insert current date/time</DESC></ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
 </BLIST>
 <U><B>Category:</B></U><BR/>
-<CODEROUTINE>[[Category:foobar]]</CODEROUTINE> indicates that a page is in the category <CODEROUTINE>foobar</CODEROUTINE>. A category name can contain a space.<BR/>
-A page can be in several categories.<BR/>
-<CODEROUTINE>[[Category:foobar|key]]</CODEROUTINE> will sort the page on the category page according to the <CODEROUTINE>key</CODEROUTINE> sorting key.<BR/>
-The category page is <CODEROUTINE>Category:foobar</CODEROUTINE>.<BR/>
-Adding a category to a category page makes it a sub-category.<BR/>
-A category can he hidden by adding <CODEROUTINE>__HIDDENCAT__</CODEROUTINE> on the category page.<BR/>
-Use the <CODEROUTINE>[[:category:foobar]]</CODEROUTINE> and <CODEROUTINE>[[:category:foobar|text]]</CODEROUTINE> to point toward a category page.<BR/>
+  <CODEROUTINE>[[Category:foobar]]</CODEROUTINE> indicates that a page is in the category <CODEROUTINE>foobar</CODEROUTINE>. A category name can contain a space.<BR/>
+  A page can be in several categories.<BR/>
+  <CODEROUTINE>[[Category:foobar|key]]</CODEROUTINE> will sort the page on the category page according to the <CODEROUTINE>key</CODEROUTINE> sorting key.<BR/>
+  The category page is <CODEROUTINE>Category:foobar</CODEROUTINE>.<BR/>
+  Adding a category to a category page makes it a sub-category.<BR/>
+  A category can he hidden by adding <CODEROUTINE>__HIDDENCAT__</CODEROUTINE> on the category page.<BR/>
+  Use the <CODEROUTINE>[[:category:foobar]]</CODEROUTINE> and <CODEROUTINE>[[:category:foobar|text]]</CODEROUTINE> to point toward a category page.<BR/>
 <BR/>
 <U><B>Templates for fr.wikipedia.org:</B></U>
-<DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>{{homonymie}}</CODEROUTINE></TERM><DESC>homonymy</DESC></ROW>
-<ROW><TERM><CODEROUTINE>{{sigles n lettres}}</CODEROUTINE></TERM><DESC>add a table pointing toward acronym summary pages</DESC></ROW>
-<ROW><TERM><CODEROUTINE>{{ébauche}}</CODEROUTINE></TERM><DESC>stub page</DESC></ROW>
-</DEFINITIONTABLE><BR/>
+  <DEFINITIONTABLE>
+    <ROW><TERM><CODEROUTINE>{{homonymie}}</CODEROUTINE></TERM><DESC>homonymy</DESC></ROW>
+    <ROW><TERM><CODEROUTINE>{{sigles n lettres}}</CODEROUTINE></TERM><DESC>add a table pointing toward acronym summary pages</DESC></ROW>
+    <ROW><TERM><CODEROUTINE>{{ébauche}}</CODEROUTINE></TERM><DESC>stub page</DESC></ROW>
+  </DEFINITIONTABLE><BR/>
 <U><B>Counter:</B></U><BR/>
-Use http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=<I>login</I>&amp;dbname=<I>wiki</I><BR/>
-for example <X><T>http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=Kolmigabrouil&amp;dbname=frwiki_p</T><A>http://tools.wikimedia.de/~interiot/cgi-bin/count_edits?user=Kolmigabrouil&amp;dbname=frwiki_p</A><L>en</L><F>HTML</F></X><BR/>
-<BLIST><TITLE>My accounts:</TITLE>
-  <ITEM><BLIST><TITLE>French</TITLE>
-    <ITEM><X><T>Wikipédia</T><A>https://fr.wikipedia.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
-      <X><T>contrib</T><A>https://fr.wikipedia.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Wikiquote</T><A>http://fr.wikiquote.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
-      <X><T>contrib</T><A>http://fr.wikiquote.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Wiktionnaire</T><A>http://fr.wiktionary.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
-      <X><T>contrib</T><A>http://fr.wiktionary.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Wikisource</T><A>http://fr.wikisource.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
-      <X><T>contrib</T><A>http://fr.wikisource.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
-  </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>English</TITLE>
-    <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
-      <X><T>contrib</T><A>https://en.wikipedia.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Wikiquote</T><A>http://en.wikiquote.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
-      <X><T>contrib</T><A>http://en.wikiquote.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
-  </BLIST></ITEM>
-</BLIST>
+  Use <X><T>https://xtools.wmflabs.org/autoedits/</T><A>https://xtools.wmflabs.org/autoedits/</A><L>en</L><F>HTML</F></X><BR/>
+  for example <X><T>https://xtools.wmflabs.org/autoedits/fr.wikipedia.org/Kolmigabrouil</T><A>https://xtools.wmflabs.org/autoedits/fr.wikipedia.org/Kolmigabrouil</A><L>en</L><F>HTML</F></X><BR/>
+  <BLIST><TITLE>My accounts:</TITLE>
+    <ITEM><BLIST><TITLE>French</TITLE>
+      <ITEM><X><T>Wikipédia</T><A>https://fr.wikipedia.org/wiki/Utilisateur:Kolmigabrouil</A><L>fr</L><F>HTML</F></X>:
+        <X><T>contrib</T><A>https://fr.wikipedia.org/wiki/Special:Contributions/Kolmigabrouil</A><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Wikiquote</T><A>https://fr.wikiquote.org/wiki/Utilisateur:Kolmigabrouil</A><L>fr</L><F>HTML</F></X>:
+        <X><T>contrib</T><A>https://fr.wikiquote.org/wiki/Special:Contributions/Kolmigabrouil</A><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Wiktionnaire</T><A>https://fr.wiktionary.org/wiki/Utilisateur:Kolmigabrouil</A><L>fr</L><F>HTML</F></X>:
+        <X><T>contrib</T><A>https://fr.wiktionary.org/wiki/Special:Contributions/Kolmigabrouil</A><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Wikisource</T><A>https://fr.wikisource.org/wiki/Utilisateur:Kolmigabrouil</A><L>fr</L><F>HTML</F></X>:
+        <X><T>contrib</T><A>https://fr.wikisource.org/wiki/Special:Contributions/Kolmigabrouil</A><L>fr</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>English</TITLE>
+      <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
+        <X><T>contrib</T><A>https://en.wikipedia.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Wikiquote</T><A>https://en.wikiquote.org/wiki/Utilisateur:Kolmigabrouil</A><L>en</L><F>HTML</F></X>:
+        <X><T>contrib</T><A>https://en.wikiquote.org/wiki/Special:Contributions/Kolmigabrouil</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+  </BLIST>
 </CONTENT>
 <X><T>reference</T><A>https://en.wikipedia.org/wiki/Wikipedia:How_to_edit_a_page</A><L>en</L><F>HTML</F></X>
 </PAGE>
