@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unit testing</TITLE>
 <PATH>links/unittest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -11,9 +11,11 @@
       <ITEM><X><T>The Art Of Unit Testing</T><A>https://www.artofunittesting.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Wikipedia list</T><A>https://en.wikipedia.org/wiki/List_of_unit_testing_frameworks</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE>Java</TITLE>
-        <ITEM><X><T>JUnit</T><A>https://junit.org</A><L>en</L><F>HTML</F></X>:
-          <X><T>JUNit 4 FAQ</T><A>https://junit.org/junit4/faq.html</A><L>en</L><F>HTML</F></X>,
-          <X status="obsolete"><T>GuiceBerry</T><A>https://github.com/zorzella/guiceberry</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><CLIST><TITLE><X><T>JUnit</T><A>https://junit.org</A><L>en</L><F>HTML</F></X></TITLE>
+          <ITEM><X><T>JUNit 4 FAQ</T><A>https://junit.org/junit4/faq.html</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X status="obsolete"><T>GuiceBerry</T><A>https://github.com/zorzella/guiceberry</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>JUnit 5 User Guide</T><A>https://junit.org/junit5/docs/current/user-guide/</A><L>en</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
         <ITEM><X><T>TestNG</T><A>https://testng.org</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Agitar</T><A>http://www.agitar.com</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
