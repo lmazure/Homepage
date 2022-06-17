@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>TypeScript</TITLE>
 <PATH>links/typescript.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -82,6 +82,7 @@
       <ITEM><ARTICLE><X><T>Announcing TypeScript 4.6 Beta</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-6-beta/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE><COMMENT>Code is now allowed in constructors before calling <CODEROUTINE>super()</CODEROUTINE>, improved checking for recursive types, and other technical improvements.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 4.6 RC</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-6-rc/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE><COMMENT>The same as the Beta, two features forgotten in Beta release notes are described here: detection of a type discriminant in a destructured parameter, and support of ES2022 as a target.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Announcing TypeScript 4.6</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-6/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>A react-jsx improvement forgotten in the two previous release notes and a quick fix for JSDoc incorrect parameter names was added in the RC.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Announcing TypeScript 4.7</T><A>https://devblogs.microsoft.com/typescript/announcing-typescript-4-7/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Daniel</FIRSTNAME><LASTNAME>Rosenwasser</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE><COMMENT>ECMAScript Module support in Node.js is back, module detection can be configured, improved type narrowing in some cases, improved inference of funtion types, covariant and contravariant optional annotations…</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>

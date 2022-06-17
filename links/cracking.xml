@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -173,6 +173,7 @@
         <ITEM><ARTICLE><X><T>What's Up With Group Messaging? - Computerphile</T><A>https://www.youtube.com/watch?v=Q0_lcKrUdWg</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE><COMMENT>Currently, the security is weaker for group messaging.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How Password Managers Work - Computerphile</T><A>https://www.youtube.com/watch?v=w68BBPDAWr8</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Chacha Cipher - Computerphile</T><A>https://www.youtube.com/watch?v=UeIpq-C-GSA</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>44</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>19</DAY></DATE><COMMENT>A presentation of the ChaCha cipher.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Breaking RSA - Computerphile</T><A>https://www.youtube.com/watch?v=-ShwJqAalOk</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>10</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Hanno</FIRSTNAME><LASTNAME>Böck</LASTNAME></AUTHOR> is using Fermat's factorization method to break RSA keys when the two primes are too close.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>PBS Infinite Series</TITLE>
         <ITEM><ARTICLE><X><T>(Almost) Unbreakable Crypto | Infinite Series</T><A>https://www.youtube.com/watch?v=NOs34_-eREk</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>28</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Gabe</FIRSTNAME><LASTNAME>Perez-Giz</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE><COMMENT>A basic non-technical introduction to symmetric encryption and AES.</COMMENT></ARTICLE></ITEM>
@@ -320,7 +321,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Using Google</TITLE>
         <ITEM><ARTICLE><X status="dead"><T>Google Your Site For Security Vulnerabilities</T><A>http://www.onlamp.com/pub/a/security/2004/10/07/googling_for_vulnerabilities.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nitesh</FIRSTNAME><LASTNAME>Dhanjani</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>Using Google to find security holes on Web servers.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X status="dead"><T>Bulletproof your organization against Google hacking: Assess your vulnerability to these ten simple security searches</T><A>http://downloads.techrepublic.com.com/download.aspx?docid=260167</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ido</FIRSTNAME><MIDDLENAME>Johnny</MIDDLENAME><LASTNAME>Long</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ed</FIRSTNAME><LASTNAME>Skoudis</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Alrik</FIRSTNAME><LASTNAME>van Eijkelenborg</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>12</MONTH></DATE><COMMENT>A longer description of the same techniques.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X status="zombie"><T>Bulletproof your organization against Google hacking: Assess your vulnerability to these ten simple security searches</T><A>http://downloads.techrepublic.com.com/download.aspx?docid=260167</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ido</FIRSTNAME><MIDDLENAME>Johnny</MIDDLENAME><LASTNAME>Long</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ed</FIRSTNAME><LASTNAME>Skoudis</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Alrik</FIRSTNAME><LASTNAME>van Eijkelenborg</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>12</MONTH></DATE><COMMENT>A longer description of the same techniques.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Spectre, Meltdown and MDS</TITLE>
         <ITEM><ARTICLE><X status="dead"><T>L'attaque SPECTRE</T><A>http://david.monniaux.free.fr/dotclear/index.php/post/2018/01/04/L-attaque-SPECTRE</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Monniaux</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE><COMMENT>A very basic, but clear, description of the problem.</COMMENT></ARTICLE></ITEM>
