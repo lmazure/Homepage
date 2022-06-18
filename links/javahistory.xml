@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java history</TITLE>
 <PATH>links/javahistory.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -185,6 +185,9 @@
       <ITEM><ARTICLE><X><T>Java 18 is here: 9 JEPs with core library improvements and updates</T><A>https://blogs.oracle.com/javamagazine/java-jdk-18-generally-available</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alan</FIRSTNAME><LASTNAME>Zeichick</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE><COMMENT>The content of Java 18.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The not-so-hidden gems in Java 18: The JDK Enhancement Proposals</T><ST>Five of Java 18’s JEPs add new features or major enhancements. See what they do and how they work.</ST><A>https://blogs.oracle.com/javamagazine/java-18-gems-jdks</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mohamed</FIRSTNAME><LASTNAME>Taman</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE><COMMENT>A description of UTF-8 by default (<X><T>JEP 400</T><A>https://openjdk.java.net/jeps/400</A><L>en</L><F>HTML</F></X>), Simple Web Server (<X><T>JEP 408</T><A>https://openjdk.java.net/jeps/408</A><L>en</L><F>HTML</F></X>), Code Snippets in Javadoc (<X><T>JEP 413</T><A>https://openjdk.java.net/jeps/413</A><L>en</L><F>HTML</F></X>), core reflection reimplementation with method handles (<X><T>JEP 416</T><A>https://openjdk.java.net/jeps/416</A><L>en</L><F>HTML</F></X>), and the Service Provider Interface for hostname and address resolution (<X><T>JEP 418</T><A>https://openjdk.java.net/jeps/418</A><L>en</L><F>HTML</F></X>).</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE predecessor="https://blogs.oracle.com/javamagazine/java-18-gems-jdks"><X><T>The hidden gems in Java 18: The subtle changes</T><ST>Not all the enhancements in a Java release are found in the numbered JDK Enhancement Proposals.</ST><A>https://blogs.oracle.com/javamagazine/java-18-gems-hidden-subtle-changes-deprecations</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mohamed</FIRSTNAME><LASTNAME>Taman</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE><COMMENT>The other changes in Java 18.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Java 19</TITLE>
+      <ITEM><ARTICLE><X><T>Coming to Java 19: Virtual threads and platform threads</T><ST>Operating systems can’t increase the efficiency of platform threads, but the JDK will make better use of them by severing the one-to-one relationship between its threads and OS threads.</ST><A>https://blogs.oracle.com/javamagazine/java-loom-virtual-threads-platform-threads</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE><COMMENT>A presentation of virtual threads.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>

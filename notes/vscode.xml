@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -31,7 +31,7 @@
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="P"/><BR/>
       <CODEROUTINE>Show All Commands</CODEROUTINE></TERM>
-    <DESC>show command palette</DESC>
+    <DESC>Show command palette</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="M"/><BR/>
@@ -260,7 +260,7 @@ Folding
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="_"/><BR/>
       <CODEROUTINE>Fold All Regions</CODEROUTINE></TERM>
     <DESC>Fold all regions<BR/>
-      a region is between a comment containing <CODEROUTINE>#region <I>Region Name</I></CODEROUTINE> and a comment containing <CODEROUTINE>#endregion</CODEROUTINE></DESC>
+      A region is between a comment containing <CODEROUTINE>#region <I>Region Name</I></CODEROUTINE> and a comment containing <CODEROUTINE>#endregion</CODEROUTINE></DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -416,7 +416,7 @@ Search/replace
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F"/><BR/>
       <CODEROUTINE>Find</CODEROUTINE></TERM>
     <DESC>Search<BR/>
-    use the regexp <CODEROUTINE>\xa0</CODEROUTINE> to find non breaking spaces</DESC>
+    Use the regexp <CODEROUTINE>\xa0</CODEROUTINE> to find non breaking spaces</DESC>
   </ROW>
   <ROW>
     <TERM><KEY id="F3"/></TERM>
@@ -425,8 +425,8 @@ Search/replace
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="H"/></TERM>
     <DESC>Replace<BR/>
-    groups are defined by <CODEROUTINE>(</CODEROUTINE> and <CODEROUTINE>)</CODEROUTINE><BR/>
-    use <CODEROUTINE>$0</CODEROUTINE> to insert the full string, <CODEROUTINE>$1</CODEROUTINE> the first group… <CODEROUTINE>$$</CODEROUTINE> to insert <CODEROUTINE>$</CODEROUTINE></DESC>
+    Groups are defined by <CODEROUTINE>(</CODEROUTINE> and <CODEROUTINE>)</CODEROUTINE><BR/>
+    Use <CODEROUTINE>$0</CODEROUTINE> to insert the full string, <CODEROUTINE>$1</CODEROUTINE> the first group… <CODEROUTINE>$$</CODEROUTINE> to insert <CODEROUTINE>$</CODEROUTINE></DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/><BR/>
@@ -462,6 +462,19 @@ Search/replace
     <ITEM><CODEROUTINE>Code.exe --diff file1 file2</CODEROUTINE></ITEM>
   </SLIST></ITEM>
 </BLIST>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="F5"/><BR/>
+      <CODEROUTINE>Go to Next Change</CODEROUTINE></TERM>
+    <DESC>Go to next change</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="F5"/><BR/>
+      <CODEROUTINE>Go to Previous Change</CODEROUTINE></TERM>
+    <DESC>Go to previous change</DESC>
+  </ROW>
+</DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
