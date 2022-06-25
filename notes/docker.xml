@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -68,9 +68,23 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE>docker load</CODEROUTINE></TERM>
+    <DESC>Load an image or repository from a tar archive (optionally compressed with gzip, bzip2, or xz) from stdin.<BR/>
+      <CODEROUTINE>docker load &lt; busybox.tar.gz</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-i</CODEROUTINE><BR/>
+      <CODEROUTINE>--input</CODEROUTINE></TERM>
+    <DESC>Read from a file instead of stdin.<BR/>
+      <CODEROUTINE>docker load --input busybox.tar.gz</CODEROUTINE></DESC>
+  </ROW>
+</DEFINITIONTABLE><BR/>
+<DEFINITIONTABLE>
+  <ROW>
     <TERM><CODEROUTINE>docker start &lt;container&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>docker container start &lt;container&gt;</CODEROUTINE></TERM>
-    <DESC>Start a stopped container (it is possible to have several container names <CODEROUTINE>docker start &lt;container1&gt; &lt;container2&gt; &lt;container3&gt;</CODEROUTINE>).</DESC>
+    <DESC>Start a stopped container<BR/>
+      (it is possible to have several container names, e.g. <CODEROUTINE>docker start &lt;container1&gt; &lt;container2&gt; &lt;container3&gt;</CODEROUTINE>).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>-i</CODEROUTINE><BR/>
@@ -213,7 +227,8 @@ Unreferenced images are images not referenced by any container.<BR/>
 Dangling images are layers that have no relationship to any tagged images.
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker images</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker images</CODEROUTINE><BR/>
+      <CODEROUTINE>docker image ls</CODEROUTINE></TERM>
     <DESC>List the top level images.</DESC>
   </ROW>
   <ROW>
