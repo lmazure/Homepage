@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unit testing</TITLE>
 <PATH>links/unittest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -99,7 +99,6 @@
     <ITEM><ARTICLE><X><T>Applying Data Analytics to Test Automation</T><A>https://www.stickyminds.com/article/applying-data-analytics-test-automation</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Harsh</FIRSTNAME><LASTNAME>Vardhan</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>12</MONTH><DAY>30</DAY></DATE><COMMENT>A good advice for keeping and analysing automated test results, but this is too high level and too few usage examples are given.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Open Source Test Reporting Tools</T><A>https://www.softwaretestingmagazine.com/tools/open-source-test-reporting-tools/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>A list of tools to generate reports for automated tests.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Testing in the Twenties</T><A>https://www.tbray.org/ongoing/When/202x/2021/05/15/Testing-in-2021</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Bray</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Bray</LASTNAME></AUTHOR>'s opinion on automated tests (unit and integration tests).</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Allure TestOps Full Overview</T><A>https://www.youtube.com/watch?v=-H7dSm8pcMo</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>25</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Egor</FIRSTNAME><LASTNAME>Ivanov</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Unit tests</TITLE>
       <ITEM><ARTICLE><X status="zombie"><T>Efficient JavaScript unit testing</T><ST>Automate JavaScript code testing across browsers</ST><A>https://www.ibm.com/developerworks/library/os-jstesting/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Hazem</FIRSTNAME><LASTNAME>Saleh</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE><COMMENT>An introduction to JSTestDriver.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="zombie"><T>Tools to unit test your JavaScript</T><ST>Using QUnit, YUI Test, and JSTestDriver</ST><A>https://www.ibm.com/developerworks/library/wa-tools/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sebastiano</FIRSTNAME><LASTNAME>Armeli-Battana</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>4</MONTH><DAY>10</DAY></DATE><COMMENT>A presentation of QUnit, YUI Test, and JSTestDriver.</COMMENT></ARTICLE></ITEM>
@@ -163,6 +162,12 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>TestNG</TITLE>
         <ITEM><ARTICLE><X><T>Make your Selenium Test Results Live using Grafana &amp; InfluxDB</T><A>https://blog.testproject.io/2020/05/12/make-your-selenium-test-results-live-using-grafana-and-influxdb/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Giridhar</FIRSTNAME><LASTNAME>Rajkumar</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE><COMMENT>Despite the title, this article is about integrating TestNG results in real time in InfluxDB and display them in Grafana.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Allure</TITLE>
+        <ITEM><ARTICLE><X><T>Allure TestOps Full Overview</T><A>https://www.youtube.com/watch?v=-H7dSm8pcMo</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>25</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Egor</FIRSTNAME><LASTNAME>Ivanov</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>ReportPortal</TITLE>
+        <ITEM><ARTICLE><X><T>[EN] ReportPortal + Machine Learning details</T><A>https://www.youtube.com/watch?v=d2ekWI2exZ4</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>39</MINUTE><SECOND>22</SECOND></DURATION></X><DATE><YEAR>2017</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>A presentation of ReportPortal and some technical details (tf–idf, ElasticSearch configuration…).</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mutation testing</TITLE>
