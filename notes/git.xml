@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -133,6 +133,12 @@
   <ROW>
     <TERM><CODEROUTINE>git add .</CODEROUTINE></TERM>
     <DESC>Update the content of the current directory in the index.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git add -i</CODEROUTINE><BR/>
+      <CODEROUTINE>git add --interactive</CODEROUTINE></TERM>
+    <DESC>Add modified contents in the working tree interactively to the index.<BR/>
+      Optional path arguments may be supplied to limit operation to a subset of the working tree</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stage</CODEROUTINE></TERM>
