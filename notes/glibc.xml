@@ -10,8 +10,8 @@
 <CODESAMPLE>#include &lt;execinfo.h&gt;<BR/>
 …<BR/>
 void *array[10];<BR/>
-size_t size = <X><T>backtrace</T><A>http://www.gnu.org/software/libc/manual/html_node/Backtraces.html</A><L>en</L><F>HTML</F></X>(array, 10);<BR/>
-char **strings = <X><T>backtrace_symbols</T><A>http://www.gnu.org/software/libc/manual/html_node/Backtraces.html</A><L>en</L><F>HTML</F></X>(array, size);<BR/>
+size_t size = <X><T>backtrace</T><A>https://www.gnu.org/software/libc/manual/html_node/Backtraces.html</A><L>en</L><F>HTML</F></X>(array, 10);<BR/>
+char **strings = <X><T>backtrace_symbols</T><A>https://www.gnu.org/software/libc/manual/html_node/Backtraces.html</A><L>en</L><F>HTML</F></X>(array, size);<BR/>
 for (size_t i = 0; i &lt; size; i++) std::cout &lt;&lt; strings[i] &lt;&lt; std::endl;<BR/>
 free(strings);</CODESAMPLE></ITEM>
 </BLIST>
