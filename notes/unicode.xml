@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -122,6 +122,22 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
 </TABLE></ITEM>
 </BLIST>
 <X><T>Emoji flag sequences</T><A>https://en.wikipedia.org/wiki/Regional_indicator_symbol#Emoji_flag_sequences</A><L>en</L><F>HTML</F></X>
+<BR/>
+<BR/>
+<B>Some common characters</B><BR/>
+<TABLE>
+  <ROW><CELL>️character</CELL><CELL>code</CELL><CELL>name</CELL></ROW>
+  <ROW><CELL>️…</CELL><CELL>U+2026</CELL><CELL>Horizontal Ellipsis</CELL></ROW>
+  <ROW><CELL>️⋮</CELL><CELL>U+22EE</CELL><CELL>Vertical Ellipsis</CELL></ROW>
+  <ROW><CELL>️←</CELL><CELL>U+2190</CELL><CELL>Leftwards Arrow</CELL></ROW>
+  <ROW><CELL>️↑</CELL><CELL>U+2191</CELL><CELL>Upwards Arrow</CELL></ROW>
+  <ROW><CELL>️→</CELL><CELL>U+2192</CELL><CELL>Rightwards Arrow</CELL></ROW>
+  <ROW><CELL>️↓</CELL><CELL>U+2193</CELL><CELL>Downwards Arrow</CELL></ROW>
+  <ROW><CELL>️↔</CELL><CELL>U+2194</CELL><CELL>Left Right Arrow</CELL></ROW>
+  <ROW><CELL>️↕</CELL><CELL>U+2195</CELL><CELL>Up Down Arrow</CELL></ROW>
+  <ROW><CELL>️∧</CELL><CELL>U+2227</CELL><CELL>Logical And</CELL></ROW>
+  <ROW><CELL>️∨</CELL><CELL>U+2228</CELL><CELL>Logical Or</CELL></ROW>
+</TABLE>
 </CONTENT>
 <X><T>links</T><A>../links/unicode.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
