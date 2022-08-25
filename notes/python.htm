@@ -320,52 +320,7 @@ object
 (currently implemented as its address)</li>
   <li> <tt>type()</tt> return the type of an object</li>
 </blockquote>
-exceptions
-<ul>
-  <li>use try to declare the temptative code block and except to catch the exception</li>
-  <tt>try:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>except ValueError:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <li>it is possible to have several
-exceptions with the same handler and several handlers with the same <tt>try</tt> clause</li>
-  <tt>try:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>except (RuntimeError, TypeError, NameError):</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>except ValueError:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <li>a final <tt>except</tt> handler
-will catch all exceptions</li>
-  <tt>try:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>except (RuntimeError, TypeError, NameError):</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>except:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <li>an <tt>else</tt> clause may be
-added after the exception handlers, it will be executed anytime no exception occurred</li>
-  <tt>try:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>except (RuntimeError, TypeError, NameError):</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>else:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <li>it is possible to retrieve the
-exception details by adding a variable name after the exception list</li>
-  <tt>try:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>except IOError, (errno, strerror):</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>except ZeroDivisionError, detail:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <li>a <tt>finally</tt> block can be
-used instead of <tt>except</tt>
-handlers: it will be always executed, but if an exception occurred, it will be reraised after this execution</li>
-  <tt>try:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <br>
-  <tt>finally:</tt> <br>
-  <tt>&nbsp;&nbsp;&nbsp; ...</tt> <li><tt>raise</tt> can be used to
-raise an exception (the argument is optional)</li>
-  <br>
-  <tt>raise NameError, 'HiThere'</tt>
-  <li><tt>raise</tt> with no argument reraise the current exception</li>
-</ul>
+
 <tt>sys</tt> module
 <ul>
   <li> <tt>sys.ps1</tt> is the primary prompt</li>

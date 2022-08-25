@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java history</TITLE>
 <PATH>links/javahistory.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -193,6 +193,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Java 19</TITLE>
       <ITEM><ARTICLE><X><T>Coming to Java 19: Virtual threads and platform threads</T><ST>Operating systems can’t increase the efficiency of platform threads, but the JDK will make better use of them by severing the one-to-one relationship between its threads and OS threads.</ST><A>https://blogs.oracle.com/javamagazine/java-loom-virtual-threads-platform-threads</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE><COMMENT>A presentation of virtual threads.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Pattern matching updates for Java 19’s JEP 427: when and null</T><ST>The third preview of pattern matching for switch addresses case refinement and the proper handling of null cases.</ST><A>https://blogs.oracle.com/javamagazine/java-pattern-matching-switch-when-null</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE><COMMENT>Yet a new version of pattern matching for switch.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>

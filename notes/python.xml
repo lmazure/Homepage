@@ -20,6 +20,57 @@
     <CODESAMPLE>d = {}</CODESAMPLE>
   </ITEM>
 </BLIST>
+<BLIST><TITLE><U><B>Exceptions</B></U></TITLE>
+  <ITEM>Use <CODEROUTINE>try</CODEROUTINE> to declare the temptative code block and <CODEROUTINE>except</CODEROUTINE> to catch the exception.
+  <CODESAMPLE>try:<BR/>
+    <TAB/>…<BR/>
+    except ValueError:<BR/>
+    <TAB/>…</CODESAMPLE>
+  </ITEM>
+  <ITEM>It is possible to have several exceptions with the same handler and several handlers with the same <CODEROUTINE>try</CODEROUTINE> clause.
+    <CODESAMPLE>try:<BR/>
+    <TAB/>…<BR/>
+    except (RuntimeError, TypeError, NameError):<BR/>
+    <TAB/>…<BR/>
+    except ValueError:<BR/>
+    <TAB/>…</CODESAMPLE>
+  </ITEM>
+  <ITEM>A final <CODEROUTINE>except</CODEROUTINE> handler will catch all exceptions.
+    <CODESAMPLE>try:<BR/>
+    <TAB/>…<BR/>
+    except (RuntimeError, TypeError, NameError):<BR/>
+    <TAB/>…<BR/>
+    except:<BR/>
+    <TAB/>…</CODESAMPLE>
+  </ITEM>
+  <ITEM>An <CODEROUTINE>else</CODEROUTINE> clause may be added after the exception handlers, it will be executed anytime no exception occurred.
+    <CODESAMPLE>try:<BR/>
+    <TAB/>…<BR/>
+    except (RuntimeError, TypeError, NameError):<BR/>
+    <TAB/>…<BR/>
+    else:<BR/>
+    <TAB/>…</CODESAMPLE>
+  </ITEM>
+  <ITEM>It is possible to retrieve the exception details by adding a variable name after the exception list.
+    <CODESAMPLE>try:<BR/>
+    <TAB/>…<BR/>
+    except IOError, (errno, strerror):<BR/>
+    <TAB/>…<BR/>
+    except ZeroDivisionError, detail:<BR/>
+    <TAB/>…</CODESAMPLE>
+  </ITEM>
+  <ITEM>A <CODEROUTINE>finally</CODEROUTINE> block can be used instead of <CODEROUTINE>except</CODEROUTINE> handlers: it will be always executed, but if an exception occurred, it will be reraised after this execution.
+    <CODESAMPLE>try:<BR/>
+    <TAB/>…<BR/>
+    finally:<BR/>
+    <TAB/>…</CODESAMPLE>
+  </ITEM>
+  <ITEM><CODEROUTINE>raise</CODEROUTINE> can be used to raise an exception (the argument is optional).
+    <CODESAMPLE>raise NameError, 'HiThere'</CODESAMPLE>
+  </ITEM>
+  <ITEM><CODEROUTINE>raise</CODEROUTINE> with no argument reraise the current exception.
+  </ITEM>
+</BLIST>
 <BLIST><TITLE><U><B><CODEROUTINE>pip</CODEROUTINE></B></U></TITLE>
   <ITEM>install a package
     <CODESAMPLE>pip install &lt;package&gt;</CODESAMPLE>
