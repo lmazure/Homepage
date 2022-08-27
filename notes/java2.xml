@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>notes/java2.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
 <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
@@ -96,6 +96,10 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
       </ROW>
     </TABLE>
   </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Regular Expressions</B></U><BR/></TITLE>
+  <ITEM><CODEROUTINE>\p{…}</CODEROUTINE> can be used to match a character of a given Unicode <X><T>category</T><A>https://www.unicode.org/reports/tr18/#General_Category_Property</A><L>en</L><F>HTML</F></X>.<BR/>
+  For example <CODEROUTINE>\p{Z}</CODEROUTINE> matches separators, I believe this is the same as <X><T><CODEROUTINE>Character.isSpaceChar()</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.html#isSpaceChar(int)</A><L>en</L><F>HTML</F></X>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Functional interfaces</B></U><BR/></TITLE>
   <ITEM><CODEROUTINE>@FunctionalInterface</CODEROUTINE> is an informative annotation type used to indicate that an interface with exactly one abstract method.</ITEM>

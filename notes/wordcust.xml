@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Word customization</TITLE>
 <PATH>notes/wordcust.xml</PATH>
-<DATE><YEAR>2017</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 The script I use to customize Word to my needs:
 <CODESAMPLE>Option Explicit<BR/>
@@ -651,12 +651,6 @@ Sub Customize()<BR/>
 <TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyNumericDecimal, wdKeyControl), _<BR/>
 <TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategorySymbol, _<BR/>
 <TAB/><TAB/><TAB/>Command:=ChrW(&amp;H2026)<BR/>
-<BR/>
-<TAB/>' --------------- translate the selection into XML<BR/>
-<TAB/>' <B>Alt+X =&gt; escape the selection into XML</B><BR/>
-<TAB/>KeyBindings.Add KeyCode:=BuildKeyCode(wdKeyX, wdKeyAlt), _<BR/>
-<TAB/><TAB/><TAB/>KeyCategory:=wdKeyCategoryMacro, _<BR/>
-<TAB/><TAB/><TAB/>Command:="Text2XML"<BR/>
 <BR/>
 <TAB/>' --------------- miscellaneous<BR/>
 <TAB/>' <B>Ctrl+G =&gt; edit goto</B><BR/>
