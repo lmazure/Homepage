@@ -3,9 +3,41 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>GitLab</TITLE>
 <PATH>notes/gitlab.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <BLIST>
+  <ITEM>Global shortcuts
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><KEY id="?"/></TERM>
+        <DESC>Display keyboard shortcuts</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Shift"/><KEY id="P"/></TERM>
+        <DESC>Go to projects</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Shift"/><KEY id="G"/></TERM>
+        <DESC>Go to groups</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY id="G"/><KEY id="I"/></TERM>
+        <DESC>Go to issues</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY id="G"/><KEY id="M"/></TERM>
+        <DESC>Go to merge requests</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Project shortcuts
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><KEY id="I"/></TERM>
+        <DESC>Create a new issue</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
   <ITEM>run the GitLab runner in Docker
       <CODESAMPLE>docker run --rm -t -i -v C:\gitlab-runner\config:/etc/gitlab-runner gitlab/gitlab-runner register --non-interactive --executor "docker" --docker-image alpine:latest --url "https://gitlab.com/" --registration-token "XXXXXXXXXXXXXXXXXXXX" --description "myrunner" --run-untagged="true" –locked="false"<BR/>
         docker run -d --name gitlab-runner --restart always -v C:\gitlab-runner\config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest</CODESAMPLE>
