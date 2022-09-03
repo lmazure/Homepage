@@ -3,23 +3,44 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>GitLab</TITLE>
 <PATH>notes/gitlab.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Global shortcuts
     <DEFINITIONTABLE>
       <ROW>
-        <TERM><KEY id="?"/></TERM>
+        <TERM><MODIFIERKEY id="Shift"/><KEY id=","/></TERM>
         <DESC>Display keyboard shortcuts</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Shift"/><KEY id="P"/></TERM>
-        <DESC>Go to projects</DESC>
+        <DESC>Go to project dashboard</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Shift"/><KEY id="G"/></TERM>
-        <DESC>Go to groups</DESC>
+        <DESC>Go to group dashboard</DESC>
       </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Shift"/><KEY id="L"/></TERM>
+        <DESC>Go to milestone dashboard</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Shift"/><KEY id="I"/></TERM>
+        <DESC>Go to issue dashboard (it displays by default the issues assigned to the current user)</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Shift"/><KEY id="T"/></TERM>
+        <DESC>Go to todo dashboard</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Shift"/><KEY id=":"/><BR/>
+          <KEY id="S"/></TERM>
+        <DESC>Search</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Project shortcuts
+    <DEFINITIONTABLE>
       <ROW>
         <TERM><KEY id="G"/><KEY id="I"/></TERM>
         <DESC>Go to issues</DESC>
@@ -28,10 +49,6 @@
         <TERM><KEY id="G"/><KEY id="M"/></TERM>
         <DESC>Go to merge requests</DESC>
       </ROW>
-    </DEFINITIONTABLE>
-  </ITEM>
-  <ITEM>Project shortcuts
-    <DEFINITIONTABLE>
       <ROW>
         <TERM><KEY id="I"/></TERM>
         <DESC>Create a new issue</DESC>

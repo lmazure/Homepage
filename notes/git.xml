@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -471,6 +471,13 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE>git revert &lt;commit1&gt; &lt;commit2&gt; …</CODEROUTINE></TERM>
+    <DESC>Revert some commits (a revert is a staged commit reverting a given past commit). If we indicate several commits on the command line, there will be one revert per indicated commit.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
     <TERM><CODEROUTINE>git fetch</CODEROUTINE></TERM>
     <DESC>Download objects and refs from upstream repository into local repository.</DESC>
   </ROW>
@@ -645,6 +652,10 @@
   <ROW>
     <TERM><CODEROUTINE>git merge --abort</CODEROUTINE></TERM>
     <DESC>Cancel the current ongoing merge (if there was a conflict or with the <CODEROUTINE>--no-commit</CODEROUTINE> flag).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git merge --squash</CODEROUTINE></TERM>
+    <DESC>Update the working tree and index by merging the branch, but the commit is not performed (the commit will have to be done later). This can be used to merge one or several branches in a single commit.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git cherry-pick &lt;commit&gt;</CODEROUTINE></TERM>
@@ -836,6 +847,7 @@ rm -fr $project.git</CODESAMPLE>
 <BLIST><TITLE>Git BASH on Windows</TITLE>
   <ITEM>The home directory is defined by the <CODEROUTINE>%HOME%</CODEROUTINE> Windows environment variable (which is not used by Windows, so it is safe to set/modify it).</ITEM>
   <ITEM>To run Python: <CODEROUTINE>winpty python</CODEROUTINE></ITEM>
+  <ITEM>To display an HTML file: <CODEROUTINE>start report.html</CODEROUTINE></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#git</A><L>en</L><F>HTML</F></X>

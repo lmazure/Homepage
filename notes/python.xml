@@ -6,9 +6,68 @@
 <DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
-  <ITEM>Test if an element is in a list
+  <ITEM>lists can mix types
+    <CODESAMPLE>a=['foo',69,'bar']</CODESAMPLE>
+  </ITEM>
+  <ITEM>lists support slices (these ones are mutable and can even be used to change the size of the list)<BR/>
+    <CODEROUTINE>a[0:2]</CODEROUTINE>: remove the two first elements of the list<BR/>
+    <CODEROUTINE>a[:0]=a</CODEROUTINE>: insert a copy ot itself at the beginning of the list
+  </ITEM>
+  <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to remove elements in a list
+    <CODESAMPLE>del a[2:4]</CODESAMPLE>
+  </ITEM>
+  <ITEM><CODEROUTINE>len</CODEROUTINE>: return the number of elements of a list</ITEM>
+  <ITEM>lists can be nested
+    <CODESAMPLE>q=[45,3]<BR/>
+      p=[0,q,14]</CODESAMPLE>
+  </ITEM>
+  <ITEM>list unpacking
+    <CODESAMPLE>a=[1,2,3,4]<BR/>
+      [a1,a2,a3,a4]=a</CODESAMPLE>
+  </ITEM>
+  <ITEM>test if an element is in a list
     <CODESAMPLE>item in List</CODESAMPLE>
   </ITEM>
+  <ITEM><BLIST><TITLE>Methods</TITLE>
+    <ITEM><CODEROUTINE>insert(pos,item)</CODEROUTINE>: insert an item at a given position</ITEM>
+    <ITEM><CODEROUTINE>append(elem)</CODEROUTINE>: append an item at the list end</ITEM>
+    <ITEM><CODEROUTINE>pop(i)</CODEROUTINE>: remove the item at the given position in the list and return it</ITEM>
+    <ITEM><CODEROUTINE>pop()</CODEROUTINE>: remove the last item and return it</ITEM>
+    <ITEM><CODEROUTINE>index(item)</CODEROUTINE>: return the index of the first occurrence of the value <CODEROUTINE>item</CODEROUTINE></ITEM>
+    <ITEM><CODEROUTINE>remove(item)</CODEROUTINE>: remove the first occurrence of the value <CODEROUTINE>item</CODEROUTINE></ITEM>
+    <ITEM><CODEROUTINE>sort()</CODEROUTINE>: sort the list</ITEM>
+    <ITEM><CODEROUTINE>reverse()</CODEROUTINE>: reverse the list</ITEM>
+    <ITEM><CODEROUTINE>count(item)</CODEROUTINE>: return the number of occurrences of the value <CODEROUTINE>item</CODEROUTINE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Functions</TITLE>
+    <ITEM><CODEROUTINE>filter(function,l)</CODEROUTINE> return the list of elements <CODEROUTINE>elem</CODEROUTINE> for which <CODEROUTINE>function(elem)</CODEROUTINE> is true</ITEM>
+    <ITEM><CODEROUTINE>map(function,l)</CODEROUTINE> return the list of values of <CODEROUTINE>function</CODEROUTINE> called for each element of <CODEROUTINE>l</CODEROUTINE><BR/>
+      more than one list can be passed to <CODEROUTINE>map</CODEROUTINE>, in this case, <CODEROUTINE>function</CODEROUTINE> must have the same number of arguments (if a list is shorter than the other one, <CODEROUTINE>function</CODEROUTINE> will be called with the value <CODEROUTINE>None</CODEROUTINE>)<BR/>
+      if <CODEROUTINE>None</CODEROUTINE> is passed instead of a function, <CODEROUTINE>map</CODEROUTINE> returns its arguments
+      <CODESAMPLE><PROMPT/>(None,[1,2,3,4],[5,6,7])
+        [(1, 5), (2, 6), (3, 7), (4, None)]</CODESAMPLE>
+    </ITEM>
+    <ITEM>reduce(function,l) call function on the two first items, then on the result and the next item…
+      <CODESAMPLE><PROMPT/>reduce(lambda x,y:x+y , [1,2,3,4,5,6])<BR/>
+        21</CODESAMPLE>
+      a third argument can be passed to indicate the starting value (this value will be returned in case of an empty list)
+    </ITEM>
+  </BLIST></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Tuple</B></U></TITLE>
+  <ITEM>a tuple is a number of values separated by a comma<BR/>
+    (they may be input with or without parentheses)
+    <CODESAMPLE>t=1,2,"azerty"</CODESAMPLE></ITEM>
+  <ITEM>tuples support slicing</ITEM>
+  <ITEM>an empty tuple is created with the syntax:
+    <CODESAMPLE>empty=()</CODESAMPLE></ITEM>
+  <ITEM>a singleton tuple is created with an empty comma
+    <CODESAMPLE>singleton=1,</CODESAMPLE></ITEM>
+  <ITEM>tuple packing
+    <CODESAMPLE>t=1,2,3</CODESAMPLE>
+    tuple unpacking
+    <CODESAMPLE>x,y,z=t</CODESAMPLE></ITEM>
+  <ITEM>tuple are immutable: it is not possible ot assign to the individual items of a tuple</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Set</B></U></TITLE>
   <ITEM>Create an empty set
@@ -16,9 +75,21 @@
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Dictionary</B></U></TITLE>
-  <ITEM>Create an empty dictionary
+  <ITEM>syntax
+    <CODESAMPLE>d={'key1':1234,'key2':5678}<BR/>
+      d['key3']=43</CODESAMPLE>
+  </ITEM>
+  <ITEM>create an empty dictionary
     <CODESAMPLE>d = {}</CODESAMPLE>
   </ITEM>
+  <ITEM>keys must be immutable: numbers, strings and tuples containing only numbers, strings and tuples</ITEM>
+  <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to delete entries of a dictionary
+    <CODESAMPLE>del d['key3']</CODESAMPLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Methods</TITLE>
+    <ITEM><CODEROUTINE>keys</CODEROUTINE>: return the keys of a dictionary</ITEM>
+    <ITEM><CODEROUTINE>has_key</CODEROUTINE>: test if a key is in the dictionary</ITEM>
+    </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Exceptions</B></U></TITLE>
   <ITEM>Use <CODEROUTINE>try</CODEROUTINE> to declare the temptative code block and <CODEROUTINE>except</CODEROUTINE> to catch the exception.

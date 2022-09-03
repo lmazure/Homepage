@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -137,7 +137,7 @@
   <ROW>
     <TERM><CODEROUTINE>docker exec &lt;container&gt; &lt;command&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>docker container exec &lt;container&gt; &lt;command&gt;</CODEROUTINE></TERM>
-    <DESC>Execute a commmand in a container (e.g. <CODEROUTINE>docker exec mycontainer cat /etc/hosts</CODEROUTINE>.</DESC>
+    <DESC>Execute a command in a container (e.g. <CODEROUTINE>docker exec mycontainer cat /etc/hosts</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>docker exec -i &lt;container&gt; sh</CODEROUTINE></TERM>
@@ -149,7 +149,8 @@
   <ROW>
     <TERM><CODEROUTINE>docker ps</CODEROUTINE><BR/>
       <CODEROUTINE>docker container ls</CODEROUTINE><BR/>
-      <CODEROUTINE>docker container list</CODEROUTINE></TERM>
+      <CODEROUTINE>docker container list</CODEROUTINE><BR/>
+      <CODEROUTINE>docker container ps</CODEROUTINE></TERM>
     <DESC>List the running containers.</DESC>
   </ROW>
   <ROW>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Security</TITLE>
 <PATH>links/cracking.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -244,6 +244,7 @@
       <ITEM><ARTICLE><X><T>Backdoor in public repository used new form of attack to target big firms</T><ST>Dependency confusion attacks exploit our trust in public code repositories.</ST><A>https://arstechnica.com/information-technology/2022/05/backdoor-in-public-repository-used-new-form-of-attack-to-target-big-firms/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE><COMMENT>A description of dependency confusion.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>“PACMAN” Hack Breaks Apple M1’s Last Line of Defense</T><ST>How many dominos could fall if this centerpiece CPU’s weakness pans out?</ST><A>https://spectrum.ieee.org/pacman-hack-can-break-apple-m1s-last-line-of-defense</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Samuel</FIRSTNAME><MIDDLENAME>K.</MIDDLENAME><LASTNAME>Moore</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE><COMMENT>A side channel attack has been found to bypass Apple's Pointer Authentication Code.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Hardcoded password in Confluence app has been leaked on Twitter</T><ST>Advisory had already warned hardcoded password was "trivial to obtain."</ST><A>https://arstechnica.com/information-technology/2022/07/atlassian-warns-hardcoded-password-flaw-is-likely-to-be-exploited-in-the-wild/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE><COMMENT>Atlassian is quite bad at security.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Critical hole in Atlassian Bitbucket allows any miscreant to hijack servers</T><ST>Grab and deploy this backend update if you offer even repo read access</ST><A>https://www.theregister.com/2022/08/29/atlassian_bitbucket_critical_bug/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jessica</FIRSTNAME><LASTNAME>Lyons Hardcastle</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE><COMMENT>Atlassian continues to have big security issues.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>SQL injection</TITLE>
         <ITEM><ARTICLE><X><T>SQL Injection Attacks by Example</T><A>http://www.unixwiz.net/techtips/sql-injection.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Friedl</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>A basic, detailed, and slow description of a SQL injection attack.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Bobby Tables</T><A>https://blog.cleancoder.com/uncle-bob/2017/12/03/BobbyTables.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME><GIVENNAME>Uncle Bob</GIVENNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE><COMMENT>SQL is too dangerous, it should not be used anymore.</COMMENT></ARTICLE></ITEM>

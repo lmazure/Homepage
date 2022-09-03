@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>ReportPortal</TITLE>
+<PATH>notes/reportportal.xml</PATH>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE>
+<CONTENT>
+<BLIST><TITLE><B>Start / stop</B></TITLE>
+  <ITEM>for the first start
+    <CODESAMPLE>docker-compose -p reportportal up -d --force-recreate</CODESAMPLE></ITEM>
+  <ITEM>to stop
+    <CODESAMPLE>docker-compose -p reportportal down</CODESAMPLE></ITEM>
+  <ITEM>to restart later on
+    <CODESAMPLE>docker-compose -p reportportal up -d</CODESAMPLE></ITEM>
+  </BLIST>
+<BR/>
+<BLIST><TITLE><B>Default logins</B></TITLE>
+  <ITEM>Default user: default / 1q2w3e</ITEM>
+  <ITEM>Administrator: superadmin / erebus</ITEM>
+</BLIST>
+<BR/>
+<B>To declare Gmail as mail server</B>
+<CODESAMPLE>
+  Host: smtp.gmail.com<BR/>
+  Protocol: SMTP<BR/>
+  Default sender name: lmazure<BR/>
+  Port: 465<BR/>
+  Authorization: ON<BR/>
+  Sender email: lmazure@henix.fr<BR/>
+  Password: XXXXX<BR/>
+</CODESAMPLE>
+Insecure applications must be authorized on <X><T>https://www.google.com/settings/security/lesssecureapps</T><A>https://www.google.com/settings/security/lesssecureapps</A><L>en</L><F>HTML</F></X>.<BR/>
+<BR/>
+<B>Integration</B><BR/>
+A Python library exists to push test results to ReportPortal: <X><T>https://github.com/reportportal/client-Python</T><A>https://github.com/reportportal/client-Python</A><L>en</L><F>HTML</F></X>.<BR/>
+<BR/>
+<B>Test with Robot Framework</B>
+<CODESAMPLE>robot --outputdir reports --listener robotframework_reportportal.listener --variable RP_UUID:"b58f8cf0-56a1-44eb-a1ca-45453d5302bc" --variable RP_ENDPOINT:"http://127.0.0.1:8080" --variable RP_LAUNCH:"my_RF_launch" --variable RP_PROJECT:"ROBOTFRAMEWORKSAMPLES" --xunit junit_report.xml --variable RP_ATTACH_XUNIT:"true" --variable RP_ATTACH_REPORT:"true" --variable RP_ATTACH_LOG:"true" mazure.robot</CODESAMPLE>
+But the reports are not uploaded in ReportPortal (see <X><T>this issue</T><A>https://github.com/reportportal/agent-Python-RobotFramework/issues/148</A><L>en</L><F>HTML</F></X>).
+</CONTENT>
+<X><T>links</T><A>../links/unittest.html#reportportal</A><L>en</L><F>HTML</F></X>
+</PAGE>
