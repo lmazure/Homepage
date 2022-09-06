@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -110,6 +110,10 @@
       <CODEROUTINE>--time &lt;n&gt;</CODEROUTINE></TERM>
     <DESC>Seconds to wait for stop before sending SIGKILL.</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker stop $(docker ps -q)</CODEROUTINE></TERM>
+    <DESC>Stop all containers.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
@@ -157,6 +161,16 @@
     <TERM><CODEROUTINE>-a</CODEROUTINE><BR/>
       <CODEROUTINE>--all</CODEROUTINE></TERM>
     <DESC>List all containers (running or not).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-q</CODEROUTINE><BR/>
+      <CODEROUTINE>--quiet</CODEROUTINE></TERM>
+    <DESC>Only display container IDs.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-s</CODEROUTINE><BR/>
+      <CODEROUTINE>--size</CODEROUTINE></TERM>
+    <DESC>Display total file sizes.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

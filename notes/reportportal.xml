@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>ReportPortal</TITLE>
 <PATH>notes/reportportal.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>Start / stop</B></TITLE>
   <ITEM>for the first start
@@ -13,6 +13,8 @@
   <ITEM>to restart later on
     <CODESAMPLE>docker-compose -p reportportal up -d</CODESAMPLE></ITEM>
   </BLIST>
+<BR/>
+<B>The application is available at <X><T>http://localhost:8080/ui/</T><A>http://localhost:8080/ui/</A><L>en</L><F>HTML</F></X>.</B>
 <BR/>
 <BLIST><TITLE><B>Default logins</B></TITLE>
   <ITEM>Default user: default / 1q2w3e</ITEM>
@@ -33,6 +35,32 @@ Insecure applications must be authorized on <X><T>https://www.google.com/setting
 <BR/>
 <B>Integration</B><BR/>
 A Python library exists to push test results to ReportPortal: <X><T>https://github.com/reportportal/client-Python</T><A>https://github.com/reportportal/client-Python</A><L>en</L><F>HTML</F></X>.<BR/>
+<BR/>
+<B>Test with JUnit</B><BR/>
+Add the following dependence in <CODEFILENAME>pom.xml</CODEFILENAME>
+<CODESAMPLE>
+  &lt;dependency&gt;<BR/>
+  <TAB/>&lt;groupId&gt;com.epam.reportportal&lt;/groupId&gt;<BR/>
+  <TAB/>&lt;artifactId&gt;agent-java-junit5&lt;/artifactId&gt;<BR/>
+  <TAB/>&lt;version&gt;5.1.4&lt;/version&gt;<BR/>
+  <TAB/>&lt;scope&gt;test&lt;/scope&gt;<BR/>
+  &lt;/dependency&gt;
+</CODESAMPLE>
+Create a <CODEFILENAME>src/main/resources/META-INF/services/org.junit.jupiter.api.extension.Extension</CODEFILENAME> containing
+<CODESAMPLE>
+  com.epam.reportportal.junit5.ReportPortalExtension
+</CODESAMPLE>
+Create a <CODEFILENAME>src/main/resources/reportportal.properties</CODEFILENAME> containing
+<CODESAMPLE>
+  rp.endpoint = http://localhost:8080<BR/>
+  rp.uuid = b58f8cf0-56a1-44eb-a1ca-45453d5302bc<BR/>
+  rp.launch = laurent_TEST_EXAMPLE<BR/>
+  rp.project = laurent_personal
+</CODESAMPLE>
+Annotate each test class with
+<CODESAMPLE>
+  @ExtendWith(ReportPortalExtension.class)
+</CODESAMPLE>
 <BR/>
 <B>Test with Robot Framework</B>
 <CODESAMPLE>robot --outputdir reports --listener robotframework_reportportal.listener --variable RP_UUID:"b58f8cf0-56a1-44eb-a1ca-45453d5302bc" --variable RP_ENDPOINT:"http://127.0.0.1:8080" --variable RP_LAUNCH:"my_RF_launch" --variable RP_PROJECT:"ROBOTFRAMEWORKSAMPLES" --xunit junit_report.xml --variable RP_ATTACH_XUNIT:"true" --variable RP_ATTACH_REPORT:"true" --variable RP_ATTACH_LOG:"true" mazure.robot</CODESAMPLE>

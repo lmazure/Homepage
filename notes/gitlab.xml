@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>GitLab</TITLE>
 <PATH>notes/gitlab.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Global shortcuts
@@ -56,10 +56,15 @@
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM>run the GitLab runner in Docker
-      <CODESAMPLE>docker run --rm -t -i -v C:\gitlab-runner\config:/etc/gitlab-runner gitlab/gitlab-runner register --non-interactive --executor "docker" --docker-image alpine:latest --url "https://gitlab.com/" --registration-token "XXXXXXXXXXXXXXXXXXXX" --description "myrunner" --run-untagged="true" –locked="false"<BR/>
-        docker run -d --name gitlab-runner --restart always -v C:\gitlab-runner\config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest</CODESAMPLE>
-      where <CODEROUTINE>XXXXXXXXXXXXXXXXXXXX</CODEROUTINE> is the registration token for specific runners<BR/>
-      <CODEFILENAME>C:\gitlab-runner\config</CODEFILENAME> will be created
+    <CODESAMPLE>docker run --rm -t -i -v C:\gitlab-runner\config:/etc/gitlab-runner gitlab/gitlab-runner register --non-interactive --executor "docker" --docker-image alpine:latest --url "https://gitlab.com/" --registration-token "XXXXXXXXXXXXXXXXXXXX" --description "myrunner" --run-untagged="true" –locked="false"<BR/>
+      docker run -d --name gitlab-runner --restart always -v C:\gitlab-runner\config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest</CODESAMPLE>
+    where <CODEROUTINE>XXXXXXXXXXXXXXXXXXXX</CODEROUTINE> is the registration token for specific runners<BR/>
+    <CODEFILENAME>C:\gitlab-runner\config</CODEFILENAME> will be created
+  </ITEM>
+  <ITEM>get the audit of group https://gitlab.com/henixdevelopment
+    <CODESAMPLE>curl --header "PRIVATE-TOKEN: &lt;token&gt;" https://gitlab.com/api/v4/groups/13404279/audit_events?per_page=500&amp;page=1</CODESAMPLE>
+    get the audit of project https://gitlab.com/henixdevelopment/open-source/opentestfactory/orchestrator
+    <CODESAMPLE>curl --header "PRIVATE-TOKEN: &lt;token&gt;" https://gitlab.com/api/v4/projects/27352872/audit_events?per_page=500&amp;page=1</CODESAMPLE>
   </ITEM>
 </BLIST>
 </CONTENT>

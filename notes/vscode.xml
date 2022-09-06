@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -202,6 +202,7 @@ Display
     <DESC>Reset zoom</DESC>
   </ROW>
 </DEFINITIONTABLE>
+To diplay/undisplay the inline parameter hints: modify setting <CODEROUTINE>editor.inlayHints.enabled</CODEROUTINE>
 <BR/>
 Folding
 <DEFINITIONTABLE>
@@ -559,7 +560,8 @@ Search/replace
     <DESC>Show manage extensions</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><KEY id=","/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id=","/><BR/>
+      <CODEROUTINE>Preferences: Open Settings (UI)</CODEROUTINE></TERM>
     <DESC>Display setting</DESC></ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="T"/><BR/>
@@ -584,13 +586,21 @@ Markdown
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="V"/><BR/>
-      <CODEROUTINE>Open Preview</CODEROUTINE></TERM>
+      <CODEROUTINE>Markdown: Open Preview</CODEROUTINE></TERM>
     <DESC>Show Markdown preview</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="V"/><BR/>
-      <CODEROUTINE>Open Preview to the Side</CODEROUTINE></TERM>
+      <CODEROUTINE>Markdown: Open Preview to the Side</CODEROUTINE></TERM>
     <DESC>Show Markdown preview in an editor on the side</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Markdown: Show Source</CODEROUTINE></TERM>
+    <DESC>Open an editor with the source of the Markdown preview currently displayed</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Markdown: Find File References</CODEROUTINE></TERM>
+    <DESC>Find the references to the Markdown file currently displayed</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE><X><T>ls</T><A>https://man7.org/linux/man-pages/man1/ls.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display directory/file information</DESC></ROW>
@@ -325,6 +325,7 @@ Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODERO
   <ROW><TERM><CODEROUTINE>tar -x</CODEROUTINE><BR/><CODEROUTINE>tar --extract</CODEROUTINE><BR/><CODEROUTINE>tar --get</CODEROUTINE></TERM><DESC>extract files from an archive file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tar -t</CODEROUTINE><BR/><CODEROUTINE>tar --list</CODEROUTINE></TERM><DESC>list content of an archive file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tar -z</CODEROUTINE></TERM><DESC>filter the archive file through gzip</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>tar cvzf data.tgz my_directory</CODEROUTINE></TERM><DESC>generate a tgz file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>tar /tmp/data.tar -I /tmp/list</CODEROUTINE></TERM><DESC>archive the files listed in <CODEROUTINE>/tmp/list</CODEROUTINE></DESC></ROW>
   <ROW><TERM><CODEROUTINE>--strip-components=3</CODEROUTINE></TERM><DESC>when extracting files, strip 3 leading components from file names</DESC></ROW>
 </DEFINITIONTABLE>
