@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -247,6 +247,22 @@
     <DESC>Separate paths from revisions.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>-L&lt;start&gt;,&lt;end&gt;:&lt;file&gt;</CODEROUTINE><BR/>
+          <CODEROUTINE>-L:&lt;funcname&gt;:&lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Show the code changes for a part of a file.<BR/>
+      <CODEROUTINE>&lt;start&gt;</CODEROUTINE> and <CODEROUTINE>&lt;end&gt;</CODEROUTINE> are numbers or regexps.<BR/>
+      <CODEROUTINE>&lt;end&gt;</CODEROUTINE> can be defined as an offset.<BR/>
+      <CODEROUTINE>&lt;funcname&gt;</CODEROUTINE> is a regexp.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --full-history</CODEROUTINE></TERM>
+    <DESC>Does not prune some history.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --full-history --simplify-merges</CODEROUTINE></TERM>
+    <DESC>Same as <CODEROUTINE>--full-history</CODEROUTINE> but remove some needless merges.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git log --full-history -- &lt;myfile&gt;</CODEROUTINE></TERM>
     <DESC>Display the log of a file even if this one does not exist anymore.</DESC>
   </ROW>
@@ -358,6 +374,10 @@
   <ROW>
     <TERM><CODEROUTINE>git blame -l</CODEROUTINE></TERM>
     <DESC>indicate all (40) characters of the revision</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git annotate &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Same feature as <CODEROUTINE>git blame</CODEROUTINE> but the output is slightly different.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
