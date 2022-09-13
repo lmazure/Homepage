@@ -283,6 +283,18 @@
     <DESC>Filter on a given author (if there are several <CODEROUTINE>--author</CODEROUTINE> flags, return commits of authors matching any of the regexps).</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git log --pretty=&lt;format&gt;</CODEROUTINE></TERM>
+    <DESC>Show more and more information.
+      <BLIST>
+        <ITEM>oneline</ITEM>
+        <ITEM>short</ITEM>
+        <ITEM>medium</ITEM>
+        <ITEM>full</ITEM>
+        <ITEM>fuller</ITEM>
+      </BLIST>
+    </DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git log --pretty="%cI %s"</CODEROUTINE></TERM>
     <DESC>Show the commit date and the commit subject.</DESC>
   </ROW>

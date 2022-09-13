@@ -1,0 +1,127 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>YAML</TITLE>
+<PATH>notes/yaml.xml</PATH>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE>
+<CONTENT>
+A YAML document is structured with indentation. The indentation level can be one or more spaces.<BR/>
+The basic block is key-value. The key is always a string. The value is a scalar so that it can be any datatype.<BR/>
+<BR/>
+<BLIST><TITLE>Data types</TITLE>
+  <ITEM><BLIST><TITLE>Numeric types</TITLE>
+    <ITEM>integer: <CODEROUTINE>val: 123</CODEROUTINE></ITEM>
+    <ITEM>hexadecimal: <CODEROUTINE>val: 0xdeadbeef</CODEROUTINE></ITEM>
+    <ITEM>octal: <CODEROUTINE>val: 023</CODEROUTINE></ITEM>
+    <ITEM>fixed floating point: <CODEROUTINE>val: 123.4</CODEROUTINE></ITEM>
+    <ITEM>exponential floating point: <CODEROUTINE>val: 12.3015e+05</CODEROUTINE></ITEM>
+    <ITEM>not a number: <CODEROUTINE>val: .NAN</CODEROUTINE></ITEM>
+    <ITEM>±infinity: <CODEROUTINE>val: .inf</CODEROUTINE> and <CODEROUTINE>val: -.inf</CODEROUTINE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Strings</TITLE>
+    <ITEM>In most cases, no quotes are needed <CODEMENU>foo: this is a normal string</CODEMENU></ITEM>
+    <ITEM>Single and doubles quotes can be used</ITEM>
+    <ITEM>Double quotes avoid the interpretation on escape sequences
+      <CODESAMPLE>foo: "this is not a normal string\n"<BR/>
+        bar: this is not a normal string\n</CODESAMPLE>
+      results into
+      <CODESAMPLE>foo: this is not a normal string<BR/>
+        bar: this is not a normal string\n</CODESAMPLE>
+    </ITEM>
+    <ITEM>The block style indicates how newlines inside the block should behave.<BR/>
+      If you would like them to be kept as newlines, use the literal style, indicated by a pipe (<CODEROUTINE>|</CODEROUTINE>).<BR/>
+      If instead you want them to be replaced by spaces, use the folded style, indicated by a right angle bracket (<CODEROUTINE>&gt;</CODEROUTINE>).<BR/>
+      (To get a newline using the folded style, leave a blank line by putting two newlines in. Lines with extra indentation are also not folded.)
+      <CODESAMPLE>bar: &gt;<BR/>
+        <TAB/>this is not a normal string it<BR/>
+        <TAB/>spans more than<BR/>
+        <TAB/>one line<BR/>
+        <TAB/>see?</CODESAMPLE>
+      results into
+      <CODESAMPLE>bar : this is not a normal string it spans more than one line see?</CODESAMPLE>
+      <CODESAMPLE>bar: |<BR/>
+        <TAB/>this is not a normal string it<BR/>
+        <TAB/>spans more than<BR/>
+        <TAB/>one line<BR/>
+        <TAB/>see?</CODESAMPLE>
+      results into
+      <CODESAMPLE>bar : this is not a normal string it<BR/>
+        spans more than<BR/>
+        one line<BR/>
+        see?</CODESAMPLE>
+    </ITEM>
+    <ITEM>The chomping indicator controls what should happen with newlines at the end of the string.<BR/>
+      The default, clip, puts a single newline at the end of the string.<BR/>
+      To remove all newlines, strip them by putting a minus sign (<CODEROUTINE>-</CODEROUTINE>) after the style indicator.<BR/>
+      Both clip and strip ignore how many newlines are actually at the end of the block; to keep them all put a plus sign (<CODEROUTINE>+</CODEROUTINE>) after the style indicator.</ITEM>
+  </BLIST></ITEM>
+  <ITEM>null
+    <CODESAMPLE>foo: ~<BR/>
+      bar: null</CODESAMPLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Strings</TITLE>
+    <ITEM>true: <CODEROUTINE>True</CODEROUTINE> (<CODEROUTINE>On</CODEROUTINE> and <CODEROUTINE>Yes</CODEROUTINE> are not supported anymore).</ITEM>
+    <ITEM>false: <CODEROUTINE>False</CODEROUTINE> (<CODEROUTINE>Off</CODEROUTINE> and <CODEROUTINE>No</CODEROUTINE> are not supported anymore).</ITEM>
+  </BLIST></ITEM>
+  <ITEM>Timestamps
+    <CODESAMPLE>canonical: 2001-12-15T02:59:43.1Z<BR/>
+      iso8601: 2001-12-14t21:59:43.10-05:00<BR/>
+      spaced: 2001-12-14 21:59:43.10 -5<BR/>
+      date: 2002-12-14</CODESAMPLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Arrays</TITLE>
+    <ITEM>on a single line
+      <CODESAMPLE>items: [ 1, 2, 3, 4, 5 ]<BR/>
+        names: [ "one", "two", "three", "four" ]</CODESAMPLE>
+    </ITEM>
+    <ITEM>on multiple lines
+      <CODESAMPLE>items:<BR/>
+      <TAB/>- 1<BR/>
+      <TAB/>- 2<BR/>
+      <TAB/>- 3<BR/>
+      <TAB/>- 4<BR/>
+      <TAB/>- 5<BR/>
+      names:<BR/>
+      <TAB/>- "one"<BR/>
+      <TAB/>- "two"<BR/>
+      <TAB/>- "three"<BR/>
+      <TAB/>- "four"</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Dictionaries</TITLE>
+    <ITEM>on a single line
+      <CODESAMPLE>foo: { thing1: huey, thing2: louie, thing3: dewey }</CODESAMPLE>
+    </ITEM>
+    <ITEM>on multiple lines
+      <CODESAMPLE>foo:<BR/>
+      <TAB/>thing1: huey<BR/>
+      <TAB/>thing2: louie<BR/>
+      <TAB/>thing3: dewey</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
+</BLIST>
+Data types can be explicited using tags (<CODEROUTINE>!!</CODEROUTINE>).
+<CODESAMPLE># The following value should be an int, no matter what:<BR/>
+  should-be-int: !!int 3.2<BR/>
+  <BR/>
+  # Parse any value to string:<BR/>
+  should-be-string: !!str 30.25<BR/>
+  <BR/>
+  # I need the next value to be boolean:<BR/>
+  should-be-boolean: !!bool yes/></CODESAMPLE>
+<BR/>
+Node anchors mark a node for future reference, which allow us to reuse the node. To mark a node we use <CODEROUTINE>&amp;</CODEROUTINE>, and to reference it we use <CODEROUTINE>*</CODEROUTINE>:
+<CODESAMPLE># The author data:<BR/>
+  author: &amp;gOrwell<BR/>
+  <TAB/>name: George<BR/>
+  <TAB/>last-name: Orwell<BR/>
+  <BR/>
+  # Some books:<BR/>
+  books: <BR/>
+  <TAB/>- 1984:<BR/>
+  <TAB/><TAB/>author: *gOrwell<BR/>
+  <TAB/>- animal-farm:<BR/>
+  <TAB/><TAB/>author: *gOrwell</CODESAMPLE>
+</CONTENT>
+<X><T>links</T><A>../links/yaml.html</A><L>en</L><F>HTML</F></X>
+</PAGE>
