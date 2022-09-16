@@ -108,7 +108,7 @@ Data types can be explicited using tags (<CODEROUTINE>!!</CODEROUTINE>).
   should-be-string: !!str 30.25<BR/>
   <BR/>
   # I need the next value to be boolean:<BR/>
-  should-be-boolean: !!bool yes/></CODESAMPLE>
+  should-be-boolean: !!bool yes</CODESAMPLE>
 <BR/>
 Node anchors mark a node for future reference, which allow us to reuse the node. To mark a node we use <CODEROUTINE>&amp;</CODEROUTINE>, and to reference it we use <CODEROUTINE>*</CODEROUTINE>:
 <CODESAMPLE># The author data:<BR/>
