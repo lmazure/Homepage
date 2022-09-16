@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unit testing</TITLE>
 <PATH>links/unittest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -65,7 +65,7 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Test reports</TITLE>
-        <ITEM><BLIST><TITLE><X><T>Allure</T><A>https://docs.qameta.io/allure/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><BLIST><TITLE><X><T>Allure</T><A>https://docs.qameta.io/allure-report/</A><L>en</L><F>HTML</F></X></TITLE>
           <ITEM><X><T>Allure Docker Service</T><A>https://github.com/fescobar/allure-docker-service</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>Allure TestOps</T><A>https://docs.qameta.io/allure-testops/</A><L>en</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
@@ -81,7 +81,7 @@
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>Test Automation Frameworks</T><A>http://safsdev.sourceforge.net/FRAMESDataDrivenTestAutomationFrameworks.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Carl</FIRSTNAME><LASTNAME>Nagle</LASTNAME></AUTHOR><COMMENT>A presentation of keyword driven automation and an architecture of a framework for such testing.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>When Should a Test Be Automated?</T><A>https://www.stickyminds.com/sites/default/files/article/file/2014/When%20Should%20a%20Test%20Be%20Automated.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Marick</LASTNAME></AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>Some ideas about the factors to be taken into account to decide for automated tests vs. manual tests.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Seven Steps to Test Automation Success</T><A>http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.471.9363&amp;rep=rep1&amp;type=pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Bret</FIRSTNAME><LASTNAME>Pettichord</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH><DAY>26</DAY></DATE><COMMENT>An overview of test automation with some very good practical comments.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Seven Steps to Test Automation Success</T><A>https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.471.9363&amp;rep=rep1&amp;type=pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Bret</FIRSTNAME><LASTNAME>Pettichord</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH><DAY>26</DAY></DATE><COMMENT>An overview of test automation with some very good practical comments.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status="zombie"><T>Diagnosing Java code: Unit tests and automated code analysis working together</T><ST>Your tests can help your tools to analyze your code</ST><A>https://www.ibm.com/developerworks/java/library/j-diag1015/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>E.</MIDDLENAME><LASTNAME>Allen</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>10</MONTH></DATE><COMMENT>Unit tests and code analysis complete each other, but I am not sure the technologies are mature enough today to have an interesting return on investment when applied.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Cost of Testing</T><A>https://testing.googleblog.com/2009/10/cost-of-testing.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Miško</FIRSTNAME><LASTNAME>Hevery</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>A personal evaluation of the cost of writing unit tests and their benefits.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>ContractTest</T><A>https://martinfowler.com/bliki/ContractTest.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>A contract test verifies that a test double is still up-to-date with the real service it is simulating.</COMMENT></ARTICLE></ITEM>
@@ -138,7 +138,7 @@
       <ITEM><BLIST><TITLE>Mockito</TITLE>
         <ITEM><ARTICLE><X><T>When/how to use Mockito Answer</T><A>https://testing.googleblog.com/2014/03/whenhow-to-use-mockito-answer.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Hongfei</FIRSTNAME><LASTNAME>Ding</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE><COMMENT>A short description of using Mockito's <CODEROUTINE>Answer</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Introduction to PowerMock</T><A>https://www.baeldung.com/intro-to-powermock</A><L>en</L><F>HTML</F></X><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE><COMMENT>A short description of PowerMockito, a PowerMock’s Mockito extension enabling to mock final, private or static methods.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Mockito Strict Stubbing and The UnnecessaryStubbingException</T><A>https://www.baeldung.com/mockito-unnecessary-stubbing-exception</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE><COMMENT>A description of Strict Stubbing and how to disable it.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Mockito Strict Stubbing and The UnnecessaryStubbingException</T><A>https://www.baeldung.com/mockito-unnecessary-stubbing-exception</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>21</DAY></DATE><COMMENT>A description of Strict Stubbing and how to disable it.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Oracles</TITLE>

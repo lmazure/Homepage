@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -85,6 +85,7 @@
           <ITEM><X><T>Selenium</T><A>https://selenium.dev/</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>Elemental Selenium</T><A>https://elementalselenium.com</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>WebdriverIO</T><A>https://webdriver.io/</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>Callisto</T><A>https://github.com/wrike/callisto</A><L>en</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
         <ITEM><X><T>Protractor</T><A>https://www.protractortest.org</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Cypress</T><A>https://www.cypress.io</A><L>en</L><F>HTML</F></X></ITEM>
@@ -183,7 +184,7 @@
         <ITEM><ARTICLE><X><T>Automated Acceptance Testing With Robot Framework</T><A>https://mydeveloperplanet.com/2020/05/19/automated-acceptance-testing-with-robot-framework/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gunter</FIRSTNAME><LASTNAME>Rotsaert</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE><COMMENT>A good introduction to Robot Framework.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE predecessor="https://mydeveloperplanet.com/2020/05/19/automated-acceptance-testing-with-robot-framework/"><X><T>How to Write Data Driven Tests With Robot Framework</T><A>https://mydeveloperplanet.com/2020/06/02/how-to-write-data-driven-tests-with-robot-framework/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gunter</FIRSTNAME><LASTNAME>Rotsaert</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE><COMMENT>How to use <CODEROUTINE>[Template]</CODEROUTINE> and the Data Driver Library.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>RoboCon 2021 - 1.04 BROWSER LIBRARY - INTRODUCTION (Mikko, Tatu, Kerkko, René)</T><A>https://www.youtube.com/watch?v=3BNVS6uiFeo</A><L>en</L><F>MP4</F><DURATION><MINUTE>32</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mikko</FIRSTNAME><LASTNAME>Korpela</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Tatu</FIRSTNAME><LASTNAME>Aalto</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Kerkko</FIRSTNAME><LASTNAME>Pelttari</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>René</FIRSTNAME><LASTNAME>Rohner</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>A humorous and good presentation of Browser Library done by its authors.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Robot FrameWork: The Ultimate Guide to Running Your Tests</T><A>https://www.blazemeter.com/blog/robot-framework-the-ultimate-guide-to-running-your-tests/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dzmitry</FIRSTNAME><LASTNAME>Ihnatsyeu</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE><COMMENT>An example of test with Robot Framework using Python and Selenium.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Robot Framework: The Ultimate Guide to Running Your Tests</T><A>https://www.blazemeter.com/blog/robot-framework-the-ultimate-guide-to-running-your-tests/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dzmitry</FIRSTNAME><LASTNAME>Ihnatsyeu</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE><COMMENT>An example of test with Robot Framework using Python and Selenium.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Create a Docker image running Robot Framework</T><A>https://blog.jdriven.com/2021/05/create-a-docker-image-running-robot-framework/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Justus</FIRSTNAME><LASTNAME>Brugman</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>UI Web Testing</TITLE>
@@ -199,7 +200,8 @@
           <ITEM><ARTICLE><X><T>Selenium locators best practices</T><A>https://screenster.io/selenium-locators-best-practices/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>7</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X quality="-1"><T>Selenium and WebdriverIO — A Historical Overview</T><A>https://medium.com/@specktackle/selenium-and-webdriverio-a-historical-overview-6f8fbf94b418</A><L>en</L><F>HTML</F></X><DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE><COMMENT>A messy and short list of facts about Selenium and WebdriverIO.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Waits</T><A>https://www.selenium.dev/documentation/webdriver/waits/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>The official Selenium wiki for explicit, implicit and fluent waits.</COMMENT></ARTICLE></ITEM>
-          <ITEM><ARTICLE><X quality="-1"><T>Implicit, Explicit and Fluent Wait in Selenium WebDriver</T><A>https://www.guru99.com/implicit-explicit-waits-selenium.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Krishna</FIRSTNAME><LASTNAME>Rungta</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>28</DAY></DATE><COMMENT>An unclear description of Implicit, Explicit and Fluent Waits.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X quality="-1"><T>Callisto: An Easy Way To Run Selenium Tests in the Cloud</T><A>https://medium.com/wriketechclub/callisto-an-easy-way-to-run-selenium-tests-in-the-cloud-6c1bc39c49ae</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vitaly</FIRSTNAME><LASTNAME>Markov</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>A presentation of Callisto, a grid of WebDriver instances managed in Kubernetes. The first part of the article is very clumsy, the technical part is fine.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X quality="-1"><T>Selenium Wait – Implicit, Explicit and Fluent Waits</T><A>https://www.guru99.com/implicit-explicit-waits-selenium.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Krishna</FIRSTNAME><LASTNAME>Rungta</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>26</DAY></DATE><COMMENT>An unclear description of Implicit, Explicit and Fluent Waits.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>WebDriverIO</TITLE>
           <ITEM><ARTICLE><X><T>4 reasons why you should consider using WebdriverIO for testing</T><A>https://blog.kevinlamping.com/4-reasons-why-you-should-think-about-using-webdriverio/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Lamping</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE><COMMENT>Easy for front-end developers, access to Selenium features, simple to use, and extendable.</COMMENT></ARTICLE></ITEM>
