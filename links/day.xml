@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Daily life</TITLE>
 <PATH>links/day.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -17,12 +17,18 @@
       </CLIST></ITEM>
       <ITEM><X><T>Liste des indicatifs téléphoniques internationaux par pays</T><A>https://fr.wikipedia.org/wiki/Liste_des_indicatifs_t%C3%A9l%C3%A9phoniques_internationaux_par_pays</A><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Liste des indicatifs téléphoniques internationaux par indicatif</T><A>https://fr.wikipedia.org/wiki/Liste_des_indicatifs_t%C3%A9l%C3%A9phoniques_internationaux_par_indicatif</A><L>fr</L><F>HTML</F></X></ITEM>
-      <ITEM><CLIST><TITLE>GSM</TITLE>
-        <ITEM><X><T>Bouygues Telecom</T><A>https://www.bouyguestelecom.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Orange</T><A>https://www.orange.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>SFR</T><A>https://www.sfr.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Free</T><A>http://mobile.free.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
-      </CLIST></ITEM>
+      <ITEM><BLIST><TITLE>GSM</TITLE>
+        <ITEM><CLIST><TITLE>Operators</TITLE>
+          <ITEM><X><T>Bouygues Telecom</T><A>https://www.bouyguestelecom.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>Orange</T><A>https://www.orange.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>SFR</T><A>https://www.sfr.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>Free</T><A>http://mobile.free.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
+        <ITEM><CLIST><TITLE>Coverage</TITLE>
+          <ITEM><X><T>nPerf</T><A>https://www.nperf.com/fr/map/FR/</A><L>fr</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>Arcep</T><A>https://monreseaumobile.arcep.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
+      </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Consuming</TITLE>
       <ITEM><CLIST><TITLE>Shops</TITLE>
@@ -102,8 +108,8 @@
       <ITEM><ARTICLE><X status="obsolete"><T>Déclaration fiscale française : changement important !</T><A>https://www.lesfrontaliers.lu/fiscalite/declaration-fiscale-francaise-changement-important/</A><L>fr</L><F>HTML</F></X><DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE><COMMENT>Yet another change for 2015 declaration.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Swimming pool</TITLE>
-      <ITEM><ARTICLE><X><T>« La vanne 6 voies expliquée en détail »</T><A>https://www.sa-piscine.com/vanne-6-voies</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Emmanuel</FIRSTNAME></AUTHOR><COMMENT>How to use the six-way selector valve.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE predecessor="https://www.sa-piscine.com/vanne-6-voies"><X><T>« La vanne 6 voies expliquée en détail, suite et fin »</T><A>https://www.sa-piscine.com/la-vanne-6-voies-suite</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Emmanuel</FIRSTNAME></AUTHOR><COMMENT>The continuation of the previous article.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>« La vanne 6 voies expliquée en détail, suite et fin »</T><A>https://www.sa-piscine.com/vanne-6-voies</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Emmanuel</FIRSTNAME></AUTHOR><COMMENT>How to use the six-way selector valve.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE predecessor="https://www.sa-piscine.com/vanne-6-voies"><X><T>« La vanne 6 voies expliquée en détail »</T><A>https://www.sa-piscine.com/la-vanne-6-voies-suite</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Emmanuel</FIRSTNAME></AUTHOR><COMMENT>The continuation of the previous article.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Piscine : Fonctionnement Vanne Multivoies</T><A>https://www.youtube.com/watch?v=VjJip3CNRgs</A><L>fr</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>34</SECOND></DURATION></X><DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Piscine: Comment Régler et Programmer l'Horloge de Filtration ?</T><A>https://www.youtube.com/watch?v=qFJLYL5fJx8</A><L>fr</L><F>MP4</F><DURATION><MINUTE>4</MINUTE><SECOND>32</SECOND></DURATION></X><DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Quand et Comment laver / rincer son filtre à sable ?</T><A>https://www.youtube.com/watch?v=xJypMTuYM6Y</A><L>fr</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>47</SECOND></DURATION></X><DATE><YEAR>2015</YEAR><MONTH>6</MONTH><DAY>12</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>

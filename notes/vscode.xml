@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -91,7 +91,7 @@ File
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="R"/><BR/>
       <CODEROUTINE>File: Reveal in File Explorer</CODEROUTINE></TERM>
-    <DESC>Open an OS file explrer with the file being selecter</DESC>
+    <DESC>Open an OS file explorer with the file being selected</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Tab"/><BR/>
@@ -601,6 +601,14 @@ Markdown
   <ROW>
     <TERM><CODEROUTINE>Markdown: Find File References</CODEROUTINE></TERM>
     <DESC>Find the references to the Markdown file currently displayed</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Java
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>Java: Create Java Project…</CODEROUTINE></TERM>
+    <DESC>Launch a wizard to create a Java project</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
