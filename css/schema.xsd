@@ -359,6 +359,7 @@
       <xs:element name="I" minOccurs="0" maxOccurs="unbounded" type="xs:string"/>
       <xs:element ref="X" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element ref="CODEFILENAME" minOccurs="0" maxOccurs="unbounded"/>
+      <xs:element ref="TAB" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
   </xs:complexType>
 </xs:element>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -23,6 +23,10 @@
         <ITEM><X><T>how to write good test cases</T><A>https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Robocop</T><A>https://robocop.readthedocs.io/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>built in keywords</T><A>https://robotframework.org/robotframework/latest/libraries/BuiltIn.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><CLIST><TITLE><X><T>Browser Library</T><A>https://robotframework-browser.org/</A><L>en</L><F>HTML</F></X></TITLE>
+          <ITEM><X><T>keywords</T><A>https://marketsquare.github.io/robotframework-browser/Browser.html</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>source</T><A>https://github.com/MarketSquare/robotframework-browser</A><L>en</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/robotframework.html</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><X><T>Karate</T><A>https://github.com/karatelabs/karate</A><L>en</L><F>HTML</F></X></ITEM>
@@ -176,7 +180,7 @@
         <ITEM><ARTICLE><X><T>Cucumber Reports</T><A>https://cucumber.io/blog/open-source/cucumber-reports/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Seb</FIRSTNAME><LASTNAME>Rose</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>4</DAY></DATE><COMMENT>Cucumber can now publish HTML reports in the cloud (in <X><T>https://reports.cucumber.io/</T><A>https://reports.cucumber.io/</A><L>en</L><F>HTML</F></X>).</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Postman</TITLE>
-        <ITEM><ARTICLE><X><T>Postman: le guide complet de l’outil indispensable au développement web</T><A>https://practicalprogramming.fr/postman</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rayed</FIRSTNAME><LASTNAME>Benbrahim</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>A good introduction to Postman, but there are some spelling mistakes and a few details are not clear.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Postman: le guide complet de l’outil indispensable au développement web</T><A>https://welovedevs.com/fr/articles/postman</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rayed</FIRSTNAME><LASTNAME>Benbrahim</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>A good introduction to Postman, but there are some spelling mistakes and a few details are not clear.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Robot Framework</TITLE>
         <ITEM><ARTICLE><X><T>Robot Framework Tutorial #19 - Arguments in Robot Framework</T><A>https://www.youtube.com/watch?v=MSp_pf4EgSg</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>27</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Manish</FIRSTNAME><LASTNAME>Verma</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>2</MONTH><DAY>1</DAY></DATE><COMMENT>How to use arguments.</COMMENT></ARTICLE></ITEM>

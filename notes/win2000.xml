@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -146,10 +146,11 @@ File explorer
   <ITEM>to create a large file
     <CODESAMPLE>fsutil file createnew &lt;filename&gt; &lt;length&gt;</CODESAMPLE>
   </ITEM>
+  <ITEM><CODEROUTINE>%PATH%</CODEROUTINE> is the concatenation of the system environment variable and of the user environment variable.</ITEM>
   <ITEM><BLIST><TITLE>to modify <CODEROUTINE>%PATH%</CODEROUTINE></TITLE>
     <ITEM>open the Paramètre dialog</ITEM>
     <ITEM>type PATH</ITEM>
-    <ITEM>select <CODEMENU>Modifier les variables d'envionnement pour votre compte</CODEMENU></ITEM>
+    <ITEM>select <CODEMENU>Modifier les variables d'environnement pour votre compte</CODEMENU></ITEM>
     <ITEM>select Path</ITEM>
     <ITEM>click on <CODEMENU>Modifier…</CODEMENU></ITEM>
     <ITEM>do the change</ITEM>
