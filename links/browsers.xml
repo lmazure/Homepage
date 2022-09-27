@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Browsers</TITLE>
 <PATH>links/browsers.xml</PATH>
-<DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -12,7 +12,7 @@
         <ITEM><X><T>download</T><A>https://www.apple.com/safari/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><X><T>Opera</T><A>https://www.opera.com</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Amaya</T><A>https://www.w3.org/Amaya</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>Amaya</T><A>https://www.w3.org/Amaya</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><CLIST><TITLE>Browser statistics</TITLE>
       <ITEM><X><T>Wikipedia</T><A>https://en.wikipedia.org/wiki/Usage_share_of_web_browsers</A><L>en</L><F>HTML</F></X></ITEM>
@@ -22,12 +22,13 @@
       <ITEM><X><T>Browser News</T><A>http://www.upsdell.com/BrowserNews/stat_trends.htm</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Android dashboards</T><A>https://developer.android.com/about/dashboards</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
+    <ITEM><X><T>WhatIsMyBrowser.com</T><A>https://www.whatismybrowser.com/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Secrets of the Browser Developer Tools</T><A>http://devtoolsecrets.com</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Code School - Discover DevTools</T><A>https://discover-devtools.codeschool.com</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X status="dead"><T>Cookie Specification Vulnerabilities</T><A>http://www.onlamp.com/pub/a/security/2004/04/01/cookie_vulnerabilities.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alexander</FIRSTNAME><LASTNAME>Prohorenko</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE><COMMENT>A simple presentation of cookie specified limits and how to use them to perform cookie flooding.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Browserscope &amp; SpriteMe</T><A>https://www.youtube.com/watch?v=pNfRL-TwzZY</A><L>en</L><F>MP4</F><DURATION><MINUTE>52</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Lindsey</FIRSTNAME><LASTNAME>Simon</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Souders</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE><COMMENT>A presentation of <X status="dead"><T>Browserscope</T><A>http://www.browserscope.org</A><L>en</L><F>HTML</F></X>, a browser benchmark ran by the community, and <X><T>SpriteMe</T><A>https://www.errorvault.com/en/spriteme.php</A><L>en</L><F>HTML</F></X>, a page analyser proposing some CSS sprites to accelerate the download.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Browserscope &amp; SpriteMe</T><A>https://www.youtube.com/watch?v=pNfRL-TwzZY</A><L>en</L><F>MP4</F><DURATION><MINUTE>52</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Lindsey</FIRSTNAME><LASTNAME>Simon</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Souders</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE><COMMENT>A presentation of <X status="dead"><T>Browserscope</T><A>http://www.browserscope.org</A><L>en</L><F>HTML</F></X>, a browser benchmark ran by the community, and <X status="dead"><T>SpriteMe</T><A>https://www.errorvault.com/en/spriteme.php</A><L>en</L><F>HTML</F></X>, a page analyser proposing some CSS sprites to accelerate the download.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Browser makers hope WebGL will remake 3D</T><ST>Don't believe WebGL is real? Here's how to try the 3D browser technology yourself. It works, but plenty of development is needed for this graphics foundation to mature.</ST><A>https://www.cnet.com/news/browser-makers-hope-webgl-will-remake-3d/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stephen</FIRSTNAME><LASTNAME>Shankland</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>12</MONTH><DAY>17</DAY></DATE><COMMENT>Yet another try to standardize 3D in Browsers.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Here comes Yahoo's own Web browser</T><ST>Axis</ST><A>https://news.cnet.com/8301-1023_3-57439724-93/here-comes-yahoos-own-web-browser-axis/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rafe</FIRSTNAME><LASTNAME>Needleman</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE><COMMENT>A browser focused on search.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>How to Prevent the 'Do Not Track' Arms Race</T><ST>The advertising industry claims this is a "nuclear first strike" against their industry. And so begins the arms race, whereby the digital cookies currently used to track user habits are blocked by the browsers -- only to have the advertisers respond with even more sophisticated tracking methods like digital fingerprinting. Browsers are gearing up to disable or reduce the effectiveness of such fingerprinting ... leading to yet another round of aggressive tracking tools by advertisers followed by blocking tools on the user side. And so on.</ST><A>https://www.wired.com/2013/04/do-not-track/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Peter</FIRSTNAME><LASTNAME>Swire</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE><COMMENT>The description of the ad war and a naive belief that W3C can stop the arm race.</COMMENT></ARTICLE></ITEM>
@@ -50,7 +51,7 @@
       <ITEM><ARTICLE><X><T>And The Winner of the Browser Wars is…</T><A>https://blog.zimbra.com/2008/06/and-the-winner-is/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Henrikson</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>6</MONTH><DAY>17</DAY></DATE><COMMENT>IE7, IE8, Firefox2, Firefox 3, and Safari.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>JavaScript Performance Rundown</T><A>https://johnresig.com/blog/javascript-performance-rundown/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Resig</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>9</MONTH><DAY>3</DAY></DATE><COMMENT>Some first benchmarks of Google Chrome. Not so good in pure JavaScript, but one of the best if you take DOM into account.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="1" status="dead"><T>Common Issues in Assessing Browser Performance</T><A>https://blogs.msdn.microsoft.com/ie/2009/01/23/common-issues-in-assessing-browser-performance/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christian</FIRSTNAME><LASTNAME>Stockwell</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>A good overview of the difficulties of measuring Browser performance.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Browser Speed Tests: Firefox 7, Chrome 14, Internet Explorer 9, and More</T><A>https://lifehacker.com/5844150/browser-speed-tests-firefox-7-chrome-14-internet-explorer-9-and-more</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Whitson</FIRSTNAME><LASTNAME>Gordon</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE><COMMENT>Yet another performance test, this time Opera is the winner and Chrome the loser.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Browser Speed Tests: Firefox 7, Chrome 14, Internet Explorer 9, and Opera 11.51</T><A>https://lifehacker.com/5844150/browser-speed-tests-firefox-7-chrome-14-internet-explorer-9-and-more</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Whitson</FIRSTNAME><LASTNAME>Gordon</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE><COMMENT>Yet another performance test, this time Opera is the winner and Chrome the loser.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
