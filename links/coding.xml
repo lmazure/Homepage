@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -61,7 +61,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Continuous integration</TITLE>
       <ITEM><X><T>Hudson</T><A>https://www.eclipse.org/hudson/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>CruiseControl</T><A>http://cruisecontrol.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>CruiseControl</T><A>https://cruisecontrol.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Jenkins</T><A>https://www.jenkins.io/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>CircleCI</T><A>https://circleci.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Azure Pipelines</T><A>https://azure.microsoft.com/services/devops/pipelines/</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
@@ -78,7 +78,7 @@
         <ITEM><X><T>GNU</T><A>https://www.gnu.org/software/make/manual/make.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/make.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
-      <ITEM><X><T>tmake</T><A>http://tmake.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>tmake</T><A>https://tmake.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Ant</T><A>https://ant.apache.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE><X><T>Maven</T><A>https://maven.apache.org/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>Maven Surefire Plugin</T><A>https://maven.apache.org/surefire/maven-surefire-plugin/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -91,6 +91,7 @@
         <ITEM><X><T>keyboard shortcuts</T><A>https://docs.gitlab.com/ee/user/shortcuts.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>quick actions</T><A>https://docs.gitlab.com/ee/user/project/quick_actions.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>GraphiQL</T><A>https://gitlab.com/-/graphql-explorer</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Glab</T><A>https://gitlab.com/gitlab-org/cli</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>status</T><A>https://status.gitlab.com/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Twitter status</T><A>https://twitter.com/gitlabstatus</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>source code</T><A>https://gitlab.com/gitlab-org/gitlab</A><L>en</L><F>HTML</F></X></ITEM>
@@ -122,7 +123,7 @@
       <ITEM><X><T>Artifactory</T><A>https://jfrog.com/artifactory/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Code browsers</TITLE>
-      <ITEM><CLIST><TITLE><ANCHOR>cscope</ANCHOR><X status="obsolete"><T>Cscope</T><A>http://cscope.sourceforge.net/</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><CLIST><TITLE><ANCHOR>cscope</ANCHOR><X status="obsolete"><T>Cscope</T><A>https://cscope.sourceforge.net/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>personal notes</T><A>../notes/cscope.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
     </BLIST></ITEM>
@@ -151,13 +152,13 @@
       <ITEM><X><T>LeakTracer</T><A>https://www.andreasen.org/LeakTracer/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>MemWatch</T><A>https://sourceforge.net/projects/memwatch/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Memprof</T><A>http://www.secretlabs.de/projects/memprof/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>mpatrol</T><A>http://mpatrol.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>mpatrol</T><A>https://mpatrol.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>AddressSanitizer (aka ASan)</T><A>https://github.com/google/sanitizers</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Static analyzers</TITLE>
       <ITEM><BLIST><TITLE>C</TITLE>
         <ITEM><X><T>splint</T><A>http://www.splint.org/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>smatch</T><A>http://smatch.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>smatch</T><A>https://smatch.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>slam</T><A>https://www.microsoft.com/en-us/research/project/slam/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>SonarQube</T><A>https://www.sonarqube.org</A><L>en</L><F>HTML</F></X>: duplicated code, coding standards, unit tests, code complexity, potential bugs, code coverage…</ITEM>
       </BLIST></ITEM>
@@ -181,7 +182,7 @@
         <ITEM><X><T>CheckStyle</T><A>https://checkstyle.sourceforge.io/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Jtest</T><A>https://www.parasoft.com/product/jtest/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Jlint</T><A>http://artho.com/jlint</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>FindBugs</T><A>http://findbugs.sourceforge.net</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>FindBugs</T><A>https://findbugs.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Macker</T><A>https://innig.net/macker/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>STAN</T><A>http://stan4j.com</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
@@ -424,6 +425,8 @@
         <ITEM><ARTICLE predecessor="https://about.gitlab.com/blog/2022/08/24/postman-integration-with-gitlab-makes-your-api-workflows-easier/"><X><T>Back up a Postman Collection Using GitLab</T><A>https://www.youtube.com/watch?v=BL8DFOPncMc</A><L>en</L><F>MP4</F><DURATION><MINUTE>4</MINUTE><SECOND>11</SECOND></DURATION></X><AUTHOR><FIRSTNAME>William</FIRSTNAME><LASTNAME>Douglas</LASTNAME><GIVENNAME>Ian</GIVENNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>12</DAY></DATE><COMMENT>A demo of the previous integration which demonstrates how basic it is.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Speed up your monorepo workflow in Git</T><A>https://about.gitlab.com/blog/2022/09/06/speed-up-your-monorepo-workflow-in-git/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Cai</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE><COMMENT>The usual advice: sparse checkout, partial clone, and shallow clone.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Pursuing faster time-to-merge for wider community contributions</T><A>https://about.gitlab.com/blog/2022/09/13/pursuing-faster-time-to-merge-for-wider-community-contributions/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nick</FIRSTNAME><LASTNAME>Veenhof</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>GitLab is experimenting new processes to manage contributors' merge requests more quickly.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>GitLab introduces new machine types for GitLab SaaS Linux Runners</T><A>https://about.gitlab.com/blog/2022/09/22/new-machine-types-for-gitlab-saas-runners/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Darren</FIRSTNAME><LASTNAME>Eastman</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE><COMMENT>GitLab now proposes a medium and a large Linux SaaS runner.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Glab est devenue la cli officielle de gitlab</T><A>https://blog.stephane-robert.info/post/gitlab-cli/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stéphane</FIRSTNAME><LASTNAME>Robert</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE><COMMENT>A short presentation of Glab.</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR>'s presentation</TITLE>
           <ITEM><ARTICLE><X><T>GITLAB - 1. PRÉSENTATION ET PRINCIPES</T><A>https://www.youtube.com/watch?v=aQl-IKLm_9A</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE><COMMENT>An overview of GitLab.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>GITLAB - 2. DÉPÔT GIT</T><A>https://www.youtube.com/watch?v=ySLhc3qdGEk</A><L>fr</L><F>MP4</F><DURATION><MINUTE>23</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Xavier</FIRSTNAME><LASTNAME>Pestel</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>The Git repository.</COMMENT></ARTICLE></ITEM>
