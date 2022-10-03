@@ -55,6 +55,13 @@
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
+  <ITEM>use <CODEROUTINE>````</CODEROUTINE> to be able to write suggestions containing markdown
+    <CODESAMPLE>````suggestion:-0+2<BR/>
+      ```shell<BR/>
+      git log<BR/>
+      ```<BR/>
+      ````</CODESAMPLE>
+  </ITEM>
   <ITEM>run the GitLab runner in Docker
     <CODESAMPLE>docker run --rm -t -i -v C:\gitlab-runner\config:/etc/gitlab-runner gitlab/gitlab-runner register --non-interactive --executor "docker" --docker-image alpine:latest --url "https://gitlab.com/" --registration-token "XXXXXXXXXXXXXXXXXXXX" --description "myrunner" --run-untagged="true" –locked="false"<BR/>
       docker run -d --name gitlab-runner --restart always -v C:\gitlab-runner\config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest</CODESAMPLE>

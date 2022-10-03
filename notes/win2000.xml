@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -26,7 +26,16 @@
   <TERM><MODIFIERKEY id="Windows"/><KEY id="+"/></TERM>
   <DESC>display the magnifier</DESC>
 </ROW>
+<ROW>
+  <TERM><MODIFIERKEY id="Windows"/><KEY id="1"/></TERM>
+  <DESC>start the first application (2 for the second, 3 for the third…) in the toolbar, display it if it was already running</DESC>
+</ROW>
+<ROW>
+  <TERM><MODIFIERKEY id="Shift"/><MODIFIERKEY id="Windows"/><KEY id="1"/></TERM>
+  <DESC>start a new instance of the first application in the toolbar</DESC>
+</ROW>
 </DEFINITIONTABLE>
+<BR/>
 File explorer
 <DEFINITIONTABLE>
 <ROW>
@@ -147,7 +156,7 @@ File explorer
     <CODESAMPLE>fsutil file createnew &lt;filename&gt; &lt;length&gt;</CODESAMPLE>
   </ITEM>
   <ITEM><CODEROUTINE>%PATH%</CODEROUTINE> is the concatenation of the system environment variable and of the user environment variable.</ITEM>
-  <ITEM><BLIST><TITLE>to modify <CODEROUTINE>%PATH%</CODEROUTINE></TITLE>
+  <ITEM><BLIST><TITLE>To modify <CODEROUTINE>%PATH%</CODEROUTINE></TITLE>
     <ITEM>open the Paramètre dialog</ITEM>
     <ITEM>type PATH</ITEM>
     <ITEM>select <CODEMENU>Modifier les variables d'environnement pour votre compte</CODEMENU></ITEM>
@@ -291,6 +300,10 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
   <ROW><TERM><CODEROUTINE>rmdir</CODEROUTINE><BR/><CODEROUTINE>rd</CODEROUTINE></TERM><DESC>delete an empty directory</DESC></ROW>
   <ROW><TERM><CODEROUTINE>rmdir /s</CODEROUTINE></TERM><DESC>delete a possibly empty directory</DESC></ROW>
   <ROW><TERM><CODEROUTINE>rmdir /s /q</CODEROUTINE></TERM><DESC>delete a possibly empty directory without prompting</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW><TERM><CODEROUTINE>where</CODEROUTINE></TERM><DESC>locate where is an executable<BR/>By default, the search is done in the current directory and in the PATH.</DESC></ROW>
 </DEFINITIONTABLE>
 In order to know which process uses a given file, use <X><T>Handle</T><A>https://docs.microsoft.com/en-us/sysinternals/downloads/handle</A><L>en</L><F>HTML</F></X> of <X><T>SysInternals</T><A>https://docs.microsoft.com/en-us/sysinternals/</A><L>en</L><F>HTML</F></X>.<BR/>
 <BR/>
