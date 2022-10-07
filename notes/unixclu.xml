@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix command line utilities</TITLE>
 <PATH>notes/unixclu.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -13,6 +13,14 @@
   <ROW>
     <TERM><CODEROUTINE>cat foobar | xargs -n 1 ls -l</CODEROUTINE></TERM>
     <DESC>long list of files defined in <CODEROUTINE>foobar</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>xargs -p</CODEROUTINE><BR/><CODEROUTINE>xargs --interactive</CODEROUTINE></TERM>
+    <DESC>print out the command to be executed and then prompt for input (y/n) to confirm before executing the command</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>xargs -t</CODEROUTINE><BR/><CODEROUTINE>xargs --verbose</CODEROUTINE></TERM>
+    <DESC>print each command, then immediately execute it</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>xargs -P &lt;n&gt;</CODEROUTINE><BR/><CODEROUTINE>xargs --max-procs=&lt;n&gt;</CODEROUTINE></TERM>

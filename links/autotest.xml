@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -119,7 +119,9 @@
       </CLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Service testing</TITLE>
-      <ITEM><X><T>SoapUI</T><A>https://www.soapui.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>SoapUI</T><A>https://www.soapui.org</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>source code</T><A>https://github.com/SmartBear/soapui</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
       <ITEM><X><T>REST Assured</T><A>https://rest-assured.io/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Postman</T><A>https://www.getpostman.com</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
