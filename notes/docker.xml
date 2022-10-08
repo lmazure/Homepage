@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -206,6 +206,29 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE>docker network ls</CODEROUTINE></TERM>
+    <DESC>List the networks.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker network create &lt;network&gt;</CODEROUTINE></TERM>
+    <DESC>Create network &lt;network&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker network rm &lt;network&gt;</CODEROUTINE></TERM>
+    <DESC>Delete network &lt;network&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker network prune</CODEROUTINE></TERM>
+    <DESC>Remove all unused local network (i.e network which are not referenced by any containers).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker network inspect &lt;network&gt;</CODEROUTINE></TERM>
+    <DESC>Return information about network &lt;network&gt;.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
     <TERM><CODEROUTINE>docker logs &lt;container&gt;</CODEROUTINE></TERM>
     <DESC>Display the logs of a container.</DESC>
   </ROW>
@@ -304,6 +327,78 @@ Dangling images are layers that have no relationship to any tagged images.
   <ROW>
     <TERM><CODEROUTINE>docker logout &lt;server&gt;</CODEROUTINE></TERM>
     <DESC>Log out from a Docker registry.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker-compose -f conf.yaml</CODEROUTINE></TERM>
+    <DESC>Use the configuration file <CODEROUTINE>conf.yaml</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker-compose -f conf1.yaml -f conf2.yaml</CODEROUTINE></TERM>
+    <DESC>Use the configuration file which is the concatenation of <CODEROUTINE>conf1.yaml</CODEROUTINE> and <CODEROUTINE>conf2.yaml</CODEROUTINE>.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker-compose up</CODEROUTINE></TERM>
+    <DESC>Create and start containers.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-d</CODEROUTINE><BR/>
+      <CODEROUTINE>--detach</CODEROUTINE></TERM>
+    <DESC>Detached mode: Run containers in the background.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker-compose start</CODEROUTINE></TERM>
+    <DESC>Starts existing containers for a service.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker-compose stop</CODEROUTINE></TERM>
+    <DESC>Stops running containers without removing them. They can be started again with <CODEROUTINE>docker compose start</CODEROUTINE>.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker-compose down</CODEROUTINE></TERM>
+    <DESC>Stop and remove containers and networks.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker-compose ps</CODEROUTINE></TERM>
+    <DESC>List containers.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--service</CODEROUTINE></TERM>
+    <DESC>Display services.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker-compose logs &lt;service&gt;</CODEROUTINE></TERM>
+    <DESC>View output from containers. It is possible to specify no or several services.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-f</CODEROUTINE><BR/>
+      <CODEROUTINE>--follow</CODEROUTINE></TERM>
+    <DESC>Keep following the logs.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--tail 200</CODEROUTINE><BR/>
+      <CODEROUTINE>-n 200</CODEROUTINE></TERM>
+    <DESC>Display the 200 last lines.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Bash</TITLE>
 <PATH>notes/bash2.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>functions</B></U></TITLE>
 <ITEM>
@@ -27,6 +27,11 @@
     e=`encode $1`<BR/>
     xse -window $win -display :0.0 $e "&lt;Key&gt;Return"
   </CODESAMPLE>
+</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Environment variables</B></U></TITLE>
+  <ITEM>Test if an environment variable is set (possibly empty) or not
+    <CODESAMPLE>[[ ! -z ${MYVAR+z} ]] &amp;&amp; echo "Set" || echo "Not defined"</CODESAMPLE>
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>HereDoc</B></U></TITLE>
