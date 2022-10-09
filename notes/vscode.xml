@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -76,11 +76,17 @@ File
     <DESC>Open new empty editor</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="E"/></TERM>
-    <DESC>Show file explorer</DESC>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="E"/><BR/>
+      <CODEROUTINE>View: Show Explorer</CODEROUTINE></TERM>
+    <DESC>Show the file explorer</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="O"/></TERM>
+    <TERM><CODEROUTINE>Collapse Folders in Explorer</CODEROUTINE></TERM>
+    <DESC>Collapse the folders in the file explorer</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="O"/><BR/>
+      <CODEROUTINE>File: Open File…</CODEROUTINE></TERM>
     <DESC>Open a file</DESC>
   </ROW>
   <ROW>
@@ -110,7 +116,8 @@ File
     <DESC>Go to file</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="O"/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="O"/><BR/>
+      <CODEROUTINE>File: Open Folder…</CODEROUTINE></TERM>
     <DESC>Open folder</DESC>
   </ROW>
   <ROW>
@@ -202,7 +209,7 @@ Display
     <DESC>Reset zoom</DESC>
   </ROW>
 </DEFINITIONTABLE>
-To diplay/undisplay the inline parameter hints: modify setting <CODEROUTINE>editor.inlayHints.enabled</CODEROUTINE>
+To diplay/undisplay the inline parameter hints: modify setting <CODEROUTINE>editor.inlayHints.enabled</CODEROUTINE>.<BR/>
 <BR/>
 Folding
 <DEFINITIONTABLE>
@@ -269,20 +276,35 @@ Folding
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Selection
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id="Alt"/><KEY id="Left"/></TERM>
-    <DESC>Go to previous edit location</DESC>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Right"/><BR/>
+      <CODEROUTINE>Expand Selection</CODEROUTINE></TERM>
+    <DESC>Expand Selection (e.g. select the containing node in XML)</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Alt"/><KEY id="Right"/></TERM>
-    <DESC>Go to next edit location</DESC>
-  </ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Left"/><BR/>
+      <CODEROUTINE>Shrink Selection</CODEROUTINE></TERM>
+      <DESC>Shrink Selection</DESC>
+    </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Multi-selection
+<DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Up"/><BR/>
-      <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Down"/><BR/>
-      <MODIFIERKEY id="Alt"/>left click</TERM>
-    <DESC>Multi-edition</DESC>
+      <CODEROUTINE>Add Cursor Above</CODEROUTINE></TERM>
+    <DESC>Add cursor on previous line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Down"/><BR/>
+      <CODEROUTINE>Add Cursor Below</CODEROUTINE></TERM>
+      <DESC>Add cursor on next line</DESC>
+    </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/>left click</TERM>
+    <DESC>Add cursor</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F2"/><BR/>
@@ -303,6 +325,17 @@ Folding
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="D"/><BR/>
       <CODEROUTINE>Move Selection to Next Find Match</CODEROUTINE></TERM>
     <DESC>Unselect the last selection and add the next found match the current selection</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Left"/></TERM>
+    <DESC>Go to previous edit location</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Right"/></TERM>
+    <DESC>Go to next edit location</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>Sort Lines Ascending</CODEROUTINE></TERM>
@@ -404,6 +437,16 @@ Folding
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="*"/></TERM>
     <DESC>Split editor horizontally</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Right"/><BR/>
+      <CODEROUTINE>View: Move Editor into Next Group</CODEROUTINE></TERM>
+    <DESC>Move editor into next group</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Left"/><BR/>
+      <CODEROUTINE>View: Move Editor into Previous Group</CODEROUTINE></TERM>
+    <DESC>Move editor into previous group</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
