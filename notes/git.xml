@@ -864,6 +864,34 @@ To remove the last commit locally and on the remote repository (nobody should ha
   <CODESAMPLE>git reset --hard HEAD^<BR/>
   git push -f</CODESAMPLE>
 <BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git rebase</CODEROUTINE></TERM>
+    <DESC>Reapply commits on top of another base tip</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git rebase --interactive</CODEROUTINE><BR/>
+      <CODEROUTINE>git rebase -i</CODEROUTINE></TERM>
+    <DESC>Start an interactive rebase: the list of commits is generated and the user can edit them.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git rebase --continue</CODEROUTINE></TERM>
+    <DESC>Restart the rebasing process after having resolved a merge conflict.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git rebase --abort</CODEROUTINE></TERM>
+    <DESC>Abort the rebase operation and reset HEAD to the original branch.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git rebase --quit</CODEROUTINE></TERM>
+    <DESC>Abort the rebase operation but HEAD is not reset back to the original branch.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git rebase --exec &lt;cmd&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git rebase -x &lt;cmd&gt;</CODEROUTINE></TERM>
+    <DESC>Append <CODEFILENAME>exec &lt;cmd&gt;</CODEFILENAME> after each line creating a commit in the final history.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
 <BLIST><TITLE>Changing the author of old commits</TITLE>
   <ITEM><CODEROUTINE>git rebase -i &lt;commit&gt;</CODEROUTINE> where &lt;commit&gt; is the commit before the first one to be edited. Use <CODEROUTINE>git rebase -i --root</CODEROUTINE> if the first commit must be edited.</ITEM>
   <ITEM>In the list of commits, change <CODEROUTINE>pick</CODEROUTINE> to <CODEROUTINE>edit</CODEROUTINE> for the commits to be edited.</ITEM>
