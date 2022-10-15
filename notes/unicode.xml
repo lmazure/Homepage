@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -126,9 +126,10 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
 <BR/>
 <B>Some common characters</B><BR/>
 <TABLE>
-  <ROW><CELL>️character</CELL><CELL>code</CELL><CELL>name</CELL></ROW>
+  <ROW><CELL>character</CELL><CELL>code</CELL><CELL>name</CELL></ROW>
   <ROW><CELL>️…</CELL><CELL>U+2026</CELL><CELL>Horizontal Ellipsis</CELL></ROW>
   <ROW><CELL>️⋮</CELL><CELL>U+22EE</CELL><CELL>Vertical Ellipsis</CELL></ROW>
+  <ROW><CELL>️✓</CELL><CELL>U+2713</CELL><CELL>Check Mark</CELL></ROW>
   <ROW><CELL>️†</CELL><CELL>U+2020</CELL><CELL>Dagger</CELL></ROW>
   <ROW><CELL>️‡</CELL><CELL>U+2021</CELL><CELL>Double Dagger</CELL></ROW>
   <ROW><CELL>️←</CELL><CELL>U+2190</CELL><CELL>Leftwards Arrow</CELL></ROW>
@@ -143,6 +144,7 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>️⇓</CELL><CELL>U+21D3</CELL><CELL>Downwards Double Arrow</CELL></ROW>
   <ROW><CELL>️⇔</CELL><CELL>U+21D4</CELL><CELL>Left Right Double Arrow</CELL></ROW>
   <ROW><CELL>️⇕</CELL><CELL>U+21D5</CELL><CELL>Up Down Double Arrow</CELL></ROW>
+  <ROW><CELL>️□</CELL><CELL>U+25A1</CELL><CELL>White Square</CELL></ROW>
   <ROW><CELL>️◀</CELL><CELL>U+25C0</CELL><CELL>Black Left-Pointing Triangle</CELL></ROW>
   <ROW><CELL>️▲</CELL><CELL>U+25B2</CELL><CELL>Black Up-Pointing Triangle</CELL></ROW>
   <ROW><CELL>️▶</CELL><CELL>U+25B6</CELL><CELL>Black Right-Pointing Triangle</CELL></ROW>
