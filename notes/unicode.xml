@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -98,26 +98,26 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
 <TABLE>
   <ROW><CELL>️👮</CELL><CELL>U+1F46E</CELL><CELL>POLICE OFFICER</CELL></ROW>
   <ROW><CELL>️🏽</CELL><CELL>U+1F3FD</CELL><CELL>EMOJI MODIFIER FITZPATRICK TYPE-4</CELL></ROW>
-  <ROW><CELL>️‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
   <ROW><CELL>️♀</CELL><CELL>U+2640</CELL><CELL>FEMALE SIGN</CELL></ROW>
-  <ROW><CELL>️️</CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
 </TABLE></ITEM>
 <ITEM>🏳️‍🌈 is defined as
 <TABLE>
   <ROW><CELL>🏳</CELL><CELL>U+1F3F3</CELL><CELL>WAVING WHITE FLAG</CELL></ROW>
-  <ROW><CELL>️</CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
-  <ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
   <ROW><CELL>🌈</CELL><CELL>U+1F308</CELL><CELL>RAINBOW</CELL></ROW>
 </TABLE></ITEM>
 <ITEM>👩‍❤️‍💋‍👨 is defined as
 <TABLE>
   <ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
-  <ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
   <ROW><CELL>❤</CELL><CELL>U+2764</CELL><CELL>HEAVY BLACK HEART</CELL></ROW>
-  <ROW><CELL>️ </CELL><CELL>+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
-  <ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL> </CELL><CELL>+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
   <ROW><CELL>💋</CELL><CELL>U+1F48B</CELL><CELL>KISS MARK</CELL></ROW>
-  <ROW><CELL>‍</CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
   <ROW><CELL>👨</CELL><CELL>U+1F468</CELL><CELL>MAN</CELL></ROW>
 </TABLE></ITEM>
 </BLIST>
@@ -127,6 +127,13 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
 <B>Some common characters</B><BR/>
 <TABLE>
   <ROW><CELL>character</CELL><CELL>code</CELL><CELL>name</CELL></ROW>
+  <ROW><CELL> </CELL><CELL>U+00A0</CELL><CELL>No-Break Space (NBSP)</CELL></ROW>
+  <ROW><CELL>‐</CELL><CELL>U+2010</CELL><CELL>Hyphen</CELL></ROW>
+  <ROW><CELL>‑</CELL><CELL>U+2011</CELL><CELL>Non-Breaking Hyphen</CELL></ROW>
+  <ROW><CELL>‒</CELL><CELL>U+2012</CELL><CELL>Figure Dash</CELL></ROW>
+  <ROW><CELL>–</CELL><CELL>U+2013</CELL><CELL>En Dash</CELL></ROW>
+  <ROW><CELL>—</CELL><CELL>U+2014</CELL><CELL>Em Dash</CELL></ROW>
+  <ROW><CELL>―</CELL><CELL>U+2015</CELL><CELL>Horizontal Bar</CELL></ROW>
   <ROW><CELL>️…</CELL><CELL>U+2026</CELL><CELL>Horizontal Ellipsis</CELL></ROW>
   <ROW><CELL>️⋮</CELL><CELL>U+22EE</CELL><CELL>Vertical Ellipsis</CELL></ROW>
   <ROW><CELL>️✓</CELL><CELL>U+2713</CELL><CELL>Check Mark</CELL></ROW>
@@ -150,7 +157,7 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>️▶</CELL><CELL>U+25B6</CELL><CELL>Black Right-Pointing Triangle</CELL></ROW>
   <ROW><CELL>️▼</CELL><CELL>U+25BC</CELL><CELL>Black Down-Pointing Triangle</CELL></ROW>
   <ROW><CELL>️∧</CELL><CELL>U+2227</CELL><CELL>Logical And</CELL></ROW>
-  <ROW><CELL>️∨</CELL><CELL>U+2228</CELL><CELL>Logical Or</CELL></ROW>
+  <ROW><CELL>∨</CELL><CELL>U+2228</CELL><CELL>Logical Or</CELL></ROW>
   <ROW><CELL>±</CELL><CELL>U+00B1</CELL><CELL>Plus-Minus Sign</CELL></ROW>
 </TABLE>
 </CONTENT>

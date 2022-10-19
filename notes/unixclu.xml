@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix command line utilities</TITLE>
 <PATH>notes/unixclu.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -13,6 +13,10 @@
   <ROW>
     <TERM><CODEROUTINE>cat foobar | xargs -n 1 ls -l</CODEROUTINE></TERM>
     <DESC>long list of files defined in <CODEROUTINE>foobar</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>xargs -n &lt;max-args&gt;</CODEROUTINE><BR/><CODEROUTINE>--max-args=&lt;max-args&gt;</CODEROUTINE></TERM>
+    <DESC>use at most &lt;max-args&gt; arguments per command line.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>xargs -p</CODEROUTINE><BR/><CODEROUTINE>xargs --interactive</CODEROUTINE></TERM>
