@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
   <ITEM>lists can mix types
@@ -87,8 +87,9 @@
     <CODESAMPLE>del d['key3']</CODESAMPLE>
   </ITEM>
   <ITEM><BLIST><TITLE>Methods</TITLE>
-    <ITEM><CODEROUTINE>keys</CODEROUTINE>: return the keys of a dictionary</ITEM>
-    <ITEM><CODEROUTINE>has_key</CODEROUTINE>: test if a key is in the dictionary</ITEM>
+    <ITEM><CODEROUTINE>keys()</CODEROUTINE>: return the keys of a dictionary</ITEM>
+    <ITEM><CODEROUTINE>if key in dic</CODEROUTINE><BR/>
+      <CODEROUTINE>dic.has_key(key)</CODEROUTINE>: test if a key is in the dictionary (<CODEROUTINE>has_key</CODEROUTINE> has been remoed in Python 3)</ITEM>
     </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Exceptions</B></U></TITLE>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -103,7 +103,11 @@
         <ITEM><X><T>TestProject</T><A>https://testproject.io/</A><L>fr</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Sahi Pro</T><A>https://www.sahipro.com/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Reflect</T><A>https://reflect.run/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Intern</T><A>https://theintern.io/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><CLIST><TITLE><X><T>Intern</T><A>https://theintern.io/</A><L>en</L><F>HTML</F></X></TITLE>
+          <ITEM><X><T>doc</T><A>https://theintern.io/docs.html#Intern/4/docs/README.md</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>code</T><A>https://github.com/theintern</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>Gitter</T><A>https://gitter.im/theintern/intern</A><L>en</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Mobile</TITLE>
         <ITEM><X><T>Appium</T><A>http://appium.io/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -162,6 +166,7 @@
     <ITEM><ARTICLE><X><T>Why Automated Testing for Web Apps?</T><A>https://www.scribd.com/document/62476258/javamagazine2011Premiere-dl</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Nilson</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>9</MONTH></DATE><COMMENT>A list of tools, very quickly described, for unit tests, test automation, and continuous integration of Web applications.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Creating Maintainable Automated Acceptance Test Suites</T><A>https://www.youtube.com/watch?v=X9ap-zH0Gkc</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>2</MINUTE><SECOND>5</SECOND></DURATION><DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE></X><AUTHOR><FIRSTNAME>Jez</FIRSTNAME><LASTNAME>Humble</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Badri</FIRSTNAME><LASTNAME>Janakiraman</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>(<X><T>slides</T><A>https://www.slideshare.net/jezhumble/creating-maintainable-automated-acceptance-tests</A><L>en</L><F>HTML</F></X>) A lot of advice based on fives principles: treat acceptance tests like production code, always interact with the SUT like a user would, continuously curate your user journeys, collective ownership of acceptance tests, acceptance tests own their data.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>PageObject</T><A>https://martinfowler.com/bliki/PageObject.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE><COMMENT>A description of the design pattern used to hide the HTML details and present a semantic API to the test script.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>A Behavior Driven Developer's guide to Infrastructure as Code</T><ST>Applying BDD to server provisioning using Ansible</ST><A>https://developer.ibm.com/tutorials/d-bbd-guide-iac/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Aaron</FIRSTNAME><LASTNAME>Cohen</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE><COMMENT>Using Molecule to implement BDD tests for validating deployments done with Ansible.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Programmez: L’émergence des outils d’automatisation sans script : pourquoi sont-ils de plus en plus utilisés ?</T><A>https://latavernedutesteur.fr/2021/04/12/programmez-lemergence-des-outils-dautomatisation-sans-script-pourquoi-sont-ils-de-plus-en-plus-utilises/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marc</FIRSTNAME><LASTNAME>Hage Chahine</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT>A very short presentation of Robot Framework, Katalon, HorusTest, and Agilitest.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Emmanuel Nocet : Tests automatisés et tests de performances</T><A>https://www.youtube.com/watch?v=BV0dt90iR7g</A><L>fr</L><F>MP4</F><DURATION><MINUTE>47</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Emmanuel</FIRSTNAME><LASTNAME>Nocet</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>4</MONTH><DAY>16</DAY></DATE><COMMENT>Some good but very basic information about automated tests and load tests.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>On the Diverse And Fantastical Shapes of Testing</T><ST>Pyramids, honeycombs, trophies, and the meaning of unit testing</ST><A>https://martinfowler.com/articles/2021-test-shapes.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE><COMMENT>It is worthless to speak about the shape of the tests since people do not mean the same when speaking about "unit test" or about "integration test".</COMMENT></ARTICLE></ITEM>
