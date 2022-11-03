@@ -80,9 +80,12 @@
         </div>
       </footer>
       <xsl:if test="count(/PAGE//MATH)>0">
-        <script>MathJax={tex:{inlineMath:[['$','$'],['£[','£]']]}};</script>
-        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
-        <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3.0.5/es5/tex-mml-chtml.js"></script>
+        <script>MathJax = { tex: { inlineMath: [['£[','£]']] }, svg: { fontCache: 'global' } };</script>
+        <xsl:element name="script">
+          <xsl:attribute name="type">text/javascript</xsl:attribute>
+          <xsl:attribute name="async"/>
+          <xsl:attribute name="src">https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js</xsl:attribute>
+        </xsl:element>
       </xsl:if>
       <script src="../scripts/common.js" type="module"></script>
       <xsl:if test="@special='indexed'">
