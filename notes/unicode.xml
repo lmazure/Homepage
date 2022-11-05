@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -127,6 +127,12 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
 <B>Some common characters</B><BR/>
 <TABLE>
   <ROW><CELL>character</CELL><CELL>code</CELL><CELL>name</CELL></ROW>
+  <ROW><CELL>æ</CELL><CELL>U+00E6</CELL><CELL>Latin Small Letter Ae</CELL></ROW>
+  <ROW><CELL>œ</CELL><CELL>U+0153</CELL><CELL>Latin Small Ligature Oe</CELL></ROW>
+  <ROW><CELL>ç</CELL><CELL>U+00E7</CELL><CELL>Latin Small Letter C with Cedilla</CELL></ROW>
+  <ROW><CELL>Æ</CELL><CELL>U+00C6</CELL><CELL>Latin Capital Letter Ae</CELL></ROW>
+  <ROW><CELL>Œ</CELL><CELL>U+0152</CELL><CELL>Latin Capital Ligature Oe</CELL></ROW>
+  <ROW><CELL>Ç</CELL><CELL>U+00C7</CELL><CELL>Latin Capital Letter C with Cedilla</CELL></ROW>
   <ROW><CELL> </CELL><CELL>U+00A0</CELL><CELL>No-Break Space (NBSP)</CELL></ROW>
   <ROW><CELL>‐</CELL><CELL>U+2010</CELL><CELL>Hyphen</CELL></ROW>
   <ROW><CELL>‑</CELL><CELL>U+2011</CELL><CELL>Non-Breaking Hyphen</CELL></ROW>

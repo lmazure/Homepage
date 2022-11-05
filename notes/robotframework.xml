@@ -25,50 +25,66 @@ Install Robot Framework
       <TAB/>Documentation<TAB/>An example to discover Robot Framework<BR/>
       <TAB/>...<BR/>
       <TAB/>...<TAB/><TAB/><TAB/>&#160;&#160;Some smoke test of my homepage<BR/>
-      <TAB/>Library<TAB/><TAB/>&#160;&#160;SeleniumLibrary<BR/>
-      <TAB/><BR/>
-      <TAB/>*** Keywords ***<BR/>
-      <TAB/>Click Map Link Node<BR/>
-      <TAB/><TAB/>[Arguments]<TAB/>${linkText}<BR/>
-      <TAB/><TAB/>Click Link<TAB/>xpath://A[text()='${linkText}']/following-sibling::A[1]<BR/>
-      <TAB/><BR/>
-      <TAB/>Click Map Text Node<BR/>
-      <TAB/><TAB/>[Arguments]<TAB/>${nodeText}<BR/>
-      <TAB/><TAB/>Click Link<TAB/>xpath://SPAN[contains(text(),'${nodeText}')]/A<BR/>
-      <TAB/><BR/>
-      <TAB/>*** Test Cases ***<BR/>
-      <TAB/>Redirection<BR/>
-      <TAB/><TAB/>Open Browser<TAB/>https://mazure.fr<BR/>
-      <TAB/><TAB/>Wait Until Location Is<TAB/> https://mazure.fr/perso/main.html<BR/>
-      <TAB/><TAB/>[Teardown]<TAB/>Close Browser<BR/>
-      <TAB/><BR/>
-      <TAB/>Access to site map<BR/>
-      <TAB/><TAB/>Open Browser<TAB/>https://mazure.fr/perso/main.html<BR/>
-      <TAB/><TAB/>Click Link<TAB/>id:goToMap<BR/>
-      <TAB/><TAB/>Title Should Be<TAB/>Site map<BR/>
-      <TAB/><TAB/>[Teardown]<TAB/>Close Browser<BR/>
-      <TAB/><BR/>
-      <TAB/>Open and close site map nodes<BR/>
-      <TAB/><TAB/>Open Browser<TAB/>https://mazure.fr/content/map.html<BR/>
-      <TAB/><TAB/>Wait Until Page Contains<TAB/>Homepage<BR/>
-      <TAB/><TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
-      <TAB/><TAB/>Click Map Link Node<TAB/>Homepage<BR/>
-      <TAB/><TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
-      <TAB/><TAB/>#Click Link<TAB/>id:toggleDiv1<BR/>
-      <TAB/><TAB/>Click Map Text Node<TAB/>Links / articles<BR/>
-      <TAB/><TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
-      <TAB/><TAB/>Click Map Link Node<TAB/>Encyclopedia<BR/>
-      <TAB/><TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
-      <TAB/><TAB/>Click Map Link Node<TAB/>Mathematics<BR/>
-      <TAB/><TAB/>Element Should Be Visible<TAB/>link:Mathematicians<BR/>
-      <TAB/><TAB/>Click Map Link Node<TAB/>Encyclopedia<BR/>
-      <TAB/><TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
-      <TAB/><TAB/>[Teardown]<TAB/>Close Browser</CODESAMPLE></ITEM>
+      Library<TAB/><TAB/>&#160;&#160;SeleniumLibrary<BR/>
+      <BR/>
+      *** Keywords ***<BR/>
+      Click Map Link Node<BR/>
+      <TAB/>[Arguments]<TAB/>${linkText}<BR/>
+      <TAB/>Click Link<TAB/>xpath://A[text()='${linkText}']/following-sibling::A[1]<BR/>
+      <BR/>
+      Click Map Text Node<BR/>
+      <TAB/>[Arguments]<TAB/>${nodeText}<BR/>
+      <TAB/>Click Link<TAB/>xpath://SPAN[contains(text(),'${nodeText}')]/A<BR/>
+      <BR/>
+      *** Test Cases ***<BR/>
+      Redirection<BR/>
+      <TAB/>Open Browser<TAB/>https://mazure.fr<BR/>
+      <TAB/>Wait Until Location Is<TAB/> https://mazure.fr/perso/main.html<BR/>
+      <TAB/>[Teardown]<TAB/>Close Browser<BR/>
+      <BR/>
+      Access to site map<BR/>
+      <TAB/>Open Browser<TAB/>https://mazure.fr/perso/main.html<BR/>
+      <TAB/>Click Link<TAB/>id:goToMap<BR/>
+      <TAB/>Title Should Be<TAB/>Site map<BR/>
+      <TAB/>[Teardown]<TAB/>Close Browser<BR/>
+      <BR/>
+      Open and close site map nodes<BR/>
+      <TAB/>Open Browser<TAB/>https://mazure.fr/content/map.html<BR/>
+      <TAB/>Wait Until Page Contains<TAB/>Homepage<BR/>
+      <TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
+      <TAB/>Click Map Link Node<TAB/>Homepage<BR/>
+      <TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
+      <TAB/>#Click Link<TAB/>id:toggleDiv1<BR/>
+      <TAB/>Click Map Text Node<TAB/>Links / articles<BR/>
+      <TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
+      <TAB/>Click Map Link Node<TAB/>Encyclopedia<BR/>
+      <TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
+      <TAB/>Click Map Link Node<TAB/>Mathematics<BR/>
+      <TAB/>Element Should Be Visible<TAB/>link:Mathematicians<BR/>
+      <TAB/>Click Map Link Node<TAB/>Encyclopedia<BR/>
+      <TAB/>Element Should Not Be Visible<TAB/>link:Mathematicians<BR/>
+      <TAB/>[Teardown]<TAB/>Close Browser</CODESAMPLE></ITEM>
   <ITEM>Saving the HTML source in a Selenium script
     <CODESAMPLE><TAB/>Library<TAB/><TAB/>&#160;&#160;OperatingSystem<BR/>
       …<BR/>
       <TAB/><TAB/>${source} =<TAB/>Get Source<BR/>
       <TAB/><TAB/>OperatingSystem.Create File<TAB/>${EXECDIR}/map_source.html<TAB/>${source}</CODESAMPLE></ITEM>
+  <ITEM>Running a test in an other technology and parsing the Surefire report
+    <CODESAMPLE>*** Settings ***<BR/>
+    Documentation<TAB/>Running an Intern test from Robot Framework<BR/>
+      Library<TAB/>Process<BR/>
+      Library<TAB/>XML<BR/>
+      <BR/>
+      *** Test Cases ***<BR/>
+      Run Intern Test<BR/>
+      <TAB/>Run Process<TAB/>npm.cmd<TAB/>test<BR/>
+      <TAB/>@{elements} =<TAB/>Get Elements<TAB/>truc.xml<TAB/>.//failure<BR/>
+      <TAB/>${f} =<TAB/>Set Variable<TAB/>Errors:<BR/>
+      <TAB/>FOR<TAB/>${failure}<TAB/>IN<TAB/>@{elements}<BR/>
+      <TAB/><TAB/>${f} =<TAB/>Catenate<TAB/>SEPARATOR=\n<TAB/>${f}<TAB/>${failure.text}<BR/>
+      <TAB/>END<BR/>
+      <TAB/>Should be empty<TAB/>${elements}<TAB/>An error has been found\n${f}</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Browser Library</U></B></TITLE>
   <ITEM>to change the Browser language<BR/>

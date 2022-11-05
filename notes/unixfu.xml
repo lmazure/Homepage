@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -200,11 +200,19 @@
     <DESC>print only the matching part of the line</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>grep -B &lt;n&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>grep -A &lt;n&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --after-context=&lt;n&gt;</CODEROUTINE></TERM>
+    <DESC>print <CODEROUTINE>n</CODEROUTINE> lines after the match</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>grep -B &lt;n&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --before-context=&lt;n&gt;</CODEROUTINE></TERM>
     <DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>grep -C &lt;n&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>grep -C &lt;n&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>grep -&lt;n&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --context=&lt;n&gt;</CODEROUTINE></TERM>
     <DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>n</CODEROUTINE> lines after the match</DESC>
   </ROW>
   <ROW>
