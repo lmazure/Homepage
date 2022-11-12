@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -371,6 +371,7 @@
         <ITEM><ARTICLE predecessor="https://github.blog/2022-09-01-gits-database-internals-iv-distributed-synchronization/"><X quality="1"><T>Git’s database internals V: scalability</T><ST>This fifth and final part of our blog series exploring Git's internals shows several strategies for scaling your Git repositories that match related database sharding techniques.</ST><A>https://github.blog/2022-09-02-gits-database-internals-v-scalability/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Derrick</FIRSTNAME><LASTNAME>Stolee</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE><COMMENT>Multi-repos, submodules, using an archived repository possibly configuring it as a Git alternate and as the commit root of the new repository, and blobless clones.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Scaling Git’s garbage collection</T><ST>A tour of recent work to re-engineer Git’s garbage collection process to scale to our largest and most active repositories.</ST><A>https://github.blog/2022-09-13-scaling-gits-garbage-collection/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>A detailed description of the management of reachable and unreachable objects, and of cruft packs.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Highlights from Git 2.38</T><ST>Another new release of Git is here! Take a look at some of our highlights on what's new in Git 2.38.</ST><A>https://github.blog/2022-10-03-highlights-from-git-2-38/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE><COMMENT>Scalar is now included in the release, <CODEROUTINE>git rebase</CODEROUTINE> can now update dependant branches, <CODEROUTINE>git rm</CODEROUTINE> supports spare index, <CODEROUTINE>git merge-tree</CODEROUTINE> supports the ort merge strategy…</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>How to use Git rebase in real life</T><A>https://about.gitlab.com/blog/2022/11/08/rebase-in-real-life/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Toon</FIRSTNAME><LASTNAME>Claes</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>8</DAY></DATE><COMMENT>How to use <CODEROUTINE>fixup</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>GitLab</TITLE>
         <ITEM><ARTICLE><X><T>7 ways to speed up your GitLab CI/CD times</T><A>https://blog.sparksuite.com/7-ways-to-speed-up-gitlab-ci-cd-times-29f60aab69f9</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Wes</FIRSTNAME><LASTNAME>Cossick</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>24</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>

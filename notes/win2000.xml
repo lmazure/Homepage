@@ -297,6 +297,10 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
+  <ROW><TERM><CODEROUTINE>mkdir</CODEROUTINE><BR/><CODEROUTINE>mk</CODEROUTINE></TERM><DESC>create a directory</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE>rmdir</CODEROUTINE><BR/><CODEROUTINE>rd</CODEROUTINE></TERM><DESC>delete an empty directory</DESC></ROW>
   <ROW><TERM><CODEROUTINE>rmdir /s</CODEROUTINE></TERM><DESC>delete a possibly empty directory</DESC></ROW>
   <ROW><TERM><CODEROUTINE>rmdir /s /q</CODEROUTINE></TERM><DESC>delete a possibly empty directory without prompting</DESC></ROW>

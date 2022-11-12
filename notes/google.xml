@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Google</TITLE>
 <PATH>notes/google.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>customization</B></U></TITLE>
   <ITEM><BLIST><TITLE>Search applets</TITLE>
@@ -77,7 +77,7 @@
 <U><B>Gmail</B></U>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><MODIFIERKEY id="Shift"/><KEY id=","/></TERM>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id=","/> (<KEY id="?"/>)</TERM>
     <DESC>Display keyboard shortcuts</DESC>
   </ROW>
   <ROW>
@@ -109,8 +109,12 @@
     <DESC>Display contacts</DESC>
   </ROW>
   <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id=":"/> (<KEY id="/"/>)</TERM>
+    <DESC>Set focus on search field</DESC>
+  </ROW>
+  <ROW>
     <TERM><KEY id="G"/><KEY id="L"/></TERM>
-    <DESC>Display labels for searching</DESC>
+    <DESC>Set focus on search field and display labels for searching</DESC>
   </ROW>
   <ROW>
     <TERM><KEY id="K"/></TERM>
