@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -173,8 +173,14 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit -a</CODEROUTINE><BR/>
-      <CODEROUTINE>git commit -all</CODEROUTINE></TERM>
+      <CODEROUTINE>git commit --all</CODEROUTINE></TERM>
     <DESC>Automatically stage files that have been modified and deleted, but new files you have not told Git about are not affected.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git commit -o</CODEROUTINE><BR/>
+      <CODEROUTINE>git commit --only</CODEROUTINE></TERM>
+    <DESC>Make a commit by taking the updated working tree contents of the paths specified on the command line, disregarding any contents that have been staged for other paths.
+      (This is the default of <CODEROUTINE>git commit</CODEROUTINE> if any paths are given on the command line. So, in this case the <CODEROUTINE>-o</CODEROUTINE> is useless.)</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit --amend</CODEROUTINE></TERM>
@@ -892,6 +898,32 @@ To remove the last commit locally and on the remote repository (nobody should ha
     <DESC>Append <CODEFILENAME>exec &lt;cmd&gt;</CODEFILENAME> after each line creating a commit in the final history.</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git commit --fixup=&lt;commit&gt;</CODEROUTINE></TERM>
+    <DESC>Create a <CODEROUTINE>fixup!</CODEROUTINE> commit which changes the content of &lt;commit&gt; but leaves its log message untouched.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git commit --fixup=amend:&lt;commit&gt;</CODEROUTINE></TERM>
+    <DESC>Similar but create an <CODEROUTINE>amend!</CODEROUTINE> commit which also replaces the log message of &lt;commit&gt; with the log message of the <CODEROUTINE>amend!</CODEROUTINE> commit.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git commit --fixup=reword:&lt;commit&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git commit --fixup=amend:&lt;commit&gt; --only</CODEROUTINE></TERM>
+    <DESC>Create an <CODEROUTINE>amend!</CODEROUTINE> commit which replaces the log message of &lt;commit&gt; with its own log message but makes no changes to the content of &lt;commit&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git commit --squahs=&lt;commit&gt;</CODEROUTINE></TERM>
+    <DESC>Construct a commit message for use with <CODEROUTINE>rebase --autosquash</CODEROUTINE>. The commit message subject line is taken from the specified commit with a prefix of <CODEROUTINE>squash!</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git rebase --autosquash</CODEROUTINE></TERM>
+    <DESC>When the commit log message begins with <CODEROUTINE>squash! …​</CODEROUTINE> or <CODEROUTINE>fixup! …​</CODEROUTINE> or <CODEROUTINE>amend! …​</CODEROUTINE>, and there is already a commit in the todo list that matches the same <CODEROUTINE>…</CODEROUTINE>, automatically modify the todo list of <CODEROUTINE>rebase -i</CODEROUTINE>, so that the commit marked for squashing comes right after the commit to be modified, and change the action of the moved commit from <CODEROUTINE>pick</CODEROUTINE> to <CODEROUTINE>squash</CODEROUTINE> or <CODEROUTINE>fixup</CODEROUTINE> or <CODEROUTINE>fixup -C</CODEROUTINE> respectively.<BR/>
+    A commit matches the <CODEROUTINE>…</CODEROUTINE> if the commit subject matches, or if the <CODEROUTINE>…</CODEROUTINE> refers to the commit’s hash. As a fall-back, partial matches of the commit subject work, too.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
 <BLIST><TITLE>Changing the author of old commits</TITLE>
   <ITEM><CODEROUTINE>git rebase -i &lt;commit&gt;</CODEROUTINE> where &lt;commit&gt; is the commit before the first one to be edited. Use <CODEROUTINE>git rebase -i --root</CODEROUTINE> if the first commit must be edited.</ITEM>
   <ITEM>In the list of commits, change <CODEROUTINE>pick</CODEROUTINE> to <CODEROUTINE>edit</CODEROUTINE> for the commits to be edited.</ITEM>
