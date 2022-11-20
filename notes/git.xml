@@ -593,7 +593,7 @@
     <TERM><CODEROUTINE>git clean -f</CODEROUTINE><BR/>
       <CODEROUTINE>git clean --force</CODEROUTINE></TERM>
     <DESC>Perform the deletion if the Git configuration variable <CODEROUTINE>clean.requireForce</CODEROUTINE> is not set to <CODEROUTINE>false</CODEROUTINE>.<BR/>
-      Untracked nested git repositories (directories with a <CODEROUTINE>.git</CODEROUTINE> subdirectory) are ignored unless a second <CODEROUTINE>-f</CODEROUTINE> is given. </DESC>
+      Untracked nested git repositories (directories with a <CODEROUTINE>.git</CODEROUTINE> subdirectory) are ignored unless a second <CODEROUTINE>-f</CODEROUTINE> is given.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clean -i</CODEROUTINE><BR/>
