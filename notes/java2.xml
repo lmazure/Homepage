@@ -5,15 +5,57 @@
 <PATH>notes/java2.xml</PATH>
 <DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
-for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
-<CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
-…<BR/>
-for (PhotoListMetaDataListener l : a_listOfMetaDataListeners) l.photoListMetaDataChanged(f);</CODESAMPLE>
-is the same as
-<CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
-…<BR/>
-for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataListeners.get(i).photoListMetaDataChanged(f);</CODESAMPLE>
-<BR/>
+  <BLIST><TITLE><U><B>Visibility</B></U></TITLE>
+    <ITEM>
+      <TABLE>
+        <ROW>
+          <CELL></CELL>
+          <CELL>public</CELL>
+          <CELL>protected</CELL>
+          <CELL>package</CELL>
+          <CELL>private</CELL>
+        </ROW>
+        <ROW>
+          <CELL>same class</CELL>
+          <CELL>yes</CELL>
+          <CELL>yes</CELL>
+          <CELL>yes</CELL>
+          <CELL>yes</CELL>
+        </ROW>
+        <ROW>
+          <CELL>class in same package</CELL>
+          <CELL>yes</CELL>
+          <CELL>yes</CELL>
+          <CELL>yes</CELL>
+          <CELL>no</CELL>
+        </ROW>
+        <ROW>
+          <CELL>subclass in different package</CELL>
+          <CELL>yes</CELL>
+          <CELL>yes</CELL>
+          <CELL>no</CELL>
+          <CELL>no</CELL>
+        </ROW>
+        <ROW>
+          <CELL>non-subclass, different package</CELL>
+          <CELL>yes</CELL>
+          <CELL>no</CELL>
+          <CELL>no</CELL>
+          <CELL>no</CELL>
+        </ROW>
+      </TABLE>
+    </ITEM>
+    </BLIST>  
+  <BLIST><TITLE><U><B>For-each loops</B></U></TITLE>
+  <ITEM>for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
+    <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
+      …<BR/>
+      for (PhotoListMetaDataListener l : a_listOfMetaDataListeners) l.photoListMetaDataChanged(f);</CODESAMPLE>
+    is the same as
+    <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
+      …<BR/>
+      for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataListeners.get(i).photoListMetaDataChanged(f);</CODESAMPLE></ITEM>
+</BLIST>
 <BLIST><TITLE><U><B>Autoboxing</B></U></TITLE>
   <ITEM>Autoboxing allows to use an <CODEROUTINE>int</CODEROUTINE> in place of an <CODEROUTINE>Integer</CODEROUTINE> and vice-versa.<BR/>
     Supported types are: <CODEROUTINE>Boolean</CODEROUTINE>, <CODEROUTINE>Byte</CODEROUTINE>, <CODEROUTINE>Character</CODEROUTINE>, <CODEROUTINE>Short</CODEROUTINE>, <CODEROUTINE>Integer</CODEROUTINE>, <CODEROUTINE>Long</CODEROUTINE>, <CODEROUTINE>Float</CODEROUTINE>, and <CODEROUTINE>Double</CODEROUTINE>.<BR/>
