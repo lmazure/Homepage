@@ -3,7 +3,7 @@
 <PAGE special="indexed" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Persons</TITLE>
 <PATH>links/persons.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -220,7 +220,7 @@
       <ITEM><X><T>homepage</T><A>http://www.muppetlabs.com/~breadbox/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><AUTHOR><GIVENNAME>rain.forest.puppy</GIVENNAME></AUTHOR></TITLE>
-      <ITEM><X status="dead"><T>homepage</T><A>http://www.wiretrip.net/rfp</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="zombie"><T>homepage</T><A>http://www.wiretrip.net/rfp</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>S.</MIDDLENAME><LASTNAME>Raymond</LASTNAME></AUTHOR></TITLE>
       <ITEM><X><T>homepage</T><A>http://www.catb.org/~esr</A><L>en</L><F>HTML</F></X></ITEM>
@@ -372,6 +372,9 @@
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Anatoli</FIRSTNAME><LASTNAME>Bugorski</LASTNAME></AUTHOR></TITLE>
       <ITEM><ARTICLE><X><T>What if you put your head in a particle accelerator?</T><A>https://www.youtube.com/watch?v=mD4J5VUwiAs</A><L>en</L><F>MP4</F><DURATION><MINUTE>17</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kyle</FIRSTNAME><LASTNAME>Hill</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE><COMMENT>The story of <AUTHOR><FIRSTNAME>Anatoli</FIRSTNAME><LASTNAME>Bugorski</LASTNAME></AUTHOR> accident: a high energy proton beam passed through his brain.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="-1"><T>🪐Anatoli Bugorski, l'homme qui a mis sa tête dans un accélérateur de particules.</T><A>https://www.youtube.com/watch?v=1zHv3WeKtww</A><L>fr</L><F>MP4</F><DURATION><MINUTE>20</MINUTE><SECOND>3</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Arnaud</FIRSTNAME><LASTNAME>Thiry</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE><COMMENT>The same story with <AUTHOR><FIRSTNAME>Arnaud</FIRSTNAME><LASTNAME>Thiry</LASTNAME></AUTHOR>'s patronising tone, while he says some erroneous things.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Magnus</FIRSTNAME><LASTNAME>Carlsen</LASTNAME></AUTHOR></TITLE>
+      <ITEM><ARTICLE><X><T>#315 – Magnus Carlsen: Greatest Chess Player of All Time</T><A>https://lexfridman.com/magnus-carlsen/</A><L>en</L><F>MP3</F><DURATION><HOUR>2</HOUR><MINUTE>39</MINUTE><SECOND>42</SECOND></DURATION></X><X><T>Magnus Carlsen: Greatest Chess Player of All Time | Lex Fridman Podcast #315</T><A>https://www.youtube.com/watch?v=0ZO28NtkwwQ</A><L>en</L><F>MP4</F><DURATION><HOUR>2</HOUR><MINUTE>31</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Magnus</FIRSTNAME><LASTNAME>Carlsen</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Lex</FIRSTNAME><LASTNAME>Fridman</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>27</DAY></DATE><COMMENT>This interview is mostly about chess.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Abdennasser</FIRSTNAME><LASTNAME>Chekroun</LASTNAME></AUTHOR></TITLE>
       <ITEM><ARTICLE><X><T>Des mathématiques pour modéliser la santé</T><A>https://maison-des-maths.paris/abdennasser-chekroun/</A><L>fr</L><F>MP3</F><DURATION><MINUTE>25</MINUTE><SECOND>27</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdennasser</FIRSTNAME><LASTNAME>Chekroun</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Abdennasser</FIRSTNAME><LASTNAME>Chekroun</LASTNAME></AUTHOR> describes his education and his work on delay differential equations.</COMMENT></ARTICLE></ITEM>
@@ -586,7 +589,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>S.</MIDDLENAME><LASTNAME>Raymond</LASTNAME></AUTHOR></TITLE>
       <ITEM><ARTICLE><X><T>ESR interview (part I)</T><A>https://lwn.net/1999/features/CL-esr.phtml</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>ChangeLog</GIVENNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>S.</MIDDLENAME><LASTNAME>Raymond</LASTNAME></AUTHOR> speaks about his future paper "The magic Cauldron", LinuxWorld, Aikido, the definition of "good software" and <AUTHOR><FIRSTNAME>Ken</FIRSTNAME><LASTNAME>Thompson</LASTNAME></AUTHOR>'s comment on Linux.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X status="dead"><T>ESR: "We Don't Need the GPL Anymore"</T><A>http://www.onlamp.com/pub/a/onlamp/2005/06/30/esr_interview.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Federico</FIRSTNAME><LASTNAME>Biancuzzi</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>S.</MIDDLENAME><LASTNAME>Raymond</LASTNAME></AUTHOR> pretends Open Source has proved to be successful and does not require the protection of GPL anymore. This is unusual for this type of interview, but here Federico asks for some good questions that, in my mind, Eric fails to answer to properly.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status="zombie"><T>ESR: "We Don't Need the GPL Anymore"</T><A>http://www.onlamp.com/pub/a/onlamp/2005/06/30/esr_interview.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Federico</FIRSTNAME><LASTNAME>Biancuzzi</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>S.</MIDDLENAME><LASTNAME>Raymond</LASTNAME></AUTHOR> pretends Open Source has proved to be successful and does not require the protection of GPL anymore. This is unusual for this type of interview, but here Federico asks for some good questions that, in my mind, Eric fails to answer to properly.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Didier</FIRSTNAME><LASTNAME>Raoult</LASTNAME></AUTHOR></TITLE>
       <ITEM><ARTICLE><X quality="-1"><T>Dépasser Darwin - Pr. Didier Raoult - Critique générale</T><A>https://www.youtube.com/watch?v=veGd8VN5uhk</A><L>fr</L><F>MP4</F><DURATION><MINUTE>51</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR><GIVENNAME>Entracte Science</GIVENNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE><COMMENT>A tedious and confusing review of <AUTHOR><FIRSTNAME>Didier</FIRSTNAME><LASTNAME>Raoult</LASTNAME></AUTHOR>'s book.</COMMENT></ARTICLE></ITEM>
@@ -665,7 +668,7 @@
       <ITEM><ARTICLE><X><T>CVRx CEO Nadim Yared keeps his edge</T><ST>CVRx CEO Nadim Yared has emerged as a fearless, outspoken leader in medtech.</ST><A>https://www.medicaldesignandoutsourcing.com/keeping-his-edge/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tom</FIRSTNAME><LASTNAME>Salemi</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>1</MONTH><DAY>7</DAY></DATE><COMMENT>A biography.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Michal</FIRSTNAME><LASTNAME>Zalewski</LASTNAME></AUTHOR></TITLE>
-      <ITEM><ARTICLE><X status="dead"><T>Michal Zalewski on the Wire</T><A>http://www.onlamp.com/pub/a/security/2005/08/25/zalewski.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Federico</FIRSTNAME><LASTNAME>Biancuzzi</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE><COMMENT>Some general discussion about security…</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status="zombie"><T>Michal Zalewski on the Wire</T><A>http://www.onlamp.com/pub/a/security/2005/08/25/zalewski.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Federico</FIRSTNAME><LASTNAME>Biancuzzi</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE><COMMENT>Some general discussion about security…</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR></TITLE>
       <ITEM><ARTICLE><X><T>resignation and postmortem</T><A>https://www.jwz.org/gruntle/nomo.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>3</MONTH></DATE><COMMENT><AUTHOR><FIRSTNAME>Jamie</FIRSTNAME><LASTNAME>Zawinski</LASTNAME></AUTHOR> explains why he resigned from Netscape.</COMMENT></ARTICLE></ITEM>
