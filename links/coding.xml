@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -22,7 +22,7 @@
         <ITEM><X><T>tkcvs</T><A>https://tkcvs.sourceforge.io/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/cvs.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
-      <ITEM><X status="obsolete"><T>RCS</T><A>https://www.cs.purdue.edu/homes/trinkle/RCS/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>RCS</T><A>https://www.cs.purdue.edu/homes/trinkle/RCShome/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X status="obsolete"><T>CSSC</T><A>https://www.gnu.org/software/cssc/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>BitKeeper</T><A>https://www.bitkeeper.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><CLIST><TITLE><ANCHOR>svn</ANCHOR><X><T>subversion</T><A>https://subversion.apache.org/</A><L>en</L><F>HTML</F></X></TITLE>
@@ -81,7 +81,9 @@
       <ITEM><X><T>tmake</T><A>https://tmake.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Ant</T><A>https://ant.apache.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE><X><T>Maven</T><A>https://maven.apache.org/</A><L>en</L><F>HTML</F></X></TITLE>
-        <ITEM><X><T>Maven Surefire Plugin</T><A>https://maven.apache.org/surefire/maven-surefire-plugin/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><CLIST><TITLE><X><T>Maven Surefire Plugin</T><A>https://maven.apache.org/surefire/maven-surefire-plugin/</A><L>en</L><F>HTML</F></X></TITLE>
+          <ITEM><X><T>Schema</T><A>https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd</A><L>en</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Compilers</TITLE>
@@ -95,7 +97,7 @@
       <ITEM><X><T>ld</T><A>http://sourceware.org/binutils/docs-2.19/ld/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Artefact repository</TITLE>
-      <ITEM><X><T>Nexus</T><A>https://www.sonatype.com/nexus/repository-oss</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Nexus</T><A>https://www.sonatype.com/products/nexus-repository</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Artifactory</T><A>https://jfrog.com/artifactory/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Code browsers</TITLE>
@@ -125,7 +127,7 @@
       <ITEM><X><T>ccmalloc</T><A>http://cs.ecs.baylor.edu/~donahoo/tools/ccmalloc/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Electric Fence</T><A>https://github.com/kallisti5/ElectricFence</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Boehm Collector</T><A>https://www.hboehm.info/gc/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>LeakTracer</T><A>https://www.andreasen.org/LeakTracer/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>LeakTracer</T><A>https://andreasen.org/LeakTracer/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>MemWatch</T><A>https://sourceforge.net/projects/memwatch/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Memprof</T><A>http://www.secretlabs.de/projects/memprof/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>mpatrol</T><A>https://mpatrol.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -144,11 +146,11 @@
         <ITEM><X><T>Infer</T><A>https://fbinfer.com/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>C/C++</TITLE>
-        <ITEM><CLIST><TITLE><ANCHOR>prolint</ANCHOR><X><T>PC-lint/FlexeLint/ProLint</T><A>https://www.gimpel.com</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><CLIST><TITLE><ANCHOR>prolint</ANCHOR><X status="zombie"><T>PC-lint/FlexeLint/ProLint</T><A>https://www.gimpel.com</A><L>en</L><F>HTML</F></X></TITLE>
           <ITEM><X><T>error messages</T><A>https://www.gimpel.com/html/pub/msg.txt</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>personal notes</T><A>../notes/prolint.html</A><L>en</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
-        <ITEM><X><T>Parasoft C++test</T><A>https://www.parasoft.com/products/ctest/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Parasoft C++test</T><A>https://www.parasoft.com/products/parasoft-c-ctest/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>PolySpace</T><A>https://www.mathworks.com/products/polyspace.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Flawfinder</T><A>https://dwheeler.com/flawfinder/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Klocwork</T><A>https://www.perforce.com/products/klocwork</A><L>en</L><F>HTML</F></X></ITEM>
@@ -156,7 +158,7 @@
       <ITEM><BLIST><TITLE>Java</TITLE>
         <ITEM><X><T>PMD</T><A>https://pmd.github.io/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>CheckStyle</T><A>https://checkstyle.sourceforge.io/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Jtest</T><A>https://www.parasoft.com/product/jtest/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Jtest</T><A>https://www.parasoft.com/products/parasoft-jtest/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X status="obsolete"><T>Jlint</T><A>http://artho.com/jlint/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>FindBugs</T><A>https://findbugs.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Macker</T><A>https://innig.net/macker/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -173,7 +175,7 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Dependency analysis</TITLE>
-      <ITEM><X><T>Lattix</T><A>https://lattix.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Lattix</T><A>https://www.lattix.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>JDepend</T><A>https://github.com/clarkware/jdepend</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>NDepend</T><A>https://www.ndepend.com</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
@@ -193,7 +195,7 @@
       <ITEM><X status="obsolete"><T>FunctionCheck</T><A>https://sourceforge.net/projects/fnccheck/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE>Java</TITLE>
         <ITEM><BLIST><TITLE>Eclipse plugins</TITLE>
-          <ITEM><X><T>EclipseColorer</T><A>https://sourceforge.net/projects/eclipsecolorer</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>EclipseColorer</T><A>https://sourceforge.net/projects/eclipsecolorer/</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>jMechanic</T><A>https://sourceforge.net/projects/jmechanic/</A><L>en</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
         <ITEM><X status="obsolete"><T>JMP</T><A>http://www.khelekore.org/jmp/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -214,7 +216,7 @@
     <ITEM><BLIST><TITLE>Code reviews</TITLE>
       <ITEM><BLIST><TITLE>Tools</TITLE>
         <ITEM><X><T>Crucible</T><A>https://www.atlassian.com/software/crucible</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><CLIST><TITLE><X><T>Promyze</T><A>https://promyze.com/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><CLIST><TITLE><X><T>Promyze</T><A>https://www.promyze.com/</A><L>en</L><F>HTML</F></X></TITLE>
           <ITEM><X><T>Hub</T><A>https://bestcodingpractices.dev/</A><L>en</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
       </BLIST></ITEM>
@@ -222,7 +224,7 @@
         <ITEM><X><T>Macadamian checklist</T><A>https://archive.is/voACj</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><BLIST><TITLE>C#</TITLE>
           <ITEM><X><T>Ted Graham</T><A>https://weblogs.asp.net/tgraham/44763</A><L>en</L><F>HTML</F></X></ITEM>
-          <ITEM><X><T>Mohammed Hameed</T><A>https://www.codeproject.com/reference/593751/WebControls/WebControls/?fid=1834048</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>Mohammed Hameed</T><A>https://www.codeproject.com/Reference/593751/Code-Review-Checklist-and-Guidelines-for-Csharp-De</A><L>en</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
@@ -242,7 +244,7 @@
     <ITEM><ARTICLE><X><T>The Downsides of Clean Commits</T><A>https://randycoulman.com/blog/2015/10/20/the-downsides-of-clean-commits/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Randy</FIRSTNAME><LASTNAME>Coulman</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>10</MONTH><DAY>20</DAY></DATE><COMMENT>Imposing clean commits results into doing less cleanup.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>ListAndHash</T><A>https://martinfowler.com/bliki/ListAndHash.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE><COMMENT>About the flexibility of data structures which are a composite of lists and hashmaps.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>ITT 2016 - Kevlin Henney - Seven Ineffective Coding Habits of Many Programmers</T><A>https://www.youtube.com/watch?v=ZsHMHukIlJY</A><L>en</L><F>MP4</F><DURATION><MINUTE>46</MINUTE><SECOND>28</SECOND></DURATION><DATE><YEAR>2016</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE></X><AUTHOR><FIRSTNAME>Kevlin</FIRSTNAME><LASTNAME>Henney</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE><COMMENT>Miscellaneous thoughts about naming, code layout, encapsulation, getters/setters, tests…</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X quality="-1"><T>Testing Solid Code</T><A>https://www.codeguru.com/columns/experts/testing-solid-code.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Kimmel</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE><COMMENT>Some strongly-worded miscellaneous opinions about best practices and useless managers.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X quality="-1"><T>Testing Solid Code</T><A>https://www.codeguru.com/blog/testing-solid-code/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Kimmel</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE><COMMENT>Some strongly-worded miscellaneous opinions about best practices and useless managers.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>What Will Your Legacy [Code] Be?</T><A>https://8thlight.com/insights/what-will-your-legacy-code-be</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Colin</FIRSTNAME><LASTNAME>Jones</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE><COMMENT>Thinking about legacy code, the one we inherit and the one we leave.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality="-1" status="dead"><T>Technical debt is real debt</T><A>https://nvie.com/posts/why-you-should-consider-technical-debt-to-be-real-debt/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vincent</FIRSTNAME><LASTNAME>Driessen</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Travis</FIRSTNAME><LASTNAME>Kimmel</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>1</MONTH><DAY>19</DAY></DATE><COMMENT>A description of technical debt, but the subject is much too simplified.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>SelfEncapsulation</T><A>https://martinfowler.com/bliki/SelfEncapsulation.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE><COMMENT>Martin explains that self-encapsulation, according to him, has little interest except in some particular cases.</COMMENT></ARTICLE></ITEM>
@@ -364,10 +366,10 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Build</TITLE>
       <ITEM><ARTICLE><X status="zombie"><T>Building the PostgreSQL BuildFarm</T><A>http://www.onlamp.com/pub/a/onlamp/2005/02/24/pg_buildfarm.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Dunstan</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE><COMMENT>A description of the Internet-distributed PostgreSQL build farm. The article probably dives too much in some details, but it nevertheless gives a good idea of the whole mechanism.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X quality="-1"><T>A (Long Overdue) BuildMaster Introduction</T><A>https://thedailywtf.com/Articles/A-%28Long-Overdue%29-BuildMaster-Introduction.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Papadimoulis</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE><COMMENT>A presentation of BuildMaster, the author describes the Software Delivery Process model, but there is no real description of the software features.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality="-1"><T>A (Long Overdue) BuildMaster Introduction</T><A>https://thedailywtf.com/articles/A-(Long-Overdue)-BuildMaster-Introduction</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Papadimoulis</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>4</MONTH><DAY>2</DAY></DATE><COMMENT>A presentation of BuildMaster, the author describes the Software Delivery Process model, but there is no real description of the software features.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Mask of the Red Build</T><A>https://www.typemock.com/mask-of-the-red-build</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gil</FIRSTNAME><LASTNAME>Zilberfeld</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>26</DAY></DATE><COMMENT>The reasons why builds must always be green.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Gulp, Grunt, Whatever</T><A>https://ponyfoo.com/articles/gulp-grunt-whatever</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolás</FIRSTNAME><LASTNAME>Bevacqua</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>An introduction to Gulp and a comparison with Grunt.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>CI/CD Tools Comparison: Jenkins, TeamCity, Bamboo, Travis CI, and More</T><A>https://www.altexsoft.com/blog/engineering/comparison-of-most-popular-continuous-integration-tools-jenkins-teamcity-bamboo-travis-ci-and-more/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE><COMMENT>A short comparison of Jenkins, TeamCity, Bamboo, Travis CI, CircleCI, and CodeShip.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>CI/CD Tools Comparison: Jenkins, TeamCity, Bamboo, Travis CI, and More</T><A>https://www.altexsoft.com/blog/engineering/cicd-tools-comparison/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE><COMMENT>A short comparison of Jenkins, TeamCity, Bamboo, Travis CI, CircleCI, and CodeShip.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Jenkins requires Java 11 or newer</T><A>https://www.jenkins.io/blog/2022/06/28/require-java-11/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Basil</FIRSTNAME><LASTNAME>Crow</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE><COMMENT>Jenkins next LTS will require Java 11.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>15 Best Jenkins Alternatives (2022 Update)</T><A>https://www.guru99.com/jenkins-alternative.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>10</DAY></DATE><COMMENT>A long list of CI/CD platforms, but the descriptions are poorly written.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Ant</TITLE>
@@ -471,7 +473,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Coverity</TITLE>
         <ITEM><ARTICLE><X><T>Checking System Rules Using System-Specific, Programmer-Written Compiler Extensions</T><A>https://web.stanford.edu/~engler/mc-osdi.pdf</A><L>en</L><F>PDF</F></X><X><T>Checking System Rules Using System-Specific, Programmer-Written Compiler Extensions</T><A>https://web.stanford.edu/~engler/mc-osdi.ps</A><L>en</L><F>PostScript</F></X><AUTHOR><FIRSTNAME>Dawson</FIRSTNAME><LASTNAME>Engler</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Benjamin</FIRSTNAME><LASTNAME>Chelf</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Andy</FIRSTNAME><LASTNAME>Chou</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Seth</FIRSTNAME><LASTNAME>Hallem</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR></DATE><COMMENT>The authors describe how they created a tool with a simple language to catch some types of error in Linux, OpenBSD…</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Homeland Security helps secure open-source code</T><A>https://www.cnet.com/news/homeland-security-helps-secure-open-source-code/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joris</FIRSTNAME><LASTNAME>Evers</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>Coverity gets some money from DHS.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Homeland Security helps secure open-source code</T><A>https://www.cnet.com/news/privacy/homeland-security-helps-secure-open-source-code/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joris</FIRSTNAME><LASTNAME>Evers</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>Coverity gets some money from DHS.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>PC-lint/FlexeLint/ProLint</TITLE>
         <ITEM><ARTICLE><X><T>A Bug a Month? It's Harder Than You Think</T><ST>Writing a bug a month is child's play when you don't intend to. But when you try to do it....</ST><A>https://www.drdobbs.com/a-bug-a-month-its-harder-than-you-think/199900339</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Erickson</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE><COMMENT>An interview of <AUTHOR><FIRSTNAME>Jim</FIRSTNAME><LASTNAME>Gimpel</LASTNAME></AUTHOR> about his "Bug of the Month" ads.</COMMENT></ARTICLE></ITEM>
