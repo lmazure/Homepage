@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
   <ITEM>lists can mix types
@@ -167,6 +167,10 @@
   <ITEM>list the out-of-date installed packages
     <CODESAMPLE>pip list -o</CODESAMPLE>
     <CODESAMPLE>pip list --outdated</CODESAMPLE>
+  </ITEM>
+  <ITEM>do not list globally-installed packages
+    <CODESAMPLE>pip list -l</CODESAMPLE>
+    <CODESAMPLE>pip list --local</CODESAMPLE>
   </ITEM>
 </BLIST></CONTENT>
 <X><T>links</T><A>../links/python.html</A><L>en</L><F>HTML</F></X>
