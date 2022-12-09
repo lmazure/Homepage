@@ -509,6 +509,8 @@
 </xsl:template>
 
 <xsl:template match="BLIST">
+  <details open="1">
+    <summary>
   <xsl:if test="count(./TITLE)>0">
     <xsl:apply-templates select="./TITLE"/>
     <xsl:if test="count(./SUBTITLE)>0">
@@ -518,11 +520,13 @@
   <xsl:if test="count(./SUBTITLE)>0">
     <xsl:apply-templates select="./SUBTITLE"/>
   </xsl:if>
+</summary>
   <xsl:choose>
      <xsl:when test="count(./ITEM)>0">
        <ul><xsl:apply-templates select="./ITEM"/></ul>
      </xsl:when>
   </xsl:choose>
+</details>
 </xsl:template>
 
 <xsl:template match="NLIST">

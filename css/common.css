@@ -18,6 +18,27 @@ a
 	text-decoration: none
 }
 
+details > summary {
+	cursor: pointer;
+	list-style-type: none;
+}
+
+details > summary::after {
+	content     : '+';
+	background  : #888;
+	color       : #fff;
+	text-align  : center;
+	left: 5px;
+}
+  
+ details[open] > summary::after {
+	content : '−';
+	background  : #888;
+	color       : #fff;
+	text-align  : center;
+	left: 5px;
+}
+
 #navigationBar  {
 	background-color: #404080;
 }
