@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -13,6 +13,7 @@
       <ITEM><ANCHOR>cucumber</ANCHOR><BLIST><TITLE><X><T>Cucumber</T><A>https://cucumber.io</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>Gherkin reference</T><A>https://cucumber.io/docs/gherkin/reference/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>changelog</T><A>https://github.com/cucumber/cucumber-jvm/blob/main/CHANGELOG.md</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>datatables</T><A>https://github.com/cucumber/cucumber-jvm/blob/main/datatable/README.md</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/cucumber.html</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><X><T>Concordion</T><A>https://concordion.org</A><L>en</L><F>HTML</F></X></ITEM>
@@ -71,9 +72,9 @@
       <ITEM><X><T>University of Wisconsin</T><A>https://pages.cs.wisc.edu/~bart/fuzz/fuzz.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>GUI tests</TITLE>
-      <ITEM><X><T>Ranorex</T><A>https://www.ranorex.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Ranorex</T><A>https://www.ranorex.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Katalon</T><A>https://katalon.com</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>TestComplete</T><A>https://smartbear.com/product/testcomplete/overview/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>TestComplete</T><A>https://smartbear.com/product/testcomplete/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE><X><T>Leapwork</T><A>https://www.leapwork.com/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>YouTube</T><A>https://www.youtube.com/channel/UCBLxP0ZN9QoK5VAaNIPZXFA</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
@@ -88,7 +89,7 @@
       <ITEM><X><T>Xnee</T><A>https://xnee.wordpress.com/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Qt</TITLE>
-        <ITEM><X><T>squish</T><A>https://www.froglogic.com/pg?id=Products&amp;category=squish</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>squish</T><A>https://www.qt.io/product/quality-assurance/squish</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Java</TITLE>
         <ITEM><X><T>Marathon</T><A>https://marathontesting.com/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -114,7 +115,7 @@
         <ITEM><X><T>Taiko</T><A>https://taiko.dev/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Nightwatch.js</T><A>https://nightwatchjs.org/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>TestCafé</T><A>https://devexpress.github.io/testcafe/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Puppeteer</T><A>https://developers.google.com/web/tools/puppeteer/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Puppeteer</T><A>https://developer.chrome.com/docs/puppeteer/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Playwright</T><A>https://playwright.dev/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>HorusTest</T><A>https://horustest.io</A><L>fr</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Kalios</T><A>http://www.kalios.com/</A><L>fr</L><F>HTML</F></X></ITEM>
@@ -156,7 +157,7 @@
     <ITEM><BLIST><TITLE>Browser farms</TITLE>
       <ITEM><X><T>Sauce Labs</T><A>https://saucelabs.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>BrowserStack</T><A>https://www.browserstack.com</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Cross Browser Testing</T><A>https://crossbrowsertesting.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>BitBar</T><A>https://smartbear.com/product/bitbar/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mock sites to test test frameworks</TITLE>
       <ITEM><X><T>automationpractice.com</T><A>http://automationpractice.com/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -205,6 +206,7 @@
         <ITEM><ARTICLE><X><T>A Case Against Cucumber</T><A>https://8thlight.com/insights/a-case-against-cucumber</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Liddle</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Why I recommend against using Cucumber</T><A>https://www.codewithjason.com/recommend-against-cucumber/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Swett</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>7</MONTH><DAY>3</DAY></DATE><COMMENT>Cucumber can be used stupidly, but even when used as intended it only adds maintenance cost and complexity compared to bare Capybara.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Cucumber Reports</T><A>https://cucumber.io/blog/open-source/cucumber-reports/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Seb</FIRSTNAME><LASTNAME>Rose</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>4</DAY></DATE><COMMENT>Cucumber can now publish HTML reports in the cloud (in <X><T>https://reports.cucumber.io/</T><A>https://reports.cucumber.io/</A><L>en</L><F>HTML</F></X>).</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Cucumber Data Tables</T><A>https://www.baeldung.com/cucumber-data-tables</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Justin</FIRSTNAME><LASTNAME>Albano</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>28</DAY></DATE><COMMENT>How to retrieve data table values in a step definition.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Postman</TITLE>
         <ITEM><ARTICLE><X><T>Postman : le guide complet de l’outil indispensable au développement web</T><A>https://welovedevs.com/fr/articles/postman</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rayed</FIRSTNAME><LASTNAME>Benbrahim</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>A good introduction to Postman, but there are some spelling mistakes and a few details are not clear.</COMMENT></ARTICLE></ITEM>
@@ -229,7 +231,7 @@
           <ITEM><ARTICLE><X protection="payed_registration"><T>Automate Acceptance Tests With Selenium</T><ST>How to use the Selenium test tool for functional testing of a Ruby on Rails and Ajax application</ST><A>https://www.scribd.com/document/924886/Automate-Acceptance-Tests-With-Selenium</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christian</FIRSTNAME><LASTNAME>Hellsten</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE><COMMENT>A short presentation of Selenium to test Ajax applications.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X quality="-1"><T>Selenium: The in-browser acceptance testing tool</T><A>https://www.youtube.com/watch?v=78mts_sKNGs</A><L>en</L><F>MP4</F><DURATION><MINUTE>41</MINUTE><SECOND>0</SECOND></DURATION><DATE><YEAR>2007</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Huggins</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>Jason tried to demonstrate how a commit in Subversion could trigger CruiseControl which would run the new build across several OSes and Browsers and generate Flash videos of the automated tests. But the presentation is very unclear and the demo failed…</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Selenium Grid: Web Testing in Parallel</T><A>https://www.infoq.com/news/2007/09/selenium-grid-parallel-testing/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Geoffrey</FIRSTNAME><LASTNAME>Wiseman</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE><COMMENT>Selenium Grid can dispatch the tests on several PCs.</COMMENT></ARTICLE></ITEM>
-          <ITEM><ARTICLE><X><T>Selenium locators best practices</T><A>https://screenster.io/selenium-locators-best-practices/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>7</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Selenium locators best practices</T><A>https://www.screenster.io/selenium-locators-best-practices/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2018</YEAR><MONTH>9</MONTH><DAY>7</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X quality="-1"><T>Selenium and WebdriverIO — A Historical Overview</T><A>https://medium.com/@specktackle/selenium-and-webdriverio-a-historical-overview-6f8fbf94b418</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Germain</FIRSTNAME><LASTNAME>Boue</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE><COMMENT>A messy and short list of facts about Selenium and WebdriverIO.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Waits</T><A>https://www.selenium.dev/documentation/webdriver/waits/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>The official Selenium wiki for explicit, implicit and fluent waits.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X quality="-1"><T>Callisto: An Easy Way To Run Selenium Tests in the Cloud</T><A>https://medium.com/wriketechclub/callisto-an-easy-way-to-run-selenium-tests-in-the-cloud-6c1bc39c49ae</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vitaly</FIRSTNAME><LASTNAME>Markov</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>A presentation of Callisto, a grid of WebDriver instances managed in Kubernetes. The first part of the article is very clumsy, the technical part is fine.</COMMENT></ARTICLE></ITEM>

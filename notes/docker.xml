@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -56,8 +56,7 @@
     <TERM><CODEROUTINE>--link &lt;name or id&gt;:alias</CODEROUTINE></TERM>
     <DESC>Create a link between the newly started container and a running one.<BR/>
       It is possible to use <CODEROUTINE>--link &lt;name or id&gt;</CODEROUTINE>, in which case the alias will be the name of the other container.<BR/>
-      This will add an entry in the <CODEFILENAME>/etc/hosts</CODEFILENAME> of the started container with an IP address for the alias, name, and id of the existing linked container.
-    </DESC>
+      This will add an entry in the <CODEFILENAME>/etc/hosts</CODEFILENAME> of the started container with an IP address for the alias, name, and id of the existing linked container.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>--volume &lt;hostdirectory&gt;:&lt;containerdirectory&gt;</CODEROUTINE><BR/>
@@ -126,6 +125,14 @@
     <TERM><CODEROUTINE>-s &lt;signal&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>--signal &lt;signal&gt;</CODEROUTINE></TERM>
     <DESC>Define the sigbnal to send (e.g. <CODEROUTINE>docker kill --signal=SIGHUP mycontainer</CODEROUTINE>).</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker restart &lt;container&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>docker container restart &lt;container&gt;</CODEROUTINE></TERM>
+    <DESC>Restart the container.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
