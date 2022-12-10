@@ -25,9 +25,9 @@
   </ITEM>
   <ITEM>format (prefer semantic over format)
     <DEFINITIONTABLE>
-      <ROW><TERM><CODEROUTINE>&lt;nowiki&gt;text&lt;/nowiki&gt;</CODEROUTINE></TERM><DESC>escape the Wiki markup (including the tags which are also HTML tags)<BR/>only the HTML character references are converted (use &amp;amp;rarr; to get &amp;rarr;)<BR/>newlines and multiple spaces are ignored</DESC></ROW>
-      <ROW><TERM><CODEROUTINE>&lt;pre&gt;text&lt;/pre&gt;</CODEROUTINE></TERM><DESC>escape the Wiki markup<BR/>only the HTML character references are converted (use &amp;amp;rarr; to get &amp;rarr;)<BR/>text format is preserved</DESC></ROW>
-      <ROW><TERM><CODEROUTINE> text</CODEROUTINE></TERM><DESC>(leading space)<BR/>escape the Wiki markup<BR/>only the HTML character references are converted (use &amp;amp;rarr; to get &amp;rarr;)<BR/>text format is preserved</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;nowiki&gt;text&lt;/nowiki&gt;</CODEROUTINE></TERM><DESC>escape the Wiki markup (including the tags which are also HTML tags)<BR/>only the HTML character references are converted (use <CODEROUTINE>&amp;amp;rarr;</CODEROUTINE> to get <CODEROUTINE>&amp;rarr;</CODEROUTINE>)<BR/>newlines and multiple spaces are ignored</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>&lt;pre&gt;text&lt;/pre&gt;</CODEROUTINE></TERM><DESC>escape the Wiki markup<BR/>only the HTML character references are converted (use <CODEROUTINE>&amp;amp;rarr;</CODEROUTINE> to get <CODEROUTINE>&amp;rarr;</CODEROUTINE>)<BR/>text format is preserved</DESC></ROW>
+      <ROW><TERM><CODEROUTINE> text</CODEROUTINE></TERM><DESC>(leading space)<BR/>escape the Wiki markup<BR/>only the HTML character references are converted (use <CODEROUTINE>&amp;amp;rarr;</CODEROUTINE> to get <CODEROUTINE>&amp;rarr;</CODEROUTINE>)<BR/>text format is preserved</DESC></ROW>
       <ROW><TERM><CODEROUTINE>&lt;i&gt;text&lt;/i&gt;</CODEROUTINE></TERM><DESC>italics</DESC></ROW>
       <ROW><TERM><CODEROUTINE>&lt;b&gt;text&lt;/b&gt;</CODEROUTINE></TERM><DESC>bold</DESC></ROW>
       <ROW><TERM><CODEROUTINE>&lt;u&gt;text&lt;/u&gt;</CODEROUTINE></TERM><DESC>underline</DESC></ROW>
@@ -36,7 +36,6 @@
       <ROW><TERM><CODEROUTINE>&lt;center&gt;text&lt;/center&gt;</CODEROUTINE></TERM><DESC>centered text</DESC></ROW>
       <ROW><TERM><CODEROUTINE>:text</CODEROUTINE></TERM><DESC>indent text</DESC></ROW>
       <ROW><TERM><CODEROUTINE>::text</CODEROUTINE></TERM><DESC>indent more text</DESC></ROW>
-      <ROW><TERM><CODEROUTINE> text</CODEROUTINE></TERM><DESC>if a line starts with a space, it will be formatted exactly as typed, in a fixed-width font, lines will not wrap</DESC></ROW>
       <ROW><TERM><CODEROUTINE>----</CODEROUTINE></TERM><DESC>horizontal line</DESC></ROW>
     </DEFINITIONTABLE>
   </ITEM>

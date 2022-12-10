@@ -100,12 +100,11 @@
     <DESC>display modification date/time of file <CODEROUTINE>foobar</CODEROUTINE></DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>date -I</CODEROUTINE><BR/><CODEROUTINE>date --iso-8601</CODEROUTINE>
-    </TERM>
-    <DESC>display date/time using ISO 8601 format</DESC></ROW>
+    <TERM><CODEROUTINE>date -I</CODEROUTINE><BR/><CODEROUTINE>date --iso-8601</CODEROUTINE></TERM>
+    <DESC>display date/time using ISO 8601 format</DESC>
+  </ROW>
   <ROW>
-    <TERM><CODEROUTINE>date -R</CODEROUTINE><BR/><CODEROUTINE>date --rfc-822</CODEROUTINE>
-    </TERM>
+    <TERM><CODEROUTINE>date -R</CODEROUTINE><BR/><CODEROUTINE>date --rfc-822</CODEROUTINE></TERM>
     <DESC>display date/time using RFC 822 format</DESC></ROW>
   <ROW>
     <TERM><CODEROUTINE>date -u</CODEROUTINE><BR/><CODEROUTINE>date --utc</CODEROUTINE><BR/><CODEROUTINE>date --universal</CODEROUTINE></TERM>

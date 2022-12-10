@@ -179,27 +179,34 @@ File explorer
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE>cacls &lt;file&gt;</CODEROUTINE></TERM><DESC>display the ACLs of file</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>cacls &lt;file&gt; /g ftp:c david:c</CODEROUTINE></TERM>
-<DESC>
-grant change access to <CODEROUTINE>ftp</CODEROUTINE> and <CODEROUTINE>david</CODEROUTINE><BR/>
-the possible permission letters are
-<BLIST>
-  <ITEM><CODEROUTINE>n</CODEROUTINE> none</ITEM>
-  <ITEM><CODEROUTINE>r</CODEROUTINE> read</ITEM>
-  <ITEM><CODEROUTINE>c</CODEROUTINE> change</ITEM>
-  <ITEM><CODEROUTINE>f</CODEROUTINE> full</ITEM>
-</BLIST>
-the possible action letters are:
-<BLIST>
-  <ITEM><CODEROUTINE>g</CODEROUTINE> grant rigths</ITEM>
-  <ITEM><CODEROUTINE>p</CODEROUTINE> replace rights</ITEM>
-</BLIST>
-</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>cacls &lt;file&gt; &lt;operations&gt; /e</CODEROUTINE></TERM><DESC>
-edit the ACLs instead of reseting them
-</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>cacls &lt;dir&gt; &lt;operations&gt; /t</CODEROUTINE></TERM><DESC>change recursively the ACLs of sub-directories and files</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE>cacls &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>display the ACLs of file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>cacls &lt;file&gt; /g ftp:c david:c</CODEROUTINE></TERM>
+    <DESC>grant change access to <CODEROUTINE>ftp</CODEROUTINE> and <CODEROUTINE>david</CODEROUTINE><BR/>
+    the possible permission letters are
+    <BLIST>
+      <ITEM><CODEROUTINE>n</CODEROUTINE> none</ITEM>
+      <ITEM><CODEROUTINE>r</CODEROUTINE> read</ITEM>
+      <ITEM><CODEROUTINE>c</CODEROUTINE> change</ITEM>
+      <ITEM><CODEROUTINE>f</CODEROUTINE> full</ITEM>
+    </BLIST>
+    the possible action letters are:
+    <BLIST>
+      <ITEM><CODEROUTINE>g</CODEROUTINE> grant rigths</ITEM>
+      <ITEM><CODEROUTINE>p</CODEROUTINE> replace rights</ITEM>
+    </BLIST></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>cacls &lt;file&gt; &lt;operations&gt; /e</CODEROUTINE></TERM>
+    <DESC>edit the ACLs instead of reseting them</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>cacls &lt;dir&gt; &lt;operations&gt; /t</CODEROUTINE></TERM>
+    <DESC>change recursively the ACLs of sub-directories and files</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
@@ -211,12 +218,12 @@ edit the ACLs instead of reseting them
 <BR/>
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE>findstr "string" file</CODEROUTINE></TERM><DESC>search a string in a file<BR/>perform a recursive search<BR/><CODEROUTINE>findstr /m /s "foobar" *.*</CODEROUTINE><BR/>the usual wild characters are supported
-<DEFINITIONTABLE>
-  <ROW><TERM><CODEROUTINE>\&lt;</CODEROUTINE></TERM><DESC>match the beginning of a word</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>\&gt;</CODEROUTINE></TERM><DESC>match the end of a word</DESC></ROW>
-</DEFINITIONTABLE>
-<CODEROUTINE>findstr /m /s "\&lt;notes.htm\&gt;" *.*</CODEROUTINE> returns the list of files containing the word <CODEROUTINE>notes.htm</CODEROUTINE>
-</DESC></ROW>
+    <DEFINITIONTABLE>
+      <ROW><TERM><CODEROUTINE>\&lt;</CODEROUTINE></TERM><DESC>match the beginning of a word</DESC></ROW>
+      <ROW><TERM><CODEROUTINE>\&gt;</CODEROUTINE></TERM><DESC>match the end of a word</DESC></ROW>
+    </DEFINITIONTABLE>
+    <CODEROUTINE>findstr /m /s "\&lt;notes.htm\&gt;" *.*</CODEROUTINE> returns the list of files containing the word <CODEROUTINE>notes.htm</CODEROUTINE></DESC>
+  </ROW>
   <ROW><TERM><CODEROUTINE>/s</CODEROUTINE></TERM><DESC>perform a recursive search</DESC></ROW>
   <ROW><TERM><CODEROUTINE>/m</CODEROUTINE></TERM><DESC>print only the file names</DESC></ROW>
   <ROW><TERM><CODEROUTINE>/n</CODEROUTINE></TERM><DESC>print the line number for each matching line</DESC></ROW>

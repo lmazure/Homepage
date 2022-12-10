@@ -7,147 +7,123 @@
 <CONTENT>
 all windows
 <DEFINITIONTABLE>
-<ROW><TERM>
-<KEY id="F1"/>
-</TERM><DESC>
-help<BR/>
-(put the cursor just after the method/property name and type <KEY id="F1"/> to have help on it)
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F2"/>
-</TERM><DESC>
-view Object Browser
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F7"/>
-</TERM><DESC>
-view Code Window
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F4"/>
-</TERM><DESC>
-view Properties Window
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="R"/>
-</TERM><DESC>
-view Project Window
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="L"/>
-</TERM><DESC>
-view call stack
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="G"/>
-</TERM><DESC>
-view Immediate Window
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><KEY id="F11"/>
-</TERM><DESC>
-switch to originating application
-</DESC></ROW>
+  <ROW>
+    <TERM><KEY id="F1"/></TERM>
+    <DESC>help<BR/>
+      (put the cursor just after the method/property name and type <KEY id="F1"/> to have help on it)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F2"/></TERM>
+    <DESC>view Object Browser</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F7"/></TERM>
+    <DESC>view Code Window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F4"/></TERM>
+    <DESC>view Properties Window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="R"/></TERM>
+    <DESC>view Project Window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="L"/></TERM>
+    <DESC>view call stack</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="G"/></TERM>
+    <DESC>view Immediate Window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="F11"/></TERM>
+    <DESC>switch to originating application</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 edit window
 <DEFINITIONTABLE>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="Space"/>
-</TERM><DESC>
-complete word
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="J"/>
-</TERM><DESC>
-after <CODEROUTINE>foo</CODEROUTINE>, list the properties/methods beginning by <I>foo</I><BR/>
-after <CODEROUTINE>foo.</CODEROUTINE>, list the properties/methods of <CODEROUTINE>foo</CODEROUTINE>
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="Tab"/>
-</TERM><DESC>
-indent
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Shift"/><KEY id="Tab"/>
-</TERM><DESC>
-outdent
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Shift"/><KEY id="F2"/>
-</TERM><DESC>
-go to definition of identifier below cursor
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="F"/>
-</TERM><DESC>
-find text
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F3"/>
-</TERM><DESC>
-find next occurrence of text
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Shift"/><KEY id="F3"/>
-</TERM><DESC>
-find previous occurrence of text
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="H"/>
-</TERM><DESC>
-replace text
-</DESC></ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Space"/></TERM>
+    <DESC>complete word</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="J"/></TERM>
+    <DESC>after <CODEROUTINE>foo</CODEROUTINE>, list the properties/methods beginning by <I>foo</I><BR/>
+      after <CODEROUTINE>foo.</CODEROUTINE>, list the properties/methods of <CODEROUTINE>foo</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="Tab"/></TERM>
+    <DESC>indent</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="Tab"/></TERM>
+    <DESC>outdent</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F2"/></TERM>
+    <DESC>go to definition of identifier below cursor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F"/></TERM>
+    <DESC>find text</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F3"/></TERM>
+    <DESC>find next occurrence of text</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F3"/></TERM>
+    <DESC>find previous occurrence of text</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="H"/></TERM>
+    <DESC>replace text</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 watch window
 <DEFINITIONTABLE>
-<ROW><TERM>
-<KEY id="Del"/>
-</TERM><DESC>
-delete selected watch
-</DESC></ROW>
+  <ROW>
+    <TERM><KEY id="Del"/></TERM>
+    <DESC>delete selected watch</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 debug
 <DEFINITIONTABLE>
-<ROW><TERM>
-<KEY id="F8"/>
-</TERM><DESC>
-step into
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Shift"/><KEY id="F8"/>
-</TERM><DESC>
-step over
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F8"/>
-</TERM><DESC>
-step out
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F5"/>
-</TERM><DESC>
-continue
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F9"/><BR/>
-left click in margin
-</TERM><DESC>
-set/remove breakpoint
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Shift"/><KEY id="F9"/>
-</TERM><DESC>
-watch selected variable
-</DESC></ROW>
+  <ROW>
+    <TERM><KEY id="F8"/></TERM>
+    <DESC>step into</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F8"/></TERM>
+    <DESC>step over</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F8"/></TERM>
+    <DESC>step out</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F5"/></TERM>
+    <DESC>continue</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F9"/><BR/>
+left click in margin</TERM>
+    <DESC>set/remove breakpoint</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F9"/></TERM>
+    <DESC>watch selected variable</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <B><U>misc.</U></B>
 <BLIST>
-<ITEM>enable access to routines or classes defined in a DLL<BR/>
-<CODEMENU>Tools<CODEMENU>References…</CODEMENU></CODEMENU></ITEM>
+  <ITEM>enable access to routines or classes defined in a DLL<BR/>
+    <CODEMENU>Tools<CODEMENU>References…</CODEMENU></CODEMENU></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>Visual Basic</T><A>vbasic.html</A><L>en</L><F>HTML</F></X>

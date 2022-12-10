@@ -6,299 +6,78 @@
 <DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="1"/>
-</TERM><DESC>
-display Mails
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="2"/>
-</TERM><DESC>
-display Calendar
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="3"/>
-</TERM><DESC>
-display Contacts
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="4"/>
-</TERM><DESC>
-display Tasks
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="5"/>
-</TERM><DESC>
-display Notes
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="6"/>
-</TERM><DESC>
-display Folders
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="7"/>
-</TERM><DESC>
-display Shortcuts
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="8"/>
-</TERM><DESC>
-display Journal
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F6"/><BR/>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Tab"/>
-</TERM><DESC>
-switch between the Folder List and the information viewer to the right
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F10"/>
-</TERM><DESC>
-make the menu bar active
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F11"/>
-</TERM><DESC>
-enter a name in the QuickFind box
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="A"/>
-</TERM><DESC>
-new appointment
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="F11"/>
-</TERM><DESC>
-new meeting request
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="M"/>
-</TERM><DESC>
-new mail
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="N"/>
-</TERM><DESC>
-new note
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="E"/>
-</TERM><DESC>
-create new folder
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="C"/>
-</TERM><DESC>
-new contact
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="L"/>
-</TERM><DESC>
-new distribution list
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="K"/>
-</TERM><DESC>
-new task
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="U"/>
-</TERM><DESC>
-new task request
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="B"/>
-</TERM><DESC>
-display address book
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="I"/>
-</TERM><DESC>
-go to Inbox folder
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="O"/>
-</TERM><DESC>
-go to Outbox folder
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F5"/><BR/>
-<MODIFIERKEY id="Ctrl"/><KEY id="M"/>
-</TERM><DESC>
-synchronize mail and calendar
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="K"/>
-</TERM><DESC>
-check email addresses
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="Enter"/>
-</TERM><DESC>
-send mail, meeting request…
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="F3"/><BR/>
-<MODIFIERKEY id="Ctrl"/><KEY id="E"/>
-</TERM><DESC>
-search</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/>
-</TERM><DESC>
-advanced search</DESC></ROW>
-<ROW><TERM>
-<KEY id="F4"/>
-</TERM><DESC>
-search in mail</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="1"/></TERM><DESC>display Mails</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="2"/></TERM><DESC>display Calendar</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="3"/></TERM><DESC>display Contacts</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="4"/></TERM><DESC>display Tasks</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="5"/></TERM><DESC>display Notes</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="6"/></TERM><DESC>display Folders</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="7"/></TERM><DESC>display Shortcuts</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="8"/></TERM><DESC>display Journal</DESC></ROW>
+<ROW><TERM><KEY id="F6"/><BR/>
+<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Tab"/></TERM><DESC>switch between the Folder List and the information viewer to the right</DESC></ROW>
+<ROW><TERM><KEY id="F10"/></TERM><DESC>make the menu bar active</DESC></ROW>
+<ROW><TERM><KEY id="F11"/></TERM><DESC>enter a name in the QuickFind box</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="A"/></TERM><DESC>new appointment</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="F11"/></TERM><DESC>new meeting request</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="M"/></TERM><DESC>new mail</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="N"/></TERM><DESC>new note</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="E"/></TERM><DESC>create new folder</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="C"/></TERM><DESC>new contact</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="L"/></TERM><DESC>new distribution list</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="K"/></TERM><DESC>new task</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="U"/></TERM><DESC>new task request</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="B"/></TERM><DESC>display address book</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="I"/></TERM><DESC>go to Inbox folder</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="O"/></TERM><DESC>go to Outbox folder</DESC></ROW>
+<ROW><TERM><KEY id="F5"/><BR/>
+<MODIFIERKEY id="Ctrl"/><KEY id="M"/></TERM><DESC>synchronize mail and calendar</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/></TERM><DESC>check email addresses</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="Enter"/></TERM><DESC>send mail, meeting request…</DESC></ROW>
+<ROW><TERM><KEY id="F3"/><BR/>
+<MODIFIERKEY id="Ctrl"/><KEY id="E"/></TERM><DESC>search</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/></TERM><DESC>advanced search</DESC></ROW>
+<ROW><TERM><KEY id="F4"/></TERM><DESC>search in mail</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 mail folder list
 <DEFINITIONTABLE>
-<ROW><TERM>
-numeric pad <KEY id="-"/>
-</TERM><DESC>
-close folder
-</DESC></ROW>
-<ROW><TERM>
-numeric pad <KEY id="+"/>
-</TERM><DESC>
-open folder
-</DESC></ROW>
+<ROW><TERM>numeric pad <KEY id="-"/></TERM><DESC>close folder</DESC></ROW>
+<ROW><TERM>numeric pad <KEY id="+"/></TERM><DESC>open folder</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 mail box
 <DEFINITIONTABLE>
-<ROW><TERM>
-<KEY id="Enter"/>
-</TERM><DESC>
-display mail in mail window
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="D"/><BR/>
-<KEY id="Del"/>
-</TERM><DESC>
-delete mail
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="R"/>
-</TERM><DESC>
-reply
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="R"/>
-</TERM><DESC>
-reply to all
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="F"/>
-</TERM><DESC>
-forward
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="V"/>
-</TERM><DESC>
-move mail to folder
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="Del"/>
-</TERM><DESC>
-send mail to the trash
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Shift"/><KEY id="Del"/>
-</TERM><DESC>
-delete definitively a mail
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="W"/>
-</TERM><DESC>
-open the follow-up window
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="Q"/>
-</TERM><DESC>
-flag as read
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="U"/>
-</TERM><DESC>
-flag as unread
-</DESC></ROW>
+<ROW><TERM><KEY id="Enter"/></TERM><DESC>display mail in mail window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="D"/><BR/>
+<KEY id="Del"/></TERM><DESC>delete mail</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="R"/></TERM><DESC>reply</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="R"/></TERM><DESC>reply to all</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="F"/></TERM><DESC>forward</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="V"/></TERM><DESC>move mail to folder</DESC></ROW>
+<ROW><TERM><KEY id="Del"/></TERM><DESC>send mail to the trash</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Shift"/><KEY id="Del"/></TERM><DESC>delete definitively a mail</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="W"/></TERM><DESC>open the follow-up window</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="Q"/></TERM><DESC>flag as read</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="U"/></TERM><DESC>flag as unread</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 mail window
 <DEFINITIONTABLE>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="D"/>
-</TERM><DESC>
-delete mail
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="V"/>
-</TERM><DESC>
-move mail to folder
-</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="D"/></TERM><DESC>delete mail</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="V"/></TERM><DESC>move mail to folder</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 agenda
 <DEFINITIONTABLE>
-<ROW><TERM>
-<MODIFIERKEY id="Ctrl"/><KEY id="N"/>
-</TERM><DESC>
-new appointment
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><KEY id="1"/>
-</TERM><DESC>
-view one day
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><I><KEY id="N"/></I>
-</TERM><DESC>
-view <I>n</I> days
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><KEY id="0"/>
-</TERM><DESC>
-view ten days
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><KEY id="-"/>
-</TERM><DESC>
-switch to weeks
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><KEY id="="/>
-</TERM><DESC>
-switch to months
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="Left"/>
-</TERM><DESC>
-go to previous day
-</DESC></ROW>
-<ROW><TERM>
-<KEY id="Right"/>
-</TERM><DESC>
-go to next day
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><KEY id="Down"/>
-</TERM><DESC>
-go to the same day of the next week
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><KEY id="Up"/>
-</TERM><DESC>
-go to the same day of the previous week
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><KEY id="PageDown"/>
-</TERM><DESC>
-go to end of month if not already there, end of next month otherwise
-</DESC></ROW>
-<ROW><TERM>
-<MODIFIERKEY id="Alt"/><KEY id="PageUp"/>
-</TERM><DESC>
-go to beginning of month if not already there, beginning of previous month otherwise
-</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Ctrl"/><KEY id="N"/></TERM><DESC>new appointment</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Alt"/><KEY id="1"/></TERM><DESC>view one day</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Alt"/><I><KEY id="N"/></I></TERM><DESC>view <I>n</I> days</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Alt"/><KEY id="0"/></TERM><DESC>view ten days</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Alt"/><KEY id="-"/></TERM><DESC>switch to weeks</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Alt"/><KEY id="="/></TERM><DESC>switch to months</DESC></ROW>
+<ROW><TERM><KEY id="Left"/></TERM><DESC>go to previous day</DESC></ROW>
+<ROW><TERM><KEY id="Right"/></TERM><DESC>go to next day</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Alt"/><KEY id="Down"/></TERM><DESC>go to the same day of the next week</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Alt"/><KEY id="Up"/></TERM><DESC>go to the same day of the previous week</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Alt"/><KEY id="PageDown"/></TERM><DESC>go to end of month if not already there, end of next month otherwise</DESC></ROW>
+<ROW><TERM><MODIFIERKEY id="Alt"/><KEY id="PageUp"/></TERM><DESC>go to beginning of month if not already there, beginning of previous month otherwise</DESC></ROW>
 </DEFINITIONTABLE><BR/>
 </CONTENT>
 </PAGE>
