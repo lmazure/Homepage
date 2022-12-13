@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -130,6 +130,9 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>æ</CELL><CELL>U+00E6</CELL><CELL>Latin Small Letter Ae</CELL></ROW>
   <ROW><CELL>œ</CELL><CELL>U+0153</CELL><CELL>Latin Small Ligature Oe</CELL></ROW>
   <ROW><CELL>ç</CELL><CELL>U+00E7</CELL><CELL>Latin Small Letter C with Cedilla</CELL></ROW>
+  <ROW><CELL>É</CELL><CELL>U+00C9</CELL><CELL>Latin Capital Letter E with Acute</CELL></ROW>
+  <ROW><CELL>È</CELL><CELL>U+00C8</CELL><CELL>Latin Capital Letter E with Grave</CELL></ROW>
+  <ROW><CELL>Ê</CELL><CELL>U+00CA</CELL><CELL>Latin Capital Letter E with Circumflex</CELL></ROW>
   <ROW><CELL>Æ</CELL><CELL>U+00C6</CELL><CELL>Latin Capital Letter Ae</CELL></ROW>
   <ROW><CELL>Œ</CELL><CELL>U+0152</CELL><CELL>Latin Capital Ligature Oe</CELL></ROW>
   <ROW><CELL>Ç</CELL><CELL>U+00C7</CELL><CELL>Latin Capital Letter C with Cedilla</CELL></ROW>
@@ -177,6 +180,8 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>⋘</CELL><CELL>U+22D8</CELL><CELL>Very Much Less-Than</CELL></ROW>
   <ROW><CELL>⋙</CELL><CELL>U+22D9</CELL><CELL>Very Much Greater-Than</CELL></ROW>
   <ROW><CELL>⚠</CELL><CELL>U26A0</CELL><CELL>Warning Sign</CELL></ROW>
+  <ROW><CELL>👍</CELL><CELL>U+1F44D</CELL><CELL>Thumbs Up Sign</CELL></ROW>
+  <ROW><CELL>👎</CELL><CELL>U+1F44E</CELL><CELL>Thumbs Down Sign</CELL></ROW>
 </TABLE>
 </CONTENT>
 <X><T>links</T><A>../links/unicode.html</A><L>en</L><F>HTML</F></X>

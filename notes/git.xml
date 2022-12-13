@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -338,6 +338,29 @@
   <ROW>
     <TERM><CODEROUTINE>git whatchanged</CODEROUTINE></TERM>
     <DESC>List the last commits: hash, author, date, and list of impacted files.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git shortlog</CODEROUTINE></TERM>
+    <DESC>Summarize <CODEROUTINE>git log</CODEROUTINE> output.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git shortlog -n</CODEROUTINE><BR/>
+          <CODEROUTINE>git shortlog --numbered</CODEROUTINE></TERM>
+    <DESC>Sort output according to the number of commits per author instead of author alphabetic order.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git shortlog -s</CODEROUTINE><BR/>
+          <CODEROUTINE>git shortlog --summary</CODEROUTINE></TERM>
+    <DESC>Suppress commit description and provide a commit count summary only.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git shortlog -e</CODEROUTINE><BR/>
+          <CODEROUTINE>git shortlog --email</CODEROUTINE></TERM>
+    <DESC>Show the email address of each author.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git shortlog -nse</CODEROUTINE></TERM>
+    <DESC>List of authors with their amails sorted by number of commits.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -795,11 +818,18 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git cat-file -t 47281c0d4fae6480a95aced8887244544feba9c5</CODEROUTINE></TERM>
-    <DESC>Display the type of a repository object</DESC>
+    <DESC>Display the type of a repository object.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git cat-file -p 47281c0d4fae6480a95aced8887244544feba9c5</CODEROUTINE></TERM>
-    <DESC>Display the content (pretty printed) of a repository object</DESC>
+    <DESC>Display the content (pretty printed) of a repository object.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git grep</CODEROUTINE></TERM>
+    <DESC>Print lines matching a pattern.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
