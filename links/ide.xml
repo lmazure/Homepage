@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>IDEs</TITLE>
 <PATH>links/ide.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -23,7 +23,7 @@
       </CLIST></ITEM>
       <ITEM><X><T>UltraEdit</T><A>https://www.ultraedit.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><CLIST><TITLE><ANCHOR>notepadpp</ANCHOR><X><T>Notepad++</T><A>https://notepad-plus-plus.org</A><L>en</L><F>HTML</F></X></TITLE>
-        <ITEM><X><T>plugins</T><A>https://sourceforge.net/projects/npp-plugins</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>plugins</T><A>https://sourceforge.net/projects/npp-plugins/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/notepadpp.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><X><T>Sublime Text</T><A>https://www.sublimetext.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -32,7 +32,7 @@
       <ITEM><CLIST><TITLE><ANCHOR>eclipse</ANCHOR><X><T>eclipse</T><A>https://www.eclipse.org/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>omondo</T><A>http://www.omondo.com/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>EGit</T><A>https://wiki.eclipse.org/EGit</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Metrics</T><A>https://sourceforge.net/projects/metrics</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Metrics</T><A>https://sourceforge.net/projects/metrics/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Checkstyle</T><A>https://checkstyle.org/eclipse-cs/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>MoreUnit</T><A>https://moreunit.github.io/MoreUnit-Eclipse/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/eclipse.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -40,12 +40,12 @@
         <ITEM><X><T>Holger Voormann</T><A>https://www.youtube.com/channel/UC_6g5CvFpKUqg_dbmxsSgow</A><L>en</L><F>HTML</F><FEED><A>https://www.youtube.com/feeds/videos.xml?channel_id=UC_6g5CvFpKUqg_dbmxsSgow</A><F>RSS</F></FEED></X></ITEM>
       </CLIST></ITEM>
       <ITEM><X><T>IntelliJ IDEA</T><A>https://www.jetbrains.com/idea/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>NetBeans</T><A>https://netbeans.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>NetBeans</T><A>https://netbeans.apache.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><CLIST><TITLE><ANCHOR>together</ANCHOR>Together</TITLE>
         <ITEM><X><T>personal notes</T><A>../notes/together.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><X><T>Source-Navigator</T><A>https://sourcenav.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Anjuta</T><A>http://anjuta.org/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Anjuta</T><A>https://anjuta.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE><ANCHOR>visualstudio</ANCHOR>Visual Studio</TITLE>
         <ITEM><X quality="1"><T>ReSharper</T><A>https://www.jetbrains.com/resharper/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/visualstudio.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -224,6 +224,9 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>IntelliJ</TITLE>
         <ITEM><ARTICLE><X><T>Custom Code Inspections in IntelliJ</T><ST>Learn more about custom code inspections with IntelliJ.</ST><A>https://dzone.com/articles/custom-code-inspections-in-intellij</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tamas</FIRSTNAME><LASTNAME>Balog</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE><COMMENT>An example of implementing a static code analysis rule using Structural Search and Replace.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Gitpod</TITLE>
+        <ITEM><ARTICLE><X><T>Introducing Gitpod Dedicated: our enterprise cloud offering</T><A>https://www.gitpod.io/blog/introducing-gitpod-dedicated</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Johannes</FIRSTNAME><LASTNAME>Landgraf</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Sven</FIRSTNAME><LASTNAME>Efftinge</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Brevoort</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE><COMMENT>Gitpod goes the same way as GitLab and starts a hosted single-tenant offer. It also kill the self-hosted version.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
