@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Robot Framework</TITLE>
 <PATH>notes/robotframework.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 Install Robot Framework
 <CODESAMPLE>install robotframework</CODESAMPLE>
@@ -14,7 +14,21 @@ Install Robot Framework
       Test Teardown<TAB/>Log To Console<TAB/>test shutdown</CODESAMPLE></ITEM>
   <ITEM>Sleep for 42 seconds
     <CODESAMPLE>Sleep<TAB/>42</CODESAMPLE></ITEM>
-</BLIST>
+  <ITEM>get length of a list
+    <CODESAMPLE><TAB/>${root} =<TAB/>Parse XML<TAB/>${CURDIR}${/}surefire_report.xml<BR/>
+      <TAB/>@{failure_elements} =<TAB/>Get Elements<TAB/>${root}<TAB/>.//testcase/*[.!='grep']<BR/>
+      <TAB/>${f} =<TAB/>Set Variable<TAB/>${EMPTY}<BR/>
+      <TAB/><B>FOR</B><TAB/>${failure}<TAB/><B>IN</B><TAB/>@{failure_elements}<BR/>
+      <TAB/><TAB/>${f} =<TAB/>Catenate<TAB/>SEPARATOR=\n<TAB/>${f}<TAB/>\ntype: ${failure.tag}\ndetails: ${failure.text}<BR/>
+      <TAB/><B>END</B></CODESAMPLE></ITEM>
+  <ITEM>loop on a list
+    <CODESAMPLE><TAB/>${root} =<TAB/>Parse XML<TAB/>${CURDIR}${/}surefire_report.xml<BR/>
+      <TAB/>@{skipped_elements} =<TAB/>Get Elements<TAB/>${root}<TAB/>.//testcase/*[.='grep']<BR/>
+      <TAB/>@{all_elements} =<TAB/>Get Elements<TAB/>${root}<TAB/>.//testcase<BR/>
+      <TAB/>${skipped_count} =<TAB/><B>Get length</B><TAB/>${skipped_elements}<BR/>
+      <TAB/>${total_count} =<TAB/><B>Get length</B><TAB/>${all_elements}<BR/>
+      <TAB/>Should Not Be Equal As Integers<TAB/>${skipped_count}<TAB/>${total_count}<TAB/>All tests have been skipped</CODESAMPLE></ITEM>
+  </BLIST>
 <BLIST><TITLE><B><U>SeleniumLibrary</U></B></TITLE>
   <ITEM>Install SeleniumLibrary
     <CODESAMPLE>pip install robotframework-seleniumlibrary<BR/>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unit testing</TITLE>
 <PATH>links/unittest.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -18,6 +18,9 @@
         </CLIST></ITEM>
         <ITEM><X><T>TestNG</T><A>https://testng.org</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Agitar</T><A>http://www.agitar.com</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Truth</T><A>http://truth.dev/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>AssertJ</T><A>https://assertj.github.io/doc/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Hamcrest</T><A>http://hamcrest.org/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>.NET</TITLE>
         <ITEM><X><T>NUnit</T><A>https://nunit.org/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -29,8 +32,8 @@
         <ITEM><X><T>Mocha</T><A>https://mochajs.org</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Sinon</T><A>https://sinonjs.org</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Jest</T><A>https://jestjs.io</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X status="obsolete"><T>Google JS Test</T><A>https://code.google.com/p/google-js-test/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X status="obsolete"><T>js-test-driver</T><A>https://code.google.com/p/js-test-driver/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X status="obsolete"><T>Google JS Test</T><A>https://github.com/google/gjstest</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X status="obsolete"><T>js-test-driver</T><A>https://code.google.com/archive/p/js-test-driver</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>C++</TITLE>
         <ITEM><X><T>GoogleTest</T><A>https://github.com/google/googletest</A><L>en</L><F>HTML</F></X></ITEM>
@@ -96,7 +99,7 @@
     <ITEM><ARTICLE><X><T>BDDon’t</T><ST>The practice and the tools</ST><A>http://thoughtworks.github.io/p2/issue12/bdd-dont/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Dishman</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>12</MONTH></DATE><COMMENT>The author advises against using BDD automated tests.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Should tests be ordered or not?</T><A>https://blog.frankel.ch/should-tests-be-ordered-or-not/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolas</FIRSTNAME><LASTNAME>Fränkel</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE><COMMENT>The author claims that tests can be ordered, but some arguments are biased (e.g. of course integration tests must be run after unit tests).</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Testing Experimental Code in Production with Scientist.NET</T><ST>A .NET port of the Ruby library allows for experimental testing of code that's gone to production.</ST><A>https://visualstudiomagazine.com/articles/2016/11/01/testing-experimental-code.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE><COMMENT>A short presentation of Scientist, a library to compare the output of two different implementations.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Myths about Unit Tests</T><A>https://8thlight.com/blog/fabien-townsend/2017/09/19/myths-about-unit-tests.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Fabien</FIRSTNAME><LASTNAME>Townsend</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>Some obvious comments about unit testing from a newby.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Myths About Unit Tests</T><A>https://8thlight.com/insights/myths-about-unit-tests</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Fabien</FIRSTNAME><LASTNAME>Townsend</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>Some obvious comments about unit testing from a newby.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Test Contra-variance</T><A>https://blog.cleancoder.com/uncle-bob/2017/10/03/TestContravariance.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME><GIVENNAME>Uncle Bob</GIVENNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE><COMMENT>A rather over-simplified description of the decoupling between the tests and the production code.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>“Unit” Tests?</T><A>https://www.facebook.com/notes/kent-beck/unit-tests/1726369154062608/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE><COMMENT>The boundary between unit and integration tests is fuzzy.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>What to test and not to test</T><A>https://blog.ploeh.dk/2018/11/12/what-to-test-and-not-to-test/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><LASTNAME>Seemann</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE><COMMENT>The ideas presented here are mostly common sense.</COMMENT></ARTICLE></ITEM>
