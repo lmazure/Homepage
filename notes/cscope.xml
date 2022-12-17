@@ -6,31 +6,27 @@
 <DATE><YEAR>2015</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 build the database:
-<CODESAMPLE>
-<PROMPT/>find /vobs-awa/AW4.3_src/src -name '*.[ch]' -print &gt; cscope.files<BR/>
-<PROMPT/>cscope -b -q
-</CODESAMPLE><BR/>
+<CODESAMPLE><PROMPT/>find /vobs-awa/AW4.3_src/src -name '*.[ch]' -print &gt; cscope.files<BR/>
+  <PROMPT/>cscope -b -q</CODESAMPLE><BR/>
 start the browser:
-<CODESAMPLE>
-<PROMPT/>cscope -d
-</CODESAMPLE>
+<CODESAMPLE><PROMPT/>cscope -d</CODESAMPLE><BR/>
 <DEFINITIONTABLE>
-<ROW>
-<TERM><KEY id="Tab"/></TERM>
-<DESC>switch between the searches and the search results</DESC>
-</ROW>
-<ROW>
-<TERM><KEY id="Left"/><BR/><KEY id="Right"/></TERM>
-<DESC>navigate</DESC>
-</ROW>
-<ROW>
-<TERM><KEY id="Space"/></TERM>
-<DESC>next page of search results</DESC>
-</ROW>
-<ROW>
-<TERM><MODIFIERKEY id="Ctrl"/><KEY id="D"/></TERM>
-<DESC>exit</DESC>
-</ROW>
+  <ROW>
+    <TERM><KEY id="Tab"/></TERM>
+    <DESC>switch between the searches and the search results</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="Left"/><BR/><KEY id="Right"/></TERM>
+    <DESC>navigate</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="Space"/></TERM>
+    <DESC>next page of search results</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="D"/></TERM>
+    <DESC>exit</DESC>
+  </ROW>
 </DEFINITIONTABLE><BR/>
 </CONTENT>
 <X><T>Links</T><A>../links/coding.html#cscope</A><L>en</L><F>HTML</F></X>
