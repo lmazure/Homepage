@@ -22,14 +22,14 @@
         <ITEM><X><T>prix des carburants</T><A>https://www.prix-carburants.gouv.fr</A><L>fr</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Train</TITLE>
-        <ITEM><CLIST><TITLE><X><T>SNCF</T><A>https://www.sncf.com</A><L>fr</L><F>HTML</F></X></TITLE>
-          <ITEM><X><T>réservation</T><A>https://www.oui.sncf</A><L>fr</L><F>HTML</F></X></ITEM>
+        <ITEM><CLIST><TITLE><X><T>SNCF</T><A>https://www.sncf.com/fr</A><L>fr</L><F>HTML</F></X></TITLE>
+          <ITEM><X><T>réservation</T><A>https://www.sncf-connect.com/</A><L>fr</L><F>HTML</F></X></ITEM>
         </CLIST></ITEM>
         <ITEM><X><T>RATP</T><A>https://www.ratp.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Plane</TITLE>
         <ITEM><X><T>Aéroports de Paris</T><A>https://www.parisaeroport.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Air France</T><A>https://www.airfrance.com/</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Air France</T><A>https://wwws.airfrance.fr/splash</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Delta AirLines</T><A>https://www.delta.com/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>American Airlines</T><A>https://www.americanairlines.fr</A><L>fr</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Bourse des vols</T><A>https://www.bourse-des-vols.com/</A><L>fr</L><F>HTML</F></X></ITEM>
@@ -40,7 +40,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tour operators</TITLE>
       <ITEM><X><T>Terres d'Aventure</T><A>https://www.terdav.com</A><L>fr</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Club Aventure</T><A>https://www.huwans-clubaventure.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Huwans</T><A>https://www.huwans.com/</A><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>UCPA</T><A>https://www.ucpa.com</A><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Atalante</T><A>https://www.atalante.fr</A><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>La Balaguère</T><A>https://www.labalaguere.com</A><L>fr</L><F>HTML</F></X></ITEM>
@@ -59,7 +59,7 @@
       <ITEM><BLIST><TITLE>Change</TITLE>
         <ITEM><X><T>XE</T><A>https://www.xe.com/currencyconverter/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
-      <ITEM><X><T>VISA cash machines</T><A>https://www.visa.com/atmlocator/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>VISA cash machines</T><A>https://www.visa.com/locator/atm</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE>Time zones</TITLE>
         <ITEM><X><T>converter</T><A>https://www.timezoneconverter.com/index.php</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>DST first half of 2014</T><A>https://www.timeanddate.com/time/dst/2014a.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -73,7 +73,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Languedoc-Roussillon</TITLE>
         <ITEM><BLIST><TITLE>Lozère</TITLE>
-          <ITEM><X><T>le Parc National des Cévennes</T><A>http://www.cevennes-parcnational.fr</A><L>fr</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>le Parc National des Cévennes</T><A>http://www.cevennes-parcnational.fr/fr</A><L>fr</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Centre</TITLE>
@@ -82,7 +82,7 @@
             <ITEM><X><T>Site officiel</T><A>https://www.orleans-metropole.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
           </BLIST></ITEM>
         </BLIST></ITEM>
-        <ITEM><X><T>Boiscommun</T><A>http://www.chez.com/boiscommun/</A><L>fr</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Boiscommun</T><A>http://boiscommun.chez.com/</A><L>fr</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Île-de-France</TITLE>
         <ITEM><X><T>Parcours Acrobatiques en Forêt</T><A>https://www.aventure-aventure.com/</A><L>fr</L><F>HTML</F></X></ITEM>
@@ -132,22 +132,19 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Rhône-Alpes</TITLE>
         <ITEM><BLIST><TITLE>Drôme</TITLE>
-          <ITEM><BLIST><TITLE>Bouvante</TITLE>
-            <ITEM><X><T>Le Sentier du Karst à Font d'Urle</T><A>https://www.ladromemontagne.fr/UserFiles/File/Font-d-Urle-livret-2012.pdf</A><L>fr</L><F>PDF</F></X></ITEM>
-          </BLIST></ITEM>
           <ITEM><BLIST><TITLE>Chabeuil</TITLE>
             <ITEM><X><T>Chroniques du Canal des Moulins de Chabeuil</T><A>https://canaldesmoulins.tumblr.com</A><L>fr</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>Fête aérienne de Valence Chabeuil</T><A>https://www.aerotorshow.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+            <ITEM><X><T>Fête aérienne de Valence Chabeuil</T><A>https://aerotorshow.fr/</A><L>fr</L><L>en</L><F>HTML</F></X></ITEM>
           </BLIST></ITEM>
           <ITEM><BLIST><TITLE>Montélimar</TITLE>
             <ITEM><X><T>Musée Européen de l'Aviation de Chasse</T><A>http://www.meacmtl.com</A><L>fr</L><F>HTML</F></X></ITEM>
           </BLIST></ITEM>
           <ITEM><BLIST><TITLE>Saint-Agnan-en-Vercors</TITLE>
             <ITEM><X quality="1"><T>Photos anciennes du Col de Rousset</T><A>http://www.debart.info/Col_de_Rousset/col_photo_ancienne.html</A><L>fr</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>Webcam Col de Rousset</T><A>https://www.skiinfo.fr/alpes-du-nord/col-de-rousset/webcams.html</A><L>fr</L><F>HTML</F></X></ITEM>
+            <ITEM><X><T>Webcam Col de Rousset</T><A>https://www.skiinfo.fr/alpes-du-nord/col-de-rousset/webcams</A><L>fr</L><F>HTML</F></X></ITEM>
           </BLIST></ITEM>
           <ITEM><BLIST><TITLE>Granges-lès-Beaumont</TITLE>
-            <ITEM><X><T>Les Cèdres</T><A>https://www.restaurantlescedres.fr</A><L>fr</L><F>HTML</F></X></ITEM>
+            <ITEM><X><T>Les Cèdres</T><A>https://www.restaurantlescedres.fr/fr/</A><L>fr</L><F>HTML</F></X></ITEM>
           </BLIST></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Isère</TITLE>
@@ -158,8 +155,8 @@
           </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Rhône</TITLE>
           <ITEM><BLIST><TITLE>Lyon</TITLE>
-            <ITEM><X><T>Musée Aviation Lyon-Corbas</T><A>http://www.ealc.fr</A><L>fr</L><F>HTML</F></X></ITEM>
-            <ITEM><X><T>Sentiers et balades</T><A>https://www.grandlyon.com/a-vivre/sentiers-et-balades.html</A><L>fr</L><F>HTML</F></X></ITEM>
+            <ITEM><X><T>Musée Aviation Lyon-Corbas</T><A>http://museeaviationlyon.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+            <ITEM><X><T>Sentiers et balades</T><A>https://www.grandlyon.com/a-vivre/sentiers-et-balades</A><L>fr</L><F>HTML</F></X></ITEM>
           </BLIST></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
@@ -172,13 +169,13 @@
           <ITEM><X><T>Ferme Auberge de la Charriole (Taintrux)</T><A>https://www.charriole.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Moselle</TITLE>
-          <ITEM><X><T>Les pelouses calcaires du Val de Fensch</T><ST>du Vert après le Fer</ST><A>http://www.cren-lorraine.com/medias/fichiers/Topoguide_Val_de_Fensch_57.pdf</A><L>fr</L><F>PDF</F></X></ITEM>
+          <ITEM><X><T>Les pelouses calcaires du Val de Fensch</T><ST>du Vert après le Fer</ST><A>https://www.valdefensch-tourisme.com/wp-content/uploads/2018/11/bdpelouses-calcaires-val-de-fensch.pdf</A><L>fr</L><F>PDF</F></X></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Meurthe-et-Moselle</TITLE>
           <ITEM><X><T>Comité Départemental du Tourisme de Meurthe et Moselle</T><A>https://tourisme-meurtheetmoselle.fr</A><L>fr</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>L'Ennoyage des anciennes Mines de Fer du Bassin Lorrain</T><A>http://sandro.rossi.free.fr/societe/ennoyage/Ennoyage.html</A><L>fr</L><F>HTML</F></X></ITEM>
           <ITEM><BLIST><TITLE>Nancy</TITLE>
-            <ITEM><X><T>Jardin Botanique du Montet</T><A>https://www.parcsetjardins.fr/jardins/422-jardin-botanique-du-montet</A><L>fr</L><F>HTML</F></X></ITEM>
+            <ITEM><X><T>Jardin Botanique Jean-Marie Pelt</T><A>https://www.parcsetjardins.fr/jardins/422-jardin-botanique-jean-marie-pelt</A><L>fr</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>Le spéléodrome de Nancy</T><A>https://usan.ffspeleo.fr/usan2008/index.php?id=40</A><L>fr</L><F>HTML</F></X></ITEM>
           </BLIST></ITEM>
           <ITEM><BLIST><TITLE>Ludres</TITLE>
@@ -206,7 +203,7 @@
       <ITEM><BLIST><TITLE>England</TITLE>
         <ITEM><BLIST><TITLE><ANCHOR>CAMBRIDGE</ANCHOR>Cambridge</TITLE>
           <ITEM><X><T>Cambridge City Council</T><A>https://www.cambridge.gov.uk</A><L>en</L><F>HTML</F></X></ITEM>
-          <ITEM><X><T>Queens' College</T><A>https://www.quns.cam.ac.uk</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>Queens' College</T><A>https://www.queens.cam.ac.uk/</A><L>en</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Greece</TITLE>
@@ -239,7 +236,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Asia</TITLE>
       <ITEM><BLIST><TITLE>India</TITLE>
-        <ITEM><X><T>India information visa</T><A>https://www.vfsglobal.com/india/france/index.html</A><L>fr</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>India information visa</T><A>https://services.vfsglobal.com/fra/fr/ind/</A><L>fr</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Indian visa application</T><A>https://indianvisaonline.gov.in/visa/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
@@ -247,9 +244,9 @@
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>Life Sucks and Then You Fly</T><A>https://www.wired.com/1999/08/flying/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Warren</FIRSTNAME><LASTNAME>Berger</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>8</MONTH><DAY>1</DAY></DATE><COMMENT>This speaks about the hyperfliers: the guys spending their life crossing the world by plane.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Steven Levitt on child carseats</T><A>https://www.youtube.com/watch?v=um5gMZcZWm0</A><L>en</L><F>MP4</F><DURATION><MINUTE>20</MINUTE><SECOND>31</SECOND></DURATION><DATE><YEAR>2008</YEAR><MONTH>6</MONTH><DAY>24</DAY></DATE></X><X><T>Surprising stats about child carseats</T><A>https://www.ted.com/talks/steven_levitt_surprising_stats_about_child_carseats</A><L>en</L><F>Flash Video</F><DURATION><MINUTE>19</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Steven</FIRSTNAME><LASTNAME>Levitt</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>7</MONTH></DATE><COMMENT><AUTHOR><FIRSTNAME>Steven</FIRSTNAME><LASTNAME>Levitt</LASTNAME></AUTHOR> claims that his analysis (statistics and crash tests) proves that child car seats are as effective as seatbelts.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Alternative to "Black Boxes" Takes Flight</T><ST>Air France crash renews interest in real-time flight-data reporting systems</ST><A>https://spectrum.ieee.org/aerospace/aviation/alternative-to-black-boxes-takes-flight</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rosaleen Ortiz</FIRSTNAME><LASTNAME>de Jesus</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH></DATE><COMMENT>The current status on replacing black boxes by real-time transmitting systems, but this article contains too little information.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Alternative to "Black Boxes" Takes Flight</T><ST>Air France crash renews interest in real-time flight-data reporting systems</ST><A>https://spectrum.ieee.org/alternative-to-black-boxes-takes-flight</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rosaleen Ortiz</FIRSTNAME><LASTNAME>de Jesus</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>9</MONTH></DATE><COMMENT>The current status on replacing black boxes by real-time transmitting systems, but this article contains too little information.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>A quelle heure votre trajet se transforme en cauchemar ?</T><A>https://www.lesfrontaliers.lu/mobilite/quelle-heure-votre-trajet-se-transforme-en-cauchemar/</A><L>fr</L><F>HTML</F></X><DATE><YEAR>2011</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE><COMMENT>The hourly statistics of the A31 Thionville/Luxembourg section.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Up in the Air: Meet the Man Who Flies Around the World for Free</T><ST>Last year, a young man walked into the Seattle airport and took the next flight to anywhere — and he hasn’t come down since</ST><A>https://www.rollingstone.com/culture/features/ben-schlappig-airlines-fly-free-20150720</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Wofford</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE><COMMENT>The title says it all: <AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Schlappig</LASTNAME></AUTHOR> is tricking the system to continuously fly for free.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Up in the Air: Meet the Man Who Flies Around the World for Free</T><ST>Last year, a young man walked into the Seattle airport and took the next flight to anywhere — and he hasn't come down since</ST><A>https://www.rollingstone.com/feature/up-in-the-air-meet-the-man-who-flies-around-the-world-for-free-43961/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Wofford</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE><COMMENT>The title says it all: <AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Schlappig</LASTNAME></AUTHOR> is tricking the system to continuously fly for free.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>[Michel Lebœuf] Les secrets de la grande vitesse ferroviaire</T><A>https://www.youtube.com/watch?v=VLaWZMU1Eo8</A><L>fr</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>39</MINUTE><SECOND>36</SECOND></DURATION><DATE><YEAR>2016</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE></X><AUTHOR><FIRSTNAME>Michel</FIRSTNAME><LASTNAME>Lebœuf</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE><COMMENT>The economics of train transport.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Doomed Boeing Jets Lacked 2 Safety Features That Company Sold Only as Extras</T><A>https://www.nytimes.com/2019/03/21/business/boeing-safety-features-charge.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Hiroko</FIRSTNAME><LASTNAME>Tabuchi</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Gelles</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>21</DAY></DATE><COMMENT>Some safety features are options that airline companies must pay for.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
