@@ -118,16 +118,16 @@
         </xsl:attribute>
         <xsl:attribute name="title">
           <xsl:text>c͟o͟p͟y͟</xsl:text>
-          <xsl:text>&#xA;title: </xsl:text>
-          <xsl:for-each select="./T"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
-          <xsl:text>&#xA;subtitle: </xsl:text>
-          <xsl:for-each select="./ST"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
-          <xsl:text>&#xA;URL: </xsl:text>
-          <xsl:for-each select="./A"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
-          <xsl:text>&#xA;language: </xsl:text>
-          <xsl:for-each select="./L"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
-          <xsl:text>&#xA;format: </xsl:text>
-          <xsl:for-each select="./F"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
+          <xsl:text>&#xA;title:</xsl:text>
+          <xsl:for-each select="./T"><xsl:text> </xsl:text><xsl:value-of select="."/></xsl:for-each>
+          <xsl:text>&#xA;subtitle:</xsl:text>
+          <xsl:for-each select="./ST"><xsl:text> </xsl:text><xsl:value-of select="."/></xsl:for-each>
+          <xsl:text>&#xA;URL:</xsl:text>
+          <xsl:for-each select="./A"><xsl:text> </xsl:text><xsl:value-of select="."/></xsl:for-each>
+          <xsl:text>&#xA;language:</xsl:text>
+          <xsl:for-each select="./L"><xsl:text> </xsl:text><xsl:value-of select="."/></xsl:for-each>
+          <xsl:text>&#xA;format:</xsl:text>
+          <xsl:for-each select="./F"><xsl:text> </xsl:text><xsl:value-of select="."/></xsl:for-each>
           <xsl:if test="count(./DURATION)=1">
             <xsl:text>&#xA;duration: </xsl:text>
             <xsl:apply-templates select="./DURATION"/>
@@ -223,10 +223,10 @@
       <xsl:value-of select="./A"/>
     </xsl:attribute>
     <xsl:attribute name="title">
-      <xsl:text>language: </xsl:text>
-      <xsl:for-each select="./L"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
-      <xsl:text>&#xA;format: </xsl:text>
-      <xsl:for-each select="./F"><xsl:value-of select="."/><xsl:text></xsl:text></xsl:for-each>
+      <xsl:text>language:</xsl:text>
+      <xsl:for-each select="./L"><xsl:text> </xsl:text><xsl:value-of select="."/></xsl:for-each>
+      <xsl:text>&#xA;format:</xsl:text>
+      <xsl:for-each select="./F"><xsl:text> </xsl:text><xsl:value-of select="."/></xsl:for-each>
       <xsl:if test="count(./DURATION)=1">
         <xsl:text>&#xA;duration: </xsl:text>
         <xsl:apply-templates select="./DURATION"/>
