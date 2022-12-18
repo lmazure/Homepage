@@ -7,19 +7,19 @@
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
-    <ITEM><X><T>Jutta Degener repository</T><A>http://www.quut.com/c</A><L>en</L><F>HTML</F></X>
+    <ITEM><X><T>Jutta Degener repository</T><A>https://www.quut.com/c/</A><L>en</L><F>HTML</F></X>
       (<X><T>⧉</T><A>http://www.lysator.liu.se/c/</A><L>en</L><F>HTML</F></X>)</ITEM>
     <ITEM><CLIST><TITLE><ANCHOR>rules</ANCHOR>Coding rules</TITLE>
-      <ITEM><X status="dead"><T>updated Indian Hill</T><A>https://www.maultech.com/chrislott/resources/cstyle/indhill-cstyle.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="zombie"><T>updated Indian Hill</T><A>https://www.maultech.com/chrislott/resources/cstyle/indhill-cstyle.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><ANCHOR>glibc</ANCHOR><X><T>glibc</T><A>https://www.gnu.org/software/libc/libc.html</A><L>en</L><F>HTML</F></X></TITLE>
       <ITEM><X><T>doc</T><A>https://www.gnu.org/software/libc/manual/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>personal notes</T><A>../notes/glibc.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>Memory allocator</TITLE>
-      <ITEM><X><T>Hoard</T><A>http://www.hoard.org/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Hoard</T><A>http://hoard.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>ptmalloc</T><A>http://www.malloc.de/en/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Doug Lea</T><A>http://gee.cs.oswego.edu/pub/misc/malloc.c</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Doug Lea</T><A>https://gee.cs.oswego.edu/pub/misc/malloc.c</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>Mathematical libraries</TITLE>
       <ITEM><X><T>Meschach</T><A>http://homepage.divms.uiowa.edu/~dstewart/meschach/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -34,7 +34,7 @@
     <ITEM><BLIST><TITLE>Miscellaneous</TITLE>
       <ITEM><ARTICLE><X><T>The Development of the C Language</T><A>https://www.bell-labs.com/usr/dmr/www/chist.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dennis</FIRSTNAME><MIDDLENAME>M.</MIDDLENAME><LASTNAME>Ritchie</LASTNAME></AUTHOR><DATE><YEAR>1993</YEAR><MONTH>4</MONTH></DATE><COMMENT>This history of BCPL, B and mainly C told by one of the language authors, is a worthy read: some idiosyncrasies are explained.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Restricted Pointers in C</T><A>http://www.lysator.liu.se/c/restrict.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bill</FIRSTNAME><LASTNAME>Homer</LASTNAME></AUTHOR><DATE><YEAR>1994</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE><COMMENT>A discussion on the <CODEROUTINE>restrict</CODEROUTINE> keyword to indicate non aliased pointers.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Programming in C UNIX System Calls and Subroutines using C.</T><A>https://www.cs.cf.ac.uk/Dave/C/CE.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>A.</FIRSTNAME><MIDDLENAME>D.</MIDDLENAME><LASTNAME>Marshall</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>3</MONTH></DATE><COMMENT>An introduction to programming C on Unix.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Programming in C UNIX System Calls and Subroutines using C.</T><A>https://users.cs.cf.ac.uk/Dave.Marshall/C/CE.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>A.</FIRSTNAME><MIDDLENAME>D.</MIDDLENAME><LASTNAME>Marshall</LASTNAME></AUTHOR><DATE><YEAR>1999</YEAR><MONTH>3</MONTH></DATE><COMMENT>An introduction to programming C on Unix.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="dead"><T>The New ISO Standard for C (C9X)</T><A>http://home.tiscalinet.ch/t_wolf/tw/c/c9x_changes.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Wolf</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>8</MONTH><DAY>1</DAY></DATE><COMMENT>This presentation summarizes the changes from C94 to C99.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The New C: Declarations &amp; Initializations</T><A>https://www.drdobbs.com/the-new-c-declarations-initializations/184401377</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Randy</FIRSTNAME><LASTNAME>Meyers</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>4</MONTH></DATE><COMMENT>Some new C99 features: declarations not at the start of a block, non-constant initializers and designated initalizers.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="dead"><T>Manipulating Fixed-Width Integer Data Types</T><A>http://www.oreillynet.com/pub/a/network/2003/10/07/michael_barr.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Barr</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>ANSI C99 defines <CODEROUTINE>int8_t</CODEROUTINE>, <CODEROUTINE>uint8_t</CODEROUTINE>, <CODEROUTINE>int16_t</CODEROUTINE>, <CODEROUTINE>uint16_t</CODEROUTINE>, <CODEROUTINE>int32_t</CODEROUTINE>, <CODEROUTINE>uint32_t</CODEROUTINE>, <CODEROUTINE>int64_t</CODEROUTINE> and <CODEROUTINE>uint64_t</CODEROUTINE>. His last advice is not the best one: if your C compiler does not support C99, you can use <X><T>this</T><A>../notes/uint32.html</A><L>en</L><F>HTML</F></X>.</COMMENT></ARTICLE></ITEM>
