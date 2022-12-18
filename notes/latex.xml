@@ -3,138 +3,543 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>LaTeX</TITLE>
 <PATH>notes/latex.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>\alpha A</CODEROUTINE></TERM><DESC><MATH>\alpha A</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\nu N</CODEROUTINE></TERM><DESC><MATH>\nu N</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\beta B</CODEROUTINE></TERM><DESC><MATH>\beta B</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\xi\Xi</CODEROUTINE></TERM><DESC><MATH>\xi\Xi</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\gamma \Gamma</CODEROUTINE></TERM><DESC><MATH>\gamma \Gamma</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>o O</CODEROUTINE></TERM><DESC><MATH>o O</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\delta \Delta</CODEROUTINE></TERM><DESC><MATH>\delta \Delta</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\pi \Pi</CODEROUTINE></TERM><DESC><MATH>\pi \Pi</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\epsilon \varepsilon E</CODEROUTINE></TERM><DESC><MATH>\epsilon \varepsilon E</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\rho\varrho P</CODEROUTINE></TERM><DESC><MATH>\rho\varrho P</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\zeta Z</CODEROUTINE></TERM><DESC><MATH>\zeta Z</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\sigma \Sigma</CODEROUTINE></TERM><DESC><MATH>\sigma \Sigma</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\eta H</CODEROUTINE></TERM><DESC><MATH>\eta H</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\tau T</CODEROUTINE></TERM><DESC><MATH>\tau T</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\theta \vartheta \Theta</CODEROUTINE></TERM><DESC><MATH>\theta \vartheta \Theta</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\upsilon \Upsilon</CODEROUTINE></TERM><DESC><MATH>\upsilon \Upsilon</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\iota I</CODEROUTINE></TERM><DESC><MATH>\iota I</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\phi \varphi \Phi</CODEROUTINE></TERM><DESC><MATH>\phi \varphi \Phi</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\kappa K</CODEROUTINE></TERM><DESC><MATH>\kappa K</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\chi X</CODEROUTINE></TERM><DESC><MATH>\chi X</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\lambda \Lambda</CODEROUTINE></TERM><DESC><MATH>\lambda \Lambda</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\psi \Psi</CODEROUTINE></TERM><DESC><MATH>\psi \Psi</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\mu M</CODEROUTINE></TERM><DESC><MATH>\mu M</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\omega \Omega</CODEROUTINE></TERM><DESC><MATH>\omega \Omega</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\aleph</CODEROUTINE></TERM><DESC><MATH>\aleph</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\beth</CODEROUTINE></TERM><DESC><MATH>\beth</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\gimel</CODEROUTINE></TERM><DESC><MATH>\gimel</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\daleth</CODEROUTINE></TERM><DESC><MATH>\daleth</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\leftarrow</CODEROUTINE></TERM><DESC><MATH>\leftarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\Leftarrow</CODEROUTINE></TERM><DESC><MATH>\Leftarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\rightarrow</CODEROUTINE></TERM><DESC><MATH>\rightarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\Rightarrow</CODEROUTINE></TERM><DESC><MATH>\Rightarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\leftrightarrow</CODEROUTINE></TERM><DESC><MATH>\leftrightarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\rightleftharpoons</CODEROUTINE></TERM><DESC><MATH>\rightleftharpoons</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\uparrow</CODEROUTINE></TERM><DESC><MATH>\uparrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\downarrow</CODEROUTINE></TERM><DESC><MATH>\downarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\Uparrow</CODEROUTINE></TERM><DESC><MATH>\Uparrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\Downarrow</CODEROUTINE></TERM><DESC><MATH>\Downarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\Leftrightarrow</CODEROUTINE></TERM><DESC><MATH>\Leftrightarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\Updownarrow</CODEROUTINE></TERM><DESC><MATH>\Updownarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\mapsto</CODEROUTINE></TERM><DESC><MATH>\mapsto</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\longmapsto</CODEROUTINE></TERM><DESC><MATH>\longmapsto</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\nearrow</CODEROUTINE></TERM><DESC><MATH>\nearrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\searrow</CODEROUTINE></TERM><DESC><MATH>\searrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\swarrow</CODEROUTINE></TERM><DESC><MATH>\swarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\nwarrow</CODEROUTINE></TERM><DESC><MATH>\nwarrow</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\leftharpoonup</CODEROUTINE></TERM><DESC><MATH>\leftharpoonup</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\rightharpoonup</CODEROUTINE></TERM><DESC><MATH>\rightharpoonup</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\leftharpoondown</CODEROUTINE></TERM><DESC><MATH>\leftharpoondown</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\rightharpoondown</CODEROUTINE></TERM><DESC><MATH>\rightharpoondown</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\infty</CODEROUTINE></TERM><DESC><MATH>\infty</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\forall</CODEROUTINE></TERM><DESC><MATH>\forall</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\Re</CODEROUTINE></TERM><DESC><MATH>\Re</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\Im</CODEROUTINE></TERM><DESC><MATH>\Im</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\nabla</CODEROUTINE></TERM><DESC><MATH>\nabla</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\exists</CODEROUTINE></TERM><DESC><MATH>\exists</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\partial</CODEROUTINE></TERM><DESC><MATH>\partial</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\nexists</CODEROUTINE></TERM><DESC><MATH>\nexists</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\emptyset</CODEROUTINE></TERM><DESC><MATH>\emptyset</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\varnothing</CODEROUTINE></TERM><DESC><MATH>\varnothing</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\wp</CODEROUTINE></TERM><DESC><MATH>\wp</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\complement</CODEROUTINE></TERM><DESC><MATH>\complement</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\neg</CODEROUTINE></TERM><DESC><MATH>\neg</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\cdots</CODEROUTINE></TERM><DESC><MATH>\cdots</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\square</CODEROUTINE></TERM><DESC><MATH>\square</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\surd</CODEROUTINE></TERM><DESC><MATH>\surd</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\blacksquare</CODEROUTINE></TERM><DESC><MATH>\blacksquare</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\triangle</CODEROUTINE></TERM><DESC><MATH>\triangle</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\cdot</CODEROUTINE></TERM><DESC><MATH>\cdot</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\times</CODEROUTINE></TERM><DESC><MATH>\times</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\div</CODEROUTINE></TERM><DESC><MATH>\div</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\cap</CODEROUTINE></TERM><DESC><MATH>\cap</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\cup</CODEROUTINE></TERM><DESC><MATH>\cup</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\neq</CODEROUTINE></TERM><DESC><MATH>\neq</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\leq</CODEROUTINE></TERM><DESC><MATH>\leq</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\geq</CODEROUTINE></TERM><DESC><MATH>\geq</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\in</CODEROUTINE></TERM><DESC><MATH>\in</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\perp</CODEROUTINE></TERM><DESC><MATH>\perp</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\notin</CODEROUTINE></TERM><DESC><MATH>\notin</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\subset</CODEROUTINE></TERM><DESC><MATH>\subset</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\simeq</CODEROUTINE></TERM><DESC><MATH>\simeq</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\approx</CODEROUTINE></TERM><DESC><MATH>\approx</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\wedge</CODEROUTINE></TERM><DESC><MATH>\wedge</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\vee</CODEROUTINE></TERM><DESC><MATH>\vee</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\oplus</CODEROUTINE></TERM><DESC><MATH>\oplus</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\otimes</CODEROUTINE></TERM><DESC><MATH>\otimes</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\Box</CODEROUTINE></TERM><DESC><MATH>\Box</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\boxtimes</CODEROUTINE></TERM><DESC><MATH>\boxtimes</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\equiv</CODEROUTINE></TERM><DESC><MATH>\equiv</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\cong</CODEROUTINE></TERM><DESC><MATH>\cong</MATH></DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\alpha A</CODEROUTINE></TERM>
+    <DESC><MATH>\alpha A</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\nu N</CODEROUTINE></TERM>
+    <DESC><MATH>\nu N</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\beta B</CODEROUTINE></TERM>
+    <DESC><MATH>\beta B</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\xi\Xi</CODEROUTINE></TERM>
+    <DESC><MATH>\xi\Xi</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\gamma \Gamma</CODEROUTINE></TERM>
+    <DESC><MATH>\gamma \Gamma</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>o O</CODEROUTINE></TERM>
+    <DESC><MATH>o O</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\delta \Delta</CODEROUTINE></TERM>
+    <DESC><MATH>\delta \Delta</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\pi \Pi</CODEROUTINE></TERM>
+    <DESC><MATH>\pi \Pi</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\epsilon \varepsilon E</CODEROUTINE></TERM>
+    <DESC><MATH>\epsilon \varepsilon E</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\rho\varrho P</CODEROUTINE></TERM>
+    <DESC><MATH>\rho\varrho P</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\zeta Z</CODEROUTINE></TERM>
+    <DESC><MATH>\zeta Z</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\sigma \Sigma</CODEROUTINE></TERM>
+    <DESC><MATH>\sigma \Sigma</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\eta H</CODEROUTINE></TERM>
+    <DESC><MATH>\eta H</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\tau T</CODEROUTINE></TERM>
+    <DESC><MATH>\tau T</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\theta \vartheta \Theta</CODEROUTINE></TERM>
+    <DESC><MATH>\theta \vartheta \Theta</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\upsilon \Upsilon</CODEROUTINE></TERM>
+    <DESC><MATH>\upsilon \Upsilon</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\iota I</CODEROUTINE></TERM>
+    <DESC><MATH>\iota I</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\phi \varphi \Phi</CODEROUTINE></TERM>
+    <DESC><MATH>\phi \varphi \Phi</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\kappa K</CODEROUTINE></TERM>
+    <DESC><MATH>\kappa K</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\chi X</CODEROUTINE></TERM>
+    <DESC><MATH>\chi X</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\lambda \Lambda</CODEROUTINE></TERM>
+    <DESC><MATH>\lambda \Lambda</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\psi \Psi</CODEROUTINE></TERM>
+    <DESC><MATH>\psi \Psi</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\mu M</CODEROUTINE></TERM>
+    <DESC><MATH>\mu M</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\omega \Omega</CODEROUTINE></TERM>
+    <DESC><MATH>\omega \Omega</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\aleph</CODEROUTINE></TERM>
+    <DESC><MATH>\aleph</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\beth</CODEROUTINE></TERM>
+    <DESC><MATH>\beth</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\gimel</CODEROUTINE></TERM>
+    <DESC><MATH>\gimel</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\daleth</CODEROUTINE></TERM>
+    <DESC><MATH>\daleth</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\leftarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\leftarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\Leftarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\Leftarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\rightarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\rightarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\Rightarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\Rightarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\leftrightarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\leftrightarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\rightleftharpoons</CODEROUTINE></TERM>
+    <DESC><MATH>\rightleftharpoons</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\uparrow</CODEROUTINE></TERM>
+    <DESC><MATH>\uparrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\downarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\downarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\Uparrow</CODEROUTINE></TERM>
+    <DESC><MATH>\Uparrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\Downarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\Downarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\Leftrightarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\Leftrightarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\Updownarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\Updownarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\mapsto</CODEROUTINE></TERM>
+    <DESC><MATH>\mapsto</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\longmapsto</CODEROUTINE></TERM>
+    <DESC><MATH>\longmapsto</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\nearrow</CODEROUTINE></TERM>
+    <DESC><MATH>\nearrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\searrow</CODEROUTINE></TERM>
+    <DESC><MATH>\searrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\swarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\swarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\nwarrow</CODEROUTINE></TERM>
+    <DESC><MATH>\nwarrow</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\leftharpoonup</CODEROUTINE></TERM>
+    <DESC><MATH>\leftharpoonup</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\rightharpoonup</CODEROUTINE></TERM>
+    <DESC><MATH>\rightharpoonup</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\leftharpoondown</CODEROUTINE></TERM>
+    <DESC><MATH>\leftharpoondown</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\rightharpoondown</CODEROUTINE></TERM>
+    <DESC><MATH>\rightharpoondown</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\infty</CODEROUTINE></TERM>
+    <DESC><MATH>\infty</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\forall</CODEROUTINE></TERM>
+    <DESC><MATH>\forall</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\Re</CODEROUTINE></TERM>
+    <DESC><MATH>\Re</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\Im</CODEROUTINE></TERM>
+    <DESC><MATH>\Im</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\nabla</CODEROUTINE></TERM>
+    <DESC><MATH>\nabla</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\exists</CODEROUTINE></TERM>
+    <DESC><MATH>\exists</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\partial</CODEROUTINE></TERM>
+    <DESC><MATH>\partial</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\nexists</CODEROUTINE></TERM>
+    <DESC><MATH>\nexists</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\emptyset</CODEROUTINE></TERM>
+    <DESC><MATH>\emptyset</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\varnothing</CODEROUTINE></TERM>
+    <DESC><MATH>\varnothing</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\wp</CODEROUTINE></TERM>
+    <DESC><MATH>\wp</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\complement</CODEROUTINE></TERM>
+    <DESC><MATH>\complement</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\neg</CODEROUTINE></TERM>
+    <DESC><MATH>\neg</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\cdots</CODEROUTINE></TERM>
+    <DESC><MATH>\cdots</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\square</CODEROUTINE></TERM>
+    <DESC><MATH>\square</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\surd</CODEROUTINE></TERM>
+    <DESC><MATH>\surd</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\blacksquare</CODEROUTINE></TERM>
+    <DESC><MATH>\blacksquare</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\triangle</CODEROUTINE></TERM>
+    <DESC><MATH>\triangle</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\cdot</CODEROUTINE></TERM>
+    <DESC><MATH>\cdot</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\times</CODEROUTINE></TERM>
+    <DESC><MATH>\times</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\div</CODEROUTINE></TERM>
+    <DESC><MATH>\div</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\cap</CODEROUTINE></TERM>
+    <DESC><MATH>\cap</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\cup</CODEROUTINE></TERM>
+    <DESC><MATH>\cup</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\neq</CODEROUTINE></TERM>
+    <DESC><MATH>\neq</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\leq</CODEROUTINE></TERM>
+    <DESC><MATH>\leq</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\geq</CODEROUTINE></TERM>
+    <DESC><MATH>\geq</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\in</CODEROUTINE></TERM>
+    <DESC><MATH>\in</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\perp</CODEROUTINE></TERM>
+    <DESC><MATH>\perp</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\notin</CODEROUTINE></TERM>
+    <DESC><MATH>\notin</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\subset</CODEROUTINE></TERM>
+    <DESC><MATH>\subset</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\simeq</CODEROUTINE></TERM>
+    <DESC><MATH>\simeq</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\approx</CODEROUTINE></TERM>
+    <DESC><MATH>\approx</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\wedge</CODEROUTINE></TERM>
+    <DESC><MATH>\wedge</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\vee</CODEROUTINE></TERM>
+    <DESC><MATH>\vee</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\oplus</CODEROUTINE></TERM>
+    <DESC><MATH>\oplus</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\otimes</CODEROUTINE></TERM>
+    <DESC><MATH>\otimes</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\Box</CODEROUTINE></TERM>
+    <DESC><MATH>\Box</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\boxtimes</CODEROUTINE></TERM>
+    <DESC><MATH>\boxtimes</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\equiv</CODEROUTINE></TERM>
+    <DESC><MATH>\equiv</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\cong</CODEROUTINE></TERM>
+    <DESC><MATH>\cong</MATH></DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>\mathbb{ABC…Z}</CODEROUTINE></TERM><DESC>blackboard bold letters, no lowercase <MATH>\mathbb{ABC…Z}</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\mathcal{ABC…Z}</CODEROUTINE></TERM><DESC>calligraphic letters letters, no lowercase <MATH>\mathcal{ABC…Z}</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\mathfrak{ABC…Zabc…z}</CODEROUTINE></TERM><DESC>fraktur letters <MATH>\mathfrak{ABC…Zabc…z}</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\mathrm{ABC…Zabc…z}</CODEROUTINE></TERM><DESC>roman letters <MATH>\mathrm{ABC…Zabc…z}</MATH></DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\mathbb{ABC…Z}</CODEROUTINE></TERM>
+    <DESC>blackboard bold letters, no lowercase <MATH>\mathbb{ABC…Z}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\mathcal{ABC…Z}</CODEROUTINE></TERM>
+    <DESC>calligraphic letters letters, no lowercase <MATH>\mathcal{ABC…Z}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\mathfrak{ABC…Zabc…z}</CODEROUTINE></TERM>
+    <DESC>fraktur letters <MATH>\mathfrak{ABC…Zabc…z}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\mathrm{ABC…Zabc…z}</CODEROUTINE></TERM>
+    <DESC>roman letters <MATH>\mathrm{ABC…Zabc…z}</MATH></DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>x\mathbin{=}x</CODEROUTINE></TERM><DESC>spacing of a binary operator <MATH>x\mathbin{=}x</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>x\mathrel{=}x</CODEROUTINE></TERM><DESC>spacing of a binary relation <MATH>x\mathrel{=}x</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>a\stackrel{top}{binrel}b\stackrel{R}{=}c</CODEROUTINE></TERM><DESC>symbol over an operator <MATH>a\stackrel{top}{binrel}b\stackrel{R}{=}c</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>real^{real}={non\mbox{-}real}</CODEROUTINE></TERM><DESC>dash <MATH>real^{real}={non\mbox{-}real}</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\infty</CODEROUTINE></TERM><DESC>infinity <MATH>\infty</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\left(-\frac{1}{2}\right)</CODEROUTINE></TERM><DESC>parentheses <MATH>\left(-\frac{1}{2}\right)</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\{\frac{1}{2}\}</CODEROUTINE></TERM><DESC>curly braces <MATH>\{\frac{1}{2}\}</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>a_{n+1}=a_n+a_{n-1}</CODEROUTINE></TERM><DESC>subscript <MATH>a_{n+1}=a_n+a_{n-1}</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>x^y</CODEROUTINE></TERM><DESC>power <MATH>x^y</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>e^{iπ}=-1</CODEROUTINE></TERM><DESC>power <MATH>e^{iπ}=-1</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\frac{a}{b}</CODEROUTINE></TERM><DESC>fraction <MATH>\frac{a}{b}</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\lceil{x}\rceil</CODEROUTINE></TERM><DESC>ceil <MATH>\lceil{x}\rceil</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\lfloor{x}\rfloor</CODEROUTINE></TERM><DESC>floor <MATH>\lfloor{x}\rfloor</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\sqrt{2}</CODEROUTINE></TERM><DESC>square root <MATH>\sqrt{2}</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\sqrt[3]{7+\sqrt{50}}+\sqrt[3]{7-\sqrt{50}}</CODEROUTINE></TERM><DESC>cube root <MATH>\sqrt[3]{7+\sqrt{50}}+\sqrt[3]{7-\sqrt{50}}</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\sum_{i=1}^{i=∞}i^i</CODEROUTINE></TERM><DESC>sum <MATH>\sum_{i=1}^{i=∞}i^i</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\sum\limits_{i=1}^{i=∞}i^i</CODEROUTINE></TERM><DESC>(better displayed) sum <MATH>\sum\limits_{i=1}^{i=∞}i^i</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\prod_{i=1}^{i=n}i^i</CODEROUTINE></TERM><DESC>product <MATH>\prod_{i=1}^{i=n}i^i</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\prod\limits_{i=1}^{i=n}i^i</CODEROUTINE></TERM><DESC>(better displayed) product <MATH>\prod\limits_{i=1}^{i=n}i^i</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\int_{a}^{b} x^2 dx</CODEROUTINE></TERM><DESC>integral <MATH>\int_{a}^{b} x^2 dx</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\int\limits_{a}^{b} x^2 dx</CODEROUTINE></TERM><DESC>(better displayed) integral <MATH>\int\limits_{a}^{b} x^2 dx</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\iint_V \mu(u,v) \,du\,dv</CODEROUTINE></TERM><DESC>double integral <MATH>\iint_V \mu(u,v) \,du\,dv</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\iint\limits_V \mu(u,v) \,du\,dv</CODEROUTINE></TERM><DESC>(better displayed) double integral <MATH>\iint\limits_V \mu(u,v) \,du\,dv</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\iiint_V \mu(u,v,w) \,du\,dv\,dw</CODEROUTINE></TERM><DESC>triple integral <MATH>\iiint_V \mu(u,v,w) \,du\,dv\,dw</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\iiiint_V \mu(t,u,v,w) \,dt\,du\,dv\,dw</CODEROUTINE></TERM><DESC>quadruple integral <MATH>\iiiint_V \mu(t,u,v,w) \,dt\,du\,dv\,dw</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\idotsint_V \mu(u_1,\dots,u_k) \,du_1 \dots du_k</CODEROUTINE></TERM><DESC>multiple integral <MATH>idotsint_V \mu(u_1,\dots,u_k) \,du_1 \dots du_k</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\oint_V f(s) \,ds</CODEROUTINE></TERM><DESC>cyclic integral <MATH>\oint_V f(s) \,ds</MATH></DESC></ROW>
-<ROW><TERM><CODEROUTINE>\lim_{x\to\infty} f(x)</CODEROUTINE></TERM><DESC>limit <MATH>\lim_{x\to\infty} f(x)</MATH></DESC></ROW>
-<ROW><TERM><CODESAMPLE>\left\{\begin{array}{@{}l@{}}<BR/>\sqrt{x}+y=7\\<BR/>x+\sqrt{y}=11<BR/>\end{array}\right.</CODESAMPLE></TERM><DESC>system of equations <MATH>\left\{\begin{array}{@{}l@{}}\sqrt{x}+y=7\\x+\sqrt{y}=11\end{array}\right.</MATH></DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE>x\mathbin{=}x</CODEROUTINE></TERM>
+    <DESC>spacing of a binary operator <MATH>x\mathbin{=}x</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>x\mathrel{=}x</CODEROUTINE></TERM>
+    <DESC>spacing of a binary relation <MATH>x\mathrel{=}x</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>a\stackrel{top}{binrel}b\stackrel{R}{=}c</CODEROUTINE></TERM>
+    <DESC>symbol over an operator <MATH>a\stackrel{top}{binrel}b\stackrel{R}{=}c</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>real^{real}={non\mbox{-}real}</CODEROUTINE></TERM>
+    <DESC>dash <MATH>real^{real}={non\mbox{-}real}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\infty</CODEROUTINE></TERM>
+    <DESC>infinity <MATH>\infty</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\left(-\frac{1}{2}\right)</CODEROUTINE></TERM>
+    <DESC>parentheses <MATH>\left(-\frac{1}{2}\right)</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\{\frac{1}{2}\}</CODEROUTINE></TERM>
+    <DESC>curly braces <MATH>\{\frac{1}{2}\}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>a_{n+1}=a_n+a_{n-1}</CODEROUTINE></TERM>
+    <DESC>subscript <MATH>a_{n+1}=a_n+a_{n-1}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>x^y</CODEROUTINE></TERM>
+    <DESC>power <MATH>x^y</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>e^{iπ}=-1</CODEROUTINE></TERM>
+    <DESC>power <MATH>e^{iπ}=-1</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\frac{a}{b}</CODEROUTINE></TERM>
+    <DESC>fraction <MATH>\frac{a}{b}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\lceil{x}\rceil</CODEROUTINE></TERM>
+    <DESC>ceil <MATH>\lceil{x}\rceil</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\lfloor{x}\rfloor</CODEROUTINE></TERM>
+    <DESC>floor <MATH>\lfloor{x}\rfloor</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\sqrt{2}</CODEROUTINE></TERM>
+    <DESC>square root <MATH>\sqrt{2}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\sqrt[3]{7+\sqrt{50}}+\sqrt[3]{7-\sqrt{50}}</CODEROUTINE></TERM>
+    <DESC>cube root <MATH>\sqrt[3]{7+\sqrt{50}}+\sqrt[3]{7-\sqrt{50}}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\sum_{i=1}^{i=∞}i^i</CODEROUTINE></TERM>
+    <DESC>sum <MATH>\sum_{i=1}^{i=∞}i^i</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\sum\limits_{i=1}^{i=∞}i^i</CODEROUTINE></TERM>
+    <DESC>(better displayed) sum <MATH>\sum\limits_{i=1}^{i=∞}i^i</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\prod_{i=1}^{i=n}i^i</CODEROUTINE></TERM>
+    <DESC>product <MATH>\prod_{i=1}^{i=n}i^i</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\prod\limits_{i=1}^{i=n}i^i</CODEROUTINE></TERM>
+    <DESC>(better displayed) product <MATH>\prod\limits_{i=1}^{i=n}i^i</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\int_{a}^{b} x^2 dx</CODEROUTINE></TERM>
+    <DESC>integral <MATH>\int_{a}^{b} x^2 dx</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\int\limits_{a}^{b} x^2 dx</CODEROUTINE></TERM>
+    <DESC>(better displayed) integral <MATH>\int\limits_{a}^{b} x^2 dx</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\iint_V \mu(u,v) \,du\,dv</CODEROUTINE></TERM>
+    <DESC>double integral <MATH>\iint_V \mu(u,v) \,du\,dv</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\iint\limits_V \mu(u,v) \,du\,dv</CODEROUTINE></TERM>
+    <DESC>(better displayed) double integral <MATH>\iint\limits_V \mu(u,v) \,du\,dv</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\iiint_V \mu(u,v,w) \,du\,dv\,dw</CODEROUTINE></TERM>
+    <DESC>triple integral <MATH>\iiint_V \mu(u,v,w) \,du\,dv\,dw</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\iiiint_V \mu(t,u,v,w) \,dt\,du\,dv\,dw</CODEROUTINE></TERM>
+    <DESC>quadruple integral <MATH>\iiiint_V \mu(t,u,v,w) \,dt\,du\,dv\,dw</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\idotsint_V \mu(u_1,\dots,u_k) \,du_1 \dots du_k</CODEROUTINE></TERM>
+    <DESC>multiple integral <MATH>idotsint_V \mu(u_1,\dots,u_k) \,du_1 \dots du_k</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\oint_V f(s) \,ds</CODEROUTINE></TERM>
+    <DESC>cyclic integral <MATH>\oint_V f(s) \,ds</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\lim_{x\to\infty} f(x)</CODEROUTINE></TERM>
+    <DESC>limit <MATH>\lim_{x\to\infty} f(x)</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>\left\{\begin{array}{@{}l@{}}<BR/>\sqrt{x}+y=7\\<BR/>x+\sqrt{y}=11<BR/>\end{array}\right.</CODESAMPLE></TERM>
+    <DESC>system of equations <MATH>\left\{\begin{array}{@{}l@{}}\sqrt{x}+y=7\\x+\sqrt{y}=11\end{array}\right.</MATH></DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Matrices
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODESAMPLE>\begin{matrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{matrix}</CODESAMPLE></TERM>
+    <DESC>matrix without brackets <MATH>\begin{matrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{matrix}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>\begin{pmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{pmatrix}</CODESAMPLE></TERM>
+    <DESC>matrix with parenthesis <MATH>\begin{pmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{pmatrix}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>\begin{bmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{bmatrix}</CODESAMPLE></TERM>
+    <DESC>matrix with square brackets <MATH>\begin{bmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{bmatrix}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>\begin{Bmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{Bmatrix}</CODESAMPLE></TERM>
+    <DESC>matrix with curly brackets <MATH>\begin{Bmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{Bmatrix}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>\begin{vmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{vmatrix}</CODESAMPLE></TERM>
+    <DESC>matrix with vertical bars <MATH>\begin{vmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{vmatrix}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>\begin{Vmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{Vmatrix}</CODESAMPLE></TERM>
+    <DESC>matrix with double vertical bars <MATH>\begin{Vmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{Vmatrix}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>\begin{bmatrix}<BR/><TAB/>a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,m} \\<BR/><TAB/>a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,m} \\<BR/><TAB/>\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<BR/><TAB/>a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,m}<BR/>\end{bmatrix}</CODESAMPLE></TERM>
+    <DESC>matrix with double vertical bars <MATH>\begin{bmatrix}a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,m} \\a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,m} \\\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,m}\end{bmatrix}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>\begin{bmatrix}<BR/><TAB/>a_{1} &amp; &amp; \\ <BR/><TAB/>&amp; \ddots &amp; \\ <BR/><TAB/>&amp; &amp; a_{n}<BR/>\end{bmatrix}</CODESAMPLE></TERM>
+    <DESC>matrix with double vertical bars <MATH>\begin{bmatrix}a_{1} &amp; &amp; \\&amp; \ddots &amp; \\&amp; &amp; a_{n}\end{bmatrix}</MATH></DESC>
+  </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
 </PAGE>
