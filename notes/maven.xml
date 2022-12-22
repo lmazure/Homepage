@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Maven</TITLE>
+<PATH>notes/maven.xml</PATH>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>22</DAY></DATE>
+<CONTENT>
+Command line options
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>-B</CODEROUTINE><BR/>
+      <CODEROUTINE>--batch-mode</CODEROUTINE></TERM>
+    <DESC>Run in non-interactive (batch) mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-s &lt;file&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>-s,--settings &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Alternate path for the user settings file</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+</CONTENT>
+<X><T>links</T><A>../links/coding.html#maven</A><L>en</L><F>HTML</F></X>
+</PAGE>
