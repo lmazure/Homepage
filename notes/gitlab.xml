@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>GitLab</TITLE>
 <PATH>notes/gitlab.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Global shortcuts
@@ -77,6 +77,58 @@
     <CODESAMPLE>curl --header "PRIVATE-TOKEN: &lt;token&gt;" https://gitlab.com/api/v4/groups/13404279/audit_events?per_page=500&amp;page=1</CODESAMPLE>
     get the audit of project https://gitlab.com/henixdevelopment/open-source/opentestfactory/orchestrator
     <CODESAMPLE>curl --header "PRIVATE-TOKEN: &lt;token&gt;" https://gitlab.com/api/v4/projects/27352872/audit_events?per_page=500&amp;page=1</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    <BLIST><TITLE>Sorting a package in the registry with Maven</TITLE>
+      <ITEM>configure the repository in <CODEFILENAME>pom.xml</CODEFILENAME>
+        <CODESAMPLE>&lt;repositories&gt;<BR/>
+          <TAB/>&lt;repository&gt;<BR/>
+          <TAB/><TAB/>&lt;id&gt;gitlab-maven&lt;/id&gt;<BR/>
+          <TAB/><TAB/>&lt;url&gt;https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven&lt;/url&gt;<BR/>
+          <TAB/>&lt;/repository&gt;<BR/>
+          &lt;/repositories&gt;<BR/>
+          &lt;distributionManagement&gt;<BR/>
+          <TAB/>&lt;repository&gt;<BR/>
+          <TAB/><TAB/>&lt;id&gt;gitlab-maven&lt;/id&gt;<BR/>
+          <TAB/><TAB/>&lt;url&gt;https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven&lt;/url&gt;<BR/>
+          <TAB/>&lt;/repository&gt;<BR/>
+          <TAB/>&lt;snapshotRepository&gt;<BR/>
+          <TAB/><TAB/>&lt;id&gt;gitlab-maven&lt;/id&gt;<BR/>
+          <TAB/><TAB/>&lt;url&gt;https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven&lt;/url&gt;<BR/>
+          <TAB/>&lt;/snapshotRepository&gt;<BR/>
+          &lt;/distributionManagement&gt;</CODESAMPLE>
+      </ITEM>
+      <ITEM>declare the repository in <CODEFILENAME>setting.xml</CODEFILENAME>
+        <CODESAMPLE>&lt;settings&gt;<BR/>
+          <TAB/>&lt;servers&gt;<BR/>
+          <TAB/><TAB/>&lt;server&gt;<BR/>
+          <TAB/><TAB/><TAB/>&lt;id&gt;gitlab-maven&lt;/id&gt;<BR/>
+          <TAB/><TAB/><TAB/>&lt;configuration&gt;<BR/>
+          <TAB/><TAB/><TAB/><TAB/>&lt;httpHeaders&gt;<BR/>
+          <TAB/><TAB/><TAB/><TAB/><TAB/>&lt;property&gt;<BR/>
+          <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>&lt;name&gt;Job-Token&lt;/name&gt;<BR/>
+          <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>&lt;value&gt;${CI_JOB_TOKEN}&lt;/value&gt;<BR/>
+          <TAB/><TAB/><TAB/><TAB/><TAB/>&lt;/property&gt;<BR/>
+          <TAB/><TAB/><TAB/><TAB/>&lt;/httpHeaders&gt;<BR/>
+          <TAB/><TAB/><TAB/>&lt;/configuration&gt;<BR/>
+          <TAB/><TAB/>&lt;/server&gt;<BR/>
+          <TAB/>&lt;/servers&gt;<BR/>
+          &lt;/settings&gt;</CODESAMPLE>
+      </ITEM>
+      <ITEM>configure the deploiement in <CODEFILENAME>.gitlab-ci.yml</CODEFILENAME>
+        <CODESAMPLE>variables:<BR/>
+          <TAB/>MAVEN_CLI_OPTS: "--batch-mode --settings settings.xml"<BR/>
+          <TAB/>MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"<BR/>
+          <BR/>
+          cache:<BR/>
+          <TAB/>paths:<BR/>
+          <TAB/><TAB/>- .m2/repository/<BR/>
+          …<BR/>
+          package:<BR/>
+          <TAB/>stage: package<BR/>
+          <TAB/>script:<BR/>
+          <TAB/><TAB/>- mvn $MAVEN_CLI_OPTS -Dmaven.test.skip compile assembly:single deploy</CODESAMPLE></ITEM>
+    </BLIST>
   </ITEM>
 </BLIST>
 </CONTENT>
