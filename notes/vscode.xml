@@ -426,8 +426,14 @@ Multi-selection
     <DESC>Open active file in new window</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="N"/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="N"/><BR/>
+      <CODEROUTINE>New Window</CODEROUTINE></TERM>
     <DESC>New window</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="F4"/><BR/>
+      <CODEROUTINE>Close Window</CODEROUTINE></TERM>
+    <DESC>Close the window</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="*"/><BR/>

@@ -5,7 +5,7 @@
 <PATH>notes/gitlab.xml</PATH>
 <DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
-<BLIST>
+<BLIST><TITLE>Shortcuts</TITLE>
   <ITEM>Global shortcuts
     <DEFINITIONTABLE>
       <ROW>
@@ -42,19 +42,37 @@
   <ITEM>Project shortcuts
     <DEFINITIONTABLE>
       <ROW>
+        <TERM><KEY id="G"/><KEY id="P"/></TERM>
+        <DESC>Go to project overview</DESC>
+      </ROW>
+      <ROW>
         <TERM><KEY id="G"/><KEY id="I"/></TERM>
         <DESC>Go to issues</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY id="I"/></TERM>
+        <DESC>Create a new issue</DESC>
       </ROW>
       <ROW>
         <TERM><KEY id="G"/><KEY id="M"/></TERM>
         <DESC>Go to merge requests</DESC>
       </ROW>
       <ROW>
-        <TERM><KEY id="I"/></TERM>
-        <DESC>Create a new issue</DESC>
+        <TERM><KEY id="G"/><KEY id="N"/></TERM>
+        <DESC>Go to repository graph</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY id="G"/><KEY id="D"/></TERM>
+        <DESC>Go to repository analytics</DESC>
+      </ROW>
+      <ROW>
+        <TERM><KEY id="G"/><KEY id="W"/></TERM>
+        <DESC>Go to wiki</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
+</BLIST>
+<BLIST><TITLE>Markdown</TITLE>
   <ITEM>use <CODEROUTINE>````</CODEROUTINE> to be able to write suggestions containing markdown
     <CODESAMPLE>````suggestion:-0+2<BR/>
       ```shell<BR/>
@@ -62,6 +80,27 @@
       ```<BR/>
       ````</CODESAMPLE>
   </ITEM>
+  <ITEM>Create a sortable and filterable table
+    <CODESAMPLE>```json:table<BR/>
+      {<BR/>
+      "fields" : [<BR/>
+      <TAB/><TAB/>{ "key": "client", "label": "Client", "sortable": "true" },<BR/>
+      <TAB/><TAB/>{ "key": "techno", "label": "Technology", "sortable": "true" }<BR/>
+      <TAB/>],<BR/>
+      "items" : [<BR/>
+      <TAB/><TAB/>{ "client": "Acme", "techno": "Cucumber" },<BR/>
+      <TAB/><TAB/>{ "client": "Fuzzy", "techno": "Agilitest" },<BR/>
+      <TAB/><TAB/>{ "client": "Knock-Knock", "techno": "Agilitest" },<BR/>
+      <TAB/><TAB/>{ "client": "Opale", "techno": "Robot Framework" },<BR/>
+      <TAB/><TAB/>{ "client": "Snurf", "techno": "Postman" },<BR/>
+      <TAB/><TAB/>{ "client": "YAC", "techno": "Katalon" }<BR/>
+      <TAB/>],<BR/>
+      "filter": "true"<BR/>
+      }<BR/>
+      ```</CODESAMPLE>
+  </ITEM>
+</BLIST>
+<BLIST>
   <ITEM>delete the local branches that to do not exist anymore in GitLab
     <CODESAMPLE>git checkout main<BR/>
     git fetch -p<BR/>

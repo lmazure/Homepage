@@ -5,6 +5,7 @@
 <PATH>notes/latex.xml</PATH>
 <DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
+Greek alphabet
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>\alpha A</CODEROUTINE></TERM>
@@ -102,6 +103,10 @@
     <TERM><CODEROUTINE>\omega \Omega</CODEROUTINE></TERM>
     <DESC><MATH>\omega \Omega</MATH></DESC>
   </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Hebrew alphabet
+<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>\aleph</CODEROUTINE></TERM>
     <DESC><MATH>\aleph</MATH></DESC>
@@ -118,6 +123,30 @@
     <TERM><CODEROUTINE>\daleth</CODEROUTINE></TERM>
     <DESC><MATH>\daleth</MATH></DESC>
   </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Other letters
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>\mathbb{ABC…Zabc…z}</CODEROUTINE></TERM>
+    <DESC>blackboard bold letters, no lowercase<BR/><MATH>\mathbb{ABC…Zabc…z}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\mathcal{ABC…Zabc…z}</CODEROUTINE></TERM>
+    <DESC>calligraphic letters letters, no lowercase<BR/><MATH>\mathcal{ABC…Zabc…z}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\mathfrak{ABC…Zabc…z}</CODEROUTINE></TERM>
+    <DESC>fraktur letters<BR/><MATH>\mathfrak{ABC…Zabc…z}</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\mathrm{ABC…Zabc…z}</CODEROUTINE></TERM>
+    <DESC>roman letters<BR/><MATH>\mathrm{ABC…Zabc…z}</MATH></DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Arrows
+<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>\leftarrow</CODEROUTINE></TERM>
     <DESC><MATH>\leftarrow</MATH></DESC>
@@ -206,6 +235,29 @@
     <TERM><CODEROUTINE>\rightharpoondown</CODEROUTINE></TERM>
     <DESC><MATH>\rightharpoondown</MATH></DESC>
   </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Dots
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>\ldots</CODEROUTINE></TERM>
+    <DESC>horizontal dots on the line<BR/><MATH>\ldots</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\cdots</CODEROUTINE></TERM>
+    <DESC>horizontal dots above the line<BR/><MATH>\cdots</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\vdots</CODEROUTINE></TERM>
+    <DESC>vertical dots<BR/><MATH>\vdots</MATH></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>\ddots</CODEROUTINE></TERM>
+    <DESC>diagonal dots<BR/><MATH>\ddots</MATH></DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>\infty</CODEROUTINE></TERM>
     <DESC><MATH>\infty</MATH></DESC>
@@ -257,10 +309,6 @@
   <ROW>
     <TERM><CODEROUTINE>\neg</CODEROUTINE></TERM>
     <DESC><MATH>\neg</MATH></DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>\cdots</CODEROUTINE></TERM>
-    <DESC><MATH>\cdots</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\square</CODEROUTINE></TERM>
@@ -370,139 +418,120 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>\mathbb{ABC…Z}</CODEROUTINE></TERM>
-    <DESC>blackboard bold letters, no lowercase <MATH>\mathbb{ABC…Z}</MATH></DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>\mathcal{ABC…Z}</CODEROUTINE></TERM>
-    <DESC>calligraphic letters letters, no lowercase <MATH>\mathcal{ABC…Z}</MATH></DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>\mathfrak{ABC…Zabc…z}</CODEROUTINE></TERM>
-    <DESC>fraktur letters <MATH>\mathfrak{ABC…Zabc…z}</MATH></DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>\mathrm{ABC…Zabc…z}</CODEROUTINE></TERM>
-    <DESC>roman letters <MATH>\mathrm{ABC…Zabc…z}</MATH></DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
-  <ROW>
     <TERM><CODEROUTINE>x\mathbin{=}x</CODEROUTINE></TERM>
-    <DESC>spacing of a binary operator <MATH>x\mathbin{=}x</MATH></DESC>
+    <DESC>spacing of a binary operator<BR/><MATH>x\mathbin{=}x</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>x\mathrel{=}x</CODEROUTINE></TERM>
-    <DESC>spacing of a binary relation <MATH>x\mathrel{=}x</MATH></DESC>
+    <DESC>spacing of a binary relation<BR/><MATH>x\mathrel{=}x</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>a\stackrel{top}{binrel}b\stackrel{R}{=}c</CODEROUTINE></TERM>
-    <DESC>symbol over an operator <MATH>a\stackrel{top}{binrel}b\stackrel{R}{=}c</MATH></DESC>
+    <DESC>symbol over an operator<BR/><MATH>a\stackrel{top}{binrel}b\stackrel{R}{=}c</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>real^{real}={non\mbox{-}real}</CODEROUTINE></TERM>
-    <DESC>dash <MATH>real^{real}={non\mbox{-}real}</MATH></DESC>
+    <DESC>dash<BR/><MATH>real^{real}={non\mbox{-}real}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\infty</CODEROUTINE></TERM>
-    <DESC>infinity <MATH>\infty</MATH></DESC>
+    <DESC>infinity<BR/><MATH>\infty</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\left(-\frac{1}{2}\right)</CODEROUTINE></TERM>
-    <DESC>parentheses <MATH>\left(-\frac{1}{2}\right)</MATH></DESC>
+    <DESC>parentheses<BR/><MATH>\left(-\frac{1}{2}\right)</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\{\frac{1}{2}\}</CODEROUTINE></TERM>
-    <DESC>curly braces <MATH>\{\frac{1}{2}\}</MATH></DESC>
+    <DESC>curly braces<BR/><MATH>\{\frac{1}{2}\}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>a_{n+1}=a_n+a_{n-1}</CODEROUTINE></TERM>
-    <DESC>subscript <MATH>a_{n+1}=a_n+a_{n-1}</MATH></DESC>
+    <DESC>subscript<BR/><MATH>a_{n+1}=a_n+a_{n-1}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>x^y</CODEROUTINE></TERM>
-    <DESC>power <MATH>x^y</MATH></DESC>
+    <DESC>power<BR/><MATH>x^y</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>e^{iπ}=-1</CODEROUTINE></TERM>
-    <DESC>power <MATH>e^{iπ}=-1</MATH></DESC>
+    <DESC>power<BR/><MATH>e^{iπ}=-1</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\frac{a}{b}</CODEROUTINE></TERM>
-    <DESC>fraction <MATH>\frac{a}{b}</MATH></DESC>
+    <DESC>fraction<BR/><MATH>\frac{a}{b}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\lceil{x}\rceil</CODEROUTINE></TERM>
-    <DESC>ceil <MATH>\lceil{x}\rceil</MATH></DESC>
+    <DESC>ceil<BR/><MATH>\lceil{x}\rceil</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\lfloor{x}\rfloor</CODEROUTINE></TERM>
-    <DESC>floor <MATH>\lfloor{x}\rfloor</MATH></DESC>
+    <DESC>floor<BR/><MATH>\lfloor{x}\rfloor</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\sqrt{2}</CODEROUTINE></TERM>
-    <DESC>square root <MATH>\sqrt{2}</MATH></DESC>
+    <DESC>square root<BR/><MATH>\sqrt{2}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\sqrt[3]{7+\sqrt{50}}+\sqrt[3]{7-\sqrt{50}}</CODEROUTINE></TERM>
-    <DESC>cube root <MATH>\sqrt[3]{7+\sqrt{50}}+\sqrt[3]{7-\sqrt{50}}</MATH></DESC>
+    <DESC>cube root<BR/><MATH>\sqrt[3]{7+\sqrt{50}}+\sqrt[3]{7-\sqrt{50}}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\sum_{i=1}^{i=∞}i^i</CODEROUTINE></TERM>
-    <DESC>sum <MATH>\sum_{i=1}^{i=∞}i^i</MATH></DESC>
+    <DESC>sum<BR/><MATH>\sum_{i=1}^{i=∞}i^i</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\sum\limits_{i=1}^{i=∞}i^i</CODEROUTINE></TERM>
-    <DESC>(better displayed) sum <MATH>\sum\limits_{i=1}^{i=∞}i^i</MATH></DESC>
+    <DESC>(better displayed) sum<BR/><MATH>\sum\limits_{i=1}^{i=∞}i^i</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\prod_{i=1}^{i=n}i^i</CODEROUTINE></TERM>
-    <DESC>product <MATH>\prod_{i=1}^{i=n}i^i</MATH></DESC>
+    <DESC>product<BR/><MATH>\prod_{i=1}^{i=n}i^i</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\prod\limits_{i=1}^{i=n}i^i</CODEROUTINE></TERM>
-    <DESC>(better displayed) product <MATH>\prod\limits_{i=1}^{i=n}i^i</MATH></DESC>
+    <DESC>(better displayed) product<BR/><MATH>\prod\limits_{i=1}^{i=n}i^i</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\int_{a}^{b} x^2 dx</CODEROUTINE></TERM>
-    <DESC>integral <MATH>\int_{a}^{b} x^2 dx</MATH></DESC>
+    <DESC>integral<BR/><MATH>\int_{a}^{b} x^2 dx</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\int\limits_{a}^{b} x^2 dx</CODEROUTINE></TERM>
-    <DESC>(better displayed) integral <MATH>\int\limits_{a}^{b} x^2 dx</MATH></DESC>
+    <DESC>(better displayed) integral<BR/><MATH>\int\limits_{a}^{b} x^2 dx</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\iint_V \mu(u,v) \,du\,dv</CODEROUTINE></TERM>
-    <DESC>double integral <MATH>\iint_V \mu(u,v) \,du\,dv</MATH></DESC>
+    <DESC>double integral<BR/><MATH>\iint_V \mu(u,v) \,du\,dv</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\iint\limits_V \mu(u,v) \,du\,dv</CODEROUTINE></TERM>
-    <DESC>(better displayed) double integral <MATH>\iint\limits_V \mu(u,v) \,du\,dv</MATH></DESC>
+    <DESC>(better displayed) double integral<BR/><MATH>\iint\limits_V \mu(u,v) \,du\,dv</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\iiint_V \mu(u,v,w) \,du\,dv\,dw</CODEROUTINE></TERM>
-    <DESC>triple integral <MATH>\iiint_V \mu(u,v,w) \,du\,dv\,dw</MATH></DESC>
+    <DESC>triple integral<BR/><MATH>\iiint_V \mu(u,v,w) \,du\,dv\,dw</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\iiiint_V \mu(t,u,v,w) \,dt\,du\,dv\,dw</CODEROUTINE></TERM>
-    <DESC>quadruple integral <MATH>\iiiint_V \mu(t,u,v,w) \,dt\,du\,dv\,dw</MATH></DESC>
+    <DESC>quadruple integral<BR/><MATH>\iiiint_V \mu(t,u,v,w) \,dt\,du\,dv\,dw</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\idotsint_V \mu(u_1,\dots,u_k) \,du_1 \dots du_k</CODEROUTINE></TERM>
-    <DESC>multiple integral <MATH>idotsint_V \mu(u_1,\dots,u_k) \,du_1 \dots du_k</MATH></DESC>
+    <DESC>multiple integral<BR/><MATH>idotsint_V \mu(u_1,\dots,u_k) \,du_1 \dots du_k</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\oint_V f(s) \,ds</CODEROUTINE></TERM>
-    <DESC>cyclic integral <MATH>\oint_V f(s) \,ds</MATH></DESC>
+    <DESC>cyclic integral<BR/><MATH>\oint_V f(s) \,ds</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\lim_{x\to\infty} f(x)</CODEROUTINE></TERM>
-    <DESC>limit <MATH>\lim_{x\to\infty} f(x)</MATH></DESC>
+    <DESC>limit<BR/><MATH>\lim_{x\to\infty} f(x)</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\left\{\begin{array}{@{}l@{}}<BR/>\sqrt{x}+y=7\\<BR/>x+\sqrt{y}=11<BR/>\end{array}\right.</CODESAMPLE></TERM>
-    <DESC>system of equations <MATH>\left\{\begin{array}{@{}l@{}}\sqrt{x}+y=7\\x+\sqrt{y}=11\end{array}\right.</MATH></DESC>
+    <DESC>system of equations<BR/><MATH>\left\{\begin{array}{@{}l@{}}\sqrt{x}+y=7\\x+\sqrt{y}=11\end{array}\right.</MATH></DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -510,35 +539,35 @@ Matrices
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODESAMPLE>\begin{matrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{matrix}</CODESAMPLE></TERM>
-    <DESC>matrix without brackets <MATH>\begin{matrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{matrix}</MATH></DESC>
+    <DESC>matrix without brackets<BR/><MATH>\begin{matrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{matrix}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\begin{pmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{pmatrix}</CODESAMPLE></TERM>
-    <DESC>matrix with parenthesis <MATH>\begin{pmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{pmatrix}</MATH></DESC>
+    <DESC>matrix with parenthesis<BR/><MATH>\begin{pmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{pmatrix}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\begin{bmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{bmatrix}</CODESAMPLE></TERM>
-    <DESC>matrix with square brackets <MATH>\begin{bmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{bmatrix}</MATH></DESC>
+    <DESC>matrix with square brackets<BR/><MATH>\begin{bmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{bmatrix}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\begin{Bmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{Bmatrix}</CODESAMPLE></TERM>
-    <DESC>matrix with curly brackets <MATH>\begin{Bmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{Bmatrix}</MATH></DESC>
+    <DESC>matrix with curly brackets<BR/><MATH>\begin{Bmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{Bmatrix}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\begin{vmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{vmatrix}</CODESAMPLE></TERM>
-    <DESC>matrix with vertical bars <MATH>\begin{vmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{vmatrix}</MATH></DESC>
+    <DESC>matrix with vertical bars<BR/><MATH>\begin{vmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{vmatrix}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\begin{Vmatrix}<BR/><TAB/>a_{11} &amp; a_{12}\\<BR/><TAB/>a_{21} &amp; a_{22}<BR/>\end{Vmatrix}</CODESAMPLE></TERM>
-    <DESC>matrix with double vertical bars <MATH>\begin{Vmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{Vmatrix}</MATH></DESC>
+    <DESC>matrix with double vertical bars<BR/><MATH>\begin{Vmatrix} a_{11} &amp; a_{12}\\ a_{21} &amp; a_{22} \end{Vmatrix}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\begin{bmatrix}<BR/><TAB/>a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,m} \\<BR/><TAB/>a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,m} \\<BR/><TAB/>\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<BR/><TAB/>a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,m}<BR/>\end{bmatrix}</CODESAMPLE></TERM>
-    <DESC>matrix with double vertical bars <MATH>\begin{bmatrix}a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,m} \\a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,m} \\\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,m}\end{bmatrix}</MATH></DESC>
+    <DESC>matrix with double vertical bars<BR/><MATH>\begin{bmatrix}a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,m} \\a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,m} \\\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,m}\end{bmatrix}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\begin{bmatrix}<BR/><TAB/>a_{1} &amp; &amp; \\ <BR/><TAB/>&amp; \ddots &amp; \\ <BR/><TAB/>&amp; &amp; a_{n}<BR/>\end{bmatrix}</CODESAMPLE></TERM>
-    <DESC>matrix with double vertical bars <MATH>\begin{bmatrix}a_{1} &amp; &amp; \\&amp; \ddots &amp; \\&amp; &amp; a_{n}\end{bmatrix}</MATH></DESC>
+    <DESC>matrix with double vertical bars<BR/><MATH>\begin{bmatrix}a_{1} &amp; &amp; \\&amp; \ddots &amp; \\&amp; &amp; a_{n}\end{bmatrix}</MATH></DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
