@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Operations</TITLE>
 <PATH>links/operations.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -17,7 +17,7 @@
     </BLIST></ITEM>
     <ITEM><CLIST><TITLE>Automation</TITLE>
       <ITEM><X><T>Chef</T><A>https://www.chef.io/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Puppet</T><A>https://puppet.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Puppet</T><A>https://www.puppet.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Ansible</T><A>https://www.ansible.com/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>Monitoring tools</TITLE>
@@ -27,6 +27,7 @@
       <ITEM><X><T>Dozzle</T><A>https://dozzle.dev/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Ekara</T><A>https://ekara.ip-label.com/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
+    <ITEM><X><T>SOPS</T><A>https://github.com/mozilla/sops</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>BlueGreenDeployment</T><A>https://martinfowler.com/bliki/BlueGreenDeployment.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>Cycling staging / production between two systems.</COMMENT></ARTICLE></ITEM>
@@ -40,6 +41,7 @@
     <ITEM><ARTICLE><X><T>How we reduced our annual server costs by 80% — from $1M to $200k — by moving away from AWS</T><A>https://levelup.gitconnected.com/how-we-reduced-our-annual-server-costs-by-80-from-1m-to-200k-by-moving-away-from-aws-2b98cbd21b46</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Trey</FIRSTNAME><LASTNAME>Huffine</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Zsolt</FIRSTNAME><LASTNAME>Varga</LASTNAME></AUTHOR> explains how Prerender migrated out of AWS.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Devops - R2DevOps votre assistant pipeline CICD</T><ST>R2DevOps est un outil complet qui a pour objectif de vous aider à construire votre pipeline CI/CD en partant de zéro.</ST><A>https://blog.stephane-robert.info/post/devops-r2devops-cicd-gitlab-github/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stéphane</FIRSTNAME><LASTNAME>Robert</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE><COMMENT>A presentation of R2DevOps, a tool to create CI/CD pipelines.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Why Twitter Didn’t Go Down: From a Real Twitter SRE</T><A>https://matthewtejo.substack.com/p/why-twitter-didnt-go-down-from-a</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Matthew</FIRSTNAME><LASTNAME>Tejo</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE><COMMENT>A Twitter SRE explains how was built the cache.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Devops - Gérer finement vos secrets avec Mozilla SOPS</T><A>https://blog.stephane-robert.info/post/devops-secret-sops/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stéphane</FIRSTNAME><LASTNAME>Robert</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>26</DAY></DATE><COMMENT>A short presentation of SOPS, a tool to encrypt passwords and tokens in configuration files.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Docker</TITLE>
       <ITEM><ARTICLE><X status="zombie"><T>Docker: A boon for the modern developer</T><ST>Make the transition to containerized apps to increase coding productivity and boost your development IQ</ST><A>https://www.ibm.com/developerworks/library/wa-docker-polyglot-programmers/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sing</FIRSTNAME><LASTNAME>Li</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE><COMMENT>An overenthusiastic introduction to Docker.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>What's Wrong With The Docker :latest Tag?</T><A>https://vsupalov.com/docker-latest-tag/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vladislav</FIRSTNAME><LASTNAME>Supalov</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>

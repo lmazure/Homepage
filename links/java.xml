@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -172,7 +172,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Memory leaks</TITLE>
         <ITEM><ARTICLE><X status="dead"><T>Bitter Java - Chapter 6: Bitter Memories</T><A>http://jacques.dsc.ufcg.edu.br/cursos/map/recursos/BitterJava.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>Tate</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR><MONTH>5</MONTH></DATE><COMMENT>An introduction to Java memory leaks (unintentional object retention) and how to find and fix them.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Memory Leaks, Be Gone</T><A>https://www.oracle.com/technetwork/articles/entarch/memory-leaks-091917.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Staffan</FIRSTNAME><LASTNAME>Larsen</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>Some advertisement for the JRockit Memory Leak Detector.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Memory Leaks, Be Gone</T><A>https://www.oracle.com/technical-resources/articles/enterprise-architecture/memory-leaks.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Staffan</FIRSTNAME><LASTNAME>Larsen</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>Some advertisement for the JRockit Memory Leak Detector.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How to Fix Memory Leaks in Java</T><A>https://dzone.com/articles/how-fix-memory-leaks-java</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Veljko</FIRSTNAME><LASTNAME>Krunic</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE><COMMENT>A good tutorial on how to analyse memory leaks.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
@@ -335,7 +335,7 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tools</TITLE>
-      <ITEM><ARTICLE><X><T>Using JConsole to Monitor Applications</T><A>https://www.oracle.com/technetwork/articles/java/jconsole-1564139.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mandy</FIRSTNAME><LASTNAME>Chung</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>12</MONTH></DATE><COMMENT>An overview of JConsole.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Using JConsole to Monitor Applications</T><A>https://www.oracle.com/technical-resources/articles/java/jconsole.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mandy</FIRSTNAME><LASTNAME>Chung</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>12</MONTH></DATE><COMMENT>An overview of JConsole.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="zombie"><T>Java postmortem diagnostics, Part 1: Introduction to JSR 326 and Apache Kato</T><ST>Learn how the Apache Kato project can help you analyze the causes of JVM failure</ST><A>https://www.ibm.com/developerworks/java/library/j-kato.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Pilkington</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE><COMMENT>A high level introduction to post-mortem analysis.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A JDeps Tutorial - Analyze Your Project's Dependencies</T><A>https://nipafx.dev/jdeps-tutorial-analyze-java-project-dependencies/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>7</MONTH><DAY>17</DAY></DATE><COMMENT>A short presentation of <CODEROUTINE>jdeps</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
@@ -344,6 +344,7 @@
       <ITEM><ARTICLE><X status="zombie"><T>5 things you didn't know about ... Apache Maven plugins</T><ST>Tips for mastering modern Maven plugins</ST><A>https://www.ibm.com/developerworks/library/j-5things16/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Theedom</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>Signing a JAR/WAR, deploying in a container, installing a JAR from a local directory, storing the build artifacts on GitHub, identifying unused dependencies, purging the local repository, adding a timestamp, and printing Maven property values.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Migrate Maven Projects to Java 11</T><A>https://winterbe.com/posts/2018/08/29/migrate-maven-projects-to-java-11-jigsaw/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benjamin</FIRSTNAME><LASTNAME>Winterberg</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Building Java Applications With Maven</T><ST>Check out this stellar Java tutorial on building applications with Maven.</ST><A>https://dzone.com/articles/building-java-applications-with-maven</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Justin</FIRSTNAME><LASTNAME>Albano</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>2</MONTH><DAY>19</DAY></DATE><COMMENT>An overview of Maven.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Refer to Environment Variables in pom.xml</T><A>https://www.baeldung.com/maven-env-variables</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mona</FIRSTNAME><LASTNAME>Mohamadinia</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>7</MONTH><DAY>9</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Puzzles</TITLE>
       <ITEM><ARTICLE><X><T>Java Puzzlers Episode VI: The Phantom-Reference Menace, Attack of the Clone, &amp; Revenge of the Shift</T><A>https://www.youtube.com/watch?v=wDN_EYUvUq0</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>13</MINUTE><SECOND>54</SECOND></DURATION><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE></X><AUTHOR><FIRSTNAME>Joshua</FIRSTNAME><LASTNAME>Bloch</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bill</FIRSTNAME><LASTNAME>Pugh</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>7</MONTH><DAY>23</DAY></DATE><COMMENT>Eight Java puzzles.</COMMENT></ARTICLE></ITEM>

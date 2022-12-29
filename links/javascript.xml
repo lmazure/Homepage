@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>JavaScript</TITLE>
 <PATH>links/javascript.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -11,7 +11,7 @@
     <ITEM><CLIST><TITLE>Tutorials</TITLE>
       <ITEM><X status="obsolete"><T>Voodoo's Introduction to Javascript</T><A>http://www.cs.unibo.it/~montreso/doc/master/JavaScript/Tutorial/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>W3 Schools</T><A>https://www.w3schools.com/js/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>JavaScript Garden</T><A>http://bonsaiden.github.io/JavaScript-Garden/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>JavaScript Garden</T><A>http://shamansir.github.io/JavaScript-Garden/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>javascript.info</T><A>https://javascript.info</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>The Principles of Object-Oriented JavaScript</T><A>https://ebooks-it.org/1593275404-ebook.htm</A><L>en</L><F>PDF</F></X></ITEM>
     </CLIST></ITEM>
@@ -19,7 +19,7 @@
       <ITEM><X><T>spy-js</T><A>http://spy-js.com</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>Code documentation</TITLE>
-      <ITEM><X><T>JSDoc</T><A>https://github.com/jsdoc3/jsdoc</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>JSDoc</T><A>https://github.com/jsdoc/jsdoc</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>FAQ</TITLE>
       <ITEM><X><T>Meta-FAQ</T><A>http://www.faqs.org/faqs/computer-lang/java/javascript/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -33,7 +33,7 @@
       <ITEM><X><T>Wikipedia list</T><A>https://en.wikipedia.org/wiki/Minification_(programming)</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>Java implementations</TITLE>
-      <ITEM><X><T>Nashorn</T><A>https://openjdk.java.net/projects/nashorn/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Nashorn</T><A>https://openjdk.org:443/projects/nashorn/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>Demos</TITLE>
       <ITEM><X><T>Chrome Experiments</T><A>https://experiments.withgoogle.com/collection/chrome</A><L>en</L><F>HTML</F></X></ITEM>
@@ -44,7 +44,7 @@
     <ITEM><X><T>json.org</T><A>https://www.json.org/json-en.html</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>JSONLint</T><A>https://jsonlint.com</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Node.js</T><A>https://nodejs.org</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>hapi</T><A>https://hapijs.com</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>hapi</T><A>https://hapi.dev/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>personal notes</T><A>../notes/javascript.html</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
@@ -67,8 +67,8 @@
     <ITEM><ARTICLE><X><T>Building a JavaScript-Based Game Engine for the Web</T><A>https://www.youtube.com/watch?v=_RRnyChxijA</A><L>en</L><F>MP4</F><DURATION><MINUTE>48</MINUTE><SECOND>11</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Bakaus</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>7</MONTH><DAY>10</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Bakaus</LASTNAME></AUTHOR> explains his technical choices and some of the performance tricks he used to implement Aves Engine, a 2D/isometric game engine.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Philip Tellis: Measuring the Web with Boomerang</T><A>https://www.youtube.com/watch?v=gy1DTBMOA74</A><L>en</L><F>MP4</F><DURATION><MINUTE>47</MINUTE><SECOND>37</SECOND></DURATION><DATE><YEAR>2011</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE></X><AUTHOR><FIRSTNAME>Philip</FIRSTNAME><LASTNAME>Tellis</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>8</DAY></DATE><COMMENT>The presentation of Boomerang, a JavaScript library used to measure latency and bandwidth and to send them back to the server.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X status="dead"><T>Strict Mode Is Coming To Town</T><A>https://yuiblog.com/blog/2010/12/14/strict-mode-is-coming-to-town/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><LASTNAME>Crockford</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE><COMMENT>A short introduction to the <CODEROUTINE>strict</CODEROUTINE> mode.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Introducing HTML 5 Web Workers: Bringing Multi-threading to JavaScript</T><A>https://www.htmlgoodies.com/html5/tutorials/introducing-html-5-web-workers-bringing-multi-threading-to-javascript.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Gravelle</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR></DATE><COMMENT>A short introduction to Web Workers.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Determine an Image's Type using the JavaScript FileReader</T><A>https://www.htmlgoodies.com/html5/tutorials/determine-an-images-type-using-the-javascript-filereader.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Gravelle</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR></DATE><COMMENT>How to check a file type by extracting and checking its Magic Number.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Introducing HTML 5 Web Workers: Bringing Multi-threading to JavaScript</T><A>https://www.htmlgoodies.com/html5/introducing-html-5-web-workers-bringing-multi-threading-to-javascript/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Gravelle</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR></DATE><COMMENT>A short introduction to Web Workers.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Determine an Image's Type using the JavaScript FileReader</T><A>https://www.htmlgoodies.com/javascript/determine-an-images-type-using-the-javascript-filereader/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Gravelle</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR></DATE><COMMENT>How to check a file type by extracting and checking its Magic Number.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Use JavaScript to Add a Read More Link When Text is Copied From Your Site</T><A>https://www.htmlgoodies.com/javascript/use-javascript-to-add-a-read-more-link-when-text-is-copied-from-your-site/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Clark</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>1</MONTH></DATE><COMMENT>A presentation of Tynt Insight service which adds a link to text cut 'n pasted from your site. I do not think the interest of this: people (probably the majority) who don't want the link will delete it, people who want the link could add it by themselves.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>7 minutes on recent DOM APIs</T><A>https://www.youtube.com/watch?v=svEg7MiqGf8</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Irish</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE><COMMENT><CODEROUTINE>element.classList</CODEROUTINE>, <CODEROUTINE>element.dataset</CODEROUTINE>, <CODEROUTINE>window.matchMedia()</CODEROUTINE>, <CODEROUTINE>element.textContent</CODEROUTINE>, and <CODEROUTINE>element.matchesSelector()</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Utilizing Web Workers and Shared Web Workers</T><A>https://www.htmlgoodies.com/html/web-workers-and-shared-workers/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Gravelle</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE><COMMENT>The same with Shared Web Workers.</COMMENT></ARTICLE></ITEM>
@@ -115,7 +115,7 @@
         <ITEM><ARTICLE><X><T>Brendan Eich on JavaScript at 17 - O'Reilly Fluent 2012</T><A>https://www.youtube.com/watch?v=Rj49rmc01Hs</A><L>en</L><F>MP4</F><DURATION><MINUTE>25</MINUTE><SECOND>43</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Brendan</FIRSTNAME><LASTNAME>Eich</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE><COMMENT>The rational of ES6 new features: easier to write applications, libraries, and code generators.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Brenda Eich on JavaScript at 18: Legal to Gamble - Fluent 2013</T><A>https://www.youtube.com/watch?v=qrf9ONmtXbM</A><L>en</L><F>MP4</F><DURATION><MINUTE>25</MINUTE><SECOND>44</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Brendan</FIRSTNAME><LASTNAME>Eich</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE><COMMENT>This is the same content as the previous year: the new JavaScript features added in ES6, asm.js and, once again, a FPS demo.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>John Paul - ES6 Right Now</T><A>https://www.youtube.com/watch?v=rwm5JLqCpdk</A><L>en</L><F>MP4</F><DURATION><MINUTE>52</MINUTE><SECOND>48</SECOND></DURATION><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Paul</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>The presentation of some new JavaScript features and how to use some among them today.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>A Look at the Newly Approved ECMAScript 2015 Features</T><A>https://www.htmlgoodies.com/beyond/javascript/a-look-at-the-newly-approved-ecmascript-2015-features.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Gravelle</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>8</MONTH></DATE><COMMENT>A very quick presentation of some ES6 features.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>A Look at the Newly Approved ECMAScript 2015 Features</T><A>https://www.htmlgoodies.com/javascript/a-look-at-the-newly-approved-ecmascript-2015-features/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Gravelle</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>8</MONTH></DATE><COMMENT>A very quick presentation of some ES6 features.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Intro to Web Workers</T><A>https://www.youtube.com/watch?v=EiPytIxrZtU</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>12</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Griffith</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>8</MONTH><DAY>17</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE>The busy JavaScript developer's guide to ECMAScript 6</TITLE>
           <ITEM><ARTICLE><X status="zombie"><T>Variable declarations and more in the new JavaScript</T><ST>Syntactic sugar strengthens core features in ECMAScript 6</ST><A>https://www.ibm.com/developerworks/library/wa-ecmascript6-neward-p1/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ted</FIRSTNAME><LASTNAME>Neward</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>9</MONTH><DAY>29</DAY></DATE><COMMENT>String templates and interpolation, <CODEROUTINE>let</CODEROUTINE> and <CODEROUTINE>const</CODEROUTINE>, destructuring assignement.</COMMENT></ARTICLE></ITEM>
@@ -147,6 +147,7 @@
       <ITEM><ARTICLE><X><T>Learn JavaScript Hoisting In 5 Minutes</T><A>https://www.youtube.com/watch?v=EvfRXyKa_GI</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>39</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kyle</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>19</DAY></DATE><COMMENT>An explanation of hoisting.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Learn Every CSS Viewport Unit In 10 Minutes</T><A>https://www.youtube.com/watch?v=5m6JOJLy5B0</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kyle</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE><COMMENT>The title says it all: <CODEROUTINE>vw</CODEROUTINE>, <CODEROUTINE>vh</CODEROUTINE>, <CODEROUTINE>vmin</CODEROUTINE>, <CODEROUTINE>vmax</CODEROUTINE>, and their new large, small, and dynamic variations.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Learn JavaScript Scoping In 10 Minutes</T><A>https://www.youtube.com/watch?v=TkFN6e9ZDMw</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kyle</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>13</DAY></DATE><COMMENT>An explanation of scopes.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>How To Setup Prettier</T><A>https://www.youtube.com/watch?v=DqfQ4DPnRqI</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kyle</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>27</DAY></DATE><COMMENT>An introduction to Prettier, a code formatter.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>WebAssembly</TITLE>
       <ITEM><ARTICLE><X><T>Emscripting a C library to Wasm</T><A>https://developers.google.com/web/updates/2018/03/emscripting-a-c-library</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Surma</GIVENNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE><COMMENT>An introduction to Emscripten by using WebP codec as an example.</COMMENT></ARTICLE></ITEM>
