@@ -219,6 +219,11 @@
 
 <xsl:template match="X">
   <xsl:element name="a">
+    <xsl:for-each select="./ATTRIBUTE">
+    <xsl:attribute name="{./ATTRIBUTENAME}">
+      <xsl:value-of select="./ATTRIBUTEVALUE"/>
+    </xsl:attribute>
+    </xsl:for-each>
     <xsl:attribute name="href">
       <xsl:value-of select="./A"/>
     </xsl:attribute>

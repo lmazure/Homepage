@@ -189,6 +189,14 @@
           </xs:choice>
         </xs:complexType>
       </xs:element>
+      <xs:element name="ATTRIBUTE" minOccurs="0" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="ATTRIBUTENAME" type="xs:string"/>
+            <xs:element name="ATTRIBUTEVALUE" type="xs:string"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
       <xs:element name="ST" type="xs:string" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element name="A" type="xs:anyURI" minOccurs="1" maxOccurs="1"/>
       <xs:element name="L" minOccurs="1" maxOccurs="3">
