@@ -5,7 +5,7 @@
 <PATH>notes/jvm.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
-<BLIST><TITLE><X><T>JPDA</T><A>http://java.sun.com/j2se/1.5.0/docs/guide/jpda</A><L>en</L><F>HTML</F></X> (Java Platform Debugger Architecture) is composed of three layers:</TITLE>
+<BLIST><TITLE><X><T>JPDA</T><A>https://docs.oracle.com/javase/1.5.0/docs/guide/jpda/</A><L>en</L><F>HTML</F></X> (Java Platform Debugger Architecture) is composed of three layers:</TITLE>
 <ITEM>JDI (Java Debug Interface) - a high-level Java API supporting remote debugging</ITEM>
 <ITEM>JPPW (Java Debug Wire Protocol - format of information and requests transferred between the debugging process and the debugger front end</ITEM>
 <ITEM>JVMTI (JVM Tools Interface) - low-level native interface (C/C++) defining the services a Java virtual machine provides for tools, including debugging. JVMTI is new in J2SE 5.0 and replaces JVMDI (Java Virtual Machine Debug Interface) and JVMPI (Java Virtual Machine Profiling Interface) which are deprecated and will be removed in the future</ITEM>
