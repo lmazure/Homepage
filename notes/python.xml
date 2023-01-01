@@ -5,6 +5,64 @@
 <PATH>notes/python.xml</PATH>
 <DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
+<BLIST><TITLE><U><B>Syntax</B></U></TITLE>
+  <ITEM>comment starts with <CODEROUTINE>#</CODEROUTINE> and extend to the end of the line</ITEM>
+  <ITEM>multiple assignment<BR/>
+    <CODEROUTINE>a,b=0,1</CODEROUTINE><BR/>
+    <CODEROUTINE>a,b=b,a+b</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to delete a variable<BR/>
+    <CODEROUTINE>del a</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>in</CODEROUTINE> test if a value is in a sequence</ITEM>
+  <ITEM><CODEROUTINE>not in</CODEROUTINE> test if a value is not in a sequence</ITEM>
+  <ITEM><CODEROUTINE>and</CODEROUTINE>, <CODEROUTINE>or</CODEROUTINE>, and <CODEROUTINE>not</CODEROUTINE> are boolean operators<BR/>
+    <CODEROUTINE>and</CODEROUTINE> and <CODEROUTINE>or</CODEROUTINE> perform a shortcut evaluation<BR/>
+    <CODESAMPLE>&gt;&gt;&gt; print '' or 'a' or 'b'<BR/>
+      a</CODESAMPLE></ITEM>
+  <ITEM>in interactive mode, <CODEROUTINE>_</CODEROUTINE> is a read-only variable containing the last printed expression</ITEM>
+  <ITEM>exit<BR/>
+    <CODESAMPLE>import sys<BR/>
+      sys.exit()</CODESAMPLE></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Complex</B></U></TITLE>
+  <ITEM>a complex can be created by using <CODEROUTINE>j</CODEROUTINE> or <CODEROUTINE>J</CODEROUTINE> to indicate the complex part<BR/>
+    <CODEROUTINE>1+2j</CODEROUTINE> or with the complex function <CODEROUTINE>complex(1,2)</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>real</CODEROUTINE> and <CODEROUTINE>imag</CODEROUTINE> can be used to retrieve the real and imaginary parts of a complex<BR/>
+  <CODESAMPLE>a=1.5+0.5j<BR/>
+    a.real<BR/>
+    a.imag</CODESAMPLE></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Strings</B></U></TITLE>
+  <ITEM>strings litterals can be enclosed in single or double quotes<BR/>
+    <CODEROUTINE>"foobar 'n \" quux"</CODEROUTINE><BR/>
+    <CODEROUTINE>'foobar \'n" quux'</CODEROUTINE></ITEM>
+  <ITEM>new line can be escaped by \<BR/>
+    <CODESAMPLE>"first line \n\<BR/>
+      second line"</CODESAMPLE></ITEM>
+  <ITEM>triple single or double quotes can also be used to create strings containing new lines<BR/>
+    <CODESAMPLE>"""first line<BR/>
+      second line"""</CODESAMPLE></ITEM>
+  <ITEM>string litterals are automatically concatenated</ITEM>
+  <ITEM><CODEROUTINE>"foo" "bar"</CODEROUTINE></ITEM>
+  <ITEM>+ append strings<BR/>
+    <CODEROUTINE>"foo"+"bar"</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>*</CODEROUTINE> repeats strings<BR/>
+    <CODEROUTINE>"foo"*5</CODEROUTINE> is <CODEROUTINE>"foofoofoofoofoo"</CODEROUTINE></ITEM>
+  <ITEM>slices<BR/>
+    <CODEROUTINE>str[4]</CODEROUTINE> fifth letter<BR/>
+    <CODEROUTINE>str[2:4]</CODEROUTINE> third and fourth letters<BR/>
+    <CODEROUTINE>str[:2]</CODEROUTINE> first two characters<BR/>
+    <CODEROUTINE>str[2:]</CODEROUTINE> all but first two characters<BR/>
+    <CODEROUTINE>str[-1]</CODEROUTINE> last character<BR/>
+    <CODEROUTINE>str[-2]</CODEROUTINE> last but one character<BR/>
+    <CODEROUTINE>str[-2:]</CODEROUTINE> last two characters<BR/>
+    <CODEROUTINE>str[:-2]</CODEROUTINE> all but the last two characters<BR/>
+    slices are immutable</ITEM>
+  <ITEM><CODEROUTINE>len</CODEROUTINE> return the length a string<BR/>
+    <CODEROUTINE>len(str)</CODEROUTINE></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Sequences</B></U></TITLE>
+  <ITEM>sequences can be lists, strings or tuples</ITEM>
+</BLIST>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
   <ITEM>lists can mix types
     <CODESAMPLE>a=['foo',69,'bar']</CODESAMPLE>
@@ -89,7 +147,7 @@
   <ITEM><BLIST><TITLE>Methods</TITLE>
     <ITEM><CODEROUTINE>keys()</CODEROUTINE>: return the keys of a dictionary</ITEM>
     <ITEM><CODEROUTINE>if key in dic</CODEROUTINE><BR/>
-      <CODEROUTINE>dic.has_key(key)</CODEROUTINE>: test if a key is in the dictionary (<CODEROUTINE>has_key</CODEROUTINE> has been remoed in Python 3)</ITEM>
+      <CODEROUTINE>dic.has_key(key)</CODEROUTINE>: test if a key is in the dictionary (<CODEROUTINE>has_key</CODEROUTINE> has been removed in Python 3)</ITEM>
     </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Exceptions</B></U></TITLE>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Maven</TITLE>
 <PATH>notes/maven.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 Command line options
 <DEFINITIONTABLE>
@@ -18,6 +18,8 @@ Command line options
     <DESC>Alternate path for the user settings file</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+Use <CODEROUTINE>${env.VARIABLE_NAME}</CODEROUTINE> to get the value of an environment variable.
 </CONTENT>
 <X><T>links</T><A>../links/coding.html#maven</A><L>en</L><F>HTML</F></X>
 </PAGE>
