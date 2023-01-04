@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -15,7 +15,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Configuration management</TITLE>
       <ITEM><CLIST><TITLE><ANCHOR>clearcase</ANCHOR>ClearCase</TITLE>
-        <ITEM><X status="zombie"><T>Rational</T><A>https://www.ibm.com/us-en/marketplace/rational-clearcase</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X status="zombie"><T>Rational</T><A>https://www.ibm.com/products/rational-clearcase</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/clcase.htm</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><CLIST><TITLE><ANCHOR>cvs</ANCHOR><X status="obsolete"><T>CVS</T><A>https://cvs.nongnu.org/</A><L>en</L><F>HTML</F></X></TITLE>
@@ -70,7 +70,7 @@
       <ITEM><X><T>Bamboo</T><A>https://www.atlassian.com/software/bamboo</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Travis CI</T><A>https://www.travis-ci.com/</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>CodeShip</T><A>https://www.cloudbees.com/products/codeship</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Bitrise</T><A>https://www.bitrise.io/</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Bitrise</T><A>https://bitrise.io</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>JFrog Pipelines</T><A>https://www.jfrog.com/confluence/display/JFROG/JFrog+Pipelines</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Build</TITLE>
@@ -80,12 +80,6 @@
       </CLIST></ITEM>
       <ITEM><X><T>tmake</T><A>https://tmake.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Ant</T><A>https://ant.apache.org/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><BLIST><TITLE><ANCHOR>maven</ANCHOR><X><T>Maven</T><A>https://maven.apache.org/</A><L>en</L><F>HTML</F></X></TITLE>
-        <ITEM><CLIST><TITLE><X><T>Maven Surefire Plugin</T><A>https://maven.apache.org/surefire/maven-surefire-plugin/</A><L>en</L><F>HTML</F></X></TITLE>
-          <ITEM><X><T>Schema</T><A>https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd</A><L>en</L><F>HTML</F></X></ITEM>
-        </CLIST></ITEM>
-        <ITEM><X><T>personal notes</T><A>../notes/maven.html</A><L>en</L><F>HTML</F></X></ITEM>
-      </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Compilers</TITLE>
       <ITEM><CLIST><TITLE><ANCHOR>gcc</ANCHOR><X><T>gcc</T><A>http://gcc.gnu.org</A><L>en</L><F>HTML</F></X></TITLE>
@@ -139,7 +133,7 @@
         <ITEM><X><T>splint</T><A>http://splint.org/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>smatch</T><A>https://smatch.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>slam</T><A>https://www.microsoft.com/en-us/research/project/slam/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>SonarQube</T><A>https://www.sonarqube.org</A><L>en</L><F>HTML</F></X>: duplicated code, coding standards, unit tests, code complexity, potential bugs, code coverage…</ITEM>
+        <ITEM><X><T>SonarQube</T><A>https://www.sonarsource.com/products/sonarqube/</A><L>en</L><F>HTML</F></X>: duplicated code, coding standards, unit tests, code complexity, potential bugs, code coverage…</ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Multi-language</TITLE>
         <ITEM><X><T>Coverity</T><A>https://www.synopsys.com/software-integrity/security-testing/static-analysis-sast.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -339,6 +333,7 @@
         <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=lJu5xwbGgRk"><X quality="-1"><T>Teamwork &amp; Git - Computerphile</T><A>https://www.youtube.com/watch?v=RzYJvSnzlMk</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Max</FIRSTNAME><LASTNAME>Wilson</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>A quick description of the features of Git and GitHub/GitLab to manage team work.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Highlights from Git 2.37</T><ST>The open source Git project just released Git 2.37. Take a look at some of our highlights from the latest release.</ST><A>https://github.blog/2022-06-27-highlights-from-git-2-37/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>Cruft packs have been added to better manage unreachable objects, a filesystem monitor is built in for Windows and macOS, the sparse index is now fully integrated…</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Improve Git monorepo performance with a file system monitor</T><ST>Monorepo performance can suffer due to the sheer number of files in your working directory. Git’s new builtin file system monitor makes it easy to speed up monorepo performance.</ST><A>https://github.blog/2022-06-29-improve-git-monorepo-performance-with-a-file-system-monitor/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jeff</FIRSTNAME><LASTNAME>Hostetler</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>A description of the performance improvements enabled by Git's FSMonitor.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Write Better Commits, Build Better Projects</T><ST>High-quality Git commits are the key to a maintainable and collaborative open- or closed-source project. Learn strategies to improve and use commits to streamline your development process.</ST><A>https://github.blog/2022-06-30-write-better-commits-build-better-projects/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Victoria</FIRSTNAME><LASTNAME>Dye</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Victoria</FIRSTNAME><LASTNAME>Dye</LASTNAME></AUTHOR> suggests to rewrite the Git history to simplify code reviews and later analysis. But doing this as far as in her example is unlikely to be worthwhile.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality="1"><T>Git’s database internals I: packed object store</T><ST>This blog series will examine Git’s internals to help make your engineering system more efficient. Part I discusses how Git stores its data in packfiles using custom compression techniques.</ST><A>https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Derrick</FIRSTNAME><LASTNAME>Stolee</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE><COMMENT>A description of the object store, the reference store, and the packfiles.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE predecessor="https://github.blog/2022-08-29-gits-database-internals-i-packed-object-store/"><X quality="1"><T>Git’s database internals II: commit history queries</T><ST>This post explores Git commit history as a database where ‘git log’ is the query language. Learn about Git’s custom query index – the commit-graph file – and how to make sure it's enabled in your repositories.</ST><A>https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Derrick</FIRSTNAME><LASTNAME>Stolee</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE><COMMENT>A description of the commit-graph and generation numbers, and how they are used. (<AUTHOR><FIRSTNAME>Derrick</FIRSTNAME><LASTNAME>Stolee</LASTNAME></AUTHOR> already explained this in some previous articles.)</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE predecessor="https://github.blog/2022-08-30-gits-database-internals-ii-commit-history-queries/"><X quality="1"><T>Git’s database internals III: file history queries</T><ST>Git’s file history queries use specialized algorithms that are tailored to common developer behavior. Level up your history spelunking skills by learning how different history modes behave and which ones to use when you need them.</ST><A>https://github.blog/2022-08-31-gits-database-internals-iii-file-history-queries/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Derrick</FIRSTNAME><LASTNAME>Stolee</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE><COMMENT>A description of some <CODEROUTINE>git log</CODEROUTINE> options: <CODEROUTINE>--show-pulls</CODEROUTINE>, <CODEROUTINE>--full-history</CODEROUTINE>, <CODEROUTINE>--full-history</CODEROUTINE>, and <CODEROUTINE>-L</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
