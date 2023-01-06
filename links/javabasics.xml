@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><CLIST><TITLE>Tutorials</TITLE>
@@ -195,6 +195,7 @@
       <ITEM><ARTICLE><X><T>A Guide To HTTP Cookies In Java</T><A>https://www.baeldung.com/cookies-java</A><L>en</L><F>HTML</F></X><DATE><YEAR>2019</YEAR><MONTH>5</MONTH><DAY>8</DAY></DATE><COMMENT>A short description of <CODEROUTINE>CookieHandler</CODEROUTINE>, <CODEROUTINE>CookieManager</CODEROUTINE>, <CODEROUTINE>CookiePolicy</CODEROUTINE> and <CODEROUTINE>CookieStore</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java 11 HttpClient Examples</T><A>https://mkyong.com/java/java-11-httpclient-examples/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Yong</FIRSTNAME><LASTNAME>Mook Kim</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>Some examples of common uses of <CODEROUTINE>HttpClient</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Curly Braces #4: Network data transmission and compression in Java</T><ST>When data-intensive applications are I/O bound, perhaps you should compress the bytes.</ST><A>https://blogs.oracle.com/javamagazine/post/curly-braces-java-network-transmission-compression</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>J.</MIDDLENAME><LASTNAME>Bruno</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE><COMMENT>A simple socket example using compression.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Java Networking Enhancements since JDK 11</T><A>https://www.youtube.com/watch?v=GPmeFv8t66E</A><L>en</L><F>MP4</F><DURATION><MINUTE>33</MINUTE><SECOND>36</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>McMahon</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>28</DAY></DATE><COMMENT>The title says all. Some details are given about the Simple Web Server, InetAddress resolution SPI, and Unix domain sockets.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Persistence</TITLE>
       <ITEM><ARTICLE><X status="zombie"><T>Magic with Merlin: Long-term persistence</T><ST>Serialize JavaBean component state to XML</ST><A>https://www.ibm.com/developerworks/java/library/j-mer0731/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Zukowski</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>7</MONTH></DATE><COMMENT>Using XMLEncoder and XMLDecoder to save/restore objects to/from XML files.</COMMENT></ARTICLE></ITEM>
