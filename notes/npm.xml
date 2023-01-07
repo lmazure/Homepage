@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>npm</TITLE>
 <PATH>notes/npm.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Display the npm version
@@ -37,6 +37,9 @@
     <ITEM>Run an audit and automatically install any compatible updates to vulnerable dependencies
       <CODESAMPLE><PROMPT/>npm audit fix</CODESAMPLE>
     </ITEM></BLIST>
+  </ITEM>
+  <ITEM>Set the cache directory
+    <CODESAMPLE><PROMPT/>npm config set cache "H:\Documents\tools\Node\npm-cache" --global</CODESAMPLE>
   </ITEM>
   <ITEM>Set the proxy
     <CODESAMPLE><PROMPT/>npm config set proxy 10.99.0.211:3128<BR/>

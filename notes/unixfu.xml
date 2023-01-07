@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -100,11 +100,37 @@
     <DESC>print lines matching a pattern</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>grep -E</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --extended-regexp</CODEROUTINE><BR/>
+      <CODEROUTINE>egrep</CODEROUTINE></TERM>
+    <DESC>use extended regular expressions</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>grep -F</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --fixed-strings</CODEROUTINE><BR/>
+      <CODEROUTINE>fgrep</CODEROUTINE></TERM>
+    <DESC>use fixed strings</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>grep -G</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --basic-regexp</CODEROUTINE></TERM>
+    <DESC>use basic regular expressions, this is the default</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>grep -P</CODEROUTINE><BR/>
+      <CODEROUTINE>greo --perl-regexp</CODEROUTINE></TERM>
+    <DESC>use Perl-compatible regular expressions</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>grep --</CODEROUTINE></TERM>
     <DESC>enable the search of a pattern beginning with a dash (e.g. <CODEROUTINE>grep -- -x</CODEROUTINE>)</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>grep -r</CODEROUTINE><BR/><CODEROUTINE>grep -R</CODEROUTINE><BR/><CODEROUTINE>grep --recursive</CODEROUTINE><BR/><CODEROUTINE>grep -d recurse</CODEROUTINE><BR/><CODEROUTINE>grep -directories=recurse</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>grep -r</CODEROUTINE><BR/>
+      <CODEROUTINE>grep -R</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --recursive</CODEROUTINE><BR/>
+      <CODEROUTINE>grep -d recurse</CODEROUTINE><BR/>
+      <CODEROUTINE>grep -directories=recurse</CODEROUTINE></TERM>
     <DESC>perform a recursive <CODEROUTINE>grep</CODEROUTINE></DESC>
   </ROW>
   <ROW>
@@ -124,16 +150,9 @@
     <DESC>restrict to match of whole line</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>grep -v</CODEROUTINE><BR/><CODEROUTINE>grep --invert-match</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>grep -v</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --invert-match</CODEROUTINE></TERM>
     <DESC>select non-matching lines</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>grep -E</CODEROUTINE><BR/><CODEROUTINE>egrep</CODEROUTINE></TERM>
-    <DESC>use extended regular expressions</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>grep -F</CODEROUTINE><BR/><CODEROUTINE>fgrep</CODEROUTINE></TERM>
-    <DESC>use fixed strings</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>grep -I</CODEROUTINE></TERM>
@@ -220,6 +239,21 @@
     <DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>m</CODEROUTINE> lines after the match</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>ls --color=never</CODEROUTINE><BR/>
+      <CODEROUTINE>ls --colour=never</CODEROUTINE></TERM>
+    <DESC>never use color display</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>ls --color=always</CODEROUTINE><BR/>
+      <CODEROUTINE>ls --colour=always</CODEROUTINE></TERM>
+    <DESC>always use color display</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>ls --color=auto</CODEROUTINE><BR/>
+      <CODEROUTINE>ls --colour=auto</CODEROUTINE></TERM>
+    <DESC>use color display only if standard output is sent to a tty</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>grep -q</CODEROUTINE><BR/><CODEROUTINE>grep --quiet</CODEROUTINE><BR/><CODEROUTINE>grep --silent</CODEROUTINE></TERM>
     <DESC>quiet mode; do not write anything to standard output; exit immediately with zero status if any match is found, even if an error was detected</DESC>
   </ROW>
@@ -247,6 +281,9 @@
     <CODEROUTINE>\W</CODEROUTINE> is a synonym for <CODEROUTINE>[^[:alnum:]]</CODEROUTINE></DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+detect non-ASCII characters
+<CODESAMPLE><PROMPT/>grep -P "[\x80-\xFF]"</CODESAMPLE>
 <BR/>
 for more complex searches (e.g. multiline searches), use <X><T>Perl</T><A>perl.htm</A><L>en</L><F>HTML</F></X>:
 <BLIST>
