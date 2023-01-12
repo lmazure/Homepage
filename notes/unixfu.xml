@@ -239,18 +239,18 @@
     <DESC>print <CODEROUTINE>n</CODEROUTINE> lines before the match and print <CODEROUTINE>m</CODEROUTINE> lines after the match</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>ls --color=never</CODEROUTINE><BR/>
-      <CODEROUTINE>ls --colour=never</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>grep --color=never</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --colour=never</CODEROUTINE></TERM>
     <DESC>never use color display</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>ls --color=always</CODEROUTINE><BR/>
-      <CODEROUTINE>ls --colour=always</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>grep --color=always</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --colour=always</CODEROUTINE></TERM>
     <DESC>always use color display</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>ls --color=auto</CODEROUTINE><BR/>
-      <CODEROUTINE>ls --colour=auto</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>grep --color=auto</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --colour=auto</CODEROUTINE></TERM>
     <DESC>use color display only if standard output is sent to a tty</DESC>
   </ROW>
   <ROW>
