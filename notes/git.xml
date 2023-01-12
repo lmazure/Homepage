@@ -99,9 +99,8 @@
   </ROW>
 </DEFINITIONTABLE>
 <BLIST>
-  <ITEM>Workaround to clone a repository which is too big to be transferred.
-    <CODESAMPLE>git clone quux@foobar.com:myprojet<BR/>
-      git fetch --depth 100</CODESAMPLE>
+  <ITEM>Workaround to clone a repository which is too big to be transferred (shallow clone).
+    <CODESAMPLE>git clone --depth 5 https://gitlab.com/foo/bar.git</CODESAMPLE>
     Later on, when high bandwidth is available, get the whole repo with
     <CODESAMPLE>git fetch --unshallow</CODESAMPLE>
   </ITEM>
