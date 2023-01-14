@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -307,11 +307,13 @@ look for duplicated word:
     <DESC>concatenate files</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>cat -v</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>cat -v</CODEROUTINE><BR/>
+      <CODEROUTINE>cat --show-nonprinting</CODEROUTINE></TERM>
     <DESC>display special characters with the <CODEROUTINE>^</CODEROUTINE> and <CODEROUTINE>M-</CODEROUTINE> notations except tab and LFD</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>cat -T</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>cat -T</CODEROUTINE><BR/>
+      <CODEROUTINE>cat --show-tabs</CODEROUTINE></TERM>
     <DESC>display tabs as <CODEROUTINE>^I</CODEROUTINE></DESC>
   </ROW>
   <ROW>
