@@ -3,36 +3,69 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Bash</TITLE>
 <PATH>notes/bash2.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
-<BLIST><TITLE><U><B>functions</B></U></TITLE>
-<ITEM>
-  The declaration of a function is
-  <CODESAMPLE>function foobar() { command-list; }</CODESAMPLE>
-  The <CODEROUTINE>function</CODEROUTINE> keyword is optional. The curly braces around the function body must be separated from the body by blanks or newlines. The command list must be terminated with a semicolon or a newline.
-</ITEM>
-<ITEM>
-  The exit status of a function is the exit status of the last command executed in the body. If the <CODEROUTINE>return</CODEROUTINE> keyword is used: with a numeric argument, this one is the function's return status; with no argument, the function's return status is the exit status of the last command executed before the <CODEROUTINE>return</CODEROUTINE>.
-</ITEM>
-<ITEM>
-  The function can return a value just by using <CODEROUTINE>echo</CODEROUTINE>.
-  <CODESAMPLE>
-    #!/bin/bash<BR/>
-    <BR/>
-    function encode() {<BR/>
-    <TAB/>command=`echo $1 | sed 's/./&lt;Key&gt;&amp; /g'`<BR/>
-    <TAB/>echo "$command"<BR/>
-    }<BR/>
-    <BR/>
-    e=`encode $1`<BR/>
-    xse -window $win -display :0.0 $e "&lt;Key&gt;Return"
-  </CODESAMPLE>
-</ITEM>
+<BLIST><TITLE><U><B>Startup files</B></U></TITLE>
+  <ITEM><BLIST><TITLE>For interactive shells or shells called with the <CODEROUTINE>--login</CODEROUTINE> option:</TITLE>
+    <ITEM><BLIST><TITLE>At startup</TITLE>
+      <ITEM><CODEROUTINE>/etc/profile</CODEROUTINE></ITEM>
+      <ITEM><CODEROUTINE>~/.bash_profile</CODEROUTINE><BR/>
+        in general, this file contains "<CODEROUTINE>if [ -f ~/.bashrc ]; then . ~/.bashrc; f</CODEROUTINE>" and then any login-specific initializations</ITEM>
+      <ITEM><CODEROUTINE>~/.bash_login</CODEROUTINE></ITEM>
+      <ITEM><CODEROUTINE>~/.profile</CODEROUTINE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>At exit</TITLE>
+      <ITEM><CODEROUTINE>~/.bash_logout</CODEROUTINE></ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>For interactive non-login shell:</TITLE>
+    <ITEM><BLIST><TITLE>At startup</TITLE>
+      <ITEM><CODEROUTINE>~/.bashrc</CODEROUTINE></ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>For non-interactive shells (to run a shell script, for example):</TITLE>
+    <ITEM><BLIST><TITLE>At startup</TITLE>
+      <ITEM>the file defined by <CODEROUTINE>$BASH_ENV</CODEROUTINE></ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+</BLIST>
+<U><B><CODEROUTINE>set</CODEROUTINE> options</B></U> (the full list is <X><T>here</T><A>https://www.gnu.org/software/bash/manual/bash.html#The-Set-Builtin</A><L>en</L><F>HTML</F></X>)
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>set -e</CODEROUTINE><BR/>
+      <CODEROUTINE>set -o errexit</CODEROUTINE></TERM>
+    <DESC>Exit immediately if a command, which is not part of a test, fails.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BLIST><TITLE><U><B>Functions</B></U></TITLE>
+  <ITEM>
+    The declaration of a function is
+    <CODESAMPLE>function foobar() { command-list; }</CODESAMPLE>
+    The <CODEROUTINE>function</CODEROUTINE> keyword is optional. The curly braces around the function body must be separated from the body by blanks or newlines. The command list must be terminated with a semicolon or a newline.
+  </ITEM>
+  <ITEM>
+    The exit status of a function is the exit status of the last command executed in the body. If the <CODEROUTINE>return</CODEROUTINE> keyword is used: with a numeric argument, this one is the function's return status; with no argument, the function's return status is the exit status of the last command executed before the <CODEROUTINE>return</CODEROUTINE>.
+  </ITEM>
+  <ITEM>
+    The function can return a value just by using <CODEROUTINE>echo</CODEROUTINE>.
+    <CODESAMPLE>
+      #!/bin/bash<BR/>
+      <BR/>
+      function encode() {<BR/>
+      <TAB/>command=`echo $1 | sed 's/./&lt;Key&gt;&amp; /g'`<BR/>
+      <TAB/>echo "$command"<BR/>
+      }<BR/>
+      <BR/>
+      e=`encode $1`<BR/>
+      xse -window $win -display :0.0 $e "&lt;Key&gt;Return"
+    </CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Environment variables</B></U></TITLE>
   <ITEM>Test if an environment variable is set (possibly empty) or not
     <CODESAMPLE>[[ ! -z ${MYVAR+z} ]] &amp;&amp; echo "Set" || echo "Not defined"</CODESAMPLE>
-</ITEM>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>HereDoc</B></U></TITLE>
   <ITEM>Syntax
@@ -95,7 +128,7 @@
     fi
     </CODESAMPLE>
   </ITEM>
-  </BLIST>
+</BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/shell.html#bash</A><L>en</L><F>HTML</F></X>
 </PAGE>

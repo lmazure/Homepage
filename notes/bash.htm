@@ -9,36 +9,6 @@
   <script src="../scripts/common.js"  type="module"></script>
 </head>
 <body>
-<b><u>startup files<br>
-</u></b>for interactive shells or shells called with the <code>--login</code>
-option:<br>
-<div style="margin-left: 40px;">at startup<br>
-</div>
-<ul style="font-family: monospace;">
-  <li><code>/etc/profile</code></li>
-  <li><code>~/.bash_profile</code><br>
-in general, this file contains "<code>if [ -f ~/.bashrc ]; then .
-~/.bashrc; f</code>" and then any login-specific initializations </li>
-  <li><code>~/.bash_login</code></li>
-  <li><code>~/.profile</code></li>
-</ul>
-<div style="margin-left: 40px;">at exit<br>
-</div>
-<ul>
-  <li><code>~/.bash_logout</code></li>
-</ul>
-for interactive non-login shell:<br>
-<div style="margin-left: 40px;">at startup<br>
-<ul>
-  <li><code>~/.bashrc</code></li>
-</ul>
-</div>
-for non-interactive shells (to run a shell script,
-for example)<br>
-<div style="margin-left: 40px;">at startup<br>
-<ul>
-  <li>the file defined by <code>$BASH_ENV</code></li>
-</ul>
 </div>
 <b><u>test</u></b><br>
 string comparison<br>
