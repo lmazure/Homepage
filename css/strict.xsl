@@ -278,16 +278,16 @@
   </xsl:for-each>
   <xsl:choose>
     <xsl:when test="@quality='2'">
-      <span title="very good"><xsl:text> 👍 👍</xsl:text></span>
+      <span title="very good"><xsl:text>👍👍</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='1'">
-      <span title="good"><xsl:text> 👍</xsl:text></span>
+      <span title="good"><xsl:text>👍</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-1'">
-      <span title="bad"><xsl:text> 👎</xsl:text></span>
+      <span title="bad"><xsl:text>👎</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-2'">
-      <span title="very bad"><xsl:text> 👎 👎</xsl:text></span>
+      <span title="very bad"><xsl:text>👎👎</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
@@ -300,10 +300,10 @@
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@protection='free_registration'">
-      <span title="free registration required"><xsl:text> 🆓</xsl:text></span>
+      <span title="free registration required"><xsl:text>🆓</xsl:text></span>
     </xsl:when>
     <xsl:when test="@protection='payed_registration'">
-      <span title="payed registration required"><xsl:text> 💰</xsl:text></span>
+      <span title="payed registration required"><xsl:text>💰</xsl:text></span>
     </xsl:when>
   </xsl:choose>
 </xsl:template>
