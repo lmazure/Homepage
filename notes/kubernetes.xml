@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Kubernetes</TITLE>
+<PATH>notes/kubernetes.xml</PATH>
+<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE>
+<CONTENT>
+get the list of pods
+<CODESAMPLE>kubectl get pods -n &lt;namespace&gt;</CODESAMPLE>
+display logs of a pod
+<CODESAMPLE>kubectl logs &lt;pod name&gt; -n &lt;namespace&gt;</CODESAMPLE>
+create an interactive shell in a pod
+<CODESAMPLE>kubectl exec -it &lt;pod name&gt; -n &lt;namespace&gt; -- /bin/sh</CODESAMPLE>
+list the containers of a pod
+<CODESAMPLE>kubectl describe pods &lt;pod name&gt; -n &lt;namespace&gt;</CODESAMPLE>
+display logs of a container in a pod
+<CODESAMPLE>kubectl logs &lt;pod name&gt; -c &lt;container name&gt; -n &lt;namespace&gt;</CODESAMPLE>
+list the deployments in a pod
+<CODESAMPLE>kubectl get deploy -n &lt;namespace&gt;</CODESAMPLE>
+display logs of a deployment in a pod
+<CODESAMPLE>kubectl describe deploy &lt;deployment name&gt; -n &lt;namespace&gt;</CODESAMPLE>
+</CONTENT>
+<X><T>links</T><A>../links/operations.html#kubernetes</A><L>en</L><F>HTML</F></X>
+</PAGE>
