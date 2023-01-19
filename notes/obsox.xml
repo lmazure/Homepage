@@ -5,7 +5,7 @@
 <PATH>notes/obsox.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
-Yet another stupid script to find obsolete code. This one looks at the file defining the structure recording the values of the X resources, at the file defining the XtResource structure and at all the C/C++ files, and tries to find some unused code. (By the way, the script could be improved by also looking at the X resource files to find uninitalized resources.)<BR/>
+Yet another stupid script to find obsolete code. This one looks at the file defining the structure recording the values of the X resources, at the file defining the XtResource structure and at all the C/C++ files, and tries to find some unused code. (By the way, the script could be improved by also looking at the X resource files to find uninitialised resources.)<BR/>
   (⊥ represents the tab character)
 <CODESAMPLE>
   #!/bin/ksh<BR/>
