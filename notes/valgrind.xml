@@ -17,7 +17,7 @@
 <B><U>Available tools</U></B>
 <DEFINITIONTABLE>
 <ROW><TERM>memcheck</TERM><DESC>memory checker</DESC></ROW>
-<ROW><TERM>addrcheck</TERM><DESC>same as memcheck except that the uninitialized are not checked<BR/>but it runs twice faster than memcheck</DESC></ROW>
+<ROW><TERM>addrcheck</TERM><DESC>same as memcheck except that the uninitialised are not checked<BR/>but it runs twice faster than memcheck</DESC></ROW>
 <ROW><TERM>cachegrind</TERM><DESC>CPU cache profiler</DESC></ROW>
 <ROW><TERM>massif</TERM><DESC>heap profiler</DESC></ROW>
 <ROW><TERM>helgrind</TERM><DESC>detect unlocked memory addresses accessed by several threads</DESC></ROW>
