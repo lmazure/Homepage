@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -120,13 +120,13 @@ File explorer
   </ITEM>
   <ITEM><BLIST><TITLE>User management with PowerShell</TITLE>
     <ITEM>enable a local user
-      <CODESAMPLE><X><T>Enable-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Enable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+      <CODESAMPLE><X><T>Enable-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Enable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
     </ITEM>
     <ITEM>disable a local user
-      <CODESAMPLE><X><T>Disable-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Disable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+      <CODESAMPLE><X><T>Disable-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Disable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
     </ITEM>
     <ITEM>return status of a local user
-      <CODESAMPLE><X><T>Get-LocalUser</T><A>https://docs.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Get-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+      <CODESAMPLE><X><T>Get-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Get-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
   <ITEM>find a file whose name contains Ondine
@@ -316,7 +316,7 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE>where</CODEROUTINE></TERM><DESC>locate where is an executable<BR/>By default, the search is done in the current directory and in the PATH.</DESC></ROW>
 </DEFINITIONTABLE>
-In order to know which process uses a given file, use <X><T>Handle</T><A>https://docs.microsoft.com/en-us/sysinternals/downloads/handle</A><L>en</L><F>HTML</F></X> of <X><T>SysInternals</T><A>https://docs.microsoft.com/en-us/sysinternals/</A><L>en</L><F>HTML</F></X>.<BR/>
+In order to know which process uses a given file, use <X><T>Handle</T><A>https://learn.microsoft.com/en-us/sysinternals/downloads/handle</A><L>en</L><F>HTML</F></X> of <X><T>SysInternals</T><A>https://learn.microsoft.com/en-us/sysinternals/</A><L>en</L><F>HTML</F></X>.<BR/>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
@@ -351,6 +351,10 @@ Special characters<BR/>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="0"/><KEY id="1"/><KEY id="3"/><KEY id="3"/></TERM>
     <DESC>…</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="0"/><KEY id="1"/><KEY id="4"/><KEY id="6"/></TERM>
+    <DESC>’</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="2"/><KEY id="4"/><BR/>
