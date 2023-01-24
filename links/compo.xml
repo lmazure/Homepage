@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Components</TITLE>
 <PATH>links/compo.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -36,8 +36,11 @@
     <ITEM><X><T>JWT</T><A>https://jwt.io/</A><L>en</L><F>HTML</F></X>: JSON Web Tokens</ITEM>
     <ITEM><X><T>Kerberos</T><A>http://web.mit.edu/kerberos/www/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM>VNC: <X><T>RealVNC</T><A>https://www.realvnc.com/en/</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM>mathematics: <X><T>Matrix and Quaternions FAQ</T><A>https://www.j3d.org/matrix_faq/matrfaq_latest.html</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM>random numbers: <X><T>HotBits</T><A>https://www.fourmilab.ch/hotbits/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM>Mathematics: <X><T>Matrix and Quaternions FAQ</T><A>https://www.j3d.org/matrix_faq/matrfaq_latest.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><CLIST><TITLE>Random numbers</TITLE>
+      <ITEM><X status="obsolete"><T>HotBits</T><A>https://www.fourmilab.ch/hotbits/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>ANU QRNG</T><A>https://qrng.anu.edu.au/</A><L>en</L><F>HTML</F></X></ITEM>
+    </CLIST></ITEM>
     <ITEM>artificial life: <X><T>biota.org</T><A>https://biota.org/</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Mess…</TITLE>
@@ -95,7 +98,7 @@
       <ITEM><ARTICLE><X><T>Initiation à JasperReports - iReport / Présentation des concepts généraux</T><A>https://jpg.developpez.com/bi/tutoriels/jasperreports/initiation/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jean-Philippe</FIRSTNAME><LASTNAME>Guilloux</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>11</MONTH><DAY>3</DAY></DATE><COMMENT>Another introduction to JasperReports and iReport.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>GraphQL</TITLE>
-      <ITEM><ARTICLE><X><T>Learn GraphQL In 40 Minutes</T><A>https://www.youtube.com/watch?v=ZQL7tL2S0oQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>39</MINUTE><SECOND>42</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kyle</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE><COMMENT>A description of GraphQL and a short implementation using Node's Express.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Learn GraphQL In 40 Minutes</T><A>https://www.youtube.com/watch?v=ZQL7tL2S0oQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>39</MINUTE><SECOND>42</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kyle</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE><COMMENT>A description of GraphQL and a short implementation using Node’s Express.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
