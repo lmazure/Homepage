@@ -162,7 +162,7 @@
         <CODESAMPLE>svn merge --reintegrate ^/branches/my-branch</CODESAMPLE>
         check the merge result<BR/>
         <CODESAMPLE>svn commit -m "Merge my-branch into trunk"</CODESAMPLE>
-        the branch is no longer usable for further work, it's not able to correctly absorb new trunk changes, nor can it be properly reintegrated to trunk again, so it is better to delete the branch<BR/>
+        the branch is no longer usable for further work, it is not able to correctly absorb new trunk changes, nor can it be properly reintegrated to trunk again, so it is better to delete the branch<BR/>
         <CODESAMPLE>svn delete ^/branches/my-branch -m "Remove my-branch, reintegrated with trunk in r123."</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Properties</TITLE>
@@ -184,5 +184,5 @@
   </BLIST></ITEM>
 </SLIST>
 </CONTENT>
-<X><T>Links</T><A>../links/coding.html#svn</A><L>en</L><F>HTML</F></X>
+<X><T>links</T><A>../links/scm.html#svn</A><L>en</L><F>HTML</F></X>
 </PAGE>
