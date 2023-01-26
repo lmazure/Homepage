@@ -150,6 +150,124 @@
       <CODEROUTINE>dic.has_key(key)</CODEROUTINE>: test if a key is in the dictionary (<CODEROUTINE>has_key</CODEROUTINE> has been removed in Python 3)</ITEM>
     </BLIST></ITEM>
 </BLIST>
+<BLIST><TITLE><U><B>Control flow</B></U></TITLE>
+  <ITEM><CODESAMPLE>if x==1:<BR/>
+    <TAB/>print("one")<BR/>
+    elif x==2:<BR/>
+    <TAB/>print("two")<BR/>
+    elif x==3:<BR/>
+    <TAB/>print("three")<BR/>
+    else:<BR/>
+    <TAB/>print("other")</CODESAMPLE></ITEM>
+  <ITEM><CODEROUTINE>for</CODEROUTINE> loops on a string or list content<BR/>
+    the <CODEROUTINE>else</CODEROUTINE> clause is executed when the list is exhausted<BR/>
+  <CODESAMPLE>a=[1,2,3]<BR/>>
+    for x in a:<BR/>>
+    <TAB/>print x<BR/>>
+    else:<BR/>>
+    <TAB/>print "finished"</CODESAMPLE></ITEM>
+  <ITEM>it is not safe to modified the content of the list being looped on, a copy should be generated
+  <CODESAMPLE>for x in a[:]:<BR/>
+    <TAB/>if x&gt;2: a.insert(0,x)</CODESAMPLE></ITEM>
+  <ITEM><CODEROUTINE>while</CODEROUTINE> loops as long a condition is true
+    <CODESAMPLE>while b&lt;10:<BR/>
+    <TAB/>b=b+1<BR/>
+    else:<BR/>
+    <TAB/>print "end"</CODESAMPLE></ITEM>
+  <ITEM>there is no <CODEROUTINE>do</CODEROUTINE>/<CODEROUTINE>while</CODEROUTINE> statement, instead use
+    <CODESAMPLE>while 1:<BR/>
+    <TAB/>line = sys.stdin.readline()<BR/>
+    <TAB/>if line == "\n": break</CODESAMPLE></ITEM>
+  <ITEM><CODEROUTINE>range(stop)</CODEROUTINE> returns <CODEROUTINE>[0,1,2...stop-1]</CODEROUTINE><BR/>
+    <CODEROUTINE>range(start,stop)</CODEROUTINE> returns <CODEROUTINE>[start,start+1...stop-1]</CODEROUTINE><BR/>
+    <CODEROUTINE>range(start,stop,incr)</CODEROUTINE> returns <CODEROUTINE>[start,start+incr...stop-incr]</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>break</CODEROUTINE> breaks out of the smallest enclosing <CODEROUTINE>for</CODEROUTINE> or <CODEROUTINE>while</CODEROUTINE>loop</ITEM>
+  <ITEM>the <CODEROUTINE>else</CODEROUTINE> clause is not executed</ITEM>
+  <ITEM><CODEROUTINE>continue</CODEROUTINE> continues with the next iteration of the loop</ITEM>
+  <ITEM><CODEROUTINE>pass</CODEROUTINE> is a noop statement</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Function</B></U></TITLE>
+  <ITEM>syntax (the docstring is optional):
+    <CODESAMPLE>def myfunction(a,b,c):<BR/>
+    <TAB/>"docstring"<BR/>
+    <TAB/># ... code</CODESAMPLE></ITEM>
+  <ITEM>all variable assignments store value in the local symbol table<BR/>
+    variable references are looked in the local symbol table, then in the global symbol table and, at last, in the table of built-in names</ITEM>
+  <ITEM>parameters are passed by reference</ITEM>
+  <ITEM>function references can be stored in variables
+    <CODEROUTINE>f=myfunction</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>return</CODEROUTINE> returns the <CODEROUTINE>None</CODEROUTINE> value</ITEM>
+  <ITEM><CODEROUTINE>return s</CODEROUTINE> returns the <CODEROUTINE>s</CODEROUTINE> value</ITEM>
+  <ITEM>default argument values can be used, they are evaluated only once
+    <CODESAMPLE>def f(a,l=[]):<BR/>
+    <TAB/>l.append(a)<BR/>
+    <TAB/>return l</CODESAMPLE>
+    <CODEROUTINE>print f(1)</CODEROUTINE> prints <CODEROUTINE>[1]</CODEROUTINE><BR/>
+    <CODEROUTINE>print f(2)</CODEROUTINE> prints <CODEROUTINE>[1,2]</CODEROUTINE><BR/>
+    <CODEROUTINE>print f(3)</CODEROUTINE> prints <CODEROUTINE>[1,2,3]</CODEROUTINE><BR/>
+    to avoid this:
+    <CODESAMPLE>def f(a,l=None)<BR/>
+    <TAB/>if l is None:<BR/>
+    <TAB/><TAB/>l=[]<BR/>
+    <TAB/>l.append(a)<BR/>
+    <TAB/>return l</CODESAMPLE></ITEM>
+  <ITEM>parameters can be passed by keywords
+    <CODESAMPLE>def foobar(a,b,c,d):<BR/>
+    <TAB/>#...<BR/>
+    foobar(0,1,d=4,c=3)</CODESAMPLE></ITEM>
+  <ITEM><CODEROUTINE>*name</CODEROUTINE> can be used to get an arbitrary number of positional arguments<BR/>
+    <CODEROUTINE>**name</CODEROUTINE> can be used to get an arbitrary number of keyword arguments
+    <CODESAMPLE>def quux(*a,**b):<BR/>
+    <TAB/>for arg in a: print arg<BR/>
+    <TAB/>for kw in b.keys(): print(kw,':',b[kw])</CODESAMPLE></ITEM>
+   <ITEM><CODEROUTINE>lambda</CODEROUTINE> can be used to create anonymous functions<BR/>
+    they are restricted to a single expression
+    <CODESAMPLE>lambda a,b:a+b</CODESAMPLE>
+    another example using a default argument value
+    <CODESAMPLE>def make_incrementator(n)<BR/>
+    <TAB/>return lambda x,incr=n:x+incr</CODESAMPLE></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Modules</B></U></TITLE>
+  <ITEM>a module is a file containing Python definitions and statements<BR/>
+    the statements are executed the first time the module is imported</ITEM>
+  <ITEM>syntax to import a module
+    <CODESAMPLE>&gt;&gt;&gt; import mymod<BR/>
+    mymod.myfunc(2)</CODESAMPLE></ITEM>
+  <ITEM>symbols of the imported module can be declared in the importing module's symbol table<BR/>
+    <CODEROUTINE>from mymod import myfunc, myfunc2</CODEROUTINE><BR/>
+    all symbols (except those beginning by an underscore) can be declared in the importing module's symbol table<BR/>
+    <CODEROUTINE>from mymod import *</CODEROUTINE></ITEM>
+  <ITEM>reload a module
+    <CODEROUTINE>reload(mymod)</CODEROUTINE></ITEM>
+  <ITEM>inside a module, its name is defined in <CODEROUTINE>__name__</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>sys.builtin_module_names</CODEROUTINE> lists the modules compiled in the interpreter</ITEM>
+  <ITEM><BLIST><TITLE>module path</TITLE>
+    <ITEM>modules are looked for in the directories listed by <CODEROUTINE>sys.path</CODEROUTINE> (which is initially defined by the environment variable <CODEROUTINE>$PYTHONPATH</CODEROUTINE>)</ITEM>
+    <ITEM>append a new directory to the path: <CODEROUTINE>sys.path.append('C:\\windows\desktop')</CODEROUTINE></ITEM>
+    </BLIST></ITEM>
+  <ITEM><CODEROUTINE>dir</CODEROUTINE> returns a list of the names defined in a module<BR/>
+    <CODEROUTINE>dir(mymod)</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>__builtin__</CODEROUTINE> is the standard module</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Packages</B></U></TITLE>
+  <ITEM>packages are structured as directories containing the file <CODEROUTINE>__init__.py</CODEROUTINE> (possibly empty) and other files being modules</ITEM>
+  <ITEM>a package can also contain subdirectories (i.e. subpackages)</ITEM>
+  <ITEM><CODEROUTINE>__init__.py</CODEROUTINE> can define <CODEROUTINE>__all__.py</CODEROUTINE> which is the list of the modules which should be imported when the syntax <CODEROUTINE>from mypackageimport *</CODEROUTINE> is used.</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Classes</B></U></TITLE>
+  <ITEM>the definition of a class starts with the declaration <CODEROUTINE>class:</CODEROUTINE></ITEM>
+  <ITEM>the initialisation method is <CODEROUTINE>__init__</CODEROUTINE>
+    <CODESAMPLE>class Complex:<BR/>
+    <TAB/>def __init__(self, realpart, imagpart):<BR/>
+    <TAB/><TAB/>self.r = realpart<BR/>
+    <TAB/><TAB/>self.i = imagpart</CODESAMPLE></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Objects</B></U></TITLE>
+<ITEM><CODEROUTINE>is</CODEROUTINE> test if two objects are the same</ITEM>
+  <ITEM><CODEROUTINE>is not</CODEROUTINE> test if two objects are not the same</ITEM>
+  <ITEM><CODEROUTINE>id()</CODEROUTINE> return an integer representing the identity of the object (currently implemented as its address)</ITEM>
+  <ITEM><CODEROUTINE>type()</CODEROUTINE> return the type of an object</ITEM>
+</BLIST>
 <BLIST><TITLE><U><B>Exceptions</B></U></TITLE>
   <ITEM>Use <CODEROUTINE>try</CODEROUTINE> to declare the temptative code block and <CODEROUTINE>except</CODEROUTINE> to catch the exception.
   <CODESAMPLE>try:<BR/>
