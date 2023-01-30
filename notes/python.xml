@@ -161,10 +161,10 @@
     <TAB/>print("other")</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>for</CODEROUTINE> loops on a string or list content<BR/>
     the <CODEROUTINE>else</CODEROUTINE> clause is executed when the list is exhausted<BR/>
-  <CODESAMPLE>a=[1,2,3]<BR/>>
-    for x in a:<BR/>>
-    <TAB/>print x<BR/>>
-    else:<BR/>>
+  <CODESAMPLE>a=[1,2,3]<BR/>
+    for x in a:<BR/>
+    <TAB/>print x<BR/>
+    else:<BR/>
     <TAB/>print "finished"</CODESAMPLE></ITEM>
   <ITEM>it is not safe to modified the content of the list being looped on, a copy should be generated
   <CODESAMPLE>for x in a[:]:<BR/>
@@ -178,9 +178,9 @@
     <CODESAMPLE>while 1:<BR/>
     <TAB/>line = sys.stdin.readline()<BR/>
     <TAB/>if line == "\n": break</CODESAMPLE></ITEM>
-  <ITEM><CODEROUTINE>range(stop)</CODEROUTINE> returns <CODEROUTINE>[0,1,2...stop-1]</CODEROUTINE><BR/>
-    <CODEROUTINE>range(start,stop)</CODEROUTINE> returns <CODEROUTINE>[start,start+1...stop-1]</CODEROUTINE><BR/>
-    <CODEROUTINE>range(start,stop,incr)</CODEROUTINE> returns <CODEROUTINE>[start,start+incr...stop-incr]</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>range(stop)</CODEROUTINE> returns <CODEROUTINE>[0,1,2… stop-1]</CODEROUTINE><BR/>
+    <CODEROUTINE>range(start,stop)</CODEROUTINE> returns <CODEROUTINE>[start,start+1… stop-1]</CODEROUTINE><BR/>
+    <CODEROUTINE>range(start,stop,incr)</CODEROUTINE> returns <CODEROUTINE>[start,start+incr… stop-incr]</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>break</CODEROUTINE> breaks out of the smallest enclosing <CODEROUTINE>for</CODEROUTINE> or <CODEROUTINE>while</CODEROUTINE>loop</ITEM>
   <ITEM>the <CODEROUTINE>else</CODEROUTINE> clause is not executed</ITEM>
   <ITEM><CODEROUTINE>continue</CODEROUTINE> continues with the next iteration of the loop</ITEM>
@@ -190,7 +190,7 @@
   <ITEM>syntax (the docstring is optional):
     <CODESAMPLE>def myfunction(a,b,c):<BR/>
     <TAB/>"docstring"<BR/>
-    <TAB/># ... code</CODESAMPLE></ITEM>
+    <TAB/># … code</CODESAMPLE></ITEM>
   <ITEM>all variable assignments store value in the local symbol table<BR/>
     variable references are looked in the local symbol table, then in the global symbol table and, at last, in the table of built-in names</ITEM>
   <ITEM>parameters are passed by reference</ITEM>
@@ -213,14 +213,14 @@
     <TAB/>return l</CODESAMPLE></ITEM>
   <ITEM>parameters can be passed by keywords
     <CODESAMPLE>def foobar(a,b,c,d):<BR/>
-    <TAB/>#...<BR/>
+    <TAB/>#…<BR/>
     foobar(0,1,d=4,c=3)</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>*name</CODEROUTINE> can be used to get an arbitrary number of positional arguments<BR/>
     <CODEROUTINE>**name</CODEROUTINE> can be used to get an arbitrary number of keyword arguments
     <CODESAMPLE>def quux(*a,**b):<BR/>
     <TAB/>for arg in a: print arg<BR/>
     <TAB/>for kw in b.keys(): print(kw,':',b[kw])</CODESAMPLE></ITEM>
-   <ITEM><CODEROUTINE>lambda</CODEROUTINE> can be used to create anonymous functions<BR/>
+  <ITEM><CODEROUTINE>lambda</CODEROUTINE> can be used to create anonymous functions<BR/>
     they are restricted to a single expression
     <CODESAMPLE>lambda a,b:a+b</CODESAMPLE>
     another example using a default argument value
@@ -241,7 +241,7 @@
     <CODEROUTINE>reload(mymod)</CODEROUTINE></ITEM>
   <ITEM>inside a module, its name is defined in <CODEROUTINE>__name__</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>sys.builtin_module_names</CODEROUTINE> lists the modules compiled in the interpreter</ITEM>
-  <ITEM><BLIST><TITLE>module path</TITLE>
+  <ITEM><BLIST><TITLE>Module path</TITLE>
     <ITEM>modules are looked for in the directories listed by <CODEROUTINE>sys.path</CODEROUTINE> (which is initially defined by the environment variable <CODEROUTINE>$PYTHONPATH</CODEROUTINE>)</ITEM>
     <ITEM>append a new directory to the path: <CODEROUTINE>sys.path.append('C:\\windows\desktop')</CODEROUTINE></ITEM>
     </BLIST></ITEM>

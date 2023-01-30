@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
-<PAGE status="unmaintained" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>links/python.xml</PATH>
 <DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
@@ -12,7 +12,7 @@
       <ITEM><X><T>Cookbook</T><A>https://code.activestate.com/recipes/langs/python/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>IAQ</T><A>http://www.norvig.com/python-iaq.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><X><T>Jython</T><A>https://www.jython.org</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X status="obsolete"><T>Jython</T><A>https://www.jython.org</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>IronPython</T><A>https://ironpython.net</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><CLIST><TITLE>Distribution</TITLE>
       <ITEM><X><T>WinPython</T><A>http://winpython.github.io/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -20,8 +20,7 @@
     <ITEM><CLIST><TITLE>Tools</TITLE>
       <ITEM><X status="obsolete"><T>PyChecker</T><A>https://sourceforge.net/projects/pychecker/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
-    <ITEM><X><T>new personal notes</T><A>../notes/python.html</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>old personal notes</T><A>../notes/python.htm</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>personal notes</T><A>../notes/python.html</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>Idioms and Anti-Idioms in Python</T><A>https://docs.python.org/3.1/howto/doanddont.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Moshe</FIRSTNAME><LASTNAME>Zadka</LASTNAME></AUTHOR><COMMENT>Short list of tips for coding in Python. Not of particular interest.</COMMENT></ARTICLE></ITEM>
@@ -51,7 +50,7 @@
     <ITEM><ARTICLE><X><T>Python Tips &amp; Tricks</T><A>https://chreke.com/python-tips-and-tricks.html</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>chreke</GIVENNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>Some miscellaneous notes about Python.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>This Is Why Python Data Classes Are Awesome</T><A>https://www.youtube.com/watch?v=CvQ7e6yUtnw</A><L>en</L><F>MP4</F><DURATION><MINUTE>22</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Arjan</FIRSTNAME><LASTNAME>Egges</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE><COMMENT>An introduction to Data Classes.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Books</TITLE>
-      <ITEM><ARTICLE><X><T>Thinking in Python</T><A>http://docs.linuxtone.org/ebooks/Python/Thinking_In_Python.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Eckel</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR></DATE><COMMENT>Design patterns applied to Python.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status="dead"><T>Thinking in Python</T><A>http://docs.linuxtone.org/ebooks/Python/Thinking_In_Python.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Eckel</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR></DATE><COMMENT>Design patterns applied to Python.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Dive Into Python 3</T><A>https://diveintopython3.net/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><LASTNAME>Pilgrim</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR></DATE><COMMENT>A free book to learn Python.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>History</TITLE>
