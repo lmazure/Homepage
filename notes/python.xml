@@ -6,7 +6,7 @@
 <DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Syntax</B></U></TITLE>
-  <ITEM>comment starts with <CODEROUTINE>#</CODEROUTINE> and extend to the end of the line</ITEM>
+  <ITEM>comment starts with <CODEROUTINE>#</CODEROUTINE> and extends to the end of the line</ITEM>
   <ITEM>multiple assignment<BR/>
     <CODEROUTINE>a,b=0,1</CODEROUTINE><BR/>
     <CODEROUTINE>a,b=b,a+b</CODEROUTINE></ITEM>
@@ -18,6 +18,12 @@
     <CODEROUTINE>and</CODEROUTINE> and <CODEROUTINE>or</CODEROUTINE> perform a shortcut evaluation<BR/>
     <CODESAMPLE>&gt;&gt;&gt; print '' or 'a' or 'b'<BR/>
       a</CODESAMPLE></ITEM>
+  <ITEM>floor division: division that rounds to nearest integer (not floor!)
+    <CODESAMPLE>a = (-11) // 4 # -3</CODESAMPLE>
+  </ITEM>
+  <ITEM>power
+    <CODESAMPLE>a = 3 ** 4 # 81</CODESAMPLE>
+  </ITEM>
   <ITEM>in interactive mode, <CODEROUTINE>_</CODEROUTINE> is a read-only variable containing the last printed expression</ITEM>
   <ITEM>exit<BR/>
     <CODESAMPLE>import sys<BR/>
@@ -57,6 +63,14 @@
     <CODEROUTINE>str[-2:]</CODEROUTINE> last two characters<BR/>
     <CODEROUTINE>str[:-2]</CODEROUTINE> all but the last two characters<BR/>
     slices are immutable</ITEM>
+  <ITEM>using a too large index generates an error
+    <CODESAMPLE>&gt;&gt;&gt; "language"[42]<BR/>
+      Traceback (most recent call last):<BR/>
+      File "&lt;stdin&gt;", line 1, in &lt;module&gt;<BR/>
+      IndexError: string index out of range</CODESAMPLE>
+    but not for slices
+  <CODESAMPLE>&gt;&gt;&gt; "language"[3:42]<BR/>
+      'guage'</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>len</CODEROUTINE> return the length a string<BR/>
     <CODEROUTINE>len(str)</CODEROUTINE></ITEM>
 </BLIST>
@@ -65,23 +79,31 @@
 </BLIST>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
   <ITEM>lists can mix types
-    <CODESAMPLE>a=['foo',69,'bar']</CODESAMPLE>
+    <CODESAMPLE>a = ['foo', 69, 'bar']</CODESAMPLE>
   </ITEM>
   <ITEM>lists support slices (these ones are mutable and can even be used to change the size of the list)<BR/>
     <CODEROUTINE>a[0:2]</CODEROUTINE>: remove the two first elements of the list<BR/>
-    <CODEROUTINE>a[:0]=a</CODEROUTINE>: insert a copy ot itself at the beginning of the list
+    <CODEROUTINE>a[:0] = a</CODEROUTINE>: insert a copy ot itself at the beginning of the list
   </ITEM>
+  <ITEM>All slice operations return a new list containing the requested elements. So <CODEROUTINE>a[:]</CODEROUTINE> returns a shallow copy of <CODEROUTINE>a</CODEROUTINE>.</ITEM>
   <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to remove elements in a list
     <CODESAMPLE>del a[2:4]</CODESAMPLE>
   </ITEM>
+  <ITEM>we can do the same with
+    <CODESAMPLE>a[2:4] = []</CODESAMPLE>
+  </ITEM>
+  <ITEM>lists can be concatenated with <CODEROUTINE>+</CODEROUTINE>
+    <CODESAMPLE>&gt;&gt;&gt; [ 1, 2 ] + [ 3, 4, 5]<BR/>
+      [1, 2, 3, 4, 5] </CODESAMPLE>
+  </ITEM>
   <ITEM><CODEROUTINE>len</CODEROUTINE>: return the number of elements of a list</ITEM>
   <ITEM>lists can be nested
-    <CODESAMPLE>q=[45,3]<BR/>
-      p=[0,q,14]</CODESAMPLE>
+    <CODESAMPLE>q = [45, 3]<BR/>
+      p = [0, q, 14]</CODESAMPLE>
   </ITEM>
   <ITEM>list unpacking
-    <CODESAMPLE>a=[1,2,3,4]<BR/>
-      [a1,a2,a3,a4]=a</CODESAMPLE>
+    <CODESAMPLE>a = [1, 2, 3, 4]<BR/>
+      [a1, a2, a3, a4] = a</CODESAMPLE>
   </ITEM>
   <ITEM>test if an element is in a list
     <CODESAMPLE>item in List</CODESAMPLE>
@@ -151,40 +173,54 @@
     </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Control flow</B></U></TITLE>
-  <ITEM><CODESAMPLE>if x==1:<BR/>
+  <ITEM>Any non-zero integer value is true; zero is false.<BR/>
+    For a sequence (string list…, anything with a non-zero length is true, empty sequences are false.</ITEM>
+  <ITEM><CODESAMPLE>if x == 1:<BR/>
     <TAB/>print("one")<BR/>
-    elif x==2:<BR/>
+    elif x == 2:<BR/>
     <TAB/>print("two")<BR/>
-    elif x==3:<BR/>
+    elif x == 3:<BR/>
     <TAB/>print("three")<BR/>
     else:<BR/>
     <TAB/>print("other")</CODESAMPLE></ITEM>
-  <ITEM><CODEROUTINE>for</CODEROUTINE> loops on a string or list content<BR/>
+  <ITEM><CODEROUTINE>for</CODEROUTINE> loops on a sequence (string or list) content<BR/>
     the <CODEROUTINE>else</CODEROUTINE> clause is executed when the list is exhausted<BR/>
   <CODESAMPLE>a=[1,2,3]<BR/>
     for x in a:<BR/>
     <TAB/>print x<BR/>
     else:<BR/>
     <TAB/>print "finished"</CODESAMPLE></ITEM>
-  <ITEM>it is not safe to modified the content of the list being looped on, a copy should be generated
-  <CODESAMPLE>for x in a[:]:<BR/>
-    <TAB/>if x&gt;2: a.insert(0,x)</CODESAMPLE></ITEM>
+  <ITEM>it is not safe to modify the content of the list being looped on, a copy should be generated</ITEM>
   <ITEM><CODEROUTINE>while</CODEROUTINE> loops as long a condition is true
-    <CODESAMPLE>while b&lt;10:<BR/>
-    <TAB/>b=b+1<BR/>
+    <CODESAMPLE>while b &lt; 10:<BR/>
+    <TAB/>b = b+1<BR/>
     else:<BR/>
     <TAB/>print "end"</CODESAMPLE></ITEM>
   <ITEM>there is no <CODEROUTINE>do</CODEROUTINE>/<CODEROUTINE>while</CODEROUTINE> statement, instead use
     <CODESAMPLE>while 1:<BR/>
     <TAB/>line = sys.stdin.readline()<BR/>
-    <TAB/>if line == "\n": break</CODESAMPLE></ITEM>
-  <ITEM><CODEROUTINE>range(stop)</CODEROUTINE> returns <CODEROUTINE>[0,1,2… stop-1]</CODEROUTINE><BR/>
-    <CODEROUTINE>range(start,stop)</CODEROUTINE> returns <CODEROUTINE>[start,start+1… stop-1]</CODEROUTINE><BR/>
-    <CODEROUTINE>range(start,stop,incr)</CODEROUTINE> returns <CODEROUTINE>[start,start+incr… stop-incr]</CODEROUTINE></ITEM>
-  <ITEM><CODEROUTINE>break</CODEROUTINE> breaks out of the smallest enclosing <CODEROUTINE>for</CODEROUTINE> or <CODEROUTINE>while</CODEROUTINE>loop</ITEM>
-  <ITEM>the <CODEROUTINE>else</CODEROUTINE> clause is not executed</ITEM>
+    <TAB/>if line == "\n":<BR/>
+    <TAB/><TAB/>break</CODESAMPLE></ITEM>
+  <ITEM>use <CODEROUTINE>range</CODEROUTINE> for iterating over a sequence of numbers<BR/>
+    <CODEROUTINE>range(stop)</CODEROUTINE> returns <CODEROUTINE>[0, 1, 2… stop-1]</CODEROUTINE><BR/>
+    <CODEROUTINE>range(start, stop)</CODEROUTINE> returns <CODEROUTINE>[start, start+1… stop-1]</CODEROUTINE><BR/>
+    <CODEROUTINE>range(start, stop, incr)</CODEROUTINE> returns <CODEROUTINE>[start, start+incr… stop-incr]</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>break</CODEROUTINE> breaks out of the smallest enclosing <CODEROUTINE>for</CODEROUTINE> or <CODEROUTINE>while</CODEROUTINE> loop<BR/>
+    the <CODEROUTINE>else</CODEROUTINE> clause is not executed</ITEM>
   <ITEM><CODEROUTINE>continue</CODEROUTINE> continues with the next iteration of the loop</ITEM>
   <ITEM><CODEROUTINE>pass</CODEROUTINE> is a noop statement</ITEM>
+  <ITEM>matching constants (<CODEROUTINE>_</CODEROUTINE> always macthes
+  <CODESAMPLE>match status:<BR/>
+    <TAB/>case 400:<BR/>
+    <TAB/><TAB/>return "Bad request"<BR/>
+    <TAB/>case 401 | 403 | 404:<BR/>
+    <TAB/><TAB/>return "Not allowed"<BR/>
+    <TAB/>case 404:<BR/>
+    <TAB/><TAB/>return "Not found"<BR/>
+    <TAB/>case 418:<BR/>
+    <TAB/><TAB/>return "I'm a teapot"<BR/>
+    <TAB/>case _:<BR/>
+    <TAB/><TAB/>return "Something's wrong with the internet"</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Function</B></U></TITLE>
   <ITEM>syntax (the docstring is optional):
