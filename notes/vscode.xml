@@ -484,25 +484,22 @@ Search/replace
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/><BR/>
-      <CODEROUTINE>Search: Find in files</CODEROUTINE></TERM>
+      <CODEROUTINE>Search: Find in Files</CODEROUTINE></TERM>
     <DESC>Search in files</DESC>
   </ROW>
   <ROW>
     <TERM><KEY id="F4"/><BR/>
-    <CODEROUTINE>Focus Next Search Result</CODEROUTINE></TERM>
+    <CODEROUTINE>Search: Focus Next Search Result</CODEROUTINE></TERM>
     <DESC>Select next search match</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Shift"/><KEY id="F4"/><BR/>
-    <CODEROUTINE>Focus Previous Search Result</CODEROUTINE></TERM>
+    <CODEROUTINE>Search: Focus Previous Search Result</CODEROUTINE></TERM>
     <DESC>Select previous search match</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/></TERM>
-    <DESC>Search in files</DESC>
-  </ROW>
-  <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="H"/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="H"/><BR/>
+      <CODEROUTINE>Search: Replace in Files</CODEROUTINE></TERM>
     <DESC>Replace in files</DESC>
   </ROW>
 </DEFINITIONTABLE>
