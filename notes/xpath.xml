@@ -46,7 +46,7 @@ The basic XPath syntax is similar to filesystem addressing. If the path starts w
 <CODEROUTINE>/AAA/CCC</CODEROUTINE> select all elements <CODEROUTINE>CCC</CODEROUTINE> which are children of the root element <CODEROUTINE>AAA</CODEROUTINE>.<BR/>
 <CODEROUTINE>/AAA/DDD/BBB</CODEROUTINE> select all elements <CODEROUTINE>BBB</CODEROUTINE> which are children of <CODEROUTINE>DDD</CODEROUTINE> which are children of the root element <CODEROUTINE>AAA</CODEROUTINE>.<BR/>
 <BR/>
-If the path starts with <CODEROUTINE>//</CODEROUTINE> then all elements in the document which fulfill following criteria are selected.<BR/>
+If the path starts with <CODEROUTINE>//</CODEROUTINE> then all elements in the document which fulfil following criteria are selected.<BR/>
 <CODEROUTINE>//BBB</CODEROUTINE> select all elements <CODEROUTINE>BBB</CODEROUTINE>.<BR/>
 <CODEROUTINE>//DDD/BBB</CODEROUTINE> select all elements <CODEROUTINE>BBB</CODEROUTINE> which are children of DDD.<BR/>
 <BR/>
