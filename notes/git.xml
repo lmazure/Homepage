@@ -643,7 +643,7 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git branch &lt;new branch&gt;</CODEROUTINE></TERM>
-    <DESC>Create a new branch.</DESC>
+    <DESC>Create a new branch (but does not switch to it).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git branch</CODEROUTINE><BR/>
@@ -978,17 +978,17 @@ To remove the last commit locally and on the remote repository (nobody should ha
 <BR/>
 Script to mirror a repository in another (to be completed to support GitHub)
 <CODESAMPLE>#!/bin/bash<BR/>
-<BR/>
-source_repo="gitlab.com/lmazure_TestGroup"<BR/>
-source_project="secondtestproject"<BR/>
-target_repo="gitlab.com/lmazure_testmirroring"<BR/>
-target_project="secondtestprojectmirror"<BR/>
-git clone --mirror https://$source_repo/$source_project.git<BR/>
-cd $source_project.git<BR/>
-git show-ref | grep ' refs/merge-requests/' | cut -d' ' -f2 | xargs -n1 -r git update-ref -d # do not push merge-requests refs to GitLab, it will refuse them<BR/>
-git push --mirror https://$target_repo/$target_project.git<BR/>
-cd ..<BR/>
-rm -fr $project.git</CODESAMPLE>
+  <BR/>
+  source_repo="gitlab.com/lmazure_TestGroup"<BR/>
+  source_project="secondtestproject"<BR/>
+  target_repo="gitlab.com/lmazure_testmirroring"<BR/>
+  target_project="secondtestprojectmirror"<BR/>
+  git clone --mirror https://$source_repo/$source_project.git<BR/>
+  cd $source_project.git<BR/>
+  git show-ref | grep ' refs/merge-requests/' | cut -d' ' -f2 | xargs -n1 -r git update-ref -d # do not push merge-requests refs to GitLab, it will refuse them<BR/>
+  git push --mirror https://$target_repo/$target_project.git<BR/>
+  cd ..<BR/>
+  rm -fr $project.git</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Git SVN</TITLE>
   <ITEM>Create a Git repo linked to a SVN repo<BR/>
