@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Maven</TITLE>
 <PATH>notes/maven.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 Command line options
 <DEFINITIONTABLE>
@@ -20,6 +20,9 @@ Command line options
 </DEFINITIONTABLE>
 <BR/>
 Use <CODEROUTINE>${env.VARIABLE_NAME}</CODEROUTINE> to get the value of an environment variable.
+<BR/>
+Diplay where is the Maven local repository:
+<CODESAMPLE>mvn help:evaluate -Dexpression=settings.localRepository</CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/java.html#maven</A><L>en</L><F>HTML</F></X>
 </PAGE>

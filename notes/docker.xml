@@ -5,6 +5,9 @@
 <PATH>notes/docker.xml</PATH>
 <DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
+<LLIST>
+<ITEM>Docker<BR/>
+<BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>docker run &lt;image&gt; &lt;command&gt;</CODEROUTINE></TERM>
@@ -53,6 +56,10 @@
     <DESC>Set an environment variable with its value which is already defined in the local environment in the container.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>--env-file &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Read in a file of environment variables.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>--link &lt;name or id&gt;:alias</CODEROUTINE></TERM>
     <DESC>Create a link between the newly started container and a running one.<BR/>
       It is possible to use <CODEROUTINE>--link &lt;name or id&gt;</CODEROUTINE>, in which case the alias will be the name of the other container.<BR/>
@@ -88,7 +95,7 @@
   <ROW>
     <TERM><CODEROUTINE>-i</CODEROUTINE><BR/>
       <CODEROUTINE>--interactive</CODEROUTINE></TERM>
-    <DESC>Attach container's STDIN.</DESC>
+    <DESC>Attach container’s STDIN.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>-a</CODEROUTINE><BR/>
@@ -337,6 +344,20 @@ Dangling images are layers that have no relationship to any tagged images.
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+<BLIST><TITLE>Notes</TITLE>
+  <ITEM>To add something in an Alpine container
+    <CODESAMPLE>
+    docker exec -it –-user=root mycontainer /bin/sh<BR/>
+    apk add curl rm -f /var/cache/apl/*
+    </CODESAMPLE>
+  </ITEM>
+  <ITEM>On Windows and Mac, use <CODEROUTINE>host.docker.internal</CODEROUTINE> instead of <CODEROUTINE>localhost</CODEROUTINE> to refer to the host from inside a container
+    (some information <X><T>here</T><A>https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach</A><L>en</L><F>HTML</F></X>).
+  </ITEM>
+</BLIST>
+</ITEM>
+<ITEM>Docker compose<BR/>
+<BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>docker-compose -f conf.yaml</CODEROUTINE></TERM>
@@ -409,17 +430,9 @@ Dangling images are layers that have no relationship to any tagged images.
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
-<BLIST><TITLE>Notes</TITLE>
-  <ITEM>To add something in an Alpine container
-    <CODESAMPLE>
-    docker exec -it –-user=root mycontainer /bin/sh<BR/>
-    apk add curl rm -f /var/cache/apl/*
-    </CODESAMPLE>
-  </ITEM>
-  <ITEM>On Windows and Mac, use <CODEROUTINE>host.docker.internal</CODEROUTINE> instead of <CODEROUTINE>localhost</CODEROUTINE> to refer to the host from inside a container
-    (some information <X><T>here</T><A>https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach</A><L>en</L><F>HTML</F></X>).
-  </ITEM>
-</BLIST>
+Docker compose will look for an <CODEFILENAME>.env</CODEFILENAME> file to define environment variables in the containers.
+</ITEM>
+</LLIST>
 </CONTENT>
 <X><T>links</T><A>../links/operations.html#docker</A><L>en</L><F>HTML</F></X>
 </PAGE>
