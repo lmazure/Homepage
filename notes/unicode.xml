@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -126,66 +126,66 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
 <BR/>
 <B>Some common characters</B><BR/>
 <TABLE>
-  <ROW><CELL>character</CELL><CELL>code</CELL><CELL>name</CELL></ROW>
-  <ROW><CELL>æ</CELL><CELL>U+00E6</CELL><CELL>Latin Small Letter Ae</CELL></ROW>
-  <ROW><CELL>œ</CELL><CELL>U+0153</CELL><CELL>Latin Small Ligature Oe</CELL></ROW>
-  <ROW><CELL>ç</CELL><CELL>U+00E7</CELL><CELL>Latin Small Letter C with Cedilla</CELL></ROW>
-  <ROW><CELL>É</CELL><CELL>U+00C9</CELL><CELL>Latin Capital Letter E with Acute</CELL></ROW>
-  <ROW><CELL>È</CELL><CELL>U+00C8</CELL><CELL>Latin Capital Letter E with Grave</CELL></ROW>
-  <ROW><CELL>Ê</CELL><CELL>U+00CA</CELL><CELL>Latin Capital Letter E with Circumflex</CELL></ROW>
-  <ROW><CELL>Æ</CELL><CELL>U+00C6</CELL><CELL>Latin Capital Letter Ae</CELL></ROW>
-  <ROW><CELL>Œ</CELL><CELL>U+0152</CELL><CELL>Latin Capital Ligature Oe</CELL></ROW>
-  <ROW><CELL>Ç</CELL><CELL>U+00C7</CELL><CELL>Latin Capital Letter C with Cedilla</CELL></ROW>
-  <ROW><CELL> </CELL><CELL>U+00A0</CELL><CELL>No-Break Space (NBSP)</CELL></ROW>
-  <ROW><CELL>‐</CELL><CELL>U+2010</CELL><CELL>Hyphen</CELL></ROW>
-  <ROW><CELL>‑</CELL><CELL>U+2011</CELL><CELL>Non-Breaking Hyphen</CELL></ROW>
-  <ROW><CELL>‒</CELL><CELL>U+2012</CELL><CELL>Figure Dash</CELL></ROW>
-  <ROW><CELL>–</CELL><CELL>U+2013</CELL><CELL>En Dash</CELL></ROW>
-  <ROW><CELL>—</CELL><CELL>U+2014</CELL><CELL>Em Dash</CELL></ROW>
-  <ROW><CELL>―</CELL><CELL>U+2015</CELL><CELL>Horizontal Bar</CELL></ROW>
-  <ROW><CELL>️·</CELL><CELL>U+00B7</CELL><CELL>Middle Dot</CELL></ROW>
-  <ROW><CELL>️…</CELL><CELL>U+2026</CELL><CELL>Horizontal Ellipsis</CELL></ROW>
-  <ROW><CELL>️⋮</CELL><CELL>U+22EE</CELL><CELL>Vertical Ellipsis</CELL></ROW>
-  <ROW><CELL>️✓</CELL><CELL>U+2713</CELL><CELL>Check Mark</CELL></ROW>
-  <ROW><CELL>️†</CELL><CELL>U+2020</CELL><CELL>Dagger</CELL></ROW>
-  <ROW><CELL>️‡</CELL><CELL>U+2021</CELL><CELL>Double Dagger</CELL></ROW>
-  <ROW><CELL>️⸸</CELL><CELL>U+2E38</CELL><CELL>Turned Dagger</CELL></ROW>
-  <ROW><CELL>️⸶</CELL><CELL>U+2E36</CELL><CELL>Dagger with Left Guard</CELL></ROW>
-  <ROW><CELL>️⸷</CELL><CELL>U+2E37</CELL><CELL>Dagger with Right Guard</CELL></ROW>
-  <ROW><CELL>️←</CELL><CELL>U+2190</CELL><CELL>Leftwards Arrow</CELL></ROW>
-  <ROW><CELL>️↑</CELL><CELL>U+2191</CELL><CELL>Upwards Arrow</CELL></ROW>
-  <ROW><CELL>️→</CELL><CELL>U+2192</CELL><CELL>Rightwards Arrow</CELL></ROW>
-  <ROW><CELL>️↓</CELL><CELL>U+2193</CELL><CELL>Downwards Arrow</CELL></ROW>
-  <ROW><CELL>️↔</CELL><CELL>U+2194</CELL><CELL>Left Right Arrow</CELL></ROW>
-  <ROW><CELL>️↕</CELL><CELL>U+2195</CELL><CELL>Up Down Arrow</CELL></ROW>
-  <ROW><CELL>️⇐</CELL><CELL>U+21D0</CELL><CELL>Leftwards Double Arrow</CELL></ROW>
-  <ROW><CELL>️⇑</CELL><CELL>U+21D1</CELL><CELL>Upwards Double Arrow</CELL></ROW>
-  <ROW><CELL>️⇒</CELL><CELL>U+21D2</CELL><CELL>Rightwards Double Arrow</CELL></ROW>
-  <ROW><CELL>️⇓</CELL><CELL>U+21D3</CELL><CELL>Downwards Double Arrow</CELL></ROW>
-  <ROW><CELL>️⇔</CELL><CELL>U+21D4</CELL><CELL>Left Right Double Arrow</CELL></ROW>
-  <ROW><CELL>️⇕</CELL><CELL>U+21D5</CELL><CELL>Up Down Double Arrow</CELL></ROW>
-  <ROW><CELL>️□</CELL><CELL>U+25A1</CELL><CELL>White Square</CELL></ROW>
-  <ROW><CELL>️◀</CELL><CELL>U+25C0</CELL><CELL>Black Left-Pointing Triangle</CELL></ROW>
-  <ROW><CELL>️▲</CELL><CELL>U+25B2</CELL><CELL>Black Up-Pointing Triangle</CELL></ROW>
-  <ROW><CELL>️▶</CELL><CELL>U+25B6</CELL><CELL>Black Right-Pointing Triangle</CELL></ROW>
-  <ROW><CELL>️▼</CELL><CELL>U+25BC</CELL><CELL>Black Down-Pointing Triangle</CELL></ROW>
-  <ROW><CELL>️◁</CELL><CELL>U+25C1</CELL><CELL>White Left-Pointing Triangle</CELL></ROW>
-  <ROW><CELL>️△</CELL><CELL>U+25B3</CELL><CELL>White Up-Pointing Triangle</CELL></ROW>
-  <ROW><CELL>️▷</CELL><CELL>U+25B7</CELL><CELL>White Right-Pointing Triangle</CELL></ROW>
-  <ROW><CELL>️▽</CELL><CELL>U+25BD</CELL><CELL>White Down-Pointing Triangle</CELL></ROW>
-  <ROW><CELL>️∧</CELL><CELL>U+2227</CELL><CELL>Logical And</CELL></ROW>
-  <ROW><CELL>∨</CELL><CELL>U+2228</CELL><CELL>Logical Or</CELL></ROW>
-  <ROW><CELL>±</CELL><CELL>U+00B1</CELL><CELL>Plus-Minus Sign</CELL></ROW>
-  <ROW><CELL>≠</CELL><CELL>U+2260</CELL><CELL>Not Equal To</CELL></ROW>
-  <ROW><CELL>≤</CELL><CELL>U+2264</CELL><CELL>Less-Than or Equal To</CELL></ROW>
-  <ROW><CELL>≥</CELL><CELL>U+2265</CELL><CELL>Greater-Than or Equal To</CELL></ROW>
-  <ROW><CELL>≪</CELL><CELL>U+226A</CELL><CELL>Much Less-Than</CELL></ROW>
-  <ROW><CELL>≫</CELL><CELL>U+226B</CELL><CELL>Much Greater-Than</CELL></ROW>
-  <ROW><CELL>⋘</CELL><CELL>U+22D8</CELL><CELL>Very Much Less-Than</CELL></ROW>
-  <ROW><CELL>⋙</CELL><CELL>U+22D9</CELL><CELL>Very Much Greater-Than</CELL></ROW>
-  <ROW><CELL>⚠</CELL><CELL>U26A0</CELL><CELL>Warning Sign</CELL></ROW>
-  <ROW><CELL>👍</CELL><CELL>U+1F44D</CELL><CELL>Thumbs Up Sign</CELL></ROW>
-  <ROW><CELL>👎</CELL><CELL>U+1F44E</CELL><CELL>Thumbs Down Sign</CELL></ROW>
+  <ROW><CELL>character</CELL><CELL>code</CELL><CELL>decimal</CELL><CELL>name</CELL><CELL>French name</CELL></ROW>
+  <ROW><CELL>æ</CELL><CELL>U+00E6</CELL><CELL></CELL><CELL><X><T>Latin Small Letter Ae</T><A>https://www.compart.com/en/unicode/U+00E6</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00E6</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>œ</CELL><CELL>U+0153</CELL><CELL>339</CELL><CELL><X><T>Latin Small Ligature Oe</T><A>https://www.compart.com/en/unicode/U+0153</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+0153</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>ç</CELL><CELL>U+00E7</CELL><CELL>231</CELL><CELL><X><T>Latin Small Letter C with Cedilla</T><A>https://www.compart.com/en/unicode/U+00E7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00E7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>É</CELL><CELL>U+00C9</CELL><CELL>201</CELL><CELL><X><T>Latin Capital Letter E with Acute</T><A>https://www.compart.com/en/unicode/U+00C9</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00C9</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>È</CELL><CELL>U+00C8</CELL><CELL>200</CELL><CELL><X><T>Latin Capital Letter E with Grave</T><A>https://www.compart.com/en/unicode/U+00C8</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00C8</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>Ê</CELL><CELL>U+00CA</CELL><CELL></CELL><CELL><X><T>Latin Capital Letter E with Circumflex</T><A>https://www.compart.com/en/unicode/U+00CA</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00CA</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>Æ</CELL><CELL>U+00C6</CELL><CELL></CELL><CELL><X><T>Latin Capital Letter Ae</T><A>https://www.compart.com/en/unicode/U+00C6</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00C6</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>Œ</CELL><CELL>U+0152</CELL><CELL></CELL><CELL><X><T>Latin Capital Ligature Oe</T><A>https://www.compart.com/en/unicode/U+0152</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+0152</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>Ç</CELL><CELL>U+00C7</CELL><CELL>199</CELL><CELL><X><T>Latin Capital Letter C with Cedilla</T><A>https://www.compart.com/en/unicode/U+00C7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00C7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL> </CELL><CELL>U+00A0</CELL><CELL>160</CELL><CELL><X><T>No-Break Space (NBSP)</T><A>https://www.compart.com/en/unicode/U+00A0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00A0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>‐</CELL><CELL>U+2010</CELL><CELL></CELL><CELL><X><T>Hyphen</T><A>https://www.compart.com/en/unicode/U+2010</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2010</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>‑</CELL><CELL>U+2011</CELL><CELL></CELL><CELL><X><T>Non-Breaking Hyphen</T><A>https://www.compart.com/en/unicode/U+2011</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2011</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>‒</CELL><CELL>U+2012</CELL><CELL></CELL><CELL><X><T>Figure Dash</T><A>https://www.compart.com/en/unicode/U+2012</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2012</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>–</CELL><CELL>U+2013</CELL><CELL></CELL><CELL><X><T>En Dash</T><A>https://www.compart.com/en/unicode/U+2013</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2013</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>—</CELL><CELL>U+2014</CELL><CELL></CELL><CELL><X><T>Em Dash</T><A>https://www.compart.com/en/unicode/U+2014</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2014</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>―</CELL><CELL>U+2015</CELL><CELL></CELL><CELL><X><T>Horizontal Bar</T><A>https://www.compart.com/en/unicode/U+2015</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2015</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️·</CELL><CELL>U+00B7</CELL><CELL></CELL><CELL><X><T>Middle Dot</T><A>https://www.compart.com/en/unicode/U+00B7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00B7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️…</CELL><CELL>U+2026</CELL><CELL>8230</CELL><CELL><X><T>Horizontal Ellipsis</T><A>https://www.compart.com/en/unicode/U+2026</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2026</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⋮</CELL><CELL>U+22EE</CELL><CELL></CELL><CELL><X><T>Vertical Ellipsis</T><A>https://www.compart.com/en/unicode/U+22EE</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+22EE</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️✓</CELL><CELL>U+2713</CELL><CELL></CELL><CELL><X><T>Check Mark</T><A>https://www.compart.com/en/unicode/U+2713</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2713</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️†</CELL><CELL>U+2020</CELL><CELL></CELL><CELL><X><T>Dagger</T><A>https://www.compart.com/en/unicode/U+2020</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2020</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️‡</CELL><CELL>U+2021</CELL><CELL></CELL><CELL><X><T>Double Dagger</T><A>https://www.compart.com/en/unicode/U+2021</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2021</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⸸</CELL><CELL>U+2E38</CELL><CELL></CELL><CELL><X><T>Turned Dagger</T><A>https://www.compart.com/en/unicode/U+2E38</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2E38</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⸶</CELL><CELL>U+2E36</CELL><CELL></CELL><CELL><X><T>Dagger with Left Guard</T><A>https://www.compart.com/en/unicode/U+2E36</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2E36</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⸷</CELL><CELL>U+2E37</CELL><CELL></CELL><CELL><X><T>Dagger with Right Guard</T><A>https://www.compart.com/en/unicode/U+2E37</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2E37</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️←</CELL><CELL>U+2190</CELL><CELL></CELL><CELL><X><T>Leftwards Arrow</T><A>https://www.compart.com/en/unicode/U+2190</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2190</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️↑</CELL><CELL>U+2191</CELL><CELL></CELL><CELL><X><T>Upwards Arrow</T><A>https://www.compart.com/en/unicode/U+2191</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2191</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️→</CELL><CELL>U+2192</CELL><CELL></CELL><CELL><X><T>Rightwards Arrow</T><A>https://www.compart.com/en/unicode/U+2192</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2192</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️↓</CELL><CELL>U+2193</CELL><CELL></CELL><CELL><X><T>Downwards Arrow</T><A>https://www.compart.com/en/unicode/U+2193</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2193</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️↔</CELL><CELL>U+2194</CELL><CELL></CELL><CELL><X><T>Left Right Arrow</T><A>https://www.compart.com/en/unicode/U+2194</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2194</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️↕</CELL><CELL>U+2195</CELL><CELL></CELL><CELL><X><T>Up Down Arrow</T><A>https://www.compart.com/en/unicode/U+2195</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2195</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⇐</CELL><CELL>U+21D0</CELL><CELL></CELL><CELL><X><T>Leftwards Double Arrow</T><A>https://www.compart.com/en/unicode/U+21D0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+21D0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⇑</CELL><CELL>U+21D1</CELL><CELL></CELL><CELL><X><T>Upwards Double Arrow</T><A>https://www.compart.com/en/unicode/U+21D1</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+21D1</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⇒</CELL><CELL>U+21D2</CELL><CELL></CELL><CELL><X><T>Rightwards Double Arrow</T><A>https://www.compart.com/en/unicode/U+21D2</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+21D2</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⇓</CELL><CELL>U+21D3</CELL><CELL></CELL><CELL><X><T>Downwards Double Arrow</T><A>https://www.compart.com/en/unicode/U+21D3</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+21D3</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⇔</CELL><CELL>U+21D4</CELL><CELL></CELL><CELL><X><T>Left Right Double Arrow</T><A>https://www.compart.com/en/unicode/U+21D4</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+21D4</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⇕</CELL><CELL>U+21D5</CELL><CELL></CELL><CELL><X><T>Up Down Double Arrow</T><A>https://www.compart.com/en/unicode/U+21D5</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+21D5</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️□</CELL><CELL>U+25A1</CELL><CELL></CELL><CELL><X><T>White Square</T><A>https://www.compart.com/en/unicode/U+25A1</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+25A1</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️◀</CELL><CELL>U+25C0</CELL><CELL></CELL><CELL><X><T>Black Left-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25C0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+25C0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️▲</CELL><CELL>U+25B2</CELL><CELL></CELL><CELL><X><T>Black Up-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25B2</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+25B2</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️▶</CELL><CELL>U+25B6</CELL><CELL></CELL><CELL><X><T>Black Right-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25B6</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+25B6</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️▼</CELL><CELL>U+25BC</CELL><CELL></CELL><CELL><X><T>Black Down-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25BC</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+25BC</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️◁</CELL><CELL>U+25C1</CELL><CELL></CELL><CELL><X><T>White Left-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25C1</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+25C1</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️△</CELL><CELL>U+25B3</CELL><CELL></CELL><CELL><X><T>White Up-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25B3</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+25B3</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️▷</CELL><CELL>U+25B7</CELL><CELL></CELL><CELL><X><T>White Right-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25B7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+25B7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️▽</CELL><CELL>U+25BD</CELL><CELL></CELL><CELL><X><T>White Down-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25BD</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+25BD</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️∧</CELL><CELL>U+2227</CELL><CELL></CELL><CELL><X><T>Logical And</T><A>https://www.compart.com/en/unicode/U+2227</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2227</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>∨</CELL><CELL>U+2228</CELL><CELL></CELL><CELL><X><T>Logical Or</T><A>https://www.compart.com/en/unicode/U+2228</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2228</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>±</CELL><CELL>U+00B1</CELL><CELL></CELL><CELL><X><T>Plus-Minus Sign</T><A>https://www.compart.com/en/unicode/U+00B1</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00B1</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>≠</CELL><CELL>U+2260</CELL><CELL></CELL><CELL><X><T>Not Equal To</T><A>https://www.compart.com/en/unicode/U+2260</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2260</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>≤</CELL><CELL>U+2264</CELL><CELL></CELL><CELL><X><T>Less-Than or Equal To</T><A>https://www.compart.com/en/unicode/U+2264</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2264</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>≥</CELL><CELL>U+2265</CELL><CELL></CELL><CELL><X><T>Greater-Than or Equal To</T><A>https://www.compart.com/en/unicode/U+2265</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2265</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>≪</CELL><CELL>U+226A</CELL><CELL></CELL><CELL><X><T>Much Less-Than</T><A>https://www.compart.com/en/unicode/U+226A</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+226A</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>≫</CELL><CELL>U+226B</CELL><CELL></CELL><CELL><X><T>Much Greater-Than</T><A>https://www.compart.com/en/unicode/U+226B</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+226B</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>⋘</CELL><CELL>U+22D8</CELL><CELL></CELL><CELL><X><T>Very Much Less-Than</T><A>https://www.compart.com/en/unicode/U+22D8</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+22D8</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>⋙</CELL><CELL>U+22D9</CELL><CELL></CELL><CELL><X><T>Very Much Greater-Than</T><A>https://www.compart.com/en/unicode/U+22D9</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+22D9</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>⚠</CELL><CELL>U+26A0</CELL><CELL></CELL><CELL><X><T>Warning Sign</T><A>https://www.compart.com/en/unicode/U+26A0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+26A0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>👍</CELL><CELL>U+1F44D</CELL><CELL>128077</CELL><CELL><X><T>Thumbs Up Sign</T><A>https://www.compart.com/en/unicode/U+1F44D</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+1F44D</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>👎</CELL><CELL>U+1F44E</CELL><CELL>128078</CELL><CELL><X><T>Thumbs Down Sign</T><A>https://www.compart.com/en/unicode/U+1F44E</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+1F44E</A><L>fr</L><F>HTML</F></X></CELL></ROW>
 </TABLE>
 </CONTENT>
 <X><T>links</T><A>../links/unicode.html</A><L>en</L><F>HTML</F></X>
