@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -136,6 +136,7 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>Æ</CELL><CELL>U+00C6</CELL><CELL></CELL><CELL><X><T>Latin Capital Letter Ae</T><A>https://www.compart.com/en/unicode/U+00C6</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00C6</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>Œ</CELL><CELL>U+0152</CELL><CELL></CELL><CELL><X><T>Latin Capital Ligature Oe</T><A>https://www.compart.com/en/unicode/U+0152</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+0152</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>Ç</CELL><CELL>U+00C7</CELL><CELL>199</CELL><CELL><X><T>Latin Capital Letter C with Cedilla</T><A>https://www.compart.com/en/unicode/U+00C7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00C7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>‽</CELL><CELL>U+203D</CELL><CELL>8253</CELL><CELL><X><T>Interrobang</T><A>https://www.compart.com/en/unicode/U+203D</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Point exclarrogatif</T><A>https://www.compart.com/fr/unicode/U+203D</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL> </CELL><CELL>U+00A0</CELL><CELL>160</CELL><CELL><X><T>No-Break Space (NBSP)</T><A>https://www.compart.com/en/unicode/U+00A0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00A0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>‐</CELL><CELL>U+2010</CELL><CELL></CELL><CELL><X><T>Hyphen</T><A>https://www.compart.com/en/unicode/U+2010</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2010</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>‑</CELL><CELL>U+2011</CELL><CELL></CELL><CELL><X><T>Non-Breaking Hyphen</T><A>https://www.compart.com/en/unicode/U+2011</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2011</A><L>fr</L><F>HTML</F></X></CELL></ROW>
