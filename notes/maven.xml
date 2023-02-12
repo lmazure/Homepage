@@ -19,9 +19,17 @@ Command line options
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Skip tests in install or package phase:
+<CODESAMPLE>mvn clean install -Dmaven.test.skip=true</CODESAMPLE>
+<CODESAMPLE>mvn clean package -Dmaven.test.skip=true</CODESAMPLE>
+<BR/>
+Compile the test sources and copies their resources, but skip their execution:
+<CODESAMPLE>mvn clean install -DskipTests</CODESAMPLE>
+<CODESAMPLE>mvn clean package -DskipTests</CODESAMPLE>
+<BR/>
 Use <CODEROUTINE>${env.VARIABLE_NAME}</CODEROUTINE> to get the value of an environment variable.
 <BR/>
-Diplay where is the Maven local repository:
+Display where is the Maven local repository:
 <CODESAMPLE>mvn help:evaluate -Dexpression=settings.localRepository</CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/java.html#maven</A><L>en</L><F>HTML</F></X>
