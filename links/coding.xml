@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -329,6 +329,7 @@
     <ITEM><BLIST><TITLE>Static analyzers</TITLE>
       <ITEM><ARTICLE><X status="dead"><T>C++ Code Analysis: an Open Architecture for the Verification of Coding Rules</T><A>https://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.517.4317&amp;rep=rep1&amp;type=pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Alessandra</FIRSTNAME><LASTNAME>Potrich</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Paolo</FIRSTNAME><LASTNAME>Tonella</LASTNAME></AUTHOR><COMMENT>An overview of a coding rules checker implemented with javacc.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="-1" status="dead"><T>C# Coding Standards and Practices</T><A>https://www.codeguru.com/csharp/article.php/c18677</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><LASTNAME>Strawmyer</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE><COMMENT>The author states the obvious: define coding rules applicable to your domain and verify them with a static analyser.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Why You Don't Trust Your Linter • Jeroen Engels • GOTO 2022</T><A>https://www.youtube.com/watch?v=XjwJeHRa53A</A><L>en</L><F>MP4</F><DURATION><MINUTE>42</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jeroen</FIRSTNAME><LASTNAME>Engels</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>Some opinionated comments on linters from someone who wrote one for Elm.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Microsoft</TITLE>
         <ITEM><ARTICLE><X status="zombie"><T>User Interface Challenges in Static Defect Detection</T><A>http://research.microsoft.com/users/jpincus/uwmsrsi01.ppt</A><L>en</L><F>PowerPoint</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Pincus</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR></DATE><COMMENT>Some interesting comments on the way developers interact with static analysis tools.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status="zombie"><T>Steering the Pyramids - Tools, Technology, and Process in Engineering at Microsoft</T><A>http://research.microsoft.com/users/jpincus/icsm.ppt</A><L>en</L><F>PowerPoint</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Pincus</LASTNAME></AUTHOR><DATE><YEAR>2002</YEAR></DATE><COMMENT>An overview of the tools used by Microsoft to improve the quality of their products, this is interesting to see what are their evolution and challenges.</COMMENT></ARTICLE></ITEM>
