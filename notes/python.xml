@@ -305,6 +305,9 @@
   <ITEM><CODEROUTINE>type()</CODEROUTINE> return the type of an object</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Exceptions</B></U></TITLE>
+  <ITEM><CODEROUTINE>BaseException</CODEROUTINE> is the common base class of all exceptions.<BR/>
+    One of its subclasses, <CODEROUTINE>Exception</CODEROUTINE>, is the base class of all the non-fatal exceptions.<BR/>
+    Exceptions which are not subclasses of <CODEROUTINE>Exception</CODEROUTINE> are not typically handled, because they are used to indicate that the program should terminate. They include <CODEROUTINE>SystemExit</CODEROUTINE> which is raised by <CODEROUTINE>sys.exit()</CODEROUTINE> and <CODEROUTINE>KeyboardInterrupt</CODEROUTINE> which is raised when a user wishes to interrupt the program.</ITEM>
   <ITEM>Use <CODEROUTINE>try</CODEROUTINE> to declare the temptative code block and <CODEROUTINE>except</CODEROUTINE> to catch the exception.
   <CODESAMPLE>try:<BR/>
     <TAB/>…<BR/>
@@ -343,17 +346,57 @@
     except ZeroDivisionError, detail:<BR/>
     <TAB/>…</CODESAMPLE>
   </ITEM>
-  <ITEM>A <CODEROUTINE>finally</CODEROUTINE> block can be used instead of <CODEROUTINE>except</CODEROUTINE> handlers: it will be always executed, but if an exception occurred, it will be reraised after this execution.
+  <ITEM>A <CODEROUTINE>finally</CODEROUTINE> block can be used: it will be always executed.
     <CODESAMPLE>try:<BR/>
     <TAB/>…<BR/>
     finally:<BR/>
     <TAB/>…</CODESAMPLE>
+     <BLIST> 
+      <ITEM>If an exception occurs during execution of the <CODEROUTINE>try</CODEROUTINE> clause, the exception may be handled by an <CODEROUTINE>except</CODEROUTINE> clause. If the exception is not handled by an <CODEROUTINE>except</CODEROUTINE> clause, the exception is re-raised after the <CODEROUTINE>finally</CODEROUTINE> clause has been executed.</ITEM>
+      <ITEM>An exception could occur during execution of an <CODEROUTINE>except</CODEROUTINE> or <CODEROUTINE>else</CODEROUTINE> clause. Again, the exception is re-raised after the <CODEROUTINE>finally</CODEROUTINE> clause has been executed.</ITEM>
+      <ITEM>If the <CODEROUTINE>finally</CODEROUTINE> clause executes a <CODEROUTINE>break</CODEROUTINE>, <CODEROUTINE>continue</CODEROUTINE>, or <CODEROUTINE>return</CODEROUTINE> statement, exceptions are not re-raised.</ITEM>
+      <ITEM>If the <CODEROUTINE>try</CODEROUTINE> statement reaches a <CODEROUTINE>break</CODEROUTINE>, <CODEROUTINE>continue</CODEROUTINE>, or <CODEROUTINE>return</CODEROUTINE> statement, the <CODEROUTINE>finally</CODEROUTINE> clause will execute just prior to the <CODEROUTINE>break</CODEROUTINE>, <CODEROUTINE>continue</CODEROUTINE>, or <CODEROUTINE>return</CODEROUTINE> statement’s execution.</ITEM>
+      <ITEM>If a <CODEROUTINE>finally</CODEROUTINE> clause includes a <CODEROUTINE>return</CODEROUTINE> statement, the returned value will be the one from the finally clause’s <CODEROUTINE>return</CODEROUTINE> statement, not the value from the try clause’s <CODEROUTINE>return</CODEROUTINE> statement.</ITEM>
+    </BLIST>
   </ITEM>
-  <ITEM><CODEROUTINE>raise</CODEROUTINE> can be used to raise an exception (the argument is optional).
+  <ITEM><CODEROUTINE>raise</CODEROUTINE> can be used to raise an exception, it is followed by a class (it will be implicitly instantiated by calling its constructor with no arguments) or an instance.
     <CODESAMPLE>raise NameError, 'HiThere'</CODESAMPLE>
   </ITEM>
-  <ITEM><CODEROUTINE>raise</CODEROUTINE> with no argument reraise the current exception.
-  </ITEM>
+  <ITEM><CODEROUTINE>raise</CODEROUTINE> with no argument reraises the current exception.</ITEM>
+  <ITEM>Exceptions are automatically chained: if an unhandled exception occurs inside an except section, it will have the exception being handled attached to it and included in the error message</ITEM>
+  <ITEM>Exceptions can be explicitly chained using <CODEROUTINE>from</CODEROUTINE>
+    <CODESAMPLE>try:<BR/>
+    <TAB/>func()<BR/>
+    except ConnectionError as exc:<BR/>
+    <TAB/>raise RuntimeError('Failed to open database') from exc</CODESAMPLE></ITEM>
+  <ITEM>Chaining can be disabled using <CODEROUTINE>from None</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>add_note</CODEROUTINE> can be used to add some text to an exception
+  <CODESAMPLE>try:<BR/>
+    <TAB/>raise TypeError('bad type')<BR/>
+    except Exception as e:<BR/>
+    <TAB/>e.add_note('Add some information')<BR/>
+    <TAB/>e.add_note('Add some more information')<BR/>
+    <TAB/>raise</CODESAMPLE></ITEM>
+  <ITEM>The builtin <CODEROUTINE>ExceptionGroup</CODEROUTINE> wraps a list of exception instances so that they can be raised together. It is an exception itself, so it can be caught like any other exception.
+    <CODESAMPLE>def f():<BR/>
+    <TAB/>excs = [OSError('error 1'), SystemError('error 2')]<BR/>
+    <TAB/>raise ExceptionGroup('there were problems', excs)</CODESAMPLE>
+    or
+    <CODESAMPLE>excs = []<BR/>
+    for test in tests:<BR/>
+    <TAB/>try:<BR/>
+    <TAB/><TAB/>test.run()<BR/>
+    <TAB/>except Exception as e:<BR/>
+    <TAB/><TAB/>excs.append(e)<BR/>
+    if excs:<BR/>
+    <TAB/>raise ExceptionGroup("Test Failures", excs)</CODESAMPLE></ITEM>
+    <ITEM>By using <CODEROUTINE>except*</CODEROUTINE> instead of <CODEROUTINE>except</CODEROUTINE>, we can selectively handle only the exceptions in the group that match a certain type, while letting all other exceptions propagate to other clauses and eventually to be reraised.</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>with</B></U></TITLE>
+  <ITEM>The <CODEROUTINE>with</CODEROUTINE> statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and correctly.
+    <CODESAMPLE>with open("myfile.txt") as f:<BR/>
+    <TAB/>for line in f:<BR/>
+    <TAB/><TAB/>print(line, end="")</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Virtual environments</B></U></TITLE>
   <ITEM>Virtual environments are managed by the <CODEROUTINE>venv</CODEROUTINE> module.
