@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Syntax</B></U></TITLE>
   <ITEM>comment starts with <CODEROUTINE>#</CODEROUTINE> and extends to the end of the line</ITEM>
@@ -369,6 +369,40 @@
   <ITEM>To deactivate the environment:
     <CODESAMPLE>deactivate</CODESAMPLE>
   </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>unittest</B></U> (<X><T>doc</T><A>https://docs.python.org/3/library/unittest.html</A><L>en</L><F>HTML</F></X>)</TITLE>
+  <ITEM>A testcase is created by subclassing <CODEROUTINE>unittest.TestCase</CODEROUTINE>. The three individual tests are defined with methods whose names start with the letters <CODEROUTINE>test</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>assertEqual()</CODEROUTINE>: check for an expected result</ITEM>
+  <ITEM><CODEROUTINE>assertTrue()</CODEROUTINE> or <CODEROUTINE>assertFalse()</CODEROUTINE>: verify a condition</ITEM>
+  <ITEM><CODEROUTINE>assertRaises()</CODEROUTINE>: verify that a specific exception gets raised</ITEM>
+  <ITEM>example
+    <CODESAMPLE>import unittest<BR/>
+    <BR/>
+    class TestStringMethods(unittest.TestCase):<BR/>
+    <BR/>
+    <TAB/>def test_upper(self):<BR/>
+    <TAB/><TAB/>self.assertEqual('foo'.upper(), 'FOO')<BR/>
+    <BR/>
+    <TAB/>def test_isupper(self):<BR/>
+    <TAB/><TAB/>self.assertTrue('FOO'.isupper())<BR/>
+    <TAB/><TAB/>self.assertFalse('Foo'.isupper())<BR/>
+    <BR/>
+    <TAB/>def test_split(self):<BR/>
+    <TAB/><TAB/>s = 'hello world'<BR/>
+    <TAB/><TAB/>self.assertEqual(s.split(), ['hello', 'world'])<BR/>
+    <TAB/><TAB/># check that s.split fails when the separator is not a string<BR/>
+    <TAB/><TAB/>with self.assertRaises(TypeError):<BR/>
+    <TAB/><TAB/><TAB/>s.split(2)<BR/>
+    <BR/>
+    if __name__ == '__main__':<BR/>
+    <TAB/>unittest.main()</CODESAMPLE></ITEM>
+  <ITEM><CODEROUTINE>setUp()</CODEROUTINE> and <CODEROUTINE>tearDown()</CODEROUTINE>: define instructions that will be executed before and after each test method</ITEM>
+  <ITEM>The unittest module can be used from the command line to run tests from modules, classes, or  individual test methods:<BR/>
+    <CODEROUTINE>python -m unittest test_module1 test_module2</CODEROUTINE><BR/>
+    <CODEROUTINE>python -m unittest test_module.TestClass</CODEROUTINE><BR/>
+    <CODEROUTINE>python -m unittest test_module.TestClass.test_method</CODEROUTINE><BR/>
+    Running with a file name is a kludge to be able to use with the shell file name autocompletion, it removes the <CODEROUTINE>.py</CODEROUTINE> extension and replaces <CODEROUTINE>/</CODEROUTINE> by <CODEROUTINE>.</CODEROUTINE>.<BR/>
+    <CODEROUTINE>python -m unittest tests/test_something.py</CODEROUTINE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>pip</B></U></TITLE>
   <ITEM>install packages
