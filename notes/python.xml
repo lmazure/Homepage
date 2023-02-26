@@ -264,19 +264,24 @@
     <TAB/>return lambda x,incr=n:x+incr</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Modules</B></U></TITLE>
-  <ITEM>a module is a file containing Python definitions and statements<BR/>
-    the statements are executed the first time the module is imported</ITEM>
-  <ITEM>syntax to import a module
-    <CODESAMPLE>&gt;&gt;&gt; import mymod<BR/>
+  <ITEM>A module is a file containing Python definitions and statements.<BR/>
+    The statements are executed the first time the module is imported.</ITEM>
+  <ITEM>Syntax to import a module
+    <CODESAMPLE>import mymodule<BR/>
     mymod.myfunc(2)</CODESAMPLE></ITEM>
-  <ITEM>symbols of the imported module can be declared in the importing module's symbol table<BR/>
+  <ITEM>If the module name is followed by <CODEROUTINE>as</CODEROUTINE>, then the name following <CODEROUTINE>as</CODEROUTINE> is bound directly to the imported module.
+    <CODESAMPLE>import mymodule as mydmod</CODESAMPLE></ITEM>
+  <ITEM>Symbols of the imported module can be declared in the importing module's symbol table<BR/>
     <CODEROUTINE>from mymod import myfunc, myfunc2</CODEROUTINE><BR/>
-    all symbols (except those beginning by an underscore) can be declared in the importing module's symbol table<BR/>
+    All symbols (except those beginning by an underscore) can be declared in the importing module's symbol table<BR/>
     <CODEROUTINE>from mymod import *</CODEROUTINE></ITEM>
-  <ITEM>reload a module
+  <ITEM>Reload a module
     <CODEROUTINE>reload(mymod)</CODEROUTINE></ITEM>
-  <ITEM>inside a module, its name is defined in <CODEROUTINE>__name__</CODEROUTINE></ITEM>
+  <ITEM>Inside a module, its name is defined in <CODEROUTINE>__name__</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>sys.builtin_module_names</CODEROUTINE> lists the modules compiled in the interpreter</ITEM>
+  <ITEM>When you run a module with
+    <CODESAMPLE>python mymodule.py &lt;arguments&gt;</CODESAMPLE>
+    the code in the module will be executed, just as if you imported it, but with <CODEROUTINE>__name__</CODEROUTINE> set to <CODEROUTINE>__main__</CODEROUTINE>. </ITEM>
   <ITEM><BLIST><TITLE>Module path</TITLE>
     <ITEM>modules are looked for in the directories listed by <CODEROUTINE>sys.path</CODEROUTINE> (which is initially defined by the environment variable <CODEROUTINE>$PYTHONPATH</CODEROUTINE>)</ITEM>
     <ITEM>append a new directory to the path: <CODEROUTINE>sys.path.append('C:\\windows\desktop')</CODEROUTINE></ITEM>
@@ -286,9 +291,9 @@
   <ITEM><CODEROUTINE>__builtin__</CODEROUTINE> is the standard module</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Packages</B></U></TITLE>
-  <ITEM>packages are structured as directories containing the file <CODEROUTINE>__init__.py</CODEROUTINE> (possibly empty) and other files being modules</ITEM>
-  <ITEM>a package can also contain subdirectories (i.e. subpackages)</ITEM>
-  <ITEM><CODEROUTINE>__init__.py</CODEROUTINE> can define <CODEROUTINE>__all__.py</CODEROUTINE> which is the list of the modules which should be imported when the syntax <CODEROUTINE>from mypackageimport *</CODEROUTINE> is used.</ITEM>
+  <ITEM>Packages are structured as directories containing the file <CODEROUTINE>__init__.py</CODEROUTINE> (possibly empty) and other files being modules</ITEM>
+  <ITEM>A package can also contain subdirectories (i.e. subpackages)</ITEM>
+  <ITEM><CODEROUTINE>__init__.py</CODEROUTINE> can define <CODEROUTINE>__all__</CODEROUTINE> variable which is the list of the modules which should be imported when the syntax <CODEROUTINE>from mypackage import *</CODEROUTINE> is used.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Classes</B></U></TITLE>
   <ITEM>the definition of a class starts with the declaration <CODEROUTINE>class:</CODEROUTINE></ITEM>
@@ -308,7 +313,7 @@
   <ITEM><CODEROUTINE>BaseException</CODEROUTINE> is the common base class of all exceptions.<BR/>
     One of its subclasses, <CODEROUTINE>Exception</CODEROUTINE>, is the base class of all the non-fatal exceptions.<BR/>
     Exceptions which are not subclasses of <CODEROUTINE>Exception</CODEROUTINE> are not typically handled, because they are used to indicate that the program should terminate. They include <CODEROUTINE>SystemExit</CODEROUTINE> which is raised by <CODEROUTINE>sys.exit()</CODEROUTINE> and <CODEROUTINE>KeyboardInterrupt</CODEROUTINE> which is raised when a user wishes to interrupt the program.</ITEM>
-  <ITEM>Use <CODEROUTINE>try</CODEROUTINE> to declare the temptative code block and <CODEROUTINE>except</CODEROUTINE> to catch the exception.
+  <ITEM>Use <CODEROUTINE>try</CODEROUTINE> to declare the tentative code block and <CODEROUTINE>except</CODEROUTINE> to catch the exception.
   <CODESAMPLE>try:<BR/>
     <TAB/>…<BR/>
     except ValueError:<BR/>
@@ -351,7 +356,7 @@
     <TAB/>…<BR/>
     finally:<BR/>
     <TAB/>…</CODESAMPLE>
-     <BLIST> 
+    <BLIST>
       <ITEM>If an exception occurs during execution of the <CODEROUTINE>try</CODEROUTINE> clause, the exception may be handled by an <CODEROUTINE>except</CODEROUTINE> clause. If the exception is not handled by an <CODEROUTINE>except</CODEROUTINE> clause, the exception is re-raised after the <CODEROUTINE>finally</CODEROUTINE> clause has been executed.</ITEM>
       <ITEM>An exception could occur during execution of an <CODEROUTINE>except</CODEROUTINE> or <CODEROUTINE>else</CODEROUTINE> clause. Again, the exception is re-raised after the <CODEROUTINE>finally</CODEROUTINE> clause has been executed.</ITEM>
       <ITEM>If the <CODEROUTINE>finally</CODEROUTINE> clause executes a <CODEROUTINE>break</CODEROUTINE>, <CODEROUTINE>continue</CODEROUTINE>, or <CODEROUTINE>return</CODEROUTINE> statement, exceptions are not re-raised.</ITEM>
