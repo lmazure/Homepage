@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Syntax</B></U></TITLE>
   <ITEM>comment starts with <CODEROUTINE>#</CODEROUTINE> and extends to the end of the line</ITEM>
@@ -209,7 +209,7 @@
     the <CODEROUTINE>else</CODEROUTINE> clause is not executed</ITEM>
   <ITEM><CODEROUTINE>continue</CODEROUTINE> continues with the next iteration of the loop</ITEM>
   <ITEM><CODEROUTINE>pass</CODEROUTINE> is a noop statement</ITEM>
-  <ITEM>matching constants (<CODEROUTINE>_</CODEROUTINE> always macthes
+  <ITEM>matching constants (<CODEROUTINE>_</CODEROUTINE>) always matches
   <CODESAMPLE>match status:<BR/>
     <TAB/>case 400:<BR/>
     <TAB/><TAB/>return "Bad request"<BR/>
@@ -256,6 +256,11 @@
     <CODESAMPLE>def quux(*a,**b):<BR/>
     <TAB/>for arg in a: print arg<BR/>
     <TAB/>for kw in b.keys(): print(kw,':',b[kw])</CODESAMPLE></ITEM>
+  <ITEM>A function can return a function
+    <CODESAMPLE>def curry(func, value):<BR/>
+    <TAB/>def f(x):<BR/>
+    <TAB/><TAB/>return func(x, value)<BR/>
+    <TAB/>return f</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>lambda</CODEROUTINE> can be used to create anonymous functions<BR/>
     they are restricted to a single expression
     <CODESAMPLE>lambda a,b:a+b</CODESAMPLE>

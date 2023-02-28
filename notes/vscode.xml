@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -52,6 +52,11 @@
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="ù"/><BR/>
       <CODEROUTINE>View: Toggle Terminal</CODEROUTINE></TERM>
     <DESC>Show/hide terminal</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="M"/><BR/>
+      <CODEROUTINE>Toggle Tab Key Moves Focus</CODEROUTINE></TERM>
+    <DESC>Set/unset mode for changing focus with tab key</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="S"/></TERM>
@@ -279,6 +284,11 @@ Folding
 Selection
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="L"/><BR/>
+      <CODEROUTINE>Expand Line Selection</CODEROUTINE></TERM>
+    <DESC>Add the next line to the selection</DESC>
+  </ROW>
+  <ROW>
     <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Right"/><BR/>
       <CODEROUTINE>Expand Selection</CODEROUTINE></TERM>
     <DESC>Expand Selection (e.g. select the containing node in XML)</DESC>
@@ -389,6 +399,11 @@ Multi-selection
     <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="F"/><BR/>
       <CODEROUTINE>Format Document</CODEROUTINE></TERM>
     <DESC>Reformat the whole document</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="I"/><BR/>
+      <CODEROUTINE>Trigger Suggest</CODEROUTINE></TERM>
+    <DESC>Display the suggestion popup</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="F8"/><BR/>
