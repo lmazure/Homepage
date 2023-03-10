@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>notes/java.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>8</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
   <BLIST><TITLE><U><B>Visibility</B></U></TITLE>
     <ITEM>
@@ -393,6 +393,22 @@
   <ROW>
     <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; flatMap​(Function&lt;? super T,​? extends Optional&lt;? extends U&gt;&gt; mapper)</CODEROUTINE></TERM>
     <DESC>If a value is present, returns the result of applying the given <CODEROUTINE>Optional</CODEROUTINE>-bearing mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<U><B>Stream</B></U>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>Optional&lt;T&gt; reduce(BinaryOperator&lt;T&gt; accumulator)</CODEROUTINE></TERM>
+    <DESC>Performs a reduction on the elements of this stream, using the provided identity value and an associative accumulation function, and returns the reduced value.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>T reduce(T identity, BinaryOperator&lt;T&gt; accumulator)</CODEROUTINE></TERM>
+    <DESC>Performs a reduction on the elements and returns an <CODEROUTINE>Optional</CODEROUTINE> describing the reduced value. If there is no value, an empty <CODEROUTINE>Optional</CODEROUTINE> is returned.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>&lt;U&gt; U reduce(U identity, BiFunction&lt;U,? super T,U&gt; accumulator, BinaryOperator&lt;U&gt; combiner)</CODEROUTINE></TERM>
+    <DESC>Performs a reduction on the elements of this stream, using the provided identity, accumulation and combining functions.<BR/>
+      The combiner is used to combine two partial reductions from two different threads; it must respect <CODEROUTINE>combiner.apply(u, accumulator.apply(identity, t)) == accumulator.apply(u, t)</CODEROUTINE>.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BLIST><TITLE><U><B>JUnit</B></U><BR/></TITLE>
