@@ -744,6 +744,10 @@
     <DESC>Create a merge that keeps the current branch head (i.e. it ignores all the changes done on the other branches).</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git merge --allow-unrelated-histories</CODEROUTINE></TERM>
+    <DESC>Allow merging histories of two projects that started their lives independently.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git cherry-pick &lt;commit&gt;</CODEROUTINE></TERM>
     <DESC>Cherry pick a commit and commit it.</DESC>
   </ROW>

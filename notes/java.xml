@@ -332,11 +332,11 @@
 <U><B>Optional</B></U>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; of​(T value)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; of(T value)</CODEROUTINE></TERM>
     <DESC>Returns an <CODEROUTINE>Optional</CODEROUTINE> describing the given non-null value.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; ofNullable​(T value)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; ofNullable(T value)</CODEROUTINE></TERM>
     <DESC>Returns an <CODEROUTINE>Optional</CODEROUTINE> describing the given value, if non-null, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
@@ -356,15 +356,15 @@
     <DESC>If a value is present, returns the value, otherwise throws <CODEROUTINE>NoSuchElementException</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>T orElse​(T other)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>T orElse(T other)</CODEROUTINE></TERM>
     <DESC>If a value is present, returns the value, otherwise returns other.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>T orElseGet​(Supplier&lt;? extends T&gt; supplier)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>T orElseGet(Supplier&lt;? extends T&gt; supplier)</CODEROUTINE></TERM>
     <DESC>If a value is present, returns the value, otherwise returns the result produced by the supplying function.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>Optional&lt;T&gt; or​(Supplier&lt;? extends Optional&lt;? extends T&gt;&gt; supplier)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>Optional&lt;T&gt; or(Supplier&lt;? extends Optional&lt;? extends T&gt;&gt; supplier)</CODEROUTINE></TERM>
     <DESC>If a value is present, returns an Optional describing the value, otherwise returns an Optional produced by the supplying function.</DESC>
   </ROW>
   <ROW>
@@ -372,26 +372,26 @@
     <DESC>If a value is present, returns the value, otherwise throws <CODEROUTINE>NoSuchElementException</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>&lt;X extends Throwable&gt; T orElseThrow​(Supplier&lt;? extends X&gt; exceptionSupplier)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>&lt;X extends Throwable&gt; T orElseThrow(Supplier&lt;? extends X&gt; exceptionSupplier)</CODEROUTINE></TERM>
     <DESC>If a value is present, returns the value, otherwise throws an exception produced by the exception supplying function.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>void ifPresentOrElse​(Consumer&lt;? super T&gt; action, Runnable emptyAction)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>void ifPresentOrElse(Consumer&lt;? super T&gt; action, Runnable emptyAction)</CODEROUTINE></TERM>
     <DESC>If a value is present, performs the given action with the value, otherwise performs the given empty-based action.<BR/>
     <CODESAMPLE>employee.ifPresentOrElse(<BR/>
       <TAB/>emp -&gt; log.debug("Found Employee: {}",emp.getName()),<BR/>
       <TAB/>() -&gt; log.error("Employee not found"));</CODESAMPLE></DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>Optional&lt;T&gt; filter​(Predicate&lt;? super T&gt; predicate)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>Optional&lt;T&gt; filter(Predicate&lt;? super T&gt; predicate)</CODEROUTINE></TERM>
     <DESC>If a value is present, and the value matches the given predicate, returns an <CODEROUTINE>Optional</CODEROUTINE> describing the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; map​(Function&lt;? super T,​? extends U&gt; mapper)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; map(Function&lt;? super T,? extends U&gt; mapper)</CODEROUTINE></TERM>
     <DESC>If a value is present, returns an Optional describing (as if by <CODEROUTINE>ofNullable(T)</CODEROUTINE>) the result of applying the given mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; flatMap​(Function&lt;? super T,​? extends Optional&lt;? extends U&gt;&gt; mapper)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; flatMap(Function&lt;? super T,? extends Optional&lt;? extends U&gt;&gt; mapper)</CODEROUTINE></TERM>
     <DESC>If a value is present, returns the result of applying the given <CODEROUTINE>Optional</CODEROUTINE>-bearing mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
   </ROW>
 </DEFINITIONTABLE>
