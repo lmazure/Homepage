@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -126,6 +126,7 @@
       <ITEM><ARTICLE><X><T>Git security vulnerabilities announced</T><ST>Git users are encouraged to upgrade to the latest version, especially if they use `git archive`, work in untrusted repositories, or use Git GUI on Windows.</ST><A>https://github.blog/2023-01-17-git-security-vulnerabilities-announced-2/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE><COMMENT>The description of three CVEs.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE predecessor="https://github.blog/2023-01-17-git-security-vulnerabilities-announced-2/"><X><T>Git security audit: Inside the hunt for - and discovery of - CVEs</T><A>https://about.gitlab.com/blog/2023/01/24/git-security-audit/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Joern</FIRSTNAME><LASTNAME>Schneeweisz</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>Some little information about the finding of one of the CVEs.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Git security vulnerabilities announced</T><ST>Git users are encouraged to upgrade to the latest version, especially if they use `git apply` or `git clone` against untrusted patches or repositories.</ST><A>https://github.blog/2023-02-14-git-security-vulnerabilities-announced-3/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>Two new CVEs.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Configuring git Credentials</T><A>https://www.baeldung.com/ops/git-configure-credentials</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Pratt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE><COMMENT>The basics of Git credentials.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mercurial</TITLE>
       <ITEM><ARTICLE><X><T>Google I/O 2009 - Mercurial on BigTable</T><A>https://www.youtube.com/watch?v=ri796Hx8las</A><L>en</L><F>MP4</F><DURATION><MINUTE>47</MINUTE><SECOND>18</SECOND></DURATION><DATE><YEAR>2009</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE></X><AUTHOR><FIRSTNAME>Jacob</FIRSTNAME><LASTNAME>Lee</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>A description on the Mercurial implementation done on top of Google’s Bigtable.</COMMENT></ARTICLE></ITEM>
