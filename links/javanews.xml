@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java news</TITLE>
 <PATH>links/javanews.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><BLIST>
@@ -103,6 +103,7 @@
       <ITEM><ARTICLE><X><T>Java Value Objects in Action with Valhalla - JEP Café #15</T><A>https://www.youtube.com/watch?v=ViZkEgshiXI</A><L>en</L><F>MP4</F><DURATION><MINUTE>19</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR><FIRSTNAME>José</FIRSTNAME><LASTNAME>Paumard</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE><COMMENT>A clear overview of value based classes and some information about primitive classes.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Java 20 - From ThreadLocal to ScopedValue with Loom Full Tutorial</T><A>https://www.youtube.com/watch?v=fjvGzBFmyhM</A><L>en</L><F>MP4</F><DURATION><MINUTE>18</MINUTE><SECOND>17</SECOND></DURATION></X><AUTHOR><GIVENNAME>Java</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>A description of the old <CODEROUTINE>ThreadLocal</CODEROUTINE> and the new <CODEROUTINE>ScopeValue</CODEROUTINE>, and why the second one is better.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="1"><T>Write Efficient Bug-free and Simple Comparators in Java - JEP Café episode 17</T><A>https://www.youtube.com/watch?v=lFbBI85oTnY</A><L>en</L><F>MP4</F><DURATION><MINUTE>19</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR><FIRSTNAME>José</FIRSTNAME><LASTNAME>Paumard</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE><COMMENT>Use <CODEROUTINE>Comparator</CODEROUTINE>’s methods to implement comparators, use methods of the wrapper classes to compare numbers, and do not use mutable fields in <CODEROUTINE>equals</CODEROUTINE> or in comparators.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Learn how to write fast Java code with the Vector API - JEP Café episode 18</T><A>https://www.youtube.com/watch?v=42My8Yfzwbg</A><L>en</L><F>MP4</F><DURATION><MINUTE>27</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR><FIRSTNAME>José</FIRSTNAME><LASTNAME>Paumard</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE><COMMENT>The basics of SIMD and an introduction to the Vector API.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
