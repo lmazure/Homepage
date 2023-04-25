@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -487,6 +487,36 @@
   <ROW>
     <TERM><CODEROUTINE>git worktree remove &lt;worktree&gt;</CODEROUTINE></TERM>
     <DESC>Remove a worktree. The main working tree cannot be removed.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git clean</CODEROUTINE></TERM>
+    <DESC>Remove untracked files from the working tree</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clean -i</CODEROUTINE><BR/>
+      <CODEROUTINE>git clean --interactive</CODEROUTINE></TERM>
+    <DESC>Show what would be done and clean files interactively.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clean -f</CODEROUTINE><BR/>
+      <CODEROUTINE>git clean --force</CODEROUTINE></TERM>
+    <DESC>Clean file with no interaction.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clean -e &lt;pattern&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git clean --exclude=&lt;pattern&gt;</CODEROUTINE></TERM>
+    <DESC>Use the given exclude pattern in addition to the standard ignore rules.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clean -x</CODEROUTINE></TERM>
+    <DESC>Don’t use the standard ignore rules, but still use the ignore rules given with <CODEROUTINE>-e</CODEROUTINE> options from the command line. This allows removing all untracked files, including build products</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git clean -X</CODEROUTINE></TERM>
+    <DESC>Remove only files ignored by Git. This may be useful to rebuild everything from scratch, but keep manually created files.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
