@@ -174,7 +174,78 @@
           <TAB/><TAB/>- mvn $MAVEN_CLI_OPTS -Dmaven.test.skip compile assembly:single deploy</CODESAMPLE></ITEM>
     </BLIST>
   </ITEM>
+  <ITEM><BLIST><TITLE>Python scripts</TITLE>
+    <ITEM>base methods
+      <CODESAMPLE>import requests<BR/>
+        import urllib.parse<BR/>
+        <BR/>
+        def makeHeader(token):<BR/>
+        <TAB/>return {"Authorization": "Bearer " + args.token}<BR/>
+        <BR/>
+        def run_post_query(token, query):<BR/>
+        <TAB/>request = requests.post(query, headers=makeHeader(token))<BR/>
+        <TAB/>if request.status_code == 201:<BR/>
+        <TAB/><TAB/>return<BR/>
+        <TAB/>raise Exception("POST query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))<BR/>
+        <BR/>
+        def run_get_query(token, query):<BR/>
+        <TAB/>request = requests.get(query, headers=makeHeader(token))<BR/>
+        <TAB/>if request.status_code == 200:<BR/>
+        <TAB/><TAB/>return request.json()<BR/>
+        <TAB/>raise Exception("GET query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))<BR/>
+        <BR/>
+        def run_put_query(token, query, data = None):<BR/>
+        <TAB/>if data:<BR/>
+        <TAB/><TAB/>request = requests.put(query, headers=makeHeader(token), data=data)<BR/>
+        <TAB/>else:<BR/>
+        <TAB/><TAB/>request = requests.put(query, headers=makeHeader(token))<BR/>
+        <TAB/>if request.status_code == 200:<BR/>
+        <TAB/><TAB/>return<BR/>
+        <TAB/>raise Exception("PUT query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))<BR/>
+        <BR/>
+        def run_delete_query(token, query):<BR/>
+        <TAB/>request = requests.delete(query, headers=makeHeader(token))<BR/>
+        <TAB/>if request.status_code in (200, 204):<BR/>
+        <TAB/><TAB/>return<BR/>
+        <TAB/>raise Exception("DELEYE query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))<BR/>
+        <BR/>
+        def run_graphql_query(token, query):<BR/>
+        <TAB/>request = requests.post("https://gitlab.com/api/graphql", json={'query': query}, headers = makeHeader(token))<BR/>
+        <TAB/>if request.status_code == 200:<BR/>
+        <TAB/><TAB/>return request.json()<BR/>
+        <TAB/>raise Exception("GraphQL query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))</CODESAMPLE>
+    </ITEM>
+    <ITEM>create a group label
+      <CODESAMPLE>def create_group_label(token, groupPath, labelName, labelDescription, labelColor, labelPriority):<BR/>
+        <TAB/>params = { "name": labelName, "description": labelDescription, "color": labelColor, "priority": labelPriority }<BR/>
+        <TAB/>query = f"https://gitlab.com/api/v4/groups/{urllib.parse.quote(groupPath, safe='')}/labels?{urllib.parse.urlencode(params)}"<BR/>
+        <TAB/>run_post_query(token, query)<BR/>
+        <TAB/>print(f"label '{labelName}' added on group {groupPath}", flush=True)</CODESAMPLE>
+    </ITEM>
+    <ITEM>get the issues of a group having a label but not another one
+      <CODESAMPLE>def get_group_issues_with_label(token, groupPath, havingOneOfTheLabelName, notHavingTheLabelName):<BR/>
+        <TAB/>issues = []<BR/>
+        <TAB/>page = 1<BR/>
+        <TAB/>while True:<BR/>
+        <TAB/><TAB/>params = { "labels": havingOneOfTheLabelName, "not[labels]": notHavingTheLabelName, "scope": "all", "page": page } <BR/>
+        <TAB/><TAB/>query = f"https://gitlab.com/api/v4/groups/{urllib.parse.quote(groupPath, safe='')}/issues?{urllib.parse.urlencode(params)}"<BR/>
+        <TAB/><TAB/>result = run_get_query(token, query)<BR/>
+        <TAB/><TAB/>if len(result) == 0:<BR/>
+        <TAB/><TAB/><TAB/>return issues<BR/>
+        <TAB/><TAB/>for issue in result:<BR/>
+        <TAB/><TAB/><TAB/>issues.append({ "projectId": issue["project_id"], "issueIid": issue["iid"], "issueId": issue["id"]})<BR/>
+        <TAB/><TAB/>page += 1<BR/>
+        </CODESAMPLE>
+    </ITEM>
+    <ITEM>add a label to an issue
+      <CODESAMPLE>def add_label_to_issue(token, projectId, issueIid, labelName):<BR/>
+        <TAB/>params = { "add_labels": labelName }<BR/>
+        <TAB/>query = f"https://gitlab.com/api/v4/projects/{projectId}/issues/{issueIid}?{urllib.parse.urlencode(params)}"<BR/>
+        <TAB/>run_put_query(token, query)<BR/>
+        <TAB/>print(f"label '{labelName}' added to issue {issueIid} of project {projectId}", flush=True)</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
 </BLIST>
 </CONTENT>
-<X><T>links</T><A>../links/cloudforges.xml#gitlab</A><L>en</L><F>HTML</F></X>
+<X><T>links</T><A>../links/cloudforges.html#gitlab</A><L>en</L><F>HTML</F></X>
 </PAGE>
