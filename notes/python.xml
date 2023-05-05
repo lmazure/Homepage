@@ -5,6 +5,11 @@
 <PATH>notes/python.xml</PATH>
 <DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
+<BLIST><TITLE><U><B>Command line</B></U></TITLE>
+  <ITEM>to avoid fucking problems when printing non-BMP characters to the console
+    <CODESAMPLE><PROMPT/>python -X utf8 foo.py</CODESAMPLE>
+</ITEM>
+</BLIST>
 <BLIST><TITLE><U><B>Syntax</B></U></TITLE>
   <ITEM>comment starts with <CODEROUTINE>#</CODEROUTINE> and extends to the end of the line</ITEM>
   <ITEM>multiple assignment<BR/>
@@ -455,44 +460,44 @@
     <CODEROUTINE>python -m unittest test_module.TestClass</CODEROUTINE><BR/>
     <CODEROUTINE>python -m unittest test_module.TestClass.test_method</CODEROUTINE><BR/>
     Running with a file name is a kludge to be able to use with the shell file name autocompletion, it removes the <CODEROUTINE>.py</CODEROUTINE> extension and replaces <CODEROUTINE>/</CODEROUTINE> by <CODEROUTINE>.</CODEROUTINE>.<BR/>
-    <CODEROUTINE>python -m unittest tests/test_something.py</CODEROUTINE></ITEM>
+    <CODESAMPLE><PROMPT/>python -m unittest tests/test_something.py</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>pip</B></U></TITLE>
   <ITEM>install packages
-    <CODESAMPLE>python -m pip install &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>python -m pip install &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
     or
-    <CODESAMPLE>pip install &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip install &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
   </ITEM>
   <ITEM>install a specific version
-    <CODESAMPLE>pip install requests==2.6.0</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip install requests==2.6.0</CODESAMPLE>
   </ITEM>
   <ITEM>install the packages defined in a <CODEFILENAME>requirements.txt</CODEFILENAME> file
-    <CODESAMPLE>pip install -r requirements.txt</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip install -r requirements.txt</CODESAMPLE>
   </ITEM>
   <ITEM>upgrade a package
-    <CODESAMPLE>pip install --upgrade &lt;package&gt;</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip install --upgrade &lt;package&gt;</CODESAMPLE>
   </ITEM>
   <ITEM>install a package from the default branch of a Git repository
-    <CODESAMPLE>pip install git+https://gitlab.com/opentestfactory/agent</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip install git+https://gitlab.com/opentestfactory/agent</CODESAMPLE>
     The version (commit ID) is available in <CODEFILENAME>/c/Users/lmazure/AppData/Local/Programs/Python/Python39/lib/site-packages/opentf_agent-*.dist-info/direct_url.json</CODEFILENAME>.<BR/>
     See <X><T>https://packaging.python.org/en/latest/specifications/direct-url/</T><A>https://packaging.python.org/en/latest/specifications/direct-url/</A><L>en</L><F>HTML</F></X>.
   </ITEM>
   <ITEM>install a package from a given branch of a Git repository
-    <CODESAMPLE>pip install git+https://gitlab.com/opentestfactory/agent@rel-1.3.1</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip install git+https://gitlab.com/opentestfactory/agent@rel-1.3.1</CODESAMPLE>
   </ITEM>
   <ITEM>list the installed packages
-    <CODESAMPLE>pip list</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip list</CODESAMPLE>
   </ITEM>
   <ITEM>list the installed packages in the format expected by <CODEROUTINE>pip install</CODEROUTINE>
-    <CODESAMPLE>pip freeze &gt; requirements.txt</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip freeze &gt; requirements.txt</CODESAMPLE>
   </ITEM>
   <ITEM>list the out-of-date installed packages
-    <CODESAMPLE>pip list -o</CODESAMPLE>
-    <CODESAMPLE>pip list --outdated</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip list -o</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip list --outdated</CODESAMPLE>
   </ITEM>
   <ITEM>do not list globally-installed packages
-    <CODESAMPLE>pip list -l</CODESAMPLE>
-    <CODESAMPLE>pip list --local</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip list -l</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip list --local</CODESAMPLE>
   </ITEM>
 </BLIST></CONTENT>
 <X><T>links</T><A>../links/python.html</A><L>en</L><F>HTML</F></X>
