@@ -113,6 +113,17 @@
   <ITEM>test if an element is in a list
     <CODESAMPLE>item in List</CODESAMPLE>
   </ITEM>
+  <ITEM>test if a list is empty
+    <CODESAMPLE>if my_list:<BR/>
+      <TAB/>print("list is not empty")<BR/>
+      else:<BR/>
+      <TAB/>print("list is empty")</CODESAMPLE>
+  </ITEM>
+  <ITEM>join the members of a list (as a string)
+    <CODESAMPLE>vowels = ["a", "e", "i", "o", "u"]<BR/>
+      vowelsCSV = ",".join(vowels)<BR/>
+      print("Vowels are = ", vowelsCSV)</CODESAMPLE>
+  </ITEM>
   <ITEM><BLIST><TITLE>Methods</TITLE>
     <ITEM><CODEROUTINE>insert(pos,item)</CODEROUTINE>: insert an item at a given position</ITEM>
     <ITEM><CODEROUTINE>append(elem)</CODEROUTINE>: append an item at the list end</ITEM>

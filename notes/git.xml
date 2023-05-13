@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -110,6 +110,8 @@
   <ITEM>On Windows, the Windows Credential Manager (Gestionnaire d'identification) is used by default (see <CODEROUTINE>git config --system --get credential.helper</CODEROUTINE>).</ITEM>
   <ITEM>To be able to use Git in a directory owned by someone else (this was implemented to fix <X><T>CVE-2022-24765</T><A>https://www.cve.org/CVERecord?id=CVE-2022-24765</A><L>en</L><F>HTML</F></X>)
     <CODESAMPLE>git config --global --add safe.directory H:/the/directory</CODESAMPLE>
+    To list all the directories declared as safe
+    <CODESAMPLE>git config --get-all --global safe.directory</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BR/>
@@ -209,6 +211,10 @@
   <ROW>
     <TERM><CODEROUTINE>git diff --cached</CODEROUTINE></TERM>
     <DESC>Display the differences between the index and the local repository.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff origin/main</CODEROUTINE></TERM>
+    <DESC>Display the differences between the work space and the <CODEROUTINE>main</CODEROUTINE> branch on the upstream repository.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff --name-only</CODEROUTINE></TERM>

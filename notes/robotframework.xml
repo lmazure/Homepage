@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Robot Framework</TITLE>
 <PATH>notes/robotframework.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 Install Robot Framework
 <CODESAMPLE>install robotframework</CODESAMPLE>
@@ -104,6 +104,12 @@ Install Robot Framework
   <ITEM>to change the Browser language<BR/>
     <CODEROUTINE>New Context<TAB/>locale=en-US</CODEROUTINE> does not work<BR/>
     <CODEROUTINE>New Browser<TAB/>chromium<TAB/>headless=false<TAB/>args=['--lang=en']</CODEROUTINE> works for Chrome<BR/></ITEM>
+</BLIST>
+<BLIST><TITLE><B><U>Documentation</U></B></TITLE>
+  <ITEM>create the HTML doc of a resource/robot file<BR/>
+    <CODESAMPLE>python -m robot.libdoc -f html ./resources/page_objects/site/generic_page_object.resource report.html</CODESAMPLE>
+    or
+    <CODESAMPLE>libdoc -f html ./resources/page_objects/site/generic_page_object.resource report.html</CODESAMPLE></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/autotest.html#robotframework</A><L>en</L><F>HTML</F></X>
