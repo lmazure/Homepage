@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -128,6 +128,7 @@
       <ITEM><ARTICLE><X><T>Git security vulnerabilities announced</T><ST>Git users are encouraged to upgrade to the latest version, especially if they use `git apply` or `git clone` against untrusted patches or repositories.</ST><A>https://github.blog/2023-02-14-git-security-vulnerabilities-announced-3/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>Two new CVEs.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Configuring git Credentials</T><A>https://www.baeldung.com/ops/git-configure-credentials</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Pratt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE><COMMENT>The basics of Git credentials.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Highlights from Git 2.40</T><ST>The first Git release of the year is here! Take a look at some of our highlights on what's new in Git 2.40.</ST><A>https://github.blog/2023-03-13-highlights-from-git-2-40/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE><COMMENT><CODEMENU>git jump</CODEMENU> now supports Emacs, <CODEROUTINE>git cat-file</CODEROUTINE> has been fixed to compute correct sizes when used with a <CODEROUTINE>mailmap</CODEROUTINE>, <CODEROUTINE>git check-attr</CODEROUTINE> can be used on a bare repository…</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality="1"><T>Savez-vous vraiment comment fonctionne git ? (Sébastien LECACHEUR)</T><A>https://www.youtube.com/watch?v=uA2WZCQP4EI</A><L>fr</L><F>MP4</F><DURATION><MINUTE>47</MINUTE><SECOND>54</SECOND></DURATION><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE></X><AUTHOR><FIRSTNAME>Sébastien</FIRSTNAME><LASTNAME>Lecacheur</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE><COMMENT>A good presentation of Git internals.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Git security vulnerabilities announced</T><ST>A new set of Git releases were published to address a variety of security vulnerabilities. All users are encouraged to upgrade. Take a look at GitHub’s view of the latest round of releases.</ST><A>https://github.blog/2023-04-25-git-security-vulnerabilities-announced-4/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE><COMMENT>Five new CVE, three being specific to Windows.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mercurial</TITLE>

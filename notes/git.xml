@@ -25,6 +25,11 @@
     <DESC>Create an empty local repository.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git init -q</CODEROUTINE><BR/>
+      <CODEROUTINE>git init --quiet</CODEROUTINE></TERM>
+    <DESC>Only print error and warning messages; all other output will be suppressed.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODESAMPLE>mkdir projet.git<BR/>
       cd projet.git<BR/>
       git --bare init</CODESAMPLE></TERM>
@@ -732,16 +737,33 @@
     <DESC>Copy the current branch, with its config and reflog, even if a branch &lt;name&gt; already exists.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git checkout &lt;branch&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git switch &lt;branch&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git checkout &lt;branch&gt;</CODEROUTINE></TERM>
     <DESC>Switch to another branch.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git checkout -b &lt;branch&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git switch -c &lt;branch&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git switch --create &lt;branch&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git checkout -b &lt;branch&gt;</CODEROUTINE></TERM>
     <DESC>Create a new branch (while leaving the working tree unchanged) and check it out.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git checkout -b &lt;branch&gt; &lt;stating point&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git switch -C &lt;branch&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git switch --force-create &lt;branch&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git checkout -B &lt;branch&gt;</CODEROUTINE></TERM>
+    <DESC>The same except that if &lt;branch&gt; already exists, it is reset to the current head.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git switch -c &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git switch --create &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git checkout -b &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE></TERM>
     <DESC>Create a new branch from a starting point and check it out.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git switch -C &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git switch --force-create &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git checkout -B &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE></TERM>
+    <DESC>The same except that if &lt;branch&gt; already exists, it is reset to &lt;starting point&gt;.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git branch -d &lt;branch&gt;</CODEROUTINE><BR/>
@@ -873,12 +895,38 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE>git hash-object &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Compute the file hash.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git hash-object --stdin</CODEROUTINE></TERM>
+    <DESC>Read data to hash from standard input.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git hash-object -w</CODEROUTINE></TERM>
+    <DESC>Actually write the object into the object database.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git hash-object -t &lt;type&gt;</CODEROUTINE></TERM>
+    <DESC>Specify the type (default: "blob").</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
     <TERM><CODEROUTINE>git cat-file -t 47281c0d4fae6480a95aced8887244544feba9c5</CODEROUTINE></TERM>
     <DESC>Display the type of a repository object.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git cat-file -p 47281c0d4fae6480a95aced8887244544feba9c5</CODEROUTINE></TERM>
     <DESC>Display the content (pretty printed) of a repository object.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git count-objects</CODEROUTINE></TERM>
+    <DESC>Display the number of unpacked object files and disk space consumed by them.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
