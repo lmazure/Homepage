@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>OCaml</TITLE>
+<PATH>notes/ocaml.xml</PATH>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE>
+<CONTENT>
+<BLIST>
+  <ITEM>define and initialise a variable
+    <CODESAMPLE><PROMPT/>let x = 50;;</CODESAMPLE>
+  </ITEM>
+  <ITEM>define a function
+    <CODESAMPLE><PROMPT/>let max a b = if a &lt; b then b else a;;</CODESAMPLE>
+  </ITEM>
+  <ITEM>define a recursive function
+    <CODESAMPLE><PROMPT/>let rec range a b = if a &gt; b then [] else a :: range (a + 1) b;;</CODESAMPLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Data types</TITLE>
+    <ITEM><BLIST><TITLE>The Basic types are</TITLE>
+      <ITEM>int: 63-bit signed int on 64-bit processors, or 31-bit signed int on 32-bit processors</ITEM>
+      <ITEM>float: IEEE double-precision floating point</ITEM>
+      <ITEM>bool: Boolean, written either <CODEROUTINE>true</CODEROUTINE> or <CODEROUTINE>false</CODEROUTINE></ITEM>
+      <ITEM>char: 8-bit character</ITEM>
+      <ITEM>string: sequence of 8 bit chars</ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Lists</TITLE>
+      <ITEM>An ordered collection of any number of elements sharing the same type.</ITEM>
+      <ITEM>Syntax
+        <CODESAMPLE><PROMPT/>[];;<BR/>
+          <PROMPT/>[1];;<BR/>
+          <PROMPT/>[1; 2];;<BR/>
+          <PROMPT/>[1; 2; 3];;</CODESAMPLE>
+      </ITEM>
+      <ITEM>head and tail of a list
+        <CODESAMPLE><PROMPT/>List.hd [1; 2; 3];;<BR></BR>
+          - : int = 1<BR></BR>
+          <PROMPT/>List.tl [1; 2; 3];;<BR></BR>
+          - : int list = [2; 3]</CODESAMPLE>
+      </ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Tuples</TITLE>
+      <ITEM>A fixed number of elements together.</ITEM>
+      <ITEM>Syntax
+        <CODESAMPLE><PROMPT/>(true, 0.0, 0.45, 0.73, "french blue");;</CODESAMPLE>
+      </ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Records</TITLE>
+      <ITEM>A fixed number of labelled elements.</ITEM>
+      <ITEM>Syntax
+        <CODESAMPLE><PROMPT/>type colour = {websafe : bool; r : float; g : float; b : float; name : string};;<BR/>
+          <PROMPT/>let b = {websafe = true; r = 0.0; g = 0.45; b = 0.73; name = "french blue"};;</CODESAMPLE>
+      </ITEM>
+      <ITEM>Records may be mutable
+        <CODESAMPLE><PROMPT/>type person =  {first_name : string; surname : string; mutable age : int};;<BR/>
+          <PROMPT/>llet birthday p = p.age &lt;- p.age + 1;;</CODESAMPLE>
+      </ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Fixed-length array</TITLE>
+      <ITEM>A mutable compound data type contain elements of the same type.<BR/>
+        Its elements may be accessed in constant time.</ITEM>
+      <ITEM>Syntax
+        <CODESAMPLE><PROMPT/>let arr = [|1; 2; 3|];;<BR/>
+          <PROMPT/>arr.(0) &lt;- 0;;</CODESAMPLE>
+      </ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+</BLIST>
+</CONTENT>
+<X><T>links</T><A>../links/lisp.html#ocaml</A><L>en</L><F>HTML</F></X>
+</PAGE>
