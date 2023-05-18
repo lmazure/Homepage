@@ -37,6 +37,12 @@
           <PROMPT/>List.tl [1; 2; 3];;<BR></BR>
           - : int list = [2; 3]</CODESAMPLE>
       </ITEM>
+      <ITEM>The cons operator <CODEROUTINE>::</CODEROUTINE> adds one element to the front of a list.
+        <CODESAMPLE><PROMPT/>1 :: [2; 3];;</CODESAMPLE>
+      </ITEM>
+      <ITEM>The append  operator <CODEROUTINE>@</CODEROUTINE>  combines two lists.
+        <CODESAMPLE><PROMPT/>[1] @ [2; 3];;</CODESAMPLE>
+      </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tuples</TITLE>
       <ITEM>A fixed number of elements together.</ITEM>
