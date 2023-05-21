@@ -27,7 +27,7 @@
     <ITEM>Patterns can be combined
       <CODESAMPLE><PROMPT/>let isvowel c =<BR/>
         <TAB/>match c with<BR/>
-       <TAB/>'a' | 'e' | 'i' | 'o' | 'u' -> true<BR/>
+        <TAB/>'a' | 'e' | 'i' | 'o' | 'u' -&gt; true<BR/>
       <TAB/>| _ -&gt; false</CODESAMPLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Data types</TITLE>
