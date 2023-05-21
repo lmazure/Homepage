@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>define and initialise a variable
@@ -15,6 +15,21 @@
   <ITEM>define a recursive function
     <CODESAMPLE><PROMPT/>let rec range a b = if a &gt; b then [] else a :: range (a + 1) b;;</CODESAMPLE>
   </ITEM>
+  <ITEM>conditional expressions use <CODEFILENAME>if … then … else …</CODEFILENAME>
+    <CODESAMPLE><PROMPT/>let rec gcd a b = if b = 0 then a else gcd b (a mod b);;</CODESAMPLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Comments</TITLE>
+    <ITEM>Comments are written between <CODEROUTINE>(*</CODEROUTINE> and <CODEROUTINE>*)</CODEROUTINE>.</ITEM>
+    <ITEM>Comments can be nested.</ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Pattern matching</TITLE>
+    <ITEM><CODEROUTINE>_</CODEROUTINE> matches anything.</ITEM>
+    <ITEM>Patterns can be combined
+      <CODESAMPLE><PROMPT/>let isvowel c =<BR/>
+        <TAB/>match c with<BR/>
+       <TAB/>'a' | 'e' | 'i' | 'o' | 'u' -> true<BR/>
+      <TAB/>| _ -&gt; false</CODESAMPLE></ITEM>
+  </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Data types</TITLE>
     <ITEM><BLIST><TITLE>The Basic types are</TITLE>
       <ITEM>int: 63-bit signed int on 64-bit processors, or 31-bit signed int on 32-bit processors</ITEM>
@@ -22,6 +37,26 @@
       <ITEM>bool: Boolean, written either <CODEROUTINE>true</CODEROUTINE> or <CODEROUTINE>false</CODEROUTINE></ITEM>
       <ITEM>char: 8-bit character</ITEM>
       <ITEM>string: sequence of 8 bit chars</ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Strings</TITLE>
+      <ITEM>Use <CODEROUTINE>^</CODEROUTINE> two concatenate two strings.</ITEM>
+      <ITEM><CODEROUTINE>\</CODEROUTINE> is to be used to escape <CODEROUTINE>"</CODEROUTINE> and <CODEROUTINE>\</CODEROUTINE>.</ITEM>
+      <ITEM>Quoted strings
+        <CODESAMPLE><PROMPT/>{|This is a quoted string, here, neither \ nor " are special characters|};<BR/>
+          <PROMPT/>{delimiter|the end of this|}quoted string is here|delimiter}</CODESAMPLE>
+      </ITEM>
+      <ITEM><CODEROUTINE>String</CODEROUTINE> module
+        <DEFINITIONTABLE>
+          <ROW>
+            <TERM><CODEROUTINE>val empty : string</CODEROUTINE></TERM>
+            <DESC>Retun an empty String.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val length : string -&gt; int</CODEROUTINE></TERM>
+            <DESC>Retun the length of the string.</DESC>
+          </ROW>
+        </DEFINITIONTABLE>
+      </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Lists</TITLE>
       <ITEM>An ordered collection of any number of elements sharing the same type.</ITEM>
@@ -32,9 +67,9 @@
           <PROMPT/>[1; 2; 3];;</CODESAMPLE>
       </ITEM>
       <ITEM>head and tail of a list
-        <CODESAMPLE><PROMPT/>List.hd [1; 2; 3];;<BR></BR>
-          - : int = 1<BR></BR>
-          <PROMPT/>List.tl [1; 2; 3];;<BR></BR>
+        <CODESAMPLE><PROMPT/>List.hd [1; 2; 3];;<BR/>
+          - : int = 1<BR/>
+          <PROMPT/>List.tl [1; 2; 3];;<BR/>
           - : int list = [2; 3]</CODESAMPLE>
       </ITEM>
       <ITEM>The cons operator <CODEROUTINE>::</CODEROUTINE> adds one element to the front of a list.
@@ -42,6 +77,51 @@
       </ITEM>
       <ITEM>The append  operator <CODEROUTINE>@</CODEROUTINE>  combines two lists.
         <CODESAMPLE><PROMPT/>[1] @ [2; 3];;</CODESAMPLE>
+      </ITEM>
+      <ITEM><CODEROUTINE>List</CODEROUTINE> module
+        <DEFINITIONTABLE>
+          <ROW>
+            <TERM><CODEROUTINE>val cons : 'a -&gt; 'a list -&gt; 'a list</CODEROUTINE></TERM>
+            <DESC>Add one element to the front of a list. <CODEROUTINE>cons x xs</CODEROUTINE> is the same as <CODEROUTINE>x :: xs</CODEROUTINE></DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val hd : 'a list -&gt; 'a</CODEROUTINE></TERM>
+            <DESC>Return the first element of the given list.<BR/>
+              Raises <CODEROUTINE>Failure</CODEROUTINE> if the list is empty.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val tl : 'a list -&gt; 'a list</CODEROUTINE></TERM>
+            <DESC>Return the given list without its first element.<BR/>
+              Raises <CODEROUTINE>Failure</CODEROUTINE> if the list is empty.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val length : 'a list -&gt; int</CODEROUTINE></TERM>
+            <DESC>Return the length of the list.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val compare_lengths : 'a list -&gt; 'b list -&gt; int</CODEROUTINE></TERM>
+            <DESC>Compare the lengths of two lists, the computation stops after reaching the end of the shortest list.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val compare_length_with : 'a list -&gt; int -&gt; int</CODEROUTINE></TERM>
+            <DESC>Compare the length of a list to an integer, the computation stops after at most <CODEROUTINE>len</CODEROUTINE> iterations on the list.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val nth : 'a list -&gt; int -&gt; 'a</CODEROUTINE></TERM>
+            <DESC>Return the n-th element of the given list.<BR/>
+              Raises <CODEROUTINE>Failure</CODEROUTINE> if the list is too short;
+              <CODEROUTINE>Invalid_argument</CODEROUTINE> if <CODEROUTINE>n</CODEROUTINE> is negative.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val nth_opt : 'a list -&gt; int -&gt; 'a option</CODEROUTINE></TERM>
+            <DESC>Return the n-th element of the given list. Return <CODEROUTINE>None</CODEROUTINE> if the list is too short.<BR/>
+              Raises <CODEROUTINE>Invalid_argument</CODEROUTINE> if <CODEROUTINE>n</CODEROUTINE> is negative.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val map : ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list</CODEROUTINE></TERM>
+            <DESC>Apply function <CODEROUTINE>f</CODEROUTINE> to <CODEROUTINE>a1, …, an</CODEROUTINE>, and builds the list <CODEROUTINE>[f a1; …; f an]</CODEROUTINE>. Not tail-recursive.</DESC>
+          </ROW>
+        </DEFINITIONTABLE>
       </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tuples</TITLE>
