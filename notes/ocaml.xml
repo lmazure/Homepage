@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>define and initialise a variable
@@ -49,11 +49,11 @@
         <DEFINITIONTABLE>
           <ROW>
             <TERM><CODEROUTINE>val empty : string</CODEROUTINE></TERM>
-            <DESC>Retun an empty String.</DESC>
+            <DESC>Return an empty String.</DESC>
           </ROW>
           <ROW>
             <TERM><CODEROUTINE>val length : string -&gt; int</CODEROUTINE></TERM>
-            <DESC>Retun the length of the string.</DESC>
+            <DESC>Return the length of the string.</DESC>
           </ROW>
         </DEFINITIONTABLE>
       </ITEM>
@@ -121,6 +121,87 @@
             <TERM><CODEROUTINE>val map : ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list</CODEROUTINE></TERM>
             <DESC>Apply function <CODEROUTINE>f</CODEROUTINE> to <CODEROUTINE>a1, …, an</CODEROUTINE>, and builds the list <CODEROUTINE>[f a1; …; f an]</CODEROUTINE>. Not tail-recursive.</DESC>
           </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val iter : ('a -&gt; unit) -&gt; 'a list -&gt; unit</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>iter f [a1; …; an]</CODEROUTINE> applies function <CODEROUTINE>f</CODEROUTINE> in turn to <CODEROUTINE>[a1; …; an]</CODEROUTINE>. It is equivalent to <CODEROUTINE>f a1; f a2; …; f an.</CODEROUTINE></DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val map2 : ('a -&gt; 'b -&gt; 'c) -&gt; 'a list -&gt; 'b list -&gt; 'c list</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>map2 f [a1; …; an] [b1; …; bn]</CODEROUTINE> is <CODEROUTINE>[f a1 b1; …; f an bn]</CODEROUTINE>. Not tail-recursive.<BR/>
+              Raises <CODEROUTINE>Invalid_argument</CODEROUTINE> if the two lists are determined to have different lengths.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val iter2 : ('a -&gt; 'b -&gt; unit) -&gt; 'a list -&gt; 'b list -&gt; unit</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>iter2 f [a1; …; an] [b1; …; bn]</CODEROUTINE> calls in turn <CODEROUTINE>f a1 b1; …; f an bn</CODEROUTINE>.<BR/>
+              Raises <CODEROUTINE>Invalid_argument</CODEROUTINE> if the two lists are determined to have different lengths.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val mem : 'a -&gt; 'a list -&gt; bool</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>mem a list</CODEROUTINE> is true if and only if <CODEROUTINE>a</CODEROUTINE> is equal to an element of <CODEROUTINE>list</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val memq : 'a -&gt; 'a list -&gt; bool</CODEROUTINE></TERM>
+            <DESC>Same as <CODEROUTINE>List.mem</CODEROUTINE>, but uses physical equality instead of structural equality to compare list elements.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val for_all : ('a -&gt; bool) -&gt; 'a list -&gt; bool</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>for_all f [a1; …; an]</CODEROUTINE> checks if all elements of the list satisfy the predicate <CODEROUTINE>f</CODEROUTINE>. That is, it returns <CODEROUTINE>(f a1) &gt;&gt; (f a2) &gt;&gt; … &gt;&gt; (f an)</CODEROUTINE> for a non-empty list and <CODEROUTINE>true</CODEROUTINE> if the list is empty</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val exists : ('a -&gt; bool) -&gt; 'a list -&gt; bool</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>exists f [a1; …; an]</CODEROUTINE> checks if at least one element of the list satisfies the predicate <CODEROUTINE>f</CODEROUTINE>. That is, it returns <CODEROUTINE>(f a1) || (f a2) || … || (f an)</CODEROUTINE> for a non-empty list and <CODEROUTINE>false</CODEROUTINE> if the list is empty</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val for_all2 : ('a -&gt; 'b -&gt; bool) -&gt; 'a list -&gt; 'b list -&gt; bool</CODEROUTINE></TERM>
+            <DESC>Same as <CODEROUTINE>List.for_all</CODEROUTINE>, but for a two-argument predicate.<BR/>
+              Raises <CODEROUTINE>Invalid_argument</CODEROUTINE> if the two lists are determined to have different lengths.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val exists2 : ('a -&gt; 'b -&gt; bool) -&gt; 'a list -&gt; 'b list -&gt; bool</CODEROUTINE></TERM>
+            <DESC>Same as <CODEROUTINE>List.exists</CODEROUTINE>, but for a two-argument predicate.<BR/>
+              Raises <CODEROUTINE>Invalid_argument</CODEROUTINE> if the two lists are determined to have different lengths.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val find : ('a -&gt; bool) -&gt; 'a list -&gt; 'a</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>find f l</CODEROUTINE> returns the first element of the list <CODEROUTINE>l</CODEROUTINE> that satisfies the predicate <CODEROUTINE>f</CODEROUTINE>.<BR/>
+              Raises <CODEROUTINE>Not_found</CODEROUTINE> if there is no value that satisfies <CODEROUTINE>f</CODEROUTINE>in the list <CODEROUTINE>l</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val find_opt : ('a -&gt; bool) -&gt; 'a list -&gt; 'a option</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>find_opt f l</CODEROUTINE> returns the first element of the list <CODEROUTINE>l</CODEROUTINE> that satisfies the predicate <CODEROUTINE>f</CODEROUTINE>. Returns <CODEROUTINE>None</CODEROUTINE> if there is no value that satisfies <CODEROUTINE>f</CODEROUTINE> in the list <CODEROUTINE>l</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val filter : ('a -&gt; bool) -&gt; 'a list -&gt; 'a list</CODEROUTINE><BR/>
+              <CODEROUTINE>val find_all : ('a -&gt; bool) -&gt; 'a list -&gt; 'a list</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>filter f l</CODEROUTINE> returns all the elements of the list <CODEROUTINE>l</CODEROUTINE> that satisfy the predicate <CODEROUTINE>f</CODEROUTINE>. The order of the elements in the input list is preserved.<BR/>
+              <CODEROUTINE>find_all</CODEROUTINE> is another name for <CODEROUTINE>filter</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val partition : ('a -&gt; bool) -&gt; 'a list -&gt; 'a list * 'a list</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>partition f l</CODEROUTINE> returns a pair of lists <CODEROUTINE>(l1, l2)</CODEROUTINE>, where <CODEROUTINE>l1</CODEROUTINE> is the list of all the elements of <CODEROUTINE>l</CODEROUTINE> that satisfy the predicate <CODEROUTINE>f</CODEROUTINE>, and <CODEROUTINE>l2</CODEROUTINE> is the list of all the elements of <CODEROUTINE>l</CODEROUTINE> that do not satisfy <CODEROUTINE>f</CODEROUTINE>. The order of the elements in the input list is preserved.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val assoc : 'a -&gt; ('a * 'b) list -&gt; 'b</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>assoc a l</CODEROUTINE> returns the value associated with key <CODEROUTINE>a</CODEROUTINE> in the list of pairs <CODEROUTINE>l</CODEROUTINE>. That is, <CODEROUTINE>assoc a [ …; (a,b); …] = b</CODEROUTINE> if <CODEROUTINE>(a,b)</CODEROUTINE> is the leftmost binding of <CODEROUTINE>a</CODEROUTINE> in list <CODEROUTINE>l</CODEROUTINE>.<BR/>
+              Raises <CODEROUTINE>Not_found</CODEROUTINE> if there is no value associated with <CODEROUTINE>a</CODEROUTINE> in the list <CODEROUTINE>l</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val assoc_opt : 'a -&gt; ('a * 'b) list -&gt; 'b option</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>assoc_opt a l</CODEROUTINE> returns the value associated with key <CODEROUTINE>a</CODEROUTINE> in the list of pairs <CODEROUTINE>l</CODEROUTINE>. That is, <CODEROUTINE>assoc a [ …; (a,b); …] = Some b</CODEROUTINE> if <CODEROUTINE>(a,b)</CODEROUTINE> is the leftmost binding of <CODEROUTINE>a</CODEROUTINE> in list <CODEROUTINE>l</CODEROUTINE>.Returns <CODEROUTINE>None</CODEROUTINE> if there is no value associated with <CODEROUTINE>a</CODEROUTINE> in the list <CODEROUTINE>l</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val split : ('a * 'b) list -&gt; 'a list * 'b list</CODEROUTINE></TERM>
+            <DESC>Transform a list of pairs into a pair of lists: <CODEROUTINE>split [(a1,b1); …; (an,bn)]</CODEROUTINE> is <CODEROUTINE>([a1; …; an], [b1; …; bn])</CODEROUTINE>. Not tail-recursive.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val combine : 'a list -&gt; 'b list -&gt; ('a * 'b) list</CODEROUTINE></TERM>
+            <DESC>Transform a pair of lists into a list of pairs: <CODEROUTINE>combine [a1; …; an] [b1; …; bn]</CODEROUTINE> is <CODEROUTINE>[(a1,b1); …; (an,bn)]</CODEROUTINE>. Not tail-recursive.<BR/>
+              Raises <CODEROUTINE>Invalid_argument</CODEROUTINE> if the two lists have different lengths.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val sort : ('a -&gt; 'a -&gt; int) -&gt; 'a list -&gt; 'a list</CODEROUTINE></TERM>
+            <DESC>Sort a list in increasing order according to a comparison function.</DESC>
+          </ROW>
         </DEFINITIONTABLE>
       </ITEM>
     </BLIST></ITEM>
@@ -138,7 +219,7 @@
       </ITEM>
       <ITEM>Records may be mutable
         <CODESAMPLE><PROMPT/>type person =  {first_name : string; surname : string; mutable age : int};;<BR/>
-          <PROMPT/>llet birthday p = p.age &lt;- p.age + 1;;</CODESAMPLE>
+          <PROMPT/>let birthday p = p.age &lt;- p.age + 1;;</CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Fixed-length array</TITLE>
