@@ -131,7 +131,7 @@
   <ROW>
     <TERM><CODEROUTINE>-s &lt;signal&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>--signal &lt;signal&gt;</CODEROUTINE></TERM>
-    <DESC>Define the sigbnal to send (e.g. <CODEROUTINE>docker kill --signal=SIGHUP mycontainer</CODEROUTINE>).</DESC>
+    <DESC>Define the signal to send (e.g. <CODEROUTINE>docker kill --signal=SIGHUP mycontainer</CODEROUTINE>).</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -158,8 +158,14 @@
     <DESC>Execute a command in a container (e.g. <CODEROUTINE>docker exec mycontainer cat /etc/hosts</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>docker exec -i &lt;container&gt; sh</CODEROUTINE></TERM>
-    <DESC>Create an interactive shell in a container.</DESC>
+    <TERM><CODEROUTINE>docker exec -i &lt;container&gt; sh</CODEROUTINE><BR/>
+      <CODEROUTINE>docker exec --interactive &lt;container&gt; sh</CODEROUTINE></TERM>
+    <DESC>Create an interactive shell in a container (add the <CODEROUTINE>-t</CODEROUTINE> flag, otherwise there is no prompt).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker exec -t</CODEROUTINE><BR/>
+      <CODEROUTINE>docker exec --tty</CODEROUTINE></TERM>
+    <DESC>Allocate a pseudo-TTY.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

@@ -9,12 +9,24 @@
   <ITEM>define and initialise a variable
     <CODESAMPLE><PROMPT/>let x = 50;;</CODESAMPLE>
   </ITEM>
-  <ITEM>define a function
-    <CODESAMPLE><PROMPT/>let max a b = if a &lt; b then b else a;;</CODESAMPLE>
-  </ITEM>
-  <ITEM>define a recursive function
-    <CODESAMPLE><PROMPT/>let rec range a b = if a &gt; b then [] else a :: range (a + 1) b;;</CODESAMPLE>
-  </ITEM>
+  <ITEM><BLIST><TITLE>Function</TITLE>
+    <ITEM>define a function
+      <CODESAMPLE><PROMPT/>let max a b = if a &lt; b then b else a;;</CODESAMPLE>
+      or
+      <CODESAMPLE>let max = fun a b -&gt; if a &lt; b then b else a;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>define a recursive function
+      <CODESAMPLE><PROMPT/>let rec range a b = if a &gt; b then [] else a :: range (a + 1) b;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>The application operator <CODEROUTINE>@@</CODEROUTINE> applies the function defined on the left side to the argument defined on the right side
+      <CODESAMPLE><PROMPT/>succ @@ 4 + 5;;<BR/>
+        - : int = 10</CODESAMPLE>
+    </ITEM>
+    <ITEM>The reverse application operator (a.k.a pipeline operator) <CODEROUTINE>|&gt;</CODEROUTINE> applies the function defined on the right side to the argument defined on the left side
+      <CODESAMPLE><PROMPT/>4 + 5 |&gt; succ;;<BR/>
+        - : int = 10</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
   <ITEM>conditional expressions use <CODEFILENAME>if … then … else …</CODEFILENAME>
     <CODESAMPLE><PROMPT/>let rec gcd a b = if b = 0 then a else gcd b (a mod b);;</CODESAMPLE>
   </ITEM>
@@ -228,6 +240,30 @@
       <ITEM>Syntax
         <CODESAMPLE><PROMPT/>let arr = [|1; 2; 3|];;<BR/>
           <PROMPT/>arr.(0) &lt;- 0;;</CODESAMPLE>
+      </ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Installation</TITLE>
+    <ITEM><BLIST><TITLE>Using Docker</TITLE>
+      <ITEM>a simple installation process:
+        <CODESAMPLE>docker run  --name ocaml -it ocaml/opam:ubuntu-22.04-ocaml-4.13 bash</CODESAMPLE>
+        in the container
+        <CODESAMPLE>opam install utop<BR/>
+        exit</CODESAMPLE>
+    </ITEM>
+    <ITEM>then use this container with
+      <CODESAMPLE>docker start ocaml<BR/>
+      docker exec -it ocaml bash</CODESAMPLE>
+      in the container
+      <CODESAMPLE>eval $(opam env)<BR/>
+      utop</CODESAMPLE>
+      …</ITEM>
+    <ITEM>at the end, exit from utop
+      <CODESAMPLE>exit 0;;</CODESAMPLE>
+      exit from the container
+      <CODESAMPLE>exit</CODESAMPLE>
+      stop the container
+      <CODESAMPLE>docker stop ocaml </CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
