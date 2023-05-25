@@ -83,7 +83,7 @@
           | Some i -&gt; string_of_int i<BR/>
           | None -&gt; "";;</CODESAMPLE>
       </ITEM>
-      <ITEM>get the value if not None, otherwise a default value
+      <ITEM>get the value if not <CODEROUTINE>None</CODEROUTINE>, otherwise a default value
         <CODESAMPLE><PROMPT/>Option.value (Some 77) ~default:(-1);; </CODESAMPLE>
       </ITEM>
       <ITEM><CODEROUTINE>Option</CODEROUTINE> module
