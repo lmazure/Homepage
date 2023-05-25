@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>define and initialise a variable
@@ -66,6 +66,48 @@
           <ROW>
             <TERM><CODEROUTINE>val length : string -&gt; int</CODEROUTINE></TERM>
             <DESC>Return the length of the string.</DESC>
+          </ROW>
+        </DEFINITIONTABLE>
+      </ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Options</TITLE>
+      <ITEM>create an option containing <CODEROUTINE>42</CODEROUTINE>
+        <CODESAMPLE>Some 42</CODESAMPLE>
+      </ITEM>
+      <ITEM>create an empty option
+        <CODESAMPLE>None</CODESAMPLE>
+      </ITEM>
+      <ITEM>pattern matching on an option
+        <CODESAMPLE><PROMPT/>let extract o =<BR/>
+          match o with<BR/>
+          | Some i -&gt; string_of_int i<BR/>
+          | None -&gt; "";;</CODESAMPLE>
+      </ITEM>
+      <ITEM>get the value if not None, otherwise a default value
+        <CODESAMPLE><PROMPT/>Option.value (Some 77) ~default:(-1);; </CODESAMPLE>
+      </ITEM>
+      <ITEM><CODEROUTINE>Option</CODEROUTINE> module
+        <DEFINITIONTABLE>
+          <ROW>
+            <TERM><CODEROUTINE>val is_none : 'a option -&gt; bool</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>is_none o</CODEROUTINE> is true if and only if <CODEROUTINE>o</CODEROUTINE> is <CODEROUTINE>None</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val is_some : 'a option -&gt; bool</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>is_some o</CODEROUTINE> is true if and only if <CODEROUTINE>o</CODEROUTINE> is <CODEROUTINE>Some o</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val get : 'a option -&gt; 'a</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>get o</CODEROUTINE> is <CODEROUTINE>v</CODEROUTINE> if <CODEROUTINE>o</CODEROUTINE> is <CODEROUTINE>Some v</CODEROUTINE> and raise otherwise.<BR/>
+              Raises <CODEROUTINE>Invalid_argument</CODEROUTINE> if <CODEROUTINE>o</CODEROUTINE> is <CODEROUTINE>None</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val value : 'a option -&gt; default:'a -&gt; 'a</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>value o ~default</CODEROUTINE> is <CODEROUTINE>v</CODEROUTINE> if <CODEROUTINE>o</CODEROUTINE> is <CODEROUTINE>Some v</CODEROUTINE> and <CODEROUTINE>default</CODEROUTINE> otherwise.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val map : ('a -&gt; 'b) -&gt; 'a option -&gt; 'b option</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>map f o</CODEROUTINE> is <CODEROUTINE>None</CODEROUTINE> if <CODEROUTINE>o</CODEROUTINE> is <CODEROUTINE>None</CODEROUTINE> and <CODEROUTINE>Some (f v)</CODEROUTINE> if <CODEROUTINE>o</CODEROUTINE> is <CODEROUTINE>Some v</CODEROUTINE>.</DESC>
           </ROW>
         </DEFINITIONTABLE>
       </ITEM>
