@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>define and initialise a variable
@@ -50,6 +50,67 @@
       <ITEM>char: 8-bit character</ITEM>
       <ITEM>string: sequence of 8 bit chars</ITEM>
     </BLIST></ITEM>
+    <ITEM><CODEROUTINE>Int</CODEROUTINE> module
+      <DEFINITIONTABLE>
+        <ROW>
+          <TERM><CODEROUTINE>val zero : int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>zero</CODEROUTINE> is the integer <CODEROUTINE>0</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val one : int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>one</CODEROUTINE> is the integer <CODEROUTINE>1</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val minus_one : int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>minus_one</CODEROUTINE> is the integer <CODEROUTINE>-1</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val neg : int -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>neg x</CODEROUTINE> is <CODEROUTINE>~-x</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val add : int -&gt; int -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>add x y</CODEROUTINE> is the addition <CODEROUTINE>x + y</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val sub : int -&gt; int -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>sub x y</CODEROUTINE> is the subtraction <CODEROUTINE>x - y</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val mul : int -&gt; int -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>mul x y</CODEROUTINE> is the multiplication <CODEROUTINE>x * y</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val div : int -&gt; int -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>div x y</CODEROUTINE> is the division <CODEROUTINE>x / y</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val rem : int -&gt; int -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>rem x y</CODEROUTINE> is the remainder <CODEROUTINE>x mod y</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val succ : int -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>succ x</CODEROUTINE> is <CODEROUTINE>add x 1</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val pred : int -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>pred x</CODEROUTINE> is <CODEROUTINE>sub x 1</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val abs : int -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>abs x</CODEROUTINE> is the absolute value of x. That is <CODEROUTINE>x</CODEROUTINE> if <CODEROUTINE>x</CODEROUTINE> is positive and <CODEROUTINE>neg x</CODEROUTINE>if <CODEROUTINE>x</CODEROUTINE> is negative.<BR/>
+            Warning. This may be negative if the argument is <CODEROUTINE>Int.min_int</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val max_int : int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>max_int</CODEROUTINE> is the greatest representable integer, <CODEROUTINE>2{^[Sys.int_size - 1]} - 1</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val min_int : int</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>min_int</CODEROUTINE> is the smallest representable integer, <CODEROUTINE>-2{^[Sys.int_size - 1]}</CODEROUTINE>.</DESC>
+        </ROW>
+      </DEFINITIONTABLE>
+    </ITEM>
     <ITEM><BLIST><TITLE>Strings</TITLE>
       <ITEM>Use <CODEROUTINE>^</CODEROUTINE> two concatenate two strings.</ITEM>
       <ITEM><CODEROUTINE>\</CODEROUTINE> is to be used to escape <CODEROUTINE>"</CODEROUTINE> and <CODEROUTINE>\</CODEROUTINE>.</ITEM>
@@ -110,6 +171,14 @@
             <DESC><CODEROUTINE>map f o</CODEROUTINE> is <CODEROUTINE>None</CODEROUTINE> if <CODEROUTINE>o</CODEROUTINE> is <CODEROUTINE>None</CODEROUTINE> and <CODEROUTINE>Some (f v)</CODEROUTINE> if <CODEROUTINE>o</CODEROUTINE> is <CODEROUTINE>Some v</CODEROUTINE>.</DESC>
           </ROW>
         </DEFINITIONTABLE>
+      </ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Lazy</TITLE>
+      <ITEM>create a lazy expression
+        <CODESAMPLE><PROMPT/>let a = lazy ( expr );;</CODESAMPLE>
+      </ITEM>
+      <ITEM>force the evaluation of the expression, the result is memoized
+        <CODESAMPLE><PROMPT/>let b = force a;;</CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Lists</TITLE>
