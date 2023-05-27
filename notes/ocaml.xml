@@ -3,12 +3,18 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST>
-  <ITEM>define and initialise a variable
-    <CODESAMPLE><PROMPT/>let x = 50;;</CODESAMPLE>
-  </ITEM>
+  <ITEM><BLIST><TITLE>Comments</TITLE>
+    <ITEM>Comments are written between <CODEROUTINE>(*</CODEROUTINE> and <CODEROUTINE>*)</CODEROUTINE>.</ITEM>
+    <ITEM>Comments can be nested.</ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Variables</TITLE>
+    <ITEM>define and initialise a variable
+      <CODESAMPLE><PROMPT/>let x = 50;;</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Function</TITLE>
     <ITEM>define a function
       <CODESAMPLE><PROMPT/>let max a b = if a &lt; b then b else a;;</CODESAMPLE>
@@ -17,6 +23,16 @@
     </ITEM>
     <ITEM>define a recursive function
       <CODESAMPLE><PROMPT/>let rec range a b = if a &gt; b then [] else a :: range (a + 1) b;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>define mutually recursive functions
+      <CODESAMPLE><PROMPT/>let rec even n =<BR/>
+        match n with<BR/>
+        | 0 -&gt; true<BR/>
+        | x -&gt; odd (x - 1)<BR/>
+        and odd n =<BR/>
+        match n with<BR/>
+        | 0 -&gt; false<BR/>
+        | x -&gt; even (x - 1);;</CODESAMPLE>
     </ITEM>
     <ITEM>The application operator <CODEROUTINE>@@</CODEROUTINE> applies the function defined on the left side to the argument defined on the right side
       <CODESAMPLE><PROMPT/>succ @@ 4 + 5;;<BR/>
@@ -30,10 +46,6 @@
   <ITEM>conditional expressions use <CODEFILENAME>if … then … else …</CODEFILENAME>
     <CODESAMPLE><PROMPT/>let rec gcd a b = if b = 0 then a else gcd b (a mod b);;</CODESAMPLE>
   </ITEM>
-  <ITEM><BLIST><TITLE>Comments</TITLE>
-    <ITEM>Comments are written between <CODEROUTINE>(*</CODEROUTINE> and <CODEROUTINE>*)</CODEROUTINE>.</ITEM>
-    <ITEM>Comments can be nested.</ITEM>
-  </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Pattern matching</TITLE>
     <ITEM><CODEROUTINE>_</CODEROUTINE> matches anything.</ITEM>
     <ITEM>Patterns can be combined

@@ -195,7 +195,7 @@ Display
     <DESC>Toggle word wrap</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>Toggle Render Whitespace</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>View: Toggle Render Whitespace</CODEROUTINE></TERM>
     <DESC>Display/undisplay space characters</DESC>
   </ROW>
   <ROW>
@@ -219,7 +219,16 @@ Display
     <DESC>Reset zoom</DESC>
   </ROW>
 </DEFINITIONTABLE>
-To display/undisplay the inline parameter hints: modify setting <CODEROUTINE>editor.inlayHints.enabled</CODEROUTINE>.<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>editor.inlayHints.enabled</CODEROUTINE></TERM>
+    <DESC>Display/undisplay the inline parameter hints</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>editor.guides.indentation</CODEROUTINE></TERM>
+    <DESC>Display/undisplay the indentation guides (vertical lines)</DESC>
+  </ROW>
+</DEFINITIONTABLE>
 <BR/>
 Folding
 <DEFINITIONTABLE>
