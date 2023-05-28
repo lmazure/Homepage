@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -366,6 +366,48 @@
       </ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Printing</TITLE>
+  <ITEM>Built-in print functions: <CODEROUTINE>print_char</CODEROUTINE>, <CODEROUTINE>print_string</CODEROUTINE>, <CODEROUTINE>print_int</CODEROUTINE>, and <CODEROUTINE>print_float</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>print_endline "str"</CODEROUTINE> prints a string followed by a newline.</ITEM>
+  <ITEM><CODEROUTINE>print_newline ())</CODEROUTINE> prints a newline.</ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE><CODEROUTINE>Stdlib</CODEROUTINE> module</TITLE>
+      <ITEM>This module is automatically opened at the beginning of each compilation.</ITEM>
+      <ITEM><DEFINITIONTABLE>
+        <ROW>
+          <TERM><CODEROUTINE>val print_char : char -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Print a character on standard output.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val print_string : string -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Print a string on standard output.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val print_bytes : bytes -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Print a byte sequence on standard output.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val print_int : int -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Print an integer, in decimal, on standard output.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val print_float : float -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Print a floating-point number, in decimal, on standard output.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val print_endline : string -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Print a string, followed by a newline character, on standard output and flush standard output.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val print_newline : unit -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Print a newline character on standard output, and flush standard output. This can be used to simulate line buffering of standard output.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val ignore : 'a -&gt; unit</CODEROUTINE><BR/></TERM>
+          <DESC>Discard the value of its argument and return <CODEROUTINE>()</CODEROUTINE>.</DESC>
+        </ROW>
+        </DEFINITIONTABLE></ITEM>
+  </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Installation</TITLE>
     <ITEM><BLIST><TITLE>Using Docker</TITLE>
       <ITEM>a simple installation process:
@@ -389,6 +431,21 @@
       <CODESAMPLE>docker stop ocaml </CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Compilation</TITLE>
+      <ITEM>Compile to bytecodes and run
+        <CODESAMPLE><PROMPT/>ocamlc foobar.ml<BR/>
+          <PROMPT/>./camlprog.exe</CODESAMPLE>
+      </ITEM>
+      <ITEM>Compile to bytecodes with debug information and run with stacktrace dump
+        <CODESAMPLE><PROMPT/>ocamlc -g foobar.ml<BR/>
+          <PROMPT/>OCAMLRUNPARAM=b ./camlprog.exe</CODESAMPLE>
+      </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Debug</TITLE>
+      <ITEM>Start the debugger
+        <CODESAMPLE><PROMPT/>ocamldebug camlprog.exe</CODESAMPLE>
+      </ITEM>
   </BLIST></ITEM>
 </BLIST>
 </CONTENT>

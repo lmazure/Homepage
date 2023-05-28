@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>JavaScript</TITLE>
 <PATH>links/javascript.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -28,7 +28,6 @@
       <ITEM><X status="obsolete"><T>JSMin</T><A>http://crockford.com/javascript/jsmin</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Dean Edwards Packer</T><A>http://dean.edwards.name/packer/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>MiniME</T><A>https://github.com/toptensoftware/minime</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X status="dead"><T>Microsoft Ajax Minifier</T><A>https://ajaxmin.codeplex.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Closure Compiler</T><A>https://developers.google.com/closure/compiler/?csw=1</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Wikipedia list</T><A>https://en.wikipedia.org/wiki/Minification_(programming)</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
@@ -37,9 +36,6 @@
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>Demos</TITLE>
       <ITEM><X><T>Chrome Experiments</T><A>https://experiments.withgoogle.com/collection/chrome</A><L>en</L><F>HTML</F></X></ITEM>
-    </CLIST></ITEM>
-    <ITEM><CLIST><TITLE>Mashups</TITLE>
-      <ITEM><X><T>ProgrammableWeb</T><A>https://www.programmableweb.com/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><X><T>json.org</T><A>https://www.json.org/json-en.html</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>JSONLint</T><A>https://jsonlint.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -96,6 +92,7 @@
     <ITEM><ARTICLE><X><T>Does ES6 make JavaScript frameworks obsolete?</T><ST>Is ES6 the JavaScript release that will finally free us from the endless cycle of frameworks?</ST><A>https://stackoverflow.blog/2021/11/10/does-es6-make-javascript-frameworks-obsolete/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Theodoros</FIRSTNAME><LASTNAME>Karasavvas</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ryan</FIRSTNAME><LASTNAME>Donovan</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>10</DAY></DATE><COMMENT>As regularly published for many years, yet another article announcing the death of the JavaScript frameworks.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>JavaScript APIs You Don’t Know About</T><A>https://www.smashingmagazine.com/2022/09/javascript-api-guide/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Juan Diego</FIRSTNAME><LASTNAME>Rodríguez</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>14</DAY></DATE><COMMENT>A short presentation of Page Visibility API, Web Share API, Broadcast Channel API, and Internationalization API.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>JS13K 2022 winners 🏆</T><ST>The eleventh annual js13kGames coding competition, challenging participants to create games in 13kB or less of JavaScript in a month, just wrapped up. This post highlights the top thirteen entries.</ST><A>https://github.blog/2022-10-06-js13k-2022-winners/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Lee</FIRSTNAME><LASTNAME>Reilly</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X quality="-1"><T>JavaScript Generators — Cas pratiques d'utilisation (Héla BEN KHALFALLAH)</T><A>https://www.youtube.com/watch?v=CDXXh79NDhA</A><L>fr</L><F>MP4</F><DURATION><MINUTE>30</MINUTE><SECOND>7</SECOND></DURATION><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE></X><AUTHOR><FIRSTNAME>Héla</FIRSTNAME><LASTNAME>Ben Khalfallah</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE><COMMENT>A very slow and bad presentation of generator functions.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Tutorials</TITLE>
       <ITEM><ARTICLE><X><T>Scoping</T><A>https://www.youtube.com/watch?v=vXWOKZVdRaI</A><L>en</L><F>MP4</F><DURATION><MINUTE>42</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kiro</FIRSTNAME><LASTNAME>Risk</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>An explanation of JavaScript hoisting.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Object Oriented Programming</T><A>https://www.youtube.com/watch?v=5vsrq-9VhZs</A><L>en</L><F>MP4</F><DURATION><MINUTE>50</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kiro</FIRSTNAME><LASTNAME>Risk</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>How to perform some common OOP patterns in JavaScript: defining a class, deriving a class, calling a method of the super-class from a derived class…</COMMENT></ARTICLE></ITEM>
@@ -213,7 +210,7 @@
         <ITEM><ARTICLE predecessor="https://www.cs.utexas.edu/~mitra/csFall2015/cs329/lectures/ajax/wa-ajaxintro10-pdf.pdf"><X><T>Mastering Ajax, Part 11: JSON on the server side</T><ST>Responding to and replying with JSON in your server-side scripts and programs</ST><A>https://www.cs.utexas.edu/~mitra/csFall2015/cs329/lectures/ajax/wa-ajaxintro11-pdf.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Brett</FIRSTNAME><LASTNAME>McLaughlin</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>8</MONTH><DAY>14</DAY></DATE><COMMENT>How to send and receive JSON between the Browser to the server.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>GWT</TITLE>
-        <ITEM><ARTICLE><X quality="-1" status="dead"><T>Working with the Google Web Toolkit</T><A>http://www.onjava.com/pub/a/onjava/2006/05/31/working-with-google-web-toolkit.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Cooper</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>5</MONTH><DAY>31</DAY></DATE><COMMENT>The author presents GWT, but he dives directly in the details of a use example without giving an overview. So this article is not clear…</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X quality="-1" status="zombie"><T>Working with the Google Web Toolkit</T><A>http://www.onjava.com/pub/a/onjava/2006/05/31/working-with-google-web-toolkit.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Cooper</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>5</MONTH><DAY>31</DAY></DATE><COMMENT>The author presents GWT, but he dives directly in the details of a use example without giving an overview. So this article is not clear…</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X status="zombie"><T>Patterns + GWT + Ajax = Usability!</T><ST>Enhance your Web site with Ajax, GWT, and design patterns</ST><A>https://www.ibm.com/developerworks/web/library/wa-aj-patterns/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Federico</FIRSTNAME><LASTNAME>Kereki</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE><COMMENT>Some design patterns:<BR/>- prevalidation: asynchronous input validation on the client<BR/>- code sharing: use the same code to validate date on the client and on the server<BR/>- caching<BR/>- prefetching<BR/>- thread simulation: either with the <CODEROUTINE>Timer</CODEROUTINE> class or with deferred commands.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Google I/O 2010 - Optimizing apps with the GWT Compiler</T><A>https://www.youtube.com/watch?v=qT6ZsQBM7kY</A><L>en</L><F>MP4</F><DURATION><MINUTE>56</MINUTE><SECOND>17</SECOND></DURATION><DATE><YEAR>2010</YEAR><MONTH>5</MONTH><DAY>26</DAY></DATE></X><AUTHOR><FIRSTNAME>Ray</FIRSTNAME><LASTNAME>Cromwell</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE><COMMENT>A description of the tricks done by GWT to improve application performance: type tightening, converting methods to static, finalising, pruning, inlining… both on Java and on JavaScript. How to build faster a GWT application.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Google I/O 2010 - GWT + HTML5 can do what?!</T><A>https://www.youtube.com/watch?v=aW--Wlf9EFs</A><L>en</L><F>MP4</F><DURATION><MINUTE>57</MINUTE><SECOND>59</SECOND></DURATION><DATE><YEAR>2010</YEAR><MONTH>5</MONTH><DAY>27</DAY></DATE></X><AUTHOR><FIRSTNAME>Ray</FIRSTNAME><LASTNAME>Cromwell</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Stefan</FIRSTNAME><LASTNAME>Haustein</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Joel</FIRSTNAME><LASTNAME>Webber</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE><COMMENT>Using WebGL to process images and sounds, and to play Quake II.</COMMENT></ARTICLE></ITEM>
