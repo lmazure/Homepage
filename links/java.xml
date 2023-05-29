@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -88,7 +88,7 @@
       <ITEM><X><T>Macadamian</T><A>http://www.literateprogramming.com/macadamian.pdf</A><L>en</L><F>PDF</F></X></ITEM>
       <ITEM><X><T>Fluxens</T><A>http://fluxens.com/javastyle.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Google</T><A>https://google.github.io/styleguide/javaguide.html</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X status="dead"><T>OpenJDK</T><A>http://cr.openjdk.java.net/~alundblad/styleguide/index-v6.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>OpenJDK</T><A>https://cr.openjdk.org/~alundblad/styleguide/index-v6.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><X><T>personal notes</T><A>../notes/java.html</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
@@ -134,6 +134,7 @@
     <ITEM><ARTICLE><X><T>Curly Braces #6: Recursion and tail-call optimization</T><A>https://blogs.oracle.com/javamagazine/post/curly-braces-java-recursion-tail-call-optimization</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><MIDDLENAME>J.</MIDDLENAME><LASTNAME>Bruno</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE><COMMENT>A description of tail-call optimisation and the fact that it is not supported by the JVM.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Introducing the Visual Recognition spec for Java machine learning</T><A>https://blogs.oracle.com/javamagazine/post/java-visrec-api-for-machine-learning</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Justine</FIRSTNAME><LASTNAME>Kavanaugh-Brown</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Frank</FIRSTNAME><LASTNAME>Greco</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Zoran</FIRSTNAME><LASTNAME>Sevarac</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mala</FIRSTNAME><LASTNAME>Gupta</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE><COMMENT>JSR381 is a high-level API providing Java developers access to basic Machine Learning algorithms.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Is this the future of Java?</T><A>https://www.youtube.com/watch?v=1piyuttz2pw</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>57</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Josh</FIRSTNAME><LASTNAME>Long</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>A short and fast description of <X><T>Manifold</T><A>http://manifold.systems/</A><L>en</L><F>HTML</F></X> that adds a bunch of features to the language.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>1, 2, 3 Quarkus! (Clement ESCOFFIER et Aurea MUNOZ HERNANDEZ)</T><A>https://www.youtube.com/watch?v=Dk_tnyAwJdw</A><L>fr</L><F>MP4</F><DURATION><MINUTE>46</MINUTE><SECOND>1</SECOND></DURATION><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE></X><AUTHOR><FIRSTNAME>Clément</FIRSTNAME><LASTNAME>Escoffier</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Aurea</FIRSTNAME><LASTNAME>Munoz Hernandez</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE><COMMENT>A demo of Quarkus 3.0.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Tutorials</TITLE>
       <ITEM><ARTICLE><X status="zombie"><T>Speaking the Java language without an accent</T><ST>Native fluency for nonnative programmers</ST><A>https://www.ibm.com/developerworks/library/j-noaccent/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Elliotte</FIRSTNAME><MIDDLENAME>Rusty</MIDDLENAME><LASTNAME>Harold</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>Some coding habits that C/C++ developers should modify in order to code in Java as everyone else.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>

@@ -217,7 +217,7 @@
         <DEFINITIONTABLE>
           <ROW>
             <TERM><CODEROUTINE>val cons : 'a -&gt; 'a list -&gt; 'a list</CODEROUTINE></TERM>
-            <DESC>Add one element to the front of a list. <CODEROUTINE>cons x xs</CODEROUTINE> is the same as <CODEROUTINE>x :: xs</CODEROUTINE></DESC>
+            <DESC>Add one element to the front of a list. <CODEROUTINE>cons x xs</CODEROUTINE> is the same as <CODEROUTINE>x :: xs</CODEROUTINE>.</DESC>
           </ROW>
           <ROW>
             <TERM><CODEROUTINE>val hd : 'a list -&gt; 'a</CODEROUTINE></TERM>
@@ -258,7 +258,7 @@
           </ROW>
           <ROW>
             <TERM><CODEROUTINE>val iter : ('a -&gt; unit) -&gt; 'a list -&gt; unit</CODEROUTINE></TERM>
-            <DESC><CODEROUTINE>iter f [a1; …; an]</CODEROUTINE> applies function <CODEROUTINE>f</CODEROUTINE> in turn to <CODEROUTINE>[a1; …; an]</CODEROUTINE>. It is equivalent to <CODEROUTINE>f a1; f a2; …; f an.</CODEROUTINE></DESC>
+            <DESC><CODEROUTINE>iter f [a1; …; an]</CODEROUTINE> applies function <CODEROUTINE>f</CODEROUTINE> in turn to <CODEROUTINE>[a1; …; an]</CODEROUTINE>. It is equivalent to <CODEROUTINE>f a1; f a2; …; f an</CODEROUTINE>.</DESC>
           </ROW>
           <ROW>
             <TERM><CODEROUTINE>val map2 : ('a -&gt; 'b -&gt; 'c) -&gt; 'a list -&gt; 'b list -&gt; 'c list</CODEROUTINE></TERM>
@@ -280,11 +280,11 @@
           </ROW>
           <ROW>
             <TERM><CODEROUTINE>val for_all : ('a -&gt; bool) -&gt; 'a list -&gt; bool</CODEROUTINE></TERM>
-            <DESC><CODEROUTINE>for_all f [a1; …; an]</CODEROUTINE> checks if all elements of the list satisfy the predicate <CODEROUTINE>f</CODEROUTINE>. That is, it returns <CODEROUTINE>(f a1) &gt;&gt; (f a2) &gt;&gt; … &gt;&gt; (f an)</CODEROUTINE> for a non-empty list and <CODEROUTINE>true</CODEROUTINE> if the list is empty</DESC>
+            <DESC><CODEROUTINE>for_all f [a1; …; an]</CODEROUTINE> checks if all elements of the list satisfy the predicate <CODEROUTINE>f</CODEROUTINE>. That is, it returns <CODEROUTINE>(f a1) &gt;&gt; (f a2) &gt;&gt; … &gt;&gt; (f an)</CODEROUTINE> for a non-empty list and <CODEROUTINE>true</CODEROUTINE> if the list is empty.</DESC>
           </ROW>
           <ROW>
             <TERM><CODEROUTINE>val exists : ('a -&gt; bool) -&gt; 'a list -&gt; bool</CODEROUTINE></TERM>
-            <DESC><CODEROUTINE>exists f [a1; …; an]</CODEROUTINE> checks if at least one element of the list satisfies the predicate <CODEROUTINE>f</CODEROUTINE>. That is, it returns <CODEROUTINE>(f a1) || (f a2) || … || (f an)</CODEROUTINE> for a non-empty list and <CODEROUTINE>false</CODEROUTINE> if the list is empty</DESC>
+            <DESC><CODEROUTINE>exists f [a1; …; an]</CODEROUTINE> checks if at least one element of the list satisfies the predicate <CODEROUTINE>f</CODEROUTINE>. That is, it returns <CODEROUTINE>(f a1) || (f a2) || … || (f an)</CODEROUTINE> for a non-empty list and <CODEROUTINE>false</CODEROUTINE> if the list is empty.</DESC>
           </ROW>
           <ROW>
             <TERM><CODEROUTINE>val for_all2 : ('a -&gt; 'b -&gt; bool) -&gt; 'a list -&gt; 'b list -&gt; bool</CODEROUTINE></TERM>
@@ -370,6 +370,18 @@
   <ITEM>Built-in print functions: <CODEROUTINE>print_char</CODEROUTINE>, <CODEROUTINE>print_string</CODEROUTINE>, <CODEROUTINE>print_int</CODEROUTINE>, and <CODEROUTINE>print_float</CODEROUTINE>.</ITEM>
   <ITEM><CODEROUTINE>print_endline "str"</CODEROUTINE> prints a string followed by a newline.</ITEM>
   <ITEM><CODEROUTINE>print_newline ())</CODEROUTINE> prints a newline.</ITEM>
+  <ITEM><CODEROUTINE>Printf</CODEROUTINE> module
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>val printf : ('a, out_channel, unit) format -&gt; 'a</CODEROUTINE></TERM>
+        <DESC>Format a message and print it on <CODEROUTINE>stdout</CODEROUTINE>.</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>val eprintf : ('a, out_channel, unit) format -&gt; 'a</CODEROUTINE></TERM>
+        <DESC>Format a message and print it on <CODEROUTINE>stderr</CODEROUTINE>.</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE><CODEROUTINE>Stdlib</CODEROUTINE> module</TITLE>
       <ITEM>This module is automatically opened at the beginning of each compilation.</ITEM>
