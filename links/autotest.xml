@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -104,15 +104,20 @@
       <ITEM><BLIST><TITLE>Web</TITLE>
         <ITEM><X><T>Watir</T><A>http://watir.com</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Test &amp; Feedback</T><A>https://marketplace.visualstudio.com/items?itemName=ms.vss-exploratorytesting-web</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><CLIST><TITLE>WebDriver</TITLE>
+        <ITEM><BLIST><TITLE>WebDriver</TITLE>
           <ITEM><X><T>specification</T><A>https://www.w3.org/TR/webdriver/</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>documentation</T><A>https://www.selenium.dev/documentation/webdriver/</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>ChromeDriver</T><A>https://chromedriver.chromium.org/home</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><CLIST><TITLE><X><T>geckodriver</T><A>https://firefox-source-docs.mozilla.org/testing/geckodriver/index.html</A><L>en</L><F>HTML</F></X></TITLE>
+            <ITEM><X><T>download</T><A>https://www.selenium.dev/documentation/webdriver/</A><L>en</L><F>HTML</F></X></ITEM>
+          </CLIST></ITEM>
           <ITEM><X><T>Leadfoot</T><A>https://theintern.io/leadfoot/index.html</A><L>en</L><F>HTML</F></X></ITEM>
-          <ITEM><X><T>Selenium</T><A>https://www.selenium.dev/</A><L>en</L><F>HTML</F></X></ITEM>
-          <ITEM><X><T>Elemental Selenium</T><A>https://elementalselenium.com</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><CLIST><TITLE><X><T>Selenium</T><A>https://www.selenium.dev/</A><L>en</L><F>HTML</F></X></TITLE>
+            <ITEM><X><T>Elemental Selenium</T><A>https://elementalselenium.com</A><L>en</L><F>HTML</F></X></ITEM>
+          </CLIST></ITEM>
           <ITEM><X><T>WebdriverIO</T><A>https://webdriver.io/</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>Callisto</T><A>https://github.com/wrike/callisto</A><L>en</L><F>HTML</F></X></ITEM>
-        </CLIST></ITEM>
+        </BLIST></ITEM>
         <ITEM><X><T>Protractor</T><A>https://www.protractortest.org</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Cypress</T><A>https://www.cypress.io</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Taiko</T><A>https://taiko.dev/</A><L>en</L><F>HTML</F></X></ITEM>

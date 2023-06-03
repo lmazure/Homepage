@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -14,15 +14,40 @@
     <ITEM>define and initialise a variable
       <CODESAMPLE><PROMPT/>let x = 50;;</CODESAMPLE>
     </ITEM>
+    <ITEM>define and initialise a variable
+      <CODESAMPLE><PROMPT/>let x = 50;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>it is possible to add type annotations
+      <CODESAMPLE><PROMPT/>let (x: int) = 50;;</CODESAMPLE>
+    </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Function</TITLE>
     <ITEM>define a function
       <CODESAMPLE><PROMPT/>let max a b = if a &lt; b then b else a;;</CODESAMPLE>
       or
-      <CODESAMPLE>let max = fun a b -&gt; if a &lt; b then b else a;;</CODESAMPLE>
+      <CODESAMPLE><PROMPT/>let max = fun a b -&gt; if a &lt; b then b else a;;</CODESAMPLE>
     </ITEM>
     <ITEM>define a recursive function
       <CODESAMPLE><PROMPT/>let rec range a b = if a &gt; b then [] else a :: range (a + 1) b;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>with type annotations
+      <CODESAMPLE><PROMPT/>let rec pow (x : int) (y : int) : int = if y = 0 then 1 else x * pow x (y - 1);;</CODESAMPLE>
+    </ITEM>
+    <ITEM>parameters can be labelled
+      <CODESAMPLE><PROMPT/>let f ~name1:arg1 ~name2:arg2 = arg1 + arg2;;<BR/>
+        <PROMPT/>f ~name2:3 ~name1:4;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>labels can be used and no variable names are to be given
+      <CODESAMPLE><PROMPT/>let f ~name1 ~name2 = name1 + name2;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>the syntax to write both a labeled argument and an explicit type annotation
+      <CODESAMPLE><PROMPT/>let f ~name1:(arg1 : int) ~name2:(arg2 : int) = arg1 + arg2;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>it is possible to make some arguments optional, a default value is provided
+      <CODESAMPLE><PROMPT/>let f ?name:(arg1=8) arg2 = arg1 + arg2;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>anonymous function, also called lambda expressions
+      <CODESAMPLE><PROMPT/>let inc = fun x -&gt; x + 1;;</CODESAMPLE>
     </ITEM>
     <ITEM>define mutually recursive functions
       <CODESAMPLE><PROMPT/>let rec even n =<BR/>
@@ -139,6 +164,10 @@
           <ROW>
             <TERM><CODEROUTINE>val length : string -&gt; int</CODEROUTINE></TERM>
             <DESC>Return the length of the string.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val split_on_char : char -&gt; string -&gt; string list</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>split_on_char sep s</CODEROUTINE> is the list of all (possibly empty) substrings of <CODEROUTINE>s</CODEROUTINE> that are delimited by the character <CODEROUTINE>sep</CODEROUTINE>.</DESC>
           </ROW>
         </DEFINITIONTABLE>
       </ITEM>
@@ -352,9 +381,23 @@
         <CODESAMPLE><PROMPT/>type colour = {websafe : bool; r : float; g : float; b : float; name : string};;<BR/>
           <PROMPT/>let b = {websafe = true; r = 0.0; g = 0.45; b = 0.73; name = "french blue"};;</CODESAMPLE>
       </ITEM>
+      <ITEM>Use the dot notation to get a field
+          <CODESAMPLE><PROMPT/>b.name;;</CODESAMPLE>
+          or pattern matching
+          <CODESAMPLE><PROMPT/>match b with {websafe = _; r = _; g = _; b = _; name = n} -&gt; n;;</CODESAMPLE>
+          or pattern matching wuth syntaxic sugar
+          <CODESAMPLE><PROMPT/>match b with {websafe ; r ; g ; b ; name } -&gt; name;;;</CODESAMPLE>
+      </ITEM>
+      <ITEM>It is possible to copy a record while modifying some fields
+        <CODESAMPLE><PROMPT/>let c = { b with websafe = false; name = "bleu français" };;</CODESAMPLE>
+      </ITEM>
       <ITEM>Records may be mutable
         <CODESAMPLE><PROMPT/>type person =  {first_name : string; surname : string; mutable age : int};;<BR/>
           <PROMPT/>let birthday p = p.age &lt;- p.age + 1;;</CODESAMPLE>
+      </ITEM>
+      <ITEM>Record types may be recursive
+      <CODESAMPLE><PROMPT/>type node = {value : int; next : node};;</CODESAMPLE>
+          But here, there is no way to construct a value of that type because of the circularity.
       </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Fixed-length array</TITLE>
