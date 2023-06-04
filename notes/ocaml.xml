@@ -21,6 +21,24 @@
       <CODESAMPLE><PROMPT/>let (x: int) = 50;;</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>References</TITLE>
+    <ITEM>declare a reference
+      <CODESAMPLE><PROMPT/>let x = ref 0;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>get the value of a reference
+      <CODESAMPLE><PROMPT/>let y = !x;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>modify the value of a reference
+      <CODESAMPLE><PROMPT/>x := 1;;</CODESAMPLE>
+    </ITEM>
+    <ITEM>aliasing a reference
+      <CODESAMPLE><PROMPT/>z = x;;</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Equality</TITLE>
+    <ITEM><CODEROUTINE>e1 == e2</CODEROUTINE> tests for physical equality of <CODEROUTINE>e1</CODEROUTINE> and <CODEROUTINE>e2</CODEROUTINE>. On mutable types such as references, arrays, byte sequences, records with mutable fields and objects with mutable instance variables, <CODEROUTINE>e1 == e2</CODEROUTINE> is true if and only if physical modification of <CODEROUTINE>e1</CODEROUTINE> also affects <CODEROUTINE>e2</CODEROUTINE>. On non-mutable types, the behavior of <CODEROUTINE>( == )</CODEROUTINE> is implementation-dependent; however, it is guaranteed that <CODEROUTINE>e1 == e2</CODEROUTINE> implies <CODEROUTINE>compare e1 e2 = 0</CODEROUTINE>.</ITEM>
+    <ITEM><CODEROUTINE>e1 = e2</CODEROUTINE> tests for structural equality of <CODEROUTINE>e1</CODEROUTINE> and <CODEROUTINE>e2</CODEROUTINE>. Mutable structures (e.g. references and arrays) are equal if and only if their current contents are structurally equal, even if the two mutable objects are not the same physical object. Equality between functional values raises <CODEROUTINE>Invalid_argument</CODEROUTINE>. Equality between cyclic data structures may not terminate.</ITEM>
+  </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Function</TITLE>
     <ITEM>define a function
       <CODESAMPLE><PROMPT/>let max a b = if a &lt; b then b else a;;</CODESAMPLE>
@@ -106,11 +124,11 @@
     </ITEM>
     <ITEM><CODEROUTINE>function</CODEROUTINE> keyword automatically has pattern matching
       <CODESAMPLE><PROMPT/>let foo = function<BR/>
-        0 -> "zero"<BR/>
-        | 1 -> "one"<BR/>
-        | 2 -> "couple"<BR/>
-        | 3 -> "few"<BR/>
-        | _ -> "many";;</CODESAMPLE>
+        0 -&gt; "zero"<BR/>
+        | 1 -&gt; "one"<BR/>
+        | 2 -&gt; "couple"<BR/>
+        | 3 -&gt; "few"<BR/>
+        | _ -&gt; "many";;</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Data types</TITLE>
@@ -500,7 +518,7 @@
       <ITEM>This module is automatically opened at the beginning of each compilation.</ITEM>
       <ITEM><DEFINITIONTABLE>
         <ROW>
-          <TERM><CODEROUTINE>val ignore : 'a -> unit</CODEROUTINE></TERM>
+          <TERM><CODEROUTINE>val ignore : 'a -&gt; unit</CODEROUTINE></TERM>
           <DESC>Discard the value of its argument and return <CODEROUTINE>()</CODEROUTINE>. For instance, <CODEROUTINE>ignore(f x)</CODEROUTINE> discards the result of the side-effecting function <CODEROUTINE>f</CODEROUTINE>. It is equivalent to <CODEROUTINE>f x; ()</CODEROUTINE>, except that the latter may generate a compiler warning; writing <CODEROUTINE>ignore(f x)</CODEROUTINE> instead avoids the warning.</DESC>
         </ROW>
         <ROW>
@@ -556,6 +574,14 @@
       <CODESAMPLE>docker stop ocaml </CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Set up the environment</TITLE>
+    <ITEM>on Linux
+      <CODESAMPLE><PROMPT/>eval $(opam env)</CODESAMPLE>
+    </ITEM>
+    <ITEM>on all OSes, to run a command with the environment being set up
+      <CODESAMPLE><PROMPT/>opam exec &lt;cmd&gt;</CODESAMPLE>
+    </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Compilation</TITLE>
       <ITEM>Compile to bytecodes and run
