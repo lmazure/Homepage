@@ -32,6 +32,8 @@
     </ITEM>
     <ITEM>with type annotations
       <CODESAMPLE><PROMPT/>let rec pow (x : int) (y : int) : int = if y = 0 then 1 else x * pow x (y - 1);;</CODESAMPLE>
+      use <CODEROUTINE>unit</CODEROUTINE> if no value is returned
+      <CODESAMPLE><PROMPT/>let print_flat_tree (n: node): unit = print_endline (string_of_list (list_of_tree n))</CODESAMPLE>
     </ITEM>
     <ITEM>parameters can be labelled
       <CODESAMPLE><PROMPT/>let f ~name1:arg1 ~name2:arg2 = arg1 + arg2;;<BR/>
@@ -77,7 +79,39 @@
       <CODESAMPLE><PROMPT/>let isvowel c =<BR/>
         <TAB/>match c with<BR/>
         <TAB/>'a' | 'e' | 'i' | 'o' | 'u' -&gt; true<BR/>
-      <TAB/>| _ -&gt; false</CODESAMPLE></ITEM>
+      <TAB/>| _ -&gt; false</CODESAMPLE>
+    </ITEM>
+    <ITEM>Pattern matching on records
+      <CODESAMPLE>type node = Node of { left : node; value : int; right : node } | Nil</CODESAMPLE>
+      If we do not care about the value
+      <CODESAMPLE>match nd with<BR/>
+        | Nil -&gt; …<BR/>
+        | Node _ -&gt; …</CODESAMPLE>
+      If we want to get the whole record
+      <CODESAMPLE>match nd with<BR/>
+        | Nil -&gt; …<BR/>
+        | Node n -&gt; …</CODESAMPLE>
+      If we want to get the whole record fields
+      <CODESAMPLE>match nd with<BR/>
+        | Nil -&gt; …<BR/>
+        | Node { left = l; value = v; right = r } -&gt; …</CODESAMPLE>
+      or with syntactic sugar
+      <CODESAMPLE>match nd with<BR/>
+        | Nil -&gt; …<BR/>
+        | Node { left; value; right } -&gt; …</CODESAMPLE>
+      It we want both the whole record and its fields
+      <CODESAMPLE>match nd with<BR/>
+        | Nil -&gt; …<BR/>
+        | Node { left = l; value = v; right = r } as n -&gt; …</CODESAMPLE>
+    </ITEM>
+    <ITEM><CODEROUTINE>function</CODEROUTINE> keyword automatically has pattern matching
+      <CODESAMPLE><PROMPT/>let foo = function<BR/>
+        0 -> "zero"<BR/>
+        | 1 -> "one"<BR/>
+        | 2 -> "couple"<BR/>
+        | 3 -> "few"<BR/>
+        | _ -> "many";;</CODESAMPLE>
+    </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Data types</TITLE>
     <ITEM><BLIST><TITLE>The Basic types are</TITLE>
@@ -300,6 +334,22 @@
               Raises <CODEROUTINE>Invalid_argument</CODEROUTINE> if the two lists are determined to have different lengths.</DESC>
           </ROW>
           <ROW>
+            <TERM><CODEROUTINE>val fold_right : ('a -&gt; 'b -&gt; 'b) -&gt; 'a list -&gt; 'b -&gt; 'b</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>fold_right f [a1; …; an] init</CODEROUTINE> is <CODEROUTINE>f a1 (f a2 (… (f an init) …))</CODEROUTINE>. Not tail-recursive.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val fold_left : ('a -&gt; 'b -&gt; 'a) -&gt; 'a -&gt; 'b list -&gt; 'a</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>fold_left f init [b1; …; bn]</CODEROUTINE> is <CODEROUTINE>f (… (f (f init b1) b2) …) bn</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val fold_left_map : ('a -&gt; 'b -&gt; 'a * 'c) -&gt; 'a -&gt; 'b list -&gt; 'a * 'c list</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>fold_left_map</CODEROUTINE> is a combination of <CODEROUTINE>fold_left</CODEROUTINE> and map that threads an accumulator through calls to <CODEROUTINE>f</CODEROUTINE>.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val concat_map : ('a -&gt; 'b list) -&gt; 'a list -&gt; 'b list</CODEROUTINE></TERM>
+            <DESC><CODEROUTINE>concat_map f l</CODEROUTINE> gives the same result as <CODEROUTINE>List.concat (List.map f l)</CODEROUTINE>. Tail-recursive.</DESC>
+          </ROW>
+          <ROW>
             <TERM><CODEROUTINE>val mem : 'a -&gt; 'a list -&gt; bool</CODEROUTINE></TERM>
             <DESC><CODEROUTINE>mem a list</CODEROUTINE> is true if and only if <CODEROUTINE>a</CODEROUTINE> is equal to an element of <CODEROUTINE>list</CODEROUTINE>.</DESC>
           </ROW>
@@ -385,7 +435,7 @@
           <CODESAMPLE><PROMPT/>b.name;;</CODESAMPLE>
           or pattern matching
           <CODESAMPLE><PROMPT/>match b with {websafe = _; r = _; g = _; b = _; name = n} -&gt; n;;</CODESAMPLE>
-          or pattern matching wuth syntaxic sugar
+          or pattern matching with syntactic sugar if we want to use the same name for both the field and a pattern variable
           <CODESAMPLE><PROMPT/>match b with {websafe ; r ; g ; b ; name } -&gt; name;;;</CODESAMPLE>
       </ITEM>
       <ITEM>It is possible to copy a record while modifying some fields
@@ -406,6 +456,26 @@
       <ITEM>Syntax
         <CODESAMPLE><PROMPT/>let arr = [|1; 2; 3|];;<BR/>
           <PROMPT/>arr.(0) &lt;- 0;;</CODESAMPLE>
+      </ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Variants</TITLE>
+      <ITEM>A variant type is a collection of constructors
+        <CODESAMPLE>type point = float * float<BR/>
+          type shape =<BR/>
+            | Point of point<BR/>
+            | Circle of point * float (* center and radius *)<BR/>
+            | Rect of point * point (* lower-left and upper-right corners *)<BR/>
+            let area = function<BR/>
+            | Point _ -&gt; 0.0<BR/>
+            | Circle (_, r) -&gt; Float.pi *. (r ** 2.0)<BR/>
+            | Rect ((x1, y1), (x2, y2)) -&gt;<BR/>
+                let w = x2 -. x1 in<BR/>
+                let h = y2 -. y1 in<BR/>
+                w *. h<BR/>
+          let center = function<BR/>
+            | Point p -&gt; p<BR/>
+            | Circle (p, _) -&gt; p<BR/>
+            | Rect ((x1, y1), (x2, y2)) -&gt; ((x2 +. x1) /. 2.0, (y2 +. y1) /. 2.0)</CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
@@ -429,6 +499,10 @@
   <ITEM><BLIST><TITLE><CODEROUTINE>Stdlib</CODEROUTINE> module</TITLE>
       <ITEM>This module is automatically opened at the beginning of each compilation.</ITEM>
       <ITEM><DEFINITIONTABLE>
+        <ROW>
+          <TERM><CODEROUTINE>val ignore : 'a -> unit</CODEROUTINE></TERM>
+          <DESC>Discard the value of its argument and return <CODEROUTINE>()</CODEROUTINE>. For instance, <CODEROUTINE>ignore(f x)</CODEROUTINE> discards the result of the side-effecting function <CODEROUTINE>f</CODEROUTINE>. It is equivalent to <CODEROUTINE>f x; ()</CODEROUTINE>, except that the latter may generate a compiler warning; writing <CODEROUTINE>ignore(f x)</CODEROUTINE> instead avoids the warning.</DESC>
+        </ROW>
         <ROW>
           <TERM><CODEROUTINE>val print_char : char -&gt; unit</CODEROUTINE></TERM>
           <DESC>Print a character on standard output.</DESC>
@@ -456,10 +530,6 @@
         <ROW>
           <TERM><CODEROUTINE>val print_newline : unit -&gt; unit</CODEROUTINE></TERM>
           <DESC>Print a newline character on standard output, and flush standard output. This can be used to simulate line buffering of standard output.</DESC>
-        </ROW>
-        <ROW>
-          <TERM><CODEROUTINE>val ignore : 'a -&gt; unit</CODEROUTINE><BR/></TERM>
-          <DESC>Discard the value of its argument and return <CODEROUTINE>()</CODEROUTINE>.</DESC>
         </ROW>
         </DEFINITIONTABLE></ITEM>
   </BLIST></ITEM>
