@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Testing</TITLE>
 <PATH>links/test.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -14,7 +14,10 @@
       <ITEM><X><T>Cem Kaner</T><A>https://kaner.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X status="dead"><T>Test Obsessed</T><A>https://testobsessed.com</A><L>en</L><F>HTML</F></X> (<AUTHOR><FIRSTNAME>Elisabeth</FIRSTNAME><LASTNAME>Hendrickson</LASTNAME></AUTHOR>)</ITEM>
       <ITEM><X><T>GTAC</T><A>https://developers.google.com/google-test-automation-conference/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>ISTQB</T><A>https://www.istqb.org/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>ISTQB</T><A>https://www.istqb.org/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>ISTQB CTFL Syllabus 2018 V3.1</T><A>https://istqb-main-web-prod.s3.amazonaws.com/media/documents/ISTQB-CTFL_Syllabus_2018_v3.1.1.pdf</A><L>en</L><F>PDF</F></X></ITEM>
+        <ITEM><X><T>Magdalena Olak - ISTQB CTFL Syllabus 2018 V3.1</T><A>https://magdalenaolak.gitbook.io/istqb-foundation-level/</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
       <ITEM><X><T>Context-Driven-Testing</T><A>https://context-driven-testing.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X quality="-1"><T>La taverne du testeur</T><A>https://latavernedutesteur.fr/</A><L>fr</L><F>HTML</F><FEED><A>https://latavernedutesteur.fr/feed/</A><F>RSS</F></FEED></X></ITEM>
       <ITEM><X><T>Software Testing Magazine</T><A>https://www.softwaretestingmagazine.com/</A><L>en</L><F>HTML</F></X></ITEM>
