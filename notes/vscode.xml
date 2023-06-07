@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -553,6 +553,16 @@ Search/replace
     <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="F5"/><BR/>
       <CODEROUTINE>Go to Previous Change</CODEROUTINE></TERM>
     <DESC>Go to previous change</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="F3"/><BR/>
+      <CODEROUTINE>Show Next Change</CODEROUTINE></TERM>
+    <DESC>Go to next change</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="F3"/><BR/>
+      <CODEROUTINE>Go to Previous Change</CODEROUTINE></TERM>
+    <DESC>Show previous change</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
