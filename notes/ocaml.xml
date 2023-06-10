@@ -32,7 +32,7 @@
       <CODESAMPLE><PROMPT/>x := 1;;</CODESAMPLE>
     </ITEM>
     <ITEM>aliasing a reference
-      <CODESAMPLE><PROMPT/>z = x;;</CODESAMPLE>
+      <CODESAMPLE><PROMPT/>let z = x;;</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Equality</TITLE>
@@ -332,6 +332,10 @@
             <TERM><CODEROUTINE>val nth_opt : 'a list -&gt; int -&gt; 'a option</CODEROUTINE></TERM>
             <DESC>Return the n-th element of the given list. Return <CODEROUTINE>None</CODEROUTINE> if the list is too short.<BR/>
               Raises <CODEROUTINE>Invalid_argument</CODEROUTINE> if <CODEROUTINE>n</CODEROUTINE> is negative.</DESC>
+          </ROW>
+          <ROW>
+            <TERM><CODEROUTINE>val append : 'a list -&gt; 'a list -&gt; 'a list</CODEROUTINE></TERM>
+            <DESC>Concatenate two lists. Same function as the infix operator <CODEROUTINE>@</CODEROUTINE>. Not tail-recursive (length of the first argument). The <CODEROUTINE>@</CODEROUTINE> operator is not tail-recursive either.</DESC>
           </ROW>
           <ROW>
             <TERM><CODEROUTINE>val map : ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list</CODEROUTINE></TERM>
