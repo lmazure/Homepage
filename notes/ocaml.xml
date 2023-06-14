@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -553,7 +553,25 @@
           <TERM><CODEROUTINE>val print_newline : unit -&gt; unit</CODEROUTINE></TERM>
           <DESC>Print a newline character on standard output, and flush standard output. This can be used to simulate line buffering of standard output.</DESC>
         </ROW>
-        </DEFINITIONTABLE></ITEM>
+        <ROW>
+          <TERM><CODEROUTINE>val float_of_int : int -&gt; float</CODEROUTINE><BR/>
+            <CODEROUTINE>val float : int -&gt; float</CODEROUTINE></TERM>
+          <DESC>Convert an integer to floating-point.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val int_of_float : float -&gt; int</CODEROUTINE><BR/>
+            <CODEROUTINE>val truncate : float -&gt; int</CODEROUTINE></TERM>
+          <DESC>Truncate the given floating-point number to an integer. The result is unspecified if the argument is nan or falls outside the range of representable integers.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val fst : 'a * 'b -&gt; 'a</CODEROUTINE></TERM>
+          <DESC>Return the first component of a pair.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val snd : 'a * 'b -&gt; 'b</CODEROUTINE></TERM>
+          <DESC>Return the second component of a pair.</DESC>
+        </ROW>
+      </DEFINITIONTABLE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Installation</TITLE>
     <ITEM><BLIST><TITLE>Using Docker</TITLE>
