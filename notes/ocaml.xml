@@ -338,6 +338,11 @@
             <DESC>Concatenate two lists. Same function as the infix operator <CODEROUTINE>@</CODEROUTINE>. Not tail-recursive (length of the first argument). The <CODEROUTINE>@</CODEROUTINE> operator is not tail-recursive either.</DESC>
           </ROW>
           <ROW>
+            <TERM><CODEROUTINE>val concat : 'a list list -&gt; 'a list</CODEROUTINE><BR/>
+              <CODEROUTINE>val flatten : 'a list list -&gt; 'a list</CODEROUTINE></TERM>
+            <DESC>Concatenate a list of lists. The elements of the argument are all concatenated together (in the same order) to give the result. Not tail-recursive (length of the argument + length of the longest sub-list).</DESC>
+          </ROW>
+          <ROW>
             <TERM><CODEROUTINE>val map : ('a -&gt; 'b) -&gt; 'a list -&gt; 'b list</CODEROUTINE></TERM>
             <DESC>Apply function <CODEROUTINE>f</CODEROUTINE> to <CODEROUTINE>a1, …, an</CODEROUTINE>, and builds the list <CODEROUTINE>[f a1; …; f an]</CODEROUTINE>. Not tail-recursive.</DESC>
           </ROW>
@@ -442,9 +447,24 @@
       </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tuples</TITLE>
-      <ITEM>A fixed number of elements together.</ITEM>
+      <ITEM>A fixed number of elements together. This is useful when a function returns several values, we no not have to define a record.</ITEM>
       <ITEM>Syntax
         <CODESAMPLE><PROMPT/>(true, 0.0, 0.45, 0.73, "french blue");;</CODESAMPLE>
+      </ITEM>
+      <ITEM>Destructuring <CODEROUTINE>let</CODEROUTINE>
+        <CODESAMPLE><PROMPT/>let v = (1, true, "bonjour", 'a');;<BR/>
+          val v : int * bool * string * char = (1, true, "bonjour", 'a')<BR/>
+          <PROMPT/>let (a,b,c,d) = v;;<BR/>
+          val a : int = 1<BR/>
+          val b : bool = true<BR/>
+          val c : string = "bonjour"<BR/>
+          val d : char = 'a'</CODESAMPLE>
+      </ITEM>
+      <ITEM>We can use tuple as a function argument. This gives a nice syntax, but this is less performant because a tuple need to be built.
+        <CODESAMPLE><PROMPT/>let f (x,y) = x + y;;<BR/>
+          val f : int * int -&gt; int = &lt;fun&gt;<BR/>
+          <PROMPT/>f (1,2);;<BR/>
+          - : int = 3</CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Records</TITLE>
@@ -481,7 +501,7 @@
       </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Variants</TITLE>
-      <ITEM>A variant type is a collection of constructors
+      <ITEM>A variant type is a collection of constructors.
         <CODESAMPLE>type point = float * float<BR/>
           type shape =<BR/>
             | Point of point<BR/>
