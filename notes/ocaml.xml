@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -87,6 +87,24 @@
       <CODESAMPLE><PROMPT/>4 + 5 |&gt; succ;;<BR/>
         - : int = 10</CODESAMPLE>
     </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Operator</TITLE>
+    <ITEM>defining an infix operator
+    <CODESAMPLE># let ( ** ) f g x = x |&gt; g |&gt; f ;;<BR/>
+      val ( ** ) : ('a -&gt; 'b) -&gt; ('c -&gt; 'a) -&gt; 'c -&gt; 'b = &lt;fun&gt;<BR/>
+      # let g x = x *. x ;;<BR/>
+      val g : float -&gt; float = &lt;fun&gt;<BR/>
+      # let f x = -. x ;;<BR/>
+      val f : float -&gt; float = &lt;fun&gt;<BR/>
+      # let _ = (f**g) 1.1 ;;<BR/>
+      - : float = -1.21000000000000019</CODESAMPLE></ITEM>
+    <ITEM>defining a prefix operator
+    <CODESAMPLE># let ( !// ) f x = 1. /. ( f x ) ;;<BR/>
+      val ( !// ) : ('a -&gt; float) -&gt; 'a -&gt; float = &lt;fun&gt;<BR/>
+      # let f x = x *. x ;;<BR/>
+      val f : float -&gt; float = &lt;fun&gt;<BR/>
+      # let _ = (!// f) 2. ;;<BR/>
+      - : float = 0.25</CODESAMPLE></ITEM>
   </BLIST></ITEM>
   <ITEM>conditional expressions use <CODEFILENAME>if … then … else …</CODEFILENAME>
     <CODESAMPLE><PROMPT/>let rec gcd a b = if b = 0 then a else gcd b (a mod b);;</CODESAMPLE>
