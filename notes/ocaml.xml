@@ -53,6 +53,19 @@
       use <CODEROUTINE>unit</CODEROUTINE> if no value is returned
       <CODESAMPLE><PROMPT/>let print_flat_tree (n: node): unit = print_endline (string_of_list (list_of_tree n))</CODESAMPLE>
     </ITEM>
+    <ITEM>to make a function tail recursive
+      <NLIST>
+        <ITEM>Change the function into a helper function. Add an extra argument: the accumulator, often named <CODEROUTINE>acc</CODEROUTINE>.</ITEM>
+        <ITEM>Write a new “main” version of the function that calls the helper. It passes the original base case’s return value as the initial value of the accumulator.</ITEM>
+        <ITEM>Change the helper function to return the accumulator in the base case.</ITEM>
+        <ITEM>Change the helper function’s recursive case. It now needs to do the extra work on the accumulator argument, before the recursive call.</ITEM>
+      </NLIST>
+      <CODESAMPLE><PROMPT/> let factorial n =<BR/>
+        <TAB/>let rec fact_aux n acc =<BR/>
+        <TAB/><TAB/>if n = 0 then acc else fact_aux (n - 1) (n * acc) in <BR/>
+        <TAB/><TAB/><TAB/>fact_aux n 1 ;;<BR/>
+        val factorial : int -&gt; int = &lt;fun&gt;</CODESAMPLE>
+    </ITEM>
     <ITEM>parameters can be labelled
       <CODESAMPLE><PROMPT/>let f ~name1:arg1 ~name2:arg2 = arg1 + arg2;;<BR/>
         <PROMPT/>f ~name2:3 ~name1:4;;</CODESAMPLE>
@@ -72,12 +85,12 @@
     <ITEM>define mutually recursive functions
       <CODESAMPLE><PROMPT/>let rec even n =<BR/>
         match n with<BR/>
-        | 0 -&gt; true<BR/>
-        | x -&gt; odd (x - 1)<BR/>
+        <TAB/>| 0 -&gt; true<BR/>
+        <TAB/>| x -&gt; odd (x - 1)<BR/>
         and odd n =<BR/>
-        match n with<BR/>
-        | 0 -&gt; false<BR/>
-        | x -&gt; even (x - 1);;</CODESAMPLE>
+        <TAB/>match n with<BR/>
+        <TAB/>| 0 -&gt; false<BR/>
+        <TAB/>| x -&gt; even (x - 1);;</CODESAMPLE>
     </ITEM>
     <ITEM>The application operator <CODEROUTINE>@@</CODEROUTINE> applies the function defined on the left side to the argument defined on the right side
       <CODESAMPLE><PROMPT/>succ @@ 4 + 5;;<BR/>
@@ -89,21 +102,27 @@
     </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Operator</TITLE>
+  <ITEM><CODEROUTINE>=</CODEROUTINE>, <CODEROUTINE>&lt;</CODEROUTINE>, and  <CODEROUTINE>&gt;</CODEROUTINE> are polymorphic.</ITEM>
+    <ITEM>An operator between parentheses is a function
+      <CODESAMPLE><PROMPT/>( + ) ;;<BR/>
+        - : int -&gt; int -&gt; int = &lt;fun&gt;<BR/>
+        <PROMPT/>( + ) 2 3 ;;<BR/>
+        - : int = 5</CODESAMPLE></ITEM>
     <ITEM>defining an infix operator
-    <CODESAMPLE># let ( ** ) f g x = x |&gt; g |&gt; f ;;<BR/>
+    <CODESAMPLE><PROMPT/> let ( ** ) f g x = x |&gt; g |&gt; f ;;<BR/>
       val ( ** ) : ('a -&gt; 'b) -&gt; ('c -&gt; 'a) -&gt; 'c -&gt; 'b = &lt;fun&gt;<BR/>
-      # let g x = x *. x ;;<BR/>
+      <PROMPT/> let g x = x *. x ;;<BR/>
       val g : float -&gt; float = &lt;fun&gt;<BR/>
-      # let f x = -. x ;;<BR/>
+      <PROMPT/> let f x = -. x ;;<BR/>
       val f : float -&gt; float = &lt;fun&gt;<BR/>
-      # let _ = (f**g) 1.1 ;;<BR/>
+      <PROMPT/> let _ = (f**g) 1.1 ;;<BR/>
       - : float = -1.21000000000000019</CODESAMPLE></ITEM>
     <ITEM>defining a prefix operator
-    <CODESAMPLE># let ( !// ) f x = 1. /. ( f x ) ;;<BR/>
+    <CODESAMPLE><PROMPT/> let ( !// ) f x = 1. /. ( f x ) ;;<BR/>
       val ( !// ) : ('a -&gt; float) -&gt; 'a -&gt; float = &lt;fun&gt;<BR/>
-      # let f x = x *. x ;;<BR/>
+      <PROMPT/> let f x = x *. x ;;<BR/>
       val f : float -&gt; float = &lt;fun&gt;<BR/>
-      # let _ = (!// f) 2. ;;<BR/>
+      <PROMPT/> let _ = (!// f) 2. ;;<BR/>
       - : float = 0.25</CODESAMPLE></ITEM>
   </BLIST></ITEM>
   <ITEM>conditional expressions use <CODEFILENAME>if … then … else …</CODEFILENAME>
@@ -114,39 +133,39 @@
     <ITEM>Patterns can be combined
       <CODESAMPLE><PROMPT/>let isvowel c =<BR/>
         <TAB/>match c with<BR/>
-        <TAB/>'a' | 'e' | 'i' | 'o' | 'u' -&gt; true<BR/>
-      <TAB/>| _ -&gt; false</CODESAMPLE>
+        <TAB/><TAB/>'a' | 'e' | 'i' | 'o' | 'u' -&gt; true<BR/>
+        <TAB/><TAB/>| _ -&gt; false</CODESAMPLE>
     </ITEM>
     <ITEM>Pattern matching on records
       <CODESAMPLE>type node = Node of { left : node; value : int; right : node } | Nil</CODESAMPLE>
       If we do not care about the value
       <CODESAMPLE>match nd with<BR/>
-        | Nil -&gt; …<BR/>
-        | Node _ -&gt; …</CODESAMPLE>
+        <TAB/>| Nil -&gt; …<BR/>
+        <TAB/>| Node _ -&gt; …</CODESAMPLE>
       If we want to get the whole record
       <CODESAMPLE>match nd with<BR/>
-        | Nil -&gt; …<BR/>
-        | Node n -&gt; …</CODESAMPLE>
+        <TAB/>| Nil -&gt; …<BR/>
+        <TAB/>| Node n -&gt; …</CODESAMPLE>
       If we want to get the whole record fields
       <CODESAMPLE>match nd with<BR/>
-        | Nil -&gt; …<BR/>
-        | Node { left = l; value = v; right = r } -&gt; …</CODESAMPLE>
+        <TAB/>| Nil -&gt; …<BR/>
+        <TAB/>| Node { left = l; value = v; right = r } -&gt; …</CODESAMPLE>
       or with syntactic sugar
       <CODESAMPLE>match nd with<BR/>
-        | Nil -&gt; …<BR/>
-        | Node { left; value; right } -&gt; …</CODESAMPLE>
+        <TAB/>| Nil -&gt; …<BR/>
+        <TAB/>| Node { left; value; right } -&gt; …</CODESAMPLE>
       It we want both the whole record and its fields
       <CODESAMPLE>match nd with<BR/>
-        | Nil -&gt; …<BR/>
-        | Node { left = l; value = v; right = r } as n -&gt; …</CODESAMPLE>
+        <TAB/>| Nil -&gt; …<BR/>
+        <TAB/>| Node { left = l; value = v; right = r } as n -&gt; …</CODESAMPLE>
     </ITEM>
     <ITEM><CODEROUTINE>function</CODEROUTINE> keyword automatically has pattern matching
       <CODESAMPLE><PROMPT/>let foo = function<BR/>
-        0 -&gt; "zero"<BR/>
-        | 1 -&gt; "one"<BR/>
-        | 2 -&gt; "couple"<BR/>
-        | 3 -&gt; "few"<BR/>
-        | _ -&gt; "many";;</CODESAMPLE>
+        <TAB/>0 -&gt; "zero"<BR/>
+        <TAB/>| 1 -&gt; "one"<BR/>
+        <TAB/>| 2 -&gt; "couple"<BR/>
+        <TAB/>| 3 -&gt; "few"<BR/>
+        <TAB/>| _ -&gt; "many";;</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Data types</TITLE>
@@ -219,7 +238,7 @@
       </DEFINITIONTABLE>
     </ITEM>
     <ITEM><BLIST><TITLE>Strings</TITLE>
-      <ITEM>Use <CODEROUTINE>^</CODEROUTINE> two concatenate two strings.</ITEM>
+      <ITEM>Use <CODEROUTINE>^</CODEROUTINE> to concatenate two strings.</ITEM>
       <ITEM><CODEROUTINE>\</CODEROUTINE> is to be used to escape <CODEROUTINE>"</CODEROUTINE> and <CODEROUTINE>\</CODEROUTINE>.</ITEM>
       <ITEM>Quoted strings
         <CODESAMPLE><PROMPT/>{|This is a quoted string, here, neither \ nor " are special characters|};<BR/>
@@ -252,8 +271,8 @@
       <ITEM>pattern matching on an option
         <CODESAMPLE><PROMPT/>let extract o =<BR/>
           match o with<BR/>
-          | Some i -&gt; string_of_int i<BR/>
-          | None -&gt; "";;</CODESAMPLE>
+          <TAB/>| Some i -&gt; string_of_int i<BR/>
+          <TAB/>| None -&gt; "";;</CODESAMPLE>
       </ITEM>
       <ITEM>get the value if not <CODEROUTINE>None</CODEROUTINE>, otherwise a default value
         <CODESAMPLE><PROMPT/>Option.value (Some 77) ~default:(-1);; </CODESAMPLE>
@@ -522,20 +541,20 @@
       <ITEM>A variant type is a collection of constructors.
         <CODESAMPLE>type point = float * float<BR/>
           type shape =<BR/>
-            | Point of point<BR/>
-            | Circle of point * float (* center and radius *)<BR/>
-            | Rect of point * point (* lower-left and upper-right corners *)<BR/>
-            let area = function<BR/>
-            | Point _ -&gt; 0.0<BR/>
-            | Circle (_, r) -&gt; Float.pi *. (r ** 2.0)<BR/>
-            | Rect ((x1, y1), (x2, y2)) -&gt;<BR/>
-                let w = x2 -. x1 in<BR/>
-                let h = y2 -. y1 in<BR/>
-                w *. h<BR/>
+          <TAB/>| Point of point<BR/>
+          <TAB/>| Circle of point * float (* center and radius *)<BR/>
+          <TAB/>| Rect of point * point (* lower-left and upper-right corners *)<BR/>
+          let area = function<BR/>
+          <TAB/>| Point _ -&gt; 0.0<BR/>
+          <TAB/>| Circle (_, r) -&gt; Float.pi *. (r ** 2.0)<BR/>
+          <TAB/>| Rect ((x1, y1), (x2, y2)) -&gt;<BR/>
+          <TAB/><TAB/>let w = x2 -. x1 in<BR/>
+          <TAB/><TAB/>let h = y2 -. y1 in<BR/>
+          <TAB/><TAB/>w *. h<BR/>
           let center = function<BR/>
-            | Point p -&gt; p<BR/>
-            | Circle (p, _) -&gt; p<BR/>
-            | Rect ((x1, y1), (x2, y2)) -&gt; ((x2 +. x1) /. 2.0, (y2 +. y1) /. 2.0)</CODESAMPLE>
+          <TAB/>| Point p -&gt; p<BR/>
+          <TAB/>| Circle (p, _) -&gt; p<BR/>
+          <TAB/>| Rect ((x1, y1), (x2, y2)) -&gt; ((x2 +. x1) /. 2.0, (y2 +. y1) /. 2.0)</CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>

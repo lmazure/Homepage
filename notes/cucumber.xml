@@ -3,10 +3,12 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Cucumber</TITLE>
 <PATH>notes/cucumber.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 Specify where is the Gecko WebDriver on the Maven command line
 <CODESAMPLE>mvn -Dwebdriver.gecko.driver=c:/Users/lmazure/bin/geckodriver.exe test</CODESAMPLE>
+Specify the tests fo run (for Cucumber 5 or later): use <CODEROUTINE>-Dcucumber.features</CODEROUTINE> to define a comma-separated list of the feature files to run
+<CODESAMPLE>mvn test -Dcucumber.features="src\test\resources\prestashoptest\account\431_Standard_account_creation.feature,src\test\resources\prestashoptest\account\432_Create_an_account__then_try_to_login_with_incorrect_password.feature,src\test\resources\prestashoptest\cart\240_Add_one_product_in_the_cart.feature"</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Define the reports to be generated</TITLE>
   <ITEM>in the code

@@ -644,6 +644,11 @@
     <TERM><CODEROUTINE>git push --mirror</CODEROUTINE></TERM>
     <DESC>All refs under <CODEROUTINE>refs/</CODEROUTINE> (which includes but is not limited to <CODEROUTINE>refs/heads/</CODEROUTINE>, <CODEROUTINE>refs/remotes/</CODEROUTINE>, and <CODEROUTINE>refs/tags/)</CODEROUTINE> are mirrored to the remote repository. Newly created local refs are pushed to the remote end, locally updated refs are force updated on the remote end, and deleted refs are removed from the remote end.</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git push --dry-run</CODEROUTINE><BR/>
+      <CODEROUTINE>git push -n</CODEROUTINE></TERM>
+    <DESC>Do everything except actually send the updates.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/><DEFINITIONTABLE>
   <ROW>
