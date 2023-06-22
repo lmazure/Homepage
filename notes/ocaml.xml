@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -496,6 +496,12 @@
           val b : bool = true<BR/>
           val c : string = "bonjour"<BR/>
           val d : char = 'a'</CODESAMPLE>
+          This can also be written
+        <CODESAMPLE><PROMPT/>let a,b,c,d = v;;<BR/>
+          val a : int = 1<BR/>
+          val b : bool = true<BR/>
+          val c : string = "bonjour"<BR/>
+          val d : char = 'a'</CODESAMPLE>
       </ITEM>
       <ITEM>We can use tuple as a function argument. This gives a nice syntax, but this is less performant because a tuple need to be built.
         <CODESAMPLE><PROMPT/>let f (x,y) = x + y;;<BR/>
@@ -503,6 +509,11 @@
           <PROMPT/>f (1,2);;<BR/>
           - : int = 3</CODESAMPLE>
       </ITEM>
+      <ITEM>syntax to define a type
+      <CODESAMPLE><PROMPT/>type square = int * int * int * int * int * int * int * int * int;;<BR/>
+        <PROMPT/>let print_square (sq: square) : unit =<BR/>
+        <TAB/>let (a ,b, c, d, e, f, g, h, i) = sq<BR/>
+        <TAB/>in Printf.printf "%d %d %d\n%d %d %d\n%d %d %d\n" a b c d e f g h i;;</CODESAMPLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Records</TITLE>
       <ITEM>A fixed number of labelled elements.</ITEM>
@@ -629,6 +640,59 @@
           <DESC>Return the second component of a pair.</DESC>
         </ROW>
       </DEFINITIONTABLE></ITEM>
+  </BLIST></ITEM>
+  <ITEM><CODEROUTINE>Random</CODEROUTINE> module
+      <DEFINITIONTABLE>
+        <ROW>
+          <TERM><CODEROUTINE>val int : int -&gt; int</CODEROUTINE></TERM>
+          <DESC>Return a random integer between 0 (inclusive) and bound (exclusive). bound must be greater than 0 and less than 2<SUP>30</SUP>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val self_init : unit -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Initialize the domain-local generator with a random seed chosen in a system-dependent way. If <CODEROUTINE>/dev/urandom</CODEROUTINE> is available on the host machine, it is used to provide a highly random initial seed. Otherwise, a less random seed is computed from system parameters (current time, process IDs, domain-local state).<BR/>
+            <CODESAMPLE>let _ = Random.self_init ()<BR/>
+              let a = Random.int 999</CODESAMPLE></DESC>
+        </ROW>
+      </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Exceptions</TITLE>
+    <ITEM>define an exception
+      <CODESAMPLE><PROMPT/>exception Error ;;<BR/>
+        exception Error<BR/>
+        <PROMPT/>exception Unix_error of string ;;<BR/>
+        exception Unix_error of string</CODESAMPLE>
+    </ITEM>
+    <ITEM>raise an exception
+      <CODESAMPLE><PROMPT/>raise ( Unix_error "File not found" ) ;;<BR/>
+        Exception: Unix_error "File not found".</CODESAMPLE>
+    </ITEM>
+    <ITEM>catching an exception
+      <CODESAMPLE><PROMPT/>let safe_divide x y =<BR/>
+        <TAB/>try ( x / y ) with<BR/>
+        <TAB/><TAB/>| Division_by_zero -&gt; 666 ;;<BR/>
+        val safe_divide : int -&gt; int -&gt; int = &lt;fun&gt;<BR/>
+        <PROMPT/>safe_divide 1 0 ;;<BR/>
+        - : int = 666</CODESAMPLE>
+    </ITEM>
+    <ITEM>There are some predefined exceptions.
+    <BLIST>
+      <ITEM><CODEROUTINE>Exit</CODEROUTINE> can be used to terminate an iteration, like a break statement.</ITEM>
+      <ITEM><CODEROUTINE>Not_found</CODEROUTINE> should be raised when searching failed because there isn't anything satisfactory to be found.</ITEM>
+      <ITEM><CODEROUTINE>Invalid_argument</CODEROUTINE> should be raised when a parameter can't be accepted.<BR/>
+        It can be raised using <CODEROUTINE>val invalid_arg : string -&gt; 'a</CODEROUTINE></ITEM>
+      <ITEM><CODEROUTINE>Failure</CODEROUTINE> should be raised when a result can't be produced.<BR/>
+        It can be raised using <CODEROUTINE>val failwith : string -&gt; 'a</CODEROUTINE></ITEM>
+    </BLIST>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Loops</TITLE>
+    <ITEM>Three types of loops
+      <BLIST>
+        <ITEM><CODESAMPLE>while e1 do e2 done</CODESAMPLE></ITEM>
+        <ITEM><CODESAMPLE>for x=e1 to e2 do e3 done</CODESAMPLE></ITEM>
+        <ITEM><CODESAMPLE>for x=e1 downto e2 do e3 done</CODESAMPLE></ITEM>
+      </BLIST>
+    </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Installation</TITLE>
     <ITEM><BLIST><TITLE>Using Docker</TITLE>
