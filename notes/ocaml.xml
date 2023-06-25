@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -648,6 +648,14 @@
           <DESC>Return a random integer between 0 (inclusive) and bound (exclusive). bound must be greater than 0 and less than 2<SUP>30</SUP>.</DESC>
         </ROW>
         <ROW>
+          <TERM><CODEROUTINE>val init : int -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Initialize the domain-local generator, using the argument as a seed. The same seed will always yield the same sequence of numbers.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val full_init : int array -&gt; unit</CODEROUTINE></TERM>
+          <DESC>Same as <CODEROUTINE>Random.init</CODEROUTINE> but takes more data as seed.</DESC>
+        </ROW>
+        <ROW>
           <TERM><CODEROUTINE>val self_init : unit -&gt; unit</CODEROUTINE></TERM>
           <DESC>Initialize the domain-local generator with a random seed chosen in a system-dependent way. If <CODEROUTINE>/dev/urandom</CODEROUTINE> is available on the host machine, it is used to provide a highly random initial seed. Otherwise, a less random seed is computed from system parameters (current time, process IDs, domain-local state).<BR/>
             <CODESAMPLE>let _ = Random.self_init ()<BR/>
@@ -726,20 +734,47 @@
       <CODESAMPLE><PROMPT/>opam exec &lt;cmd&gt;</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>Compilation</TITLE>
-      <ITEM>Compile to bytecodes and run
-        <CODESAMPLE><PROMPT/>ocamlc foobar.ml<BR/>
-          <PROMPT/>./camlprog.exe</CODESAMPLE>
-      </ITEM>
-      <ITEM>Compile to bytecodes with debug information and run with stacktrace dump
-        <CODESAMPLE><PROMPT/>ocamlc -g foobar.ml<BR/>
-          <PROMPT/>OCAMLRUNPARAM=b ./camlprog.exe</CODESAMPLE>
-      </ITEM>
-  </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>Debug</TITLE>
-      <ITEM>Start the debugger
-        <CODESAMPLE><PROMPT/>ocamldebug camlprog.exe</CODESAMPLE>
-      </ITEM>
+  <ITEM><BLIST><TITLE>Tools</TITLE>
+    <ITEM><BLIST><TITLE><CODEROUTINE>ocamlc</CODEROUTINE></TITLE>
+        <ITEM>Compile to bytecodes
+          <CODESAMPLE><PROMPT/>ocamlc foobar.ml</CODESAMPLE>
+          On most systems, the file produced by the linking phase can be run directly
+          <CODESAMPLE><PROMPT/>./camlprog.exe</CODESAMPLE>
+        </ITEM>
+        <ITEM><CODEROUTINE>ocamlc</CODEROUTINE> can take in input
+          <BLIST>
+            <ITEM><CODEROUTINE>.ml</CODEROUTINE> which are taken to be source files</ITEM>
+            <ITEM><CODEROUTINE>.mli</CODEROUTINE> which are taken to be source files for compilation unit interfaces</ITEM>
+            <ITEM><CODEROUTINE>.cmo</CODEROUTINE> which are taken to be compiled object bytecode</ITEM>
+            <ITEM><CODEROUTINE>.cma</CODEROUTINE> which are taken taken to be libraries of object bytecode (generated with <CODEROUTINE>ocaml -a</CODEROUTINE>)</ITEM>
+            <ITEM><CODEROUTINE>.c</CODEROUTINE> which are taken taken to be C sources files, assed to the C compiler, which generates a <CODEROUTINE>.o</CODEROUTINE>/<CODEROUTINE>.obj</CODEROUTINE> object file</ITEM>
+            <ITEM><CODEROUTINE>.o</CODEROUTINE> (<CODEROUTINE>.obj</CODEROUTINE> on Windows) which are assumed to be C object files</ITEM>
+            <ITEM><CODEROUTINE>.a</CODEROUTINE> (<CODEROUTINE>.lib</CODEROUTINE> on Windows) which are assumed to be C libraries</ITEM>
+            <ITEM><CODEROUTINE>.so</CODEROUTINE> (<CODEROUTINE>.dll</CODEROUTINE> on Windows) which are assumed to be C shared libraries</ITEM>
+          </BLIST>
+        </ITEM>
+        <ITEM>When compiling a <CODEROUTINE>.ml</CODEROUTINE>
+          <BLIST>
+            <ITEM>If a <CODEROUTINE>.mli</CODEROUTINE> file already exists, <CODEROUTINE>ocamlc</CODEROUTINE> checks that it checks that the <CODEROUTINE>.ml</CODEROUTINE> repects it.<BR/>
+              Otherwise it generates one.</ITEM>
+              <ITEM><CODEROUTINE>ocamlc</CODEROUTINE> generates a <CODEROUTINE>.cmo</CODEROUTINE>.</ITEM>
+              <ITEM><CODEROUTINE>ocamlc</CODEROUTINE> generates a bytecode file <CODEROUTINE>a.out</CODEROUTINE> (<CODEFILENAME>camlprog.exe</CODEFILENAME> on Windows).</ITEM>
+          </BLIST>
+        </ITEM>
+        <ITEM>Compile to bytecodes with debug information and run with stacktrace dump
+          <CODESAMPLE><PROMPT/>ocamlc -g foobar.ml<BR/>
+            <PROMPT/>OCAMLRUNPARAM=b ./camlprog.exe</CODESAMPLE>
+        </ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE><CODEROUTINE>ocamlrun</CODEROUTINE></TITLE>
+        <ITEM>Run a bytecode file.<BR/>
+          Most of the time, bytecode files can be run directly, without using <CODEROUTINE>ocamlrun</CODEROUTINE>.</ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE><CODEROUTINE>ocamldebug</CODEROUTINE></TITLE>
+        <ITEM>Start the debugger
+          <CODESAMPLE><PROMPT/>ocamldebug camlprog.exe</CODESAMPLE>
+        </ITEM>
+    </BLIST></ITEM>
   </BLIST></ITEM>
 </BLIST>
 </CONTENT>
