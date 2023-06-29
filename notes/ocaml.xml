@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -641,6 +641,15 @@
         </ROW>
       </DEFINITIONTABLE></ITEM>
   </BLIST></ITEM>
+  <ITEM><CODEROUTINE>Sys</CODEROUTINE> module
+      <DEFINITIONTABLE>
+        <ROW>
+          <TERM><CODEROUTINE>val argv : string array</CODEROUTINE></TERM>
+          <DESC>The command line arguments given to the process. The first element is the command name used to invoke the program. The following elements are the command-line arguments given to the program.
+            <CODESAMPLE>let seed = int_of_string Sys.argv.(1) </CODESAMPLE></DESC>
+        </ROW>
+      </DEFINITIONTABLE>
+  </ITEM>
   <ITEM><CODEROUTINE>Random</CODEROUTINE> module
       <DEFINITIONTABLE>
         <ROW>
