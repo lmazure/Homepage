@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -127,11 +127,11 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
 <B>Some common characters</B><BR/>
 <TABLE>
   <ROW><CELL>character</CELL><CELL>code</CELL><CELL>decimal</CELL><CELL>name</CELL><CELL>French name</CELL></ROW>
-  <ROW><CELL>æ</CELL><CELL>U+00E6</CELL><CELL></CELL><CELL><X><T>Latin Small Letter Ae</T><A>https://www.compart.com/en/unicode/U+00E6</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00E6</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL>œ</CELL><CELL>U+0153</CELL><CELL>339</CELL><CELL><X><T>Latin Small Ligature Oe</T><A>https://www.compart.com/en/unicode/U+0153</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+0153</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL>ç</CELL><CELL>U+00E7</CELL><CELL>231</CELL><CELL><X><T>Latin Small Letter C with Cedilla</T><A>https://www.compart.com/en/unicode/U+00E7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00E7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL>É</CELL><CELL>U+00C9</CELL><CELL>201</CELL><CELL><X><T>Latin Capital Letter E with Acute</T><A>https://www.compart.com/en/unicode/U+00C9</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00C9</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL>È</CELL><CELL>U+00C8</CELL><CELL>200</CELL><CELL><X><T>Latin Capital Letter E with Grave</T><A>https://www.compart.com/en/unicode/U+00C8</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00C8</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>æ</CELL><CELL>U+00E6</CELL><CELL></CELL><CELL><X><T>Latin Small Letter Ae</T><A>https://www.compart.com/en/unicode/U+00E6</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Lettre minuscule latine ae</T><A>https://www.compart.com/fr/unicode/U+00E6</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>œ</CELL><CELL>U+0153</CELL><CELL>339</CELL><CELL><X><T>Latin Small Ligature Oe</T><A>https://www.compart.com/en/unicode/U+0153</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Digramme soudé minuscule latin oe</T><A>https://www.compart.com/fr/unicode/U+0153</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>ç</CELL><CELL>U+00E7</CELL><CELL>231</CELL><CELL><X><T>Latin Small Letter C with Cedilla</T><A>https://www.compart.com/en/unicode/U+00E7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Lettre minuscule latine C cédille</T><A>https://www.compart.com/fr/unicode/U+00E7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>É</CELL><CELL>U+00C9</CELL><CELL>201</CELL><CELL><X><T>Latin Capital Letter E with Acute</T><A>https://www.compart.com/en/unicode/U+00C9</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Lettre majuscule latine E accent aigu</T><A>https://www.compart.com/fr/unicode/U+00C9</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>È</CELL><CELL>U+00C8</CELL><CELL>200</CELL><CELL><X><T>Latin Capital Letter E with Grave</T><A>https://www.compart.com/en/unicode/U+00C8</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Lettre majuscule latine E accent grave</T><A>https://www.compart.com/fr/unicode/U+00C8</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>Ê</CELL><CELL>U+00CA</CELL><CELL></CELL><CELL><X><T>Latin Capital Letter E with Circumflex</T><A>https://www.compart.com/en/unicode/U+00CA</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00CA</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>Æ</CELL><CELL>U+00C6</CELL><CELL></CELL><CELL><X><T>Latin Capital Letter Ae</T><A>https://www.compart.com/en/unicode/U+00C6</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00C6</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>Œ</CELL><CELL>U+0152</CELL><CELL></CELL><CELL><X><T>Latin Capital Ligature Oe</T><A>https://www.compart.com/en/unicode/U+0152</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+0152</A><L>fr</L><F>HTML</F></X></CELL></ROW>
@@ -231,6 +231,8 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>🕑</CELL><CELL>U+1F551</CELL><CELL></CELL><CELL><X><T>Clock Face Two Oclock</T><A>https://www.compart.com/en/unicode/U+1F551</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Cadran d'horloge À deux heures</T><A>https://www.compart.com/fr/unicode/U+1F551</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>🕒</CELL><CELL>U+1F552</CELL><CELL></CELL><CELL><X><T>Clock Face Three Oclock</T><A>https://www.compart.com/en/unicode/U+1F552</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Cadran d'horloge À trois heures</T><A>https://www.compart.com/fr/unicode/U+1F552</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>🕓</CELL><CELL>U+1F553</CELL><CELL></CELL><CELL><X><T>Clock Face Four Oclock</T><A>https://www.compart.com/en/unicode/U+1F553</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Cadran d'horloge À quatre heures</T><A>https://www.compart.com/fr/unicode/U+1F553</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>🕔</CELL><CELL>U+1F554</CELL><CELL></CELL><CELL><X><T>Clock Face Five Oclock</T><A>https://www.compart.com/en/unicode/U+1F554</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Cadran d'horloge À cinq heures</T><A>https://www.compart.com/fr/unicode/U+1F554</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>🕕</CELL><CELL>U+1F555</CELL><CELL></CELL><CELL><X><T>Clock Face Six Oclock</T><A>https://www.compart.com/en/unicode/U+1F555</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Cadran d'horloge À six heures</T><A>https://www.compart.com/fr/unicode/U+1F555</A><L>fr</L><F>HTML</F></X></CELL></ROW>
 </TABLE>
 </CONTENT>
 <X><T>links</T><A>../links/unicode.html</A><L>en</L><F>HTML</F></X>

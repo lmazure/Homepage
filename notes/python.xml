@@ -43,7 +43,7 @@
     a.imag</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Strings</B></U></TITLE>
-  <ITEM>strings litterals can be enclosed in single or double quotes<BR/>
+  <ITEM>strings literals can be enclosed in single or double quotes<BR/>
     <CODEROUTINE>"foobar 'n \" quux"</CODEROUTINE><BR/>
     <CODEROUTINE>'foobar \'n" quux'</CODEROUTINE></ITEM>
   <ITEM>new line can be escaped by \<BR/>
@@ -52,7 +52,7 @@
   <ITEM>triple single or double quotes can also be used to create strings containing new lines<BR/>
     <CODESAMPLE>"""first line<BR/>
       second line"""</CODESAMPLE></ITEM>
-  <ITEM>string litterals are automatically concatenated</ITEM>
+  <ITEM>string literals are automatically concatenated</ITEM>
   <ITEM><CODEROUTINE>"foo" "bar"</CODEROUTINE></ITEM>
   <ITEM>+ append strings<BR/>
     <CODEROUTINE>"foo"+"bar"</CODEROUTINE></ITEM>
@@ -78,6 +78,20 @@
       'guage'</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>len</CODEROUTINE> return the length a string<BR/>
     <CODEROUTINE>len(str)</CODEROUTINE></ITEM>
+  <ITEM><BLIST><TITLE>String Interpolation</TITLE>
+    <ITEM>string modulo operator
+      <CODESAMPLE>myVal1 = 10.1<BR/>
+        myVal2 = 2.2<BR/>
+        print("The sum of %s and %s is %s." %(my_val_1, my_val_2, my_val_1+my_val_2))</CODESAMPLE></ITEM>
+    <ITEM><CODEROUTINE>String .format()</CODEROUTINE><BR/>
+      <CODESAMPLE>'My name is {name} and I am {age} years old'.format(name= 'Frida', age=114)</CODESAMPLE></ITEM>
+    <ITEM>f-strings
+      <CODESAMPLE>f'The date today is {datetime.datetime.now():%B %d, %Y}'</CODESAMPLE></ITEM>
+    <ITEM>template strings
+      <CODESAMPLE>from string import Template<BR/>
+        greeting = Template('Welcome, $name')<BR/>
+        greeting.substitute(name='Frida!')</CODESAMPLE></ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Sequences</B></U></TITLE>
   <ITEM>sequences can be lists, strings or tuples</ITEM>
