@@ -240,6 +240,71 @@
         <TAB/><TAB/>page += 1<BR/>
         </CODESAMPLE>
     </ITEM>
+    <ITEM>get the epics having a given label and a label in a given scope<BR/>
+      cursor is properly managed
+      <CODESAMPLE>epic_list_query = """<BR/>
+        {<BR/>
+        <TAB/>group (fullPath: "henixdevelopment/squash") {<BR/>
+        <TAB/><TAB/>epics (state: opened, labelName: ["Roadmap","Release::*"], after: "%s") {<BR/>
+        <TAB/><TAB/><TAB/>edges {<BR/>
+        <TAB/><TAB/><TAB/><TAB/>cursor<BR/>
+        <TAB/><TAB/><TAB/><TAB/>node {<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>id<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>iid<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>title<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>group {<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>fullPath<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>startDateIsFixed<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>startDateFixed<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>dueDateIsFixed<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>dueDateFixed<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>labels {<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>edges {<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>node {<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>title<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+        <TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+        <TAB/><TAB/><TAB/><TAB/>}<BR/>
+        <TAB/><TAB/><TAB/>}<BR/>
+        <TAB/><TAB/>}<BR/>
+        <TAB/>}<BR/>
+        }<BR/>
+        """<BR/>
+        <BR/>
+        def handle_epic():<BR/>
+        <TAB/>…<BR/>
+        <BR/>
+        def handle_epics():<BR/>
+        <TAB/>cursor = ""<BR/>
+        <TAB/>while True:<BR/>
+        <TAB/><TAB/>result = run_graphql_query(epic_list_query % cursor)<BR/>
+        <TAB/><TAB/>if len(result["data"]["group"]["epics"]["edges"]) == 0:<BR/>
+        <TAB/><TAB/><TAB/>break<BR/>
+        <TAB/><TAB/>for epic_node in result["data"]["group"]["epics"]["edges"]:<BR/>
+        <TAB/><TAB/><TAB/>handle_epic(epic_node["node"])</CODESAMPLE>
+    </ITEM>
+    <ITEM>set an epic to fixed dates
+      <CODESAMPLE>set_epic_date_request = """<BR/>
+        mutation<BR/>
+        {<BR/>
+        <TAB/>updateEpic (input: {<BR/>
+        <TAB/><TAB/>groupPath: "%s",<BR/>
+        <TAB/><TAB/>iid: "%s",<BR/>
+        <TAB/><TAB/>startDateIsFixed: true,<BR/>
+        <TAB/><TAB/>startDateFixed: "%s",<BR/>
+        <TAB/><TAB/>dueDateIsFixed: true,<BR/>
+        <TAB/><TAB/>dueDateFixed: "%s"<BR/>
+        <TAB/>}) {<BR/>
+        <TAB/><TAB/>clientMutationId<BR/>
+        <TAB/>}<BR/>
+        }<BR/>
+        """<BR/>
+        <BR/>
+        def set_epic_dates(group_path, iid, start_date, due_date):<BR/>
+        <TAB/>run_graphql_query(set_epic_date_request % (group_path, iid, start_date, due_date))<BR/></CODESAMPLE>
+    </ITEM>
     <ITEM>add a label to an issue
       <CODESAMPLE>def add_label_to_issue(token, projectId, issueIid, labelName):<BR/>
         <TAB/>params = { "add_labels": labelName }<BR/>
