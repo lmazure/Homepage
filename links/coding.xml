@@ -3,19 +3,18 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><X><T>Stack Overflow</T><A>https://stackoverflow.com</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Software Heritage</T><A>https://www.softwareheritage.org/</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>France-IOI</T><A>http://www.france-ioi.org/index.php</A><L>fr</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>France-IOI</T><A>https://www.france-ioi.org/index.html</A><L>fr</L><F>HTML</F></X></ITEM>
     <ITEM><BLIST><TITLE>Refactoring</TITLE>
       <ITEM><X><T>Refactoring.com</T><A>https://www.refactoring.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>SourceMaking</T><A>https://sourcemaking.com</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Continuous integration</TITLE>
-      <ITEM><X><T>Hudson</T><A>https://www.eclipse.org/hudson/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>CruiseControl</T><A>https://cruisecontrol.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Jenkins</T><A>https://www.jenkins.io/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>CircleCI</T><A>https://circleci.com/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -26,7 +25,7 @@
       <ITEM><X><T>Travis CI</T><A>https://www.travis-ci.com/</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>CodeShip</T><A>https://www.cloudbees.com/products/codeship</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Bitrise</T><A>https://bitrise.io</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>JFrog Pipelines</T><A>https://www.jfrog.com/confluence/display/JFROG/JFrog+Pipelines</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>JFrog Pipelines</T><A>https://jfrog.com/help/r/get-started-with-the-jfrog-platform/jfrog-pipelines</A><L>en</L><L>fr</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Build</TITLE>
       <ITEM><CLIST><TITLE><ANCHOR>make</ANCHOR>make</TITLE>
@@ -47,7 +46,7 @@
       <ITEM><X><T>ld</T><A>http://sourceware.org/binutils/docs-2.19/ld/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Artefact repository</TITLE>
-      <ITEM><X><T>Nexus</T><A>https://www.sonatype.com/products/nexus-repository</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Nexus</T><A>https://www.sonatype.com/products/sonatype-nexus-repository</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Artifactory</T><A>https://jfrog.com/artifactory/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Code browsers</TITLE>
@@ -153,7 +152,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>.NET</TITLE>
         <ITEM><X><T>dotTrace</T><A>https://www.jetbrains.com/profiler/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>ANTS</T><A>https://www.red-gate.com/products/dotnet-development/ants-performance-profiler/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>ANTS</T><A>https://www.red-gate.com/products/ants-performance-profiler/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Diff / merge</TITLE>
@@ -161,7 +160,7 @@
       <ITEM><X><T>KDiff3</T><A>https://invent.kde.org/sdk/kdiff3</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Other tools</TITLE>
-      <ITEM><X><T>Simian</T><A>http://www.harukizaemon.com/simian/</A><L>en</L><F>HTML</F></X>: detection of code duplication</ITEM>
+      <ITEM><X><T>Simian</T><A>https://www.harukizaemon.com/simian/</A><L>en</L><F>HTML</F></X>: detection of code duplication</ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Code reviews</TITLE>
       <ITEM><BLIST><TITLE>Tools</TITLE>
@@ -223,7 +222,7 @@
     <ITEM><ARTICLE><X><T>Code Health: Now You're Thinking With Functions</T><A>https://testing.googleblog.com/2022/02/code-health-now-youre-thinking-with.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Cathal</FIRSTNAME><LASTNAME>Weakliam</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT>The basic: using higher-order functions.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Hit ’em High, Hit ’em Low:</T><ST>Regression Testing and the Saff Squeeze</ST><A>https://medium.com/@kentbeck_7670/hit-em-high-hit-em-low-ffe1991ee8d</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>28</DAY></DATE><COMMENT>Digging out a bug in a failing test by recursively diving in the subroutines, inlining them, and removing code not related to the bug.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The “dark yellow problem” in design system color palettes</T><A>https://uxdesign.cc/the-dark-yellow-problem-in-design-system-color-palettes-a0db1eedc99d</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Lodestar Design</GIVENNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>8 top SBOM tools to consider</T><ST>These commercial and open-source tools will scan code and create software bills of materials automatically.</ST><A>https://www.csoonline.com/article/3667483/8-top-sbom-tools-to-consider.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steven</FIRSTNAME><MIDDLENAME>J.</MIDDLENAME><LASTNAME>Vaughan-Nichols</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE><COMMENT>Some little information about SBOM and a list of such tools.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>8 top SBOM tools to consider</T><ST>These commercial and open-source tools will scan code and create software bills of materials automatically.</ST><A>https://www.csoonline.com/article/573225/8-top-sbom-tools-to-consider.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steven</FIRSTNAME><MIDDLENAME>J.</MIDDLENAME><LASTNAME>Vaughan-Nichols</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE><COMMENT>Some little information about SBOM and a list of such tools.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality="-1"><T>Model Driven Software Engineering - Computerphile</T><A>https://www.youtube.com/watch?v=3aoLV5i1feo</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>11</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Steffen</FIRSTNAME><LASTNAME>Zschaler</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>21</DAY></DATE><COMMENT>This presentation is unclear: this is more a domain-specific language than model-driven engineering.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Cloud Development Environments Tame Complexity By Reducing State</T><A>https://medium.com/@kentbeck_7670/cloud-development-environments-tame-complexity-by-reducing-state-4a154ea7959f</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE><COMMENT>GitPod may be the solution to kill the cost of keeping a development environment working.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Low-code/no-code platforms: The 10% trap and the limits of abstractions</T><A>https://www.thoughtworks.com/en-us/insights/podcasts/technology-podcasts/low-code-no-code-platforms-ten_percent-trap-limits-abstractions</A><L>en</L><F>MP3</F><DURATION><MINUTE>30</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Neal</FIRSTNAME><LASTNAME>Ford</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Mason</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Shaw</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Xu</FIRSTNAME><LASTNAME>Hao</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE><COMMENT>The (few) pros and the (many) cons of low-code and no-code tools.</COMMENT></ARTICLE></ITEM>
@@ -362,7 +361,7 @@
         <ITEM><ARTICLE><X><T>Nullness Analysis for Java</T><A>https://www.youtube.com/watch?v=3d0YlZbY92U</A><L>en</L><F>MP4</F><DURATION><MINUTE>53</MINUTE><SECOND>29</SECOND></DURATION><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE></X><AUTHOR><FIRSTNAME>Fausto</FIRSTNAME><LASTNAME>Spoto</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE><COMMENT>A presentation of Julia and a comparison with Eclipse and NIT for nullness analysis.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>SonarQube</TITLE>
-        <ITEM><ARTICLE><X><T>Kill the Noise! to Change Gear in our Code Analyzers</T><A>https://blog.sonarsource.com/kill-the-noise-to-change-gear-in-our-code-analyzers/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Freddy</FIRSTNAME><LASTNAME>Mallet</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE><COMMENT>The Sonar team is reclassifying the rules as bugs vs. warnings.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X status="dead"><T>Kill the Noise! to Change Gear in our Code Analyzers</T><A>https://blog.sonarsource.com/kill-the-noise-to-change-gear-in-our-code-analyzers/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Freddy</FIRSTNAME><LASTNAME>Mallet</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE><COMMENT>The Sonar team is reclassifying the rules as bugs vs. warnings.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Infer</TITLE>
         <ITEM><ARTICLE><X><T>Facebook's Code Checker - Computerphile</T><A>https://www.youtube.com/watch?v=tKR2UZdRpV0</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Peter</FIRSTNAME><LASTNAME>O'Hearn</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE><COMMENT>Some basic non-technical information about static code analysers and Infer.</COMMENT></ARTICLE></ITEM>
@@ -376,6 +375,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Futamura projections</TITLE>
       <ITEM><ARTICLE><X quality="1"><T>The Three Projections of Doctor Futamura</T><A>http://blog.sigfpe.com/2009/05/three-projections-of-doctor-futamura.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Piponi</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>3</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Ruby Conf 2013 - Compilers For Free by Tom Stuart</T><A>https://www.youtube.com/watch?v=n_k6O50Nd-4</A><L>en</L><F>MP4</F><DURATION><MINUTE>41</MINUTE><SECOND>32</SECOND></DURATION><DATE><YEAR>2013</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE></X><AUTHOR><FIRSTNAME>Tom</FIRSTNAME><LASTNAME>Stuart</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>11</MONTH><DAY>9</DAY></DATE><COMMENT>A description of partial evaluation and, too quickly, of Futamura projections.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Compilers For Nothing, Executables For Free!</T><A>https://www.youtube.com/watch?v=Dcug6bu_wUE</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Vaibhav</FIRSTNAME><LASTNAME>Sagar</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE><COMMENT>A too fast description of Futamura projections (the slides are <X><T>here</T><A>https://vaibhavsagar.com/presentations/partial-evaluation/#/title-slide</A><L>en</L><L>fr</L><F>HTML</F></X>).</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Formal verification</TITLE>
