@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><CLIST><TITLE>Tutorials</TITLE>
@@ -194,6 +194,7 @@
       <ITEM><ARTICLE><X status="zombie"><T>Java programming dynamics, Part 3: Applied reflection</T><ST>Building a framework for command line arguments</ST><A>https://www.ibm.com/developerworks/java/library/j-dyn0715/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dennis</FIRSTNAME><MIDDLENAME>M.</MIDDLENAME><LASTNAME>Sosnoski</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>7</MONTH><DAY>15</DAY></DATE><COMMENT>The author creates a command line parser as an example of using reflection.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Reflection for the modern Java programmer</T><A>https://blogs.oracle.com/javamagazine/post/java-reflection-introduction</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>21</DAY></DATE><COMMENT>A presentation of reflection as it was up to Java 18.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE predecessor="https://blogs.oracle.com/javamagazine/post/java-reflection-introduction"><X><T>The performance implications of Java reflection</T><A>https://blogs.oracle.com/javamagazine/post/java-reflection-performance</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>19</DAY></DATE><COMMENT>Some technical implementation details explaining why reflection is slow.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE predecessor="https://blogs.oracle.com/javamagazine/post/java-reflection-performance"><X><T>Method handles: A better way to do Java reflection</T><A>https://blogs.oracle.com/javamagazine/post/java-reflection-method-handles</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>22</DAY></DATE><COMMENT>A presentation of method handles and the fact the Reflection API has been rewritten to use them in Java 18.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>I/O</TITLE>
       <ITEM><ARTICLE><X><T>Watching a Directory for Changes</T><A>https://docs.oracle.com/javase/tutorial/essential/io/notification.html</A><L>en</L><F>HTML</F></X><COMMENT>How to use <CODEROUTINE>WatchService</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>

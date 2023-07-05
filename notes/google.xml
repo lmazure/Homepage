@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Google</TITLE>
 <PATH>notes/google.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>11</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>customization</B></U></TITLE>
   <ITEM><BLIST><TITLE>Search applets</TITLE>
@@ -71,6 +71,22 @@
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Down"/></TERM>
     <DESC>Move the selected lines downwards</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<U><B>Google sheets</B></U>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id=";"/></TERM>
+    <DESC>Insert current date</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id=";"/></TERM>
+    <DESC>Insert current time</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id=";"/></TERM>
+    <DESC>Insert current date and time</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
