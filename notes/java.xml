@@ -399,11 +399,11 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>Optional&lt;T&gt; reduce(BinaryOperator&lt;T&gt; accumulator)</CODEROUTINE></TERM>
-    <DESC>Performs a reduction on the elements of this stream, using the provided identity value and an associative accumulation function, and returns the reduced value.</DESC>
+    <DESC>Performs a reduction on the elements and returns an <CODEROUTINE>Optional</CODEROUTINE> describing the reduced value. If there is no value, an empty <CODEROUTINE>Optional</CODEROUTINE> is returned.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>T reduce(T identity, BinaryOperator&lt;T&gt; accumulator)</CODEROUTINE></TERM>
-    <DESC>Performs a reduction on the elements and returns an <CODEROUTINE>Optional</CODEROUTINE> describing the reduced value. If there is no value, an empty <CODEROUTINE>Optional</CODEROUTINE> is returned.</DESC>
+    <DESC>Performs a reduction on the elements of this stream, using the provided identity value and an associative accumulation function, and returns the reduced value.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>&lt;U&gt; U reduce(U identity, BiFunction&lt;U,? super T,U&gt; accumulator, BinaryOperator&lt;U&gt; combiner)</CODEROUTINE></TERM>

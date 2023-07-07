@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -257,12 +257,17 @@
     <DESC>Show commit logs.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git log --all</CODEROUTINE></TERM>
+    <DESC>Pretend as if all the refs in <CODEROUTINE>refs/</CODEROUTINE>, along with <CODEROUTINE>HEAD</CODEROUTINE>, are listed on the command line as &lt;commit&gt;.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git log --full-history</CODEROUTINE></TERM>
     <DESC>Do not prune some history as the default mode (useful to see the merges).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>--</CODEROUTINE></TERM>
-    <DESC>Separate paths from revisions.</DESC>
+    <DESC>Separate paths from revisions.<BR/>
+    <CODEROUTINE>git log -- **/*.md</CODEROUTINE> will show logs of commits impacting the Python files.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>-L&lt;start&gt;,&lt;end&gt;:&lt;file&gt;</CODEROUTINE><BR/>
@@ -299,6 +304,58 @@
   <ROW>
     <TERM><CODEROUTINE>git log --author=&lt;regex&gt;</CODEROUTINE></TERM>
     <DESC>Filter on a given author (if there are several <CODEROUTINE>--author</CODEROUTINE> flags, return commits of authors matching any of the regexps).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --grep=&lt;regexp&gt;</CODEROUTINE></TERM>
+    <DESC>Filter the commits to the ones with log message that matches the specified pattern (regular expression).<BR/>
+      With more than one <CODEROUTINE>--grep=&lt;regexp&gt;</CODEROUTINE>, commits whose message matches any of the given patterns are chosen.<BR/>
+      With more than one <CODEROUTINE>--grep=&lt;regexp&gt;</CODEROUTINE> and <CODEROUTINE>---all-match</CODEROUTINE>, limit the commits output to ones that match all given regular expressions.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--invert-grep</CODEROUTINE></TERM>
+    <DESC>Limit the commits output to ones with log message that do not match.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-i</CODEROUTINE><BR/>
+      <CODEROUTINE>--regexp-ignore-case</CODEROUTINE></TERM>
+    <DESC>Match the regular expression limiting patterns without regard to letter case.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--basic-regexp</CODEROUTINE></TERM>
+    <DESC>Consider the limiting patterns to be basic regular expressions; this is the default.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-E</CODEROUTINE><BR/>
+      <CODEROUTINE>--extended-regexp</CODEROUTINE></TERM>
+    <DESC>Consider the limiting patterns to be extended regular expressions instead of the default basic regular expressions</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-F</CODEROUTINE><BR/>
+      <CODEROUTINE>--fixed-strings</CODEROUTINE></TERM>
+    <DESC>Consider the limiting patterns to be fixed strings.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-P</CODEROUTINE><BR/>
+      <CODEROUTINE>--perl-regexp</CODEROUTINE></TERM>
+    <DESC>Consider the limiting patterns to be Perl-compatible regular expressions.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log -S&lt;string&gt;</CODEROUTINE></TERM>
+    <DESC>Look for differences that change the number of occurrences of the specified string.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log -S&lt;string&gt; --pickaxe-regex</CODEROUTINE></TERM>
+    <DESC>Treat &lt;string&gt; as a regular expression.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log -G&lt;regexp&gt;</CODEROUTINE></TERM>
+    <DESC>Look for differences whose patch text contains added/removed lines that match the specified regular expression.<BR/>
+      (Use <CODEROUTINE>git log -G&lt;regexp&gt; -p</CODEROUTINE> to display all the matching changes.<BR/>
+      Use <CODEROUTINE>git log -G&lt;regexp&gt; --all</CODEROUTINE> to look in all branches.)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--pickaxe-all</CODEROUTINE></TERM>
+    <DESC>When <CODEROUTINE>-S</CODEROUTINE> or -<CODEROUTINE>-G</CODEROUTINE> finds a change, show all the changes in that changeset, not just the files that contain the string/regexp.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --pretty=&lt;format&gt;</CODEROUTINE></TERM>
@@ -1087,7 +1144,7 @@ To remove the last commit locally and on the remote repository (nobody should ha
     <DESC>Create an <CODEROUTINE>amend!</CODEROUTINE> commit which replaces the log message of &lt;commit&gt; with its own log message but makes no changes to the content of &lt;commit&gt;.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git commit --squahs=&lt;commit&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git commit --squash=&lt;commit&gt;</CODEROUTINE></TERM>
     <DESC>Construct a commit message for use with <CODEROUTINE>rebase --autosquash</CODEROUTINE>. The commit message subject line is taken from the specified commit with a prefix of <CODEROUTINE>squash!</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
@@ -1129,6 +1186,7 @@ Script to mirror a repository in another (to be completed to support GitHub)
 <BR/>
 <BLIST><TITLE>Git BASH on Windows</TITLE>
   <ITEM>The home directory is defined by the <CODEROUTINE>%HOME%</CODEROUTINE> Windows environment variable (which is not used by Windows, so it is safe to set/modify it).</ITEM>
+  <ITEM>To display the remote repository in the browser: <CODEROUTINE>start `git remote get-url origin`</CODEROUTINE>.</ITEM>
   <ITEM>To run Python: <CODEROUTINE>winpty python</CODEROUTINE></ITEM>
   <ITEM>To display an HTML file: <CODEROUTINE>start report.html</CODEROUTINE></ITEM>
 </BLIST>
