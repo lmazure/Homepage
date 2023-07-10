@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>notes/java.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
   <BLIST><TITLE><U><B>Visibility</B></U></TITLE>
     <ITEM>
@@ -409,6 +409,10 @@
     <TERM><CODEROUTINE>&lt;U&gt; U reduce(U identity, BiFunction&lt;U,? super T,U&gt; accumulator, BinaryOperator&lt;U&gt; combiner)</CODEROUTINE></TERM>
     <DESC>Performs a reduction on the elements of this stream, using the provided identity, accumulation and combining functions.<BR/>
       The combiner is used to combine two partial reductions from two different threads; it must respect <CODEROUTINE>combiner.apply(u, accumulator.apply(identity, t)) == accumulator.apply(u, t)</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>stringStream.collect( Collectors.joining( "," ) )</CODEROUTINE></TERM>
+    <DESC>Create a comma-separated list from a stream of strings.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BLIST><TITLE><U><B>JUnit</B></U><BR/></TITLE>
