@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>to avoid fucking problems when printing non-BMP characters to the console
@@ -437,6 +437,12 @@
     <CODESAMPLE>with open("myfile.txt") as f:<BR/>
     <TAB/>for line in f:<BR/>
     <TAB/><TAB/>print(line, end="")</CODESAMPLE></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Display colored messages</B></U></TITLE>
+  <ITEM>Write some text in yellow
+    <CODESAMPLE>import colorama<BR/>
+    …<BR/>
+    print(colorama.Fore.YELLOW + f"set epic to start date = {start_date} and due date = {due_date} ({release})" + colorama.Style.RESET_ALL)</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Virtual environments</B></U></TITLE>
   <ITEM>Virtual environments are managed by the <CODEROUTINE>venv</CODEROUTINE> module.
