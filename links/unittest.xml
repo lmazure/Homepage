@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unit testing</TITLE>
 <PATH>links/unittest.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -20,7 +20,7 @@
         <ITEM><X><T>Agitar</T><A>http://www.agitar.com</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Truth</T><A>http://truth.dev/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>AssertJ</T><A>https://assertj.github.io/doc/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Hamcrest</T><A>http://hamcrest.org/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Hamcrest</T><A>https://hamcrest.org/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Truth</T><A>https://truth.dev/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>.NET</TITLE>
@@ -82,7 +82,7 @@
         </BLIST></ITEM>
         <ITEM><X><T>Testomat</T><A>https://testomat.io/</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
-  </SLIST></ITEM>
+    </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>Test Automation Frameworks</T><A>https://safsdev.sourceforge.net/FRAMESDataDrivenTestAutomationFrameworks.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Carl</FIRSTNAME><LASTNAME>Nagle</LASTNAME></AUTHOR><COMMENT>A presentation of keyword driven automation and an architecture of a framework for such testing.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>When Should a Test Be Automated?</T><A>https://www.stickyminds.com/sites/default/files/article/file/2014/When%20Should%20a%20Test%20Be%20Automated.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Marick</LASTNAME></AUTHOR><DATE><YEAR>1998</YEAR></DATE><COMMENT>Some ideas about the factors to be taken into account to decide for automated tests vs. manual tests.</COMMENT></ARTICLE></ITEM>
@@ -143,7 +143,7 @@
       <ITEM><BLIST><TITLE>Mockito</TITLE>
         <ITEM><ARTICLE><X><T>When/how to use Mockito Answer</T><A>https://testing.googleblog.com/2014/03/whenhow-to-use-mockito-answer.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Hongfei</FIRSTNAME><LASTNAME>Ding</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE><COMMENT>A short description of using Mockito’s <CODEROUTINE>Answer</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Introduction to PowerMock</T><A>https://www.baeldung.com/intro-to-powermock</A><L>en</L><F>HTML</F></X><DATE><YEAR>2022</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE><COMMENT>A short description of PowerMockito, a PowerMock’s Mockito extension enabling to mock final, private or static methods.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Mockito Strict Stubbing and The UnnecessaryStubbingException</T><A>https://www.baeldung.com/mockito-unnecessary-stubbing-exception</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>21</DAY></DATE><COMMENT>A description of Strict Stubbing and how to disable it.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Mockito Strict Stubbing and The UnnecessaryStubbingException</T><A>https://www.baeldung.com/mockito-unnecessary-stubbing-exception</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Cook</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>9</DAY></DATE><COMMENT>A description of Strict Stubbing and how to disable it.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Oracles</TITLE>
@@ -166,6 +166,7 @@
         <ITEM><ARTICLE><X><T>Working and unit testing with temporary files in Java</T><ST>Temporary files are frequently used in testing and in production. Here is how to create and manage—and delete—them.</ST><A>https://blogs.oracle.com/javamagazine/post/working-and-unit-testing-with-temporary-files-in-java</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Binstock</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE><COMMENT>Some basic information about temporary files in JUnit 4, JUnit 5, and plain Java.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>JUnit 5 Tutorial: Writing Nested Tests</T><A>https://www.petrikainulainen.net/programming/testing/junit-5-tutorial-writing-nested-tests/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2021</YEAR><MONTH>12</MONTH><DAY>15</DAY></DATE><COMMENT>A short presentation of <CODEROUTINE>@Nested</CODEROUTINE> classes.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Guide to Dynamic Tests in Junit 5</T><A>https://www.baeldung.com/junit5-dynamic-tests</A><L>en</L><F>HTML</F></X><DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>A description of dynamic tests.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Assertions in JUnit 4 and JUnit 5</T><A>https://www.baeldung.com/junit-assertions</A><L>en</L><F>HTML</F></X><DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>A description of JUnit 4 and 5 assertions, some are not clearly explained.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality="1"><T>Guide to JUnit 5 Parameterized Tests</T><A>https://www.baeldung.com/parameterized-tests-junit-5</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ali</FIRSTNAME><LASTNAME>Dehghani</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE><COMMENT>An exhaustive description of parametrised tests.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Writing Templates for Test Cases Using JUnit 5</T><A>https://www.baeldung.com/junit5-test-templates</A><L>en</L><F>HTML</F></X><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE><COMMENT>A too short presentation of test templates.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>A Guide to @RepeatedTest in Junit 5</T><A>https://www.baeldung.com/junit-5-repeated-test</A><L>en</L><F>HTML</F></X><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE><COMMENT>A description of repeated tests.</COMMENT></ARTICLE></ITEM>
@@ -199,7 +200,7 @@
       <ITEM><ARTICLE><X><T>Code coverage goal: 80% and no less!</T><A>https://testing.googleblog.com/2010/07/code-coverage-goal-80-and-no-less.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alberto</FIRSTNAME><LASTNAME>Savoia</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>7</MONTH><DAY>20</DAY></DATE><COMMENT>How much code coverage should we target?</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Code coverage considered harmful</T><A>http://adiws.blogspot.com/2012/04/code-coverage-considered-harmful.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Graham</FIRSTNAME><LASTNAME>Pearson</LASTNAME></AUTHOR><DATE><YEAR>2012</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>The perverse effects of code coverage when dealing with dumb developers.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Code Coverage Best Practices</T><A>https://testing.googleblog.com/2020/08/code-coverage-best-practices.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Carlos</FIRSTNAME><LASTNAME>Arguelles</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Marko</FIRSTNAME><LASTNAME>Ivanković</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Bender</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE><COMMENT>Some good advice.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Intro to JaCoCo</T><A>https://www.baeldung.com/jacoco</A><L>en</L><F>HTML</F></X><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>12</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Intro to JaCoCo</T><A>https://www.baeldung.com/jacoco</A><L>en</L><F>HTML</F></X><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
