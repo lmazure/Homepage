@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>to avoid fucking problems when printing non-BMP characters to the console
@@ -85,8 +85,10 @@
         print("The sum of %s and %s is %s." %(my_val_1, my_val_2, my_val_1+my_val_2))</CODESAMPLE></ITEM>
     <ITEM><CODEROUTINE>String .format()</CODEROUTINE><BR/>
       <CODESAMPLE>'My name is {name} and I am {age} years old'.format(name= 'Frida', age=114)</CODESAMPLE></ITEM>
-    <ITEM>f-strings
-      <CODESAMPLE>f'The date today is {datetime.datetime.now():%B %d, %Y}'</CODESAMPLE></ITEM>
+    <ITEM><BLIST><TITLE>F-strings</TITLE>
+      <ITEM><CODESAMPLE>f'The date today is {datetime.datetime.now():%B %d, %Y}'</CODESAMPLE></ITEM>
+      <ITEM>use <CODEROUTINE>{{</CODEROUTINE> to insert a <CODEROUTINE>{</CODEROUTINE> and <CODEROUTINE>}}</CODEROUTINE> to insert a <CODEROUTINE>}</CODEROUTINE></ITEM>
+    </BLIST></ITEM>
     <ITEM>template strings
       <CODESAMPLE>from string import Template<BR/>
         greeting = Template('Welcome, $name')<BR/>
