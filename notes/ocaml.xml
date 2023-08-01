@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -11,9 +11,6 @@
     <ITEM>Comments can be nested.</ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Variables</TITLE>
-    <ITEM>define and initialise a variable
-      <CODESAMPLE><PROMPT/>let x = 50;;</CODESAMPLE>
-    </ITEM>
     <ITEM>define and initialise a variable
       <CODESAMPLE><PROMPT/>let x = 50;;</CODESAMPLE>
     </ITEM>
@@ -248,7 +245,7 @@
         <DEFINITIONTABLE>
           <ROW>
             <TERM><CODEROUTINE>val empty : string</CODEROUTINE></TERM>
-            <DESC>Return an empty String.</DESC>
+            <DESC>Return an empty string.</DESC>
           </ROW>
           <ROW>
             <TERM><CODEROUTINE>val length : string -&gt; int</CODEROUTINE></TERM>
@@ -547,6 +544,19 @@
         <CODESAMPLE><PROMPT/>let arr = [|1; 2; 3|];;<BR/>
           <PROMPT/>arr.(0) &lt;- 0;;</CODESAMPLE>
       </ITEM>
+      <ITEM><CODEROUTINE>Array</CODEROUTINE> module
+          <DEFINITIONTABLE>
+            <ROW>
+              <TERM><CODEROUTINE>val length : 'a array -&gt; int</CODEROUTINE></TERM>
+              <DESC>Return the length (number of elements) of the given array.</DESC>
+            </ROW>
+            <ROW>
+              <TERM><CODEROUTINE>val get : 'a array -&gt; int -&gt; 'a</CODEROUTINE></TERM>
+              <DESC><CODEROUTINE>get a n</CODEROUTINE> returns the element number <CODEROUTINE>n</CODEROUTINE> of array <CODEROUTINE>a</CODEROUTINE>. The first element has number <CODEROUTINE>0</CODEROUTINE>. <BR/>
+                You can write <CODEROUTINE>a.(n)</CODEROUTINE> instead of <CODEROUTINE>get a n</CODEROUTINE>.</DESC>
+            </ROW>
+          </DEFINITIONTABLE>
+      </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Variants</TITLE>
       <ITEM>A variant type is a collection of constructors.
@@ -632,6 +642,17 @@
           <DESC>Truncate the given floating-point number to an integer. The result is unspecified if the argument is nan or falls outside the range of representable integers.</DESC>
         </ROW>
         <ROW>
+          <TERM><CODEROUTINE>val int_of_string_opt : string -&gt; int option</CODEROUTINE></TERM>
+          <DESC>Convert the given string to an integer. The string is read in decimal (by default, or if the string begins with <CODEROUTINE>0u</CODEROUTINE>), in hexadecimal (if it begins with <CODEROUTINE>0x</CODEROUTINE> or <CODEROUTINE>0X</CODEROUTINE>), in octal (if it begins with <CODEROUTINE>0o</CODEROUTINE> or <CODEROUTINE>0O</CODEROUTINE>), or in binary (if it begins with <CODEROUTINE>0b</CODEROUTINE> or <CODEROUTINE>0B</CODEROUTINE>).<BR/>
+            The <CODEROUTINE>0u</CODEROUTINE> prefix reads the input as an unsigned integer in the range <CODEROUTINE>[0, 2*max_int+1]</CODEROUTINE>. If the input exceeds <CODEROUTINE>max_int</CODEROUTINE> it is converted to the signed integer <CODEROUTINE>min_int + input - max_int - 1</CODEROUTINE>.<BR/>
+            The <CODEROUTINE>_</CODEROUTINE> (underscore) character can appear anywhere in the string and is ignored.<BR/>
+            Return <CODEROUTINE>None</CODEROUTINE> if the given string is not a valid representation of an integer, or if the integer represented exceeds the range of integers representable in type <CODEROUTINE>int</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val int_of_string : string -&gt; int</CODEROUTINE></TERM>
+          <DESC>Same as <CODEROUTINE>int_of_string_opt</CODEROUTINE>, but raise <CODEROUTINE>Failure "int_of_string"</CODEROUTINE> instead of returning <CODEROUTINE>None</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
           <TERM><CODEROUTINE>val fst : 'a * 'b -&gt; 'a</CODEROUTINE></TERM>
           <DESC>Return the first component of a pair.</DESC>
         </ROW>
@@ -700,6 +721,9 @@
       <ITEM><CODEROUTINE>Failure</CODEROUTINE> should be raised when a result can't be produced.<BR/>
         It can be raised using <CODEROUTINE>val failwith : string -&gt; 'a</CODEROUTINE></ITEM>
     </BLIST>
+    </ITEM>
+    <ITEM>Example: verifying the command lines arguments
+      <CODESAMPLE>let start = if (Array.length Sys.argv) != 2 then invalid_arg ("Syntax: " ^ Sys.argv.(0) ^ " &lt;seed&gt;"); int_of_string Sys.argv.(1)</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Loops</TITLE>

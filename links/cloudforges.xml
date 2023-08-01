@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Cloud forges</TITLE>
 <PATH>links/cloudforges.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -224,6 +224,7 @@
       <ITEM><ARTICLE><X><T>How GitHub's Database Self-Destructed in 43 Seconds</T><A>https://www.youtube.com/watch?v=dsHyUgGMht0</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>3</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Fang</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>12</DAY></DATE><COMMENT>A description of the <DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE> incident.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Unit testing Python code using Pytest + GitHub Actions</T><A>https://www.youtube.com/watch?v=0aEJBygCn5Q</A><L>en</L><F>MP4</F><DURATION><MINUTE>23</MINUTE><SECOND>1</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Ethan</FIRSTNAME><LASTNAME>Henderson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>22</DAY></DATE><COMMENT>A simple example of a pipeline running Pytest tests.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>GitHub merge queue is generally available</T><ST>Supercharge pull request merges on your busiest branches by enabling your team to queue.</ST><A>https://github.blog/2023-07-12-github-merge-queue-is-generally-available/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dustin</FIRSTNAME><LASTNAME>Yin</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>12</DAY></DATE><COMMENT>GitHub adds merge queues, a mechanism building and checking the merged code before performing the real merge. This is the same as the old TFS’ gated check-in builds.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Scaling merge-ort across GitHub</T><ST>GitHub switched to performing merges and rebases using merge-ort. Come behind the scenes to see why and how we made this change.</ST><A>https://github.blog/2023-07-27-scaling-merge-ort-across-github/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Cooper</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>27</DAY></DATE><COMMENT>The subtitle says it all.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Bitbucket</TITLE>
       <ITEM><ARTICLE><X><T>An introduction to Bitbucket Pipelines</T><A>https://bitbucket.org/blog/an-introduction-to-bitbucket-pipelines</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kelvin</FIRSTNAME><LASTNAME>Yap</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>10</MONTH><DAY>30</DAY></DATE><COMMENT>A short introduction of the CI/CD tool in Bitbucket.</COMMENT></ARTICLE></ITEM>
