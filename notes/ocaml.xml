@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -807,6 +807,31 @@
         <ITEM>Start the debugger
           <CODESAMPLE><PROMPT/>ocamldebug camlprog.exe</CODESAMPLE>
         </ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE><CODEROUTINE>opam</CODEROUTINE></TITLE>
+      <ITEM>Initialise the <CODEFILENAME>~/.opam</CODEFILENAME> directory
+        <CODESAMPLE><PROMPT/>opam init</CODESAMPLE>
+      </ITEM>
+      <ITEM>Synchronize opam's database with the package repositories
+        <CODESAMPLE><PROMPT/>opam update</CODESAMPLE>
+      </ITEM>
+      <ITEM>List installed packages
+        <CODESAMPLE><PROMPT/>opam list</CODESAMPLE>
+      </ITEM>
+      <ITEM>Install the package <CODEROUTINE>&lt;name&gt;</CODEROUTINE>
+        <CODESAMPLE><PROMPT/>opam install &lt;name&gt;</CODESAMPLE>
+      </ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE><CODEROUTINE>dune</CODEROUTINE></TITLE>
+      <ITEM>Initialise the project <CODEROUTINE>&lt;name&gt;</CODEROUTINE>
+        <CODESAMPLE><PROMPT/>dune init proj &lt;name&gt;</CODESAMPLE>
+      </ITEM>
+      <ITEM>Build the project in the current directory
+        <CODESAMPLE><PROMPT/>dune build</CODESAMPLE>
+      </ITEM>
+      <ITEM>Run the tests of the project in the current directory
+        <CODESAMPLE><PROMPT/>dune test</CODESAMPLE>
+      </ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </BLIST>
