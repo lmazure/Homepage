@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -818,19 +818,38 @@
       <ITEM>List installed packages
         <CODESAMPLE><PROMPT/>opam list</CODESAMPLE>
       </ITEM>
+      <ITEM>List all available packages
+        <CODESAMPLE><PROMPT/>opam list -a</CODESAMPLE>
+      </ITEM>
       <ITEM>Install the package <CODEROUTINE>&lt;name&gt;</CODEROUTINE>
         <CODESAMPLE><PROMPT/>opam install &lt;name&gt;</CODESAMPLE>
       </ITEM>
+      <ITEM>It is possible to constrain the version to install
+        <CODESAMPLE><PROMPT/>opam install &lt;name&gt;.&lt;version&gt;</CODESAMPLE>
+        <CODESAMPLE><PROMPT/>opam install "&lt;name&gt;&gt;=&lt;version&gt;"</CODESAMPLE>
+      </ITEM>
+      <ITEM>Upgrade package <CODEROUTINE>&lt;name&gt;</CODEROUTINE>
+        <CODESAMPLE><PROMPT/>opam upgrade &lt;name&gt;</CODESAMPLE>
+      </ITEM>
+      <ITEM>Upgrade all installed package <CODEROUTINE>&lt;name&gt;</CODEROUTINE>
+        <CODESAMPLE><PROMPT/>opam upgrade</CODESAMPLE>
+      </ITEM>
+      <ITEM>Uninstall the package <CODEROUTINE>&lt;name&gt;</CODEROUTINE>
+        <CODESAMPLE><PROMPT/>opam remove &lt;name&gt;</CODESAMPLE>
+      </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><CODEROUTINE>dune</CODEROUTINE></TITLE>
-      <ITEM>Initialise the project <CODEROUTINE>&lt;name&gt;</CODEROUTINE>
-        <CODESAMPLE><PROMPT/>dune init proj &lt;name&gt;</CODESAMPLE>
+      <ITEM>Initialise the project <CODEROUTINE>&lt;project_name&gt;</CODEROUTINE>
+        <CODESAMPLE><PROMPT/>dune init proj &lt;project_name&gt;</CODESAMPLE>
       </ITEM>
       <ITEM>Build the project in the current directory
         <CODESAMPLE><PROMPT/>dune build</CODESAMPLE>
       </ITEM>
       <ITEM>Run the tests of the project in the current directory
         <CODESAMPLE><PROMPT/>dune test</CODESAMPLE>
+      </ITEM>
+      <ITEM>Run the project
+        <CODESAMPLE><PROMPT/>dune exec &lt;project_name&gt;</CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
