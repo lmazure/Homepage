@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -735,6 +735,59 @@
       </BLIST>
     </ITEM>
   </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Zarith: arithmetic and logical operations over arbitrary-precision integers</TITLE>
+    <ITEM>example
+      <CODESAMPLE>open Z<BR/>
+        <BR/>
+        let c =<BR/>
+        <TAB/>let a = Z.of_string "12345678901234567890" in<BR/>
+        <TAB/>let b = Z.of_string "98765432109876543210" in<BR/>
+        <TAB/>a + b<BR/>
+        <BR/>
+        let _ = Printf.printf "Sum: %s\n" (Z.to_string c);<BR/></CODESAMPLE>
+    </ITEM>
+    <ITEM><CODEROUTINE>Z</CODEROUTINE> module
+      <DEFINITIONTABLE>
+        <ROW>
+          <TERM><CODEROUTINE>type t</CODEROUTINE></TERM>
+          <DESC>Type of integers of arbitrary length.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>exception Overflow</CODEROUTINE></TERM>
+          <DESC>Raised by conversion functions when the value cannot be represented in the destination type.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val of_int : int -&gt; t</CODEROUTINE></TERM>
+          <DESC>Converts from a base integer.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val to_int : t -&gt; int</CODEROUTINE></TERM>
+          <DESC>Converts to a base integer. May raise an <CODEROUTINE>Overflow</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val of_string : string -&gt; t</CODEROUTINE></TERM>
+          <DESC>Converts a string to an integer.
+            An optional <CODEROUTINE>-</CODEROUTINE> prefix indicates a negative number, while a <CODEROUTINE>+</CODEROUTINE> prefix is ignored.
+            An optional prefix <CODEROUTINE>0x</CODEROUTINE>, <CODEROUTINE>0o</CODEROUTINE>, or <CODEROUTINE>0b</CODEROUTINE> (following the optional <CODEROUTINE>-</CODEROUTINE> or <CODEROUTINE>+</CODEROUTINE> prefix) indicates that the number is, represented, in hexadecimal, octal, or binary, respectively.
+            Otherwise, base 10 is assumed. (Unlike C, a lone <CODEROUTINE>0</CODEROUTINE> prefix does not denote octal.)</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val to_string : t -&gt; string</CODEROUTINE></TERM>
+          <DESC>Gives a human-readable, decimal string representation of the argument.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val add : t -&gt; t -&gt; t</CODEROUTINE><BR/>
+            <CODEROUTINE>val (+) : t -&gt; t -&gt; t</CODEROUTINE></TERM>
+          <DESC>Addition.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val sub : t -&gt; t -&gt; t</CODEROUTINE><BR/>
+            <CODEROUTINE>val (-) : t -&gt; t -&gt; t</CODEROUTINE></TERM>
+          <DESC>Subtraction .</DESC>
+        </ROW>
+      </DEFINITIONTABLE>
+  </ITEM>
+  </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Installation</TITLE>
     <ITEM><BLIST><TITLE>Using Docker</TITLE>
       <ITEM>a simple installation process:
@@ -836,6 +889,11 @@
       </ITEM>
       <ITEM>Uninstall the package <CODEROUTINE>&lt;name&gt;</CODEROUTINE>
         <CODESAMPLE><PROMPT/>opam remove &lt;name&gt;</CODESAMPLE>
+      </ITEM>
+      <ITEM>Prints appropriate shell variable assignments to stdout
+        <CODESAMPLE><PROMPT/>opam env</CODESAMPLE>
+        To be used as
+        <CODESAMPLE><PROMPT/>eval $(opam env)</CODESAMPLE>
       </ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><CODEROUTINE>dune</CODEROUTINE></TITLE>
