@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>notes/java.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
   <BLIST><TITLE><U><B>Visibility</B></U></TITLE>
     <ITEM>
@@ -114,6 +114,14 @@
         <ITEM><CODEROUTINE>RuntimeException</CODEROUTINE>: represents exceptions that a program shouldn't generally expect to occur, but could potentially recover from, it is likely to be a programming error rather than an error due to invalid user input or a badly configured environment</ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
+    <ITEM>to get the stacktrace as a string
+      <CODESAMPLE>private static String getExceptionDescription(final Throwable e) {<BR/>
+        <TAB/>final StringWriter sw = new StringWriter();<BR/>
+        <TAB/>final PrintWriter pw = new PrintWriter(sw);<BR/>
+        <TAB/>e.printStackTrace(pw);<BR/>
+        <TAB/>return sw.toString();<BR/>
+        }</CODESAMPLE>
+    </ITEM>
   </BLIST></ITEM>
   <ITEM><CODEROUTINE>Error</CODEROUTINE>s and <CODEROUTINE>RuntimeException</CODEROUTINE>s are unchecked exceptions (methods don't explicitly have to declare that they can throw an unchecked exception; callers don't have to handle them explicitly)</ITEM>
 </BLIST>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -652,7 +652,7 @@ Search/replace
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id=","/><BR/>
       <CODEROUTINE>Preferences: Open Settings (UI)</CODEROUTINE></TERM>
-    <DESC>Display setting</DESC></ROW>
+    <DESC>Display settings</DESC></ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="T"/><BR/>
       <CODEMENU>File<CODEMENU>Preferences<CODEMENU>Color Theme</CODEMENU></CODEMENU></CODEMENU></TERM>
@@ -702,7 +702,7 @@ Java
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
-GitLens
+<X><T>GitLens</T><A>https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens</A><L>en</L><F>HTML</F></X> (<X><T>doc</T><A>https://help.gitkraken.com/gitlens/gitlens-home/</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <KEY id="B"/><BR/>
@@ -724,15 +724,20 @@ GitLens
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+<X><T>GitLab Workflow</T><A>https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow</A><L>en</L><F>HTML</F></X>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>gitlab.aiAssistedCodeSuggestions.enabled</CODEROUTINE></TERM>
+    <DESC>Toggle code completion</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
 <BLIST><TITLE>Keyboard Shortcuts</TITLE>
   <ITEM>Type the string definition of a shortcut (e.g. <CODEROUTINE>ctrl + n</CODEROUTINE>), to find where it is used.</ITEM>
 </BLIST>
-<BLIST><TITLE>Extensions</TITLE>
+<BLIST><TITLE>Other extensions</TITLE>
   <ITEM><X><T>Debugger for Chrome</T><A>https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>XML</T><A>https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><BLIST><TITLE><X><T>GitLens</T><A>https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens</A><L>en</L><F>HTML</F></X></TITLE>
-    <ITEM><X><T>GitKraken</T><A>https://help.gitkraken.com/gitlens/gitlens-home/</A><L>en</L><F>HTML</F></X></ITEM>
-  </BLIST></ITEM>
   <ITEM><X><T>Docker</T><A>https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 </CONTENT>
