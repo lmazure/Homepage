@@ -757,6 +757,18 @@
           <DESC>Raised by conversion functions when the value cannot be represented in the destination type.</DESC>
         </ROW>
         <ROW>
+          <TERM><CODEROUTINE>val zero : t</CODEROUTINE></TERM>
+          <DESC>The number 0.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val one : t</CODEROUTINE></TERM>
+          <DESC>The number 1.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val minus_one : t</CODEROUTINE></TERM>
+          <DESC>The number -1.</DESC>
+        </ROW>
+        <ROW>
           <TERM><CODEROUTINE>val of_int : int -&gt; t</CODEROUTINE></TERM>
           <DESC>Converts from a base integer.</DESC>
         </ROW>
@@ -781,9 +793,29 @@
           <DESC>Addition.</DESC>
         </ROW>
         <ROW>
+          <TERM><CODEROUTINE>val succ : t -&gt; t</CODEROUTINE></TERM>
+          <DESC>Returns its argument plus one.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val pred : t -&gt; t</CODEROUTINE></TERM>
+          <DESC>Returns its argument minus one.</DESC>
+        </ROW>
+        <ROW>
           <TERM><CODEROUTINE>val sub : t -&gt; t -&gt; t</CODEROUTINE><BR/>
             <CODEROUTINE>val (-) : t -&gt; t -&gt; t</CODEROUTINE></TERM>
           <DESC>Subtraction .</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val shift_left : t -&gt; int -&gt; t</CODEROUTINE></TERM>
+          <DESC>Shifts to the left. Equivalent to a multiplication by a power of 2. The second argument must be non-negative.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val shift_right : t -&gt; int -&gt; t</CODEROUTINE></TERM>
+          <DESC>Shifts to the right. This is an arithmetic shift, equivalent to a division by a power of 2 with rounding towards -oo. The second argument must be non-negative.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val shift_right_trunc : t -&gt; int -&gt; t</CODEROUTINE></TERM>
+          <DESC>Shifts to the right, rounding towards 0. This is equivalent to a division by a power of 2, with truncation. The second argument must be non-negative</DESC>
         </ROW>
       </DEFINITIONTABLE>
   </ITEM>
