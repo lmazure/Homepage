@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -172,7 +172,7 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>⅔</CELL><CELL>U+2154</CELL><CELL>8532</CELL><CELL><X><T>Vulgar Fraction Two Thirds</T><A>https://www.compart.com/en/unicode/U+2154</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Fraction ordinaire deux tiers</T><A>https://www.compart.com/fr/unicode/U+2154</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>¼</CELL><CELL>U+188</CELL><CELL>8532</CELL><CELL><X><T>Vulgar Fraction One Quarter</T><A>https://www.compart.com/en/unicode/U+00BC</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Fraction ordinaire un quart</T><A>https://www.compart.com/fr/unicode/U+00BC</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>¾</CELL><CELL>U+00BE</CELL><CELL>190</CELL><CELL><X><T>Vulgar Fraction Three Quarters</T><A>https://www.compart.com/en/unicode/U+00BE</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Fraction ordinaire trois quarts</T><A>https://www.compart.com/fr/unicode/U+00BE</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL> </CELL><CELL>U+00A0</CELL><CELL>160</CELL><CELL><X><T>No-Break Space (NBSP)</T><A>https://www.compart.com/en/unicode/U+00A0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00A0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>&#xA0;</CELL><CELL>U+00A0</CELL><CELL>160</CELL><CELL><X><T>No-Break Space (NBSP)</T><A>https://www.compart.com/en/unicode/U+00A0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00A0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>‐</CELL><CELL>U+2010</CELL><CELL></CELL><CELL><X><T>Hyphen</T><A>https://www.compart.com/en/unicode/U+2010</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2010</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>‑</CELL><CELL>U+2011</CELL><CELL></CELL><CELL><X><T>Non-Breaking Hyphen</T><A>https://www.compart.com/en/unicode/U+2011</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2011</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>‒</CELL><CELL>U+2012</CELL><CELL></CELL><CELL><X><T>Figure Dash</T><A>https://www.compart.com/en/unicode/U+2012</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2012</A><L>fr</L><F>HTML</F></X></CELL></ROW>
@@ -193,8 +193,8 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>👍</CELL><CELL>U+1F44D</CELL><CELL>128077</CELL><CELL><X><T>Thumbs Up Sign</T><A>https://www.compart.com/en/unicode/U+1F44D</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+1F44D</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>👎</CELL><CELL>U+1F44E</CELL><CELL>128078</CELL><CELL><X><T>Thumbs Down Sign</T><A>https://www.compart.com/en/unicode/U+1F44E</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+1F44E</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️🚧</CELL><CELL>U+1F6A7</CELL><CELL></CELL><CELL><X><T>Construction Sign</T><A>https://www.compart.com/en/unicode/U+1F6A7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Panneau indicateur de construction</T><A>https://www.compart.com/fr/unicode/U+1F6A7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL>️†</CELL><CELL>U+2020</CELL><CELL></CELL><CELL><X><T>Dagger</T><A>https://www.compart.com/en/unicode/U+2020</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2020</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL>️‡</CELL><CELL>U+2021</CELL><CELL></CELL><CELL><X><T>Double Dagger</T><A>https://www.compart.com/en/unicode/U+2021</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2021</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️†</CELL><CELL>U+2020</CELL><CELL>8224</CELL><CELL><X><T>Dagger</T><A>https://www.compart.com/en/unicode/U+2020</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Obèle</T><A>https://www.compart.com/fr/unicode/U+2020</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️‡</CELL><CELL>U+2021</CELL><CELL>8225</CELL><CELL><X><T>Double Dagger</T><A>https://www.compart.com/en/unicode/U+2021</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Double obèle</T><A>https://www.compart.com/fr/unicode/U+2021</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️⸸</CELL><CELL>U+2E38</CELL><CELL></CELL><CELL><X><T>Turned Dagger</T><A>https://www.compart.com/en/unicode/U+2E38</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2E38</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️⸶</CELL><CELL>U+2E36</CELL><CELL></CELL><CELL><X><T>Dagger with Left Guard</T><A>https://www.compart.com/en/unicode/U+2E36</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2E36</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️⸷</CELL><CELL>U+2E37</CELL><CELL></CELL><CELL><X><T>Dagger with Right Guard</T><A>https://www.compart.com/en/unicode/U+2E37</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2E37</A><L>fr</L><F>HTML</F></X></CELL></ROW>

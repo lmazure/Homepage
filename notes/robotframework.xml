@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Robot Framework</TITLE>
 <PATH>notes/robotframework.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 Install Robot Framework
 <CODESAMPLE>install robotframework</CODESAMPLE>
@@ -17,20 +17,68 @@ Install Robot Framework
     In botch cases, it is possible to define a default value: <CODEROUTINE>%{ENV_VAR_NAME=default_value}</CODEROUTINE> and  <CODEROUTINE>Get Environment Variable<TAB/>ENV_VAR_NAME<TAB/>default_value</CODEROUTINE></ITEM>
   <ITEM>Sleep for 42 seconds
     <CODESAMPLE>Sleep<TAB/>42</CODESAMPLE></ITEM>
-  <ITEM>loop on a list
+  <ITEM>Loop on a list
     <CODESAMPLE>${root} =<TAB/>Parse XML<TAB/>${CURDIR}${/}surefire_report.xml<BR/>
       @{failure_elements} =<TAB/>Get Elements<TAB/>${root}<TAB/>.//testcase/*[.!='grep']<BR/>
       ${f} =<TAB/>Set Variable<TAB/>${EMPTY}<BR/>
       <B>FOR</B><TAB/>${failure}<TAB/><B>IN</B><TAB/>@{failure_elements}<BR/>
       <TAB/>${f} =<TAB/>Catenate<TAB/>SEPARATOR=\n<TAB/>${f}<TAB/>\ntype: ${failure.tag}\ndetails: ${failure.text}<BR/>
       <B>END</B></CODESAMPLE></ITEM>
-  <ITEM>get length of a list
+  <ITEM>Get length of a list
     <CODESAMPLE>${root} =<TAB/>Parse XML<TAB/>${CURDIR}${/}surefire_report.xml<BR/>
       @{skipped_elements} =<TAB/>Get Elements<TAB/>${root}<TAB/>.//testcase/*[.='grep']<BR/>
       @{all_elements} =<TAB/>Get Elements<TAB/>${root}<TAB/>.//testcase<BR/>
       ${skipped_count} =<TAB/><B>Get length</B><TAB/>${skipped_elements}<BR/>
       ${total_count} =<TAB/><B>Get length</B><TAB/>${all_elements}<BR/>
       Should Not Be Equal As Integers<TAB/>${skipped_count}<TAB/>${total_count}<TAB/>All tests have been skipped</CODESAMPLE></ITEM>
+  <ITEM>Running a test in an other technology and parsing the Surefire report
+    <CODESAMPLE>*** Settings ***<BR/>
+    Documentation<TAB/>Running an Intern test from Robot Framework<BR/>
+      Library<TAB/>Process<BR/>
+      Library<TAB/>XML<BR/>
+      <BR/>
+      *** Test Cases ***<BR/>
+      Run Intern Test<BR/>
+      <TAB/>Run Process<TAB/>npm.cmd<TAB/>test<BR/>
+      <TAB/>@{elements} =<TAB/>Get Elements<TAB/>truc.xml<TAB/>.//failure<BR/>
+      <TAB/>${f} =<TAB/>Set Variable<TAB/>Errors:<BR/>
+      <TAB/>FOR<TAB/>${failure}<TAB/>IN<TAB/>@{elements}<BR/>
+      <TAB/><TAB/>${f} =<TAB/>Catenate<TAB/>SEPARATOR=\n<TAB/>${f}<TAB/>${failure.text}<BR/>
+      <TAB/>END<BR/>
+      <TAB/>Should be empty<TAB/>${elements}<TAB/>An error has been found\n${f}</CODESAMPLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Converting a test into json</TITLE>
+    <ITEM>test sample (<CODEROUTINE>test.robot</CODEROUTINE>):
+      <CODESAMPLE>*** Settings ***<BR/>
+      Library<TAB/>DateTime<BR/>
+      <BR/>
+      <BR/>
+      *** Test Cases ***<BR/>
+      Simple Test Case<BR/>
+      <TAB/>[Documentation]<TAB/>Shows some assertion keywords<BR/>
+      <TAB/>Should Be Equal<TAB/>Text123<TAB/>Text123<BR/>
+      <TAB/>Should Be True<TAB/>5 + 5 == 10<BR/>
+      <BR/>
+      Test for the year 2022<BR/>
+      <TAB/>[Documentation]<TAB/>Tests if it is still 2022...<BR/>
+      <TAB/>${date}=<TAB/>Get Current Date<TAB/>result_format=datetime<BR/>
+      <TAB/>Log<TAB/>${date}<BR/>
+      <TAB/>Should Be Equal As Strings<TAB/>${date.year}<TAB/>2022</CODESAMPLE>
+    </ITEM>
+    <ITEM>Python script to perform the conversion (<CODEROUTINE>convert.py</CODEROUTINE>):
+      <CODESAMPLE>from robot.running import TestSuite<BR/>
+        import sys<BR/>
+        <BR/>
+        suite = TestSuite.from_file_system(sys.argv[1])<BR/>
+        suite.to_json(sys.argv[2])</CODESAMPLE>
+    </ITEM>
+    <ITEM>convert the file
+      <CODESAMPLE><PROMPT/>python3 convert.py test.robot test.rbt</CODESAMPLE>
+    </ITEM>
+    <ITEM>run the test
+      <CODESAMPLE><PROMPT/>robot test.rbt</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Tags</U></B></TITLE>
   <ITEM><BLIST><TITLE>Setting tags</TITLE>
@@ -114,22 +162,6 @@ Install Robot Framework
       …<BR/>
       <TAB/><TAB/>${source} =<TAB/>Get Source<BR/>
       <TAB/><TAB/>OperatingSystem.Create File<TAB/>${EXECDIR}/map_source.html<TAB/>${source}</CODESAMPLE></ITEM>
-  <ITEM>Running a test in an other technology and parsing the Surefire report
-    <CODESAMPLE>*** Settings ***<BR/>
-    Documentation<TAB/>Running an Intern test from Robot Framework<BR/>
-      Library<TAB/>Process<BR/>
-      Library<TAB/>XML<BR/>
-      <BR/>
-      *** Test Cases ***<BR/>
-      Run Intern Test<BR/>
-      <TAB/>Run Process<TAB/>npm.cmd<TAB/>test<BR/>
-      <TAB/>@{elements} =<TAB/>Get Elements<TAB/>truc.xml<TAB/>.//failure<BR/>
-      <TAB/>${f} =<TAB/>Set Variable<TAB/>Errors:<BR/>
-      <TAB/>FOR<TAB/>${failure}<TAB/>IN<TAB/>@{elements}<BR/>
-      <TAB/><TAB/>${f} =<TAB/>Catenate<TAB/>SEPARATOR=\n<TAB/>${f}<TAB/>${failure.text}<BR/>
-      <TAB/>END<BR/>
-      <TAB/>Should be empty<TAB/>${elements}<TAB/>An error has been found\n${f}</CODESAMPLE>
-  </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Browser Library</U></B></TITLE>
   <ITEM>to change the Browser language<BR/>
