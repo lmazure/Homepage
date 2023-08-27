@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Project management</B></U></TITLE>
   <ITEM>create a project on an existing source hierarchy<BR/>
@@ -466,6 +466,18 @@ in Debug window
     <ITEM>Click on <CODEMENU>Finish</CODEMENU></ITEM>
     <ITEM>Right-click on the project and <CODEMENU>Team<CODEMENU>Add to Index</CODEMENU></CODEMENU></ITEM>
     <ITEM>In the <CODEMENU>Git Staging</CODEMENU> view, click on <CODEMENU>Commit</CODEMENU></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Import a project from a Git repository</TITLE>
+    <ITEM><CODEMENU>File<CODEMENU>Import</CODEMENU></CODEMENU></ITEM>
+    <ITEM>Select <CODEMENU>Git<CODEMENU>Projects from Git (with smart import)</CODEMENU></CODEMENU></ITEM>
+    <ITEM>Click on <CODEMENU>Next</CODEMENU></ITEM>
+    <ITEM>Select  <CODEMENU>Clone URI</CODEMENU></ITEM>
+    <ITEM>Fill the URI (e.g. <CODEROUTINE>https://gitlab.com/henixdevelopment/open-source/code-samples/bdd-cucumber-02.git</CODEROUTINE>)</ITEM>
+    <ITEM>Click on <CODEMENU>Next</CODEMENU></ITEM>
+    <ITEM>Click on <CODEMENU>Next</CODEMENU></ITEM>
+    <ITEM>Set directory to a new directory in the workspace</ITEM>
+    <ITEM>Click on <CODEMENU>Next</CODEMENU></ITEM>
+    <ITEM>Click on <CODEMENU>Finish</CODEMENU></ITEM>
   </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>JavaFx</B></U></TITLE>
