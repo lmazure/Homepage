@@ -3,11 +3,15 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Robot Framework</TITLE>
 <PATH>notes/robotframework.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 Install Robot Framework
 <CODESAMPLE>install robotframework</CODESAMPLE>
 <BLIST>
+  <ITEM>To also generate a Surefire report
+    <CODESAMPLE><PROMPT/>robot -x foo.xml .</CODESAMPLE>
+    or
+    <CODESAMPLE><PROMPT/>robot --xunit foo.xml .</CODESAMPLE></ITEM>
   <ITEM>Declaring test setup and teardown in the settings
     <CODESAMPLE>*** Settings ***<BR/>
       Test Setup<TAB/>Log To Console<TAB/>test startup<BR/>
