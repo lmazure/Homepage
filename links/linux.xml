@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Linux</TITLE>
 <PATH>links/linux.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -24,6 +24,7 @@
     <ITEM><CLIST><TITLE>Kernel</TITLE>
       <ITEM><X status="obsolete"><T>The linux-kernel mailing list FAQ</T><A>http://vger.kernel.org/lkml/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Kernel Bug Tracker</T><A>https://bugzilla.kernel.org</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Kernelnewbies</T><A>https://kernelnewbies.org/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>Distributions</TITLE>
       <ITEM><X><T>Debian</T><A>https://debian.org/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -100,9 +101,10 @@
       <ITEM><ARTICLE><X><T>Creating Linux virtual filesystems</T><A>https://lwn.net/Articles/13325/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Corbet</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE><COMMENT>How to implement a VFS on Linux 2.6.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Kernel comparison: Improved memory management in the 2.6 kernel</T><ST>From large pages to reverse mapping: more reliability and speed</ST><A>https://www.krsaborio.net/linux-scalability/research/2004/0303.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Larson</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE><COMMENT>The new 2.6 features: reverse mappings, large pages and TLEs in high memory.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Reorganizing the address space</T><A>https://lwn.net/Articles/91829/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Corbet</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE><COMMENT>The stack, memory maps and heap have been moved around.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>The Native POSIX Thread Library for Linux</T><A>https://pdfs.semanticscholar.org/e843/e5070343535f42300c55851cad70a9808abd.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Ulrich</FIRSTNAME><LASTNAME>Drepper</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ingo</FIRSTNAME><LASTNAME>Molnar</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE><COMMENT>A draft written at the beginning of the NPTL implementation.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>The Native POSIX Thread Library for Linux</T><A>https://www.semanticscholar.org/paper/The-Native-POSIX-Thread-Library-for-Linux-Drepper-Molnar/ffced47e5604b66736d365030bfe532d11285433?p2df</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Ulrich</FIRSTNAME><LASTNAME>Drepper</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ingo</FIRSTNAME><LASTNAME>Molnar</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE><COMMENT>A draft written at the beginning of the NPTL implementation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="zombie"><T>TASK_KILLABLE: New process state in Linux</T><ST>This new sleeping state echoes TASK_UNINTERRUPTIBLE with the ability to respond to fatal signals</ST><A>https://www.ibm.com/developerworks/linux/library/l-task-killable/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Avinesh</FIRSTNAME><LASTNAME>Kumar</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE><COMMENT>Kernel 2.6.25 supports sleeping tasks that are interruptible only by fatal signals.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="zombie"><T>Inside the Linux 2.6 Completely Fair Scheduler</T><ST>Providing fair access to CPUs since 2.6.23</ST><A>https://www.ibm.com/developerworks/linux/library/l-completely-fair-scheduler/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>M.</FIRSTNAME><MIDDLENAME>Tim</MIDDLENAME><LASTNAME>Jones</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>12</MONTH><DAY>15</DAY></DATE><COMMENT>A description of the 2.6.23 scheduler.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Seeking an acceptable unaccepted memory policy</T><A>https://lwn.net/Articles/928328/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jonathan</FIRSTNAME><LASTNAME>Corbet</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE><COMMENT>The problem of supporting old versions of AMD’s SEV-SNP (Secure Encrypted Virtualization and Secure Nested Paging) and the new memory acceptance mechanism.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Filesystems</TITLE>
       <ITEM><ARTICLE><X status="dead"><T>Speeding up Linux Using hdparm</T><A>http://www.linuxdevcenter.com/pub/a/linux/2000/06/29/hdparm.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Flickenger</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT>Using hdparm to improve the performance of IDE disks.</COMMENT></ARTICLE></ITEM>
