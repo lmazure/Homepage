@@ -102,7 +102,7 @@ The <CODEROUTINE>descendant</CODEROUTINE> axis contains the descendants of the c
 The <CODEROUTINE>parent</CODEROUTINE> axis contains the parent of the context node, if there is one.<BR/>
 <CODEROUTINE>//DDD/parent::*</CODEROUTINE> select all parents of <CODEROUTINE>DDD</CODEROUTINE> element<BR/>
 <BR/>
-The <CODEROUTINE>ancestor</CODEROUTINE> axis contains the ancestors of the context node; the ancestors of the context node consist of the parent of context node and the parent's parent and so on; thus, the <CODEROUTINE>ancestor</CODEROUTINE> axis will always include the root node, unless the context node is the root node.<BR/>
+The <CODEROUTINE>ancestor</CODEROUTINE> axis contains the ancestors of the context node; the ancestors of the context node consist of the parent of context node and the parent’s parent and so on; thus, the <CODEROUTINE>ancestor</CODEROUTINE> axis will always include the root node, unless the context node is the root node.<BR/>
 <CODEROUTINE>/AAA/BBB/DDD/CCC/EEE/ancestor::*</CODEROUTINE> select all elements given in this absolute path<BR/>
 <CODEROUTINE>//FFF/ancestor::*</CODEROUTINE> select ancestors of <CODEROUTINE>FFF</CODEROUTINE> element<BR/>
 <BR/>

@@ -29,15 +29,15 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>ls --color=never</CODEROUTINE></TERM>
-    <DESC>never use color display</DESC>
+    <DESC>never use colour display</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>ls --color=always</CODEROUTINE></TERM>
-    <DESC>always use color display</DESC>
+    <DESC>always use colour display</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>ls --color=auto</CODEROUTINE></TERM>
-    <DESC>use color display only if standard output is sent to a tty</DESC>
+    <DESC>use colour display only if standard output is sent to a tty</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -241,17 +241,17 @@
   <ROW>
     <TERM><CODEROUTINE>grep --color=never</CODEROUTINE><BR/>
       <CODEROUTINE>grep --colour=never</CODEROUTINE></TERM>
-    <DESC>never use color display</DESC>
+    <DESC>never use colour display</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>grep --color=always</CODEROUTINE><BR/>
       <CODEROUTINE>grep --colour=always</CODEROUTINE></TERM>
-    <DESC>always use color display</DESC>
+    <DESC>always use colour display</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>grep --color=auto</CODEROUTINE><BR/>
       <CODEROUTINE>grep --colour=auto</CODEROUTINE></TERM>
-    <DESC>use color display only if standard output is sent to a tty</DESC>
+    <DESC>use colour display only if standard output is sent to a tty</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>grep -q</CODEROUTINE><BR/><CODEROUTINE>grep --quiet</CODEROUTINE><BR/><CODEROUTINE>grep --silent</CODEROUTINE></TERM>
@@ -711,7 +711,7 @@ Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODERO
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>-noleaf</CODEROUTINE></TERM>
-    <DESC>do not optimize by assuming that directories contain two fewer subdirectories than their hard link count (necessary for some filesystems: MSDOS, CDROM, AFS…)</DESC>
+    <DESC>do not optimise by assuming that directories contain two fewer subdirectories than their hard link count (necessary for some filesystems: MSDOS, CDROM, AFS…)</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

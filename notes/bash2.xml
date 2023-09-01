@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Bash</TITLE>
 <PATH>notes/bash2.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Startup files</B></U></TITLE>
   <ITEM><BLIST><TITLE>For interactive shells or shells called with the <CODEROUTINE>--login</CODEROUTINE> option:</TITLE>
@@ -65,6 +65,12 @@
 <BLIST><TITLE><U><B>Environment variables</B></U></TITLE>
   <ITEM>Test if an environment variable is set (possibly empty) or not
     <CODESAMPLE>[[ ! -z ${MYVAR+z} ]] &amp;&amp; echo "Set" || echo "Not defined"</CODESAMPLE>
+  </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Builtin commands</B></U></TITLE>
+  <ITEM><CODEROUTINE>hash</CODEROUTINE> is used to manage the cache of the command to the directories in <CODEROUTINE>PATH</CODEROUTINE> do not have to be scanned every time<BR/>
+    <CODEROUTINE>hash -l</CODEROUTINE> dumps the cache<BR/>
+    <CODEROUTINE>hash -r</CODEROUTINE> empties the cache
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>HereDoc</B></U></TITLE>

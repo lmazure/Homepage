@@ -63,7 +63,7 @@ The join method allows one thread to wait for the completion of another. If <COD
 <U><B>Memory consistency</B></U><BR/>
 Memory consistency is based on the <I>happens-before</I> relation on memory operations. The results of a write by one thread are guaranteed to be visible to a read by another thread only if the write operation happens-before the read operation.
 <BLIST>
-<TITLE>Each action in a thread happens-before every action in that thread that comes later in the program's order.</TITLE>
+<TITLE>Each action in a thread happens-before every action in that thread that comes later in the program’s order.</TITLE>
 <ITEM>An unlock (synchronized block or method exit) of a monitor happens-before every subsequent lock (synchronized block or method entry) of that same monitor. And because the happens-before relation is transitive, all actions of a thread prior to unlocking happen-before all actions subsequent to any thread locking that monitor.</ITEM>
 <ITEM>A write to a volatile field happens-before every subsequent read of that same field. Writes and reads of volatile fields have similar memory consistency effects as entering and exiting monitors, but do not entail mutual exclusion locking.</ITEM>
 <ITEM>A call to <CODEROUTINE>start</CODEROUTINE> on a thread happens-before any action in the started thread.</ITEM>

@@ -287,7 +287,7 @@
       <ROW>
         <TERM1><CODEROUTINE>CHAR(Number)</CODEROUTINE></TERM1>
         <TERM2><CODEROUTINE>CAR(nombre)</CODEROUTINE></TERM2>
-        <DESC>convert a number into a character according to the current code table (codes greater than 127 depend on the system's character mapping)<BR/>
+        <DESC>convert a number into a character according to the current code table (codes greater than 127 depend on the system’s character mapping)<BR/>
           The number must be between 1 and 255.<BR/>
           <CODEROUTINE>=CHAR(100)</CODEROUTINE> returns the character <CODEROUTINE>d</CODEROUTINE>.</DESC>
       </ROW>

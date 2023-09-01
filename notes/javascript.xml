@@ -28,7 +28,7 @@
 </BLIST>
 <BLIST><TITLE><U><B>Arrays</B></U></TITLE>
   <ITEM><BLIST><TITLE>Array Creation</TITLE>
-    <ITEM>regular array (add an optional integer argument to control array's size)
+    <ITEM>regular array (add an optional integer argument to control array’s size)
     <CODESAMPLE>var myCars=new Array();<BR/>
     myCars[0]="Saab";<BR/>
     myCars[1]="Volvo";<BR/>
@@ -105,7 +105,7 @@ can be written<BR/>
 <TAB/>lastName<BR/>
 };</CODESAMPLE>
 <BR/>
-<U><B><CODEROUTINE>script</CODEROUTINE>'s <CODEROUTINE>defer</CODEROUTINE> and <CODEROUTINE>async</CODEROUTINE></B></U><BR/>
+<U><B><CODEROUTINE>script</CODEROUTINE>’s <CODEROUTINE>defer</CODEROUTINE> and <CODEROUTINE>async</CODEROUTINE></B></U><BR/>
 <CODESAMPLE>&lt;script src="sample.js" defer&gt;&lt;/script&gt;</CODESAMPLE>
 <BLIST>
   <ITEM>If <CODEROUTINE>async</CODEROUTINE> is present: The script is executed asynchronously with the rest of the page (the script will be executed while the page continues the parsing)</ITEM>
