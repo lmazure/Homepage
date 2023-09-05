@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>GitLab</TITLE>
 <PATH>notes/gitlab.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Shortcuts</TITLE>
   <ITEM>Global shortcuts
@@ -311,6 +311,19 @@
         <TAB/>query = f"https://gitlab.com/api/v4/projects/{projectId}/issues/{issueIid}?{urllib.parse.urlencode(params)}"<BR/>
         <TAB/>run_put_query(token, query)<BR/>
         <TAB/>print(f"label '{labelName}' added to issue {issueIid} of project {projectId}", flush=True)</CODESAMPLE>
+    </ITEM>
+    <ITEM>set (or change) the milestone of an issue
+      <CODESAMPLE>def get_milestone_id(project, milestoneName, token):<BR/>
+        <TAB/>query = f"https://gitlab.com/api/v4/projects/{urllib.parse.quote(project, safe='')}/milestones?include_parent_milestones=true&amp;title={urllib.parse.quote(milestoneName, safe='')}"<BR/>
+        <TAB/>result = run_get_query(token, query)<BR/>
+        <TAB/>return result[0]["id"]<BR/>
+        <BR/>
+        def set_issue_milestone(project, issueIid, milestoneId, token):<BR/>
+        <TAB/>query = f"https://gitlab.com/api/v4/projects/{urllib.parse.quote(project, safe='')}/issues/{issueIid}?milestone_id={milestoneId}"<BR/>
+        <TAB/>run_put_query(token, query)<BR/>
+        …<BR/>
+        newMilestoneId = get_milestone_id(project, newMilestone, token)<BR/>
+        set_issue_milestone(project, issueIid, newMilestoneId, token)</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
 </BLIST>

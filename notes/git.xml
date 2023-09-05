@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -193,6 +193,10 @@
   <ROW>
     <TERM><CODEROUTINE>git commit --amend</CODEROUTINE></TERM>
     <DESC>Replace the tip of the current branch by creating a new commit.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git commit --amend --no-edit</CODEROUTINE></TERM>
+    <DESC>Amend a commit without changing its commit message.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit --amend -m "an updated commit message"</CODEROUTINE></TERM>
@@ -385,6 +389,27 @@
     <DESC>Show only names and status of changed files.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git log --abbrev-commit</CODEROUTINE></TERM>
+    <DESC>SInstead of showing the full 40-byte hexadecimal commit object name, show a prefix that names the object uniquely.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log --oneline</CODEROUTINE></TERM>
+    <DESC>Shorthand for <CODEROUTINE>--pretty=oneline --abbrev-commit</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log decorate</CODEROUTINE><BR/>
+      <CODEROUTINE>git log decorate=short</CODEROUTINE></TERM>
+    <DESC>Print out the ref names of any commits that are shown. The ref name prefixes <CODEROUTINE>refs/heads/</CODEROUTINE>, <CODEROUTINE>refs/tags/</CODEROUTINE>, and <CODEROUTINE>refs/remotes/</CODEROUTINE> are not printed.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log decorate=long</CODEROUTINE></TERM>
+    <DESC>Print out the full ref names of any commits that are shown.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git log decorate=auto</CODEROUTINE></TERM>
+    <DESC>If the output is going to a terminal, the ref names are shown as if <CODEROUTINE>short</CODEROUTINE> was given, otherwise no ref names are shown. </DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git log --stat</CODEROUTINE></TERM>
     <DESC>Indicate the modified files with a graph of the stats of the changes.</DESC>
   </ROW>
@@ -574,6 +599,10 @@
     <DESC>Clean file with no interaction.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git clean -d</CODEROUTINE></TERM>
+    <DESC>Recurse into untracked directories.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git clean -e &lt;pattern&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git clean --exclude=&lt;pattern&gt;</CODEROUTINE></TERM>
     <DESC>Use the given exclude pattern in addition to the standard ignore rules.</DESC>
@@ -684,6 +713,10 @@
     <DESC>Push commits made on a local branch to a remote repository in the branch of same name.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git push https://username:password@mygithost.com/file.git</CODEROUTINE></TERM>
+    <DESC>Specify the credentials on the command line.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git push --all</CODEROUTINE></TERM>
     <DESC>Push all branches.</DESC>
   </ROW>
@@ -694,8 +727,9 @@
       This is to be used when a branch has been created locally and does not exist in the remote repository.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git push https://username:password@mygithost.com/file.git</CODEROUTINE></TERM>
-    <DESC>Specify the credentials on the command line.</DESC>
+    <TERM><CODEROUTINE>git push --force</CODEROUTINE><BR/>
+      <CODEROUTINE>git push -f</CODEROUTINE></TERM>
+    <DESC>Do not check that the remote ref is an ancestor of the local ref</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git push --mirror</CODEROUTINE></TERM>
@@ -954,6 +988,13 @@
     <TERM><CODEROUTINE>git push origin :refs/tags/&lt;tagname&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git push origin --delete &lt;tagname&gt;</CODEROUTINE></TERM>
     <DESC>Delete a tag on the remote.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>git bisect</CODEROUTINE></TERM>
+    <DESC>Use binary search to find the commit that introduced a bug.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
