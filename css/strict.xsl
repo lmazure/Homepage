@@ -291,6 +291,9 @@
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
+    <xsl:when test="@status='removed'">
+      <span title="removed page"><xsl:text> 🪦</xsl:text></span>
+    </xsl:when>
     <xsl:when test="@status='dead' or @status='zombie'">
       <span title="dead link"><xsl:text> †</xsl:text></span>
     </xsl:when>

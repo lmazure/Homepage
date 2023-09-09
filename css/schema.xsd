@@ -233,7 +233,7 @@
     <xs:attribute name="status">
      <xs:simpleType>
        <xs:restriction base="xs:string">
-         <xs:pattern value="obsolete|dead|zombie"/>
+         <xs:pattern value="obsolete|dead|zombie|removed"/>
        </xs:restriction>
       </xs:simpleType>
     </xs:attribute>
