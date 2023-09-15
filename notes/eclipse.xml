@@ -62,6 +62,10 @@
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="R"/></TERM>
     <DESC>display the Open Resource dialog</DESC>
   </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="3"/></TERM>
+    <DESC>find action</DESC>
+  </ROW>
   </DEFINITIONTABLE>
 <BR/>
 <BLIST><TITLE><U><B>Compilation</B></U><BR/></TITLE>
@@ -457,31 +461,8 @@ in Debug window
   </ITEM>
   <ITEM>To solve the problem of unkown import files, delete <CODEFILENAME>src/module-info.java</CODEFILENAME></ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>Git</B></U></TITLE>
-  <ITEM><BLIST><TITLE>Create a Git repository and the initial commit</TITLE>
-    <ITEM>Right-click on the project and <CODEMENU>Team<CODEMENU>Share projet…</CODEMENU></CODEMENU></ITEM>
-    <ITEM>In the <CODEMENU>Share Project</CODEMENU> dialog, check <CODEMENU>Use or create repository in parent folder of project</CODEMENU></ITEM>
-    <ITEM>Check the project</ITEM>
-    <ITEM>Click on <CODEMENU>Create Repository</CODEMENU></ITEM>
-    <ITEM>Click on <CODEMENU>Finish</CODEMENU></ITEM>
-    <ITEM>Right-click on the project and <CODEMENU>Team<CODEMENU>Add to Index</CODEMENU></CODEMENU></ITEM>
-    <ITEM>In the <CODEMENU>Git Staging</CODEMENU> view, click on <CODEMENU>Commit</CODEMENU></ITEM>
-  </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>Import a project from a Git repository</TITLE>
-    <ITEM><CODEMENU>File<CODEMENU>Import</CODEMENU></CODEMENU></ITEM>
-    <ITEM>Select <CODEMENU>Git<CODEMENU>Projects from Git (with smart import)</CODEMENU></CODEMENU></ITEM>
-    <ITEM>Click on <CODEMENU>Next</CODEMENU></ITEM>
-    <ITEM>Select  <CODEMENU>Clone URI</CODEMENU></ITEM>
-    <ITEM>Fill the URI (e.g. <CODEROUTINE>https://gitlab.com/henixdevelopment/open-source/code-samples/bdd-cucumber-02.git</CODEROUTINE>)</ITEM>
-    <ITEM>Click on <CODEMENU>Next</CODEMENU></ITEM>
-    <ITEM>Click on <CODEMENU>Next</CODEMENU></ITEM>
-    <ITEM>Set directory to a new directory in the workspace</ITEM>
-    <ITEM>Click on <CODEMENU>Next</CODEMENU></ITEM>
-    <ITEM>Click on <CODEMENU>Finish</CODEMENU></ITEM>
-  </BLIST></ITEM>
-</BLIST>
 <BLIST><TITLE><U><B>JavaFx</B></U></TITLE>
-  <ITEM>use <X><T>e(fx)clipse</T><A>https://www.eclipse.org/efxclipse/index.html</A><L>en</L><F>HTML</F></X><BR/>
+  <ITEM>use <X><T>e(fx)clipse</T><A>https://eclipse.dev/efxclipse/index.html</A><L>en</L><F>HTML</F></X><BR/>
     The packages are installable from <X><T>https://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</T><A>https://download.eclipse.org/efxclipse/updates-released/3.0.0/site/</A><L>en</L><F>HTML</F></X>.
   </ITEM>
 </BLIST>
