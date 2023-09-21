@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -60,7 +60,8 @@
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="S"/></TERM>
-    <DESC>Display keyboard shortcuts</DESC>
+    <DESC>Display keyboard shortcuts<BR/>
+      Type the string definition of a shortcut (e.g. <CODEROUTINE>ctrl + n</CODEROUTINE>), to find where it is used.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>Code: Show Release Notes</CODEROUTINE></TERM>
@@ -701,44 +702,43 @@ Java
     <DESC>Launch a wizard to create a Java project</DESC>
   </ROW>
 </DEFINITIONTABLE>
-<BR/>
-<X><T>GitLens</T><A>https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens</A><L>en</L><F>HTML</F></X> (<X><T>doc</T><A>https://help.gitkraken.com/gitlens/gitlens-home/</A><L>en</L><F>HTML</F></X>)
-<DEFINITIONTABLE>
-  <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <KEY id="B"/><BR/>
-      <CODEROUTINE>GitLens: Toggle File Blame</CODEROUTINE></TERM>
-    <DESC>Toggle the display (on the left) of the blaming for each code line</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>GitLens: Toggle Line Blame</CODEROUTINE></TERM>
-    <DESC>Toggle the display (at the right of the file line) of the blaming for the current line</DESC>
-  </ROW>
-  <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <MODIFIERKEY id="Shift"/><KEY id="B"/><BR/>
-      <CODEROUTINE>GitLens: Toggle Code Lens</CODEROUTINE></TERM>
-    <DESC>Toggle the display of inlined code blaming</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>GitLens: Toggle File Heatmap</CODEROUTINE></TERM>
-    <DESC>Toggle the display of the heatmap</DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<X><T>GitLab Workflow</T><A>https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow</A><L>en</L><F>HTML</F></X>
-<DEFINITIONTABLE>
-  <ROW>
-    <TERM><CODEROUTINE>gitlab.aiAssistedCodeSuggestions.enabled</CODEROUTINE></TERM>
-    <DESC>Toggle code completion</DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<BLIST><TITLE>Keyboard Shortcuts</TITLE>
-  <ITEM>Type the string definition of a shortcut (e.g. <CODEROUTINE>ctrl + n</CODEROUTINE>), to find where it is used.</ITEM>
-</BLIST>
-<BLIST><TITLE>Other extensions</TITLE>
-  <ITEM><X><T>XML</T><A>https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Debugger for Chrome</T><A>https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Docker</T><A>https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</A><L>en</L><F>HTML</F></X></ITEM>
+<BLIST><TITLE>Extensions</TITLE>
+  <ITEM><X><T>GitLens</T><A>https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens</A><L>en</L><F>HTML</F></X> (<X><T>doc</T><A>https://help.gitkraken.com/gitlens/gitlens-home/</A><L>en</L><F>HTML</F></X>)
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <KEY id="B"/><BR/>
+          <CODEROUTINE>GitLens: Toggle File Blame</CODEROUTINE></TERM>
+        <DESC>Toggle the display (on the left) of the blaming for each code line</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>GitLens: Toggle Line Blame</CODEROUTINE></TERM>
+        <DESC>Toggle the display (at the right of the file line) of the blaming for the current line</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <MODIFIERKEY id="Shift"/><KEY id="B"/><BR/>
+          <CODEROUTINE>GitLens: Toggle Code Lens</CODEROUTINE></TERM>
+        <DESC>Toggle the display of inlined code blaming</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>GitLens: Toggle File Heatmap</CODEROUTINE></TERM>
+        <DESC>Toggle the display of the heatmap</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM><X><T>GitLab Workflow</T><A>https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow</A><L>en</L><F>HTML</F></X>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>gitlab.aiAssistedCodeSuggestions.enabled</CODEROUTINE></TERM>
+        <DESC>Toggle code completion</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Other extensions</TITLE>
+    <ITEM><X><T>XML</T><A>https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Code Spell Checker</T><A>https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Debugger for Chrome</T><A>https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Docker</T><A>https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</A><L>en</L><F>HTML</F></X></ITEM>
+  </BLIST></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/ide.html#vscode</A><L>en</L><F>HTML</F></X>
