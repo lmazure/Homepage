@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Markdown</TITLE>
 <PATH>notes/markdown.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -106,6 +106,10 @@
       <CODESAMPLE>___</CODESAMPLE></TERM>
     <DESC>Horizontal rule<BR/>
       Put blank lines before and after</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODESAMPLE>&lt;a id="foo"&gt;&lt;/a&gt;</CODESAMPLE></TERM>
+    <DESC>Insert an anchor</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>

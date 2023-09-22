@@ -553,11 +553,13 @@
     <DESC>Stash the changes in a dirty working directory away.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git stash</CODEROUTINE><BR/><CODEROUTINE>git stash push</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git stash</CODEROUTINE><BR/>
+      <CODEROUTINE>git stash push</CODEROUTINE></TERM>
     <DESC>Save local modifications away and revert the working directory to match the HEAD commit (in the working tree and in the index).</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git stash push --message &lt;message&gt;</CODEROUTINE><BR/><CODEROUTINE>git stash push -m &lt;message&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git stash push --message &lt;message&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git stash push -m &lt;message&gt;</CODEROUTINE></TERM>
     <DESC>Attach a description to the stashed state.</DESC>
   </ROW>
   <ROW>
@@ -580,7 +582,7 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash apply [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Restore the entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
+    <DESC>Restore the entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present). The entry is kept among the stashed entries.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash apply --index [&lt;stash&gt;]</CODEROUTINE></TERM>
