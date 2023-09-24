@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>to avoid fucking problems when printing non-BMP characters to the console
@@ -479,6 +479,8 @@
   </ITEM>
   <ITEM>In order to activate the environment, some scripts are generated for each Linux/Windows shell, for example, for bash:
     <CODESAMPLE>source &lt;venv&gt;/bin/activate</CODESAMPLE>
+    for Windows:
+    <CODESAMPLE>source &lt;venv&gt;/Scripts/activate</CODESAMPLE>
   </ITEM>
   <ITEM>To deactivate the environment:
     <CODESAMPLE>deactivate</CODESAMPLE>
