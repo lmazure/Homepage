@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Google</TITLE>
 <PATH>notes/google.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>customization</B></U></TITLE>
   <ITEM><BLIST><TITLE>Search applets</TITLE>
@@ -32,6 +32,18 @@
 <BR/>
 <U><B>Google docs</B></U>
 <DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/></TERM>
+    <DESC>Toggle bold</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="I"/></TERM>
+    <DESC>Toggle italics</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="U"/></TERM>
+    <DESC>Toggle underline</DESC>
+  </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="5"/></TERM>
     <DESC>Toggle strike-through</DESC>
