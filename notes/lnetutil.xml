@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Linux network utilities</TITLE>
 <PATH>notes/lnetutil.xml</PATH>
-<DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -80,6 +80,18 @@
       <TERM><CODEROUTINE>-u &lt;user:password&gt;</CODEROUTINE><BR/>
         <CODEROUTINE>--user &lt;user:password&gt;</CODEROUTINE></TERM>
       <DESC>define user and password for server authentication</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>-F &lt;name=content&gt;</CODEROUTINE><BR/>
+        <CODEROUTINE>--form &lt;name=content&gt;</CODEROUTINE></TERM>
+      <DESC>emulate a filled-in form<BR/>
+        <CODEROUTINE>curl -F name=John -F shoesize=11 https://example.com</CODEROUTINE><BR/>
+        <BR/>
+        to attach a file, use <CODEROUTINE>@</CODEROUTINE>:<BR/>
+        <CODEROUTINE>curl -F profile=@portrait.jpg https://example.com/upload.cgi</CODEROUTINE>:<BR/>
+        <BR/>
+        to use the content of a file as a field value, use <CODEROUTINE>&lt;</CODEROUTINE>:<BR/>
+        <CODEROUTINE>url -F "story=&lt;hugefile.txt" https://example.com/</CODEROUTINE></DESC>
     </ROW>
     <ROW>
       <TERM><CODEROUTINE>-s</CODEROUTINE><BR/>
