@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -702,13 +702,21 @@ Java
     <DESC>Launch a wizard to create a Java project</DESC>
   </ROW>
 </DEFINITIONTABLE>
-<BLIST><TITLE>Extensions</TITLE>
+<BR/>
+<BLIST><TITLE>Used extensions</TITLE>
+  <ITEM><X><T>XML</T><A>https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>Code Spell Checker</T><A>https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>Pylance</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>Python</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.python</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>Codeium</T><A>https://marketplace.visualstudio.com/items?itemName=Codeium.codeium</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+<BLIST><TITLE>Extensions not used anymore</TITLE>
   <ITEM><X><T>GitLens</T><A>https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens</A><L>en</L><F>HTML</F></X> (<X><T>doc</T><A>https://help.gitkraken.com/gitlens/gitlens-home/</A><L>en</L><F>HTML</F></X>)
     <DEFINITIONTABLE>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <KEY id="B"/><BR/>
           <CODEROUTINE>GitLens: Toggle File Blame</CODEROUTINE></TERM>
-        <DESC>Toggle the display (on the left) of the blaming for each code line</DESC>
+          <DESC>Toggle the display (on the left) of the blaming for each code line</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>GitLens: Toggle Line Blame</CODEROUTINE></TERM>
@@ -717,7 +725,7 @@ Java
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <MODIFIERKEY id="Shift"/><KEY id="B"/><BR/>
           <CODEROUTINE>GitLens: Toggle Code Lens</CODEROUTINE></TERM>
-        <DESC>Toggle the display of inlined code blaming</DESC>
+          <DESC>Toggle the display of inlined code blaming</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>GitLens: Toggle File Heatmap</CODEROUTINE></TERM>
@@ -734,8 +742,6 @@ Java
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM><BLIST><TITLE>Other extensions</TITLE>
-    <ITEM><X><T>XML</T><A>https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Code Spell Checker</T><A>https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Debugger for Chrome</T><A>https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Docker</T><A>https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
