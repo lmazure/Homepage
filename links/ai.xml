@@ -3,19 +3,26 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Artificial intelligence</TITLE>
 <PATH>links/ai.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><BLIST><TITLE>LLM</TITLE>
       <ITEM><X><T>Learn Prompting</T><A>https://learnprompting.org/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>LangChain</T><A>https://www.langchain.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>LangChain</T><A>https://www.langchain.com/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>doc</T><A>https://docs.langchain.com/docs</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
+      <ITEM><CLIST><TITLE><X><T>Griptape</T><A>https://github.com/griptape-ai/griptape</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>doc</T><A>https://docs.griptape.ai/</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
+      <ITEM><X><T>simpleaichat</T><A>https://github.com/minimaxir/simpleaichat</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Machine learning</TITLE>
       <ITEM><X><T>OpenAI</T><A>https://openai.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>TensorFlow</T><A>https://www.tensorflow.org</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Hugging Face</T><A>https://huggingface.co/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>BigML</T><A>https://bigml.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>SentenceTransformers</T><A>https://www.sbert.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Machine Learning for Software Engineering</T><A>https://github.com/saltudelft/ml4se</A><L>en</L><F>HTML</F></X>: a curated list of papers, PhD theses, datasets, and tools</ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Image sets</TITLE>
@@ -160,6 +167,7 @@
     <ITEM><ARTICLE><X><T>"Grokking" : les modèles d'IA sont-ils capables de piger ?</T><ST>Ce phénomène étonnant, découvert récemment, pourrait changer notre compréhension de l'apprentissage et de la cognition dans les réseaux de neurones...</ST><A>https://scienceetonnante.substack.com/p/grokking-les-modeles-dia-sont-ils</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Louapre</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>A presentation of grokking, a phenomenon where generalisation seems to happen abruptly and long after fitting the training data.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>AI now generates music with CD-quality audio from text, and it’s advancing rapidly</T><ST>Musicians: Speak now or forever hold your beats.</ST><A>https://arstechnica.com/information-technology/2023/09/ai-can-now-generate-cd-quality-music-from-text-and-its-only-getting-better/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benj</FIRSTNAME><LASTNAME>Edwards</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>Stability AI has released Stable Audio, a music generator.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality="1"><T>Exploring Generative AI</T><A>https://martinfowler.com/articles/exploring-gen-ai.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Birgitta</FIRSTNAME><LASTNAME>Böckeler</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>A list of well-thought-out ideas on AI-assisted coding.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Opinion: The Copyright Office is making a mistake on AI-generated art</T><ST>A rule against copyrighting AI art will be unworkable.</ST><A>https://arstechnica.com/tech-policy/2023/09/opinion-dont-exclude-ai-generated-art-from-copyright/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Timothy</FIRSTNAME><MIDDLENAME>B.</MIDDLENAME><LASTNAME>Lee</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE><COMMENT>Some good arguments why art work generated with the help of AI should be copyrightable.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Security</TITLE>
       <ITEM><ARTICLE><X><T>Three Small Stickers in Intersection Can Cause Tesla Autopilot to Swerve Into Wrong Lane</T><ST>Security researchers from Tencent have demonstrated a way to use physical attacks to spoof Tesla’s autopilot</ST><A>https://spectrum.ieee.org/three-small-stickers-on-road-can-steer-tesla-autopilot-into-oncoming-lane</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Evan</FIRSTNAME><LASTNAME>Ackerman</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE><COMMENT>Some Japanese researchers are able to trick Tesla lane detection algorithm with some coloured patches.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>AI applications open new security vulnerabilities</T><ST>Your ML model and AI-as-a-service apps might open new attack surfaces. Here's how to mitigate them.</ST><A>https://stackoverflow.blog/2023/01/24/ai-applications-open-new-security-vulnerabilities/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taimur</FIRSTNAME><LASTNAME>Ijlal</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>An introduction to the possible attacks of AI-based applications.</COMMENT></ARTICLE></ITEM>
@@ -305,6 +313,7 @@
       <ITEM><ARTICLE><X><T>Stability AI releases Stable Diffusion XL, its next-gen image synthesis model</T><ST>New SDXL 1.0 release allows hi-res AI image synthesis that can run on a local machine.</ST><A>https://arstechnica.com/information-technology/2023/07/stable-diffusion-xl-puts-ai-generated-visual-worlds-at-your-gpus-command/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benj</FIRSTNAME><LASTNAME>Edwards</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>28</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Funky AI-generated spiraling medieval village captivates social media</T><ST>Graham: "This was the point where AI-generated art passed the Turing Test for me."</ST><A>https://arstechnica.com/information-technology/2023/09/dreamy-ai-generated-geometric-scenes-mesmerize-social-media-users/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benj</FIRSTNAME><LASTNAME>Edwards</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>15</DAY></DATE><COMMENT>Using Stable Diffusion with ControlNet to generate images respecting a given layout.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The Physical Process That Powers a New Type of Generative AI</T><ST>Some modern image generators rely on the principles of diffusion to create images. Alternatives based on the process behind the distribution of charged particles may yield even better results.</ST><A>https://www.quantamagazine.org/new-physics-inspired-generative-ai-exceeds-expectations-20230919/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Nadis</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>Some researchers replaced the diffusion model with a Poisson model to generate images, but there is no details in this article.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>OpenAI’s new AI image generator pushes the limits in detail and prompt fidelity</T><ST>With better response to details and text, DALL-E 3 hopes to make prompt engineering obsolete.</ST><A>https://arstechnica.com/information-technology/2023/09/openai-announces-dall-e-3-a-next-gen-ai-image-generator-based-on-chatgpt/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benj</FIRSTNAME><LASTNAME>Edwards</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>21</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Neural networks</TITLE>
       <ITEM><ARTICLE><X><T>Polyworld: Using Evolution to Design Artificial Intelligence</T><A>https://www.youtube.com/watch?v=_m97_kL4ox0</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>6</MINUTE><SECOND>39</SECOND></DURATION><DATE><YEAR>2007</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE></X><AUTHOR><FIRSTNAME>Virgil</FIRSTNAME><LASTNAME>Griffith</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>11</MONTH><DAY>8</DAY></DATE><COMMENT>Using artificial life to optimise neural networks.</COMMENT></ARTICLE></ITEM>
@@ -324,8 +333,12 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Coding</TITLE>
-      <ITEM><ARTICLE><X><T>LangChain101: Question A 300 Page Book (w/ OpenAI + Pinecone)</T><A>https://www.youtube.com/watch?v=h0DHDp1FbmQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>SandKamradterson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE><COMMENT>A small demo using LangChain, OpenAI, and Pinecone.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="1"><T>$0 Embeddings (OpenAI vs. free &amp; open source)</T><A>https://www.youtube.com/watch?v=QdDoFfkVkcw</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>24</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE><COMMENT>A demo of two ways to compute embeddings: online with Hugging Face and locally in the browser.</COMMENT></ARTICLE></ITEM>
+      <ITEM><BLIST><TITLE>LangChain</TITLE>
+        <ITEM><ARTICLE><X><T>LangChain101: Question A 300 Page Book (w/ OpenAI + Pinecone)</T><A>https://www.youtube.com/watch?v=h0DHDp1FbmQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Kamradt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE><COMMENT>A small demo using LangChain, OpenAI, and Pinecone.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>The LangChain Cookbook - Beginner Guide To 7 Essential Concepts</T><A>https://www.youtube.com/watch?v=2xxziIWmaSA</A><L>en</L><F>MP4</F><DURATION><MINUTE>38</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Kamradt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>29</DAY></DATE><COMMENT>Some short examples of the LangChain features.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>The LangChain Cookbook Part 2 - Beginner Guide To 9 Use Cases</T><A>https://www.youtube.com/watch?v=vGP4pQdCocw</A><L>en</L><F>MP4</F><DURATION><MINUTE>26</MINUTE><SECOND>2</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Kamradt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>2</DAY></DATE><COMMENT>The continuation of the previous video.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>

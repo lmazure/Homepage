@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>to avoid fucking problems when printing non-BMP characters to the console
@@ -533,6 +533,7 @@
     <CODESAMPLE><PROMPT/>pip install -r requirements.txt</CODESAMPLE>
   </ITEM>
   <ITEM>upgrade a package
+    <CODESAMPLE><PROMPT/>pip install -U &lt;package&gt;</CODESAMPLE>
     <CODESAMPLE><PROMPT/>pip install --upgrade &lt;package&gt;</CODESAMPLE>
   </ITEM>
   <ITEM>install a package from the default branch of a Git repository
