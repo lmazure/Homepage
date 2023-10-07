@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -704,6 +704,10 @@
   <ROW>
     <TERM><CODEROUTINE>git restore &lt;file&gt;</CODEROUTINE></TERM>
     <DESC>Replace &lt;file&gt; in the working tree by its version in HEAD.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git restore --staged &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Remove the file will from staging, its modifications in the workspace remain untouched.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git restore --source &lt;commit&gt; &lt;file&gt;</CODEROUTINE></TERM>
