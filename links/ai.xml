@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Artificial intelligence</TITLE>
 <PATH>links/ai.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -333,7 +333,9 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Coding</TITLE>
+      <ITEM><ARTICLE><X><T>ClippyGPT - How I Built Supabase’s OpenAI Doc Search (Embeddings)</T><A>https://www.youtube.com/watch?v=Yhtjd7yGGGA</A><L>en</L><F>MP4</F><DURATION><MINUTE>41</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR> describes in details how he implemented a chat to answer questions on Supabase: tokenising the doc, finding the paragraph closest to the question, and generating the answer.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="1"><T>$0 Embeddings (OpenAI vs. free &amp; open source)</T><A>https://www.youtube.com/watch?v=QdDoFfkVkcw</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>24</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE><COMMENT>A demo of two ways to compute embeddings: online with Hugging Face and locally in the browser.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>How to Use an LLM in a SaaS Platform</T><A>https://www.youtube.com/watch?v=fH8fJYWfJcg</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>53</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Arjan</FIRSTNAME><LASTNAME>Egges</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Arjan</FIRSTNAME><LASTNAME>Egges</LASTNAME></AUTHOR> describes his first steps to build learntail.com, using OpenAI and Langchain to generates quizzes.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>LangChain</TITLE>
         <ITEM><ARTICLE><X><T>LangChain101: Question A 300 Page Book (w/ OpenAI + Pinecone)</T><A>https://www.youtube.com/watch?v=h0DHDp1FbmQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Kamradt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE><COMMENT>A small demo using LangChain, OpenAI, and Pinecone.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>The LangChain Cookbook - Beginner Guide To 7 Essential Concepts</T><A>https://www.youtube.com/watch?v=2xxziIWmaSA</A><L>en</L><F>MP4</F><DURATION><MINUTE>38</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Kamradt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>29</DAY></DATE><COMMENT>Some short examples of the LangChain features.</COMMENT></ARTICLE></ITEM>
