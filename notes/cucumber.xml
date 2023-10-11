@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Cucumber</TITLE>
 <PATH>notes/cucumber.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 Specify where is the Gecko WebDriver on the Maven command line
 <CODESAMPLE>mvn -Dwebdriver.gecko.driver=c:/Users/lmazure/bin/geckodriver.exe test</CODESAMPLE>
@@ -31,10 +31,58 @@ Specify the tests fo run (for Cucumber 5 or later): use <CODEROUTINE>-Dcucumber.
 </BLIST>
 In order to be able to generate Allure report, add the following dependency in <CODEFILENAME>pom.xml</CODEFILENAME>
 <CODESAMPLE>&lt;dependency&gt;<BR/>
-<TAB/>&lt;groupId&gt;io.qameta.allure&lt;/groupId&gt;<BR/>
-<TAB/>&lt;artifactId&gt;allure-cucumber7-jvm&lt;/artifactId&gt;<BR/>
-<TAB/>&lt;version&gt;2.17.2&lt;/version&gt;<BR/>
-&lt;/dependency&gt;</CODESAMPLE>
+  <TAB/>&lt;groupId&gt;io.qameta.allure&lt;/groupId&gt;<BR/>
+  <TAB/>&lt;artifactId&gt;allure-cucumber7-jvm&lt;/artifactId&gt;<BR/>
+  <TAB/>&lt;version&gt;2.17.2&lt;/version&gt;<BR/>
+  &lt;/dependency&gt;</CODESAMPLE>
+<BR/>
+To have a step working both for standard strings and doc strings:
+<CODESAMPLE>@When("I customize with message {string}")<BR/>
+  &#160;@When("I customize with message") // necessary to support doc strings<BR/>
+  &#160;public void customizeMessage(final String message) {<BR/>
+  &#160;<TAB/>final ProductPageObject productPage = new ProductPageObject();<BR/>
+  &#160;<TAB/>productPage.addMessage(message);<BR/>
+  &#160;}</CODESAMPLE>
+<BR/>
+To define custom types:
+<CODESAMPLE>/**<BR/>
+  &#160;* Parse a string which may be between double quotes.<BR/>
+  &#160;* If it is between double quotes, the quotes are removed.<BR/>
+  &#160;*<BR/>
+  &#160;* @param input string<BR/>
+  &#160;* @return cleaned string<BR/>
+  &#160;*/<BR/>
+  @ParameterType(".+|\".*\"")<BR/>
+  public String quotableString(final String input) {<BR/><TAB/>if (input.startsWith("\"") &amp;&amp; input.endsWith("\"")) {<BR/>
+  <TAB/><TAB/>return input.substring(1, input.length()-1);<BR/>
+  <TAB/>}<BR/>
+  <TAB/>return input;<BR/>
+  }<BR/>
+  <BR/>
+  /**<BR/>
+  &#160;* Parse an integer which may be between double quotes.<BR/>
+  &#160;*<BR/>
+  &#160;* @param input string<BR/>
+  &#160;* @return cleaned integer<BR/>
+  &#160;*/<BR/>
+  @ParameterType("\\d+|\"\\d+\"")<BR/>
+  public int quotableInteger(final String input) {<BR/>
+  <TAB/>return Integer.parseInt(quotableString(input));<BR/>
+  }<BR/>
+  <BR/>
+  @When("I fill command form with alias {string} company {string} vat {quotableString} address {string} supp {string} zip {quotableInteger} city {string} country {string} phone {quotableString} and facturation {string} and submit")<BR/>
+  public void fillCommand(final String alias,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>final String company,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>final String vat,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>final String address,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>final String supp,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>final int zip,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>final String city,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>final String country,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>final String phone,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>final String facturation) {<BR/>
+  <TAB/>…<BR/>
+  <TAB/>}</CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/autotest.html#cucumber</A><L>en</L><F>HTML</F></X>
 </PAGE>
