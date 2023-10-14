@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>GitLab</TITLE>
 <PATH>notes/gitlab.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Shortcuts</TITLE>
   <ITEM>Global shortcuts
@@ -109,6 +109,9 @@
   </ITEM>
 </BLIST>
 <BLIST><TITLE>Mess…</TITLE>
+  <ITEM>retrieve the issue related to a merge request
+    <CODESAMPLE>curl --header "PRIVATE-TOKEN:$GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/27169359/merge_requests/355" | jq -r  '.description'  head -1 | sed 's/.*#//' </CODESAMPLE>
+  </ITEM>
   <ITEM>delete the local branches that to do not exist anymore in GitLab
     <CODESAMPLE>git checkout main<BR/>
     git fetch -p<BR/>

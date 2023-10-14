@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -699,19 +699,13 @@ Markdown
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
-Java
-<DEFINITIONTABLE>
-  <ROW>
-    <TERM><CODEROUTINE>Java: Create Java Project…</CODEROUTINE></TERM>
-    <DESC>Launch a wizard to create a Java project</DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
 <BLIST><TITLE>Used extensions</TITLE>
   <ITEM><X><T>XML</T><A>https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Code Spell Checker</T><A>https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Pylance</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Python</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.python</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><BLIST><TITLE><X><T>Python</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.python</A><L>en</L><F>HTML</F></X></TITLE>
+    <ITEM>to define the virtual environment to use, add <CODEROUTINE>"python.envFile": "${workspaceFolder}/.venv"</CODEROUTINE> in <CODEFILENAME>settings.json</CODEFILENAME>.</ITEM>
+  </BLIST></ITEM>
   <ITEM><X><T>Codeium</T><A>https://marketplace.visualstudio.com/items?itemName=Codeium.codeium</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 <BLIST><TITLE>Extensions not used anymore</TITLE>
@@ -742,6 +736,14 @@ Java
       <ROW>
         <TERM><CODEROUTINE>gitlab.aiAssistedCodeSuggestions.enabled</CODEROUTINE></TERM>
         <DESC>Toggle code completion</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Java
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>Java: Create Java Project…</CODEROUTINE></TERM>
+        <DESC>Launch a wizard to create a Java project</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
