@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Project management</B></U></TITLE>
   <ITEM>create a project on an existing source hierarchy<BR/>
@@ -142,6 +142,10 @@
         <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id=":"/><BR/>
           <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="C"/></TERM>
         <DESC>toggle comment</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Ins"/></TERM>
+        <DESC>toggle <X><T>Smart Insert Mode</T><A>https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fpreferences%2Fjava%2Feditor%2Fref-preferences-typing.htm</A><L>en</L><F>HTML</F></X></DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="I"/></TERM>
