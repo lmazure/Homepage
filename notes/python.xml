@@ -480,7 +480,7 @@
   <ITEM>In order to activate the environment, some scripts are generated for each Linux/Windows shell, for example, for bash:
     <CODESAMPLE>source &lt;venv&gt;/bin/activate</CODESAMPLE>
     for Windows:
-    <CODESAMPLE>source &lt;venv&gt;/Scripts/activate</CODESAMPLE>
+    <CODESAMPLE>&lt;venv&gt;\Scripts\activate</CODESAMPLE>
   </ITEM>
   <ITEM>To deactivate the environment:
     <CODESAMPLE>deactivate</CODESAMPLE>
