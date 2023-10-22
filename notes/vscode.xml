@@ -704,7 +704,8 @@ Markdown
   <ITEM><X><T>Code Spell Checker</T><A>https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Pylance</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><BLIST><TITLE><X><T>Python</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.python</A><L>en</L><F>HTML</F></X></TITLE>
-    <ITEM>to define the virtual environment to use, add <CODEROUTINE>"python.envFile": "${workspaceFolder}/.venv"</CODEROUTINE> in <CODEFILENAME>settings.json</CODEFILENAME>.</ITEM>
+    <ITEM>to set the virtual environment to use, run <CODEROUTINE>Python: Select Interpreter</CODEROUTINE>.</ITEM>
+    <ITEM>to define the default virtual environment to use, add <CODEROUTINE>"python.envFile": "${workspaceFolder}/.venv"</CODEROUTINE> in <CODEFILENAME>settings.json</CODEFILENAME>.</ITEM>
   </BLIST></ITEM>
   <ITEM><X><T>Codeium</T><A>https://marketplace.visualstudio.com/items?itemName=Codeium.codeium</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>

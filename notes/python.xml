@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>to avoid fucking problems when printing non-BMP characters to the console
@@ -521,6 +521,11 @@
     <CODESAMPLE><PROMPT/>python -m unittest tests/test_something.py</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>pip</B></U></TITLE>
+  <ITEM><BLIST><TITLE>Output</TITLE>
+    <ITEM>Give less output. Option is additive, can be used up to 3 times: <CODEROUTINE>-q</CODEROUTINE>, <CODEROUTINE>--quiet</CODEROUTINE>.</ITEM>
+    <ITEM>Give more output. Option is additive, can be used up to 3 times: <CODEROUTINE>-v</CODEROUTINE>, <CODEROUTINE>--verbose</CODEROUTINE>.</ITEM>
+  </BLIST></ITEM>
+  <ITEM>Show version and exit: <CODEROUTINE>-V</CODEROUTINE>, <CODEROUTINE>--version</CODEROUTINE>.</ITEM>
   <ITEM>install packages
     <CODESAMPLE><PROMPT/>python -m pip install &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
     or
