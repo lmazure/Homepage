@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Artificial intelligence</TITLE>
 <PATH>links/ai.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -21,6 +21,7 @@
       <ITEM><X><T>OpenAI</T><A>https://openai.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>TensorFlow</T><A>https://www.tensorflow.org</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Hugging Face</T><A>https://huggingface.co/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Kaggle</T><A>https://www.kaggle.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>BigML</T><A>https://bigml.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>SentenceTransformers</T><A>https://www.sbert.net/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Machine Learning for Software Engineering</T><A>https://github.com/saltudelft/ml4se</A><L>en</L><F>HTML</F></X>: a curated list of papers, PhD theses, datasets, and tools</ITEM>
@@ -35,6 +36,7 @@
       <ITEM><X><T>Midjourney</T><A>https://www.midjourney.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Stable Diffusion Demo</T><A>https://huggingface.co/spaces/stabilityai/stable-diffusion</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>DreamFusion</T><A>https://dreamfusion3d.github.io/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>pollinations</T><A>https://pollinations.ai/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Optimisation</TITLE>
       <ITEM><X><T>Méthode de Nelder-Mead</T><A>https://fr.wikipedia.org/wiki/M%C3%A9thode_de_Nelder-Mead</A><L>fr</L><F>HTML</F></X></ITEM>
@@ -341,9 +343,10 @@
       <ITEM><ARTICLE><X><T>ClippyGPT - How I Built Supabase’s OpenAI Doc Search (Embeddings)</T><A>https://www.youtube.com/watch?v=Yhtjd7yGGGA</A><L>en</L><F>MP4</F><DURATION><MINUTE>41</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR> describes in details how he implemented a chat to answer questions on Supabase: tokenising the doc, finding the paragraph closest to the question, and generating the answer.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Hugging Face + Langchain in 5 mins | Access 200k+ FREE AI models for your AI apps</T><A>https://www.youtube.com/watch?v=_j7JEDWuqLE</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE><COMMENT>A small effective demo of using Hugging Face and LangChain.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="1"><T>$0 Embeddings (OpenAI vs. free &amp; open source)</T><A>https://www.youtube.com/watch?v=QdDoFfkVkcw</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>24</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE><COMMENT>A demo of two ways to compute embeddings: online with Hugging Face and locally in the browser.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Build AI agent workforce - Multi agent framework with MetaGPT &amp; chatDev</T><A>https://www.youtube.com/watch?v=pJwR5pv0_gs</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>40</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>A presentation of ChatDev.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>"Next Level Prompts?" - 10 mins into advanced prompting</T><A>https://www.youtube.com/watch?v=69bH4IHZivs</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE><COMMENT>Some tools/sites helping to write prompts: <X><T>Guidance</T><A>https://github.com/guidance-ai/guidance</A><L>en</L><F>HTML</F></X>, <X><T>FlowGPT</T><A>https://flowgpt.com/</A><L>en</L><F>HTML</F></X>, <X><T>gpt-prompt-engineer</T><A>https://github.com/mshumer/gpt-prompt-engineer</A><L>en</L><F>HTML</F></X>, <X><T>PromptsRoyale</T><A>https://www.promptsroyale.com/</A><L>en</L><F>HTML</F></X>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A developer’s guide to open source LLMs and generative AI</T><ST>Open source generative AI projects are a great way to build new AI-powered features and apps.</ST><A>https://github.blog/2023-10-05-a-developers-guide-to-open-source-llms-and-generative-ai/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gwen</FIRSTNAME><LASTNAME>Davis</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE><COMMENT>Some information on open-source LLMs and a short list of four ones.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>How to Use an LLM in a SaaS Platform</T><A>https://www.youtube.com/watch?v=fH8fJYWfJcg</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>53</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Arjan</FIRSTNAME><LASTNAME>Egges</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Arjan</FIRSTNAME><LASTNAME>Egges</LASTNAME></AUTHOR> describes his first steps to build learntail.com, using OpenAI and Langchain to generates quizzes.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality="-1"><T>FULLY LOCAL Mistral AI PDF Processing [Hands-on Tutorial]</T><A>https://www.youtube.com/watch?v=wZDVgy_14PE</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR><GIVENNAME>1littlecoder</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE><COMMENT>The guy is just doing the example of <X><T>katanaml/llm-mistral-invoice-cpu</T><A>https://github.com/katanaml/llm-mistral-invoice-cpu</A><L>en</L><F>HTML</F></X>.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>LangChain</TITLE>
         <ITEM><ARTICLE><X><T>LangChain101: Question A 300 Page Book (w/ OpenAI + Pinecone)</T><A>https://www.youtube.com/watch?v=h0DHDp1FbmQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Kamradt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE><COMMENT>A small demo using LangChain, OpenAI, and Pinecone.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Workaround OpenAI's Token Limit With Chain Types</T><A>https://www.youtube.com/watch?v=f9_BWhCI4Zo</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Kamradt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>Some solutions to summarise or extract answers from too long documents.</COMMENT></ARTICLE></ITEM>
@@ -355,7 +358,11 @@
         <ITEM><ARTICLE><X><T>🤫UNCENSORED Mistral can answer ANYTHING 🤫</T><A>https://www.youtube.com/watch?v=YPOpzJ4N25w</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><GIVENNAME>1littlecoder</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>14</DAY></DATE><COMMENT>Testing <X><T>ehartford/dolphin-2.0-mistral-7b</T><A>https://huggingface.co/ehartford/dolphin-2.0-mistral-7b</A><L>en</L><F>HTML</F></X> in Google Colab.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Construire son RAG (Retrieval Augmented Generation) grâce à langchain: L’exemple de l’Helpdesk d’OCTO</T><A>https://blog.octo.com/le-chatbot-docto-langchain-rag-et-code-associe/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Florian</FIRSTNAME><LASTNAME>Bastin</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Nicolas</FIRSTNAME><LASTNAME>Cavallo</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE><COMMENT>A detailled example demonstrating how to extract data from Confluence, embed the chunks, create a chain to find and format the answer, and evaluate the result.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
-    </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Multi agents</TITLE>
+        <ITEM><ARTICLE><X><T>Build AI agent workforce - Multi agent framework with MetaGPT &amp; chatDev</T><A>https://www.youtube.com/watch?v=pJwR5pv0_gs</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>40</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>8</DAY></DATE><COMMENT>A presentation of <X><T>ChatDev</T><A>https://chatdev.ai/</A><L>en</L><F>HTML</F></X>.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Autogen - Microsoft's best AI Agent framework that is controllable?</T><A>https://www.youtube.com/watch?v=Bq-0ClZttc8</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE><COMMENT>a presentation of <X><T>AutoGen</T><A>https://microsoft.github.io/autogen/</A><L>en</L><F>HTML</F></X>.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
 </CONTENT>
