@@ -5,6 +5,12 @@
 <xs:import namespace="http://www.w3.org/XML/1998/namespace" schemaLocation="xml.xsd"/>
 
 <!-- definition of the types -->
+<xs:simpleType name="noZeroInteger">
+  <xs:restriction base="xs:integer">
+    <xs:pattern value="[1-9]*[0-9]"/>
+  </xs:restriction>
+</xs:simpleType>
+
 <xs:complexType name="person">
   <xs:sequence>
     <xs:element name="NAMEPREFIX" type="xs:string" minOccurs="0" maxOccurs="1"/>
@@ -21,14 +27,14 @@
     <xs:element name="YEAR" type="xs:integer"/>
     <xs:element name="MONTH">
       <xs:simpleType>
-        <xs:restriction base="xs:positiveInteger">
+        <xs:restriction base="noZeroInteger">
           <xs:maxInclusive value="12"/>
         </xs:restriction>
       </xs:simpleType>
     </xs:element>
     <xs:element name="DAY">
       <xs:simpleType>
-        <xs:restriction base="xs:positiveInteger">
+        <xs:restriction base="noZeroInteger">
           <xs:maxInclusive value="31"/>
         </xs:restriction>
       </xs:simpleType>
@@ -41,14 +47,14 @@
     <xs:element name="YEAR" type="xs:integer"/>
     <xs:element name="MONTH" minOccurs="0" maxOccurs="1">
       <xs:simpleType>
-        <xs:restriction base="xs:positiveInteger">
+        <xs:restriction base="noZeroInteger">
           <xs:maxInclusive value="12"/>
         </xs:restriction>
       </xs:simpleType>
     </xs:element>
     <xs:element name="DAY" minOccurs="0" maxOccurs="1">
       <xs:simpleType>
-        <xs:restriction base="xs:positiveInteger">
+        <xs:restriction base="noZeroInteger">
           <xs:maxInclusive value="31"/>
         </xs:restriction>
       </xs:simpleType>
@@ -60,21 +66,21 @@
   <xs:sequence>
     <xs:element name="HOUR" minOccurs="0" maxOccurs="1">
       <xs:simpleType>
-        <xs:restriction base="xs:positiveInteger">
+        <xs:restriction base="noZeroInteger">
           <xs:minInclusive value="1"/>
         </xs:restriction>
       </xs:simpleType>
     </xs:element>
     <xs:element name="MINUTE" minOccurs="0" maxOccurs="1">
       <xs:simpleType>
-        <xs:restriction base="xs:nonNegativeInteger">
+        <xs:restriction base="noZeroInteger">
           <xs:maxInclusive value="59"/>
         </xs:restriction>
       </xs:simpleType>
     </xs:element>
     <xs:element name="SECOND" minOccurs="1" maxOccurs="1">
       <xs:simpleType>
-        <xs:restriction base="xs:nonNegativeInteger">
+        <xs:restriction base="noZeroInteger">
           <xs:maxInclusive value="59"/>
         </xs:restriction>
       </xs:simpleType>
