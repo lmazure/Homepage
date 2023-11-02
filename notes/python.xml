@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>to avoid fucking problems when printing non-BMP characters to the console
@@ -477,11 +477,15 @@
   </ITEM>
   <ITEM>A common directory location for a virtual environment is <CODEFILENAME>.venv</CODEFILENAME>.
   </ITEM>
-  <ITEM>In order to activate the environment, some scripts are generated for each Linux/Windows shell, for example, for bash:
-    <CODESAMPLE>source &lt;venv&gt;/bin/activate</CODESAMPLE>
-    for Windows:
-    <CODESAMPLE>&lt;venv&gt;\Scripts\activate</CODESAMPLE>
-  </ITEM>
+  <ITEM><BLIST><TITLE>In order to activate the environment, some scripts are generated for each Linux/Windows shell.</TITLE>
+    <ITEM>for bash
+    <CODESAMPLE>source &lt;venv&gt;/bin/activate</CODESAMPLE></ITEM>
+    <ITEM>for Windows bat
+    <CODESAMPLE>&lt;venv&gt;\Scripts\activate</CODESAMPLE></ITEM>
+    <ITEM>for PowerShell
+    <CODESAMPLE> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process<BR/>
+      &lt;venv&gt;\Scripts\Activate.ps1</CODESAMPLE></ITEM>
+  </BLIST></ITEM>
   <ITEM>To deactivate the environment:
     <CODESAMPLE>deactivate</CODESAMPLE>
   </ITEM>
