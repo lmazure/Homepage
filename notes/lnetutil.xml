@@ -82,6 +82,17 @@
       <DESC>define user and password for server authentication</DESC>
     </ROW>
     <ROW>
+      <TERM><CODEROUTINE>-w &lt;format&gt;</CODEROUTINE><BR/>
+        <CODEROUTINE>--write-ou &lt;format&gt;</CODEROUTINE></TERM>
+      <DESC>display information on <CODEROUTINE>stdout</CODEROUTINE> after a completed transfer<BR/>
+        variables are specified as <CODEROUTINE>%{variable_name}</CODEROUTINE>
+        <DEFINITIONTABLE>
+          <ROW><TERM><CODEROUTINE>http_code</CODEROUTINE></TERM><DESC>numerical response code that was found in the last retrieved HTTP(S) or FTP(s) transfer</DESC></ROW>
+          <ROW><TERM><CODEROUTINE>num_redirects</CODEROUTINE></TERM><DESC>number of redirects that were followed in the request</DESC></ROW>
+        </DEFINITIONTABLE><BR/>
+        <CODEROUTINE>\n</CODEROUTINE> outputs a newline, <CODEROUTINE>\r</CODEROUTINE> a carriage return, <CODEROUTINE>\t</CODEROUTINE> outputs a tab</DESC>
+    </ROW>
+    <ROW>
       <TERM><CODEROUTINE>-F &lt;name=content&gt;</CODEROUTINE><BR/>
         <CODEROUTINE>--form &lt;name=content&gt;</CODEROUTINE></TERM>
       <DESC>emulate a filled-in form<BR/>
@@ -94,10 +105,17 @@
         <CODEROUTINE>url -F "story=&lt;hugefile.txt" https://example.com/</CODEROUTINE></DESC>
     </ROW>
     <ROW>
+      <TERM><CODEROUTINE>-o &lt;file&gt;</CODEROUTINE><BR/>
+        <CODEROUTINE>--output &lt;file&gt;</CODEROUTINE></TERM>
+      <DESC>write output to <CODEROUTINE>&lt;file&gt;</CODEROUTINE> instead of stdout.</DESC>
+    </ROW>
+    <ROW>
       <TERM><CODEROUTINE>-s</CODEROUTINE><BR/>
         <CODEROUTINE>--silent</CODEROUTINE></TERM>
-      <DESC>displayed only the date sent by the server (i.e. no progress meter nor error message)</DESC>
+      <DESC>displayed only the data sent by the server (i.e. no progress meter nor error message)</DESC>
     </ROW>
     </DEFINITIONTABLE>
+    to retrieve the HTTP code:
+    <CODESAMPLE>CODE=$(curl -o /dev/null -w '%{HTTP_CODE}' -u "admin:admin" https://sqtm-nightly-cloud.acceptance.squashtest.org/api/rest/latest/projects/999/test-cases)</CODESAMPLE>
   </CONTENT>
 </PAGE>
