@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -707,7 +707,14 @@ Markdown
     <ITEM>to set the virtual environment to use, run <CODEROUTINE>Python: Select Interpreter</CODEROUTINE>.</ITEM>
     <ITEM>to define the default virtual environment to use, add <CODEROUTINE>"python.envFile": "${workspaceFolder}/.venv"</CODEROUTINE> in <CODEFILENAME>settings.json</CODEFILENAME>.</ITEM>
   </BLIST></ITEM>
-  <ITEM><X><T>Codeium</T><A>https://marketplace.visualstudio.com/items?itemName=Codeium.codeium</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>Codeium</T><A>https://marketplace.visualstudio.com/items?itemName=Codeium.codeium</A><L>en</L><F>HTML</F></X>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>Codeium: Provide Authentication Token</CODEROUTINE></TERM>
+        <DESC>Declare the authentication token</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE>Extensions not used anymore</TITLE>
   <ITEM><X><T>GitLens</T><A>https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens</A><L>en</L><F>HTML</F></X> (<X><T>doc</T><A>https://help.gitkraken.com/gitlens/gitlens-home/</A><L>en</L><F>HTML</F></X>)
