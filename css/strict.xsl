@@ -107,9 +107,10 @@
       <xsl:text>, </xsl:text>
     </xsl:if>
     <xsl:if test="position()=1" >
-      <xsl:text>"</xsl:text>
-      <xsl:apply-templates select="."/>
-      <xsl:text>"</xsl:text>
+      <xsl:apply-templates select=".">
+        <xsl:with-param name="titleclass" select="'articletitle'" />
+        <xsl:with-param name="subtitleclass" select="'articlesubtitle'" />
+      </xsl:apply-templates>
     </xsl:if>
     <xsl:if test="position()>1" >
       <xsl:element name="a">
@@ -138,7 +139,7 @@
           </xsl:if>
         </xsl:attribute>
         <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
-        <xsl:text>&#x29C9;</xsl:text>
+        <span class='articletitle'>⧉</span>
       </xsl:element>
     </xsl:if>
     <xsl:if test="(position()=last()) and (position()>1)" >
@@ -166,7 +167,7 @@
     <xsl:text>)</xsl:text>
   </xsl:if>
   <xsl:if test="count(./COMMENT)=1">
-    <xsl:text> &#x25BA; </xsl:text>
+    <xsl:text> ► </xsl:text>
     <xsl:apply-templates select="./COMMENT"/>
   </xsl:if>
 </xsl:template>
@@ -218,6 +219,8 @@
 </xsl:template>
 
 <xsl:template match="X">
+  <xsl:param name="titleclass" select="'linktitle'" />
+  <xsl:param name="subtitleclass" select="'linksubtitle'" />
   <xsl:element name="a">
     <xsl:for-each select="./ATTRIBUTE">
     <xsl:attribute name="{./ATTRIBUTENAME}">
@@ -264,41 +267,58 @@
         <xsl:attribute name="target"><xsl:text>_self</xsl:text></xsl:attribute>
       </xsl:otherwise>
     </xsl:choose>
-    <span class="linktitle"><xsl:value-of select="./T"/></span>
+    <xsl:element name="span">
+      <xsl:attribute name="class">
+        <xsl:value-of select="$titleclass"/>
+      </xsl:attribute>
+      <xsl:value-of select="./T"/>
+    </xsl:element>
     <xsl:for-each select="./ST">
-      <xsl:text> — </xsl:text><span class="linksubtitle"><xsl:value-of select="."/></span>
+      <xsl:text> — </xsl:text>
+      <xsl:element name="span">
+        <xsl:attribute name="class">
+          <xsl:value-of select="$subtitleclass"/>
+        </xsl:attribute>
+      <xsl:value-of select="."/>
+      </xsl:element>
     </xsl:for-each>
   </xsl:element>
   <xsl:for-each select="./FEED">
     <xsl:element name="a">
       <xsl:attribute name="href"><xsl:value-of select="./A"/></xsl:attribute>
+      <xsl:attribute name="title">RSS feed</xsl:attribute>
       <xsl:attribute name="target"><xsl:text>_blank</xsl:text></xsl:attribute>
-      <xsl:text>📡</xsl:text>
+      <xsl:element name="span">
+        <xsl:attribute name="class">
+          <xsl:value-of select="$titleclass"/>
+        </xsl:attribute>
+        <xsl:text>📡</xsl:text>
+      </xsl:element>
     </xsl:element>
   </xsl:for-each>
   <xsl:choose>
     <xsl:when test="@quality='2'">
-      <span title="very good"><xsl:text>👍👍</xsl:text></span>
+      <span title="very good"><xsl:text>🏆</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='1'">
-      <span title="good"><xsl:text>👍</xsl:text></span>
+      <span title="good"><xsl:text>⭐</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-1'">
-      <span title="bad"><xsl:text>👎</xsl:text></span>
+      <span title="bad"><xsl:text>🙅</xsl:text></span>
     </xsl:when>
     <xsl:when test="@quality='-2'">
-      <span title="very bad"><xsl:text>👎👎</xsl:text></span>
+      <span title="very bad"><xsl:text>☠️</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
     <xsl:when test="@status='removed'">
-      <span title="removed page"><xsl:text> 🪦</xsl:text></span>
+      <span title="removed page"><xsl:text>🗑️</xsl:text></span>
     </xsl:when>
     <xsl:when test="@status='dead' or @status='zombie'">
-      <span title="dead link"><xsl:text> †</xsl:text></span>
+      <span title="dead link"><xsl:text>🚫</xsl:text></span>
     </xsl:when>
     <xsl:when test="@status='obsolete'">
-      <span title="obsolete"><xsl:text> ‡</xsl:text></span>
+      <span title="obsolete"><xsl:text>🏚️</xsl:text></span>
     </xsl:when>
   </xsl:choose>
   <xsl:choose>
