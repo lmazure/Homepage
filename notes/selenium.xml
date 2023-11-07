@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Selenium</TITLE>
+<PATH>notes/selenium.xml</PATH>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE>
+<CONTENT>
+  <BLIST><TITLE>In order to know which versions of Selenium support a given version of Chrome</TITLE>
+    <ITEM>Look at <X><T>https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v118</T><A>https://mvnrepository.com/artifact/org.seleniumhq.selenium/selenium-devtools-v118</A><L>en</L><F>HTML</F></X> where <CODEROUTINE>118</CODEROUTINE> is replaced by the Chrome version.</ITEM>
+    <ITEM>The versions (e.g. <CODEROUTINE>4.15.0</CODEROUTINE>) correspond to the version ofe <CODEROUTINE>selenium-java</CODEROUTINE> artefact containing it.</ITEM>
+  </BLIST>
+</CONTENT>
+<X><T>links</T><A>../links/autotest.html#selenium</A><L>en</L><F>HTML</F></X>
+</PAGE>

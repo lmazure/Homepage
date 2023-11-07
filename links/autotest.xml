@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -123,8 +123,10 @@
             <ITEM><X><T>download</T><A>https://www.selenium.dev/documentation/webdriver/</A><L>en</L><F>HTML</F></X></ITEM>
           </CLIST></ITEM>
           <ITEM><X><T>Leadfoot</T><A>https://theintern.io/leadfoot/index.html</A><L>en</L><F>HTML</F></X></ITEM>
-          <ITEM><CLIST><TITLE><X><T>Selenium</T><A>https://www.selenium.dev/</A><L>en</L><F>HTML</F></X></TITLE>
+          <ITEM><ANCHOR>selenium</ANCHOR><CLIST><TITLE><X><T>Selenium</T><A>https://www.selenium.dev/</A><L>en</L><F>HTML</F></X></TITLE>
+            <ITEM><X><T>Selenium Java Changelog</T><A>https://github.com/SeleniumHQ/selenium/blob/trunk/java/CHANGELOG</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><X><T>Elemental Selenium</T><A>https://elementalselenium.com</A><L>en</L><F>HTML</F></X></ITEM>
+            <ITEM><X><T>personal notes</T><A>../notes/selenium.html</A><L>en</L><F>HTML</F></X></ITEM>
           </CLIST></ITEM>
           <ITEM><X><T>WebdriverIO</T><A>https://webdriver.io/</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>Callisto</T><A>https://github.com/wrike/callisto</A><L>en</L><F>HTML</F></X></ITEM>
