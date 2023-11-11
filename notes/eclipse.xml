@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Eclipse</TITLE>
 <PATH>notes/eclipse.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Project management</B></U></TITLE>
   <ITEM>create a project on an existing source hierarchy<BR/>
@@ -17,6 +17,14 @@
   <ROW>
     <TERM><KEY id="F12"/></TERM>
     <DESC>editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="PageDown"/></TERM>
+    <DESC>next tab</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="PageUp"/></TERM>
+    <DESC>previous tab</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F6"/></TERM>
@@ -37,6 +45,14 @@
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Q"/></TERM>
     <DESC>go to last edit location</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Left"/></TERM>
+    <DESC>backward history</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Right"/></TERM>
+    <DESC>forward history</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F7"/></TERM>
@@ -148,6 +164,22 @@
         <DESC>toggle <X><T>Smart Insert Mode</T><A>https://help.eclipse.org/latest/index.jsp?topic=%2Forg.eclipse.jdt.doc.user%2Freference%2Fpreferences%2Fjava%2Feditor%2Fref-preferences-typing.htm</A><L>en</L><F>HTML</F></X></DESC>
       </ROW>
       <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="D"/></TERM>
+        <DESC>delete selected lines</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><KEY id="Up"/></TERM>
+        <DESC>move selected lines one line up</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><KEY id="Down"/></TERM>
+        <DESC>move selected lines one line down</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Down"/></TERM>
+        <DESC>copy the selected lines</DESC>
+      </ROW>
+          <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="I"/></TERM>
         <DESC>correct indentation</DESC>
       </ROW>
@@ -188,8 +220,16 @@
         <DESC>reformat the code</DESC>
       </ROW>
       <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Z"/></TERM>
+        <DESC>surround with Quick Menu</DESC>
+      </ROW>
+      <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="O"/></TERM>
         <DESC>organize imports</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="P"/></TERM>
+        <DESC>go to matching bracket</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
@@ -259,6 +299,18 @@ in Search window
   <ITEM>type the fields</ITEM>
   <ITEM>generate the constructor with <CODEMENU>Source<CODEMENU>Generate Constructor using Fields…</CODEMENU></CODEMENU></ITEM>
   <ITEM>generate the setters and/or getters <CODEMENU>Source<CODEMENU>Generate Getters and Setters…</CODEMENU></CODEMENU></ITEM>
+  <ITEM>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="S"/>, R</TERM>
+        <DESC>display Generate Constructor using Fields dialog</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="S"/>, O</TERM>
+        <DESC>display Generate Getters and Setters dialog</DESC>
+      </ROW>
+      </DEFINITIONTABLE>
+  </ITEM>
 </BLIST>
 <U><B>Refactoring</B></U><BR/>
 In Editor window
@@ -274,10 +326,6 @@ In Editor window
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="V"/></TERM>
     <DESC>move</DESC>
-  </ROW>
-  <ROW>
-    <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="S"/></TERM>
-    <DESC>change local variable into field</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="M"/></TERM>
@@ -435,6 +483,10 @@ in Debug window
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="L"/></TERM>
         <DESC>display the list of shortcuts</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="L"/>, <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="L"/></TERM>
+        <DESC>display the shortcut configuration</DESC>
       </ROW>
     </DEFINITIONTABLE></ITEM>
 </BLIST>

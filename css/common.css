@@ -49,12 +49,14 @@ span.author {
 	cursor: pointer;
 	color: #700000;
 	text-decoration: underline;
+	text-decoration-thickness: 0.2px;
 	text-decoration-style: dotted;
 }
 
 span.keyword {
 	cursor: pointer;
 	text-decoration: underline;
+	text-decoration-thickness: 0.2px;
 	text-decoration-style: dotted;
 }
 
@@ -62,6 +64,7 @@ span.articletitle {
 	cursor: pointer;
 	color: rgb(38, 150, 46);
 	text-decoration: underline;
+	text-decoration-thickness: 0.2px;
 	text-decoration-style: dashed;
 }
 
@@ -70,6 +73,7 @@ span.articlesubtitle {
 	color: rgb(38, 150, 46);
 	font-style: oblique;
 	text-decoration: underline;
+	text-decoration-thickness: 0.2px;
 	text-decoration-style: dashed;
 }
 
@@ -77,6 +81,7 @@ span.linktitle {
 	cursor: pointer;
 	color: rgb(64, 74, 212);
 	text-decoration: underline;
+	text-decoration-thickness: 0.2px;
 	text-decoration-style: dashed;
 }
 
@@ -85,6 +90,7 @@ span.linksubtitle {
 	color: rgb(64, 74, 212);
 	font-style: oblique;
 	text-decoration: underline;
+	text-decoration-thickness: 0.2px;
 	text-decoration-style: dashed;
 }
 
