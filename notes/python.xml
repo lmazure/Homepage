@@ -6,13 +6,13 @@
 <DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
-  <ITEM>to avoid fucking problems when printing non-BMP characters to the console
+  <ITEM>To avoid fucking problems when printing non-BMP characters to the console
     <CODESAMPLE><PROMPT/>python -X utf8 foo.py</CODESAMPLE>
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Syntax</B></U></TITLE>
-  <ITEM>comment starts with <CODEROUTINE>#</CODEROUTINE> and extends to the end of the line</ITEM>
-  <ITEM>multiple assignment<BR/>
+  <ITEM>Comment starts with <CODEROUTINE>#</CODEROUTINE> and extends to the end of the line</ITEM>
+  <ITEM>Multiple assignment<BR/>
     <CODEROUTINE>a,b=0,1</CODEROUTINE><BR/>
     <CODEROUTINE>a,b=b,a+b</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to delete a variable<BR/>
@@ -23,19 +23,19 @@
     <CODEROUTINE>and</CODEROUTINE> and <CODEROUTINE>or</CODEROUTINE> perform a shortcut evaluation<BR/>
     <CODESAMPLE>&gt;&gt;&gt; print '' or 'a' or 'b'<BR/>
       a</CODESAMPLE></ITEM>
-  <ITEM>floor division: division that rounds to nearest integer (not floor!)
+  <ITEM>Floor division: division that rounds to nearest integer (not floor!)
     <CODESAMPLE>a = (-11) // 4 # -3</CODESAMPLE>
   </ITEM>
-  <ITEM>power
+  <ITEM>Power
     <CODESAMPLE>a = 3 ** 4 # 81</CODESAMPLE>
   </ITEM>
-  <ITEM>in interactive mode, <CODEROUTINE>_</CODEROUTINE> is a read-only variable containing the last printed expression</ITEM>
-  <ITEM>exit<BR/>
+  <ITEM>In interactive mode, <CODEROUTINE>_</CODEROUTINE> is a read-only variable containing the last printed expression</ITEM>
+  <ITEM>Exit<BR/>
     <CODESAMPLE>import sys<BR/>
       sys.exit()</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Complex</B></U></TITLE>
-  <ITEM>a complex can be created by using <CODEROUTINE>j</CODEROUTINE> or <CODEROUTINE>J</CODEROUTINE> to indicate the complex part<BR/>
+  <ITEM>A complex can be created by using <CODEROUTINE>j</CODEROUTINE> or <CODEROUTINE>J</CODEROUTINE> to indicate the complex part<BR/>
     <CODEROUTINE>1+2j</CODEROUTINE> or with the complex function <CODEROUTINE>complex(1,2)</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>real</CODEROUTINE> and <CODEROUTINE>imag</CODEROUTINE> can be used to retrieve the real and imaginary parts of a complex<BR/>
   <CODESAMPLE>a=1.5+0.5j<BR/>
@@ -43,22 +43,22 @@
     a.imag</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Strings</B></U></TITLE>
-  <ITEM>strings literals can be enclosed in single or double quotes<BR/>
+  <ITEM>String literals can be enclosed in single or double quotes<BR/>
     <CODEROUTINE>"foobar 'n \" quux"</CODEROUTINE><BR/>
     <CODEROUTINE>'foobar \'n" quux'</CODEROUTINE></ITEM>
-  <ITEM>new line can be escaped by \<BR/>
+  <ITEM>New line can be escaped by \<BR/>
     <CODESAMPLE>"first line \n\<BR/>
       second line"</CODESAMPLE></ITEM>
-  <ITEM>triple single or double quotes can also be used to create strings containing new lines<BR/>
+  <ITEM>Triple single or double quotes can also be used to create strings containing new lines<BR/>
     <CODESAMPLE>"""first line<BR/>
       second line"""</CODESAMPLE></ITEM>
-  <ITEM>string literals are automatically concatenated</ITEM>
-  <ITEM><CODEROUTINE>"foo" "bar"</CODEROUTINE></ITEM>
-  <ITEM>+ append strings<BR/>
+  <ITEM>String literals are automatically concatenated<BR/>
+    <CODEROUTINE>"foo" "bar"</CODEROUTINE></ITEM>
+  <ITEM>+ appends strings<BR/>
     <CODEROUTINE>"foo"+"bar"</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>*</CODEROUTINE> repeats strings<BR/>
     <CODEROUTINE>"foo"*5</CODEROUTINE> is <CODEROUTINE>"foofoofoofoofoo"</CODEROUTINE></ITEM>
-  <ITEM>slices<BR/>
+  <ITEM>Slices<BR/>
     <CODEROUTINE>str[4]</CODEROUTINE> fifth letter<BR/>
     <CODEROUTINE>str[2:4]</CODEROUTINE> third and fourth letters<BR/>
     <CODEROUTINE>str[:2]</CODEROUTINE> first two characters<BR/>
@@ -68,7 +68,7 @@
     <CODEROUTINE>str[-2:]</CODEROUTINE> last two characters<BR/>
     <CODEROUTINE>str[:-2]</CODEROUTINE> all but the last two characters<BR/>
     slices are immutable</ITEM>
-  <ITEM>using a too large index generates an error
+  <ITEM>Using a too large index generates an error
     <CODESAMPLE>&gt;&gt;&gt; "language"[42]<BR/>
       Traceback (most recent call last):<BR/>
       File "&lt;stdin&gt;", line 1, in &lt;module&gt;<BR/>
@@ -79,7 +79,7 @@
   <ITEM><CODEROUTINE>len</CODEROUTINE> return the length a string<BR/>
     <CODEROUTINE>len(str)</CODEROUTINE></ITEM>
   <ITEM><BLIST><TITLE>String Interpolation</TITLE>
-    <ITEM>string modulo operator
+    <ITEM>String modulo operator
       <CODESAMPLE>myVal1 = 10.1<BR/>
         myVal2 = 2.2<BR/>
         print("The sum of %s and %s is %s." %(my_val_1, my_val_2, my_val_1+my_val_2))</CODESAMPLE></ITEM>
@@ -87,22 +87,22 @@
       <CODESAMPLE>'My name is {name} and I am {age} years old'.format(name= 'Frida', age=114)</CODESAMPLE></ITEM>
     <ITEM><BLIST><TITLE>F-strings</TITLE>
       <ITEM><CODESAMPLE>f'The date today is {datetime.datetime.now():%B %d, %Y}'</CODESAMPLE></ITEM>
-      <ITEM>use <CODEROUTINE>{{</CODEROUTINE> to insert a <CODEROUTINE>{</CODEROUTINE> and <CODEROUTINE>}}</CODEROUTINE> to insert a <CODEROUTINE>}</CODEROUTINE></ITEM>
+      <ITEM>Use <CODEROUTINE>{{</CODEROUTINE> to insert a <CODEROUTINE>{</CODEROUTINE> and <CODEROUTINE>}}</CODEROUTINE> to insert a <CODEROUTINE>}</CODEROUTINE></ITEM>
     </BLIST></ITEM>
-    <ITEM>template strings
+    <ITEM>Template strings
       <CODESAMPLE>from string import Template<BR/>
         greeting = Template('Welcome, $name')<BR/>
         greeting.substitute(name='Frida!')</CODESAMPLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Sequences</B></U></TITLE>
-  <ITEM>sequences can be lists, strings or tuples</ITEM>
+  <ITEM>Sequences can be lists, strings or tuples</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
-  <ITEM>lists can mix types
+  <ITEM>Lists can mix types
     <CODESAMPLE>a = ['foo', 69, 'bar']</CODESAMPLE>
   </ITEM>
-  <ITEM>lists support slices (these ones are mutable and can even be used to change the size of the list)<BR/>
+  <ITEM>Lists support slices (these ones are mutable and can even be used to change the size of the list)<BR/>
     <CODEROUTINE>a[0:2]</CODEROUTINE>: remove the two first elements of the list<BR/>
     <CODEROUTINE>a[:0] = a</CODEROUTINE>: insert a copy ot itself at the beginning of the list
   </ITEM>
@@ -110,7 +110,7 @@
   <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to remove elements in a list
     <CODESAMPLE>del a[2:4]</CODESAMPLE>
   </ITEM>
-  <ITEM>we can do the same with
+  <ITEM>We can do the same with
     <CODESAMPLE>a[2:4] = []</CODESAMPLE>
   </ITEM>
   <ITEM>lists can be concatenated with <CODEROUTINE>+</CODEROUTINE>
@@ -118,24 +118,24 @@
       [1, 2, 3, 4, 5] </CODESAMPLE>
   </ITEM>
   <ITEM><CODEROUTINE>len</CODEROUTINE>: return the number of elements of a list</ITEM>
-  <ITEM>lists can be nested
+  <ITEM>Lists can be nested
     <CODESAMPLE>q = [45, 3]<BR/>
       p = [0, q, 14]</CODESAMPLE>
   </ITEM>
-  <ITEM>list unpacking
+  <ITEM>List unpacking
     <CODESAMPLE>a = [1, 2, 3, 4]<BR/>
       [a1, a2, a3, a4] = a</CODESAMPLE>
   </ITEM>
-  <ITEM>test if an element is in a list
+  <ITEM>Test if an element is in a list
     <CODESAMPLE>item in List</CODESAMPLE>
   </ITEM>
-  <ITEM>test if a list is empty
+  <ITEM>Test if a list is empty
     <CODESAMPLE>if my_list:<BR/>
       <TAB/>print("list is not empty")<BR/>
       else:<BR/>
       <TAB/>print("list is empty")</CODESAMPLE>
   </ITEM>
-  <ITEM>join the members of a list (as a string)
+  <ITEM>Join the members of a list (as a string)
     <CODESAMPLE>vowels = ["a", "e", "i", "o", "u"]<BR/>
       vowelsCSV = ",".join(vowels)<BR/>
       print("Vowels are = ", vowelsCSV)</CODESAMPLE>
@@ -167,19 +167,19 @@
   </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Tuple</B></U></TITLE>
-  <ITEM>a tuple is a number of values separated by a comma<BR/>
+  <ITEM>A tuple is a number of values separated by a comma<BR/>
     (they may be input with or without parentheses)
     <CODESAMPLE>t=1,2,"azerty"</CODESAMPLE></ITEM>
-  <ITEM>tuples support slicing</ITEM>
-  <ITEM>an empty tuple is created with the syntax:
+  <ITEM>Tuples support slicing</ITEM>
+  <ITEM>An empty tuple is created with the syntax:
     <CODESAMPLE>empty=()</CODESAMPLE></ITEM>
-  <ITEM>a singleton tuple is created with an empty comma
+  <ITEM>A singleton tuple is created with an empty comma
     <CODESAMPLE>singleton=1,</CODESAMPLE></ITEM>
-  <ITEM>tuple packing
+  <ITEM>Tuple packing
     <CODESAMPLE>t=1,2,3</CODESAMPLE>
-    tuple unpacking
+    Tuple unpacking
     <CODESAMPLE>x,y,z=t</CODESAMPLE></ITEM>
-  <ITEM>tuple are immutable: it is not possible ot assign to the individual items of a tuple</ITEM>
+  <ITEM>Tuple are immutable: it is not possible ot assign to the individual items of a tuple</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Set</B></U></TITLE>
   <ITEM>Create an empty set
@@ -187,14 +187,14 @@
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Dictionary</B></U></TITLE>
-  <ITEM>syntax
+  <ITEM>Syntax
     <CODESAMPLE>d={'key1':1234,'key2':5678}<BR/>
       d['key3']=43</CODESAMPLE>
   </ITEM>
-  <ITEM>create an empty dictionary
+  <ITEM>Create an empty dictionary
     <CODESAMPLE>d = {}</CODESAMPLE>
   </ITEM>
-  <ITEM>keys must be immutable: numbers, strings and tuples containing only numbers, strings and tuples</ITEM>
+  <ITEM>Keys must be immutable: numbers, strings and tuples containing only numbers, strings and tuples</ITEM>
   <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to delete entries of a dictionary, it raises a <CODEROUTINE>KeyErro</CODEROUTINE>r if rhe key is not in the map
     <CODESAMPLE>del d['key3']</CODESAMPLE>
   </ITEM>
@@ -239,24 +239,24 @@
     else:<BR/>
     <TAB/>print("other")</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>for</CODEROUTINE> loops on a sequence (string or list) content<BR/>
-    the <CODEROUTINE>else</CODEROUTINE> clause is executed when the list is exhausted<BR/>
+    The <CODEROUTINE>else</CODEROUTINE> clause is executed when the list is exhausted<BR/>
   <CODESAMPLE>a=[1,2,3]<BR/>
     for x in a:<BR/>
     <TAB/>print x<BR/>
     else:<BR/>
     <TAB/>print "finished"</CODESAMPLE></ITEM>
-  <ITEM>it is not safe to modify the content of the list being looped on, a copy should be generated</ITEM>
+  <ITEM>It is not safe to modify the content of the list being looped on, a copy should be generated</ITEM>
   <ITEM><CODEROUTINE>while</CODEROUTINE> loops as long a condition is true
     <CODESAMPLE>while b &lt; 10:<BR/>
     <TAB/>b = b+1<BR/>
     else:<BR/>
     <TAB/>print "end"</CODESAMPLE></ITEM>
-  <ITEM>there is no <CODEROUTINE>do</CODEROUTINE>/<CODEROUTINE>while</CODEROUTINE> statement, instead use
+  <ITEM>There is no <CODEROUTINE>do</CODEROUTINE>/<CODEROUTINE>while</CODEROUTINE> statement, instead use
     <CODESAMPLE>while 1:<BR/>
     <TAB/>line = sys.stdin.readline()<BR/>
     <TAB/>if line == "\n":<BR/>
     <TAB/><TAB/>break</CODESAMPLE></ITEM>
-  <ITEM>use <CODEROUTINE>range</CODEROUTINE> for iterating over a sequence of numbers<BR/>
+  <ITEM>Use <CODEROUTINE>range</CODEROUTINE> for iterating over a sequence of numbers<BR/>
     <CODEROUTINE>range(stop)</CODEROUTINE> returns <CODEROUTINE>[0, 1, 2… stop-1]</CODEROUTINE><BR/>
     <CODEROUTINE>range(start, stop)</CODEROUTINE> returns <CODEROUTINE>[start, start+1… stop-1]</CODEROUTINE><BR/>
     <CODEROUTINE>range(start, stop, incr)</CODEROUTINE> returns <CODEROUTINE>[start, start+incr… stop-incr]</CODEROUTINE></ITEM>
@@ -264,7 +264,7 @@
     the <CODEROUTINE>else</CODEROUTINE> clause is not executed</ITEM>
   <ITEM><CODEROUTINE>continue</CODEROUTINE> continues with the next iteration of the loop</ITEM>
   <ITEM><CODEROUTINE>pass</CODEROUTINE> is a noop statement</ITEM>
-  <ITEM>matching constants (<CODEROUTINE>_</CODEROUTINE>) always matches
+  <ITEM>Matching constants (<CODEROUTINE>_</CODEROUTINE>) always matches
   <CODESAMPLE>match status:<BR/>
     <TAB/>case 400:<BR/>
     <TAB/><TAB/>return "Bad request"<BR/>
@@ -278,31 +278,31 @@
     <TAB/><TAB/>return "Something's wrong with the internet"</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Function</B></U></TITLE>
-  <ITEM>syntax (the docstring is optional):
+  <ITEM>Syntax (the docstring is optional):
     <CODESAMPLE>def myfunction(a,b,c):<BR/>
     <TAB/>"docstring"<BR/>
     <TAB/># … code</CODESAMPLE></ITEM>
-  <ITEM>all variable assignments store value in the local symbol table<BR/>
-    variable references are looked in the local symbol table, then in the global symbol table and, at last, in the table of built-in names</ITEM>
-  <ITEM>parameters are passed by reference</ITEM>
-  <ITEM>function references can be stored in variables
+  <ITEM>All variable assignments store value in the local symbol table<BR/>
+    Variable references are looked in the local symbol table, then in the global symbol table and, at last, in the table of built-in names</ITEM>
+  <ITEM>Parameters are passed by reference</ITEM>
+  <ITEM>Function references can be stored in variables
     <CODEROUTINE>f=myfunction</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>return</CODEROUTINE> returns the <CODEROUTINE>None</CODEROUTINE> value</ITEM>
   <ITEM><CODEROUTINE>return s</CODEROUTINE> returns the <CODEROUTINE>s</CODEROUTINE> value</ITEM>
-  <ITEM>default argument values can be used, they are evaluated only once
+  <ITEM>Default argument values can be used, they are evaluated only once
     <CODESAMPLE>def f(a,l=[]):<BR/>
     <TAB/>l.append(a)<BR/>
     <TAB/>return l</CODESAMPLE>
     <CODEROUTINE>print f(1)</CODEROUTINE> prints <CODEROUTINE>[1]</CODEROUTINE><BR/>
     <CODEROUTINE>print f(2)</CODEROUTINE> prints <CODEROUTINE>[1,2]</CODEROUTINE><BR/>
     <CODEROUTINE>print f(3)</CODEROUTINE> prints <CODEROUTINE>[1,2,3]</CODEROUTINE><BR/>
-    to avoid this:
+    To avoid this:
     <CODESAMPLE>def f(a,l=None)<BR/>
     <TAB/>if l is None:<BR/>
     <TAB/><TAB/>l=[]<BR/>
     <TAB/>l.append(a)<BR/>
     <TAB/>return l</CODESAMPLE></ITEM>
-  <ITEM>parameters can be passed by keywords
+  <ITEM>Parameters can be passed by keywords
     <CODESAMPLE>def foobar(a,b,c,d):<BR/>
     <TAB/>#…<BR/>
     foobar(0,1,d=4,c=3)</CODESAMPLE></ITEM>
@@ -317,9 +317,9 @@
     <TAB/><TAB/>return func(x, value)<BR/>
     <TAB/>return f</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>lambda</CODEROUTINE> can be used to create anonymous functions<BR/>
-    they are restricted to a single expression
+    They are restricted to a single expression
     <CODESAMPLE>lambda a,b:a+b</CODESAMPLE>
-    another example using a default argument value
+    Another example using a default argument value
     <CODESAMPLE>def make_incrementator(n)<BR/>
     <TAB/>return lambda x,incr=n:x+incr</CODESAMPLE></ITEM>
 </BLIST>
@@ -341,10 +341,10 @@
   <ITEM><CODEROUTINE>sys.builtin_module_names</CODEROUTINE> lists the modules compiled in the interpreter</ITEM>
   <ITEM>When you run a module with
     <CODESAMPLE>python mymodule.py &lt;arguments&gt;</CODESAMPLE>
-    the code in the module will be executed, just as if you imported it, but with <CODEROUTINE>__name__</CODEROUTINE> set to <CODEROUTINE>__main__</CODEROUTINE>. </ITEM>
+    The code in the module will be executed, just as if you imported it, but with <CODEROUTINE>__name__</CODEROUTINE> set to <CODEROUTINE>__main__</CODEROUTINE>. </ITEM>
   <ITEM><BLIST><TITLE>Module path</TITLE>
-    <ITEM>modules are looked for in the directories listed by <CODEROUTINE>sys.path</CODEROUTINE> (which is initially defined by the environment variable <CODEROUTINE>$PYTHONPATH</CODEROUTINE>)</ITEM>
-    <ITEM>append a new directory to the path: <CODEROUTINE>sys.path.append('C:\\windows\desktop')</CODEROUTINE></ITEM>
+    <ITEM>Modules are looked for in the directories listed by <CODEROUTINE>sys.path</CODEROUTINE> (which is initially defined by the environment variable <CODEROUTINE>$PYTHONPATH</CODEROUTINE>)</ITEM>
+    <ITEM>Append a new directory to the path: <CODEROUTINE>sys.path.append('C:\\windows\desktop')</CODEROUTINE></ITEM>
     </BLIST></ITEM>
   <ITEM><CODEROUTINE>dir</CODEROUTINE> returns a list of the names defined in a module<BR/>
     <CODEROUTINE>dir(mymod)</CODEROUTINE></ITEM>
@@ -356,8 +356,8 @@
   <ITEM><CODEROUTINE>__init__.py</CODEROUTINE> can define <CODEROUTINE>__all__</CODEROUTINE> variable which is the list of the modules which should be imported when the syntax <CODEROUTINE>from mypackage import *</CODEROUTINE> is used.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Classes</B></U></TITLE>
-  <ITEM>the definition of a class starts with the declaration <CODEROUTINE>class:</CODEROUTINE></ITEM>
-  <ITEM>the initialisation method is <CODEROUTINE>__init__</CODEROUTINE>
+  <ITEM>The definition of a class starts with the declaration <CODEROUTINE>class:</CODEROUTINE></ITEM>
+  <ITEM>The initialisation method is <CODEROUTINE>__init__</CODEROUTINE>
     <CODESAMPLE>class Complex:<BR/>
     <TAB/>def __init__(self, realpart, imagpart):<BR/>
     <TAB/><TAB/>self.r = realpart<BR/>
@@ -478,11 +478,11 @@
   <ITEM>A common directory location for a virtual environment is <CODEFILENAME>.venv</CODEFILENAME>.
   </ITEM>
   <ITEM><BLIST><TITLE>In order to activate the environment, some scripts are generated for each Linux/Windows shell.</TITLE>
-    <ITEM>for bash
+    <ITEM>For bash
     <CODESAMPLE>source &lt;venv&gt;/bin/activate</CODESAMPLE></ITEM>
-    <ITEM>for Windows bat
+    <ITEM>For Windows bat
     <CODESAMPLE>&lt;venv&gt;\Scripts\activate</CODESAMPLE></ITEM>
-    <ITEM>for PowerShell
+    <ITEM>For PowerShell
     <CODESAMPLE> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process<BR/>
       &lt;venv&gt;\Scripts\Activate.ps1</CODESAMPLE></ITEM>
   </BLIST></ITEM>
@@ -530,40 +530,40 @@
     <ITEM>Give more output. Option is additive, can be used up to 3 times: <CODEROUTINE>-v</CODEROUTINE>, <CODEROUTINE>--verbose</CODEROUTINE>.</ITEM>
   </BLIST></ITEM>
   <ITEM>Show version and exit: <CODEROUTINE>-V</CODEROUTINE>, <CODEROUTINE>--version</CODEROUTINE>.</ITEM>
-  <ITEM>install packages
+  <ITEM>Install packages
     <CODESAMPLE><PROMPT/>python -m pip install &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
     or
     <CODESAMPLE><PROMPT/>pip install &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
   </ITEM>
-  <ITEM>install a specific version
+  <ITEM>Install a specific version
     <CODESAMPLE><PROMPT/>pip install requests==2.6.0</CODESAMPLE>
   </ITEM>
-  <ITEM>install the packages defined in a <CODEFILENAME>requirements.txt</CODEFILENAME> file
+  <ITEM>Install the packages defined in a <CODEFILENAME>requirements.txt</CODEFILENAME> file
     <CODESAMPLE><PROMPT/>pip install -r requirements.txt</CODESAMPLE>
   </ITEM>
-  <ITEM>upgrade a package
+  <ITEM>Upgrade a package
     <CODESAMPLE><PROMPT/>pip install -U &lt;package&gt;</CODESAMPLE>
     <CODESAMPLE><PROMPT/>pip install --upgrade &lt;package&gt;</CODESAMPLE>
   </ITEM>
-  <ITEM>install a package from the default branch of a Git repository
+  <ITEM>Install a package from the default branch of a Git repository
     <CODESAMPLE><PROMPT/>pip install git+https://gitlab.com/opentestfactory/agent</CODESAMPLE>
     The version (commit ID) is available in <CODEFILENAME>/c/Users/lmazure/AppData/Local/Programs/Python/Python39/lib/site-packages/opentf_agent-*.dist-info/direct_url.json</CODEFILENAME>.<BR/>
     See <X><T>https://packaging.python.org/en/latest/specifications/direct-url/</T><A>https://packaging.python.org/en/latest/specifications/direct-url/</A><L>en</L><F>HTML</F></X>.
   </ITEM>
-  <ITEM>install a package from a given branch of a Git repository
+  <ITEM>Install a package from a given branch of a Git repository
     <CODESAMPLE><PROMPT/>pip install git+https://gitlab.com/opentestfactory/agent@rel-1.3.1</CODESAMPLE>
   </ITEM>
-  <ITEM>list the installed packages
+  <ITEM>List the installed packages
     <CODESAMPLE><PROMPT/>pip list</CODESAMPLE>
   </ITEM>
-  <ITEM>list the installed packages in the format expected by <CODEROUTINE>pip install</CODEROUTINE>
+  <ITEM>List the installed packages in the format expected by <CODEROUTINE>pip install</CODEROUTINE>
     <CODESAMPLE><PROMPT/>pip freeze &gt; requirements.txt</CODESAMPLE>
   </ITEM>
-  <ITEM>list the out-of-date installed packages
+  <ITEM>List the out-of-date installed packages
     <CODESAMPLE><PROMPT/>pip list -o</CODESAMPLE>
     <CODESAMPLE><PROMPT/>pip list --outdated</CODESAMPLE>
   </ITEM>
-  <ITEM>do not list globally-installed packages
+  <ITEM>Do not list globally-installed packages
     <CODESAMPLE><PROMPT/>pip list -l</CODESAMPLE>
     <CODESAMPLE><PROMPT/>pip list --local</CODESAMPLE>
   </ITEM>

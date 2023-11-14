@@ -1229,7 +1229,7 @@
     <DESC>Display all the values of <CODEROUTINE>user.name</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --get-all --show-origin  user.name</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git config --get-all --show-origin user.name</CODEROUTINE></TERM>
     <DESC>Display all the values of <CODEROUTINE>user.name</CODEROUTINE> with their origin.</DESC>
   </ROW>
   <ROW>
@@ -1306,8 +1306,8 @@ It is possible to ignore files/directories in a given directory by listing them 
 In order to commit an empty directory, create a <CODEFILENAME>.gitkeep</CODEFILENAME> file in it. This is not defined by Git, but it is a common usage.<BR/>
 <BR/>
 To remove the last commit locally and on the remote repository (nobody should have pulled meanwhile)
-  <CODESAMPLE>git reset --hard HEAD^<BR/>
-  git push -f</CODESAMPLE>
+  <CODESAMPLE><PROMPT/>git reset --hard HEAD^<BR/>
+    <PROMPT/>git push -f</CODESAMPLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
@@ -1360,6 +1360,45 @@ To remove the last commit locally and on the remote repository (nobody should ha
     <TERM><CODEROUTINE>git rebase --autosquash</CODEROUTINE></TERM>
     <DESC>When the commit log message begins with <CODEROUTINE>squash! …​</CODEROUTINE> or <CODEROUTINE>fixup! …​</CODEROUTINE> or <CODEROUTINE>amend! …​</CODEROUTINE>, and there is already a commit in the todo list that matches the same <CODEROUTINE>…</CODEROUTINE>, automatically modify the todo list of <CODEROUTINE>rebase -i</CODEROUTINE>, so that the commit marked for squashing comes right after the commit to be modified, and change the action of the moved commit from <CODEROUTINE>pick</CODEROUTINE> to <CODEROUTINE>squash</CODEROUTINE> or <CODEROUTINE>fixup</CODEROUTINE> or <CODEROUTINE>fixup -C</CODEROUTINE> respectively.<BR/>
     A commit matches the <CODEROUTINE>…</CODEROUTINE> if the commit subject matches, or if the <CODEROUTINE>…</CODEROUTINE> refers to the commit’s hash. As a fall-back, partial matches of the commit subject work, too.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>git credential’s man page</T><A>https://git-scm.com/docs/git-credential</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>Retrieve and store user credentials</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git credential fill</CODEROUTINE></TERM>
+    <DESC>retrieve the credentials
+      <CODESAMPLE><PROMPT/>git credential fill &lt;&lt; EOF<BR/>
+        protocol=https<BR/>
+        host=github.com<BR/>
+        EOF<BR/>
+        protocol=https<BR/>
+        host=github.com<BR/>
+        username=john<BR/>
+        password=gho_DHaifTZE9NtPIZE3iShEit8qpzbtCi4I8boT</CODESAMPLE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git credential reject</CODEROUTINE></TERM>
+    <DESC>forget the credentials
+      <CODESAMPLE><PROMPT/>git credential reject &lt;&lt; EOF<BR/>
+        protocol=https<BR/>
+        host=github.com<BR/>
+        EOF</CODESAMPLE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git credential approve</CODEROUTINE></TERM>
+    <DESC>record credentials (the OS will display a mesage for login in)
+      <CODESAMPLE><PROMPT/>git credential fill &lt;&lt; EOF<BR/>
+        protocol=https<BR/>
+        host=github.com<BR/>
+        EOF<BR/>
+        protocol=https<BR/>
+        host=github.com<BR/>
+        username=jane<BR/>
+        password=gho_WnwWimkTLgqiKJZEFr48dABX1nPous670DKaUw</CODESAMPLE></DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
