@@ -13,15 +13,15 @@
 <BLIST><TITLE><U><B>Syntax</B></U></TITLE>
   <ITEM>Comment starts with <CODEROUTINE>#</CODEROUTINE> and extends to the end of the line</ITEM>
   <ITEM>Multiple assignment<BR/>
-    <CODEROUTINE>a,b=0,1</CODEROUTINE><BR/>
-    <CODEROUTINE>a,b=b,a+b</CODEROUTINE></ITEM>
+    <CODEROUTINE>a,b = 0,1</CODEROUTINE><BR/>
+    <CODEROUTINE>a,b = b,a+b</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to delete a variable<BR/>
     <CODEROUTINE>del a</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>in</CODEROUTINE> test if a value is in a sequence</ITEM>
   <ITEM><CODEROUTINE>not in</CODEROUTINE> test if a value is not in a sequence</ITEM>
   <ITEM><CODEROUTINE>and</CODEROUTINE>, <CODEROUTINE>or</CODEROUTINE>, and <CODEROUTINE>not</CODEROUTINE> are boolean operators<BR/>
     <CODEROUTINE>and</CODEROUTINE> and <CODEROUTINE>or</CODEROUTINE> perform a shortcut evaluation<BR/>
-    <CODESAMPLE>&gt;&gt;&gt; print '' or 'a' or 'b'<BR/>
+    <CODESAMPLE><PROMPT/> print '' or 'a' or 'b'<BR/>
       a</CODESAMPLE></ITEM>
   <ITEM>Floor division: division that rounds to nearest integer (not floor!)
     <CODESAMPLE>a = (-11) // 4 # -3</CODESAMPLE>
@@ -69,12 +69,12 @@
     <CODEROUTINE>str[:-2]</CODEROUTINE> all but the last two characters<BR/>
     slices are immutable</ITEM>
   <ITEM>Using a too large index generates an error
-    <CODESAMPLE>&gt;&gt;&gt; "language"[42]<BR/>
+    <CODESAMPLE><PROMPT/> "language"[42]<BR/>
       Traceback (most recent call last):<BR/>
       File "&lt;stdin&gt;", line 1, in &lt;module&gt;<BR/>
       IndexError: string index out of range</CODESAMPLE>
     but not for slices
-  <CODESAMPLE>&gt;&gt;&gt; "language"[3:42]<BR/>
+  <CODESAMPLE><PROMPT/> "language"[3:42]<BR/>
       'guage'</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>len</CODEROUTINE> return the length a string<BR/>
     <CODEROUTINE>len(str)</CODEROUTINE></ITEM>
@@ -95,9 +95,6 @@
         greeting.substitute(name='Frida!')</CODESAMPLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>Sequences</B></U></TITLE>
-  <ITEM>Sequences can be lists, strings or tuples</ITEM>
-</BLIST>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
   <ITEM>Lists can mix types
     <CODESAMPLE>a = ['foo', 69, 'bar']</CODESAMPLE>
@@ -114,7 +111,7 @@
     <CODESAMPLE>a[2:4] = []</CODESAMPLE>
   </ITEM>
   <ITEM>lists can be concatenated with <CODEROUTINE>+</CODEROUTINE>
-    <CODESAMPLE>&gt;&gt;&gt; [ 1, 2 ] + [ 3, 4, 5]<BR/>
+    <CODESAMPLE><PROMPT/> [ 1, 2 ] + [ 3, 4, 5]<BR/>
       [1, 2, 3, 4, 5] </CODESAMPLE>
   </ITEM>
   <ITEM><CODEROUTINE>len</CODEROUTINE>: return the number of elements of a list</ITEM>
@@ -180,6 +177,9 @@
     Tuple unpacking
     <CODESAMPLE>x,y,z=t</CODESAMPLE></ITEM>
   <ITEM>Tuple are immutable: it is not possible ot assign to the individual items of a tuple</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Sequences</B></U></TITLE>
+  <ITEM>Sequences can be lists, strings or tuples</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Set</B></U></TITLE>
   <ITEM>Create an empty set

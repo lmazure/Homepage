@@ -9,10 +9,11 @@
   <ITEM>display the version<BR/>
     <CODESAMPLE>tsc --version</CODESAMPLE></ITEM>
   <ITEM><BLIST><TITLE><CODEFILENAME>tsconfig.json</CODEFILENAME></TITLE>
-    <ITEM>The presence of a <CODEFILENAME>tsconfig.json</CODEFILENAME> file in a directory indicates that the directory is the root of a TypeScript project.<BR/>
-      If <CODEROUTINE>tsc</CODEROUTINE> is launched with no input file, it will look for <CODEFILENAME>tsconfig.json</CODEFILENAME> or <CODEFILENAME>jsconfig.json</CODEFILENAME>.<BR/>
+    <ITEM>The presence of a <CODEFILENAME>tsconfig.json</CODEFILENAME> file in a directory indicates that the directory is the root of a TypeScript project.</ITEM>
+    <ITEM>If <CODEROUTINE>tsc</CODEROUTINE> is launched with no input file, it will look for <CODEFILENAME>tsconfig.json</CODEFILENAME> or <CODEFILENAME>jsconfig.json</CODEFILENAME>.<BR/>
       <CODEFILENAME>jsconfig.json</CODEFILENAME> is for JavaScript projects, it is the same as <CODEFILENAME>jsconfig.json</CODEFILENAME> except for some JavaScript-related compiler flags enabled by default.</ITEM>
-    <ITEM><CODEROUTINE>tsc</CODEROUTINE> can be invoked with <CODEROUTINE>--project</CODEROUTINE>/<CODEROUTINE>-p</CODEROUTINE> to specify the path of a directory containing a <CODEFILENAME>tsconfig.json</CODEFILENAME> file or the path to a valid .json file containing the configurations.</ITEM>
+    <ITEM>If <CODEROUTINE>tsc</CODEROUTINE> is launched with some arguments, it will compile the files with the default compiler settings.<BR/>
+      <CODEROUTINE>tsc</CODEROUTINE> can be invoked with <CODEROUTINE>--project</CODEROUTINE>/<CODEROUTINE>-p</CODEROUTINE> to specify the path of a directory containing a <CODEFILENAME>tsconfig.json</CODEFILENAME> file or the path to a valid .json file containing the configurations.</ITEM>
     <ITEM>generate the default <CODEFILENAME>tsconfig.json</CODEFILENAME><BR/>
       <CODESAMPLE>tsc --init</CODESAMPLE></ITEM>
   </BLIST></ITEM>
