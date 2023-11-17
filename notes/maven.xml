@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Maven</TITLE>
 <PATH>notes/maven.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 Command line options
 <DEFINITIONTABLE>
@@ -19,22 +19,26 @@ Command line options
   </ROW>
 </DEFINITIONTABLE>
 <BLIST>
-<ITEM>Skip tests in install or package phase:
-<CODESAMPLE>mvn clean install -Dmaven.test.skip=true</CODESAMPLE>
-<CODESAMPLE>mvn clean package -Dmaven.test.skip=true</CODESAMPLE></ITEM>
-<ITEM>Compile the test sources and copies their resources, but skip their execution:
-<CODESAMPLE>mvn clean install -DskipTests</CODESAMPLE>
-<CODESAMPLE>mvn clean package -DskipTests</CODESAMPLE></ITEM>
-<ITEM>Use <CODEROUTINE>${env.VARIABLE_NAME}</CODEROUTINE> to get the value of an environment variable.</ITEM>
-<ITEM>Display where is the Maven local repository:
-<CODESAMPLE>mvn help:evaluate -Dexpression=settings.localRepository</CODESAMPLE>
-The repository can be defined in the <CODEFILENAME>settings.xml</CODEFILENAME> file with the <CODEROUTINE>&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</CODEROUTINE> element.</ITEM>
-<ITEM>Execute some given test classes / test methods
-<CODESAMPLE>mvn test -Dtest="TanTest,SinTest#checkValue"</CODESAMPLE></ITEM>
+  <ITEM>Skip tests in install or package phase:
+    <CODESAMPLE>mvn clean install -Dmaven.test.skip=true</CODESAMPLE>
+    <CODESAMPLE>mvn clean package -Dmaven.test.skip=true</CODESAMPLE></ITEM>
+  <ITEM>Compile the test sources and copies their resources, but skip their execution:
+    <CODESAMPLE>mvn clean install -DskipTests</CODESAMPLE>
+    <CODESAMPLE>mvn clean package -DskipTests</CODESAMPLE></ITEM>
+  <ITEM>Use <CODEROUTINE>${env.VARIABLE_NAME}</CODEROUTINE> to get the value of an environment variable.</ITEM>
+  <ITEM>Display where is the Maven local repository:
+    <CODESAMPLE>mvn help:evaluate -Dexpression=settings.localRepository</CODESAMPLE>
+    The repository can be defined in the <CODEFILENAME>settings.xml</CODEFILENAME> file with the <CODEROUTINE>&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</CODEROUTINE> element.</ITEM>
+  <ITEM>Execute some given test classes / test methods
+    <CODESAMPLE>mvn test -Dtest="TanTest,SinTest#checkValue"</CODESAMPLE></ITEM>
+  <ITEM>Execute some given test classes / test methods
+    <CODESAMPLE>mvn test -Dtest="TanTest,SinTest#checkValue"</CODESAMPLE></ITEM>
+  <ITEM>The <CODEROUTINE>-Dvalue=name</CODEROUTINE> parameters are set as system properties and can be retrieve in the Java code using <CODEROUTINE>java system.getproperty()</CODEROUTINE>.</ITEM>
 </BLIST>
 <BLIST><TITLE><B>Maven daemon</B></TITLE>
-<ITEM>Stop all daemons
-<CODESAMPLE>mvnd --stop</CODESAMPLE></ITEM>
-</BLIST></CONTENT>
+  <ITEM>Stop all daemons
+    <CODESAMPLE>mvnd --stop</CODESAMPLE></ITEM>
+</BLIST>
+</CONTENT>
 <X><T>links</T><A>../links/java.html#maven</A><L>en</L><F>HTML</F></X>
 </PAGE>

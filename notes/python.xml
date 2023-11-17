@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
@@ -132,6 +132,11 @@
       else:<BR/>
       <TAB/>print("list is empty")</CODESAMPLE>
   </ITEM>
+  <ITEM>A list comprehension consists of brackets containing an expression followed by a <CODEROUTINE>for</CODEROUTINE> clause, then zero or more <CODEROUTINE>for</CODEROUTINE> or <CODEROUTINE>if</CODEROUTINE> clauses.
+    <CODESAMPLE><PROMPT/>[x**2 for x in range(10)]<BR/>
+      [0, 1, 4, 9, 16, 25, 36, 49, 64, 81]</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>[(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]<BR/>
+      [(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]</CODESAMPLE>  </ITEM>
   <ITEM>Join the members of a list (as a string)
     <CODESAMPLE>vowels = ["a", "e", "i", "o", "u"]<BR/>
       vowelsCSV = ",".join(vowels)<BR/>
@@ -185,6 +190,10 @@
   <ITEM>Create an empty set
     <CODESAMPLE>s = set()</CODESAMPLE>
   </ITEM>
+  <ITEM>Set comprehension
+    <CODESAMPLE><PROMPT/>{s**2 for s in range(10)}<BR/>
+      {0, 1, 64, 4, 36, 9, 16, 49, 81, 25}</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Dictionary</B></U></TITLE>
   <ITEM>Syntax
@@ -197,6 +206,12 @@
   <ITEM>Keys must be immutable: numbers, strings and tuples containing only numbers, strings and tuples</ITEM>
   <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to delete entries of a dictionary, it raises a <CODEROUTINE>KeyErro</CODEROUTINE>r if rhe key is not in the map
     <CODESAMPLE>del d['key3']</CODESAMPLE>
+  </ITEM>
+  <ITEM>Dictionary comprehension
+    <CODESAMPLE>dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}<BR/>
+      # Double each value in the dictionary<BR/>
+      double_dict1 = {k:v*2 for (k,v) in dict1.items()}<BR/>
+      print(double_dict1)</CODESAMPLE>
   </ITEM>
   <ITEM><BLIST><TITLE>Methods</TITLE>
     <ITEM><CODEROUTINE>key in d</CODEROUTINE>: return <CODEROUTINE>True</CODEROUTINE> if d has a key key, else <CODEROUTINE>False</CODEROUTINE></ITEM>
