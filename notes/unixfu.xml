@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -346,7 +346,7 @@ look for duplicated word:
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>split -b 256k</CODEROUTINE><BR/><CODEROUTINE>split --bytes=256k</CODEROUTINE></TERM>
-    <DESC>generate file of 256K</DESC>
+    <DESC>generate files of 256K</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -712,6 +712,24 @@ Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODERO
   <ROW>
     <TERM><CODEROUTINE>-noleaf</CODEROUTINE></TERM>
     <DESC>do not optimise by assuming that directories contain two fewer subdirectories than their hard link count (necessary for some filesystems: MSDOS, CDROM, AFS…)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-exec command ;</CODEROUTINE></TERM>
+    <DESC>execute command <CODEROUTINE>command</CODEROUTINE><BR/>
+      The string <CODEROUTINE>{}</CODEROUTINE> is replaced by the current file name being processed.<BR/>
+      The specified command is run once for each matched file.<BR/>
+      The command is executed in the starting directory.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-exec command {} +</CODEROUTINE></TERM>
+    <DESC>execute command <CODEROUTINE>command</CODEROUTINE><BR/>
+      This variant of the <CODEROUTINE>-exec</CODEROUTINE> action runs the specified command on the selected files, but the command line is built by appending each selected file name at the end.<BR/>
+      Only one instance of <CODEROUTINE>{}</CODEROUTINE> is allowed within the command, and it must appear at the end, immediately before the <CODEROUTINE>+</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-execdir command ;</CODEROUTINE><BR/>
+      <CODEROUTINE>-execdir command {} +</CODEROUTINE></TERM>
+    <DESC>Like <CODEROUTINE>-exec</CODEROUTINE>, but the specified command is run from the subdirectory containing the matched file.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
@@ -582,6 +582,7 @@
     <CODESAMPLE><PROMPT/>pip list -l</CODESAMPLE>
     <CODESAMPLE><PROMPT/>pip list --local</CODESAMPLE>
   </ITEM>
+  <ITEM>When installing from <CODEROUTINE>https://test.pypi.org/</CODEROUTINE> (e.g. <CODEROUTINE>pip install -i https://test.pypi.org/simple/ squash-data-simulator==0.1.6.32279</CODEROUTINE>), the dependencies must be already installed, otherwise the installation will fail (I believe because <CODEROUTINE>pip</CODEROUTINE> will try to install them from <CODEROUTINE>https://test.pypi.org/</CODEROUTINE> and they are not present there).</ITEM>
 </BLIST></CONTENT>
 <X><T>links</T><A>../links/python.html</A><L>en</L><F>HTML</F></X>
 </PAGE>

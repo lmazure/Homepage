@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -140,6 +140,7 @@
       <ITEM><ARTICLE><X><T>Git 2.42 release: Here are four of our contributions in detail</T><A>https://about.gitlab.com/blog/2023/10/12/contributions-to-git-2-42-release/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christian</FIRSTNAME><LASTNAME>Couder</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE><COMMENT>Adding <CODEROUTINE>-include</CODEROUTINE> and <CODEROUTINE>-exclude</CODEROUTINE> options to <CODEROUTINE>git pack-refs</CODEROUTINE>, adding a <CODEROUTINE>-Z</CODEROUTINE> option to <CODEROUTINE>git cat-file</CODEROUTINE>, allowing to provide pseudo options in <CODEROUTINE>stdin</CODEROUTINE> to <CODEROUTINE>git rev-list --stdin</CODEROUTINE>, and some code cleanup.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Organizing multiple Git identities</T><A>https://garrit.xyz/posts/2023-10-13-organizing-multiple-git-identities</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Garrit</FIRSTNAME><LASTNAME>Franke</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE><COMMENT>How to configure different user data for different Git repositories.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Configuring git Credentials</T><A>https://www.baeldung.com/ops/git-configure-credentials</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Pratt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>19</DAY></DATE><COMMENT>The basics of Git credentials.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Highlights from Git 2.43</T><ST>The last Git release of 2023 is here! Take a look at some of our highlights on what's new in Git 2.43.</ST><A>https://github.blog/2023-11-20-highlights-from-git-2-43/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>20</DAY></DATE><COMMENT>Multiple cruft packs, <CODEROUTINE>git repack</CODEROUTINE> now supports <CODEROUTINE>--filter</CODEROUTINE> and <CODEROUTINE>--filter-to</CODEROUTINE> to remove some blobs from the workspace, improved message for revert of revert, <CODEROUTINE>git log</CODEROUTINE> has now a <CODEROUTINE>%(decorate)</CODEROUTINE> placeholder…</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mercurial</TITLE>
       <ITEM><ARTICLE><X><T>Google I/O 2009 - Mercurial on BigTable</T><A>https://www.youtube.com/watch?v=ri796Hx8las</A><L>en</L><F>MP4</F><DURATION><MINUTE>47</MINUTE><SECOND>18</SECOND></DURATION><DATE><YEAR>2009</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE></X><AUTHOR><FIRSTNAME>Jacob</FIRSTNAME><LASTNAME>Lee</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>A description on the Mercurial implementation done on top of Google’s Bigtable.</COMMENT></ARTICLE></ITEM>
