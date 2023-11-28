@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>pip</TITLE>
+<PATH>notes/pip.xml</PATH>
+<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE>
+<CONTENT>
+<BLIST>
+  <ITEM><BLIST><TITLE>Output</TITLE>
+    <ITEM>Give less output. Option is additive, can be used up to 3 times: <CODEROUTINE>-q</CODEROUTINE>, <CODEROUTINE>--quiet</CODEROUTINE>.</ITEM>
+    <ITEM>Give more output. Option is additive, can be used up to 3 times: <CODEROUTINE>-v</CODEROUTINE>, <CODEROUTINE>--verbose</CODEROUTINE>.</ITEM>
+  </BLIST></ITEM>
+  <ITEM>Show version and exit: <CODEROUTINE>-V</CODEROUTINE>, <CODEROUTINE>--version</CODEROUTINE>.</ITEM>
+  <ITEM>Install packages
+    <CODESAMPLE><PROMPT/>python -m pip install &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
+    or
+    <CODESAMPLE><PROMPT/>pip install &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>Install a specific version
+    <CODESAMPLE><PROMPT/>pip install requests==2.6.0</CODESAMPLE>
+  </ITEM>
+  <ITEM>Install the packages defined in a <CODEFILENAME>requirements.txt</CODEFILENAME> file
+    <CODESAMPLE><PROMPT/>pip install -r requirements.txt</CODESAMPLE>
+  </ITEM>
+  <ITEM>Upgrade a package
+    <CODESAMPLE><PROMPT/>pip install -U &lt;package&gt;</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip install --upgrade &lt;package&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>Install a package from the default branch of a Git repository
+    <CODESAMPLE><PROMPT/>pip install git+https://gitlab.com/opentestfactory/agent</CODESAMPLE>
+    The version (commit ID) is available in <CODEFILENAME>/c/Users/lmazure/AppData/Local/Programs/Python/Python39/lib/site-packages/opentf_agent-*.dist-info/direct_url.json</CODEFILENAME>.<BR/>
+    See <X><T>https://packaging.python.org/en/latest/specifications/direct-url/</T><A>https://packaging.python.org/en/latest/specifications/direct-url/</A><L>en</L><F>HTML</F></X>.
+  </ITEM>
+  <ITEM>Install a package from a given branch of a Git repository
+    <CODESAMPLE><PROMPT/>pip install git+https://gitlab.com/opentestfactory/agent@rel-1.3.1</CODESAMPLE>
+  </ITEM>
+  <ITEM>List the installed packages
+    <CODESAMPLE><PROMPT/>pip list</CODESAMPLE>
+  </ITEM>
+  <ITEM>List the installed packages in the format expected by <CODEROUTINE>pip install</CODEROUTINE>
+    <CODESAMPLE><PROMPT/>pip freeze &gt; requirements.txt</CODESAMPLE>
+  </ITEM>
+  <ITEM>List the out-of-date installed packages
+    <CODESAMPLE><PROMPT/>pip list -o</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip list --outdated</CODESAMPLE>
+  </ITEM>
+  <ITEM>Do not list globally-installed packages
+    <CODESAMPLE><PROMPT/>pip list -l</CODESAMPLE>
+    <CODESAMPLE><PROMPT/>pip list --local</CODESAMPLE>
+  </ITEM>
+  <ITEM>When installing from <CODEROUTINE>https://test.pypi.org/</CODEROUTINE> (e.g. <CODEROUTINE>pip install -i https://test.pypi.org/simple/ squash-data-simulator==0.1.6.32279</CODEROUTINE>), the dependencies must be already installed, otherwise the installation will fail (I believe because <CODEROUTINE>pip</CODEROUTINE> will try to install them from <CODEROUTINE>https://test.pypi.org/</CODEROUTINE> and they are not present there).</ITEM>
+</BLIST>
+</CONTENT>
+</PAGE>
