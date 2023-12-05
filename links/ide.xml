@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>IDEs</TITLE>
 <PATH>links/ide.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -52,7 +52,6 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE><ANCHOR>vscode</ANCHOR><X><T>VS Code</T><A>https://code.visualstudio.com/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>release notes</T><A>https://code.visualstudio.com/updates/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>VS Code can do that?!</T><A>https://www.vscodecandothat.com/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/vscode.html</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><X><T>Gitpod</T><A>https://www.gitpod.io/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -108,7 +107,7 @@
             <ITEM><ARTICLE><X status="removed"><T>Profiling Your Applications with Eclipse Callisto</T><A>http://www.onjava.com/pub/a/onjava/2006/08/16/profiling-with-eclipse-callisto.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><MIDDLENAME>Ferguson</MIDDLENAME><LASTNAME>Smart</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>8</MONTH><DAY>16</DAY></DATE><COMMENT>A presentation of TPTP features: static code analysis, test coverage, and memory and execution time profiling.</COMMENT></ARTICLE></ITEM>
           </BLIST></ITEM>
           <ITEM><BLIST><TITLE>UML</TITLE>
-            <ITEM><ARTICLE><X><T>Getting Started with UML2</T><A>https://www.eclipse.org/modeling/mdt/uml2/docs/articles/Getting_Started_with_UML2/article.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kenn</FIRSTNAME><LASTNAME>Hussey</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bruck</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>A presentation of the GUI and API of UML2.</COMMENT></ARTICLE></ITEM>
+            <ITEM><ARTICLE><X><T>Getting Started with UML2</T><A>https://wiki.eclipse.org/MDT/UML2/Getting_Started_with_UML2</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kenn</FIRSTNAME><LASTNAME>Hussey</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>James</FIRSTNAME><LASTNAME>Bruck</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE><COMMENT>A presentation of the GUI and API of UML2.</COMMENT></ARTICLE></ITEM>
           </BLIST></ITEM>
           <ITEM><BLIST><TITLE>Visual editor</TITLE>
             <ITEM><ARTICLE><X><T>Build GUIs with the Eclipse Visual Editor project</T><ST>A graphical tool for building graphical interfaces</ST><A>https://blog.csdn.net/thl789/article/details/171421</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Gallardo</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR><MONTH>3</MONTH><DAY>14</DAY></DATE><COMMENT>A presentation of the Visual Editor with two short examples: one with AWT/Swing and the other with SWT.</COMMENT></ARTICLE></ITEM>
@@ -172,6 +171,7 @@
           <ITEM><ARTICLE><X><T>Eclipse 2023-03 Java IDE Improvements</T><A>https://www.youtube.com/watch?v=JgMLyGBEQ1c</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Holger</FIRSTNAME><LASTNAME>Voormann</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Eclipse 2023-06 Java IDE Improvements</T><A>https://www.youtube.com/watch?v=OQe_hafeuz8</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>3</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Holger</FIRSTNAME><LASTNAME>Voormann</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Eclipse 2023-09 Java IDE Improvements</T><A>https://www.youtube.com/watch?v=bUnx9_jF-ig</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>29</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Holger</FIRSTNAME><LASTNAME>Voormann</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>+++Coming on December 6, 2023+++ Eclipse 2023-12 Java IDE Improvements</T><A>https://www.youtube.com/watch?v=ilM7GY1uEYI</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Holger</FIRSTNAME><LASTNAME>Voormann</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Visual Studio</TITLE>
@@ -238,6 +238,12 @@
         <ITEM><ARTICLE><X><T>Créer ma première extension VS Code en 25 minutes chrono (Sébastien BLANC)</T><A>https://www.youtube.com/watch?v=cj-Q6_k5gSM</A><L>fr</L><F>MP4</F><DURATION><MINUTE>31</MINUTE><SECOND>13</SECOND></DURATION><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE></X><AUTHOR><FIRSTNAME>Sébastien</FIRSTNAME><LASTNAME>Blanc</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE><COMMENT>An introduction on how to write a VS Code extension.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>VSCode Remote Development and Docker</T><A>https://www.youtube.com/watch?v=MJT0HVy3ox0</A><L>en</L><F>MP4</F><DURATION><MINUTE>22</MINUTE><SECOND>23</SECOND></DURATION></X><AUTHOR><GIVENNAME>Concise Developer</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE><COMMENT>How to configure VSCode to develop on a VM or in a Docker container.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How to resolve git merge conflicts (VSCode)</T><A>https://www.youtube.com/watch?v=dpahpzY5Lyk</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>30</SECOND></DURATION></X><AUTHOR><GIVENNAME>Concise Developer</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE><COMMENT>A short presentation of merge conflict management in VSCode.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>GitHub Copilot</TITLE>
+        <ITEM><ARTICLE><X><T>Responsible AI pair programming with GitHub Copilot</T><ST>GitHub Copilot boosts developer productivity, but using it responsibly still requires good developer and DevSecOps practices.</ST><A>https://github.blog/2023-02-22-responsible-ai-pair-programming-with-github-copilot/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Colin</FIRSTNAME><LASTNAME>Dembovsky</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>22</DAY></DATE><COMMENT>The subtitle says it all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Taking Copilot to difficult terrain</T><A>https://erik.doernenburg.com/2023/06/taking-copilot-to-difficult-terrain/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Erik</FIRSTNAME><LASTNAME>Dörnenburg</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE><COMMENT>A rather positive test of using GitHub Copilot to write some Rust unit tests.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Smarter, more efficient coding: GitHub Copilot goes beyond Codex with improved AI model</T><ST>We're thrilled to announce two major updates to GitHub Copilot code Completion's capabilities that will help developers work even more efficiently and effectively.</ST><A>https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shuyin</FIRSTNAME><LASTNAME>Zhao</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>28</DAY></DATE><COMMENT>Some advertisement for GitHub Copilot.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>GitHub Copilot just got exponentially smarter</T><A>https://www.youtube.com/watch?v=SZVCJRUADc4</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Burke</FIRSTNAME><LASTNAME>Holland</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>A description of GitHub Copilot new features.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>IntelliJ</TITLE>
         <ITEM><ARTICLE><X><T>Custom Code Inspections in IntelliJ</T><ST>Learn more about custom code inspections with IntelliJ.</ST><A>https://dzone.com/articles/custom-code-inspections-in-intellij</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Tamas</FIRSTNAME><LASTNAME>Balog</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE><COMMENT>An example of implementing a static code analysis rule using Structural Search and Replace.</COMMENT></ARTICLE></ITEM>

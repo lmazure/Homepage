@@ -184,7 +184,33 @@
   <ITEM>Tuple are immutable: it is not possible ot assign to the individual items of a tuple</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Sequences</B></U></TITLE>
-  <ITEM>Sequences can be lists, strings or tuples</ITEM>
+  <ITEM>Sequences can be lists, strings or tuples.</ITEM>
+  <ITEM><BLIST><TITLE>Loops</TITLE>
+    <ITEM>When looping through a sequence, the position index and corresponding value can be retrieved at the same time using <CODEROUTINE>enumerate()</CODEROUTINE>
+      <CODESAMPLE>for i, v in enumerate(['tic', 'tac', 'toe']):<BR/>
+        <TAB/>print(i, v)</CODESAMPLE>
+    </ITEM>
+    <ITEM>To loop over two or more sequences at the same time, the entries can be paired with <CODEROUTINE>zip()</CODEROUTINE>
+      <CODESAMPLE>questions = ['name', 'quest', 'favorite color']<BR/>
+        answers = ['lancelot', 'the holy grail', 'blue']<BR/>
+        for q, a in zip(questions, answers):<BR/>
+        <TAB/>print('What is your {0}?  It is {1}.'.format(q, a))</CODESAMPLE>
+    </ITEM>
+    <ITEM>To loop over a sequence in reverse, first specify the sequence in a forward direction and then call <CODEROUTINE>reversed()</CODEROUTINE>
+      <CODESAMPLE>for i in reversed(range(1, 10, 2)):<BR/>
+        <TAB/>print(i)</CODESAMPLE>
+    </ITEM>
+    <ITEM>To loop over a sequence in sorted order, use <CODEROUTINE>sorted()</CODEROUTINE> function which returns a new sorted list while leaving the source unaltered.
+      <CODESAMPLE>basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']<BR/>
+        for i in sorted(basket):<BR/>
+        <TAB/>print(i)</CODESAMPLE>
+    </ITEM>
+    <ITEM>Using <CODEROUTINE>set()</CODEROUTINE> on a sequence eliminates duplicate elements. The use of <CODEROUTINE>sorted()</CODEROUTINE> in combination with <CODEROUTINE>set()</CODEROUTINE> over a sequence is an idiomatic way to loop over unique elements of the sequence in sorted order..
+      <CODESAMPLE>basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']<BR/>
+        for f in sorted(set(basket)):<BR/>
+        <TAB/>print(i)</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Set</B></U></TITLE>
   <ITEM>Create an empty set
@@ -204,8 +230,13 @@
     <CODESAMPLE>d = {}</CODESAMPLE>
   </ITEM>
   <ITEM>Keys must be immutable: numbers, strings and tuples containing only numbers, strings and tuples</ITEM>
-  <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to delete entries of a dictionary, it raises a <CODEROUTINE>KeyErro</CODEROUTINE>r if rhe key is not in the map
+  <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to delete entries of a dictionary, it raises a <CODEROUTINE>KeyError</CODEROUTINE> if rhe key is not in the map
     <CODESAMPLE>del d['key3']</CODESAMPLE>
+  </ITEM>
+  <ITEM>When looping through dictionaries, the key and corresponding value can be retrieved at the same time using <CODEROUTINE>items()</CODEROUTINE>
+    <CODESAMPLE>knights = {'gallahad': 'the pure', 'robin': 'the brave'}<BR/>
+      for k, v in knights.items():<BR/>
+      <TAB/>print(k, v)</CODESAMPLE>
   </ITEM>
   <ITEM>Dictionary comprehension
     <CODESAMPLE>dict1 = {'a': 1, 'b': 2, 'c': 3, 'd': 4, 'e': 5}<BR/>
