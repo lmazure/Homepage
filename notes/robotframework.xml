@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Robot Framework</TITLE>
 <PATH>notes/robotframework.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 Install Robot Framework
 <CODESAMPLE>install robotframework</CODESAMPLE>
@@ -171,6 +171,16 @@ Install Robot Framework
   <ITEM>to change the Browser language<BR/>
     <CODEROUTINE>New Context<TAB/>locale=en-US</CODEROUTINE> does not work<BR/>
     <CODEROUTINE>New Browser<TAB/>chromium<TAB/>headless=false<TAB/>args=['--lang=en']</CODEROUTINE> works for Chrome<BR/></ITEM>
+</BLIST>
+<BLIST><TITLE><B><U>Allure report generation</U></B></TITLE>
+  <ITEM>To install allure, run the following command:
+    <CODESAMPLE>pip install allure-robotframework</CODESAMPLE></ITEM>
+  <ITEM>To run tests with allure, use the following command:
+    <CODESAMPLE>robot --listener "allure_robotframework;fubar" case.robot</CODESAMPLE>
+    The test results are saved in <CODEROUTINE>UUID-result.json</CODEROUTINE> files.<BR/>
+    Errors, such as using a non-existent keyword, are saved in <CODEROUTINE>UUID-attachment.html</CODEROUTINE> files.</ITEM>
+  <ITEM>To generate and display the Allure report, use the following command:
+  <CODESAMPLE>allure serve fubar</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Documentation</U></B></TITLE>
   <ITEM>create the HTML doc of a resource/robot file<BR/>

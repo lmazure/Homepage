@@ -275,7 +275,7 @@
 </BLIST>
 <BLIST><TITLE><U><B>Control flow</B></U></TITLE>
   <ITEM>Any non-zero integer value is true; zero is false.<BR/>
-    For a sequence (string list…, anything with a non-zero length is true, empty sequences are false.</ITEM>
+    For a sequence (string, list…), anything with a non-zero length is true, empty sequences are false.</ITEM>
   <ITEM><CODESAMPLE>if x == 1:<BR/>
     <TAB/>print("one")<BR/>
     elif x == 2:<BR/>
