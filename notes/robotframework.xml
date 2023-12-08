@@ -178,6 +178,8 @@ Install Robot Framework
   <ITEM>To run tests with allure, use the following command:
     <CODESAMPLE>robot --listener "allure_robotframework;fubar" case.robot</CODESAMPLE>
     The test results are saved in <CODEROUTINE>UUID-result.json</CODEROUTINE> files.<BR/>
+    Allure’s attachment done with <CODEROUTINE><TAB/>Attach<TAB/>"I attach kuux"</CODEROUTINE>, are saved in <CODEROUTINE>UUID-attachment.attach</CODEROUTINE> files.<BR/>
+    Variable setting, such as <CODEROUTINE><TAB/>${snake} =<TAB/>Set Variable<TAB/>python</CODEROUTINE>, are saved in <CODEROUTINE>UUID-attachment.html</CODEROUTINE> files, but special characters are not escaped!<BR/>
     Errors, such as using a non-existent keyword, are saved in <CODEROUTINE>UUID-attachment.html</CODEROUTINE> files.</ITEM>
   <ITEM>To generate and display the Allure report, use the following command:
   <CODESAMPLE>allure serve fubar</CODESAMPLE></ITEM>
