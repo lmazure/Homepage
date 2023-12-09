@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
 <ITEM>stash</ITEM>
@@ -1408,6 +1408,9 @@ To remove the last commit locally and on the remote repository (nobody should ha
   <ITEM>When the interactive rebase pauses, <CODEROUTINE>git commit --amend --author="Author Name &lt;email@address.com&gt;"</CODEROUTINE>, then <CODEROUTINE>git rebase --continue</CODEROUTINE>.</ITEM>
   <ITEM><CODEROUTINE>git push -f</CODEROUTINE>.</ITEM>
 </BLIST>
+<BR/>
+Update a hierarchy of workspaces
+<CODESAMPLE>find . -type d -name ".git" -execdir git pull -v \;</CODESAMPLE>
 <BR/>
 Script to mirror a repository in another (to be completed to support GitHub)
 <CODESAMPLE>#!/bin/bash<BR/>
