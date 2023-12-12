@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -181,6 +181,11 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>―</CELL><CELL>U+2015</CELL><CELL></CELL><CELL><X><T>Horizontal Bar</T><A>https://www.compart.com/en/unicode/U+2015</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+2015</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️·</CELL><CELL>U+00B7</CELL><CELL></CELL><CELL><X><T>Middle Dot</T><A>https://www.compart.com/en/unicode/U+00B7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>TBD</T><A>https://www.compart.com/fr/unicode/U+00B7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️…</CELL><CELL>U+2026</CELL><CELL>8230</CELL><CELL><X><T>Horizontal Ellipsis</T><A>https://www.compart.com/en/unicode/U+2026</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Points de suspension</T><A>https://www.compart.com/fr/unicode/U+2026</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>"</CELL><CELL>U+0022</CELL><CELL></CELL><CELL><X><T>Quotation Mark</T><A>https://www.compart.com/en/unicode/U+0022</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Guillemet anglais</T><A>https://www.compart.com/fr/unicode/U+0022</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>"</CELL><CELL>U+00AB</CELL><CELL></CELL><CELL><X><T>Left-Pointing Double Angle Quotation Mark</T><A>https://www.compart.com/en/unicode/U+00AB</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Guillemet gauche</T><A>https://www.compart.com/fr/unicode/U+00AB</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>"</CELL><CELL>U+00BB</CELL><CELL></CELL><CELL><X><T>Right-Pointing Double Angle Quotation Mark</T><A>https://www.compart.com/en/unicode/U+00BB</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Guillemet droit</T><A>https://www.compart.com/fr/unicode/U+00BB</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>"</CELL><CELL>U+201C</CELL><CELL></CELL><CELL><X><T>Left Double Quotation Mark</T><A>https://www.compart.com/en/unicode/U+201C</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Guillemet-Apostrophe double culbuté</T><A>https://www.compart.com/fr/unicode/U+201C</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>"</CELL><CELL>U+201D</CELL><CELL></CELL><CELL><X><T>Right Double Quotation Mark</T><A>https://www.compart.com/en/unicode/U+201D</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Guillemet-Apostrophe double</T><A>https://www.compart.com/fr/unicode/U+201D</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️⋮</CELL><CELL>U+22EE</CELL><CELL></CELL><CELL><X><T>Vertical Ellipsis</T><A>https://www.compart.com/en/unicode/U+22EE</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Trois points suspendus</T><A>https://www.compart.com/fr/unicode/U+22EE</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>⚠</CELL><CELL>U+26A0</CELL><CELL></CELL><CELL><X><T>Warning Sign</T><A>https://www.compart.com/en/unicode/U+26A0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Signal de danger</T><A>https://www.compart.com/fr/unicode/U+26A0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>☠</CELL><CELL>U+2620</CELL><CELL></CELL><CELL><X><T>Skull and Crossbones</T><A>https://www.compart.com/en/unicode/U+2620</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Tête de mort</T><A>https://www.compart.com/fr/unicode/U+2620</A><L>fr</L><F>HTML</F></X></CELL></ROW>

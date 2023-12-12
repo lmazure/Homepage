@@ -16,13 +16,9 @@
     <CODEROUTINE>a,b = 0,1</CODEROUTINE><BR/>
     <CODEROUTINE>a,b = b,a+b</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to delete a variable<BR/>
-    <CODEROUTINE>del a</CODEROUTINE></ITEM>
-  <ITEM><CODEROUTINE>in</CODEROUTINE> test if a value is in a sequence</ITEM>
-  <ITEM><CODEROUTINE>not in</CODEROUTINE> test if a value is not in a sequence</ITEM>
-  <ITEM><CODEROUTINE>and</CODEROUTINE>, <CODEROUTINE>or</CODEROUTINE>, and <CODEROUTINE>not</CODEROUTINE> are boolean operators<BR/>
-    <CODEROUTINE>and</CODEROUTINE> and <CODEROUTINE>or</CODEROUTINE> perform a shortcut evaluation<BR/>
-    <CODESAMPLE><PROMPT/> print '' or 'a' or 'b'<BR/>
-      a</CODESAMPLE></ITEM>
+    <CODEROUTINE>del a</CODEROUTINE>
+  </ITEM>
+  <ITEM>Assignment inside expressions must be done explicitly with the walrus operator <CODEROUTINE>:=</CODEROUTINE>.</ITEM>
   <ITEM>Floor division: division that rounds to nearest integer (not floor!)
     <CODESAMPLE>a = (-11) // 4 # -3</CODESAMPLE>
   </ITEM>
@@ -32,15 +28,42 @@
   <ITEM>In interactive mode, <CODEROUTINE>_</CODEROUTINE> is a read-only variable containing the last printed expression</ITEM>
   <ITEM>Exit<BR/>
     <CODESAMPLE>import sys<BR/>
-      sys.exit()</CODESAMPLE></ITEM>
+      sys.exit()</CODESAMPLE>
+  </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Conditions</B></U></TITLE>
+  <ITEM><CODEROUTINE>in</CODEROUTINE> tests if a value is in a sequence. <CODEROUTINE>not in</CODEROUTINE> tests if a value is not in a sequence</ITEM>
+  <ITEM>The operators <CODEROUTINE>is</CODEROUTINE> and <CODEROUTINE>is not</CODEROUTINE> compare whether two objects are really the same object.</ITEM>
+  <ITEM><CODEROUTINE>and</CODEROUTINE>, <CODEROUTINE>or</CODEROUTINE>, and <CODEROUTINE>not</CODEROUTINE> are boolean operators<BR/>
+    <CODEROUTINE>and</CODEROUTINE> and <CODEROUTINE>or</CODEROUTINE> perform a shortcut evaluation<BR/>
+    <CODESAMPLE><PROMPT/> print('' or 'a' or 'b')<BR/>
+      a</CODESAMPLE>
+  </ITEM>
+  <ITEM>Comparisons can be chained: <CODEROUTINE>a &lt; b == c</CODEROUTINE> tests whether <CODEROUTINE>a</CODEROUTINE> is less than <CODEROUTINE>b</CODEROUTINE> and moreover <CODEROUTINE>b</CODEROUTINE> equals <CODEROUTINE>c</CODEROUTINE>.</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Printing</B></U></TITLE>
+  <ITEM>define the separator between printed arguments<BR/>
+    <CODESAMPLE><PROMPT/>print(1, 2, 3, sep ='-')<BR/>
+      1-2-3</CODESAMPLE>
+    </ITEM>
+  <ITEM>define the line separator<BR/>
+    <CODESAMPLE><PROMPT/>print(1, end ='*'); print(2, end ='*'); print(3, end ='*')<BR/>
+      1*2*3*</CODESAMPLE>
+  </ITEM>
+  <ITEM>print to a file<BR/>
+    <CODESAMPLE><PROMPT/>print('foobar', file=open('quux.txt', 'a'))</CODESAMPLE>
+  </ITEM>
+  <ITEM>For print data structure in a readable manner, use <X><T>pprint</T><A>https://docs.python.org/3/library/pprint.html</A><L>en</L><F>HTML</F></X>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Complex</B></U></TITLE>
   <ITEM>A complex can be created by using <CODEROUTINE>j</CODEROUTINE> or <CODEROUTINE>J</CODEROUTINE> to indicate the complex part<BR/>
-    <CODEROUTINE>1+2j</CODEROUTINE> or with the complex function <CODEROUTINE>complex(1,2)</CODEROUTINE></ITEM>
+    <CODEROUTINE>1+2j</CODEROUTINE> or with the complex function <CODEROUTINE>complex(1,2)</CODEROUTINE>
+  </ITEM>
   <ITEM><CODEROUTINE>real</CODEROUTINE> and <CODEROUTINE>imag</CODEROUTINE> can be used to retrieve the real and imaginary parts of a complex<BR/>
   <CODESAMPLE>a=1.5+0.5j<BR/>
     a.real<BR/>
-    a.imag</CODESAMPLE></ITEM>
+    a.imag</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Strings</B></U></TITLE>
   <ITEM>String literals can be enclosed in single or double quotes<BR/>
@@ -48,10 +71,12 @@
     <CODEROUTINE>'foobar \'n" quux'</CODEROUTINE></ITEM>
   <ITEM>New line can be escaped by \<BR/>
     <CODESAMPLE>"first line \n\<BR/>
-      second line"</CODESAMPLE></ITEM>
+      second line"</CODESAMPLE>
+  </ITEM>
   <ITEM>Triple single or double quotes can also be used to create strings containing new lines<BR/>
     <CODESAMPLE>"""first line<BR/>
-      second line"""</CODESAMPLE></ITEM>
+      second line"""</CODESAMPLE>
+  </ITEM>
   <ITEM>String literals are automatically concatenated<BR/>
     <CODEROUTINE>"foo" "bar"</CODEROUTINE></ITEM>
   <ITEM>+ appends strings<BR/>
@@ -75,24 +100,29 @@
       IndexError: string index out of range</CODESAMPLE>
     but not for slices
   <CODESAMPLE><PROMPT/> "language"[3:42]<BR/>
-      'guage'</CODESAMPLE></ITEM>
+      'guage'</CODESAMPLE>
+  </ITEM>
   <ITEM><CODEROUTINE>len</CODEROUTINE> return the length a string<BR/>
     <CODEROUTINE>len(str)</CODEROUTINE></ITEM>
   <ITEM><BLIST><TITLE>String Interpolation</TITLE>
     <ITEM>String modulo operator
       <CODESAMPLE>myVal1 = 10.1<BR/>
         myVal2 = 2.2<BR/>
-        print("The sum of %s and %s is %s." %(my_val_1, my_val_2, my_val_1+my_val_2))</CODESAMPLE></ITEM>
+        print("The sum of %s and %s is %s." %(my_val_1, my_val_2, my_val_1+my_val_2))</CODESAMPLE>
+    </ITEM>
     <ITEM><CODEROUTINE>String .format()</CODEROUTINE><BR/>
-      <CODESAMPLE>'My name is {name} and I am {age} years old'.format(name= 'Frida', age=114)</CODESAMPLE></ITEM>
+      <CODESAMPLE>'My name is {name} and I am {age} years old'.format(name= 'Frida', age=114)</CODESAMPLE>
+    </ITEM>
     <ITEM><BLIST><TITLE>F-strings</TITLE>
-      <ITEM><CODESAMPLE>f'The date today is {datetime.datetime.now():%B %d, %Y}'</CODESAMPLE></ITEM>
+      <ITEM><CODESAMPLE>f'The date today is {datetime.datetime.now():%B %d, %Y}'</CODESAMPLE>
+      </ITEM>
       <ITEM>Use <CODEROUTINE>{{</CODEROUTINE> to insert a <CODEROUTINE>{</CODEROUTINE> and <CODEROUTINE>}}</CODEROUTINE> to insert a <CODEROUTINE>}</CODEROUTINE></ITEM>
     </BLIST></ITEM>
     <ITEM>Template strings
       <CODESAMPLE>from string import Template<BR/>
         greeting = Template('Welcome, $name')<BR/>
-        greeting.substitute(name='Frida!')</CODESAMPLE></ITEM>
+        greeting.substitute(name='Frida!')</CODESAMPLE>
+    </ITEM>
   </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>List</B></U></TITLE>
@@ -171,16 +201,20 @@
 <BLIST><TITLE><U><B>Tuple</B></U></TITLE>
   <ITEM>A tuple is a number of values separated by a comma<BR/>
     (they may be input with or without parentheses)
-    <CODESAMPLE>t=1,2,"azerty"</CODESAMPLE></ITEM>
+    <CODESAMPLE>t=1,2,"azerty"</CODESAMPLE>
+  </ITEM>
   <ITEM>Tuples support slicing</ITEM>
   <ITEM>An empty tuple is created with the syntax:
-    <CODESAMPLE>empty=()</CODESAMPLE></ITEM>
+    <CODESAMPLE>empty=()</CODESAMPLE>
+  </ITEM>
   <ITEM>A singleton tuple is created with an empty comma
-    <CODESAMPLE>singleton=1,</CODESAMPLE></ITEM>
+    <CODESAMPLE>singleton=1,</CODESAMPLE>
+  </ITEM>
   <ITEM>Tuple packing
     <CODESAMPLE>t=1,2,3</CODESAMPLE>
     Tuple unpacking
-    <CODESAMPLE>x,y,z=t</CODESAMPLE></ITEM>
+    <CODESAMPLE>x,y,z=t</CODESAMPLE>
+  </ITEM>
   <ITEM>Tuple are immutable: it is not possible ot assign to the individual items of a tuple</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Sequences</B></U></TITLE>
@@ -283,25 +317,29 @@
     elif x == 3:<BR/>
     <TAB/>print("three")<BR/>
     else:<BR/>
-    <TAB/>print("other")</CODESAMPLE></ITEM>
+    <TAB/>print("other")</CODESAMPLE>
+  </ITEM>
   <ITEM><CODEROUTINE>for</CODEROUTINE> loops on a sequence (string or list) content<BR/>
     The <CODEROUTINE>else</CODEROUTINE> clause is executed when the list is exhausted<BR/>
   <CODESAMPLE>a=[1,2,3]<BR/>
     for x in a:<BR/>
     <TAB/>print x<BR/>
     else:<BR/>
-    <TAB/>print "finished"</CODESAMPLE></ITEM>
+    <TAB/>print "finished"</CODESAMPLE>
+  </ITEM>
   <ITEM>It is not safe to modify the content of the list being looped on, a copy should be generated</ITEM>
   <ITEM><CODEROUTINE>while</CODEROUTINE> loops as long a condition is true
     <CODESAMPLE>while b &lt; 10:<BR/>
     <TAB/>b = b+1<BR/>
     else:<BR/>
-    <TAB/>print "end"</CODESAMPLE></ITEM>
+    <TAB/>print "end"</CODESAMPLE>
+  </ITEM>
   <ITEM>There is no <CODEROUTINE>do</CODEROUTINE>/<CODEROUTINE>while</CODEROUTINE> statement, instead use
     <CODESAMPLE>while 1:<BR/>
     <TAB/>line = sys.stdin.readline()<BR/>
     <TAB/>if line == "\n":<BR/>
-    <TAB/><TAB/>break</CODESAMPLE></ITEM>
+    <TAB/><TAB/>break</CODESAMPLE>
+  </ITEM>
   <ITEM>Use <CODEROUTINE>range</CODEROUTINE> for iterating over a sequence of numbers<BR/>
     <CODEROUTINE>range(stop)</CODEROUTINE> returns <CODEROUTINE>[0, 1, 2… stop-1]</CODEROUTINE><BR/>
     <CODEROUTINE>range(start, stop)</CODEROUTINE> returns <CODEROUTINE>[start, start+1… stop-1]</CODEROUTINE><BR/>
@@ -311,23 +349,25 @@
   <ITEM><CODEROUTINE>continue</CODEROUTINE> continues with the next iteration of the loop</ITEM>
   <ITEM><CODEROUTINE>pass</CODEROUTINE> is a noop statement</ITEM>
   <ITEM>Matching constants (<CODEROUTINE>_</CODEROUTINE>) always matches
-  <CODESAMPLE>match status:<BR/>
-    <TAB/>case 400:<BR/>
-    <TAB/><TAB/>return "Bad request"<BR/>
-    <TAB/>case 401 | 403 | 404:<BR/>
-    <TAB/><TAB/>return "Not allowed"<BR/>
-    <TAB/>case 404:<BR/>
-    <TAB/><TAB/>return "Not found"<BR/>
-    <TAB/>case 418:<BR/>
-    <TAB/><TAB/>return "I'm a teapot"<BR/>
-    <TAB/>case _:<BR/>
-    <TAB/><TAB/>return "Something's wrong with the internet"</CODESAMPLE></ITEM>
+    <CODESAMPLE>match status:<BR/>
+      <TAB/>case 400:<BR/>
+      <TAB/><TAB/>return "Bad request"<BR/>
+      <TAB/>case 401 | 403 | 404:<BR/>
+      <TAB/><TAB/>return "Not allowed"<BR/>
+      <TAB/>case 404:<BR/>
+      <TAB/><TAB/>return "Not found"<BR/>
+      <TAB/>case 418:<BR/>
+      <TAB/><TAB/>return "I'm a teapot"<BR/>
+      <TAB/>case _:<BR/>
+      <TAB/><TAB/>return "Something's wrong with the internet"</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Function</B></U></TITLE>
   <ITEM>Syntax (the docstring is optional):
     <CODESAMPLE>def myfunction(a,b,c):<BR/>
     <TAB/>"docstring"<BR/>
-    <TAB/># … code</CODESAMPLE></ITEM>
+    <TAB/># … code</CODESAMPLE>
+  </ITEM>
   <ITEM>All variable assignments store value in the local symbol table<BR/>
     Variable references are looked in the local symbol table, then in the global symbol table and, at last, in the table of built-in names</ITEM>
   <ITEM>Parameters are passed by reference</ITEM>
@@ -347,36 +387,43 @@
     <TAB/>if l is None:<BR/>
     <TAB/><TAB/>l=[]<BR/>
     <TAB/>l.append(a)<BR/>
-    <TAB/>return l</CODESAMPLE></ITEM>
+    <TAB/>return l</CODESAMPLE>
+  </ITEM>
   <ITEM>Parameters can be passed by keywords
     <CODESAMPLE>def foobar(a,b,c,d):<BR/>
     <TAB/>#…<BR/>
-    foobar(0,1,d=4,c=3)</CODESAMPLE></ITEM>
+    foobar(0,1,d=4,c=3)</CODESAMPLE>
+  </ITEM>
   <ITEM><CODEROUTINE>*name</CODEROUTINE> can be used to get an arbitrary number of positional arguments<BR/>
     <CODEROUTINE>**name</CODEROUTINE> can be used to get an arbitrary number of keyword arguments
     <CODESAMPLE>def quux(*a,**b):<BR/>
     <TAB/>for arg in a: print arg<BR/>
-    <TAB/>for kw in b.keys(): print(kw,':',b[kw])</CODESAMPLE></ITEM>
+    <TAB/>for kw in b.keys(): print(kw,':',b[kw])</CODESAMPLE>
+  </ITEM>
   <ITEM>A function can return a function
     <CODESAMPLE>def curry(func, value):<BR/>
     <TAB/>def f(x):<BR/>
     <TAB/><TAB/>return func(x, value)<BR/>
-    <TAB/>return f</CODESAMPLE></ITEM>
+    <TAB/>return f</CODESAMPLE>
+  </ITEM>
   <ITEM><CODEROUTINE>lambda</CODEROUTINE> can be used to create anonymous functions<BR/>
     They are restricted to a single expression
     <CODESAMPLE>lambda a,b:a+b</CODESAMPLE>
     Another example using a default argument value
     <CODESAMPLE>def make_incrementator(n)<BR/>
-    <TAB/>return lambda x,incr=n:x+incr</CODESAMPLE></ITEM>
+    <TAB/>return lambda x,incr=n:x+incr</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Modules</B></U></TITLE>
   <ITEM>A module is a file containing Python definitions and statements.<BR/>
     The statements are executed the first time the module is imported.</ITEM>
   <ITEM>Syntax to import a module
     <CODESAMPLE>import mymodule<BR/>
-    mymod.myfunc(2)</CODESAMPLE></ITEM>
+    mymod.myfunc(2)</CODESAMPLE>
+  </ITEM>
   <ITEM>If the module name is followed by <CODEROUTINE>as</CODEROUTINE>, then the name following <CODEROUTINE>as</CODEROUTINE> is bound directly to the imported module.
-    <CODESAMPLE>import mymodule as mydmod</CODESAMPLE></ITEM>
+    <CODESAMPLE>import mymodule as mydmod</CODESAMPLE>
+  </ITEM>
   <ITEM>Symbols of the imported module can be declared in the importing module's symbol table<BR/>
     <CODEROUTINE>from mymod import myfunc, myfunc2</CODEROUTINE><BR/>
     All symbols (except those beginning by an underscore) can be declared in the importing module's symbol table<BR/>
@@ -407,7 +454,8 @@
     <CODESAMPLE>class Complex:<BR/>
     <TAB/>def __init__(self, realpart, imagpart):<BR/>
     <TAB/><TAB/>self.r = realpart<BR/>
-    <TAB/><TAB/>self.i = imagpart</CODESAMPLE></ITEM>
+    <TAB/><TAB/>self.i = imagpart</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Objects</B></U></TITLE>
 <ITEM><CODEROUTINE>is</CODEROUTINE> test if two objects are the same</ITEM>
@@ -479,7 +527,8 @@
     <CODESAMPLE>try:<BR/>
     <TAB/>func()<BR/>
     except ConnectionError as exc:<BR/>
-    <TAB/>raise RuntimeError('Failed to open database') from exc</CODESAMPLE></ITEM>
+    <TAB/>raise RuntimeError('Failed to open database') from exc</CODESAMPLE>
+  </ITEM>
   <ITEM>Chaining can be disabled using <CODEROUTINE>from None</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>add_note</CODEROUTINE> can be used to add some text to an exception
   <CODESAMPLE>try:<BR/>
@@ -487,7 +536,8 @@
     except Exception as e:<BR/>
     <TAB/>e.add_note('Add some information')<BR/>
     <TAB/>e.add_note('Add some more information')<BR/>
-    <TAB/>raise</CODESAMPLE></ITEM>
+    <TAB/>raise</CODESAMPLE>
+  </ITEM>
   <ITEM>The builtin <CODEROUTINE>ExceptionGroup</CODEROUTINE> wraps a list of exception instances so that they can be raised together. It is an exception itself, so it can be caught like any other exception.
     <CODESAMPLE>def f():<BR/>
     <TAB/>excs = [OSError('error 1'), SystemError('error 2')]<BR/>
@@ -500,20 +550,23 @@
     <TAB/>except Exception as e:<BR/>
     <TAB/><TAB/>excs.append(e)<BR/>
     if excs:<BR/>
-    <TAB/>raise ExceptionGroup("Test Failures", excs)</CODESAMPLE></ITEM>
-    <ITEM>By using <CODEROUTINE>except*</CODEROUTINE> instead of <CODEROUTINE>except</CODEROUTINE>, we can selectively handle only the exceptions in the group that match a certain type, while letting all other exceptions propagate to other clauses and eventually to be reraised.</ITEM>
+    <TAB/>raise ExceptionGroup("Test Failures", excs)</CODESAMPLE>
+  </ITEM>
+  <ITEM>By using <CODEROUTINE>except*</CODEROUTINE> instead of <CODEROUTINE>except</CODEROUTINE>, we can selectively handle only the exceptions in the group that match a certain type, while letting all other exceptions propagate to other clauses and eventually to be reraised.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>with</B></U></TITLE>
   <ITEM>The <CODEROUTINE>with</CODEROUTINE> statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and correctly.
     <CODESAMPLE>with open("myfile.txt") as f:<BR/>
     <TAB/>for line in f:<BR/>
-    <TAB/><TAB/>print(line, end="")</CODESAMPLE></ITEM>
+    <TAB/><TAB/>print(line, end="")</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Display colored messages</B></U></TITLE>
   <ITEM>Write some text in yellow
     <CODESAMPLE>import colorama<BR/>
     …<BR/>
-    print(colorama.Fore.YELLOW + f"set epic to start date = {start_date} and due date = {due_date} ({release})" + colorama.Style.RESET_ALL)</CODESAMPLE></ITEM>
+    print(colorama.Fore.YELLOW + f"set epic to start date = {start_date} and due date = {due_date} ({release})" + colorama.Style.RESET_ALL)</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Virtual environments</B></U></TITLE>
   <ITEM>Virtual environments are managed by the <CODEROUTINE>venv</CODEROUTINE> module.
@@ -525,12 +578,15 @@
   </ITEM>
   <ITEM><BLIST><TITLE>In order to activate the environment, some scripts are generated for each Linux/Windows shell.</TITLE>
     <ITEM>For bash
-    <CODESAMPLE>source &lt;venv&gt;/bin/activate</CODESAMPLE></ITEM>
+      <CODESAMPLE>source &lt;venv&gt;/bin/activate</CODESAMPLE>
+    </ITEM>
     <ITEM>For Windows bat
-    <CODESAMPLE>&lt;venv&gt;\Scripts\activate</CODESAMPLE></ITEM>
+      <CODESAMPLE>&lt;venv&gt;\Scripts\activate</CODESAMPLE>
+    </ITEM>
     <ITEM>For PowerShell
-    <CODESAMPLE> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process<BR/>
-      &lt;venv&gt;\Scripts\Activate.ps1</CODESAMPLE></ITEM>
+      <CODESAMPLE> Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process<BR/>
+        &lt;venv&gt;\Scripts\Activate.ps1</CODESAMPLE>
+    </ITEM>
   </BLIST></ITEM>
   <ITEM>To deactivate the environment:
     <CODESAMPLE>deactivate</CODESAMPLE>
@@ -561,14 +617,16 @@
     <TAB/><TAB/><TAB/>s.split(2)<BR/>
     <BR/>
     if __name__ == '__main__':<BR/>
-    <TAB/>unittest.main()</CODESAMPLE></ITEM>
+    <TAB/>unittest.main()</CODESAMPLE>
+  </ITEM>
   <ITEM><CODEROUTINE>setUp()</CODEROUTINE> and <CODEROUTINE>tearDown()</CODEROUTINE>: define instructions that will be executed before and after each test method</ITEM>
   <ITEM>The unittest module can be used from the command line to run tests from modules, classes, or  individual test methods:<BR/>
     <CODEROUTINE>python -m unittest test_module1 test_module2</CODEROUTINE><BR/>
     <CODEROUTINE>python -m unittest test_module.TestClass</CODEROUTINE><BR/>
     <CODEROUTINE>python -m unittest test_module.TestClass.test_method</CODEROUTINE><BR/>
     Running with a file name is a kludge to be able to use with the shell file name autocompletion, it removes the <CODEROUTINE>.py</CODEROUTINE> extension and replaces <CODEROUTINE>/</CODEROUTINE> by <CODEROUTINE>.</CODEROUTINE>.<BR/>
-    <CODESAMPLE><PROMPT/>python -m unittest tests/test_something.py</CODESAMPLE></ITEM>
+    <CODESAMPLE><PROMPT/>python -m unittest tests/test_something.py</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>naming conventions</B></U></TITLE>
   <ITEM>Function names should be lowercase, with words separated by underscores.</ITEM>
