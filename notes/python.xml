@@ -467,6 +467,7 @@
   <ITEM><CODEROUTINE>BaseException</CODEROUTINE> is the common base class of all exceptions.<BR/>
     One of its subclasses, <CODEROUTINE>Exception</CODEROUTINE>, is the base class of all the non-fatal exceptions.<BR/>
     Exceptions which are not subclasses of <CODEROUTINE>Exception</CODEROUTINE> are not typically handled, because they are used to indicate that the program should terminate. They include <CODEROUTINE>SystemExit</CODEROUTINE> which is raised by <CODEROUTINE>sys.exit()</CODEROUTINE> and <CODEROUTINE>KeyboardInterrupt</CODEROUTINE> which is raised when a user wishes to interrupt the program.</ITEM>
+  <ITEM>The exception hierarchy is <X><T>here</T><A>https://docs.python.org/3/library/exceptions.html#exception-hierarchy</A><L>en</L><F>HTML</F></X>.</ITEM>
   <ITEM>Use <CODEROUTINE>try</CODEROUTINE> to declare the tentative code block and <CODEROUTINE>except</CODEROUTINE> to catch the exception.
   <CODESAMPLE>try:<BR/>
     <TAB/>…<BR/>
@@ -553,6 +554,19 @@
     <TAB/>raise ExceptionGroup("Test Failures", excs)</CODESAMPLE>
   </ITEM>
   <ITEM>By using <CODEROUTINE>except*</CODEROUTINE> instead of <CODEROUTINE>except</CODEROUTINE>, we can selectively handle only the exceptions in the group that match a certain type, while letting all other exceptions propagate to other clauses and eventually to be reraised.</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Assertions</B></U></TITLE>
+  <ITEM>Assert statements are a convenient way to insert debugging assertions into a program:</ITEM>
+  <ITEM>The simple form, <CODEROUTINE>assert expression</CODEROUTINE>, is equivalent to
+    <CODESAMPLE>if __debug__:<BR/>
+      <TAB/>if not expression: raise AssertionError</CODESAMPLE>
+  </ITEM>
+  <ITEM>The extended form, <CODEROUTINE>assert expression1, expression2</CODEROUTINE>, is equivalent to
+    <CODESAMPLE>if __debug__:<BR/>
+      <TAB/>if not expression1: raise AssertionError(expression2)</CODESAMPLE>
+  </ITEM>
+  <ITEM>These equivalences assume that <CODEROUTINE>__debug__</CODEROUTINE> and <CODEROUTINE>AssertionError</CODEROUTINE> refer to the built-in variables with those names.<BR/>
+    In the current implementation, the built-in variable <CODEROUTINE>__debug__</CODEROUTINE> is <CODEROUTINE>True</CODEROUTINE> under normal circumstances, <CODEROUTINE>False</CODEROUTINE> when optimization is requested (command line option <CODEROUTINE>-O</CODEROUTINE>). The current code generator emits no code for an assert statement when optimization is requested at compile time.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>with</B></U></TITLE>
   <ITEM>The <CODEROUTINE>with</CODEROUTINE> statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and correctly.
