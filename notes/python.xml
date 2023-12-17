@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
@@ -359,7 +359,7 @@
       <TAB/>case 418:<BR/>
       <TAB/><TAB/>return "I'm a teapot"<BR/>
       <TAB/>case _:<BR/>
-      <TAB/><TAB/>return "Something's wrong with the internet"</CODESAMPLE>
+      <TAB/><TAB/>return "Something’s wrong with the internet"</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Function</B></U></TITLE>
@@ -424,14 +424,14 @@
   <ITEM>If the module name is followed by <CODEROUTINE>as</CODEROUTINE>, then the name following <CODEROUTINE>as</CODEROUTINE> is bound directly to the imported module.
     <CODESAMPLE>import mymodule as mydmod</CODESAMPLE>
   </ITEM>
-  <ITEM>Symbols of the imported module can be declared in the importing module's symbol table<BR/>
+  <ITEM>Symbols of the imported module can be declared in the importing module’s symbol table.<BR/>
     <CODEROUTINE>from mymod import myfunc, myfunc2</CODEROUTINE><BR/>
-    All symbols (except those beginning by an underscore) can be declared in the importing module's symbol table<BR/>
+    All symbols (except those beginning by an underscore) can be declared in the importing module’s symbol table.<BR/>
     <CODEROUTINE>from mymod import *</CODEROUTINE></ITEM>
-  <ITEM>Reload a module
+  <ITEM>Reload a module.
     <CODEROUTINE>reload(mymod)</CODEROUTINE></ITEM>
-  <ITEM>Inside a module, its name is defined in <CODEROUTINE>__name__</CODEROUTINE></ITEM>
-  <ITEM><CODEROUTINE>sys.builtin_module_names</CODEROUTINE> lists the modules compiled in the interpreter</ITEM>
+  <ITEM>Inside a module, its name is defined in <CODEROUTINE>__name__</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>sys.builtin_module_names</CODEROUTINE> lists the modules compiled in the interpreter.</ITEM>
   <ITEM>When you run a module with
     <CODESAMPLE>python mymodule.py &lt;arguments&gt;</CODESAMPLE>
     The code in the module will be executed, just as if you imported it, but with <CODEROUTINE>__name__</CODEROUTINE> set to <CODEROUTINE>__main__</CODEROUTINE>. </ITEM>
@@ -439,9 +439,14 @@
     <ITEM>Modules are looked for in the directories listed by <CODEROUTINE>sys.path</CODEROUTINE> (which is initially defined by the environment variable <CODEROUTINE>$PYTHONPATH</CODEROUTINE>)</ITEM>
     <ITEM>Append a new directory to the path: <CODEROUTINE>sys.path.append('C:\\windows\desktop')</CODEROUTINE></ITEM>
     </BLIST></ITEM>
-  <ITEM><CODEROUTINE>dir</CODEROUTINE> returns a list of the names defined in a module<BR/>
-    <CODEROUTINE>dir(mymod)</CODEROUTINE></ITEM>
-  <ITEM><CODEROUTINE>__builtin__</CODEROUTINE> is the standard module</ITEM>
+  <ITEM><CODEROUTINE>dir</CODEROUTINE> returns a list of the names defined in a module.<BR/>
+    <CODEROUTINE>dir(mymod)</CODEROUTINE><BR/>
+    Without arguments, <CODEROUTINE>dir()</CODEROUTINE>return the list of names in the current local scope.</ITEM>
+  <ITEM><CODEROUTINE>__builtin__</CODEROUTINE> is the standard module.  </ITEM>
+  <ITEM><CODEROUTINE>pd = __import__('pandas')</CODEROUTINE> is the same as <CODEROUTINE>import pandas as pd</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>__all__</CODEROUTINE> can be used in a module to define the symbols that should be imported when the module is imported with a wildcard (<CODEROUTINE>from &lt;module&gt; import *</CODEROUTINE>). But the other symbols can still be imported by stating them explicitly (<CODEROUTINE>from &lt;module&gt; import &lt;symbol&gt;</CODEROUTINE>).</ITEM>
+  <ITEM>Absolute imports: if <CODEROUTINE>foo.py</CODEROUTINE> is in <CODEROUTINE>dir/subdir</CODEROUTINE>, it can be imported as <CODEROUTINE>import dir.subdir.foo</CODEROUTINE>.<BR/>
+    Relative imports: if <CODEROUTINE>bar.py</CODEROUTINE> is in the same directory, it can use <CODEROUTINE>import .foo</CODEROUTINE>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Packages</B></U></TITLE>
   <ITEM>Packages are structured as directories containing the file <CODEROUTINE>__init__.py</CODEROUTINE> (possibly empty) and other files being modules</ITEM>
