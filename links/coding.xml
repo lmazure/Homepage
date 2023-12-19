@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -244,6 +244,7 @@
     <ITEM><ARTICLE><X><T>Improve Readability With Positive Booleans</T><A>https://testing.googleblog.com/2023/10/improve-readability-with-positive.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Max</FIRSTNAME><LASTNAME>Kanat-Alexander</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE><COMMENT>Code using a double negation is difficult to understand.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Unlocking Clean Code: 20 Architectural Tips for Every Developer</T><ST>Discover 20 key architectural tips for robust software. Embrace Clean Architecture for developers seeking efficient and adaptable code.</ST><A>https://dzone.com/articles/clean-code-tips</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rajeev</FIRSTNAME><LASTNAME>Bera</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE><COMMENT>A good and classical list of coding best practices, but these ones are shortly described.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Bug in Binary Search - Computerphile</T><A>https://www.youtube.com/watch?v=_eS-nNnkKfI</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>30</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE><COMMENT>The classical problem of the possible overflow when computing the middle between two numbers.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>DiffDebugging</T><A>https://martinfowler.com/bliki/DiffDebugging.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>Using a binary search to find the commit that introduced a bug.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Multi-threading</TITLE>
       <ITEM><ARTICLE><X status="zombie"><T>Fundamentals Of Multithreading</T><A>https://www.slcentral.com/articles/01/6/multithreading/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Paul</FIRSTNAME><LASTNAME>Mazzucco</LASTNAME></AUTHOR><DATE><YEAR>2001</YEAR><MONTH>6</MONTH><DAY>15</DAY></DATE><COMMENT>A good overview of the current implementation of multithreading at the CPU level: CMP, CMT, FMT, SMT…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Near-Optimal Parallel Join Processing in MapReduce</T><A>https://www.youtube.com/watch?v=kiuUGXWRzPA</A><L>en</L><F>MP4</F><DURATION><MINUTE>56</MINUTE><SECOND>59</SECOND></DURATION><DATE><YEAR>2011</YEAR><MONTH>5</MONTH><DAY>18</DAY></DATE></X><AUTHOR><FIRSTNAME>Mirek</FIRSTNAME><LASTNAME>Riedewald</LASTNAME></AUTHOR><DATE><YEAR>2011</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE><COMMENT>A very technical presentation of an algorithm to implement join models in a MapReduce framework (see also <X><T>this paper</T><A>https://www.ccs.neu.edu/home/mirek/papers/2011-SIGMOD-ParallelJoins.pdf</A><L>en</L><F>PDF</F></X>).</COMMENT></ARTICLE></ITEM>

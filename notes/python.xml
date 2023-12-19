@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
@@ -56,8 +56,8 @@
   <ITEM>For print data structure in a readable manner, use <X><T>pprint</T><A>https://docs.python.org/3/library/pprint.html</A><L>en</L><F>HTML</F></X>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Complex</B></U></TITLE>
-  <ITEM>A complex can be created by using <CODEROUTINE>j</CODEROUTINE> or <CODEROUTINE>J</CODEROUTINE> to indicate the complex part<BR/>
-    <CODEROUTINE>1+2j</CODEROUTINE> or with the complex function <CODEROUTINE>complex(1,2)</CODEROUTINE>
+  <ITEM>A complex can be created by using <CODEROUTINE>j</CODEROUTINE> or <CODEROUTINE>J</CODEROUTINE> to indicate the complex part.<BR/>
+    <CODEROUTINE>1+2j</CODEROUTINE> or with the <CODEROUTINE>complex</CODEROUTINE> function (<CODEROUTINE>complex(1,2)</CODEROUTINE>).
   </ITEM>
   <ITEM><CODEROUTINE>real</CODEROUTINE> and <CODEROUTINE>imag</CODEROUTINE> can be used to retrieve the real and imaginary parts of a complex<BR/>
   <CODESAMPLE>a=1.5+0.5j<BR/>
@@ -184,8 +184,24 @@
     <ITEM><CODEROUTINE>count(item)</CODEROUTINE>: return the number of occurrences of the value <CODEROUTINE>item</CODEROUTINE></ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Functions</TITLE>
-    <ITEM><CODEROUTINE>filter(function,l)</CODEROUTINE> return the list of elements <CODEROUTINE>elem</CODEROUTINE> for which <CODEROUTINE>function(elem)</CODEROUTINE> is true</ITEM>
-    <ITEM><CODEROUTINE>map(function,l)</CODEROUTINE> return the list of values of <CODEROUTINE>function</CODEROUTINE> called for each element of <CODEROUTINE>l</CODEROUTINE><BR/>
+    <ITEM>Functions can have attributes and inner functions.</ITEM>
+    <ITEM>Generator function:
+      <CODESAMPLE>def fibonacci_generator():<BR/>
+        <TAB/>a, b = 0, 1<BR/>
+        <TAB/>while True:<BR/>
+        <TAB/><TAB/>yield a<BR/>
+        <TAB/><TAB/>a, b = b, a + b<BR/>
+        <BR/>
+        fib_generator = fibonacci_generator()<BR/>
+        print(next(fib_generator)) # Prints 0<BR/>
+        print(next(fib_generator)) # Prints 1<BR/>
+        print(next(fib_generator)) # Prints 1<BR/>
+        print(next(fib_generator)) # Prints 2<BR/>
+        print(next(fib_generator)) # Prints 3</CODESAMPLE>
+    </ITEM>
+    <ITEM><X><T>Attributes</T><A>https://docs.python.org/3/reference/datamodel.html#callable-types</A><L>en</L><F>HTML</F></X> of a function.</ITEM>
+    <ITEM><CODEROUTINE>filter(function,l)</CODEROUTINE> return the list of elements <CODEROUTINE>elem</CODEROUTINE> for which <CODEROUTINE>function(elem)</CODEROUTINE> is true.</ITEM>
+    <ITEM><CODEROUTINE>map(function,l)</CODEROUTINE> return the list of values of <CODEROUTINE>function</CODEROUTINE> called for each element of <CODEROUTINE>l</CODEROUTINE>.<BR/>
       more than one list can be passed to <CODEROUTINE>map</CODEROUTINE>, in this case, <CODEROUTINE>function</CODEROUTINE> must have the same number of arguments (if a list is shorter than the other one, <CODEROUTINE>function</CODEROUTINE> will be called with the value <CODEROUTINE>None</CODEROUTINE>)<BR/>
       if <CODEROUTINE>None</CODEROUTINE> is passed instead of a function, <CODEROUTINE>map</CODEROUTINE> returns its arguments
       <CODESAMPLE><PROMPT/>(None,[1,2,3,4],[5,6,7])
