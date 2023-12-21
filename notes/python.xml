@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
@@ -236,15 +236,29 @@
 <BLIST><TITLE><U><B>Sequences</B></U></TITLE>
   <ITEM>Sequences can be lists, strings or tuples.</ITEM>
   <ITEM><BLIST><TITLE>Loops</TITLE>
+    <ITEM>Tuple unpacking (all tuples must have the same length):
+      <CODESAMPLE>for a, b in [(1, "one"), (3, "three"), (5, "five")]:<BR/>
+        <TAB/>print(a, b)</CODESAMPLE>
+      <CODESAMPLE>for a, b, c in [(1, "one", "un"), (3, "three", "trois"), (5, "five", "cinq")]:<BR/>
+        <TAB/>print(a, b, c)</CODESAMPLE>
+      <CODESAMPLE>for a, (b, c) in [(1, ("one", "un")), (3, ("three", "trois")), (5, ("five", "cinq"))]:<BR/>
+        <TAB/>print(a, b, c)</CODESAMPLE>
+    </ITEM>
     <ITEM>When looping through a sequence, the position index and corresponding value can be retrieved at the same time using <CODEROUTINE>enumerate()</CODEROUTINE>
       <CODESAMPLE>for i, v in enumerate(['tic', 'tac', 'toe']):<BR/>
         <TAB/>print(i, v)</CODESAMPLE>
     </ITEM>
-    <ITEM>To loop over two or more sequences at the same time, the entries can be paired with <CODEROUTINE>zip()</CODEROUTINE>
+    <ITEM>To loop over two or more sequences at the same time, the entries can be paired with <CODEROUTINE>zip()</CODEROUTINE>.<BR/>
+      The loop finishes with the shortest sequence.
       <CODESAMPLE>questions = ['name', 'quest', 'favorite color']<BR/>
         answers = ['lancelot', 'the holy grail', 'blue']<BR/>
         for q, a in zip(questions, answers):<BR/>
         <TAB/>print('What is your {0}?  It is {1}.'.format(q, a))</CODESAMPLE>
+      <CODESAMPLE>letters = [ "alpha", "beta", "gamma", "delta" ]<BR/>
+        numbers = [ 0, 1, 2, 3 ]<BR/>
+        months = [ "jan", "feb", "mar", "apr", "may" ]<BR/>
+        for l, n, m in zip (letters, numbers, months):<BR/>
+        <TAB/>print(l, n , m)</CODESAMPLE>
     </ITEM>
     <ITEM>To loop over a sequence in reverse, first specify the sequence in a forward direction and then call <CODEROUTINE>reversed()</CODEROUTINE>
       <CODESAMPLE>for i in reversed(range(1, 10, 2)):<BR/>
