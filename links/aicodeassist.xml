@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>AI coding assistants</TITLE>
+<PATH>links/aicodeassist.xml</PATH>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>24</DAY></DATE>
+<CONTENT>
+<LLIST>
+  <ITEM><SLIST>
+    <ITEM><BLIST><TITLE>Coding assistants</TITLE>
+      <ITEM><X><T>GitHub Copilot</T><A>https://github.com/features/copilot</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Tabnine</T><A>https://www.tabnine.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Codeium</T><A>https://codeium.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>CodeWhisperer</T><A>https://aws.amazon.com/codewhisperer/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>JetBrains AI Assistant</T><A>https://plugins.jetbrains.com/plugin/22282-ai-assistant</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>DeepSeek Coder</T><A>https://github.com/deepseek-ai/DeepSeek-Coder</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Phind</T><A>https://www.phind.com</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+  </SLIST></ITEM>
+  <ITEM><BLIST><TITLE>Articles and videos</TITLE>
+    <ITEM><ARTICLE><X><T>Coding Made AI—Now, How Will AI Unmake Coding?</T><ST>It won’t replace many coding jobs, but many coding jobs will be increasingly AI-assisted</ST><A>https://spectrum.ieee.org/ai-code-generation-language-models</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Craig</FIRSTNAME><MIDDLENAME>S.</MIDDLENAME><LASTNAME>Smith</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>The subtitle says it all.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Replit’s Ghostwriter AI can explain programs to you—or help write them</T><ST>Ghostwriter generates, completes, or transforms code in 16 languages, similar to GitHub Copilot.</ST><A>https://arstechnica.com/information-technology/2022/10/replits-ghostwriter-ai-can-explain-programs-to-you-or-help-write-them/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benj</FIRSTNAME><LASTNAME>Edwards</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE><COMMENT>The subtitle says it all.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>DeepMind’s latest AI project solves programming challenges like a newb</T><ST>Google's AI division tackles programming languages with a language model.</ST><A>https://arstechnica.com/science/2022/12/deepminds-latest-ai-project-solves-programming-challenges-like-a-newb/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Timmer</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE><COMMENT>DeepMind tries to create an AI generating code, the results are still not good.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X quality="-1"><T>L’IA va-t-elle changer notre métier de développeur ? (Louis-Guillaume MORAND, Eric GRENON)</T><A>https://www.youtube.com/watch?v=vQqOV83ZMpE</A><L>fr</L><F>MP4</F><DURATION><MINUTE>48</MINUTE><SECOND>26</SECOND></DURATION><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE></X><AUTHOR><FIRSTNAME>Louis-Guillaume</FIRSTNAME><LASTNAME>Morand</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Grenon</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE><COMMENT>Some good advice, a lot of bullshit, and plenty of broken demos.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>AI system devises first optimizations to sorting code in over a decade</T><ST>Writing efficient code was turned into a game, and the AI played to win.</ST><A>https://arstechnica.com/science/2023/06/googles-deepmind-develops-a-system-that-writes-efficient-algorithms/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>John</FIRSTNAME><LASTNAME>Timmer</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>7</DAY></DATE><COMMENT>DeepMind created AlphaDev to optimise assembly code and improved some sorting algorithms.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>A Critical Look at AI-Generated Software</T><ST>Coding with ChatGPT, GitHub Copilot, and other AI tools is both irresistible and dangerous</ST><A>https://spectrum.ieee.org/ai-software</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jaideep</FIRSTNAME><LASTNAME>Vaidya</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Hafiz</FIRSTNAME><LASTNAME>Asif</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>11</DAY></DATE><COMMENT>A very classical analysis of AI tools for generating code.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X quality="1"><T>Exploring Generative AI</T><A>https://martinfowler.com/articles/exploring-gen-ai.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Birgitta</FIRSTNAME><LASTNAME>Böckeler</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE><COMMENT>A list of well-thought-out ideas on AI-assisted coding.</COMMENT></ARTICLE></ITEM>
+    <ITEM><BLIST><TITLE>GitHub Copilot</TITLE>
+      <ITEM><ARTICLE><X><T>Responsible AI pair programming with GitHub Copilot</T><ST>GitHub Copilot boosts developer productivity, but using it responsibly still requires good developer and DevSecOps practices.</ST><A>https://github.blog/2023-02-22-responsible-ai-pair-programming-with-github-copilot/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Colin</FIRSTNAME><LASTNAME>Dembovsky</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>22</DAY></DATE><COMMENT>The subtitle says it all.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Taking Copilot to difficult terrain</T><A>https://erik.doernenburg.com/2023/06/taking-copilot-to-difficult-terrain/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Erik</FIRSTNAME><LASTNAME>Dörnenburg</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE><COMMENT>A rather positive test of using GitHub Copilot to write some Rust unit tests.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Smarter, more efficient coding: GitHub Copilot goes beyond Codex with improved AI model</T><ST>We're thrilled to announce two major updates to GitHub Copilot code Completion's capabilities that will help developers work even more efficiently and effectively.</ST><A>https://github.blog/2023-07-28-smarter-more-efficient-coding-github-copilot-goes-beyond-codex-with-improved-ai-model/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shuyin</FIRSTNAME><LASTNAME>Zhao</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>28</DAY></DATE><COMMENT>Some advertisement for GitHub Copilot.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>GitHub Copilot just got exponentially smarter</T><A>https://www.youtube.com/watch?v=SZVCJRUADc4</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Burke</FIRSTNAME><LASTNAME>Holland</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>A description of GitHub Copilot new features.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Codeium</TITLE>
+      <ITEM><ARTICLE><X><T>Why You Should Not Trust All the Numbers You See</T><A>https://codeium.com/blog/code-llm-eval-why-you-should-not-trust-all-the-numbers-you-see</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Matthew</FIRSTNAME><LASTNAME>Li</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mehul</FIRSTNAME><LASTNAME>Raheja</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><LASTNAME>Chen</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE><COMMENT>A critic of the metrics provided by Codeium’s competitors and how Codeium evaluates its product.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>GitHub Copilot’s Security Filters Don’t Work</T><A>https://codeium.com/blog/github-copilot-security-scanning-does-not-work</A><L>en</L><F>HTML</F></X><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE><COMMENT>Demonstrating that GitHub Copilot’s claims to filter out unsafe code are bullshit.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Code Suggestion Attribution</T><A>https://codeium.com/blog/attribution-announcement</A><L>en</L><F>HTML</F></X><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>6</DAY></DATE><COMMENT>A description of how Codeium handles code licences: filter out code that is explicitly non-permissively licenced from training data, attribution of generated code…</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>DeepSeek Coder</TITLE>
+      <ITEM><ARTICLE><X quality="-1"><T>This AI CODING LLM Nobody's talking about!!!</T><A>https://www.youtube.com/watch?v=jwX9Tn1FjAk</A><L>en</L><F>MP4</F><DURATION><MINUTE>20</MINUTE><SECOND>29</SECOND></DURATION></X><AUTHOR><GIVENNAME>1littlecoder</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>5</DAY></DATE><COMMENT>A presentation of DeepSeek Coder: the guy reads the doc and performs three simple tries.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+</LLIST>
+</CONTENT>
+</PAGE>
