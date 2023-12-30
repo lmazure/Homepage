@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
@@ -487,10 +487,33 @@
   <ITEM>The definition of a class starts with the declaration <CODEROUTINE>class:</CODEROUTINE></ITEM>
   <ITEM>The initialisation method is <CODEROUTINE>__init__</CODEROUTINE>
     <CODESAMPLE>class Complex:<BR/>
-    <TAB/>def __init__(self, realpart, imagpart):<BR/>
-    <TAB/><TAB/>self.r = realpart<BR/>
-    <TAB/><TAB/>self.i = imagpart</CODESAMPLE>
+      <TAB/>def __init__(self, realpart, imagpart):<BR/>
+      <TAB/><TAB/>self.r = realpart<BR/>
+      <TAB/><TAB/>self.i = imagpart</CODESAMPLE>
   </ITEM>
+  <ITEM>The <CODEROUTINE>__str__</CODEROUTINE> function controls what should be returned when the class object is represented as a string.
+    <CODESAMPLE>class Person:<BR/>
+      <TAB/>def __init__(self, name, age):<BR/>
+      <TAB/><TAB/>self.name = name<BR/>
+      <TAB/><TAB/>self.age = age<BR/>
+      <BR/>
+      <TAB/>def __str__(self):<BR/>
+      <TAB/><TAB/>return f"{self.name}({self.age})"</CODESAMPLE>
+    </ITEM>
+    <ITEM>The <CODEROUTINE>self</CODEROUTINE> parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.<BR/>
+      It does not have to be named <CODEROUTINE>self</CODEROUTINE>, but it has to be the first parameter of any function in the class.</ITEM>
+    <ITEM>There is no data privacy, properties can be modified (<CODEROUTINE>p1.age = 40</CODEROUTINE>) or deleted (<CODEROUTINE>del p1.age</CODEROUTINE>).</ITEM>
+    <ITEM>Inheritance
+      <CODESAMPLE>class Person:<BR/>
+        <TAB/>def __init__(self, fname, lname):<BR/>
+        <TAB/><TAB/>self.firstname = fname<BR/>
+        <TAB/><TAB/>self.lastname = lname<BR/>
+        <BR/>
+        class Student(Person):<BR/>
+        <TAB/>def __init__(self, fname, lname, year):<BR/>
+        <TAB/><TAB/>super().__init__(fname, lname)<BR/>
+        <TAB/><TAB/>self.graduationyear = year</CODESAMPLE>
+    </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Objects</B></U></TITLE>
 <ITEM><CODEROUTINE>is</CODEROUTINE> test if two objects are the same</ITEM>
