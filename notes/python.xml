@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
@@ -79,8 +79,8 @@
   </ITEM>
   <ITEM>String literals are automatically concatenated<BR/>
     <CODEROUTINE>"foo" "bar"</CODEROUTINE></ITEM>
-  <ITEM>+ appends strings<BR/>
-    <CODEROUTINE>"foo"+"bar"</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>+</CODEROUTINE> appends strings<BR/>
+    <CODEROUTINE>"foo" + "bar"</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>*</CODEROUTINE> repeats strings<BR/>
     <CODEROUTINE>"foo"*5</CODEROUTINE> is <CODEROUTINE>"foofoofoofoofoo"</CODEROUTINE></ITEM>
   <ITEM>Slices<BR/>
@@ -110,13 +110,93 @@
         myVal2 = 2.2<BR/>
         print("The sum of %s and %s is %s." %(my_val_1, my_val_2, my_val_1+my_val_2))</CODESAMPLE>
     </ITEM>
-    <ITEM><CODEROUTINE>String .format()</CODEROUTINE><BR/>
+    <ITEM><CODEROUTINE>String.format()</CODEROUTINE><BR/>
       <CODESAMPLE>'My name is {name} and I am {age} years old'.format(name= 'Frida', age=114)</CODESAMPLE>
     </ITEM>
     <ITEM><BLIST><TITLE>F-strings</TITLE>
       <ITEM><CODESAMPLE>f'The date today is {datetime.datetime.now():%B %d, %Y}'</CODESAMPLE>
       </ITEM>
       <ITEM>Use <CODEROUTINE>{{</CODEROUTINE> to insert a <CODEROUTINE>{</CODEROUTINE> and <CODEROUTINE>}}</CODEROUTINE> to insert a <CODEROUTINE>}</CODEROUTINE></ITEM>
+      <ITEM>Insert the variable name a value
+        <CODESAMPLE><PROMPT/>name = 'Tom'<BR/>
+          <PROMPT/>age = 42  <BR/>
+          <PROMPT/>print(f'{name=} is {age=} years old')<BR/>
+          name='Tom' is age=42 years old</CODESAMPLE>
+      </ITEM>
+      <ITEM>Rounding to n decimal places
+        <CODESAMPLE><PROMPT/>pi = 3.14159265<BR/>
+          <PROMPT/>print(f'pi is {pi:.2f}')<BR/>
+          pi is 3.14</CODESAMPLE>
+      </ITEM>
+      <ITEM>Rounding to n significant figures
+        <CODESAMPLE><PROMPT/>pi = 3.14159265<BR/>
+          <PROMPT/>print(f'pi is {pi:.2g}')<BR/>
+          pi is 3.1</CODESAMPLE>
+      </ITEM>
+      <ITEM>Aligning
+        <CODESAMPLE><PROMPT/>fruit = 'apple'<BR/>
+          <PROMPT/>print(f'|{fruit:&lt;20}|')<BR/>
+          |apple&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;|<BR/>
+          <PROMPT/>print(f'|{fruit:&gt;20}|')<BR/>
+          |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;apple|<BR/>
+          <PROMPT/>print(f'|{fruit:^20}|')<BR/>
+          |&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;apple&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;|</CODESAMPLE>
+        It is possible to pad with another character than space
+        <CODESAMPLE><PROMPT/>print(f'|{fruit:-&lt;20}|')<BR/>
+          |apple---------------|<BR/>
+          <PROMPT/>print(f'|{fruit:x&gt;20}|')<BR/>
+          |xxxxxxxxxxxxxxxapple|<BR/>
+          <PROMPT/>print(f'|{fruit:=^20}|')<BR/>
+          |=======apple========|</CODESAMPLE>
+      </ITEM>
+      <ITEM>Formatting numbers with commas
+        <CODESAMPLE><PROMPT/>large = 12345678<BR/>
+          <PROMPT/>print(f'{large:,}')<BR/>
+          12,345,678</CODESAMPLE>
+      </ITEM>
+      <ITEM>Formatting numbers as percentage
+        <CODESAMPLE><PROMPT/>a = 0.25<BR/>
+          <PROMPT/>b = 0.5<BR/>
+          <PROMPT/>c = 0.75<BR/>
+          <PROMPT/>print(f'{a:.0%} {b:.1%} {c:.2%}')<BR/>
+          25% 50.0% 75.00%</CODESAMPLE>
+      </ITEM>
+      <ITEM>Formatting numbers as hexadecimal
+        <CODESAMPLE><PROMPT/>print(f'{9:0x} {10:0x} {11:0x} {12:0x}')<BR/>
+          9 a b c<BR/>
+          <PROMPT/>print(f'{9:0X} {10:0X} {11:0X} {12:0X}')<BR/>
+          9 A B C<BR/>
+          <PROMPT/>print(f'{9:#0x} {10:#0x} {11:#0x} {12:#0x}')<BR/>
+          0x9 0xa 0xb 0xc<BR/>
+          <PROMPT/>print(f'{9:#0X} {10:#0X} {11:#0X} {12:#0X}')<BR/>
+          0X9 0XA 0XB 0XC</CODESAMPLE>
+      </ITEM>
+      <ITEM>Formatting numbers as binary
+        <CODESAMPLE><PROMPT/>print(f'{1:b} {2:b} {3:b} {4:b} {5:b}')<BR/>
+          1 10 11 100 101</CODESAMPLE>
+      </ITEM>
+      <ITEM>Formatting numbers with a sign
+        <CODESAMPLE><PROMPT/>a = 12<BR/>
+          <PROMPT/>b = -13<BR/>
+          <PROMPT/>print(f'{a:+} {b:+}')<BR/>
+          +12 -13</CODESAMPLE>
+      </ITEM>
+      <ITEM>Formatting datetimes
+        <CODESAMPLE><PROMPT/>from datetime import datetime<BR/>
+          <PROMPT/>d = datetime(2023, 12, 31)<BR/>
+          <PROMPT/>print(f'{d:%B %d %Y}')<BR/>
+          December 31 2023<BR/>
+          <PROMPT/>print(f'{d:%b %d, %Y (%A)}')<BR/>
+          Dec 31, 2023 (Sunday)</CODESAMPLE>
+      </ITEM>
+      <ITEM>Formatting as printable representation
+        <CODESAMPLE><PROMPT/>name = 'Rocky'<BR/>
+          <PROMPT/>print(f'Name is {name!r}')<BR/>
+          Name is 'Rocky'</CODESAMPLE>
+        This is the same as
+        <CODESAMPLE><PROMPT/>print(f'Name is {repr(name)}')<BR/>
+          Name is 'Rocky'</CODESAMPLE>
+      </ITEM>
     </BLIST></ITEM>
     <ITEM>Template strings
       <CODESAMPLE>from string import Template<BR/>
