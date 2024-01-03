@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
@@ -348,7 +348,11 @@
       <CODESAMPLE>basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']<BR/>
         for i in sorted(basket):<BR/>
         <TAB/>print(i)</CODESAMPLE>
-    </ITEM>
+        <CODESAMPLE><PROMPT/>l = [('apple', 4), ('orange', 5), ('pear', 2)]<BR/>
+          <PROMPT/>s = sorted(l, key=lambda x: x[-1])<BR/>
+          <PROMPT/>print(s)<BR/>
+          [('pear', 2), ('apple', 4), ('orange', 5)]</CODESAMPLE>
+      </ITEM>
     <ITEM>Using <CODEROUTINE>set()</CODEROUTINE> on a sequence eliminates duplicate elements. The use of <CODEROUTINE>sorted()</CODEROUTINE> in combination with <CODEROUTINE>set()</CODEROUTINE> over a sequence is an idiomatic way to loop over unique elements of the sequence in sorted order..
       <CODESAMPLE>basket = ['apple', 'orange', 'apple', 'pear', 'orange', 'banana']<BR/>
         for f in sorted(set(basket)):<BR/>
@@ -551,6 +555,7 @@
     </BLIST></ITEM>
   <ITEM><CODEROUTINE>dir</CODEROUTINE> returns a list of the names defined in a module.<BR/>
     <CODEROUTINE>dir(mymod)</CODEROUTINE><BR/>
+    <CODEROUTINE>dir</CODEROUTINE> can also be used to get the methods and attributes of an object.<BR/>
     Without arguments, <CODEROUTINE>dir()</CODEROUTINE>return the list of names in the current local scope.</ITEM>
   <ITEM><CODEROUTINE>__builtin__</CODEROUTINE> is the standard module.  </ITEM>
   <ITEM><CODEROUTINE>pd = __import__('pandas')</CODEROUTINE> is the same as <CODEROUTINE>import pandas as pd</CODEROUTINE>.</ITEM>
@@ -594,12 +599,14 @@
         <TAB/><TAB/>super().__init__(fname, lname)<BR/>
         <TAB/><TAB/>self.graduationyear = year</CODESAMPLE>
     </ITEM>
+    <ITEM><CODEROUTINE>isinstance(object, classinfo)</CODEROUTINE>: Return <CODEROUTINE>True</CODEROUTINE> if the object argument is an instance of the <CODEROUTINE>classinfo</CODEROUTINE> argument, or of a (direct, indirect, or virtual) subclass thereof.</ITEM>
+    <ITEM><CODEROUTINE>issubclass(class, classinfo)</CODEROUTINE>: Return <CODEROUTINE>True</CODEROUTINE> if class is a subclass (direct, indirect, or virtual) of <CODEROUTINE>classinfo</CODEROUTINE>. A class is considered a subclass of itself.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Objects</B></U></TITLE>
-<ITEM><CODEROUTINE>is</CODEROUTINE> test if two objects are the same</ITEM>
-  <ITEM><CODEROUTINE>is not</CODEROUTINE> test if two objects are not the same</ITEM>
-  <ITEM><CODEROUTINE>id()</CODEROUTINE> return an integer representing the identity of the object (currently implemented as its address)</ITEM>
-  <ITEM><CODEROUTINE>type()</CODEROUTINE> return the type of an object</ITEM>
+<ITEM><CODEROUTINE>is</CODEROUTINE> tests if two objects are the same.</ITEM>
+  <ITEM><CODEROUTINE>is not</CODEROUTINE> tests if two objects are not the same.</ITEM>
+  <ITEM><CODEROUTINE>id()</CODEROUTINE> returns an integer representing the identity of the object (currently implemented as its address).</ITEM>
+  <ITEM><CODEROUTINE>type()</CODEROUTINE> returns the type of an object.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Exceptions</B></U></TITLE>
   <ITEM><CODEROUTINE>BaseException</CODEROUTINE> is the common base class of all exceptions.<BR/>
@@ -712,6 +719,19 @@
     <TAB/>for line in f:<BR/>
     <TAB/><TAB/>print(line, end="")</CODESAMPLE>
   </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>time</B></U></TITLE>
+  <ITEM><CODEROUTINE>time.sleep(secs)</CODEROUTINE>: Suspend execution of the calling thread for the given number of seconds. The argument may be a floating point number to indicate a more precise sleep time.</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>random</B></U></TITLE>
+  <ITEM><CODEROUTINE>random.randrange(stop)</CODEROUTINE><BR/>
+    <CODEROUTINE>random.randrange(start, stop[, step])</CODEROUTINE>: Return a randomly selected element from <CODEROUTINE>range(start, stop, step)</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>random.random()</CODEROUTINE>: Return a random floating point number in the range 0.0 &lt;= X &lt; 1.0.</ITEM>
+  <ITEM><CODEROUTINE>random.choice(seq)</CODEROUTINE>: Return a random element from the non-empty sequence <CODEROUTINE>seq</CODEROUTINE>.</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>os</B></U></TITLE>
+  <ITEM><CODEROUTINE>os.listdir(path='.')</CODEROUTINE>: Return a list containing the names of the entries in the directory given by <CODEROUTINE>path</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>os.walk(top, topdown=True, onerror=None, followlinks=False)</CODEROUTINE>: Generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple <CODEROUTINE>(dirpath, dirnames, filenames)</CODEROUTINE>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Display colored messages</B></U></TITLE>
   <ITEM>Write some text in yellow
