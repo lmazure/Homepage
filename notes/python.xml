@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
@@ -798,6 +798,7 @@
   <ITEM><X><T>torch.mm(input, mat2, *, out=None) → Tensor</T><A>https://pytorch.org/docs/stable/generated/torch.mm.html</A><L>en</L><F>HTML</F></X> performs a matrix multiplication of the matrices <CODEROUTINE>input</CODEROUTINE> and <CODEROUTINE>mat2</CODEROUTINE>.</ITEM>
   <ITEM><X><T>torch.matmul(input, other, *, out=None) → Tensor</T><A>https://pytorch.org/docs/stable/generated/torch.matmul.html</A><L>en</L><F>HTML</F></X> performs a matrix product of two tensors. The behavior depends on the dimensionality of the tensors.</ITEM>
   <ITEM>The <CODEROUTINE>@</CODEROUTINE> operand can also be used to multiply two tensors.</ITEM>
+  <ITEM>The optimizers are listed <X><T>here</T><A>https://pytorch.org/docs/stable/optim.html</A><L>en</L><F>HTML</F></X>.</ITEM>
   </BLIST>
 <BLIST><TITLE><U><B>unittest</B></U> (<X><T>doc</T><A>https://docs.python.org/3/library/unittest.html</A><L>en</L><F>HTML</F></X>)</TITLE>
   <ITEM>A testcase is created by subclassing <CODEROUTINE>unittest.TestCase</CODEROUTINE>. The three individual tests are defined with methods whose names start with the letters <CODEROUTINE>test</CODEROUTINE>.</ITEM>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -14,7 +14,7 @@
       <ITEM><X><T>Abacus AI</T><A>https://abacus.ai/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Deep Infra</T><A>https://deepinfra.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE><X><T>Cohere</T><A>https://cohere.com/</A><L>en</L><F>HTML</F></X></TITLE>
-        <ITEM><X><T>doc</T><A>https://docs.cohere.com/docs</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>doc</T><A>https://docs.cohere.com/docs/the-cohere-platform</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mess</TITLE>
@@ -23,7 +23,7 @@
         <ITEM><X><T>doc</T><A>https://python.langchain.com/</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><CLIST><TITLE><X><T>Griptape</T><A>https://github.com/griptape-ai/griptape</A><L>en</L><F>HTML</F></X></TITLE>
-        <ITEM><X><T>doc</T><A>https://docs.griptape.ai/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>doc</T><A>https://docs.griptape.ai/latest/</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><X><T>simpleaichat</T><A>https://github.com/minimaxir/simpleaichat</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>OpenGPTs</T><A>https://www.opengpts.org/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -60,6 +60,7 @@
     <ITEM><ARTICLE><X quality="1"><T>An intuitive introduction to text embeddings</T><ST>Text embeddings are key to LLMs and convert text into vector coordinates.</ST><A>https://stackoverflow.blog/2023/11/09/an-intuitive-introduction-to-text-embeddings/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kevin</FIRSTNAME><LASTNAME>Henner</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>9</DAY></DATE><COMMENT>A good introduction to text embedding.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Wanna RAG? These are your best LLMs!!!</T><A>https://www.youtube.com/watch?v=Ce0OKpMhvXw</A><L>en</L><F>MP4</F><DURATION><MINUTE>16</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><GIVENNAME>1littlecoder</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE><COMMENT>A presentation of Galileo’s Hallucination Index.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>No, You DON'T NEED OpenAI Function Calling!!!!</T><A>https://www.youtube.com/watch?v=CwF-n36sB0c</A><L>en</L><F>MP4</F><DURATION><MINUTE>17</MINUTE><SECOND>28</SECOND></DURATION></X><AUTHOR><GIVENNAME>1littlecoder</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>17</DAY></DATE><COMMENT>A quick n’ dirty presentation of Gorilla OpenFunctions.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Training Your Own AI Model Is Not As Hard As You (Probably) Think</T><A>https://www.youtube.com/watch?v=fCUkvL0mbxI</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>23</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Sewell</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>22</DAY></DATE><COMMENT>Using several steps to generate code from a Figma design: I wonder if what is presented here really works on other cases that this demo.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>llamafile is the new best way to run a LLM on your own computer</T><A>https://simonwillison.net/2023/Nov/29/llamafile/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE><COMMENT>A presentation of llamafile: a single file containing the model and its executable which can run on several OSes.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Models</TITLE>
       <ITEM><ARTICLE><X quality="1"><T>Uncensored Models</T><A>https://erichartford.com/uncensored-models</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Hartford</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Hartford</LASTNAME></AUTHOR> explains how and why he fine-tunes some uncensored models.</COMMENT></ARTICLE></ITEM>
