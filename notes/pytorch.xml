@@ -3,11 +3,11 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>PyTorch</TITLE>
 <PATH>notes/pytorch.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
-  <DEFINITIONTABLE>
-    <ROW>
-      <TERM><X><T><CODEROUTINE>torch.tensor(data, *, dtype=None, device=None, requires_grad=False, pin_memory=False) → Tensor</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.tensor.html</A><L>en</L><F>HTML</F></X></TERM>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><X><T><CODEROUTINE>torch.tensor(data, *, dtype=None, device=None, requires_grad=False, pin_memory=False) → Tensor</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.tensor.html</A><L>en</L><F>HTML</F></X></TERM>
     <DESC>constructs a tensor with no autograd history (a.k.a. a "leaf tensor") by copying data.</DESC>
   </ROW>
   <ROW>
@@ -17,6 +17,13 @@
   <ROW>
     <TERM><X><T><CODEROUTINE>Tensor.size(dim=None) → torch.Size or int</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.Tensor.size.html</A><L>en</L><F>HTML</F></X></TERM>
     <DESC>returns the size of the <CODEROUTINE>self</CODEROUTINE> tensor. If <CODEROUTINE>dim</CODEROUTINE> is not specified, the returned value is a <CODEROUTINE>torch.Size</CODEROUTINE>, a subclass of <CODEROUTINE>tuple</CODEROUTINE>. If <CODEROUTINE>dim</CODEROUTINE> is specified, returns an int holding the size of that dimension.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><X><T><CODEROUTINE>torch.arange(start=0, end, step=1, *, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False) → Tensor</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.arange.html</A><L>en</L><F>HTML</F></X></TERM>
+    <DESC>returns a 1-D tensor of size <MATH>\left\lceil \frac{\text{end} - \text{start}}{\text{step}} \right\rceil</MATH> with values from the interval [start, end) taken with common difference step beginning from start.</DESC>
   </ROW>
   <ROW>
     <TERM><X><T><CODEROUTINE>torch.rand(*size, *, generator=None, out=None, dtype=None, layout=torch.strided, device=None, requires_grad=False, pin_memory=False) → Tensor</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.rand.html</A><L>en</L><F>HTML</F></X></TERM>
@@ -30,6 +37,9 @@
     <TERM><X><T><CODEROUTINE>torch.multinomial(input, num_samples, replacement=False, *, generator=None, out=None) → LongTensor</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.multinomial.html</A><L>en</L><F>HTML</F></X></TERM>
     <DESC>returns a tensor where each row contains <CODEROUTINE>num_samples</CODEROUTINE> indices sampled from the multinomial probability distribution located in the corresponding row of tensor <CODEROUTINE>input</CODEROUTINE>.</DESC>
   </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
   <ROW>
     <TERM><X><T><CODEROUTINE>Tensor.view(*shape) → Tensor</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.Tensor.view.html</A><L>en</L><F>HTML</F></X></TERM>
     <DESC>returns a new tensor with the same data as the <CODEROUTINE>self</CODEROUTINE> tensor but of a different shape.</DESC>
@@ -94,8 +104,9 @@
     <TERM><X><T><CODEROUTINE>torch.load(f, map_location=None, pickle_module=pickle, *, weights_only=False, mmap=None, **pickle_load_args)</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.load.html</A><L>en</L><F>HTML</F></X></TERM>
     <DESC>loads an object saved with <CODEROUTINE>torch.save()</CODEROUTINE> from a file.</DESC>
   </ROW>
-  </DEFINITIONTABLE>
-  The optimizers are listed <X><T>here</T><A>https://pytorch.org/docs/stable/optim.html</A><L>en</L><F>HTML</F></X>.<BR/>
+</DEFINITIONTABLE>
+<BR/>
+The optimizers are listed <X><T>here</T><A>https://pytorch.org/docs/stable/optim.html</A><L>en</L><F>HTML</F></X>.<BR/>
 </CONTENT>
 <X><T>links</T><A>../links/ai.html#pytorch</A><L>en</L><F>HTML</F></X>
 </PAGE>
