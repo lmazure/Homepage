@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>ML</TITLE>
 <PATH>links/ml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -32,6 +32,7 @@
         <ITEM><X><T>documentation</T><A>https://opam.ocaml.org/doc/Install.html</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>source</T><A>https://github.com/ocaml/opam</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
+      <ITEM><X><T>odoc</T><A>https://ocaml.github.io/odoc/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>personal notes</T><A>../notes/ocaml.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
   </SLIST></ITEM>
@@ -54,9 +55,10 @@
       <ITEM><ARTICLE><X><T>Custom operators in OCaml</T><A>https://blog.shaynefletcher.org/2016/09/custom-operators-in-ocaml.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shayne</FIRSTNAME><LASTNAME>Fletcher</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>9</MONTH><DAY>20</DAY></DATE><COMMENT>How to define infix and prefix operators.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Effective Programming in OCaml • KC Sivaramakrishnan • YOW! 2021</T><A>https://www.youtube.com/watch?v=X28PFYvZ_V8</A><L>en</L><F>MP4</F><DURATION><MINUTE>32</MINUTE><SECOND>16</SECOND></DURATION><DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>20</DAY></DATE></X><AUTHOR><FIRSTNAME>KC</FIRSTNAME><LASTNAME>Sivaramakrishnan</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR></DATE><COMMENT>A good presentation of <CODEROUTINE>Effect</CODEROUTINE>s.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>OCaml 5 With Multicore Support Is Here!</T><A>https://tarides.com/blog/2022-12-19-ocaml-5-with-multicore-support-is-here/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christine</FIRSTNAME><LASTNAME>Rose</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE><COMMENT>A short announcement of OCaml 5.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Building the OCaml GPT library</T><A>https://medium.com/@playersrebirth/building-the-ocaml-gpt-library-650c00b4d72b</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>PizieDust</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE><COMMENT>An overview of using dune for a project, but this is too high-level to be really useful.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Building the OCaml GPT library</T><A>https://medium.com/@playersrebirth/building-the-ocaml-gpt-library-650c00b4d72b</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>PixieDust</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE><COMMENT>An overview of using dune for a project, but this is too high-level to be really useful.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>WebAssembly Support for OCaml: Introducing Wasm_of_Ocaml</T><A>https://tarides.com/blog/2023-11-01-webassembly-support-for-ocaml-introducing-wasm-of-ocaml/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Isabella</FIRSTNAME><LASTNAME>Leandersson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE><COMMENT>The projects to port OCaml to Wasm and, in particular <CODEROUTINE>wasm_of_ocaml</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="-1"><T>OCaml: Memory Safety and Beyond</T><A>https://tarides.com/blog/2023-12-14-ocaml-memory-safety-and-beyond/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Gazagnaire</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>14</DAY></DATE><COMMENT>An advertisement for OCaml, explaining that it is a safer language. This is an answer to a paper, but the main point of that one is to stop using C/C++.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Meet odoc, OCaml's Documentation Generator</T><A>https://tarides.com/blog/2024-01-10-meet-odoc-ocaml-s-documentation-generator/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christine</FIRSTNAME><LASTNAME>Rose</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>A very short presentation of <CODEROUTINE>odoc</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>ReasonML</TITLE>
       <ITEM><ARTICLE><X quality="-1"><T>X Marks the Spot (Part 1): ReasonML</T><A>https://8thlight.com/insights/x-marks-the-spot-part-1-reasonml</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Chris</FIRSTNAME><LASTNAME>Wilson</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>19</DAY></DATE><COMMENT>An unclear presentation of ReasonML.</COMMENT></ARTICLE></ITEM>
