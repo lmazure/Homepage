@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>PyTorch</TITLE>
 <PATH>notes/pytorch.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -103,6 +103,42 @@
   <ROW>
     <TERM><X><T><CODEROUTINE>torch.load(f, map_location=None, pickle_module=pickle, *, weights_only=False, mmap=None, **pickle_load_args)</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.load.html</A><L>en</L><F>HTML</F></X></TERM>
     <DESC>loads an object saved with <CODEROUTINE>torch.save()</CODEROUTINE> from a file.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Activation functions
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><X><T><CODEROUTINE>torch.nn.ReLU(inplace=False)</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.nn.ReLU.html</A><L>en</L><F>HTML</F></X></TERM>
+    <DESC>applies the rectified linear unit function element-wise.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><X><T><CODEROUTINE>torch.nn.Sigmoid(*args, **kwargs)</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.nn.Sigmoid.html</A><L>en</L><F>HTML</F></X></TERM>
+    <DESC>Applies the element-wise function:<MATH>\text{Sigmoid}(x) = \sigma(x) = \frac{1}{1 + \exp(-x)}</MATH>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><X><T><CODEROUTINE>torch.nn.Softmax(dim=None)</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.nn.Softmax.html</A><L>en</L><F>HTML</F></X></TERM>
+    <DESC>applies the Softmax function to an n-dimensional input Tensor rescaling them so that the elements of the n-dimensional output Tensor lie in the range [0,1] and sum to 1.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Loss functions
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><X><T><CODEROUTINE>torch.nn.BCELoss(weight=None, size_average=None, reduce=None, reduction='mean')</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.nn.BCELoss.html</A><L>en</L><F>HTML</F></X></TERM>
+    <DESC>creates a criterion that measures the Binary Cross Entropy between the target and the input probabilities.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><X><T><CODEROUTINE>torch.nn.CrossEntropyLoss(weight=None, size_average=None, ignore_index=-100, reduce=None, reduction='mean', label_smoothing=0.0)</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.nn.CrossEntropyLoss.html</A><L>en</L><F>HTML</F></X></TERM>
+    <DESC>creates a criterion that computes the cross entropy loss between input logits and target.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><X><T><CODEROUTINE>torch.nn.NLLLoss(weight=None, size_average=None, ignore_index=-100, reduce=None, reduction='mean')</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.nn.NLLLoss.html</A><L>en</L><F>HTML</F></X></TERM>
+    <DESC>The negative log likelihood loss. It is useful to train a classification problem with C classes.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><X><T><CODEROUTINE>torch.nn.MSELoss(size_average=None, reduce=None, reduction='mean')</CODEROUTINE></T><A>https://pytorch.org/docs/stable/generated/torch.nn.MSELoss.html</A><L>en</L><F>HTML</F></X></TERM>
+    <DESC>creates a criterion that measures the mean squared error (squared L2 norm) between each element in the input xx and target yy.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
