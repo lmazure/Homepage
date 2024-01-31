@@ -101,7 +101,10 @@
       ] },
       { "title" : "Encyclopedia", "page" : "links/data.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
         { "title" : "Mathematics", "page" : "links/math.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
-          { "title" : "Numbers", "page" : "links/numbers.html", "languages" : ["en"], "formats" : ["HTML"] },
+          { "title" : "Numbers", "page" : "links/numbers.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+            { "title" : "Integers", "page" : "links/integers.html", "languages" : ["en"], "formats" : ["HTML"] },
+            { "title" : "Reals", "page" : "links/reals.html", "languages" : ["en"], "formats" : ["HTML"] }
+          ] },
           { "title" : "Functions", "page" : "links/functions.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Geometry", "page" : "links/geometry.html", "languages" : ["en"], "formats" : ["HTML"] },
           { "title" : "Fractals", "page" : "links/fractal.html", "languages" : ["en"], "formats" : ["HTML"] },
