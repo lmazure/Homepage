@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -509,8 +509,12 @@ Search/replace
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="H"/></TERM>
     <DESC>Replace<BR/>
-    Groups are defined by <CODEROUTINE>(</CODEROUTINE> and <CODEROUTINE>)</CODEROUTINE><BR/>
-    Use <CODEROUTINE>$0</CODEROUTINE> to insert the full string, <CODEROUTINE>$1</CODEROUTINE> the first group… <CODEROUTINE>$$</CODEROUTINE> to insert <CODEROUTINE>$</CODEROUTINE></DESC>
+    Groups are defined by <CODEROUTINE>(</CODEROUTINE> and <CODEROUTINE>)</CODEROUTINE>.<BR/>
+    Use <CODEROUTINE>$0</CODEROUTINE> to insert the full string, <CODEROUTINE>$1</CODEROUTINE> the first group… <CODEROUTINE>$$</CODEROUTINE> to insert <CODEROUTINE>$</CODEROUTINE>.<BR/>
+    <BR/>
+    To uppercase a group, use <CODEROUTINE>\U$1</CODEROUTINE>.<BR/>
+    <CODEROUTINE>\u</CODEROUTINE> and <CODEROUTINE>\l</CODEROUTINE> upper/lowercase a single character, <CODEROUTINE>\U</CODEROUTINE> and <CODEROUTINE>\L</CODEROUTINE> upper/lowercase the rest of the matching group.<BR/>
+    The modifiers can also be stacked:, <CODEROUTINE>\u\u\u$1</CODEROUTINE> uppercase the first three characters of the group, <CODEROUTINE>\l\U$1</CODEROUTINE> lowercase the first character and uppercase the rest.</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/><BR/>
