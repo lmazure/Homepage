@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -751,6 +751,13 @@ Markdown
     </DEFINITIONTABLE>
   </ITEM>
 </BLIST>
+To set Git bash as the default shell, define in <CODEFILENAME>settings.json</CODEFILENAME>:
+<CODESAMPLE>"terminal.integrated.profiles.windows": {<BR/>
+  <TAB/>"Git Bash": {<BR/>
+  <TAB/><TAB/>"path": "F:\\Documents\\tools\\git\\2.43.0\\bin\\bash.exe",<BR/>
+  <TAB/>}<BR/>
+  },<BR/>
+  "terminal.integrated.defaultProfile.windows": "Git Bash"</CODESAMPLE>
 <BLIST><TITLE>Extensions not used anymore</TITLE>
   <ITEM><X><T>GitLab Workflow</T><A>https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow</A><L>en</L><F>HTML</F></X>
     <DEFINITIONTABLE>

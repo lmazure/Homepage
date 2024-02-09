@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Maven</TITLE>
 <PATH>notes/maven.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 Command line options
 <DEFINITIONTABLE>
@@ -13,9 +13,29 @@ Command line options
     <DESC>Run in non-interactive (batch) mode</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>-f &lt;file&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>--file &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Alternate path for POM file</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>-s &lt;file&gt;</CODEROUTINE><BR/>
-      <CODEROUTINE>-s,--settings &lt;file&gt;</CODEROUTINE></TERM>
+      <CODEROUTINE>--settings &lt;file&gt;</CODEROUTINE></TERM>
     <DESC>Alternate path for the user settings file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-V</CODEROUTINE><BR/>
+      <CODEROUTINE>--version</CODEROUTINE></TERM>
+      <DESC>Display version information without stopping build</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>-v</CODEROUTINE><BR/>
+        <CODEROUTINE>--version</CODEROUTINE></TERM>
+        <DESC>Display version information and terminate the Maven process</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>-o</CODEROUTINE><BR/>
+          <CODEROUTINE>--offline</CODEROUTINE></TERM>
+    <DESC>Work offline</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BLIST>
