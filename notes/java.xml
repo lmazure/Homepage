@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>notes/java.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
   <BLIST><TITLE><U><B>Visibility</B></U></TITLE>
     <ITEM>
@@ -234,7 +234,8 @@
     <ROW>
       <TERM><CODEROUTINE>Function&lt;T,R&gt;</CODEROUTINE></TERM>
       <DESC>Represents a function that accepts one argument and produces a result.<BR/>
-        <CODEROUTINE>R apply(T t)</CODEROUTINE></DESC>
+        <CODEROUTINE>R apply(T t)</CODEROUTINE><BR/>
+        <CODEROUTINE>static &lt;T&gt; Function&lt;T,T&gt; identity()</CODEROUTINE> returns a function that always returns its input argument.</DESC>
     </ROW>
     <ROW>
       <TERM><CODEROUTINE>DoubleFunction&lt;R&gt;</CODEROUTINE></TERM>

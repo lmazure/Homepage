@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -142,6 +142,7 @@
       <ITEM><ARTICLE><X><T>Highlights from Git 2.43</T><ST>The last Git release of 2023 is here! Take a look at some of our highlights on what's new in Git 2.43.</ST><A>https://github.blog/2023-11-20-highlights-from-git-2-43/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>20</DAY></DATE><COMMENT>Multiple cruft packs, <CODEROUTINE>git repack</CODEROUTINE> now supports <CODEROUTINE>--filter</CODEROUTINE> and <CODEROUTINE>--filter-to</CODEROUTINE> to remove some blobs from the workspace, improved message for revert of revert, <CODEROUTINE>git log</CODEROUTINE> has now a <CODEROUTINE>%(decorate)</CODEROUTINE> placeholder…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Git reflog : ma commande (sous-côtée) préférée de Git par Eve Julliard</T><A>https://www.youtube.com/watch?v=E09Mml_ZHCw</A><L>fr</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>46</SECOND></DURATION><DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE></X><AUTHOR><FIRSTNAME>Eve</FIRSTNAME><LASTNAME>Juliard</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE><COMMENT>A description of the <CODEROUTINE>git reflog</CODEROUTINE> command.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>How to Fix Git “Refusing to Merge Unrelated Histories”</T><A>https://www.baeldung.com/git-merge-unrelated-histories-error</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Aliaksei</FIRSTNAME><LASTNAME>Laurynovich</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT>The solution is to run <CODEROUTINE>git pull origin main --allow-unrelated-histories</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>GitButler Product Demo February 2024</T><A>https://www.youtube.com/watch?v=PWc4meBj4jo</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>A short and rather impressive demo of GitButler.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mercurial</TITLE>
       <ITEM><ARTICLE><X><T>Google I/O 2009 - Mercurial on BigTable</T><A>https://www.youtube.com/watch?v=ri796Hx8las</A><L>en</L><F>MP4</F><DURATION><MINUTE>47</MINUTE><SECOND>18</SECOND></DURATION><DATE><YEAR>2009</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE></X><AUTHOR><FIRSTNAME>Jacob</FIRSTNAME><LASTNAME>Lee</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>A description on the Mercurial implementation done on top of Google’s Bigtable.</COMMENT></ARTICLE></ITEM>

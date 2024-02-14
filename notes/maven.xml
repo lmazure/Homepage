@@ -3,14 +3,34 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Maven</TITLE>
 <PATH>notes/maven.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 Command line options
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>-B</CODEROUTINE><BR/>
-      <CODEROUTINE>--batch-mode</CODEROUTINE></TERM>
-    <DESC>Run in non-interactive (batch) mode</DESC>
+    <TERM><CODEROUTINE>-h</CODEROUTINE><BR/>
+      <CODEROUTINE>--help</CODEROUTINE></TERM>
+    <DESC>Display help information</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-P</CODEROUTINE><BR/>
+      <CODEROUTINE>--activate-profiles &lt;profiles&gt;</CODEROUTINE></TERM>
+    <DESC>Comma-delimited list of profiles to activate</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-V</CODEROUTINE><BR/>
+      <CODEROUTINE>--show-version</CODEROUTINE></TERM>
+    <DESC>Display version information without stopping build</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-v</CODEROUTINE><BR/>
+      <CODEROUTINE>--version</CODEROUTINE></TERM>
+      <DESC>Display version information and terminate the Maven process</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-o</CODEROUTINE><BR/>
+      <CODEROUTINE>--offline</CODEROUTINE></TERM>
+    <DESC>Work offline</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>-f &lt;file&gt;</CODEROUTINE><BR/>
@@ -23,19 +43,74 @@ Command line options
     <DESC>Alternate path for the user settings file</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>-V</CODEROUTINE><BR/>
-      <CODEROUTINE>--version</CODEROUTINE></TERM>
-      <DESC>Display version information without stopping build</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>-v</CODEROUTINE><BR/>
-        <CODEROUTINE>--version</CODEROUTINE></TERM>
-        <DESC>Display version information and terminate the Maven process</DESC>
-      </ROW>
-      <ROW>
-        <TERM><CODEROUTINE>-o</CODEROUTINE><BR/>
-          <CODEROUTINE>--offline</CODEROUTINE></TERM>
-    <DESC>Work offline</DESC>
+    <TERM><CODEROUTINE>-gs &lt;file&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>--global-settings &lt;file&gt;</CODEROUTINE></TERM>
+    <DESC>Alternate path for the global settings file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-emp</CODEROUTINE><BR/>
+      <CODEROUTINE>--encrypt-master-password &lt;password&gt;</CODEROUTINE></TERM>
+    <DESC>Encrypt master security password</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-ep</CODEROUTINE><BR/>
+      <CODEROUTINE>--encrypt-password &lt;password&gt;</CODEROUTINE></TERM>
+    <DESC>Encrypt server password</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-fae</CODEROUTINE><BR/>
+      <CODEROUTINE>--fail-at-end</CODEROUTINE></TERM>
+    <DESC>Only fail the build afterwards; allow all non-impacted builds to continue</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-ff</CODEROUTINE><BR/>
+      <CODEROUTINE>--fail-fast</CODEROUTINE></TERM>
+    <DESC>Stop at first failure in reactorised builds</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-fn</CODEROUTINE><BR/>
+      <CODEROUTINE>--fail-never</CODEROUTINE></TERM>
+    <DESC>Never fail the build, regardless of project result</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-e</CODEROUTINE><BR/>
+      <CODEROUTINE>--errors</CODEROUTINE></TERM>
+    <DESC>Produce execution error messages</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-X</CODEROUTINE><BR/>
+      <CODEROUTINE>--debug</CODEROUTINE></TERM>
+    <DESC>Produce execution debug output</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-q</CODEROUTINE><BR/>
+      <CODEROUTINE>--quiet</CODEROUTINE></TERM>
+    <DESC>Quiet output - only show errors</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-B</CODEROUTINE><BR/>
+      <CODEROUTINE>--batch-mode</CODEROUTINE></TERM>
+    <DESC>Run in non-interactive (batch) mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-C</CODEROUTINE><BR/>
+      <CODEROUTINE>--strict-checksums</CODEROUTINE></TERM>
+    <DESC>Fail the build if checksums don’t match</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-c</CODEROUTINE><BR/>
+      <CODEROUTINE>--lax-checksums</CODEROUTINE></TERM>
+    <DESC>Warn if checksums don’t match</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-U</CODEROUTINE><BR/>
+      <CODEROUTINE>--update-snapshots</CODEROUTINE></TERM>
+    <DESC>Forces a check for updated releases and snapshots on remote repositories</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-N</CODEROUTINE><BR/>
+      <CODEROUTINE>--non-recursive</CODEROUTINE></TERM>
+    <DESC>Prevents Maven from building submodules. Only builds the project contained in the current directory.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BLIST>
