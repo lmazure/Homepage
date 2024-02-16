@@ -3,14 +3,14 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
-<ITEM>stash</ITEM>
-<ITEM>workspace</ITEM>
-<ITEM>index</ITEM>
-<ITEM>local repository</ITEM>
-<ITEM>upstream repository</ITEM>
+  <ITEM>stash</ITEM>
+  <ITEM>workspace</ITEM>
+  <ITEM>index</ITEM>
+  <ITEM>local repository</ITEM>
+  <ITEM>upstream repository</ITEM>
 </BLIST>
 <DEFINITIONTABLE>
   <ROW>
@@ -1027,6 +1027,9 @@
     <DESC>Allow merging histories of two projects that started their lives independently.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git merge -m &lt;msg&gt;</CODEROUTINE></TERM>
+    <DESC>Define the message of the merge commit.</DESC>
+  </ROW>  <ROW>
     <TERM><CODEROUTINE><X><T>git cherry-pick’s man page</T><A>https://git-scm.com/docs/git-cherry-pick</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Apply the changes introduced by some existing commits.</DESC>
   </ROW>
