@@ -121,8 +121,13 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>👨</CELL><CELL>U+1F468</CELL><CELL>MAN</CELL></ROW>
 </TABLE></ITEM>
 </BLIST>
-<X><T>Emoji flag sequences</T><A>https://en.wikipedia.org/wiki/Regional_indicator_symbol#Emoji_flag_sequences</A><L>en</L><F>HTML</F></X>
+<X><T>Emoji flag sequences</T><A>https://en.wikipedia.org/wiki/Regional_indicator_symbol#Emoji_flag_sequences</A><L>en</L><F>HTML</F></X><BR/>
 <BR/>
+Emoji style:<BR/>
+<CODEROUTINE>&amp;#xFE0F;</CODEROUTINE> is the Variation Selector-16, which renders the preceding character as an emoji.<BR/>
+<CODEROUTINE>&amp;#xFE0E;</CODEROUTINE> is the Variation Selector-15, which renders the preceding character as text rather than as an emoji.<BR/>
+<CODEROUTINE>Alembic &amp;#x2697;&amp;#xFE0E;; Warning ⚠&amp;#xFE0E;; skull &amp;#x2620;&amp;#xFE0E;</CODEROUTINE> gives: Alembic &#x2697;&#xFE0E;; Warning ⚠&#xFE0E;; skull &#x2620;&#xFE0E;<BR/>
+<CODEROUTINE>Alembic &amp;#x2697;&amp;#xFE0F;; Warning ⚠&amp;#xFE0F;; skull &amp;#x2620;&amp;#xFE0F;</CODEROUTINE> gives: Alembic &#x2697;&#xFE0F;; Warning ⚠&#xFE0F;; skull &#x2620;&#xFE0F;<BR/>
 <BR/>
 <B>Some common characters</B><BR/>
 <TABLE>
@@ -191,10 +196,10 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>"</CELL><CELL>U+201C</CELL><CELL></CELL><CELL><X><T>Left Double Quotation Mark</T><A>https://www.compart.com/en/unicode/U+201C</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Guillemet-Apostrophe double culbuté</T><A>https://www.compart.com/fr/unicode/U+201C</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>"</CELL><CELL>U+201D</CELL><CELL></CELL><CELL><X><T>Right Double Quotation Mark</T><A>https://www.compart.com/en/unicode/U+201D</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Guillemet-Apostrophe double</T><A>https://www.compart.com/fr/unicode/U+201D</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️⋮</CELL><CELL>U+22EE</CELL><CELL></CELL><CELL><X><T>Vertical Ellipsis</T><A>https://www.compart.com/en/unicode/U+22EE</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Trois points suspendus</T><A>https://www.compart.com/fr/unicode/U+22EE</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL>⚠</CELL><CELL>U+26A0</CELL><CELL></CELL><CELL><X><T>Warning Sign</T><A>https://www.compart.com/en/unicode/U+26A0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Signal de danger</T><A>https://www.compart.com/fr/unicode/U+26A0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL>☠</CELL><CELL>U+2620</CELL><CELL></CELL><CELL><X><T>Skull and Crossbones</T><A>https://www.compart.com/en/unicode/U+2620</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Tête de mort</T><A>https://www.compart.com/fr/unicode/U+2620</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>⚠️</CELL><CELL>U+26A0</CELL><CELL></CELL><CELL><X><T>Warning Sign</T><A>https://www.compart.com/en/unicode/U+26A0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Signal de danger</T><A>https://www.compart.com/fr/unicode/U+26A0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>☠️</CELL><CELL>U+2620</CELL><CELL></CELL><CELL><X><T>Skull and Crossbones</T><A>https://www.compart.com/en/unicode/U+2620</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Tête de mort</T><A>https://www.compart.com/fr/unicode/U+2620</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️✓</CELL><CELL>U+2713</CELL><CELL></CELL><CELL><X><T>Check Mark</T><A>https://www.compart.com/en/unicode/U+2713</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Coche</T><A>https://www.compart.com/fr/unicode/U+2713</A><L>fr</L><F>HTML</F></X></CELL></ROW>
-  <ROW><CELL>️✔</CELL><CELL>U+2714</CELL><CELL></CELL><CELL><X><T>Heavy Check Mark</T><A>https://www.compart.com/en/unicode/U+2714</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Coche épaisse</T><A>https://www.compart.com/fr/unicode/U+2714</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️✔️</CELL><CELL>U+2714</CELL><CELL></CELL><CELL><X><T>Heavy Check Mark</T><A>https://www.compart.com/en/unicode/U+2714</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Coche épaisse</T><A>https://www.compart.com/fr/unicode/U+2714</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️✅</CELL><CELL>U+2705</CELL><CELL></CELL><CELL><X><T>White Heavy Check Mark</T><A>https://www.compart.com/en/unicode/U+2705</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Coche épaisse blanche</T><A>https://www.compart.com/fr/unicode/U+2705</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️❎</CELL><CELL>U+274E</CELL><CELL></CELL><CELL><X><T>Negative Squared Cross Mark</T><A>https://www.compart.com/en/unicode/U+274E</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Signe en forme de croix encadré</T><A>https://www.compart.com/fr/unicode/U+274E</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️☐</CELL><CELL>U+2610</CELL><CELL></CELL><CELL><X><T>Ballot Box</T><A>https://www.compart.com/en/unicode/U+2610</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Case de bulletin</T><A>https://www.compart.com/fr/unicode/U+2610</A><L>fr</L><F>HTML</F></X></CELL></ROW>
@@ -215,6 +220,8 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>💰</CELL><CELL>U+1F193</CELL><CELL></CELL><CELL><X><T>Money Bag</T><A>https://www.compart.com/en/unicode/U+1F4B0</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Sac d’argent</T><A>https://www.compart.com/fr/unicode/U+1F4B0</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>💎</CELL><CELL>U+1F48E</CELL><CELL></CELL><CELL><X><T>Gem Stone</T><A>https://www.compart.com/en/unicode/U+1F48E</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Pierre précieuse</T><A>https://www.compart.com/fr/unicode/U+1F48E</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>👑</CELL><CELL>U+1F451</CELL><CELL></CELL><CELL><X><T>Crown</T><A>https://www.compart.com/en/unicode/U+1F451</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Couronne</T><A>https://www.compart.com/fr/unicode/U+1F451</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>🧪</CELL><CELL>U+1F9EA</CELL><CELL></CELL><CELL><X><T>Test Tube</T><A>https://www.compart.com/en/unicode/U+1F9EA</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T></T><A>https://www.compart.com/fr/unicode/U+1F9EA</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>⚗️</CELL><CELL>U+2697</CELL><CELL></CELL><CELL><X><T>Alembic</T><A>https://www.compart.com/en/unicode/U+2697</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Alambic</T><A>https://www.compart.com/fr/unicode/U+2697</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>🗑</CELL><CELL>U+1F5D1</CELL><CELL></CELL><CELL><X><T>Wastebasket</T><A>https://www.compart.com/en/unicode/U+1F5D1</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Corbeille</T><A>https://www.compart.com/fr/unicode/U+1F5D1</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>🪦</CELL><CELL>U+1FAA6</CELL><CELL>129702</CELL><CELL><X><T>Headstone</T><A>https://www.compart.com/en/unicode/U+1FAA6</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Pierre tombale</T><A>https://www.compart.com/fr/unicode/U+1FAA6</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️†</CELL><CELL>U+2020</CELL><CELL>8224</CELL><CELL><X><T>Dagger</T><A>https://www.compart.com/en/unicode/U+2020</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Obèle</T><A>https://www.compart.com/fr/unicode/U+2020</A><L>fr</L><F>HTML</F></X></CELL></ROW>
