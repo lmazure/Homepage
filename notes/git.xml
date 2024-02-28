@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -226,6 +226,11 @@
     <TERM><CODEROUTINE>git commit --amend --author="John &lt;John@foo.bar&gt;"</CODEROUTINE></TERM>
     <DESC>Declare that the authorship of the new commit belongs to the specified name/email.</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git commit -S</CODEROUTINE><BR/>
+      <CODEROUTINE>git commit --gpg-sign</CODEROUTINE></TERM>
+    <DESC>GPG-sign commits.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
@@ -261,6 +266,10 @@
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt;:&lt;file 1&gt; &lt;commit 2&gt;:&lt;file 2&gt;</CODEROUTINE></TERM>
     <DESC>Compare two different files in two different revisions.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --word-diff</CODEROUTINE></TERM>
+    <DESC>Show a word diff.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -483,7 +492,7 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>git show’s man page</T><A>https://git-scm.com/docs/git-show</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
-    <DESC>Show changes between commits, commit and working tree, etc.</DESC>
+    <DESC>Show changes between commits, commit and working tree…</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git show &lt;commit&gt;</CODEROUTINE></TERM>
@@ -513,8 +522,19 @@
     <DESC>Annotate each line of the file with information from the revision which last modified the line.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git blame -L &lt;start&gt;,&lt;end&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git blame -L :&lt;funcname&gt;</CODEROUTINE></TERM>
+    <DESC>Annotate only the line range given by <CODEROUTINE>&lt;start&gt;</CODEROUTINE>,<CODEROUTINE>&lt;end&gt;</CODEROUTINE>, or by the function name regex <CODEROUTINE>&lt;funcname&gt;</CODEROUTINE>. May be specified multiple times. Overlapping ranges are allowed.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git blame -M</CODEROUTINE></TERM>
     <DESC>Detect moved or copied lines within a file.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git blame -C</CODEROUTINE></TERM>
+    <DESC>Detect lines moved or copied from other files that were modified in the same commit.<BR/>
+      When this option is given twice (<CODEMENU>-C -C</CODEMENU>), the command additionally looks for copies from other files in the commit that creates the file.<BR/>
+      When this option is given three times(<CODEMENU>-C -C -C</CODEMENU>), the command additionally looks for copies from other files in any commit.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git blame -w</CODEROUTINE></TERM>
@@ -744,6 +764,13 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE><X><T>git replace’s man page</T><A>https://git-scm.com/docs/git-replace</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>Create, list, delete refs to replace objects.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
     <TERM><CODEROUTINE><X><T>git fetch’s man page</T><A>https://git-scm.com/docs/git-fetch</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Download objects and refs from another repository.</DESC>
   </ROW>
@@ -825,7 +852,8 @@
   <ROW>
     <TERM><CODEROUTINE>git push --force</CODEROUTINE><BR/>
       <CODEROUTINE>git push -f</CODEROUTINE></TERM>
-    <DESC>Do not check that the remote ref is an ancestor of the local ref.</DESC>
+    <DESC>Do not check that the remote ref is an ancestor of the local ref.<BR/>
+      Do not use, use <CODEROUTINE>--force-with-lease</CODEROUTINE> instead.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git push --force-with-lease</CODEROUTINE></TERM>
@@ -839,6 +867,10 @@
     <TERM><CODEROUTINE>git push --dry-run</CODEROUTINE><BR/>
       <CODEROUTINE>git push -n</CODEROUTINE></TERM>
     <DESC>Do everything except actually send the updates.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git push --signed</CODEROUTINE></TERM>
+    <DESC>GPG-sign the push request.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/><DEFINITIONTABLE>
@@ -895,6 +927,17 @@
       <CODEROUTINE>git branch -l</CODEROUTINE><BR/>
       <CODEROUTINE>git branch --list</CODEROUTINE></TERM>
     <DESC>List the local branches, the current one is prefixed with <CODEROUTINE>*</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git branch --column</CODEROUTINE></TERM>
+    <DESC>Display branch listing in columns.<BR/>
+      Can be set as default with the configuration variables <CODEROUTINE>column.branch</CODEROUTINE> or <CODEROUTINE>column.ui</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git branch --sort=&lt;key&gt;</CODEROUTINE></TERM>
+    <DESC>Sort based on the key given.<BR/>
+      Prefix <CODEROUTINE>-</CODEROUTINE> to sort in descending order of the value.<BR/>
+      Teh default sort can be defined with the configuration variable <CODEROUTINE>branch.sort</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git branch -v</CODEROUTINE><BR/>
@@ -1208,6 +1251,13 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE><X><T>git fsck’s man page</T><A>https://git-scm.com/docs/git-fsck</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>Verifies the connectivity and validity of the objects in the database.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
     <TERM><CODEROUTINE><X><T>git maintenance’s man page</T><A>https://git-scm.com/docs/git-maintenance</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Run tasks to optimise Git repository data.</DESC>
   </ROW>
@@ -1315,10 +1365,15 @@
     <DESC>Rename the section <CODEROUTINE>&lt;old-name&gt;</CODEROUTINE> into <CODEROUTINE>&lt;new-name&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --global alias ac "commit -am"</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git config --global alias.ac "commit -am"</CODEROUTINE></TERM>
     <DESC>Define an alias. The alias can be used as <CODEROUTINE>git ac "Fixed my bug"</CODEROUTINE>.</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git config --global alias.ac "!myscript.sh"</CODEROUTINE></TERM>
+    <DESC>Define an alias of a shell command.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
+The <CODEROUTINE>include</CODEROUTINE> and <CODEROUTINE>includeIf</CODEROUTINE> sections allow to include config directives from another source. <BR/>
 <BR/>
 It is possible to ignore files/directories in a given directory by listing them in the <CODEFILENAME>.gitignore</CODEFILENAME> file of that directory.<BR/>
 <BR/>
@@ -1361,6 +1416,15 @@ To remove the last commit locally and on the remote repository (nobody should ha
   <ROW>
     <TERM><CODEROUTINE><X><T>git replay’s man page</T><A>https://git-scm.com/docs/git-replay</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Replay commits on a new base, works with bare repos too.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>git rerere’s man page</T><A>https://git-scm.com/docs/git-rerere</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>Reuse recorded resolution of conflicted merges.<BR/>
+      Must be enabled by <CODEROUTINE>git config --global rerere.anabled true</CODEROUTINE>.<BR/>
+      <CODEROUTINE>git merge</CODEROUTINE> and <CODEROUTINE>git commit</CODEROUTINE> automatically invoke <CODEROUTINE>git rerere</CODEROUTINE>, so there is no need to call it directly.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -1427,6 +1491,13 @@ To remove the last commit locally and on the remote repository (nobody should ha
         password=gho_WnwWimkTLgqiKJZEFr48dABX1nPous670DKaUw</CODESAMPLE></DESC>
   </ROW>
 </DEFINITIONTABLE>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>git column’s man page</T><A>https://git-scm.com/docs/git-column</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>Display data in columns.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
 <BR/>
 <BLIST><TITLE>Changing the author of old commits</TITLE>
   <ITEM><CODEROUTINE>git rebase -i &lt;commit&gt;</CODEROUTINE> where &lt;commit&gt; is the commit before the first one to be edited. Use <CODEROUTINE>git rebase -i --root</CODEROUTINE> if the first commit must be edited.</ITEM>
