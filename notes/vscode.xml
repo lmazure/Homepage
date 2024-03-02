@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -350,6 +350,16 @@ Multi-selection
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="D"/><BR/>
       <CODEROUTINE>Move Selection to Next Find Match</CODEROUTINE></TERM>
     <DESC>Unselect the last selection and add the next found match the current selection</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="U"/><BR/>
+      <CODEROUTINE>Cursor Undo</CODEROUTINE></TERM>
+    <DESC>Undo the last cursor state change<BR/>
+      Useful to undo cancel the last <MODIFIERKEY id="Ctrl"/><KEY id="D"/> or the last <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Down"/>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Cursor Redo</CODEROUTINE></TERM>
+    <DESC>Redo the previously undone cursor state change</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
