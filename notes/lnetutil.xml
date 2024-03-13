@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Linux network utilities</TITLE>
 <PATH>notes/lnetutil.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -82,17 +82,6 @@
       <DESC>define user and password for server authentication</DESC>
     </ROW>
     <ROW>
-      <TERM><CODEROUTINE>-w &lt;format&gt;</CODEROUTINE><BR/>
-        <CODEROUTINE>--write-ou &lt;format&gt;</CODEROUTINE></TERM>
-      <DESC>display information on <CODEROUTINE>stdout</CODEROUTINE> after a completed transfer<BR/>
-        variables are specified as <CODEROUTINE>%{variable_name}</CODEROUTINE>
-        <DEFINITIONTABLE>
-          <ROW><TERM><CODEROUTINE>http_code</CODEROUTINE></TERM><DESC>numerical response code that was found in the last retrieved HTTP(S) or FTP(s) transfer</DESC></ROW>
-          <ROW><TERM><CODEROUTINE>num_redirects</CODEROUTINE></TERM><DESC>number of redirects that were followed in the request</DESC></ROW>
-        </DEFINITIONTABLE><BR/>
-        <CODEROUTINE>\n</CODEROUTINE> outputs a newline, <CODEROUTINE>\r</CODEROUTINE> a carriage return, <CODEROUTINE>\t</CODEROUTINE> outputs a tab</DESC>
-    </ROW>
-    <ROW>
       <TERM><CODEROUTINE>-F &lt;name=content&gt;</CODEROUTINE><BR/>
         <CODEROUTINE>--form &lt;name=content&gt;</CODEROUTINE></TERM>
       <DESC>emulate a filled-in form<BR/>
@@ -112,7 +101,23 @@
     <ROW>
       <TERM><CODEROUTINE>-s</CODEROUTINE><BR/>
         <CODEROUTINE>--silent</CODEROUTINE></TERM>
-      <DESC>displayed only the data sent by the server (i.e. no progress meter nor error message)</DESC>
+      <DESC>display only the data sent by the server (i.e. no progress meter nor error message)</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>-o</CODEROUTINE><BR/>
+        <CODEROUTINE>--include</CODEROUTINE></TERM>
+      <DESC>include response headers in the output</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>-w &lt;format&gt;</CODEROUTINE><BR/>
+        <CODEROUTINE>--write-ou &lt;format&gt;</CODEROUTINE></TERM>
+      <DESC>display information on <CODEROUTINE>stdout</CODEROUTINE> after a completed transfer<BR/>
+        variables are specified as <CODEROUTINE>%{variable_name}</CODEROUTINE>
+        <DEFINITIONTABLE>
+          <ROW><TERM><CODEROUTINE>http_code</CODEROUTINE></TERM><DESC>numerical response code that was found in the last retrieved HTTP(S) or FTP(s) transfer</DESC></ROW>
+          <ROW><TERM><CODEROUTINE>num_redirects</CODEROUTINE></TERM><DESC>number of redirects that were followed in the request</DESC></ROW>
+        </DEFINITIONTABLE><BR/>
+        <CODEROUTINE>\n</CODEROUTINE> outputs a newline, <CODEROUTINE>\r</CODEROUTINE> a carriage return, <CODEROUTINE>\t</CODEROUTINE> outputs a tab</DESC>
     </ROW>
     </DEFINITIONTABLE>
     to retrieve the HTTP code:
