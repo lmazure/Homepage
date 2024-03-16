@@ -121,6 +121,6 @@
     </ROW>
     </DEFINITIONTABLE>
     to retrieve the HTTP code:
-    <CODESAMPLE>CODE=$(curl -o /dev/null -w '%{HTTP_CODE}' -u "admin:admin" https://sqtm-nightly-cloud.acceptance.squashtest.org/api/rest/latest/projects/999/test-cases)</CODESAMPLE>
+    <CODESAMPLE>CODE=$(curl -o /dev/null -w '%{HTTP_CODE}' -u " user:password" https://sqtm-nightly-cloud.acceptance.squashtest.org/api/rest/latest/projects/999/test-cases)</CODESAMPLE>
   </CONTENT>
 </PAGE>
