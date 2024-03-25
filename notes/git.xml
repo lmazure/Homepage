@@ -919,6 +919,10 @@
     <DESC>List, create, or delete branches.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>git branch --show-current</CODEROUTINE></TERM>
+    <DESC>Print the name of the current branch.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>git branch &lt;new branch&gt;</CODEROUTINE></TERM>
     <DESC>Create a new branch (but does not switch to it).</DESC>
   </ROW>
@@ -937,7 +941,7 @@
     <TERM><CODEROUTINE>git branch --sort=&lt;key&gt;</CODEROUTINE></TERM>
     <DESC>Sort based on the key given.<BR/>
       Prefix <CODEROUTINE>-</CODEROUTINE> to sort in descending order of the value.<BR/>
-      Teh default sort can be defined with the configuration variable <CODEROUTINE>branch.sort</CODEROUTINE>.</DESC>
+      The default sort can be defined with the configuration variable <CODEROUTINE>branch.sort</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git branch -v</CODEROUTINE><BR/>
