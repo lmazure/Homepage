@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -1413,6 +1413,10 @@ To remove the last commit locally and on the remote repository (nobody should ha
   <ROW>
     <TERM><CODEROUTINE>git rebase --quit</CODEROUTINE></TERM>
     <DESC>Abort the rebase operation but HEAD is not reset back to the original branch.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git rebase --update-refs</CODEROUTINE></TERM>
+    <DESC>Automatically force-update any branches that point to commits that are being rebased.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git rebase --exec &lt;cmd&gt;</CODEROUTINE><BR/>
