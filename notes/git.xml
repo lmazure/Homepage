@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -1504,6 +1504,7 @@ To remove the last commit locally and on the remote repository (nobody should ha
         password=gho_WnwWimkTLgqiKJZEFr48dABX1nPous670DKaUw</CODESAMPLE></DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>git column’s man page</T><A>https://git-scm.com/docs/git-column</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
@@ -1535,6 +1536,20 @@ Script to mirror a repository in another (to be completed to support GitHub)
   git push --mirror https://$target_repo/$target_project.git<BR/>
   cd ..<BR/>
   rm -fr $project.git</CODESAMPLE>
+<BR/>
+Script to find the nearest version of a file (<CODEROUTINE>$1</CODEROUTINE>) compared to a local file (<CODEROUTINE>$2</CODEROUTINE>)
+<CODESAMPLE>#!/bin/bash<BR/>
+<BR/>
+  file=$1<BR/>
+  commits=$(git log -n 20 --format="%H" $1)<BR/>
+  for commit in $commits<BR/>
+  do<BR/>
+  <TAB/>echo "-------------------------"<BR/>
+  <TAB/>echo $commit<BR/>
+  <TAB/>git checkout --quiet $commit $1<BR/>
+  <TAB/>sdiff -s $1 $2 | wc -l<BR/>
+  done<BR/>
+  git checkout --quiet HEAD $1</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Git SVN</TITLE>
   <ITEM><CODEROUTINE><X><T>git svn’s man page</T><A>https://git-scm.com/docs/git-svn</A><L>en</L><F>HTML</F></X></CODEROUTINE></ITEM>
