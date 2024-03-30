@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>notes/java.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
   <BLIST><TITLE><U><B>Visibility</B></U></TITLE>
     <ITEM>
@@ -149,7 +149,7 @@
 </BLIST>
 <BLIST><TITLE><U><B>Regular Expressions</B></U><BR/></TITLE>
   <ITEM><CODEROUTINE>\p{…}</CODEROUTINE> can be used to match a character of a given Unicode <X><T>category</T><A>https://www.unicode.org/reports/tr18/#General_Category_Property</A><L>en</L><F>HTML</F></X>.<BR/>
-  For example <CODEROUTINE>\p{Z}</CODEROUTINE> matches separators, I believe this is the same as <X><T><CODEROUTINE>Character.isSpaceChar()</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/11/docs/api/java.base/java/lang/Character.html#isSpaceChar(int)</A><L>en</L><F>HTML</F></X>.</ITEM>
+  For example <CODEROUTINE>\p{Z}</CODEROUTINE> matches separators, I believe this is the same as <X><T><CODEROUTINE>Character.isSpaceChar()</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Character.html#isSpaceChar(int)</A><L>en</L><F>HTML</F></X>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Functional interfaces</B></U><BR/></TITLE>
   <ITEM><CODEROUTINE>@FunctionalInterface</CODEROUTINE> is an informative annotation type used to indicate that an interface with exactly one abstract method.</ITEM>
@@ -338,7 +338,7 @@
     </ROW>
   </DEFINITIONTABLE></ITEM>
 </BLIST>
-<U><B>Optional</B></U>
+<U><B><X><T><CODEROUTINE>Optional</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html</A><L>en</L><F>HTML</F></X></B></U>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; of(T value)</CODEROUTINE></TERM>
@@ -397,7 +397,7 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; map(Function&lt;? super T,? extends U&gt; mapper)</CODEROUTINE></TERM>
-    <DESC>If a value is present, returns an Optional describing (as if by <CODEROUTINE>ofNullable(T)</CODEROUTINE>) the result of applying the given mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
+    <DESC>If a value is present, returns an <CODEROUTINE>Optional</CODEROUTINE> describing (as if by <CODEROUTINE>ofNullable(T)</CODEROUTINE>) the result of applying the given mapping function to the value, otherwise returns an empty <CODEROUTINE>Optional</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>&lt;U&gt; Optional&lt;U&gt; flatMap(Function&lt;? super T,? extends Optional&lt;? extends U&gt;&gt; mapper)</CODEROUTINE></TERM>
@@ -409,8 +409,28 @@
   <ITEM><CODEROUTINE>OptionalInt</CODEROUTINE>: A container object which may or may not contain an int value.</ITEM>
   <ITEM><CODEROUTINE>OptionalLong</CODEROUTINE>: A container object which may or may not contain a long value.</ITEM>
 </BLIST>
-<U><B>Stream</B></U>
+<U><B><X><T><CODEROUTINE>Stream</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html</A><L>en</L><F>HTML</F></X></B></U>
 <DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>&lt;R&gt; Stream&lt;R&gt; map(Function&lt;? super T,? extends R&gt; mapper)</CODEROUTINE></TERM>
+    <DESC>Returns a stream consisting of the results of applying the given function to the elements of this stream.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>&lt;R&gt; Stream&lt;R&gt; flatMap(Function&lt;? super T,? extends Stream&lt;? extends R&gt;&gt; mapper)</CODEROUTINE></TERM>
+    <DESC>Returns a stream consisting of the results of replacing each element of this stream with the contents of a mapped stream produced by applying the provided mapping function to each element.<BR/>
+    <CODESAMPLE>Stream&lt;String&gt; lines = Files.lines(path, StandardCharsets.UTF_8);<BR/>
+      Stream&lt;String&gt; words = lines.flatMap(line -&gt; Stream.of(line.split(" +")));</CODESAMPLE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>default &lt;R&gt; Stream&lt;R&gt; mapMulti(BiConsumer&lt;? super T,? super Consumer&lt;R&gt;&gt; mapper)</CODEROUTINE></TERM>
+    <DESC>Returns a stream consisting of the results of replacing each element of this stream with multiple elements, specifically zero or more elements.<BR/>
+      <CODESAMPLE>Stream&lt;Number&gt; numbers = … ;<BR/>
+        List&lt;Integer&gt; integers = numbers.&lt;Integer&gt;mapMulti((number, consumer) -&gt; {<BR/>
+        <TAB/>if (number instanceof Integer i)<BR/>
+        <TAB/><TAB/>consumer.accept(i);<BR/>
+        <TAB/>})<BR/>
+        <TAB/>.collect(Collectors.toList());</CODESAMPLE></DESC>
+  </ROW>
   <ROW>
     <TERM><CODEROUTINE>Optional&lt;T&gt; reduce(BinaryOperator&lt;T&gt; accumulator)</CODEROUTINE></TERM>
     <DESC>Performs a reduction on the elements and returns an <CODEROUTINE>Optional</CODEROUTINE> describing the reduced value. If there is no value, an empty <CODEROUTINE>Optional</CODEROUTINE> is returned.</DESC>

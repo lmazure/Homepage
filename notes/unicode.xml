@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -119,7 +119,45 @@ While a combining character sequence can be arbitrarily big, the Unicode standar
   <ROW><CELL>💋</CELL><CELL>U+1F48B</CELL><CELL>KISS MARK</CELL></ROW>
   <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
   <ROW><CELL>👨</CELL><CELL>U+1F468</CELL><CELL>MAN</CELL></ROW>
-</TABLE></ITEM>
+</TABLE>
+but we can also have 👨‍❤️‍💋‍👨
+<TABLE>
+  <ROW><CELL>👨</CELL><CELL>U+1F468</CELL><CELL>MAN</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>❤</CELL><CELL>U+2764</CELL><CELL>HEAVY BLACK HEART</CELL></ROW>
+  <ROW><CELL> </CELL><CELL>+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>💋</CELL><CELL>U+1F48B</CELL><CELL>KISS MARK</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>👨</CELL><CELL>U+1F468</CELL><CELL>MAN</CELL></ROW>
+</TABLE>
+or 👩‍❤️‍💋‍👩
+<TABLE>
+  <ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>❤</CELL><CELL>U+2764</CELL><CELL>HEAVY BLACK HEART</CELL></ROW>
+  <ROW><CELL> </CELL><CELL>+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>💋</CELL><CELL>U+1F48B</CELL><CELL>KISS MARK</CELL></ROW>
+  <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+  <ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
+</TABLE>
+</ITEM>
+<ITEM>👩‍❤️‍👨‍👧‍👦 is defined as
+  <TABLE>
+    <ROW><CELL>👩</CELL><CELL>U+1F469</CELL><CELL>WOMAN</CELL></ROW>
+    <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+    <ROW><CELL>❤</CELL><CELL>U+2764</CELL><CELL>HEAVY BLACK HEART</CELL></ROW>
+    <ROW><CELL> </CELL><CELL>+FE0F</CELL><CELL>VARIATION SELECTOR-16</CELL></ROW>
+    <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+    <ROW><CELL>👨</CELL><CELL>U+1F468</CELL><CELL>MAN</CELL></ROW>
+    <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+    <ROW><CELL>👧</CELL><CELL>U+1F467</CELL><CELL>GIRL</CELL></ROW>
+    <ROW><CELL></CELL><CELL>U+200D</CELL><CELL>ZERO WIDTH JOINER</CELL></ROW>
+    <ROW><CELL>👦</CELL><CELL>U+1F466</CELL><CELL>BOY</CELL></ROW>
+  </TABLE>
+  see <X><T>here</T><A>https://unicode.org/emoji/charts/full-emoji-list.html#family</A><L>en</L><F>HTML</F></X> for the family emojis
+</ITEM>
 </BLIST>
 <X><T>Emoji flag sequences</T><A>https://en.wikipedia.org/wiki/Regional_indicator_symbol#Emoji_flag_sequences</A><L>en</L><F>HTML</F></X><BR/>
 <BR/>
