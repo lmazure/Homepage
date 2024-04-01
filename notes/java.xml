@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>notes/java.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
   <BLIST><TITLE><U><B>Visibility</B></U></TITLE>
     <ITEM>
@@ -411,6 +411,18 @@
 </BLIST>
 <U><B><X><T><CODEROUTINE>Stream</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html</A><L>en</L><F>HTML</F></X></B></U>
 <DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>static &lt;T&gt; Stream&lt;T&gt; concat(Stream&lt;? extends T&gt; a, Stream&lt;? extends T&gt; b)</CODEROUTINE></TERM>
+    <DESC>Creates a lazily concatenated stream whose elements are all the elements of the first stream followed by all the elements of the second stream.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>boolean allMatch(Predicate&lt;? super T&gt; predicate)</CODEROUTINE></TERM>
+    <DESC>Returns whether all elements of this stream match the provided predicate.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>boolean anyMatch(Predicate&lt;? super T&gt; predicate)</CODEROUTINE></TERM>
+    <DESC>Returns whether any elements of this stream match the provided predicate.</DESC>
+  </ROW>
   <ROW>
     <TERM><CODEROUTINE>&lt;R&gt; Stream&lt;R&gt; map(Function&lt;? super T,? extends R&gt; mapper)</CODEROUTINE></TERM>
     <DESC>Returns a stream consisting of the results of applying the given function to the elements of this stream.</DESC>

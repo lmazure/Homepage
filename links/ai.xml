@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Artificial intelligence</TITLE>
 <PATH>links/ai.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -71,10 +71,14 @@
     <ITEM><CLIST><TITLE><AUTHOR><FIRSTNAME>Andrej</FIRSTNAME><LASTNAME>Karpathy</LASTNAME></AUTHOR></TITLE>
       <ITEM><X><T>Homepage</T><A>https://karpathy.ai/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Blog</T><A>https://karpathy.github.io/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X quality="1"><T>YouTube</T><A>https://www.youtube.com/channel/UCXUPKJO5MZQN11PqgIvyuvQ</A><L>en</L><F>HTML</F><FEED><A>https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ</A><F>Atom</F></FEED></X></ITEM>
+      <ITEM><X quality="2"><T>YouTube</T><A>https://www.youtube.com/channel/UCXUPKJO5MZQN11PqgIvyuvQ</A><L>en</L><F>HTML</F><FEED><A>https://www.youtube.com/feeds/videos.xml?channel_id=UCXUPKJO5MZQN11PqgIvyuvQ</A><F>Atom</F></FEED></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><AUTHOR><FIRSTNAME>Yannic</FIRSTNAME><LASTNAME>Kilcher</LASTNAME></AUTHOR></TITLE>
       <ITEM><X><T>YouTube</T><A>https://www.youtube.com/channel/UCZHmQk67mSJgfCCTn7xBfew</A><L>en</L><F>HTML</F><FEED><A>https://www.youtube.com/feeds/videos.xml?channel_id=UCZHmQk67mSJgfCCTn7xBfew</A><F>Atom</F></FEED></X></ITEM>
+    </CLIST></ITEM>
+    <ITEM><CLIST><TITLE><AUTHOR><FIRSTNAME>Sebastian</FIRSTNAME><LASTNAME>Raschka</LASTNAME></AUTHOR></TITLE>
+      <ITEM><X><T>Homepage</T><A>https://sebastianraschka.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X quality="1"><T>Ahead of AI</T><A>https://magazine.sebastianraschka.com/</A><L>en</L><F>HTML</F><FEED><A>https://magazine.sebastianraschka.com/feed</A><F>Atom</F></FEED></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><AUTHOR><FIRSTNAME>Letitia</FIRSTNAME><LASTNAME>Parcalabescu</LASTNAME></AUTHOR></TITLE>
       <ITEM><X><T>YouTube</T><A>https://www.youtube.com/channel/UCobqgqE4i5Kf7wrxRxhToQA</A><L>en</L><F>HTML</F><FEED><A>https://www.youtube.com/feeds/videos.xml?channel_id=UCobqgqE4i5Kf7wrxRxhToQA</A><F>Atom</F></FEED></X></ITEM>
@@ -325,6 +329,7 @@
       <ITEM><ARTICLE><X quality="-1"><T>Floating Points are no more, Changes everything for LLMs!!!</T><A>https://www.youtube.com/watch?v=Gtf3CxIRiPk</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>"<X><T>The Era of 1-bit LLMs: All Large Language Models are in 1.58 Bits</T><A>https://arxiv.org/abs/2402.17764</A><L>en</L><F>HTML</F></X>" describes a LLM using only -1, 0, and 1 as weights.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="-1"><T>How Selective Forgetting Can Help AI Learn Better</T><ST>Erasing key information during training results in machine learning models that can learn new languages faster and more easily.</ST><A>https://www.quantamagazine.org/how-selective-forgetting-can-help-ai-learn-better-20240228/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Amos</FIRSTNAME><LASTNAME>Zeeberg</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>Some little and too basic information about forgetting language models which are easier to train to new languages.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Research Papers in February 2024: A LoRA Successor, Small Finetuned LLMs Vs Generalist LLMs, and Transparent LLM Research</T><A>https://magazine.sebastianraschka.com/p/research-papers-in-february-2024</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sebastian</FIRSTNAME><LASTNAME>Raschka</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE><COMMENT>Can small fined-tuned models perform better on some tasks than large models, DoRA, OLMo is a real open source model, Gemma…</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Tips for LLM Pretraining and Evaluating Reward Models</T><ST>Discussing AI Research Papers in March 2024</ST><A>https://magazine.sebastianraschka.com/p/tips-for-llm-pretraining-and-evaluating-rms</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sebastian</FIRSTNAME><LASTNAME>Raschka</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE><COMMENT>An analysis of continuous pretraining and a benchmark for evaluating reward models.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Generative Adversarial Networks</TITLE>
         <ITEM><ARTICLE><X><T>Generative Adversarial Networks (GANs) - Computerphile</T><A>https://www.youtube.com/watch?v=Sw9r8CL98N0</A><L>en</L><F>MP4</F><DURATION><MINUTE>21</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Miles</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE><COMMENT>Adversarial Networks and using them to generate images.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Zebras, Horses &amp; CycleGAN - Computerphile</T><A>https://www.youtube.com/watch?v=T-lBMrjZ3_0</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>8</MONTH><DAY>1</DAY></DATE><COMMENT>A description of CycleGAN, two GANs working in opposite directions.</COMMENT></ARTICLE></ITEM>
@@ -340,6 +345,7 @@
         <ITEM><ARTICLE><X><T>Mamba: Linear-Time Sequence Modeling with Selective State Spaces (Paper Explained)</T><A>https://www.youtube.com/watch?v=9dSkvxS2EB0</A><L>en</L><F>MP4</F><DURATION><MINUTE>40</MINUTE><SECOND>40</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Yannic</FIRSTNAME><LASTNAME>Kilcher</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>24</DAY></DATE><COMMENT>The paper presenting the Mambe architecture: "<X><T>Mamba: Linear-Time Sequence Modeling with Selective State Spaces</T><A>https://arxiv.org/abs/2312.00752</A><L>en</L><F>HTML</F></X>".</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>This CRAZY Paper on Mamba has got some REAL Juice!!!</T><A>https://www.youtube.com/watch?v=i23Zz4fsfp0</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>A shallow presentation of the "<X><T>Repeat After Me: Transformers are Better than State Space Models at Copying</T><A>https://arxiv.org/abs/2402.01032</A><L>en</L><F>HTML</F></X>" paper.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>MAMBA and State Space Models explained | SSM explained</T><A>https://www.youtube.com/watch?v=vrF3MtGwD0Y</A><L>en</L><F>MP4</F><DURATION><MINUTE>22</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Letitia</FIRSTNAME><LASTNAME>Parcalabescu</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>An other presentation of MAMBA.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>The FIRST Production-grade Mamba-based LLM!!!</T><A>https://www.youtube.com/watch?v=Pd0_GKykmdE</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>1</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE><COMMENT>A presentation of <X><T>ai21labs/Jamba-v0.1</T><A>https://huggingface.co/ai21labs/Jamba-v0.1</A><L>en</L><F>HTML</F></X>, a hybrid Mamba/Transformer architecture.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>PyTorch</TITLE>
         <ITEM><ARTICLE><X><T>Débuter avec PyTorch</T><A>https://ledatascientist.com/debuter-avec-pytorch/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Salma</FIRSTNAME><LASTNAME>Elghourbal</LASTNAME></AUTHOR><DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE><COMMENT>A short introduction to Pytorch with a small example.</COMMENT></ARTICLE></ITEM>

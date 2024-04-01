@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -545,6 +545,16 @@ Search/replace
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="H"/><BR/>
       <CODEROUTINE>Search: Replace in Files</CODEROUTINE></TERM>
     <DESC>Replace in files</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="O"/><BR/>
+      <CODEROUTINE>Go to symbol in Editor…</CODEROUTINE></TERM>
+    <DESC>Go to a symbol definition in the current editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="T"/><BR/>
+      <CODEROUTINE>Go to symbol in Workspace…</CODEROUTINE></TERM>
+    <DESC>Go to a symbol definition in the workspace</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
