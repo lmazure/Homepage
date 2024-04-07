@@ -3,11 +3,11 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
-    <ITEM><CODEROUTINE>Code.exe --help</CODEROUTINE></ITEM>
+  <ITEM><CODEROUTINE>Code.exe --help</CODEROUTINE></ITEM>
   </SLIST></ITEM>
   <ITEM><SLIST><TITLE>Print version</TITLE>
     <ITEM><CODEROUTINE>Code.exe --version</CODEROUTINE></ITEM>
@@ -498,6 +498,20 @@ Multi-selection
 <BR/>
 Search/replace
 <DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Down"/><BR/>
+      <CODEROUTINE>SCrollLineDown</CODEROUTINE></TERM>
+    <DESC>Scroll down by one line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Up"/><BR/>
+      <CODEROUTINE>SCrollLineUp</CODEROUTINE></TERM>
+    <DESC>Scroll up by one line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>View: Toggle Locked Scrolling Across Editors</CODEROUTINE></TERM>
+    <DESC>Lock the scrolling of editors</DESC>
+  </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="G"/></TERM>
     <DESC>Display go to line dialog</DESC>
