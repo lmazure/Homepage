@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>JavaScript</TITLE>
 <PATH>notes/javascript.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
   <ITEM>Number: Double precision 64-bit floating point values. It can be used to represent both, integers and fractions.</ITEM>
@@ -38,6 +38,42 @@
     <ITEM>literal array
     <CODESAMPLE>var myCars=["Saab","Volvo","BMW"];</CODESAMPLE></ITEM>
   </BLIST></ITEM>
+  <ITEM>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.filter()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>creates a shallow copy of a filtered portion of a given array</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.map()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>creates a new array populated with the results of calling a provided function on every element in the calling array</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.find()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>returns the first element in the provided array that satisfies the provided testing function</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.some()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>tests whether at least one element in the array passes the test implemented by the provided function</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.every()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>tests whether all elements in the array pass the test implemented by the provided function</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.includes()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>determines whether an array includes a certain value among its entries</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.forEach()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>executes a provided function once for each array element</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.reduce()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>executes a user-supplied "reducer" callback function on each element of the array</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Objects</B></U></TITLE>
   <ITEM>The <CODEROUTINE>delete</CODEROUTINE> operator removes a property from an object.</ITEM>
