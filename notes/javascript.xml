@@ -3,8 +3,22 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>JavaScript</TITLE>
 <PATH>notes/javascript.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
+<BLIST><TITLE><U><B>Operators</B></U></TITLE>
+  <ITEM>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>??</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing</A><L>en</L><F>HTML</F></X></CODEROUTINE> nullish coalescing operator</TERM>
+        <DESC>returns its right-hand side operand when its left-hand side operand is <CODEROUTINE>undefined</CODEROUTINE> or <CODEROUTINE>null</CODEROUTINE>, and otherwise returns its left-hand side operand</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>?.</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining</A><L>en</L><F>HTML</F></X></CODEROUTINE> optional chaining</TERM>
+        <DESC>accesses an object’s property or calls a function, if the object accessed or function called using this operator is <CODEROUTINE>undefined</CODEROUTINE> or <CODEROUTINE>null</CODEROUTINE>, the expression short circuits and evaluates to <CODEROUTINE>undefined</CODEROUTINE></DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+</BLIST>
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
   <ITEM>Number: Double precision 64-bit floating point values. It can be used to represent both, integers and fractions.</ITEM>
   <ITEM>String: Represents a sequence of Unicode characters</ITEM>
@@ -41,6 +55,62 @@
   <ITEM>
     <DEFINITIONTABLE>
       <ROW>
+        <TERM><CODEROUTINE><X><T>Array.isArray()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/isArray</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>determines whether the passed value is an Array</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.at()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/at</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>takes an integer value and returns the item at that index, negative indexes can be used</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.fill()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>changes all elements within a range of indices in an array to a static value</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.push()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>adds the specified elements to the end of an array and returns the new length of the array</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.pop()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/pop</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>removes the last element from an array and returns that element</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.unshift()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/unshift</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>adds the specified elements to the beginning of an array and returns the new length of the array</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.shift()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/shift</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>removes the first element from an array and returns that removed element</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.with()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/with</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>copying version of using the bracket notation to change the value of a given index, negative indexes can be used</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.splice()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/splice</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>changes the contents of an array by removing or replacing existing elements and/or adding new elements in place</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.toSpliced()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>copying counterpart of the <CODEROUTINE>Array.prototype.spliced()</CODEROUTINE> method</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.reverse()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>reverses an array in place and returns the reference to the same array</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.toReversed()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toReversed</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>copying counterpart of the <CODEROUTINE>Array.prototype.reverse()</CODEROUTINE> method</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.sort()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/sort</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>sorts the elements of an array in place and returns the reference to the same array, now sorted</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.toSorted()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSorted</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>copying counterpart of the <CODEROUTINE>Array.prototype.sort()</CODEROUTINE> method</DESC>
+      </ROW>
+      <ROW>
         <TERM><CODEROUTINE><X><T>Array.prototype.filter()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
         <DESC>creates a shallow copy of a filtered portion of a given array</DESC>
       </ROW>
@@ -51,6 +121,18 @@
       <ROW>
         <TERM><CODEROUTINE><X><T>Array.prototype.find()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/find</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
         <DESC>returns the first element in the provided array that satisfies the provided testing function</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.findIndex()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findIndex</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>returns the index of the first element in an array that satisfies the provided testing function</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.findLast()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLast</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>iterates the array in reverse order and returns the value of the first element that satisfies the provided testing function</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.findLastIndex()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>terates the array in reverse order and returns the index of the first element that satisfies the provided testing function</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE><X><T>Array.prototype.some()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
@@ -70,13 +152,39 @@
       </ROW>
       <ROW>
         <TERM><CODEROUTINE><X><T>Array.prototype.reduce()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
-        <DESC>executes a user-supplied "reducer" callback function on each element of the array</DESC>
+        <DESC>executes a user-supplied "reducer" callback function on each element (from left to right) of the array</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.reduceRight()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>applies a function against an accumulator and each value of the array (from right to left) to reduce it to a single value</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Array.prototype.flatMap()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>creates a new array with all sub-array elements concatenated into it recursively up to the specified depth</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Maps</B></U></TITLE>
+  <ITEM>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Map.groupBy()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Map/groupBy</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>groups the elements of a given iterable using the values returned by a provided callback function</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Objects</B></U></TITLE>
   <ITEM>The <CODEROUTINE>delete</CODEROUTINE> operator removes a property from an object.</ITEM>
+  <ITEM>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE><X><T>Object.groupBy()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/groupBy</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+        <DESC>groups the elements of a given iterable according to the string values returned by a provided callback function</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Regular Expressions</B></U></TITLE>
   <ITEM>Syntax<BR/>
