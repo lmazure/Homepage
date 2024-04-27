@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -752,7 +752,45 @@ Markdown
         <DESC>Declare the authentication token</DESC>
       </ROW>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="A"/><BR/>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="I"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="I"/><BR/>
+          <CODEROUTINE>Codeium: Command</CODEROUTINE></TERM>
+        <DESC>Open command</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><KEY id="C"/></TERM>
+        <DESC>Cancel command</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><KEY id="A"/></TERM>
+        <DESC>Accept diff</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><KEY id="R"/></TERM>
+        <DESC>Reject diff</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><KEY id="F"/></TERM>
+        <DESC>Follow-up diff</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>Codeium: Toggle Autocomplete for Current Language</CODEROUTINE></TERM>
+        <DESC>Toggle autocomplete for current language</DESC>
+      </ROW>      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><KEY id="\"/></TERM>
+        <DESC>Trigger line suggestion</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><KEY id="["/></TERM>
+        <DESC>Show next completion</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Alt"/><KEY id="]"/></TERM>
+        <DESC>Show previous completion</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="A"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="A"/><BR/>
           <CODEROUTINE>Codeium: Open Chat</CODEROUTINE></TERM>
         <DESC>Display the chat</DESC>
       </ROW>
