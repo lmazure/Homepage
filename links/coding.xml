@@ -68,14 +68,13 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Memory checkers</TITLE>
       <ITEM><CLIST><TITLE><ANCHOR>purify</ANCHOR>Purify</TITLE>
-        <ITEM><X><T>doc</T><A>http://publibfp.dhe.ibm.com/epubs/pdf/i1194270.pdf</A><L>en</L><F>PDF</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/purify.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><CLIST><TITLE><ANCHOR>valgrind</ANCHOR><X><T>Valgrind</T><A>https://valgrind.org/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>personal notes</T><A>../notes/valgrind.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><X><T>dmalloc</T><A>https://dmalloc.com/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>ccmalloc</T><A>https://cs.ecs.baylor.edu/~donahoo/tools/ccmalloc/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>ccmalloc</T><A>https://cs.baylor.edu/~donahoo/tools/ccmalloc/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Electric Fence</T><A>https://github.com/kallisti5/ElectricFence</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Boehm Collector</T><A>https://www.hboehm.info/gc/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>LeakTracer</T><A>https://andreasen.org/LeakTracer/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -178,7 +177,7 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Games</TITLE>
-      <ITEM><X><T>CodinGame</T><A>https://www.codingame.com</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>CodinGame</T><A>https://www.codingame.com/start/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>codewars</T><A>https://www.codewars.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>LeetCode</T><A>https://leetcode.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>HackerRank</T><A>https://www.hackerrank.com/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -264,7 +263,7 @@
       <ITEM><ARTICLE><X><T>Gulp, Grunt, Whatever</T><A>https://ponyfoo.com/articles/gulp-grunt-whatever</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolás</FIRSTNAME><LASTNAME>Bevacqua</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>An introduction to Gulp and a comparison with Grunt.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>CI/CD Tools Comparison: Jenkins, TeamCity, Bamboo, Travis CI, and More</T><A>https://www.altexsoft.com/blog/cicd-tools-comparison/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2022</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE><COMMENT>A short comparison of Jenkins, TeamCity, Bamboo, Travis CI, CircleCI, and CodeShip.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Jenkins requires Java 11 or newer</T><A>https://www.jenkins.io/blog/2022/06/28/require-java-11/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Basil</FIRSTNAME><LASTNAME>Crow</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>28</DAY></DATE><COMMENT>Jenkins next LTS will require Java 11.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>15 Best Jenkins Alternatives (2024 Update)</T><A>https://www.guru99.com/jenkins-alternative.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE><COMMENT>A long list of CI/CD platforms, but the descriptions are poorly written.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Top 10 Jenkins Alternatives (2024)</T><A>https://www.guru99.com/jenkins-alternative.html</A><L>en</L><F>HTML</F></X><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>2</DAY></DATE><COMMENT>A long list of CI/CD platforms, but the descriptions are poorly written.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Ant</TITLE>
         <ITEM><ARTICLE><X quality="-1" status="removed"><T>Improve Your Build Process with Ant</T><A>http://www.onlamp.com/pub/a/php/2005/12/20/php_ant.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Kimsal</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE><COMMENT>An introduction to Ant, but I think that this article is not very clear.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
@@ -463,7 +462,7 @@
       <ITEM><ARTICLE predecessor="https://medium.com/@kentbeck_7670/software-design-is-human-relationships-part-2-of-3-waiters-changers-and-sufficiency-4c0bb9a08d23"><X><T>Software Design is Human Relationships: Part 3 of 3, Changers &amp; Changers</T><A>https://medium.com/@kentbeck_7670/software-design-is-human-relationships-part-3-of-3-changers-changers-20eeac7846e0</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>7</MONTH><DAY>18</DAY></DATE><COMMENT>Changers may disagree on how the structure should be changed or on how to order behaviour and structure changes.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Jupyter</TITLE>
-      <ITEM><ARTICLE><X><T>À la découverte de Jupyter, un logiciel scientifique libre aux millions d'utilisateurs</T><ST>Un logiciel pas si gazeux</ST><A>https://www.nextinpact.com/article/70628/a-decouverte-jupyter-logiciel-scientifique-libre-aux-millions-dutilisateurs</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Clavey</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE><COMMENT>Some (non-technical) information about Jupyter.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>À la découverte de Jupyter, un logiciel scientifique libre aux millions d'utilisateurs</T><ST>Un logiciel pas si gazeux</ST><A>https://next.ink/1442/a-decouverte-jupyter-logiciel-scientifique-libre-aux-millions-dutilisateurs/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Clavey</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>21</DAY></DATE><COMMENT>Some (non-technical) information about Jupyter.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Jupyter Notebooks vs Python Scripts | When to Use Which?</T><A>https://www.youtube.com/watch?v=0Jw8seqai18</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Arjan</FIRSTNAME><LASTNAME>Egges</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT>A short presentation of Jupyter and some pitfalls to avoid.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Commenting the code</TITLE>
