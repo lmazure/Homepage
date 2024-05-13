@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -24,20 +24,30 @@
       <ITEM><X><T>personal notes</T><A>../notes/svn.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><ANCHOR>git</ANCHOR><X><T>git</T><A>https://git-scm.com/</A><L>en</L><F>HTML</F></X></TITLE>
-      <ITEM><X><T>documentation</T><A>https://git-scm.com/doc</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>glossary</T><A>https://git-scm.com/docs/gitglossary/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Git for Windows</T><A>https://gitforwindows.org/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Pro Git</T><A>https://git-scm.com/book/en/v2</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>visual cheatsheet</T><A>http://ndpsoftware.com/git-cheatsheet.html</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>DeepGit</T><A>https://www.syntevo.com/deepgit/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>git-hyper-blame</T><A>https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/git-hyper-blame.html</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>SourceTree</T><A>https://www.sourcetreeapp.com</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Gogs</T><A>https://gogs.io/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Gitea</T><A>https://about.gitea.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><BLIST><TITLE>Doc</TITLE>
+          <ITEM><CLIST><TITLE><X><T>documentation</T><A>https://git-scm.com/doc</A><L>en</L><F>HTML</F></X></TITLE>
+          <ITEM><X><T>glossary</T><A>https://git-scm.com/docs/gitglossary/</A><L>en</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
+        <ITEM><X><T>Pro Git</T><A>https://git-scm.com/book/en/v2</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>visual cheatsheet</T><A>http://ndpsoftware.com/git-cheatsheet.html</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Clients</TITLE>
+        <ITEM><X><T>Git for Windows</T><A>https://gitforwindows.org/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>DeepGit</T><A>https://www.syntevo.com/deepgit/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>git-hyper-blame</T><A>https://commondatastorage.googleapis.com/chrome-infra-docs/flat/depot_tools/docs/html/git-hyper-blame.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>SourceTree</T><A>https://www.sourcetreeapp.com</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>GitButler</T><A>https://gitbutler.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Servers</TITLE>
+        <ITEM><X><T>Gogs</T><A>https://gogs.io/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Gitea</T><A>https://about.gitea.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
       <ITEM><CLIST><TITLE>Hook management</TITLE>
         <ITEM><X><T>pre-commit</T><A>https://pre-commit.com/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Husky</T><A>https://typicode.github.io/husky/</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
+      <ITEM><X><T>Conventional Commits</T><A>https://www.conventionalcommits.org/en/v1.0.0/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Karma Git Commit Msg</T><A>https://karma-runner.github.io/latest/dev/git-commit-msg.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>personal notes</T><A>../notes/git.html</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><X status="obsolete"><T>Aegis</T><A>https://sourceforge.net/projects/aegis/</A><L>en</L><F>HTML</F></X></ITEM>
