@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Design Patterns</TITLE>
 <PATH>links/dp.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -29,7 +29,7 @@
           <ITEM><ARTICLE><X><T>Abstract Factory</T><A>http://kremer.cpsc.ucalgary.ca/patterns/abstractFactory.html</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X status="dead"><T>Abstract Factory Design Pattern</T><A>http://www.castle-cadenza.demon.co.uk/abfact.htm</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shaun</FIRSTNAME><LASTNAME>Parry</LASTNAME></AUTHOR><COMMENT>A very short presentation of the pattern, but Parry gives a Delphi example.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Creating Truly Maintainable Class Factories</T><A>https://www.drdobbs.com/creating-truly-maintainable-class-factor/184401309</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Early</FIRSTNAME><LASTNAME>Ehlinger</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>11</MONTH></DATE><COMMENT>A factory implementation using dynamic library loading.</COMMENT></ARTICLE></ITEM>
-          <ITEM><ARTICLE><X><T>Abstract Factory Pattern in Java</T><A>https://www.baeldung.com/java-abstract-factory-pattern</A><L>en</L><F>HTML</F></X><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE><COMMENT>A short description of the pattern with little explanation.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Abstract Factory Pattern in Java</T><A>https://www.baeldung.com/java-abstract-factory-pattern</A><L>en</L><F>HTML</F></X><DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>A short description of the pattern with little explanation.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Builder: Separate the construction of a complex object from its representation so that the same construction process can create different representations.</TITLE>
           <ITEM><ARTICLE><X><T>Builder</T><A>http://kremer.cpsc.ucalgary.ca/patterns/builder.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
@@ -50,7 +50,7 @@
         <ITEM><BLIST><TITLE>Prototype: Specify the kinds of objects to create using a prototypical instance, and create new objects by copying this prototype.</TITLE>
           <ITEM><ARTICLE><X><T>Prototype</T><A>http://kremer.cpsc.ucalgary.ca/patterns/prototype.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Rob</FIRSTNAME><LASTNAME>Kremer</LASTNAME></AUTHOR><COMMENT>A very short summary of the pattern.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>Create Object Clones Through the Prototype Pattern in .NET</T><A>https://visualstudiomagazine.com/articles/2013/05/31/the-prototype-pattern-in-net.aspx</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Vogel</LASTNAME></AUTHOR><DATE><YEAR>2013</YEAR><MONTH>5</MONTH><DAY>31</DAY></DATE><COMMENT>A simple C# example.</COMMENT></ARTICLE></ITEM>
-          <ITEM><ARTICLE><X><T>Prototype Pattern in Java</T><A>https://www.baeldung.com/java-pattern-prototype</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vivek</FIRSTNAME><LASTNAME>Balasubramaniam</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>A short description of the pattern in Java.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Prototype Pattern in Java</T><A>https://www.baeldung.com/java-pattern-prototype</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vivek</FIRSTNAME><LASTNAME>Balasubramaniam</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT>A short description of the pattern in Java.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Product Trader: Let clients create objects by naming an abstract superclass and by providing a specification.</TITLE>
           <ITEM><ARTICLE><X><T>Product Trader</T><A>https://www.riehle.org/computer-science/research/1996/plop-1996-product-trader.html</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Dirk</FIRSTNAME><LASTNAME>Baümer</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Dirk</FIRSTNAME><LASTNAME>Riehle</LASTNAME></AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>This is a complete description of the role pattern with the pros, cons, C++ and Smalltalk examples…</COMMENT></ARTICLE></ITEM>
@@ -121,7 +121,7 @@
           <ITEM><ARTICLE><X><T>Streams Pattern</T><A>http://alumni.media.mit.edu/~tpminka/patterns/Streams.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Minka</LASTNAME></AUTHOR><DATE><YEAR>1997</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE><COMMENT>A good short presentation of the pattern, but there is no UML diagram or example explaining how to implement it.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Behavioral patterns</TITLE>
+      <ITEM><BLIST><TITLE>Behavioural patterns</TITLE>
         <ITEM><BLIST><TITLE>Active Object (a.k.a. Concurrent Object or Actor): Decouple method execution from method invocation to enhance concurrency and simplify synchronized access to an object that resides in its own thread of control.</TITLE>
           <ITEM><ARTICLE><X><T>Active Object</T><ST>An Object Behavioral Pattern for Concurrent Programming</ST><A>https://www.dre.vanderbilt.edu/~schmidt/PDF/Active-Objects.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>R.</FIRSTNAME><MIDDLENAME>Greg</MIDDLENAME><LASTNAME>Lavender</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Douglas</FIRSTNAME><MIDDLENAME>C.</MIDDLENAME><LASTNAME>Schmidt</LASTNAME></AUTHOR><DATE><YEAR>1996</YEAR></DATE><COMMENT>A complete description of the pattern with some information on a C++ implementation.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
