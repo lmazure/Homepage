@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -1008,6 +1008,27 @@ Options common to <CODEROUTINE>diff</CODEROUTINE> and <CODEROUTINE>sdiff</CODERO
   <ROW>
     <TERM><CODEROUTINE>locale -a -v</CODEROUTINE></TERM>
     <DESC>list of all available locales with LC_IDENTIFICATION data</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>aspell help</CODEROUTINE></TERM>
+    <DESC>display the help</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>sudo apt-get install aspell-fr</CODEROUTINE></TERM>
+    <DESC>install French dictionary</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>-M</CODEROUTINE><BR/>
+      <CODEROUTINE>--mode=markdown</CODEROUTINE></TERM>
+    <DESC>Markdown mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>find . -type f -name "*.md" -print -exec sh -c 'aspell list --lang=en-US -M &lt; {}' \;</CODEROUTINE></TERM>
+    <DESC>spell check all Markdown files</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
