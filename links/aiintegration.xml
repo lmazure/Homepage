@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -21,7 +21,10 @@
       <ITEM><CLIST><TITLE><X><T>LangChain</T><A>https://www.langchain.com/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>doc</T><A>https://python.langchain.com/</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
-      <ITEM><X><T>LangChain4J</T><A>https://docs.langchain4j.dev/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>LangChain4J</T><A>https://docs.langchain4j.dev/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>API doc</T><A>https://docs.langchain4j.dev/apidocs/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>source</T><A>https://github.com/langchain4j</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
       <ITEM><X><T>Spring AI</T><A>https://spring.io/projects/spring-ai/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><CLIST><TITLE><X><T>Griptape</T><A>https://github.com/griptape-ai/griptape</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>doc</T><A>https://docs.griptape.ai/latest/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -121,6 +124,9 @@
           <ITEM><ARTICLE><X quality="-1"><T>NEW Mixtral 8x22b Tested - Mistral's New Flagship MoE Open-Source Model</T><A>https://www.youtube.com/watch?v=a75TC-w2aQ4</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>2</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matthew</FIRSTNAME><LASTNAME>Berman</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE><COMMENT>A classic naive evaluation of the model.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>MIXTRAL 8x22B INSTRUCT and more!!!</T><A>https://www.youtube.com/watch?v=nKst30LrgC4</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>17</DAY></DATE><COMMENT>The Mixtral 8x22B Instruct model, a tokenizer, and a Python library: Mistral Common.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>Codestral</TITLE>
+          <ITEM><ARTICLE><X><T>Codestral: Hello, World!</T><ST>Empowering developers and democratising coding with Mistral AI.</ST><A>https://mistral.ai/news/codestral/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE><COMMENT>Mistral announces their first code model.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Gemma</TITLE>
         <ITEM><ARTICLE><X><T>Google beats OpenAI in "Open Sourcing" Flagship Models!</T><A>https://www.youtube.com/watch?v=UM2arC3EzEI</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>0</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE><COMMENT>Google has released two open-weight models: Gemma 2B and 7B.</COMMENT></ARTICLE></ITEM>
@@ -142,8 +148,11 @@
     <ITEM><BLIST><TITLE>Web scrapping</TITLE>
       <ITEM><ARTICLE><X><T>Web Scraping AI AGENT, that absolutely works 😍</T><A>https://www.youtube.com/watch?v=zDqAZOiPX_M</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>A presentation of <X><T>ScrapeGraphAI</T><A>https://pypi.org/project/scrapegraphai/</A><L>en</L><F>HTML</F></X>, a Python library to scrap a Web site and to interrogate a LLM on the scrapped data.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>“Wait, this Agent can Scrape ANYTHING?!” - Build universal web scraping agent</T><A>https://www.youtube.com/watch?v=dSX5eoD4-u4</A><L>en</L><F>MP4</F><DURATION><MINUTE>29</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>16</DAY></DATE><COMMENT>Scrapping the Web with <X><T>FireCrawl</T><A>https://www.firecrawl.dev/</A><L>en</L><F>HTML</F></X> or <X><T>AgentQL</T><A>https://docs.agentql.com/</A><L>en</L><F>HTML</F></X>, and a LLM.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>How to scrape the web for LLM in 2024: Jina AI (Reader API), Mendable (firecrawl) and Scrapegraph-ai</T><A>https://www.youtube.com/watch?v=QxHE4af5BQE</A><L>en</L><F>MP4</F><DURATION><MINUTE>20</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Hai</FIRSTNAME><LASTNAME>Nghiem</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>17</DAY></DATE><COMMENT>Some Web scrapping tools: Beautiful Soup, Jina AI, Firecrawl, and Scrapegraph-ai.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tools</TITLE>
+      <ITEM><ARTICLE><X><T>LLM Toolkit: Validation is all you need</T><A>https://www.mechanical-orchard.com/insights/llm-toolkit-validation-is-all-you-need</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jeff</FIRSTNAME><LASTNAME>Schomay</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE><COMMENT>Building a tool that, from an English question, performs a database request and generates an answer, using Instructor and Fructose.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Google's RAG Experiment - NotebookLM</T><A>https://www.youtube.com/watch?v=nK61ZpAS13s</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>The title says it all. Google demo is impressive, using voice for quering and answering.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>LangChain</TITLE>
         <ITEM><ARTICLE><X><T>LangChain101: Question A 300 Page Book (w/ OpenAI + Pinecone)</T><A>https://www.youtube.com/watch?v=h0DHDp1FbmQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>31</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Kamradt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE><COMMENT>A small demo using LangChain, OpenAI, and Pinecone.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Workaround OpenAI's Token Limit With Chain Types</T><A>https://www.youtube.com/watch?v=f9_BWhCI4Zo</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Kamradt</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>1</DAY></DATE><COMMENT>Some solutions to summarise or extract answers from too long documents.</COMMENT></ARTICLE></ITEM>
@@ -156,6 +165,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>LangChain4J</TITLE>
         <ITEM><ARTICLE><X><T>Java Meets AI: A Hands On Guide to Building LLM Powered Applications with LangChain4j By Lize Raes</T><A>https://www.youtube.com/watch?v=BD1MSLbs9KE</A><L>en</L><F>MP4</F><DURATION><MINUTE>50</MINUTE><SECOND>47</SECOND></DURATION></X><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE><COMMENT>An overview of LangChain4j.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>The Definitive Guide to Tool Support in LangChain4J</T><A>https://www.youtube.com/watch?v=cjI_6Siry-s</A><L>en</L><F>MP4</F><DURATION><MINUTE>28</MINUTE><SECOND>19</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Ken</FIRSTNAME><LASTNAME>Kousen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE><COMMENT>A rather slow presentation of using tools in LangChain4j.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Java rencontre l'IA : Comment intégrer les LLMs dans vos applications avec LangChain4j</T><A>https://www.youtube.com/watch?v=0FEUmI2Ou10</A><L>fr</L><F>MP4</F><DURATION><MINUTE>46</MINUTE><SECOND>34</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Lize</FIRSTNAME><LASTNAME>Raes</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>3</DAY></DATE><COMMENT>The same, in French and updated.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Ollama</TITLE>
