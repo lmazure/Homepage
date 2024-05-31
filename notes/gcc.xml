@@ -42,7 +42,7 @@ It is faster that using <CODEROUTINE>malloc</CODEROUTINE>/<CODEROUTINE>free</COD
 It is useful to write macros optimized when one of their parameters is a hard coded constant.</ITEM>
 <ITEM><CODEROUTINE>__typeof__</CODEROUTINE> this is a macro returning the type of its argument<BR/>
 It is useful when writing macros which are generic for several data types.</ITEM>
-<ITEM><CODEROUTINE>__va_copy</CODEROUTINE> copy a <CODEROUTINE>va_list</CODEROUTINE> (there is no other way to portably walk though a variable parameter list twice)</ITEM>
+<ITEM><CODEROUTINE>__va_copy</CODEROUTINE> copy a <CODEROUTINE>va_list</CODEROUTINE> (there is no other way to portably walk through a variable parameter list twice)</ITEM>
 </BLIST>
 <BLIST><TITLE>Warnings</TITLE>
 <ITEM>use <CODEROUTINE>-Wall -W</CODEROUTINE> to get most warning messages (<CODEROUTINE>-W</CODEROUTINE> has been deprecated by <CODEROUTINE>-Wextra</CODEROUTINE> with gcc3.x)</ITEM>
