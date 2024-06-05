@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -53,7 +53,6 @@
     </CLIST></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
-    <ITEM><ARTICLE><X><T>ClippyGPT - How I Built Supabase’s OpenAI Doc Search (Embeddings)</T><A>https://www.youtube.com/watch?v=Yhtjd7yGGGA</A><L>en</L><F>MP4</F><DURATION><MINUTE>41</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR> describes in details how he implemented a chat to answer questions on Supabase: tokenising the doc, finding the paragraph closest to the question, and generating the answer.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>LLaMA &amp; Alpaca: “ChatGPT” On Your Local Computer 🤯 |  Tutorial</T><A>https://www.youtube.com/watch?v=kT_-qUxrlOU</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Thissen</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>A short explanation on how to use Dalai and LLaMA.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Hugging Face + Langchain in 5 mins | Access 200k+ FREE AI models for your AI apps</T><A>https://www.youtube.com/watch?v=_j7JEDWuqLE</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE><COMMENT>A small effective demo of using Hugging Face and LangChain.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality="1"><T>$0 Embeddings (OpenAI vs. free &amp; open source)</T><A>https://www.youtube.com/watch?v=QdDoFfkVkcw</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>24</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE><COMMENT>A demo of two ways to compute embeddings: online with Hugging Face and locally in the browser.</COMMENT></ARTICLE></ITEM>
@@ -126,6 +125,7 @@
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>Codestral</TITLE>
           <ITEM><ARTICLE><X><T>Codestral: Hello, World!</T><ST>Empowering developers and democratising coding with Mistral AI.</ST><A>https://mistral.ai/news/codestral/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE><COMMENT>Mistral announces their first code model.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X quality="-1"><T>Solving HackerRank HARD Problems with Codestral.</T><A>https://www.youtube.com/watch?v=MJ7W45iHAks</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>28</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>4</DAY></DATE><COMMENT>The too common evaluation of a code model: the evaluator simply copies and pastes the problem and runs the unit tests, without looking at the generated code.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Gemma</TITLE>
@@ -144,6 +144,10 @@
       <ITEM><BLIST><TITLE>Phi</TITLE>
         <ITEM><ARTICLE><X><T>Microsoft’s Phi-3 shows the surprising power of small, locally run AI language models</T><ST>Microsoft’s 3.8B parameter Phi-3 may rival GPT-3.5, signaling a new era of “small language models."</ST><A>https://arstechnica.com/information-technology/2024/04/microsofts-phi-3-shows-the-surprising-power-of-small-locally-run-ai-language-models/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benj</FIRSTNAME><LASTNAME>Edwards</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>Some little information, mostly Microsoft’s PR, on Phi-3-mini.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>RAG</TITLE>
+      <ITEM><ARTICLE><X><T>ClippyGPT - How I Built Supabase’s OpenAI Doc Search (Embeddings)</T><A>https://www.youtube.com/watch?v=Yhtjd7yGGGA</A><L>en</L><F>MP4</F><DURATION><MINUTE>41</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Greg</FIRSTNAME><LASTNAME>Richardson</LASTNAME></AUTHOR> describes in details how he implemented a chat to answer questions on Supabase: tokenising the doc, finding the paragraph closest to the question, and generating the answer.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Ne mettez pas les projets RAG en production trop vite !</T><A>https://blog.octo.com/la-plupart-des-projets-llm-ne-sont-pas-pret-pour-une-mise-en-production</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Philippe</FIRSTNAME><LASTNAME>Prados</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>3</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Philippe</FIRSTNAME><LASTNAME>Prados</LASTNAME></AUTHOR> lists some examples of problems that will occur with a too simplistic implementation of a RAG. But this simply means that you do not design a demo and a scaleable application the same way, the second is much more complex.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Web scrapping</TITLE>
       <ITEM><ARTICLE><X><T>Web Scraping AI AGENT, that absolutely works 😍</T><A>https://www.youtube.com/watch?v=zDqAZOiPX_M</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>A presentation of <X><T>ScrapeGraphAI</T><A>https://pypi.org/project/scrapegraphai/</A><L>en</L><F>HTML</F></X>, a Python library to scrap a Web site and to interrogate a LLM on the scrapped data.</COMMENT></ARTICLE></ITEM>
