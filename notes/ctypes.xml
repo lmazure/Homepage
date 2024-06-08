@@ -57,7 +57,7 @@ uint_fastn_t is a fast unsigned integer type with a width of at least n.</ITEM>
 </BLIST>
 The macros defining the min and max values (e.g. INT_FAST8_MAX, INTMAX_MIN…) and the scanf and printf formats (e.g. PRIdFAST8, PRIoMAX…) are also available for the previous types.<BR/>
 <BR/>
-strtoimax and strtoumax routines should be used to parse a string into a intmax_t or uintmax_t. <BR/>
+strtoimax and strtoumax routines should be used to parse a string into an intmax_t or uintmax_t. <BR/>
 <BR/>
 INTMAX_C and UINTMAX_C macros should be used to define intmax_t or uintmax_t constants.
 </CONTENT>

@@ -287,8 +287,8 @@ if <CODEROUTINE>dir_target/data</CODEROUTINE> does not exist, <CODEROUTINE>xcopy
 <DEFINITIONTABLE>
   <ROW><TERM><CODEROUTINE>copy</CODEROUTINE></TERM><DESC>copy a file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>/v</CODEROUTINE></TERM><DESC>check that sectors written on disk are correct</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>/a</CODEROUTINE></TERM><DESC>for a source file, the data are copied up to the first end-of-file mark(<MODIFIERKEY id="Ctrl"/><KEY id="Z"/>)<BR/>for a target file, a end-of-file mark is added as the last character in the file</DESC></ROW>
-  <ROW><TERM><CODEROUTINE>/b</CODEROUTINE></TERM><DESC>for a source file, the file must be entirely copied including the end-of-file marks<BR/>for a target file, does not add a end-of-file mark at the end of the file</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/a</CODEROUTINE></TERM><DESC>for a source file, the data are copied up to the first end-of-file mark(<MODIFIERKEY id="Ctrl"/><KEY id="Z"/>)<BR/>for a target file, an end-of-file mark is added as the last character in the file</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/b</CODEROUTINE></TERM><DESC>for a source file, the file must be entirely copied including the end-of-file marks<BR/>for a target file, does not add an end-of-file mark at the end of the file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>copy foo+bar[+…] target</CODEROUTINE></TERM><DESC>concatenate the source files into a single target file</DESC></ROW>
   <ROW><TERM><CODEROUTINE>copy foo+bar[+…]</CODEROUTINE></TERM><DESC>concatenate the files into <CODEROUTINE>foo</CODEROUTINE></DESC></ROW>
   <ROW><TERM><CODEROUTINE>copy *.suf target</CODEROUTINE></TERM><DESC>concatenate the files in target</DESC></ROW>
