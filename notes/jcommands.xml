@@ -7,14 +7,15 @@
 <CONTENT>
 <BLIST><TITLE><B><U>java</U></B></TITLE>
   <ITEM>syntax:<BR/>
-    <CODEROUTINE>java [ options ] class [ argument … ]</CODEROUTINE><BR/>
-    <CODEROUTINE>java [ options ] -jar file.jar [ argument … ]</CODEROUTINE></ITEM>
+    <CODEROUTINE>java [ options ] mainclass [ argument … ]</CODEROUTINE><BR/>
+    <CODEROUTINE>java [ options ] -jar file.jar [ argument … ]</CODEROUTINE><BR/>
+    <CODEROUTINE>java [ options ] -jar file.jar mainclass [ argument … ]</CODEROUTINE> if the main class is not defined in the jar file</ITEM>
   <ITEM><CODEROUTINE>-Xms<I>n</I></CODEROUTINE> set the initial size, in bytes, of the memory allocation pool<BR/>
     The value must be a multiple of 1024 greater than 1MB.<BR/>
-    Append the letter k or K to indicate kilobytes, or m or M to indicate megabytes.</ITEM>
+    Append the letter <CODEROUTINE>k</CODEROUTINE> or <CODEROUTINE>K</CODEROUTINE> to indicate kilobytes, or <CODEROUTINE>m</CODEROUTINE> or <CODEROUTINE>M</CODEROUTINE> to indicate megabytes.</ITEM>
   <ITEM><CODEROUTINE>-Xmx<I>n</I></CODEROUTINE> set the maximum size, in bytes, of the memory allocation pool<BR/>
     The value must be a multiple of 1024 greater than 2MB.<BR/>
-    Append the letter k or K to indicate kilobytes, or m or M to indicate megabytes.</ITEM>
+    Append the letter <CODEROUTINE>k</CODEROUTINE> or <CODEROUTINE>K</CODEROUTINE> to indicate kilobytes, or <CODEROUTINE>m</CODEROUTINE> or <CODEROUTINE>M</CODEROUTINE> to indicate megabytes.</ITEM>
   <ITEM><CODEROUTINE>-Xss<I>n</I></CODEROUTINE> set the thread stack size</ITEM>
   <ITEM><CODEROUTINE>-D<I>property</I>=<I>value</I></CODEROUTINE> set a system property value</ITEM>
   <ITEM>
@@ -82,8 +83,81 @@
   </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>javac</U></B></TITLE>
-  <ITEM>detail the deprecated features used by the file being compiled
-    <CODESAMPLE>javac -deprecation foobar.java</CODESAMPLE></ITEM>
+  <ITEM>Compiles java files into class files.
+    <CODESAMPLE>javac -d ./target/classes $(find -name '*.java')</CODESAMPLE></ITEM>
+    <ITEM>
+      <DEFINITIONTABLE>
+        <ROW>
+          <TERM><CODEROUTINE>--class-path classpath</CODEROUTINE><BR/>
+            <CODEROUTINE>-classpath classpath</CODEROUTINE><BR/>
+            <CODEROUTINE>-cp classpath</CODEROUTINE></TERM>
+          <DESC>Specifies where to find user class files and annotation processors. This class path overrides the user class path in the <CODEROUTINE>CLASSPATH</CODEROUTINE> environment variable.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-d directory</CODEROUTINE></TERM>
+          <DESC>Sets the destination directory for class files. If a class is part of a package, then <CODEROUTINE>javac</CODEROUTINE> puts the class file in a subdirectory that reflects the module name (if appropriate) and package name. The directory, and any necessary subdirectories, will be created if they do not already exist.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-deprecation</CODEROUTINE><BR/>
+            <CODEROUTINE>-Xlint:deprecation</CODEROUTINE></TERM>
+          <DESC>Shows a description of each use or override of a deprecated member or class.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-verbose</CODEROUTINE></TERM>
+          <DESC>Outputs messages about what the compiler is doing.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-version</CODEROUTINE><BR/>
+            <CODEROUTINE>--version</CODEROUTINE></TERM>
+          <DESC>Prints version information.</DESC>
+        </ROW>
+      </DEFINITIONTABLE>
+    </ITEM>
+</BLIST>
+<BLIST><TITLE><B><U>jar</U></B></TITLE>
+  <ITEM>Create or manipulate an archive for classes and resources.</ITEM>
+    <ITEM>
+      <DEFINITIONTABLE>
+        <ROW>
+          <TERM><CODEROUTINE>-c</CODEROUTINE><BR/>
+            <CODEROUTINE>--create</CODEROUTINE></TERM>
+          <DESC>Creates the archive.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-t</CODEROUTINE><BR/>
+            <CODEROUTINE>--list</CODEROUTINE></TERM>
+          <DESC>Lists the table of contents for the archive.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-f FILE</CODEROUTINE><BR/>
+            <CODEROUTINE>--file=FILE</CODEROUTINE></TERM>
+          <DESC>Specifies the archive file name.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-e CLASSNAME</CODEROUTINE><BR/>
+            <CODEROUTINE>--main-class=CLASSNAME</CODEROUTINE></TERM>
+          <DESC>Specifies the application entry point for standalone applications bundled into a modular or executable modular JAR file.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-m FILE</CODEROUTINE><BR/>
+            <CODEROUTINE>--manifest=FILE</CODEROUTINE></TERM>
+          <DESC>Includes the manifest information from the given manifest file.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-C DIR</CODEROUTINE></TERM>
+          <DESC>Changes the specified directory and includes the files specified at the end of the command line.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>-v</CODEROUTINE><BR/>
+            <CODEROUTINE>--verbose</CODEROUTINE></TERM>
+          <DESC>Sends or prints verbose output to standard output.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>--version</CODEROUTINE></TERM>
+          <DESC>Prints version information.</DESC>
+        </ROW>
+      </DEFINITIONTABLE>
+    </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>javap</U></B></TITLE>
   <ITEM>dump the package, protected and public classes and members of a class:
@@ -100,6 +174,7 @@
       <ROW><CELL>48</CELL><CELL>0</CELL><CELL>1.4</CELL></ROW>
       <ROW><CELL>49</CELL><CELL>0</CELL><CELL>1.5</CELL></ROW>
       <ROW><CELL>50</CELL><CELL>0</CELL><CELL>1.6</CELL></ROW>
+      <ROW><CELL>…</CELL><CELL>…</CELL><CELL>…</CELL></ROW>
     </TABLE>
   </ITEM>
 </BLIST>
@@ -146,5 +221,5 @@
     <CODEROUTINE>jinfo <I>pid</I></CODEROUTINE></ITEM>
 </BLIST>
 </CONTENT>
-<X><T>Oracle's documentation</T><A>https://docs.oracle.com/en/java/javase/21/docs/specs/man/index.html</A><L>en</L><F>HTML</F></X>
+<X><T>Oracle's documentation</T><A>https://docs.oracle.com/en/java/javase/22/docs/specs/man/index.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
