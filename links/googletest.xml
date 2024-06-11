@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Testing at Google</TITLE>
 <PATH>links/googletest.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><BLIST>
@@ -104,6 +104,7 @@
       <ITEM><ARTICLE><X><T>What’s in a Name?</T><A>https://testing.googleblog.com/2024/03/whats-in-name.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Raider</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE><COMMENT>The basic reminder that proper naming is important.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Test Failures Should Be Actionable</T><A>https://testing.googleblog.com/2024/05/test-failures-should-be-actionable.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Titus</FIRSTNAME><LASTNAME>Winters</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE><COMMENT>It should be possible to start analysing a test failure with only the test name and the failure message.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Avoid the Long Parameter List</T><A>https://testing.googleblog.com/2024/05/avoid-long-parameter-list.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gene</FIRSTNAME><LASTNAME>Volovich</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Don't DRY Your Code Prematurely</T><A>https://testing.googleblog.com/2024/05/dont-dry-your-code-prematurely.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Maksimovich</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>The author suggests to not factorise code too early because methods may diverge later. But this advice is debatable: the methods may never diverge and, even if it is the case, keeping their common logic centralised is often better.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>The Clean Code Talks: writing testable code</TITLE>
       <ITEM><ARTICLE><X><T>Clean Code Talks - "GuiceBerry"</T><A>https://www.youtube.com/watch?v=4E4672CS58Q</A><L>en</L><F>MP4</F><DURATION><MINUTE>49</MINUTE><SECOND>11</SECOND></DURATION><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE></X><AUTHOR><FIRSTNAME>Luiz-Otavio</FIRSTNAME><LASTNAME>Zorzella</LASTNAME></AUTHOR><DATE><YEAR>2008</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>A presentation of GuiceBerry.</COMMENT></ARTICLE></ITEM>
