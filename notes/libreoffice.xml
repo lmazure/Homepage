@@ -3,10 +3,10 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>5</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
-  <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/Common/XML_File_Formats</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/latest/en-US/text/shared/00/00000021.html</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM>Shortcuts
     <DEFINITIONTABLE>
       <ROW>
@@ -182,6 +182,11 @@
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
+  <ITEM><NLIST><TITLE>Configure the keyboard key for the autocompletion</TITLE>
+    <ITEM><CODEMENU>Outils<CODEMENU>AutoCorrection<CODEMENU>Options d’AutoCorrection…</CODEMENU></CODEMENU></CODEMENU></ITEM>
+    <ITEM>Select tab <CODEMENU>Insertion automatique</CODEMENU></ITEM>
+    <ITEM>Select the key in the <CODEMENU>Accepter avec :</CODEMENU> dropdown</ITEM>
+  </NLIST></ITEM>
   <ITEM><NLIST><TITLE>Change page orientation</TITLE>
     <ITEM>Choose Format - Page</ITEM>
     <ITEM>Click the Page tab</ITEM>

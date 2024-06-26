@@ -372,6 +372,16 @@
     <CODESAMPLE><PROMPT/>{s**2 for s in range(10)}<BR/>
       {0, 1, 64, 4, 36, 9, 16, 49, 81, 25}</CODESAMPLE>
   </ITEM>
+  <ITEM>Sets can only contain immutable types<BR/>
+    SO, in order to put a dictionary in a ser, a kludge must be used, for example:
+    <CODESAMPLE>set1 = set()<BR/>
+      set1.add(frozenset({("email", "john@example.com"), ("full_name", email["John Doe"]), ("tags", ",".join(["high", "red"]))}))<BR/>
+      …<BR/>
+      for d in set1:<BR/>
+      <TAB/>data = dict(d)<BR/>
+      <TAB/>print(f"{data['email']} — {data['full_name']} — {data['tags']}")
+    </CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Dictionary</B></U></TITLE>
   <ITEM>Syntax

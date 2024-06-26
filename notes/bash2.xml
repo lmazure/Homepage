@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Bash</TITLE>
 <PATH>notes/bash2.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>History</B></U></TITLE>
   <ITEM><CODEROUTINE>!!</CODEROUTINE> repeat the last command.</ITEM>
@@ -12,6 +12,7 @@
   <ITEM><CODEROUTINE>!-n</CODEROUTINE> refer to the nth last command. For example, !<CODEROUTINE>-2</CODEROUTINE> refers to the second last command.</ITEM>
   <ITEM><CODEROUTINE>!string</CODEROUTINE> refer to the most recent command that starts with string. For example, !ls refers to the most recent command that starts with ls.</ITEM>
   <ITEM><CODEROUTINE>!343:s/foo/bar/</CODEROUTINE> refer to the 343th command, replacing <CODEROUTINE>foo</CODEROUTINE> by <CODEROUTINE>bar</CODEROUTINE> in it.</ITEM>
+  <ITEM><CODEROUTINE>history 42</CODEROUTINE> return the 42 last commands.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Startup files</B></U></TITLE>
   <ITEM><BLIST><TITLE>For interactive shells or shells called with the <CODEROUTINE>--login</CODEROUTINE> option:</TITLE>
