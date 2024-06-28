@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -30,6 +30,7 @@
         </CLIST></ITEM>
         <ITEM><X><T>Pro Git</T><A>https://git-scm.com/book/en/v2</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>visual cheatsheet</T><A>http://ndpsoftware.com/git-cheatsheet.html</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>GitLab cheatsheet</T><A>https://about.gitlab.com/images/press/git-cheat-sheet.pdf</A><L>en</L><F>PDF</F></X></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Clients</TITLE>
         <ITEM><X><T>Git for Windows</T><A>https://gitforwindows.org/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -167,9 +168,10 @@
       <ITEM><ARTICLE><X><T>Highlights from Git 2.45</T><ST>Git 2.45 is here with experimental support for reftables, and SHA-256 interoperability. Get our take on the latest here.</ST><A>https://github.blog/2024-04-29-highlights-from-git-2-45/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>29</DAY></DATE><COMMENT>Reftable storage, first experiment of SHA-1/SHA-256 interoperability, <CODEROUTINE>git rev-list --missing=print</CODEROUTINE> now supports missing query tips, <CODEROUTINE>git reflog list</CODEROUTINE> can be use to how which references have a reflog even when using reftables, <CODEROUTINE>git config --comment</CODEROUTINE> can be used to comment a line, <CODEROUTINE>git cherry-pick</CODEROUTINE> now supports <CODEROUTINE>--empty</CODEROUTINE>…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Securing Git: Addressing 5 new vulnerabilities</T><ST>Git is releasing several new versions to address five CVEs. Upgrading to the latest Git version is essential to protect against these vulnerabilities.</ST><A>https://github.blog/2024-05-14-securing-git-addressing-5-new-vulnerabilities/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Johannes</FIRSTNAME><LASTNAME>Schindelin</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>14</DAY></DATE><COMMENT>Some fixes of vulnerabilities related to cloning repositories.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A beginner's guide to the Git reftable format</T><A>https://about.gitlab.com/blog/2024/05/30/a-beginners-guide-to-the-git-reftable-format/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrick</FIRSTNAME><LASTNAME>Steinhardt</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE><COMMENT>A detailed description of reftables.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Developer Git Commit Hygiene</T><ST>This article will demonstrate good developer Git commit hygiene as well as educate the developer audience to use short and frequent commits.</ST><A>https://dzone.com/articles/developer-git-commit-hygiene-1</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Gaurav</FIRSTNAME><LASTNAME>Shekhar</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE><COMMENT>A basic (and somewhat out-dated) list of Git good practices.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>GitButler</TITLE>
         <ITEM><ARTICLE><X><T>GitButler Product Demo February 2024</T><A>https://www.youtube.com/watch?v=PWc4meBj4jo</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>A short and rather impressive demo of GitButler.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>GitButler Product Demo 0.12</T><A>https://www.youtube.com/watch?v=zZD24Ikxd1g</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE><COMMENT>Simple rebasing and project history.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>New GitButler Release - Power rebasing, infinite undo and more!</T><A>https://www.youtube.com/watch?v=zZD24Ikxd1g</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>10</DAY></DATE><COMMENT>Simple rebasing and project history.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mercurial</TITLE>
