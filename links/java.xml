@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -254,6 +254,7 @@
       <ITEM><BLIST><TITLE>Data-Oriented Programming</TITLE>
         <ITEM><ARTICLE><X quality="1"><T>Data Oriented Programming in Java</T><A>https://www.infoq.com/articles/data-oriented-programming-java/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE><COMMENT>How to used records and sealed classes to model data and pattern matching to handle it.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Data-Oriented Programming in Java - Version 1.1</T><A>https://inside.java/2024/05/23/dop-v1-1-introduction/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>23</DAY></DATE><COMMENT>A preamble to the Data-Oriented Programming presentation.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Model Data Immutably and Transparently - Data-Oriented Programming v1.1</T><A>https://inside.java/2024/05/27/dop-v1-1-immutable-transparent-data/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>Data objects should be immutable and transparent, so <CODEROUTINE>record</CODEROUTINE>s are a good fit; but getting complete immutability is difficult.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Libraries</TITLE>
@@ -291,6 +292,7 @@
       <ITEM><BLIST><TITLE>Hadoop</TITLE>
         <ITEM><ARTICLE><X status="removed"><T>Business intelligence on the cheap with Apache Hadoop and Dojo, Part 1: Crunch your existing data using Apache Hadoop</T><ST>Feed a web-based reporting application</ST><A>https://www.ibm.com/developerworks/library/wa-dojohadoop1/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Galpin</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>8</MONTH><DAY>17</DAY></DATE><COMMENT>How to use Hadoop to map, reduce and format the data.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE predecessor="https://www.ibm.com/developerworks/library/wa-dojohadoop1/"><X status="removed"><T>Business intelligence on the cheap with Apache Hadoop and Dojo, Part 2: Create eye-catching, interactive reports using the Dojo toolkit</T><ST>Take advantage of Dojo charts</ST><A>https://www.ibm.com/developerworks/library/wa-dojohadoop2/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><LASTNAME>Galpin</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE><COMMENT>Using Dojo to interactively display the data prepared by Hadoop.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>What is Apache Hadoop?</T><A>https://www.youtube.com/watch?v=JWX5Inb--ig</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>59</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Keen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>An overview of Hadoop ecosystem.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Struts</TITLE>
         <ITEM><ARTICLE><X quality="-1"><T>Struts</T><A>https://wpetrus.developpez.com/java/struts/</A><L>fr</L><F>HTML</F></X><AUTHOR><GIVENNAME>Metoss</GIVENNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>6</MONTH><DAY>1</DAY></DATE><COMMENT>This presentation of Struts is not clear.</COMMENT></ARTICLE></ITEM>
