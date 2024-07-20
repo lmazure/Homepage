@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -441,6 +441,21 @@ Docker compose will look for an <CODEFILENAME>.env</CODEFILENAME> file to define
 <BR/>
 Analyse a Docker image with Trivy:<BR/>
 <CODEROUTINE>docker run -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.51.2 image squashtest/squash-tm:6.1.0 &gt; log_6.1.0.txt</CODEROUTINE>
+<BR/>
+<BR/>
+<BLIST><TITLE>Create a SBOM with syft</TITLE>
+  <ITEM>installation of syft
+    <CODESAMPLE>sudo sh<BR/>
+      curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin<BR/>
+      exit</CODESAMPLE>
+  </ITEM>
+  <ITEM>running syft<BR/>
+    in another window
+    <CODESAMPLE>sudo dockerd</CODESAMPLE>
+    then, use
+    <CODESAMPLE>syft scan squashtest/squash:7.0.3 -o spdx_json &gt; sbom_squashtest_squash_7_0_3.json</CODESAMPLE>
+  </ITEM>
+</BLIST>
 </ITEM>
 </LLIST>
 </CONTENT>
