@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>pip</TITLE>
 <PATH>notes/pip.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Output</TITLE>
@@ -56,6 +56,9 @@
     <CODESAMPLE><PROMPT/>pip show &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
   </ITEM>
   <ITEM>When installing from <CODEROUTINE>https://test.pypi.org/</CODEROUTINE> (e.g. <CODEROUTINE>pip install -i https://test.pypi.org/simple/ squash-data-simulator==0.1.6.32279</CODEROUTINE>), the dependencies must be already installed, otherwise the installation will fail (I believe because <CODEROUTINE>pip</CODEROUTINE> will try to install them from <CODEROUTINE>https://test.pypi.org/</CODEROUTINE> and they are not present there).</ITEM>
+  <ITEM>List the available versions of a package.
+    <CODESAMPLE><PROMPT/>pip index versions &lt;package3&gt;</CODESAMPLE>
+  </ITEM>
 </BLIST>
 </CONTENT>
 </PAGE>
