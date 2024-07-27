@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -155,6 +155,20 @@ File
       <MODIFIERKEY id="Ctrl"/><KEY id="W"/><BR/>
       <CODEROUTINE>View: Close Editor</CODEROUTINE></TERM>
     <DESC>Close an editor</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="T"/><BR/>
+      <CODEROUTINE>View: Reopen Closed Editor</CODEROUTINE></TERM>
+    <DESC>Reopen the last closed editor</DESC>
+  </ROW>  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="W"/><BR/>
+      <CODEROUTINE>View: Close All Editors in Group</CODEROUTINE></TERM>
+    <DESC>Close all editors in editor group</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="U"/><BR/>
+      <CODEROUTINE>View: Close Saved Editors in Group</CODEROUTINE></TERM>
+    <DESC>Close saved editors in editor group</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="W"/><BR/>
@@ -472,6 +486,7 @@ Multi-selection
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="F4"/><BR/>
+      <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="W"/><BR/>
       <CODEROUTINE>Close Window</CODEROUTINE></TERM>
     <DESC>Close the window</DESC>
   </ROW>

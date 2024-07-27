@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>pip</TITLE>
 <PATH>notes/pip.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Output</TITLE>
@@ -37,6 +37,9 @@
   <ITEM>Uninstall some packages
     <CODESAMPLE><PROMPT/>pip uninstall &lt;package1&gt; &lt;package2&gt; &lt;package3&gt;</CODESAMPLE>
     <CODESAMPLE><PROMPT/>pip uninstall -r requirements.txt</CODESAMPLE>
+  </ITEM>
+  <ITEM>Uninstall all packages
+    <CODESAMPLE><PROMPT/>pip freeze | xargs pip uninstall -y</CODESAMPLE>
   </ITEM>
   <ITEM>List the installed packages
     <CODESAMPLE><PROMPT/>pip list</CODESAMPLE>
