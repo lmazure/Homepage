@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -319,6 +319,26 @@ look for duplicated word:
   <ROW>
     <TERM><CODEROUTINE>cat -t</CODEROUTINE></TERM>
     <DESC>same as <CODEROUTINE>-vT</CODEROUTINE></DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>od</T><A>https://man7.org/linux/man-pages/man1/od.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>write an unambiguous representation of a file to standard output</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>od -c</CODEROUTINE><BR/>
+      <CODEROUTINE>od -t c</CODEROUTINE><BR/>
+      <CODEROUTINE>od --format c</CODEROUTINE></TERM>
+    <DESC>select printable characters or backslash escapes</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>od -x</CODEROUTINE><BR/>
+      <CODEROUTINE>od -t x2</CODEROUTINE><BR/>
+      <CODEROUTINE>od --format x2</CODEROUTINE></TERM>
+    <DESC>select hexadecimal 2-byte units</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
