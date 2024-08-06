@@ -373,7 +373,7 @@
       {0, 1, 64, 4, 36, 9, 16, 49, 81, 25}</CODESAMPLE>
   </ITEM>
   <ITEM>Sets can only contain immutable types<BR/>
-    SO, in order to put a dictionary in a ser, a kludge must be used, for example:
+    So, in order to put a dictionary in a set, a kludge must be used, for example:
     <CODESAMPLE>set1 = set()<BR/>
       set1.add(frozenset({("email", "john@example.com"), ("full_name", email["John Doe"]), ("tags", ",".join(["high", "red"]))}))<BR/>
       …<BR/>
@@ -542,6 +542,42 @@
     <TAB/>return lambda x,incr=n:x+incr</CODESAMPLE>
   </ITEM>
 </BLIST>
+<BLIST><TITLE><U><B>Decorators</B></U></TITLE>
+  <ITEM>The generic pattern is:
+    <CODESAMPLE>import functools<BR/>
+      <BR/>
+      def decorator(func):<BR/>
+      <TAB/>@functools.wraps(func)<BR/>
+      <TAB/>def wrapper_decorator(*args, **kwargs):<BR/>
+      <TAB/><TAB/># Do something before<BR/>
+      <TAB/><TAB/>value = func(*args, **kwargs)<BR/>
+      <TAB/><TAB/># Do something after<BR/>
+      <TAB/><TAB/>return value<BR/>
+      <TAB/>return wrapper_decorator<BR/>
+      <BR/>
+      @decorator<BR/>
+      def decoratee():<BR/>
+      <TAB/>…</CODESAMPLE>
+      <CODEROUTINE>@functools.wraps(func)</CODEROUTINE> ensures that the decorated function retains its original identity.
+  </ITEM>
+  <ITEM>Example of a decorator with arguments:
+    <CODESAMPLE>import functools<BR/>
+      <BR/>
+      def repeat(num_times):<BR/>
+      <TAB/>def decorator_repeat(func):<BR/>
+      <TAB/><TAB/>@functools.wraps(func)<BR/>
+      <TAB/><TAB/>def wrapper_repeat(*args, **kwargs):<BR/>
+      <TAB/><TAB/><TAB/>for _ in range(num_times):<BR/>
+      <TAB/><TAB/><TAB/><TAB/>value = func(*args, **kwargs)<BR/>
+      <TAB/><TAB/><TAB/>return value<BR/>
+      <TAB/><TAB/>return wrapper_repeat<BR/>
+      <TAB/>return decorator_repeat<BR/>
+      <BR/>
+      @repeat(num_times=4)<BR/>
+      def greet(name):<BR/>
+      <TAB/>print(f"Hello {name}")</CODESAMPLE>
+  </ITEM>
+</BLIST>
 <BLIST><TITLE><U><B>Modules</B></U></TITLE>
   <ITEM>A module is a file containing Python definitions and statements.<BR/>
     The statements are executed the first time the module is imported.</ITEM>
@@ -613,8 +649,8 @@
         <TAB/><TAB/>super().__init__(fname, lname)<BR/>
         <TAB/><TAB/>self.graduationyear = year</CODESAMPLE>
     </ITEM>
-    <ITEM><CODEROUTINE>isinstance(object, classinfo)</CODEROUTINE>: Return <CODEROUTINE>True</CODEROUTINE> if the object argument is an instance of the <CODEROUTINE>classinfo</CODEROUTINE> argument, or of a (direct, indirect, or virtual) subclass thereof.</ITEM>
-    <ITEM><CODEROUTINE>issubclass(class, classinfo)</CODEROUTINE>: Return <CODEROUTINE>True</CODEROUTINE> if class is a subclass (direct, indirect, or virtual) of <CODEROUTINE>classinfo</CODEROUTINE>. A class is considered a subclass of itself.</ITEM>
+    <ITEM><CODEROUTINE>isinstance(object, classinfo)</CODEROUTINE>: return <CODEROUTINE>True</CODEROUTINE> if the object argument is an instance of the <CODEROUTINE>classinfo</CODEROUTINE> argument, or of a (direct, indirect, or virtual) subclass thereof.</ITEM>
+    <ITEM><CODEROUTINE>issubclass(class, classinfo)</CODEROUTINE>: return <CODEROUTINE>True</CODEROUTINE> if class is a subclass (direct, indirect, or virtual) of <CODEROUTINE>classinfo</CODEROUTINE>. A class is considered a subclass of itself.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Objects</B></U></TITLE>
 <ITEM><CODEROUTINE>is</CODEROUTINE> tests if two objects are the same.</ITEM>
@@ -739,12 +775,12 @@
 </BLIST>
 <BLIST><TITLE><U><B>random</B></U></TITLE>
   <ITEM><CODEROUTINE>random.randrange(stop)</CODEROUTINE><BR/>
-    <CODEROUTINE>random.randrange(start, stop[, step])</CODEROUTINE>: Return a randomly selected element from <CODEROUTINE>range(start, stop, step)</CODEROUTINE>.</ITEM>
-  <ITEM><CODEROUTINE>random.random()</CODEROUTINE>: Return a random floating point number in the range 0.0 &lt;= X &lt; 1.0.</ITEM>
-  <ITEM><CODEROUTINE>random.choice(seq)</CODEROUTINE>: Return a random element from the non-empty sequence <CODEROUTINE>seq</CODEROUTINE>.</ITEM>
+    <CODEROUTINE>random.randrange(start, stop[, step])</CODEROUTINE>: return a randomly selected element from <CODEROUTINE>range(start, stop, step)</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>random.random()</CODEROUTINE>: return a random floating point number in the range 0.0 &lt;= X &lt; 1.0.</ITEM>
+  <ITEM><CODEROUTINE>random.choice(seq)</CODEROUTINE>: return a random element from the non-empty sequence <CODEROUTINE>seq</CODEROUTINE>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>os</B></U></TITLE>
-  <ITEM><CODEROUTINE>os.listdir(path='.')</CODEROUTINE>: Return a list containing the names of the entries in the directory given by <CODEROUTINE>path</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>os.listdir(path='.')</CODEROUTINE>: return a list containing the names of the entries in the directory given by <CODEROUTINE>path</CODEROUTINE>.</ITEM>
   <ITEM><CODEROUTINE>os.walk(top, topdown=True, onerror=None, followlinks=False)</CODEROUTINE>: Generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple <CODEROUTINE>(dirpath, dirnames, filenames)</CODEROUTINE>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Display colored messages</B></U></TITLE>
