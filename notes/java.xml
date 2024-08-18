@@ -58,7 +58,7 @@
 </BLIST>
 <BLIST><TITLE><U><B>Autoboxing</B></U></TITLE>
   <ITEM>Autoboxing allows to use an <CODEROUTINE>int</CODEROUTINE> in place of an <CODEROUTINE>Integer</CODEROUTINE> and vice-versa.<BR/>
-    Supported types are: <CODEROUTINE>Boolean</CODEROUTINE>, <CODEROUTINE>Byte</CODEROUTINE>, <CODEROUTINE>Character</CODEROUTINE>, <CODEROUTINE>Short</CODEROUTINE>, <CODEROUTINE>Integer</CODEROUTINE>, <CODEROUTINE>Long</CODEROUTINE>, <CODEROUTINE>Float</CODEROUTINE>, and <CODEROUTINE>Double</CODEROUTINE>.<BR/>
+    Supported types are <CODEROUTINE>Boolean</CODEROUTINE>, <CODEROUTINE>Byte</CODEROUTINE>, <CODEROUTINE>Character</CODEROUTINE>, <CODEROUTINE>Short</CODEROUTINE>, <CODEROUTINE>Integer</CODEROUTINE>, <CODEROUTINE>Long</CODEROUTINE>, <CODEROUTINE>Float</CODEROUTINE>, and <CODEROUTINE>Double</CODEROUTINE>.<BR/>
     If the program tries to autounbox <CODEROUTINE>null</CODEROUTINE>, it will throw a <CODEROUTINE>NullPointerException</CODEROUTINE>.<BR/>
     The <CODEROUTINE>==</CODEROUTINE> operator performs reference identity comparisons on <CODEROUTINE>Integer</CODEROUTINE> expressions and value equality comparisons on <CODEROUTINE>int</CODEROUTINE> expressions.<BR/>
     The performance costs associated with boxing and unboxing must not be forgotten.
