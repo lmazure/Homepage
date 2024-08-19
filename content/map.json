@@ -127,7 +127,9 @@
         { "title" : "Economy", "page" : "links/economy.html", "languages" : ["en"], "formats" : ["HTML"] },
         { "title" : "Space", "page" : "links/space.html", "languages" : ["en"], "formats" : ["HTML"] },
         { "title" : "Living beings", "page" : "links/livingbeings.html", "languages" : ["en"], "formats" : ["HTML"] },
-        { "title" : "Health information", "page" : "links/health.html", "languages" : ["en"], "formats" : ["HTML"] },
+        { "title" : "Health information", "page" : "links/health.html", "languages" : ["en"], "formats" : ["HTML"], "children" : [
+          { "title" : "Diseases", "page" : "links/disease.html", "languages" : ["en"], "formats" : ["HTML"] }
+        ] },
         { "title" : "Ecology", "page" : "links/ecology.html", "languages" : ["en"], "formats" : ["HTML"] },
         { "title" : "Language", "page" : "links/lang.html", "languages" : ["en"], "formats" : ["HTML"] }
       ] },
