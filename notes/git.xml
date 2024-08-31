@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -621,14 +621,21 @@
     <DESC>All changes already added to the index are left intact.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git stash push [--include-untracked|--all]</CODEROUTINE><BR/>
-      <CODEROUTINE>git stash -u</CODEROUTINE><BR/><CODEROUTINE>git stash -a</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git stash push --include-untracked</CODEROUTINE><BR/>
+      <CODEROUTINE>git stash push --all</CODEROUTINE><BR/>
+      <CODEROUTINE>git stash -u</CODEROUTINE><BR/>
+      <CODEROUTINE>git stash -a</CODEROUTINE></TERM>
     <DESC><CODEROUTINE>--include-untracked</CODEROUTINE>, <CODEROUTINE>-u</CODEROUTINE>: all untracked files are also stashed and then cleaned up with <CODEROUTINE>git clean</CODEROUTINE><BR/>
       <CODEROUTINE>--all</CODEROUTINE>, <CODEROUTINE>-a</CODEROUTINE>: the ignored files are stashed and cleaned in addition to the untracked files.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash push -u foo.txt bar.txt new.txt</CODEROUTINE></TERM>
     <DESC>Stash a list of modified and new files.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git stash push -p</CODEROUTINE><BR/>
+      <CODEROUTINE>git stash push --patch</CODEROUTINE></TERM>
+    <DESC>Interactively select hunks from the diff between HEAD and the working tree to be stashed.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash list</CODEROUTINE></TERM>
