@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Bash</TITLE>
 <PATH>notes/bash2.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>History</B></U></TITLE>
   <ITEM><CODEROUTINE>!!</CODEROUTINE> repeat the last command.</ITEM>
@@ -44,6 +44,11 @@
     <TERM><CODEROUTINE>set -e</CODEROUTINE><BR/>
       <CODEROUTINE>set -o errexit</CODEROUTINE></TERM>
     <DESC>Exit immediately if a command, which is not part of a test, fails.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>set -x</CODEROUTINE><BR/>
+      <CODEROUTINE>set -o xtrace</CODEROUTINE></TERM>
+    <DESC>Print a trace of commands and their arguments after they are expanded and before they are executed.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
