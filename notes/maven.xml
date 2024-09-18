@@ -117,7 +117,7 @@ Command line options
   <ITEM>Skip tests in install or package phase:
     <CODESAMPLE>mvn clean install -Dmaven.test.skip=true</CODESAMPLE>
     <CODESAMPLE>mvn clean package -Dmaven.test.skip=true</CODESAMPLE></ITEM>
-  <ITEM>Compile the test sources and copies their resources, but skip their execution:
+  <ITEM>Compile the test sources and copy their resources, but skip their execution:
     <CODESAMPLE>mvn clean install -DskipTests</CODESAMPLE>
     <CODESAMPLE>mvn clean package -DskipTests</CODESAMPLE></ITEM>
   <ITEM>Use <CODEROUTINE>${env.VARIABLE_NAME}</CODEROUTINE> to get the value of an environment variable.</ITEM>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -466,6 +466,7 @@ Multi-selection
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Navigation
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="PageDown"/></TERM>
@@ -702,6 +703,7 @@ Search/replace
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Customisation
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="X"/></TERM>
@@ -710,7 +712,26 @@ Search/replace
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id=","/><BR/>
       <CODEROUTINE>Preferences: Open Settings (UI)</CODEROUTINE></TERM>
-    <DESC>Display settings</DESC></ROW>
+    <DESC>Display settings</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Preferences: Open Worspace Settings (JSON)</CODEROUTINE></TERM>
+    <DESC>Open <CODEROUTINE>&lt;workspace&gt;/.vscode/settings.json</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Preferences: Open User Setting (JSON)</CODEROUTINE></TERM>
+    <DESC>If there is a profile: open <CODEROUTINE>&lt;user-data-dir&gt;/User/profiles/&lt;profile-id&gt;/settings.json</CODEROUTINE><BR/>
+      otherwise: open <CODEROUTINE>&lt;user-data-dir&gt;/User/settings.json</CODEROUTINE></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Preferences: Open Application Settings (JSON)</CODEROUTINE></TERM>
+    <DESC>If there is a profile: open <CODEROUTINE>&lt;user-data-dir&gt;/User/settings.json</CODEROUTINE><BR/>
+      otherwise: the command is unavailable</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Preferences: Open Default Settings (JSON)</CODEROUTINE></TERM>
+    <DESC>Open <CODEROUTINE>defaultSettings.json</CODEROUTINE> (where is this file?)</DESC>
+  </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="T"/><BR/>
       <CODEMENU>File<CODEMENU>Preferences<CODEMENU>Color Theme</CODEMENU></CODEMENU></CODEMENU></TERM>
@@ -751,6 +772,26 @@ Markdown
     <DESC>Find the references to the Markdown file currently displayed</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+To set Git bash as the default shell, define in <CODEFILENAME>settings.json</CODEFILENAME>:
+<CODESAMPLE>""terminal.integrated.profiles.windows": {<BR/>
+  <TAB/>"PowerShell": {<BR/>
+  <TAB/><TAB/><TAB/>"source": "PowerShell",<BR/>
+  <TAB/><TAB/><TAB/>"icon": "terminal-powershell"<BR/>
+  <TAB/>},<BR/>
+  <TAB/>"Command Prompt": {<BR/>
+  <TAB/><TAB/><TAB/>"path": [<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/>"${env:windir}\\Sysnative\\cmd.exe",<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/>"${env:windir}\\System32\\cmd.exe"<BR/>
+  <TAB/><TAB/><TAB/>],<BR/>
+  <TAB/><TAB/><TAB/>"args": [],<BR/>
+  <TAB/><TAB/><TAB/>"icon": "terminal-cmd"<BR/>
+  <TAB/>},<BR/>
+  <TAB/>"Git Bash": {<BR/>
+  <TAB/><TAB/><TAB/>"path": "G:\\Documents\\tools\\Git\\2.46.0\\bin\\bash.exe",<BR/>
+  <TAB/>}<BR/>
+  },<BR/>
+  "terminal.integrated.defaultProfile.windows": "Git Bash"</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Used extensions</TITLE>
   <ITEM><X><T>XML</T><A>https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml</A><L>en</L><F>HTML</F></X></ITEM>
@@ -838,13 +879,6 @@ Markdown
     </DEFINITIONTABLE>
   </ITEM>
 </BLIST>
-To set Git bash as the default shell, define in <CODEFILENAME>settings.json</CODEFILENAME>:
-<CODESAMPLE>"terminal.integrated.profiles.windows": {<BR/>
-  <TAB/>"Git Bash": {<BR/>
-  <TAB/><TAB/>"path": "F:\\Documents\\tools\\git\\2.43.0\\bin\\bash.exe",<BR/>
-  <TAB/>}<BR/>
-  },<BR/>
-  "terminal.integrated.defaultProfile.windows": "Git Bash"</CODESAMPLE>
 <BLIST><TITLE>Extensions not used anymore</TITLE>
   <ITEM><X><T>GitLab Workflow</T><A>https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow</A><L>en</L><F>HTML</F></X>
     <DEFINITIONTABLE>
