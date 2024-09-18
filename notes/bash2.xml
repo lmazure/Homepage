@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Bash</TITLE>
 <PATH>notes/bash2.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>History</B></U></TITLE>
   <ITEM><CODEROUTINE>!!</CODEROUTINE> repeat the last command.</ITEM>
@@ -119,8 +119,7 @@
     <CODESAMPLE>if [[ $# -ne 4 ]]; then<BR/>
       <TAB/>echo "Syntax: $0 &lt;source login&gt; &lt;source password&gt; &lt;target login&gt; &lt;target password&gt;"<BR/>
       <TAB/>exit 2<BR/>
-      fi
-    </CODESAMPLE>
+      fi</CODESAMPLE>
   </ITEM>
   <ITEM>
     Testing the exit status of the previous command
@@ -128,25 +127,29 @@
       if [[ $? -ne 0 ]]; then<BR/>
       <TAB/>echo "Failed to clone https://$source_repo/$source_project.git"<BR/>
       <TAB/>exit 2<BR/>
-      fi
-    </CODESAMPLE>
+      fi</CODESAMPLE>
   </ITEM>
   <ITEM>
     Looping on directories
     <CODESAMPLE>for dir in $( ls -d * )<BR/>
-      do<BR/>
-      <TAB/>cd $dir<BR/>
-      <TAB/>git pull<BR/>
-      <TAB/>cd ..<BR/>
-      done
-    </CODESAMPLE>
+      <TAB/>do<BR/>
+      <TAB/><TAB/>cd $dir<BR/>
+      <TAB/><TAB/>git pull<BR/>
+      <TAB/><TAB/>cd ..<BR/>
+      <TAB/>done</CODESAMPLE>
+  </ITEM>
+  <ITEM>
+    Looping on increment
+    <CODESAMPLE>for i in {259..327}<BR/>
+      <TAB/>do<BR/>
+      <TAB/><TAB/>echo $i<BR/>
+      <TAB/>done</CODESAMPLE>
   </ITEM>
   <ITEM>
     Test the presence of a string in a file
     <CODESAMPLE>if grep -q foo myfile; then<BR/>
       <TAB/>echo "String is present"<BR/>
-    fi
-    </CODESAMPLE>
+    fi</CODESAMPLE>
   </ITEM>
 </BLIST>
 </CONTENT>
