@@ -93,7 +93,7 @@
       <CODESAMPLE><PROMPT/>succ @@ 4 + 5;;<BR/>
         - : int = 10</CODESAMPLE>
     </ITEM>
-    <ITEM>The reverse application operator (a.k.a pipeline operator) <CODEROUTINE>|&gt;</CODEROUTINE> applies the function defined on the right side to the argument defined on the left side
+    <ITEM>The reverse application operator (a.k.a. pipeline operator) <CODEROUTINE>|&gt;</CODEROUTINE> applies the function defined on the right side to the argument defined on the left side
       <CODESAMPLE><PROMPT/>4 + 5 |&gt; succ;;<BR/>
         - : int = 10</CODESAMPLE>
     </ITEM>
@@ -167,11 +167,11 @@
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Data types</TITLE>
     <ITEM><BLIST><TITLE>The Basic types are</TITLE>
-      <ITEM>int: 63-bit signed int on 64-bit processors, or 31-bit signed int on 32-bit processors</ITEM>
-      <ITEM>float: IEEE double-precision floating point</ITEM>
-      <ITEM>bool: Boolean, written either <CODEROUTINE>true</CODEROUTINE> or <CODEROUTINE>false</CODEROUTINE></ITEM>
-      <ITEM>char: 8-bit character</ITEM>
-      <ITEM>string: sequence of 8 bit chars</ITEM>
+      <ITEM><CODEROUTINE>int</CODEROUTINE>: 63-bit signed int on 64-bit processors, or 31-bit signed int on 32-bit processors</ITEM>
+      <ITEM><CODEROUTINE>float</CODEROUTINE>: IEEE double-precision floating point</ITEM>
+      <ITEM><CODEROUTINE>bool</CODEROUTINE>: Boolean, written either <CODEROUTINE>true</CODEROUTINE> or <CODEROUTINE>false</CODEROUTINE></ITEM>
+      <ITEM><CODEROUTINE>char</CODEROUTINE>: 8-bit character</ITEM>
+      <ITEM><CODEROUTINE>string</CODEROUTINE>: sequence of 8 bit chars</ITEM>
     </BLIST></ITEM>
     <ITEM><CODEROUTINE>Int</CODEROUTINE> module
       <DEFINITIONTABLE>
