@@ -160,9 +160,9 @@
     </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>javap</U></B></TITLE>
-  <ITEM>dump the package, protected and public classes and members of a class:
+  <ITEM>dump the package, protected, and public classes and members of a class:
     <CODESAMPLE>javap javax.swing.DefaultListRenderer</CODESAMPLE></ITEM>
-  <ITEM>to know in which Java version is FooBar.class, execute
+  <ITEM>to know in which Java version is <CODEROUTINE>FooBar.class</CODEROUTINE>, execute:
     <CODESAMPLE>javap FooBat</CODESAMPLE>
     and look for <CODEROUTINE>minor version</CODEROUTINE> and <CODEROUTINE>major version</CODEROUTINE>
     <TABLE>
