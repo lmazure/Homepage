@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -882,6 +882,14 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
+  <ITEM><X><T>Docker</T><A>https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</A><L>en</L><F>HTML</F></X>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>Docker Containers: Attach Shell</CODEROUTINE></TERM>
+        <DESC>Open a shell in a running container</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE>Extensions not used anymore</TITLE>
   <ITEM><X><T>GitLab Workflow</T><A>https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow</A><L>en</L><F>HTML</F></X>
@@ -902,7 +910,6 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
   </ITEM>
   <ITEM><BLIST><TITLE>Other extensions</TITLE>
     <ITEM><X><T>Debugger for Chrome</T><A>https://marketplace.visualstudio.com/items?itemName=msjsdiag.debugger-for-chrome</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><X><T>Docker</T><A>https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Java Platform Support</T><A>https://marketplace.visualstudio.com/items?itemName=Oracle.oracle-java</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
 </BLIST>
