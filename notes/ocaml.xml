@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>OCaml</TITLE>
 <PATH>notes/ocaml.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM><BLIST><TITLE>Comments</TITLE>
@@ -32,9 +32,55 @@
       <CODESAMPLE><PROMPT/>let z = x;;</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
-  <ITEM><BLIST><TITLE>Equality</TITLE>
-    <ITEM><CODEROUTINE>e1 == e2</CODEROUTINE> tests for physical equality of <CODEROUTINE>e1</CODEROUTINE> and <CODEROUTINE>e2</CODEROUTINE>. On mutable types such as references, arrays, byte sequences, records with mutable fields and objects with mutable instance variables, <CODEROUTINE>e1 == e2</CODEROUTINE> is true if and only if physical modification of <CODEROUTINE>e1</CODEROUTINE> also affects <CODEROUTINE>e2</CODEROUTINE>. On non-mutable types, the behaviour of <CODEROUTINE>( == )</CODEROUTINE> is implementation-dependent; however, it is guaranteed that <CODEROUTINE>e1 == e2</CODEROUTINE> implies <CODEROUTINE>compare e1 e2 = 0</CODEROUTINE>.</ITEM>
-    <ITEM><CODEROUTINE>e1 = e2</CODEROUTINE> tests for structural equality of <CODEROUTINE>e1</CODEROUTINE> and <CODEROUTINE>e2</CODEROUTINE>. Mutable structures (e.g. references and arrays) are equal if and only if their current contents are structurally equal, even if the two mutable objects are not the same physical object. Equality between functional values raises <CODEROUTINE>Invalid_argument</CODEROUTINE>. Equality between cyclic data structures may not terminate.</ITEM>
+  <ITEM><BLIST><TITLE>Comparisons</TITLE>
+    <ITEM><CODEROUTINE>Stdlib</CODEROUTINE> module
+      <DEFINITIONTABLE>
+        <ROW>
+          <TERM><CODEROUTINE>val (=) : 'a -&gt; 'a -&gt; bool</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>e1 = e2</CODEROUTINE> tests for structural equality of <CODEROUTINE>e1</CODEROUTINE> and <CODEROUTINE>e2</CODEROUTINE>. Mutable structures (e.g. references and arrays) are equal if and only if their current contents are structurally equal, even if the two mutable objects are not the same physical object. Equality between functional values raises <CODEROUTINE>Invalid_argument</CODEROUTINE>. Equality between cyclic data structures may not terminate. Comparison between cyclic structures may not terminate.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val (&lt;&gt;) : 'a -&gt; 'a -&gt; bool</CODEROUTINE><BR/></TERM>
+          <DESC>Negation of <CODEROUTINE>(=)</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val (&lt;) : 'a -&gt; 'a -&gt; bool</CODEROUTINE><BR/></TERM>
+          <DESC>See <CODEROUTINE>(&gt;=)</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val (&gt;) : 'a -&gt; 'a -&gt; bool</CODEROUTINE><BR/></TERM>
+          <DESC>See <CODEROUTINE>(&gt;=)</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val (&lt;=) : 'a -&gt; 'a -&gt; bool</CODEROUTINE><BR/></TERM>
+          <DESC>See <CODEROUTINE>(&gt;=)</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val (&gt;=) : 'a -&gt; 'a -&gt; bool</CODEROUTINE><BR/></TERM>
+          <DESC>Structural ordering functions. These functions coincide with the usual orderings over integers, characters, strings, byte sequences and floating-point numbers, and extend them to a total ordering over all types. The ordering is compatible with <CODEROUTINE>(=)</CODEROUTINE>. As in the case of <CODEROUTINE>(=)</CODEROUTINE>, mutable structures are compared by contents. Comparison between cyclic structures may not terminate.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val compare : 'a -&gt; 'a -&gt; int</CODEROUTINE><BR/></TERM>
+          <DESC>Returns <CODEROUTINE>0</CODEROUTINE> if <CODEROUTINE>x</CODEROUTINE> is equal to <CODEROUTINE>y</CODEROUTINE>, a negative integer if <CODEROUTINE>x</CODEROUTINE> is less than <CODEROUTINE>y</CODEROUTINE>, and a positive integer if <CODEROUTINE>x</CODEROUTINE> is greater than <CODEROUTINE>y</CODEROUTINE>. The ordering implemented by compare is compatible with the comparison predicates <CODEROUTINE>(=)</CODEROUTINE>, <CODEROUTINE>(&lt;)</CODEROUTINE> and <CODEROUTINE>(&gt;)</CODEROUTINE> defined above, with one difference on the treatment of the float value <CODEROUTINE>nan</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val min : 'a -&gt; 'a -&gt; 'a</CODEROUTINE><BR/></TERM>
+          <DESC>Return the smaller of the two arguments. The result is unspecified if one of the arguments contains the float value <CODEROUTINE>nan</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val max : 'a -&gt; 'a -&gt; 'a</CODEROUTINE><BR/></TERM>
+          <DESC>Return the greater of the two arguments. The result is unspecified if one of the arguments contains the float value <CODEROUTINE>nan</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val (==) : 'a -&gt; 'a -&gt; bool</CODEROUTINE><BR/></TERM>
+          <DESC><CODEROUTINE>e1 == e2</CODEROUTINE> tests for physical equality of <CODEROUTINE>e1</CODEROUTINE> and <CODEROUTINE>e2</CODEROUTINE>. On mutable types such as references, arrays, byte sequences, records with mutable fields and objects with mutable instance variables, <CODEROUTINE>e1 == e2</CODEROUTINE> is true if and only if physical modification of <CODEROUTINE>e1</CODEROUTINE> also affects <CODEROUTINE>e2</CODEROUTINE>. On non-mutable types, the behaviour of <CODEROUTINE>(==)</CODEROUTINE> is implementation-dependent; however, it is guaranteed that <CODEROUTINE>e1 == e2</CODEROUTINE> implies <CODEROUTINE>compare e1 e2 = 0</CODEROUTINE>.</DESC>
+        </ROW>
+        <ROW>
+          <TERM><CODEROUTINE>val (!=) : 'a -&gt; 'a -&gt; bool</CODEROUTINE><BR/></TERM>
+          <DESC>Negation of <CODEROUTINE>(==)</CODEROUTINE>.</DESC>
+        </ROW>
+      </DEFINITIONTABLE>
+    </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Function</TITLE>
     <ITEM>define a function
