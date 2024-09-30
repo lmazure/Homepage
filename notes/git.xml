@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -133,6 +133,9 @@
   </ITEM>
   <ITEM>Clone a directory with file paths/names too long for Windows.
     <CODESAMPLE>git clone -c core.longpaths=true https://gitlab.com/foo/bar.git</CODESAMPLE>
+  </ITEM>
+  <ITEM>Clone a repository while replacing symbolic links by text files.
+    <CODESAMPLE>git clone -c <X><T>core.symlinks</T><A>https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks</A><L>en</L><F>HTML</F></X>=false https://gitlab.com/foo/bar.git</CODESAMPLE>
   </ITEM>
   <ITEM>On Windows, the Windows Credential Manager (Gestionnaire d'identification) is used by default (see <CODEROUTINE>git config --system --get credential.helper</CODEROUTINE>).</ITEM>
   <ITEM>To be able to use Git in a directory owned by someone else (this was implemented to fix <X><T>CVE-2022-24765</T><A>https://www.cve.org/CVERecord?id=CVE-2022-24765</A><L>en</L><F>HTML</F></X>)

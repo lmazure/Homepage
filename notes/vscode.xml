@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -857,6 +857,10 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
       <ROW>
         <TERM><CODEROUTINE>Codeium: Focus on Chat View</CODEROUTINE></TERM>
         <DESC>Display and focus on the chat</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>codeium.enableCodeLens</CODEROUTINE></TERM>
+        <DESC>Toggle the display of inline action buttons</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
