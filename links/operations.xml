@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Operations</TITLE>
 <PATH>links/operations.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -60,6 +60,7 @@
     <ITEM><ARTICLE><X><T>What is Podman Desktop?</T><A>https://www.youtube.com/watch?v=6LzKwyYl2-c</A><L>en</L><F>MP4</F><DURATION><MINUTE>4</MINUTE><SECOND>42</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Cedric</FIRSTNAME><LASTNAME>Clyburn</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE><COMMENT>A short presentation of Podman Desktop.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Data Plane vs. Control Plane</T><A>https://www.youtube.com/watch?v=Ep1QW-wOmgc</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Kawalsky</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE><COMMENT>A clear description of the Data Plane / Control Plane architecture pattern and its advantages and disadvantages.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Sneaky Costs of Scaling Serverless</T><A>https://www.zachleat.com/web/serverless-cost/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Zach</FIRSTNAME><LASTNAME>Leatherman</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE><COMMENT>Some feedback about the prices of Vercel, Netlify, and AWS.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Querying Metrics with OxQL</T><A>https://oxide.computer/podcasts/oxide-and-friends/2113598</A><L>en</L><F>MP3</F><DURATION><HOUR>1</HOUR><MINUTE>35</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Ben</FIRSTNAME><LASTNAME>Naecker</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bryan</FIRSTNAME><LASTNAME>Cantrill</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Leventhal</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>A description of why and how Oxide choose to use ClickHouse for storing production metrics and added its own query language to interrogate the data.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Docker</TITLE>
       <ITEM><ARTICLE><X status="removed"><T>Docker: A boon for the modern developer</T><ST>Make the transition to containerized apps to increase coding productivity and boost your development IQ</ST><A>https://www.ibm.com/developerworks/library/wa-docker-polyglot-programmers/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sing</FIRSTNAME><LASTNAME>Li</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>1</MONTH><DAY>5</DAY></DATE><COMMENT>An overenthusiastic introduction to Docker.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>What's Wrong With The Docker :latest Tag?</T><A>https://vsupalov.com/docker-latest-tag/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Vladislav</FIRSTNAME><LASTNAME>Supalov</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
