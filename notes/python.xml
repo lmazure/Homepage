@@ -3,9 +3,15 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
+  <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
+    Execute the Python code in <CODEROUTINE>&lt;command&gt;</CODEROUTINE>. <CODEROUTINE>&lt;command&gt;</CODEROUTINE> can be one or more statements separated by newlines, with significant leading whitespace as in normal module code.
+  </ITEM>
+  <ITEM><CODESAMPLE><PROMPT/>python -m &lt;module&gt;</CODESAMPLE>
+    Search <CODEROUTINE>sys.path</CODEROUTINE> for the named module and execute its contents as the <CODEROUTINE>__main__</CODEROUTINE> module.
+  </ITEM>
   <ITEM>To avoid fucking problems when printing non-BMP characters to the console
     <CODESAMPLE><PROMPT/>python -X utf8 foo.py</CODESAMPLE>
 </ITEM>

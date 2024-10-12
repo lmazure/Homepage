@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -40,6 +40,7 @@
       <ITEM><X><T>20</T><A>https://docs.oracle.com/en/java/javase/20/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>21</T><A>https://docs.oracle.com/en/java/javase/21/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>22</T><A>https://docs.oracle.com/en/java/javase/22/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>23</T><A>https://docs.oracle.com/en/java/javase/23/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><ANCHOR>javadoc</ANCHOR><X><T>javadoc</T><A>https://docs.oracle.com/en/java/javase/21/javadoc/</A><L>en</L><F>HTML</F></X></TITLE>
       <ITEM><X><T>Documentation Comment Specification</T><A>https://docs.oracle.com/en/java/javase/21/docs/specs/javadoc/doc-comment-spec.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -297,6 +298,7 @@
       <ITEM><BLIST><TITLE>Lombok</TITLE>
         <ITEM><ARTICLE><X status="removed"><T>Eliminate Java verbosity the easy way</T><A>https://www.ibm.com/developerworks/java/library/os-lombok/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><MIDDLENAME>M.</MIDDLENAME><LASTNAME>Carey</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>An introduction to Lombok, a utility that generates <CODEROUTINE>toString()</CODEROUTINE>, <CODEROUTINE>equals()</CODEROUTINE>, <CODEROUTINE>hashCode()</CODEROUTINE>, getters, setters, synchronisation, exception handling…</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Using Lombok’s @Getter for Boolean Fields</T><A>https://www.baeldung.com/lombok-getter-boolean</A><L>en</L><F>HTML</F></X><DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Using Lombok Library With JDK 23</T><ST>In this brief tutorial, learn how to avoid compilation errors when using the Lombok library with Java 23.</ST><A>https://dzone.com/articles/using-lombok-library-witk-jdk-23</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Arnošt</FIRSTNAME><LASTNAME>Havelka</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>The subtitle says it all.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>POI</TITLE>
         <ITEM><ARTICLE><X status="removed"><T>Read, recycle, and reuse: Reporting made easy with Excel, XML, and Java technologies, Part 1</T><ST>Read Excel files and write them to new files using Java and XML technologies</ST><A>https://www.ibm.com/developerworks/java/library/x-jxmlexl/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shaene</FIRSTNAME><MIDDLENAME>M</MIDDLENAME><LASTNAME>Siders</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>After listing some Java libraries able to read/write Excel files, the author gives an example on using Apache’s POI to parse an Excel file.</COMMENT></ARTICLE></ITEM>

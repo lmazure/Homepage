@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Design</TITLE>
 <PATH>links/design.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -45,6 +45,7 @@
       <ITEM><X><T>The Twelve-Factor App</T><A>https://12factor.net</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Principles Wiki</T><A>http://principles-wiki.net/start</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>ArchUnit</T><A>https://www.archunit.org/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Swagger</T><A>https://swagger.io/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><X><T>IEEE 1016-2009</T><A>https://perso.univ-st-etienne.fr/jacquene/gl/articles/IEEE-1016-2009.pdf</A><L>en</L><F>PDF</F></X>: IEEE Recommended Practice for Software Design Descriptions</ITEM>
     <ITEM><BLIST><TITLE>User interface</TITLE>
@@ -138,6 +139,7 @@
     <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=2Bz_nfx-xTo"><X><T>Architecture Hexagonale &amp; Clean architecture : bonnet blanc, blanc bonnet ? – Compte-rendu du talk de Christophe Breheret-Girardin du Comptoir x La Duck Conf 2023</T><A>https://blog.octo.com/architecture-hexagonale-clean-architecture-bonnet-blanc-blanc-bonnet-compte-rendu-du-talk-de-christophe-breheret-girardin-du-comptoir-x-la-duck-conf-2023</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Lana</FIRSTNAME><LASTNAME>Lesik</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A summary of the previous video.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>How not to add AI to your product</T><ST>Our second attempt at adding AI to Fillout, an online form builder.</ST><A>https://www.fillout.com/blog/how-not-to-add-ai-to-your-product</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dominic</FIRSTNAME><LASTNAME>Whyte</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE><COMMENT>Things will not work when you rush to add AI in your product without verifying that it really helps users.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>A Daily Practice of Empirical Software Design - Kent Beck - DDD Europe 2023</T><A>https://www.youtube.com/watch?v=yBEcq23OgB4</A><L>en</L><F>MP4</F><DURATION><MINUTE>59</MINUTE><SECOND>13</SECOND></DURATION><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE><COMMENT>The nuances of coupling and cohesion.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>What’s Wrong With OpenAPI?</T><ST>How we struggled with API documentation on our projects and went a bit crazy</ST><A>https://levelup.gitconnected.com/whats-wrong-with-openapi-771e67e2bf6f</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Konstantin</FIRSTNAME><LASTNAME>Malyshev</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Konstantin</FIRSTNAME><LASTNAME>Malyshev</LASTNAME></AUTHOR> explains that they were unhappy with OpenAPI and they created they own API definition tool: JSight.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Eventual Business Consistency</T><ST>Executive Summary of Bi-temporality</ST><A>https://tidyfirst.substack.com/p/eventual-business-consistency</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>4</DAY></DATE><COMMENT>This description of bitemporality is too short to properly explain how it works.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Building Chatbots and AI Assistants</T><ST>This article presents a comprehensive guide to harnessing natural language processing (NLP) and chatbot frameworks. Learn more!</ST><A>https://dzone.com/articles/building-chatbots-and-ai-assistants-a-comprehensiv</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Artem</FIRSTNAME><LASTNAME>Lebedev</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>23</DAY></DATE><COMMENT>A very high-level description on how to set up a chabot.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Twelve-Factor Methodology in a Spring Boot Microservice</T><A>https://www.baeldung.com/spring-boot-12-factor</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kumar</FIRSTNAME><LASTNAME>Chandrakant</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT>A basic description of a Java/Maven/Docker/… technical stack and design to comply with the Twelve Factors.</COMMENT></ARTICLE></ITEM>
