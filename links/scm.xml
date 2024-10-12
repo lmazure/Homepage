@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -208,6 +208,7 @@
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>2.47</TITLE>
           <ITEM><ARTICLE><X><T>What's new in Git 2.47.0?</T><A>https://about.gitlab.com/blog/2024/10/07/whats-new-in-git-2-47-0/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Justin</FIRSTNAME><LASTNAME>Tobler</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>Global configuration of the reftable format and the object format, <CODEROUTINE>git refs verify</CODEROUTINE>, a bug fix in the reftable compaction, <CODEROUTINE>git maintenance --detach</CODEROUTINE>, fixed memory leaks, and the ongoing removal of the <CODEROUTINE>the_repository</CODEROUTINE> global variable.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Highlights from Git 2.47</T><ST>Git 2.47 is here, with features like incremental multi-pack indexes and more. Check out our coverage of some of the highlights here.</ST><A>https://github.blog/open-source/git/highlights-from-git-2-47/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>7</DAY></DATE><COMMENT>Incremental multi-pack indexes are in experimental phase, an unclear description of <CODEROUTINE>for-each-ref --format="%(is-base:…)"</CODEROUTINE>, a new Platform Support Policy, the continuous effort on unit tests / memory leaks / code cleanup, …</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>GitButler</TITLE>

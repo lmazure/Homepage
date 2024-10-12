@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -170,6 +170,10 @@
           <PROMPT/>c = 0.75<BR/>
           <PROMPT/>print(f'{a:.0%} {b:.1%} {c:.2%}')<BR/>
           25% 50.0% 75.00%</CODESAMPLE>
+      </ITEM>
+      <ITEM>Formatting numbers by prepending zeros
+        <CODESAMPLE><PROMPT/>print(f'{42:04d}')<BR/>
+          0042</CODESAMPLE>
       </ITEM>
       <ITEM>Formatting numbers as hexadecimal
         <CODESAMPLE><PROMPT/>print(f'{9:0x} {10:0x} {11:0x} {12:0x}')<BR/>
