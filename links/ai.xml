@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Artificial intelligence</TITLE>
 <PATH>links/ai.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -41,6 +41,7 @@
       <ITEM><X><T>Hugging Face Leaderboards</T><A>https://huggingface.co/spaces?sort=likes&amp;search=leaderboard</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE>Quallity</TITLE>
         <ITEM><X><T>LMSYS Chatbot Arena</T><A>https://huggingface.co/spaces/lmsys/chatbot-arena-leaderboard</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>Compar:IA</T><A>https://comparia.beta.gouv.fr/arene/?cgu_acceptees</A><L>fr</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Open LLM</T><A>https://huggingface.co/spaces/open-llm-leaderboard/open_llm_leaderboard</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Artificial Analysis</T><A>https://artificialanalysis.ai/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Enterprise Scenarios</T><A>https://huggingface.co/spaces/PatronusAI/enterprise_scenarios_leaderboard</A><L>en</L><F>HTML</F></X></ITEM>
@@ -306,6 +307,7 @@
       <ITEM><ARTICLE><X><T>Google AI Studio data exfiltration demo</T><A>https://simonwillison.net/2024/Aug/7/google-ai-studio-data-exfiltration-demo/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE><COMMENT>Yet another example of exfiltrating information by asking the model to generate the URL of an image.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Stealing Part of a Production Language Model with Nicholas Carlini</T><A>https://twimlai.com/podcast/twimlai/stealing-part-of-a-production-language-model/</A><L>en</L><F>MP3</F><DURATION><HOUR>1</HOUR><MINUTE>3</MINUTE><SECOND>0</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nicholas</FIRSTNAME><LASTNAME>Carlini</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Charrington</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Nicholas</FIRSTNAME><LASTNAME>Carlini</LASTNAME></AUTHOR> speaks about his two papers: how to extract the last layer of a LLM and the fact that differential privacy does not mean that people will not complain about a model leaking private data.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Invisible text that AI chatbots understand and humans can’t? Yep, it’s a thing.</T><ST>A quirk in the Unicode standard harbors an ideal steganographic code channel.</ST><A>https://arstechnica.com/security/2024/10/ai-chatbots-can-read-and-write-invisible-text-creating-an-ideal-covert-channel/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>14</DAY></DATE><COMMENT>Some searchers demonstrated prompt injection and data exfiltration using Unicode’s Tags block.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Quand la désinformation de l'industrie du tabac inspire Big🚬Tech ?</T><A>https://www.youtube.com/watch?v=vOOxi9MfgNE</A><L>fr</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>35</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jean-Lou</FIRSTNAME><LASTNAME>Fourquet</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE><COMMENT>The same repetitive discourse as <AUTHOR><FIRSTNAME>Lê</FIRSTNAME><LASTNAME>Nguyên Hoang</LASTNAME></AUTHOR>: I am not sure that this repetition will change anything, but maybe their editorial could help if it were not published on an obscure website.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>AlphaFold</TITLE>
       <ITEM><BLIST><TITLE>AlphaFold 2</TITLE>
