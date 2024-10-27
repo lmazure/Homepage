@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>SQL</TITLE>
 <PATH>links/sql.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -78,6 +78,9 @@
       <ITEM><BLIST><TITLE>SSRS</TITLE>
         <ITEM><ARTICLE><X status="removed"><T>Microsoft SQL Server 2008 Reporting Services Best Practices</T><A>https://channel9.msdn.com/Events/TechEd/Europe/2009/DAT306</A><L>en</L><F>Windows Media Player</F><DURATION><HOUR>1</HOUR><MINUTE>1</MINUTE><SECOND>41</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Chris</FIRSTNAME><LASTNAME>Baldwin</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>11</MONTH><DAY>10</DAY></DATE><COMMENT>The title says it all: backup/restore, tablix, performance, graphs…</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>DuckDB</TITLE>
+      <ITEM><ARTICLE><X><T>DuckDB: Crunching Data Anywhere, From Laptops to Servers • Gabor Szarnyas • GOTO 2024</T><A>https://www.youtube.com/watch?v=9Rdwh0rNaf0</A><L>en</L><F>MP4</F><DURATION><MINUTE>36</MINUTE><SECOND>29</SECOND></DURATION></X><DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE><COMMENT>A presentation of DuckDB, an in-process analytical RDBMS.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Transaction strategies</TITLE>
       <ITEM><ARTICLE><X status="removed"><T>Transaction strategies: Understanding transaction pitfalls</T><ST>Beware of these common mistakes when implementing transactions in the Java platform</ST><A>https://www.ibm.com/developerworks/java/library/j-ts1/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mark</FIRSTNAME><LASTNAME>Richards</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>2</MONTH><DAY>3</DAY></DATE><COMMENT>Some common errors with Spring and EJB: improper read-only settings, forcing a new transaction when this should not be the case, bad rollback in case of checked exceptions…</COMMENT></ARTICLE></ITEM>
