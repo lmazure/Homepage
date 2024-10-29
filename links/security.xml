@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Security</TITLE>
 <PATH>links/security.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -14,6 +14,7 @@
     <ITEM><CLIST><TITLE><X><T>The Update Framework</T><A>https://theupdateframework.io/</A><L>en</L><F>HTML</F></X></TITLE>
       <ITEM><X><T>gittuf</T><A>https://gittuf.dev/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
+    <ITEM><X><T>AIDE</T><A>https://aide.github.io/doc/</A><L>en</L><F>HTML</F></X>: a file integrity checker</ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>Setuid Demystified</T><A>https://people.eecs.berkeley.edu/~daw/papers/setuid-usenix02.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Hao</FIRSTNAME><LASTNAME>Chen</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Wagner</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Drew</FIRSTNAME><LASTNAME>Dean</LASTNAME></AUTHOR><COMMENT>A thorough analysis of <CODEROUTINE>setuid</CODEROUTINE>: the system calls, divergence between Solaris, Linux and FreeBSD, its pitfalls…</COMMENT></ARTICLE></ITEM>
