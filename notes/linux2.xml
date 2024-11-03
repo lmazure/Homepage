@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Linux</TITLE>
 <PATH>notes/linux2.xml</PATH>
-<DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW><TERM><CODEFILENAME><X><T>/dev/random</T><A>https://man7.org/linux/man-pages/man4/random.4.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>when read, return random bytes<BR/>if the environment pool is empty, reading <CODEFILENAME>/dev/random</CODEFILENAME> will block until additional environmental noise is gathered</DESC></ROW>
@@ -15,8 +15,24 @@
 <CODEFILENAME><X><T>/etc/os-release</T><A>https://man7.org/linux/man-pages/man5/os-release.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME> (if it does not exist, fall back on <CODEFILENAME><X><T>/usr/lib/os-release</T><A>https://man7.org/linux/man-pages/man5/os-release.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME>) contains the description of the OS as a newline-separated list of environment variable assignments (i.e. it can be sourced in a shell script).
 <BR/>
 <DEFINITIONTABLE>
-  <ROW><TERM><CODEFILENAME><X><T>openssl genrsa</T><A>https://www.openssl.org/docs/man3.0/man1/openssl-genrsa.html</A><L>en</L><F>HTML</F></X> -out trusted_key.pem 4096</CODEFILENAME></TERM><DESC>generate a 4096 RSA private key</DESC></ROW>
-  <ROW><TERM><CODEFILENAME><X><T>openssl rsa</T><A>https://www.openssl.org/docs/man3.0/man1/openssl-rsa.html</A><L>en</L><F>HTML</F></X> -pubout -in trusted_key.pem -out trusted_key.pub</CODEFILENAME></TERM><DESC>generate a public key</DESC></ROW>
+  <ROW><TERM><CODEFILENAME><X><T>openssl genrsa</T><A>https://docs.openssl.org/3.0/man1/openssl-genrsa/</A><L>en</L><F>HTML</F></X> -out trusted_key.pem 4096</CODEFILENAME></TERM><DESC>generate a 4096 RSA private key</DESC></ROW>
+  <ROW><TERM><CODEFILENAME><X><T>openssl rsa</T><A>https://docs.openssl.org/3.0/man1/openssl-rsa/</A><L>en</L><F>HTML</F></X> -pubout -in trusted_key.pem -out trusted_key.pub</CODEFILENAME></TERM><DESC>generate a public key</DESC></ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>env</T><A>https://www.man7.org/linux/man-pages/man1/env.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>run a program in a modified environment</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>env FOO="bar" &lt;command&gt;</CODEROUTINE></TERM>
+    <DESC>run <CODEROUTINE>&lt;command&gt;</CODEROUTINE> with the <CODEROUTINE>FOO</CODEROUTINE> environment varaible set to <CODEROUTINE>bar</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>env --ignore-environment</CODEROUTINE><BR/>
+      <CODEROUTINE>env -i</CODEROUTINE></TERM>
+    <DESC>start with an empty environment</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
 </PAGE>
