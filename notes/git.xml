@@ -1518,7 +1518,7 @@ To remove the last commit locally and on the remote repository (nobody should ha
   <ROW>
     <TERM><CODEROUTINE><X><T>git rerere’s man page</T><A>https://git-scm.com/docs/git-rerere</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Reuse recorded resolution of conflicted merges.<BR/>
-      Must be enabled by <CODEROUTINE>git config --global rerere.anabled true</CODEROUTINE>.<BR/>
+      Must be enabled by <CODEROUTINE>git config --global rerere.enabled true</CODEROUTINE>.<BR/>
       <CODEROUTINE>git merge</CODEROUTINE> and <CODEROUTINE>git commit</CODEROUTINE> automatically invoke <CODEROUTINE>git rerere</CODEROUTINE>, so there is no need to call it directly.</DESC>
   </ROW>
 </DEFINITIONTABLE>
