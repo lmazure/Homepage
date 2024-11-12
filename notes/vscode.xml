@@ -778,21 +778,21 @@ Markdown
 </DEFINITIONTABLE>
 <BR/>
 To set Git bash as the default shell, define in <CODEFILENAME>settings.json</CODEFILENAME>:
-<CODESAMPLE>""terminal.integrated.profiles.windows": {<BR/>
+<CODESAMPLE>"terminal.integrated.profiles.windows": {<BR/>
   <TAB/>"PowerShell": {<BR/>
-  <TAB/><TAB/><TAB/>"source": "PowerShell",<BR/>
-  <TAB/><TAB/><TAB/>"icon": "terminal-powershell"<BR/>
+  <TAB/><TAB/>"source": "PowerShell",<BR/>
+  <TAB/><TAB/>"icon": "terminal-powershell"<BR/>
   <TAB/>},<BR/>
   <TAB/>"Command Prompt": {<BR/>
-  <TAB/><TAB/><TAB/>"path": [<BR/>
-  <TAB/><TAB/><TAB/><TAB/><TAB/>"${env:windir}\\Sysnative\\cmd.exe",<BR/>
-  <TAB/><TAB/><TAB/><TAB/><TAB/>"${env:windir}\\System32\\cmd.exe"<BR/>
-  <TAB/><TAB/><TAB/>],<BR/>
-  <TAB/><TAB/><TAB/>"args": [],<BR/>
-  <TAB/><TAB/><TAB/>"icon": "terminal-cmd"<BR/>
+  <TAB/><TAB/>"path": [<BR/>
+  <TAB/><TAB/><TAB/>"${env:windir}\\Sysnative\\cmd.exe",<BR/>
+  <TAB/><TAB/><TAB/>"${env:windir}\\System32\\cmd.exe"<BR/>
+  <TAB/><TAB/>],<BR/>
+  <TAB/><TAB/>"args": [],<BR/>
+  <TAB/><TAB/>"icon": "terminal-cmd"<BR/>
   <TAB/>},<BR/>
   <TAB/>"Git Bash": {<BR/>
-  <TAB/><TAB/><TAB/>"path": "G:\\Documents\\tools\\Git\\2.46.0\\bin\\bash.exe",<BR/>
+  <TAB/><TAB/>"path": "G:\\Documents\\tools\\Git\\2.46.0\\bin\\bash.exe"<BR/>
   <TAB/>}<BR/>
   },<BR/>
   "terminal.integrated.defaultProfile.windows": "Git Bash"</CODESAMPLE>

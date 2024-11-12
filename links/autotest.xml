@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -42,6 +42,7 @@
             <ITEM><X><T>RequestsLibrary</T><A>https://marketsquare.github.io/robotframework-requests/doc/RequestsLibrary.html</A><L>en</L><F>HTML</F></X></ITEM>
             <ITEM><CLIST><TITLE><X><T>Browser Library</T><A>https://robotframework-browser.org/</A><L>en</L><F>HTML</F></X></TITLE>
               <ITEM><X><T>keywords</T><A>https://marketsquare.github.io/robotframework-browser/Browser.html</A><L>en</L><F>HTML</F></X></ITEM>
+              <ITEM><X><T>release notes</T><A>https://github.com/MarketSquare/robotframework-browser/tree/main/docs/releasenotes</A><L>en</L><F>HTML</F></X></ITEM>
               <ITEM><X><T>source</T><A>https://github.com/MarketSquare/robotframework-browser</A><L>en</L><F>HTML</F></X></ITEM>
             </CLIST></ITEM>
             <ITEM><CLIST><TITLE><X><T>Selenium Library</T><A>https://github.com/robotframework/SeleniumLibrary</A><L>en</L><F>HTML</F></X></TITLE>
@@ -57,7 +58,10 @@
           </BLIST></ITEM>
         </BLIST></ITEM>
         <ITEM><X><T>how to write good test cases</T><A>https://github.com/robotframework/HowToWriteGoodTestCases/blob/master/HowToWriteGoodTestCases.rst</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><X><T>Robocop</T><A>https://robocop.readthedocs.io/en/stable/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><CLIST><TITLE><X><T>Robocop</T><A>https://robocop.readthedocs.io/en/stable/</A><L>en</L><F>HTML</F></X></TITLE>
+          <ITEM><X><T>release notes</T><A>https://github.com/MarketSquare/robotframework-robocop/tree/master/docs/releasenotes</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><X><T>source</T><A>https://github.com/MarketSquare/robotframework-robocop</A><L>en</L><F>HTML</F></X></ITEM>
+        </CLIST></ITEM>
         <ITEM><X><T>XML report schema</T><A>https://github.com/robotframework/robotframework/tree/master/doc/schema</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>personal notes</T><A>../notes/robotframework.html</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
