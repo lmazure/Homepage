@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>uv</TITLE>
+<PATH>notes/uv.xml</PATH>
+<DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE>
+<CONTENT>
+<BLIST><TITLE>Install <CODEROUTINE>uv</CODEROUTINE> on a USB key</TITLE>
+  <ITEM>Environment setup:
+    <CODESAMPLE>export UV_INSTALL_DIR="/g/Documents/tools/uv/bin"<BR/>
+      export UV_CACHE_DIR="/g/Documents/tools/uv/cache"<BR/>
+      export UV_PYTHON_INSTALL_DIR="/g/Documents/tools/uv/python"</CODESAMPLE>
+  </ITEM>
+  <ITEM>Install <CODEROUTINE>uv</CODEROUTINE>:
+    <CODESAMPLE>curl -LsSf https://astral.sh/uv/install.sh | env INSTALLER_NO_MODIFY_PATH=1 sh</CODESAMPLE>
+  </ITEM>
+</BLIST>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>uv --version</CODEROUTINE></TERM>
+    <DESC>Display the <CODEROUTINE>uv</CODEROUTINE> version.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>uv self update</CODEROUTINE></TERM>
+    <DESC>Update <CODEROUTINE>uv</CODEROUTINE> installation.<BR/>
+        Does not work, <CODEROUTINE>uv</CODEROUTINE> believes it has been installet with an installer.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>uv python list</CODEROUTINE></TERM>
+    <DESC>List all installed Python versions.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>uv python install 3.12</CODEROUTINE></TERM>
+    <DESC>Install Python version 3.12.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>uv python uninstall 3.12</CODEROUTINE></TERM>
+    <DESC>Uninstall Python version 3.12.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+</CONTENT>
+<X><T>links</T><A>../links/python.html#uv</A><L>en</L><F>HTML</F></X>
+</PAGE>
