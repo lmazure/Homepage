@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Bash</TITLE>
 <PATH>notes/bash2.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>History</B></U></TITLE>
   <ITEM><CODEROUTINE>!!</CODEROUTINE> repeat the last command.</ITEM>
@@ -44,6 +44,15 @@
     <TERM><CODEROUTINE>set -e</CODEROUTINE><BR/>
       <CODEROUTINE>set -o errexit</CODEROUTINE></TERM>
     <DESC>Exit immediately if a command, which is not part of a test, fails.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>set -o pipefail</CODEROUTINE></TERM>
+    <DESC>If set, the return value of a pipeline is the value of the last (rightmost) command to exit with a non-zero status, or zero if all commands in the pipeline exit successfully.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>set -u</CODEROUTINE><BR/>
+      <CODEROUTINE>set -o nounset</CODEROUTINE></TERM>
+    <DESC>Treat unset variables and parameters other than the special parameters <CODEROUTINE>@</CODEROUTINE> or <CODEROUTINE>*</CODEROUTINE>, or array variables subscripted with <CODEROUTINE>@</CODEROUTINE> or <CODEROUTINE>*</CODEROUTINE>, as an error when performing parameter expansion.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>set -x</CODEROUTINE><BR/>
