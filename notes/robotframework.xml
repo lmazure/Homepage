@@ -16,7 +16,7 @@ Install Robot Framework
     <CODESAMPLE>*** Settings ***<BR/>
       Test Setup<TAB/>Log To Console<TAB/>test startup<BR/>
       Test Teardown<TAB/>Log To Console<TAB/>test shutdown</CODESAMPLE></ITEM>
-  <ITEM>Retrieve the value of an environment variable:  <CODEROUTINE>%{ENV_VAR_NAME}</CODEROUTINE><BR/>
+  <ITEM>Retrieve the value of an environment variable: <CODEROUTINE>%{ENV_VAR_NAME}</CODEROUTINE><BR/>
     Using the OperatingSystem library: <CODEROUTINE>Get Environment Variable<TAB/>ENV_VAR_NAME</CODEROUTINE><BR/>
     In botch cases, it is possible to define a default value: <CODEROUTINE>%{ENV_VAR_NAME=default_value}</CODEROUTINE> and  <CODEROUTINE>Get Environment Variable<TAB/>ENV_VAR_NAME<TAB/>default_value</CODEROUTINE></ITEM>
   <ITEM>Sleep for 42 seconds

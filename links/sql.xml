@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>SQL</TITLE>
 <PATH>links/sql.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -47,6 +47,7 @@
       <ITEM><ARTICLE><X><T>SELECT 'amazing_features' FROM "postgresql" (Kévin DAVIN)</T><A>https://www.youtube.com/watch?v=I1rAkNDv1Ws</A><L>fr</L><F>MP4</F><DURATION><MINUTE>29</MINUTE><SECOND>6</SECOND></DURATION><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE></X><AUTHOR><FIRSTNAME>Kévin</FIRSTNAME><LASTNAME>Davin</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE><COMMENT>Some lesser known features of PostgreSQL.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>What Is TOAST (and Why It Isn’t Enough for Data Compression in Postgres)</T><A>https://www.timescale.com/blog/what-is-toast-and-why-it-isnt-enough-for-data-compression-in-postgres/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Carlota</FIRSTNAME><LASTNAME>Soto</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE><COMMENT>A presentation of how The Oversized Attribute Storage Technique works and why Timescale claims to do better.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="1"><T>Indexes Under The Hood</T><ST>Many things can improve database performance. One of the most obvious solutions is to use indexes. This blog post will examine them in detail to understand how they work in PostgreSQL and what makes them useful.</ST><A>https://www.metisdata.io/blog/indexes-under-the-hood</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Furmanek</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE><COMMENT>The implementation details and cost estimation of table storage and B-trees, and some other information about indexes.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Everyone Uses Postgres… But Why?</T><ST>All big players in the market use PostgreSQL nowadays. Postgres is just the best and the most popular solution these days, no matter if it’s for startups or enterprise companies. But why is that? What makes PostgreSQL so great and why did companies abandon their enterprise-ready databases like Oracle, MS SQL, or DB2? Read on to find the answers.</ST><A>https://www.metisdata.io/blog/everyone-uses-postgres-but-why</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Furmanek</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>27</DAY></DATE><COMMENT>The history of PostgreSQL, the large companies using it, its versatility…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>What’s New In PostgreSQL 17</T><ST>PostgreSQL 17 came out in September. Let’s see what’s new.</ST><A>https://www.metisdata.io/blog/whats-new-in-postgresql-17</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Furmanek</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>SQL Server</TITLE>
