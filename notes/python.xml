@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -667,6 +667,23 @@
   <ITEM><CODEROUTINE>is not</CODEROUTINE> tests if two objects are not the same.</ITEM>
   <ITEM><CODEROUTINE>id()</CODEROUTINE> returns an integer representing the identity of the object (currently implemented as its address).</ITEM>
   <ITEM><CODEROUTINE>type()</CODEROUTINE> returns the type of an object.</ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>Types</B></U> (<X><T>doc</T><A>https://docs.python.org/3/library/typing.html</A><L>en</L><F>HTML</F></X>)</TITLE>
+  <ITEM>Types can be declared using:
+    <CODESAMPLE>def surface_area_of_cube(edge_length: float) -&gt; str:<BR/>
+    <TAB/>return f"The surface area of the cube is {6 * edge_length ** 2}."</CODESAMPLE></ITEM>
+  <ITEM>A type alias is defined using the <CODEROUTINE>type</CODEROUTINE> statement, which creates an instance of <CODEROUTINE>TypeAliasType</CODEROUTINE>.
+    <CODESAMPLE>type Vector = list[float]</CODESAMPLE>
+    Before Python 3.12, the syntax was
+    <CODESAMPLE>Vector = list[float]</CODESAMPLE>
+    or
+    <CODESAMPLE>from typing import TypeAlias<BR/>
+      Vector: TypeAlias = list[float]</CODESAMPLE></ITEM>
+  <ITEM>Use the NewType helper to create distinct types:
+    <CODESAMPLE>from typing import NewType<BR/>
+      UserId = NewType('UserId', int)<BR/>
+      some_id = UserId(524313)</CODESAMPLE>
+    The static type checker will treat the new type as if it were a subclass of the original type.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Exceptions</B></U></TITLE>
   <ITEM><CODEROUTINE>BaseException</CODEROUTINE> is the common base class of all exceptions.<BR/>
