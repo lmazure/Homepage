@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Linux network utilities</TITLE>
 <PATH>notes/lnetutil.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -82,6 +82,11 @@
       <DESC>define user and password for server authentication</DESC>
     </ROW>
     <ROW>
+      <TERM><CODEROUTINE>-d &lt;data&gt;</CODEROUTINE><BR/>
+        <CODEROUTINE>--data &lt;data&gt;</CODEROUTINE></TERM>
+      <DESC>send the specified data in a POST request to the HTTP server</DESC>
+    </ROW>
+    <ROW>
       <TERM><CODEROUTINE>-F &lt;name=content&gt;</CODEROUTINE><BR/>
         <CODEROUTINE>--form &lt;name=content&gt;</CODEROUTINE></TERM>
       <DESC>emulate a filled-in form<BR/>
@@ -91,7 +96,7 @@
         <CODEROUTINE>curl -F profile=@portrait.jpg https://example.com/upload.cgi</CODEROUTINE>:<BR/>
         <BR/>
         to use the content of a file as a field value, use <CODEROUTINE>&lt;</CODEROUTINE>:<BR/>
-        <CODEROUTINE>url -F "story=&lt;hugefile.txt" https://example.com/</CODEROUTINE></DESC>
+        <CODEROUTINE>curl -F "story=&lt;hugefile.txt" https://example.com/</CODEROUTINE></DESC>
     </ROW>
     <ROW>
       <TERM><CODEROUTINE>-o &lt;file&gt;</CODEROUTINE><BR/>
@@ -119,8 +124,30 @@
         </DEFINITIONTABLE><BR/>
         <CODEROUTINE>\n</CODEROUTINE> outputs a newline, <CODEROUTINE>\r</CODEROUTINE> a carriage return, <CODEROUTINE>\t</CODEROUTINE> outputs a tab</DESC>
     </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>-c &lt;filename&gt;</CODEROUTINE><BR/>
+        <CODEROUTINE>--cookie-jar &lt;filename&gt;</CODEROUTINE></TERM>
+      <DESC>specify to which file to write all cookies after a completed operation.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>-b &lt;filename&gt;</CODEROUTINE><BR/>
+        <CODEROUTINE>--cookie &lt;filename&gt;</CODEROUTINE></TERM>
+      <DESC>specify a filename to read previously stored cookie from.</DESC>
+    </ROW>
     </DEFINITIONTABLE>
     to retrieve the HTTP code:
     <CODESAMPLE>CODE=$(curl -o /dev/null -w '%{HTTP_CODE}' -u " user:password" https://sqtm-nightly-cloud.acceptance.squashtest.org/api/rest/latest/projects/999/test-cases)</CODESAMPLE>
+    to generate a token on TM
+    <CODESAMPLE>#!/bin/sh<BR/>
+      <BR/>
+      URL=https://nightly-postgres.acceptance.squashtest.org<BR/>
+      LOGIN=admin<BR/>
+      PASSWORD=admin<BR/>
+      <BR/>
+      curl -s -c cookies.txt -o /dev/null -X GET $URL/login<BR/>
+      TOKEN=$(grep 'XSRF-TOKEN' cookies.txt | awk '{print $NF}')<BR/>
+      curl -s -b cookies.txt -c cookies.txt -d "username=$LOGIN&amp;password=$PASSWORD" -H "X-Xsrf-Token: $TOKEN" -o /dev/null -X POST $URL/backend/login<BR/>
+      TOKEN=$(grep 'XSRF-TOKEN' cookies.txt | awk '{print $NF}')<BR/>
+      curl -s -c cookies.txt -b cookies.txt -X POST -H "X-Xsrf-Token: $TOKEN" -H "Content-Type: application/json" -d '{"name":"test1234","expiryDate":"2025-01-11T23:00:00.000Z","permissions":"READ_WRITE"}' $URL/backend/api-token/generate-api-token | jq -r .token | base64 --decode</CODESAMPLE>
   </CONTENT>
 </PAGE>
