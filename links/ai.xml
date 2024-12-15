@@ -22,7 +22,7 @@
       <ITEM><X><T>Futurepedia</T><A>https://www.futurepedia.io/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>QuillBot’s AI detector</T><A>https://quillbot.com/ai-content-detector</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE>Chat</TITLE>
-        <ITEM><BLIST><TITLE><X><T>LMSYS Chatbot Arena</T><A>https://chat.lmsys.org/?arena</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><BLIST><TITLE><X><T>LMSYS Chatbot Arena</T><A>https://lmarena.ai?arena</A><L>en</L><F>HTML</F></X></TITLE>
           <ITEM><X><T>WebDev Arena</T><A>https://web.lmarena.ai/</A><L>en</L><F>HTML</F></X></ITEM>
         </BLIST></ITEM>
         <ITEM><X><T>ChatGPT</T><A>https://chatgpt.com/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -82,6 +82,9 @@
     <ITEM><BLIST><TITLE>Vector databases</TITLE>
       <ITEM><X><T>Qdrant</T><A>https://qdrant.tech/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Chroma</T><A>https://docs.trychroma.com/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>pgvector</T><A>https://github.com/pgvector/pgvector</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>pgai</T><A>https://github.com/timescale/pgai</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>MariaDB Vectors</T><A>https://mariadb.com/kb/en/vectors/</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Security</TITLE>
       <ITEM><X><T>MITRE ATLAS</T><A>https://atlas.mitre.org/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -424,7 +427,7 @@
     <ITEM><BLIST><TITLE>Vector databases</TITLE>
       <ITEM><ARTICLE><X><T>Getting Started with ChromaDB - Lowest Learning Curve Vector Database For Semantic Search</T><A>https://www.youtube.com/watch?v=QSW2L8dkaZk</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><GIVENNAME>Johnny Code</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE><COMMENT>An effective and good introduction to ChromaDB.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>My binary vector search is better than your FP32 vectors</T><ST>Binary Vector Search: The 30x Memory Reduction Revolution with Preserved Accuracy</ST><A>https://blog.pgvecto.rs/my-binary-vector-search-is-better-than-your-fp32-vectors</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ce</FIRSTNAME><LASTNAME>Gao</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE><COMMENT>Accelerating vector search by using binary vectors and adaptive retrieval.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Discover The Secrets Of Your Chromadb</T><A>https://www.youtube.com/watch?v=_9wwTWpZd3o</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE><COMMENT>Tools to manage Chroma datases: Chromadb Admin and VectorAdmin.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Discover The Secrets Of Your Chromadb</T><A>https://www.youtube.com/watch?v=_9wwTWpZd3o</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE><COMMENT>Tools to manage Chroma databases: Chromadb Admin and VectorAdmin.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Introducing sqlite-lembed: A SQLite extension for generating text embeddings locally</T><A>http://alexgarcia.xyz/blog/2024/sqlite-lembed-init/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alex</FIRSTNAME><LASTNAME>Garcia</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Using sqlite-vec with embeddings in sqlite-utils and Datasette</T><A>https://til.simonwillison.net/sqlite/sqlite-vec</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE><COMMENT>Some examples of sqlite-vec usage.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="-1"><T>A Fun &amp; Absurd Introduction to Vector Databases • Alexander Chatzizacharias • GOTO 2024</T><A>https://www.youtube.com/watch?v=5hAGhmHNTQQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>48</MINUTE><SECOND>12</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Alexander</FIRSTNAME><LASTNAME>Chatzizacharias</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE><COMMENT>A long presentation of vector databases, <AUTHOR><FIRSTNAME>Alexander</FIRSTNAME><LASTNAME>Chatzizacharias</LASTNAME></AUTHOR> tries to make funny game-inspired demos, but there is little information.</COMMENT></ARTICLE></ITEM>

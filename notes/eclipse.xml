@@ -235,6 +235,14 @@
   </ITEM>
   <ITEM>configure the folding with <CODEMENU>Window<CODEMENU>Preferences<CODEMENU>Java<CODEMENU>Editor<CODEMENU>Folding</CODEMENU></CODEMENU></CODEMENU></CODEMENU></CODEMENU>.</ITEM>
 </BLIST>
+<BLIST><TITLE><U><B>Newlines</B></U></TITLE>
+<ITEM>Workspace setting:<BR/>
+  <CODEMENU>Window<CODEMENU>Preferences</CODEMENU></CODEMENU>, then <CODEMENU>General<CODEMENU>Workspace<CODEMENU>New text file line delimiter<CODEMENU>Default (Windows)</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>Project setting:<BR/>
+  <CODEMENU>Project<CODEMENU>Properties</CODEMENU></CODEMENU>, puis <CODEMENU>Resources<CODEMENU>New text file line delimiter<CODEMENU>Inherited from container (Windows)</CODEMENU></CODEMENU></CODEMENU></ITEM>
+<ITEM>To correct a file:<BR/>
+  <CODEMENU>File<CODEMENU>Convert line delimeter to<CODEMENU>Windows (CRLF, \r\n, 0D0A, ¤¶) Default</CODEMENU></CODEMENU></CODEMENU></ITEM>
+</BLIST>
 <BLIST><TITLE><U><B>Bookmarks</B></U></TITLE>
   <ITEM>add a boomark on the current line:<BR/>
     right-click on the left margin of the Editor and select <CODEMENU>Add Bookmark…</CODEMENU> or <CODEMENU>Edit<CODEMENU>Add Bookmark…</CODEMENU></CODEMENU> in the menubar<BR/>
@@ -551,7 +559,7 @@ in Debug window
 </BLIST>
 <BLIST><TITLE>Used extensions</TITLE>
   <ITEM><X><T>Codeium</T><A>https://marketplace.eclipse.org/content/codeium</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>SonarLint</T><A>https://marketplace.eclipse.org/content/sonarlint</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>SonarQube for IDE</T><A>https://marketplace.eclipse.org/content/sonarqube-ide</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/ide.html#eclipse</A><L>en</L><F>HTML</F></X>
