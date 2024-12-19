@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -66,6 +66,26 @@
   <ROW>
     <TERM><CODEROUTINE><X><T>basename</T><A>https://man7.org/linux/man-pages/man1/basename.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>strip directory and suffix from filenames</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>basename /tmp/foobar.txt</CODEROUTINE></TERM>
+    <DESC>strip directory from filename</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>basename /tmp/foobar.txt .txt</CODEROUTINE><BR/>
+      <CODEROUTINE>basename -s .txt /tmp/foobar.txt</CODEROUTINE><BR/>
+      <CODEROUTINE>basename --suffix=.txt /tmp/foobar.txt</CODEROUTINE></TERM>
+    <DESC>strip directory and suffix from filename</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>basename -a</CODEROUTINE><BR/>
+      <CODEROUTINE>basename --multiple</CODEROUTINE></TERM>
+    <DESC>support multiple arguments and treat each as a NAME</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>basename -s SUFFIX</CODEROUTINE><BR/>
+      <CODEROUTINE>basename --suffix==SUFFIX</CODEROUTINE></TERM>
+    <DESC>support multiple arguments and treat each as a NAME</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

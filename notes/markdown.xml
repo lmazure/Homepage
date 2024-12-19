@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Markdown</TITLE>
 <PATH>notes/markdown.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2023</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -112,6 +112,9 @@
     <DESC>Insert an anchor</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+Display some markdown in the console:
+<CODESAMPLE><PROMPT/>cat foo.md | python -m rich.markdown -</CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/life.html#markdown</A><L>en</L><F>HTML</F></X>
 </PAGE>

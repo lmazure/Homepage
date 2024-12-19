@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -144,9 +144,11 @@
   </ITEM>
   <ITEM>On Windows, the Windows Credential Manager (Gestionnaire d'identification) is used by default (see <CODEROUTINE>git config --system --get credential.helper</CODEROUTINE>).</ITEM>
   <ITEM>To be able to use Git in a directory owned by someone else (this was implemented to fix <X><T>CVE-2022-24765</T><A>https://www.cve.org/CVERecord?id=CVE-2022-24765</A><L>en</L><F>HTML</F></X>)
-    <CODESAMPLE>git config --global --add safe.directory H:/the/directory</CODESAMPLE>
+    <CODESAMPLE>git config set --global --append safe.directory `pwd`</CODESAMPLE>
     To list all the directories declared as safe
-    <CODESAMPLE>git config --get-all --global safe.directory</CODESAMPLE>
+    <CODESAMPLE>git config get --global --all safe.directory</CODESAMPLE>
+    To remove the directory from the safe ones
+    <CODESAMPLE>git config unset --global --value `pwd` safe.directory</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BR/>
@@ -709,40 +711,6 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git clean’s man page</T><A>https://git-scm.com/docs/git-clean</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
-    <DESC>Remove untracked files from the working tree.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git clean -i</CODEROUTINE><BR/>
-      <CODEROUTINE>git clean --interactive</CODEROUTINE></TERM>
-    <DESC>Show what would be done and clean files interactively.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git clean -f</CODEROUTINE><BR/>
-      <CODEROUTINE>git clean --force</CODEROUTINE></TERM>
-    <DESC>Clean file with no interaction.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git clean -d</CODEROUTINE></TERM>
-    <DESC>Recurse into untracked directories.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git clean -e &lt;pattern&gt;</CODEROUTINE><BR/>
-      <CODEROUTINE>git clean --exclude=&lt;pattern&gt;</CODEROUTINE></TERM>
-    <DESC>Use the given exclude pattern in addition to the standard ignore rules.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git clean -x</CODEROUTINE></TERM>
-    <DESC>Don’t use the standard ignore rules, but still use the ignore rules given with <CODEROUTINE>-e</CODEROUTINE> options from the command line. This allows removing all untracked files, including build products.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git clean -X</CODEROUTINE></TERM>
-    <DESC>Remove only files ignored by Git. This may be useful to rebuild everything from scratch, but keep manually created files.</DESC>
-  </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
-  <ROW>
     <TERM><CODEROUTINE><X><T>git reset’s man page</T><A>https://git-scm.com/docs/git-reset</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Reset current HEAD to the specified state.</DESC>
   </ROW>
@@ -811,6 +779,35 @@
     <DESC>Interactively select hunks in the difference between the restore source and the restore location.</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>git sparse-checkout’s man page</T><A>https://git-scm.com/docs/git-sparse-checkout</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>Reduce your working tree to a subset of tracked files</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git sparse-checkout set MY/DIR1 SUB/DIR2</CODEROUTINE></TERM>
+    <DESC>Enable the necessary sparse-checkout config settings (<CODEROUTINE>core.sparseCheckout</CODEROUTINE>, <CODEROUTINE>core.sparseCheckoutCone</CODEROUTINE>, and <CODEROUTINE>index.sparse</CODEROUTINE>) if they are not already set to the desired values, populate the sparse-checkout file from the list of arguments following the set subcommand, and update the working directory to match.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git sparse-checkout add MY/DIR1 SUB/DIR2</CODEROUTINE></TERM>
+    <DESC>Update the sparse-checkout file to include additional directories (in cone mode) or patterns (in non-cone mode).</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+Example:
+<CODESAMPLE>REPO=https://github.com/danascheider/tessitura-front-end.git<BR/>
+  DIR=features<BR/>
+  git clone --filter=blob:none --no-checkout --depth 1 --sparse $REPO<BR/>
+  cd `basename -s .git $REPO`<BR/>
+  git config set --global --append safe.directory `pwd`<BR/>
+  git sparse-checkout set $DIR<BR/>
+  git checkout<BR/>
+  <BR/>
+  …<BR/>
+  <BR/>
+  git config unset --global --value `pwd` safe.directory<BR/>
+  cd ..<BR/>
+  rm -rf `basename -s .git $REPO`</CODESAMPLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
@@ -956,20 +953,20 @@
   <ROW>
     <TERM><CODEROUTINE>git clean -e &lt;pattern&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git clean --exclude=&lt;pattern&gt;</CODEROUTINE></TERM>
-    <DESC>Exclude the files/directories matching &lt;pattern&gt;.</DESC>
+    <DESC>Exclude the files/directories matching &lt;pattern&gt; in addition to the standard ignore rules.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clean -x</CODEROUTINE></TERM>
-    <DESC>Also remove the files/directories which are ignored by Git (but still use the ignore rules given with <CODEROUTINE>-e</CODEROUTINE> options).</DESC>
+    <DESC>Don’t use the standard ignore rules, but still use the ignore rules given with <CODEROUTINE>-e</CODEROUTINE> options from the command line. This allows removing all untracked files, including build products.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clean -X</CODEROUTINE></TERM>
-    <DESC>Only remove the files/directories which are ignored by Git.</DESC>
+    <DESC>Remove only files ignored by Git. This may be useful to rebuild everything from scratch, but keep manually created files.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clean -f</CODEROUTINE><BR/>
       <CODEROUTINE>git clean --force</CODEROUTINE></TERM>
-    <DESC>Perform the deletion if the Git configuration variable <CODEROUTINE>clean.requireForce</CODEROUTINE> is not set to <CODEROUTINE>false</CODEROUTINE>.<BR/>
+    <DESC>Clean file with no interaction. Perform the deletion if the Git configuration variable <CODEROUTINE>clean.requireForce</CODEROUTINE> is not set to <CODEROUTINE>false</CODEROUTINE>.<BR/>
       Untracked nested git repositories (directories with a <CODEROUTINE>.git</CODEROUTINE> subdirectory) are ignored unless a second <CODEROUTINE>-f</CODEROUTINE> is given.</DESC>
   </ROW>
   <ROW>
@@ -1077,7 +1074,7 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git checkout --progress</CODEROUTINE></TERM>
-    <DESC>This flag enables progress reporting even if not attached to a terminal.</DESC>
+    <DESC>Enable progress reporting even if not attached to a terminal.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git switch &lt;branch&gt;</CODEROUTINE><BR/>
@@ -1394,24 +1391,32 @@
       When writing, the new value is written to the repository local configuration file by default, and options <CODEROUTINE>--system</CODEROUTINE>, <CODEROUTINE>--global</CODEROUTINE>, <CODEROUTINE>--worktree</CODEROUTINE>, <CODEROUTINE>--file &lt;filename&gt;</CODEROUTINE> can be used to tell the command to write to that location (we can use <CODEROUTINE>--local</CODEROUTINE> but that is the default).</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --get user.name</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git config get user.name</CODEROUTINE><BR/>
+      old syntax:<BR/>
+      <CODEROUTINE>git config --get user.name</CODEROUTINE></TERM>
     <DESC>Display the value of <CODEROUTINE>user.name</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --get-all user.name</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git config get --all user.name</CODEROUTINE><BR/>
+      old syntax:<BR/>
+      <CODEROUTINE>git config --get-all user.name</CODEROUTINE></TERM>
     <DESC>Display all the values of <CODEROUTINE>user.name</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --get-all --show-origin user.name</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git config get --all --show-origin user.name</CODEROUTINE><BR/>
+      old syntax:<BR/>
+      <CODEROUTINE>git config --get-all --show-origin user.name</CODEROUTINE></TERM>
     <DESC>Display all the values of <CODEROUTINE>user.name</CODEROUTINE> with their origin.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config -l</CODEROUTINE><BR/>
+    <TERM>old syntax:<BR/>
+      <CODEROUTINE>git config -l</CODEROUTINE><BR/>
       <CODEROUTINE>git config --list</CODEROUTINE></TERM>
     <DESC>List all variables set in config file with their values.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --global --list</CODEROUTINE></TERM>
+    <TERM>old syntax:<BR/>
+      <CODEROUTINE>git config --global --list</CODEROUTINE></TERM>
     <DESC>Display the global configuration.</DESC>
   </ROW>
   <ROW>
@@ -1431,42 +1436,52 @@
     <DESC>Open an editor to edit the global configuration file.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --global user.name "John Doe"</CODEROUTINE><BR/>
+    <TERM>old syntax:<BR/>
+      <CODEROUTINE>git config --global user.name "John Doe"</CODEROUTINE><BR/>
       <CODEROUTINE>git config set --global user.name "John Doe"</CODEROUTINE></TERM>
     <DESC>Set the name in the global configuration file.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --global user.email johndoe@example.com</CODEROUTINE><BR/>
-      <CODEROUTINE>git config set --global user.email johndoe@example.com</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git config set --global user.email johndoe@example.com</CODEROUTINE><BR/>
+      old syntax:<BR/>
+      <CODEROUTINE>git config --global user.email johndoe@example.com</CODEROUTINE></TERM>
     <DESC>Set the email in the global configuration file.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git config set --system user.email johndoe@example.com</CODEROUTINE><BR/>
+      old syntax:<BR/>
       <CODEROUTINE>git config --system user.email johndoe@example.com</CODEROUTINE></TERM>
     <DESC>Set the email in the system-wide configuration file.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config user.name "John Doe"</CODEROUTINE><BR/>
-      <CODEROUTINE>git config set user.name "John Doe"</CODEROUTINE><BR/>
-      <CODEROUTINE>git config --local user.name "John Doe"</CODEROUTINE><BR/>
-      <CODEROUTINE>git config set --local user.name "John Doe"</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git config set user.name "John Doe"</CODEROUTINE><BR/>
+      <CODEROUTINE>git config set --local user.name "John Doe"</CODEROUTINE><BR/>
+      old syntax:<BR/>
+      <CODEROUTINE>git config user.name "John Doe"</CODEROUTINE><BR/>
+      <CODEROUTINE>git config --local user.name "John Doe"</CODEROUTINE></TERM>
     <DESC>Set the name in the local repository configuration file.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --unset &lt;name&gt;</CODEROUTINE><BR/>
+    <TERM><CODEROUTINE>git config unset &lt;name&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git config unset --local &lt;name&gt;</CODEROUTINE><BR/>
+      old syntax:<BR/>
+      <CODEROUTINE>git config --unset &lt;name&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git config --local --unset &lt;name&gt;</CODEROUTINE></TERM>
-    <DESC>Remove the line matching the key <CODEROUTINE>&lt;name&gt;</CODEROUTINE> from config file.</DESC>
+    <DESC>Remove the line matching the key <CODEROUTINE>&lt;name&gt;</CODEROUTINE> from the configuration file.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --remove-section &lt;name&gt;</CODEROUTINE></TERM>
+    <TERM>old syntax:<BR/>
+      <CODEROUTINE>git config --remove-section &lt;name&gt;</CODEROUTINE></TERM>
     <DESC>Remove the section <CODEROUTINE>&lt;name&gt;</CODEROUTINE> from the configuration file.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --replace-all</CODEROUTINE></TERM>
+    <TERM>old syntax:<BR/>
+      <CODEROUTINE>git config --replace-all</CODEROUTINE></TERM>
     <DESC>Default behaviour is to replace at most one line. This replaces all lines matching the key.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git config --add</CODEROUTINE></TERM>
+    <TERM>old syntax:<BR/>
+      <CODEROUTINE>git config --add</CODEROUTINE></TERM>
     <DESC>Adds a new line to the option without altering any existing values.</DESC>
   </ROW>
   <ROW>
