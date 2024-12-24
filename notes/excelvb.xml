@@ -79,7 +79,7 @@ Range("A1:A1").AutoFilter Field:=10, Criteria1:="=foobar*"
 Range("A1:A1").AutoFilter Field:=10, Criteria1:="=*foobar"
 </CODESAMPLE>
 </ITEM>
-<ITEM>when filtering on a column containing a boolean expression, the macro recorder generates
+<ITEM>when filtering on a column containing a Boolean expression, the macro recorder generates
 <CODESAMPLE>
 Range("A1:A1").AutoFilter Field:=10, Criteria1:="VRAI"
 </CODESAMPLE>

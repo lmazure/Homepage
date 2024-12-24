@@ -50,9 +50,9 @@ a multiline string"<BR/>
 <PROMPT/>\S</CODESAMPLE></ITEM>
 <ITEM><CODEROUTINE>true</CODEROUTINE> is true<BR/>
 <CODEROUTINE>false</CODEROUTINE> is false<BR/>
-<CODEROUTINE>nil</CODEROUTINE> also evaluates to false in a boolean context<BR/>
-everything else evaluates to true in a boolean context</ITEM>
-<ITEM><CODEROUTINE>true?</CODEROUTINE> tests whether a value is actually true, not whether the value evaluates to true in a boolean context. The only thing that is <CODEROUTINE>true?</CODEROUTINE> is <CODEROUTINE>true</CODEROUTINE> itself:
+<CODEROUTINE>nil</CODEROUTINE> also evaluates to false in a Boolean context<BR/>
+everything else evaluates to true in a Boolean context</ITEM>
+<ITEM><CODEROUTINE>true?</CODEROUTINE> tests whether a value is actually true, not whether the value evaluates to true in a Boolean context. The only thing that is <CODEROUTINE>true?</CODEROUTINE> is <CODEROUTINE>true</CODEROUTINE> itself:
 <CODESAMPLE>(true? true)<BR/>
 <PROMPT/>true<BR/>
 (true? "foo")<BR/>
