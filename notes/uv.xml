@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>uv</TITLE>
 <PATH>notes/uv.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Install <CODEROUTINE>uv</CODEROUTINE> on a USB key</TITLE>
   <ITEM>Environment setup:
@@ -27,7 +27,7 @@
   <ROW>
     <TERM><CODEROUTINE>uv self update</CODEROUTINE></TERM>
     <DESC>Update <CODEROUTINE>uv</CODEROUTINE> installation.<BR/>
-        Does not work, <CODEROUTINE>uv</CODEROUTINE> believes it has been installet with an installer.</DESC>
+      Does not work, <CODEROUTINE>uv</CODEROUTINE> believes it has been installed with an installer.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -43,6 +43,28 @@
   <ROW>
     <TERM><CODEROUTINE>uv python uninstall 3.12</CODEROUTINE></TERM>
     <DESC>Uninstall Python version 3.12.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>uv venv</CODEROUTINE></TERM>
+    <DESC>Create a virtual environment <CODEROUTINE>.venv</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>uv venv my-name</CODEROUTINE></TERM>
+    <DESC>Create a virtual environment <CODEROUTINE>my-name</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>source .venv/bin/activate</CODEROUTINE></TERM>
+    <DESC>Activate the virtual environment.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>uv pip install -r requirements.txt</CODEROUTINE></TERM>
+    <DESC>Install from a <CODEROUTINE>requirements.txt</CODEROUTINE> file.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
