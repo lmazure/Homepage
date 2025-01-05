@@ -219,7 +219,7 @@ public class Test<BR/>
 <TAB/><TAB/><TAB/>// each map has the following entries<BR/>
 <TAB/><TAB/><TAB/>// - customfieldId<BR/>
 <TAB/><TAB/><TAB/>// - values<BR/>
-<TAB/><TAB/><TAB/>// - key (this one is optional and I don't know it use)<BR/>
+<TAB/><TAB/><TAB/>// - key (this one is optional and I don’t know it use)<BR/>
 <TAB/><TAB/><TAB/>if ( entry.get("customfieldId").equals(FIELD_ID_FIXED_IN_BUILD) ) {<BR/>
 <TAB/><TAB/><TAB/><TAB/>resolvedOn = (String)entry.get("values");<BR/>
 <TAB/><TAB/><TAB/><TAB/>break;<BR/>
