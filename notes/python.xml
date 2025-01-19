@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -506,10 +506,10 @@
     <TAB/>"docstring"<BR/>
     <TAB/># … code</CODESAMPLE>
   </ITEM>
-  <ITEM>All variable assignments store value in the local symbol table<BR/>
-    Variable references are looked in the local symbol table, then in the global symbol table and, at last, in the table of built-in names</ITEM>
-  <ITEM>Parameters are passed by reference</ITEM>
-  <ITEM>Function references can be stored in variables
+  <ITEM>All variable assignments store value in the local symbol table.<BR/>
+    Variable references are looked in the local symbol table, then in the global symbol table and, at last, in the table of built-in names.</ITEM>
+  <ITEM>Parameters are passed by reference.</ITEM>
+  <ITEM>Function references can be stored in variables.
     <CODEROUTINE>f=myfunction</CODEROUTINE></ITEM>
   <ITEM><CODEROUTINE>return</CODEROUTINE> returns the <CODEROUTINE>None</CODEROUTINE> value</ITEM>
   <ITEM><CODEROUTINE>return s</CODEROUTINE> returns the <CODEROUTINE>s</CODEROUTINE> value</ITEM>
@@ -532,8 +532,13 @@
     <TAB/>#…<BR/>
     foobar(0,1,d=4,c=3)</CODESAMPLE>
   </ITEM>
-  <ITEM><CODEROUTINE>*name</CODEROUTINE> can be used to get an arbitrary number of positional arguments<BR/>
-    <CODEROUTINE>**name</CODEROUTINE> can be used to get an arbitrary number of keyword arguments
+  <ITEM><CODEROUTINE>def quux(pos1, pos2, /, pos_or_kwd1, pos_or_kwd2, *, kwd1, kwd2):</CODEROUTINE><BR/>
+    Arguments before <CODEROUTINE>/</CODEROUTINE> are positional only.<BR/>
+    Arguments between <CODEROUTINE>/</CODEROUTINE> and <CODEROUTINE>*</CODEROUTINE> can be positional or keyword.<BR/>
+    Arguments after <CODEROUTINE>*</CODEROUTINE> are keyword only.
+  </ITEM>
+  <ITEM><CODEROUTINE>*name</CODEROUTINE> can be used to get an arbitrary number of positional arguments.<BR/>
+    <CODEROUTINE>**name</CODEROUTINE> can be used to get an arbitrary number of keyword arguments.
     <CODESAMPLE>def quux(*a,**b):<BR/>
     <TAB/>for arg in a: print arg<BR/>
     <TAB/>for kw in b.keys(): print(kw,':',b[kw])</CODESAMPLE>
@@ -591,17 +596,36 @@
 <BLIST><TITLE><U><B>Modules</B></U></TITLE>
   <ITEM>A module is a file containing Python definitions and statements.<BR/>
     The statements are executed the first time the module is imported.</ITEM>
-  <ITEM>Syntax to import a module
-    <CODESAMPLE>import mymodule<BR/>
-    mymod.myfunc(2)</CODESAMPLE>
-  </ITEM>
-  <ITEM>If the module name is followed by <CODEROUTINE>as</CODEROUTINE>, then the name following <CODEROUTINE>as</CODEROUTINE> is bound directly to the imported module.
-    <CODESAMPLE>import mymodule as mydmod</CODESAMPLE>
-  </ITEM>
-  <ITEM>Symbols of the imported module can be declared in the importing module’s symbol table.<BR/>
-    <CODEROUTINE>from mymod import myfunc, myfunc2</CODEROUTINE><BR/>
-    All symbols (except those beginning by an underscore) can be declared in the importing module’s symbol table.<BR/>
-    <CODEROUTINE>from mymod import *</CODEROUTINE></ITEM>
+  <ITEM><BLIST><TITLE>Imports</TITLE>
+    <ITEM>Syntax overview
+      <TABLE>
+        <ROW><CELL>Syntax</CELL><CELL>Example</CELL><CELL>Usage</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>import module_name</CODEROUTINE></CELL><CELL><CODEROUTINE>import math</CODEROUTINE></CELL><CELL>Imports the entire module and makes it available under its original name.</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>import module_name as alias</CODEROUTINE></CELL><CELL><CODEROUTINE>import pandas as pd</CODEROUTINE></CELL><CELL>Imports the entire module and makes it available under a specified alias.</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>from module_name import attribute</CODEROUTINE></CELL><CELL><CODEROUTINE>from math import pi</CODEROUTINE></CELL><CELL>Imports specific attributes (functions, classes, variables) from a module.</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>from module_name import attribute1, attribute2</CODEROUTINE></CELL><CELL><CODEROUTINE>from math import pi, sqrt</CODEROUTINE></CELL><CELL>Imports multiple specific attributes from a module.</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>from module_name import *</CODEROUTINE></CELL><CELL><CODEROUTINE>from math import *</CODEROUTINE></CELL><CELL>Imports all attributes from a module. This is generally discouraged because it can lead to namespace pollution and conflicts.</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>from module_name import attribute as alias</CODEROUTINE></CELL><CELL><CODEROUTINE>from math import sqrt as square_root</CODEROUTINE></CELL><CELL>Imports a specific attribute from a module and makes it available under a specified alias.</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>import module_name.submodule_name</CODEROUTINE></CELL><CELL><CODEROUTINE>import os.path</CODEROUTINE></CELL><CELL>Imports a submodule from a module.</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>import module_name.submodule_name as alias</CODEROUTINE></CELL><CELL><CODEROUTINE>import os.path as osp</CODEROUTINE></CELL><CELL>Imports a submodule from a module and makes it available under a specified alias.</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>module = __import__("module_name")</CODEROUTINE></CELL><CELL><CODEROUTINE>pd = __import__("pandas")</CODEROUTINE></CELL><CELL>Imports a module programmatically. This is less common and typically used in dynamic or metaprogramming scenarios.</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>from . import module_name</CODEROUTINE></CELL><CELL><CODEROUTINE>from . import utils</CODEROUTINE></CELL><CELL>Used within a package to import modules relative to the current module’s location (same-level module).</CELL></ROW>
+        <ROW><CELL><CODEROUTINE>from .. import module_name</CODEROUTINE></CELL><CELL><CODEROUTINE>from .. import utils</CODEROUTINE></CELL><CELL>Used within a package to import modules relative to the current module’s location (parent-level module).</CELL></ROW>
+      </TABLE>
+    </ITEM>
+    <ITEM>Syntax to import a module
+      <CODESAMPLE>import mymodule<BR/>
+      mymod.myfunc(2)</CODESAMPLE>
+    </ITEM>
+    <ITEM>If the module name is followed by <CODEROUTINE>as</CODEROUTINE>, then the name following <CODEROUTINE>as</CODEROUTINE> is bound directly to the imported module.
+      <CODESAMPLE>import mymodule as mydmod</CODESAMPLE>
+    </ITEM>
+    <ITEM>Symbols of the imported module can be declared in the importing module’s symbol table.<BR/>
+      <CODEROUTINE>from mymod import myfunc, myfunc2</CODEROUTINE><BR/>
+      All symbols (except those beginning by an underscore) can be declared in the importing module’s symbol table.<BR/>
+      <CODEROUTINE>from mymod import *</CODEROUTINE></ITEM>
+    <ITEM><CODEROUTINE>pd = __import__('pandas')</CODEROUTINE> is the same as <CODEROUTINE>import pandas as pd</CODEROUTINE>.</ITEM>
+  </BLIST></ITEM>
   <ITEM>Reload a module.
     <CODEROUTINE>reload(mymod)</CODEROUTINE></ITEM>
   <ITEM>Inside a module, its name is defined in <CODEROUTINE>__name__</CODEROUTINE>.</ITEM>
@@ -618,7 +642,6 @@
     <CODEROUTINE>dir</CODEROUTINE> can also be used to get the methods and attributes of an object.<BR/>
     Without arguments, <CODEROUTINE>dir()</CODEROUTINE>return the list of names in the current local scope.</ITEM>
   <ITEM><CODEROUTINE>__builtin__</CODEROUTINE> is the standard module.</ITEM>
-  <ITEM><CODEROUTINE>pd = __import__('pandas')</CODEROUTINE> is the same as <CODEROUTINE>import pandas as pd</CODEROUTINE>.</ITEM>
   <ITEM><CODEROUTINE>__all__</CODEROUTINE> can be used in a module to define the symbols that should be imported when the module is imported with a wildcard (<CODEROUTINE>from &lt;module&gt; import *</CODEROUTINE>). But the other symbols can still be imported by stating them explicitly (<CODEROUTINE>from &lt;module&gt; import &lt;symbol&gt;</CODEROUTINE>).</ITEM>
   <ITEM>Absolute imports: if <CODEROUTINE>foo.py</CODEROUTINE> is in <CODEROUTINE>dir/subdir</CODEROUTINE>, it can be imported as <CODEROUTINE>import dir.subdir.foo</CODEROUTINE>.<BR/>
     Relative imports: if <CODEROUTINE>bar.py</CODEROUTINE> is in the same directory, it can use <CODEROUTINE>import .foo</CODEROUTINE>.</ITEM>
