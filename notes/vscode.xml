@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -640,11 +640,19 @@ Search/replace
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>Transform to Uppercase</CODEROUTINE></TERM>
-    <DESC>Convert selection to lowercase</DESC>
+    <DESC>Convert selection to uppercase</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>Transform to Title Case</CODEROUTINE></TERM>
     <DESC>Convert selection to titlecase</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Convert Indentation to Spaces</CODEROUTINE></TERM>
+    <DESC>Reindent with spaces</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Convert Indentation to Tabs</CODEROUTINE></TERM>
+    <DESC>Reindent with tabs</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -804,6 +812,7 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
   <ITEM><BLIST><TITLE><X><T>Python</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.python</A><L>en</L><F>HTML</F></X></TITLE>
     <ITEM>to set the virtual environment to use, run <CODEROUTINE>Python: Select Interpreter</CODEROUTINE>.</ITEM>
     <ITEM>to define the default virtual environment to use, add <CODEROUTINE>"python.envFile": "${workspaceFolder}/.venv"</CODEROUTINE> in <CODEFILENAME>settings.json</CODEFILENAME>.</ITEM>
+    <ITEM>to enable type checking, set <CODEROUTINE>python.analysis.typeCheckingMode</CODEROUTINE> to <CODEFILENAME>basic</CODEFILENAME> or <CODEFILENAME>strict</CODEFILENAME>.</ITEM>
   </BLIST></ITEM>
   <ITEM><X><T>Codeium</T><A>https://marketplace.visualstudio.com/items?itemName=Codeium.codeium</A><L>en</L><F>HTML</F></X>
     <DEFINITIONTABLE>

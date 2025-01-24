@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI coding assistants</TITLE>
 <PATH>links/aicodeassist.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -29,6 +29,7 @@
       <ITEM><X><T>Continue</T><A>https://www.continue.dev/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Cline</T><A>https://github.com/cline/cline</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Aider</T><A>https://github.com/Aider-AI/aider</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Roo Code</T><A>https://github.com/RooVetGit/Roo-Code</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Project IDX</T><A>https://idx.dev/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>bolt.diy</T><A>https://github.com/stackblitz-labs/bolt.diy</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
@@ -80,6 +81,7 @@
     <ITEM><ARTICLE><X><T>How I program with LLMs</T><A>https://crawshaw.io/blog/programming-with-llms</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Crawshaw</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>6</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Crawshaw</LASTNAME></AUTHOR> describes his (classical) use of LLMs and that he decided to contribute to yet another tool, sketch.dev, to automate interactions with them.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Phi-4 + Bolt DIY + Cline &amp; Aider : This 100% PRIVATE &amp; LOCAL AI Coder is INSANE! (Beats Cursor!)</T><A>https://www.youtube.com/watch?v=5piUVcCUZcs</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR><GIVENNAME>AICodeKing</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>13</DAY></DATE><COMMENT>As indicated in the title: how to use Phi-4 in Cline, bolt.diy, and Aider.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Le futur du développeur avec l'IA ?</T><A>https://blog.octo.com/le-futur-du-developpeur-avec-l'ia</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jordan</FIRSTNAME><LASTNAME>Chapuy</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>16</DAY></DATE><COMMENT>A very classical opinion about the impact of AI on coding.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Deepseek-R1 + RooCline &amp; Aider + Free APIs : This CRAZY AI Coder is AMAZING!</T><A>https://www.youtube.com/watch?v=emXbPe86UVs</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><GIVENNAME>AICodeKing</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>22</DAY></DATE><COMMENT>How to use Deepseek-R1 in Roo Cline and in Aider.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>GitHub Copilot</TITLE>
       <ITEM><ARTICLE><X><T>Research: quantifying GitHub Copilot’s impact on developer productivity and happiness</T><ST>When the GitHub Copilot Technical Preview launched just over one year ago, we wanted to know one thing: Is this tool helping developers? The GitHub Next team conducted research using a combination of surveys and experiments, which led us to expected and unexpected answers.</ST><A>https://github.blog/news-insights/research/research-quantifying-github-copilots-impact-on-developer-productivity-and-happiness/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eirini</FIRSTNAME><LASTNAME>Kalliamvakou</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>7</DAY></DATE><COMMENT>A survey and an experiment demonstrating that developers using GitHub Copilot deliver faster, are more focused, and happier. But what about code quality?</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Responsible AI pair programming with GitHub Copilot</T><ST>GitHub Copilot boosts developer productivity, but using it responsibly still requires good developer and DevSecOps practices.</ST><A>https://github.blog/ai-and-ml/github-copilot/responsible-ai-pair-programming-with-github-copilot/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Colin</FIRSTNAME><LASTNAME>Dembovsky</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>22</DAY></DATE><COMMENT>The subtitle says it all.</COMMENT></ARTICLE></ITEM>
@@ -129,6 +131,7 @@
         <ITEM><ARTICLE><X><T>Innovation, not Productivity: Why we Built Windsurf</T><A>https://codeium.com/blog/why-we-built-windsurf</A><L>en</L><F>HTML</F></X><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE><COMMENT>Codeium explains that AI code assistants are not only about developer productivity: more persons can produce applications while not being developers, people can work on code bases they do not master…</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Windsurf Wave 2</T><A>https://codeium.com/blog/windsurf-wave-2</A><L>en</L><F>HTML</F></X><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE><COMMENT>Web search, automated memories, terminal integration, and problem tab integration.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE predecessor="https://codeium.com/blog/windsurf-wave-2"><X><T>Windsurf Wave 2 Update: Web Search, Autogenerated Memories, and More</T><A>https://www.youtube.com/watch?v=YBP5Fs2N0Mg</A><L>en</L><F>MP4</F><DURATION><MINUTE>3</MINUTE><SECOND>2</SECOND></DURATION></X><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE><COMMENT>The corresponding video.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Turn Blog Post Tutorials into Full-Stack Applications Automatically - Windsurf Editor</T><A>https://www.youtube.com/watch?v=X7Ipaou43o0</A><L>en</L><F>MP4</F><DURATION><MINUTE>3</MINUTE><SECOND>33</SECOND></DURATION></X><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>A demo of generating code from <X><T>a blog post</T><A>https://khou22.com/blog/building-a-waitlist-in-2023</A><L>en</L><F>HTML</F></X>.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>StarCoder</TITLE>

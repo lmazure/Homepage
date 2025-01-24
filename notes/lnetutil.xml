@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Linux network utilities</TITLE>
 <PATH>notes/lnetutil.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -77,6 +77,11 @@
         <CODEROUTINE>-H 'Accept: application/json'</CODEROUTINE></DESC>
     </ROW>
     <ROW>
+      <TERM><CODEROUTINE>-X &lt;method&gt;</CODEROUTINE><BR/>
+        <CODEROUTINE>--request &lt;method&gt;</CODEROUTINE></TERM>
+      <DESC>change the method to use when starting the transfer</DESC>
+    </ROW>
+    <ROW>
       <TERM><CODEROUTINE>-u &lt;user:password&gt;</CODEROUTINE><BR/>
         <CODEROUTINE>--user &lt;user:password&gt;</CODEROUTINE></TERM>
       <DESC>define user and password for server authentication</DESC>
@@ -109,7 +114,7 @@
       <DESC>display only the data sent by the server (i.e. no progress meter nor error message)</DESC>
     </ROW>
     <ROW>
-      <TERM><CODEROUTINE>-o</CODEROUTINE><BR/>
+      <TERM><CODEROUTINE>-i</CODEROUTINE><BR/>
         <CODEROUTINE>--include</CODEROUTINE></TERM>
       <DESC>include response headers in the output</DESC>
     </ROW>
@@ -133,6 +138,11 @@
       <TERM><CODEROUTINE>-b &lt;filename&gt;</CODEROUTINE><BR/>
         <CODEROUTINE>--cookie &lt;filename&gt;</CODEROUTINE></TERM>
       <DESC>specify a filename to read previously stored cookie from.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>-v</CODEROUTINE><BR/>
+        <CODEROUTINE>--verbose</CODEROUTINE></TERM>
+      <DESC>makes curl verbose during the operation</DESC>
     </ROW>
     </DEFINITIONTABLE>
     to retrieve the HTTP code:
