@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI models</TITLE>
 <PATH>links/aimodels.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
@@ -48,6 +48,7 @@
         <ITEM><ARTICLE><X><T>Qwen QwQ-32B : This New OPENSOURCE Model BEATS O1 &amp; SONNET? (with FREE API)</T><A>https://www.youtube.com/watch?v=oX9ZMuKA2Ls</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>28</SECOND></DURATION></X><AUTHOR><GIVENNAME>AICodeKing</GIVENNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>28</DAY></DATE><COMMENT>The usual basic presentation and evaluation for Qwen QwQ-32B.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Athene-V2 &amp; Agent : This NEW Opensource MODEL BEATS SONNET &amp; GPT-4O! (Best OPEN LLM w/ Free API)</T><A>https://www.youtube.com/watch?v=65J_ZKy3H3w</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR><GIVENNAME>AICodeKing</GIVENNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE><COMMENT>Always the same ad, presentation, and evaluation, this time for Athene-V2, a model fine-tuned from Qwen 2.5 72B.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Trying out QvQ—Qwen’s new visual reasoning model</T><A>https://simonwillison.net/2024/Dec/24/qvq/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>24</DAY></DATE><COMMENT>Some experimentation with the visual reasoning capabilities of QVQ-72B-Preview.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Qwen2.5-1M: Deploy Your Own Qwen with Context Length up to 1M Tokens</T><A>https://simonwillison.net/2025/Jan/26/qwen25-1m/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>26</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR> had trouble running Qwen2.5-7B-Instruct-1M locally, first because the context size was configured too small in Ollama, second because he did not have enough RAM.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Deepseek</TITLE>
@@ -62,6 +63,7 @@
       <ITEM><ARTICLE><X><T>DeepSeekR1 - Full Breakdown</T><A>https://www.youtube.com/watch?v=gzZihJ5miZE</A><L>en</L><F>MP4</F><DURATION><MINUTE>22</MINUTE><SECOND>48</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>21</DAY></DATE><COMMENT>The classical announcement reading and experimentation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A free, powerful Chinese AI model just dropped — but don’t ask it about Tiananmen Square</T><ST>Those who train the AI models get to decide what the truth is.</ST><A>https://sherwood.news/tech/a-free-powerful-chinese-ai-model-just-dropped-but-dont-ask-it-about/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jon</FIRSTNAME><LASTNAME>Keegan</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE><COMMENT>Guess what… The DeepSeek R1 models are aligned with China’s point of view, not with the US one.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>DeepSeek R1 for Structured Agents</T><A>https://www.youtube.com/watch?v=LQPYWW3gqkQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>21</MINUTE><SECOND>55</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>Exploiting DeepSeek-R1 by using a smaller model (Gemini 1.5 Flash) to structure its output.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>ggml : x2 speed for WASM by optimizing SIMD</T><A>https://simonwillison.net/2025/Jan/27/llamacpp-pr/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>27</DAY></DATE><COMMENT>Some buzz because someone was able to optimise code using DeepSeek-R1.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Amazon</TITLE>
       <ITEM><ARTICLE><X><T>First impressions of the new Amazon Nova LLMs (via a new llm-bedrock plugin)</T><A>https://simonwillison.net/2024/Dec/4/amazon-nova/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE><COMMENT>Nova is cheaper than Gemini.</COMMENT></ARTICLE></ITEM>
