@@ -26,7 +26,7 @@
           <CODEROUTINE>-cp classpath</CODEROUTINE></TERM>
         <DESC>Specifies a list of directories, JAR files, and ZIP archives to search for class files.<BR/>
           On Windows, semicolons (<CODEROUTINE>;</CODEROUTINE>) separate entities in this list; on other platforms it is a colon (<CODEROUTINE>:</CODEROUTINE>).<BR/>
-          Specifying <CODEROUTINE>classpath</CODEROUTINE> overrides any setting of the <CODEROUTINE>CLASSPATH</CODEROUTINE> environment variable. If the class path option isn't used and classpath isn't set, then the user class path consists of the current directory.<BR/>
+          Specifying <CODEROUTINE>classpath</CODEROUTINE> overrides any setting of the <CODEROUTINE>CLASSPATH</CODEROUTINE> environment variable. If the class path option isn’t used and classpath isn’t set, then the user class path consists of the current directory.<BR/>
           As a special convenience, a class path element that contains a base name of an asterisk (<CODEROUTINE>*</CODEROUTINE>) is considered equivalent to specifying a list of all the files in the directory with the extension <CODEROUTINE>.jar</CODEROUTINE> or <CODEROUTINE>.JAR</CODEROUTINE>.</DESC>
       </ROW>
       <ROW>
@@ -221,5 +221,5 @@
     <CODEROUTINE>jinfo <I>pid</I></CODEROUTINE></ITEM>
 </BLIST>
 </CONTENT>
-<X><T>Oracle's documentation</T><A>https://docs.oracle.com/en/java/javase/22/docs/specs/man/index.html</A><L>en</L><F>HTML</F></X>
+<X><T>Oracle's documentation</T><A>https://docs.oracle.com/en/java/javase/23/docs/specs/man/index.html</A><L>en</L><F>HTML</F></X>
 </PAGE>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>notes/java.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
   <BLIST><TITLE><U><B>Visibility</B></U></TITLE>
     <ITEM>
@@ -149,7 +149,7 @@
 </BLIST>
 <BLIST><TITLE><U><B>Regular Expressions</B></U><BR/></TITLE>
   <ITEM><CODEROUTINE>\p{…}</CODEROUTINE> can be used to match a character of a given Unicode <X><T>category</T><A>https://www.unicode.org/reports/tr18/#General_Category_Property</A><L>en</L><F>HTML</F></X>.<BR/>
-  For example <CODEROUTINE>\p{Z}</CODEROUTINE> matches separators, I believe this is the same as <X><T><CODEROUTINE>Character.isSpaceChar()</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/lang/Character.html#isSpaceChar(int)</A><L>en</L><F>HTML</F></X>.</ITEM>
+  For example <CODEROUTINE>\p{Z}</CODEROUTINE> matches separators, I believe this is the same as <X><T><CODEROUTINE>Character.isSpaceChar()</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/lang/Character.html#isSpaceChar(int)</A><L>en</L><F>HTML</F></X>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Functional interfaces</B></U><BR/></TITLE>
   <ITEM><CODEROUTINE>@FunctionalInterface</CODEROUTINE> is an informative annotation type used to indicate that an interface with exactly one abstract method.</ITEM>
@@ -338,7 +338,7 @@
     </ROW>
   </DEFINITIONTABLE></ITEM>
 </BLIST>
-<U><B><X><T><CODEROUTINE>Optional</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/Optional.html</A><L>en</L><F>HTML</F></X></B></U>
+<U><B><X><T><CODEROUTINE>Optional</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/Optional.html</A><L>en</L><F>HTML</F></X></B></U>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>static &lt;T&gt; Optional&lt;T&gt; of(T value)</CODEROUTINE></TERM>
@@ -409,7 +409,7 @@
   <ITEM><CODEROUTINE>OptionalInt</CODEROUTINE>: A container object which may or may not contain an int value.</ITEM>
   <ITEM><CODEROUTINE>OptionalLong</CODEROUTINE>: A container object which may or may not contain a long value.</ITEM>
 </BLIST>
-<U><B><X><T><CODEROUTINE>Stream</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/22/docs/api/java.base/java/util/stream/Stream.html</A><L>en</L><F>HTML</F></X></B></U>
+<U><B><X><T><CODEROUTINE>Stream</CODEROUTINE></T><A>https://docs.oracle.com/en/java/javase/23/docs/api/java.base/java/util/stream/Stream.html</A><L>en</L><F>HTML</F></X></B></U>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>static &lt;T&gt; Stream&lt;T&gt; concat(Stream&lt;? extends T&gt; a, Stream&lt;? extends T&gt; b)</CODEROUTINE></TERM>
@@ -459,6 +459,10 @@
   <ROW>
     <TERM><CODEROUTINE>stringStream.collect( Collectors.joining( "," ) )</CODEROUTINE></TERM>
     <DESC>Create a comma-separated list from a stream of strings.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Stream&lt;T&gt; peek(Consumer&lt;? super T&gt; action)</CODEROUTINE></TERM>
+    <DESC>Return a stream consisting of the elements of this stream, additionally performing the provided action on each element as elements are consumed from the resulting stream.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BLIST><TITLE><U><B>JUnit</B></U><BR/></TITLE>
