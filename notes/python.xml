@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -833,12 +833,46 @@
   <ITEM><CODEROUTINE>os.listdir(path='.')</CODEROUTINE>: return a list containing the names of the entries in the directory given by <CODEROUTINE>path</CODEROUTINE>.</ITEM>
   <ITEM><CODEROUTINE>os.walk(top, topdown=True, onerror=None, followlinks=False)</CODEROUTINE>: Generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple <CODEROUTINE>(dirpath, dirnames, filenames)</CODEROUTINE>.</ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>Display colored messages</B></U></TITLE>
+<BLIST><TITLE><U><B>Colorama</B></U> (<X><T>doc</T><A>https://pypi.org/project/colorama/</A><L>en</L><F>HTML</F></X>)</TITLE>
+  <ITEM>Colorama is only aiming at supporting ANSI escape character sequences on Windows (using the appropriate Win32 calls to emulate them).<BR/>
+    Use other libraries if you want powerful formatting.</ITEM>
+  <ITEM><BLIST><TITLE>Old initialisation (do not use anymore)</TITLE>
+    <ITEM><CODEROUTINE>init()</CODEROUTINE> initialise the wrapping of the output.</ITEM>
+    <ITEM><CODEROUTINE>deinit()</CODEROUTINE> stop the wrapping of the output.</ITEM>
+    <ITEM><CODEROUTINE>reinit()</CODEROUTINE> restart the wrapping of the output.</ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>New initialisation</TITLE>
+    <ITEM><CODEROUTINE>just_fix_windows_console()</CODEROUTINE> initialise the wrapping of the output.</ITEM>
+  </BLIST></ITEM>
   <ITEM>Write some text in yellow
     <CODESAMPLE>import colorama<BR/>
     …<BR/>
     print(colorama.Fore.YELLOW + f"set epic to start date = {start_date} and due date = {due_date} ({release})" + colorama.Style.RESET_ALL)</CODESAMPLE>
   </ITEM>
+  <ITEM><BLIST><TITLE>All format constants:</TITLE>
+    <ITEM>Fore: <CODEROUTINE>colorama.Fore.BLACK</CODEROUTINE>, <CODEROUTINE>colorama.Fore.RED</CODEROUTINE>, <CODEROUTINE>colorama.Fore.GREEN</CODEROUTINE>, <CODEROUTINE>colorama.Fore.YELLOW</CODEROUTINE>, <CODEROUTINE>colorama.Fore.BLUE</CODEROUTINE>, <CODEROUTINE>colorama.Fore.MAGENTA</CODEROUTINE>, <CODEROUTINE>colorama.Fore.CYAN</CODEROUTINE>, <CODEROUTINE>colorama.Fore.WHITE</CODEROUTINE>, <CODEROUTINE>colorama.Fore.RESET</CODEROUTINE>.</ITEM>
+    <ITEM>Back: <CODEROUTINE>colorama.Back.BLACK</CODEROUTINE>, <CODEROUTINE>colorama.Back.RED</CODEROUTINE>, <CODEROUTINE>colorama.Back.GREEN</CODEROUTINE>, <CODEROUTINE>colorama.Back.YELLOW</CODEROUTINE>, <CODEROUTINE>colorama.Back.BLUE</CODEROUTINE>, <CODEROUTINE>colorama.Back.MAGENTA</CODEROUTINE>, <CODEROUTINE>colorama.Back.CYAN</CODEROUTINE>, <CODEROUTINE>colorama.Back.WHITE</CODEROUTINE>, <CODEROUTINE>colorama.Back.RESET</CODEROUTINE>.</ITEM>
+    <ITEM>Style: <CODEROUTINE>colorama.Style.DIM</CODEROUTINE>, <CODEROUTINE>colorama.Style.NORMAL</CODEROUTINE>, <CODEROUTINE>colorama.Style.BRIGHT</CODEROUTINE>, <CODEROUTINE>colorama.Style.RESET_ALL</CODEROUTINE>.</ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Cursor positoning:</TITLE>
+  <ITEM><CODEROUTINE>Cursor.POS(row, col)</CODEROUTINE> move the cursor to the specified row and column.<BR/>
+    The top-left corner of the terminal is (1, 1).
+    <CODESAMPLE>from colorama import init, Cursor<BR/>
+    <BR/>
+    # Initialize Colorama<BR/>
+    init()<BR/>
+    <BR/>
+    # Move the cursor to row 10, column 5<BR/>
+    print(Cursor.POS(10, 5) + 'This text is at row 10, column 5')</CODESAMPLE></ITEM>
+  <ITEM><CODEROUTINE>Cursor.UP(n)</CODEROUTINE> move the cursor up by n rows.
+    <CODESAMPLE>print(Cursor.UP(5) + 'This text is 5 rows up')</CODESAMPLE></ITEM>
+  <ITEM><CODEROUTINE>Cursor.DOWN(n)</CODEROUTINE> move the cursor down by n rows.
+    <CODESAMPLE>print(Cursor.DOWN(3) + 'This text is 3 rows down')</CODESAMPLE></ITEM>
+  <ITEM><CODEROUTINE>Cursor.FORWARD(n)</CODEROUTINE> move the cursor forward (right) by n columns.
+    <CODESAMPLE>print(Cursor.FORWARD(10) + 'This text is 10 columns to the right')</CODESAMPLE></ITEM>
+  <ITEM><CODEROUTINE>Cursor.BACK(n)</CODEROUTINE> move the cursor backward (left) by n columns.
+    <CODESAMPLE>print(Cursor.BACK(7) + 'This text is 7 columns to the left')</CODESAMPLE></ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Virtual environments</B></U></TITLE>
   <ITEM>Virtual environments are managed by the <CODEROUTINE>venv</CODEROUTINE> module.
