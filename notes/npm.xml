@@ -18,17 +18,25 @@
     <CODESAMPLE><PROMPT/>npm root --global</CODESAMPLE>
   </ITEM>
   <ITEM><BLIST><TITLE><CODEROUTINE>-save</CODEROUTINE> options</TITLE>
-    <ITEM>Install <CODEROUTINE>foobar</CODEROUTINE> as a development dependency, it will be recorded in the <CODEROUTINE>devDependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
-      <CODESAMPLE><PROMPT/>npm install --save-dev foobar<BR/>
-        <PROMPT/>npm install -D foobar</CODESAMPLE>
+    <ITEM>Install <CODEROUTINE>&lt;package-name&gt;</CODEROUTINE> as a development dependency, it will be recorded in the <CODEROUTINE>devDependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
+      <CODESAMPLE><PROMPT/>npm install --save-dev &lt;package-name&gt;<BR/>
+        <PROMPT/>npm install -D &lt;package-name&gt;</CODESAMPLE>
     </ITEM>
-    <ITEM>Install <CODEROUTINE>foobar</CODEROUTINE> as a deployment dependency, it will be recorded in the <CODEROUTINE>dependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
-      <CODESAMPLE><PROMPT/>npm install --save foobar</CODESAMPLE>
+    <ITEM>Install <CODEROUTINE>&lt;package-name&gt;</CODEROUTINE> as a deployment dependency, it will be recorded in the <CODEROUTINE>dependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
+      <CODESAMPLE><PROMPT/>npm install --save &lt;package-name&gt;</CODESAMPLE>
     </ITEM>
-    <ITEM>Install <CODEROUTINE>foobar</CODEROUTINE> without updating <CODEFILENAME>package.json</CODEFILENAME>
-      <CODESAMPLE><PROMPT/>npm install foobar</CODESAMPLE>
+    <ITEM>Install <CODEROUTINE>&lt;package-name&gt;</CODEROUTINE> without updating <CODEFILENAME>package.json</CODEFILENAME>
+      <CODESAMPLE><PROMPT/>npm install &lt;package-name&gt;</CODESAMPLE>
       alias
-      <CODESAMPLE><PROMPT/>npm i foobar</CODESAMPLE>
+      <CODESAMPLE><PROMPT/>npm i &lt;package-name&gt;</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Uninstall a package</TITLE>
+    <ITEM>Remove a package from local <CODEROUTINE>node_modules</CODEROUTINE> folder and from project’s <CODEROUTINE>package.json</CODEROUTINE>
+      <CODESAMPLE><PROMPT/>npm uninstall &lt;package-name&gt;</CODESAMPLE>
+    </ITEM>
+    <ITEM>Remove a global package
+      <CODESAMPLE><PROMPT/>npm uninstall -g &lt;package-name&gt;</CODESAMPLE>
     </ITEM></BLIST>
   </ITEM>
   <ITEM><BLIST><TITLE>Security audit</TITLE>
@@ -37,19 +45,29 @@
     </ITEM>
     <ITEM>Run an audit and automatically install any compatible updates to vulnerable dependencies
       <CODESAMPLE><PROMPT/>npm audit fix</CODESAMPLE>
-    </ITEM></BLIST>
-  </ITEM>
-  <ITEM>Set the cache directory
-    <CODESAMPLE><PROMPT/>npm config set cache "H:\Documents\tools\Node\npm-cache" --global</CODESAMPLE>
-  </ITEM>
-  <ITEM>Set the proxy
-    <CODESAMPLE><PROMPT/>npm config set proxy 10.99.0.211:3128<BR/>
-    <PROMPT/>npm config set https-proxy 10.99.0.211:3128</CODESAMPLE>
-  </ITEM>
-  <ITEM>Unset the proxy
-    <CODESAMPLE><PROMPT/>npm config rm proxy<BR/>
-    <PROMPT/>npm config rm https-proxy</CODESAMPLE>
-  </ITEM>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Cache</TITLE>
+    <ITEM>Set the cache directory
+      <CODESAMPLE><PROMPT/>npm config set cache "H:\Documents\tools\Node\npm-cache" --global</CODESAMPLE>
+    </ITEM>
+    <ITEM>Check the cache
+      <CODESAMPLE><PROMPT/>npm cache verify</CODESAMPLE>
+    </ITEM>
+    <ITEM>Clean the cache (this should not be necessary, so <CODEROUTINE>--force</CODEROUTINE> is required, otherwise <CODEROUTINE>npm</CODEROUTINE> will refuse do do it)
+      <CODESAMPLE><PROMPT/>npm cache clean --force</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Proxy</TITLE>
+    <ITEM>Set the proxy
+      <CODESAMPLE><PROMPT/>npm config set proxy 10.99.0.211:3128<BR/>
+      <PROMPT/>npm config set https-proxy 10.99.0.211:3128</CODESAMPLE>
+    </ITEM>
+    <ITEM>Unset the proxy
+      <CODESAMPLE><PROMPT/>npm config rm proxy<BR/>
+      <PROMPT/>npm config rm https-proxy</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
 </BLIST>
 </CONTENT>
 </PAGE>

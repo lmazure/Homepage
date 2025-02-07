@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI models</TITLE>
 <PATH>links/aimodels.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
@@ -67,6 +67,9 @@
         <ITEM><ARTICLE><X><T>DeepSeek R1 for Structured Agents</T><A>https://www.youtube.com/watch?v=LQPYWW3gqkQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>21</MINUTE><SECOND>55</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>Exploiting DeepSeek-R1 by using a smaller model (Gemini 1.5 Flash) to structure its output.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>ggml : x2 speed for WASM by optimizing SIMD</T><A>https://simonwillison.net/2025/Jan/27/llamacpp-pr/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>27</DAY></DATE><COMMENT>Some buzz because someone was able to optimise code using DeepSeek-R1.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality="-1"><T>DeepSeek is a Game Changer for AI - Computerphile</T><A>https://www.youtube.com/watch?v=gY4Z-9QlZ64</A><L>en</L><F>MP4</F><DURATION><MINUTE>19</MINUTE><SECOND>57</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE><COMMENT>This presentation of DeepSeek-R1 is much too basic.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X quality="1"><T>Auditing AI Bias: The DeepSeek Case</T><A>https://dsthoughts.baulab.info/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Can</FIRSTNAME><LASTNAME>Rager</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Bau</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>31</DAY></DATE><COMMENT>Authors were able to get DeepSeek-R1 to generate non Chinese compliant answers by using priming attacks.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>DeepSeek-R1: How It Works, Simplified!</T><A>https://www.youtube.com/watch?v=Uzi-cGmRalI</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>0</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Zain</FIRSTNAME><LASTNAME>Hasan</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>A basic description of DeepSeek-R1 training.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>DeepSeek iOS app sends data unencrypted to ByteDance-controlled servers</T><ST>Apple's defenses that protect data from being sent in the clear are globally disabled.</ST><A>https://arstechnica.com/security/2025/02/deepseek-ios-app-sends-data-unencrypted-to-bytedance-controlled-servers/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>DeepSeek is just very bad at security. The real question is the usual one: do you trust the company to which you send your data?</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Deepseek Janus-Pro</TITLE>
         <ITEM><ARTICLE><X><T>DeepSeek Janus-Pro</T><A>https://simonwillison.net/2025/Jan/27/deepseek-janus-pro/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>27</DAY></DATE><COMMENT>The usual "test" of a model, this time it is DeepSeek Janus-Pro, a vision and image generation model.</COMMENT></ARTICLE></ITEM>
