@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -111,6 +111,7 @@
     <ITEM><ARTICLE><X><T>Structured Generation w/ SmolLM2 running in browser &amp; WebGPU</T><A>https://simonwillison.net/2024/Nov/29/structured-generation-smollm2-webgpu/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE><COMMENT>Runing a 1.7B model (<X><T>HuggingFaceTB/SmolLM2-1.7B-Instruct</T><A>https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct</A><L>en</L><F>HTML</F></X>) in Chrome.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>17 Python Libraries Every AI Engineer Should Know</T><A>https://www.youtube.com/watch?v=p4G0coRey9w</A><L>en</L><F>MP4</F><DURATION><MINUTE>19</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Ebbelaar</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X quality="1"><T>How to Build Effective AI Agents (without the hype)</T><A>https://www.youtube.com/watch?v=tx5OapbK-8A</A><L>en</L><F>MP4</F><DURATION><MINUTE>24</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Ebbelaar</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>20</DAY></DATE><COMMENT>A good and down-to-earth description of some AI workflows.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Using pip to install a Large Language Model that’s under 100MB</T><A>https://simonwillison.net/2025/Feb/7/pip-install-llm-smollm2/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR> created a (useless) Pypi package embedding a tiny LLM (<X><T>HuggingFaceTB/SmolLM2-135M-Instruct</T><A>https://huggingface.co/HuggingFaceTB/SmolLM2-135M-Instruct</A><L>en</L><F>HTML</F></X>).</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Fine-tuning</TITLE>
       <ITEM><ARTICLE><X><T>Fine Tune a model with MLX for Ollama</T><A>https://www.youtube.com/watch?v=3UQ7GY9hNwk</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>39</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE><COMMENT>How to fine-tune a model with MLX and use it in Ollama.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=3UQ7GY9hNwk"><X><T>Is MLX the best Fine Tuning Framework?</T><A>https://www.youtube.com/watch?v=BCfCdTp-fdM</A><L>en</L><F>MP4</F><DURATION><MINUTE>19</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>18</DAY></DATE><COMMENT>A detailed introduction to fine-tuning with MLX. This is an expanded version of the previous video.</COMMENT></ARTICLE></ITEM>
