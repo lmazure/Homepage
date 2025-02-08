@@ -9,7 +9,9 @@
   <ITEM><SLIST>
     <ITEM><BLIST><TITLE>Machine learning</TITLE>
       <ITEM><X><T>TensorFlow</T><A>https://www.tensorflow.org</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Hugging Face</T><A>https://huggingface.co/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>Hugging Face</T><A>https://huggingface.co/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>blog</T><A>https://huggingface.co/blog</A><L>en</L><F>HTML</F><FEED><A>https://huggingface.co/blog/feed.xml</A><F>Atom</F></FEED></X></ITEM>
+      </CLIST></ITEM>
       <ITEM><X><T>Kaggle</T><A>https://www.kaggle.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>BigML</T><A>https://bigml.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>SentenceTransformers</T><A>https://www.sbert.net/</A><L>en</L><F>HTML</F></X></ITEM>
