@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -260,6 +260,7 @@
       <ITEM><ARTICLE><X status="removed"><T>5 things you didn't know about … Java Object Serialization</T><ST>You thought serialized data was safe? Think again.</ST><A>https://www.ibm.com/developerworks/java/library/j-5things1/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ted</FIRSTNAME><LASTNAME>Neward</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>Some less known serialisation features: handling class refactoring, hooks in serialisation/deserialisation, signing/sealing serialised data, replacing the serialised/deserialised object, and validating the deserialisation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Quiz yourself: Deserializing objects with readObject</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-serialize-deserialize-readobject</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>This question is more about types and Pattern Matching for <CODEROUTINE>instanceof</CODEROUTINE>, rather than serialisation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Quiz yourself: Deserializing objects that have a nonserializable parent</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-deserialization</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE><COMMENT>The relationship between deserialisation and constructors.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Quiz yourself: Serializing a primitive with ObjectOutputStream</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-serialize-primitive-value</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>XML</TITLE>
       <ITEM><ARTICLE><X status="removed"><T>Parsing, indexing, and searching XML with Digester and Lucene</T><ST>These open source projects can ease your XML-handling tasks</ST><A>https://www.ibm.com/developerworks/library/j-lucene</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Otis</FIRSTNAME><LASTNAME>Gospodnetic</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>3</DAY></DATE><COMMENT>Disgester is a simple to use parser ala SAX. Lucene is a text indexer.</COMMENT></ARTICLE></ITEM>
