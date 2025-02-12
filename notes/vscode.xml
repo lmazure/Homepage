@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -41,6 +41,11 @@
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><BR/>
       <CODEROUTINE>View: Toggle Side Bar Visibility</CODEROUTINE></TERM>
+    <DESC>Show/hide left panel</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="B"/><BR/>
+      <CODEROUTINE>View: Toggle Secondary Side Bar Visibility</CODEROUTINE></TERM>
     <DESC>Show/hide left panel</DESC>
   </ROW>
   <ROW>
