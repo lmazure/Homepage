@@ -40,7 +40,7 @@ This feature, known as type inference, allows you to invoke a generic method as 
 <BR/>
 <BLIST><TITLE><U><B>Bounded Type Parameters</B></U></TITLE>
   <ITEM>It is possible to restrict the kinds of types that are allowed to be passed to a type parameter. For example, a method that operates on numbers might only want to accept instances of <CODEROUTINE>Number</CODEROUTINE> or its subclasses. This is what bounded type parameters are for.<BR/>
-To declare a bounded type parameter, list the type parameter's name, followed by the <CODEROUTINE>extends</CODEROUTINE> keyword, followed by its upper bound. Note that, in this context, <CODEROUTINE>extends</CODEROUTINE> is used in a general sense to mean either "extends" (as in classes) or "implements" (as in interfaces).
+    To declare a bounded type parameter, list the type parameter's name, followed by the <CODEROUTINE>extends</CODEROUTINE> keyword, followed by its upper bound. Note that, in this context, <CODEROUTINE>extends</CODEROUTINE> is used in a general sense to mean either "extends" (as in classes) or "implements" (as in interfaces).
 <CODESAMPLE>public &lt;U extends Number&gt; void inspect(U u){<BR/>
 <TAB/>…<BR/>
 }</CODESAMPLE></ITEM>

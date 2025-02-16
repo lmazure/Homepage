@@ -147,6 +147,8 @@
     </DEFINITIONTABLE>
     to retrieve the HTTP code:
     <CODESAMPLE>CODE=$(curl -o /dev/null -w '%{HTTP_CODE}' -u " user:password" https://sqtm-nightly-cloud.acceptance.squashtest.org/api/rest/latest/projects/999/test-cases)</CODESAMPLE>
+    to retrieve an image file:
+    <CODESAMPLE>curl -v -X GET http://localhost:8080/api/get_image/0 --output foobar.png</CODESAMPLE>
     to generate a token on TM
     <CODESAMPLE>#!/bin/sh<BR/>
       <BR/>
