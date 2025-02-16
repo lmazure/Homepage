@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python libraries</TITLE>
 <PATH>notes/pythonlib.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Colorama</B></U> (<X><T>doc</T><A>https://pypi.org/project/colorama/</A><L>en</L><F>HTML</F></X>)</TITLE>
   <ITEM>Colorama is only aiming at supporting ANSI escape character sequences on Windows (using the appropriate Win32 calls to emulate them).<BR/>
@@ -45,6 +45,13 @@
   <ITEM><CODEROUTINE>Cursor.BACK(n)</CODEROUTINE> move the cursor backward (left) by n columns.
     <CODESAMPLE>print(Cursor.BACK(7) + 'This text is 7 columns to the left')</CODESAMPLE></ITEM>
   </BLIST></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>yt-dlp</B></U> (<X><T>doc</T><A>https://github.com/yt-dlp/yt-dlp#readme</A><L>en</L><F>HTML</F></X>)</TITLE>
+  <ITEM>Quick download of a YouTube video
+    <CODESAMPLE>python -m venv .venv<BR/>
+      source .venv/Scripts/activate<BR/>
+      pip install yt-dlp<BR/>
+      yt-dlp "https://www.youtube.com/watch?v=NHq2GFx_4Io"</CODESAMPLE></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/python.html</A><L>en</L><F>HTML</F></X>
