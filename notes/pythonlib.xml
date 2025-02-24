@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python libraries</TITLE>
 <PATH>notes/pythonlib.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Colorama</B></U> (<X><T>doc</T><A>https://pypi.org/project/colorama/</A><L>en</L><F>HTML</F></X>)</TITLE>
   <ITEM>Colorama is only aiming at supporting ANSI escape character sequences on Windows (using the appropriate Win32 calls to emulate them).<BR/>
@@ -48,10 +48,31 @@
 </BLIST>
 <BLIST><TITLE><U><B>yt-dlp</B></U> (<X><T>doc</T><A>https://github.com/yt-dlp/yt-dlp#readme</A><L>en</L><F>HTML</F></X>)</TITLE>
   <ITEM>Quick download of a YouTube video
-    <CODESAMPLE>python -m venv .venv<BR/>
-      source .venv/Scripts/activate<BR/>
-      pip install yt-dlp<BR/>
-      yt-dlp "https://www.youtube.com/watch?v=NHq2GFx_4Io"</CODESAMPLE></ITEM>
+    <CODESAMPLE><PROMPT/>python -m venv .venv<BR/>
+      <PROMPT/>source .venv/Scripts/activate<BR/>
+      <PROMPT/>pip install yt-dlp<BR/>
+      <PROMPT/>yt-dlp "https://www.youtube.com/watch?v=NHq2GFx_4Io"</CODESAMPLE></ITEM>
+</BLIST>
+<BLIST><TITLE><U><B>LinkChecker</B></U> (<X><T>doc</T><A>https://linkchecker.github.io/linkchecker/</A><L>en</L><F>HTML</F></X>)</TITLE>
+  <ITEM>install
+    <CODESAMPLE><PROMPT/>pip install LinkChecker</CODESAMPLE>
+  </ITEM>
+  <ITEM>check <CODEROUTINE>https://squashtest.com</CODEROUTINE>
+    <CODESAMPLE><PROMPT/>cat &lt;&lt; EOF<BR/>
+      [filtering]<BR/>
+      ignorewarningsforurls= ^https://siteassets.parastorage.com ^url-too-long<BR/>
+      [output]<BR/>
+      ignoreerrors= ^https://siteassets.parastorage.com ^400 Bad Request<BR/>
+      EOF &gt; ~/.config/linkchecker/linkcheckerrc<BR/>
+      <PROMPT/>linkchecker.exe --check-extern https://squashtest.com -F html/utf8</CODESAMPLE>
+  </ITEM>
+  <ITEM>check <CODEROUTINE>https://tm-fr.doc.squashtest.com/v9/</CODEROUTINE>
+    <CODESAMPLE><PROMPT/>cat &lt;&lt; EOF<BR/>
+      [output]<BR/>
+      ignoreerrors= ^https://gitlab.com/henixdevelopment/ ^403 Forbidden<BR/>
+      EOF &gt; ~/.config/linkchecker/linkcheckerrc<BR/>
+      <PROMPT/>linkchecker.exe --check-extern https://tm-fr.doc.squashtest.com/v9/ -F html/utf8</CODESAMPLE>
+  </ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/python.html</A><L>en</L><F>HTML</F></X>

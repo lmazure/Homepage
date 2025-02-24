@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -439,8 +439,10 @@ Dangling images are layers that have no relationship to any tagged images.
 Docker compose will look for an <CODEFILENAME>.env</CODEFILENAME> file to define environment variables in the containers.
 <BR/>
 <BR/>
-Analyse a Docker image with Trivy:<BR/>
-<CODEROUTINE>docker run -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.51.2 image squashtest/squash-tm:6.1.0 &gt; log_6.1.0.txt</CODEROUTINE>
+Analyse a Docker image with Trivy and generated a table overview:<BR/>
+<CODEROUTINE>docker run -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.51.2 image squashtest/squash-tm:6.1.0 &gt; log_6.1.0.txt</CODEROUTINE><BR/>
+Analyse a Docker image with Trivy and generate a JSON report:<BR/>
+<CODEROUTINE>docker run -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:latest -f json image squashtest/squash-orchestrator:5.0.0 &gt; log_5.0.0.json</CODEROUTINE>
 <BR/>
 <BR/>
 <BLIST><TITLE>Create a SBOM with syft</TITLE>
