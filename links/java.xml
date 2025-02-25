@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -178,6 +178,7 @@
       <ITEM><ARTICLE><X><T>Java Performance Optimization Tips: How to Avoid Common Pitfalls</T><ST>Since Java is one of the most widely used languages in development today, learning how to make your Java apps as performant as possible is a crucial skill.</ST><A>https://dzone.com/articles/java-performance-optimization-tips-how-to-avoid-co</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Lodge</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>A short list of basic good pieces of advice.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Processing Large Files in Java</T><A>https://stuartmarks.wordpress.com/2019/01/11/processing-large-files-in-java/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Stuart</FIRSTNAME><LASTNAME>Marks</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>1</MONTH><DAY>11</DAY></DATE><COMMENT>The author describes some optimisations he did on a program parsing a big file.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A Guide to Java Profilers</T><A>https://www.baeldung.com/java-profilers</A><L>en</L><F>HTML</F></X><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE><COMMENT>A short presentation of JProfiler, YourKit, Java VisualVM, and NetBeans Profiler.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Java Performance Update</T><A>https://www.youtube.com/watch?v=rXv2-lN5Xgk</A><L>en</L><F>MP4</F><DURATION><MINUTE>52</MINUTE><SECOND>55</SECOND></DURATION></X><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>25</DAY></DATE><COMMENT>This presentation describes some JVM performance improvements, most of them are the same than 30 years ago. Only the last part, about the latest optimisations, is interesting.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Memory management</TITLE>
       <ITEM><ARTICLE><X status="removed"><T>Java theory and practice: Whose object is it, anyway?</T><ST>Garbage collection reduces the need to track object ownership -- but it doesn't eliminate it</ST><A>https://www.ibm.com/developerworks/library/j-jtp06243/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>24</DAY></DATE><COMMENT>Use immutable objects or defensive copying, otherwise you will have to clearly document which classes own the objects to avoid tricky bugs.</COMMENT></ARTICLE></ITEM>
