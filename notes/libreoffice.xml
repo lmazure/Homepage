@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>LibreOffice</TITLE>
 <PATH>notes/libreoffice.xml</PATH>
-<DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>General</TITLE>
   <ITEM><X><T>File extensions</T><A>https://help.libreoffice.org/latest/en-US/text/shared/00/00000021.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -195,7 +195,7 @@
   </NLIST></ITEM>
   <ITEM><NLIST><TITLE>Enable real time spell checking</TITLE>
     <ITEM><CODEMENU>Outils<CODEMENU>Options…</CODEMENU></CODEMENU></ITEM>
-    <ITEM>Check <CODEMENU>Paramètres linguistiques<CODEMENU>Linguistique<CODEMENU>Options<CODEMENU>Vérifier l'orthographe au cours de la frappe</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
+    <ITEM>Check <CODEMENU>Paramètres linguistiques<CODEMENU>Linguistique<CODEMENU>Options<CODEMENU>Vérifier l’orthographe au cours de la frappe</CODEMENU></CODEMENU></CODEMENU></CODEMENU></ITEM>
   </NLIST></ITEM>
   <ITEM><NLIST><TITLE>Create an autotext</TITLE>
     <ITEM>Select some text (it can contain graphics, tables…)</ITEM>
@@ -383,6 +383,12 @@
 <BLIST><TITLE>Problems</TITLE>
   <ITEM>The underlining of spelling mistakes is no more displayed:<BR/>
     delete the file <CODEFILENAME>C:\Users\&lt;user&gt;\AppData\Roaming\LibreOffice\4\user\registrymodifications.xcu</CODEFILENAME>
+  </ITEM>
+  <ITEM>The unreadable dark mode:<BR/>
+    <CODEMENU>Outils<CODEMENU>Options…</CODEMENU></CODEMENU><BR/>
+    Then<BR/>
+    <CODEMENU>LibreOffice<CODEMENU>Apparence<CODEMENU>Option<CODEMENU>Apparence</CODEMENU></CODEMENU></CODEMENU></CODEMENU> to change the mode<BR/>
+    <CODEMENU>LibreOffice<CODEMENU>Affichage<CODEMENU>Thème d’icônes<CODEMENU>Thème</CODEMENU></CODEMENU></CODEMENU></CODEMENU> to set icons for light/dark mode
   </ITEM>
 </BLIST>
 </CONTENT>
