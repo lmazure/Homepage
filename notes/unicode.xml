@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -166,6 +166,7 @@ Emoji style:<BR/>
 <CODEROUTINE>&amp;#xFE0E;</CODEROUTINE> is the Variation Selector-15, which renders the preceding character as text rather than as an emoji.<BR/>
 <CODEROUTINE>Alembic &amp;#x2697;&amp;#xFE0E;; Warning ⚠&amp;#xFE0E;; skull &amp;#x2620;&amp;#xFE0E;</CODEROUTINE> gives: Alembic &#x2697;&#xFE0E;; Warning ⚠&#xFE0E;; skull &#x2620;&#xFE0E;<BR/>
 <CODEROUTINE>Alembic &amp;#x2697;&amp;#xFE0F;; Warning ⚠&amp;#xFE0F;; skull &amp;#x2620;&amp;#xFE0F;</CODEROUTINE> gives: Alembic &#x2697;&#xFE0F;; Warning ⚠&#xFE0F;; skull &#x2620;&#xFE0F;<BR/>
+The characters supporting these selectors are listed in <X><T>https://www.unicode.org/Public/emoji/12.1/emoji-variation-sequences.txt</T><A>https://www.unicode.org/Public/emoji/12.1/emoji-variation-sequences.txt</A><L>en</L><F>HTML</F></X>.<BR/>
 <BR/>
 <B>Some common characters</B><BR/>
 <TABLE>
