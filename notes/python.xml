@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -684,6 +684,8 @@
     </ITEM>
     <ITEM><CODEROUTINE>isinstance(object, classinfo)</CODEROUTINE>: return <CODEROUTINE>True</CODEROUTINE> if the object argument is an instance of the <CODEROUTINE>classinfo</CODEROUTINE> argument, or of a (direct, indirect, or virtual) subclass thereof.</ITEM>
     <ITEM><CODEROUTINE>issubclass(class, classinfo)</CODEROUTINE>: return <CODEROUTINE>True</CODEROUTINE> if class is a subclass (direct, indirect, or virtual) of <CODEROUTINE>classinfo</CODEROUTINE>. A class is considered a subclass of itself.</ITEM>
+    <ITEM>Private methods are indicated with the <CODEROUTINE>__</CODEROUTINE> prefix.<BR/>
+      Protected methods are indicated with the <CODEROUTINE>_</CODEROUTINE> prefix.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Objects</B></U></TITLE>
 <ITEM><CODEROUTINE>is</CODEROUTINE> tests if two objects are the same.</ITEM>
