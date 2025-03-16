@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>SQL</TITLE>
 <PATH>links/sql.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -67,6 +67,7 @@
       <ITEM><ARTICLE><X><T>Introducing Limbo: A complete rewrite of SQLite in Rust</T><A>https://simonwillison.net/2024/Dec/10/introducing-limbo/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>10</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>APSW SQLite query explainer</T><A>https://simonwillison.net/2025/Feb/7/apsw-sqlite-query-explainer/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT><CODEROUTINE>apsw.ext.query_info()</CODEROUTINE> can be used to analyse a SQL query.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>sqlite-s3vfs</T><A>https://simonwillison.net/2025/Feb/7/sqlite-s3vfs/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT>sqlite-s3vfs is a virtual filesystem for SQLite to read from and write to S3.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Abusing SQLite to Handle Concurrency</T><A>https://blog.skypilot.co/abusing-sqlite-to-handle-concurrency/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christopher</FIRSTNAME><LASTNAME>Cooper</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>4</DAY></DATE><COMMENT>Some details about the write-lock explaining why SQLite is bad when there are many concurrent writers.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>CockroachDB</TITLE>
       <ITEM><ARTICLE><X><T>Whither CockroachDB?</T><A>https://oxide-and-friends.transistor.fm/episodes/whither-cockroachdb</A><L>en</L><F>MP3</F><DURATION><HOUR>1</HOUR><MINUTE>34</MINUTE><SECOND>7</SECOND></DURATION><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE></X><X><T>Oxide and Friends 8/19/2024 -- Whither CockroachDB?</T><A>https://www.youtube.com/watch?v=DNHMYp8M40k</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>34</MINUTE><SECOND>6</SECOND></DURATION><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE></X><AUTHOR><FIRSTNAME>Bryan</FIRSTNAME><LASTNAME>Cantrill</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Pacheco</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Leventhal</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Pacheco</LASTNAME></AUTHOR> explains the problems Oxide experienced with PostgreSQL, why they switched to CockroachDB, and the licence change.</COMMENT></ARTICLE></ITEM>
