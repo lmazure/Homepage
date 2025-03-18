@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -47,7 +47,9 @@
       <ITEM><X><T>Learn Prompting</T><A>https://learnprompting.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Open Interpreter</T><A>https://github.com/OpenInterpreter/open-interpreter</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>AutoGPT</T><A>https://github.com/Significant-Gravitas/AutoGPT</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Docling</T><A>https://ds4sd.github.io/docling/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><CLIST><TITLE><X><T>Docling</T><A>https://docling-project.github.io/docling/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><X><T>code</T><A>https://github.com/docling-project/docling</A><L>en</L><F>HTML</F></X></ITEM>
+      </CLIST></ITEM>
       <ITEM><CLIST><TITLE><X><T>llm</T><A>https://llm.datasette.io/en/stable/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>code</T><A>https://github.com/simonw/llm</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
@@ -143,6 +145,7 @@
       <ITEM><ARTICLE><X><T>Build a document-based question answering system by using Docling with Granite 3.1</T><A>https://www.ibm.com/think/tutorials/build-document-question-answering-system-with-docling-and-granite</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ash</FIRSTNAME><LASTNAME>Minhas</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Anna</FIRSTNAME><LASTNAME>Gutowska</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Erika</FIRSTNAME><LASTNAME>Russi</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE><COMMENT>A small demo of interrogating a document using Granite, Docling, LangChain, and FFAIS.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>2 Methods For Improving Retrieval in RAG</T><A>https://www.youtube.com/watch?v=smGbeghV1JE</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>39</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Johannes</FIRSTNAME><LASTNAME>Jolkkonen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>19</DAY></DATE><COMMENT>This video seems to be a real usage of RAG, not the usual YouTuber doing the usual demo. The guy improved his RAG system by preprocessing the documents to extract structured data from them using a LLM.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="-1"><T>GraphRAG vs. Traditional RAG: Higher Accuracy &amp; Insight with LLM</T><A>https://www.youtube.com/watch?v=Aw7iQjKAX2k</A><L>en</L><F>MP4</F><DURATION><MINUTE>4</MINUTE><SECOND>17</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sara</FIRSTNAME><LASTNAME>Bacha</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>This presentation of GraphRAG is too high level, you have no clue on how to implement it.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Build an AI-powered multimodal RAG system with Docling and Granite</T><A>https://www.ibm.com/think/tutorials/build-multimodal-rag-langchain-with-docling-granite</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>BJ</FIRSTNAME><LASTNAME>Hargrave</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Erika</FIRSTNAME><LASTNAME>Russi</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>26</DAY></DATE><COMMENT>Yet another RAG example, this one extracts text, tables, and images from a PDF file.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>NotebookLM</TITLE>
         <ITEM><ARTICLE><X><T>Google's RAG Experiment - NotebookLM</T><A>https://www.youtube.com/watch?v=nK61ZpAS13s</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>The title says it all. Google demo is impressive, using voice for querying and answering.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How to create AI Podcasts with NotebookLM Tutorial</T><A>https://www.youtube.com/watch?v=qhmu5DP8Rmg</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE><COMMENT>A presentation of an impressive Google demo usable (from Illuminate and NotebookLM): you give a paper as entry, it generates a two-persons podcast.</COMMENT></ARTICLE></ITEM>
@@ -283,6 +286,9 @@
       <ITEM><ARTICLE><X><T>Deepseek Operator (+Free APIs) : This 100% FREE AI Agent Beats OpenAI's Operator FOR FREE!</T><A>https://www.youtube.com/watch?v=LA4KXEYcU4o</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>2</SECOND></DURATION></X><AUTHOR><GIVENNAME>AICodeKing</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>24</DAY></DATE><COMMENT>A demo of Browser Use WebUI, a UI for a Browser agent.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Qwen-2.5 Operator: This is The BEST LOCAL AI Operator Agent THAT YOU CAN USE NOW!</T><A>https://www.youtube.com/watch?v=Phq9poHINss</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR><GIVENNAME>AICodeKing</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>30</DAY></DATE><COMMENT>Using Browser Use with Qwen2.5-VL.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Gemini Browser Use</T><A>https://www.youtube.com/watch?v=LJFCnWn9GRQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT>Some simple experimentation with Browser Use and Gemini 2.0.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>OpenAI Agent SDK</TITLE>
+      <ITEM><ARTICLE><X><T>How to Build an Agent with the OpenAI Agents SDK</T><A>https://www.youtube.com/watch?v=0Z7u6DTDZ8o</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>58</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>A classical <AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR>’s presentation.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
