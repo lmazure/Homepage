@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Hacking</TITLE>
 <PATH>links/hacking.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -158,6 +158,7 @@
     <ITEM><ARTICLE><X><T>Two never-before-seen tools, from same group, infect air-gapped devices</T><ST>It's hard enough creating one air-gap-jumping tool. GoldenJackal did it 2x in 5 years.</ST><A>https://arstechnica.com/security/2024/10/two-never-before-seen-tools-from-same-group-infect-air-gapped-devices/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>How to Lose a Fortune with Just One Bad Click</T><A>https://krebsonsecurity.com/2024/12/how-to-lose-a-fortune-with-just-one-bad-click/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Krebs</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>18</DAY></DATE><COMMENT>How scammers use social engineering and some tricks with Google to get access to someone’s Google account and steal their cryptocurrencies.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>the new rsync exploit is sort of hilarious.</T><A>https://www.youtube.com/watch?v=eKtpdMmLMHY</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>1</SECOND></DURATION></X><AUTHOR><GIVENNAME>Low Level</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>17</DAY></DATE><COMMENT>A technical explanation of some of the CVEs found in <CODEROUTINE>rsync</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Large enterprises scramble after supply-chain attack spills their secrets</T><ST>tj-actions/changed-files corrupted to run credential-stealing memory scraper.</ST><A>https://arstechnica.com/information-technology/2025/03/supply-chain-attack-exposing-credentials-affects-23k-users-of-tj-actions/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>Yet another supply chain attack. This one via GitHub Actions.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>SQL injection</TITLE>
       <ITEM><ARTICLE><X><T>SQL Injection Attacks by Example</T><A>http://www.unixwiz.net/techtips/sql-injection.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Friedl</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>A basic, detailed, and slow description of a SQL injection attack.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Bobby Tables</T><A>https://blog.cleancoder.com/uncle-bob/2017/12/03/BobbyTables.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME><GIVENNAME>Uncle Bob</GIVENNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE><COMMENT>SQL is too dangerous, it should not be used anymore.</COMMENT></ARTICLE></ITEM>
