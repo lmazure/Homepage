@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -386,15 +386,8 @@ Multi-selection
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Edition
 <DEFINITIONTABLE>
-  <ROW>
-    <TERM><MODIFIERKEY id="Alt"/><KEY id="Left"/></TERM>
-    <DESC>Go to previous edit location</DESC>
-  </ROW>
-  <ROW>
-    <TERM><MODIFIERKEY id="Alt"/><KEY id="Right"/></TERM>
-    <DESC>Go to next edit location</DESC>
-  </ROW>
   <ROW>
     <TERM><CODEROUTINE>Sort Lines Ascending</CODEROUTINE></TERM>
     <DESC>Sort lines in increasing order</DESC>
@@ -453,6 +446,23 @@ Multi-selection
       <CODEROUTINE>Trigger Suggest</CODEROUTINE></TERM>
     <DESC>Display the suggestion popup</DESC>
   </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Navigation in editor
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Left"/></TERM>
+    <DESC>Go to previous edit location</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Right"/></TERM>
+    <DESC>Go to next edit location</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="O"/><BR/>
+      <CODEROUTINE>Go to symbol in Editor…</CODEROUTINE></TERM>
+    <DESC>Go to a symbol</DESC>
+  </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="F8"/><BR/>
       <CODEROUTINE>Go to Next Problem (Error, Warning, Info)</CODEROUTINE></TERM>
@@ -475,7 +485,7 @@ Multi-selection
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
-Navigation
+Navigation between editors
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="PageDown"/></TERM>

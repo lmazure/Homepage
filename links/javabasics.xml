@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -115,6 +115,7 @@
     <ITEM><BLIST><TITLE>Dates</TITLE>
       <ITEM><ARTICLE><X><T>Calculating Java dates</T><ST>Take the time to learn how to create and use dates</ST><A>https://www.infoworld.com/article/2162782/calculating-java-dates.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Nielsen</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>12</MONTH></DATE><COMMENT>An introduction to <CODEROUTINE>Date</CODEROUTINE>, <CODEROUTINE>DateFormat</CODEROUTINE> and <CODEROUTINE>GregorianCalendar</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="removed"><T>Making Sense of Java's Dates</T><A>http://www.onjava.com/pub/a/onjava/2003/06/05/java_calendar.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Philipp</FIRSTNAME><MIDDLENAME>K.</MIDDLENAME><LASTNAME>Janert</LASTNAME></AUTHOR><DATE><YEAR>2003</YEAR><MONTH>6</MONTH><DAY>6</DAY></DATE><COMMENT>An overview of the date classes and some comments about their messy design (but this is a characteristic of the whole Java, isn’t it?)</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Quiz yourself: The strange case of the Java developer’s birthday</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-birthday-weekday</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE><COMMENT>Some basic facts about the Date and Time API.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Handling time zones in distributed systems, Part 1</T><A>https://blogs.oracle.com/javamagazine/post/java-timezone-part-1</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mohamed</FIRSTNAME><LASTNAME>Taman</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>22</DAY></DATE><COMMENT>An introduction to timezone management.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE predecessor="https://blogs.oracle.com/javamagazine/post/java-timezone-part-1"><X><T>Handling time zones in distributed systems, Part 2</T><A>https://blogs.oracle.com/javamagazine/post/java-timezone-part-2</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mohamed</FIRSTNAME><LASTNAME>Taman</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>22</DAY></DATE><COMMENT>An example of an application dealing with timezones, but I disagree with some details.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
