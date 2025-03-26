@@ -165,7 +165,7 @@ File
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="T"/><BR/>
       <CODEROUTINE>View: Reopen Closed Editor</CODEROUTINE></TERM>
     <DESC>Reopen the last closed editor</DESC>
-  </ROW>  <ROW>
+  </ROW><ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="W"/><BR/>
       <CODEROUTINE>View: Close All Editors in Group</CODEROUTINE></TERM>
     <DESC>Close all editors in editor group</DESC>
@@ -861,7 +861,7 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
       <ROW>
         <TERM><CODEROUTINE>Codeium: Toggle Autocomplete for Current Language</CODEROUTINE></TERM>
         <DESC>Toggle autocomplete for current language</DESC>
-      </ROW>      <ROW>
+      </ROW><ROW>
         <TERM><MODIFIERKEY id="Alt"/><KEY id="\"/></TERM>
         <DESC>Trigger line suggestion</DESC>
       </ROW>

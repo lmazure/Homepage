@@ -270,7 +270,7 @@
     SELECT * FROM employees WHERE ROWNUM &lt; 10;
     </CODESAMPLE></ITEM>
     <ITEM>If an <CODEROUTINE>ORDER BY</CODEROUTINE> clause follows <CODEROUTINE>ROWNUM</CODEROUTINE> in the same query, then the rows will be reordered by the <CODEROUTINE>ORDER BY</CODEROUTINE>   clause. The results can vary depending on the way the rows are accessed.<BR/>
-    If you embed the <CODEROUTINE>ORDER BY</CODEROUTINE> clause in a subquery and place the <CODEROUTINE>ROWNUM</CODEROUTINE> condition in the top-level query, then you can force the   <CODEROUTINE>ROWNUM</CODEROUTINE> condition to be applied after the ordering of the rows. For example, the following query returns the employees with the 10 smallest employee numbers. This is   sometimes referred to as top-N reporting:
+    If you embed the <CODEROUTINE>ORDER BY</CODEROUTINE> clause in a subquery and place the <CODEROUTINE>ROWNUM</CODEROUTINE> condition in the top-level query, then you can force the <CODEROUTINE>ROWNUM</CODEROUTINE> condition to be applied after the ordering of the rows. For example, the following query returns the employees with the 10 smallest employee numbers. This is sometimes referred to as top-N reporting:
     <CODESAMPLE>
     SELECT * FROM<BR/>
     <TAB/>(SELECT * FROM employees ORDER BY employee_id)<BR/>
@@ -281,7 +281,7 @@
     SELECT * FROM employees<BR/>
     <TAB/>WHERE ROWNUM &gt; 1;
     </CODESAMPLE>
-    The first row fetched is assigned a <CODEROUTINE>ROWNUM</CODEROUTINE> of 1 and makes the condition false. The second row to be fetched is now the first row and is also assigned a     <CODEROUTINE>ROWNUM</CODEROUTINE> of 1 and makes the condition false. All rows subsequently fail to satisfy the condition, so no rows are returned.</ITEM>
+    The first row fetched is assigned a <CODEROUTINE>ROWNUM</CODEROUTINE> of 1 and makes the condition false. The second row to be fetched is now the first row and is also assigned a <CODEROUTINE>ROWNUM</CODEROUTINE> of 1 and makes the condition false. All rows subsequently fail to satisfy the condition, so no rows are returned.</ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Alias</TITLE>
   <ITEM>

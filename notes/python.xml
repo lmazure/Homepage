@@ -129,7 +129,7 @@
       <ITEM>Use <CODEROUTINE>{{</CODEROUTINE> to insert a <CODEROUTINE>{</CODEROUTINE> and <CODEROUTINE>}}</CODEROUTINE> to insert a <CODEROUTINE>}</CODEROUTINE></ITEM>
       <ITEM>Insert the variable name a value
         <CODESAMPLE><PROMPT/>name = 'Tom'<BR/>
-          <PROMPT/>age = 42  <BR/>
+          <PROMPT/>age = 42<BR/>
           <PROMPT/>print(f'{name=} is {age=} years old')<BR/>
           name='Tom' is age=42 years old</CODESAMPLE>
       </ITEM>
@@ -430,7 +430,7 @@
     <ITEM><CODEROUTINE>popitem()</CODEROUTINE>: remove and return a <CODEROUTINE>(key, value)</CODEROUTINE> pair from the dictionary. Pairs are returned in LIFO order. If the dictionary is empty, calling <CODEROUTINE>popitem()</CODEROUTINE> raises a <CODEROUTINE>KeyError</CODEROUTINE>.</ITEM>
     <ITEM><CODEROUTINE>reversed(d)</CODEROUTINE>: return a reverse iterator over the keys of the dictionary. This is a shortcut for <CODEROUTINE>reversed(d.keys()).</CODEROUTINE></ITEM>
     <ITEM><CODEROUTINE>setdefault(key[, default])</CODEROUTINE>: if <CODEROUTINE>key</CODEROUTINE> is in the dictionary, return its value. If not, insert <CODEROUTINE>key</CODEROUTINE> with a value of <CODEROUTINE>default</CODEROUTINE> and return <CODEROUTINE>default</CODEROUTINE>. <CODEROUTINE>default</CODEROUTINE> defaults to <CODEROUTINE>None</CODEROUTINE>.</ITEM>
-    <ITEM><CODEROUTINE>update([other])</CODEROUTINE>: update the dictionary with the key/value pairs from other, overwriting existing keys. Return <CODEROUTINE>None</CODEROUTINE>.  <CODEROUTINE>update()</CODEROUTINE> accepts either another dictionary object or an iterable of key/value pairs (as tuples or other iterables of length two). If keyword arguments are specified, the dictionary is then updated with those key/value pairs: <CODEROUTINE>d.update(red=1, blue=2)</CODEROUTINE>.</ITEM>
+    <ITEM><CODEROUTINE>update([other])</CODEROUTINE>: update the dictionary with the key/value pairs from other, overwriting existing keys. Return <CODEROUTINE>None</CODEROUTINE>. <CODEROUTINE>update()</CODEROUTINE> accepts either another dictionary object or an iterable of key/value pairs (as tuples or other iterables of length two). If keyword arguments are specified, the dictionary is then updated with those key/value pairs: <CODEROUTINE>d.update(red=1, blue=2)</CODEROUTINE>.</ITEM>
     <ITEM><CODEROUTINE>values()</CODEROUTINE>: return a new view of the dictionary’s values.</ITEM>
     <ITEM><CODEROUTINE>d | other</CODEROUTINE>: create a new dictionary with the merged keys and values of <CODEROUTINE>d</CODEROUTINE> and <CODEROUTINE>other</CODEROUTINE>, which must both be dictionaries. The values of <CODEROUTINE>other</CODEROUTINE> take priority when <CODEROUTINE>d</CODEROUTINE> and <CODEROUTINE>other</CODEROUTINE> share keys.</ITEM>
     <ITEM><CODEROUTINE>d |= other</CODEROUTINE>: update the dictionary d with keys and values from <CODEROUTINE>other</CODEROUTINE>, which may be either a mapping or an iterable of key/value pairs. The values of <CODEROUTINE>other</CODEROUTINE> take priority when d and other share keys.</ITEM>
