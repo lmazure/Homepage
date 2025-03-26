@@ -20,8 +20,7 @@ Sub hyperlinkPhoto()<BR/>
 End Sub<BR/>
 </CODESAMPLE><BR/>
 hyperlink the SPRs
-<CODESAMPLE>
-Option Explicit<BR/>
+<CODESAMPLE>Option Explicit<BR/>
 Private Function isSPRIdentifier(txt As String) As Boolean<BR/>
 <TAB/>isSPRIdentifier = False<BR/>
 <TAB/>If (Len(txt) &lt;&gt; 10) Then<BR/>
@@ -55,8 +54,7 @@ Sub hyperlinkDDTS()<BR/>
 End Sub<BR/>
 </CODESAMPLE><BR/>
 hyperlink the requests in JIRA
-<CODESAMPLE>
-Option Explicit<BR/>
+<CODESAMPLE>Option Explicit<BR/>
 Private Function isJIRAIdentifier(txt As String) As Boolean<BR/>
 <TAB/>isJIRAIdentifier = False<BR/>
 <TAB/>If ((Mid(txt, 1, 4) &lt;&gt; "VER-") Or (Len(txt) = 4)) Then<BR/>
@@ -86,8 +84,7 @@ Sub hyperlinkJIRA()<BR/>
 End Sub
 </CODESAMPLE><BR/>
 compare two sheets in two different files
-<CODESAMPLE>
-Option Explicit<BR/>
+<CODESAMPLE>Option Explicit<BR/>
 <BR/>
 Sub compare()<BR/>
 <BR/>
@@ -250,7 +247,7 @@ Sub merge()<BR/>
 End Sub
 </CODESAMPLE><BR/>
 create a graph of frequencies from an Excel database
-<CODESAMPLE> Option Explicit<BR/>
+<CODESAMPLE>Option Explicit<BR/>
 <BR/>
 Sub CreateRootCauseGraph()<BR/>
 <BR/>
@@ -286,9 +283,9 @@ Sub CreateRootCauseGraph()<BR/>
 <TAB/>Dim pos As Integer<BR/>
 <TAB/>For i = 1 To totalNumber<BR/>
 <TAB/><TAB/>If (source.Cells(i, closureCodeColumn) = "CA taken" And _<BR/>
-<TAB/><TAB/><TAB/> (source.Cells(i, statusColumn) = "Resolved" Or _<BR/>
-<TAB/><TAB/><TAB/>  source.Cells(i, statusColumn) = "Verified" Or _<BR/>
-<TAB/><TAB/><TAB/>  source.Cells(i, statusColumn) = "Closed")) Then<BR/>
+<TAB/><TAB/><TAB/><TAB/>(source.Cells(i, statusColumn) = "Resolved" Or _<BR/>
+<TAB/><TAB/><TAB/><TAB/>source.Cells(i, statusColumn) = "Verified" Or _<BR/>
+<TAB/><TAB/><TAB/><TAB/>source.Cells(i, statusColumn) = "Closed")) Then<BR/>
 <TAB/><TAB/><TAB/>incrNumber = incrNumber + 1<BR/>
 <TAB/><TAB/><TAB/>text = source.Cells(i, rootCauseColumn)<BR/>
 <TAB/><TAB/><TAB/>pos = InStr(text, "]")<BR/>

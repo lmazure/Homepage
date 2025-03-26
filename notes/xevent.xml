@@ -56,7 +56,7 @@ exposeCB(Widget w, <BR/>
 Get an event in the event queue without remove it <BR/>
 event selection is done by an event mask
 <CODESAMPLE>static Boolean checkTypedEventWithoutRemovingFlag;<BR/>
-static <X><T>XEvent</T><A>https://www.x.org/archive/X11R7.5/doc/man/man3/XEvent.3.html</A><L>en</L><F>HTML</F></X>  checkTypedEventWithoutRemovingEvent;<BR/>
+static <X><T>XEvent</T><A>https://www.x.org/archive/X11R7.5/doc/man/man3/XEvent.3.html</A><L>en</L><F>HTML</F></X> checkTypedEventWithoutRemovingEvent;<BR/>
 <BR/>
 static Bool<BR/>
 checkTypedEventWithoutRemovingPredicate(Display * /*display*/,<BR/>

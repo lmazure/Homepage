@@ -67,12 +67,12 @@ public class Test<BR/>
 <TAB/>private static final String JIRA_URI  = "https://jira.kikamedical.net";<BR/>
 <TAB/>private static final String RPC_PATH  = "/rpc/xmlrpc";<BR/>
 <TAB/><BR/>
-<TAB/>private static String STATUS_OPEN<TAB/><TAB/>= "1";<BR/>
-<TAB/>private static String STATUS_IN_PROGRESS = "3";<BR/>
+<TAB/>private static String STATUS_OPEN<TAB/>= "1";<BR/>
+<TAB/>private static String STATUS_IN_PROGRESS<TAB/>= "3";<BR/>
 <TAB/>private static String STATUS_REOPENED<TAB/>= "4";<BR/>
 <TAB/>private static String STATUS_RESOLVED<TAB/>= "5";<BR/>
-<TAB/>private static String STATUS_CLOSED<TAB/>  = "6";<BR/>
-<TAB/>private static String STATUS_SUBMIT<TAB/>  = "10000";<BR/>
+<TAB/>private static String STATUS_CLOSED<TAB/>= "6";<BR/>
+<TAB/>private static String STATUS_SUBMIT<TAB/>= "10000";<BR/>
 <TAB/>private static String STATUS_REJECTED<TAB/>= "10001";<BR/>
 <TAB/><BR/>
 <TAB/>private static final String FILTER_ID = "10347"; // ID of the filter used to list the requests<BR/>
@@ -80,7 +80,7 @@ public class Test<BR/>
 <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/> // 10347 -&gt; test K3 Proto<BR/>
 <TAB/><BR/>
 <TAB/>private static final String FIELD_ID_FIXED_IN_BUILD  = "customfield_10017";<BR/>
-<TAB/>private static final String FIELD_ID_BUILD<TAB/><TAB/>   = "customfield_10026";<BR/>
+<TAB/>private static final String FIELD_ID_BUILD = "customfield_10026";<BR/>
 <TAB/>private static final String FIELD_ID_COMMITERS_TESTS = "customfield_10091";<BR/>
 <TAB/><BR/>
 <TAB/>private static final String CODE_REVIEW_COMMENT = "this request has been coded reviewed";<BR/>
@@ -264,7 +264,7 @@ public class Test<BR/>
 <TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
 <TAB/><TAB/>}<BR/>
 <BR/>
-<TAB/>  return isAlreadyFlaggedAsCodeReview;<BR/>
+<TAB/> return isAlreadyFlaggedAsCodeReview;<BR/>
 <TAB/>}<BR/>
 <TAB/><BR/>
 <TAB/><BR/>
@@ -295,7 +295,7 @@ public class Test<BR/>
 <TAB/><BR/>
 <TAB/><BR/>
 <TAB/>private static int compareVersion(String versionA,<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>  String versionB) {<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>String versionB) {<BR/>
 <TAB/><TAB/><BR/>
 <TAB/><TAB/>String[] verA = versionA.split("\\.");<BR/>
 <TAB/><TAB/>if ( verA.length != 4 ) throw new IllegalArgumentException(versionA + " is an illegal version number");<BR/>

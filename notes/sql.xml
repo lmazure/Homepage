@@ -6,16 +6,16 @@
 <DATE><YEAR>2021</YEAR><MONTH>2</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command categories</B></U></TITLE>
-  <ITEM>  DML - Data Manipulation Language: used to insert, modify, delete, and update data in database.<BR/>
+  <ITEM>DML - Data Manipulation Language: used to insert, modify, delete, and update data in database.<BR/>
     Examples: INSERT, UPDATE and DELETE statements</ITEM>
-  <ITEM>  DQL - Data Query Language: used to retrieve records from database.<BR/>
+  <ITEM>DQL - Data Query Language: used to retrieve records from database.<BR/>
     Many people include this category into DML Statements.<BR/>
     Example: SELECT statement</ITEM>
-  <ITEM>  DDL - Data Definition Language: used to create and modify the structure of database objects in database.<BR/>
+  <ITEM>DDL - Data Definition Language: used to create and modify the structure of database objects in database.<BR/>
     Examples: CREATE, ALTER, DROP statements</ITEM>
-  <ITEM>  DCL - Data Control Language: used to create roles, permissions, and referential integrity as well as to control access to database by securing it.<BR/>
+  <ITEM>DCL - Data Control Language: used to create roles, permissions, and referential integrity as well as to control access to database by securing it.<BR/>
     Examples: GRANT, REVOKE statements</ITEM>
-  <ITEM>  TCL - Transactional Control Language: used to manage different transactions occurring within a database.<BR/>
+  <ITEM>TCL - Transactional Control Language: used to manage different transactions occurring within a database.<BR/>
     Examples: COMMIT, SAVE POINT, ROLLBACK statements</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Database creation</B></U></TITLE>
@@ -269,7 +269,7 @@
     <CODESAMPLE>
     SELECT * FROM employees WHERE ROWNUM &lt; 10;
     </CODESAMPLE></ITEM>
-    <ITEM>If an <CODEROUTINE>ORDER BY</CODEROUTINE> clause follows <CODEROUTINE>ROWNUM</CODEROUTINE> in the same query, then the rows will be reordered by the <CODEROUTINE>ORDER BY</CODEROUTINE>   clause. The results can vary depending on the way the rows are accessed.<BR/>
+    <ITEM>If an <CODEROUTINE>ORDER BY</CODEROUTINE> clause follows <CODEROUTINE>ROWNUM</CODEROUTINE> in the same query, then the rows will be reordered by the <CODEROUTINE>ORDER BY</CODEROUTINE> clause. The results can vary depending on the way the rows are accessed.<BR/>
     If you embed the <CODEROUTINE>ORDER BY</CODEROUTINE> clause in a subquery and place the <CODEROUTINE>ROWNUM</CODEROUTINE> condition in the top-level query, then you can force the <CODEROUTINE>ROWNUM</CODEROUTINE> condition to be applied after the ordering of the rows. For example, the following query returns the employees with the 10 smallest employee numbers. This is sometimes referred to as top-N reporting:
     <CODESAMPLE>
     SELECT * FROM<BR/>
@@ -298,7 +298,7 @@
   </ITEM>
   <ITEM><BLIST><TITLE><CODEROUTINE>group by</CODEROUTINE></TITLE>
   <ITEM>
-  <CODEROUTINE>GROUP BY</CODEROUTINE> is used when we are selecting multiple columns from a table (or tables) and at least one arithmetic operator appears in the <CODEROUTINE>SELECT</CODEROUTINE>   statement. When that happens, we need to <CODEROUTINE>GROUP BY</CODEROUTINE> all the other selected columns, i.e., all columns except the one(s) operated on by the arithmetic operator.
+  <CODEROUTINE>GROUP BY</CODEROUTINE> is used when we are selecting multiple columns from a table (or tables) and at least one arithmetic operator appears in the <CODEROUTINE>SELECT</CODEROUTINE> statement. When that happens, we need to <CODEROUTINE>GROUP BY</CODEROUTINE> all the other selected columns, i.e., all columns except the one(s) operated on by the arithmetic operator.
   <CODESAMPLE>SELECT storeName, SUM(sales)<BR/>
   FROM storeInformation<BR/>
   GROUP BY storeName;</CODESAMPLE>
