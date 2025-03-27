@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -28,7 +28,16 @@
     <CODESAMPLE>a_very_long_variable_name = 'This is a very long string that we want to ' \<BR/>
       &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;'wrap across two lines for better readability.</CODESAMPLE>
   </ITEM>
-  <ITEM>Assignment inside expressions must be done explicitly with the walrus operator <CODEROUTINE>:=</CODEROUTINE>.</ITEM>
+  <ITEM>Assignment inside expressions must be done explicitly with the walrus operator <CODEROUTINE>:=</CODEROUTINE>.
+  <CODESAMPLE><PROMPT/>numbers = [2, 8, 0, 1, 1, 9, 7, 7]<BR/>
+    <PROMPT/>description = {<BR/>
+    <TAB/>"length": (num_length := len(numbers)),<BR/>
+    <TAB/>"sum": (num_sum := sum(numbers)),<BR/>
+    <TAB/>"mean": num_sum / num_length,<BR/>
+    }<BR/>
+    <PROMPT/>description<BR/>
+    {'length': 8, 'sum': 35, 'mean': 4.375}</CODESAMPLE>
+  </ITEM>
   <ITEM>Floor division: division that rounds to nearest integer (not floor!)
     <CODESAMPLE>a = (-11) // 4 # -3</CODESAMPLE>
   </ITEM>
