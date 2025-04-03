@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Sports</TITLE>
 <PATH>links/sport.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -15,11 +15,8 @@
       <ITEM><X><T>Visorando</T><A>https://www.visorando.com</A><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>viaferrata.org</T><A>https://www.viaferrata.org/index.php/fr/</A><L>fr</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>FFRP</T><A>https://www.ffrandonnee.fr</A><L>fr</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Haute-Loire</T><A>https://www.rando-hauteloire.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Haute-Loire</T><A>https://www.rando-hauteloire.fr/?lang=en</A><L>fr</L><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Cirkwi</T><A>https://www.cirkwi.com/</A><L>fr</L><F>HTML</F></X></ITEM>
-    </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>Jogging</TITLE>
-      <ITEM><X><T>course à pied</T><A>http://www.vo2max.com.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Basketball</TITLE>
       <ITEM><X><T>AFEB</T><A>https://www.afeb.asso.fr/</A><L>fr</L><F>HTML</F></X></ITEM>
@@ -31,11 +28,14 @@
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>The Technology Behind the Formula One Scandal</T><ST>A British team got secrets about Ferrari's tech tricks by e-mail</ST><A>https://spectrum.ieee.org/the-technology-behind-the-formula-one-scandal</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Justin</FIRSTNAME><LASTNAME>Mullins</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>A short description of the technological secrets McLaren has stolen from Ferrari.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>We analysed 4,678,387 NBA shots</T><A>https://www.youtube.com/watch?v=yh5c3duQQ1w</A><L>en</L><F>MP4</F><DURATION><MINUTE>23</MINUTE><SECOND>44</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Parker</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Grant</FIRSTNAME><LASTNAME>Sanderson</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Tim</FIRSTNAME><LASTNAME>Chartier</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>30</DAY></DATE><COMMENT>Some basket ball statistics.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X quality="1"><T>J'explore des escaliers antiques oubliés à l'aide du Lidar HD</T><A>https://www.youtube.com/watch?v=QUJl3SpBzGA</A><L>fr</L><F>MP4</F><DURATION><MINUTE>16</MINUTE><SECOND>36</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>26</DAY></DATE><COMMENT>Finding, with IGN’s Lidar data, a forgotten stairway in a cliff of the Cevennes.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=QUJl3SpBzGA"><X><T>La vidéo des escaliers antiques et vertigineux (Cévennes)</T><A>https://www.youtube.com/watch?v=8uvc9NzgWFU</A><L>fr</L><F>MP4</F><DURATION><MINUTE>21</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>22</DAY></DATE><COMMENT>The video of the expedition.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Je monte au sommet, parcours avec le Lidar 3D</T><A>https://www.youtube.com/watch?v=1LQ8tLJWScc</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>39</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>7</DAY></DATE><COMMENT>Preparing a trek using Lidar data.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Une grotte oubliée révélée par le LiDAR (vue sur QGiS)</T><A>https://www.youtube.com/watch?v=mxIPcj-fobE</A><L>fr</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>2</DAY></DATE><COMMENT>A cave found using Lidar data.</COMMENT></ARTICLE></ITEM>
-    <ITEM><ARTICLE><X><T>Des vestiges romains révélés par le LiDAR, je pars explorer</T><A>https://www.youtube.com/watch?v=GWWmkwVFhig</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>43</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>A, maybe Roman, hole excavated in the ground.</COMMENT></ARTICLE></ITEM>
+    <ITEM><BLIST><TITLE><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR></TITLE>
+      <ITEM><ARTICLE><X quality="1"><T>J'explore des escaliers antiques oubliés à l'aide du Lidar HD</T><A>https://www.youtube.com/watch?v=QUJl3SpBzGA</A><L>fr</L><F>MP4</F><DURATION><MINUTE>16</MINUTE><SECOND>36</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>26</DAY></DATE><COMMENT>Finding, with IGN’s Lidar data, a forgotten stairway in a cliff of the Cevennes.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=QUJl3SpBzGA"><X><T>Ces anciens escaliers antiques sont vertigineux (Cévennes)</T><A>https://www.youtube.com/watch?v=8uvc9NzgWFU</A><L>fr</L><F>MP4</F><DURATION><MINUTE>21</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>22</DAY></DATE><COMMENT>The video of the expedition.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Je monte au sommet, parcours avec le Lidar 3D</T><A>https://www.youtube.com/watch?v=1LQ8tLJWScc</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>39</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>7</DAY></DATE><COMMENT>Preparing a trek using Lidar data.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Une grotte oubliée révélée par le LiDAR (vue sur QGiS)</T><A>https://www.youtube.com/watch?v=mxIPcj-fobE</A><L>fr</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>2</DAY></DATE><COMMENT>A cave found using Lidar data.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Des vestiges romains révélés par le LiDAR, je pars explorer</T><A>https://www.youtube.com/watch?v=GWWmkwVFhig</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>43</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>16</DAY></DATE><COMMENT>A, maybe Roman, hole excavated in the ground.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Cet aven était inconnu jusque-là, découverte au LiDAR</T><A>https://www.youtube.com/watch?v=Z24tAUnNe1w</A><L>fr</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR><GIVENNAME>Grimpes et Traces</GIVENNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE><COMMENT>Finding a sinkhole.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
 </CONTENT>
