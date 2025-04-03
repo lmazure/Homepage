@@ -53,7 +53,7 @@ A thread sends an interrupt by invoking <CODEROUTINE>interrupt</CODEROUTINE> on 
 If the thread is frequently invoking methods that throw <CODEROUTINE>InterruptedException</CODEROUTINE>, it simply returns from the <CODEROUTINE>run</CODEROUTINE> method after it catches that exception.<BR/>
 If a thread goes a long time without invoking a method that throws <CODEROUTINE>InterruptedException</CODEROUTINE>, it must periodically invoke <CODEROUTINE>Thread.interrupted</CODEROUTINE>, which returns true if an interrupt has been received.<BR/>
 <BR/>
-The interrupt mechanism is implemented using an internal flag known as the interrupt status. Invoking <CODEROUTINE>Thread.interrupt</CODEROUTINE> sets this flag. When a thread checks for an interrupt by invoking the static method <CODEROUTINE>Thread.interrupted</CODEROUTINE>, interrupt status is cleared. The non-static <CODEROUTINE>Thread.isInterrupted</CODEROUTINE>, which is used by one thread to query the interrupt status of another, does not change the interrupt status flag.  By convention, any method that exits by throwing an InterruptedException clears interrupt status when it does so. However, it's always possible that interrupt status will immediately be set again, by another thread invoking interrupt.<BR/>
+The interrupt mechanism is implemented using an internal flag known as the interrupt status. Invoking <CODEROUTINE>Thread.interrupt</CODEROUTINE> sets this flag. When a thread checks for an interrupt by invoking the static method <CODEROUTINE>Thread.interrupted</CODEROUTINE>, interrupt status is cleared. The non-static <CODEROUTINE>Thread.isInterrupted</CODEROUTINE>, which is used by one thread to query the interrupt status of another, does not change the interrupt status flag. By convention, any method that exits by throwing an InterruptedException clears interrupt status when it does so. However, it's always possible that interrupt status will immediately be set again, by another thread invoking interrupt.<BR/>
 <BR/>
 <BR/>
 <U><B>Joins</B></U><BR/>
@@ -111,7 +111,7 @@ A thread often acts in response to the action of another thread. If the other th
 <BR/>
 <BR/>
 <U><B>Guarded blocks</B></U><BR/>
-A guarded block is a block beginning by polling a condition that must be true before the block can proceed.  Use <CODEROUTINE>Object.wait</CODEROUTINE> to suspend the current thread. The invocation of wait does not return until another thread has issued a notification that some special event may have occurred though not necessarily the event this thread is waiting for:
+A guarded block is a block beginning by polling a condition that must be true before the block can proceed. Use <CODEROUTINE>Object.wait</CODEROUTINE> to suspend the current thread. The invocation of wait does not return until another thread has issued a notification that some special event may have occurred though not necessarily the event this thread is waiting for:
 <CODESAMPLE>public synchronized guardedJoy() {<BR/>
 <TAB/>while(!joy) {<BR/>
 <TAB/><TAB/>try {<BR/>

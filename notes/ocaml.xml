@@ -824,9 +824,9 @@
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>val of_string : string -&gt; t</CODEROUTINE></TERM>
-          <DESC>Converts a string to an integer.
-            An optional <CODEROUTINE>-</CODEROUTINE> prefix indicates a negative number, while a <CODEROUTINE>+</CODEROUTINE> prefix is ignored.
-            An optional prefix <CODEROUTINE>0x</CODEROUTINE>, <CODEROUTINE>0o</CODEROUTINE>, or <CODEROUTINE>0b</CODEROUTINE> (following the optional <CODEROUTINE>-</CODEROUTINE> or <CODEROUTINE>+</CODEROUTINE> prefix) indicates that the number is, represented, in hexadecimal, octal, or binary, respectively.
+          <DESC>Converts a string to an integer.<BR/>
+            An optional <CODEROUTINE>-</CODEROUTINE> prefix indicates a negative number, while a <CODEROUTINE>+</CODEROUTINE> prefix is ignored.<BR/>
+            An optional prefix <CODEROUTINE>0x</CODEROUTINE>, <CODEROUTINE>0o</CODEROUTINE>, or <CODEROUTINE>0b</CODEROUTINE> (following the optional <CODEROUTINE>-</CODEROUTINE> or <CODEROUTINE>+</CODEROUTINE> prefix) indicates that the number is, represented, in hexadecimal, octal, or binary, respectively.<BR/>
             Otherwise, base 10 is assumed. (Unlike C, a lone <CODEROUTINE>0</CODEROUTINE> prefix does not denote octal.)</DESC>
         </ROW>
         <ROW>

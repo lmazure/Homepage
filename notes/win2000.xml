@@ -120,13 +120,13 @@ File explorer
   </ITEM>
   <ITEM><BLIST><TITLE>User management with PowerShell</TITLE>
     <ITEM>enable a local user
-      <CODESAMPLE><X><T>Enable-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Enable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+      <CODESAMPLE><X><T>Enable-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/enable-localuser?view=powershell-5.1</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
     </ITEM>
     <ITEM>disable a local user
-      <CODESAMPLE><X><T>Disable-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Disable-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+      <CODESAMPLE><X><T>Disable-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/disable-localuser?view=powershell-5.1</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
     </ITEM>
     <ITEM>return status of a local user
-      <CODESAMPLE><X><T>Get-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/Microsoft.PowerShell.LocalAccounts/Get-LocalUser</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
+      <CODESAMPLE><X><T>Get-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/get-localuser?view=powershell-5.1</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
   <ITEM>find a file whose name contains Ondine
@@ -142,7 +142,7 @@ File explorer
     start <CODEROUTINE>compmgmt.msc</CODEROUTINE><BR/>
     click on <CODEMENU>Stockage<CODEMENU>Gestion des disques</CODEMENU></CODEMENU><BR/>
     right-click on the line corresponding to the disk<BR/>
-    select <CODEMENU>Modifier la lettre et les chemins d'accès…</CODEMENU><BR/>
+    select <CODEMENU>Modifier la lettre et les chemins d’accès…</CODEMENU><BR/>
     in the newly displayed dialog, click on <CODEMENU>Modifer…</CODEMENU><BR/>
     select the new letter and apply
   </ITEM>
@@ -159,7 +159,7 @@ File explorer
   <ITEM><BLIST><TITLE>To modify <CODEROUTINE>%PATH%</CODEROUTINE></TITLE>
     <ITEM>open the Paramètre dialog</ITEM>
     <ITEM>type PATH</ITEM>
-    <ITEM>select <CODEMENU>Modifier les variables d'environnement pour votre compte</CODEMENU></ITEM>
+    <ITEM>select <CODEMENU>Modifier les variables d’environnement pour votre compte</CODEMENU></ITEM>
     <ITEM>select Path</ITEM>
     <ITEM>click on <CODEMENU>Modifier…</CODEMENU></ITEM>
     <ITEM>do the change</ITEM>

@@ -11,7 +11,7 @@ You need to grant X server access to an account, lets say <I>foobar</I>. Add the
 /usr/X11R6/bin/xauth nextract - :0 | /bin/su -c '/usr/X11R6/bin/xauth -f .Xauthority nmerge - ' - foobar</CODESAMPLE>
 <BR/>
 <U>step 2</U><BR/>
-Being logged (using <CODEROUTINE>telnet</CODEROUTINE> or <CODEROUTINE>ssh</CODEROUTINE>)  as <I>foobar</I>, run the following script (first argument is logging name, second argument is password):
+Being logged (using <CODEROUTINE>telnet</CODEROUTINE> or <CODEROUTINE>ssh</CODEROUTINE>) as <I>foobar</I>, run the following script (first argument is logging name, second argument is password):
 <CODESAMPLE>
 #!/bin/bash<BR/>
 <BR/>

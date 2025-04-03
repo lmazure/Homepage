@@ -16,7 +16,7 @@ If you really need to have integer types having a given number of bytes, use the
 <ROW><CELL>int64_t</CELL><CELL>64 bits</CELL><CELL>signed</CELL><CELL>SCNd64<BR/>SCNi64</CELL><CELL>PRId64<BR/>PRIi64</CELL><CELL>INT64_MIN</CELL><CELL>INT64_MAX</CELL><CELL>INT64_C</CELL></ROW>
 <ROW><CELL>uint64_t</CELL><CELL>64 bits</CELL><CELL>unsigned</CELL><CELL>SCNo64<BR/>SCNu64<BR/>SCNx64</CELL><CELL>PRIo64<BR/>PRIu64<BR/>PRIx64<BR/>PRIX64</CELL><CELL>0</CELL><CELL>UINT64_MAX</CELL><CELL>UINT64_C</CELL></ROW></TABLE>
 <BR/>
-The types int64_t and uint64_t may be unavailable. You should test if the macro INT64_MAX or  UINT64_MAX is defined to know if the current environment support them. <BR/>
+The types int64_t and uint64_t may be unavailable. You should test if the macro INT64_MAX or UINT64_MAX is defined to know if the current environment support them.<BR/>
 <BR/>
 The printf/scanf formats are defined in inttypes.h. They are defined by C99, but they are not available in C++. Here is an example how to use them:
 <CODESAMPLE>uint32_t val = … <BR/>

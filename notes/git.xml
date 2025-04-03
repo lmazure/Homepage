@@ -231,7 +231,7 @@
   <ROW>
     <TERM><CODEROUTINE>git commit -o</CODEROUTINE><BR/>
       <CODEROUTINE>git commit --only</CODEROUTINE></TERM>
-    <DESC>Make a commit by taking the updated working tree contents of the paths specified on the command line, disregarding any contents that have been staged for other paths.
+    <DESC>Make a commit by taking the updated working tree contents of the paths specified on the command line, disregarding any contents that have been staged for other paths.<BR/>
       (This is the default of <CODEROUTINE>git commit</CODEROUTINE> if any paths are given on the command line. So, in this case the <CODEROUTINE>-o</CODEROUTINE> is useless.)</DESC>
   </ROW>
   <ROW>
