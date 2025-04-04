@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -219,8 +219,9 @@ Display
     <DESC>Display/undisplay space characters</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>View: Toggle Editor Sticky Scroll</CODEROUTINE></TERM>
-    <DESC>Toggle sticky scroll</DESC>
+    <TERM><CODEROUTINE>View: Toggle Editor Sticky Scroll</CODEROUTINE><BR/>
+      Preference: <CODEROUTINE>editor.stickyScroll.enabled</CODEROUTINE></TERM>
+    <DESC>Toggle sticky scroll (the command <CODEROUTINE>View: Toggle Editor Sticky Scroll</CODEROUTINE> does not seem to work anymore)</DESC>
   </ROW>
   <ROW>
     <TERM><KEY id="F11"/></TERM>

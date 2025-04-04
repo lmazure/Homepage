@@ -76,8 +76,8 @@ report the temperature, number of errors, lifetime… of an ATA/IDE/SCSI3 hard d
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>scsiinfo</T><A>http://manpages.ubuntu.com/manpages/cosmic/man8/scsiinfo.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display/set SCSI device parameters</DESC></ROW>
-<ROW><TERM><CODEROUTINE>scsiinfo -X</CODEROUTINE></TERM><DESC>set SCSI device parameters (use <CODEROUTINE><X><T>scsi-config</T><A>http://manpages.ubuntu.com/manpages/bionic/man8/scsi-config.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> instead)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>scsiinfo</T><A>https://manpages.ubuntu.com/manpages/plucky/en/man8/scsiinfo.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display/set SCSI device parameters</DESC></ROW>
+<ROW><TERM><CODEROUTINE>scsiinfo -X</CODEROUTINE></TERM><DESC>set SCSI device parameters (use <CODEROUTINE><X><T>scsi-config</T><A>https://manpages.ubuntu.com/manpages/bionic/man8/scsi-config.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> instead)</DESC></ROW>
 <ROW><TERM><CODEROUTINE>scsiinfo -d /dev/sda</CODEROUTINE></TERM><DESC>dump defect list from manufacturer table and grown table</DESC></ROW>
 <ROW><TERM><CODEROUTINE>scsiinfo -a /dev/sda</CODEROUTINE></TERM><DESC>display all information</DESC></ROW>
 </DEFINITIONTABLE>
@@ -89,7 +89,7 @@ report the temperature, number of errors, lifetime… of an ATA/IDE/SCSI3 hard d
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>scsiformat</T><A>http://manpages.ubuntu.com/manpages/cosmic/man8/scsiformat.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>format a SCSI disk</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>scsiformat</T><A>https://manpages.ubuntu.com/manpages/plucky/en/man8/scsiformat.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>format a SCSI disk</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
@@ -175,7 +175,7 @@ report virtual memory statistics<BR/>
 <BLIST><TITLE>SCSI</TITLE>
 <ITEM>
 return the SCSI devices corresponding to the <CODEROUTINE>/dev/sg</CODEROUTINE>s
-<CODESAMPLE><PROMPT/><X><T>sg_map</T><A>http://manpages.ubuntu.com/manpages/cosmic/man8/sg_map.8.html</A><L>en</L><F>HTML</F></X></CODESAMPLE>
+<CODESAMPLE><PROMPT/><X><T>sg_map</T><A>https://manpages.ubuntu.com/manpages/plucky/en/man8/sg_map.8.html</A><L>en</L><F>HTML</F></X></CODESAMPLE>
 </ITEM>
 <ITEM>
 list the <CODEROUTINE>/dev/sg</CODEROUTINE>s bound to a SCSI device
@@ -201,7 +201,7 @@ list the <CODEROUTINE>/dev/sg</CODEROUTINE>s bound to a SCSI device
 <ROW><TERM><CODEFILENAME>/proc/version</CODEFILENAME></TERM><DESC>contains the versions of the Linux kernel, gcc and Red Hat Linux installed on the system</DESC></ROW>
 <ROW><TERM><CODEFILENAME>/proc/filesystems</CODEFILENAME></TERM><DESC>lists the file systems supported by the kernel</DESC></ROW>
 <ROW><TERM><CODEFILENAME>/proc/swaps</CODEFILENAME></TERM><DESC>lists the swap spaces and their use</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/stat</CODEFILENAME></TERM><DESC>contains some kernel statitistics</DESC></ROW>
+<ROW><TERM><CODEFILENAME>/proc/stat</CODEFILENAME></TERM><DESC>contains some kernel statistics</DESC></ROW>
 <ROW><TERM><CODEFILENAME>/proc/slabinfo</CODEFILENAME></TERM><DESC>lists the memory usage on the slab level</DESC></ROW>
 <ROW><TERM><CODEFILENAME>/proc/mounts</CODEFILENAME></TERM><DESC>lists all the mount of the system</DESC></ROW>
 <ROW><TERM><CODEFILENAME>/proc/locks</CODEFILENAME></TERM><DESC>lists the file currently locked by the kernel</DESC></ROW>
