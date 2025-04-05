@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>ML implementation</TITLE>
 <PATH>links/aiimplementation.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -11,6 +11,7 @@
       <ITEM><X><T>TensorFlow</T><A>https://www.tensorflow.org</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><CLIST><TITLE><X><T>Hugging Face</T><A>https://huggingface.co/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>blog</T><A>https://huggingface.co/blog</A><L>en</L><F>HTML</F><FEED><A>https://huggingface.co/blog/feed.xml</A><F>Atom</F></FEED></X></ITEM>
+        <ITEM><X><T>learn</T><A>https://huggingface.co/learn</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><X><T>Kaggle</T><A>https://www.kaggle.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>BigML</T><A>https://bigml.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -124,6 +125,7 @@
       <ITEM><ARTICLE><X><T>Understanding Reasoning LLMs</T><ST>Methods and Strategies for Building and Refining Reasoning Models</ST><A>https://magazine.sebastianraschka.com/p/understanding-reasoning-llms</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sebastian</FIRSTNAME><LASTNAME>Raschka</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE><COMMENT>A good overview of the current methods to build reasoning models: inference-time scaling, RL, SFT, and distillation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Elisa Fromont - Les modèles de diffusion</T><A>https://www.youtube.com/watch?v=2kmrtUYHZUY</A><L>fr</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Elisa</FIRSTNAME><LASTNAME>Fromont</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>A mathematical description of the diffusion models.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>New AI text diffusion models break speed barriers by pulling words from noise</T><ST>New diffusion models borrow technique from AI image synthesis for 10x speed boost.</ST><A>https://arstechnica.com/ai/2025/02/new-ai-text-diffusion-models-break-speed-barriers-by-pulling-words-from-noise/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benj</FIRSTNAME><LASTNAME>Edwards</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>27</DAY></DATE><COMMENT>Inception Labs has released Mercury Coder, a LLaDA (Large Language Diffusion with mAsking).</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>How DeepSeek Rewrote the Transformer [MLA]</T><A>https://www.youtube.com/watch?v=0VLAoVGf_74</A><L>en</L><F>MP4</F><DURATION><MINUTE>18</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Stephen</FIRSTNAME><LASTNAME>Welch</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>5</DAY></DATE><COMMENT>A presentation of DeepSeek’s Multi-Head Latent Attention.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>The State of LLM Reasoning Models</T><ST>Part 1: Inference-Time Compute Scaling Methods</ST><A>https://magazine.sebastianraschka.com/p/state-of-llm-reasoning-and-inference-scaling</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sebastian</FIRSTNAME><LASTNAME>Raschka</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>8</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Sebastian</FIRSTNAME><LASTNAME>Raschka</LASTNAME></AUTHOR> summarises several articles among the current flurry of papers related to inference-time scaling.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Tokenisers</TITLE>
         <ITEM><ARTICLE><X quality="2"><T>Let's build the GPT Tokenizer</T><A>https://www.youtube.com/watch?v=zduSFxRajkE</A><L>en</L><F>MP4</F><DURATION><HOUR>2</HOUR><MINUTE>13</MINUTE><SECOND>34</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Andrej</FIRSTNAME><LASTNAME>Karpathy</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>A very good description of tokenisation.</COMMENT></ARTICLE></ITEM>
