@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java</TITLE>
 <PATH>links/java.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -40,6 +40,7 @@
       <ITEM><X><T>21</T><A>https://docs.oracle.com/en/java/javase/21/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>22</T><A>https://docs.oracle.com/en/java/javase/22/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>23</T><A>https://docs.oracle.com/en/java/javase/23/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>24</T><A>https://docs.oracle.com/en/java/javase/24/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE><ANCHOR>javadoc</ANCHOR><X><T>javadoc</T><A>https://docs.oracle.com/en/java/javase/21/javadoc/</A><L>en</L><F>HTML</F></X></TITLE>
       <ITEM><X><T>Documentation Comment Specification</T><A>https://docs.oracle.com/en/java/javase/21/docs/specs/javadoc/doc-comment-spec.html</A><L>en</L><F>HTML</F></X></ITEM>
@@ -93,10 +94,9 @@
       <ITEM><X><T>OpenRewrite</T><A>https://docs.openrewrite.org/</A><L>en</L><F>HTML</F></X>: Java/framework updates</ITEM>
     </BLIST></ITEM>
     <ITEM><CLIST><TITLE><ANCHOR>rules</ANCHOR>Coding rules</TITLE>
-      <ITEM><X><T>Doug Leas</T><A>https://gee.cs.oswego.edu/dl/html/javaCodingStd.html</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>AmbySoft</T><A>http://www.ambysoft.com/essays/javaCodingStandards.html</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Macadamian</T><A>http://www.literateprogramming.com/macadamian.pdf</A><L>en</L><F>PDF</F></X></ITEM>
-      <ITEM><X><T>Fluxens</T><A>http://fluxens.com/javastyle.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>Doug Leas</T><A>https://gee.cs.oswego.edu/dl/html/javaCodingStd.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>AmbySoft</T><A>http://www.ambysoft.com/essays/javaCodingStandards.html</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X status="obsolete"><T>Macadamian</T><A>http://www.literateprogramming.com/macadamian.pdf</A><L>en</L><F>PDF</F></X></ITEM>
       <ITEM><X><T>Google</T><A>https://google.github.io/styleguide/javaguide.html</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>OpenJDK</T><A>https://cr.openjdk.org/~alundblad/styleguide/index-v6.html</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
@@ -147,6 +147,7 @@
     <ITEM><ARTICLE><X><T>Is this the future of Java?</T><A>https://www.youtube.com/watch?v=1piyuttz2pw</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>57</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Josh</FIRSTNAME><LASTNAME>Long</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE><COMMENT>A short and fast description of <X><T>Manifold</T><A>http://manifold.systems/</A><L>en</L><F>HTML</F></X> that adds a bunch of features to the language.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>1, 2, 3 Quarkus! (Clement ESCOFFIER et Aurea MUNOZ HERNANDEZ)</T><A>https://www.youtube.com/watch?v=Dk_tnyAwJdw</A><L>fr</L><F>MP4</F><DURATION><MINUTE>46</MINUTE><SECOND>1</SECOND></DURATION><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE></X><AUTHOR><FIRSTNAME>Clément</FIRSTNAME><LASTNAME>Escoffier</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Aurea</FIRSTNAME><LASTNAME>Munoz Hernandez</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE><COMMENT>A demo of Quarkus 3.0.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Quiz yourself: When is a Java object still reachable?</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-object-reachability</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE><COMMENT>You need to remember that an instance of an inner class has a pointer toward its enclosing instance.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Quiz yourself: How private is a Java private inner class?</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-private-inner-class</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE><COMMENT>Is it possible to exploit an instance of a private inner class from outside?</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Java's Startup Booster: CDS</T><A>https://www.youtube.com/watch?v=vvlQv1Dh-HU</A><L>en</L><F>MP4</F><DURATION><MINUTE>20</MINUTE><SECOND>11</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Billy</FIRSTNAME><LASTNAME>Korando</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>The history of Java’s Class Data Sharing, why and how to use it.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Quiz yourself: Using anonymous classes in Java</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-anonymous-classes</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>8</MONTH><DAY>14</DAY></DATE><COMMENT>Some details of what an anonymous class can derive from.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>97 Things Every Java Prog. Should Know • Trisha Gee &amp; Kevlin Henney ft. Emily &amp; Holly • GOTO 2024</T><A>https://www.youtube.com/watch?v=YAXGU2J7XjM</A><L>en</L><F>MP4</F><DURATION><MINUTE>41</MINUTE><SECOND>52</SECOND></DURATION><DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>20</DAY></DATE></X><AUTHOR><FIRSTNAME>Kevlin</FIRSTNAME><LASTNAME>Henney</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Trisha</FIRSTNAME><LASTNAME>Gee</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Emily</FIRSTNAME><LASTNAME>Bache</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Holly</FIRSTNAME><LASTNAME>Cummins</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>10</MONTH><DAY>4</DAY></DATE><COMMENT>Some random pieces of advice for Java developers.</COMMENT></ARTICLE></ITEM>
