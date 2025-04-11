@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -232,15 +232,18 @@ Display
     <DESC>Toggle the zen mode</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num +"/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num +"/><BR/>
+      <CODEROUTINE>View: Zoom In</CODEROUTINE></TERM>
     <DESC>Zoom in</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num -"/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num -"/><BR/>
+      <CODEROUTINE>View: Zoom Out</CODEROUTINE></TERM>
     <DESC>Zoom out</DESC>
   </ROW>
   <ROW>
-    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num 0"/></TERM>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num 0"/><BR/>
+      <CODEROUTINE>View: Reset Zoom</CODEROUTINE></TERM>
     <DESC>Reset zoom</DESC>
   </ROW>
 </DEFINITIONTABLE>
