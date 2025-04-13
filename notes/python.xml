@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>27</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -824,23 +824,26 @@
   <ITEM>These equivalences assume that <CODEROUTINE>__debug__</CODEROUTINE> and <CODEROUTINE>AssertionError</CODEROUTINE> refer to the built-in variables with those names.<BR/>
     In the current implementation, the built-in variable <CODEROUTINE>__debug__</CODEROUTINE> is <CODEROUTINE>True</CODEROUTINE> under normal circumstances, <CODEROUTINE>False</CODEROUTINE> when optimization is requested (command line option <CODEROUTINE>-O</CODEROUTINE>). The current code generator emits no code for an assert statement when optimization is requested at compile time.</ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>with</B></U></TITLE>
+<BLIST><TITLE><U><B><CODEROUTINE>with</CODEROUTINE></B></U></TITLE>
   <ITEM>The <CODEROUTINE>with</CODEROUTINE> statement allows objects like files to be used in a way that ensures they are always cleaned up promptly and correctly.
     <CODESAMPLE>with open("myfile.txt") as f:<BR/>
     <TAB/>for line in f:<BR/>
     <TAB/><TAB/>print(line, end="")</CODESAMPLE>
   </ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>time</B></U></TITLE>
-  <ITEM><CODEROUTINE>time.sleep(secs)</CODEROUTINE>: Suspend execution of the calling thread for the given number of seconds. The argument may be a floating point number to indicate a more precise sleep time.</ITEM>
+<BLIST><TITLE><U><B><CODEROUTINE>time</CODEROUTINE></B></U></TITLE>
+  <ITEM><CODEROUTINE>time.sleep(secs)</CODEROUTINE>: suspend execution of the calling thread for the given number of seconds. The argument may be a floating point number to indicate a more precise sleep time.</ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>random</B></U></TITLE>
+<BLIST><TITLE><U><B><CODEROUTINE>getpass</CODEROUTINE></B></U></TITLE>
+  <ITEM><CODEROUTINE>getpass.getpass(prompt='Password: ', stream=None)</CODEROUTINE>: prompt the user for a password without echoing. </ITEM>
+</BLIST>
+<BLIST><TITLE><U><B><CODEROUTINE>random</CODEROUTINE></B></U></TITLE>
   <ITEM><CODEROUTINE>random.randrange(stop)</CODEROUTINE><BR/>
     <CODEROUTINE>random.randrange(start, stop[, step])</CODEROUTINE>: return a randomly selected element from <CODEROUTINE>range(start, stop, step)</CODEROUTINE>.</ITEM>
   <ITEM><CODEROUTINE>random.random()</CODEROUTINE>: return a random floating point number in the range 0.0 &lt;= X &lt; 1.0.</ITEM>
   <ITEM><CODEROUTINE>random.choice(seq)</CODEROUTINE>: return a random element from the non-empty sequence <CODEROUTINE>seq</CODEROUTINE>.</ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>os</B></U></TITLE>
+<BLIST><TITLE><U><B><CODEROUTINE>os</CODEROUTINE></B></U></TITLE>
   <ITEM><CODEROUTINE>os.listdir(path='.')</CODEROUTINE>: return a list containing the names of the entries in the directory given by <CODEROUTINE>path</CODEROUTINE>.</ITEM>
   <ITEM><CODEROUTINE>os.walk(top, topdown=True, onerror=None, followlinks=False)</CODEROUTINE>: Generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple <CODEROUTINE>(dirpath, dirnames, filenames)</CODEROUTINE>.</ITEM>
 </BLIST>
