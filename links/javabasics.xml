@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -208,6 +208,7 @@
       <ITEM><ARTICLE><X><T>Quiz yourself: Collectors, comparators, and type inferencing in Java</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-collectors-comparators</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE><COMMENT>A rather complex example of Streams.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Teaching old Streams new tricks  By Viktor Klang</T><A>https://www.youtube.com/watch?v=8fMFa6OqlY8</A><L>en</L><F>MP4</F><DURATION><MINUTE>50</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Viktor</FIRSTNAME><LASTNAME>Klang</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE><COMMENT>A presentation of Gatherers.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Guide to mapMulti in Stream API</T><A>https://www.baeldung.com/java-mapmulti</A><L>en</L><F>HTML</F></X><DATE><YEAR>2024</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT>A clear description of <CODEROUTINE>Stream.mapMulti()</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Stream Gatherers: Intro to Intermediate Operations Modeler</T><ST>Gatherers is a new and powerful API that enhances the Stream API by modeling intermediate operations and allowing the definition of custom intermediate operations.</ST><A>https://dzone.com/articles/stream-gatherers-intermediate-operations-modeler</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Hüseyin</FIRSTNAME><LASTNAME>Akdoğan</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>19</DAY></DATE><COMMENT>This introduction to <CODEROUTINE>Gatherer</CODEROUTINE> is too short to be clear.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Type inference</TITLE>
       <ITEM><ARTICLE><X><T>Java Feature Spotlight: Local Variable Type Inference</T><A>https://www.infoq.com/articles/java-local-variable-type-inference/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><DATE><YEAR>2019</YEAR><MONTH>11</MONTH><DAY>1</DAY></DATE><COMMENT>A description of type inference, with a focus on local variable type inference (<CODEROUTINE>var</CODEROUTINE>) and some guidelines to use this one.</COMMENT></ARTICLE></ITEM>
