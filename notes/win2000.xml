@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>2</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -118,6 +118,9 @@ File explorer
     <CODEROUTINE>||</CODEROUTINE> command following this symbol runs only if the command preceding the symbol fails<BR/>
     <CODEROUTINE>&amp;</CODEROUTINE> separates multiple commands on the command line
   </ITEM>
+  <ITEM>configure Windows Defender to ignore a directory
+    <CODESAMPLE>Add-MpPreference -ExclusionPath "G:\Documents\tmp" -Name "UserName"</CODESAMPLE>
+  </ITEM>
   <ITEM><BLIST><TITLE>User management with PowerShell</TITLE>
     <ITEM>enable a local user
       <CODESAMPLE><X><T>Enable-LocalUser</T><A>https://learn.microsoft.com/en-us/powershell/module/microsoft.powershell.localaccounts/enable-localuser?view=powershell-5.1</A><L>en</L><F>HTML</F></X> -Name "UserName"</CODESAMPLE>
@@ -201,7 +204,7 @@ File explorer
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>cacls &lt;file&gt; &lt;operations&gt; /e</CODEROUTINE></TERM>
-    <DESC>edit the ACLs instead of reseting them</DESC>
+    <DESC>edit the ACLs instead of resetting them</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>cacls &lt;dir&gt; &lt;operations&gt; /t</CODEROUTINE></TERM>
