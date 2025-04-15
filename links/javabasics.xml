@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java basics</TITLE>
 <PATH>links/javabasics.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -111,6 +111,7 @@
       <ITEM><ARTICLE><X><T>Quiz yourself: The allowable subtypes in sealed classes</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-sealed-class-subtype-modifiers</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE><COMMENT>A class inheriting from a <CODEROUTINE>sealed</CODEROUTINE> class must be <CODEROUTINE>sealed</CODEROUTINE>, <CODEROUTINE>non-sealed</CODEROUTINE>, or <CODEROUTINE>final</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Quiz yourself: Classes, modules, and sealed types</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-sealed-types-modules</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE><COMMENT>The combination of sealed classes and modules.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Quiz yourself: Sealed and non-sealed classes and interfaces</T><A>https://blogs.oracle.com/javamagazine/post/java-sealed-types-subtypes-final</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>12</MONTH><DAY>12</DAY></DATE><COMMENT>Some tricky details of <CODEROUTINE>sealed</CODEROUTINE> and <CODEROUTINE>final</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Quiz yourself: Java’s sealed-type mechanism and the module-info.java file</T><A>https://blogs.oracle.com/javamagazine/post/java-quiz-sealed-types-module-info</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Roberts</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Mikalai</FIRSTNAME><LASTNAME>Zaikin</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>6</MONTH><DAY>26</DAY></DATE><COMMENT>The classes specified by <CODEROUTINE>permits</CODEROUTINE> must be in the same module or in the same package as the permitting class.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Dates</TITLE>
       <ITEM><ARTICLE><X><T>Calculating Java dates</T><ST>Take the time to learn how to create and use dates</ST><A>https://www.infoworld.com/article/2162782/calculating-java-dates.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><LASTNAME>Nielsen</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>12</MONTH></DATE><COMMENT>An introduction to <CODEROUTINE>Date</CODEROUTINE>, <CODEROUTINE>DateFormat</CODEROUTINE> and <CODEROUTINE>GregorianCalendar</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
