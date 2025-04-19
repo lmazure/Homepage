@@ -119,7 +119,7 @@ File explorer
     <CODEROUTINE>&amp;</CODEROUTINE> separates multiple commands on the command line
   </ITEM>
   <ITEM>configure Windows Defender to ignore a directory
-    <CODESAMPLE>Add-MpPreference -ExclusionPath "G:\Documents\tmp" -Name "UserName"</CODESAMPLE>
+    <CODESAMPLE>Add-MpPreference -ExclusionPath "G:\Documents\tmp"</CODESAMPLE>
   </ITEM>
   <ITEM><BLIST><TITLE>User management with PowerShell</TITLE>
     <ITEM>enable a local user
