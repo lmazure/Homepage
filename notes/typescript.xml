@@ -3,11 +3,11 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>TypeScript</TITLE>
 <PATH>notes/typescript.xml</PATH>
-<DATE><YEAR>2021</YEAR><MONTH>3</MONTH><DAY>31</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><CODEROUTINE>tsc</CODEROUTINE></TITLE>
   <ITEM>display the version<BR/>
-    <CODESAMPLE>tsc --version</CODESAMPLE></ITEM>
+    <CODESAMPLE><PROMPT/>tsc --version</CODESAMPLE></ITEM>
   <ITEM><BLIST><TITLE><CODEFILENAME>tsconfig.json</CODEFILENAME></TITLE>
     <ITEM>The presence of a <CODEFILENAME>tsconfig.json</CODEFILENAME> file in a directory indicates that the directory is the root of a TypeScript project.</ITEM>
     <ITEM>If <CODEROUTINE>tsc</CODEROUTINE> is launched with no input file, it will look for <CODEFILENAME>tsconfig.json</CODEFILENAME> or <CODEFILENAME>jsconfig.json</CODEFILENAME>.<BR/>
@@ -15,7 +15,7 @@
     <ITEM>If <CODEROUTINE>tsc</CODEROUTINE> is launched with some arguments, it will compile the files with the default compiler settings.<BR/>
       <CODEROUTINE>tsc</CODEROUTINE> can be invoked with <CODEROUTINE>--project</CODEROUTINE>/<CODEROUTINE>-p</CODEROUTINE> to specify the path of a directory containing a <CODEFILENAME>tsconfig.json</CODEFILENAME> file or the path to a valid .json file containing the configurations.</ITEM>
     <ITEM>generate the default <CODEFILENAME>tsconfig.json</CODEFILENAME><BR/>
-      <CODESAMPLE>tsc --init</CODESAMPLE></ITEM>
+      <CODESAMPLE><PROMPT/>tsc --init</CODESAMPLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
 <BR/>
@@ -46,8 +46,8 @@ It is possible to pass parameters having a type that is a superset of the expect
 <U><B>Postfix <CODEROUTINE>!</CODEROUTINE>: Non-null Assertion Operator</B></U><BR/>
 The <CODEROUTINE>!</CODEROUTINE> postfix operator removes <CODEROUTINE>null</CODEROUTINE> and <CODEROUTINE>undefined</CODEROUTINE> from a type without doing any checking.
 <CODESAMPLE>function liveDangerously(x?: number | undefined) {<BR/>
-<TAB/>console.log(x!.toFixed());<BR/>
-}</CODESAMPLE>
+  <TAB/>console.log(x!.toFixed());<BR/>
+  }</CODESAMPLE>
 <BR/>
 <U><B>Equality</B></U><BR/>
 <CODEROUTINE>==</CODEROUTINE> test equality with type coercition<BR/>
@@ -62,6 +62,10 @@ Some built-in types like <CODEROUTINE>Array</CODEROUTINE>, <CODEROUTINE>Map</COD
 <BR/>
 <CODEROUTINE>for … in</CODEROUTINE><BR/>
 <CODEROUTINE>for … in</CODEROUTINE> loops on the properties of an object.<BR/>
+<BR/>
+<U><B>Executing scripts</B></U><BR/>
+To run a TypeScript script using node, you can use <X><T>ts-node</T><A>https://typestrong.org/ts-node/</A><L>en</L><F>HTML</F></X>:<BR/>
+<CODESAMPLE><PROMPT/>npx ts-node --compilerOptions '{"module":"CommonJS"}' test.ts</CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/typescript.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
