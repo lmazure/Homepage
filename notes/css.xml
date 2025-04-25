@@ -8,7 +8,7 @@
 <BLIST><TITLE><B><U>Syntax</U></B></TITLE>
   <ITEM>The CSS syntax is made up of three parts: a selector, a property and a value:
   <CODESAMPLE>selector {property: value}</CODESAMPLE></ITEM>
-  <ITEM>If  the value is multiple words, put quotes around the value:
+  <ITEM>If the value is multiple words, put quotes around the value:
   <CODESAMPLE>p {font-family: "sans serif"}</CODESAMPLE></ITEM>
   <ITEM>If you wish to specify more than one property, you must separate each property with a semicolon. The example below shows how to define a center aligned paragraph, with a red text colour:
   <CODESAMPLE>p {text-align:center;color:red}</CODESAMPLE></ITEM>
@@ -112,7 +112,7 @@ But if the external style sheet link is placed below the internal style sheet in
 <BLIST><TITLE><B><U>Properties</U></B></TITLE>
   <ITEM><BLIST><TITLE><CODEROUTINE>position</CODEROUTINE></TITLE>
     <ITEM><CODEROUTINE>relative</CODEROUTINE>: the computed position value is relative. The <CODEROUTINE>top</CODEROUTINE> and <CODEROUTINE>bottom</CODEROUTINE> properties specify the vertical offset from its normal position; the <CODEROUTINE>left</CODEROUTINE> and <CODEROUTINE>right</CODEROUTINE> properties specify the horizontal offset.</ITEM>
-    <ITEM><CODEROUTINE>absolute</CODEROUTINE>/<CODEROUTINE>fixed</CODEROUTINE>:the  computed position value is absolute or fixed. The <CODEROUTINE>top</CODEROUTINE>, <CODEROUTINE>right</CODEROUTINE>, <CODEROUTINE>bottom</CODEROUTINE>, and <CODEROUTINE>left</CODEROUTINE> properties specify offsets from the edges of the element's containing block. (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset.</ITEM>
+    <ITEM><CODEROUTINE>absolute</CODEROUTINE>/<CODEROUTINE>fixed</CODEROUTINE>:the computed position value is absolute or fixed. The <CODEROUTINE>top</CODEROUTINE>, <CODEROUTINE>right</CODEROUTINE>, <CODEROUTINE>bottom</CODEROUTINE>, and <CODEROUTINE>left</CODEROUTINE> properties specify offsets from the edges of the element's containing block. (The containing block is the ancestor relative to which the element is positioned.) If the element has margins, they are added to the offset.</ITEM>
     <ITEM><CODEROUTINE>sticky</CODEROUTINE>: the computed position value is sticky. It's treated as relatively positioned until its containing block crosses a specified threshold (such as setting <CODEROUTINE>top</CODEROUTINE> to value other than <CODEROUTINE>auto</CODEROUTINE>) within its flow root (or the container it scrolls within), at which point it is treated as "stuck" until meeting the opposite edge of its containing block.</ITEM>
   </BLIST></ITEM>
 </BLIST>

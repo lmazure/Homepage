@@ -25,7 +25,7 @@ Yet another stupid script to find obsolete code. This one looks at the file defi
   <BR/>
   for x in ` sort -u l1 l2 `<BR/>
   do<BR/>
-  <TAB/>if ( ! egrep  -l "(\.$x[^a-zA-Z0-9_]|\.$x$)" *.c &gt; /dev/null )<BR/>
+  <TAB/>if ( ! egrep -l "(\.$x[^a-zA-Z0-9_]|\.$x$)" *.c &gt; /dev/null )<BR/>
   <TAB/>then<BR/>
   <TAB/><TAB/>echo "$x not used"<BR/>
   <TAB/>fi<BR/>

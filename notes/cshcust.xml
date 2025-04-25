@@ -22,7 +22,7 @@ set noclobber
 if ( ${?TERM} &amp;&amp; $TERM == "xterm" ) then<BR/>
 <TAB/>alias cd 'cd \!*; echo -n "^[]2;`cleartool pwv -setview -short`:`pwd`^G"'<BR/>
 endif<BR/>
-alias x 'xterm -title `pwd` -sb -sl 5000 -bg black -fg green -cr orange  -fn fixed'
+alias x 'xterm -title `pwd` -sb -sl 5000 -bg black -fg green -cr orange -fn fixed'
 </CODESAMPLE>
 <BR/>
 <B><U><X><T>Purify</T><A>purify.html</A><L>en</L><F>HTML</F></X></U></B>

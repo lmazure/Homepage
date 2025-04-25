@@ -900,7 +900,7 @@
     <TAB/>unittest.main()</CODESAMPLE>
   </ITEM>
   <ITEM><CODEROUTINE>setUp()</CODEROUTINE> and <CODEROUTINE>tearDown()</CODEROUTINE>: define instructions that will be executed before and after each test method</ITEM>
-  <ITEM>The unittest module can be used from the command line to run tests from modules, classes, or  individual test methods:<BR/>
+  <ITEM>The unittest module can be used from the command line to run tests from modules, classes, or individual test methods:<BR/>
     <CODEROUTINE>python -m unittest test_module1 test_module2</CODEROUTINE><BR/>
     <CODEROUTINE>python -m unittest test_module.TestClass</CODEROUTINE><BR/>
     <CODEROUTINE>python -m unittest test_module.TestClass.test_method</CODEROUTINE><BR/>

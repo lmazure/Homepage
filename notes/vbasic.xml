@@ -267,7 +267,7 @@ Next c
 Private Sub Compute_Click( )<BR/>
 <TAB/>grade=txtgrade.Text<BR/>
 <TAB/>Select Case grade<BR/>
-<TAB/><TAB/>Case  "A"<BR/>
+<TAB/><TAB/>Case "A"<BR/>
 <TAB/><TAB/><TAB/>result.Caption="High Distinction"<BR/>
 <TAB/><TAB/>Case "A-"<BR/>
 <TAB/><TAB/><TAB/>result.Caption="Distinction"<BR/>

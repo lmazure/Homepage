@@ -110,7 +110,7 @@
 </BLIST>
 <BLIST><TITLE>Mess…</TITLE>
   <ITEM>retrieve the issue related to a merge request
-    <CODESAMPLE>curl --header "PRIVATE-TOKEN:$GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/27169359/merge_requests/355" | jq -r  '.description'  head -1 | sed 's/.*#//' </CODESAMPLE>
+    <CODESAMPLE>curl --header "PRIVATE-TOKEN:$GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/27169359/merge_requests/355" | jq -r '.description'  head -1 | sed 's/.*#//' </CODESAMPLE>
   </ITEM>
   <ITEM>delete the local branches that to do not exist anymore in GitLab
     <CODESAMPLE>git checkout main<BR/>

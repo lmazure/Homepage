@@ -196,7 +196,7 @@
   <ROW><TERM><CODEROUTINE>LIKE</CODEROUTINE></TERM><DESC>Search for a pattern</DESC></ROW>
   <ROW><TERM><CODEROUTINE>IN</CODEROUTINE></TERM><DESC>If you know the exact value you want to return for at least one of the columns</DESC></ROW>
   </DEFINITIONTABLE>
-  <CODEROUTINE>AND</CODEROUTINE> and <CODEROUTINE>OR</CODEROUTINE> can be used to combine criterion, <CODEROUTINE>AND</CODEROUTINE> has higher precedence than <CODEROUTINE>OR</CODEROUTINE>, but   parentheses should be used anyway
+  <CODEROUTINE>AND</CODEROUTINE> and <CODEROUTINE>OR</CODEROUTINE> can be used to combine criterion, <CODEROUTINE>AND</CODEROUTINE> has higher precedence than <CODEROUTINE>OR</CODEROUTINE>, but parentheses should be used anyway
   example
   <CODESAMPLE>SELECT * FROM Persons WHERE<BR/>
   (FirstName='Tove' OR FirstName='Stephen')<BR/>
@@ -264,7 +264,7 @@
   </ITEM></BLIST>
   </ITEM>
   <ITEM><BLIST><TITLE><CODEROUTINE>ROWNUM</CODEROUTINE> pseudocolumn (Oracle)</TITLE>
-    <ITEM>For each row returned by a query, the <CODEROUTINE>ROWNUM</CODEROUTINE> pseudocolumn returns a number indicating the order in which Oracle selects the row from a table or set of joined   rows.</ITEM>
+    <ITEM>For each row returned by a query, the <CODEROUTINE>ROWNUM</CODEROUTINE> pseudocolumn returns a number indicating the order in which Oracle selects the row from a table or set of joined rows.</ITEM>
     <ITEM>To limit the number of rows returned by a query:
     <CODESAMPLE>
     SELECT * FROM employees WHERE ROWNUM &lt; 10;
@@ -340,7 +340,7 @@
   This type of subquery is called a correlated subquery. The inner query is dependent on the outer query.
   </ITEM>
   <ITEM>
-  <CODEROUTINE>EXISTS</CODEROUTINE> tests whether the inner query returns any row. If it does, then the outer query proceeds. If not, the outer query does not execute, and the entire SQL statement   returns nothing.
+  <CODEROUTINE>EXISTS</CODEROUTINE> tests whether the inner query returns any row. If it does, then the outer query proceeds. If not, the outer query does not execute, and the entire SQL statement returns nothing.
   <CODESAMPLE>SELECT <I>columnName1</I><BR/>
   FROM <I>tableName1</I><BR/>
   WHERE EXISTS<BR/>
@@ -567,15 +567,15 @@
 <BLIST><TITLE><U><B>Postgres</B></U></TITLE>
   <ITEM>
   display the list of patients
-  <CODESAMPLE><PROMPT/>echo "select patient_id, patient_name from patient_folder;" | <X><T>psql</T><A>https://www.postgresql.org/docs/current/app-psql.html</A><L>en</L><F>HTML</F></X> -U postgres   -At ctmr_sdc_db</CODESAMPLE>
+  <CODESAMPLE><PROMPT/>echo "select patient_id, patient_name from patient_folder;" | <X><T>psql</T><A>https://www.postgresql.org/docs/current/app-psql.html</A><L>en</L><F>HTML</F></X> -U postgres -At ctmr_sdc_db</CODESAMPLE>
   </ITEM>
   <ITEM>
   display the lock status of series <CODEROUTINE>s105</CODEROUTINE>.
-  <CODESAMPLE><PROMPT/><X><T>psql</T><A>https://www.postgresql.org/docs/current/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "select series_lock from   series_environment where series_id = 's105';" </CODESAMPLE>
+  <CODESAMPLE><PROMPT/><X><T>psql</T><A>https://www.postgresql.org/docs/current/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "select series_lock from series_environment where series_id = 's105';" </CODESAMPLE>
   </ITEM>
   <ITEM>
   change the lock status of series <CODEROUTINE>s105</CODEROUTINE>.
-  <CODESAMPLE><PROMPT/><X><T>psql</T><A>https://www.postgresql.org/docs/current/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "update series_environment set   series_lock ='Yes' where series_id = 's105';"</CODESAMPLE>
+  <CODESAMPLE><PROMPT/><X><T>psql</T><A>https://www.postgresql.org/docs/current/app-psql.html</A><L>en</L><F>HTML</F></X> -t -d ctmr_sdc_db -U postgres -c "update series_environment set series_lock ='Yes' where series_id = 's105';"</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>MySQL</B></U></TITLE>
@@ -583,7 +583,7 @@
   login
   <CODESAMPLE><PROMPT/>mysql -h <I>host</I> -u <I>user</I> -p<I>password</I> <I>database</I></CODESAMPLE>
   if <CODEROUTINE><I>host</I></CODEROUTINE> is not indicate, <CODEROUTINE>mysql</CODEROUTINE> will try to log on the localhost<BR/>
-  <CODEROUTINE><I>password</I></CODEROUTINE> is optional, if the flag <CODEROUTINE>-p</CODEROUTINE> is present, but the password is not on the command line, <CODEROUTINE>mysql</CODEROUTINE> will   prompt for it<BR/>
+  <CODEROUTINE><I>password</I></CODEROUTINE> is optional, if the flag <CODEROUTINE>-p</CODEROUTINE> is present, but the password is not on the command line, <CODEROUTINE>mysql</CODEROUTINE> will prompt for it<BR/>
   <CODEROUTINE><I>database</I></CODEROUTINE> is optional, if absent, no database is selected</ITEM>
   <ITEM>
   logout

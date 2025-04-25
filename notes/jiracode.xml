@@ -64,8 +64,8 @@ import java.util.Vector;<BR/>
 public class Test<BR/>
 {<BR/>
 <TAB/><BR/>
-<TAB/>private static final String JIRA_URI  = "https://jira.kikamedical.net";<BR/>
-<TAB/>private static final String RPC_PATH  = "/rpc/xmlrpc";<BR/>
+<TAB/>private static final String JIRA_URI = "https://jira.kikamedical.net";<BR/>
+<TAB/>private static final String RPC_PATH = "/rpc/xmlrpc";<BR/>
 <TAB/><BR/>
 <TAB/>private static String STATUS_OPEN<TAB/>= "1";<BR/>
 <TAB/>private static String STATUS_IN_PROGRESS<TAB/>= "3";<BR/>
@@ -79,7 +79,7 @@ public class Test<BR/>
 <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/> // 10344 -&gt; K3 3.9<BR/>
 <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/> // 10347 -&gt; test K3 Proto<BR/>
 <TAB/><BR/>
-<TAB/>private static final String FIELD_ID_FIXED_IN_BUILD  = "customfield_10017";<BR/>
+<TAB/>private static final String FIELD_ID_FIXED_IN_BUILD = "customfield_10017";<BR/>
 <TAB/>private static final String FIELD_ID_BUILD = "customfield_10026";<BR/>
 <TAB/>private static final String FIELD_ID_COMMITERS_TESTS = "customfield_10091";<BR/>
 <TAB/><BR/>
@@ -101,7 +101,7 @@ public class Test<BR/>
 <TAB/><TAB/><TAB/><TAB/>String password) {<BR/>
 <TAB/><TAB/>{<BR/>
 <TAB/><TAB/><TAB/>// build that has been reviewed<BR/>
-<TAB/><TAB/><TAB/>//final String reviewedBuild  = args[0];<BR/>
+<TAB/><TAB/><TAB/>//final String reviewedBuild = args[0];<BR/>
 <BR/>
 <TAB/><TAB/><TAB/>try<BR/>
 <TAB/><TAB/><TAB/>{<BR/>
@@ -188,7 +188,7 @@ public class Test<BR/>
 <BR/>
 <BR/>
 <TAB/>// definition of the JIRA components that impacts code<BR/>
-<TAB/>static final String[] s_comp  = { "Functional", "IT", "Performance", "Refactoring", "User Interface" };<BR/>
+<TAB/>static final String[] s_comp = { "Functional", "IT", "Performance", "Refactoring", "User Interface" };<BR/>
 <TAB/>static final HashSet&lt;String&gt; s_componentsImpactingCode = new HashSet&lt;String&gt;(Arrays.asList(s_comp));<BR/>
 <BR/>
 <TAB/>private static boolean isImpactingCode(Map answer) {<BR/>

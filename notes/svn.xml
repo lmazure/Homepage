@@ -151,7 +151,7 @@
       <ITEM>List the branches
       <CODESAMPLE>svn ls file:///cygdrive/m/svn_repository/my_project/branches</CODESAMPLE></ITEM>
       <ITEM>Create a branch &lt;branch name&gt; from trunk
-      <CODESAMPLE>svn copy file:///cygdrive/m/svn_repository/my_project/trunk  file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; -m "Branch creation comment"</CODESAMPLE></ITEM>
+      <CODESAMPLE>svn copy file:///cygdrive/m/svn_repository/my_project/trunk file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; -m "Branch creation comment"</CODESAMPLE></ITEM>
       <ITEM>Check out branch &lt;branch name&gt;
       <CODESAMPLE>svn co file:///cygdrive/m/svn_repository/my_project/branches/&lt;branch name&gt; &lt;directory name&gt;</CODESAMPLE></ITEM>
       <ITEM>Merge trunk into current work directory (which contains the checkout of a branch)

@@ -371,7 +371,7 @@
       <ITEM>The cons operator <CODEROUTINE>::</CODEROUTINE> adds one element to the front of a list.
         <CODESAMPLE><PROMPT/>1 :: [2; 3];;</CODESAMPLE>
       </ITEM>
-      <ITEM>The append  operator <CODEROUTINE>@</CODEROUTINE> combines two lists.
+      <ITEM>The append operator <CODEROUTINE>@</CODEROUTINE> combines two lists.
         <CODESAMPLE><PROMPT/>[1] @ [2; 3];;</CODESAMPLE>
       </ITEM>
       <ITEM><CODEROUTINE>List</CODEROUTINE> module
@@ -869,7 +869,7 @@
   <ITEM><BLIST><TITLE>Installation</TITLE>
     <ITEM><BLIST><TITLE>Using Docker</TITLE>
       <ITEM>a simple installation process:
-        <CODESAMPLE>docker run  --name ocaml -it ocaml/opam:ubuntu-22.04-ocaml-4.13 bash</CODESAMPLE>
+        <CODESAMPLE>docker run --name ocaml -it ocaml/opam:ubuntu-22.04-ocaml-4.13 bash</CODESAMPLE>
         in the container
         <CODESAMPLE>opam install utop<BR/>
         exit</CODESAMPLE>
