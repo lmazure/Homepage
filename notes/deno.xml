@@ -3,12 +3,171 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>deno</TITLE>
 <PATH>notes/deno.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>deno --version</CODEROUTINE></TERM>
     <DESC>Display the <CODEROUTINE>deno</CODEROUTINE> version.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>deno check module.ts</CODEROUTINE></TERM>
+    <DESC>Type check a script.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno check --all module.ts</CODEROUTINE></TERM>
+    <DESC>Also type check remote modules and npm packages.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --check module.ts</CODEROUTINE></TERM>
+    <DESC>Type check and run a script.(By default, <CODEROUTINE>deno run</CODEROUTINE> does not check types.)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --check=all module.ts</CODEROUTINE></TERM>
+    <DESC>Also type check remote modules and npm packages.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>deno run -R script.ts</CODEROUTINE>
+      <CODEROUTINE>deno run --allow-read script.ts</CODEROUTINE></TERM>
+    <DESC>Allow all reads from file system.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-read=foo.txt,bar.txt script.ts</CODEROUTINE></TERM>
+    <DESC>Allow reads from file <CODEFILENAME>foo.txt</CODEFILENAME> and <CODEFILENAME>bar.txt</CODEFILENAME> only.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-read=node_modules script.ts</CODEROUTINE></TERM>
+    <DESC>Allow reads from any file in any subdirectory of <CODEFILENAME>./node_modules</CODEFILENAME>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-read=/etc --deny-read=/etc/hosts script.ts</CODEROUTINE></TERM>
+    <DESC>Allow reading files in <CODEFILENAME>/etc</CODEFILENAME> but disallow reading <CODEFILENAME>/etc/hosts</CODEFILENAME>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --deny-read script.ts</CODEROUTINE></TERM>
+    <DESC>Deny all read access to disk, disabling permission prompts for reads.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run -W script.ts</CODEROUTINE>
+      <CODEROUTINE>deno run --allow-write script.ts</CODEROUTINE></TERM>
+    <DESC>Allow all writes to file system.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-write=foo.txt,bar.txt script.ts</CODEROUTINE></TERM>
+    <DESC>Allow writes to file <CODEFILENAME>foo.txt</CODEFILENAME> and <CODEFILENAME>bar.txt</CODEFILENAME> only.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-write=./ --deny-write=./secrets script.ts</CODEROUTINE></TERM>
+    <DESC>Allow reading files in current working directory but disallow writing to <CODEFILENAME>./secrets</CODEFILENAME> directory.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --deny-write script.ts</CODEROUTINE></TERM>
+    <DESC>Deny all write access to disk, disabling permission prompts.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run -N script.ts</CODEROUTINE><BR/>
+      <CODEROUTINE>deno run --allow-net script.ts</CODEROUTINE></TERM>
+    <DESC>Allow network access.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-net=github.com,jsr.io script.ts</CODEROUTINE></TERM>
+    <DESC>Allow network access to <CODEROUTINE>github.com</CODEROUTINE> and <CODEROUTINE>jsr.io</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-net=example.com:80 script.ts</CODEROUTINE></TERM>
+    <DESC>Allow a hostname at port 80.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-net=1.1.1.1:443 script.ts</CODEROUTINE></TERM>
+    <DESC>Allow an IPv4 address on port 443.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-net=[2606:4700:4700::1111] script.ts</CODEROUTINE></TERM>
+    <DESC>Allow an IPv6 address, all ports allowed.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-net --deny-net=github.com,jsr.io script.ts</CODEROUTINE></TERM>
+    <DESC>Allow access to network, but deny access to <CODEROUTINE>github.com</CODEROUTINE> and <CODEROUTINE>jsr.io</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --deny-net script.ts</CODEROUTINE></TERM>
+    <DESC>Deny all network access, disabling permission prompts.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run -E script.ts</CODEROUTINE><BR/>
+      <CODEROUTINE>deno run --allow-env script.ts</CODEROUTINE></TERM>
+    <DESC>Allow access to all environment variables.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-env=HOME,FOO script.ts</CODEROUTINE></TERM>
+    <DESC>Allow <CODEROUTINE>HOME</CODEROUTINE> and <CODEROUTINE>FOO</CODEROUTINE> environment variables.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-env="AWS_*" script.ts</CODEROUTINE></TERM>
+    <DESC>Allow access to all environment variables starting with <CODEROUTINE>AWS_</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-env --deny-env=AWS_ACCESS_KEY_ID,AWS_SECRET_ACCESS_KEY script.ts</CODEROUTINE></TERM>
+    <DESC>Allow all environment variables except <CODEROUTINE>AWS_ACCESS_KEY_ID</CODEROUTINE> and <CODEROUTINE>AWS_SECRET_ACCESS_KEY</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --deny-env script.ts</CODEROUTINE></TERM>
+    <DESC>Deny all access to env variables, disabling permission prompts.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run -S script.ts</CODEROUTINE><BR/>
+      <CODEROUTINE>deno run --allow-sys script.ts</CODEROUTINE></TERM>
+    <DESC>Allow all system information APIs.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-sys="systemMemoryInfo,osRelease" script.ts</CODEROUTINE></TERM>
+    <DESC>Allow <CODEROUTINE>systemMemoryInfo</CODEROUTINE> and <CODEROUTINE>osRelease</CODEROUTINE> APIs.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-sys --deny-sys="networkInterfaces" script.ts</CODEROUTINE></TERM>
+    <DESC>Allow accessing all system information but <CODEROUTINE>networkInterfaces</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --deny-sys script.ts</CODEROUTINE></TERM>
+    <DESC>Deny all access to system information, disabling permission prompts.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-run script.ts</CODEROUTINE></TERM>
+    <DESC>Allow running all subprocesses.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-run="curl,whoami" script.ts</CODEROUTINE></TERM>
+    <DESC>Allow running <CODEROUTINE>curl</CODEROUTINE> and <CODEROUTINE>whoami</CODEROUTINE> subprocesses.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-run --deny-run="whoami,ps" script.ts</CODEROUTINE></TERM>
+    <DESC>Allow running running all programs, but <CODEROUTINE>whoami</CODEROUTINE> and <CODEROUTINE>ps</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --deny-run script.ts</CODEROUTINE></TERM>
+    <DESC>Deny all access for spawning subprocessing, disabling permission prompts.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-ffi script.ts</CODEROUTINE></TERM>
+    <DESC>Allow loading dynamic all libraries</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-ffi=./libfoo.so script.ts</CODEROUTINE></TERM>
+    <DESC>Allow loading dynamic libraries from a specific path.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --allow-ffi --deny-ffi=./libfoo.so script.ts</CODEROUTINE></TERM>
+    <DESC>Allow loading all dynamic libraries, but <CODEFILENAME>./libfoo.so</CODEFILENAME>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>deno run --deny-ffi script.ts</CODEROUTINE></TERM>
+    <DESC>Deny loading all dynamic libraries, disabling permission prompts.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
