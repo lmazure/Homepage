@@ -128,8 +128,11 @@
     get the audit of project https://gitlab.com/henixdevelopment/open-source/opentestfactory/orchestrator
     <CODESAMPLE>curl --header "PRIVATE-TOKEN: &lt;token&gt;" https://gitlab.com/api/v4/projects/27352872/audit_events?per_page=500&amp;page=1</CODESAMPLE>
   </ITEM>
+  <ITEM>in order to see what someone has crontibuted, rather use <CODEROUTINE>Merged by</CODEROUTINE> rather than <CODEROUTINE>Author</CODEROUTINE><BR/>
+    <X><T>https://gitlab.com/groups/henixdevelopment/open-source/-/merge_requests/?sort=updated_desc&amp;state=merged&amp;merge_user=lmazure&amp;first_page_size=20</T><A>https://gitlab.com/groups/henixdevelopment/open-source/-/merge_requests/?sort=updated_desc&amp;state=merged&amp;merge_user=lmazure&amp;first_page_size=20</A><L>en</L><F>HTML</F></X>
+  </ITEM>
   <ITEM>
-    <BLIST><TITLE>Sorting a package in the registry with Maven</TITLE>
+    <BLIST><TITLE>Store a package in the registry with Maven</TITLE>
       <ITEM>configure the repository in <CODEFILENAME>pom.xml</CODEFILENAME>
         <CODESAMPLE>&lt;repositories&gt;<BR/>
           <TAB/>&lt;repository&gt;<BR/>
