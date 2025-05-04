@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -495,19 +495,21 @@
     the <CODEROUTINE>else</CODEROUTINE> clause is not executed</ITEM>
   <ITEM><CODEROUTINE>continue</CODEROUTINE> continues with the next iteration of the loop</ITEM>
   <ITEM><CODEROUTINE>pass</CODEROUTINE> is a noop statement</ITEM>
-  <ITEM>Matching constants (<CODEROUTINE>_</CODEROUTINE>) always matches
-    <CODESAMPLE>match status:<BR/>
-      <TAB/>case 400:<BR/>
-      <TAB/><TAB/>return "Bad request"<BR/>
-      <TAB/>case 401 | 403 | 404:<BR/>
-      <TAB/><TAB/>return "Not allowed"<BR/>
-      <TAB/>case 404:<BR/>
-      <TAB/><TAB/>return "Not found"<BR/>
-      <TAB/>case 418:<BR/>
-      <TAB/><TAB/>return "I'm a teapot"<BR/>
-      <TAB/>case _:<BR/>
-      <TAB/><TAB/>return "Something’s wrong with the internet"</CODESAMPLE>
-  </ITEM>
+  <ITEM><BLIST><TITLE>Structural Pattern Matching</TITLE>
+    <ITEM><CODEROUTINE>_</CODEROUTINE> is a wildcard always matching
+      <CODESAMPLE>match status:<BR/>
+        <TAB/>case 400:<BR/>
+        <TAB/><TAB/>return "Bad request"<BR/>
+        <TAB/>case 401 | 403 | 404:<BR/>
+        <TAB/><TAB/>return "Not allowed"<BR/>
+        <TAB/>case 404:<BR/>
+        <TAB/><TAB/>return "Not found"<BR/>
+        <TAB/>case 418:<BR/>
+        <TAB/><TAB/>return "I'm a teapot"<BR/>
+        <TAB/>case _:<BR/>
+        <TAB/><TAB/>return "Something’s wrong with the internet"</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Function</B></U></TITLE>
   <ITEM>Syntax (the docstring is optional):
