@@ -90,7 +90,7 @@
     <CODESAMPLE>[[ ! -z ${MYVAR+z} ]] &amp;&amp; echo "Set" || echo "Not defined"</CODESAMPLE>
   </ITEM>
 </BLIST>
-<BLIST><TITLE><U><B>Builtin commands</B></U></TITLE>
+<BLIST><TITLE><U><B>Built-in commands</B></U></TITLE>
   <ITEM><CODEROUTINE>hash</CODEROUTINE> is used to manage the cache of the command to the directories in <CODEROUTINE>PATH</CODEROUTINE> do not have to be scanned every time<BR/>
     <CODEROUTINE>hash -l</CODEROUTINE> dumps the cache<BR/>
     <CODEROUTINE>hash -r</CODEROUTINE> empties the cache

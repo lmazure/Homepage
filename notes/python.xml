@@ -797,7 +797,7 @@
     <TAB/>e.add_note('Add some more information')<BR/>
     <TAB/>raise</CODESAMPLE>
   </ITEM>
-  <ITEM>The builtin <CODEROUTINE>ExceptionGroup</CODEROUTINE> wraps a list of exception instances so that they can be raised together. It is an exception itself, so it can be caught like any other exception.
+  <ITEM>The built-in <CODEROUTINE>ExceptionGroup</CODEROUTINE> wraps a list of exception instances so that they can be raised together. It is an exception itself, so it can be caught like any other exception.
     <CODESAMPLE>def f():<BR/>
     <TAB/>excs = [OSError('error 1'), SystemError('error 2')]<BR/>
     <TAB/>raise ExceptionGroup('there were problems', excs)</CODESAMPLE>
