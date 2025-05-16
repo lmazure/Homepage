@@ -393,6 +393,17 @@ Multi-selection
 Edition
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Z"/><BR/>
+      <CODEROUTINE>Undo</CODEROUTINE></TERM>
+    <DESC>Undo</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Z"/>
+      <MODIFIERKEY id="Ctrl"/><KEY id="Y"/><BR/>
+      <CODEROUTINE>Redo</CODEROUTINE></TERM>
+    <DESC>Redo</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>Sort Lines Ascending</CODEROUTINE></TERM>
     <DESC>Sort lines in increasing order</DESC>
   </ROW>
