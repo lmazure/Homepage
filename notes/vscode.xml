@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -113,12 +113,12 @@ File
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Tab"/><BR/>
       <CODEROUTINE>View: Quick Open Least Recently Used Editor in Group</CODEROUTINE></TERM>
-    <DESC>Navigate backward history of file</DESC>
+    <DESC>Navigate backward history of opened tabs</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Tab"/><BR/>
       <CODEROUTINE>View: Quick Open Previous Recently Used Editor in Group</CODEROUTINE></TERM>
-    <DESC>Navigate forward history of file</DESC>
+    <DESC>Navigate forward history of opened tabs</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="E"/><BR/>
@@ -404,6 +404,11 @@ Edition
     <DESC>Redo</DESC>
   </ROW>
   <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="K"/><BR/>
+      <CODEROUTINE>Delete line</CODEROUTINE></TERM>
+    <DESC>Delete line</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>Sort Lines Ascending</CODEROUTINE></TERM>
     <DESC>Sort lines in increasing order</DESC>
   </ROW>
@@ -414,6 +419,14 @@ Edition
   <ROW>
     <TERM><CODEROUTINE>Delete Duplicate Lines</CODEROUTINE></TERM>
     <DESC>Delete duplicate lines</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="Enter"/></TERM>
+    <DESC>Insert Line Above</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Enter"/></TERM>
+    <DESC>Insert Line Below</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="Up"/></TERM>
@@ -430,6 +443,24 @@ Edition
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="Shift"/><KEY id="Down"/></TERM>
     <DESC>Copy line down</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Alt"/><KEY id="Space"/></TERM>
+    <DESC>Display autocompletion</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id=";"/></TERM>
+    <DESC>Quick fix…</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="^"/><BR/>
+      <CODEROUTINE>Indent line</CODEROUTINE></TERM>
+    <DESC>Indent line</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id=")"/><BR/>
+      <CODEROUTINE>Outdent line</CODEROUTINE></TERM>
+    <DESC>Outdent line</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <MODIFIERKEY id="Ctrl"/><KEY id="C"/><BR/>
@@ -543,6 +574,22 @@ Navigation between editors
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Left"/><BR/>
       <CODEROUTINE>View: Move Editor into Previous Group</CODEROUTINE></TERM>
     <DESC>Move editor into previous group</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="&amp;"/></TERM>
+    <DESC>Set focus on the first tab group</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="é"/></TERM>
+    <DESC>Set second on the second tab group</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="&quot;"/></TERM>
+    <DESC>Set focus on the third tab group</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="'"/></TERM>
+    <DESC>Set focus on the fourth tab group</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

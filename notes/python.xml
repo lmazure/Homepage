@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -362,6 +362,10 @@
         months = [ "jan", "feb", "mar", "apr", "may" ]<BR/>
         for l, n, m in zip (letters, numbers, months):<BR/>
         <TAB/>print(l, n , m)</CODESAMPLE>
+      So, to transpose a list of lists:
+      <CODESAMPLE><PROMPT/> l = [[11, 12, 13, 14], [21, 22, 23, 24], [31, 32, 33, 34]]<BR/>
+      <PROMPT/> [list(i) for i in zip(*l)]<BR/>
+      [[11, 21, 31], [12, 22, 32], [13, 23, 33], [14, 24, 34]]</CODESAMPLE>
     </ITEM>
     <ITEM>To loop over a sequence in reverse, first specify the sequence in a forward direction and then call <CODEROUTINE>reversed()</CODEROUTINE>
       <CODESAMPLE>for i in reversed(range(1, 10, 2)):<BR/>
@@ -490,7 +494,15 @@
   <ITEM>Use <CODEROUTINE>range</CODEROUTINE> for iterating over a sequence of numbers<BR/>
     <CODEROUTINE>range(stop)</CODEROUTINE> returns <CODEROUTINE>[0, 1, 2… stop-1]</CODEROUTINE><BR/>
     <CODEROUTINE>range(start, stop)</CODEROUTINE> returns <CODEROUTINE>[start, start+1… stop-1]</CODEROUTINE><BR/>
-    <CODEROUTINE>range(start, stop, incr)</CODEROUTINE> returns <CODEROUTINE>[start, start+incr… stop-incr]</CODEROUTINE></ITEM>
+    <CODEROUTINE>range(start, stop, incr)</CODEROUTINE> returns <CODEROUTINE>[start, start+incr… stop-incr]</CODEROUTINE><BR/>
+    <CODESAMPLE><PROMPT/> r = range(-1, -6, -1)<BR/>
+    <PROMPT/> for i in r:<BR/>
+    <PROMPT/><TAB/>print(i)<BR/>
+    -1<BR/>
+    -2<BR/>
+    -3<BR/>
+    -4<BR/>
+    -5</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>break</CODEROUTINE> breaks out of the smallest enclosing <CODEROUTINE>for</CODEROUTINE> or <CODEROUTINE>while</CODEROUTINE> loop<BR/>
     the <CODEROUTINE>else</CODEROUTINE> clause is not executed</ITEM>
   <ITEM><CODEROUTINE>continue</CODEROUTINE> continues with the next iteration of the loop</ITEM>
