@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -54,9 +54,19 @@
     <DESC>Show/hide bottom panel</DESC>
   </ROW>
   <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="U"/><BR/>
+      <CODEROUTINE>View: Toggle Output</CODEROUTINE></TERM>
+    <DESC>Show/hide output panel</DESC>
+  </ROW>
+  <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="ù"/><BR/>
       <CODEROUTINE>View: Toggle Terminal</CODEROUTINE></TERM>
     <DESC>Show/hide terminal</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="ù"/><BR/>
+      <CODEROUTINE>Terminal: Create New Terminal</CODEROUTINE></TERM>
+    <DESC>Create a new terminal</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="M"/><BR/>
