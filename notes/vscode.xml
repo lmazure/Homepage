@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -457,6 +457,11 @@ Edition
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="Space"/></TERM>
     <DESC>Display autocompletion</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F2"/><BR/>
+      <CODEROUTINE>Rename Symbol</CODEROUTINE></TERM>
+    <DESC>Rename</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id=";"/></TERM>
