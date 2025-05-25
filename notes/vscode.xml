@@ -698,6 +698,7 @@ Search/replace
   </SLIST></ITEM>
 </BLIST>
 <BR/>
+Comparison
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>Compare: Toggle Inline View</CODEROUTINE></TERM>
@@ -725,6 +726,7 @@ Search/replace
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Casing
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>Transform to Lowercase</CODEROUTINE></TERM>
@@ -748,6 +750,7 @@ Search/replace
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Code navigation
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Alt"/><KEY id="F12"/></TERM>
@@ -762,6 +765,7 @@ Search/replace
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Source code management
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/></TERM>
@@ -770,6 +774,7 @@ Search/replace
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
+Debug
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="D"/></TERM>
@@ -804,6 +809,41 @@ Search/replace
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F5"/><BR/>
     <CODEROUTINE>Debug: Restart</CODEROUTINE></TERM>
     <DESC>Relaunch the program in debug mode</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F9"/><BR/>
+    <CODEROUTINE>Debug: Toggle Breakpoint</CODEROUTINE></TERM>
+    <DESC>Toggle line breakpoint</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F9"/><BR/>
+    <CODEROUTINE>Debug: Inline Breakpoint</CODEROUTINE></TERM>
+    <DESC>Toggle inline breakpoint</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F10"/><BR/>
+    <CODEROUTINE>Debug: Step Over</CODEROUTINE></TERM>
+    <DESC>Step over</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F11"/><BR/>
+    <CODEROUTINE>Debug: Step Into</CODEROUTINE></TERM>
+    <DESC>Step into</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Shift"/><KEY id="F11"/><BR/>
+    <CODEROUTINE>Debug: Step Out</CODEROUTINE></TERM>
+    <DESC>Step out</DESC>
+  </ROW>
+  <ROW>
+    <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F11"/><BR/>
+    <CODEROUTINE>Debug: Step Into Target</CODEROUTINE></TERM>
+    <DESC>Step into callee</DESC>
+  </ROW>
+  <ROW>
+    <TERM><KEY id="F6"/><BR/>
+    <CODEROUTINE>Debug: Pause</CODEROUTINE></TERM>
+    <DESC>Step on the first next line to be executed</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
