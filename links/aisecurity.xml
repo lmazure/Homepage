@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI security/safety</TITLE>
 <PATH>links/aisecurity.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -94,6 +94,7 @@
     <ITEM><ARTICLE><X quality="-1"><T>"L’IA est déjà hors de contrôle." - Charbel-Raphaël Segerie</T><A>https://www.youtube.com/watch?v=_wr55txHiYs</A><L>fr</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>20</MINUTE><SECOND>53</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Charbel-Raphaël</FIRSTNAME><LASTNAME>Segerie</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Shaïman</FIRSTNAME><LASTNAME>Türler</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>19</DAY></DATE><COMMENT>Such speakers are not helping to really think about the risks of AI: he puts forward some claims with not a single real source or real argument, his discourse is fully biased against AI…</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>'Forbidden' AI Technique - Computerphile</T><A>https://www.youtube.com/watch?v=Xx4Tpsk_fnM</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>48</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Chana</FIRSTNAME><LASTNAME>Messinger</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>20</DAY></DATE><COMMENT>If you perform RL to detect cheating by analysing the chain of thoughts; the model will learn to hide its "thoughts". As usual, Computerphile is not giving its source, here it is "<X><T>Monitoring Reasoning Models for Misbehavior and the Risks of Promoting Obfuscation</T><A>https://arxiv.org/abs/2503.11926</A><L>en</L><F>HTML</F></X>". The problem is they that they are assuming that the CoT is the real reasoning of the model, this has been proven wrong in an Anthropic study.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Remote Prompt Injection in GitLab Duo Leads to Source Code Theft</T><A>https://www.legitsecurity.com/blog/remote-prompt-injection-in-gitlab-duo</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Omer</FIRSTNAME><LASTNAME>Mayraz</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE><COMMENT>GitLab suffered the classical problem of prompt injection and data exfiltration using an <CODEROUTINE>&lt;img&gt;</CODEROUTINE> URL.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>GitHub MCP Exploited: Accessing private repositories via MCP</T><A>https://simonwillison.net/2025/May/26/github-mcp-exploited/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>26</DAY></DATE><COMMENT>Yet another example of data exfiltration using AI, this time via GitHub’s MCP.</COMMENT></ARTICLE></ITEM>
   </BLIST></ITEM>
 </LLIST>
 </CONTENT>
