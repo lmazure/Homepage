@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -859,7 +859,13 @@
 </BLIST>
 <BLIST><TITLE><U><B><CODEROUTINE>os</CODEROUTINE></B></U></TITLE>
   <ITEM><CODEROUTINE>os.listdir(path='.')</CODEROUTINE>: return a list containing the names of the entries in the directory given by <CODEROUTINE>path</CODEROUTINE>.</ITEM>
-  <ITEM><CODEROUTINE>os.walk(top, topdown=True, onerror=None, followlinks=False)</CODEROUTINE>: Generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple <CODEROUTINE>(dirpath, dirnames, filenames)</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>os.path.commonpath(paths)</CODEROUTINE> return the longest common sub-path of each pathname in the iterable paths. 
+	  <CODESAMPLE><PROMPT/>paths = ['/usr/local/bin', '/usr/bin'] <BR/>
+      <PROMPT/>prefix = os.path.commonpath(paths)<BR/>
+      <PROMPT/>print("Longest common sub-path:", prefix)<BR/>
+      Longest common sub-path: \usr</CODESAMPLE>
+  </ITEM>
+  <ITEM><CODEROUTINE>os.walk(top, topdown=True, onerror=None, followlinks=False)</CODEROUTINE>: generate the file names in a directory tree by walking the tree either top-down or bottom-up. For each directory in the tree rooted at directory top (including top itself), it yields a 3-tuple <CODEROUTINE>(dirpath, dirnames, filenames)</CODEROUTINE>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Virtual environments</B></U></TITLE>
   <ITEM>Virtual environments are managed by the <CODEROUTINE>venv</CODEROUTINE> module.
