@@ -391,6 +391,66 @@
   <ITEM>Create an empty set
     <CODESAMPLE>s = set()</CODESAMPLE>
   </ITEM>
+  <ITEM>Union
+    <CODESAMPLE><PROMPT/>{ 1, 2, 3 } | { 4, 5 }<BR/>
+      {1, 2, 3, 4, 5}<BR/>
+      <PROMPT/>{ 1, 2, 3 }.union({ 4, 5 })<BR/>
+      {1, 2, 3, 4, 5}</CODESAMPLE>
+  </ITEM>
+  <ITEM>Intersection
+    <CODESAMPLE><PROMPT/>{ 1, 2, 3, 4, } &amp; { 2, 3 }<BR/>
+      {2, 3}<BR/>
+      <PROMPT/>{ 1, 2, 3, 4, }.intersection({ 2, 3 })<BR/>
+      {2, 3}</CODESAMPLE>
+  </ITEM>
+  <ITEM>Symmetric difference
+    <CODESAMPLE><PROMPT/>{ 1, 2, 3, 4, } ^ { 2, 3, 5, 6 }<BR/>
+      {1, 4, 5, 6}<BR/>
+      <PROMPT/>{ 1, 2, 3, 4, }.symmetric_difference({ 2, 3, 5, 6 })<BR/>
+      {1, 4, 5, 6}</CODESAMPLE>
+  </ITEM>
+  <ITEM>Difference
+    <CODESAMPLE><PROMPT/>{ 1, 2, 3, 4, } - { 2, 3, 5, 6 }<BR/>
+      {1, 4}<BR/>
+      <PROMPT/>{ 1, 2, 3, 4, }.difference({ 2, 3, 5, 6 })<BR/>
+      {1, 4}</CODESAMPLE>
+  </ITEM>
+  <ITEM>Inclusion
+    <CODESAMPLE><PROMPT/>{ 1, 2, 3, 4, } - { 2, 3, 5, 6 }<BR/>
+      {1, 4}<BR/>
+      <PROMPT/>{ 1, 2, 3, 4, }.difference({ 2, 3, 5, 6 })<BR/>
+      {1, 4}</CODESAMPLE>
+  </ITEM>
+  <ITEM><CODEROUTINE>isdisjoint(other)</CODEROUTINE>: Return True if the set has no elements in common with other. Sets are disjoint if and only if their intersection is the empty set.</ITEM>
+  <ITEM><CODEROUTINE>issubset(other)</CODEROUTINE><BR/>
+    <CODEROUTINE>set &lt;= other</CODEROUTINE>: Test whether every element in the set is in other.
+  </ITEM>
+  <ITEM><CODEROUTINE>set &lt; other</CODEROUTINE>: Test whether the set is a proper subset of other, that is, <CODEROUTINE>set &lt;= other and set != other</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>issuperset(other)</CODEROUTINE><BR/>
+    <CODEROUTINE>set &gt;= other</CODEROUTINE>: Test whether every element in other is in the set.
+  </ITEM>
+  <ITEM><CODEROUTINE>set &gt; other</CODEROUTINE>: Test whether the set is a proper superset of other, that is, <CODEROUTINE>set &gt;= other and set != other</CODEROUTINE>.</ITEM>
+  <ITEM><CODEROUTINE>union(*others)</CODEROUTINE><BR/>
+    <CODEROUTINE>set | other | ...</CODEROUTINE>: Return a new set with elements from the set and all others.</ITEM>
+  <ITEM><CODEROUTINE>intersection(*others)</CODEROUTINE><BR/>
+    <CODEROUTINE>set &amp; other &amp; ...</CODEROUTINE>: Return a new set with elements common to the set and all others.</ITEM>
+  <ITEM><CODEROUTINE>difference(*others)</CODEROUTINE><BR/>
+    <CODEROUTINE>set - other - ...</CODEROUTINE>: Return a new set with elements in the set that are not in the others.</ITEM>
+  <ITEM><CODEROUTINE>symmetric_difference(other)</CODEROUTINE><BR/>
+    <CODEROUTINE>set ^ other</CODEROUTINE>: Return a new set with elements in either the set or other but not both.</ITEM>
+  <ITEM><CODEROUTINE>update(*others)</CODEROUTINE><BR/>
+    <CODEROUTINE>set |= other | ...</CODEROUTINE>: Update the set, adding elements from all others.</ITEM>
+  <ITEM><CODEROUTINE>intersection_update(*others)</CODEROUTINE><BR/>
+    <CODEROUTINE>set &amp;= other &amp; ...</CODEROUTINE>: Update the set, keeping only elements found in it and all others.</ITEM>
+  <ITEM><CODEROUTINE>difference_update(*others)</CODEROUTINE><BR/>
+    <CODEROUTINE>set -= other | ...</CODEROUTINE>: Update the set, removing elements found in others.</ITEM>
+  <ITEM><CODEROUTINE>symmetric_difference_update(other)</CODEROUTINE><BR/>
+    <CODEROUTINE>set ^= other</CODEROUTINE>: Update the set, keeping only elements found in either set, but not in both.</ITEM>
+  <ITEM><CODEROUTINE>add(elem)</CODEROUTINE>: Add element elem to the set.</ITEM>
+  <ITEM><CODEROUTINE>remove(elem)</CODEROUTINE>: Remove element elem from the set. Raises <CODEROUTINE>KeyError</CODEROUTINE> if <CODEROUTINE>elem</CODEROUTINE> is not contained in the set.</ITEM>
+  <ITEM><CODEROUTINE>discard(elem)</CODEROUTINE>: Remove element elem from the set if it is present.</ITEM>
+  <ITEM><CODEROUTINE>pop()</CODEROUTINE>: Remove and return an arbitrary element from the set. Raises <CODEROUTINE>KeyError</CODEROUTINE> if the set is empty.</ITEM>
+  <ITEM><CODEROUTINE>clear()</CODEROUTINE>: Remove all elements from the set.</ITEM>
   <ITEM>Set comprehension
     <CODESAMPLE><PROMPT/>{s**2 for s in range(10)}<BR/>
       {0, 1, 64, 4, 36, 9, 16, 49, 81, 25}</CODESAMPLE>
