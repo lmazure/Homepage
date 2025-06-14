@@ -8,164 +8,169 @@
 <BLIST><TITLE><U><B>process analysis</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>ps</T><A>https://man7.org/linux/man-pages/man1/ps.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>list the running processes</DESC></ROW>
-<ROW><TERM><CODEROUTINE>--forest</CODEROUTINE></TERM><DESC>display the forest of the processes</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-e</CODEROUTINE><BR/><CODEROUTINE>-A</CODEROUTINE></TERM><DESC>display all the processes</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-f</CODEROUTINE></TERM><DESC>display in full format</DESC></ROW>
-<ROW><TERM><CODEROUTINE>h</CODEROUTINE></TERM><DESC>suppress column headers</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-o</CODEROUTINE></TERM><DESC>user defined format
-(this table is incomplete and some lines are out of date)
-<TABLE>
-<ROW><CELL>code</CELL><CELL>header</CELL><CELL>description</CELL></ROW>
-<ROW><CELL><CODEROUTINE>cmd</CODEROUTINE></CELL><CELL>CMD</CELL><CELL>simple name of executable</CELL></ROW>
-<ROW><CELL><CODEROUTINE>flags</CODEROUTINE></CELL><CELL>F</CELL><CELL>flags as in long format F field</CELL></ROW>
-<ROW><CELL><CODEROUTINE>pgrp</CODEROUTINE></CELL><CELL></CELL><CELL>process group ID</CELL></ROW>
-<ROW><CELL><CODEROUTINE>tpgid</CODEROUTINE></CELL><CELL></CELL><CELL>controlling tty process group ID</CELL></ROW>
-<ROW><CELL><CODEROUTINE>cutime</CODEROUTINE></CELL><CELL></CELL><CELL>cumulative user time</CELL></ROW>
-<ROW><CELL><CODEROUTINE>cstime</CODEROUTINE></CELL><CELL></CELL><CELL>cumulative system time</CELL></ROW>
-<ROW><CELL><CODEROUTINE>utime</CODEROUTINE></CELL><CELL></CELL><CELL>user time</CELL></ROW>
-<ROW><CELL><CODEROUTINE>stime</CODEROUTINE></CELL><CELL></CELL><CELL>system time</CELL></ROW>
-<ROW><CELL><CODEROUTINE>min_flt</CODEROUTINE></CELL><CELL></CELL><CELL>number of minor page faults</CELL></ROW>
-<ROW><CELL><CODEROUTINE>maj_flt</CODEROUTINE></CELL><CELL></CELL><CELL>number of major page faults</CELL></ROW>
-<ROW><CELL><CODEROUTINE>cmin_flt</CODEROUTINE></CELL><CELL></CELL><CELL>cumulative minor page faults</CELL></ROW>
-<ROW><CELL><CODEROUTINE>cmaj_flt</CODEROUTINE></CELL><CELL></CELL><CELL>cumulative major page faults</CELL></ROW>
-<ROW><CELL><CODEROUTINE>session</CODEROUTINE></CELL><CELL></CELL><CELL>session ID</CELL></ROW>
-<ROW><CELL><CODEROUTINE>pid</CODEROUTINE></CELL><CELL></CELL><CELL>process ID</CELL></ROW>
-<ROW><CELL><CODEROUTINE>ppid</CODEROUTINE></CELL><CELL></CELL><CELL>parent process ID</CELL></ROW>
-<ROW><CELL><CODEROUTINE>rss</CODEROUTINE></CELL><CELL height="2">RSS</CELL><CELL height="3">resident set size<BR/>the non-swapped physical memory that a task has used (in kiloBytes)</CELL></ROW>
-<ROW><CELL><CODEROUTINE>rsize</CODEROUTINE></CELL></ROW>
-<ROW><CELL><CODEROUTINE>rsz</CODEROUTINE></CELL><CELL>RSZ</CELL></ROW>
-<ROW><CELL><CODEROUTINE>resident</CODEROUTINE></CELL><CELL></CELL><CELL>resident pages</CELL></ROW>
-<ROW><CELL><CODEROUTINE>size</CODEROUTINE></CELL><CELL>SZ</CELL><CELL>approximate amount of swap space (in kiloBytes) that would be required if the process were to dirty all writable pages and then be swapped out</CELL></ROW>
-<ROW><CELL><CODEROUTINE>share</CODEROUTINE></CELL><CELL></CELL><CELL>amount of shared pages</CELL></ROW>
-<ROW><CELL><CODEROUTINE>tty</CODEROUTINE></CELL><CELL></CELL><CELL>the minor device number of tty</CELL></ROW>
-<ROW><CELL><CODEROUTINE>start_time</CODEROUTINE></CELL><CELL></CELL><CELL>time process was started</CELL></ROW>
-<ROW><CELL><CODEROUTINE>sz</CODEROUTINE></CELL><CELL>SZ</CELL><CELL>size in physical pages of the core image of the process</CELL></ROW>
-<ROW><CELL><CODEROUTINE>uid</CODEROUTINE></CELL><CELL></CELL><CELL>user ID number</CELL></ROW>
-<ROW><CELL><CODEROUTINE>user</CODEROUTINE></CELL><CELL></CELL><CELL>user name</CELL></ROW>
-<ROW><CELL><CODEROUTINE>vsize</CODEROUTINE></CELL><CELL height="2">VSZ</CELL><CELL height="2">virtual memory usage (in kiloBytes) of entire process<BR/>vm_lib + vm_exe + vm_data + vm_stack </CELL></ROW>
-<ROW><CELL><CODEROUTINE>vsz</CODEROUTINE></CELL></ROW>
-<ROW><CELL><CODEROUTINE>priority</CODEROUTINE></CELL><CELL></CELL><CELL>kernel scheduling priority</CELL></ROW>
-</TABLE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-efLm</CODEROUTINE></TERM><DESC>list the number of threads and the threads of each process</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-eLm 123</CODEROUTINE></TERM><DESC>list the threads of process 123</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>ps</T><A>https://man7.org/linux/man-pages/man1/ps.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>list the running processes</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>--forest</CODEROUTINE></TERM><DESC>display the forest of the processes</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-e</CODEROUTINE><BR/><CODEROUTINE>-A</CODEROUTINE></TERM><DESC>display all the processes</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-f</CODEROUTINE></TERM><DESC>display in full format</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>h</CODEROUTINE></TERM><DESC>suppress column headers</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-o</CODEROUTINE></TERM><DESC>user defined format
+    (this table is incomplete and some lines are out of date)
+    <TABLE>
+      <ROW><CELL>code</CELL><CELL>header</CELL><CELL>description</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>cmd</CODEROUTINE></CELL><CELL>CMD</CELL><CELL>simple name of executable</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>flags</CODEROUTINE></CELL><CELL>F</CELL><CELL>flags as in long format F field</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>pgrp</CODEROUTINE></CELL><CELL></CELL><CELL>process group ID</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>tpgid</CODEROUTINE></CELL><CELL></CELL><CELL>controlling tty process group ID</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>cutime</CODEROUTINE></CELL><CELL></CELL><CELL>cumulative user time</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>cstime</CODEROUTINE></CELL><CELL></CELL><CELL>cumulative system time</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>utime</CODEROUTINE></CELL><CELL></CELL><CELL>user time</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>stime</CODEROUTINE></CELL><CELL></CELL><CELL>system time</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>min_flt</CODEROUTINE></CELL><CELL></CELL><CELL>number of minor page faults</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>maj_flt</CODEROUTINE></CELL><CELL></CELL><CELL>number of major page faults</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>cmin_flt</CODEROUTINE></CELL><CELL></CELL><CELL>cumulative minor page faults</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>cmaj_flt</CODEROUTINE></CELL><CELL></CELL><CELL>cumulative major page faults</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>session</CODEROUTINE></CELL><CELL></CELL><CELL>session ID</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>pid</CODEROUTINE></CELL><CELL></CELL><CELL>process ID</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>ppid</CODEROUTINE></CELL><CELL></CELL><CELL>parent process ID</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>rss</CODEROUTINE></CELL><CELL height="2">RSS</CELL><CELL height="3">resident set size<BR/>the non-swapped physical memory that a task has used (in kiloBytes)</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>rsize</CODEROUTINE></CELL></ROW>
+      <ROW><CELL><CODEROUTINE>rsz</CODEROUTINE></CELL><CELL>RSZ</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>resident</CODEROUTINE></CELL><CELL></CELL><CELL>resident pages</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>size</CODEROUTINE></CELL><CELL>SZ</CELL><CELL>approximate amount of swap space (in kiloBytes) that would be required if the process were to dirty all writable pages and then be swapped out</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>share</CODEROUTINE></CELL><CELL></CELL><CELL>amount of shared pages</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>tty</CODEROUTINE></CELL><CELL></CELL><CELL>the minor device number of tty</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>start_time</CODEROUTINE></CELL><CELL></CELL><CELL>time process was started</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>sz</CODEROUTINE></CELL><CELL>SZ</CELL><CELL>size in physical pages of the core image of the process</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>uid</CODEROUTINE></CELL><CELL></CELL><CELL>user ID number</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>user</CODEROUTINE></CELL><CELL></CELL><CELL>user name</CELL></ROW>
+      <ROW><CELL><CODEROUTINE>vsize</CODEROUTINE></CELL><CELL height="2">VSZ</CELL><CELL height="2">virtual memory usage (in kiloBytes) of entire process<BR/>vm_lib + vm_exe + vm_data + vm_stack </CELL></ROW>
+      <ROW><CELL><CODEROUTINE>vsz</CODEROUTINE></CELL></ROW>
+      <ROW><CELL><CODEROUTINE>priority</CODEROUTINE></CELL><CELL></CELL><CELL>kernel scheduling priority</CELL></ROW>
+    </TABLE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-efLm</CODEROUTINE></TERM><DESC>list the number of threads and the threads of each process</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-eLm 123</CODEROUTINE></TERM><DESC>list the threads of process 123</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>fuser</T><A>https://man7.org/linux/man-pages/man1/fuser.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>indicate the processes using a file or a socket</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-m path</CODEROUTINE></TERM><DESC>list the process accessing the mounted file system containing <CODEROUTINE>path</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-v</CODEROUTINE></TERM><DESC>display the commands in addition to the PIDs</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-k</CODEROUTINE></TERM><DESC>kill the processes with SIGKILL</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-ki</CODEROUTINE></TERM><DESC>ask for confirmation before killing processes</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-&lt;signal&gt;</CODEROUTINE></TERM><DESC>kill the processes with <CODEROUTINE>signal</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>pv</T><A>https://www.man7.org/linux/man-pages/man1/pv.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>monitor the progress of data through a pipe</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>pstack</T><A>https://www.unix.com/man_page/redhat/1/pstack/</A><L>en</L><F>HTML</F></X> pid […]</CODEROUTINE></TERM><DESC>print a stack trace of running processes</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>fuser</T><A>https://man7.org/linux/man-pages/man1/fuser.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>indicate the processes using a file or a socket</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-m path</CODEROUTINE></TERM><DESC>list the process accessing the mounted file system containing <CODEROUTINE>path</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-v</CODEROUTINE></TERM><DESC>display the commands in addition to the PIDs</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-k</CODEROUTINE></TERM><DESC>kill the processes with SIGKILL</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-ki</CODEROUTINE></TERM><DESC>ask for confirmation before killing processes</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-&lt;signal&gt;</CODEROUTINE></TERM><DESC>kill the processes with <CODEROUTINE>signal</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>pmap</T><A>https://man7.org/linux/man-pages/man1/pmap.1.html</A><L>en</L><F>HTML</F></X> pid</CODEROUTINE></TERM><DESC>list the memory mappings of the process</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>pstack</T><A>https://www.unix.com/man_page/redhat/1/pstack/</A><L>en</L><F>HTML</F></X> pid […]</CODEROUTINE></TERM><DESC>print a stack trace of running processes</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>strace</T><A>https://man7.org/linux/man-pages/man1/strace.1.html</A><L>en</L><F>HTML</F></X> command</CODEROUTINE></TERM><DESC>trace the system calls of a process</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-p pid</CODEROUTINE></TERM><DESC>attach to process <CODEROUTINE>pid</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-f</CODEROUTINE></TERM><DESC>follow the child processes</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-s 128</CODEROUTINE></TERM><DESC>set the string truncation limit to 128</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-o &lt;file&gt;</CODEROUTINE></TERM><DESC>write trace in file <CODEROUTINE>&lt;file&gt;</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-ff</CODEROUTINE></TERM><DESC>(use with <CODEROUTINE>-o</CODEROUTINE>) write trace in <CODEROUTINE>&lt;file&gt;.pid</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-e trace=file</CODEROUTINE></TERM><DESC>trace all system calls which take a file name as a parameter</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-e trace=mmap2,munmap</CODEROUTINE></TERM><DESC>trace the memory map system calls</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-f -e trace=execvp -s 128</CODEROUTINE></TERM><DESC>follow the hierarchy of <CODEROUTINE>fork</CODEROUTINE>s/<CODEROUTINE>exec</CODEROUTINE>s</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>pmap</T><A>https://man7.org/linux/man-pages/man1/pmap.1.html</A><L>en</L><F>HTML</F></X> pid</CODEROUTINE></TERM><DESC>list the memory mappings of the process</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>ltrace</T><A>https://man7.org/linux/man-pages/man1/ltrace.1.html</A><L>en</L><F>HTML</F></X> command</CODEROUTINE></TERM><DESC>trace the library calls of a process</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-p pid</CODEROUTINE></TERM><DESC>attach to process <CODEROUTINE>pid</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-C</CODEROUTINE></TERM><DESC>demangle the C++ names</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-s 128</CODEROUTINE></TERM><DESC>set the string truncation limit to 128</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-S</CODEROUTINE></TERM><DESC>display also the system calls</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-A col</CODEROUTINE></TERM><DESC>align the return values on column <CODEROUTINE>col</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-l lib</CODEROUTINE></TERM><DESC>limit the traces to the specified library<BR/>
-for example, trace the calls to the <CODEROUTINE>foobar.so</CODEROUTINE> library:<BR/>
-<CODESAMPLE><PROMPT/>ltrace -C -l /the/path/foobar.so quux</CODESAMPLE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-f</CODEROUTINE></TERM><DESC>follow the child processes</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-o &lt;file&gt;</CODEROUTINE></TERM><DESC>write trace in file <CODEROUTINE>&lt;file&gt;</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-ff</CODEROUTINE></TERM><DESC>(use with <CODEROUTINE>-o</CODEROUTINE>) write trace in <CODEROUTINE>&lt;file&gt;.pid</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>strace</T><A>https://man7.org/linux/man-pages/man1/strace.1.html</A><L>en</L><F>HTML</F></X> command</CODEROUTINE></TERM><DESC>trace the system calls of a process</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-p pid</CODEROUTINE></TERM><DESC>attach to process <CODEROUTINE>pid</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-f</CODEROUTINE></TERM><DESC>follow the child processes</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-s 128</CODEROUTINE></TERM><DESC>set the string truncation limit to 128</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-o &lt;file&gt;</CODEROUTINE></TERM><DESC>write trace in file <CODEROUTINE>&lt;file&gt;</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-ff</CODEROUTINE></TERM><DESC>(use with <CODEROUTINE>-o</CODEROUTINE>) write trace in <CODEROUTINE>&lt;file&gt;.pid</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-e trace=file</CODEROUTINE></TERM><DESC>trace all system calls which take a file name as a parameter</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-e trace=mmap2,munmap</CODEROUTINE></TERM><DESC>trace the memory map system calls</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-f -e trace=execvp -s 128</CODEROUTINE></TERM><DESC>follow the hierarchy of <CODEROUTINE>fork</CODEROUTINE>s/<CODEROUTINE>exec</CODEROUTINE>s</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>/proc/self</CODEROUTINE></TERM><DESC>the directory of the process itself</DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/cmdline</CODEROUTINE></TERM><DESC>the command line used to starts the process</DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/cwd</CODEROUTINE></TERM><DESC>a link toward the current directory of the process</DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/environ</CODEROUTINE></TERM><DESC>environment of the process<BR/>display it by using<CODESAMPLE>cat environment | tr "\000" "\n"</CODESAMPLE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/root</CODEROUTINE></TERM><DESC>a link toward the root directory of the process</DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/exe</CODEROUTINE></TERM><DESC>a link toward the binary of the process</DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/fd/&lt;fd&gt;</CODEROUTINE></TERM><DESC>a symbolic link toward the file whose file descriptor is <CODEROUTINE>&lt;fd&gt;</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/maps</CODEROUTINE></TERM><DESC>parts of the process’ address space which are currently mapped to a file.<BR/>
-<BLIST><TITLE>The fields, from left to right, are:</TITLE>
-<ITEM>the address space associated to this mapping (start address - end address)</ITEM>
-<ITEM>the permissions associated to this mapping</ITEM>
-<ITEM>the offset from the beginning of the file where the mapping starts</ITEM>
-<ITEM>the device on which the mapped file is located</ITEM>
-<ITEM>the inode number of the file</ITEM>
-<ITEM>the name of the file itself</ITEM></BLIST></DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/mem</CODEROUTINE></TERM><DESC>memory of the process</DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/stat</CODEROUTINE></TERM><DESC>some information</DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/statm</CODEROUTINE></TERM><DESC>summary of the process memory usage</DESC></ROW>
-<ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/status</CODEROUTINE></TERM><DESC>human readable file containing most of the information which is in <CODEROUTINE>/proc/&lt;pid&gt;/stat</CODEROUTINE> and <CODEROUTINE>/proc/&lt;pid&gt;/statm</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>ltrace</T><A>https://man7.org/linux/man-pages/man1/ltrace.1.html</A><L>en</L><F>HTML</F></X> command</CODEROUTINE></TERM><DESC>trace the library calls of a process</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-p pid</CODEROUTINE></TERM><DESC>attach to process <CODEROUTINE>pid</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-C</CODEROUTINE></TERM><DESC>demangle the C++ names</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-s 128</CODEROUTINE></TERM><DESC>set the string truncation limit to 128</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-S</CODEROUTINE></TERM><DESC>display also the system calls</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-A col</CODEROUTINE></TERM><DESC>align the return values on column <CODEROUTINE>col</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-l lib</CODEROUTINE></TERM><DESC>limit the traces to the specified library<BR/>
+    for example, trace the calls to the <CODEROUTINE>foobar.so</CODEROUTINE> library:<BR/>
+    <CODESAMPLE><PROMPT/>ltrace -C -l /the/path/foobar.so quux</CODESAMPLE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-f</CODEROUTINE></TERM><DESC>follow the child processes</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-o &lt;file&gt;</CODEROUTINE></TERM><DESC>write trace in file <CODEROUTINE>&lt;file&gt;</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-ff</CODEROUTINE></TERM><DESC>(use with <CODEROUTINE>-o</CODEROUTINE>) write trace in <CODEROUTINE>&lt;file&gt;.pid</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>nm</T><A>https://man7.org/linux/man-pages/man1/nm.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>dump the symbols of a binary</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-A</CODEROUTINE></TERM><DESC>prepend each line with the filename</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/self</CODEROUTINE></TERM><DESC>the directory of the process itself</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/cmdline</CODEROUTINE></TERM><DESC>the command line used to starts the process</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/cwd</CODEROUTINE></TERM><DESC>a link toward the current directory of the process</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/environ</CODEROUTINE></TERM><DESC>environment of the process<BR/>display it by using<CODESAMPLE>cat environment | tr "\000" "\n"</CODESAMPLE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/root</CODEROUTINE></TERM><DESC>a link toward the root directory of the process</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/exe</CODEROUTINE></TERM><DESC>a link toward the binary of the process</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/fd/&lt;fd&gt;</CODEROUTINE></TERM><DESC>a symbolic link toward the file whose file descriptor is <CODEROUTINE>&lt;fd&gt;</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/maps</CODEROUTINE></TERM><DESC>parts of the process’ address space which are currently mapped to a file.<BR/>
+    <BLIST><TITLE>The fields, from left to right, are:</TITLE>
+    <ITEM>the address space associated to this mapping (start address - end address)</ITEM>
+    <ITEM>the permissions associated to this mapping</ITEM>
+    <ITEM>the offset from the beginning of the file where the mapping starts</ITEM>
+    <ITEM>the device on which the mapped file is located</ITEM>
+    <ITEM>the inode number of the file</ITEM>
+    <ITEM>the name of the file itself</ITEM></BLIST></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/mem</CODEROUTINE></TERM><DESC>memory of the process</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/stat</CODEROUTINE></TERM><DESC>some information</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/statm</CODEROUTINE></TERM><DESC>summary of the process memory usage</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>/proc/&lt;pid&gt;/status</CODEROUTINE></TERM><DESC>human readable file containing most of the information which is in <CODEROUTINE>/proc/&lt;pid&gt;/stat</CODEROUTINE> and <CODEROUTINE>/proc/&lt;pid&gt;/statm</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>objdump</T><A>https://man7.org/linux/man-pages/man1/objdump.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>extract information from object file</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-D</CODEROUTINE></TERM><DESC>disassemble a binary</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-t</CODEROUTINE><BR/><CODEROUTINE>--syms</CODEROUTINE></TERM><DESC>print the symbol table entries of the file</DESC></ROW>
-<ROW><TERM><CODEROUTINE>-C</CODEROUTINE><BR/><CODEROUTINE>--demangle</CODEROUTINE></TERM><DESC>demangle the C++ names</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>nm</T><A>https://man7.org/linux/man-pages/man1/nm.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>dump the symbols of a binary</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-A</CODEROUTINE></TERM><DESC>prepend each line with the filename</DESC></ROW>
+</DEFINITIONTABLE>
+</ITEM>
+<ITEM>
+<DEFINITIONTABLE>
+  <ROW><TERM><CODEROUTINE><X><T>objdump</T><A>https://man7.org/linux/man-pages/man1/objdump.1.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>extract information from object file</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-D</CODEROUTINE></TERM><DESC>disassemble a binary</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-t</CODEROUTINE><BR/><CODEROUTINE>--syms</CODEROUTINE></TERM><DESC>print the symbol table entries of the file</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-C</CODEROUTINE><BR/><CODEROUTINE>--demangle</CODEROUTINE></TERM><DESC>demangle the C++ names</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>impede generation of core files<BR/>
 <BLIST>
-<ITEM>at the system level, add the line
-<CODESAMPLE>* hard core 0</CODESAMPLE>
-in the file <CODEFILENAME>/etc/security/limits.conf</CODEFILENAME></ITEM>
-<ITEM>at the shell level<CODESAMPLE><PROMPT/><X><T>ulimit</T><A>https://man7.org/linux/man-pages/man1/bash.1.html</A><L>en</L><F>HTML</F></X> -c 0</CODESAMPLE> (bash)<BR/>
-<CODESAMPLE><PROMPT/><X><T>limit</T><A>https://www.unix.com/man_page/redhat/1/limit/</A><L>en</L><F>HTML</F></X> coredumpsize 0</CODESAMPLE> (tcsh)</ITEM>
+  <ITEM>at the system level, add the line
+    <CODESAMPLE>* hard core 0</CODESAMPLE>
+    in the file <CODEFILENAME>/etc/security/limits.conf</CODEFILENAME></ITEM>
+  <ITEM>at the shell level<CODESAMPLE><PROMPT/><X><T>ulimit</T><A>https://man7.org/linux/man-pages/man1/bash.1.html</A><L>en</L><F>HTML</F></X> -c 0</CODESAMPLE> (bash)<BR/>
+    <CODESAMPLE><PROMPT/><X><T>limit</T><A>https://www.unix.com/man_page/redhat/1/limit/</A><L>en</L><F>HTML</F></X> coredumpsize 0</CODESAMPLE> (tcsh)</ITEM>
 </BLIST>
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>profiling</B></U></TITLE>
-<ITEM>profile a binary:<BR/>
-compile and link all the code with <CODEROUTINE>-pg</CODEROUTINE>
-(the profiling does not work with shared libraries, so the libraries which are interesting should be statically linked)
-<CODESAMPLE>/path_to_bin/myBin<BR/>
-<X><T>gprof</T><A>https://man7.org/linux/man-pages/man1/gprof.1.html</A><L>en</L><F>HTML</F></X> -z /path_to_bin/myBin gmon.out</CODESAMPLE></ITEM>
-<ITEM>profile a shared library:<BR/>
-<CODESAMPLE>setenv LD_PROFILE_OUTPUT /tmp/prof.001<BR/>
-mkdir $LD_PROFILE_OUTPUT<BR/>
-setenv LD_PROFILE libMyLib.so<BR/>
-/path_to_bin/myBin<BR/>
-<X><T>sprof</T><A>https://man7.org/linux/man-pages/man1/sprof.1.html</A><L>en</L><F>HTML</F></X> /path_to_lib/$LD_PROFILE $LD_PROFILE_OUTPUT/$LD_PROFILE.profile</CODESAMPLE>
-(this gives the number of calls, but no timing)</ITEM>
+  <ITEM>profile a binary:<BR/>
+    compile and link all the code with <CODEROUTINE>-pg</CODEROUTINE>
+    (the profiling does not work with shared libraries, so the libraries which are interesting should be statically linked)
+    <CODESAMPLE>/path_to_bin/myBin<BR/>
+    <X><T>gprof</T><A>https://man7.org/linux/man-pages/man1/gprof.1.html</A><L>en</L><F>HTML</F></X> -z /path_to_bin/myBin gmon.out</CODESAMPLE></ITEM>
+  <ITEM>profile a shared library:<BR/>
+    <CODESAMPLE>setenv LD_PROFILE_OUTPUT /tmp/prof.001<BR/>
+    mkdir $LD_PROFILE_OUTPUT<BR/>
+    setenv LD_PROFILE libMyLib.so<BR/>
+    /path_to_bin/myBin<BR/>
+    <X><T>sprof</T><A>https://man7.org/linux/man-pages/man1/sprof.1.html</A><L>en</L><F>HTML</F></X> /path_to_lib/$LD_PROFILE $LD_PROFILE_OUTPUT/$LD_PROFILE.profile</CODESAMPLE>
+    (this gives the number of calls, but no timing)</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>miscellaneous</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>addr2line</T><A>https://man7.org/linux/man-pages/man1/addr2line.1.html</A><L>en</L><F>HTML</F></X> 0x40006D -e foobar</CODEROUTINE></TERM><DESC>print the source file name and line number of the executable <CODEROUTINE>foobar</CODEROUTINE> corresponding to the address <CODEROUTINE>0x40006D</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>-f</CODEROUTINE></TERM><DESC>also display the routine name</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>addr2line</T><A>https://man7.org/linux/man-pages/man1/addr2line.1.html</A><L>en</L><F>HTML</F></X> 0x40006D -e foobar</CODEROUTINE></TERM><DESC>print the source file name and line number of the executable <CODEROUTINE>foobar</CODEROUTINE> corresponding to the address <CODEROUTINE>0x40006D</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>-f</CODEROUTINE></TERM><DESC>also display the routine name</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>

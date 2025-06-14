@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>SQL</TITLE>
 <PATH>links/sql.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -64,6 +64,7 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>SQLite</TITLE>
+      <ITEM><ARTICLE><X><T>Notes on the SQLite DuckDB paper</T><A>https://simonwillison.net/2022/Sep/1/sqlite-duckdb-paper/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE><COMMENT>SQLite is trying to improve its performance for OLAP applications.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>SQLite and its weird new fork “libSQL”</T><A>https://www.youtube.com/watch?v=PGpL5hYpY1o</A><L>en</L><F>MP4</F><DURATION><MINUTE>4</MINUTE><SECOND>29</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jeff</FIRSTNAME><LASTNAME>Delaney</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE><COMMENT>A fast-paced introduction to SQLite and libSQL.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Introducing Limbo: A complete rewrite of SQLite in Rust</T><A>https://simonwillison.net/2024/Dec/10/introducing-limbo/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>10</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>APSW SQLite query explainer</T><A>https://simonwillison.net/2025/Feb/7/apsw-sqlite-query-explainer/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT><CODEROUTINE>apsw.ext.query_info()</CODEROUTINE> can be used to analyse a SQL query.</COMMENT></ARTICLE></ITEM>
