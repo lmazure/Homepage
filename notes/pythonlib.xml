@@ -3,8 +3,16 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python libraries</TITLE>
 <PATH>notes/pythonlib.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
+<BLIST><TITLE><U><B>pytest</B></U> (<X><T>doc</T><A>https://docs.pytest.org/en/stable/</A><L>en</L><F>HTML</F></X>)</TITLE>
+  <ITEM>The <CODEROUTINE>tmp_path</CODEROUTINE> fixture is a <CODEROUTINE>pathlib.Path</CODEROUTINE> object providing a temporary directory unique to each test function.
+    <CODESAMPLE>def test_save_and_load_history(tmp_path: Path) -&gt; None:<BR/>
+        <TAB/>file_path = tmp_path / "history.json"<BR/>
+        <TAB/>history.save_to_file(str(file_path))<BR/>
+        <TAB/>…</CODESAMPLE>
+  </ITEM>
+</BLIST>
 <BLIST><TITLE><U><B>Colorama</B></U> (<X><T>doc</T><A>https://pypi.org/project/colorama/</A><L>en</L><F>HTML</F></X>)</TITLE>
   <ITEM>Colorama is only aiming at supporting ANSI escape character sequences on Windows (using the appropriate Win32 calls to emulate them).<BR/>
     Use other libraries if you want powerful formatting.</ITEM>
