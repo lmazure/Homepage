@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>uv</TITLE>
 <PATH>notes/uv.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>4</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Install <CODEROUTINE>uv</CODEROUTINE> on a USB key</TITLE>
   <ITEM>Environment setup:
@@ -67,6 +67,12 @@
     <DESC>Install from a <CODEROUTINE>requirements.txt</CODEROUTINE> file.</DESC>
   </ROW>
 </DEFINITIONTABLE>
-</CONTENT>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>uv run foobar.py</CODEROUTINE></TERM>
+    <DESC>Run the script <CODEROUTINE>foobar.py</CODEROUTINE>.</DESC>
+  </ROW>
+</DEFINITIONTABLE></CONTENT>
 <X><T>links</T><A>../links/python.html#uv</A><L>en</L><F>HTML</F></X>
 </PAGE>
