@@ -3,13 +3,36 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Google’s AI</TITLE>
 <PATH>links/aigoogle.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><X><T>Gemini</T><A>https://gemini.google.com/app</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
+    <ITEM><BLIST><TITLE>AlphaGo</TITLE>
+        <ITEM><ARTICLE><X><T>Jeu de go et intelligence artificielle — À chaud ! #2</T><A>https://www.youtube.com/watch?v=P6eBraOUBLw</A><L>fr</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>52</SECOND></DURATION></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Louapre</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>3</MONTH><DAY>11</DAY></DATE><COMMENT>Some information about AlphaGo.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>AlphaGo - The Movie | Full award-winning documentary</T><A>https://www.youtube.com/watch?v=WXuK6gekU1Y</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>30</MINUTE><SECOND>27</SECOND></DURATION><DATE><YEAR>2020</YEAR><MONTH>3</MONTH><DAY>13</DAY></DATE></X><AUTHOR><GIVENNAME>Google DeepMind</GIVENNAME></AUTHOR><DATE><YEAR>2017</YEAR></DATE><COMMENT>The story of the <AUTHOR><FIRSTNAME>Lee</FIRSTNAME><LASTNAME>Sedol</LASTNAME></AUTHOR> vs. AlphaGo competition.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>AlphaFold</TITLE>
+    <ITEM><ARTICLE><X><T>The Most Useful Thing AI Has Ever Done</T><A>https://www.youtube.com/watch?v=P_fHJIYENdI</A><L>en</L><F>MP4</F><DURATION><MINUTE>24</MINUTE><SECOND>51</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Derek</FIRSTNAME><LASTNAME>Muller</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>10</DAY></DATE><COMMENT>The history of AlphaFold.</COMMENT></ARTICLE></ITEM>
+      <ITEM><BLIST><TITLE>AlphaFold 2</TITLE>
+        <ITEM><ARTICLE><X><T>‘It will change everything’: DeepMind’s AI makes gigantic leap in solving protein structures</T><ST>Google’s deep-learning program for determining the 3D shapes of proteins stands to transform biology, say scientists.</ST><A>https://www.nature.com/articles/d41586-020-03348-4</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ewen</FIRSTNAME><LASTNAME>Callaway</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Le repliement des protéines : Résolu par l'intelligence artificielle AlphaFold ?</T><A>https://www.youtube.com/watch?v=OGewxRMME8o</A><L>fr</L><F>MP4</F><DURATION><MINUTE>22</MINUTE><SECOND>39</SECOND></DURATION></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Louapre</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE><COMMENT>A presentation of the protein folding problem and some information about AlphaFold 2.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=OGewxRMME8o"><X><T>Le repliement des protéines &amp; l’I.A AlphaFold de DeepMind</T><A>https://scienceetonnante.com/blog/2020/12/09/le-repliement-des-proteines/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><LASTNAME>Louapre</LASTNAME></AUTHOR><DATE><YEAR>2020</YEAR><MONTH>12</MONTH><DAY>9</DAY></DATE><COMMENT>Some information complementing the previous video.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>AlphaFold 3</TITLE>
+        <ITEM><ARTICLE><X quality="-1"><T>Deepmind's AlphaFold 3!!!</T><A>https://www.youtube.com/watch?v=E1PE_1Id6vs</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>A bad presentation of DeepMind announcement.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>AlphaZero</TITLE>
+      <ITEM><ARTICLE><X><T>Discovering novel algorithms with AlphaTensor</T><A>https://deepmind.google/discover/blog/discovering-novel-algorithms-with-alphatensor/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Alhussein</FIRSTNAME><LASTNAME>Fawzi</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Matej</FIRSTNAME><LASTNAME>Balog</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Bernardino</FIRSTNAME><LASTNAME>Romera-Paredes</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Demis</FIRSTNAME><LASTNAME>Hassabis</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Pushmeet</FIRSTNAME><LASTNAME>Kohli</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE><COMMENT>AlphaZero found some matrix multiplication algorithms better than the current known ones.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE predecessor="https://deepmind.google/discover/blog/discovering-novel-algorithms-with-alphatensor/"><X><T>How AI Discovered a Faster Matrix Multiplication Algorithm</T><A>https://www.youtube.com/watch?v=fDAPJ7rvcUw</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>59</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Hagenas</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE><COMMENT>The same.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>AlphaEvolve</TITLE>
+      <ITEM><ARTICLE><X><T>New maths discoveries! All announced at once!</T><A>https://www.youtube.com/watch?v=sGCmu7YKgPA</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Parker</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>14</DAY></DATE><COMMENT>Some optimisation results from AlphaEvolve.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>AlphaEvolve: Using LLMs to solve Scientific and Engineering Challenges | AlphaEvolve explained</T><A>https://www.youtube.com/watch?v=Z4uF6cVly8o</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>57</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Letitia</FIRSTNAME><LASTNAME>Parcalabescu</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>19</DAY></DATE><COMMENT>A high-level description of how AlphaEvolve works.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Gemini</TITLE>
       <ITEM><ARTICLE><X><T>State-of-the-art text embedding via the Gemini API</T><A>https://developers.googleblog.com/en/gemini-embedding-text-model-now-available-gemini-api/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Logan</FIRSTNAME><LASTNAME>Kilpatrick</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Zach</FIRSTNAME><LASTNAME>Gleicher</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Parashar</FIRSTNAME><LASTNAME>Shah</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>7</DAY></DATE><COMMENT>Google is releasing a new embedding model (Matryoshka, 8K tokens, 3K dimensions, 100 languages), but there is little information in this announcement.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Gemini 1.0</TITLE>
