@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unicode</TITLE>
 <PATH>notes/unicode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>17 planes, each of 65536 code points</B></TITLE>
   <ITEM>Plane 0 (0000-FFFF): Basic Multilingual Plane (BMP)</ITEM>
@@ -169,6 +169,7 @@ Emoji style:<BR/>
 The characters supporting these selectors are listed in <X><T>https://www.unicode.org/Public/emoji/12.1/emoji-variation-sequences.txt</T><A>https://www.unicode.org/Public/emoji/12.1/emoji-variation-sequences.txt</A><L>en</L><F>HTML</F></X>.<BR/>
 <BR/>
 <B>Some common characters</B><BR/>
+<X><T>Enclosed Alphanumerics</T><A>https://www.compart.com/en/unicode/block/U+2460</A><L>en</L><F>HTML</F></X> (<X><T>Symboles alphanumériques bornés ou entourés</T><A>https://www.compart.com/fr/unicode/block/U+2460</A><L>fr</L><F>HTML</F></X>)
 <TABLE>
   <ROW><CELL>character</CELL><CELL>code</CELL><CELL>decimal</CELL><CELL>name</CELL><CELL>French name</CELL></ROW>
   <ROW><CELL>æ</CELL><CELL>U+00E6</CELL><CELL></CELL><CELL><X><T>Latin Small Letter Ae</T><A>https://www.compart.com/en/unicode/U+00E6</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Lettre minuscule latine ae</T><A>https://www.compart.com/fr/unicode/U+00E6</A><L>fr</L><F>HTML</F></X></CELL></ROW>
@@ -316,6 +317,10 @@ The characters supporting these selectors are listed in <X><T>https://www.unicod
   <ROW><CELL>️△</CELL><CELL>U+25B3</CELL><CELL>9651</CELL><CELL><X><T>White Up-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25B3</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Triangle blanc pointant vers le haut</T><A>https://www.compart.com/fr/unicode/U+25B3</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️▷</CELL><CELL>U+25B7</CELL><CELL>9655</CELL><CELL><X><T>White Right-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25B7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Triangle blanc pointant vers la droite</T><A>https://www.compart.com/fr/unicode/U+25B7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️▽</CELL><CELL>U+25BD</CELL><CELL>9661</CELL><CELL><X><T>White Down-Pointing Triangle</T><A>https://www.compart.com/en/unicode/U+25BD</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Triangle blanc pointant vers le bas</T><A>https://www.compart.com/fr/unicode/U+25BD</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️①</CELL><CELL>U+2460</CELL><CELL>9312</CELL><CELL><X><T>Circled Digit One</T><A>https://www.compart.com/en/unicode/U+2460</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Chiffre un cerclé</T><A>https://www.compart.com/fr/unicode/U+2460</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️②</CELL><CELL>U+2461</CELL><CELL>9313</CELL><CELL><X><T>Circled Digit Two</T><A>https://www.compart.com/en/unicode/U+2461</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Chiffre deux cerclé</T><A>https://www.compart.com/fr/unicode/U+2461</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️③</CELL><CELL>U+2462</CELL><CELL>9314</CELL><CELL><X><T>Circled Digit Three</T><A>https://www.compart.com/en/unicode/U+2462</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Chiffre trois cerclé</T><A>https://www.compart.com/fr/unicode/U+2462</A><L>fr</L><F>HTML</F></X></CELL></ROW>
+  <ROW><CELL>️⑳</CELL><CELL>U+2473</CELL><CELL>9331</CELL><CELL><X><T>Circled Number Twenty</T><A>https://www.compart.com/en/unicode/U+2473</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Nombre vingt cerclé</T><A>https://www.compart.com/fr/unicode/U+2473</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>×</CELL><CELL>U+00D7</CELL><CELL>215</CELL><CELL><X><T>Multiplication Sign</T><A>https://www.compart.com/en/unicode/U+00D7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Signe de multiplication</T><A>https://www.compart.com/fr/unicode/U+00D7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>÷</CELL><CELL>U+00F7</CELL><CELL>247</CELL><CELL><X><T>Division Sign</T><A>https://www.compart.com/en/unicode/U+00F7</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Signe de division</T><A>https://www.compart.com/fr/unicode/U+00F7</A><L>fr</L><F>HTML</F></X></CELL></ROW>
   <ROW><CELL>️∧</CELL><CELL>U+2227</CELL><CELL></CELL><CELL><X><T>Logical And</T><A>https://www.compart.com/en/unicode/U+2227</A><L>en</L><F>HTML</F></X></CELL><CELL><X><T>Et logique</T><A>https://www.compart.com/fr/unicode/U+2227</A><L>fr</L><F>HTML</F></X></CELL></ROW>
