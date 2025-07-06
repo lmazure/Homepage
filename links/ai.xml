@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Artificial intelligence</TITLE>
 <PATH>links/ai.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -38,6 +38,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Leaderboards</TITLE>
       <ITEM><X><T>Hugging Face Leaderboards</T><A>https://huggingface.co/spaces?sort=likes&amp;search=leaderboard</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>ARC-AGI Leaderboard</T><A>https://arcprize.org/leaderboard</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE>Quallity</TITLE>
         <ITEM><BLIST><TITLE><X><T>LMSYS Chatbot Arena</T><A>https://lmarena.ai?arena</A><L>en</L><F>HTML</F></X></TITLE>
           <ITEM><X><T>WebDev Arena</T><A>https://web.lmarena.ai/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -291,6 +292,7 @@
     <ITEM><ARTICLE><X><T>Scientists once hoarded pre-nuclear steel; now we’re hoarding pre-AI content</T><ST>Newly announced catalog collects pre-2022 sources untouched by ChatGPT and AI contamination.</ST><A>https://arstechnica.com/ai/2025/06/why-one-man-is-archiving-human-made-content-from-before-the-ai-explosion/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benj</FIRSTNAME><LASTNAME>Edwards</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>18</DAY></DATE><COMMENT><X><T>lowbackgroundsteel.ai</T><A>https://lowbackgroundsteel.ai/</A><L>en</L><F>HTML</F></X> is a (very very small) list of repositories of pre-AI documents.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Study: Meta AI model can reproduce almost half of Harry Potter book</T><ST>The research could have big implications for generative AI copyright lawsuits.</ST><A>https://arstechnica.com/features/2025/06/study-metas-llama-3-1-can-recall-42-percent-of-the-first-harry-potter-book/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Timothy</FIRSTNAME><MIDDLENAME>B.</MIDDLENAME><LASTNAME>Lee</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE><COMMENT>Some hypotheses on why Llama 3.1 can generate half the content of Harry Potter book, and the possible impact of this study on the copyrights suits.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Anthropic wins a major fair use victory for AI — but it’s still in trouble for stealing books</T><A>https://simonwillison.net/2025/Jun/24/anthropic-training/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>24</DAY></DATE><COMMENT>The judge indicates that Anthropic can train its models on books they have bought, but they initially trained their first models on books they pirated.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>Comment parler intelligemment d'intelligence ?</T><A>https://www.youtube.com/watch?v=AwUpxjODogQ</A><L>fr</L><F>MP4</F><DURATION><MINUTE>40</MINUTE><SECOND>15</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Thibaut</FIRSTNAME><LASTNAME>Giraud</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE><COMMENT>A presentation of <AUTHOR><FIRSTNAME>François</FIRSTNAME><LASTNAME>Chollet</LASTNAME></AUTHOR>’s benchmarks: ARC-AGI.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Hardware</TITLE>
       <ITEM><ARTICLE><X><T>Humane AI Pin is a disaster: Founders already want to sell the company</T><ST>One month after launch of its "smartphone replacement," Humane already seems doomed.</ST><A>https://arstechnica.com/gadgets/2024/05/humane-ai-pin-founders-run-for-the-exits-one-month-after-launch/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ron</FIRSTNAME><LASTNAME>Amadeo</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>Rabbit R1</TITLE>
@@ -380,9 +382,10 @@
     <ITEM><BLIST><TITLE>Text to speech</TITLE>
       <ITEM><ARTICLE><X><T>Kokoro Local TTS + Custom Voices</T><A>https://www.youtube.com/watch?v=tl1wvZXlj0I</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>15</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>15</DAY></DATE><COMMENT>A presentation of <X><T>hexgrad/Kokoro</T><A>https://huggingface.co/hexgrad/Kokoro-82M</A><L>en</L><F>HTML</F></X>: interpolating voices and using its ONNX port.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
-    <ITEM><BLIST><TITLE>Moshi</TITLE>
+    <ITEM><BLIST><TITLE>Kyutai / Moshi</TITLE>
       <ITEM><ARTICLE><X quality="-1"><T>The ONLY Real Time Speech AI that can run locally!!!</T><A>https://www.youtube.com/watch?v=BAa5Rg83S0g</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>A non convincing demo of Moshi, a speech-to-speech model.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Moshi The Talking AI</T><A>https://www.youtube.com/watch?v=JKA_v5Bb_tI</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>28</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>A much better presentation of the model.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Kyutai STT &amp; TTS - A Perfect Local Voice Solution?</T><A>https://www.youtube.com/watch?v=6UjxLZXwFbk</A><L>en</L><F>MP4</F><DURATION><MINUTE>9</MINUTE><SECOND>50</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>4</DAY></DATE><COMMENT>A presentation of Kyutai’s new models.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Embeddings</TITLE>
       <ITEM><ARTICLE><X><T>Neural Network Embeddings Explained</T><ST>How deep learning can represent War and Peace as a vector</ST><A>https://towardsdatascience.com/neural-network-embeddings-explained-4d028e6f0526/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Will</FIRSTNAME><LASTNAME>Koehrsen</LASTNAME></AUTHOR><DATE><YEAR>2018</YEAR><MONTH>10</MONTH><DAY>2</DAY></DATE><COMMENT>An introduction to embeddings, but only the usage is described, not the mechanisms to generate the embeddings.</COMMENT></ARTICLE></ITEM>
