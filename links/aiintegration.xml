@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -190,7 +190,7 @@
         <ITEM><ARTICLE><X quality="-1"><T>Content Extraction using Large Language Models &amp; JavaScript</T><A>https://www.youtube.com/watch?v=GyIaXarpq9w</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>3</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Amanda</FIRSTNAME><LASTNAME>Winkles</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>An example of using LangChain with Granite to extract data from a PDF and Mistral Large to format it into a Markdown table. But the Json format is unspecified, she is using some flaky heuristic to clean up Granite’s answer, an LLM is an overkill to convert Json into a Markdown table…</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>LangChain RAG: Optimizing AI Models for Accurate Responses</T><A>https://www.youtube.com/watch?v=cDn7bf84LsM</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Erika</FIRSTNAME><LASTNAME>Russi</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE><COMMENT>A simple RAG system using LangChain and Granite 3.0 8B Instruct.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>LangChain4J</TITLE>
+      <ITEM><BLIST><TITLE>LangChain4j</TITLE>
         <ITEM><ARTICLE><X><T>Java Meets AI: A Hands On Guide to Building LLM Powered Applications with LangChain4j By Lize Raes</T><A>https://www.youtube.com/watch?v=BD1MSLbs9KE</A><L>en</L><F>MP4</F><DURATION><MINUTE>50</MINUTE><SECOND>47</SECOND></DURATION></X><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE><COMMENT>An overview of LangChain4j.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Experiments with Langchain4j or Java way to LLM-powered applications</T><A>https://kindgeek.com/blog/post/experiments-with-langchain4j-or-java-way-to-llm-powered-applications</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Iryna</FIRSTNAME><LASTNAME>Hvozdyk</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>6</DAY></DATE><COMMENT>A good overview of LangChain4j features, this is mostly for persons who do not know the typical AI use cases.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>The Definitive Guide to Tool Support in LangChain4J</T><A>https://www.youtube.com/watch?v=cjI_6Siry-s</A><L>en</L><F>MP4</F><DURATION><MINUTE>28</MINUTE><SECOND>19</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Ken</FIRSTNAME><LASTNAME>Kousen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE><COMMENT>A rather slow presentation of using tools in LangChain4j.</COMMENT></ARTICLE></ITEM>
@@ -237,6 +237,9 @@
           <ITEM><ARTICLE><X quality="-1"><T>Optimize Your AI - Quantization Explained</T><A>https://www.youtube.com/watch?v=K75j8MkwgJ0</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>9</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>28</DAY></DATE><COMMENT>This description of model and context quantisation is unclear, mostly because there is no technical explanation.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>MSTY Makes Ollama Better</T><A>https://www.youtube.com/watch?v=5U_lOjfZiXg</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>A presentation of MSTY, a UI for Ollama.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Docker Model Runner</TITLE>
+        <ITEM><ARTICLE><X><T>Docker Model Runner: Running AI Models Locally Made Simple</T><ST>Docker Model Runner: run AI models locally with zero setup. Pull from Docker Hub, chat via CLI or API. OpenAI-compatible. Beta.</ST><A>https://dzone.com/articles/docker-model-runner-running-ai-models</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Suleiman</FIRSTNAME><LASTNAME>Dibirov</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>1</DAY></DATE><COMMENT>Docker is also getting in the AI craziness, proposing an alternative to Ollama: Docker Model Runner.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>llm</TITLE>
         <ITEM><ARTICLE><X><T>Language models on the command-line w/ Simon Willison</T><A>https://www.youtube.com/watch?v=QUXQNi6jQ30</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>7</MINUTE><SECOND>4</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Hugo</FIRSTNAME><LASTNAME>Bowne-Anderson</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>6</MONTH><DAY>13</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR> presents his <CODEROUTINE>llm</CODEROUTINE> CLI tools.</COMMENT></ARTICLE></ITEM>
