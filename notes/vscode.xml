@@ -1060,6 +1060,15 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
     <ITEM><X><T>Java Platform Support</T><A>https://marketplace.visualstudio.com/items?itemName=Oracle.oracle-java</A><L>en</L><F>HTML</F></X></ITEM>
   </BLIST></ITEM>
 </BLIST>
+Code snippet to insert current date:
+<CODESAMPLE>"XML Date": {<BR/>
+<TAB/>"scope": "xml",<BR/>
+<TAB/>"prefix": "xdate",<BR/>
+<TAB/>"body": [<BR/>
+<TAB/><TAB/>"&lt;DATE&gt;&lt;YEAR&gt;$CURRENT_YEAR&lt;/YEAR&gt;&lt;MONTH&gt;${CURRENT_MONTH/^0//}&lt;/MONTH&gt;&lt;DAY&gt;${CURRENT_DATE/^0//}&lt;/DAY&gt;&lt;/DATE&gt;"<BR/>
+<TAB/>],<BR/>
+<TAB/>"description": "Inserts the current date in XML format"<BR/>
+}</CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/ide.html#vscode</A><L>en</L><F>HTML</F></X>
 </PAGE>

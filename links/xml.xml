@@ -3,14 +3,13 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>XML</TITLE>
 <PATH>links/xml.xml</PATH>
-<DATE><YEAR>2019</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
     <ITEM><X><T>W3C</T><A>https://www.w3.org/XML/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><CLIST>
       <ITEM><X><T>xml.com</T><A>https://www.xml.com/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X status="obsolete"><T>XMLhack</T><A>https://www.xmlhack.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>ZVON.org</T><A>https://zvon.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Oasis</T><A>https://www.oasis-open.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Textuality</T><A>https://www.textuality.com/xml/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -77,7 +76,7 @@
       <ITEM><X><T>zvon tutorial</T><A>https://zvon.org/xxl/WMLTutorial/</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
     <ITEM><CLIST><TITLE>MathML</TITLE>
-      <ITEM><X><T>tutorialspoint</T><A>https://www.tutorialspoint.com/mathml/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>tutorialspoint</T><A>https://www.tutorialspoint.com/mathml/index.htm</A><L>en</L><F>HTML</F></X></ITEM>
     </CLIST></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
@@ -146,7 +145,7 @@
       <ITEM><ARTICLE><X status="removed"><T>Web services programming tips and tricks: Array gotcha</T><ST>null array vs. empty array - An XML Schema pattern to help distinguish between a null and an empty array</ST><A>https://www.ibm.com/developerworks/webservices/library/ws-array/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Russell</FIRSTNAME><LASTNAME>Butek</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Richard</FIRSTNAME><LASTNAME>Scheuerle</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>1</MONTH><DAY>6</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="removed"><T>When to use elements versus attributes</T><ST>Exploring the oldest question in XML design</ST><A>https://www.ibm.com/developerworks/xml/library/x-eleatt/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Uche</FIRSTNAME><LASTNAME>Ogbuji</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>3</MONTH><DAY>4</DAY></DATE><COMMENT>Some good guidelines…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="removed"><T>Use XML namespaces with care</T><ST>Minimizing problems while incorporating namespaces into XML design</ST><A>https://www.ibm.com/developerworks/xml/library/x-namcar/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Uche</FIRSTNAME><LASTNAME>Ogbuji</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE><COMMENT>Some advice on how to use namespaces.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X status="dead"><T>The standalone pseudo-attribute is only relevant if a DTD is used</T><A>http://www.xmlplease.com/xml/standalone/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jesper</FIRSTNAME><LASTNAME>Tverskov</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE><COMMENT>A good explanation of the <CODEROUTINE>standalone</CODEROUTINE> document declaration.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X status="zombie"><T>The standalone pseudo-attribute is only relevant if a DTD is used</T><A>http://www.xmlplease.com/xml/standalone/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Jesper</FIRSTNAME><LASTNAME>Tverskov</LASTNAME></AUTHOR><DATE><YEAR>2009</YEAR><MONTH>6</MONTH><DAY>8</DAY></DATE><COMMENT>A good explanation of the <CODEROUTINE>standalone</CODEROUTINE> document declaration.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X status="removed"><T>Dealing with data in XML</T><ST>Use the CDATA section effectively</ST><A>https://www.ibm.com/developerworks/xml/library/x-cdata/index.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Chris</FIRSTNAME><LASTNAME>Herborth</LASTNAME></AUTHOR><DATE><YEAR>2010</YEAR><MONTH>1</MONTH><DAY>12</DAY></DATE><COMMENT>Some advice on using CDATA and base64 encoding in Browsers.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>Working XML: Safe coding practices</TITLE>
         <ITEM><ARTICLE><X status="removed"><T>Working XML: Safe coding practices, Part 1</T><ST>Avoid common XML mistakes</ST><A>https://www.ibm.com/developerworks/xml/library/x-wxxm30.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Benoît</FIRSTNAME><LASTNAME>Marchal</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE><COMMENT>Some very basic XML pitfalls: violating the XML syntax, bad character encoding, incorrect handling of the namespaces.</COMMENT></ARTICLE></ITEM>
