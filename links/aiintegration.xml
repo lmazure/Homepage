@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -18,7 +18,7 @@
       <ITEM><X><T>Abacus AI</T><A>https://abacus.ai/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Deep Infra</T><A>https://deepinfra.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Fireworks AI</T><A>https://fireworks.ai/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>Hyperbolic</T><A>https://app.hyperbolic.xyz</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Hyperbolic</T><A>https://app.hyperbolic.ai/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><BLIST><TITLE><X><T>Cohere</T><A>https://cohere.com/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>doc</T><A>https://docs.cohere.com/docs/the-cohere-platform</A><L>en</L><F>HTML</F></X></ITEM>
       </BLIST></ITEM>
@@ -149,6 +149,7 @@
       <ITEM><ARTICLE><X><T>Build an AI-powered multimodal RAG system with Docling and Granite</T><A>https://www.ibm.com/think/tutorials/build-multimodal-rag-langchain-with-docling-granite</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>BJ</FIRSTNAME><LASTNAME>Hargrave</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Erika</FIRSTNAME><LASTNAME>Russi</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>26</DAY></DATE><COMMENT>Yet another RAG example, this one extracts text, tables, and images from a PDF file.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X quality="1"><T>RAG vs. CAG: Solving Knowledge Gaps in AI Models</T><A>https://www.youtube.com/watch?v=HdafI0t3sEY</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>59</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Keen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>A basic and good comparison of Retrieval-Augmented Generation and Cache-Augmented Generation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>What is Retrieval-Augmented Fine-Tuning (RAFT)?</T><A>https://www.youtube.com/watch?v=rqyczEvh3D4</A><L>en</L><F>MP4</F><DURATION><MINUTE>7</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Isaac</FIRSTNAME><LASTNAME>Ke</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE><COMMENT>Fine tuning a model so it gets better at using only the relevant documents provided by the retrieval part and at answering that it does not know if no document is relevant.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Improving Retrieval with ELO Scores</T><A>https://www.zeroentropy.dev/articles/improving-retrieval-with-elo-scores</A><L>en</L><F>HTML</F></X><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>8</DAY></DATE><COMMENT>ZeroEntropy explains the training process they used for their zerank-1 rerankers.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>NotebookLM</TITLE>
         <ITEM><ARTICLE><X><T>Google's RAG Experiment - NotebookLM</T><A>https://www.youtube.com/watch?v=nK61ZpAS13s</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE><COMMENT>The title says it all. Google demo is impressive, using voice for querying and answering.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How to create AI Podcasts with NotebookLM Tutorial</T><A>https://www.youtube.com/watch?v=qhmu5DP8Rmg</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE><COMMENT>A presentation of an impressive Google demo usable (from Illuminate and NotebookLM): you give a paper as entry, it generates a two-persons podcast.</COMMENT></ARTICLE></ITEM>
