@@ -154,7 +154,9 @@
     <DESC>perform a recursive <CODEROUTINE>grep</CODEROUTINE></DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>grep -a</CODEROUTINE><BR/><CODEROUTINE>grep --test</CODEROUTINE><BR/><CODEROUTINE>grep --binary-files=text</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>grep -a</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --text</CODEROUTINE><BR/>
+      <CODEROUTINE>grep --binary-files=text</CODEROUTINE></TERM>
     <DESC>process a binary file as if it were text</DESC>
   </ROW>
   <ROW>
