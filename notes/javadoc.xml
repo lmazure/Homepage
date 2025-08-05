@@ -22,7 +22,7 @@ this can be used for the main description, @return, @param and @throws</DESC></R
 <I>label</I> is optional</DESC></ROW>
 <ROW><TERM>@serial</TERM><DESC>used in the doc comment for a default serializable field</DESC></ROW>
 <ROW><TERM>@serialData <I>data-description</I></TERM><DESC>documents the types and order of data in the serialised form</DESC></ROW>
-<ROW><TERM>@serialField <I>field-name field-type field-description</I></TERM><DESC>documents an ObjectStreamField component of a Serializable class’s serialPersistentFields member</DESC></ROW>
+<ROW><TERM>@serialField <I>field-name field-type field-description</I></TERM><DESC>documents an ObjectStreamField component of a Serializable class’ serialPersistentFields member</DESC></ROW>
 <ROW><TERM>@since <I>since-text</I></TERM><DESC>adds a "Since" heading with the specified <I>since-text</I> to the generated documentation</DESC></ROW>
 <ROW><TERM>@throws <I>class-name description</I></TERM><DESC>adds a "Throws" subheading to the generated documentation, with the <I>class-name</I> and <I>description</I> text</DESC></ROW>
 <ROW><TERM>{@value <I>package.class#field</I>}</TERM><DESC>replaced by the value of a static field</DESC></ROW>
