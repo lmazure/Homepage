@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -261,6 +261,7 @@
         <ITEM><ARTICLE><X><T>Feed a video to a vision LLM as a sequence of JPEG frames on the CLI (also LLM 0.25)</T><A>https://simonwillison.net/2025/May/5/llm-video-frames/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE><COMMENT>The release notes of <CODEROUTINE>llm</CODEROUTINE> 0.25 with some details about a new <CODEROUTINE>llm-video-frames</CODEROUTINE> plugin to extract frames from a video and send them to the model.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>LLM 0.26a0 adds support for tools!</T><A>https://simonwillison.net/2025/May/14/llm-adds-support-for-tools/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>14</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR> prototypes tool integration in <CODEROUTINE>llm</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How I used o3 to find CVE-2025-37899, a remote zeroday vulnerability in the Linux kernel’s SMB implementation</T><A>https://simonwillison.net/2025/May/24/sean-heelan/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Sean</FIRSTNAME><LASTNAME>Heelan</LASTNAME></AUTHOR> found a use-after-free bug using GPT-o3 via llm.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>LLM 0.27, the annotated release notes: GPT-5 and improved tool calling</T><A>https://simonwillison.net/2025/Aug/11/llm-027/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE><COMMENT>GPT-5 is now supported and tools can now be configured in templates.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Agents</TITLE>
