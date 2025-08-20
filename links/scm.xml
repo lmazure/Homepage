@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -228,6 +228,10 @@
         <ITEM><BLIST><TITLE>2.50</TITLE>
           <ITEM><ARTICLE><X><T>Highlights from Git 2.50</T><ST>The open source Git project just released Git 2.50. Here is GitHub’s look at some of the most interesting features and changes introduced since last time.</ST><A>https://github.blog/open-source/git/highlights-from-git-2-50/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>16</DAY></DATE><COMMENT>Some improvements of multiple cruft packs, multi-pack reachability bitmaps, removal of the <CODEROUTINE>recursive</CODEROUTINE> merge, <CODEROUTINE>git cat-file</CODEROUTINE> now supports filtering, removal of <CODEROUTINE>git cat-file --allow-unknown-type</CODEROUTINE>, improvements of <CODEROUTINE>git maintenance</CODEROUTINE>…</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>What’s new in Git 2.50.0?</T><A>https://about.gitlab.com/blog/what-s-new-in-git-2-50-0/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Justin</FIRSTNAME><LASTNAME>Tobler</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>16</DAY></DATE><COMMENT>The <CODEROUTINE>git diff-pairs</CODEROUTINE> command allows to split the computation of a large diff into several chunks, <CODEROUTINE>git update-ref</CODEROUTINE> now supports a <CODEROUTINE>--batch-updates</CODEROUTINE> flag to reject the invalid reference updates and apply the correct ones, <CODEROUTINE>git cat-file</CODEROUTINE> now supports <CODEROUTINE>--filter</CODEROUTINE>, a quadratic accident has been fixed in <CODEROUTINE>git bundle</CODEROUTINE>, and <CODEROUTINE>git clone --bundle-uri</CODEROUTINE> now handles references other than <CODEROUTINE>refs/heads/*</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>2.51</TITLE>
+          <ITEM><ARTICLE><X><T>Highlights from Git 2.51</T><ST>The open source Git project just released Git 2.51. Here is GitHub’s look at some of the most interesting features and changes introduced since last time.</ST><A>https://github.blog/open-source/git/highlights-from-git-2-51/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT>Non-cruft packs are now closed under reachability, smaller packs by using an improved walk path, stashes can now be exported/imported, improved <CODEROUTINE>git cat-file</CODEROUTINE>, <CODEROUTINE>git whatchanged</CODEROUTINE> is deprecated, <CODEROUTINE>git switch</CODEROUTINE> and <CODEROUTINE>git restore</CODEROUTINE> are not experimental anymore…</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>What’s new in Git 2.51.0?</T><A>https://about.gitlab.com/blog/what-s-new-in-git-2-51-0/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Karthik</FIRSTNAME><LASTNAME>Nayak</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>18</DAY></DATE><COMMENT><CODEROUTINE>git-push</CODEROUTINE> and <CODEROUTINE>git-fetch</CODEROUTINE> are faster by using batched updates, <CODEROUTINE>git for-each-ref</CODEROUTINE> now supports pagination, and some other changes listed in the previous article.</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Bits and Booze</TITLE>
