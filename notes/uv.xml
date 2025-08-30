@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>uv</TITLE>
 <PATH>notes/uv.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Install <CODEROUTINE>uv</CODEROUTINE> on a USB key</TITLE>
   <ITEM>Environment setup:
@@ -13,6 +13,21 @@
   </ITEM>
   <ITEM>Install <CODEROUTINE>uv</CODEROUTINE>:
     <CODESAMPLE>curl -LsSf https://astral.sh/uv/install.sh | env INSTALLER_NO_MODIFY_PATH=1 sh</CODESAMPLE>
+  </ITEM>
+  <ITEM>Create a new project:
+    <CODESAMPLE>uv init &lt;project-name&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>Add a dependency:
+    <CODESAMPLE>uv add &lt;package-name&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>Add a development dependency:
+    <CODESAMPLE>uv add --dev &lt;package-name&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>Remove a dependency:
+    <CODESAMPLE>uv remove &lt;package-name&gt;</CODESAMPLE>
+  </ITEM>
+  <ITEM>Synchronise the environment:
+    <CODESAMPLE>uv sync</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BR/>
