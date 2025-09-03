@@ -39,7 +39,7 @@ compile in 64 bits mode (<CODEROUTINE>long</CODEROUTINE>s and pointers are 64 bi
 <ITEM><CODEROUTINE>alloca</CODEROUTINE> allocates some memory on the stack (exists in many other implementations other than gcc)<BR/>
 It is faster that using <CODEROUTINE>malloc</CODEROUTINE>/<CODEROUTINE>free</CODEROUTINE>, but the limit on the stack size may be low on some machine (this is done in order to catch early infinite recrusions) and there is no way to test for a failed allocation (the program will simply crash when trying to write data in a too large address).</ITEM>
 <ITEM><CODEROUTINE>__buildin_constant_p</CODEROUTINE> this a compiler intrinsic routine testing if its parameter is a constant<BR/>
-It is useful to write macros optimized when one of their parameters is a hard coded constant.</ITEM>
+It is useful to write macros optimised when one of their parameters is a hard coded constant.</ITEM>
 <ITEM><CODEROUTINE>__typeof__</CODEROUTINE> this is a macro returning the type of its argument<BR/>
 It is useful when writing macros which are generic for several data types.</ITEM>
 <ITEM><CODEROUTINE>__va_copy</CODEROUTINE> copy a <CODEROUTINE>va_list</CODEROUTINE> (there is no other way to portably walk through a variable parameter list twice)</ITEM>
