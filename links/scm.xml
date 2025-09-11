@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -258,6 +258,8 @@
         <ITEM><ARTICLE><X><T>GitButler Product Demo Overview (Summer 2025)</T><A>https://www.youtube.com/watch?v=DhJtNNhCNLM</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>43</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE><COMMENT>An updated product demonstration.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=DhJtNNhCNLM"><X><T>Setting Up GitButler with Agent Tooling</T><A>https://www.youtube.com/watch?v=J6xV_Wyz9zg</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>55</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>8</DAY></DATE><COMMENT>A demo of using Claude Code hooks or GitButler MCP Server to get GitButler to create branches and commits while the AI is modifying the code.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Uncommitting in Git and GitButler</T><A>https://www.youtube.com/watch?v=iJ9qJ-xcQ-U</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE><COMMENT>How to uncommit (while keeping the changes in the workspace) a previous commit, which may not be the last one, using GitButler or using Git.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Claude Code Gets a Native UI Inside GitButler</T><A>https://www.youtube.com/watch?v=lTOo4v5KGkk</A><L>en</L><F>MP4</F><DURATION><MINUTE>3</MINUTE><SECOND>39</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>GitButler has now a tab from which you can drive Claude Code.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=lTOo4v5KGkk"><X><T>GitButler's Claude Code tab</T><ST>GitButler's new Agents Tab brings Claude Code directly into your Git workflow, giving each branch its own independent development assistant.</ST><A>https://blog.gitbutler.com/agents-tab</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>11</DAY></DATE><COMMENT>The corresponding blog.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mercurial</TITLE>
