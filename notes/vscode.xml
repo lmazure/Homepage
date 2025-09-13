@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -771,6 +771,14 @@ Source code management
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/></TERM>
     <DESC>Show/hide source code management<BR/>
       GitLens changes it to <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <KEY id="G"/></DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Terminal
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>Terminal: Toggle Sticky Scroll</CODEROUTINE></TERM>
+    <DESC>Toggle sticky scroll in terminal</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
