@@ -1,0 +1,56 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>AI</TITLE>
+<PATH>notes/ai.xml</PATH>
+<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>13</DAY></DATE>
+<CONTENT>
+<BLIST>
+<ITEM><U><B>Sending images to Claude</B></U><BR/>
+Create a PNG file of this Mermaid diagram:
+<MERMAID>
+flowchart TD
+    A([START]) --&gt; B{Urgent Issue?}
+    B --&gt;|YES| C[Escalate to Manager]
+    B --&gt;|NO| D[Standard Support]
+    D --&gt; E{Issue Resolved?}
+    E --&gt;|NO| F[Create Ticket]
+    E --&gt;|YES| G[Send Confirmation]
+    C --&gt; H([END])
+    F --&gt; H
+    G --&gt; H
+</MERMAID>
+then send it to Claude:
+<CODESAMPLE><PROMPT/>IMAGE_DATA=$(base64 -w 0 /mnt/c/Users/lmazure/Desktop/workflow.png)<BR/>
+<PROMPT/>curl https://api.anthropic.com/v1/messages \<BR/>
+<TAB/>-H "Content-Type: application/json" \<BR/>
+<TAB/>-H "x-api-key: $MY_KEY" \<BR/>
+<TAB/>-H "anthropic-version: 2023-06-01" \<BR/>
+<TAB/>-d "{<BR/>
+<TAB/><TAB/>\"model\": \"claude-sonnet-4-20250514\",<BR/>
+<TAB/><TAB/>\"max_tokens\": 1024,<BR/>
+<TAB/><TAB/>\"system\": \"You are an expert in manual software testing. You are in charge to define the test cases necessary to validate a specific requirement. You must provide the test cases formatted in JSON as an array with the following format: {'testCases':[{'name':'','description':'','prerequisites':'','testSteps':[{'action':'','expectedResult':''}]}]}. Your answer must contain only that JSON.\",<BR/>
+<TAB/><TAB/>\"messages\": [<BR/>
+<TAB/><TAB/><TAB/>{<BR/>
+<TAB/><TAB/><TAB/><TAB/>\"role\": \"user\",<BR/>
+<TAB/><TAB/><TAB/><TAB/>\"content\": [<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>{<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"type\": \"text\",<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"text\": \"The user workflow is defined in the attached image.\"<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>},<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>{<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"type\": \"image\",<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"source\": {<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"type\": \"base64\",<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"media_type\": \"image/png\",<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"data\": \"$IMAGE_DATA\"<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+<TAB/><TAB/><TAB/><TAB/>]<BR/>
+<TAB/><TAB/><TAB/>}<BR/>
+<TAB/><TAB/>]<BR/>
+<TAB/>}" | jq -r '.content[0].text'</CODESAMPLE>
+</ITEM>
+</BLIST>
+</CONTENT>
+</PAGE>

@@ -82,9 +82,16 @@
       <xsl:if test="count(/PAGE//MATH)>0">
         <script>MathJax = { tex: { inlineMath: [['£[','£]']] }, svg: { fontCache: 'global' } };</script>
         <xsl:element name="script">
-          <xsl:attribute name="type">text/javascript</xsl:attribute>
           <xsl:attribute name="async"/>
-          <xsl:attribute name="src">https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js</xsl:attribute>
+          <xsl:attribute name="src">https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-mml-chtml.js</xsl:attribute>
+        </xsl:element>
+      </xsl:if>
+      <xsl:if test="count(/PAGE//MERMAID)>0">
+        <script>function initializeMermaid() { mermaid.initialize({ startOnLoad: true }); }</script>
+        <xsl:element name="script">
+          <xsl:attribute name="async"/>
+          <xsl:attribute name="src">https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js</xsl:attribute>
+          <xsl:attribute name="onload">initializeMermaid</xsl:attribute>
         </xsl:element>
       </xsl:if>
       <script src="../scripts/common.js" type="module"></script>
@@ -216,6 +223,12 @@
   <xsl:text>£[</xsl:text>
   <xsl:value-of select="."/>
   <xsl:text>£]</xsl:text>
+</xsl:template>
+
+<xsl:template match="MERMAID">
+  <div class="mermaid">
+    <xsl:value-of select="."/>
+  </div>
 </xsl:template>
 
 <xsl:template match="X">
