@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -56,6 +56,7 @@
       </CLIST></ITEM>
       <ITEM><X><T>Browser Use</T><A>https://browser-use.com/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>mcptools</T><A>https://github.com/f/mcptools</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>GitHub MCP Registry</T><A>https://github.com/mcp</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><CLIST><TITLE>AssemblyAI</TITLE>
       <ITEM><X><T>YouTube</T><A>https://www.youtube.com/channel/UCtatfZMf-8EkIwASXM4ts0A</A><L>en</L><F>HTML</F><FEED><A>https://www.youtube.com/feeds/videos.xml?channel_id=UCtatfZMf-8EkIwASXM4ts0A</A><F>Atom</F></FEED></X></ITEM>
@@ -213,7 +214,7 @@
         <ITEM><ARTICLE><X><T>Open WebUI</T><A>https://simonwillison.net/2024/Dec/27/open-webui/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>27</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR> discovers Open WebUI, he is satisfied by the installation easiness, and he experiments it with Llama 3.2 3B.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Building a Vision App with Ollama Structured Outputs</T><A>https://www.youtube.com/watch?v=4Mya8AsZDUo</A><L>en</L><F>MP4</F><DURATION><MINUTE>17</MINUTE><SECOND>53</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>12</MONTH><DAY>31</DAY></DATE><COMMENT>A presentation of Ollama Structured Outputs and some examples using them with Llama 3.2’s vision.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Solved with Windsurf</T><A>https://www.youtube.com/watch?v=lTDKg7IcY0c</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>46</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>14</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR> wrote a utility in Rust, a language he barely knows, using Windsurf, to get a report on the models installed in Ollama.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Function calling using LLMs</T><ST>Building AI Agents that interact with the external world.</ST><A>https://martinfowler.com/articles/function-call-LLM.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kiran</FIRSTNAME><LASTNAME>Prakash</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE><COMMENT>A simple example of a script using tools and, then, converted to usinf MCP.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Function calling using LLMs</T><ST>Building AI Agents that interact with the external world.</ST><A>https://martinfowler.com/articles/function-call-LLM.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kiran</FIRSTNAME><LASTNAME>Prakash</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>6</DAY></DATE><COMMENT>A simple example of a script using tools and, then, converted to using MCP.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Ollama Gets a New App</T><A>https://www.youtube.com/watch?v=xN4Q98CbqqE</A><L>en</L><F>MP4</F><DURATION><MINUTE>6</MINUTE><SECOND>12</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>New Ollama UI</T><A>https://www.youtube.com/watch?v=prrWESXl7wg</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>34</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>31</DAY></DATE><COMMENT>The same, but more informative.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality="-1"><T>Debugging Ollama</T><A>https://www.youtube.com/watch?v=ofrXnkZxIkw</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>0</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>4</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Williams</LASTNAME></AUTHOR> experimented and discovered that <CODEROUTINE>OLLAMA_DEBUG</CODEROUTINE>’s behaviour has been changed. He should just have searched for it (<X><T>PR</T><A>https://github.com/ollama/ollama/pull/10650</A><L>en</L><F>HTML</F></X>).</COMMENT></ARTICLE></ITEM>
