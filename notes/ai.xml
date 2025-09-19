@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI</TITLE>
 <PATH>notes/ai.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>16</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST>
 <ITEM><U><B>Sending images to Claude / ChatGPT</B></U><BR/>
@@ -79,6 +79,34 @@ The same request for OpenAI:
 <TAB/><TAB/>],<BR/>
 <TAB/><TAB/>"max_tokens": 300<BR/>
 <TAB/>}'</CODESAMPLE>
+The same request for Mistral:
+<CODESAMPLE>curl -X POST "https://api.mistral.ai/v1/chat/completions" \<BR/>
+<TAB/>-H "Content-Type: application/json" \<BR/>
+<TAB/>-H "Authorization: Bearer $MY_KEY" \<BR/>
+<TAB/>-d "{<BR/>
+<TAB/><TAB/>\"model\": \"mistral-medium\",<BR/>
+<TAB/><TAB/>\"messages\": [<BR/>
+<TAB/><TAB/><TAB/>{<BR/>
+<TAB/><TAB/><TAB/><TAB/>\"role\": \"system\",<BR/>
+<TAB/><TAB/><TAB/><TAB/>\"content\": \"You are an expert in manual software testing. You are in charge to define the test cases necessary to validate a specific requirement. You must provide the test cases formatted in JSON as an array with the following format: {\\\"testCases\\\":[{\\\"name\\\":\\\"\\\",\\\"description\\\":\\\"\\\",\\\"prerequisites\\\":\\\"\\\",\\\"testSteps\\\":[{\\\"action\\\":\\\"\\\",\\\"expectedResult\\\":\\\"\\\"}]}]}. Your answer must contain only that JSON.\"<BR/>
+<TAB/><TAB/><TAB/>},<BR/>
+<TAB/><TAB/><TAB/>{<BR/>
+<TAB/><TAB/><TAB/><TAB/>\"role\": \"user\",<BR/>
+<TAB/><TAB/><TAB/><TAB/>\"content\": [<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>{<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"type\": \"text\",<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"text\": \"The workflow is described in the attached image.\"<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>},<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>{<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"type\": \"image_url\",<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"image_url\": {<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>\"url\": \"data:image/jpeg;base64,$IMAGE_DATA\"<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+<TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+<TAB/><TAB/><TAB/><TAB/>]<BR/>
+<TAB/><TAB/><TAB/>}<BR/>
+<TAB/><TAB/>]<BR/>
+<TAB/>}"</CODESAMPLE>
 </ITEM>
 </BLIST>
 </CONTENT>
