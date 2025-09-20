@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java history</TITLE>
 <PATH>links/javahistory.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -89,7 +89,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Streams</TITLE>
         <ITEM><ARTICLE><X><T>API Stream - Une nouvelle façon de gérer les Collections en Java 8</T><A>https://blog.ippon.fr/2014/03/17/api-stream-une-nouvelle-facon-de-gerer-les-collections-en-java-8/</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Luc</FIRSTNAME><LASTNAME>Clément</LASTNAME></AUTHOR><DATE><YEAR>2014</YEAR><MONTH>3</MONTH><DAY>17</DAY></DATE><COMMENT>An overview of <CODEROUTINE>Stream</CODEROUTINE>s.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>3 Reasons why You Shouldn’t Replace Your for-loops by Stream.forEach()</T><A>https://blog.jooq.org/3-reasons-why-you-shouldnt-replace-your-for-loops-by-stream-foreach/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Luka</FIRSTNAME><LASTNAME>Seder</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE><COMMENT>The title says it all: do use blindly <CODEROUTINE>Stream.forEach()</CODEROUTINE>, but consider performance, readability and maintainability.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>3 Reasons why You Shouldn’t Replace Your for-loops by Stream.forEach()</T><A>https://blog.jooq.org/3-reasons-why-you-shouldnt-replace-your-for-loops-by-stream-foreach/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Luka</FIRSTNAME><LASTNAME>Seder</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>12</MONTH><DAY>8</DAY></DATE><COMMENT>The title says it all: don’t use blindly <CODEROUTINE>Stream.forEach()</CODEROUTINE>, but consider performance, readability and maintainability.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>JDK 8: Lessons Learnt With Lambdas and Streams - Simon Ritter</T><A>https://www.youtube.com/watch?v=w0Fd5PfI8TQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>50</MINUTE><SECOND>48</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Ritter</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE><COMMENT>A few, but good, pieces of advice for using Streams.</COMMENT></ARTICLE></ITEM>
         <ITEM><BLIST><TITLE>Brian Goetz’ Java Streams</TITLE>
           <ITEM><ARTICLE><X quality="1"><T>An introduction to the java.util.stream library</T><ST>Run functional-style queries on collections and other data sets</ST><A>https://developer.ibm.com/articles/j-java-streams-1-brian-goetz/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Brian</FIRSTNAME><LASTNAME>Goetz</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Nathan</FIRSTNAME><LASTNAME>Good</LASTNAME></AUTHOR><DATE><YEAR>2016</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>An introduction to streams.</COMMENT></ARTICLE></ITEM>
@@ -228,6 +228,7 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Java 25</TITLE>
       <ITEM><ARTICLE><X><T>How to Upgrade to Java 25 #RoadTo25</T><A>https://www.youtube.com/watch?v=9azNjz7s1Ck</A><L>en</L><F>MP4</F><DURATION><MINUTE>22</MINUTE><SECOND>40</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nicolai</FIRSTNAME><LASTNAME>Parlog</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Billy</FIRSTNAME><LASTNAME>Korando</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>24</DAY></DATE><COMMENT>A funny way to describe the list of removals and deprecations between Java 21 and 25.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>What’s New in Java 25 in 2 Minutes... More or Less - Sip of Java</T><A>https://www.youtube.com/watch?v=lCNNA1erCfk</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>9</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Billy</FIRSTNAME><LASTNAME>Korando</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>A short summary of the new features, removals, and preview features.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
