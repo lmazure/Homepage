@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Hacking</TITLE>
 <PATH>links/hacking.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -168,7 +168,7 @@
       <ITEM><ARTICLE><X><T>Bobby Tables</T><A>https://blog.cleancoder.com/uncle-bob/2017/12/03/BobbyTables.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME><GIVENNAME>Uncle Bob</GIVENNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE><COMMENT>SQL is too dangerous, it should not be used anymore.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Buffer overflows and similar tricks</TITLE>
-      <ITEM><ARTICLE><X quality="2"><T>Smashing The Stack For Fun And Profit</T><A>https://insecure.org/stf/smashstack.html</A><L>en</L><F>HTML</F></X><X><T>Smashing The Stack For Fun And Profit</T><A>https://phrack.org/issues/49/14</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Elias</FIRSTNAME><LASTNAME>Levy</LASTNAME><GIVENNAME>Aleph One</GIVENNAME></AUTHOR><DATE><YEAR>1996</YEAR><MONTH>11</MONTH></DATE><COMMENT>A very well-known article: <AUTHOR><FIRSTNAME>Elias</FIRSTNAME><LASTNAME>Levy</LASTNAME><GIVENNAME>Aleph One</GIVENNAME></AUTHOR> describes what is a buffer overflow exploit and how to exploit it.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality="2"><T>Smashing The Stack For Fun And Profit</T><A>https://insecure.org/stf/smashstack.html</A><L>en</L><F>HTML</F></X><X quality="2"><T>Smashing The Stack For Fun And Profit</T><A>https://phrack.org/issues/49/14</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Elias</FIRSTNAME><LASTNAME>Levy</LASTNAME><GIVENNAME>Aleph One</GIVENNAME></AUTHOR><DATE><YEAR>1996</YEAR><MONTH>11</MONTH></DATE><COMMENT>A very well-known article: <AUTHOR><FIRSTNAME>Elias</FIRSTNAME><LASTNAME>Levy</LASTNAME><GIVENNAME>Aleph One</GIVENNAME></AUTHOR> describes what is a buffer overflow exploit and how to exploit it.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Ping of Death</T><A>https://insecure.org/sploits/ping-o-death.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Malachi</FIRSTNAME><LASTNAME>Kenney</LASTNAME></AUTHOR><DATE><YEAR>1997</YEAR><MONTH>1</MONTH><DAY>22</DAY></DATE><COMMENT>At the beginning of Internet explosion, there were some major security issues: you could simply crash a machine by sending an illegal IP packet…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>TAKING ADVANTAGE OF NON-TERMINATED ADJACENT MEMORY SPACES</T><A>https://phrack.org/issues/56/14</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>twitch</GIVENNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE><COMMENT>A small variation of the buffer overflow by using contiguous buffers.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Bypassing StackGuard and StackShield</T><A>https://phrack.org/issues/56/5</A><L>en</L><F>HTML</F></X><AUTHOR><GIVENNAME>Bulba</GIVENNAME></AUTHOR><AUTHOR><GIVENNAME>Kil3r</GIVENNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE><COMMENT>Some new overflow techniques: overwriting the return address despite the presence of a canary, patching the <CODEROUTINE>atexit</CODEROUTINE> table and patching the global offset table.</COMMENT></ARTICLE></ITEM>
@@ -184,7 +184,7 @@
       <ITEM><ARTICLE><X><T>Writing UTF-8 compatible shellcodes</T><A>https://phrack.org/issues/62/9</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Thomas</FIRSTNAME><LASTNAME>Wana</LASTNAME></AUTHOR><DATE><YEAR>2004</YEAR><MONTH>7</MONTH><DAY>13</DAY></DATE><COMMENT>A description of the conditions necessary to create a shellcode which is a valid UTF8 string and some tricks to fulfil them.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Format string</TITLE>
-      <ITEM><ARTICLE><X quality="2"><T>More info on format bugs.</T><A>https://julianor.tripod.com/bc/kalou-formats.txt</A><L>en</L><F>HTML</F></X><X><T>Format string vulnerability</T><A>https://aeb.win.tue.nl/linux/hh/kalou/format.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Pascal</FIRSTNAME><LASTNAME>Bouchareine</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>7</MONTH><DAY>18</DAY></DATE><COMMENT>How to exploit format string bugs to examine the stack and execute a root shell.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X quality="2"><T>More info on format bugs.</T><A>https://julianor.tripod.com/bc/kalou-formats.txt</A><L>en</L><F>HTML</F></X><X quality="2"><T>Format string vulnerability</T><A>https://aeb.win.tue.nl/linux/hh/kalou/format.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Pascal</FIRSTNAME><LASTNAME>Bouchareine</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>7</MONTH><DAY>18</DAY></DATE><COMMENT>How to exploit format string bugs to examine the stack and execute a root shell.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Write It Secure: Format Strings and Locale Filtering</T><A>https://dwheeler.com/essays/write_it_secure_1.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>David</FIRSTNAME><MIDDLENAME>A.</MIDDLENAME><LASTNAME>Wheeler</LASTNAME></AUTHOR><DATE><YEAR>2000</YEAR><MONTH>12</MONTH></DATE><COMMENT>A non-technical overview of format string exploit and locale hijacks.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Integer overflows</TITLE>
@@ -229,6 +229,9 @@
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>SHA-1 attacks</TITLE>
       <ITEM><ARTICLE><X><T>Cryptanalysis of SHA-1</T><A>https://www.schneier.com/blog/archives/2005/02/cryptanalysis_o.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Bruce</FIRSTNAME><LASTNAME>Schneier</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE><COMMENT>A Chinese team has been able to divide the search space by 2<SUP>11</SUP>. SHA-1’s future starts to look like MD5’s future.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>SHA-2 attacks</TITLE>
+      <ITEM><ARTICLE><X><T>SHA2 Fatal Flaw? (Hash Length Extension Attack) - Computerphile</T><A>https://www.youtube.com/watch?v=gOIBUe1fjX0</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>23</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mike</FIRSTNAME><LASTNAME>Pound</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>23</DAY></DATE><COMMENT>A description of a length extension attack on SHA2.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Ajax</TITLE>
       <ITEM><ARTICLE><X><T>Ajax Security Dangers</T><A>https://sol.sela.co.il/api/controllers/m/_Uploads/dbsAttachedFiles/AJAXdangers.pdf</A><L>en</L><F>PDF</F></X><AUTHOR><FIRSTNAME>Billy</FIRSTNAME><LASTNAME>Hoffman</LASTNAME></AUTHOR><DATE><YEAR>2006</YEAR></DATE><COMMENT>Yet another white paper on AJAX security. The only interest here is that it describes possible issues with AJAX bridging.</COMMENT></ARTICLE></ITEM>
