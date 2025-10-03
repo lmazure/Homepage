@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>12</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -946,9 +946,10 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
   "terminal.integrated.defaultProfile.windows": "Git Bash"</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Used extensions</TITLE>
+  <ITEM><X><T>Markdown Table Formatter</T><A>https://marketplace.visualstudio.com/items?itemName=fcrespo82.markdown-table-formatter</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><X><T>Markdown Preview Mermaid Support</T><A>https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>XML</T><A>https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Code Spell Checker</T><A>https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Markdown Table Formatter</T><A>https://marketplace.visualstudio.com/items?itemName=fcrespo82.markdown-table-formatter</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Pylance</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><BLIST><TITLE><X><T>Python</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.python</A><L>en</L><F>HTML</F></X></TITLE>
     <ITEM>to set the virtual environment to use, run <CODEROUTINE>Python: Select Interpreter</CODEROUTINE>.</ITEM>
