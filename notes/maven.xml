@@ -126,9 +126,7 @@ Command line options
     The repository can be defined in the <CODEFILENAME>settings.xml</CODEFILENAME> file with the <CODEROUTINE>&lt;localRepository&gt;/path/to/local/repo&lt;/localRepository&gt;</CODEROUTINE> element.</ITEM>
   <ITEM>Execute some given test classes / test methods
     <CODESAMPLE>mvn test -Dtest="TanTest,SinTest#checkValue"</CODESAMPLE></ITEM>
-  <ITEM>Execute some given test classes / test methods
-    <CODESAMPLE>mvn test -Dtest="TanTest,SinTest#checkValue"</CODESAMPLE></ITEM>
-  <ITEM>The <CODEROUTINE>-Dvalue=name</CODEROUTINE> parameters are set as system properties and can be retrieve in the Java code using <CODEROUTINE>java system.getproperty()</CODEROUTINE>.</ITEM>
+  <ITEM>The <CODEROUTINE>-D&lt;name&gt;=&lt;value&gt;</CODEROUTINE> parameters are set as system properties and can be retrieved in the Java code using <CODEROUTINE>System.getProperty()</CODEROUTINE>.</ITEM>
 </BLIST>
 <BLIST><TITLE><B>Maven daemon</B></TITLE>
   <ITEM>Stop all daemons
