@@ -14,31 +14,31 @@
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>## title 2</CODESAMPLE><BR/>
-      <CODESAMPLE>title 1<BR/>
+      <CODESAMPLE>title 2<BR/>
         -------</CODESAMPLE></TERM>
-    <DESC>Heading level 2 (<CODEROUTINE>&lt;h1&gt;title 2&lt;/h1&gt;</CODEROUTINE>)</DESC>
+    <DESC>Heading level 2 (<CODEROUTINE>&lt;h2&gt;title 2&lt;/h2&gt;</CODEROUTINE>)</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>### title 3</CODESAMPLE></TERM>
-    <DESC>Heading level 3 (<CODEROUTINE>&lt;h1&gt;title 3&lt;/h1&gt;</CODEROUTINE>)</DESC>
+    <DESC>Heading level 3 (<CODEROUTINE>&lt;h3&gt;title 3&lt;/h3&gt;</CODEROUTINE>)</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>#### title 4</CODESAMPLE></TERM>
-    <DESC>Heading level 4 (<CODEROUTINE>&lt;h1&gt;title 4&lt;/h1&gt;</CODEROUTINE>)</DESC>
+    <DESC>Heading level 4 (<CODEROUTINE>&lt;h4&gt;title 4&lt;/h4&gt;</CODEROUTINE>)</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>##### title 5</CODESAMPLE></TERM>
-    <DESC>Heading level 5 (<CODEROUTINE>&lt;h1&gt;title 5&lt;/h1&gt;</CODEROUTINE>)</DESC>
+    <DESC>Heading level 5 (<CODEROUTINE>&lt;h5&gt;title 5&lt;/h5&gt;</CODEROUTINE>)</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>###### title 6</CODESAMPLE></TERM>
-    <DESC>Heading level 6 (<CODEROUTINE>&lt;h1&gt;title 6&lt;/h1&gt;</CODEROUTINE>)</DESC>
+    <DESC>Heading level 6 (<CODEROUTINE>&lt;h6&gt;title 6&lt;/h6&gt;</CODEROUTINE>)</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>paragraph 1<BR/>
       <BR/>
       paragraph 2</CODESAMPLE></TERM>
-    <DESC>Use a blank lines to separate the text in paragraphs.</DESC>
+    <DESC>Use a blank line to separate the text in paragraphs.</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>text&lt;br&gt;</CODESAMPLE></TERM>
@@ -96,7 +96,7 @@
     <TERM><CODESAMPLE>|&#160;Tables&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|&#160;Are&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;|&#160;Cool&#160;&#160;|<BR/>
       |&#160;-------------&#160;|:-------------:|&#160;-----:|<BR/>
       |&#160;col&#160;3&#160;is&#160;&#160;&#160;&#160;&#160;&#160;|&#160;right-aligned&#160;|&#160;$1600&#160;|<BR/>
-      |&#160;col&#160;2&#160;is&#160;&#160;&#160;&#160;&#160;&#160;|&#160;&#160;&#160;&#160;centered&#160;&#160;&#160;|&#160;&#160;&#160;$12&#160;|</CODESAMPLE></TERM>
+      |&#160;col&#160;2&#160;is&#160;&#160;&#160;&#160;&#160;&#160;|&#160;&#160;&#160;&#160;centred&#160;&#160;&#160;|&#160;&#160;&#160;$12&#160;|</CODESAMPLE></TERM>
     <DESC>Use pipes to define a table, outer pipes are optional, pipes do not have to be aligned.<BR/>
       Use colons to define the column alignment.</DESC>
   </ROW>
