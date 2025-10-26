@@ -234,7 +234,7 @@
   </ITEM>
   <ITEM>Lists support slices (these ones are mutable and can even be used to change the size of the list)<BR/>
     <CODEROUTINE>a[0:2]</CODEROUTINE>: remove the two first elements of the list<BR/>
-    <CODEROUTINE>a[:0] = a</CODEROUTINE>: insert a copy ot itself at the beginning of the list
+    <CODEROUTINE>a[:0] = a</CODEROUTINE>: insert a copy of itself at the beginning of the list
   </ITEM>
   <ITEM>All slice operations return a new list containing the requested elements. So <CODEROUTINE>a[:]</CODEROUTINE> returns a shallow copy of <CODEROUTINE>a</CODEROUTINE>.</ITEM>
   <ITEM><CODEROUTINE>del</CODEROUTINE> can be used to remove elements in a list
@@ -334,7 +334,7 @@
     Tuple unpacking
     <CODESAMPLE>x,y,z=t</CODESAMPLE>
   </ITEM>
-  <ITEM>Tuple are immutable: it is not possible ot assign to the individual items of a tuple</ITEM>
+  <ITEM>Tuple are immutable: it is not possible to assign to the individual items of a tuple</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Sequences</B></U></TITLE>
   <ITEM>Sequences can be lists, strings, or tuples.</ITEM>

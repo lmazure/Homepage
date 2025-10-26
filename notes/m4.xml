@@ -5,13 +5,11 @@
 <PATH>notes/m4.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
-<U>automatic indexation</U>
-<CODESAMPLE>
-define(`insertSortCriteria',`sortCriteria`'eval($1+$2)')<BR/>
-insertSortCriteria(17,1)<BR/>
-insertSortCriteria(17,2)<BR/>
-insertSortCriteria(17,3)<BR/>
-</CODESAMPLE>
+<U>Automatic indexation</U>
+<CODESAMPLE>define(`insertSortCriteria',`sortCriteria`'eval($1+$2)')<BR/>
+  insertSortCriteria(17,1)<BR/>
+  insertSortCriteria(17,2)<BR/>
+  insertSortCriteria(17,3)</CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/unix.html#m4</A><L>en</L><F>HTML</F></X>
 </PAGE>

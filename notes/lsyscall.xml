@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
-<TITLE>Linux systems calls</TITLE>
+<TITLE>Linux system calls</TITLE>
 <PATH>notes/lsyscall.xml</PATH>
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>27</DAY></DATE>
 <CONTENT>
@@ -43,7 +43,7 @@
 <ROW><TERM><CODEROUTINE><X><T>read</T><A>https://man7.org/linux/man-pages/man2/read.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>read a file (given its file descriptor)</DESC></ROW>
 <ROW><TERM><CODEROUTINE><X><T>write</T><A>https://man7.org/linux/man-pages/man2/write.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>write to a file (given its file descriptor)</DESC></ROW>
 <ROW><TERM><CODEROUTINE><X><T>fsync</T><A>https://man7.org/linux/man-pages/man2/fsync.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>flush the file data and metadata on the disk</DESC></ROW>
-<ROW><TERM><CODEROUTINE><X><T>fdatasync</T><A>https://man7.org/linux/man-pages/man2/fdatasync.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>flush the file data on the disk (but not the metadadata)</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>fdatasync</T><A>https://man7.org/linux/man-pages/man2/fdatasync.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>flush the file data on the disk (but not the metadata)</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 <ITEM>socket
 <DEFINITIONTABLE>
@@ -80,7 +80,7 @@
 <ROW><TERM><CODEROUTINE><X><T>madvise</T><A>https://man7.org/linux/man-pages/man2/madvise.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>indicate to the kernel how memory will be used</DESC></ROW>
 <ROW><TERM><CODEROUTINE><X><T>mlock</T><A>https://man7.org/linux/man-pages/man2/mlock.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>lock some pages in core memory</DESC></ROW>
 <ROW><TERM><CODEROUTINE><X><T>munlock</T><A>https://man7.org/linux/man-pages/man2/munlock.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>unlock some pages from core memory</DESC></ROW>
-<ROW><TERM><CODEROUTINE><X><T>mlockall</T><A>https://man7.org/linux/man-pages/man2/mlockall.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>lock all process pages (pages of the code, data and stack segments, shared libraries, user space kernel data, shared memory and memory mapped files) in core memory</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>mlockall</T><A>https://man7.org/linux/man-pages/man2/mlockall.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>lock all process pages (pages of the code, data, and stack segments, shared libraries, user space kernel data, shared memory and memory mapped files) in core memory</DESC></ROW>
 <ROW><TERM><CODEROUTINE><X><T>munlockall</T><A>https://man7.org/linux/man-pages/man2/munlockall.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>unlock all process pages from core memory</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
@@ -101,7 +101,7 @@
 <ROW><TERM><CODEROUTINE><X><T>time</T><A>https://man7.org/linux/man-pages/man2/time.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>get time</DESC></ROW>
 <ROW><TERM><CODEROUTINE><X><T>gettimeofday</T><A>https://man7.org/linux/man-pages/man2/gettimeofday.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>get time and time zone</DESC></ROW>
 <ROW><TERM><CODEROUTINE><X><T>settimeofday</T><A>https://man7.org/linux/man-pages/man2/settimeofday.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>set time and time zone</DESC></ROW>
-<ROW><TERM><CODEROUTINE><X><T>adjtimex</T><A>https://man7.org/linux/man-pages/man2/adjtimex.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>set/get clock adjustement</DESC></ROW>
+<ROW><TERM><CODEROUTINE><X><T>adjtimex</T><A>https://man7.org/linux/man-pages/man2/adjtimex.2.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>set/get clock adjustment</DESC></ROW>
 </DEFINITIONTABLE></ITEM>
 </BLIST>
 </CONTENT>
