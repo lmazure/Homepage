@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>10</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -197,6 +197,7 @@
         <ITEM><ARTICLE><X><T>Construire son RAG (Retrieval Augmented Generation) grâce à langchain: L’exemple de l’Helpdesk d’OCTO</T><A>https://blog.octo.com/le-chatbot-docto-langchain-rag-et-code-associe</A><L>fr</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Florian</FIRSTNAME><LASTNAME>Bastin</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Nicolas</FIRSTNAME><LASTNAME>Cavallo</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE><COMMENT>A detailed example demonstrating how to extract data from Confluence, embed the chunks, create a chain to find and format the answer, and evaluate the result.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X quality="-1"><T>Content Extraction using Large Language Models &amp; JavaScript</T><A>https://www.youtube.com/watch?v=GyIaXarpq9w</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>3</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Amanda</FIRSTNAME><LASTNAME>Winkles</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE><COMMENT>An example of using LangChain with Granite to extract data from a PDF and Mistral Large to format it into a Markdown table. But the Json format is unspecified, she is using some flaky heuristic to clean up Granite’s answer, an LLM is an overkill to convert Json into a Markdown table…</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>LangChain RAG: Optimizing AI Models for Accurate Responses</T><A>https://www.youtube.com/watch?v=cDn7bf84LsM</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Erika</FIRSTNAME><LASTNAME>Russi</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>13</DAY></DATE><COMMENT>A simple RAG system using LangChain and Granite 3.0 8B Instruct.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>LangChain Reaches 1.0 - Whats new?</T><A>https://www.youtube.com/watch?v=hjIlj4OAECQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>16</MINUTE><SECOND>34</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE><COMMENT>An overview of LangChain current products while it is raising more money.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>LangChain4j</TITLE>
         <ITEM><ARTICLE><X><T>Java Meets AI: A Hands On Guide to Building LLM Powered Applications with LangChain4j By Lize Raes</T><A>https://www.youtube.com/watch?v=BD1MSLbs9KE</A><L>en</L><F>MP4</F><DURATION><MINUTE>50</MINUTE><SECOND>47</SECOND></DURATION></X><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE><COMMENT>An overview of LangChain4j.</COMMENT></ARTICLE></ITEM>
