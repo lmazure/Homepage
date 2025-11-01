@@ -61,7 +61,7 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>lftp</T><A>https://www.unix.com/man_page/redhat/1/lftp/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
-    <DESC>implementation of FTP that also support the HTTP protocol</DESC>
+    <DESC>implementation of FTP that also supports the HTTP protocol</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -146,7 +146,7 @@
     </ROW>
     </DEFINITIONTABLE>
     to retrieve the HTTP code:
-    <CODESAMPLE>CODE=$(curl -o /dev/null -w '%{HTTP_CODE}' -u " user:password" https://sqtm-nightly-cloud.acceptance.squashtest.org/api/rest/latest/projects/999/test-cases)</CODESAMPLE>
+    <CODESAMPLE>CODE=$(curl -o /dev/null -w '%{HTTP_CODE}' -u "user:password" https://sqtm-nightly-cloud.acceptance.squashtest.org/api/rest/latest/projects/999/test-cases)</CODESAMPLE>
     to retrieve an image file:
     <CODESAMPLE>curl -v -X GET http://localhost:8080/api/get_image/0 --output foobar.png</CODESAMPLE>
     to generate a token on TM
