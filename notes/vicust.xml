@@ -7,15 +7,13 @@
 <CONTENT>
 <SLIST>
 <ITEM>
-<CODEROUTINE>vi</CODEROUTINE> customization is defined in <CODEFILENAME>~/.exrc</CODEFILENAME>
+<CODEROUTINE>vi</CODEROUTINE> customisation is defined in <CODEFILENAME>~/.exrc</CODEFILENAME>
 </ITEM>
 <ITEM>
-ClearCase shortkeys:
-<CODESAMPLE>
-:map #3 :!cleartool co -nc %^M:se noro^M<BR/>
-:map #4 :!cleartool diff -graph -pred % &amp;^M<BR/>
-:map #5 :!cleartool lsvtree -graph % &amp;^M<BR/>
-</CODESAMPLE>
+ClearCase shortcuts:
+<CODESAMPLE>:map #3 :!cleartool co -nc %^M:se noro^M<BR/>
+  :map #4 :!cleartool diff -graph -pred % &amp;^M<BR/>
+  :map #5 :!cleartool lsvtree -graph % &amp;^M</CODESAMPLE>
 </ITEM>
 </SLIST>
 </CONTENT>
