@@ -9,19 +9,19 @@
 <ITEM>create a CD ISO image
 <CODESAMPLE><PROMPT/>mkisofs -r -o foo.iso root_dir_of_data</CODESAMPLE></ITEM>
 <ITEM>rip the ISO image of a CD
-<CODESAMPLE><PROMPT/>dd if=/dev/cdrom of=foobar.iso</CODESAMPLE></ITEM>
+  <CODESAMPLE><PROMPT/>dd if=/dev/cdrom of=foobar.iso</CODESAMPLE></ITEM>
 <ITEM>test an ISO image
-<CODESAMPLE><PROMPT/>mkdir /tmp/test<BR/>
-<PROMPT/>mount -o loop /tmp/foobar.iso /tmp/test</CODESAMPLE></ITEM>
+  <CODESAMPLE><PROMPT/>mkdir /tmp/test<BR/>
+  <PROMPT/>mount -o loop /tmp/foobar.iso /tmp/test</CODESAMPLE></ITEM>
 <ITEM>find the CD/DVD drive location (x,y,z) with
-<CODESAMPLE><PROMPT/>cdrecord -scanbus</CODESAMPLE>
-and burn with (old Red Hat releases)
-<CODESAMPLE><PROMPT/>cdrecord -v -dev=x,y,z foo.iso</CODESAMPLE></ITEM>
+  <CODESAMPLE><PROMPT/>cdrecord -scanbus</CODESAMPLE>
+  and burn with (old Red Hat releases)
+  <CODESAMPLE><PROMPT/>cdrecord -v -dev=x,y,z foo.iso</CODESAMPLE></ITEM>
 <ITEM>burn a DVD ISO image on latest RedHat releases (I set the speed to 1 to avoid some DVD corruption problems…)
-<CODESAMPLE><PROMPT/>sudo cdrecord -v dev=ATA:1,0,0 -dao -speed 1 toto.iso</CODESAMPLE></ITEM>
+  <CODESAMPLE><PROMPT/>sudo cdrecord -v dev=ATA:1,0,0 -dao -speed 1 toto.iso</CODESAMPLE></ITEM>
 <ITEM>blank a R/W CD
-<CODESAMPLE><PROMPT/>cdrecord -dev=2,0,0 -blank=fast</CODESAMPLE>
-<CODESAMPLE><PROMPT/>cdrecord -dev=2,0,0 -blank=all</CODESAMPLE></ITEM>
+  <CODESAMPLE><PROMPT/>cdrecord -dev=2,0,0 -blank=fast</CODESAMPLE>
+  <CODESAMPLE><PROMPT/>cdrecord -dev=2,0,0 -blank=all</CODESAMPLE></ITEM>
 </BLIST>
 </CONTENT>
 </PAGE>
