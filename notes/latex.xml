@@ -133,7 +133,7 @@ Other letters
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\mathcal{ABC…Zabc…z}</CODEROUTINE></TERM>
-    <DESC>calligraphic letters letters, no lowercase<BR/><MATH>\mathcal{ABC…Zabc…z}</MATH></DESC>
+    <DESC>calligraphic letters, no lowercase<BR/><MATH>\mathcal{ABC…Zabc…z}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>\mathfrak{ABC…Zabc…z}</CODEROUTINE></TERM>
@@ -563,11 +563,11 @@ Matrices
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\begin{bmatrix}<BR/><TAB/>a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,m} \\<BR/><TAB/>a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,m} \\<BR/><TAB/>\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\<BR/><TAB/>a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,m}<BR/>\end{bmatrix}</CODESAMPLE></TERM>
-    <DESC>matrix with double vertical bars<BR/><MATH>\begin{bmatrix}a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,m} \\a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,m} \\\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,m}\end{bmatrix}</MATH></DESC>
+    <DESC>matrix with horizontal, vertical, and diagonal dots<BR/><MATH>\begin{bmatrix}a_{1,1} &amp; a_{1,2} &amp; \cdots &amp; a_{1,m} \\a_{2,1} &amp; a_{2,2} &amp; \cdots &amp; a_{2,m} \\\vdots &amp; \vdots &amp; \ddots &amp; \vdots \\a_{m,1} &amp; a_{m,2} &amp; \cdots &amp; a_{m,m}\end{bmatrix}</MATH></DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>\begin{bmatrix}<BR/><TAB/>a_{1} &amp; &amp; \\ <BR/><TAB/>&amp; \ddots &amp; \\ <BR/><TAB/>&amp; &amp; a_{n}<BR/>\end{bmatrix}</CODESAMPLE></TERM>
-    <DESC>matrix with double vertical bars<BR/><MATH>\begin{bmatrix}a_{1} &amp; &amp; \\&amp; \ddots &amp; \\&amp; &amp; a_{n}\end{bmatrix}</MATH></DESC>
+    <DESC>diagonal matrix with diagonal dots<BR/><MATH>\begin{bmatrix}a_{1} &amp; &amp; \\&amp; \ddots &amp; \\&amp; &amp; a_{n}\end{bmatrix}</MATH></DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
