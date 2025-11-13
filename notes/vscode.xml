@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -612,12 +612,12 @@ Search/replace
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Down"/><BR/>
-      <CODEROUTINE>SCrollLineDown</CODEROUTINE></TERM>
+      <CODEROUTINE>ScrollLineDown</CODEROUTINE></TERM>
     <DESC>Scroll down by one line</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Up"/><BR/>
-      <CODEROUTINE>SCrollLineUp</CODEROUTINE></TERM>
+      <CODEROUTINE>ScrollLineUp</CODEROUTINE></TERM>
     <DESC>Scroll up by one line</DESC>
   </ROW>
   <ROW>
@@ -650,7 +650,7 @@ Search/replace
     <BR/>
     To uppercase a group, use <CODEROUTINE>\U$1</CODEROUTINE>.<BR/>
     <CODEROUTINE>\u</CODEROUTINE> and <CODEROUTINE>\l</CODEROUTINE> upper/lowercase a single character, <CODEROUTINE>\U</CODEROUTINE> and <CODEROUTINE>\L</CODEROUTINE> upper/lowercase the rest of the matching group.<BR/>
-    The modifiers can also be stacked:, <CODEROUTINE>\u\u\u$1</CODEROUTINE> uppercase the first three characters of the group, <CODEROUTINE>\l\U$1</CODEROUTINE> lowercase the first character and uppercase the rest.</DESC>
+    The modifiers can also be stacked: <CODEROUTINE>\u\u\u$1</CODEROUTINE> uppercase the first three characters of the group, <CODEROUTINE>\l\U$1</CODEROUTINE> lowercase the first character and uppercase the rest.</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="F"/><BR/>
@@ -949,13 +949,42 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
   <ITEM><X><T>Markdown Table Formatter</T><A>https://marketplace.visualstudio.com/items?itemName=fcrespo82.markdown-table-formatter</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>Markdown Preview Mermaid Support</T><A>https://marketplace.visualstudio.com/items?itemName=bierner.markdown-mermaid</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><X><T>XML</T><A>https://marketplace.visualstudio.com/items?itemName=redhat.vscode-xml</A><L>en</L><F>HTML</F></X></ITEM>
-  <ITEM><X><T>Code Spell Checker</T><A>https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker</A><L>en</L><F>HTML</F></X></ITEM>
+  <ITEM><BLIST><TITLE><X><T>Code Spell Checker</T><A>https://marketplace.visualstudio.com/items?itemName=streetsidesoftware.code-spell-checker</A><L>en</L><F>HTML</F></X></TITLE>
+    <ITEM>to define the used languages, set the property <CODEROUTINE>"cSpell.language": "en,fr"</CODEROUTINE> in <CODEFILENAME>settings.json</CODEFILENAME>.</ITEM>
+  </BLIST></ITEM>
   <ITEM><X><T>Pylance</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.vscode-pylance</A><L>en</L><F>HTML</F></X></ITEM>
   <ITEM><BLIST><TITLE><X><T>Python</T><A>https://marketplace.visualstudio.com/items?itemName=ms-python.python</A><L>en</L><F>HTML</F></X></TITLE>
     <ITEM>to set the virtual environment to use, run <CODEROUTINE>Python: Select Interpreter</CODEROUTINE>.</ITEM>
     <ITEM>to define the default virtual environment to use, add <CODEROUTINE>"python.envFile": "${workspaceFolder}/.venv"</CODEROUTINE> in <CODEFILENAME>settings.json</CODEFILENAME>.</ITEM>
     <ITEM>to enable type checking, set <CODEROUTINE>python.analysis.typeCheckingMode</CODEROUTINE> to <CODEFILENAME>basic</CODEFILENAME> or <CODEFILENAME>strict</CODEFILENAME>.</ITEM>
   </BLIST></ITEM>
+  <ITEM><X><T>Docker</T><A>https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</A><L>en</L><F>HTML</F></X>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>Docker Containers: Attach Shell</CODEROUTINE></TERM>
+        <DESC>Open a shell in a running container</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM><X><T>Shades of Purple</T><A>https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple</A><L>en</L><F>HTML</F></X></ITEM>
+</BLIST>
+<BLIST><TITLE>Extensions not used anymore</TITLE>
+  <ITEM><X><T>GitLab Workflow</T><A>https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow</A><L>en</L><F>HTML</F></X>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>gitlab.aiAssistedCodeSuggestions.enabled</CODEROUTINE></TERM>
+        <DESC>Toggle code completion</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM><X><T>Extension Pack for Java</T><A>https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack</A><L>en</L><F>HTML</F></X>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>Java: Create Java Project…</CODEROUTINE></TERM>
+        <DESC>Launch a wizard to create a Java project</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
   <ITEM><X><T>Codeium</T><A>https://marketplace.visualstudio.com/items?itemName=Codeium.codeium</A><L>en</L><F>HTML</F></X>
     <DEFINITIONTABLE>
       <ROW>
@@ -1034,33 +1063,6 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
       <ROW>
         <TERM><CODEROUTINE>GitLens: Toggle File Heatmap</CODEROUTINE></TERM>
         <DESC>Toggle the display of the heatmap</DESC>
-      </ROW>
-    </DEFINITIONTABLE>
-  </ITEM>
-  <ITEM><X><T>Docker</T><A>https://marketplace.visualstudio.com/items?itemName=ms-azuretools.vscode-docker</A><L>en</L><F>HTML</F></X>
-    <DEFINITIONTABLE>
-      <ROW>
-        <TERM><CODEROUTINE>Docker Containers: Attach Shell</CODEROUTINE></TERM>
-        <DESC>Open a shell in a running container</DESC>
-      </ROW>
-    </DEFINITIONTABLE>
-  </ITEM>
-  <ITEM><X><T>Shades of Purple</T><A>https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple</A><L>en</L><F>HTML</F></X></ITEM>
-</BLIST>
-<BLIST><TITLE>Extensions not used anymore</TITLE>
-  <ITEM><X><T>GitLab Workflow</T><A>https://marketplace.visualstudio.com/items?itemName=GitLab.gitlab-workflow</A><L>en</L><F>HTML</F></X>
-    <DEFINITIONTABLE>
-      <ROW>
-        <TERM><CODEROUTINE>gitlab.aiAssistedCodeSuggestions.enabled</CODEROUTINE></TERM>
-        <DESC>Toggle code completion</DESC>
-      </ROW>
-    </DEFINITIONTABLE>
-  </ITEM>
-  <ITEM><X><T>Extension Pack for Java</T><A>https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack</A><L>en</L><F>HTML</F></X>
-    <DEFINITIONTABLE>
-      <ROW>
-        <TERM><CODEROUTINE>Java: Create Java Project…</CODEROUTINE></TERM>
-        <DESC>Launch a wizard to create a Java project</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
