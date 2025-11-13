@@ -12,19 +12,19 @@ enable it with
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="R"/></TERM><DESC>use raw keyboard events</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="K"/></TERM><DESC>kill current VT in use</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="E"/></TERM><DESC>terminate all running processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="I"/></TERM><DESC>kill all processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="L"/></TERM><DESC>kill all processes (including <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="B"/></TERM><DESC>reboot</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="S"/></TERM><DESC>sync all drives</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="U"/></TERM><DESC>umount all filesystems</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="O"/></TERM><DESC>turn the machine off</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="P"/></TERM><DESC>dump processor’s registers</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="T"/></TERM><DESC>dump current tasks</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="M"/></TERM><DESC>dump some memory info</DESC></ROW>
-<ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="0"/> up to <MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="9"/></TERM><DESC>set kernel log level and redirect it to console</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="R"/></TERM><DESC>use raw keyboard events</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="K"/></TERM><DESC>kill current VT in use</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="E"/></TERM><DESC>terminate all running processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="I"/></TERM><DESC>kill all processes (except <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="L"/></TERM><DESC>kill all processes (including <CODEROUTINE>init</CODEROUTINE>)</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="B"/></TERM><DESC>reboot</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="S"/></TERM><DESC>sync all drives</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="U"/></TERM><DESC>umount all filesystems</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="O"/></TERM><DESC>turn the machine off</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="P"/></TERM><DESC>dump processor’s registers</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="T"/></TERM><DESC>dump current tasks</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="M"/></TERM><DESC>dump some memory info</DESC></ROW>
+  <ROW><TERM><MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="0"/> up to <MODIFIERKEY id="Alt"/><MODIFIERKEY id="SysRq"/><KEY id="9"/></TERM><DESC>set kernel log level and redirect it to console</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
@@ -43,8 +43,8 @@ enable it with
 <ITEM><BLIST><TITLE>DNS</TITLE>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>host</T><A>https://linux.die.net/man/1/host</A><L>en</L><F>HTML</F></X> foobar</CODEROUTINE></TERM><DESC>perform a DNS lookup and return the IP address of <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE><X><T>host</T><A>https://linux.die.net/man/1/host</A><L>en</L><F>HTML</F></X> 11.22.33.44</CODEROUTINE></TERM><DESC>perform a DNS lookup and return the name of <CODEROUTINE>11.22.33.44</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>host</T><A>https://linux.die.net/man/1/host</A><L>en</L><F>HTML</F></X> foobar</CODEROUTINE></TERM><DESC>perform a DNS lookup and return the IP address of <CODEROUTINE>foobar</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>host</T><A>https://linux.die.net/man/1/host</A><L>en</L><F>HTML</F></X> 11.22.33.44</CODEROUTINE></TERM><DESC>perform a DNS lookup and return the name of <CODEROUTINE>11.22.33.44</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
@@ -76,38 +76,38 @@ report the temperature, number of errors, lifetime… of an ATA/IDE/SCSI3 hard d
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>scsiinfo</T><A>https://manpages.ubuntu.com/manpages/plucky/en/man8/scsiinfo.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display/set SCSI device parameters</DESC></ROW>
-<ROW><TERM><CODEROUTINE>scsiinfo -X</CODEROUTINE></TERM><DESC>set SCSI device parameters (use <CODEROUTINE><X><T>scsi-config</T><A>https://manpages.ubuntu.com/manpages/bionic/man8/scsi-config.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> instead)</DESC></ROW>
-<ROW><TERM><CODEROUTINE>scsiinfo -d /dev/sda</CODEROUTINE></TERM><DESC>dump defect list from manufacturer table and grown table</DESC></ROW>
-<ROW><TERM><CODEROUTINE>scsiinfo -a /dev/sda</CODEROUTINE></TERM><DESC>display all information</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>scsiinfo</T><A>https://manpages.ubuntu.com/manpages/plucky/en/man8/scsiinfo.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display/set SCSI device parameters</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>scsiinfo -X</CODEROUTINE></TERM><DESC>set SCSI device parameters (use <CODEROUTINE><X><T>scsi-config</T><A>https://manpages.ubuntu.com/manpages/bionic/man8/scsi-config.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE> instead)</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>scsiinfo -d /dev/sda</CODEROUTINE></TERM><DESC>dump defect list from manufacturer table and grown table</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>scsiinfo -a /dev/sda</CODEROUTINE></TERM><DESC>display all information</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>hdparm</T><A>https://man7.org/linux/man-pages/man8/hdparm.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display/set IDE hard disk parameters</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>hdparm</T><A>https://man7.org/linux/man-pages/man8/hdparm.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>display/set IDE hard disk parameters</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>scsiformat</T><A>https://manpages.ubuntu.com/manpages/plucky/en/man8/scsiformat.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>format a SCSI disk</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>scsiformat</T><A>https://manpages.ubuntu.com/manpages/plucky/en/man8/scsiformat.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>format a SCSI disk</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>badblocks</T><A>https://man7.org/linux/man-pages/man8/badblocks.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>list the bad blocks of a device</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>badblocks</T><A>https://man7.org/linux/man-pages/man8/badblocks.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>list the bad blocks of a device</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>System analysis</B></U></TITLE>
 <ITEM>
-The messages log by the system are in <CODEFILENAME>/var/log</CODEFILENAME>.
+The messages logged by the system are in <CODEFILENAME>/var/log</CODEFILENAME>.
 <DEFINITIONTABLE>
-<ROW><TERM><CODEFILENAME>/var/log/messages</CODEFILENAME></TERM><DESC>System log</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/var/log/boot.log</CODEFILENAME></TERM><DESC>Service start/stop log</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/var/log/secure</CODEFILENAME></TERM><DESC>Security log</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/var/log/maillog</CODEFILENAME></TERM><DESC>Sendmail log</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/var/log/httpd/access_log</CODEFILENAME></TERM><DESC>Apache access log</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/var/log/httpd/error_log</CODEFILENAME></TERM><DESC>Apache error log</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/var/log/messages</CODEFILENAME></TERM><DESC>System log</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/var/log/boot.log</CODEFILENAME></TERM><DESC>Service start/stop log</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/var/log/secure</CODEFILENAME></TERM><DESC>Security log</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/var/log/maillog</CODEFILENAME></TERM><DESC>Sendmail log</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/var/log/httpd/access_log</CODEFILENAME></TERM><DESC>Apache access log</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/var/log/httpd/error_log</CODEFILENAME></TERM><DESC>Apache error log</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
@@ -189,34 +189,34 @@ list the <CODEROUTINE>/dev/sg</CODEROUTINE>s bound to a SCSI device
 <ITEM>
 <X><T>/proc</T><A>https://tldp.org/LDP/Linux-Filesystem-Hierarchy/html/proc.html</A><L>en</L><F>HTML</F></X> files
 <DEFINITIONTABLE>
-<ROW><TERM><CODEFILENAME>/proc/cmdline</CODEFILENAME></TERM><DESC>the command line parameters used to start the kernel</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/kcore</CODEFILENAME></TERM><DESC>is the image of the physical memory (in the core file format)</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/kmsg</CODEFILENAME></TERM><DESC>is the kernel messages log (only a provileged process can read it and syslog must be called by a process)</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/ksyms</CODEFILENAME></TERM><DESC>is the kernel symbol table</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/loadavg</CODEFILENAME></TERM><DESC>contains load indicators (same as uptime)</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/cpuinfo</CODEFILENAME></TERM><DESC>CPU characteristics (only the cpu and bogomips are standard entries)</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/meminfo</CODEFILENAME></TERM><DESC>contains the current memory usage (same as free)</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/modules</CODEFILENAME></TERM><DESC>lists the modules currently loaded in the kernel</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/uptime</CODEFILENAME></TERM><DESC>contains the uptime and idle time</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/version</CODEFILENAME></TERM><DESC>contains the versions of the Linux kernel, gcc and Red Hat Linux installed on the system</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/filesystems</CODEFILENAME></TERM><DESC>lists the file systems supported by the kernel</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/swaps</CODEFILENAME></TERM><DESC>lists the swap spaces and their use</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/stat</CODEFILENAME></TERM><DESC>contains some kernel statistics</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/slabinfo</CODEFILENAME></TERM><DESC>lists the memory usage on the slab level</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/mounts</CODEFILENAME></TERM><DESC>lists all the mount of the system</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/locks</CODEFILENAME></TERM><DESC>lists the file currently locked by the kernel</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/devices</CODEFILENAME></TERM><DESC>major numbers and device groups</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/ioports</CODEFILENAME></TERM><DESC>used IO addresses</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/interrupts</CODEFILENAME></TERM><DESC>used interrupts</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/dma</CODEFILENAME></TERM><DESC>used DMA channels</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/cmdline</CODEFILENAME></TERM><DESC>the command line parameters used to start the kernel</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/kcore</CODEFILENAME></TERM><DESC>is the image of the physical memory (in the core file format)</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/kmsg</CODEFILENAME></TERM><DESC>is the kernel messages log (only a privileged process can read it and syslog must be called by a process)</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/ksyms</CODEFILENAME></TERM><DESC>is the kernel symbol table</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/loadavg</CODEFILENAME></TERM><DESC>contains load indicators (same as uptime)</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/cpuinfo</CODEFILENAME></TERM><DESC>CPU characteristics (only the cpu and bogomips are standard entries)</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/meminfo</CODEFILENAME></TERM><DESC>contains the current memory usage (same as free)</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/modules</CODEFILENAME></TERM><DESC>lists the modules currently loaded in the kernel</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/uptime</CODEFILENAME></TERM><DESC>contains the uptime and idle time</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/version</CODEFILENAME></TERM><DESC>contains the versions of the Linux kernel, gcc and Red Hat Linux installed on the system</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/filesystems</CODEFILENAME></TERM><DESC>lists the file systems supported by the kernel</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/swaps</CODEFILENAME></TERM><DESC>lists the swap spaces and their use</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/stat</CODEFILENAME></TERM><DESC>contains some kernel statistics</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/slabinfo</CODEFILENAME></TERM><DESC>lists the memory usage on the slab level</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/mounts</CODEFILENAME></TERM><DESC>lists all the mount of the system</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/locks</CODEFILENAME></TERM><DESC>lists the file currently locked by the kernel</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/devices</CODEFILENAME></TERM><DESC>major numbers and device groups</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/ioports</CODEFILENAME></TERM><DESC>used IO addresses</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/interrupts</CODEFILENAME></TERM><DESC>used interrupts</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/dma</CODEFILENAME></TERM><DESC>used DMA channels</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM><BLIST><TITLE>/proc/sys</TITLE>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>sysctl</T><A>https://man7.org/linux/man-pages/man8/sysctl.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>configure kernel parameters at runtime</DESC></ROW>
-<ROW><TERM><CODEROUTINE>sysctl -a</CODEROUTINE></TERM><DESC>list all the parameters currently set</DESC></ROW>
-<ROW><TERM><CODEROUTINE>sysctl -w kernel.sysrq=1</CODEROUTINE></TERM><DESC>this is the same as <CODEROUTINE>echo 1 &gt; /proc/sys/kernel/sysrq</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>sysctl</T><A>https://man7.org/linux/man-pages/man8/sysctl.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>configure kernel parameters at runtime</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>sysctl -a</CODEROUTINE></TERM><DESC>list all the parameters currently set</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>sysctl -w kernel.sysrq=1</CODEROUTINE></TERM><DESC>this is the same as <CODEROUTINE>echo 1 &gt; /proc/sys/kernel/sysrq</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>When the system boots, the <CODEROUTINE>init</CODEROUTINE> program runs the <CODEFILENAME>/etc/rc.d/rc.sysinit</CODEFILENAME> script which executes <CODEROUTINE>sysctl</CODEROUTINE> using <CODEFILENAME>/etc/sysctl.conf</CODEFILENAME>. So any values added to <CODEFILENAME>/etc/sysctl.conf</CODEFILENAME> will take effect each time the system boots.</ITEM>
@@ -228,47 +228,47 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>https://lin
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>chkconfig</T><A>https://linux.die.net/man/8/chkconfig</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>configure system services</DESC></ROW>
-<ROW><TERM><CODEROUTINE>chkconfig --list</CODEROUTINE></TERM><DESC>list the current state of the services</DESC></ROW>
-<ROW><TERM><CODEROUTINE>chkconfig rexec on</CODEROUTINE></TERM><DESC>enable a service<BR/>the service will be started only at the nest reboot, use <CODEROUTINE>service rexec start</CODEROUTINE> to start it now</DESC></ROW>
-<ROW><TERM><CODEROUTINE>chkconfig rexec off</CODEROUTINE></TERM><DESC>disable a service</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>chkconfig</T><A>https://linux.die.net/man/8/chkconfig</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>configure system services</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>chkconfig --list</CODEROUTINE></TERM><DESC>list the current state of the services</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>chkconfig rexec on</CODEROUTINE></TERM><DESC>enable a service<BR/>the service will be started only at the next reboot, use <CODEROUTINE>service rexec start</CODEROUTINE> to start it now</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>chkconfig rexec off</CODEROUTINE></TERM><DESC>disable a service</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>service --status-all</CODEROUTINE></TERM><DESC>return the status of all services</DESC></ROW>
-<ROW><TERM><CODEROUTINE>service sshd status</CODEROUTINE></TERM><DESC>indicate if <CODEROUTINE>sshd</CODEROUTINE> is running</DESC></ROW>
-<ROW><TERM><CODEROUTINE>service sshd start</CODEROUTINE></TERM><DESC>start <CODEROUTINE>sshd</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>service sshd stop</CODEROUTINE></TERM><DESC>stop <CODEROUTINE>sshd</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>service --status-all</CODEROUTINE></TERM><DESC>return the status of all services</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>service sshd status</CODEROUTINE></TERM><DESC>indicate if <CODEROUTINE>sshd</CODEROUTINE> is running</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>service sshd start</CODEROUTINE></TERM><DESC>start <CODEROUTINE>sshd</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>service sshd stop</CODEROUTINE></TERM><DESC>stop <CODEROUTINE>sshd</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>File system analysis</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>lsof</T><A>https://people.freebsd.org/~abe/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>list the open files</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>lsof</T><A>https://people.freebsd.org/~abe/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>list the open files</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>shred</T><A>https://man7.org/linux/man-pages/man1/shred.1.html</A><L>en</L><F>HTML</F></X> foobar</CODEROUTINE></TERM><DESC>overwrite a file before deleting it</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>shred</T><A>https://man7.org/linux/man-pages/man1/shred.1.html</A><L>en</L><F>HTML</F></X> foobar</CODEROUTINE></TERM><DESC>overwrite a file before deleting it</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEFILENAME><X><T>/etc/fstab</T><A>https://man7.org/linux/man-pages/man5/fstab.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>description of the filesystems to mount</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/etc/mtab</CODEFILENAME></TERM><DESC>tracking of the mounted filesystems</DESC></ROW>
+  <ROW><TERM><CODEFILENAME><X><T>/etc/fstab</T><A>https://man7.org/linux/man-pages/man5/fstab.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>description of the filesystems to mount</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/etc/mtab</CODEFILENAME></TERM><DESC>tracking of the mounted filesystems</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>sfdisk</T><A>https://man7.org/linux/man-pages/man8/sfdisk.8.html</A><L>en</L><F>HTML</F></X> -l /dev/sdb</CODEROUTINE></TERM><DESC>display the partition table of disk /dev/sdb</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>sfdisk</T><A>https://man7.org/linux/man-pages/man8/sfdisk.8.html</A><L>en</L><F>HTML</F></X> -l /dev/sdb</CODEROUTINE></TERM><DESC>display the partition table of disk /dev/sdb</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM><BLIST><TITLE>Swap</TITLE>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>swapon</T><A>https://linux.die.net/man/8/swapon</A><L>en</L><F>HTML</F></X> -s</CODEROUTINE><BR/><CODEROUTINE>cat <CODEFILENAME><X><T>/proc/swaps</T><A>https://man7.org/linux/man-pages/man5/proc.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></CODEROUTINE></TERM><DESC>display swap usage</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>swapon</T><A>https://linux.die.net/man/8/swapon</A><L>en</L><F>HTML</F></X> -s</CODEROUTINE><BR/><CODEROUTINE>cat <CODEFILENAME><X><T>/proc/swaps</T><A>https://man7.org/linux/man-pages/man5/proc.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></CODEROUTINE></TERM><DESC>display swap usage</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
@@ -276,44 +276,44 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>https://lin
 <ITEM><BLIST><TITLE>XFS</TITLE>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>mkfs.xfs</T><A>https://man7.org/linux/man-pages/man8/mkfs.xfs.8.html</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE><BR/><CODEROUTINE><X><T>mkfs</T><A>https://man7.org/linux/man-pages/man8/mkfs.8.html</A><L>en</L><F>HTML</F></X> -t xfs /dev/md4</CODEROUTINE></TERM><DESC>create a XFS filesystem</DESC></ROW>
-<ROW><TERM><CODEROUTINE>mkfs.xfs -f</CODEROUTINE></TERM><DESC>do not create the filesystem, only display its parameters</DESC></ROW>
-<ROW><TERM><CODEROUTINE>mkfs.xfs -N</CODEROUTINE></TERM><DESC>force the filesystem creation even if the partition already contains one</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>mkfs.xfs</T><A>https://man7.org/linux/man-pages/man8/mkfs.xfs.8.html</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE><BR/><CODEROUTINE><X><T>mkfs</T><A>https://man7.org/linux/man-pages/man8/mkfs.8.html</A><L>en</L><F>HTML</F></X> -t xfs /dev/md4</CODEROUTINE></TERM><DESC>create a XFS filesystem</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>mkfs.xfs -N</CODEROUTINE></TERM><DESC>do not create the filesystem, only display its parameters</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>mkfs.xfs -f</CODEROUTINE></TERM><DESC>force the filesystem creation even if the partition already contains one</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODESAMPLE><X><T>xfs_growfs</T><A>https://man7.org/linux/man-pages/man8/xfs_growfs.8.html</A><L>en</L><F>HTML</F></X> -n /dev/md4<BR/>xfs_growfs -n /export/home1</CODESAMPLE></TERM><DESC>display the filesystem parameters</DESC></ROW>
+  <ROW><TERM><CODESAMPLE><X><T>xfs_growfs</T><A>https://man7.org/linux/man-pages/man8/xfs_growfs.8.html</A><L>en</L><F>HTML</F></X> -n /dev/md4<BR/>xfs_growfs -n /export/home1</CODESAMPLE></TERM><DESC>display the filesystem parameters</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODESAMPLE><X><T>xfs_info</T><A>https://man7.org/linux/man-pages/man8/xfs_info.8.html</A><L>en</L><F>HTML</F></X> /dev/md4<BR/>xfs_info /export/home1</CODESAMPLE></TERM><DESC>same as <CODEROUTINE>xfs_growfs -n</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODESAMPLE><X><T>xfs_info</T><A>https://man7.org/linux/man-pages/man8/xfs_info.8.html</A><L>en</L><F>HTML</F></X> /dev/md4<BR/>xfs_info /export/home1</CODESAMPLE></TERM><DESC>same as <CODEROUTINE>xfs_growfs -n</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>xfs_db</T><A>https://man7.org/linux/man-pages/man8/xfs_db.8.html</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>launch the XFS debugger on /dev/md4</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>xfs_db</T><A>https://man7.org/linux/man-pages/man8/xfs_db.8.html</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>launch the XFS debugger on /dev/md4</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>xfs_check</T><A>https://linux.die.net/man/8/xfs_check</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>launch the XFS checker on <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>xfs_check -i 123 /dev/md4</CODEROUTINE></TERM><DESC>launch the XFS checker on inode 123 of <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>xfs_check -l /dev/scsi/sbdc1b0t0u0p5 /dev/md0</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-l</CODEROUTINE> option indicates that <CODEROUTINE>/dev/md0</CODEROUTINE> has an external log <CODEROUTINE>/dev/scsi/sbdc1b0t0u0p5</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>xfs_check</T><A>https://linux.die.net/man/8/xfs_check</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>launch the XFS checker on <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>xfs_check -i 123 /dev/md4</CODEROUTINE></TERM><DESC>launch the XFS checker on inode 123 of <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>xfs_check -l /dev/scsi/sbdc1b0t0u0p5 /dev/md0</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-l</CODEROUTINE> option indicates that <CODEROUTINE>/dev/md0</CODEROUTINE> has an external log <CODEROUTINE>/dev/scsi/sbdc1b0t0u0p5</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>xfs_ncheck</T><A>https://man7.org/linux/man-pages/man8/xfs_ncheck.8.html</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>return the list of inodes/pathnames on <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>xfs_ncheck -i 123 /dev/md4</CODEROUTINE></TERM><DESC>return pathname of inode 123 of <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>xfs_ncheck -l /dev/scsi/sbdc1b0t0u0p5 /dev/md0</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-l</CODEROUTINE> option indicates that <CODEROUTINE>/dev/md0</CODEROUTINE> has an external log <CODEROUTINE>/dev/scsi/sbdc1b0t0u0p5</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>xfs_ncheck</T><A>https://man7.org/linux/man-pages/man8/xfs_ncheck.8.html</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>return the list of inodes/pathnames on <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>xfs_ncheck -i 123 /dev/md4</CODEROUTINE></TERM><DESC>return pathname of inode 123 of <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>xfs_ncheck -l /dev/scsi/sbdc1b0t0u0p5 /dev/md0</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-l</CODEROUTINE> option indicates that <CODEROUTINE>/dev/md0</CODEROUTINE> has an external log <CODEROUTINE>/dev/scsi/sbdc1b0t0u0p5</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>xfs_repair</T><A>https://man7.org/linux/man-pages/man8/xfs_repair.8.html</A><L>en</L><F>HTML</F></X> /dev/md0</CODEROUTINE></TERM><DESC>repair the filesystem mounted on <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
-<ROW><TERM><CODEROUTINE>xfs_repair -l /dev/scsi/sbdc1b0t0u0p5 /dev/md0</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-l</CODEROUTINE> option indicates that <CODEROUTINE>/dev/md0</CODEROUTINE> has an external log <CODEROUTINE>/dev/scsi/sbdc1b0t0u0p5</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>xfs_repair</T><A>https://man7.org/linux/man-pages/man8/xfs_repair.8.html</A><L>en</L><F>HTML</F></X> /dev/md4</CODEROUTINE></TERM><DESC>repair the filesystem mounted on <CODEROUTINE>/dev/md4</CODEROUTINE></DESC></ROW>
+  <ROW><TERM><CODEROUTINE>xfs_repair -l /dev/scsi/sbdc1b0t0u0p5 /dev/md0</CODEROUTINE></TERM><DESC>the <CODEROUTINE>-l</CODEROUTINE> option indicates that <CODEROUTINE>/dev/md0</CODEROUTINE> has an external log <CODEROUTINE>/dev/scsi/sbdc1b0t0u0p5</CODEROUTINE></DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
@@ -321,10 +321,10 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>https://lin
 <ITEM><BLIST><TITLE>NFS</TITLE>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEFILENAME>/var/lib/nfs/rmtab</CODEFILENAME></TERM><DESC>client information</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/var/lib/nfs/etab</CODEFILENAME></TERM><DESC>detailed export information</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/proc/fs/nfs/exports</CODEFILENAME><BR/><CODEFILENAME><X><T>/etc/exports</T><A>https://man7.org/linux/man-pages/man5/exports.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>lists of clients</DESC></ROW>
-<ROW><TERM><CODEFILENAME>/var/lib/nfs/xtab</CODEFILENAME></TERM><DESC>explicit machine names</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/var/lib/nfs/rmtab</CODEFILENAME></TERM><DESC>client information</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/var/lib/nfs/etab</CODEFILENAME></TERM><DESC>detailed export information</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/proc/fs/nfs/exports</CODEFILENAME><BR/><CODEFILENAME><X><T>/etc/exports</T><A>https://man7.org/linux/man-pages/man5/exports.5.html</A><L>en</L><F>HTML</F></X></CODEFILENAME></TERM><DESC>lists of clients</DESC></ROW>
+  <ROW><TERM><CODEFILENAME>/var/lib/nfs/xtab</CODEFILENAME></TERM><DESC>explicit machine names</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
@@ -333,7 +333,7 @@ the configuration file is <CODEFILENAME><X><T>/etc/xinetd.conf</T><A>https://lin
 <BLIST><TITLE><U><B>Libraries</B></U></TITLE>
 <ITEM>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>ldconfig</T><A>https://man7.org/linux/man-pages/man8/ldconfig.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>recreate the links for the shared libraries and rebuild the cache</DESC></ROW>
+  <ROW><TERM><CODEROUTINE><X><T>ldconfig</T><A>https://man7.org/linux/man-pages/man8/ldconfig.8.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>recreate the links for the shared libraries and rebuild the cache</DESC></ROW>
 </DEFINITIONTABLE>
 </ITEM>
 </BLIST>
