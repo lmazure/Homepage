@@ -15,9 +15,9 @@ list the containers of a pod
 <CODESAMPLE>kubectl describe pods &lt;pod name&gt; -n &lt;namespace&gt;</CODESAMPLE>
 display logs of a container in a pod
 <CODESAMPLE>kubectl logs &lt;pod name&gt; -c &lt;container name&gt; -n &lt;namespace&gt;</CODESAMPLE>
-list the deployments in a pod
+list the deployments in a namespace
 <CODESAMPLE>kubectl get deploy -n &lt;namespace&gt;</CODESAMPLE>
-display logs of a deployment in a pod
+display logs of a deployment in a namespace
 <CODESAMPLE>kubectl describe deploy &lt;deployment name&gt; -n &lt;namespace&gt;</CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/operations.html#kubernetes</A><L>en</L><F>HTML</F></X>
