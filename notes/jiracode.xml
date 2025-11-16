@@ -7,323 +7,323 @@
 <CONTENT>
 API
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE>jira1.addComment</CODEROUTINE></TERM>
-<DESC>Adds a comment to an issue</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.createIssue</CODEROUTINE></TERM>
-<DESC>Creates an issue in JIRA from a Hashtable object</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getComments</CODEROUTINE></TERM>
-<DESC>Returns all comments associated with the issue</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getComponents</CODEROUTINE></TERM>
-<DESC>Returns all components available in the specified project</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getIssue</CODEROUTINE></TERM>
-<DESC>Gets an issue from a given issue key.</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getIssuesFromFilter</CODEROUTINE></TERM>
-<DESC>Executes a saved filter</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getIssuesFromTextSearch</CODEROUTINE></TERM>
-<DESC>Find issues using a free text search</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getIssuesFromTextSearchWithProject</CODEROUTINE></TERM>
-<DESC>Find issues using a free text search, limited to certain projects</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getIssueTypes</CODEROUTINE></TERM>
-<DESC>Returns all visible issue types in the system</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getPriorities</CODEROUTINE></TERM>
-<DESC>Returns all priorities in the system</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getProjectsNoSchemes</CODEROUTINE></TERM>
-<DESC>Returns a list of projects available to the user</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getResolutions</CODEROUTINE></TERM>
-<DESC>Returns all resolutions in the system</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getSavedFilters</CODEROUTINE></TERM>
-<DESC>Gets all saved filters available for the currently logged in user</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getServerInfo</CODEROUTINE></TERM>
-<DESC>Returns the Server information such as baseUrl, version, edition, buildDate, buildNumber</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getStatuses</CODEROUTINE></TERM>
-<DESC>Returns all statuses in the system</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getSubTaskIssueTypes</CODEROUTINE></TERM>
-<DESC>Returns all visible subtask issue types in the system</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getUser username</CODEROUTINE></TERM>
-<DESC>Returns user’s information given a username</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.getVersions project-key</CODEROUTINE></TERM>
-<DESC>Returns all versions available in the specified project</DESC></ROW>
-<ROW><TERM><CODEROUTINE>jira1.updateIssue issue-key field-values</CODEROUTINE></TERM>
-<DESC>Updates an issue in JIRA from a Hashtable object</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.addComment</CODEROUTINE></TERM>
+  <DESC>Adds a comment to an issue</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.createIssue</CODEROUTINE></TERM>
+  <DESC>Creates an issue in JIRA from a Hashtable object</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getComments</CODEROUTINE></TERM>
+  <DESC>Returns all comments associated with the issue</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getComponents</CODEROUTINE></TERM>
+  <DESC>Returns all components available in the specified project</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getIssue</CODEROUTINE></TERM>
+  <DESC>Gets an issue from a given issue key.</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getIssuesFromFilter</CODEROUTINE></TERM>
+  <DESC>Executes a saved filter</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getIssuesFromTextSearch</CODEROUTINE></TERM>
+  <DESC>Find issues using a free text search</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getIssuesFromTextSearchWithProject</CODEROUTINE></TERM>
+  <DESC>Find issues using a free text search, limited to certain projects</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getIssueTypes</CODEROUTINE></TERM>
+  <DESC>Returns all visible issue types in the system</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getPriorities</CODEROUTINE></TERM>
+  <DESC>Returns all priorities in the system</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getProjectsNoSchemes</CODEROUTINE></TERM>
+  <DESC>Returns a list of projects available to the user</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getResolutions</CODEROUTINE></TERM>
+  <DESC>Returns all resolutions in the system</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getSavedFilters</CODEROUTINE></TERM>
+  <DESC>Gets all saved filters available for the currently logged in user</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getServerInfo</CODEROUTINE></TERM>
+  <DESC>Returns the Server information such as baseUrl, version, edition, buildDate, buildNumber</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getStatuses</CODEROUTINE></TERM>
+  <DESC>Returns all statuses in the system</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getSubTaskIssueTypes</CODEROUTINE></TERM>
+  <DESC>Returns all visible subtask issue types in the system</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getUser username</CODEROUTINE></TERM>
+  <DESC>Returns user’s information given a username</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.getVersions project-key</CODEROUTINE></TERM>
+  <DESC>Returns all versions available in the specified project</DESC></ROW>
+  <ROW><TERM><CODEROUTINE>jira1.updateIssue issue-key field-values</CODEROUTINE></TERM>
+  <DESC>Updates an issue in JIRA from a Hashtable object</DESC></ROW>
 </DEFINITIONTABLE>
 <BR/>
 Here is a program that will add a code review comment to all requests anterior or equal to a given build number.
 <CODESAMPLE>package com.kika.JIRACodeReviewDriver;<BR/>
-<BR/>
-import org.apache.xmlrpc.client.XmlRpcClient;<BR/>
-import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;<BR/>
-import org.apache.xmlrpc.XmlRpcException;<BR/>
-<BR/>
-import java.net.MalformedURLException;<BR/>
-import java.net.URL;<BR/>
-import java.util.Arrays;<BR/>
-import java.util.HashSet;<BR/>
-import java.util.Map;<BR/>
-import java.util.Vector;<BR/>
-<BR/>
-public class Test<BR/>
-{<BR/>
-<TAB/><BR/>
-<TAB/>private static final String JIRA_URI = "https://jira.kikamedical.net";<BR/>
-<TAB/>private static final String RPC_PATH = "/rpc/xmlrpc";<BR/>
-<TAB/><BR/>
-<TAB/>private static String STATUS_OPEN<TAB/>= "1";<BR/>
-<TAB/>private static String STATUS_IN_PROGRESS<TAB/>= "3";<BR/>
-<TAB/>private static String STATUS_REOPENED<TAB/>= "4";<BR/>
-<TAB/>private static String STATUS_RESOLVED<TAB/>= "5";<BR/>
-<TAB/>private static String STATUS_CLOSED<TAB/>= "6";<BR/>
-<TAB/>private static String STATUS_SUBMIT<TAB/>= "10000";<BR/>
-<TAB/>private static String STATUS_REJECTED<TAB/>= "10001";<BR/>
-<TAB/><BR/>
-<TAB/>private static final String FILTER_ID = "10347"; // ID of the filter used to list the requests<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/> // 10344 -&gt; K3 3.9<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/> // 10347 -&gt; test K3 Proto<BR/>
-<TAB/><BR/>
-<TAB/>private static final String FIELD_ID_FIXED_IN_BUILD = "customfield_10017";<BR/>
-<TAB/>private static final String FIELD_ID_BUILD = "customfield_10026";<BR/>
-<TAB/>private static final String FIELD_ID_COMMITERS_TESTS = "customfield_10091";<BR/>
-<TAB/><BR/>
-<TAB/>private static final String CODE_REVIEW_COMMENT = "this request has been coded reviewed";<BR/>
-<BR/>
-<TAB/>private String a_loginToken;<BR/>
-<TAB/>private XmlRpcClient a_rpcClient;<BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/>public static void main(String[] args) {<BR/>
-<TAB/><TAB/>Test test = new Test(args[0],args[1]);<BR/>
-<TAB/><TAB/>test.execute(args[2]);<BR/>
-<TAB/>}<BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/>public Test(String login,<BR/>
-<TAB/><TAB/><TAB/><TAB/>String password) {<BR/>
-<TAB/><TAB/>{<BR/>
-<TAB/><TAB/><TAB/>// build that has been reviewed<BR/>
-<TAB/><TAB/><TAB/>//final String reviewedBuild = args[0];<BR/>
-<BR/>
-<TAB/><TAB/><TAB/>try<BR/>
-<TAB/><TAB/><TAB/>{<BR/>
-<TAB/><TAB/><TAB/><TAB/>// Initialise RPC Client<BR/>
-<TAB/><TAB/><TAB/><TAB/>XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();<BR/>
-<TAB/><TAB/><TAB/><TAB/>config.setServerURL(new URL(JIRA_URI + RPC_PATH));<BR/>
-<TAB/><TAB/><TAB/><TAB/>a_rpcClient = new XmlRpcClient();<BR/>
-<TAB/><TAB/><TAB/><TAB/>a_rpcClient.setConfig(config);<BR/>
-<BR/>
-<TAB/><TAB/><TAB/><TAB/>// Login and retrieve logon token<BR/>
-<TAB/><TAB/><TAB/><TAB/>Vector&lt;String&gt; loginParams = new Vector&lt;String&gt;(2);<BR/>
-<TAB/><TAB/><TAB/><TAB/>loginParams.add(login);<BR/>
-<TAB/><TAB/><TAB/><TAB/>loginParams.add(password);<BR/>
-<TAB/><TAB/><TAB/><TAB/>a_loginToken = (String) a_rpcClient.execute("jira1.login", loginParams);<BR/>
-<TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/><TAB/>catch (MalformedURLException e)<BR/>
-<TAB/><TAB/><TAB/>{<BR/>
-<TAB/><TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
-<TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/><TAB/>catch (XmlRpcException e)<BR/>
-<TAB/><TAB/><TAB/>{<BR/>
-<TAB/><TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
-<TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/>}<BR/>
-<TAB/>}<BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/>public void execute(String reviewedBuild) {<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>try {<BR/>
-<TAB/><TAB/><TAB/><BR/>
-<TAB/><TAB/><TAB/>// Retrieve list of issues<BR/>
-<TAB/><TAB/><TAB/>Vector&lt;String&gt; parameters = new Vector&lt;String&gt;(2);<BR/>
-<TAB/><TAB/><TAB/>parameters.add(a_loginToken);<BR/>
-<TAB/><TAB/><TAB/>parameters.add(FILTER_ID);<BR/>
-<TAB/><TAB/><TAB/>Object[] issues = (Object[])a_rpcClient.execute("jira1.getIssuesFromFilter", parameters);<BR/>
-<BR/>
-<TAB/><TAB/><TAB/>// Print projects<BR/>
-<TAB/><TAB/><TAB/>for (Object o: issues)<BR/>
-<TAB/><TAB/><TAB/>{<BR/>
-<TAB/><TAB/><TAB/><TAB/>Map issue =  (Map) o;<BR/>
-<BR/>
-<TAB/><TAB/><TAB/><TAB/>final String key = (String)issue.get("key");<BR/>
-<TAB/><TAB/><TAB/><TAB/>final String status = (String)issue.get("status");<BR/>
-<BR/>
-<TAB/><TAB/><TAB/><TAB/>try {<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/>if ( isImpactingCode(issue) &amp;&amp;<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/> ( status.equals(STATUS_RESOLVED) || status.equals(STATUS_CLOSED) ) ) {<BR/>
-<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>String resolvedOn = getResolvedOn(issue);<BR/>
-<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>if ( resolvedOn != null &amp;&amp; compareVersion(reviewedBuild,resolvedOn)&gt;=0 ) {<BR/>
-<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>if ( !isAlreadyFlaggedAsCodeReviewed(key)) {<BR/>
-<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>flagAsCodeReviewed(key,reviewedBuild);<BR/>
-<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/><TAB/><TAB/>} catch (IllegalArgumentException e) {<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/>System.err.println("IllegalArgumentException while handling " + key + ", this request is ignored");<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
-<TAB/><TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/><TAB/><TAB/><BR/>
-<TAB/><TAB/><TAB/>System.out.println();<BR/>
-<BR/>
-<TAB/><TAB/><TAB/>// Log out<BR/>
-<TAB/><TAB/><TAB/>parameters = new Vector&lt;String&gt;(1);<BR/>
-<TAB/><TAB/><TAB/>parameters.add(a_loginToken);<BR/>
-<TAB/><TAB/><TAB/>Boolean bool = (Boolean) a_rpcClient.execute("jira1.logout", parameters);<BR/>
-<TAB/><TAB/><TAB/>System.out.println("Logout successful: " + bool);<BR/>
-<BR/>
-<TAB/><TAB/>}<BR/>
-<TAB/><TAB/>catch (XmlRpcException e)<BR/>
-<TAB/><TAB/>{<BR/>
-<TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
-<TAB/><TAB/>}<BR/>
-<BR/>
-<TAB/>}<BR/>
-<BR/>
-<BR/>
-<BR/>
-<TAB/>// definition of the JIRA components that impacts code<BR/>
-<TAB/>static final String[] s_comp = { "Functional", "IT", "Performance", "Refactoring", "User Interface" };<BR/>
-<TAB/>static final HashSet&lt;String&gt; s_componentsImpactingCode = new HashSet&lt;String&gt;(Arrays.asList(s_comp));<BR/>
-<BR/>
-<TAB/>private static boolean isImpactingCode(Map answer) {<BR/>
-<BR/>
-<TAB/><TAB/>Object[] components = (Object[])answer.get("components");<BR/>
-<TAB/><TAB/>for (Object component: components){<BR/>
-<TAB/><TAB/><TAB/>final Map entry = (Map) component;<BR/>
-<TAB/><TAB/><TAB/>// each map has the following entries<BR/>
-<TAB/><TAB/><TAB/>// - id<BR/>
-<TAB/><TAB/><TAB/>// - name<BR/>
-<TAB/><TAB/><TAB/>if ( s_componentsImpactingCode.contains(entry.get("name")) ) {<BR/>
-<TAB/><TAB/><TAB/><TAB/>return true;<BR/>
-<TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/>}<BR/>
-<BR/>
-<TAB/><TAB/>return false;<BR/>
-<TAB/>}<BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/>private static String getResolvedOn(Map answer) {<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>String resolvedOn = null;<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>Object[] customFieldValues = (Object[])answer.get("customFieldValues");<BR/>
-<TAB/><TAB/>for (Object customFieldValue: customFieldValues){<BR/>
-<TAB/><TAB/><TAB/>final Map entry = (Map) customFieldValue;<BR/>
-<TAB/><TAB/><TAB/>// each map has the following entries<BR/>
-<TAB/><TAB/><TAB/>// - customfieldId<BR/>
-<TAB/><TAB/><TAB/>// - values<BR/>
-<TAB/><TAB/><TAB/>// - key (this one is optional and I don’t know it use)<BR/>
-<TAB/><TAB/><TAB/>if ( entry.get("customfieldId").equals(FIELD_ID_FIXED_IN_BUILD) ) {<BR/>
-<TAB/><TAB/><TAB/><TAB/>resolvedOn = (String)entry.get("values");<BR/>
-<TAB/><TAB/><TAB/><TAB/>break;<BR/>
-<TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/>}<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>return resolvedOn;<BR/>
-<TAB/>}<BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/>private boolean isAlreadyFlaggedAsCodeReviewed(String requestID) {<BR/>
-<BR/>
-<TAB/><TAB/>boolean isAlreadyFlaggedAsCodeReview = false;<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>try {<BR/>
-<TAB/><TAB/><TAB/>Vector&lt;String&gt; parameters = new Vector&lt;String&gt;(2);<BR/>
-<TAB/><TAB/><TAB/>parameters.add(a_loginToken);<BR/>
-<TAB/><TAB/><TAB/>parameters.add(requestID);<BR/>
-<TAB/><TAB/><TAB/>Object[] comments = (Object[])a_rpcClient.execute("jira1.getComments", parameters);<BR/>
-<BR/>
-<TAB/><TAB/><TAB/>for (Object o: comments)<BR/>
-<TAB/><TAB/><TAB/>{<BR/>
-<TAB/><TAB/><TAB/><TAB/>Map comment = (Map) o;<BR/>
-<TAB/><TAB/><TAB/><TAB/>// each map has the following entries<BR/>
-<TAB/><TAB/><TAB/><TAB/>// - id<BR/>
-<TAB/><TAB/><TAB/><TAB/>// - author<BR/>
-<TAB/><TAB/><TAB/><TAB/>// - body<BR/>
-<TAB/><TAB/><TAB/><TAB/>// - created<BR/>
-<TAB/><TAB/><TAB/><TAB/>// - updated<BR/>
-<TAB/><TAB/><TAB/><TAB/>// - updateAuthor<BR/>
-<TAB/><TAB/><TAB/><TAB/>String body = (String)comment.get("body"); <BR/>
-<TAB/><TAB/><TAB/><TAB/>if ( body.startsWith(CODE_REVIEW_COMMENT) ) {<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/>isAlreadyFlaggedAsCodeReview = true;<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/>break;<BR/>
-<TAB/><TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/>}<BR/>
-<TAB/><TAB/>catch (XmlRpcException e)<BR/>
-<TAB/><TAB/>{<BR/>
-<TAB/><TAB/><TAB/>System.err.println("failed to get comments of " + requestID);<BR/>
-<TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
-<TAB/><TAB/>}<BR/>
-<BR/>
-<TAB/> return isAlreadyFlaggedAsCodeReview;<BR/>
-<TAB/>}<BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/>private void flagAsCodeReviewed(String requestID,<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>String reviewedBuild) {<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>try {<BR/>
-<TAB/><TAB/><TAB/>Vector&lt;String&gt; parameters = new Vector&lt;String&gt;(3);<BR/>
-<TAB/><TAB/><TAB/>parameters.add(a_loginToken);<BR/>
-<TAB/><TAB/><TAB/>parameters.add(requestID);<BR/>
-<TAB/><TAB/><TAB/>parameters.add(CODE_REVIEW_COMMENT + " on " + reviewedBuild);<BR/>
-<TAB/><TAB/><TAB/>Boolean bool = (Boolean)a_rpcClient.execute("jira1.addComment", parameters);<BR/>
-<TAB/><TAB/><TAB/>if ( bool.booleanValue() ) { <BR/>
-<TAB/><TAB/><TAB/><TAB/>System.out.println(requestID+" is flagged as reviewed");<BR/>
-<TAB/><TAB/><TAB/>} else {<BR/>
-<TAB/><TAB/><TAB/><TAB/>System.err.println("failed to comment " + requestID + " as reviewed");<BR/>
-<TAB/><TAB/><TAB/>}<BR/>
-<TAB/><TAB/>}<BR/>
-<TAB/><TAB/>catch (XmlRpcException e)<BR/>
-<TAB/><TAB/>{<BR/>
-<TAB/><TAB/><TAB/>System.err.println("failed to comment " + requestID + " as reviewed");<BR/>
-<TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
-<TAB/><TAB/>}<BR/>
-<BR/>
-<TAB/>}<BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/><BR/>
-<TAB/>private static int compareVersion(String versionA,<BR/>
-<TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>String versionB) {<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>String[] verA = versionA.split("\\.");<BR/>
-<TAB/><TAB/>if ( verA.length != 4 ) throw new IllegalArgumentException(versionA + " is an illegal version number");<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>String[] verB = versionB.split("\\.");<BR/>
-<TAB/><TAB/>if ( verB.length != 4 ) throw new IllegalArgumentException(versionB + " is an illegal version number");<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>for (int i=0; i&lt;4; i++) {<BR/>
-<TAB/><TAB/><TAB/>int a = Integer.parseInt(verA[i]);<BR/>
-<TAB/><TAB/><TAB/>int b = Integer.parseInt(verB[i]);<BR/>
-<TAB/><TAB/><TAB/>if (a&lt;b) return -1;<BR/>
-<TAB/><TAB/><TAB/>if (a&gt;b) return 1;
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>}<BR/>
-<TAB/><TAB/><BR/>
-<TAB/><TAB/>return 0;<BR/>
-<TAB/>}<BR/>
-}</CODESAMPLE>
+  <BR/>
+  import org.apache.xmlrpc.client.XmlRpcClient;<BR/>
+  import org.apache.xmlrpc.client.XmlRpcClientConfigImpl;<BR/>
+  import org.apache.xmlrpc.XmlRpcException;<BR/>
+  <BR/>
+  import java.net.MalformedURLException;<BR/>
+  import java.net.URL;<BR/>
+  import java.util.Arrays;<BR/>
+  import java.util.HashSet;<BR/>
+  import java.util.Map;<BR/>
+  import java.util.Vector;<BR/>
+  <BR/>
+  public class Test<BR/>
+  {<BR/>
+  <TAB/><BR/>
+  <TAB/>private static final String JIRA_URI = "https://jira.kikamedical.net";<BR/>
+  <TAB/>private static final String RPC_PATH = "/rpc/xmlrpc";<BR/>
+  <TAB/><BR/>
+  <TAB/>private static String STATUS_OPEN<TAB/>= "1";<BR/>
+  <TAB/>private static String STATUS_IN_PROGRESS<TAB/>= "3";<BR/>
+  <TAB/>private static String STATUS_REOPENED<TAB/>= "4";<BR/>
+  <TAB/>private static String STATUS_RESOLVED<TAB/>= "5";<BR/>
+  <TAB/>private static String STATUS_CLOSED<TAB/>= "6";<BR/>
+  <TAB/>private static String STATUS_SUBMIT<TAB/>= "10000";<BR/>
+  <TAB/>private static String STATUS_REJECTED<TAB/>= "10001";<BR/>
+  <TAB/><BR/>
+  <TAB/>private static final String FILTER_ID = "10347"; // ID of the filter used to list the requests<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/> // 10344 -&gt; K3 3.9<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/> // 10347 -&gt; test K3 Proto<BR/>
+  <TAB/><BR/>
+  <TAB/>private static final String FIELD_ID_FIXED_IN_BUILD = "customfield_10017";<BR/>
+  <TAB/>private static final String FIELD_ID_BUILD = "customfield_10026";<BR/>
+  <TAB/>private static final String FIELD_ID_COMMITERS_TESTS = "customfield_10091";<BR/>
+  <TAB/><BR/>
+  <TAB/>private static final String CODE_REVIEW_COMMENT = "this request has been coded reviewed";<BR/>
+  <BR/>
+  <TAB/>private String a_loginToken;<BR/>
+  <TAB/>private XmlRpcClient a_rpcClient;<BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/>public static void main(String[] args) {<BR/>
+  <TAB/><TAB/>Test test = new Test(args[0],args[1]);<BR/>
+  <TAB/><TAB/>test.execute(args[2]);<BR/>
+  <TAB/>}<BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/>public Test(String login,<BR/>
+  <TAB/><TAB/><TAB/><TAB/>String password) {<BR/>
+  <TAB/><TAB/>{<BR/>
+  <TAB/><TAB/><TAB/>// build that has been reviewed<BR/>
+  <TAB/><TAB/><TAB/>//final String reviewedBuild = args[0];<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/>try<BR/>
+  <TAB/><TAB/><TAB/>{<BR/>
+  <TAB/><TAB/><TAB/><TAB/>// Initialise RPC Client<BR/>
+  <TAB/><TAB/><TAB/><TAB/>XmlRpcClientConfigImpl config = new XmlRpcClientConfigImpl();<BR/>
+  <TAB/><TAB/><TAB/><TAB/>config.setServerURL(new URL(JIRA_URI + RPC_PATH));<BR/>
+  <TAB/><TAB/><TAB/><TAB/>a_rpcClient = new XmlRpcClient();<BR/>
+  <TAB/><TAB/><TAB/><TAB/>a_rpcClient.setConfig(config);<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/><TAB/>// Login and retrieve logon token<BR/>
+  <TAB/><TAB/><TAB/><TAB/>Vector&lt;String&gt; loginParams = new Vector&lt;String&gt;(2);<BR/>
+  <TAB/><TAB/><TAB/><TAB/>loginParams.add(login);<BR/>
+  <TAB/><TAB/><TAB/><TAB/>loginParams.add(password);<BR/>
+  <TAB/><TAB/><TAB/><TAB/>a_loginToken = (String) a_rpcClient.execute("jira1.login", loginParams);<BR/>
+  <TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><TAB/>catch (MalformedURLException e)<BR/>
+  <TAB/><TAB/><TAB/>{<BR/>
+  <TAB/><TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
+  <TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><TAB/>catch (XmlRpcException e)<BR/>
+  <TAB/><TAB/><TAB/>{<BR/>
+  <TAB/><TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
+  <TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/>}<BR/>
+  <TAB/>}<BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/>public void execute(String reviewedBuild) {<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>try {<BR/>
+  <TAB/><TAB/><TAB/><BR/>
+  <TAB/><TAB/><TAB/>// Retrieve list of issues<BR/>
+  <TAB/><TAB/><TAB/>Vector&lt;String&gt; parameters = new Vector&lt;String&gt;(2);<BR/>
+  <TAB/><TAB/><TAB/>parameters.add(a_loginToken);<BR/>
+  <TAB/><TAB/><TAB/>parameters.add(FILTER_ID);<BR/>
+  <TAB/><TAB/><TAB/>Object[] issues = (Object[])a_rpcClient.execute("jira1.getIssuesFromFilter", parameters);<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/>// Print projects<BR/>
+  <TAB/><TAB/><TAB/>for (Object o: issues)<BR/>
+  <TAB/><TAB/><TAB/>{<BR/>
+  <TAB/><TAB/><TAB/><TAB/>Map issue =  (Map) o;<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/><TAB/>final String key = (String)issue.get("key");<BR/>
+  <TAB/><TAB/><TAB/><TAB/>final String status = (String)issue.get("status");<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/><TAB/>try {<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/>if ( isImpactingCode(issue) &amp;&amp;<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/> ( status.equals(STATUS_RESOLVED) || status.equals(STATUS_CLOSED) ) ) {<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>String resolvedOn = getResolvedOn(issue);<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>if ( resolvedOn != null &amp;&amp; compareVersion(reviewedBuild,resolvedOn)&gt;=0 ) {<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>if ( !isAlreadyFlaggedAsCodeReviewed(key)) {<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>flagAsCodeReviewed(key,reviewedBuild);<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><TAB/><TAB/>} catch (IllegalArgumentException e) {<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/>System.err.println("IllegalArgumentException while handling " + key + ", this request is ignored");<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
+  <TAB/><TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><TAB/><TAB/><BR/>
+  <TAB/><TAB/><TAB/>System.out.println();<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/>// Log out<BR/>
+  <TAB/><TAB/><TAB/>parameters = new Vector&lt;String&gt;(1);<BR/>
+  <TAB/><TAB/><TAB/>parameters.add(a_loginToken);<BR/>
+  <TAB/><TAB/><TAB/>Boolean bool = (Boolean) a_rpcClient.execute("jira1.logout", parameters);<BR/>
+  <TAB/><TAB/><TAB/>System.out.println("Logout successful: " + bool);<BR/>
+  <BR/>
+  <TAB/><TAB/>}<BR/>
+  <TAB/><TAB/>catch (XmlRpcException e)<BR/>
+  <TAB/><TAB/>{<BR/>
+  <TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
+  <TAB/><TAB/>}<BR/>
+  <BR/>
+  <TAB/>}<BR/>
+  <BR/>
+  <BR/>
+  <BR/>
+  <TAB/>// definition of the JIRA components that impact code<BR/>
+  <TAB/>static final String[] s_comp = { "Functional", "IT", "Performance", "Refactoring", "User Interface" };<BR/>
+  <TAB/>static final HashSet&lt;String&gt; s_componentsImpactingCode = new HashSet&lt;String&gt;(Arrays.asList(s_comp));<BR/>
+  <BR/>
+  <TAB/>private static boolean isImpactingCode(Map answer) {<BR/>
+  <BR/>
+  <TAB/><TAB/>Object[] components = (Object[])answer.get("components");<BR/>
+  <TAB/><TAB/>for (Object component: components){<BR/>
+  <TAB/><TAB/><TAB/>final Map entry = (Map) component;<BR/>
+  <TAB/><TAB/><TAB/>// each map has the following entries<BR/>
+  <TAB/><TAB/><TAB/>// - id<BR/>
+  <TAB/><TAB/><TAB/>// - name<BR/>
+  <TAB/><TAB/><TAB/>if ( s_componentsImpactingCode.contains(entry.get("name")) ) {<BR/>
+  <TAB/><TAB/><TAB/><TAB/>return true;<BR/>
+  <TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/>}<BR/>
+  <BR/>
+  <TAB/><TAB/>return false;<BR/>
+  <TAB/>}<BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/>private static String getResolvedOn(Map answer) {<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>String resolvedOn = null;<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>Object[] customFieldValues = (Object[])answer.get("customFieldValues");<BR/>
+  <TAB/><TAB/>for (Object customFieldValue: customFieldValues){<BR/>
+  <TAB/><TAB/><TAB/>final Map entry = (Map) customFieldValue;<BR/>
+  <TAB/><TAB/><TAB/>// each map has the following entries<BR/>
+  <TAB/><TAB/><TAB/>// - customfieldId<BR/>
+  <TAB/><TAB/><TAB/>// - values<BR/>
+  <TAB/><TAB/><TAB/>// - key (this one is optional and I don’t know it use)<BR/>
+  <TAB/><TAB/><TAB/>if ( entry.get("customfieldId").equals(FIELD_ID_FIXED_IN_BUILD) ) {<BR/>
+  <TAB/><TAB/><TAB/><TAB/>resolvedOn = (String)entry.get("values");<BR/>
+  <TAB/><TAB/><TAB/><TAB/>break;<BR/>
+  <TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>return resolvedOn;<BR/>
+  <TAB/>}<BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/>private boolean isAlreadyFlaggedAsCodeReviewed(String requestID) {<BR/>
+  <BR/>
+  <TAB/><TAB/>boolean isAlreadyFlaggedAsCodeReview = false;<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>try {<BR/>
+  <TAB/><TAB/><TAB/>Vector&lt;String&gt; parameters = new Vector&lt;String&gt;(2);<BR/>
+  <TAB/><TAB/><TAB/>parameters.add(a_loginToken);<BR/>
+  <TAB/><TAB/><TAB/>parameters.add(requestID);<BR/>
+  <TAB/><TAB/><TAB/>Object[] comments = (Object[])a_rpcClient.execute("jira1.getComments", parameters);<BR/>
+  <BR/>
+  <TAB/><TAB/><TAB/>for (Object o: comments)<BR/>
+  <TAB/><TAB/><TAB/>{<BR/>
+  <TAB/><TAB/><TAB/><TAB/>Map comment = (Map) o;<BR/>
+  <TAB/><TAB/><TAB/><TAB/>// each map has the following entries<BR/>
+  <TAB/><TAB/><TAB/><TAB/>// - id<BR/>
+  <TAB/><TAB/><TAB/><TAB/>// - author<BR/>
+  <TAB/><TAB/><TAB/><TAB/>// - body<BR/>
+  <TAB/><TAB/><TAB/><TAB/>// - created<BR/>
+  <TAB/><TAB/><TAB/><TAB/>// - updated<BR/>
+  <TAB/><TAB/><TAB/><TAB/>// - updateAuthor<BR/>
+  <TAB/><TAB/><TAB/><TAB/>String body = (String)comment.get("body"); <BR/>
+  <TAB/><TAB/><TAB/><TAB/>if ( body.startsWith(CODE_REVIEW_COMMENT) ) {<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/>isAlreadyFlaggedAsCodeReview = true;<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/>break;<BR/>
+  <TAB/><TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/>}<BR/>
+  <TAB/><TAB/>catch (XmlRpcException e)<BR/>
+  <TAB/><TAB/>{<BR/>
+  <TAB/><TAB/><TAB/>System.err.println("failed to get comments of " + requestID);<BR/>
+  <TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
+  <TAB/><TAB/>}<BR/>
+  <BR/>
+  <TAB/> return isAlreadyFlaggedAsCodeReview;<BR/>
+  <TAB/>}<BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/>private void flagAsCodeReviewed(String requestID,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>String reviewedBuild) {<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>try {<BR/>
+  <TAB/><TAB/><TAB/>Vector&lt;String&gt; parameters = new Vector&lt;String&gt;(3);<BR/>
+  <TAB/><TAB/><TAB/>parameters.add(a_loginToken);<BR/>
+  <TAB/><TAB/><TAB/>parameters.add(requestID);<BR/>
+  <TAB/><TAB/><TAB/>parameters.add(CODE_REVIEW_COMMENT + " on " + reviewedBuild);<BR/>
+  <TAB/><TAB/><TAB/>Boolean bool = (Boolean)a_rpcClient.execute("jira1.addComment", parameters);<BR/>
+  <TAB/><TAB/><TAB/>if ( bool.booleanValue() ) { <BR/>
+  <TAB/><TAB/><TAB/><TAB/>System.out.println(requestID+" is flagged as reviewed");<BR/>
+  <TAB/><TAB/><TAB/>} else {<BR/>
+  <TAB/><TAB/><TAB/><TAB/>System.err.println("failed to comment " + requestID + " as reviewed");<BR/>
+  <TAB/><TAB/><TAB/>}<BR/>
+  <TAB/><TAB/>}<BR/>
+  <TAB/><TAB/>catch (XmlRpcException e)<BR/>
+  <TAB/><TAB/>{<BR/>
+  <TAB/><TAB/><TAB/>System.err.println("failed to comment " + requestID + " as reviewed");<BR/>
+  <TAB/><TAB/><TAB/>e.printStackTrace();<BR/>
+  <TAB/><TAB/>}<BR/>
+  <BR/>
+  <TAB/>}<BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/><BR/>
+  <TAB/>private static int compareVersion(String versionA,<BR/>
+  <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>String versionB) {<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>String[] verA = versionA.split("\\.");<BR/>
+  <TAB/><TAB/>if ( verA.length != 4 ) throw new IllegalArgumentException(versionA + " is an illegal version number");<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>String[] verB = versionB.split("\\.");<BR/>
+  <TAB/><TAB/>if ( verB.length != 4 ) throw new IllegalArgumentException(versionB + " is an illegal version number");<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>for (int i=0; i&lt;4; i++) {<BR/>
+  <TAB/><TAB/><TAB/>int a = Integer.parseInt(verA[i]);<BR/>
+  <TAB/><TAB/><TAB/>int b = Integer.parseInt(verB[i]);<BR/>
+  <TAB/><TAB/><TAB/>if (a&lt;b) return -1;<BR/>
+  <TAB/><TAB/><TAB/>if (a&gt;b) return 1;
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>}<BR/>
+  <TAB/><TAB/><BR/>
+  <TAB/><TAB/>return 0;<BR/>
+  <TAB/>}<BR/>
+  }</CODESAMPLE>
 <BR/>
 Code to set a custom field
 <CODESAMPLE>Vector&lt;String&gt; v = new Vector&lt;String&gt;(1);<BR/>
-v.add(fieldValue); <BR/>
-Map&lt;String,Object&gt; map = new HashMap&lt;String,Object&gt;(); <BR/>
-map.put(fieldName,v); <BR/>
-Vector&lt;Object&gt; parameters = new Vector&lt;Object&gt;(); <BR/>
-parameters.add(a_loginToken); <BR/>
-parameters.add(requestID); <BR/>
-parameters.add(map); <BR/>
-/* Map&lt;String,Object&gt; modifiedIssue = (Map&lt;String,Object&gt;) */ a_rpcClient.execute("jira1.updateIssue", parameters);</CODESAMPLE>
+  v.add(fieldValue); <BR/>
+  Map&lt;String,Object&gt; map = new HashMap&lt;String,Object&gt;(); <BR/>
+  map.put(fieldName,v); <BR/>
+  Vector&lt;Object&gt; parameters = new Vector&lt;Object&gt;(); <BR/>
+  parameters.add(a_loginToken); <BR/>
+  parameters.add(requestID); <BR/>
+  parameters.add(map); <BR/>
+  /* Map&lt;String,Object&gt; modifiedIssue = (Map&lt;String,Object&gt;) */ a_rpcClient.execute("jira1.updateIssue", parameters);</CODESAMPLE>
 </CONTENT>
 </PAGE>
