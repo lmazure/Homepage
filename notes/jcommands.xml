@@ -24,66 +24,66 @@
         <TERM><CODEROUTINE>--class-path classpath</CODEROUTINE><BR/>
           <CODEROUTINE>-classpath classpath</CODEROUTINE><BR/>
           <CODEROUTINE>-cp classpath</CODEROUTINE></TERM>
-        <DESC>Specifies a list of directories, JAR files, and ZIP archives to search for class files.<BR/>
+        <DESC>Specify a list of directories, JAR files, and ZIP archives to search for class files.<BR/>
           On Windows, semicolons (<CODEROUTINE>;</CODEROUTINE>) separate entities in this list; on other platforms it is a colon (<CODEROUTINE>:</CODEROUTINE>).<BR/>
           Specifying <CODEROUTINE>classpath</CODEROUTINE> overrides any setting of the <CODEROUTINE>CLASSPATH</CODEROUTINE> environment variable. If the class path option isn’t used and classpath isn’t set, then the user class path consists of the current directory.<BR/>
           As a special convenience, a class path element that contains a base name of an asterisk (<CODEROUTINE>*</CODEROUTINE>) is considered equivalent to specifying a list of all the files in the directory with the extension <CODEROUTINE>.jar</CODEROUTINE> or <CODEROUTINE>.JAR</CODEROUTINE>.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>--version</CODEROUTINE></TERM>
-        <DESC>Prints product version to the output stream and exits.</DESC>
+        <DESC>Print product version to the output stream and exits.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>-version</CODEROUTINE></TERM>
-        <DESC>Prints product version to the error stream and exits.</DESC>
+        <DESC>Print product version to the error stream and exits.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>--show-version</CODEROUTINE></TERM>
-        <DESC>Prints the product version to the output stream and continues.</DESC>
+        <DESC>Print the product version to the output stream and continues.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>-showversion</CODEROUTINE></TERM>
-        <DESC>Prints the product version to the error stream and continues.</DESC>
+        <DESC>Print the product version to the error stream and continues.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>-help</CODEROUTINE><BR/>
             <CODEROUTINE>-h</CODEROUTINE><BR/>
             <CODEROUTINE>-?</CODEROUTINE></TERM>
-        <DESC>Prints the help message to the error stream.</DESC>
+        <DESC>Print the help message to the error stream.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>--help</CODEROUTINE></TERM>
-        <DESC>Prints the help message to the output stream.</DESC>
+        <DESC>Print the help message to the output stream.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>-X</CODEROUTINE></TERM>
-        <DESC>Prints the help on extra options to the error stream.</DESC>
+        <DESC>Print the help on extra options to the error stream.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>--help-extra</CODEROUTINE></TERM>
-        <DESC>Prints the help on extra options to the output stream.</DESC>
+        <DESC>Print the help on extra options to the output stream.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>-verbose:class</CODEROUTINE></TERM>
-        <DESC>Displays information about each loaded class.</DESC>
+        <DESC>Display information about each loaded class.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>-verbose:gc</CODEROUTINE></TERM>
-        <DESC>Displays information about each garbage collection (GC) event.</DESC>
+        <DESC>Display information about each garbage collection (GC) event.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>-verbose:jni</CODEROUTINE></TERM>
-        <DESC>Displays information about the use of native methods and other Java Native Interface (JNI) activity.</DESC>
+        <DESC>Display information about the use of native methods and other Java Native Interface (JNI) activity.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>-verbose:module</CODEROUTINE></TERM>
-        <DESC>Displays information about the modules in use.</DESC>
+        <DESC>Display information about the modules in use.</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>javac</U></B></TITLE>
-  <ITEM>Compiles java files into class files.
+  <ITEM>Compile java files into class files.
     <CODESAMPLE>javac -d ./target/classes $(find -name '*.java')</CODESAMPLE></ITEM>
     <ITEM>
       <DEFINITIONTABLE>
@@ -91,25 +91,25 @@
           <TERM><CODEROUTINE>--class-path classpath</CODEROUTINE><BR/>
             <CODEROUTINE>-classpath classpath</CODEROUTINE><BR/>
             <CODEROUTINE>-cp classpath</CODEROUTINE></TERM>
-          <DESC>Specifies where to find user class files and annotation processors. This class path overrides the user class path in the <CODEROUTINE>CLASSPATH</CODEROUTINE> environment variable.</DESC>
+          <DESC>Specify where to find user class files and annotation processors. This class path overrides the user class path in the <CODEROUTINE>CLASSPATH</CODEROUTINE> environment variable.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-d directory</CODEROUTINE></TERM>
-          <DESC>Sets the destination directory for class files. If a class is part of a package, then <CODEROUTINE>javac</CODEROUTINE> puts the class file in a subdirectory that reflects the module name (if appropriate) and package name. The directory, and any necessary subdirectories, will be created if they do not already exist.</DESC>
+          <DESC>Set the destination directory for class files. If a class is part of a package, then <CODEROUTINE>javac</CODEROUTINE> puts the class file in a subdirectory that reflects the module name (if appropriate) and package name. The directory, and any necessary subdirectories, will be created if they do not already exist.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-deprecation</CODEROUTINE><BR/>
             <CODEROUTINE>-Xlint:deprecation</CODEROUTINE></TERM>
-          <DESC>Shows a description of each use or override of a deprecated member or class.</DESC>
+          <DESC>Show a description of each use or override of a deprecated member or class.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-verbose</CODEROUTINE></TERM>
-          <DESC>Outputs messages about what the compiler is doing.</DESC>
+          <DESC>Output messages about what the compiler is doing.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-version</CODEROUTINE><BR/>
             <CODEROUTINE>--version</CODEROUTINE></TERM>
-          <DESC>Prints version information.</DESC>
+          <DESC>Print version information.</DESC>
         </ROW>
       </DEFINITIONTABLE>
     </ITEM>
@@ -121,49 +121,49 @@
         <ROW>
           <TERM><CODEROUTINE>-c</CODEROUTINE><BR/>
             <CODEROUTINE>--create</CODEROUTINE></TERM>
-          <DESC>Creates the archive.</DESC>
+          <DESC>Create the archive.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-t</CODEROUTINE><BR/>
             <CODEROUTINE>--list</CODEROUTINE></TERM>
-          <DESC>Lists the table of contents for the archive.</DESC>
+          <DESC>List the table of contents for the archive.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-f FILE</CODEROUTINE><BR/>
             <CODEROUTINE>--file=FILE</CODEROUTINE></TERM>
-          <DESC>Specifies the archive file name.</DESC>
+          <DESC>Specify the archive file name.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-e CLASSNAME</CODEROUTINE><BR/>
             <CODEROUTINE>--main-class=CLASSNAME</CODEROUTINE></TERM>
-          <DESC>Specifies the application entry point for standalone applications bundled into a modular or executable modular JAR file.</DESC>
+          <DESC>Specify the application entry point for standalone applications bundled into a modular or executable modular JAR file.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-m FILE</CODEROUTINE><BR/>
             <CODEROUTINE>--manifest=FILE</CODEROUTINE></TERM>
-          <DESC>Includes the manifest information from the given manifest file.</DESC>
+          <DESC>Include the manifest information from the given manifest file.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-C DIR</CODEROUTINE></TERM>
-          <DESC>Changes the specified directory and includes the files specified at the end of the command line.</DESC>
+          <DESC>Change the specified directory and includes the files specified at the end of the command line.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>-v</CODEROUTINE><BR/>
             <CODEROUTINE>--verbose</CODEROUTINE></TERM>
-          <DESC>Sends or prints verbose output to standard output.</DESC>
+          <DESC>Send or prints verbose output to standard output.</DESC>
         </ROW>
         <ROW>
           <TERM><CODEROUTINE>--version</CODEROUTINE></TERM>
-          <DESC>Prints version information.</DESC>
+          <DESC>Print version information.</DESC>
         </ROW>
       </DEFINITIONTABLE>
     </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>javap</U></B></TITLE>
-  <ITEM>dump the package, protected, and public classes and members of a class:
+  <ITEM>Dump the package, protected, and public classes and members of a class:
     <CODESAMPLE>javap javax.swing.DefaultListRenderer</CODESAMPLE></ITEM>
-  <ITEM>to know in which Java version is <CODEROUTINE>FooBar.class</CODEROUTINE>, execute:
-    <CODESAMPLE>javap FooBat</CODESAMPLE>
+  <ITEM>Determine in which Java version is <CODEROUTINE>FooBar.class</CODEROUTINE>, execute:
+    <CODESAMPLE>javap FooBar</CODESAMPLE>
     and look for <CODEROUTINE>minor version</CODEROUTINE> and <CODEROUTINE>major version</CODEROUTINE>
     <TABLE>
       <ROW><CELL>major</CELL><CELL>minor</CELL><CELL>Java</CELL></ROW>
@@ -179,47 +179,47 @@
   </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>keytool</U></B></TITLE>
-  <ITEM>manage keys and certificates</ITEM>
+  <ITEM>Manage keys and certificates</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>javaws</U></B></TITLE>
-  <ITEM>start Java Web Start Launcher on the specified JNLP URL
+  <ITEM>Start Java Web Start Launcher on the specified JNLP URL
     <CODESAMPLE>javaws &lt;url&gt;</CODESAMPLE></ITEM>
-  <ITEM>run the Java Application Cache Viewer
+  <ITEM>Run the Java Application Cache Viewer
     <CODESAMPLE>javaws</CODESAMPLE>
     <CODESAMPLE>javaws -viewer</CODESAMPLE></ITEM>
-  <ITEM>use the system cache instead of the user cache
+  <ITEM>Use the system cache instead of the user cache
     <CODESAMPLE>javaws -system</CODESAMPLE></ITEM>
-  <ITEM>clear the user cache
+  <ITEM>Clear the user cache
     <CODESAMPLE>javaws -Xclearcache</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>jconsole</U></B></TITLE>
-  <ITEM>the monitored process must be started with the <CODEROUTINE>-Dcom.sun.management.jmxremote</CODEROUTINE> option</ITEM>
+  <ITEM>The monitored process must be started with the <CODEROUTINE>-Dcom.sun.management.jmxremote</CODEROUTINE> option</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>jps</U></B></TITLE>
-  <ITEM>list the running JVMs, the class containing the <CODEROUTINE>main</CODEROUTINE> method and name and the arguments passed to the <CODEROUTINE>main</CODEROUTINE> method.</ITEM>
+  <ITEM>List the running JVMs, the class containing the <CODEROUTINE>main</CODEROUTINE> method and name and the arguments passed to the <CODEROUTINE>main</CODEROUTINE> method.</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>jstack</U></B></TITLE>
-  <ITEM>dump the stacks of all the threads of a process</ITEM>
+  <ITEM>Dump the stacks of all the threads of a process</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>jmap</U></B></TITLE>
-  <ITEM>create a heapdump of a process:<BR/>
+  <ITEM>Create a heapdump of a process:<BR/>
     <CODEROUTINE>jmap -dump:file="C:\Documents and setting\…\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
-  <ITEM>create a heapdump containing only the non-garbageable objects:<BR/>
+  <ITEM>Create a heapdump containing only the non-garbageable objects:<BR/>
     <CODEROUTINE>jmap -dump:live,file="C:\Documents and setting\…\myheap.bin" <I>pid</I></CODEROUTINE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>jhat</U></B></TITLE>
-  <ITEM>analyse a heapdump and start a browser to allow to access the data<BR/>
+  <ITEM>Analyse a heapdump and start a browser to allow to access the data<BR/>
     the server is reachable at http://localhost:7000</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>jstat</U></B></TITLE>
-  <ITEM>return some JVM statistics</ITEM>
-  <ITEM>track the usage of the perm gen space for one minute with an update every 500 ms<BR/>
+  <ITEM>Return some JVM statistics</ITEM>
+  <ITEM>Track the usage of the perm gen space for one minute with an update every 500 ms<BR/>
     <CODEROUTINE>jstat -gcpermcapacity <I>pid</I> 500 120</CODEROUTINE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>jinfo</U></B></TITLE>
-  <ITEM>return the properties and Java virtual machine command line flags<BR/>
+  <ITEM>Return the properties and Java virtual machine command line flags<BR/>
     <CODEROUTINE>jinfo <I>pid</I></CODEROUTINE></ITEM>
 </BLIST>
 </CONTENT>
-<X><T>Oracle's documentation</T><A>https://docs.oracle.com/en/java/javase/23/docs/specs/man/index.html</A><L>en</L><F>HTML</F></X>
+<X><T>Oracle's documentation</T><A>https://docs.oracle.com/en/java/javase/25/docs/specs/man/index.html</A><L>en</L><F>HTML</F></X>
 </PAGE>
