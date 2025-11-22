@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -42,6 +42,12 @@
     <TERM><CODEROUTINE>git init -q</CODEROUTINE><BR/>
       <CODEROUTINE>git init --quiet</CODEROUTINE></TERM>
     <DESC>Only print error and warning messages; all other output will be suppressed.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git init -b &lt;branch&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git init --branch &lt;branch&gt;</CODEROUTINE></TERM>
+    <DESC>Define the initial branch name.<BR/>
+      (The default is <CODEROUTINE>master</CODEROUTINE>, it will be <CODEROUTINE>main</CODEROUTINE> in Git 3.0.)</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE>mkdir project.git<BR/>
