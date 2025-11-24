@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -43,6 +43,8 @@
       <ITEM><CLIST><TITLE><X><T>Griptape</T><A>https://github.com/griptape-ai/griptape</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>doc</T><A>https://docs.griptape.ai/latest/</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
+      <ITEM><X><T>LangFlow</T><A>https://www.langflow.org/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>CUGA</T><A>https://github.com/cuga-project/cuga-agent</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mess</TITLE>
       <ITEM><X><T>Learn Prompting</T><A>https://learnprompting.org/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -335,6 +337,7 @@
       <ITEM><ARTICLE><X><T>Building the Hugging Face MCP Server</T><A>https://huggingface.co/blog/building-hf-mcp</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Shaun</FIRSTNAME><LASTNAME>Smith</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Julien</FIRSTNAME><LASTNAME>Chaumond</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Eliott</FIRSTNAME><LASTNAME>Coyac</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Abubakar</FIRSTNAME><LASTNAME>Abid</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>10</DAY></DATE><COMMENT>Some information about how Hugging Face implemented their MCP server.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>too many model context protocol servers and LLM allocations on the dance floor</T><A>https://simonwillison.net/2025/Aug/22/too-many-mcps/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>22</DAY></DATE><COMMENT>People tend to overuse MCP servers, while some other solutions use much less tokens in the context.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>[Video Response] What Cloudflare's code mode misses about MCP and tool calling</T><A>https://www.youtube.com/watch?v=0bpYCxv2qhw</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Yannic</FIRSTNAME><LASTNAME>Kilcher</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>10</MONTH><DAY>19</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Yannic</FIRSTNAME><LASTNAME>Kilcher</LASTNAME></AUTHOR> comments the claim that it is more efficient that the LLM calls tools via API calls rather than by using MCP: by using MCP, it is possible to handle data which is not properly structured.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>How to Automate Anything with Python Inside Claude Desktop (Using MCP)</T><A>https://www.youtube.com/watch?v=l6Pw7G9URTY</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>16</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Ebbelaar</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>10</MONTH><DAY>31</DAY></DATE><COMMENT>Implementing a very small and simple MCP Server using Python and <CODEROUTINE>uv</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Hugging Face</TITLE>
       <ITEM><ARTICLE><X><T>Say hello to `hf`: a faster, friendlier Hugging Face CLI ✨</T><A>https://huggingface.co/blog/hf-cli</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Lucain</FIRSTNAME><LASTNAME>Pouget</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Célina</FIRSTNAME><LASTNAME>Hanouti</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Julien</FIRSTNAME><LASTNAME>Chaumond</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>25</DAY></DATE><COMMENT>Hugging Face has revamped its CLI.</COMMENT></ARTICLE></ITEM>
