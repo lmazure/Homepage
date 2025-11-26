@@ -28,29 +28,29 @@
 </BLIST>
 <BLIST><TITLE><U><B>Boolean</B></U></TITLE>
   <ITEM>All the following lines of code create Boolean objects with an initial value of false:
-  <CODESAMPLE>var myBoolean=new Boolean();<BR/>
-  var myBoolean=new Boolean(0); <BR/>
-  var myBoolean=new Boolean(null); <BR/>
-  var myBoolean=new Boolean("");<BR/>
-  var myBoolean=new Boolean(false); <BR/>
-  var myBoolean=new Boolean(NaN);</CODESAMPLE>
-  And all the following lines of code create Boolean objects with an initial value of true:
-  <CODESAMPLE>var myBoolean=new Boolean(true); <BR/>
-  var myBoolean=new Boolean("true");<BR/>
-  var myBoolean=new Boolean("false");<BR/>
-  var myBoolean=new Boolean("Richard");</CODESAMPLE></ITEM>
+    <CODESAMPLE>var myBoolean=new Boolean();<BR/>
+      var myBoolean=new Boolean(0); <BR/>
+      var myBoolean=new Boolean(null); <BR/>
+      var myBoolean=new Boolean("");<BR/>
+      var myBoolean=new Boolean(false); <BR/>
+      var myBoolean=new Boolean(NaN);</CODESAMPLE>
+    And all the following lines of code create Boolean objects with an initial value of true:
+    <CODESAMPLE>var myBoolean=new Boolean(true); <BR/>
+      var myBoolean=new Boolean("true");<BR/>
+      var myBoolean=new Boolean("false");<BR/>
+      var myBoolean=new Boolean("Richard");</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Arrays</B></U></TITLE>
   <ITEM><BLIST><TITLE>Array Creation</TITLE>
     <ITEM>regular array (add an optional integer argument to control array’s size)
-    <CODESAMPLE>var myCars=new Array();<BR/>
-    myCars[0]="Saab";<BR/>
-    myCars[1]="Volvo";<BR/>
-    myCars[2]="BMW";</CODESAMPLE></ITEM>
+      <CODESAMPLE>var myCars=new Array();<BR/>
+        myCars[0]="Saab";<BR/>
+        myCars[1]="Volvo";<BR/>
+        myCars[2]="BMW";</CODESAMPLE></ITEM>
     <ITEM>condensed array
-    <CODESAMPLE>var myCars=new Array("Saab","Volvo","BMW");</CODESAMPLE></ITEM>
+      <CODESAMPLE>var myCars=new Array("Saab","Volvo","BMW");</CODESAMPLE></ITEM>
     <ITEM>literal array
-    <CODESAMPLE>var myCars=["Saab","Volvo","BMW"];</CODESAMPLE></ITEM>
+      <CODESAMPLE>var myCars=["Saab","Volvo","BMW"];</CODESAMPLE></ITEM>
   </BLIST></ITEM>
   <ITEM>
     <DEFINITIONTABLE>
@@ -92,7 +92,7 @@
       </ROW>
       <ROW>
         <TERM><CODEROUTINE><X><T>Array.prototype.toSpliced()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/toSpliced</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
-        <DESC>copying counterpart of the <CODEROUTINE>Array.prototype.spliced()</CODEROUTINE> method</DESC>
+        <DESC>copying counterpart of the <CODEROUTINE>Array.prototype.splice()</CODEROUTINE> method</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE><X><T>Array.prototype.reverse()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reverse</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
@@ -132,7 +132,7 @@
       </ROW>
       <ROW>
         <TERM><CODEROUTINE><X><T>Array.prototype.findLastIndex()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/findLastIndex</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
-        <DESC>terates the array in reverse order and returns the index of the first element that satisfies the provided testing function</DESC>
+        <DESC>iterates the array in reverse order and returns the index of the first element that satisfies the provided testing function</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE><X><T>Array.prototype.some()</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/some</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
@@ -188,30 +188,30 @@
 </BLIST>
 <BLIST><TITLE><U><B>Regular Expressions</B></U></TITLE>
   <ITEM>Syntax<BR/>
-  <CODESAMPLE>var txt=new RegExp(pattern,modifiers);</CODESAMPLE>
-  or
-  <CODESAMPLE>var txt=/pattern/modifiers;</CODESAMPLE></ITEM>
+    <CODESAMPLE>var txt=new RegExp(pattern,modifiers);</CODESAMPLE>
+    or
+    <CODESAMPLE>var txt=/pattern/modifiers;</CODESAMPLE></ITEM>
   <ITEM>Modifiers<BR/>
-  <CODEROUTINE>i</CODEROUTINE> - case-insensitive matching<BR/>
-  <CODEROUTINE>g</CODEROUTINE> - global match (find all matches rather than stopping after the first match)<BR/>
-  <CODEROUTINE>m</CODEROUTINE> - multiline matching<BR/>
+    <CODEROUTINE>i</CODEROUTINE> - case-insensitive matching<BR/>
+    <CODEROUTINE>g</CODEROUTINE> - global match (find all matches rather than stopping after the first match)<BR/>
+    <CODEROUTINE>m</CODEROUTINE> - multiline matching<BR/>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Popup Boxes</B></U></TITLE>
   <ITEM>Alert Box<BR/>
-  An alert box is often used if you want to make sure information comes through to the user.<BR/>
-  When an alert box pops up, the user will have to click "OK" to proceed.
-  <CODESAMPLE>alert("sometext");</CODESAMPLE></ITEM>
+    An alert box is often used if you want to make sure information comes through to the user.<BR/>
+    When an alert box pops up, the user will have to click "OK" to proceed.
+    <CODESAMPLE>alert("sometext");</CODESAMPLE></ITEM>
   <ITEM>Confirm Box<BR/>
-  A confirm box is often used if you want the user to verify or accept something. <BR/>
-  When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. <BR/>
-  If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
-  <CODESAMPLE>confirm("sometext");</CODESAMPLE></ITEM>
+    A confirm box is often used if you want the user to verify or accept something. <BR/>
+    When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. <BR/>
+    If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
+    <CODESAMPLE>confirm("sometext");</CODESAMPLE></ITEM>
   <ITEM>Prompt Box<BR/>
-  A prompt box is often used if you want the user to input a value before entering a page.<BR/>
-  When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.<BR/>
-  If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
-  <CODESAMPLE>prompt("sometext","defaultvalue");</CODESAMPLE></ITEM>
+    A prompt box is often used if you want the user to input a value before entering a page.<BR/>
+    When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.<BR/>
+    If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
+    <CODESAMPLE>prompt("sometext","defaultvalue");</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Events</B></U></TITLE>
   <ITEM><BLIST><TITLE><CODEROUTINE>MouseEvent</CODEROUTINE></TITLE>
@@ -238,16 +238,16 @@ You can use the <CODEROUTINE>%c</CODEROUTINE> directive to apply a CSS style to 
 <BR/>
 <U><B>Declaring properties with a variable of the same name</B></U><BR/>
 <CODESAMPLE>const firstName = "John";<BR/>
-const lastName = "Doe";<BR/>
-const person = {<BR/>
-<TAB/>firstName: firstName,<BR/>
-<TAB/>lastName: lastName<BR/>
-};</CODESAMPLE>
+  const lastName = "Doe";<BR/>
+  const person = {<BR/>
+  <TAB/>firstName: firstName,<BR/>
+  <TAB/>lastName: lastName<BR/>
+  };</CODESAMPLE>
 can be written<BR/>
 <CODESAMPLE>const person = {<BR/>
-<TAB/>firstName,<BR/>
-<TAB/>lastName<BR/>
-};</CODESAMPLE>
+  <TAB/>firstName,<BR/>
+  <TAB/>lastName<BR/>
+  };</CODESAMPLE>
 <BR/>
 <U><B><CODEROUTINE>script</CODEROUTINE>’s <CODEROUTINE>defer</CODEROUTINE> and <CODEROUTINE>async</CODEROUTINE></B></U><BR/>
 <CODESAMPLE>&lt;script src="sample.js" defer&gt;&lt;/script&gt;</CODESAMPLE>
