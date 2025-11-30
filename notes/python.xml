@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Python</TITLE>
 <PATH>notes/python.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><U><B>Command line</B></U></TITLE>
   <ITEM><CODESAMPLE><PROMPT/>python -c &lt;command&gt;</CODESAMPLE>
@@ -736,25 +736,38 @@
       <BR/>
       <TAB/>def __str__(self):<BR/>
       <TAB/><TAB/>return f"{self.name}({self.age})"</CODESAMPLE>
-    </ITEM>
-    <ITEM>The <CODEROUTINE>self</CODEROUTINE> parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.<BR/>
-      It does not have to be named <CODEROUTINE>self</CODEROUTINE>, but it has to be the first parameter of any function in the class.</ITEM>
-    <ITEM>There is no data privacy, properties can be modified (<CODEROUTINE>p1.age = 40</CODEROUTINE>) or deleted (<CODEROUTINE>del p1.age</CODEROUTINE>).</ITEM>
-    <ITEM>Inheritance
-      <CODESAMPLE>class Person:<BR/>
-        <TAB/>def __init__(self, fname, lname):<BR/>
-        <TAB/><TAB/>self.firstname = fname<BR/>
-        <TAB/><TAB/>self.lastname = lname<BR/>
+  </ITEM>
+  <ITEM>The <CODEROUTINE>self</CODEROUTINE> parameter is a reference to the current instance of the class, and is used to access variables that belongs to the class.<BR/>
+    It does not have to be named <CODEROUTINE>self</CODEROUTINE>, but it has to be the first parameter of any function in the class.</ITEM>
+  <ITEM>There is no data privacy, properties can be modified (<CODEROUTINE>p1.age = 40</CODEROUTINE>) or deleted (<CODEROUTINE>del p1.age</CODEROUTINE>).</ITEM>
+  <ITEM>Inheritance
+    <CODESAMPLE>class Person:<BR/>
+      <TAB/>def __init__(self, fname, lname):<BR/>
+      <TAB/><TAB/>self.firstname = fname<BR/>
+      <TAB/><TAB/>self.lastname = lname<BR/>
+      <BR/>
+      class Student(Person):<BR/>
+      <TAB/>def __init__(self, fname, lname, year):<BR/>
+      <TAB/><TAB/>super().__init__(fname, lname)<BR/>
+      <TAB/><TAB/>self.graduationyear = year</CODESAMPLE>
+  </ITEM>
+  <ITEM><CODEROUTINE>isinstance(object, classinfo)</CODEROUTINE>: return <CODEROUTINE>True</CODEROUTINE> if the object argument is an instance of the <CODEROUTINE>classinfo</CODEROUTINE> argument, or of a (direct, indirect, or virtual) subclass thereof.</ITEM>
+  <ITEM><CODEROUTINE>issubclass(class, classinfo)</CODEROUTINE>: return <CODEROUTINE>True</CODEROUTINE> if class is a subclass (direct, indirect, or virtual) of <CODEROUTINE>classinfo</CODEROUTINE>. A class is considered a subclass of itself.</ITEM>
+  <ITEM>Private methods are indicated with the <CODEROUTINE>__</CODEROUTINE> prefix.<BR/>
+    Protected methods are indicated with the <CODEROUTINE>_</CODEROUTINE> prefix.</ITEM>
+  <ITEM><BLIST><TITLE><CODEROUTINE>__slots__</CODEROUTINE></TITLE>
+    <ITEM><CODEROUTINE>__slots__</CODEROUTINE> is a class variable that is usually assigned a sequence of strings that are variable names used by instances.
+      <CODESAMPLE>class Example():<BR/>
+        <TAB/>__slots__ = ("slot_0", "slot_1")<BR/>
         <BR/>
-        class Student(Person):<BR/>
-        <TAB/>def __init__(self, fname, lname, year):<BR/>
-        <TAB/><TAB/>super().__init__(fname, lname)<BR/>
-        <TAB/><TAB/>self.graduationyear = year</CODESAMPLE>
+        <TAB/>def __init__(self):<BR/>
+        <TAB/><TAB/>self.slot_0 = "zero"<BR/>
+        <TAB/><TAB/>self.slot_1 = "one"</CODESAMPLE>
+    The <CODEROUTINE>__slots__</CODEROUTINE> declaration allows us to explicitly declare data members, causes Python to reserve space for them in memory, and prevents the creation of <CODEROUTINE>__dict__</CODEROUTINE> and <CODEROUTINE>__weakref__</CODEROUTINE> attributes. It also prevents the creation of any variables that aren't declared in <CODEROUTINE>__slots__</CODEROUTINE>.
     </ITEM>
-    <ITEM><CODEROUTINE>isinstance(object, classinfo)</CODEROUTINE>: return <CODEROUTINE>True</CODEROUTINE> if the object argument is an instance of the <CODEROUTINE>classinfo</CODEROUTINE> argument, or of a (direct, indirect, or virtual) subclass thereof.</ITEM>
-    <ITEM><CODEROUTINE>issubclass(class, classinfo)</CODEROUTINE>: return <CODEROUTINE>True</CODEROUTINE> if class is a subclass (direct, indirect, or virtual) of <CODEROUTINE>classinfo</CODEROUTINE>. A class is considered a subclass of itself.</ITEM>
-    <ITEM>Private methods are indicated with the <CODEROUTINE>__</CODEROUTINE> prefix.<BR/>
-      Protected methods are indicated with the <CODEROUTINE>_</CODEROUTINE> prefix.</ITEM>
+    <ITEM>There are a few things to be aware of when going beyond the basics. Slots variables declared in parents are available in child classes. However, child subclasses will have <CODEROUTINE>__dict__</CODEROUTINE> and <CODEROUTINE>__weakref__</CODEROUTINE> attributes unless they also define <CODEROUTINE>__slots__</CODEROUTINE>, which should only contain names of additional slots. Multiple inheritance with multiple slotted parent classes can be used, but only one parent is allowed to have attributes created by slots. The other bases must have empty slot layouts.</ITEM>
+    <ITEM>Certain Python objects may depend on the <CODEROUTINE>__dict__</CODEROUTINE> attribute. For example, descriptor classes depend on the <CODEROUTINE>__dict__</CODEROUTINE> attribute being present in the owner class. Programmers may want to avoid <CODEROUTINE>__slots__</CODEROUTINE> in any case where another Python object requires <CODEROUTINE>__dict__</CODEROUTINE> or <CODEROUTINE>__weakref__</CODEROUTINE> to be present. The <CODEROUTINE>functools.cached_property()</CODEROUTINE> is another example that requires an instance dictionary to function correctly.</ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Objects</B></U></TITLE>
 <ITEM><CODEROUTINE>is</CODEROUTINE> tests if two objects are the same.</ITEM>
