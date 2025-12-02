@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -366,18 +366,18 @@ Dangling images are layers that have no relationship to any tagged images.
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker-compose -f conf.yaml</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker compose -f conf.yaml</CODEROUTINE></TERM>
     <DESC>Use the configuration file <CODEROUTINE>conf.yaml</CODEROUTINE></DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>docker-compose -f conf1.yaml -f conf2.yaml</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker compose -f conf1.yaml -f conf2.yaml</CODEROUTINE></TERM>
     <DESC>Use the configuration file which is the concatenation of <CODEROUTINE>conf1.yaml</CODEROUTINE> and <CODEROUTINE>conf2.yaml</CODEROUTINE>.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker-compose up</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker compose up</CODEROUTINE></TERM>
     <DESC>Create and start containers.</DESC>
   </ROW>
   <ROW>
@@ -389,28 +389,28 @@ Dangling images are layers that have no relationship to any tagged images.
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker-compose start</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker compose start</CODEROUTINE></TERM>
     <DESC>Starts existing containers for a service.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker-compose stop</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker compose stop</CODEROUTINE></TERM>
     <DESC>Stops running containers without removing them. They can be started again with <CODEROUTINE>docker compose start</CODEROUTINE>.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker-compose down</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker compose down</CODEROUTINE></TERM>
     <DESC>Stop and remove containers and networks.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker-compose ps</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker compose ps</CODEROUTINE></TERM>
     <DESC>List containers.</DESC>
   </ROW>
   <ROW>
@@ -421,7 +421,7 @@ Dangling images are layers that have no relationship to any tagged images.
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker-compose logs &lt;service&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>docker compose logs &lt;service&gt;</CODEROUTINE></TERM>
     <DESC>View output from containers. It is possible to specify no or several services.</DESC>
   </ROW>
   <ROW>
