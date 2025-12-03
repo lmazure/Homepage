@@ -167,7 +167,7 @@ add in the .lnt file:
 <CODEROUTINE>-i/my/path</CODEROUTINE>
 </ITEM>
 <ITEM>ProLint is not able to understand complex templates (e.g. STL), see <X><T>http://www.gimpel.com/Discussion.cfm?ThreadID=923#2</T><A>http://www.gimpel.com/Discussion.cfm?ThreadID=923#2</A><L>en</L><F>HTML</F></X> for a proposition.<BR/>
-On Linux, a quick ’n dirty hack is to create the <CODEROUTINE>stl_config.h</CODEROUTINE> file:
+On Linux, a quick and dirty hack is to create the <CODEROUTINE>stl_config.h</CODEROUTINE> file:
 <CODESAMPLE>#define __STL_STATIC_TEMPLATE_MEMBER_BUG<BR/>
 #define __STL_NEED_TYPENAME<BR/>
 #define __STL_NEED_EXPLICIT<BR/>
