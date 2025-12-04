@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>12</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>12</MONTH><DAY>4</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -46,6 +46,11 @@
       <ITEM><X><T>LangFlow</T><A>https://www.langflow.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>CUGA</T><A>https://github.com/cuga-project/cuga-agent</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>MCP</TITLE>
+      <ITEM><X><T>MCP Inspector</T><A>https://modelcontextprotocol.io/docs/tools/inspector</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>mcptools</T><A>https://github.com/f/mcptools</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>GitHub MCP Registry</T><A>https://github.com/mcp</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mess</TITLE>
       <ITEM><X><T>Learn Prompting</T><A>https://learnprompting.org/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Open Interpreter</T><A>https://github.com/OpenInterpreter/open-interpreter</A><L>en</L><F>HTML</F></X></ITEM>
@@ -57,8 +62,6 @@
         <ITEM><X><T>code</T><A>https://github.com/simonw/llm</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
       <ITEM><X><T>Browser Use</T><A>https://browser-use.com/</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>mcptools</T><A>https://github.com/f/mcptools</A><L>en</L><F>HTML</F></X></ITEM>
-      <ITEM><X><T>GitHub MCP Registry</T><A>https://github.com/mcp</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><CLIST><TITLE>AssemblyAI</TITLE>
       <ITEM><X><T>YouTube</T><A>https://www.youtube.com/channel/UCtatfZMf-8EkIwASXM4ts0A</A><L>en</L><F>HTML</F><FEED><A>https://www.youtube.com/feeds/videos.xml?channel_id=UCtatfZMf-8EkIwASXM4ts0A</A><F>Atom</F></FEED></X></ITEM>
@@ -170,7 +173,7 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Web scraping</TITLE>
-      <ITEM><ARTICLE><X><T>Web Scraping AI AGENT, that absolutely works 😍</T><A>https://www.youtube.com/watch?v=zDqAZOiPX_M</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>A presentation of <X><T>ScrapeGraphAI</T><A>https://pypi.org/project/scrapegraphai/</A><L>en</L><F>HTML</F></X>, a Python library to scrape a Web site and to interrogate an LLM on the scrapped data.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Web Scraping AI AGENT, that absolutely works 😍</T><A>https://www.youtube.com/watch?v=zDqAZOiPX_M</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Abdul Majed</FIRSTNAME><LASTNAME>Raja</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>9</DAY></DATE><COMMENT>A presentation of <X><T>ScrapeGraphAI</T><A>https://pypi.org/project/scrapegraphai/</A><L>en</L><F>HTML</F></X>, a Python library to scrape a website and to interrogate an LLM on the scrapped data.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>“Wait, this Agent can Scrape ANYTHING?!” - Build universal web scraping agent</T><A>https://www.youtube.com/watch?v=dSX5eoD4-u4</A><L>en</L><F>MP4</F><DURATION><MINUTE>29</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jason</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>16</DAY></DATE><COMMENT>Scraping the Web with <X><T>FireCrawl</T><A>https://www.firecrawl.dev/</A><L>en</L><F>HTML</F></X> or <X><T>AgentQL</T><A>https://www.agentql.com/</A><L>en</L><F>HTML</F></X>, and an LLM.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>How to scrape the web for LLM in 2024: Jina AI (Reader API), Mendable (firecrawl) and Scrapegraph-ai</T><A>https://www.youtube.com/watch?v=QxHE4af5BQE</A><L>en</L><F>MP4</F><DURATION><MINUTE>20</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Hai</FIRSTNAME><LASTNAME>Nghiem</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>5</MONTH><DAY>17</DAY></DATE><COMMENT>Some Web scraping tools: Beautiful Soup, Jina AI, Firecrawl, and Scrapegraph-ai.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>How Stack Overflow fends off scraping bots</T><ST>Josh Zhang, a staff site reliability engineer at Stack Overflow, tells Ryan and Eira how the Stack Exchange network defends against scraping bots. They also cover the emergence of human botnets, why DDoS attacks have spiked in the last couple of years, and the constant balancing act of protecting sites from attack without inhibiting legitimate users.</ST><A>https://stackoverflow.blog/2024/07/30/how-stack-overflow-fends-off-scraping-bots/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Josh</FIRSTNAME><LASTNAME>Zhang</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ryan</FIRSTNAME><LASTNAME>Donovan</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Eira</FIRSTNAME><LASTNAME>May</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE><COMMENT>The subtitle says it all.</COMMENT></ARTICLE></ITEM>
