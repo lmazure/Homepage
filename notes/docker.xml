@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>12</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>12</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -398,6 +398,13 @@ Dangling images are layers that have no relationship to any tagged images.
   <ROW>
     <TERM><CODEROUTINE>docker compose stop</CODEROUTINE></TERM>
     <DESC>Stops running containers without removing them. They can be started again with <CODEROUTINE>docker compose start</CODEROUTINE>.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>docker compose restart</CODEROUTINE></TERM>
+    <DESC>Restarts stopped and running services.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
