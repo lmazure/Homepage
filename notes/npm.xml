@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>npm</TITLE>
 <PATH>notes/npm.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2025</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Display the npm version
@@ -17,7 +17,7 @@
     <CODESAMPLE><PROMPT/>npm root -g</CODESAMPLE>
     <CODESAMPLE><PROMPT/>npm root --global</CODESAMPLE>
   </ITEM>
-  <ITEM><BLIST><TITLE><CODEROUTINE>-save</CODEROUTINE> options</TITLE>
+  <ITEM><BLIST><TITLE><CODEROUTINE>--save</CODEROUTINE> options</TITLE>
     <ITEM>Install <CODEROUTINE>&lt;package-name&gt;</CODEROUTINE> as a development dependency, it will be recorded in the <CODEROUTINE>devDependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
       <CODESAMPLE><PROMPT/>npm install --save-dev &lt;package-name&gt;<BR/>
         <PROMPT/>npm install -D &lt;package-name&gt;</CODESAMPLE>
@@ -29,6 +29,14 @@
       <CODESAMPLE><PROMPT/>npm install &lt;package-name&gt;</CODESAMPLE>
       alias
       <CODESAMPLE><PROMPT/>npm i &lt;package-name&gt;</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Update a package</TITLE>
+    <ITEM>Update <CODEROUTINE>&lt;package-name&gt;</CODEROUTINE> without updating <CODEFILENAME>package.json</CODEFILENAME>
+      <CODESAMPLE><PROMPT/>npm update &lt;package-name&gt;</CODESAMPLE>
+    </ITEM>
+    <ITEM>Update <CODEROUTINE>&lt;package-name&gt;</CODEROUTINE> and update <CODEFILENAME>package.json</CODEFILENAME>
+      <CODESAMPLE><PROMPT/>npm update --save &lt;package-name&gt;</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Uninstall a package</TITLE>
