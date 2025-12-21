@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Handlebars</TITLE>
+<PATH>notes/handlebars.xml</PATH>
+<DATE><YEAR>2016</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE>
+<CONTENT>
+<BLIST>
+    <ITEM>Inline (single-line) comment
+      <CODESAMPLE>{{! This is a comment }}</CODESAMPLE>
+    </ITEM>
+    <ITEM>Block (multi-line) comment
+      <CODESAMPLE>{{!--<BR/>
+        <TAB/>This is a multi-line comment.<BR/>
+        <TAB/>It will not appear in the output.<BR/>
+        --}}</CODESAMPLE>
+    </ITEM>
+    <ITEM>Additionally, to escape the mustache syntax in comments, you can use:
+      <CODESAMPLE>{{!-- This comment may contain mustaches like }} --}}</CODESAMPLE>
+    </ITEM>
+</BLIST>
+</CONTENT>
+</PAGE>

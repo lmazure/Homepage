@@ -50,6 +50,7 @@ then send it to Claude:
 <TAB/><TAB/><TAB/>}<BR/>
 <TAB/><TAB/>]<BR/>
 <TAB/>}" | jq -r '.content[0].text'</CODESAMPLE>
+<BR/>
 The same request for OpenAI:
 <CODESAMPLE>curl -X POST "https://api.openai.com/v1/chat/completions" \<BR/>
 <TAB/>-H "Content-Type: application/json" \<BR/>
@@ -79,6 +80,7 @@ The same request for OpenAI:
 <TAB/><TAB/>],<BR/>
 <TAB/><TAB/>"max_tokens": 300<BR/>
 <TAB/>}'</CODESAMPLE>
+<BR/>
 The same request for Mistral:
 <CODESAMPLE>curl -X POST "https://api.mistral.ai/v1/chat/completions" \<BR/>
 <TAB/>-H "Content-Type: application/json" \<BR/>
