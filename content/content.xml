@@ -9,7 +9,7 @@
 <SCRIPT>
 import { ContentBuilder } from "../scripts/ContentBuilder.js";
 window.postInitialize = function() {
-    var builder = new ContentBuilder();
+    const builder = new ContentBuilder();
     builder.buildContent();
 }
 </SCRIPT>

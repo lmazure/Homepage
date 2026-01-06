@@ -9,7 +9,7 @@
 <SCRIPT>
 import { MapBuilder } from "../scripts/MapBuilder.js";
 window.postInitialize = function() {
-    var builder = new MapBuilder();
+    const builder = new MapBuilder();
     builder.buildMap();
 }
 </SCRIPT>

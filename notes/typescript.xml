@@ -34,9 +34,9 @@ It is possible to pass parameters having a type that is a superset of the expect
   <TAB/>y: number;<BR/>
   <TAB/>z: number;<BR/>
   }<BR/>
-  var point1D: Point1D = { x: 0 }<BR/>
-  var point2D: Point2D = { x: 0, y: 10 }<BR/>
-  var point3D: Point3D = { x: 0, y: 10, z: 20 }<BR/>
+  const point1D: Point1D = { x: 0 }<BR/>
+  const point2D: Point2D = { x: 0, y: 10 }<BR/>
+  const point3D: Point3D = { x: 0, y: 10, z: 20 }<BR/>
   function iTakePoint2D(point: Point2D) { /* do something */ }<BR/>
   iTakePoint2D(point2D); // OK<BR/>
   iTakePoint2D(point3D); // OK<BR/>

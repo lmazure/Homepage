@@ -5,20 +5,6 @@
 <PATH>notes/javascript.xml</PATH>
 <DATE><YEAR>2024</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
-<BLIST><TITLE><U><B>Operators</B></U></TITLE>
-  <ITEM>
-    <DEFINITIONTABLE>
-      <ROW>
-        <TERM><CODEROUTINE><X><T>??</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing</A><L>en</L><F>HTML</F></X></CODEROUTINE> nullish coalescing operator</TERM>
-        <DESC>returns its right-hand side operand when its left-hand side operand is <CODEROUTINE>undefined</CODEROUTINE> or <CODEROUTINE>null</CODEROUTINE>, and otherwise returns its left-hand side operand</DESC>
-      </ROW>
-      <ROW>
-        <TERM><CODEROUTINE><X><T>?.</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining</A><L>en</L><F>HTML</F></X></CODEROUTINE> optional chaining</TERM>
-        <DESC>accesses an object’s property or calls a function, if the object accessed or function called using this operator is <CODEROUTINE>undefined</CODEROUTINE> or <CODEROUTINE>null</CODEROUTINE>, the expression short circuits and evaluates to <CODEROUTINE>undefined</CODEROUTINE></DESC>
-      </ROW>
-    </DEFINITIONTABLE>
-  </ITEM>
-</BLIST>
 <BLIST><TITLE><U><B>Types</B></U></TITLE>
   <ITEM>Number: Double precision 64-bit floating point values. It can be used to represent both, integers and fractions.</ITEM>
   <ITEM>String: Represents a sequence of Unicode characters</ITEM>
@@ -28,29 +14,29 @@
 </BLIST>
 <BLIST><TITLE><U><B>Boolean</B></U></TITLE>
   <ITEM>All the following lines of code create Boolean objects with an initial value of false:
-    <CODESAMPLE>var myBoolean=new Boolean();<BR/>
-      var myBoolean=new Boolean(0); <BR/>
-      var myBoolean=new Boolean(null); <BR/>
-      var myBoolean=new Boolean("");<BR/>
-      var myBoolean=new Boolean(false); <BR/>
-      var myBoolean=new Boolean(NaN);</CODESAMPLE>
+    <CODESAMPLE>const myBoolean=new Boolean();<BR/>
+      const myBoolean=new Boolean(0); <BR/>
+      const myBoolean=new Boolean(null); <BR/>
+      const myBoolean=new Boolean("");<BR/>
+      const myBoolean=new Boolean(false); <BR/>
+      const myBoolean=new Boolean(NaN);</CODESAMPLE>
     And all the following lines of code create Boolean objects with an initial value of true:
-    <CODESAMPLE>var myBoolean=new Boolean(true); <BR/>
-      var myBoolean=new Boolean("true");<BR/>
-      var myBoolean=new Boolean("false");<BR/>
-      var myBoolean=new Boolean("Richard");</CODESAMPLE></ITEM>
+    <CODESAMPLE>const myBoolean=new Boolean(true); <BR/>
+      const myBoolean=new Boolean("true");<BR/>
+      const myBoolean=new Boolean("false");<BR/>
+      const myBoolean=new Boolean("Richard");</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Arrays</B></U></TITLE>
   <ITEM><BLIST><TITLE>Array Creation</TITLE>
     <ITEM>regular array (add an optional integer argument to control array’s size)
-      <CODESAMPLE>var myCars=new Array();<BR/>
+      <CODESAMPLE>const myCars=new Array();<BR/>
         myCars[0]="Saab";<BR/>
         myCars[1]="Volvo";<BR/>
         myCars[2]="BMW";</CODESAMPLE></ITEM>
     <ITEM>condensed array
-      <CODESAMPLE>var myCars=new Array("Saab","Volvo","BMW");</CODESAMPLE></ITEM>
+      <CODESAMPLE>const myCars=new Array("Saab","Volvo","BMW");</CODESAMPLE></ITEM>
     <ITEM>literal array
-      <CODESAMPLE>var myCars=["Saab","Volvo","BMW"];</CODESAMPLE></ITEM>
+      <CODESAMPLE>const myCars=["Saab","Volvo","BMW"];</CODESAMPLE></ITEM>
   </BLIST></ITEM>
   <ITEM>
     <DEFINITIONTABLE>
@@ -188,9 +174,9 @@
 </BLIST>
 <BLIST><TITLE><U><B>Regular Expressions</B></U></TITLE>
   <ITEM>Syntax<BR/>
-    <CODESAMPLE>var txt=new RegExp(pattern,modifiers);</CODESAMPLE>
+    <CODESAMPLE>const txt=new RegExp(pattern,modifiers);</CODESAMPLE>
     or
-    <CODESAMPLE>var txt=/pattern/modifiers;</CODESAMPLE></ITEM>
+    <CODESAMPLE>const txt=/pattern/modifiers;</CODESAMPLE></ITEM>
   <ITEM>Modifiers<BR/>
     <CODEROUTINE>i</CODEROUTINE> - case-insensitive matching<BR/>
     <CODEROUTINE>g</CODEROUTINE> - global match (find all matches rather than stopping after the first match)<BR/>
@@ -201,17 +187,17 @@
   <ITEM>Alert Box<BR/>
     An alert box is often used if you want to make sure information comes through to the user.<BR/>
     When an alert box pops up, the user will have to click "OK" to proceed.
-    <CODESAMPLE>alert("sometext");</CODESAMPLE></ITEM>
+    <CODESAMPLE>alert("some text");</CODESAMPLE></ITEM>
   <ITEM>Confirm Box<BR/>
     A confirm box is often used if you want the user to verify or accept something. <BR/>
     When a confirm box pops up, the user will have to click either "OK" or "Cancel" to proceed. <BR/>
     If the user clicks "OK", the box returns true. If the user clicks "Cancel", the box returns false.
-    <CODESAMPLE>confirm("sometext");</CODESAMPLE></ITEM>
+    <CODESAMPLE>confirm("some text");</CODESAMPLE></ITEM>
   <ITEM>Prompt Box<BR/>
     A prompt box is often used if you want the user to input a value before entering a page.<BR/>
     When a prompt box pops up, the user will have to click either "OK" or "Cancel" to proceed after entering an input value.<BR/>
     If the user clicks "OK" the box returns the input value. If the user clicks "Cancel" the box returns null.
-    <CODESAMPLE>prompt("sometext","defaultvalue");</CODESAMPLE></ITEM>
+    <CODESAMPLE>prompt("some text","default value");</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Events</B></U></TITLE>
   <ITEM><BLIST><TITLE><CODEROUTINE>MouseEvent</CODEROUTINE></TITLE>
@@ -223,15 +209,46 @@
 <U><B>Template literals (a.k.a. template strings)</B></U>
 <CODESAMPLE>console.log(`Current value is ${value}`)</CODESAMPLE><BR/>
 <BR/>
-<U><B>nullish coalescing operator (<CODEROUTINE>??</CODEROUTINE>)</B></U><BR/>
+<U><B>Nullish coalescing operator (<CODEROUTINE><X><T>??</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Nullish_coalescing</A><L>en</L><F>HTML</F></X></CODEROUTINE>)</B></U><BR/>
 The nullish coalescing operator (<CODEROUTINE>??</CODEROUTINE>) is a logical operator that returns its right-hand side operand when its left-hand side operand is null or undefined, and otherwise returns its left-hand side operand.<BR/>
 This can be contrasted with the logical OR (<CODEROUTINE>||</CODEROUTINE>) operator, which returns the right-hand side operand if the left operand is any falsy value, not only null or undefined. In other words, if you use <CODEROUTINE>||</CODEROUTINE> to provide some default value to another variable foo, you may encounter unexpected behaviours if you consider some falsy values as usable (e.g., <CODEROUTINE>''</CODEROUTINE> or <CODEROUTINE>0</CODEROUTINE>).<BR/>
 <BR/>
-<U><B>optional chaining operator (<CODEROUTINE>?.</CODEROUTINE>)</B></U><BR/>
+<U><B>Optional chaining operator (<CODEROUTINE><X><T>?.</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Optional_chaining</A><L>en</L><F>HTML</F></X></CODEROUTINE>)</B></U><BR/>
 The optional chaining operator (<CODEROUTINE>?.</CODEROUTINE>) functions similarly to the <CODEROUTINE>.</CODEROUTINE> chaining operator, except that instead of causing an error if a reference is nullish (null or undefined), the expression short-circuits with a return value of undefined. When used with function calls, it returns undefined if the given function does not exist.<BR/>
 <CODESAMPLE>myVar.myFunc?.()<BR/>
 myVar.myArray?.[0]</CODESAMPLE>
 <BR/>
+
+<U><B>Spread syntax (<CODEROUTINE><X><T>...</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax</A><L>en</L><F>HTML</F></X></CODEROUTINE>)</B></U><BR/>
+<BLIST><TITLE>The spread syntac can be used at several places:</TITLE>
+  <ITEM>When used in function calls, the spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected.<BR/>
+  <CODESAMPLE>function myFunction(x, y, z) {}<BR/>
+    const args = [0, 1, 2];<BR/>
+    myFunction(...args);</CODESAMPLE>
+  </ITEM>
+  <ITEM>When used in array literals, the spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more elements are expected.<BR/>
+  <CODESAMPLE>const parts = ['shoulders', 'knees'];<BR/>
+    const lyrics = ['head', ...parts, 'and', 'toes'];</CODESAMPLE>
+  This can be used to conditionally include elements in an array:<BR/>
+    <CODESAMPLE>const includeMiddle = true;<BR/>
+      const names = [ 'John', ...(includeMiddle ? ['Paul'] : []), 'George', 'Ringo' ];</CODESAMPLE>
+  </ITEM>
+  <ITEM>When used in object literals, the spread syntax allows an object expression to be expanded in places where zero or more key-value pairs (for object literals) are expected.<BR/>
+  When one object is spread into another object, or when multiple objects are spread into one object, and properties with identical names are encountered, the property takes the last value assigned while remaining in the position it was originally set.
+  <CODESAMPLE>const obj1 = { foo: 'bar', x: 42 };<BR/>
+    const obj2 = { foo: 'baz', y: 13 };<BR/>
+    const clonedObj = { ...obj1 }; // { foo: "bar", x: 42 }<BR/>
+    const mergedObj = { ...obj1, ...obj2 }; // { foo: "baz", x: 42, y: 13 }</CODESAMPLE>
+  This can be used to conditionally include properties in an object:<BR/>
+    <CODESAMPLE>const includeZ = true;<BR/>
+      const obj = {<BR/>
+      <TAB/>x: 1,<BR/>
+      <TAB/>y: 2,<BR/>
+      <TAB/>...(includeZ &amp;&amp; { z: 3 })<BR/>
+      };</CODESAMPLE>
+  </ITEM>
+</BLIST><BR/>
+
 <U><B>Styling console output</B></U><BR/>
 You can use the <CODEROUTINE>%c</CODEROUTINE> directive to apply a CSS style to console output:<BR/>
 <CODESAMPLE>console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");</CODESAMPLE>
