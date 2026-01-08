@@ -218,7 +218,6 @@ The optional chaining operator (<CODEROUTINE>?.</CODEROUTINE>) functions similar
 <CODESAMPLE>myVar.myFunc?.()<BR/>
 myVar.myArray?.[0]</CODESAMPLE>
 <BR/>
-
 <U><B>Spread syntax (<CODEROUTINE><X><T>...</T><A>https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax</A><L>en</L><F>HTML</F></X></CODEROUTINE>)</B></U><BR/>
 <BLIST><TITLE>The spread syntac can be used at several places:</TITLE>
   <ITEM>When used in function calls, the spread syntax allows an iterable such as an array expression or string to be expanded in places where zero or more arguments (for function calls) or elements (for array literals) are expected.<BR/>
@@ -248,7 +247,6 @@ myVar.myArray?.[0]</CODESAMPLE>
       };</CODESAMPLE>
   </ITEM>
 </BLIST><BR/>
-
 <U><B>Styling console output</B></U><BR/>
 You can use the <CODEROUTINE>%c</CODEROUTINE> directive to apply a CSS style to console output:<BR/>
 <CODESAMPLE>console.log("This is %cMy stylish message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");</CODESAMPLE>
