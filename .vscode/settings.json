@@ -20,25 +20,18 @@
         "stylesheet"
     ],
     "explorer.excludeGitIgnore": false,
-    "cSpell.language": "en-GB,en,fr",
+    "cSpell.language": "en-GB,fr",
     "cSpell.enabled": true,
     "terminal.integrated.profiles.windows": {
         "PowerShell": {
             "source": "PowerShell",
             "icon": "terminal-powershell"
         },
-        "Command Prompt": {
-            "path": [
-                "${env:windir}\\Sysnative\\cmd.exe",
-                "${env:windir}\\System32\\cmd.exe"
-            ],
-            "args": [],
-            "icon": "terminal-cmd"
-        },
-        "Git Bash": {
-            "path": "G:\\Documents\\tools\\Git\\2.46.0\\bin\\bash.exe"
+        "Git": {
+            "path": "G:/Documents/tools/Git/2.52.0/bin/bash.exe",
+            "icon": "terminal-bash"
         }
     },
-    "terminal.integrated.defaultProfile.windows": "Git Bash",
+    "terminal.integrated.defaultProfile.windows": "Git",
     "editor.stickyScroll.enabled": false
 }

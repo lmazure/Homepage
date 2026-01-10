@@ -931,19 +931,13 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
   <TAB/><TAB/>"source": "PowerShell",<BR/>
   <TAB/><TAB/>"icon": "terminal-powershell"<BR/>
   <TAB/>},<BR/>
-  <TAB/>"Command Prompt": {<BR/>
-  <TAB/><TAB/>"path": [<BR/>
-  <TAB/><TAB/><TAB/>"${env:windir}\\Sysnative\\cmd.exe",<BR/>
-  <TAB/><TAB/><TAB/>"${env:windir}\\System32\\cmd.exe"<BR/>
-  <TAB/><TAB/>],<BR/>
-  <TAB/><TAB/>"args": [],<BR/>
-  <TAB/><TAB/>"icon": "terminal-cmd"<BR/>
-  <TAB/>},<BR/>
-  <TAB/>"Git Bash": {<BR/>
-  <TAB/><TAB/>"path": "G:\\Documents\\tools\\Git\\2.46.0\\bin\\bash.exe"<BR/>
+  <TAB/>"Git": {<BR/>
+  <TAB/><TAB/>"path": "G:/Documents/tools/Git/2.52.0/bin/bash.exe",<BR/>
+  <TAB/><TAB/>"icon": "terminal-bash"<BR/>
   <TAB/>}<BR/>
   },<BR/>
-  "terminal.integrated.defaultProfile.windows": "Git Bash"</CODESAMPLE>
+  "terminal.integrated.defaultProfile.windows": "Git",<BR/>
+  "editor.stickyScroll.enabled": false</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Used extensions</TITLE>
   <ITEM><X><T>WSL</T><A>https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.remote-wsl</A><L>en</L><F>HTML</F></X></ITEM>
