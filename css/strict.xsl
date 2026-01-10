@@ -453,12 +453,6 @@
   </xsl:if>
 </xsl:template>
 
-<xsl:template match="DATE">
-  <xsl:apply-templates select="MONTH"/>
-  <xsl:apply-templates select="DAY"/>
-  <xsl:apply-templates select="YEAR"/>
-</xsl:template>
-
 <xsl:template match="AUTHOR">
   <xsl:element name="span">
     <xsl:attribute name="class">author</xsl:attribute>
@@ -505,6 +499,17 @@
   </xsl:element>
 </xsl:template>
 
+<xsl:template match="DATE">
+  <xsl:apply-templates select="DAY"/>
+  <xsl:apply-templates select="MONTH"/>
+  <xsl:apply-templates select="YEAR"/>
+</xsl:template>
+
+<xsl:template match="DAY">
+  <xsl:value-of select="."/>
+  <xsl:text> </xsl:text>
+</xsl:template>
+
 <xsl:template match="MONTH">
   <xsl:choose>
     <xsl:when test=".=1">January </xsl:when>
@@ -520,19 +525,6 @@
     <xsl:when test=".=11">November </xsl:when>
     <xsl:when test=".=12">December </xsl:when>
   </xsl:choose>
-</xsl:template>
-
-<xsl:template match="DAY">
-  <xsl:value-of select="."/>
-  <sup>
-    <xsl:choose>
-      <xsl:when test=".=1 or .=21 or .=31">st</xsl:when>
-      <xsl:when test=".=2 or .=22">nd</xsl:when>
-      <xsl:when test=".=3 or .=23">rd</xsl:when>
-      <xsl:otherwise>th</xsl:otherwise>
-    </xsl:choose>
-  </sup>
-  <xsl:text>, </xsl:text>
 </xsl:template>
 
 <xsl:template match="SLIST">
