@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -26,6 +26,15 @@
       <CODEROUTINE>git --version</CODEROUTINE><BR/>
       <CODEROUTINE>git version</CODEROUTINE></TERM>
     <DESC>Print the version of Git.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git -C &lt;path&gt; &lt;command&gt;</CODEROUTINE></TERM>
+    <DESC>Run as if git was started in &lt;path&gt; instead of the current working directory.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git -P &lt;command&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git --no-pager &lt;command&gt;</CODEROUTINE></TERM>
+    <DESC>Do not pipe Git output into a pager.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git --attr-source=&lt;tree-ish&gt;</CODEROUTINE></TERM>
