@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -772,6 +772,10 @@ Source code management
     <CODEROUTINE>View: Show Changes</CODEROUTINE></TERM>
     <DESC>Show/hide source code management<BR/>
       GitLens changes it to <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="G"/>, <KEY id="G"/></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>Git: Toggle Git Blame Editor Decoration</CODEROUTINE></TERM>
+    <DESC>Show/hide Git blame decorations</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
