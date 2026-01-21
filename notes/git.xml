@@ -1707,6 +1707,13 @@ To remove the last commit locally and on the remote repository (nobody should ha
 </DEFINITIONTABLE>
 <BR/>
 <BR/>
+<BLIST><TITLE>Recover a file deleted in a previous commit</TITLE>
+  <ITEM>Find the commit that deleted the file:
+    <CODESAMPLE>git log -1 --stat --diff-filter=D --all -- ./path/to/file</CODESAMPLE></ITEM>
+  <ITEM>Recover the file:
+    <CODESAMPLE>git checkout &lt;deletion-commit&gt;^ -- ./path/to/file</CODESAMPLE></ITEM>
+</BLIST>
+<BR/>
 <BLIST><TITLE>Changing the author of old commits</TITLE>
   <ITEM><CODEROUTINE>git rebase -i &lt;commit&gt;</CODEROUTINE> where &lt;commit&gt; is the commit before the first one to be edited. Use <CODEROUTINE>git rebase -i --root</CODEROUTINE> if the first commit must be edited.</ITEM>
   <ITEM>In the list of commits, change <CODEROUTINE>pick</CODEROUTINE> to <CODEROUTINE>edit</CODEROUTINE> for the commits to be edited.</ITEM>
