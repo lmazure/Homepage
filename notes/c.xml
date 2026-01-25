@@ -6,65 +6,70 @@
 <DATE><YEAR>2010</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE><B>memory categories</B></TITLE>
-<ITEM>
-<DEFINITIONTABLE>
-<ROW>
-<TERM>dynamic memory</TERM>
-<DESC>memory allocated via <CODEROUTINE>malloc</CODEROUTINE>, <CODEROUTINE>new</CODEROUTINE> or <CODEROUTINE>new[]</CODEROUTINE><BR/>
-(aka heap memory)</DESC></ROW>
-<ROW>
-<TERM>stack memory</TERM>
-<DESC>non-static local variables and call-by-value parameter variables</DESC>
-</ROW>
-<ROW>
-<TERM>static memory</TERM>
-<DESC>file scope variables and local static variables<BR/>
-they are stored in some sections of the executable file
-<BLIST>
-<ITEM>normal data</ITEM>
-<ITEM>BSS data: variables and arrays which are to be initialized to zero at run-time and so is treated as a special case, since the actual contents of the section need not be stored in the executable file</ITEM>
-<ITEM>read-only data: constant variables and arrays whose contents are guaranteed not to change when a program is being run</ITEM>
-</BLIST></DESC></ROW>
-</DEFINITIONTABLE></ITEM>
+  <ITEM>
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM>dynamic memory</TERM>
+        <DESC>memory allocated via <CODEROUTINE>malloc</CODEROUTINE>, <CODEROUTINE>new</CODEROUTINE> or <CODEROUTINE>new[]</CODEROUTINE><BR/>
+          (aka heap memory)</DESC>
+      </ROW>
+      <ROW>
+        <TERM>stack memory</TERM>
+        <DESC>non-static local variables and call-by-value parameter variables</DESC>
+      </ROW>
+      <ROW>
+        <TERM>static memory</TERM>
+        <DESC>file scope variables and local static variables<BR/>
+          they are stored in some sections of the executable file
+          <BLIST>
+            <ITEM>normal data</ITEM>
+            <ITEM>BSS data: variables and arrays which are to be initialized to zero at run-time and so is treated as a special case, since the actual contents of the section need not be stored in the executable file</ITEM>
+            <ITEM>read-only data: constant variables and arrays whose contents are guaranteed not to change when a program is being run</ITEM>
+          </BLIST>
+        </DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><B><CODEROUTINE>const</CODEROUTINE> correctness</B></TITLE>
-<ITEM>It is illegal to assign a pointer to a pointer to an <CODEROUTINE>int</CODEROUTINE> (<CODEROUTINE>pp</CODEROUTINE>) to a pointer to a pointer to a <CODEROUTINE>const int</CODEROUTINE> (<CODEROUTINE>ppc</CODEROUTINE>). Otherwise a <CODEROUTINE>const int</CODEROUTINE> could later be assigned to <CODEROUTINE>ppc</CODEROUTINE> and modified through <CODEROUTINE>pp</CODEROUTINE>. Here is an example:
-<CODESAMPLE>#include &lt;stdio.h&gt;<BR/>
-#include &lt;string.h&gt;<BR/>
-#include &lt;stdlib.h&gt;<BR/>
-<BR/>
-int main(int argc, char **argv) {<BR/>
-<BR/>
-  const int **ppc;<BR/>
-  int **pp = (int**)malloc(sizeof(int*));<BR/>
-<BR/>
-  ppc = pp;  // illegal, you can bypass the law with: (int**)iic = ii<BR/>
-<BR/>
-  const int myPreciousData = atoi(argv[1]);<BR/>
-  ppc[0]=&amp;myPreciousData;<BR/>
-  pp[0][0]=123456789;<BR/>
-  printf("%d\n",myPreciousData);<BR/>
-<BR/>
-  return 0;<BR/>
-}</CODESAMPLE></ITEM>
+  <ITEM>It is illegal to assign a pointer to a pointer to an <CODEROUTINE>int</CODEROUTINE> (<CODEROUTINE>pp</CODEROUTINE>) to a pointer to a pointer to a <CODEROUTINE>const int</CODEROUTINE> (<CODEROUTINE>ppc</CODEROUTINE>). Otherwise a <CODEROUTINE>const int</CODEROUTINE> could later be assigned to <CODEROUTINE>ppc</CODEROUTINE> and modified through <CODEROUTINE>pp</CODEROUTINE>. Here is an example:
+    <CODESAMPLE>#include &lt;stdio.h&gt;<BR/>
+      #include &lt;string.h&gt;<BR/>
+      #include &lt;stdlib.h&gt;<BR/>
+      <BR/>
+      int main(int argc, char **argv) {<BR/>
+      <BR/>
+        const int **ppc;<BR/>
+        int **pp = (int**)malloc(sizeof(int*));<BR/>
+      <BR/>
+        ppc = pp;  // illegal, you can bypass the law with: (int**)iic = ii<BR/>
+      <BR/>
+        const int myPreciousData = atoi(argv[1]);<BR/>
+        ppc[0]=&amp;myPreciousData;<BR/>
+        pp[0][0]=123456789;<BR/>
+        printf("%d\n",myPreciousData);<BR/>
+      <BR/>
+        return 0;<BR/>
+      }</CODESAMPLE>
+  </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U><X><T><CODEROUTINE>&lt;stdint.h&gt;</CODEROUTINE></T><A>https://pubs.opengroup.org/onlinepubs/007904975/basedefs/stdint.h.html</A><L>en</L><F>HTML</F></X></U></B></TITLE>
-<ITEM><CODEROUTINE>int8_t</CODEROUTINE>, <CODEROUTINE>uint8_t</CODEROUTINE>, <CODEROUTINE>int16_t</CODEROUTINE>… define types of a given sizes</ITEM>
-<ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>… define types having at least a given size (the compiler will choose the types the most adequate for performance -e.g. it will use words if the CPU manipulate words faster than half-words - )</ITEM>
-<ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>… define types having at least a given size (the compiler will choose the types the most adequate for the registers, this is useful for loop indexes for example)</ITEM>
-<ITEM><CODEROUTINE>intptr_t</CODEROUTINE>, <CODEROUTINE>uintptr_t</CODEROUTINE> define types large enough to contain a pointer</ITEM>
+  <ITEM><CODEROUTINE>int8_t</CODEROUTINE>, <CODEROUTINE>uint8_t</CODEROUTINE>, <CODEROUTINE>int16_t</CODEROUTINE>… define types of a given sizes</ITEM>
+  <ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>… define types having at least a given size (the compiler will choose the types the most adequate for performance -e.g. it will use words if the CPU manipulate words faster than half-words - )</ITEM>
+  <ITEM><CODEROUTINE>int_least8_t</CODEROUTINE>, <CODEROUTINE>uint_least8_t</CODEROUTINE>, <CODEROUTINE>int_least16_t</CODEROUTINE>… define types having at least a given size (the compiler will choose the types the most adequate for the registers, this is useful for loop indexes for example)</ITEM>
+  <ITEM><CODEROUTINE>intptr_t</CODEROUTINE>, <CODEROUTINE>uintptr_t</CODEROUTINE> define types large enough to contain a pointer</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U><X><T><CODEROUTINE>&lt;stddef.h&gt;</CODEROUTINE></T><A>https://pubs.opengroup.org/onlinepubs/007904975/basedefs/stddef.h.html</A><L>en</L><F>HTML</F></X></U></B></TITLE>
-<ITEM><CODEROUTINE>ptrdiff_t</CODEROUTINE> difference between two pointers</ITEM>
-<ITEM><CODEROUTINE>wchar_t</CODEROUTINE> wide character</ITEM>
-<ITEM><CODEROUTINE>size_t</CODEROUTINE> result of a size_of<BR/>
-</ITEM>
+  <ITEM><CODEROUTINE>ptrdiff_t</CODEROUTINE> difference between two pointers</ITEM>
+  <ITEM><CODEROUTINE>wchar_t</CODEROUTINE> wide character</ITEM>
+  <ITEM><CODEROUTINE>size_t</CODEROUTINE> result of a size_of</ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>Swapping</U></B></TITLE>
-<ITEM>The Internet standards specify big-endian integers.<BR/>
-<CODEROUTINE>htonl</CODEROUTINE> and <CODEROUTINE>ntohl</CODEROUTINE> are used to convert 32-bit integers.<BR/>
-<CODEROUTINE>htons</CODEROUTINE> and <CODEROUTINE>ntohs</CODEROUTINE> are used for 16-bit integers.<BR/>
-There is no standard set of functions for 64-bit integers, but Linux provides the macros: <CODEROUTINE>bswap_16</CODEROUTINE>, <CODEROUTINE>bswap_32</CODEROUTINE>, and <CODEROUTINE>bswap_64</CODEROUTINE>.</ITEM>
+  <ITEM>The Internet standards specify big-endian integers.<BR/>
+    <CODEROUTINE>htonl</CODEROUTINE> and <CODEROUTINE>ntohl</CODEROUTINE> are used to convert 32-bit integers.<BR/>
+    <CODEROUTINE>htons</CODEROUTINE> and <CODEROUTINE>ntohs</CODEROUTINE> are used for 16-bit integers.<BR/>
+    There is no standard set of functions for 64-bit integers, but Linux provides the macros: <CODEROUTINE>bswap_16</CODEROUTINE>, <CODEROUTINE>bswap_32</CODEROUTINE>, and <CODEROUTINE>bswap_64</CODEROUTINE>.
+  </ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/c.html</A><L>en</L><F>HTML</F></X>

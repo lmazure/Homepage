@@ -1,0 +1,87 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>tmux</TITLE>
+<PATH>notes/tmux.xml</PATH>
+<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>25</DAY></DATE>
+<CONTENT>
+<BLIST>
+  <ITEM>Session management
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="d"/></TERM>
+        <DESC>Detach from session</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>tmux ls</CODEROUTINE></TERM>
+        <DESC>List sessions</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>tmux attach</CODEROUTINE><BR/>
+          <CODEROUTINE>tmux a</CODEROUTINE></TERM>
+        <DESC>Reattach to last session</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>tmux attach -t session_name</CODEROUTINE></TERM>
+        <DESC>Attach to specific session</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Window management
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="c"/></TERM>
+        <DESC>Create new window</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="n"/></TERM>
+        <DESC>Next window</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="p"/></TERM>
+        <DESC>Previous window</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="0-9"/></TERM>
+        <DESC>Switch to window by number</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Pane management
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="%"/></TERM>
+        <DESC>Split pane vertically</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="&quot;"/></TERM>
+        <DESC>Split pane horizontally</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="Up"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="Down"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="Left"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="Right"/></TERM>
+        <DESC>Navigate between panes</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="x"/></TERM>
+        <DESC>Close current pane</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Other useful commands
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="?"/></TERM>
+        <DESC>Show all keybindings</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="["/></TERM>
+        <DESC>Enter scroll mode (use arrow keys, press <KEY id="q"/> to exit)</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+</BLIST>
+</CONTENT>
+</PAGE>
