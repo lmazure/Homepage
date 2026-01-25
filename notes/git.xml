@@ -1756,7 +1756,10 @@ Script to find the nearest version of a file (<CODEROUTINE>$1</CODEROUTINE>) com
   <ITEM>To properly manage newlines
     <CODESAMPLE><PROMPT/>git config --global core.autocrlf true</CODESAMPLE>
     When checking out code, this convert line endings to <CODEROUTINE>\r\n</CODEROUTINE> if on Windows.<BR/>
-    When committing code, this converts line endings to Unix-style <CODEROUTINE>\n</CODEROUTINE>.
+    When committing code, this converts line endings to Unix-style <CODEROUTINE>\n</CODEROUTINE>.<BR/>
+    But I think this will be a problem when using Antigravity (which must be in Windows) on a repo in WSL2. In this case, the repo must be configured with
+    <CODESAMPLE><PROMPT/>git config set --local core.autocrlf false<BR/>
+      <PROMPT/>git config set --local core.eol lf</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BR/>

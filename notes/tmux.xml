@@ -9,7 +9,7 @@
   <ITEM>Session management
     <DEFINITIONTABLE>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="d"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="D"/></TERM>
         <DESC>Detach from session</DESC>
       </ROW>
       <ROW>
@@ -30,19 +30,22 @@
   <ITEM>Window management
     <DEFINITIONTABLE>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="c"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="C"/></TERM>
         <DESC>Create new window</DESC>
       </ROW>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="n"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="N"/></TERM>
         <DESC>Next window</DESC>
       </ROW>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="p"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="P"/></TERM>
         <DESC>Previous window</DESC>
       </ROW>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="0-9"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="0"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="1"/><BR/>
+          …<BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="9"/></TERM>
         <DESC>Switch to window by number</DESC>
       </ROW>
     </DEFINITIONTABLE>
@@ -50,22 +53,22 @@
   <ITEM>Pane management
     <DEFINITIONTABLE>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="%"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="%"/></TERM>
         <DESC>Split pane vertically</DESC>
       </ROW>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="&quot;"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="&quot;"/></TERM>
         <DESC>Split pane horizontally</DESC>
       </ROW>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="Up"/><BR/>
-          <MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="Down"/><BR/>
-          <MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="Left"/><BR/>
-          <MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="Right"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Up"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Down"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Left"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Right"/></TERM>
         <DESC>Navigate between panes</DESC>
       </ROW>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="x"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="X"/></TERM>
         <DESC>Close current pane</DESC>
       </ROW>
     </DEFINITIONTABLE>
@@ -73,12 +76,12 @@
   <ITEM>Other useful commands
     <DEFINITIONTABLE>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="?"/></TERM>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="?"/></TERM>
         <DESC>Show all keybindings</DESC>
       </ROW>
       <ROW>
-        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="b"/><KEY id="["/></TERM>
-        <DESC>Enter scroll mode (use arrow keys, press <KEY id="q"/> to exit)</DESC>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="["/></TERM>
+        <DESC>Enter scroll mode (use arrow keys, press <KEY id="Q"/> to exit)</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
