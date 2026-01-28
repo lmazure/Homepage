@@ -3,9 +3,14 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI models</TITLE>
 <PATH>links/aimodels.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
+  <ITEM><SLIST>
+    <ITEM><BLIST><TITLE><X><T>Moonshot AI</T><A>https://www.moonshot.ai/</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><X><T>Kimi</T><A>https://www.kimi.com/</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
+  </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X quality="1"><T>Uncensored Models</T><A>https://erichartford.com/uncensored-models</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Hartford</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>15</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Eric</FIRSTNAME><LASTNAME>Hartford</LASTNAME></AUTHOR> explains how and why he fine-tunes some uncensored models.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>NEW "Orca-2" 🐳 Official Release - 13B Better than 70B Models</T><A>https://www.youtube.com/watch?v=ofJLbfyYOms</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><GIVENNAME>Prompt Engineering</GIVENNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>23</DAY></DATE><COMMENT>The title says it all (<X><T>microsoft/Orca-2-13b</T><A>https://huggingface.co/microsoft/Orca-2-13b</A><L>en</L><F>HTML</F></X>).</COMMENT></ARTICLE></ITEM>
@@ -91,13 +96,19 @@
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Moonshot</TITLE>
-      <ITEM><ARTICLE><X><T>Kimi K2: Open Agentic Intelligence</T><A>https://moonshotai.github.io/Kimi-K2/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>Moonshot announces their new model: Kimi K2, a very large open-weights model.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Kimi K2: Leading Open-Source Model Now Available on Together AI</T><A>https://www.together.ai/blog/kimi-k2-leading-open-source-model-now-available-on-together-ai</A><L>en</L><F>HTML</F></X><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>14</DAY></DATE><COMMENT>Together AI is offering Kimi K2.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Kimi K2: What’s all the fuss and what’s it like to use?</T><A>https://www.thoughtworks.com/insights/blog/generative-ai/kimi-k2-whats-fuss-whats-like-use</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Richard</FIRSTNAME><LASTNAME>Gall</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Zhenjia</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>18</DAY></DATE><COMMENT>Some feedback on Kimi K2.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Kimi K2 0905 for Agents</T><A>https://www.youtube.com/watch?v=lglL34IPpYQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>55</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE><COMMENT>A new version of Kimi K2, with the usual announcement reading and the short demo.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Kimi-K2-Instruct-0905</T><A>https://simonwillison.net/2025/Sep/6/kimi-k2-instruct-0905/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE><COMMENT>Some very little information about the new model.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>NEW Top Open Model - Kimi K2 Thinking</T><A>https://www.youtube.com/watch?v=rX_UwjUt_4Q</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>The usual presentation of that thinking model.</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Kimi K2 Thinking</T><A>https://simonwillison.net/2025/Nov/6/kimi-k2-thinking/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>The same.</COMMENT></ARTICLE></ITEM>
+      <ITEM><BLIST><TITLE>Kimi K2</TITLE>
+        <ITEM><ARTICLE><X><T>Kimi K2: Open Agentic Intelligence</T><A>https://moonshotai.github.io/Kimi-K2/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>11</DAY></DATE><COMMENT>Moonshot announces their new model: Kimi K2, a very large open-weights model.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Kimi K2: Leading Open-Source Model Now Available on Together AI</T><A>https://www.together.ai/blog/kimi-k2-leading-open-source-model-now-available-on-together-ai</A><L>en</L><F>HTML</F></X><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>14</DAY></DATE><COMMENT>Together AI is offering Kimi K2.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Kimi K2: What’s all the fuss and what’s it like to use?</T><A>https://www.thoughtworks.com/insights/blog/generative-ai/kimi-k2-whats-fuss-whats-like-use</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Richard</FIRSTNAME><LASTNAME>Gall</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Zhenjia</FIRSTNAME><LASTNAME>Zhou</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>7</MONTH><DAY>18</DAY></DATE><COMMENT>Some feedback on Kimi K2.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Kimi K2 0905 for Agents</T><A>https://www.youtube.com/watch?v=lglL34IPpYQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>12</MINUTE><SECOND>55</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE><COMMENT>A new version of Kimi K2, with the usual announcement reading and the short demo.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Kimi-K2-Instruct-0905</T><A>https://simonwillison.net/2025/Sep/6/kimi-k2-instruct-0905/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE><COMMENT>Some very little information about the new model.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>NEW Top Open Model - Kimi K2 Thinking</T><A>https://www.youtube.com/watch?v=rX_UwjUt_4Q</A><L>en</L><F>MP4</F><DURATION><MINUTE>11</MINUTE><SECOND>21</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>The usual presentation of that thinking model.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Kimi K2 Thinking</T><A>https://simonwillison.net/2025/Nov/6/kimi-k2-thinking/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>6</DAY></DATE><COMMENT>The same.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Kimi K2.5</TITLE>
+        <ITEM><ARTICLE><X><T>Kimi K2.5- The Agent Swarm</T><A>https://www.youtube.com/watch?v=FfCqINSD8Tc</A><L>en</L><F>MP4</F><DURATION><MINUTE>20</MINUTE><SECOND>23</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>27</DAY></DATE><COMMENT>A presentation of Kimi K2.5 and its support of agent swarms.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Kimi K2.5: Visual Agentic Intelligence</T><A>https://simonwillison.net/2026/Jan/27/kimi-k25/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>27</DAY></DATE><COMMENT>The usual short presentation of the model.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Hugging Face</TITLE>
       <ITEM><ARTICLE><X><T>Structured Generation w/ SmolLM2 running in browser &amp; WebGPU</T><A>https://simonwillison.net/2024/Nov/29/structured-generation-smollm2-webgpu/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>29</DAY></DATE><COMMENT>Running a 1.7B model (<X><T>HuggingFaceTB/SmolLM2-1.7B-Instruct</T><A>https://huggingface.co/HuggingFaceTB/SmolLM2-1.7B-Instruct</A><L>en</L><F>HTML</F></X>) in Chrome.</COMMENT></ARTICLE></ITEM>
