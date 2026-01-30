@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>tmux</TITLE>
 <PATH>notes/tmux.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Session management
@@ -11,6 +11,10 @@
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="D"/></TERM>
         <DESC>Detach from session</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>tmux new-session -s session_name</CODEROUTINE></TERM>
+        <DESC>Create a session with specified name</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux ls</CODEROUTINE></TERM>
@@ -25,6 +29,10 @@
         <TERM><CODEROUTINE>tmux attach -t session_name</CODEROUTINE></TERM>
         <DESC>Attach to specific session</DESC>
       </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>tmux kill -t session_name</CODEROUTINE></TERM>
+        <DESC>Kill specific session</DESC>
+      </ROW>
     </DEFINITIONTABLE>
   </ITEM>
   <ITEM>Window management
@@ -32,6 +40,14 @@
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="C"/></TERM>
         <DESC>Create new window</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id=","/></TERM>
+        <DESC>Rename the current window</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="&amp;"/></TERM>
+        <DESC>Kill the current window (with confirmation)</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="N"/></TERM>
@@ -47,6 +63,43 @@
           …<BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="9"/></TERM>
         <DESC>Switch to window by number</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="W"/></TERM>
+        <DESC>Choose window from a list</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="F"/></TERM>
+        <DESC>Find window by name</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="."/></TERM>
+        <DESC>Move window to a different index</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="L"/></TERM>
+        <DESC>Switch to the last active window</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="'"/></TERM>
+        <DESC>Prompt for a window index to select</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>tmux new-window</CODEROUTINE><BR/>
+          <CODEROUTINE>tmux neww</CODEROUTINE></TERM>
+        <DESC>Create a new window</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>tmux new-window -n name</CODEROUTINE></TERM>
+        <DESC>Create a window with specified name</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>tmux new-window -c /path/to/dir</CODEROUTINE></TERM>
+        <DESC>Create a window in specific directory</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>tmux new-window command</CODEROUTINE></TERM>
+        <DESC>Create a window and run command</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
