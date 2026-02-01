@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Mkdocs</TITLE>
+<PATH>notes/mkdocs.xml</PATH>
+<DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>1</DAY></DATE>
+<CONTENT>
+<BLIST><TITLE>Reducing the disk space used by a documentation</TITLE>
+  <ITEM>Get an overview of the file sizes (per file extension)
+    <CODESAMPLE>du -b $(find . -type f) 2&gt;/dev/null | awk '{split($2,a,"."); if(length(a)>1) ext=a[length(a)]; else ext="no_ext"; size[ext]+=$1} END {for(e in size) printf "%-15s %10.2f MB\n", e, size[e]/1024/1024}' | sort -k2 -rn</CODESAMPLE>
+  </ITEM>
+  <ITEM><BLIST><TITLE>Reducing the size of the PNG files</TITLE>
+    <ITEM>Use of <X><T>optiPNG</T><A>https://optipng.sourceforge.net/</A><L>en</L><F>HTML</F></X> to reduce the size of the PNG files.</ITEM>
+    <ITEM>Install
+      <CODESAMPLE>sudo apt install optipng</CODESAMPLE>
+    </ITEM>
+    <ITEM>Execute
+      <CODESAMPLE>find . -type f -name "*.png" -exec optipng -o7 {} \;</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Reducing the size of the HTML files</TITLE>
+    <ITEM>Use of <X><T>Minify</T><A>https://github.com/tdewolff/minify</A><L>en</L><F>HTML</F></X> to reduce the size of the PNG files.</ITEM>
+    <ITEM>Install
+      <CODESAMPLE>sudo apt install minify</CODESAMPLE>
+    </ITEM>
+    <ITEM>Execute
+      <CODESAMPLE>find . -type f -name "*.html" -exec minify -o {} {} \;</CODESAMPLE>
+      (This will have to be integrated in the CI/CD pipeline.)
+    </ITEM>
+  </BLIST></ITEM>
+</BLIST>
+</CONTENT>
+<X><T>links</T><A>../links/life.html#mkdocs</A><L>en</L><F>HTML</F></X>
+</PAGE>
