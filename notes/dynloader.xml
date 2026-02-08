@@ -6,12 +6,30 @@
 <DATE><YEAR>2010</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
-<ROW><TERM><CODEROUTINE><X><T>dlopen</T><A>https://man7.org/linux/man-pages/man3/dlopen.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>load a dynamic library file</DESC></ROW>
-<ROW><TERM><CODEROUTINE><X><T>dlclose</T><A>https://man7.org/linux/man-pages/man3/dlopen.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>unload a dynamic library file (an increment mechanism is used, unload is effectively performed only when the increment reaches zero)</DESC></ROW>
-<ROW><TERM><CODEROUTINE><X><T>dlsym</T><A>https://man7.org/linux/man-pages/man3/dlsym.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return the address of a symbol given its name</DESC></ROW>
-<ROW><TERM><CODEROUTINE><X><T>dlvsym</T><A>https://man7.org/linux/man-pages/man3/dlvsym.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>(GNU extension) return the address of a symbol given its name and version</DESC></ROW>
-<ROW><TERM><CODEROUTINE><X><T>dladdr</T><A>https://man7.org/linux/man-pages/man3/dladdr.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>(GNU extension) return the name of a symbol given its address</DESC></ROW>
-<ROW><TERM><CODEROUTINE><X><T>dlerror</T><A>https://man7.org/linux/man-pages/man3/dlerror.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM><DESC>return a human readable string describing the most recent error</DESC></ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>dlopen</T><A>https://man7.org/linux/man-pages/man3/dlopen.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>load a dynamic library file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>dlclose</T><A>https://man7.org/linux/man-pages/man3/dlopen.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>unload a dynamic library file (an increment mechanism is used, unload is effectively performed only when the increment reaches zero)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>dlsym</T><A>https://man7.org/linux/man-pages/man3/dlsym.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>return the address of a symbol given its name</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>dlvsym</T><A>https://man7.org/linux/man-pages/man3/dlvsym.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>(GNU extension) return the address of a symbol given its name and version</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>dladdr</T><A>https://man7.org/linux/man-pages/man3/dladdr.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>(GNU extension) return the name of a symbol given its address</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>dlerror</T><A>https://man7.org/linux/man-pages/man3/dlerror.3.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>return a human readable string describing the most recent error</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 See <X><T>here</T><A>lhijack.html</A><L>en</L><F>HTML</F></X> for an example of use.
 </CONTENT>
