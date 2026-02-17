@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Mkdocs</TITLE>
 <PATH>notes/mkdocs.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Reducing the disk space used by a documentation</TITLE>
   <ITEM>Get an overview of the file sizes (per file extension)
@@ -19,7 +19,7 @@
     </ITEM>
   </BLIST></ITEM>
   <ITEM><BLIST><TITLE>Reducing the size of the HTML files</TITLE>
-    <ITEM>Use of <X><T>Minify</T><A>https://github.com/tdewolff/minify</A><L>en</L><F>HTML</F></X> to reduce the size of the PNG files.</ITEM>
+    <ITEM>Use of <X><T>Minify</T><A>https://github.com/tdewolff/minify</A><L>en</L><F>HTML</F></X> to minify the HTML files.</ITEM>
     <ITEM>Install
       <CODESAMPLE>sudo apt install minify</CODESAMPLE>
     </ITEM>
@@ -27,6 +27,23 @@
       <CODESAMPLE>find . -type f -name "*.html" -exec minify -o {} {} \;</CODESAMPLE>
       (This will have to be integrated in the CI/CD pipeline.)
     </ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Reducing the size of the HTML files (other option)</TITLE>
+      <ITEM>Use of <X><T>mkdocs-minify-plugin</T><A>https://github.com/byrnereese/mkdocs-minify-plugin</A><L>en</L><F>HTML</F></X> to minify the HTML files.</ITEM>
+      <ITEM>Add in <CODEFILENAME>requirements.txt</CODEFILENAME>:
+        <CODESAMPLE>mkdocs-minify-plugin</CODESAMPLE>
+      </ITEM>
+      <ITEM>Configure it it <CODEFILENAME>mkdocs.yml</CODEFILENAME>:
+        <CODESAMPLE>plugins:<BR/>
+          <TAB/>- minify:<BR/>
+          <TAB/><TAB/><TAB/>minify_html: true<BR/>
+          <TAB/><TAB/><TAB/>htmlmin_opts:<BR/>
+          <TAB/><TAB/><TAB/><TAB/><TAB/>remove_comments: true<BR/>
+          <TAB/><TAB/><TAB/><TAB/><TAB/>remove_empty_space: true<BR/>
+          <TAB/><TAB/><TAB/><TAB/><TAB/>reduce_boolean_attributes: true<BR/>
+          <TAB/><TAB/><TAB/><TAB/><TAB/>keep_pre: true<BR/>
+          <TAB/><TAB/><TAB/><TAB/><TAB/>pre_tags: ['pre', 'code', 'textarea']</CODESAMPLE>
+      </ITEM>
   </BLIST></ITEM>
 </BLIST>
 </CONTENT>
