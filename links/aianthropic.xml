@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Anthropic</TITLE>
 <PATH>links/aianthropic.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -119,6 +119,9 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Claude Opus 4.6</TITLE>
         <ITEM><ARTICLE><X quality="1"><T>Building a C compiler with a team of parallel Claudes</T><ST>We tasked Opus 4.6 using agent teams to build a C Compiler, and then (mostly) walked away. Here's what it taught us about the future of autonomous software development.</ST><A>https://www.anthropic.com/engineering/building-c-compiler</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Nicholas</FIRSTNAME><LASTNAME>Carlini</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Nicholas</FIRSTNAME><LASTNAME>Carlini</LASTNAME></AUTHOR> used 16 agents to build a working sub-par C compiler in Rust.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Claude Sonnet 4.6</TITLE>
+        <ITEM><ARTICLE><X><T>Introducing Claude Sonnet 4.6</T><A>https://simonwillison.net/2026/Feb/17/claude-sonnet-46/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>Claude Sonnnet 4.6 has been released.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Claude for Chrome</TITLE>
         <ITEM><ARTICLE><X><T>Piloting Claude for Chrome</T><A>https://simonwillison.net/2025/Aug/26/piloting-claude-for-chrome/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>26</DAY></DATE><COMMENT>Anthropic is also proposing a Browser agent, with all the prompt injection risks this will involve.</COMMENT></ARTICLE></ITEM>

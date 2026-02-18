@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI security/safety</TITLE>
 <PATH>links/aisecurity.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -127,6 +127,7 @@
       <ITEM><ARTICLE><X><T>New prompt injection papers: Agents Rule of Two and The Attacker Moves Second</T><A>https://simonwillison.net/2025/Nov/2/new-prompt-injection-papers/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>2</DAY></DATE><COMMENT>A paper from Meta ("<X><T>Agents Rule of Two: A Practical Approach to AI Agent Security</T><A>https://ai.meta.com/blog/practical-ai-agent-security/</A><L>en</L><F>HTML</F></X>") which is based on the lethal trifecta principle and a paper ("<X><T>The Attacker Moves Second: Stronger Adaptive Attacks Bypass Defenses Against Llm Jailbreaks and Prompt Injections</T><A>https://arxiv.org/abs/2510.09023</A><L>en</L><F>HTML</F></X>") showing that adaptive jailbreak attacks are always successful.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Antigravity Grounded! Exploring Security Vulnerabilities in Google's Latest IDE</T><A>https://www.youtube.com/watch?v=3gHx1gvDnZU</A><L>en</L><F>MP4</F><DURATION><MINUTE>18</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Johann</FIRSTNAME><LASTNAME>Rehberger</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>25</DAY></DATE><COMMENT>As usual, <AUTHOR><FIRSTNAME>Johann</FIRSTNAME><LASTNAME>Rehberger</LASTNAME></AUTHOR> quickly found the usual prompt injections in Antigravity, some being inherited from Windsurf.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Securing AI Agents: How to Prevent Hidden Prompt Injection Attacks</T><A>https://www.youtube.com/watch?v=5ZA1lTxTH3c</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>7</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jeff</FIRSTNAME><LASTNAME>Crume</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Keen</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>An explanation of prompt injection, but it is a pity that <AUTHOR><FIRSTNAME>Jeff</FIRSTNAME><LASTNAME>Crume</LASTNAME></AUTHOR> explains that there is a way to avoid them…</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Agentic Email</T><A>https://martinfowler.com/bliki/AgenticEmail.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR> reminds that prompt injection is still a problem and it is not a good idea to let an agent manage your emails.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
   </BLIST></ITEM>
 </LLIST>
