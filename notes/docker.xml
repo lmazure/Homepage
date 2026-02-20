@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>12</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>19</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -412,6 +412,11 @@ Dangling images are layers that have no relationship to any tagged images.
   <ROW>
     <TERM><CODEROUTINE>docker compose down</CODEROUTINE></TERM>
     <DESC>Stop and remove containers and networks.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>docker compose down -v</CODEROUTINE><BR/>
+      <CODEROUTINE>docker compose down --volumes</CODEROUTINE></TERM>
+    <DESC>Remove named volumes declared in the "volumes" section of the Compose file and anonymous volumes attached to containers.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
