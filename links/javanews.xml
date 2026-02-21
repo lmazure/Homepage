@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Java news</TITLE>
 <PATH>links/javanews.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><BLIST>
@@ -190,6 +190,9 @@
       <ITEM><ARTICLE><X><T>Choosing between ArrayList and LinkedList - JEP Cafe #20</T><A>https://www.youtube.com/watch?v=ul4wHrbJ8Fk</A><L>en</L><F>MP4</F><DURATION><MINUTE>30</MINUTE><SECOND>49</SECOND></DURATION></X><AUTHOR><FIRSTNAME>José</FIRSTNAME><LASTNAME>Paumard</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE><COMMENT>Some well-known facts about <CODEROUTINE>ArrayList</CODEROUTINE> and <CODEROUTINE>LinkedList</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Optimizing your equals() methods with Pattern Matching - JEP Cafe #21</T><A>https://www.youtube.com/watch?v=kuzjX_efuDs</A><L>en</L><F>MP4</F><DURATION><MINUTE>32</MINUTE><SECOND>55</SECOND></DURATION></X><AUTHOR><FIRSTNAME>José</FIRSTNAME><LASTNAME>Paumard</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>11</MONTH><DAY>9</DAY></DATE><COMMENT>Some microbenchmarks and an explanation of the branch prediction impact to explain why implementing <CODEROUTINE>equals()</CODEROUTINE> with pattern matching is currently the fastest.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Data Oriented Programming in Java 21, Solving the Countdown game - JEP Cafe #22</T><A>https://www.youtube.com/watch?v=Y2pmZlP-cOU</A><L>en</L><F>MP4</F><DURATION><MINUTE>34</MINUTE><SECOND>9</SECOND></DURATION></X><AUTHOR><FIRSTNAME>José</FIRSTNAME><LASTNAME>Paumard</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>8</DAY></DATE><COMMENT>Yet another Countdown resolution, this one using <CODEROUTINE>Stream.mapMulti()</CODEROUTINE> and Gatherers.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE><X><T>Stack Walker</T><A>https://www.youtube.com/playlist?list=PLX8CzqL3ArzVpnvuuVxEtMAazHDLhdrgv</A><L>en</L><F>HTML</F></X></TITLE>
+      <ITEM><ARTICLE><X><T>Java Serialization: Spooky Action at a Distance</T><A>https://www.youtube.com/watch?v=2sxK-z84Oi4</A><L>en</L><F>MP4</F><DURATION><MINUTE>17</MINUTE><SECOND>37</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Billy</FIRSTNAME><LASTNAME>Korando</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>21</DAY></DATE><COMMENT>A description of some of the problems with serialisation.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE><X><T>Sip of Java</T><A>https://www.youtube.com/playlist?list=PLX8CzqL3ArzWkPoqzLemlQ-Nm5wXzRmfE</A><L>en</L><F>HTML</F></X></TITLE>
       <ITEM><ARTICLE><X><T>What’s New in Java 24 in 2 Minutes... More or Less - Sip of Java</T><A>https://www.youtube.com/watch?v=TDVuQM4HMSc</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>14</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Billy</FIRSTNAME><LASTNAME>Korando</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>21</DAY></DATE><COMMENT>A fast-paced presentation of Java 24.</COMMENT></ARTICLE></ITEM>
