@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>2</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -82,6 +82,22 @@
     <TERM><CODEROUTINE>--volume &lt;hostdirectory&gt;:&lt;containerdirectory&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>-v &lt;hostdirectory&gt;:&lt;containerdirectory&gt;</CODEROUTINE></TERM>
     <DESC>Mount <CODEROUTINE>&lt;hostdirectory&gt;</CODEROUTINE> as <CODEROUTINE>&lt;imagedirectory&gt;</CODEROUTINE> in the container. If <CODEROUTINE>&lt;hostdirectory&gt;</CODEROUTINE> does not exist, it will be created.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>docker image pull</T><A>https://docs.docker.com/reference/cli/docker/image/pull/</A><L>en</L><F>HTML</F></X> &lt;image&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>docker pull &lt;image&gt;</CODEROUTINE></TERM>
+    <DESC>Download an image from a registry.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>docker image history</T><A>https://docs.docker.com/reference/cli/docker/image/history/</A><L>en</L><F>HTML</F></X> &lt;image&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>docker history &lt;image&gt;</CODEROUTINE></TERM>
+    <DESC>Show the history of an image.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -186,7 +202,7 @@
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>docker ps</CODEROUTINE><BR/>
-      <CODEROUTINE>docker container ls</CODEROUTINE><BR/>
+      <CODEROUTINE>docker container list</CODEROUTINE><BR/>
       <CODEROUTINE><X><T>docker container ls</T><A>https://docs.docker.com/reference/cli/docker/container/ls/</A><L>en</L><F>HTML</F></X></CODEROUTINE><BR/>
       <CODEROUTINE>docker container ps</CODEROUTINE></TERM>
     <DESC>List the running containers.</DESC>
@@ -316,7 +332,9 @@ Dangling images are layers that have no relationship to any tagged images.
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>docker image rm &lt;image1&gt; &lt;image2&gt; …</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>docker image rm</T><A>https://docs.docker.com/reference/cli/docker/image/rm/</A><L>en</L><F>HTML</F></X> &lt;image1&gt; &lt;image2&gt; …</CODEROUTINE><BR/>
+      <CODEROUTINE>docker image remove &lt;image1&gt; &lt;image2&gt; …</CODEROUTINE><BR/>
+      <CODEROUTINE>docker image rmi &lt;image1&gt; &lt;image2&gt; …</CODEROUTINE></TERM>
     <DESC>Remove some images.</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -472,9 +490,14 @@ Digest: sha256:1c78ed1ef824ab8bb05b04359d186e4c1229d0b3e67005faacb54a7d71974f73<
 Status: Image is up to date for aquasec/trivy:latest<BR/>
 Version: 0.69.1</CODESAMPLE>
 Use that version to analyse a Docker image with Trivy and generate a table overview:
-<CODESAMPLE><PROMPT/>docker run -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.txt</CODESAMPLE>
+<CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.txt</CODESAMPLE>
+(<CODEROUTINE>-T</CODEROUTINE> avoids the garbled display.)<BR/>
 Analyse a Docker image with Trivy and generate a JSON report:
-<CODESAMPLE><PROMPT/>ocker run -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.json</CODESAMPLE>
+<CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.json</CODESAMPLE>
+<BR/>
+<BR/>
+Run Dockle on an image:
+<CODESAMPLE>docker run --rm  goodwithtech/dockle:latest opentestfactory/allinone:nightly</CODESAMPLE>
 <BR/>
 <BR/>
 <BLIST><TITLE>Create a SBOM with syft</TITLE>
