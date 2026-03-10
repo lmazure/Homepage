@@ -27,6 +27,53 @@
   </SLIST></ITEM>
 </BLIST>
 <BR/>
+Common Quick Open / Command Palette prefixes:
+<TABLE>
+  <ROW>
+    <CELL></CELL>
+    <CELL><MODIFIERKEY id="Ctrl"/><KEY id="P"/>
+      <CODEROUTINE>workbench.action.quickOpen</CODEROUTINE></CELL>
+    <CELL>Quick Open: search and open files in the workspace.</CELL>
+  </ROW>
+  <ROW>
+    <CELL><CODEROUTINE>&gt;</CODEROUTINE></CELL>
+    <CELL><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="P"/><BR/>
+      <KEY id="F1"/><BR/>
+      <CODEROUTINE>workbench.action.showCommands</CODEROUTINE></CELL>
+    <CELL>Show and run commands from VS Code and extensions.</CELL>
+  </ROW>
+  <ROW>
+    <CELL><CODEROUTINE>@</CODEROUTINE></CELL>
+    <CELL><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="O"/><BR/>
+      <CODEROUTINE>workbench.action.gotoSymbol</CODEROUTINE></CELL>
+    <CELL>Go to symbol in the current file (functions, classes, etc.).</CELL>
+  </ROW>
+  <ROW>
+    <CELL><CODEROUTINE>@:</CODEROUTINE></CELL>
+    <CELL><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="O"/>,<KEY id=":"/><BR/>
+      <CODEROUTINE>workbench.action.gotoSymbol</CODEROUTINE></CELL>
+    <CELL>Go to symbol in current file, grouped by category.</CELL>
+  </ROW>
+  <ROW>
+    <CELL><CODEROUTINE>#</CODEROUTINE></CELL>
+    <CELL><MODIFIERKEY id="Ctrl"/><KEY id="T"/><BR/>
+      <CODEROUTINE>workbench.action.showAllSymbols</CODEROUTINE></CELL>
+    <CELL>Go to symbol in the entire workspace.</CELL>
+  </ROW>
+  <ROW>
+    <CELL><CODEROUTINE>:</CODEROUTINE></CELL>
+    <CELL><MODIFIERKEY id="Ctrl"/><KEY id="G"/><BR/>
+      <CODEROUTINE>workbench.action.gotoLine</CODEROUTINE></CELL>
+    <CELL>Go to line (and column) in the current file, e.g. <CODEROUTINE>:42:5</CODEROUTINE>.</CELL>
+  </ROW>
+  <ROW>
+    <CELL><CODEROUTINE>?</CODEROUTINE></CELL>
+    <CELL></CELL>
+    <CELL>Show help for the available prefix commands in the Quick Open box.</CELL>
+  </ROW>
+</TABLE>
+<BR/>
+Display and toggle panels
 <DEFINITIONTABLE>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Shift"/><KEY id="P"/><BR/>
