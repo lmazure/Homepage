@@ -66,14 +66,14 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
 </BLIST>
 <U><B>Static Import</B></U><BR/>
   The static import construct allows unqualified access to static members without inheriting from the type containing the static members. Instead, the program imports the members, either individually:
-  <CODESAMPLE>import static java.lang.Math.PI;<BR/>
-  import static java.lang.Math.cos;</CODESAMPLE>
+  <CODESAMPLE language="java">import static java.lang.Math.PI;
+import static java.lang.Math.cos;</CODESAMPLE>
   or en masse:
-  <CODESAMPLE>import static java.lang.Math.*;</CODESAMPLE>
+  <CODESAMPLE language="java">import static java.lang.Math.*;</CODESAMPLE>
   Once the static members have been imported, they may be used without qualification:
-  <CODESAMPLE>double r = cos(PI * theta);</CODESAMPLE>
+  <CODESAMPLE language="java">double r = cos(PI * theta);</CODESAMPLE>
   (instead of
-  <CODESAMPLE>double r = Math.cos(Math.PI * theta);</CODESAMPLE>
+  <CODESAMPLE language="java">double r = Math.cos(Math.PI * theta);</CODESAMPLE>
   )<BR/>
   This should be used sparingly since it pollutes the namespace of the class.<BR/>
 <BR/>
@@ -99,11 +99,11 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
 </BLIST>
 <BLIST><TITLE><U><B>Varargs</B></U><BR/></TITLE>
   <ITEM>example
-    <CODESAMPLE>void foo(int... x) {<BR/>
-    <TAB/>for (int i = 0; i &lt; x.length; i++) {<BR/>
-    <TAB/><TAB/>System.out.println(x[i]);<BR/>
-    <TAB/>}<BR/>
-    }</CODESAMPLE>
+    <CODESAMPLE language="java">void foo(int... x) {
+<TAB/>for (int i = 0; i &lt; x.length; i++) {
+<TAB/><TAB/>System.out.println(x[i]);
+<TAB/>}
+}</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Exceptions</B></U><BR/></TITLE>
@@ -115,12 +115,12 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM>to get the stacktrace as a string
-      <CODESAMPLE>private static String getExceptionDescription(final Throwable e) {<BR/>
-        <TAB/>final StringWriter sw = new StringWriter();<BR/>
-        <TAB/>final PrintWriter pw = new PrintWriter(sw);<BR/>
-        <TAB/>e.printStackTrace(pw);<BR/>
-        <TAB/>return sw.toString();<BR/>
-        }</CODESAMPLE>
+      <CODESAMPLE language="java">private static String getExceptionDescription(final Throwable e) {
+<TAB/>final StringWriter sw = new StringWriter();
+<TAB/>final PrintWriter pw = new PrintWriter(sw);
+<TAB/>e.printStackTrace(pw);
+<TAB/>return sw.toString();
+}</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
   <ITEM><CODEROUTINE>Error</CODEROUTINE>s and <CODEROUTINE>RuntimeException</CODEROUTINE>s are unchecked exceptions (methods don't explicitly have to declare that they can throw an unchecked exception; callers don't have to handle them explicitly)</ITEM>
@@ -387,9 +387,9 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
   <ROW>
     <TERM><CODEROUTINE>void ifPresentOrElse(Consumer&lt;? super T&gt; action, Runnable emptyAction)</CODEROUTINE></TERM>
     <DESC>If a value is present, performs the given action with the value, otherwise performs the given empty-based action.<BR/>
-    <CODESAMPLE>employee.ifPresentOrElse(<BR/>
-      <TAB/>emp -&gt; log.debug("Found Employee: {}",emp.getName()),<BR/>
-      <TAB/>() -&gt; log.error("Employee not found"));</CODESAMPLE></DESC>
+    <CODESAMPLE language="java">employee.ifPresentOrElse(
+<TAB/>emp -&gt; log.debug("Found Employee: {}",emp.getName()),
+<TAB/>() -&gt; log.error("Employee not found"));</CODESAMPLE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>Optional&lt;T&gt; filter(Predicate&lt;? super T&gt; predicate)</CODEROUTINE></TERM>
@@ -430,18 +430,18 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
   <ROW>
     <TERM><CODEROUTINE>&lt;R&gt; Stream&lt;R&gt; flatMap(Function&lt;? super T,? extends Stream&lt;? extends R&gt;&gt; mapper)</CODEROUTINE></TERM>
     <DESC>Returns a stream consisting of the results of replacing each element of this stream with the contents of a mapped stream produced by applying the provided mapping function to each element.<BR/>
-    <CODESAMPLE>Stream&lt;String&gt; lines = Files.lines(path, StandardCharsets.UTF_8);<BR/>
-      Stream&lt;String&gt; words = lines.flatMap(line -&gt; Stream.of(line.split(" +")));</CODESAMPLE></DESC>
+    <CODESAMPLE language="java">Stream&lt;String&gt; lines = Files.lines(path, StandardCharsets.UTF_8);
+Stream&lt;String&gt; words = lines.flatMap(line -&gt; Stream.of(line.split(" +")));</CODESAMPLE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>default &lt;R&gt; Stream&lt;R&gt; mapMulti(BiConsumer&lt;? super T,? super Consumer&lt;R&gt;&gt; mapper)</CODEROUTINE></TERM>
     <DESC>Returns a stream consisting of the results of replacing each element of this stream with multiple elements, specifically zero or more elements.<BR/>
-      <CODESAMPLE>Stream&lt;Number&gt; numbers = … ;<BR/>
-        List&lt;Integer&gt; integers = numbers.&lt;Integer&gt;mapMulti((number, consumer) -&gt; {<BR/>
-        <TAB/>if (number instanceof Integer i)<BR/>
-        <TAB/><TAB/>consumer.accept(i);<BR/>
-        <TAB/>})<BR/>
-        <TAB/>.collect(Collectors.toList());</CODESAMPLE></DESC>
+      <CODESAMPLE language="java">Stream&lt;Number&gt; numbers = … ;
+List&lt;Integer&gt; integers = numbers.&lt;Integer&gt;mapMulti((number, consumer) -&gt; {
+<TAB/>if (number instanceof Integer i)
+<TAB/><TAB/>consumer.accept(i);
+<TAB/>})
+<TAB/>.collect(Collectors.toList());</CODESAMPLE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>Optional&lt;T&gt; reduce(BinaryOperator&lt;T&gt; accumulator)</CODEROUTINE></TERM>
@@ -465,36 +465,35 @@ for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataLi
     <DESC>Return a stream consisting of the elements of this stream, additionally performing the provided action on each element as elements are consumed from the resulting stream.</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
 <BLIST><TITLE><U><B>JUnit</B></U><BR/></TITLE>
   <ITEM>to create a test suite as a list of test classes:
-    <CODESAMPLE>
-    package data.internet.test;<BR/>
-    <BR/>
-    import org.junit.platform.runner.JUnitPlatform;<BR/>
-    import org.junit.platform.suite.api.SelectClasses;<BR/>
-    import org.junit.runner.RunWith;<BR/>
-    <BR/>
-    @RunWith(JUnitPlatform.class)<BR/>
-    @SelectClasses({SynchronousSiteDataRetrieverTest.class,<BR/>
-    <TAB/>AsynchronousSiteDataRetrieverTest.class,<BR/>
-    <TAB/>CachedSiteDataRetrieverTest.class})<BR/>
-    public class AllSiteRetrieverTests {<BR/>
-    }</CODESAMPLE>
+    <CODESAMPLE language="java">package data.internet.test;
+
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.platform.suite.api.SelectClasses;
+import org.junit.runner.RunWith;
+
+@RunWith(JUnitPlatform.class)
+@SelectClasses({SynchronousSiteDataRetrieverTest.class,
+                AsynchronousSiteDataRetrieverTest.class,
+                CachedSiteDataRetrieverTest.class})
+public class AllSiteRetrieverTests {
+}</CODESAMPLE>
   </ITEM>
   <ITEM>to create a test suite as a list of test packages:
-    <CODESAMPLE>
-    package test;<BR/>
-    <BR/>
-    import org.junit.platform.runner.JUnitPlatform;<BR/>
-    import org.junit.platform.suite.api.SelectPackages;<BR/>
-    import org.junit.runner.RunWith;<BR/>
-    <BR/>
-    @RunWith(JUnitPlatform.class)<BR/>
-    @SelectPackages({"data.internet.test",<BR/>
-    <TAB/>"data.jsongenerator.test",<BR/>
-    <TAB/>"data.test"})<BR/>
-    public class AllTests {<BR/>
-    }</CODESAMPLE>
+    <CODESAMPLE language="java">package test;
+
+import org.junit.platform.runner.JUnitPlatform;
+import org.junit.platform.suite.api.SelectPackages;
+import org.junit.runner.RunWith;
+
+@RunWith(JUnitPlatform.class)
+@SelectPackages({"data.internet.test",
+                 "data.jsongenerator.test",
+                 "data.test"})
+public class AllTests {
+}</CODESAMPLE>
     but this is in fact a JUnit 4 test suite.<BR/>
     Test suites do not exist in JUnit 5, see <X><T>here</T><A>https://bugs.eclipse.org/bugs/show_bug.cgi?id=511183</A><L>en</L><F>HTML</F></X>.
   </ITEM>
