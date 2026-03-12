@@ -367,6 +367,7 @@
       <xs:element ref="X" minOccurs="0" maxOccurs="unbounded"/>
       <xs:element ref="CODEFILENAME" minOccurs="0" maxOccurs="unbounded"/>
     </xs:sequence>
+  <xs:attribute  name="language" use="optional"/>
   </xs:complexType>
 </xs:element>
 

@@ -48,13 +48,13 @@
     </BLIST>
   <BLIST><TITLE><U><B>For-each loops</B></U></TITLE>
   <ITEM>for-each loops can be used on a <CODEROUTINE>Collection</CODEROUTINE> or on an array
-    <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
-      …<BR/>
-      for (PhotoListMetaDataListener l : a_listOfMetaDataListeners) l.photoListMetaDataChanged(f);</CODESAMPLE>
+    <CODESAMPLE language="java">final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;
+…
+for (PhotoListMetaDataListener l : a_listOfMetaDataListeners) l.photoListMetaDataChanged(f);</CODESAMPLE>
     is the same as
-    <CODESAMPLE>final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;<BR/>
-      …<BR/>
-      for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataListeners.get(i).photoListMetaDataChanged(f);</CODESAMPLE></ITEM>
+    <CODESAMPLE language="java">final private Vector&lt;PhotoListMetaDataListener&gt; a_listOfMetaDataListeners;
+…
+for (int i = 0; i &lt; a_listOfMetaDataListeners.size(); i++) a_listOfMetaDataListeners.get(i).photoListMetaDataChanged(f);</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Autoboxing</B></U></TITLE>
   <ITEM>Autoboxing allows the use of an <CODEROUTINE>int</CODEROUTINE> in place of an <CODEROUTINE>Integer</CODEROUTINE> and vice-versa.<BR/>

@@ -1,5 +1,5 @@
 <xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
-<xsl:output method="html" encoding="utf-8" indent="yes" />
+<xsl:output method="html" encoding="utf-8" indent="no" />
 
 <xsl:variable name="filepath" select="/PAGE/PATH"/>
 
@@ -8,6 +8,9 @@
   <html>
     <head>
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
+    <xsl:if test="count(/PAGE//CODESAMPLE[@language])>0">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"/>
+    </xsl:if>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/png" href="../icon.png" />
     <xsl:comment>[if IE]&gt;&lt;link rel="shortcut icon" type="image/x-icon" href="../favicon.ico"/&gt;&lt;![endif]</xsl:comment>
@@ -89,9 +92,15 @@
       <xsl:if test="count(/PAGE//MERMAID)>0">
         <script>function initializeMermaid() { mermaid.initialize({ startOnLoad: true }); }</script>
         <xsl:element name="script">
-          <xsl:attribute name="async"/>
           <xsl:attribute name="src">https://cdn.jsdelivr.net/npm/mermaid/dist/mermaid.min.js</xsl:attribute>
-          <xsl:attribute name="onload">initializeMermaid</xsl:attribute>
+          <xsl:attribute name="onload">initializeMermaid()</xsl:attribute>
+        </xsl:element>
+      </xsl:if>
+      <xsl:if test="count(/PAGE//CODESAMPLE[@language])>0">
+        <script>function initializeHighlight() { hljs.highlightAll(); }</script>
+        <xsl:element name="script">
+          <xsl:attribute name="src">https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js</xsl:attribute>
+          <xsl:attribute name="onload">initializeHighlight()</xsl:attribute>
         </xsl:element>
       </xsl:if>
       <script src="../scripts/common.js" type="module"></script>
@@ -192,9 +201,16 @@
 </xsl:template>
 
 <xsl:template match="CODESAMPLE">
-  <table class="file"><tr><td><code>
-    <xsl:apply-templates/>
-  </code></td></tr></table>
+  <xsl:choose>
+    <xsl:when test="@language">
+      <pre><code class="language-{@language}"><xsl:apply-templates/></code></pre>
+    </xsl:when>
+    <xsl:otherwise>
+      <table class="file"><tr><td><code>
+        <xsl:apply-templates/>
+      </code></td></tr></table>
+    </xsl:otherwise>
+  </xsl:choose>
 </xsl:template>
 
 <xsl:template match="TEXTBLOCK">
@@ -659,9 +675,7 @@
   <sub><xsl:apply-templates/></sub>
 </xsl:template>
 
-<xsl:template match="BR">
-  <xsl:element name="br"/>
-</xsl:template>
+<xsl:template match="BR"><xsl:element name="br"/></xsl:template>
 
 <xsl:template match="LINE">
   <hr class="line"/>

@@ -118,8 +118,21 @@ hr.line {
 	border: 0;
 }
 
-code {
-	background-color: #F1F1F1;
+.hljs {
+    background-color: #F1F1F1 !important;
+}
+
+pre {
+    margin: 0;
+    padding: 2px 2px;
+    border-color: #555;
+    border-style: solid;
+    border-width: 2px;
+    border-radius: 8px;
+    overflow-x: auto;
+    background-color: #F1F1F1;
+    display: table;
+    max-width: 100%;
 }
 
 .codemenu {
@@ -172,7 +185,6 @@ code {
 	background-color: #FFFFFF;
 	position: absolute;
 }
-
 
 .keywordPopup {
 	overflow: auto;
