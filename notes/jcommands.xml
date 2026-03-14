@@ -84,7 +84,7 @@
 </BLIST>
 <BLIST><TITLE><B><U>javac</U></B></TITLE>
   <ITEM>Compile java files into class files.
-    <CODESAMPLE>javac -d ./target/classes $(find -name '*.java')</CODESAMPLE></ITEM>
+    <CODESAMPLE language="bash"><PROMPT/>javac -d ./target/classes $(find -name '*.java')</CODESAMPLE></ITEM>
     <ITEM>
       <DEFINITIONTABLE>
         <ROW>
@@ -161,9 +161,9 @@
 </BLIST>
 <BLIST><TITLE><B><U>javap</U></B></TITLE>
   <ITEM>Dump the package, protected, and public classes and members of a class:
-    <CODESAMPLE>javap javax.swing.DefaultListRenderer</CODESAMPLE></ITEM>
+    <CODESAMPLE language="bash"><PROMPT/>javap javax.swing.DefaultListRenderer</CODESAMPLE></ITEM>
   <ITEM>Determine in which Java version is <CODEROUTINE>FooBar.class</CODEROUTINE>, execute:
-    <CODESAMPLE>javap FooBar</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>javap FooBar</CODESAMPLE>
     and look for <CODEROUTINE>minor version</CODEROUTINE> and <CODEROUTINE>major version</CODEROUTINE>
     <TABLE>
       <ROW><CELL>major</CELL><CELL>minor</CELL><CELL>Java</CELL></ROW>
@@ -183,14 +183,14 @@
 </BLIST>
 <BLIST><TITLE><B><U>javaws</U></B></TITLE>
   <ITEM>Start Java Web Start Launcher on the specified JNLP URL
-    <CODESAMPLE>javaws &lt;url&gt;</CODESAMPLE></ITEM>
+    <CODESAMPLE language="bash"><PROMPT/>javaws &lt;url&gt;</CODESAMPLE></ITEM>
   <ITEM>Run the Java Application Cache Viewer
-    <CODESAMPLE>javaws</CODESAMPLE>
-    <CODESAMPLE>javaws -viewer</CODESAMPLE></ITEM>
+    <CODESAMPLE language="bash"><PROMPT/>javaws</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>javaws -viewer</CODESAMPLE></ITEM>
   <ITEM>Use the system cache instead of the user cache
-    <CODESAMPLE>javaws -system</CODESAMPLE></ITEM>
+    <CODESAMPLE language="bash"><PROMPT/>javaws -system</CODESAMPLE></ITEM>
   <ITEM>Clear the user cache
-    <CODESAMPLE>javaws -Xclearcache</CODESAMPLE></ITEM>
+    <CODESAMPLE language="bash"><PROMPT/>javaws -Xclearcache</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><B><U>jconsole</U></B></TITLE>
   <ITEM>The monitored process must be started with the <CODEROUTINE>-Dcom.sun.management.jmxremote</CODEROUTINE> option</ITEM>
