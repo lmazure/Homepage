@@ -33,24 +33,24 @@
 </BLIST>
 <BLIST><TITLE><B><CODEROUTINE>const</CODEROUTINE> correctness</B></TITLE>
   <ITEM>It is illegal to assign a pointer to a pointer to an <CODEROUTINE>int</CODEROUTINE> (<CODEROUTINE>pp</CODEROUTINE>) to a pointer to a pointer to a <CODEROUTINE>const int</CODEROUTINE> (<CODEROUTINE>ppc</CODEROUTINE>). Otherwise a <CODEROUTINE>const int</CODEROUTINE> could later be assigned to <CODEROUTINE>ppc</CODEROUTINE> and modified through <CODEROUTINE>pp</CODEROUTINE>. Here is an example:
-    <CODESAMPLE>#include &lt;stdio.h&gt;<BR/>
-      #include &lt;string.h&gt;<BR/>
-      #include &lt;stdlib.h&gt;<BR/>
-      <BR/>
-      int main(int argc, char **argv) {<BR/>
-      <BR/>
-        const int **ppc;<BR/>
-        int **pp = (int**)malloc(sizeof(int*));<BR/>
-      <BR/>
-        ppc = pp;  // illegal, you can bypass the law with: (int**)iic = ii<BR/>
-      <BR/>
-        const int myPreciousData = atoi(argv[1]);<BR/>
-        ppc[0]=&amp;myPreciousData;<BR/>
-        pp[0][0]=123456789;<BR/>
-        printf("%d\n",myPreciousData);<BR/>
-      <BR/>
-        return 0;<BR/>
-      }</CODESAMPLE>
+    <CODESAMPLE language="c">#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+#include &lt;stdlib.h&gt;
+
+int main(int argc, char **argv) {
+
+  const int **ppc;
+  int **pp = (int**)malloc(sizeof(int*));
+
+  ppc = pp;  // illegal, you can bypass the law with: (int**)iic = ii
+
+  const int myPreciousData = atoi(argv[1]);
+  ppc[0]=&amp;myPreciousData;
+  pp[0][0]=123456789;
+  printf("%d\n", myPreciousData);
+
+  return 0;
+}</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><B><U><X><T><CODEROUTINE>&lt;stdint.h&gt;</CODEROUTINE></T><A>https://pubs.opengroup.org/onlinepubs/007904975/basedefs/stdint.h.html</A><L>en</L><F>HTML</F></X></U></B></TITLE>
