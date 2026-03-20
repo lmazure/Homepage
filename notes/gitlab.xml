@@ -74,59 +74,59 @@
 </BLIST>
 <BLIST><TITLE>Markdown</TITLE>
   <ITEM>use <CODEROUTINE>````</CODEROUTINE> to be able to write suggestions containing markdown
-    <CODESAMPLE>````suggestion:-0+2<BR/>
-      ```shell<BR/>
-      git log<BR/>
-      ```<BR/>
-      ````</CODESAMPLE>
+    <CODESAMPLE language="markdown">````suggestion:-0+2
+```shell
+git log
+```
+````</CODESAMPLE>
   </ITEM>
   <ITEM>Create a sortable and filterable table
-    <CODESAMPLE>```json:table<BR/>
-      {<BR/>
-      "fields" : [<BR/>
-      <TAB/><TAB/>{ "key": "client", "label": "Client", "sortable": "true" },<BR/>
-      <TAB/><TAB/>{ "key": "techno", "label": "Technology", "sortable": "true" }<BR/>
-      <TAB/>],<BR/>
-      "items" : [<BR/>
-      <TAB/><TAB/>{ "client": "Acme", "techno": "Cucumber" },<BR/>
-      <TAB/><TAB/>{ "client": "Fuzzy", "techno": "Agilitest" },<BR/>
-      <TAB/><TAB/>{ "client": "Knock-Knock", "techno": "Agilitest" },<BR/>
-      <TAB/><TAB/>{ "client": "Opale", "techno": "Robot Framework" },<BR/>
-      <TAB/><TAB/>{ "client": "Snurf", "techno": "Postman" },<BR/>
-      <TAB/><TAB/>{ "client": "YAC", "techno": "Katalon" }<BR/>
-      <TAB/>],<BR/>
-      "filter": "true"<BR/>
-      }<BR/>
-      ```</CODESAMPLE>
+    <CODESAMPLE language="markdown">```json:table
+{
+"fields" : [
+        { "key": "client", "label": "Client", "sortable": "true" },
+        { "key": "techno", "label": "Technology", "sortable": "true" }
+    ],
+"items" : [
+        { "client": "Acme", "techno": "Cucumber" },
+        { "client": "Fuzzy", "techno": "Agilitest" },
+        { "client": "Knock-Knock", "techno": "Agilitest" },
+        { "client": "Opale", "techno": "Robot Framework" },
+        { "client": "Snurf", "techno": "Postman" },
+        { "client": "YAC", "techno": "Katalon" }
+    ],
+"filter": "true"
+}
+```</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE>Wiki</TITLE>
   <ITEM>Clone the repo of the wiki
-    <CODESAMPLE>git clone https://gitlab.com/mygroup/myproject.wiki.git</CODESAMPLE>
+    <CODESAMPLE language="bash">git clone https://gitlab.com/mygroup/myproject.wiki.git</CODESAMPLE>
   </ITEM>
   <ITEM>Insert a table of content
-    <CODESAMPLE>[[_TOC_]]</CODESAMPLE>
+    <CODESAMPLE language="markdown">[[_TOC_]]</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE>Mess…</TITLE>
   <ITEM>retrieve the issue related to a merge request
-    <CODESAMPLE>curl --header "PRIVATE-TOKEN:$GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/27169359/merge_requests/355" | jq -r '.description'  head -1 | sed 's/.*#//' </CODESAMPLE>
+    <CODESAMPLE language="bash">curl --header "PRIVATE-TOKEN:$GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/27169359/merge_requests/355" | jq -r '.description'  head -1 | sed 's/.*#//' </CODESAMPLE>
   </ITEM>
   <ITEM>delete the local branches that to do not exist anymore in GitLab
-    <CODESAMPLE>git checkout main<BR/>
-    git fetch -p<BR/>
-    git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -n 1 -pr git branch -D</CODESAMPLE>
+    <CODESAMPLE language="bash">git checkout main
+git fetch -p
+git branch -vv | grep ': gone]' | awk '{print $1}' | xargs -n 1 -pr git branch -D</CODESAMPLE>
   </ITEM>
   <ITEM>run the GitLab runner in Docker
-    <CODESAMPLE>docker run --rm -t -i -v C:\gitlab-runner\config:/etc/gitlab-runner gitlab/gitlab-runner register --non-interactive --executor "docker" --docker-image alpine:latest --url "https://gitlab.com/" --registration-token "XXXXXXXXXXXXXXXXXXXX" --description "myrunner" --run-untagged="true" –locked="false"<BR/>
-      docker run -d --name gitlab-runner --restart always -v C:\gitlab-runner\config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest</CODESAMPLE>
+    <CODESAMPLE language="bash">docker run --rm -t -i -v C:\gitlab-runner\config:/etc/gitlab-runner gitlab/gitlab-runner register --non-interactive --executor "docker" --docker-image alpine:latest --url "https://gitlab.com/" --registration-token "XXXXXXXXXXXXXXXXXXXX" --description "myrunner" --run-untagged="true" –locked="false"<BR/>
+docker run -d --name gitlab-runner --restart always -v C:\gitlab-runner\config:/etc/gitlab-runner -v /var/run/docker.sock:/var/run/docker.sock gitlab/gitlab-runner:latest</CODESAMPLE>
     where <CODEROUTINE>XXXXXXXXXXXXXXXXXXXX</CODEROUTINE> is the registration token for specific runners<BR/>
     <CODEFILENAME>C:\gitlab-runner\config</CODEFILENAME> will be created
   </ITEM>
   <ITEM>get the audit of group https://gitlab.com/henixdevelopment
-    <CODESAMPLE>curl --header "PRIVATE-TOKEN: &lt;token&gt;" https://gitlab.com/api/v4/groups/13404279/audit_events?per_page=500&amp;page=1</CODESAMPLE>
+    <CODESAMPLE language="bash">curl --header "PRIVATE-TOKEN: &lt;token&gt;" https://gitlab.com/api/v4/groups/13404279/audit_events?per_page=500&amp;page=1</CODESAMPLE>
     get the audit of project https://gitlab.com/henixdevelopment/open-source/opentestfactory/orchestrator
-    <CODESAMPLE>curl --header "PRIVATE-TOKEN: &lt;token&gt;" https://gitlab.com/api/v4/projects/27352872/audit_events?per_page=500&amp;page=1</CODESAMPLE>
+    <CODESAMPLE language="bash">curl --header "PRIVATE-TOKEN: &lt;token&gt;" https://gitlab.com/api/v4/projects/27352872/audit_events?per_page=500&amp;page=1</CODESAMPLE>
   </ITEM>
   <ITEM>in order to see what someone has crontibuted, rather use <CODEROUTINE>Merged by</CODEROUTINE> rather than <CODEROUTINE>Author</CODEROUTINE><BR/>
     <X><T>https://gitlab.com/groups/henixdevelopment/open-source/-/merge_requests/?sort=updated_desc&amp;state=merged&amp;merge_user=lmazure&amp;first_page_size=20</T><A>https://gitlab.com/groups/henixdevelopment/open-source/-/merge_requests/?sort=updated_desc&amp;state=merged&amp;merge_user=lmazure&amp;first_page_size=20</A><L>en</L><F>HTML</F></X>
@@ -134,202 +134,234 @@
   <ITEM>
     <BLIST><TITLE>Store a package in the registry with Maven</TITLE>
       <ITEM>configure the repository in <CODEFILENAME>pom.xml</CODEFILENAME>
-        <CODESAMPLE>&lt;repositories&gt;<BR/>
-          <TAB/>&lt;repository&gt;<BR/>
-          <TAB/><TAB/>&lt;id&gt;gitlab-maven&lt;/id&gt;<BR/>
-          <TAB/><TAB/>&lt;url&gt;https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven&lt;/url&gt;<BR/>
-          <TAB/>&lt;/repository&gt;<BR/>
-          &lt;/repositories&gt;<BR/>
-          &lt;distributionManagement&gt;<BR/>
-          <TAB/>&lt;repository&gt;<BR/>
-          <TAB/><TAB/>&lt;id&gt;gitlab-maven&lt;/id&gt;<BR/>
-          <TAB/><TAB/>&lt;url&gt;https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven&lt;/url&gt;<BR/>
-          <TAB/>&lt;/repository&gt;<BR/>
-          <TAB/>&lt;snapshotRepository&gt;<BR/>
-          <TAB/><TAB/>&lt;id&gt;gitlab-maven&lt;/id&gt;<BR/>
-          <TAB/><TAB/>&lt;url&gt;https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven&lt;/url&gt;<BR/>
-          <TAB/>&lt;/snapshotRepository&gt;<BR/>
-          &lt;/distributionManagement&gt;</CODESAMPLE>
+        <CODESAMPLE language="xml">&lt;repositories&gt;
+    &lt;repository&gt;
+        &lt;id&gt;gitlab-maven&lt;/id&gt;
+        &lt;url&gt;https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven&lt;/url&gt;
+    &lt;/repository&gt;
+&lt;/repositories&gt;
+&lt;distributionManagement&gt;
+    &lt;repository&gt;
+        &lt;id&gt;gitlab-maven&lt;/id&gt;
+        &lt;url&gt;https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven&lt;/url&gt;
+    &lt;/repository&gt;
+    &lt;snapshotRepository&gt;
+        &lt;id&gt;gitlab-maven&lt;/id&gt;
+        &lt;url&gt;https://gitlab.com/api/v4/projects/${env.CI_PROJECT_ID}/packages/maven&lt;/url&gt;
+    &lt;/snapshotRepository&gt;
+&lt;/distributionManagement&gt;</CODESAMPLE>
       </ITEM>
       <ITEM>declare the repository in <CODEFILENAME>setting.xml</CODEFILENAME>
-        <CODESAMPLE>&lt;settings&gt;<BR/>
-          <TAB/>&lt;servers&gt;<BR/>
-          <TAB/><TAB/>&lt;server&gt;<BR/>
-          <TAB/><TAB/><TAB/>&lt;id&gt;gitlab-maven&lt;/id&gt;<BR/>
-          <TAB/><TAB/><TAB/>&lt;configuration&gt;<BR/>
-          <TAB/><TAB/><TAB/><TAB/>&lt;httpHeaders&gt;<BR/>
-          <TAB/><TAB/><TAB/><TAB/><TAB/>&lt;property&gt;<BR/>
-          <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>&lt;name&gt;Job-Token&lt;/name&gt;<BR/>
-          <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>&lt;value&gt;${CI_JOB_TOKEN}&lt;/value&gt;<BR/>
-          <TAB/><TAB/><TAB/><TAB/><TAB/>&lt;/property&gt;<BR/>
-          <TAB/><TAB/><TAB/><TAB/>&lt;/httpHeaders&gt;<BR/>
-          <TAB/><TAB/><TAB/>&lt;/configuration&gt;<BR/>
-          <TAB/><TAB/>&lt;/server&gt;<BR/>
-          <TAB/>&lt;/servers&gt;<BR/>
-          &lt;/settings&gt;</CODESAMPLE>
+        <CODESAMPLE language="xml">&lt;settings&gt;
+    &lt;servers&gt;
+        &lt;server&gt;
+            &lt;id&gt;gitlab-maven&lt;/id&gt;
+            &lt;configuration&gt;
+                &lt;httpHeaders&gt;
+                    &lt;property&gt;
+                        &lt;name&gt;Job-Token&lt;/name&gt;
+                        &lt;value&gt;${CI_JOB_TOKEN}&lt;/value&gt;
+                    &lt;/property&gt;
+                &lt;/httpHeaders&gt;
+            &lt;/configuration&gt;
+        &lt;/server&gt;
+    &lt;/servers&gt;
+&lt;/settings&gt;</CODESAMPLE>
       </ITEM>
-      <ITEM>configure the deploiement in <CODEFILENAME>.gitlab-ci.yml</CODEFILENAME>
-        <CODESAMPLE>variables:<BR/>
-          <TAB/>MAVEN_CLI_OPTS: "--batch-mode --settings settings.xml"<BR/>
-          <TAB/>MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"<BR/>
-          <BR/>
-          cache:<BR/>
-          <TAB/>paths:<BR/>
-          <TAB/><TAB/>- .m2/repository/<BR/>
-          …<BR/>
-          package:<BR/>
-          <TAB/>stage: package<BR/>
-          <TAB/>script:<BR/>
-          <TAB/><TAB/>- mvn $MAVEN_CLI_OPTS -Dmaven.test.skip compile assembly:single deploy</CODESAMPLE></ITEM>
+      <ITEM>configure the deployment in <CODEFILENAME>.gitlab-ci.yml</CODEFILENAME>
+        <CODESAMPLE language="yaml">variables:
+    MAVEN_CLI_OPTS: "--batch-mode --settings settings.xml"
+    MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
+
+cache:
+    paths:
+        - .m2/repository/
+…
+package:
+    stage: package
+    script:
+        - mvn $MAVEN_CLI_OPTS -Dmaven.test.skip compile assembly:single deploy</CODESAMPLE></ITEM>
     </BLIST>
+  </ITEM>
+  <ITEM>GraphQL request to get AI consumption
+    <CODESAMPLE language="graphql">query getUserSubscriptionUsage {
+  subscriptionUsage(namespacePath: "henixdevelopment") {
+    enabled
+    lastEventTransactionAt
+    subscriptionPortalUsageDashboardUrl
+    purchaseCreditsPath
+    startDate
+    endDate
+    paidTierTrial {
+      isActive
+    }
+    usersUsage {
+      users(sort: TOTAL_CREDITS_USED_DESC) {
+        nodes {
+          id
+          name
+          username
+          avatarUrl
+          usage {
+            totalCredits
+            creditsUsed
+            monthlyCommitmentCreditsUsed
+            monthlyWaiverCreditsUsed
+            overageCreditsUsed
+            paidTierTrialCreditsUsed
+          }
+        }
+      }
+    }
+  }
+}</CODESAMPLE>
   </ITEM>
   <ITEM><BLIST><TITLE>Python scripts</TITLE>
     <ITEM>base methods
-      <CODESAMPLE>import requests<BR/>
-        import urllib.parse<BR/>
-        <BR/>
-        def makeHeader(token):<BR/>
-        <TAB/>return {"Authorization": "Bearer " + args.token}<BR/>
-        <BR/>
-        def run_post_query(token, query):<BR/>
-        <TAB/>request = requests.post(query, headers=makeHeader(token))<BR/>
-        <TAB/>if request.status_code == 201:<BR/>
-        <TAB/><TAB/>return<BR/>
-        <TAB/>raise Exception("POST query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))<BR/>
-        <BR/>
-        def run_get_query(token, query):<BR/>
-        <TAB/>request = requests.get(query, headers=makeHeader(token))<BR/>
-        <TAB/>if request.status_code == 200:<BR/>
-        <TAB/><TAB/>return request.json()<BR/>
-        <TAB/>raise Exception("GET query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))<BR/>
-        <BR/>
-        def run_put_query(token, query, data = None):<BR/>
-        <TAB/>if data:<BR/>
-        <TAB/><TAB/>request = requests.put(query, headers=makeHeader(token), data=data)<BR/>
-        <TAB/>else:<BR/>
-        <TAB/><TAB/>request = requests.put(query, headers=makeHeader(token))<BR/>
-        <TAB/>if request.status_code == 200:<BR/>
-        <TAB/><TAB/>return<BR/>
-        <TAB/>raise Exception("PUT query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))<BR/>
-        <BR/>
-        def run_delete_query(token, query):<BR/>
-        <TAB/>request = requests.delete(query, headers=makeHeader(token))<BR/>
-        <TAB/>if request.status_code in (200, 204):<BR/>
-        <TAB/><TAB/>return<BR/>
-        <TAB/>raise Exception("DELETE query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))<BR/>
-        <BR/>
-        def run_graphql_query(token, query):<BR/>
-        <TAB/>request = requests.post("https://gitlab.com/api/graphql", json={'query': query}, headers = makeHeader(token))<BR/>
-        <TAB/>if request.status_code == 200:<BR/>
-        <TAB/><TAB/>return request.json()<BR/>
-        <TAB/>raise Exception("GraphQL query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))</CODESAMPLE>
+      <CODESAMPLE language="python">import requests
+import urllib.parse
+
+def makeHeader(token):
+    return {"Authorization": "Bearer " + args.token}
+
+def run_post_query(token, query):
+    request = requests.post(query, headers=makeHeader(token))
+    if request.status_code == 201:
+        return
+    raise Exception("POST query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))
+
+def run_get_query(token, query):
+    request = requests.get(query, headers=makeHeader(token))
+    if request.status_code == 200:
+        return request.json()
+    raise Exception("GET query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))
+
+def run_put_query(token, query, data = None):
+    if data:
+        request = requests.put(query, headers=makeHeader(token), data=data)
+    else:
+        request = requests.put(query, headers=makeHeader(token))
+    if request.status_code == 200:
+        return
+    raise Exception("PUT query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))
+
+def run_delete_query(token, query):
+    request = requests.delete(query, headers=makeHeader(token))
+    if request.status_code in (200, 204):
+        return
+    raise Exception("DELETE query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))
+
+def run_graphql_query(token, query):
+    request = requests.post("https://gitlab.com/api/graphql", json={'query': query}, headers = makeHeader(token))
+    if request.status_code == 200:
+        return request.json()
+    raise Exception("GraphQL query \"{}\" failed to run by returning code of {}: {}".format(query, request.status_code, request.content))</CODESAMPLE>
     </ITEM>
     <ITEM>create a group label
-      <CODESAMPLE>def create_group_label(token, groupPath, labelName, labelDescription, labelColor, labelPriority):<BR/>
-        <TAB/>params = { "name": labelName, "description": labelDescription, "color": labelColor, "priority": labelPriority }<BR/>
-        <TAB/>query = f"https://gitlab.com/api/v4/groups/{urllib.parse.quote(groupPath, safe='')}/labels?{urllib.parse.urlencode(params)}"<BR/>
-        <TAB/>run_post_query(token, query)<BR/>
-        <TAB/>print(f"label '{labelName}' added on group {groupPath}", flush=True)</CODESAMPLE>
+      <CODESAMPLE language="python">def create_group_label(token, groupPath, labelName, labelDescription, labelColor, labelPriority):
+    params = { "name": labelName, "description": labelDescription, "color": labelColor, "priority": labelPriority }
+    query = f"https://gitlab.com/api/v4/groups/{urllib.parse.quote(groupPath, safe='')}/labels?{urllib.parse.urlencode(params)}"
+    run_post_query(token, query)
+    print(f"label '{labelName}' added on group {groupPath}", flush=True)</CODESAMPLE>
     </ITEM>
     <ITEM>get the issues of a group having a label but not another one
-      <CODESAMPLE>def get_group_issues_with_label(token, groupPath, havingOneOfTheLabelName, notHavingTheLabelName):<BR/>
-        <TAB/>issues = []<BR/>
-        <TAB/>page = 1<BR/>
-        <TAB/>while True:<BR/>
-        <TAB/><TAB/>params = { "labels": havingOneOfTheLabelName, "not[labels]": notHavingTheLabelName, "scope": "all", "page": page } <BR/>
-        <TAB/><TAB/>query = f"https://gitlab.com/api/v4/groups/{urllib.parse.quote(groupPath, safe='')}/issues?{urllib.parse.urlencode(params)}"<BR/>
-        <TAB/><TAB/>result = run_get_query(token, query)<BR/>
-        <TAB/><TAB/>if len(result) == 0:<BR/>
-        <TAB/><TAB/><TAB/>return issues<BR/>
-        <TAB/><TAB/>for issue in result:<BR/>
-        <TAB/><TAB/><TAB/>issues.append({ "projectId": issue["project_id"], "issueIid": issue["iid"], "issueId": issue["id"]})<BR/>
-        <TAB/><TAB/>page += 1<BR/>
-        </CODESAMPLE>
+      <CODESAMPLE language="python">def get_group_issues_with_label(token, groupPath, havingOneOfTheLabelName, notHavingTheLabelName):
+    issues = []
+    page = 1
+    while True:
+        params = { "labels": havingOneOfTheLabelName, "not[labels]": notHavingTheLabelName, "scope": "all", "page": page }
+        query = f"https://gitlab.com/api/v4/groups/{urllib.parse.quote(groupPath, safe='')}/issues?{urllib.parse.urlencode(params)}"
+        result = run_get_query(token, query)
+        if len(result) == 0:
+            return issues
+        for issue in result:
+            issues.append({ "projectId": issue["project_id"], "issueIid": issue["iid"], "issueId": issue["id"]})
+        page += 1</CODESAMPLE>
     </ITEM>
     <ITEM>get the epics having a given label and a label in a given scope<BR/>
       cursor is properly managed
-      <CODESAMPLE>epic_list_query = """<BR/>
-        {<BR/>
-        <TAB/>group (fullPath: "henixdevelopment/squash") {<BR/>
-        <TAB/><TAB/>epics (state: opened, labelName: ["Roadmap","Release::*"], after: "%s") {<BR/>
-        <TAB/><TAB/><TAB/>edges {<BR/>
-        <TAB/><TAB/><TAB/><TAB/>cursor<BR/>
-        <TAB/><TAB/><TAB/><TAB/>node {<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>id<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>iid<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>title<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>group {<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>fullPath<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>startDateIsFixed<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>startDateFixed<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>dueDateIsFixed<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>dueDateFixed<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>labels {<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>edges {<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>node {<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>title<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
-        <TAB/><TAB/><TAB/><TAB/><TAB/>}<BR/>
-        <TAB/><TAB/><TAB/><TAB/>}<BR/>
-        <TAB/><TAB/><TAB/>}<BR/>
-        <TAB/><TAB/>}<BR/>
-        <TAB/>}<BR/>
-        }<BR/>
-        """<BR/>
-        <BR/>
-        def handle_epic():<BR/>
-        <TAB/>…<BR/>
-        <BR/>
-        def handle_epics():<BR/>
-        <TAB/>cursor = ""<BR/>
-        <TAB/>while True:<BR/>
-        <TAB/><TAB/>result = run_graphql_query(epic_list_query % cursor)<BR/>
-        <TAB/><TAB/>if len(result["data"]["group"]["epics"]["edges"]) == 0:<BR/>
-        <TAB/><TAB/><TAB/>break<BR/>
-        <TAB/><TAB/>for epic_node in result["data"]["group"]["epics"]["edges"]:<BR/>
-        <TAB/><TAB/><TAB/>handle_epic(epic_node["node"])</CODESAMPLE>
+      <CODESAMPLE language="python">epic_list_query = """
+{
+    group (fullPath: "henixdevelopment/squash") {
+        epics (state: opened, labelName: ["Roadmap","Release::*"], after: "%s") {
+            edges {
+                cursor
+                node {
+                    id
+                    iid
+                    title
+                    group {
+                        fullPath
+                    }
+                    startDateIsFixed
+                    startDateFixed
+                    dueDateIsFixed
+                    dueDateFixed
+                    labels {
+                        edges {
+                            node {
+                                title
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+"""
+
+def handle_epic():
+    …
+
+def handle_epics():
+    cursor = ""
+    while True:
+        result = run_graphql_query(epic_list_query % cursor)
+        if len(result["data"]["group"]["epics"]["edges"]) == 0:
+            break
+        for epic_node in result["data"]["group"]["epics"]["edges"]:
+            handle_epic(epic_node["node"])</CODESAMPLE>
     </ITEM>
     <ITEM>set an epic to fixed dates
-      <CODESAMPLE>set_epic_date_request = """<BR/>
-        mutation<BR/>
-        {<BR/>
-        <TAB/>updateEpic (input: {<BR/>
-        <TAB/><TAB/>groupPath: "%s",<BR/>
-        <TAB/><TAB/>iid: "%s",<BR/>
-        <TAB/><TAB/>startDateIsFixed: true,<BR/>
-        <TAB/><TAB/>startDateFixed: "%s",<BR/>
-        <TAB/><TAB/>dueDateIsFixed: true,<BR/>
-        <TAB/><TAB/>dueDateFixed: "%s"<BR/>
-        <TAB/>}) {<BR/>
-        <TAB/><TAB/>clientMutationId<BR/>
-        <TAB/>}<BR/>
-        }<BR/>
-        """<BR/>
-        <BR/>
-        def set_epic_dates(group_path, iid, start_date, due_date):<BR/>
-        <TAB/>run_graphql_query(set_epic_date_request % (group_path, iid, start_date, due_date))<BR/></CODESAMPLE>
+      <CODESAMPLE language="python">set_epic_date_request = """
+mutation
+{
+    updateEpic (input: {
+        groupPath: "%s",
+        iid: "%s",
+        startDateIsFixed: true,
+        startDateFixed: "%s",
+        dueDateIsFixed: true,
+        dueDateFixed: "%s"
+    }) {
+        clientMutationId
+    }
+}
+"""
+
+def set_epic_dates(group_path, iid, start_date, due_date):
+    run_graphql_query(set_epic_date_request % (group_path, iid, start_date, due_date))</CODESAMPLE>
     </ITEM>
     <ITEM>add a label to an issue
-      <CODESAMPLE>def add_label_to_issue(token, projectId, issueIid, labelName):<BR/>
-        <TAB/>params = { "add_labels": labelName }<BR/>
-        <TAB/>query = f"https://gitlab.com/api/v4/projects/{projectId}/issues/{issueIid}?{urllib.parse.urlencode(params)}"<BR/>
-        <TAB/>run_put_query(token, query)<BR/>
-        <TAB/>print(f"label '{labelName}' added to issue {issueIid} of project {projectId}", flush=True)</CODESAMPLE>
+      <CODESAMPLE language="python">def add_label_to_issue(token, projectId, issueIid, labelName):
+    params = { "add_labels": labelName }
+    query = f"https://gitlab.com/api/v4/projects/{projectId}/issues/{issueIid}?{urllib.parse.urlencode(params)}"
+    run_put_query(token, query)
+    print(f"label '{labelName}' added to issue {issueIid} of project {projectId}", flush=True)</CODESAMPLE>
     </ITEM>
     <ITEM>set (or change) the milestone of an issue
-      <CODESAMPLE>def get_milestone_id(project, milestoneName, token):<BR/>
-        <TAB/>query = f"https://gitlab.com/api/v4/projects/{urllib.parse.quote(project, safe='')}/milestones?include_parent_milestones=true&amp;title={urllib.parse.quote(milestoneName, safe='')}"<BR/>
-        <TAB/>result = run_get_query(token, query)<BR/>
-        <TAB/>return result[0]["id"]<BR/>
-        <BR/>
-        def set_issue_milestone(project, issueIid, milestoneId, token):<BR/>
-        <TAB/>query = f"https://gitlab.com/api/v4/projects/{urllib.parse.quote(project, safe='')}/issues/{issueIid}?milestone_id={milestoneId}"<BR/>
-        <TAB/>run_put_query(token, query)<BR/>
-        …<BR/>
-        newMilestoneId = get_milestone_id(project, newMilestone, token)<BR/>
-        set_issue_milestone(project, issueIid, newMilestoneId, token)</CODESAMPLE>
+      <CODESAMPLE language="python">def get_milestone_id(project, milestoneName, token):
+    query = f"https://gitlab.com/api/v4/projects/{urllib.parse.quote(project, safe='')}/milestones?include_parent_milestones=true&amp;title={urllib.parse.quote(milestoneName, safe='')}"
+    result = run_get_query(token, query)
+    return result[0]["id"]
+
+def set_issue_milestone(project, issueIid, milestoneId, token):
+    query = f"https://gitlab.com/api/v4/projects/{urllib.parse.quote(project, safe='')}/issues/{issueIid}?milestone_id={milestoneId}"
+    run_put_query(token, query)
+…
+newMilestoneId = get_milestone_id(project, newMilestone, token)
+set_issue_milestone(project, issueIid, newMilestoneId, token)</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
 </BLIST>
