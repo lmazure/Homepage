@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>GitLab</TITLE>
 <PATH>notes/gitlab.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>10</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Shortcuts</TITLE>
   <ITEM>Global shortcuts
@@ -109,6 +109,13 @@ git log
   </ITEM>
 </BLIST>
 <BLIST><TITLE>Mess…</TITLE>
+  <ITEM>get all notes of an issue
+    <CODESAMPLE language="bash">curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/34858181/issues/6354/notes" | jq</CODESAMPLE>
+    get all notes of an issue except fot GitLab activity notes
+    <CODESAMPLE language="bash">curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/34858181/issues/6354/notes?activity_filter=only_comments" | jq</CODESAMPLE>
+    get all notes of an issue organised as a hierarchy
+    <CODESAMPLE language="bash">curl --header "PRIVATE-TOKEN: $GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/34858181/issues/6354/discussions" | jq</CODESAMPLE>
+  </ITEM>
   <ITEM>retrieve the issue related to a merge request
     <CODESAMPLE language="bash">curl --header "PRIVATE-TOKEN:$GITLAB_TOKEN" "https://gitlab.com/api/v4/projects/27169359/merge_requests/355" | jq -r '.description'  head -1 | sed 's/.*#//' </CODESAMPLE>
   </ITEM>
