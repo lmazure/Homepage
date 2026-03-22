@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -191,6 +191,10 @@ File
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="S"/></TERM>
     <DESC>Save</DESC>
+  </ROW>
+  <ROW>
+    <TERM>Setting <CODEROUTINE>"editor.formatOnSave": false</CODEROUTINE></TERM>
+    <DESC>Do not format on save</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="K"/>, <KEY id="S"/></TERM>
