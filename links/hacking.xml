@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Hacking</TITLE>
 <PATH>links/hacking.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -168,6 +168,7 @@
     <ITEM><ARTICLE><X><T>A GitHub Issue Title Compromised 4,000 Developer Machines</T><A>https://grith.ai/blog/clinejection-when-your-ai-tool-installs-another</A><L>en</L><F>HTML</F></X><DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>5</DAY></DATE><COMMENT>A description of how Cline’s CI/CD has been hacked by using prompt injection on the triage bot.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Widely used Trivy scanner compromised in ongoing supply-chain attack</T><ST>Admins: Sorry to say, but it’s likely a rotate-your-secrets kind of weekend.</ST><A>https://arstechnica.com/security/2026/03/widely-used-trivy-scanner-compromised-in-ongoing-supply-chain-attack/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>20</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE predecessor="https://arstechnica.com/security/2026/03/widely-used-trivy-scanner-compromised-in-ongoing-supply-chain-attack/"><X><T>Self-propagating malware poisons open source software and wipes Iran-based machines</T><ST>Development houses: It’s time to check your networks for infections.</ST><A>https://arstechnica.com/security/2026/03/self-propagating-malware-poisons-open-source-software-and-wipes-iran-based-machines/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>24</DAY></DATE><COMMENT>TeamPCP, the team responsible of the Trivy attack, is strangely targetting Iran.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>A bad day to use python</T><A>https://www.youtube.com/watch?v=mx3g7XoPVNQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>38</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><MIDDLENAME>B.</MIDDLENAME><LASTNAME>Paulson</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>26</DAY></DATE><COMMENT>LiteLLM has been hacked, and it seems that they have fake security certifications.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>SQL injection</TITLE>
       <ITEM><ARTICLE><X><T>SQL Injection Attacks by Example</T><A>http://www.unixwiz.net/techtips/sql-injection.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Steve</FIRSTNAME><LASTNAME>Friedl</LASTNAME></AUTHOR><DATE><YEAR>2007</YEAR><MONTH>10</MONTH><DAY>10</DAY></DATE><COMMENT>A basic, detailed, and slow description of a SQL injection attack.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Bobby Tables</T><A>https://blog.cleancoder.com/uncle-bob/2017/12/03/BobbyTables.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Robert</FIRSTNAME><MIDDLENAME>Cecil</MIDDLENAME><LASTNAME>Martin</LASTNAME><GIVENNAME>Uncle Bob</GIVENNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>12</MONTH><DAY>3</DAY></DATE><COMMENT>SQL is too dangerous, it should not be used anymore.</COMMENT></ARTICLE></ITEM>
