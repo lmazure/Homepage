@@ -72,7 +72,7 @@
   <ITEM>print to a file<BR/>
     <CODESAMPLE><PROMPT/>print('foobar', file=open('quux.txt', 'a'))</CODESAMPLE>
   </ITEM>
-  <ITEM>For print data structure in a readable manner, use <X><T>pprint</T><A>https://docs.python.org/3/library/pprint.html</A><L>en</L><F>HTML</F></X>.</ITEM>
+  <ITEM>To print a data structure in a readable manner, use <X><T>pprint</T><A>https://docs.python.org/3/library/pprint.html</A><L>en</L><F>HTML</F></X>.</ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Complex</B></U></TITLE>
   <ITEM>A complex can be created by using <CODEROUTINE>j</CODEROUTINE> or <CODEROUTINE>J</CODEROUTINE> to indicate the complex part.<BR/>
@@ -121,7 +121,7 @@
   <CODESAMPLE><PROMPT/> "language"[3:42]<BR/>
       'guage'</CODESAMPLE>
   </ITEM>
-  <ITEM><CODEROUTINE>len</CODEROUTINE> return the length a string<BR/>
+  <ITEM><CODEROUTINE>len</CODEROUTINE> returns the length of a string<BR/>
     <CODEROUTINE>len(str)</CODEROUTINE></ITEM>
   <ITEM><BLIST><TITLE>String Interpolation</TITLE>
     <ITEM>String modulo operator
@@ -520,16 +520,16 @@
     The <CODEROUTINE>else</CODEROUTINE> clause is executed when the list is exhausted<BR/>
   <CODESAMPLE>a=[1,2,3]<BR/>
     for x in a:<BR/>
-    <TAB/>print x<BR/>
+    <TAB/>print(x)<BR/>
     else:<BR/>
-    <TAB/>print "finished"</CODESAMPLE>
+    <TAB/>print("finished")</CODESAMPLE>
   </ITEM>
   <ITEM>It is not safe to modify the content of the list being looped on, a copy should be generated</ITEM>
   <ITEM><CODEROUTINE>while</CODEROUTINE> loops as long a condition is true
     <CODESAMPLE>while b &lt; 10:<BR/>
     <TAB/>b = b+1<BR/>
     else:<BR/>
-    <TAB/>print "end"</CODESAMPLE>
+    <TAB/>print("end")</CODESAMPLE>
   </ITEM>
   <ITEM>There is no <CODEROUTINE>do</CODEROUTINE>/<CODEROUTINE>while</CODEROUTINE> statement, instead use
     <CODESAMPLE>while 1:<BR/>
@@ -586,9 +586,9 @@
     <CODESAMPLE>def f(a,l=[]):<BR/>
     <TAB/>l.append(a)<BR/>
     <TAB/>return l</CODESAMPLE>
-    <CODEROUTINE>print f(1)</CODEROUTINE> prints <CODEROUTINE>[1]</CODEROUTINE><BR/>
-    <CODEROUTINE>print f(2)</CODEROUTINE> prints <CODEROUTINE>[1,2]</CODEROUTINE><BR/>
-    <CODEROUTINE>print f(3)</CODEROUTINE> prints <CODEROUTINE>[1,2,3]</CODEROUTINE><BR/>
+    <CODEROUTINE>print(f(1))</CODEROUTINE> prints <CODEROUTINE>[1]</CODEROUTINE><BR/>
+    <CODEROUTINE>print(f(2))</CODEROUTINE> prints <CODEROUTINE>[1,2]</CODEROUTINE><BR/>
+    <CODEROUTINE>print(f(3))</CODEROUTINE> prints <CODEROUTINE>[1,2,3]</CODEROUTINE><BR/>
     To avoid this:
     <CODESAMPLE>def f(a,l=None)<BR/>
     <TAB/>if l is None:<BR/>
@@ -609,7 +609,7 @@
   <ITEM><CODEROUTINE>*name</CODEROUTINE> can be used to get an arbitrary number of positional arguments.<BR/>
     <CODEROUTINE>**name</CODEROUTINE> can be used to get an arbitrary number of keyword arguments.
     <CODESAMPLE>def quux(*a,**b):<BR/>
-    <TAB/>for arg in a: print arg<BR/>
+    <TAB/>for arg in a: print(arg)<BR/>
     <TAB/>for kw in b.keys(): print(kw,':',b[kw])</CODESAMPLE>
   </ITEM>
   <ITEM>A function can return a function
@@ -622,7 +622,7 @@
     They are restricted to a single expression
     <CODESAMPLE>lambda a,b:a+b</CODESAMPLE>
     Another example using a default argument value
-    <CODESAMPLE>def make_incrementator(n)<BR/>
+    <CODESAMPLE>def make_incrementator(n):<BR/>
     <TAB/>return lambda x,incr=n:x+incr</CODESAMPLE>
   </ITEM>
 </BLIST>

@@ -443,7 +443,7 @@ Multi-selection
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="U"/><BR/>
       <CODEROUTINE>Cursor Undo</CODEROUTINE></TERM>
     <DESC>Undo the last cursor state change<BR/>
-      Useful to undo cancel the last <MODIFIERKEY id="Ctrl"/><KEY id="D"/> or the last <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Down"/>.</DESC>
+      Useful to undo the last <MODIFIERKEY id="Ctrl"/><KEY id="D"/> or the last <MODIFIERKEY id="Ctrl"/><MODIFIERKEY id="Alt"/><KEY id="Down"/>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>Cursor Redo</CODEROUTINE></TERM>
@@ -647,7 +647,7 @@ Navigation between editors
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="é"/></TERM>
-    <DESC>Set second on the second tab group</DESC>
+    <DESC>Set focus on the second tab group</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="&quot;"/></TERM>
@@ -681,7 +681,7 @@ Search/replace
   </ROW>
   <ROW>
     <TERM><KEY id="F12"/></TERM>
-    <DESC>Go to definition of the symbol where is the cursor</DESC>
+    <DESC>Go to the definition of the symbol under the cursor</DESC>
   </ROW>
   <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="F"/><BR/>
@@ -923,11 +923,11 @@ Customisation
     <DESC>Display settings</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>Preferences: Open Worspace Settings (JSON)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>Preferences: Open Workspace Settings (JSON)</CODEROUTINE></TERM>
     <DESC>Open <CODEROUTINE>&lt;workspace&gt;/.vscode/settings.json</CODEROUTINE></DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>Preferences: Open User Setting (JSON)</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>Preferences: Open User Settings (JSON)</CODEROUTINE></TERM>
     <DESC>If there is a profile: open <CODEROUTINE>&lt;user-data-dir&gt;/User/profiles/&lt;profile-id&gt;/settings.json</CODEROUTINE><BR/>
       otherwise: open <CODEROUTINE>&lt;user-data-dir&gt;/User/settings.json</CODEROUTINE></DESC>
   </ROW>

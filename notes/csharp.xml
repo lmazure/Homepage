@@ -100,7 +100,7 @@ then
 <ITEM>For immutable classes, use
 <CODESAMPLE>public string Name { get; private set; }<BR/>
 public string Address { get; private set; }</CODESAMPLE>
-to disable modification on the auto-implemented properties, then use a contructor
+to disable modification on the auto-implemented properties, then use a constructor
 <CODESAMPLE>public Contact2(string contactName, string contactAddress)<BR/>
 {<BR/>
 <TAB/>Name = contactName;<BR/>
@@ -409,14 +409,14 @@ int i = s.WordCount();</CODESAMPLE>
 <U><B>Variable number of parameters</B></U><BR/>
 <CODESAMPLE>static void Main()<BR/>
 {<BR/>
-<TAB/>MaFonctionVariable("Bonjour");<BR/>
-<TAB/>MaFonctionVariable("Bonjour", "Au revoir");<BR/>
+<TAB/>MyVariableFunction("Hello");<BR/>
+<TAB/>MyVariableFunction("Hello", "Goodbye");<BR/>
 }<BR/>
 <BR/>
-static void MaFonctionVariable(params String[] MesParams)<BR/>
+static void MyVariableFunction(params String[] MyParams)<BR/>
 {<BR/>
-<TAB/>foreach (String courantString in MesParams)<BR/>
-<TAB/><TAB/>Console.WriteLine("Valeur du paramètre : {0}", courantString);<BR/>
+<TAB/>foreach (String currentString in MyParams)<BR/>
+<TAB/><TAB/>Console.WriteLine("Parameter value : {0}", currentString);<BR/>
 }</CODESAMPLE>
 In order to use parameters of different types, define the parameter as of type <CODEROUTINE>Object[]</CODEROUTINE>.<BR/>
 <BR/>
@@ -525,10 +525,10 @@ The order of execution is<BR/>
 <CODEROUTINE>AreEqual(Double, Double, Double, String, Object[])</CODEROUTINE></TERM><DESC>verify that two specified doubles are equal, or within the specified accuracy of each other</DESC></ROW>
 <ROW><TERM><CODEROUTINE>IsTrue(Boolean)</CODEROUTINE><BR/>
 <CODEROUTINE>IsTrue(Boolean, String)</CODEROUTINE><BR/>
-<CODEROUTINE>IsFalse(Boolean, String, Object[])</CODEROUTINE></TERM><DESC>verify that the specified condition is true</DESC></ROW>
+<CODEROUTINE>IsTrue(Boolean, String, Object[])</CODEROUTINE></TERM><DESC>verify that the specified condition is true</DESC></ROW>
 <ROW><TERM><CODEROUTINE>IsFalse(Boolean)</CODEROUTINE><BR/>
 <CODEROUTINE>IsFalse(Boolean, String)</CODEROUTINE><BR/>
-<CODEROUTINE>IsFalse(Boolean, String, Object[])</CODEROUTINE></TERM><DESC>verify that the specified condition is true</DESC></ROW>
+<CODEROUTINE>IsFalse(Boolean, String, Object[])</CODEROUTINE></TERM><DESC>verify that the specified condition is false</DESC></ROW>
 <ROW><TERM><CODEROUTINE>IsNull(Object)</CODEROUTINE><BR/>
 <CODEROUTINE>IsNull(Object, String)</CODEROUTINE><BR/>
 <CODEROUTINE>IsNull(Object, String, Object[])</CODEROUTINE></TERM><DESC>verify that the specified object is null</DESC></ROW>
@@ -634,7 +634,7 @@ Found under the <CODEROUTINE>System.Collections.Generic</CODEROUTINE> namespace.
 </ITEM>
 </BLIST>
 <BR/>
-<BLIST><TITLE><U><B>Code contracs</B></U></TITLE>
+<BLIST><TITLE><U><B>Code contracts</B></U></TITLE>
 <ITEM><CODEROUTINE>PureAttribute</CODEROUTINE> indicates that a method is pure.
 </ITEM>
 </BLIST>
