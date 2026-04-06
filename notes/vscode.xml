@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -64,7 +64,9 @@ Common Quick Open / Command Palette prefixes:
     <CELL><CODEROUTINE>:</CODEROUTINE></CELL>
     <CELL><MODIFIERKEY id="Ctrl"/><KEY id="G"/><BR/>
       <CODEROUTINE>workbench.action.gotoLine</CODEROUTINE></CELL>
-    <CELL>Go to line (and column) in the current file, e.g. <CODEROUTINE>:42:5</CODEROUTINE>.</CELL>
+    <CELL>Go to line (and column) in the current file, e.g. <CODEROUTINE>:42:5</CODEROUTINE>.<BR/>
+      <CODEROUTINE>::17</CODEROUTINE> goes to the 17-th character.<BR/>
+      <CODEROUTINE>::-17</CODEROUTINE> goes to the 17-th character from the end.<BR/></CELL>
   </ROW>
   <ROW>
     <CELL><CODEROUTINE>?</CODEROUTINE></CELL>
