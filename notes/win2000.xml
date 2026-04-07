@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Windows</TITLE>
 <PATH>notes/win2000.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
 <ROW>
@@ -105,6 +105,7 @@ File explorer
 <BLIST>
   <ITEM>
     <CODEROUTINE>systeminfo | find /i "Boot Time"</CODEROUTINE> returns the date/time of the last boot.
+    <CODEROUTINE>(Get-CimInstance Win32_OperatingSystem).LastBootUpTime</CODEROUTINE> idem using PowerShell.
   </ITEM>
   <ITEM>
     <CODEROUTINE>tasklist /v | findstr javaw.exe</CODEROUTINE> lists the <CODEROUTINE>javaw.exe</CODEROUTINE> processes running.
