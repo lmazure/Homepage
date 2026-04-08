@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Anthropic</TITLE>
 <PATH>links/aianthropic.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -137,6 +137,9 @@
       <ITEM><BLIST><TITLE>Claude Sonnet 4.6</TITLE>
         <ITEM><ARTICLE><X><T>Introducing Claude Sonnet 4.6</T><A>https://simonwillison.net/2026/Feb/17/claude-sonnet-46/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT>Claude Sonnnet 4.6 has been released.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>The "Token Muncher" Problem: Is Sonnet 4.6 Actually Cheaper?</T><A>https://www.youtube.com/watch?v=iyLwNnU6BMA</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>18</DAY></DATE><COMMENT>Tokens are cheaper with Sonnet 4.6 than Sonnet 4.5, but it is using much more tokens.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Claude Mythos</TITLE>
+        <ITEM><ARTICLE><X><T>Anthropic’s Project Glasswing—restricting Claude Mythos to security researchers—sounds necessary to me</T><A>https://simonwillison.net/2026/Apr/7/project-glasswing/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>7</DAY></DATE><COMMENT>The newest Anthropic model is too good at finding exploits: they delay the release so open-source teams can fix the code and Anthropic can add anti-hacking guardrails.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Claude for Chrome</TITLE>
         <ITEM><ARTICLE><X><T>Piloting Claude for Chrome</T><A>https://simonwillison.net/2025/Aug/26/piloting-claude-for-chrome/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>26</DAY></DATE><COMMENT>Anthropic is also proposing a Browser agent, with all the prompt injection risks this will involve.</COMMENT></ARTICLE></ITEM>
