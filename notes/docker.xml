@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -492,10 +492,10 @@ Digest: sha256:1c78ed1ef824ab8bb05b04359d186e4c1229d0b3e67005faacb54a7d71974f73<
 Status: Image is up to date for aquasec/trivy:latest<BR/>
 Version: 0.69.1</CODESAMPLE>
 Use that version to analyse a Docker image with Trivy and generate a table overview:
-<CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.txt</CODESAMPLE>
-(<CODEROUTINE>-T</CODEROUTINE> avoids the garbled display.)<BR/>
+<CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --timeout 30m --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.txt</CODESAMPLE>
+(<CODEROUTINE>-t</CODEROUTINE> avoids the garbled display. <CODEROUTINE>--timeout 30m </CODEROUTINE> is a Trivy flag to get the download successful on a fucking slow network.)<BR/>
 Analyse a Docker image with Trivy and generate a JSON report:
-<CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.json</CODESAMPLE>
+<CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --timeout 30m --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.json</CODESAMPLE>
 <BR/>
 <BR/>
 Run Dockle on an image:
