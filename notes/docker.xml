@@ -493,7 +493,7 @@ Status: Image is up to date for aquasec/trivy:latest<BR/>
 Version: 0.69.1</CODESAMPLE>
 Use that version to analyse a Docker image with Trivy and generate a table overview:
 <CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --timeout 30m --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.txt</CODESAMPLE>
-(<CODEROUTINE>-t</CODEROUTINE> avoids the garbled display. <CODEROUTINE>--timeout 30m </CODEROUTINE> is a Trivy flag to get the download successful on a fucking slow network.)<BR/>
+(<CODEROUTINE>-t</CODEROUTINE> avoids the garbled display. <CODEROUTINE>--timeout 30m</CODEROUTINE> is a Trivy flag to get the download successful on a fucking slow network.)<BR/>
 Analyse a Docker image with Trivy and generate a JSON report:
 <CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --timeout 30m --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.json</CODESAMPLE>
 <BR/>
