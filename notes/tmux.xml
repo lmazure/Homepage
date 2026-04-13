@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>tmux</TITLE>
 <PATH>notes/tmux.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Session management
@@ -119,6 +119,24 @@
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Left"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Right"/></TERM>
         <DESC>Navigate between panes</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Ctrl"/><KEY id="Up"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Ctrl"/><KEY id="Down"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Ctrl"/><KEY id="Left"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Ctrl"/><KEY id="Right"/></TERM>
+        <DESC>Resize by 1 cell in that direction</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Alt"/><KEY id="Up"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Alt"/><KEY id="Down"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Alt"/><KEY id="Left"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Alt"/><KEY id="Right"/></TERM>
+        <DESC>Resize by larger steps, often 5 cells</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Z"/></TERM>
+        <DESC>Zoom/unzoom current pane</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="X"/></TERM>
