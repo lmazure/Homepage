@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -1719,7 +1719,7 @@ To remove the last commit locally and on the remote repository (nobody should ha
       git merge main</CODESAMPLE>
   </ITEM>
   <ITEM>The effective way (but the local <CODEROUTINE>main</CODEROUTINE> branch is not updated):
-    <CODESAMPLE>git pull origin main</CODESAMPLE>
+    <CODESAMPLE>git pull --no-rebase origin main</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BR/>
