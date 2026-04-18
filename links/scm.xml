@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -169,6 +169,7 @@
       <ITEM><ARTICLE><X><T>A data model for Git (and other docs updates)</T><A>https://jvns.ca/blog/2026/01/08/a-data-model-for-git/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Julia</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Julia</FIRSTNAME><LASTNAME>Evans</LASTNAME></AUTHOR> explains how she improved Git documentation.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Devs can no longer avoid learning Git worktree</T><A>https://www.youtube.com/watch?v=S8_AsOuAwLo</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>26</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Joshua</FIRSTNAME><LASTNAME>Morony</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>4</DAY></DATE><COMMENT>An introduction to worktrees for people using AI agents.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>A couple of git nits</T><ST>A small rant on git papercuts, and why they are like that.</ST><A>https://blog.gitbutler.com/git-ux-rant</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>José Esteban</FIRSTNAME><LASTNAME>Vega Carrillo</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>3</MONTH><DAY>16</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>José Esteban</FIRSTNAME><LASTNAME>Vega Carrillo</LASTNAME></AUTHOR> complains about some idiosyncrasies of Git: <CODEROUTINE>git cat-file -p</CODEROUTINE>, <CODEROUTINE>git log --oneline --graph --decorate --all</CODEROUTINE>, and <CODEROUTINE>git log -S / -G</CODEROUTINE>. As he explains, Git is old and used by everyone, so he suggests to move to GitButler or Jujutsu.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Taming Git complexity with Rust and Gitoxide -  FOSDEM 2026</T><A>https://www.youtube.com/watch?v=iSAMvE3yzfc</A><L>en</L><F>MP4</F><DURATION><MINUTE>17</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kiril</FIRSTNAME><LASTNAME>Videlov</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>16</DAY></DATE><COMMENT>A very short introduction to the Gitoxide library.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>History</TITLE>
         <ITEM><BLIST><TITLE>2.6</TITLE>
           <ITEM><ARTICLE><X><T>Git 2.6 Brings Many New Features and Improvements</T><A>https://www.infoq.com/news/2015/10/git-26-released/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Sergio</FIRSTNAME><LASTNAME>De Simone</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>10</MONTH><DAY>8</DAY></DATE><COMMENT>A description of the new release.</COMMENT></ARTICLE></ITEM>
