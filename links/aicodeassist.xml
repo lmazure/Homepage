@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI coding assistants</TITLE>
 <PATH>links/aicodeassist.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>26</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -59,6 +59,7 @@
     </BLIST></ITEM>
     <ITEM><X><T>StrongDM Software Factory</T><A>https://factory.strongdm.ai/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Simon Willison’s Agentic Engineering Patterns</T><A>https://simonwillison.net/guides/agentic-engineering-patterns/</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Agent Client Protocol</T><A>https://agentclientprotocol.com/get-started/introduction</A><L>en</L><F>HTML</F></X></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>Coding Made AI—Now, How Will AI Unmake Coding?</T><ST>It won’t replace many coding jobs, but many coding jobs will be increasingly AI-assisted</ST><A>https://spectrum.ieee.org/ai-code-generation-language-models</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Craig</FIRSTNAME><MIDDLENAME>S.</MIDDLENAME><LASTNAME>Smith</LASTNAME></AUTHOR><DATE><YEAR>2022</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE><COMMENT>The subtitle says it all.</COMMENT></ARTICLE></ITEM>
@@ -249,6 +250,7 @@
     <ITEM><ARTICLE predecessor="https://bcantrill.dtrace.org/2026/04/12/the-peril-of-laziness-lost/"><X><T>Laziness, Impatience, and Hubris</T><ST>How Larry Wall's virtues of a Perl programmer inspire me in this era of engineering</ST><A>https://www.adamhjk.com/blog/laziness-impatience-hubris/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Jacob</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Jacob</LASTNAME></AUTHOR> also refers to <AUTHOR><FIRSTNAME>Larry</FIRSTNAME><LASTNAME>Wall</LASTNAME></AUTHOR>’s values, but he reaches another conclusion: he aims at building a system that ensure AI implement and test a correct architecture.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Linus Lays down the Law</T><A>https://www.youtube.com/watch?v=c6yN06GKRNQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>13</MINUTE><SECOND>5</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Michael</FIRSTNAME><MIDDLENAME>B.</MIDDLENAME><LASTNAME>Paulson</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE><COMMENT>The Linux kernel team has defined a rule for AI generated code after a long controversy started by an overlooked bug in some AI written code.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Extract PDF text in your browser with LiteParse for the web</T><A>https://simonwillison.net/2026/Apr/23/liteparse-for-the-web/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>23</DAY></DATE><COMMENT>Yet another description of building a one HTML page application.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>From One AI to Any AI: JetBrains rethinks the approach to AI tooling</T><A>https://www.youtube.com/watch?v=J8fHU4WFd_c</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>40</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jan Niklas</FIRSTNAME><LASTNAME>Wortman</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>28</DAY></DATE><COMMENT>JetBrains changed their strategy: they will support any AI providers via the Agent Client Protocol.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>StarCoder</TITLE>
       <ITEM><ARTICLE><X><T>StarCoder: A State-of-the-Art LLM for Code</T><A>https://huggingface.co/blog/starcoder</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Leandro</FIRSTNAME><LASTNAME>von Werra</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Loubna</FIRSTNAME><LASTNAME>Ben Allal</LASTNAME></AUTHOR><DATE><YEAR>2023</YEAR><MONTH>5</MONTH><DAY>4</DAY></DATE><COMMENT>A family of open-source models and some of their benchmark results.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>StarCoder2 and The Stack v2</T><A>https://huggingface.co/blog/starcoder2</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Leandro</FIRSTNAME><LASTNAME>von Werra</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Loubna</FIRSTNAME><LASTNAME>Ben Allal</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Anton</FIRSTNAME><LASTNAME>Lozhkov</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Nouamane</FIRSTNAME><LASTNAME>Tazi</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>2</MONTH><DAY>28</DAY></DATE><COMMENT>A new version trained on a larger dataset.</COMMENT></ARTICLE></ITEM>
