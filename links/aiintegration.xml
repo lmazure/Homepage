@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>24</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -322,6 +322,7 @@
         <ITEM><ARTICLE><X><T>LLM 0.26a0 adds support for tools!</T><A>https://simonwillison.net/2025/May/14/llm-adds-support-for-tools/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>14</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR> prototypes tool integration in <CODEROUTINE>llm</CODEROUTINE>.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>How I used o3 to find CVE-2025-37899, a remote zeroday vulnerability in the Linux kernel’s SMB implementation</T><A>https://simonwillison.net/2025/May/24/sean-heelan/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>5</MONTH><DAY>24</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Sean</FIRSTNAME><LASTNAME>Heelan</LASTNAME></AUTHOR> found a use-after-free bug using GPT-o3 via llm.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>LLM 0.27, the annotated release notes: GPT-5 and improved tool calling</T><A>https://simonwillison.net/2025/Aug/11/llm-027/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE><COMMENT>GPT-5 is now supported and tools can now be configured in templates.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>LLM 0.32a0 is a major backwards-compatible refactor</T><A>https://simonwillison.net/2026/Apr/29/llm/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>29</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR> is rewritting the insides of <CODEROUTINE>llm</CODEROUTINE> to better handle multimodality, his design is classic and seems to be a thin layer on top of the current APIs.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Agents</TITLE>
