@@ -16,6 +16,21 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
     <TERM><CODEROUTINE>claude -c</CODEROUTINE></TERM>
     <DESC>Continue most recent conversation in current directory</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --print "query"</CODEROUTINE><BR/>
+      <CODEROUTINE>claude -p "query"</CODEROUTINE></TERM>
+    <DESC>Print response without interactive mode.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>HTML</F></X>)
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>/usage</CODEROUTINE><BR/>
+      <CODEROUTINE>/stats</CODEROUTINE><BR/>
+      <CODEROUTINE>/cost</CODEROUTINE></TERM>
+    <DESC>Show session cost, plan usage limits, and activity stats.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
 <X><T>links</T><A>../links/aianthropic.html#claudecode</A><L>en</L><F>HTML</F></X>
