@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Claude Code</TITLE>
+<PATH>notes/claudecode.xml</PATH>
+<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE>
+<CONTENT>
+Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><L>en</L><F>HTML</F></X>)
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>claude --resume &lt;id or name&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>claude -r &lt;id or name&gt;</CODEROUTINE></TERM>
+    <DESC>Resume a specific session by ID or name.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude -c</CODEROUTINE></TERM>
+    <DESC>Continue most recent conversation in current directory</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+</CONTENT>
+<X><T>links</T><A>../links/aianthropic.html#claudecode</A><L>en</L><F>HTML</F></X>
+</PAGE>
