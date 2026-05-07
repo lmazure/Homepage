@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Claude Code</TITLE>
 <PATH>notes/claudecode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>7</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -21,6 +21,11 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
       <CODEROUTINE>claude -p "query"</CODEROUTINE></TERM>
     <DESC>Print response without interactive mode.</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --name &lt;name&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>claude -n &lt;name&gt;</CODEROUTINE></TERM>
+    <DESC>Set a display name for the session.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>HTML</F></X>)
@@ -30,6 +35,13 @@ Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><
       <CODEROUTINE>/stats</CODEROUTINE><BR/>
       <CODEROUTINE>/cost</CODEROUTINE></TERM>
     <DESC>Show session cost, plan usage limits, and activity stats.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/loop [interval] [prompt]</CODEROUTINE></TERM>
+    <DESC>Skill.<BR/>
+      Run a prompt repeatedly while the session stays open.<BR/>
+      Omit the interval and Claude self-paces between iterations.<BR/>
+      Omit the prompt and Claude runs an autonomous maintenance check, or the prompt in <CODEFILENAME>.claude/loop.md</CODEFILENAME> if present.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
