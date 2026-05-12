@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -141,13 +141,13 @@
       <CODEROUTINE>git clone -b &lt;branch&gt;</CODEROUTINE></TERM>
     <DESC>Set the HEAD to the specified branch after the clone is complete and check out that branch.</DESC>
   </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>git remote’s man page</T><A>https://git-scm.com/docs/git-remote</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>List the upstream and downstream repositories.</DESC>
   </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git remote</CODEROUTINE></TERM>
     <DESC>Display the list of existing remotes.</DESC>
@@ -172,6 +172,19 @@
   <ROW>
     <TERM><CODEROUTINE>git remote -v rm origin</CODEROUTINE></TERM>
     <DESC>Remove the tracking of the remote "origin".</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git remote prune &lt;remotename&gt;</CODEROUTINE></TERM>
+    <DESC>Delete stale references associated with &lt;remotename&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git remote update &lt;remotename&gt;</CODEROUTINE></TERM>
+    <DESC>Fetch update from &lt;remotename&gt;.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git remote update --prune &lt;remotename&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git remote update -p &lt;remotename&gt;</CODEROUTINE></TERM>
+    <DESC>Fetch update from &lt;remotename&gt; and run pruning.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BLIST>
