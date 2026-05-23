@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Automated testing</TITLE>
 <PATH>links/autotest.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>22</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -146,11 +146,17 @@
         <ITEM><X><T>Nightwatch.js</T><A>https://nightwatchjs.org/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>TestCafé</T><A>https://devexpress.github.io/testcafe/</A><L>en</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Puppeteer</T><A>https://developer.chrome.com/docs/puppeteer/</A><L>en</L><F>HTML</F></X></ITEM>
-        <ITEM><CLIST><TITLE><X><T>Playwright</T><A>https://playwright.dev/</A><L>en</L><F>HTML</F></X></TITLE>
+        <ITEM><BLIST><TITLE><X><T>Playwright</T><A>https://playwright.dev/</A><L>en</L><F>HTML</F></X></TITLE>
           <ITEM><X><T>Java</T><A>https://playwright.dev/java/</A><L>en</L><F>HTML</F></X></ITEM>
-          <ITEM><X><T>Playwright MCP</T><A>https://github.com/microsoft/playwright-mcp</A><L>en</L><F>HTML</F></X></ITEM>
+          <ITEM><CLIST><TITLE><X><T>Playwright MCP</T><A>https://playwright.dev/mcp/introduction</A><L>en</L><F>HTML</F></X></TITLE>
+            <ITEM><X><T>code</T><A>https://github.com/microsoft/playwright-mcp</A><L>en</L><F>HTML</F></X></ITEM>
+          </CLIST></ITEM>
+          <ITEM><CLIST><TITLE><X><T>Playwright CLI</T><A>https://playwright.dev/agent-cli/introduction</A><L>en</L><F>HTML</F></X></TITLE>
+            <ITEM><X><T>code</T><A>https://github.com/microsoft/playwright-cli</A><L>en</L><F>HTML</F></X></ITEM>
+          </CLIST></ITEM>
+          <ITEM><X><T>Playwright agents</T><A>https://playwright.dev/docs/test-agents</A><L>en</L><F>HTML</F></X></ITEM>
           <ITEM><X><T>YouTube</T><A>https://www.youtube.com/channel/UC46Zj8pDH5tDosqm1gd7WTg</A><L>en</L><F>HTML</F></X></ITEM>
-        </CLIST></ITEM>
+        </BLIST></ITEM>
         <ITEM><X><T>HorusTest</T><A>https://horustest.io</A><L>fr</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>Kalios</T><A>http://www.kalios.com/</A><L>fr</L><F>HTML</F></X></ITEM>
         <ITEM><X><T>TestProject</T><A>https://testproject.io/</A><L>fr</L><F>HTML</F></X></ITEM>
