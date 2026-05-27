@@ -25,6 +25,9 @@
     <ITEM>Install <CODEROUTINE>&lt;package-name&gt;</CODEROUTINE> as a deployment dependency, it will be recorded in the <CODEROUTINE>dependencies</CODEROUTINE> section of <CODEFILENAME>package.json</CODEFILENAME>
       <CODESAMPLE language="bash"><PROMPT/>npm install --save &lt;package-name&gt;</CODESAMPLE>
     </ITEM>
+    <ITEM>Install <CODEROUTINE>&lt;package-name&gt;</CODEROUTINE> as a deployment dependency without running any pre- or post-scripts.
+      <CODESAMPLE language="bash"><PROMPT/>npm install --ignore-scripts --save &lt;package-name&gt;</CODESAMPLE>
+    </ITEM>
     <ITEM>Install <CODEROUTINE>&lt;package-name&gt;</CODEROUTINE> without updating <CODEFILENAME>package.json</CODEFILENAME>
       <CODESAMPLE language="bash"><PROMPT/>npm install &lt;package-name&gt;</CODESAMPLE>
       alias
