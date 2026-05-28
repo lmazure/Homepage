@@ -1,0 +1,52 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Pi</TITLE>
+<PATH>notes/pi.xml</PATH>
+<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE>
+<CONTENT>
+Install Pi:<BR/>
+<CODESAMPLE language="bash"><PROMPT/>npm install --ignore-scripts @earendil-works/pi-coding-agent</CODESAMPLE><BR/>
+<BR/>
+Update Pi:<BR/>
+<CODESAMPLE language="bash"><PROMPT/>npm update --ignore-scripts @earendil-works/pi-coding-agent</CODESAMPLE>
+<BR/>
+<BR/>
+Commands
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>/quit</CODEROUTINE></TERM>
+    <DESC>Quit Pi.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/login</CODEROUTINE></TERM>
+    <DESC>Configure provider authentication.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/logout</CODEROUTINE></TERM>
+    <DESC>Remove provider authentication.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/model</CODEROUTINE></TERM>
+    <DESC>Select model.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/reload</CODEROUTINE></TERM>
+    <DESC>Reload keybindings, extensions, skills, prompts, and themes.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/session</CODEROUTINE></TERM>
+    <DESC>Show session info and stats.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/skill:&lt;skill-name&gt;</CODEROUTINE></TERM>
+    <DESC></DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/export</CODEROUTINE></TERM>
+    <DESC></DESC>
+  </ROW>
+</DEFINITIONTABLE>
+</CONTENT>
+<X><T>links</T><A>../links/aicodeassist.html#pi</A><L>en</L><F>HTML</F></X>
+</PAGE>
