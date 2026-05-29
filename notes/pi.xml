@@ -12,7 +12,7 @@ Update Pi:<BR/>
 <CODESAMPLE language="bash"><PROMPT/>npm update --ignore-scripts @earendil-works/pi-coding-agent</CODESAMPLE>
 <BR/>
 <BR/>
-Commands
+Commands (<X><T>doc</T><A>https://pi.dev/docs/latest/usage#slash-commands</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>/quit</CODEROUTINE></TERM>
@@ -40,11 +40,11 @@ Commands
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/skill:&lt;skill-name&gt;</CODEROUTINE></TERM>
-    <DESC></DESC>
+    <DESC>Load a skill</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/export</CODEROUTINE></TERM>
-    <DESC></DESC>
+    <DESC>Export session (HTML default, or specify path: <CODEROUTINE>.html</CODEROUTINE>/<CODEROUTINE>.jsonl</CODEROUTINE>)</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
