@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -1116,6 +1116,19 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
       <ROW>
         <TERM><CODEROUTINE>GitLens: Toggle File Heatmap</CODEROUTINE></TERM>
         <DESC>Toggle the display of the heatmap</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Dev Containers
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>Dev Containers: Add Dev Container Configuration Files…</CODEROUTINE></TERM>
+          <DESC>Generate a <CODEFILENAME>devcontainer.json</CODEFILENAME> file by selecting from a list of pre-defined container configuration and a list of available feature.<BR/>
+            See <X><T>doc</T><A>https://code.visualstudio.com/docs/devcontainers/create-dev-container#_automate-dev-container-creation</A><L>en</L><F>HTML</F></X>.</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>Dev Containers: Rebuild and Reopen in Container</CODEROUTINE></TERM>
+        <DESC>Rebuild the image, start the container, and connect VS Code to it.</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
