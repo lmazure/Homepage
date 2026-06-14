@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>GitLab</TITLE>
 <PATH>notes/gitlab.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Shortcuts</TITLE>
   <ITEM>Global shortcuts
@@ -99,6 +99,33 @@ git log
 }
 ```</CODESAMPLE>
   </ITEM>
+  <ITEM><BLIST><TITLE>Alerts</TITLE>
+    <ITEM>Note: information that users should take into account, even when skimming:
+      <CODESAMPLE language="markdown">&gt; [!note]<BR/>
+&gt; The following information is useful.</CODESAMPLE></ITEM>
+    <ITEM>Tip: Optional information to help a user be more successful:
+      <CODESAMPLE language="markdown">&gt; [!tip]<BR/>
+&gt; Tip of the day.</CODESAMPLE></ITEM>
+    <ITEM>Important: Crucial information necessary for users to succeed:
+      <CODESAMPLE language="markdown">&gt; [!important]<BR/>
+&gt; This is something important you should know.</CODESAMPLE></ITEM>
+    <ITEM>Caution: Negative potential consequences of an action:
+      <CODESAMPLE language="markdown">&gt; [!caution]<BR/>
+&gt; You need to be very careful about the following.</CODESAMPLE></ITEM>
+    <ITEM>Warning: Critical potential risks:
+      <CODESAMPLE language="markdown">&gt; [!warning]<BR/>
+&gt; The following would be dangerous.</CODESAMPLE></ITEM>
+    <ITEM>The title may be overridden:
+      <CODESAMPLE language="markdown">&gt; [!warning] Data deletion<BR/>
+&gt; The following instructions will make your data unrecoverable.</CODESAMPLE></ITEM>
+    <ITEM>Multiline blockquotes can also be used:
+      <CODESAMPLE language="markdown">&gt;&gt;&gt; [!note] Things to consider<BR/>
+You should consider the following ramifications:<BR/>
+<BR/>
+1. consideration 1<BR/>
+1. consideration 2<BR/>
+&gt;&gt;&gt;</CODESAMPLE></ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE>Wiki</TITLE>
   <ITEM>Clone the repo of the wiki
@@ -106,28 +133,6 @@ git log
   </ITEM>
   <ITEM>Insert a table of content
     <CODESAMPLE language="markdown">[[_TOC_]]</CODESAMPLE>
-  </ITEM>
-  <ITEM>Admonitions
-    <CODESAMPLE language="markdown">&gt; [!note]<BR/>
-&gt; The following information is useful.</CODESAMPLE>
-    <CODESAMPLE language="markdown">&gt; [!tip]<BR/>
-&gt; Tip of the day.</CODESAMPLE>
-    <CODESAMPLE language="markdown">&gt; [!important]<BR/>
-&gt; This is something important you should know.</CODESAMPLE>
-    <CODESAMPLE language="markdown">&gt; [!caution]<BR/>
-&gt; You need to be very careful about the following.</CODESAMPLE>
-    <CODESAMPLE language="markdown">&gt; [!warning]<BR/>
-&gt; The following would be dangerous.</CODESAMPLE>
-    The title may be overridden:
-    <CODESAMPLE language="markdown">&gt; [!warning] Data deletion<BR/>
-&gt; he following instructions will make your data unrecoverable.</CODESAMPLE>
-    Multiline blockquotes can also be used:
-    <CODESAMPLE language="markdown">&gt;&gt;&gt; [!note] Things to consider<BR/>
-You should consider the following ramifications:<BR/>
-<BR/>
-1. consideration 1<BR/>
-1. consideration 2<BR/>
-&gt;&gt;&gt;</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE>Mess…</TITLE>
