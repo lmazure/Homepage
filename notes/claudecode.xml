@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Claude Code</TITLE>
 <PATH>notes/claudecode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>14</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>17</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -46,14 +46,14 @@ Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><
     <DESC>Exit the CLI.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>/help</CODEROUTINE></TERM>
+    <DESC>Show help and available commands.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>/usage</CODEROUTINE><BR/>
       <CODEROUTINE>/stats</CODEROUTINE><BR/>
       <CODEROUTINE>/cost</CODEROUTINE></TERM>
     <DESC>Show session cost, plan usage limits, and activity stats.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>/skills</CODEROUTINE></TERM>
-    <DESC>List available skills.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/model</CODEROUTINE></TERM>
@@ -64,16 +64,24 @@ Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><
     <DESC>Set effort level for model usage.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>/clear</CODEROUTINE></TERM>
+    <DESC>Start a new session with empty context; previous session stays on disk (resumable with <CODEROUTINE>/resume</CODEROUTINE>)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/skills</CODEROUTINE></TERM>
+    <DESC>List available skills.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/memory</CODEROUTINE></TERM>
+    <DESC>Open a memory file in your editor</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>/btw</CODEROUTINE></TERM>
     <DESC>Ask a quick side question without interrupting the main conversation.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/release-notes</CODEROUTINE></TERM>
     <DESC>View release notes.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>/help</CODEROUTINE></TERM>
-    <DESC>Show help and available commands.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/loop [interval] [prompt]</CODEROUTINE></TERM>
