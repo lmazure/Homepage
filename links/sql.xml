@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>SQL</TITLE>
 <PATH>links/sql.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -14,6 +14,7 @@
     </BLIST></ITEM>
     <ITEM><X><T>MySQL</T><A>https://www.mysql.com/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>SQLite</T><A>https://www.sqlite.org/index.html</A><L>en</L><F>HTML</F></X></ITEM>
+    <ITEM><X><T>Turso</T><A>https://turso.tech/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>SQL Relay</T><A>https://sqlrelay.sourceforge.net/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>H2</T><A>http://www.h2database.com</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Dolt</T><A>https://www.dolthub.com/</A><L>en</L><F>HTML</F></X></ITEM>
@@ -79,6 +80,9 @@
       <ITEM><ARTICLE><X><T>sqlite-s3vfs</T><A>https://simonwillison.net/2025/Feb/7/sqlite-s3vfs/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>2</MONTH><DAY>7</DAY></DATE><COMMENT>sqlite-s3vfs is a virtual filesystem for SQLite to read from and write to S3.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Abusing SQLite to Handle Concurrency</T><A>https://blog.skypilot.co/abusing-sqlite-to-handle-concurrency/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Christopher</FIRSTNAME><LASTNAME>Cooper</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>3</MONTH><DAY>4</DAY></DATE><COMMENT>Some details about the write-lock explaining why SQLite is bad when there are many concurrent writers.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>sqlite-utils 4.0a1 has several (minor) backwards incompatible changes</T><A>https://simonwillison.net/2025/Nov/24/sqlite-utils-40a1/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE><COMMENT>The release notes of sqlite-utils 4.0.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Turso</TITLE>
+      <ITEM><ARTICLE><X><T>The most trusted code on Earth is being rewritten in Rust</T><A>https://www.youtube.com/watch?v=Sntj4HmuykI</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>20</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jeff</FIRSTNAME><LASTNAME>Delaney</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>19</DAY></DATE><COMMENT>Turso is a backwards-compatible rewrite of SQLite in Rust adding support of concurrency, asynchronous operations, and vector search.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>CockroachDB</TITLE>
       <ITEM><ARTICLE><X><T>Whither CockroachDB?</T><A>https://oxide-and-friends.transistor.fm/episodes/whither-cockroachdb</A><L>en</L><F>MP3</F><DURATION><HOUR>1</HOUR><MINUTE>34</MINUTE><SECOND>7</SECOND></DURATION><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE></X><X><T>Oxide and Friends 8/19/2024 -- Whither CockroachDB?</T><A>https://www.youtube.com/watch?v=DNHMYp8M40k</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>34</MINUTE><SECOND>6</SECOND></DURATION><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>21</DAY></DATE></X><AUTHOR><FIRSTNAME>Bryan</FIRSTNAME><LASTNAME>Cantrill</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Pacheco</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Adam</FIRSTNAME><LASTNAME>Leventhal</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>8</MONTH><DAY>19</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Dave</FIRSTNAME><LASTNAME>Pacheco</LASTNAME></AUTHOR> explains the problems Oxide experienced with PostgreSQL, why they switched to CockroachDB, and the licence change.</COMMENT></ARTICLE></ITEM>
