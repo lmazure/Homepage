@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>tmux</TITLE>
 <PATH>notes/tmux.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>13</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Session management
@@ -75,6 +75,10 @@
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="."/></TERM>
         <DESC>Move window to a different index</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="&lt;"/></TERM>
+        <DESC>Swap window with another one</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="L"/></TERM>
