@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -384,20 +384,6 @@ Dangling images are layers that have no relationship to any tagged images.
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
-<BLIST><TITLE>Notes</TITLE>
-  <ITEM>To add something in an Alpine container
-    <CODESAMPLE>
-    docker exec -it –-user=root mycontainer /bin/sh<BR/>
-    apk add curl rm -f /var/cache/apl/*
-    </CODESAMPLE>
-  </ITEM>
-  <ITEM>On Windows and Mac, use <CODEROUTINE>host.docker.internal</CODEROUTINE> instead of <CODEROUTINE>localhost</CODEROUTINE> to refer to the host from inside a container
-    (some information <X><T>here</T><A>https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach</A><L>en</L><F>HTML</F></X>).
-  </ITEM>
-</BLIST>
-</ITEM>
-<ITEM>Docker compose<BR/>
-<BR/>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>docker compose</T><A>https://docs.docker.com/reference/cli/docker/compose/</A><L>en</L><F>HTML</F></X> -f conf.yaml</CODEROUTINE></TERM>
@@ -407,9 +393,6 @@ Dangling images are layers that have no relationship to any tagged images.
     <TERM><CODEROUTINE>docker compose -f conf1.yaml -f conf2.yaml</CODEROUTINE></TERM>
     <DESC>Use the configuration file which is the concatenation of <CODEROUTINE>conf1.yaml</CODEROUTINE> and <CODEROUTINE>conf2.yaml</CODEROUTINE>.</DESC>
   </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>docker compose up</T><A>https://docs.docker.com/reference/cli/docker/compose/up/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Create and start containers.</DESC>
@@ -419,30 +402,18 @@ Dangling images are layers that have no relationship to any tagged images.
       <CODEROUTINE>--detach</CODEROUTINE></TERM>
     <DESC>Detached mode: Run containers in the background.</DESC>
   </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>docker compose start</T><A>https://docs.docker.com/reference/cli/docker/compose/start/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Starts existing containers for a service.</DESC>
   </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>docker compose stop</T><A>https://docs.docker.com/reference/cli/docker/compose/stop/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Stops running containers without removing them. They can be started again with <CODEROUTINE>docker compose start</CODEROUTINE>.</DESC>
   </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>docker compose restart</T><A>https://docs.docker.com/reference/cli/docker/compose/restart/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Restarts stopped and running services.</DESC>
   </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>docker compose down</T><A>https://docs.docker.com/reference/cli/docker/compose/down/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Stop and remove containers and networks.</DESC>
@@ -452,9 +423,10 @@ Dangling images are layers that have no relationship to any tagged images.
       <CODEROUTINE>docker compose down --volumes</CODEROUTINE></TERM>
     <DESC>Remove named volumes declared in the "volumes" section of the Compose file and anonymous volumes attached to containers.</DESC>
   </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>docker compose pull</T><A>https://docs.docker.com/reference/cli/docker/compose/pull/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>Pulls an image associated with a service defined in a <CODEFILENAME>compose.yaml</CODEFILENAME> file, but does not start containers based on those images</DESC>
+  </ROW>
   <ROW>
     <TERM><CODEROUTINE><X><T>docker compose ps</T><A>https://docs.docker.com/reference/cli/docker/compose/ps/</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>List containers.</DESC>
@@ -463,9 +435,6 @@ Dangling images are layers that have no relationship to any tagged images.
     <TERM><CODEROUTINE>--service</CODEROUTINE></TERM>
     <DESC>Display services.</DESC>
   </ROW>
-</DEFINITIONTABLE>
-<BR/>
-<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>docker compose logs</T><A>https://docs.docker.com/reference/cli/docker/compose/logs/</A><L>en</L><F>HTML</F></X> &lt;service&gt;</CODEROUTINE></TERM>
     <DESC>View output from containers. It is possible to specify no or several services.</DESC>
@@ -482,40 +451,46 @@ Dangling images are layers that have no relationship to any tagged images.
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
-Docker compose will look for an <CODEFILENAME>.env</CODEFILENAME> file to define environment variables in the containers.
-<BR/>
-<BR/>
-Get the most recent version of Trivy:
-<CODESAMPLE><PROMPT/> docker run --pull always --rm aquasec/trivy:latest version<BR/>
-latest: Pulling from aquasec/trivy<BR/>
-Digest: sha256:1c78ed1ef824ab8bb05b04359d186e4c1229d0b3e67005faacb54a7d71974f73<BR/>
-Status: Image is up to date for aquasec/trivy:latest<BR/>
+Docker compose will look for an <CODEFILENAME>.env</CODEFILENAME> file to define environment variables in the containers.<BR/></ITEM>
+<ITEM><BLIST><TITLE>Notes</TITLE>
+  <ITEM>To add something in an Alpine container
+    <CODESAMPLE>
+    docker exec -it –-user=root mycontainer /bin/sh<BR/>
+    apk add curl rm -f /var/cache/apl/*
+    </CODESAMPLE>
+  </ITEM>
+  <ITEM>On Windows and Mac, use <CODEROUTINE>host.docker.internal</CODEROUTINE> instead of <CODEROUTINE>localhost</CODEROUTINE> to refer to the host from inside a container
+    (some information <X><T>here</T><A>https://stackoverflow.com/questions/24319662/from-inside-of-a-docker-container-how-do-i-connect-to-the-localhost-of-the-mach</A><L>en</L><F>HTML</F></X>).
+  </ITEM>
+</BLIST></ITEM>
+<ITEM><BLIST><TITLE>Examples of use</TITLE>
+  <ITEM>Get the most recent version of Trivy:
+    <CODESAMPLE language="text"><PROMPT/> docker run --pull always --rm aquasec/trivy:latest version
+latest: Pulling from aquasec/trivy
+Digest: sha256:1c78ed1ef824ab8bb05b04359d186e4c1229d0b3e67005faacb54a7d71974f73
+Status: Image is up to date for aquasec/trivy:latest
 Version: 0.69.1</CODESAMPLE>
 Use that version to analyse a Docker image with Trivy and generate a table overview:
-<CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --timeout 30m --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.txt</CODESAMPLE>
-(<CODEROUTINE>-t</CODEROUTINE> avoids the garbled display. <CODEROUTINE>--timeout 30m</CODEROUTINE> is a Trivy flag to get the download successful on a fucking slow network.)<BR/>
-Analyse a Docker image with Trivy and generate a JSON report:
-<CODESAMPLE><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --timeout 30m --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.json</CODESAMPLE>
-<BR/>
-<BR/>
-Run Dockle on an image:
-<CODESAMPLE>docker run --rm  goodwithtech/dockle:latest opentestfactory/allinone:nightly</CODESAMPLE>
-<BR/>
-<BR/>
-<BLIST><TITLE>Create a SBOM with syft</TITLE>
-  <ITEM>installation of syft
-    <CODESAMPLE>sudo sh<BR/>
-      curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin<BR/>
-      exit</CODESAMPLE>
-  </ITEM>
-  <ITEM>running syft<BR/>
-    in another window
-    <CODESAMPLE>sudo dockerd</CODESAMPLE>
-    then, use
-    <CODESAMPLE>syft scan squashtest/squash:7.0.3 -o spdx_json &gt; sbom_squashtest_squash_7_0_3.json</CODESAMPLE>
-  </ITEM>
-</BLIST>
-</ITEM>
+    <CODESAMPLE language="bash"><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --timeout 30m --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.txt</CODESAMPLE>
+    (<CODEROUTINE>-t</CODEROUTINE> avoids the garbled display. <CODEROUTINE>--timeout 30m</CODEROUTINE> is a Trivy flag to get the download successful on a fucking slow network.)<BR/>
+    Analyse a Docker image with Trivy and generate a JSON report:
+    <CODESAMPLE language="bash"><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --timeout 30m --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.json</CODESAMPLE></ITEM>
+  <ITEM>Run Dockle on an image:
+    <CODESAMPLE language="bash"><PROMPT/>docker run --rm  goodwithtech/dockle:latest opentestfactory/allinone:nightly</CODESAMPLE></ITEM>
+  <ITEM><BLIST><TITLE>Create a SBOM with syft</TITLE>
+      <ITEM>installation of syft
+        <CODESAMPLE language="bash"><PROMPT/>sudo sh
+curl -sSfL https://raw.githubusercontent.com/anchore/syft/main/install.sh | sh -s -- -b /usr/local/bin<BR/>
+exit</CODESAMPLE>
+      </ITEM>
+      <ITEM>running syft<BR/>
+        in another window
+        <CODESAMPLE language="bash"><PROMPT/>sudo dockerd</CODESAMPLE>
+        then, use
+        <CODESAMPLE language="bash"><PROMPT/>syft scan squashtest/squash:7.0.3 -o spdx_json &gt; sbom_squashtest_squash_7_0_3.json</CODESAMPLE>
+      </ITEM>
+    </BLIST></ITEM>
+</BLIST></ITEM>
 </LLIST>
 </CONTENT>
 <X><T>links</T><A>../links/operations.html#docker</A><L>en</L><F>HTML</F></X>
