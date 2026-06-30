@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -252,6 +252,9 @@
         <ITEM><BLIST><TITLE>2.54</TITLE>
           <ITEM><ARTICLE><X><T>Highlights from Git 2.54</T><ST>The open source Git project just released Git 2.54. Here is GitHub’s look at some of the most interesting features and changes introduced since last time.</ST><A>https://github.blog/open-source/git/highlights-from-git-2-54/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>20</DAY></DATE><COMMENT>The introduction of the <CODEROUTINE>git history</CODEROUTINE> command which only supports changing commit messages and splitting commits for the time being, setting hooks by configuration, geometric repacking is now the default, improvements of <CODEROUTINE>git add –p</CODEROUTINE>, <CODEROUTINE>git replay</CODEROUTINE>, <CODEROUTINE>git log –L</CODEROUTINE>, <CODEROUTINE>git blame</CODEROUTINE>… and many other things.</COMMENT></ARTICLE></ITEM>
           <ITEM><ARTICLE><X><T>What’s new in Git 2.54.0?</T><A>https://about.gitlab.com/blog/whats-new-in-git-2-54-0/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Patrick</FIRSTNAME><LASTNAME>Steinhardt</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>20</DAY></DATE><COMMENT>Pluggable object database, new <CODEROUTINE>git history</CODEROUTINE> command, <CODEFILENAME>git repo structure</CODEFILENAME> improvement, and geometric compaction being the default.</COMMENT></ARTICLE></ITEM>
+        </BLIST></ITEM>
+        <ITEM><BLIST><TITLE>2.55</TITLE>
+          <ITEM><ARTICLE><X><T>Highlights from Git 2.55</T><ST>The open source Git project just released Git 2.55. Here is GitHub’s look at some of the most interesting features and changes introduced since last time.</ST><A>https://github.blog/open-source/git/highlights-from-git-2-55/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Taylor</FIRSTNAME><LASTNAME>Blau</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE><COMMENT><CODEROUTINE>git repack --write-midx=incremental</CODEROUTINE> allows repacking the newly created layer with older ones, <CODEROUTINE>git history fixup &lt;commit&gt;</CODEROUTINE> applies the currently staged changes to the specified commit, config-based hooks can be run in parallel, the file system monitor daemon is now available on Linux, <CODEROUTINE>git format-rev</CODEROUTINE> reads revisions from the command line and pretty-formats them…</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Bits and Booze</TITLE>

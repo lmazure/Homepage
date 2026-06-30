@@ -258,6 +258,10 @@
     <TERM><CODEROUTINE>git rm &lt;file&gt;</CODEROUTINE></TERM>
     <DESC>Remove &lt;file&gt; from the index, or from the working tree and the index.</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git rm --cached</CODEROUTINE></TERM>
+    <DESC>Unstage and remove paths only from the index. Working tree files will be left alone.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
