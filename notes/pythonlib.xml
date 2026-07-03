@@ -62,9 +62,6 @@ print(Cursor.POS(10, 5) + 'This text is at row 10, column 5')</CODESAMPLE></ITEM
 <PROMPT/>yt-dlp "https://www.youtube.com/watch?v=NHq2GFx_4Io"</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>LinkChecker</B></U> (<X><T>doc</T><A>https://linkchecker.github.io/linkchecker/</A><L>en</L><F>HTML</F></X>)</TITLE>
-  <ITEM>install
-    <CODESAMPLE language="bash"><PROMPT/>pip install LinkChecker</CODESAMPLE>
-  </ITEM>
   <ITEM>check <CODEROUTINE>https://squashtm.com</CODEROUTINE>
     <CODESAMPLE language="bash"><PROMPT/>cat &lt;&lt; EOF
 [filtering]
@@ -72,14 +69,14 @@ ignorewarningsforurls= ^https://siteassets.parastorage.com ^url-too-long
 [output]
 ignoreerrors= ^https://siteassets.parastorage.com ^400 Bad Request
 EOF &gt; ~/.config/linkchecker/linkcheckerrc
-<PROMPT/>linkchecker.exe --check-extern https://squashtest.com -F html/utf8</CODESAMPLE>
+<PROMPT/>uvx linkchecker --check-extern https://squashtest.com -F html/utf8</CODESAMPLE>
   </ITEM>
   <ITEM>check <CODEROUTINE>https://tm-fr.doc.squashtest.com/v9/</CODEROUTINE>
     <CODESAMPLE language="bash"><PROMPT/>cat &lt;&lt; EOF
 [output]
 ignoreerrors= ^https://gitlab.com/henixdevelopment/ ^403 Forbidden
 EOF &gt; ~/.config/linkchecker/linkcheckerrc
-<PROMPT/>linkchecker.exe --check-extern https://tm-fr.doc.squashtest.com/v9/ -F html/utf8</CODESAMPLE>
+<PROMPT/>uvx linkchecker --check-extern https://tm-fr.doc.squashtest.com/v9/ -F html/utf8</CODESAMPLE>
   </ITEM>
 </BLIST>
 </CONTENT>

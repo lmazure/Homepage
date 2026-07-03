@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>uv</TITLE>
 <PATH>notes/uv.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>8</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>3</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Install <CODEROUTINE>uv</CODEROUTINE> on a USB key</TITLE>
   <ITEM>Environment setup:
@@ -88,6 +88,18 @@
     <TERM><CODEROUTINE>uv run foobar.py</CODEROUTINE></TERM>
     <DESC>Run the script <CODEROUTINE>foobar.py</CODEROUTINE>.</DESC>
   </ROW>
-</DEFINITIONTABLE></CONTENT>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>uv tool run pycowsay hello from uv</CODEROUTINE></TERM>
+    <DESC>Run <CODEROUTINE>ruff</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>uvx pycowsay hello from uv</CODEROUTINE></TERM>
+    <DESC><CODEROUTINE>uvx</CODEROUTINE> is an alias for <CODEROUTINE>uv tool run</CODEROUTINE>.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+</CONTENT>
 <X><T>links</T><A>../links/python.html#uv</A><L>en</L><F>HTML</F></X>
 </PAGE>
