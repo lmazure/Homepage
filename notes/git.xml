@@ -1818,7 +1818,7 @@ Script to find the nearest version of a file (<CODEROUTINE>$1</CODEROUTINE>) com
   git checkout --quiet HEAD $1</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Git on Windows</TITLE>
-  <ITEM>To properly manage newlines
+  <ITEM>Properly manage newlines
     <CODESAMPLE><PROMPT/>git config --global core.autocrlf true</CODESAMPLE>
     When checking out code, this convert line endings to <CODEROUTINE>\r\n</CODEROUTINE> if on Windows.<BR/>
     When committing code, this converts line endings to Unix-style <CODEROUTINE>\n</CODEROUTINE>.<BR/>
@@ -1826,6 +1826,11 @@ Script to find the nearest version of a file (<CODEROUTINE>$1</CODEROUTINE>) com
     <CODESAMPLE><PROMPT/>git config set --local core.autocrlf false<BR/>
       <PROMPT/>git config set --local core.eol lf</CODESAMPLE>
   </ITEM>
+  <ITEM><BLIST><TITLE>Install on an external SDD</TITLE>
+    <ITEM>download PortableGit-2.55.0-64-bit.7z.exe</ITEM>
+    <ITEM>double click</ITEM>
+    <ITEM>install in G:\Documents\tools\Git\2.55.0</ITEM>
+  </BLIST></ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>Git SVN</TITLE>
@@ -1854,9 +1859,9 @@ Script to find the nearest version of a file (<CODEROUTINE>$1</CODEROUTINE>) com
 <BR/>
 <BLIST><TITLE>Git BASH on Windows</TITLE>
   <ITEM>The home directory is defined by the <CODEROUTINE>%HOME%</CODEROUTINE> Windows environment variable (which is not used by Windows, so it is safe to set/modify it).</ITEM>
-  <ITEM>To display the remote repository in the browser: <CODEROUTINE>start `git remote get-url origin`</CODEROUTINE>.</ITEM>
-  <ITEM>To run Python: <CODEROUTINE>winpty python</CODEROUTINE></ITEM>
-  <ITEM>To display an HTML file: <CODEROUTINE>start report.html</CODEROUTINE></ITEM>
+  <ITEM>Display the remote repository in the browser: <CODEROUTINE>start `git remote get-url origin`</CODEROUTINE>.</ITEM>
+  <ITEM>Run Python: <CODEROUTINE>winpty python</CODEROUTINE></ITEM>
+  <ITEM>Display an HTML file: <CODEROUTINE>start report.html</CODEROUTINE></ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>My configuration</TITLE>
