@@ -7,10 +7,10 @@
 <CONTENT>
 <BLIST><TITLE><U><B>pytest</B></U> (<X><T>doc</T><A>https://docs.pytest.org/en/stable/</A><L>en</L><F>HTML</F></X>)</TITLE>
   <ITEM>The <CODEROUTINE>tmp_path</CODEROUTINE> fixture is a <CODEROUTINE>pathlib.Path</CODEROUTINE> object providing a temporary directory unique to each test function.
-    <CODESAMPLE>def test_save_and_load_history(tmp_path: Path) -&gt; None:<BR/>
-        <TAB/>file_path = tmp_path / "history.json"<BR/>
-        <TAB/>history.save_to_file(str(file_path))<BR/>
-        <TAB/>…</CODESAMPLE>
+    <CODESAMPLE language="python">def test_save_and_load_history(tmp_path: Path) -&gt; None:
+<TAB/>file_path = tmp_path / "history.json"
+<TAB/>history.save_to_file(str(file_path))
+<TAB/>…</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>Colorama</B></U> (<X><T>doc</T><A>https://pypi.org/project/colorama/</A><L>en</L><F>HTML</F></X>)</TITLE>
@@ -25,9 +25,9 @@
     <ITEM><CODEROUTINE>just_fix_windows_console()</CODEROUTINE> initialise the wrapping of the output.</ITEM>
   </BLIST></ITEM>
   <ITEM>Write some text in yellow
-    <CODESAMPLE>import colorama<BR/>
-    …<BR/>
-    print(colorama.Fore.YELLOW + f"set epic to start date = {start_date} and due date = {due_date} ({release})" + colorama.Style.RESET_ALL)</CODESAMPLE>
+    <CODESAMPLE language="python">import colorama
+…
+print(colorama.Fore.YELLOW + f"set epic to start date = {start_date} and due date = {due_date} ({release})" + colorama.Style.RESET_ALL)</CODESAMPLE>
   </ITEM>
   <ITEM><BLIST><TITLE>All format constants:</TITLE>
     <ITEM>Fore: <CODEROUTINE>colorama.Fore.BLACK</CODEROUTINE>, <CODEROUTINE>colorama.Fore.RED</CODEROUTINE>, <CODEROUTINE>colorama.Fore.GREEN</CODEROUTINE>, <CODEROUTINE>colorama.Fore.YELLOW</CODEROUTINE>, <CODEROUTINE>colorama.Fore.BLUE</CODEROUTINE>, <CODEROUTINE>colorama.Fore.MAGENTA</CODEROUTINE>, <CODEROUTINE>colorama.Fore.CYAN</CODEROUTINE>, <CODEROUTINE>colorama.Fore.WHITE</CODEROUTINE>, <CODEROUTINE>colorama.Fore.RESET</CODEROUTINE>.</ITEM>
@@ -37,49 +37,49 @@
   <ITEM><BLIST><TITLE>Cursor positoning:</TITLE>
   <ITEM><CODEROUTINE>Cursor.POS(row, col)</CODEROUTINE> move the cursor to the specified row and column.<BR/>
     The top-left corner of the terminal is (1, 1).
-    <CODESAMPLE>from colorama import init, Cursor<BR/>
-    <BR/>
-    # Initialize Colorama<BR/>
-    init()<BR/>
-    <BR/>
-    # Move the cursor to row 10, column 5<BR/>
-    print(Cursor.POS(10, 5) + 'This text is at row 10, column 5')</CODESAMPLE></ITEM>
+    <CODESAMPLE language="python">from colorama import init, Cursor
+
+# Initialize Colorama
+init()
+
+# Move the cursor to row 10, column 5
+print(Cursor.POS(10, 5) + 'This text is at row 10, column 5')</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>Cursor.UP(n)</CODEROUTINE> move the cursor up by n rows.
-    <CODESAMPLE>print(Cursor.UP(5) + 'This text is 5 rows up')</CODESAMPLE></ITEM>
+    <CODESAMPLE language="python">print(Cursor.UP(5) + 'This text is 5 rows up')</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>Cursor.DOWN(n)</CODEROUTINE> move the cursor down by n rows.
-    <CODESAMPLE>print(Cursor.DOWN(3) + 'This text is 3 rows down')</CODESAMPLE></ITEM>
+    <CODESAMPLE language="python">print(Cursor.DOWN(3) + 'This text is 3 rows down')</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>Cursor.FORWARD(n)</CODEROUTINE> move the cursor forward (right) by n columns.
-    <CODESAMPLE>print(Cursor.FORWARD(10) + 'This text is 10 columns to the right')</CODESAMPLE></ITEM>
+    <CODESAMPLE language="python">print(Cursor.FORWARD(10) + 'This text is 10 columns to the right')</CODESAMPLE></ITEM>
   <ITEM><CODEROUTINE>Cursor.BACK(n)</CODEROUTINE> move the cursor backward (left) by n columns.
-    <CODESAMPLE>print(Cursor.BACK(7) + 'This text is 7 columns to the left')</CODESAMPLE></ITEM>
+    <CODESAMPLE language="python">print(Cursor.BACK(7) + 'This text is 7 columns to the left')</CODESAMPLE></ITEM>
   </BLIST></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>yt-dlp</B></U> (<X><T>doc</T><A>https://github.com/yt-dlp/yt-dlp#readme</A><L>en</L><F>HTML</F></X>)</TITLE>
   <ITEM>Quick download of a YouTube video
-    <CODESAMPLE><PROMPT/>python -m venv .venv<BR/>
-      <PROMPT/>source .venv/Scripts/activate<BR/>
-      <PROMPT/>pip install yt-dlp<BR/>
-      <PROMPT/>yt-dlp "https://www.youtube.com/watch?v=NHq2GFx_4Io"</CODESAMPLE></ITEM>
+    <CODESAMPLE language="bash"><PROMPT/>python -m venv .venv
+<PROMPT/>source .venv/Scripts/activate
+<PROMPT/>pip install yt-dlp
+<PROMPT/>yt-dlp "https://www.youtube.com/watch?v=NHq2GFx_4Io"</CODESAMPLE></ITEM>
 </BLIST>
 <BLIST><TITLE><U><B>LinkChecker</B></U> (<X><T>doc</T><A>https://linkchecker.github.io/linkchecker/</A><L>en</L><F>HTML</F></X>)</TITLE>
   <ITEM>install
-    <CODESAMPLE><PROMPT/>pip install LinkChecker</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>pip install LinkChecker</CODESAMPLE>
   </ITEM>
   <ITEM>check <CODEROUTINE>https://squashtm.com</CODEROUTINE>
-    <CODESAMPLE><PROMPT/>cat &lt;&lt; EOF<BR/>
-      [filtering]<BR/>
-      ignorewarningsforurls= ^https://siteassets.parastorage.com ^url-too-long<BR/>
-      [output]<BR/>
-      ignoreerrors= ^https://siteassets.parastorage.com ^400 Bad Request<BR/>
-      EOF &gt; ~/.config/linkchecker/linkcheckerrc<BR/>
-      <PROMPT/>linkchecker.exe --check-extern https://squashtest.com -F html/utf8</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>cat &lt;&lt; EOF
+[filtering]
+ignorewarningsforurls= ^https://siteassets.parastorage.com ^url-too-long
+[output]
+ignoreerrors= ^https://siteassets.parastorage.com ^400 Bad Request
+EOF &gt; ~/.config/linkchecker/linkcheckerrc
+<PROMPT/>linkchecker.exe --check-extern https://squashtest.com -F html/utf8</CODESAMPLE>
   </ITEM>
   <ITEM>check <CODEROUTINE>https://tm-fr.doc.squashtest.com/v9/</CODEROUTINE>
-    <CODESAMPLE><PROMPT/>cat &lt;&lt; EOF<BR/>
-      [output]<BR/>
-      ignoreerrors= ^https://gitlab.com/henixdevelopment/ ^403 Forbidden<BR/>
-      EOF &gt; ~/.config/linkchecker/linkcheckerrc<BR/>
-      <PROMPT/>linkchecker.exe --check-extern https://tm-fr.doc.squashtest.com/v9/ -F html/utf8</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>cat &lt;&lt; EOF
+[output]
+ignoreerrors= ^https://gitlab.com/henixdevelopment/ ^403 Forbidden
+EOF &gt; ~/.config/linkchecker/linkcheckerrc
+<PROMPT/>linkchecker.exe --check-extern https://tm-fr.doc.squashtest.com/v9/ -F html/utf8</CODESAMPLE>
   </ITEM>
 </BLIST>
 </CONTENT>
