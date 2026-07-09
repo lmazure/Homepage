@@ -3,35 +3,35 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>tmux</TITLE>
 <PATH>notes/tmux.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>9</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Session management
     <DEFINITIONTABLE>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="D"/></TERM>
-        <DESC>Detach from session</DESC>
+        <DESC>Detach from session.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux new-session -s session_name</CODEROUTINE></TERM>
-        <DESC>Create a session with specified name</DESC>
+        <DESC>Create a session with specified name.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux ls</CODEROUTINE></TERM>
-        <DESC>List sessions</DESC>
+        <DESC>List sessions.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux attach</CODEROUTINE><BR/>
           <CODEROUTINE>tmux a</CODEROUTINE></TERM>
-        <DESC>Reattach to last session</DESC>
+        <DESC>Reattach to last session.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux attach -t session_name</CODEROUTINE></TERM>
-        <DESC>Attach to specific session</DESC>
+        <DESC>Attach to specific session.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux kill -t session_name</CODEROUTINE></TERM>
-        <DESC>Kill specific session</DESC>
+        <DESC>Kill specific session.</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
@@ -39,71 +39,71 @@
     <DEFINITIONTABLE>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="C"/></TERM>
-        <DESC>Create new window</DESC>
+        <DESC>Create new window.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id=","/></TERM>
-        <DESC>Rename the current window</DESC>
+        <DESC>Rename the current window.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="&amp;"/></TERM>
-        <DESC>Kill the current window (with confirmation)</DESC>
+        <DESC>Kill the current window (with confirmation).</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="N"/></TERM>
-        <DESC>Next window</DESC>
+        <DESC>Next window.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="P"/></TERM>
-        <DESC>Previous window</DESC>
+        <DESC>Previous window.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="0"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="1"/><BR/>
           …<BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="9"/></TERM>
-        <DESC>Switch to window by number</DESC>
+        <DESC>Switch to window by number.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="W"/></TERM>
-        <DESC>Choose window from a list</DESC>
+        <DESC>Choose window from a list.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="F"/></TERM>
-        <DESC>Find window by name</DESC>
+        <DESC>Find window by name.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="."/></TERM>
-        <DESC>Move window to a different index</DESC>
+        <DESC>Move window to a different index.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="&lt;"/></TERM>
-        <DESC>Swap window with another one</DESC>
+        <DESC>Swap window with another one.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="L"/></TERM>
-        <DESC>Switch to the last active window</DESC>
+        <DESC>Switch to the last active window.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="'"/></TERM>
-        <DESC>Prompt for a window index to select</DESC>
+        <DESC>Prompt for a window index to select.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux new-window</CODEROUTINE><BR/>
           <CODEROUTINE>tmux neww</CODEROUTINE></TERM>
-        <DESC>Create a new window</DESC>
+        <DESC>Create a new window.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux new-window -n name</CODEROUTINE></TERM>
-        <DESC>Create a window with specified name</DESC>
+        <DESC>Create a window with specified name.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux new-window -c /path/to/dir</CODEROUTINE></TERM>
-        <DESC>Create a window in specific directory</DESC>
+        <DESC>Create a window in specific directory.</DESC>
       </ROW>
       <ROW>
         <TERM><CODEROUTINE>tmux new-window command</CODEROUTINE></TERM>
-        <DESC>Create a window and run command</DESC>
+        <DESC>Create a window and run command.</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
@@ -111,40 +111,40 @@
     <DEFINITIONTABLE>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="%"/></TERM>
-        <DESC>Split pane vertically</DESC>
+        <DESC>Split pane vertically.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="&quot;"/></TERM>
-        <DESC>Split pane horizontally</DESC>
+        <DESC>Split pane horizontally.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Up"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Down"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Left"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Right"/></TERM>
-        <DESC>Navigate between panes</DESC>
+        <DESC>Navigate between panes.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Ctrl"/><KEY id="Up"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Ctrl"/><KEY id="Down"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Ctrl"/><KEY id="Left"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Ctrl"/><KEY id="Right"/></TERM>
-        <DESC>Resize by 1 cell in that direction</DESC>
+        <DESC>Resize by 1 cell in that direction.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Alt"/><KEY id="Up"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Alt"/><KEY id="Down"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Alt"/><KEY id="Left"/><BR/>
           <MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Alt"/><KEY id="Right"/></TERM>
-        <DESC>Resize by larger steps, often 5 cells</DESC>
+        <DESC>Resize by larger steps, often 5 cells.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Z"/></TERM>
-        <DESC>Zoom/unzoom current pane</DESC>
+        <DESC>Zoom/unzoom current pane.</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="X"/></TERM>
-        <DESC>Close current pane</DESC>
+        <DESC>Close current pane.</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
@@ -152,14 +152,43 @@
     <DEFINITIONTABLE>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="?"/></TERM>
-        <DESC>Show all keybindings (use arrow keys, press <KEY id="Q"/> to exit)</DESC>
+        <DESC>Show all keybindings (use arrow keys, press <KEY id="Q"/> to exit).</DESC>
       </ROW>
       <ROW>
         <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="["/></TERM>
-        <DESC>Enter scroll mode (use arrow keys, press <KEY id="Q"/> to exit)</DESC>
+        <DESC>Enter scroll mode (use arrow keys, press <KEY id="Q"/> to exit).</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
+  <ITEM>
+    The configuration is in <CODEFILENAME>~/.tmux.conf</CODEFILENAME>.<BR/>
+    Once modified, reload the configuration with <CODEROUTINE>tmux source-file ~/.tmux.conf</CODEROUTINE>.<BR/>
+    The list is <X><T>here</T><A>https://man.openbsd.org/tmux.1#OPTIONS</A><L>en</L><F>HTML</F></X>.
+      <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>set -g status-left " #S "</CODEROUTINE></TERM>
+        <DESC>Set the content of the left side of the status bar.</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>set -g status-right " %H:%M %d-%b "</CODEROUTINE></TERM>
+        <DESC>Set the content of the right side of the status bar.</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>
+    Format variables are enclosed in <CODEROUTINE>#{</CODEROUTINE> and <CODEROUTINE>}</CODEROUTINE>.<BR/>
+    The list is <X><T>here</T><A>https://man.openbsd.org/tmux.1#FORMATS</A><L>en</L><F>HTML</F></X>.
+      <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>session_name</CODEROUTINE><BR/>
+          <CODEROUTINE>#S</CODEROUTINE></TERM>
+        <DESC>Name of session</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>pane_current_path</CODEROUTINE></TERM>
+        <DESC>Current path if available</DESC>
+      </ROW>
+    </DEFINITIONTABLE>  </ITEM>
 </BLIST>
 </CONTENT>
 </PAGE>
