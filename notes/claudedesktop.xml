@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Claude Desktop</TITLE>
+<PATH>notes/claudedesktop.xml</PATH>
+<DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>10</DAY></DATE>
+<CONTENT>
+The configuration file is <CODEFILENAME>C:\Users\lmazure\AppData\Roaming\Claude\claude_desktop_config.json</CODEFILENAME>.<BR/>
+<BR/>
+Add my SquashTM MCP Server:
+<CODESAMPLE language="json"> "mcpServers": {<BR/>
+    "squashtm": {<BR/>
+      "command": "npx",<BR/>
+      "args": [<BR/>
+        "-y",<BR/>
+        "github:lmazure/SMS#v0.0.10"<BR/>
+      ],<BR/>
+      "env": {<BR/>
+        "SQUASHTM_URL": "http://localhost:8090/squash",<BR/>
+        "SQUASHTM_API_KEY": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiIxIiwidXVpZCI6IjU2M2RlNTExLWFmZjItNGIxZi1hNDQ2LTk3MzBiZmMwM2Y5OCIsInBlcm1pc3Npb25zIjoiUkVBRF9XUklURSIsImlhdCI6MTc2NjkxNjA1MCwiZXhwIjoxNzk4MzI5NjAwfQ.HynOVSP3JVZlEw8yzHCsVKreCrKJw5JB_icvEh4IxdXdfzR2Z1f6-HF8uc8lw4YtyzpH-IImphAeOuqyHy9xIQ"<BR/>
+      }<BR/>
+    }<BR/>
+  },</CODESAMPLE>
+<BR/>
+Add GitLab MCP Server:
+<CODESAMPLE language="json">"mcpServers": {<BR/>
+    "GitLab": {<BR/>
+      "command": "npx",<BR/>
+      "args": [<BR/>
+        "-y",<BR/>
+        "@zereight/mcp-gitlab@latest"<BR/>
+      ],<BR/>
+      "env": {<BR/>
+        "GITLAB_PERSONAL_ACCESS_TOKEN": "glpat-EPeIOgONX2gtmxCdLX42OmM6MQpvOjEKdTo1YjYzeQ8.01.170aky38n"<BR/>
+      }<BR/>
+    }<BR/>
+  },</CODESAMPLE>
+</CONTENT>
+<X><T>links</T><A>../links/aianthropic.html#claudedesktop</A><L>en</L><F>HTML</F></X>
+</PAGE>
