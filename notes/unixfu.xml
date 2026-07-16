@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Unix file utilities</TITLE>
 <PATH>notes/unixfu.xml</PATH>
-<DATE><YEAR>2025</YEAR><MONTH>9</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 <DEFINITIONTABLE>
   <ROW>
@@ -319,8 +319,20 @@ find the <CODEROUTINE>getpid</CODEROUTINE>s used in a <CODEROUTINE>printf</CODER
 </ITEM>
 </BLIST>
 <BR/>
-look for duplicated word:
+look for duplicated words:
 <CODESAMPLE><PROMPT/>egrep "(\b[a-zA-Z]+) \1\b" foo.txt</CODESAMPLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE><X><T>ripgrep</T><A>https://manpages.debian.org/trixie/ripgrep/rg.1.en.html</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>recursively search the current directory for lines matching a pattern</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>rg -w</CODEROUTINE><BR/>
+      <CODEROUTINE>rg --word-regexp</CODEROUTINE></TERM>
+    <DESC>only show matches surrounded by word boundaries</DESC>
+  </ROW>
+</DEFINITIONTABLE>
 <BR/>
 <BR/>
 <DEFINITIONTABLE>
