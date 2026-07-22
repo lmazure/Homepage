@@ -68,7 +68,7 @@ Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><
     <DESC>Set effort level for model usage.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>/commpact</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>/compact</CODEROUTINE></TERM>
     <DESC>Free up context by summarising the conversation so far.</DESC>
   </ROW>
   <ROW>
@@ -82,6 +82,10 @@ Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><
   <ROW>
     <TERM><CODEROUTINE>/resume</CODEROUTINE></TERM>
     <DESC>Resume a previous conversation</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/plan</CODEROUTINE></TERM>
+    <DESC>Enable plan mode or view the current session plan.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/skills</CODEROUTINE></TERM>
@@ -124,11 +128,6 @@ Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><
     <DESC>Set the prompt bar colour for this session.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>/dataviz</CODEROUTINE></TERM>
-    <DESC>Skill.<BR/>
-      Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualisation, in ANY output medium — an HTML or React artefact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, …), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colours, building a stat tile / meter / KPI row, or laying out a dashboard. Produces visualisations that read as one system — elegant, accessible, consistent in light and dark — using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a colour formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` — swap that file’s values for your brand’s. Triggers on: "chart", "graph", "plot", "data viz", "visualisation", "dashboard", "analytics", "visualise data", "categorical colours", "sequential / diverging palette", "stat tile", "sparkline", "heatmap", "legend", "axis", "tooltip", "chart colours", "colour by series".</DESC>
-  </ROW>
-  <ROW>
     <TERM><CODEROUTINE>/release-notes</CODEROUTINE></TERM>
     <DESC>View release notes.</DESC>
   </ROW>
@@ -136,10 +135,16 @@ Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><
     <TERM><CODEROUTINE>/feedback</CODEROUTINE></TERM>
     <DESC>Submit feedback, report a bug, or share your conversation.</DESC>
   </ROW>
+</DEFINITIONTABLE>
+Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>HTML</F></X>)
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>/dataviz</CODEROUTINE></TERM>
+    <DESC>Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualisation, in ANY output medium — an HTML or React artefact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, …), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colours, building a stat tile / meter / KPI row, or laying out a dashboard. Produces visualisations that read as one system — elegant, accessible, consistent in light and dark — using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a colour formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` — swap that file’s values for your brand’s. Triggers on: "chart", "graph", "plot", "data viz", "visualisation", "dashboard", "analytics", "visualise data", "categorical colours", "sequential / diverging palette", "stat tile", "sparkline", "heatmap", "legend", "axis", "tooltip", "chart colours", "colour by series".</DESC>
+  </ROW>
   <ROW>
     <TERM><CODEROUTINE>/loop [interval] [prompt]</CODEROUTINE></TERM>
-    <DESC>Skill.<BR/>
-      Run a prompt repeatedly while the session stays open.<BR/>
+    <DESC>Run a prompt repeatedly while the session stays open.<BR/>
       Omit the interval and Claude self-paces between iterations.<BR/>
       Omit the prompt and Claude runs an autonomous maintenance check, or the prompt in <CODEFILENAME>.claude/loop.md</CODEFILENAME> if present.</DESC>
   </ROW>
