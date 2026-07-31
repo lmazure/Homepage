@@ -3,12 +3,13 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Pi</TITLE>
 <PATH>notes/pi.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>5</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 Install Pi:<BR/>
 <CODESAMPLE language="bash"><PROMPT/>npm install --ignore-scripts @earendil-works/pi-coding-agent</CODESAMPLE><BR/>
 <BR/>
 Update Pi:<BR/>
+<CODESAMPLE language="bash"><PROMPT/>pi update --self</CODESAMPLE>
 <CODESAMPLE language="bash"><PROMPT/>npm update --ignore-scripts @earendil-works/pi-coding-agent</CODESAMPLE>
 <BR/>
 <BR/>
