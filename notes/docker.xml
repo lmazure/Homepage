@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>29</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -95,6 +95,14 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE><X><T>docker image inspect</T><A>https://docs.docker.com/reference/cli/docker/image/inspect/</A><L>en</L><F>HTML</F></X> &lt;image&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>docker image inspect &lt;image&gt; &lt;image2&gt; …</CODEROUTINE></TERM>
+    <DESC>Display detailed information on one or more images</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
     <TERM><CODEROUTINE><X><T>docker image history</T><A>https://docs.docker.com/reference/cli/docker/image/history/</A><L>en</L><F>HTML</F></X> &lt;image&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>docker history &lt;image&gt;</CODEROUTINE></TERM>
     <DESC>Show the history of an image.</DESC>
@@ -106,13 +114,15 @@
     <TERM><CODEROUTINE><X><T>docker image load</T><A>https://docs.docker.com/reference/cli/docker/image/load/</A><L>en</L><F>HTML</F></X> &lt;image&gt; &lt;command&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>docker load</CODEROUTINE></TERM>
     <DESC>Load an image or repository from a tar archive (optionally compressed with gzip, bzip2, or xz) from stdin.<BR/>
-      <CODEROUTINE>docker load &lt; busybox.tar.gz</CODEROUTINE></DESC>
+      <CODEROUTINE>docker load &lt; busybox.tar.gz</CODEROUTINE><BR/>
+      <CODEROUTINE>docker image load &lt; busybox.tar.gz</CODEROUTINE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>-i</CODEROUTINE><BR/>
       <CODEROUTINE>--input</CODEROUTINE></TERM>
     <DESC>Read from a file instead of stdin.<BR/>
-      <CODEROUTINE>docker load --input busybox.tar.gz</CODEROUTINE></DESC>
+      <CODEROUTINE>docker load --input busybox.tar.gz</CODEROUTINE><BR/>
+      <CODEROUTINE>docker image load --input busybox.tar.gz</CODEROUTINE></DESC>
   </ROW>
 </DEFINITIONTABLE><BR/>
 <DEFINITIONTABLE>
