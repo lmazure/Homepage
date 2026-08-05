@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI coding assistants</TITLE>
 <PATH>links/aicodeassist.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -42,7 +42,10 @@
       </CLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Spec driven</TITLE>
-      <ITEM><X><T>BMad Method</T><A>https://github.com/bmad-code-org/BMAD-METHOD</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><BLIST><TITLE>BMad</TITLE>
+        <ITEM><X><T>site</T><A>https://www.bmadcode.com/</A><L>en</L><F>HTML</F></X></ITEM>
+        <ITEM><X><T>code</T><A>https://github.com/bmad-code-org/</A><L>en</L><F>HTML</F></X></ITEM>
+      </BLIST></ITEM>
       <ITEM><X><T>CodeSpeak</T><A>https://codespeak.dev/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>OpenSpec</T><A>https://openspec.dev/</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>Lattice</T><A>https://github.com/techygarg/lattice</A><L>en</L><F>HTML</F></X></ITEM>
@@ -300,6 +303,7 @@
     <ITEM><ARTICLE><X><T>What does the future of software engineering look like?</T><A>https://www.thoughtworks.com/insights/podcasts/technology-podcasts/what-does-future-software-engineering-look-like</A><L>en</L><F>MP3</F><DURATION><MINUTE>46</MINUTE><SECOND>25</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kief</FIRSTNAME><LASTNAME>Morris</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Andrew</FIRSTNAME><LASTNAME>Harmel-Law</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Ken</FIRSTNAME><LASTNAME>Mugrage</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>9</DAY></DATE><COMMENT>Some thoughts about the AI agents impact: the evolving role of developpers, harnesses, non-functional requirements, AI amplifies the existing bad practices in a team… There is nothing deep or new in this podcast.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Tower Keeps Rising</T><A>https://lucumr.pocoo.org/2026/7/13/the-tower-keeps-rising/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Armin</FIRSTNAME><LASTNAME>Ronacher</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>13</DAY></DATE><COMMENT>On large vibecoded project, each human do not need anymore to speak with the other ones and share a common vision of the architecture. Each one works on their side. Is it sustainable?</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Why we won’t see another DeepSeek moment anytime soon</T><A>https://blog.kilo.ai/p/no-second-deekseek-moment</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Job</FIRSTNAME><LASTNAME>Rietbergen</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>21</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Job</FIRSTNAME><LASTNAME>Rietbergen</LASTNAME></AUTHOR> considers that compute capacity will be the liniting factor, not the avaibility of models. Since we don’t know who will win, we should not rely on a single provider.</COMMENT></ARTICLE></ITEM>
+    <ITEM><ARTICLE><X><T>The Most Important AI Coding Advice You Haven't Heard Yet</T><A>https://www.youtube.com/watch?v=bDLdZIAjH5Y</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>17</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Nizar</FIRSTNAME><LASTNAME>Selander</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Emily</FIRSTNAME><LASTNAME>Bache</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>24</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Nizar</FIRSTNAME><LASTNAME>Selander</LASTNAME></AUTHOR> explains how he uses TDD with AI agents.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>The Best Local Coding Models for Any Setup</T><ST>How to choose the best model to run locally with Atomic Chat and Kilo Code</ST><A>https://blog.kilo.ai/p/the-best-local-coding-models-for</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ari</FIRSTNAME><LASTNAME>Messer</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>29</DAY></DATE><COMMENT>A list of nine small models usable locally.</COMMENT></ARTICLE></ITEM>
     <ITEM><ARTICLE><X><T>Kimi K3 + Grok 4.5 Built the Same Database as Claude Opus 5 at 1/25th the Price</T><ST>Why model choice matters</ST><A>https://blog.kilo.ai/p/kimi-k3-grok-45-built-the-same-database</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Job</FIRSTNAME><LASTNAME>Rietbergen</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE><COMMENT>Opus 5 produces cleaner code, but it is much more expensive than using Kimi K3 for planning and Grok 4.5 for implementing.</COMMENT></ARTICLE></ITEM>
     <ITEM><BLIST><TITLE>StarCoder</TITLE>
