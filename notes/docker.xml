@@ -345,7 +345,7 @@ Dangling images are layers that have no relationship to any tagged images.
   <ROW>
     <TERM><CODEROUTINE><X><T>docker image rm</T><A>https://docs.docker.com/reference/cli/docker/image/rm/</A><L>en</L><F>HTML</F></X> &lt;image1&gt; &lt;image2&gt; …</CODEROUTINE><BR/>
       <CODEROUTINE>docker image remove &lt;image1&gt; &lt;image2&gt; …</CODEROUTINE><BR/>
-      <CODEROUTINE>docker image rmi &lt;image1&gt; &lt;image2&gt; …</CODEROUTINE></TERM>
+      <CODEROUTINE>docker rmi &lt;image1&gt; &lt;image2&gt; …</CODEROUTINE></TERM>
     <DESC>Remove some images.</DESC>
   </ROW>
 </DEFINITIONTABLE>
