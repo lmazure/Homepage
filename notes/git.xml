@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>12</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -387,6 +387,41 @@
   <ROW>
     <TERM><CODEROUTINE>git diff --name-only</CODEROUTINE></TERM>
     <DESC>Display only the filenames.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --stat</CODEROUTINE></TERM>
+    <DESC>Generate a diffstat.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --stat</CODEROUTINE></TERM>
+    <DESC>Generate a diffstat.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --ignore-cr-at-eol</CODEROUTINE></TERM>
+    <DESC>Ignore carriage-return at the end of line when doing a comparison.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --ignore-space-at-eol</CODEROUTINE></TERM>
+    <DESC>Ignore changes in whitespace at EOL.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --ignore-space-change</CODEROUTINE><BR/>
+      <CODEROUTINE>git diff -b</CODEROUTINE></TERM>
+    <DESC>Ignore changes in amount of whitespace. This ignores whitespace at line end, and considers all other sequences of one or more whitespace characters to be equivalent.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --ignore-all-space</CODEROUTINE><BR/>
+      <CODEROUTINE>git diff -w</CODEROUTINE></TERM>
+    <DESC>Ignore whitespace when comparing lines. This ignores differences even if one line has whitespace where the other line has none.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --ignore-blank-lines</CODEROUTINE></TERM>
+    <DESC>Ignore changes whose lines are all blank.</DESC>
+    </ROW>
+    <ROW>
+      <TERM><CODEROUTINE>git diff --ignore-matching-lines=&lt;regex&gt;</CODEROUTINE><BR/>
+        <CODEROUTINE>git diff -I&lt;regex&gt;</CODEROUTINE></TERM>
+    <DESC>Ignore changes whose all lines match &lt;regex&gt;. This option may be specified more than once.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt; &lt;commit 2&gt; &lt;file&gt;</CODEROUTINE></TERM>
