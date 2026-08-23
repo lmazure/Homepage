@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI security/safety</TITLE>
 <PATH>links/aisecurity.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -139,6 +139,7 @@
       <ITEM><ARTICLE><X><T>Securing AI Agents: How to Prevent Hidden Prompt Injection Attacks</T><A>https://www.youtube.com/watch?v=5ZA1lTxTH3c</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jeff</FIRSTNAME><LASTNAME>Crume</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Keen</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>1</MONTH><DAY>10</DAY></DATE><COMMENT>An explanation of prompt injection, but it is a pity that <AUTHOR><FIRSTNAME>Jeff</FIRSTNAME><LASTNAME>Crume</LASTNAME></AUTHOR> claims that there is a way to avoid them…</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Agentic Email</T><A>https://martinfowler.com/bliki/AgenticEmail.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>2</MONTH><DAY>17</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR> reminds that prompt injection is still a problem and it is not a good idea to let an agent manage your emails.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>4 Ways Your AI Coding Agent Exfiltrates Secrets</T><ST>AI coding agents have your secrets and make HTTP requests. That creates four exfiltration channels, and most security tools only cover one.</ST><A>https://dzone.com/articles/ways-your-ai-coding-agent-exfiltrates-secrets</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Josh</FIRSTNAME><LASTNAME>Waldrep</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>14</DAY></DATE><COMMENT>Some exfiltration channels and some solutions for filtering them.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Grok exfiltrates user data when malicious instructions are encrypted</T><ST>Cryptographic Context Injection is only the latest way to break an LLM safety guardrail.</ST><A>https://arstechnica.com/security/2026/08/grok-exfiltrates-user-data-when-malicious-instructions-are-encrypted/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Dan</FIRSTNAME><LASTNAME>Goodin</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>20</DAY></DATE><COMMENT>A prompt injection using an encrypted text and asking the LLM to decrypt it.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Accidental cyberattacks</TITLE>
     <ITEM><ARTICLE><X><T>OpenAI’s accidental cyberattack against Hugging Face is science fiction that happened</T><A>https://simonwillison.net/2026/Jul/22/openai-cyberattack/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>22</DAY></DATE><COMMENT>A not-yet-released model of OpenAI escaped its sandbox and hacked in Hugging Face to get the answer to the benchmark it was solving.</COMMENT></ARTICLE></ITEM>
