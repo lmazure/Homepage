@@ -9,7 +9,7 @@
     <head>
     <link rel="stylesheet" type="text/css" href="../css/common.css" />
     <xsl:if test="count(/PAGE//CODESAMPLE[@language])>0">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github.min.css"/>
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.2/styles/github.min.css"/>
     </xsl:if>
     <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <link rel="icon" type="image/png" href="../icon.png" />
@@ -99,7 +99,7 @@
       <xsl:if test="count(/PAGE//CODESAMPLE[@language])>0">
         <script>function initializeHighlight() { hljs.highlightAll(); }</script>
         <xsl:element name="script">
-          <xsl:attribute name="src">https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js</xsl:attribute>
+          <xsl:attribute name="src">https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.2/highlight.min.js</xsl:attribute>
           <xsl:attribute name="onload">initializeHighlight()</xsl:attribute>
         </xsl:element>
       </xsl:if>
