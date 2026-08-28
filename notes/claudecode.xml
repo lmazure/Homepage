@@ -36,6 +36,16 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
       <CODEROUTINE>claude --permission-mode bypassPermissions</CODEROUTINE></TERM>
     <DESC>Skip permission prompts.</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude project purge &lt;path&gt;</CODEROUTINE></TERM>
+    <DESC>Delete all local Claude Code state for a project: transcripts, task lists, debug logs, file-edit history, prompt history lines, and the project’s entry in <CODEFILENAME>~/.claude.json</CODEFILENAME>.<BR/>
+      Omit <CODEROUTINE>&lt;path&gt;</CODEROUTINE> to pick from an interactive list.<BR/>
+      Flags:<BR/>
+      <CODEROUTINE>--dry-run</CODEROUTINE> to preview<BR/>
+      <CODEROUTINE>-y</CODEROUTINE>/<CODEROUTINE>--yes</CODEROUTINE> to skip confirmation<BR/>
+      <CODEROUTINE>-i</CODEROUTINE>/<CODEROUTINE>--interactive</CODEROUTINE> to confirm each item<BR/>
+      <CODEROUTINE>--all</CODEROUTINE> for every project.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>HTML</F></X>)
