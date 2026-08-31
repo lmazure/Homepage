@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Claude Code</TITLE>
 <PATH>notes/claudecode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>7</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>31</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -22,9 +22,8 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
     <DESC>Continue most recent conversation in current directory</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>claude --print "query"</CODEROUTINE><BR/>
-      <CODEROUTINE>claude -p "query"</CODEROUTINE></TERM>
-    <DESC>Print response without interactive mode.</DESC>
+    <TERM><CODEROUTINE>claude "query"</CODEROUTINE></TERM>
+    <DESC>Start interactive session with initial prompt.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>claude --name &lt;name&gt;</CODEROUTINE><BR/>
@@ -32,9 +31,56 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
     <DESC>Set a display name for the session.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>claude --model &lt;model&gt;</CODEROUTINE></TERM>
+    <DESC>Sets the model for the current session with an alias for the latest model (<CODEROUTINE>sonnet</CODEROUTINE>, <CODEROUTINE>opus</CODEROUTINE>, <CODEROUTINE>haiku</CODEROUTINE>, or <CODEROUTINE>fable</CODEROUTINE>) or a model’s full name. </DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --system-prompt "prompt"</CODEROUTINE></TERM>
+    <DESC>Replace the entire system prompt with custom text.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --system-prompt-file &lt;filegt;</CODEROUTINE></TERM>
+    <DESC>Load system prompt from a file, replacing the default prompt.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --tools "tools"</CODEROUTINE></TERM>
+    <DESC>Restrict which built-in tools Claude can use. Use <CODEROUTINE>""</CODEROUTINE> to disable all, <CODEROUTINE>"default"</CODEROUTINE> for all, or tool names like <CODEROUTINE>"Bash,Edit,Read"</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>claude --dangerously-skip-permissions</CODEROUTINE><BR/>
       <CODEROUTINE>claude --permission-mode bypassPermissions</CODEROUTINE></TERM>
     <DESC>Skip permission prompts.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --print "query"</CODEROUTINE><BR/>
+      <CODEROUTINE>claude -p "query"</CODEROUTINE></TERM>
+    <DESC>Print response without interactive mode.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --output-format &lt;format&gt;</CODEROUTINE></TERM>
+    <DESC>Specify output format for print mode (<CODEROUTINE>-p</CODEROUTINE>)<BR/>
+       &lt;format&gt; can be: <CODEROUTINE>text</CODEROUTINE>, <CODEROUTINE>json</CODEROUTINE>, or <CODEROUTINE>stream-json</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --json-schema "format"</CODEROUTINE></TERM>
+    <DESC>Get validated JSON output matching the JSON Schema after the agent completes its workflow (print mode only).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --max-budget-usd &lt;budget&gt;</CODEROUTINE></TERM>
+    <DESC>Maximum dollar amount to spend on API calls before stopping (print mode only).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --safe-mode</CODEROUTINE></TERM>
+    <DESC>Start with all customizations disabled to troubleshoot a broken configuration: CLAUDE.md, skills, plugins, hooks, MCP servers, custom commands and agents, output styles, workflows, custom themes, custom keybindings, status line and file-suggestion commands, LSP servers, and auto memory do not load.<BR/>
+      Authentication, model selection, built-in tools, and permissions work normally, which differs from <CODEROUTINE>--bare</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --bare</CODEROUTINE></TERM>
+    <DESC>Minimal mode: skip auto-discovery of hooks, skills, custom commands, subagents, plugins, MCP servers, auto memory, and CLAUDE.md so scripted calls start faster.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude --no-session-persistence</CODEROUTINE></TERM>
+    <DESC>Disable session persistence so sessions are not saved to disk and cannot be resumed. Print mode only.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>claude project purge &lt;path&gt;</CODEROUTINE></TERM>
