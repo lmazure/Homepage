@@ -32,7 +32,7 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>claude --model &lt;model&gt;</CODEROUTINE></TERM>
-    <DESC>Sets the model for the current session with an alias for the latest model (<CODEROUTINE>sonnet</CODEROUTINE>, <CODEROUTINE>opus</CODEROUTINE>, <CODEROUTINE>haiku</CODEROUTINE>, or <CODEROUTINE>fable</CODEROUTINE>) or a model’s full name. </DESC>
+    <DESC>Sets the model for the current session with an alias for the latest model (<CODEROUTINE>sonnet</CODEROUTINE>, <CODEROUTINE>opus</CODEROUTINE>, <CODEROUTINE>haiku</CODEROUTINE>, or <CODEROUTINE>fable</CODEROUTINE>) or a model’s full name.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>claude --system-prompt "prompt"</CODEROUTINE></TERM>
@@ -59,7 +59,7 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
   <ROW>
     <TERM><CODEROUTINE>claude --output-format &lt;format&gt;</CODEROUTINE></TERM>
     <DESC>Specify output format for print mode (<CODEROUTINE>-p</CODEROUTINE>)<BR/>
-       &lt;format&gt; can be: <CODEROUTINE>text</CODEROUTINE>, <CODEROUTINE>json</CODEROUTINE>, or <CODEROUTINE>stream-json</CODEROUTINE>.</DESC>
+      &lt;format&gt; can be: <CODEROUTINE>text</CODEROUTINE>, <CODEROUTINE>json</CODEROUTINE>, or <CODEROUTINE>stream-json</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>claude --json-schema "format"</CODEROUTINE></TERM>
@@ -71,7 +71,7 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>claude --safe-mode</CODEROUTINE></TERM>
-    <DESC>Start with all customizations disabled to troubleshoot a broken configuration: CLAUDE.md, skills, plugins, hooks, MCP servers, custom commands and agents, output styles, workflows, custom themes, custom keybindings, status line and file-suggestion commands, LSP servers, and auto memory do not load.<BR/>
+    <DESC>Start with all customisations disabled to troubleshoot a broken configuration: CLAUDE.md, skills, plugins, hooks, MCP servers, custom commands and agents, output styles, workflows, custom themes, custom keybindings, status line and file-suggestion commands, LSP servers, and auto memory do not load.<BR/>
       Authentication, model selection, built-in tools, and permissions work normally, which differs from <CODEROUTINE>--bare</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
