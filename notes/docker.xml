@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Docker</TITLE>
 <PATH>notes/docker.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>5</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <LLIST>
 <ITEM>Docker<BR/>
@@ -485,6 +485,9 @@ Use that version to analyse a Docker image with Trivy and generate a table overv
     (<CODEROUTINE>-t</CODEROUTINE> avoids the garbled display. <CODEROUTINE>--timeout 30m</CODEROUTINE> is a Trivy flag to get the download successful on a fucking slow network.)<BR/>
     Analyse a Docker image with Trivy and generate a JSON report:
     <CODESAMPLE language="bash"><PROMPT/>docker run -t -v /tmp/trivy/Caches:/root/.cache/ aquasec/trivy:0.69.1 image --timeout 30m --format table squashtest/squash:13.0.0 &gt; squashtm_13.0.0.json</CODESAMPLE></ITEM>
+  <ITEM>running grype<BR/>
+    <CODESAMPLE language="bash"><PROMPT/>docker run --rm   -v grype-db:/cache -e GRYPE_DB_CACHE_DIR=/cache   anchore/grype:latest -o table   registry:squashtest/squash:13.0.7 &gt; grype_squashtm_13.0.7.txt</CODESAMPLE>
+  </ITEM>
   <ITEM>Run Dockle on an image:
     <CODESAMPLE language="bash"><PROMPT/>docker run --rm  goodwithtech/dockle:latest opentestfactory/allinone:nightly</CODESAMPLE></ITEM>
   <ITEM><BLIST><TITLE>Create a SBOM with syft</TITLE>
