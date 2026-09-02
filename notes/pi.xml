@@ -3,17 +3,57 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Pi</TITLE>
 <PATH>notes/pi.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>7</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
-Install Pi:<BR/>
+Install Pi locally:<BR/>
 <CODESAMPLE language="bash"><PROMPT/>npm install --ignore-scripts @earendil-works/pi-coding-agent</CODESAMPLE><BR/>
 <BR/>
 Update Pi:<BR/>
 <CODESAMPLE language="bash"><PROMPT/>pi update --self</CODESAMPLE>
-<CODESAMPLE language="bash"><PROMPT/>npm update --ignore-scripts @earendil-works/pi-coding-agent</CODESAMPLE>
+For a local install, we must use <CODEROUTINE>npm update</CODEROUTINE> and indicate the version:
+<CODESAMPLE language="bash"><PROMPT/>npm update --ignore-scripts @earendil-works/pi-coding-agent@0.84.4</CODESAMPLE>
 <BR/>
 <BR/>
-Commands (<X><T>doc</T><A>https://pi.dev/docs/latest/usage#slash-commands</A><L>en</L><F>HTML</F></X>)
+Command line (<X><T>doc</T><A>https://pi.dev/docs/latest/usage#cli-reference</A><L>en</L><F>HTML</F></X>)
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>--print</CODEROUTINE><BR/>
+      <CODEROUTINE>-p</CODEROUTINE></TERM>
+    <DESC>Print response and exit.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--continue</CODEROUTINE><BR/>
+      <CODEROUTINE>-c</CODEROUTINE></TERM>
+    <DESC>Continue the most recent session.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--resume</CODEROUTINE><BR/>
+      <CODEROUTINE>-r</CODEROUTINE></TERM>
+    <DESC>Browse and select a session.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--version</CODEROUTINE><BR/>
+      <CODEROUTINE>-v</CODEROUTINE></TERM>
+    <DESC>Show version.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>--help</CODEROUTINE><BR/>
+      <CODEROUTINE>-h</CODEROUTINE></TERM>
+    <DESC>Show help.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+Environment variables (<X><T>doc</T><A>https://pi.dev/docs/latest/providers#api-keys</A><L>en</L><F>HTML</F></X>)
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>OPENROUTER_API_KEY</CODEROUTINE></TERM>
+    <DESC>OpenRouter API key</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+Slash commands (<X><T>doc</T><A>https://pi.dev/docs/latest/usage#slash-commands</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>/quit</CODEROUTINE></TERM>
@@ -48,6 +88,17 @@ Commands (<X><T>doc</T><A>https://pi.dev/docs/latest/usage#slash-commands</A><L>
     <DESC>Export session (HTML default, or specify path: <CODEROUTINE>.html</CODEROUTINE>/<CODEROUTINE>.jsonl</CODEROUTINE>)</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+<BR/>
+<BLIST><SUBTITLE>Using Minimax M3 Free on OpenRouter</SUBTITLE>
+  <ITEM>Edit the file <CODEFILENAME>~/.pi/agent/models-store.json</CODEFILENAME><BR/>
+    Look for <CODEROUTINE>"id": "minimax/minimax-m3:free"</CODEROUTINE><BR/>
+    Set <CODEROUTINE>"maxTokens": 400000</CODEROUTINE>
+  </ITEM>
+  <ITEM><CODEROUTINE>export OPENROUTER_API_KEY=sk-or-v1-deadbeef0123456789deadbeef0123456789deadbeef0123456789</CODEROUTINE></ITEM>
+  <ITEM>start Pi</ITEM>
+  <ITEM><CODEROUTINE>/model</CODEROUTINE> and select <CODEROUTINE>minimax/minimax-m3:free</CODEROUTINE></ITEM>
+</BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/aicodeassist.html#pi</A><L>en</L><F>HTML</F></X>
 </PAGE>
