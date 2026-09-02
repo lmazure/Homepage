@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Coding</TITLE>
 <PATH>links/coding.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>1</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>2</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -11,6 +11,9 @@
     <ITEM><X><T>Software Heritage</T><A>https://www.softwareheritage.org/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Semantic Versioning</T><A>https://semver.org/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>France-IOI</T><A>https://www.france-ioi.org/index.html</A><L>fr</L><F>HTML</F></X></ITEM>
+    <ITEM><BLIST><TITLE>Dev Containers</TITLE>
+      <ITEM><X><T>doc</T><A>https://code.visualstudio.com/docs/devcontainers/containers</A><L>en</L><F>HTML</F></X></ITEM>
+    </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Refactoring</TITLE>
       <ITEM><X><T>Refactoring.com</T><A>https://www.refactoring.com</A><L>en</L><F>HTML</F></X></ITEM>
       <ITEM><X><T>SourceMaking</T><A>https://sourcemaking.com</A><L>en</L><F>HTML</F></X></ITEM>
@@ -54,6 +57,8 @@
       <ITEM><CLIST><TITLE><ANCHOR>cscope</ANCHOR><X status="obsolete"><T>Cscope</T><A>https://cscope.sourceforge.net/</A><L>en</L><F>HTML</F></X></TITLE>
         <ITEM><X><T>personal notes</T><A>../notes/cscope.html</A><L>en</L><F>HTML</F></X></ITEM>
       </CLIST></ITEM>
+      <ITEM><X><T>Graphify</T><A>https://graphify.net/</A><L>en</L><F>HTML</F></X></ITEM>
+      <ITEM><X><T>Understand-Anything</T><A>https://github.com/Egonex-AI/Understand-Anything</A><L>en</L><F>HTML</F></X></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Debuggers</TITLE>
       <ITEM><BLIST><TITLE><ANCHOR>gdb</ANCHOR><X><T>gdb</T><A>https://www.sourceware.org/gdb/</A><L>en</L><F>HTML</F></X></TITLE>
@@ -192,9 +197,6 @@
     <ITEM><X><T>RegExr</T><A>https://regexr.com/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>Kata-Log</T><A>https://kata-log.rocks/</A><L>en</L><F>HTML</F></X></ITEM>
     <ITEM><X><T>OpenFeature</T><A>https://openfeature.dev/</A><L>en</L><F>HTML</F></X></ITEM>
-    <ITEM><BLIST><TITLE>Dev Containers</TITLE>
-      <ITEM><X><T>doc</T><A>https://code.visualstudio.com/docs/devcontainers/containers</A><L>en</L><F>HTML</F></X></ITEM>
-    </BLIST></ITEM>
   </SLIST></ITEM>
   <ITEM><BLIST><TITLE>Articles and videos</TITLE>
     <ITEM><ARTICLE><X><T>Code As Documentation</T><A>https://martinfowler.com/bliki/CodeAsDocumentation.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2005</YEAR><MONTH>3</MONTH><DAY>22</DAY></DATE><COMMENT>Code is the primary source of documentation, so it should be clear and readable.</COMMENT></ARTICLE></ITEM>
