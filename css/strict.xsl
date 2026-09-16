@@ -469,11 +469,25 @@
   </xsl:if>
 </xsl:template>
 
+<xsl:template name="emitNamePart">
+  <xsl:param name="part"/>
+  <xsl:param name="preceding" select="false()"/>
+  <xsl:if test="$part">
+    <xsl:if test="$preceding"><xsl:text> </xsl:text></xsl:if>
+    <xsl:if test="name($part)='GIVENNAME'"><xsl:text>"</xsl:text></xsl:if>
+    <xsl:value-of select="$part"/>
+    <xsl:if test="name($part)='GIVENNAME'"><xsl:text>"</xsl:text></xsl:if>
+  </xsl:if>
+</xsl:template>
+
 <xsl:template match="AUTHOR">
   <xsl:element name="span">
     <xsl:attribute name="class">author</xsl:attribute>
     <xsl:attribute name="onClick">
       <xsl:text>do_person(event, {</xsl:text>
+      <xsl:if test="@order">
+        <xsl:text>order:"</xsl:text><xsl:value-of select="@order"/><xsl:text>",</xsl:text>
+      </xsl:if>
       <xsl:choose>
         <xsl:when test="count(./NAMEPREFIX)=1">
           <xsl:text>namePrefix:"</xsl:text><xsl:value-of select="./NAMEPREFIX"/><xsl:text>",</xsl:text>
@@ -506,12 +520,24 @@
       </xsl:choose>
       <xsl:text> })</xsl:text>
     </xsl:attribute>
-    <xsl:for-each select="NAMEPREFIX/text() | FIRSTNAME/text() | MIDDLENAME/text() | LASTNAME/text() | NAMESUFFIX/text() | GIVENNAME/text()">
-      <xsl:if test="name(parent::*)='GIVENNAME'"><xsl:text>"</xsl:text></xsl:if>
-      <xsl:value-of select="."/>
-      <xsl:if test="name(parent::*)='GIVENNAME'"><xsl:text>"</xsl:text></xsl:if>
-      <xsl:if test="not(position() = last())"><xsl:text> </xsl:text></xsl:if>
-    </xsl:for-each>
+    <xsl:choose>
+      <xsl:when test="@order='eastern'">
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="NAMEPREFIX"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="LASTNAME"/><xsl:with-param name="preceding" select="NAMEPREFIX"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="MIDDLENAME"/><xsl:with-param name="preceding" select="NAMEPREFIX or LASTNAME"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="FIRSTNAME"/><xsl:with-param name="preceding" select="NAMEPREFIX or LASTNAME or MIDDLENAME"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="NAMESUFFIX"/><xsl:with-param name="preceding" select="NAMEPREFIX or LASTNAME or MIDDLENAME or FIRSTNAME"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="GIVENNAME"/><xsl:with-param name="preceding" select="NAMEPREFIX or LASTNAME or MIDDLENAME or FIRSTNAME or NAMESUFFIX"/></xsl:call-template>
+      </xsl:when>
+      <xsl:otherwise>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="NAMEPREFIX"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="FIRSTNAME"/><xsl:with-param name="preceding" select="NAMEPREFIX"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="MIDDLENAME"/><xsl:with-param name="preceding" select="NAMEPREFIX or FIRSTNAME"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="LASTNAME"/><xsl:with-param name="preceding" select="NAMEPREFIX or FIRSTNAME or MIDDLENAME"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="NAMESUFFIX"/><xsl:with-param name="preceding" select="NAMEPREFIX or FIRSTNAME or MIDDLENAME or LASTNAME"/></xsl:call-template>
+        <xsl:call-template name="emitNamePart"><xsl:with-param name="part" select="GIVENNAME"/><xsl:with-param name="preceding" select="NAMEPREFIX or FIRSTNAME or MIDDLENAME or LASTNAME or NAMESUFFIX"/></xsl:call-template>
+      </xsl:otherwise>
+    </xsl:choose>
   </xsl:element>
 </xsl:template>
 
