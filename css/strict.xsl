@@ -485,9 +485,6 @@
     <xsl:attribute name="class">author</xsl:attribute>
     <xsl:attribute name="onClick">
       <xsl:text>do_person(event, {</xsl:text>
-      <xsl:if test="@order">
-        <xsl:text>order:"</xsl:text><xsl:value-of select="@order"/><xsl:text>",</xsl:text>
-      </xsl:if>
       <xsl:choose>
         <xsl:when test="count(./NAMEPREFIX)=1">
           <xsl:text>namePrefix:"</xsl:text><xsl:value-of select="./NAMEPREFIX"/><xsl:text>",</xsl:text>
