@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Devin</TITLE>
+<PATH>notes/devin.xml</PATH>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>23</DAY></DATE>
+<CONTENT>
+Command line
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>devin -p "prompt"</CODEROUTINE><BR/>
+      <CODEROUTINE>devin -p -- prompt words here</CODEROUTINE></TERM>
+    <DESC>Print response and exit.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<BR/>
+Slash commands (<X><T>doc</T><A>https://docs.devin.ai/cli/essential-commands#slash-commands</A><L>en</L><F>HTML</F></X>)
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>/exit</CODEROUTINE><BR/>
+      <CODEROUTINE>/quit</CODEROUTINE></TERM>
+    <DESC>Exit the CLI.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+</CONTENT>
+<X><T>links</T><A>../links/windsurf.html#devin-cli</A><L>en</L><F>HTML</F></X>
+</PAGE>
