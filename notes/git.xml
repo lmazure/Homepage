@@ -80,9 +80,9 @@
       (The default is <CODEROUTINE>master</CODEROUTINE>, it will be <CODEROUTINE>main</CODEROUTINE> in Git 3.0.)</DESC>
   </ROW>
   <ROW>
-    <TERM><CODESAMPLE>mkdir project.git<BR/>
-      cd project.git<BR/>
-      git --bare init</CODESAMPLE></TERM>
+    <TERM><CODESAMPLE language="bash">mkdir project.git
+cd project.git
+git --bare init</CODESAMPLE></TERM>
     <DESC>Create an empty server repository.</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -201,23 +201,23 @@
 </DEFINITIONTABLE>
 <BLIST>
   <ITEM>Workaround to clone a repository which is too big to be transferred (shallow clone).
-    <CODESAMPLE>git clone --depth 5 https://gitlab.com/foo/bar.git</CODESAMPLE>
+    <CODESAMPLE language="bash">git clone --depth 5 https://gitlab.com/foo/bar.git</CODESAMPLE>
     Later on, when high bandwidth is available, get the whole repo with
-    <CODESAMPLE>git fetch --unshallow</CODESAMPLE>
+    <CODESAMPLE language="bash">git fetch --unshallow</CODESAMPLE>
   </ITEM>
   <ITEM>Clone a directory with file paths/names too long for Windows.
-    <CODESAMPLE>git clone -c core.longpaths=true https://gitlab.com/foo/bar.git</CODESAMPLE>
+    <CODESAMPLE language="bash">git clone -c core.longpaths=true https://gitlab.com/foo/bar.git</CODESAMPLE>
   </ITEM>
   <ITEM>Clone a repository while replacing symbolic links by text files.
-    <CODESAMPLE>git clone -c <X><T>core.symlinks</T><A>https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks</A><L>en</L><F>HTML</F></X>=false https://gitlab.com/foo/bar.git</CODESAMPLE>
+    <CODESAMPLE language="bash">git clone -c <X><T>core.symlinks</T><A>https://git-scm.com/docs/git-config#Documentation/git-config.txt-coresymlinks</A><L>en</L><F>HTML</F></X>=false https://gitlab.com/foo/bar.git</CODESAMPLE>
   </ITEM>
   <ITEM>On Windows, the Windows Credential Manager (Gestionnaire d'identification) is used by default (see <CODEROUTINE>git config --system --get credential.helper</CODEROUTINE>).</ITEM>
   <ITEM>To be able to use Git in a directory owned by someone else (this was implemented to fix <X><T>CVE-2022-24765</T><A>https://www.cve.org/CVERecord?id=CVE-2022-24765</A><L>en</L><F>HTML</F></X>)
-    <CODESAMPLE>git config set --global --append safe.directory `pwd`</CODESAMPLE>
+    <CODESAMPLE language="bash">git config set --global --append safe.directory `pwd`</CODESAMPLE>
     To list all the directories declared as safe
-    <CODESAMPLE>git config get --global --all safe.directory</CODESAMPLE>
+    <CODESAMPLE language="bash">git config get --global --all safe.directory</CODESAMPLE>
     To remove the directory from the safe ones
-    <CODESAMPLE>git config unset --global --value `pwd` safe.directory</CODESAMPLE>
+    <CODESAMPLE language="bash">git config unset --global --value `pwd` safe.directory</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BR/>
@@ -956,19 +956,19 @@
   </ROW>
 </DEFINITIONTABLE>
 Example:
-<CODESAMPLE>REPO=https://github.com/danascheider/tessitura-front-end.git<BR/>
-  DIR=features<BR/>
-  git clone --filter=blob:none --no-checkout --depth 1 --sparse $REPO<BR/>
-  cd `basename -s .git $REPO`<BR/>
-  git config set --global --append safe.directory `pwd`<BR/>
-  git sparse-checkout set $DIR<BR/>
-  git checkout<BR/>
-  <BR/>
-  …<BR/>
-  <BR/>
-  git config unset --global --value `pwd` safe.directory<BR/>
-  cd ..<BR/>
-  rm -rf `basename -s .git $REPO`</CODESAMPLE>
+<CODESAMPLE language="bash">REPO=https://github.com/danascheider/tessitura-front-end.git
+DIR=features
+git clone --filter=blob:none --no-checkout --depth 1 --sparse $REPO
+cd `basename -s .git $REPO`
+git config set --global --append safe.directory `pwd`
+git sparse-checkout set $DIR
+git checkout
+
+…
+
+git config unset --global --value `pwd` safe.directory
+cd ..
+rm -rf `basename -s .git $REPO`</CODESAMPLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
@@ -1319,8 +1319,8 @@ Example:
     <DESC>Merge a branch in the workspace without committing.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODESAMPLE>git add &lt;file1&gt; &lt;file2&gt; &lt;file3&gt;<BR/>
-      git merge --continue</CODESAMPLE></TERM>
+    <TERM><CODESAMPLE language="bash">git add &lt;file1&gt; &lt;file2&gt; &lt;file3&gt;
+git merge --continue</CODESAMPLE></TERM>
     <DESC>After a conflict resolution, add the fixed files to the index and continue the merge.</DESC>
   </ROW>
   <ROW>
@@ -1683,8 +1683,8 @@ It is possible to ignore files/directories in a given directory by listing them 
 In order to commit an empty directory, create a <CODEFILENAME>.gitkeep</CODEFILENAME> file in it. This is not defined by Git, but it is a common usage.<BR/>
 <BR/>
 To remove the last commit locally and on the remote repository (nobody should have pulled meanwhile)
-  <CODESAMPLE><PROMPT/>git reset --hard HEAD^<BR/>
-    <PROMPT/>git push -f</CODESAMPLE>
+  <CODESAMPLE language="bash"><PROMPT/>git reset --hard HEAD^
+<PROMPT/>git push -f</CODESAMPLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
@@ -1768,34 +1768,34 @@ To remove the last commit locally and on the remote repository (nobody should ha
   <ROW>
     <TERM><CODEROUTINE>git credential fill</CODEROUTINE></TERM>
     <DESC>retrieve the credentials
-      <CODESAMPLE><PROMPT/>git credential fill &lt;&lt; EOF<BR/>
-        protocol=https<BR/>
-        host=github.com<BR/>
-        EOF<BR/>
-        protocol=https<BR/>
-        host=github.com<BR/>
-        username=john<BR/>
-        password=gho_DHaifTZE9NtPIZE3iShEit8qpzbtCi4I8boT</CODESAMPLE></DESC>
+      <CODESAMPLE language="bash"><PROMPT/>git credential fill &lt;&lt; EOF
+protocol=https
+host=github.com
+EOF
+protocol=https
+host=github.com
+username=john
+password=gho_DHaifTZE9NtPIZE3iShEit8qpzbtCiI4I8boT</CODESAMPLE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git credential reject</CODEROUTINE></TERM>
     <DESC>forget the credentials
-      <CODESAMPLE><PROMPT/>git credential reject &lt;&lt; EOF<BR/>
-        protocol=https<BR/>
-        host=github.com<BR/>
-        EOF</CODESAMPLE></DESC>
+      <CODESAMPLE language="bash"><PROMPT/>git credential reject &lt;&lt; EOF
+protocol=https
+host=github.com
+EOF</CODESAMPLE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git credential approve</CODEROUTINE></TERM>
     <DESC>record credentials (the OS will display a mesage for login in)
-      <CODESAMPLE><PROMPT/>git credential fill &lt;&lt; EOF<BR/>
-        protocol=https<BR/>
-        host=github.com<BR/>
-        EOF<BR/>
-        protocol=https<BR/>
-        host=github.com<BR/>
-        username=jane<BR/>
-        password=gho_WnwWimkTLgqiKJZEFr48dABX1nPous670DKaUw</CODESAMPLE></DESC>
+      <CODESAMPLE language="bash"><PROMPT/>git credential fill &lt;&lt; EOF
+protocol=https
+host=github.com
+EOF
+protocol=https
+host=github.com
+username=jane
+password=gho_WnwWimkTLgqiKJZEFr48dABX1nPous670DKaUw</CODESAMPLE></DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -1809,21 +1809,21 @@ To remove the last commit locally and on the remote repository (nobody should ha
 <BR/>
 <BLIST><TITLE>Merge remote <CODEROUTINE>main</CODEROUTINE> branch in the local current branch</TITLE>
   <ITEM>The slow way:
-    <CODESAMPLE>git switch main<BR/>
-      git pull<BR/>
-      git switch -<BR/>
-      git merge main</CODESAMPLE>
+    <CODESAMPLE language="bash">git switch main
+git pull
+git switch -
+git merge main</CODESAMPLE>
   </ITEM>
   <ITEM>The effective way (but the local <CODEROUTINE>main</CODEROUTINE> branch is not updated):
-    <CODESAMPLE>git pull --no-rebase origin main</CODESAMPLE>
+    <CODESAMPLE language="bash">git pull --no-rebase origin main</CODESAMPLE>
   </ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>Recover a file deleted in a previous commit</TITLE>
   <ITEM>Find the commit that deleted the file:
-    <CODESAMPLE>git log -1 --stat --diff-filter=D --all -- ./path/to/file</CODESAMPLE></ITEM>
+    <CODESAMPLE language="bash">git log -1 --stat --diff-filter=D --all -- ./path/to/file</CODESAMPLE></ITEM>
   <ITEM>Recover the file:
-    <CODESAMPLE>git checkout &lt;deletion-commit&gt;^ -- ./path/to/file</CODESAMPLE></ITEM>
+    <CODESAMPLE language="bash">git checkout &lt;deletion-commit&gt;^ -- ./path/to/file</CODESAMPLE></ITEM>
 </BLIST>
 <BR/>
 <BLIST><TITLE>Changing the author of old commits</TITLE>
@@ -1834,44 +1834,44 @@ To remove the last commit locally and on the remote repository (nobody should ha
 </BLIST>
 <BR/>
 Update a hierarchy of workspaces
-<CODESAMPLE>find . -type d -name ".git" -execdir git pull -v \;</CODESAMPLE>
+<CODESAMPLE language="bash">find . -type d -name ".git" -execdir git pull -v \;</CODESAMPLE>
 <BR/>
 Script to mirror a repository in another (to be completed to support GitHub)
-<CODESAMPLE>#!/bin/bash<BR/>
-  <BR/>
-  source_repo="gitlab.com/lmazure_TestGroup"<BR/>
-  source_project="secondtestproject"<BR/>
-  target_repo="gitlab.com/lmazure_testmirroring"<BR/>
-  target_project="secondtestprojectmirror"<BR/>
-  git clone --mirror https://$source_repo/$source_project.git<BR/>
-  cd $source_project.git<BR/>
-  git show-ref | grep ' refs/merge-requests/' | cut -d' ' -f2 | xargs -n1 -r git update-ref -d # do not push merge-requests refs to GitLab, it will refuse them<BR/>
-  git push --mirror https://$target_repo/$target_project.git<BR/>
-  cd ..<BR/>
-  rm -fr $project.git</CODESAMPLE>
+<CODESAMPLE language="bash">#!/bin/bash
+
+source_repo="gitlab.com/lmazure_TestGroup"
+source_project="secondtestproject"
+target_repo="gitlab.com/lmazure_testmirroring"
+target_project="secondtestprojectmirror"
+git clone --mirror https://$source_repo/$source_project.git
+cd $source_project.git
+git show-ref | grep ' refs/merge-requests/' | cut -d' ' -f2 | xargs -n1 -r git update-ref -d # do not push merge-requests refs to GitLab, it will refuse them
+git push --mirror https://$target_repo/$target_project.git
+cd ..
+rm -fr $project.git</CODESAMPLE>
 <BR/>
 Script to find the nearest version of a file (<CODEROUTINE>$1</CODEROUTINE>) compared to a local file (<CODEROUTINE>$2</CODEROUTINE>)
-<CODESAMPLE>#!/bin/bash<BR/>
-<BR/>
-  file=$1<BR/>
-  commits=$(git log -n 20 --format="%H" $1)<BR/>
-  for commit in $commits<BR/>
-  do<BR/>
-  <TAB/>echo "-------------------------"<BR/>
-  <TAB/>echo $commit<BR/>
-  <TAB/>git checkout --quiet $commit $1<BR/>
-  <TAB/>sdiff -s $1 $2 | wc -l<BR/>
-  done<BR/>
-  git checkout --quiet HEAD $1</CODESAMPLE>
+<CODESAMPLE language="bash">#!/bin/bash
+
+file=$1
+commits=$(git log -n 20 --format="%H" $1)
+for commit in $commits
+do
+    echo "-------------------------"
+    echo $commit
+    git checkout --quiet $commit $1
+    sdiff -s $1 $2 | wc -l
+done
+git checkout --quiet HEAD $1</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Git on Windows</TITLE>
   <ITEM>Properly manage newlines
-    <CODESAMPLE><PROMPT/>git config --global core.autocrlf true</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>git config --global core.autocrlf true</CODESAMPLE>
     When checking out code, this convert line endings to <CODEROUTINE>\r\n</CODEROUTINE> if on Windows.<BR/>
     When committing code, this converts line endings to Unix-style <CODEROUTINE>\n</CODEROUTINE>.<BR/>
     But I think this will be a problem when using Antigravity (which must be in Windows) on a repo in WSL2. In this case, the repo must be configured with
-    <CODESAMPLE><PROMPT/>git config set --local core.autocrlf false<BR/>
-      <PROMPT/>git config set --local core.eol lf</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>git config set --local core.autocrlf false
+<PROMPT/>git config set --local core.eol lf</CODESAMPLE>
   </ITEM>
   <ITEM><BLIST><TITLE>Install on an external SDD</TITLE>
     <ITEM>download PortableGit-2.55.0-64-bit.7z.exe</ITEM>
@@ -1892,14 +1892,14 @@ Script to find the nearest version of a file (<CODEROUTINE>$1</CODEROUTINE>) com
 <BR/>
 <BLIST><TITLE>Fix a repository created by Eclipse</TITLE>
   <ITEM>Eclipse may configure a repository tracking only the current and main branches:
-    <CODESAMPLE><PROMPT/>git config --local --list<BR/>
-      …<BR/>
-      remote.origin.fetch=+refs/heads/55-proper-support-of-removed-articles:refs/remotes/origin/55-proper-support-of-removed-articles<BR/>
-      remote.origin.fetch=+refs/heads/main:refs/remotes/origin/main<BR/>
-      …</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>git config --local --list
+…
+remote.origin.fetch=+refs/heads/55-proper-support-of-removed-articles:refs/remotes/origin/55-proper-support-of-removed-articles
+remote.origin.fetch=+refs/heads/main:refs/remotes/origin/main
+…</CODESAMPLE>
   </ITEM>
   <ITEM>to fix it and track all branches:
-    <CODESAMPLE><PROMPT/>git config --local --replace-all remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>git config --local --replace-all remote.origin.fetch "+refs/heads/*:refs/remotes/origin/*"</CODESAMPLE>
   </ITEM>
   <ITEM>then <CODEROUTINE>git fetch</CODEROUTINE> will fetch all branches.</ITEM>
 </BLIST>
@@ -1913,11 +1913,11 @@ Script to find the nearest version of a file (<CODEROUTINE>$1</CODEROUTINE>) com
 <BR/>
 <BLIST><TITLE>My configuration</TITLE>
   <ITEM>Set up prompting for autocorrect
-    <CODESAMPLE><PROMPT/>git config --global help.autocorrect prompt</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>git config --global help.autocorrect prompt</CODESAMPLE>
   </ITEM>
   <ITEM>Set up name and mail for the repo
-    <CODESAMPLE><PROMPT/>git config set --local user.name Laurent<BR/>
-      <PROMPT/>git config set --local user.email laurent@gilgamesh</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>git config set --local user.name Laurent
+<PROMPT/>git config set --local user.email laurent@gilgamesh</CODESAMPLE>
   </ITEM></BLIST></CONTENT>
 <X><T>links</T><A>../links/scm.html#git</A><L>en</L><F>HTML</F></X>
 </PAGE>
