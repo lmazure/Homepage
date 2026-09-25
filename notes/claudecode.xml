@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Claude Code</TITLE>
 <PATH>notes/claudecode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>19</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -155,6 +155,10 @@ Slash commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>e
     <DESC>Enable plan mode or view the current session plan.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>/plan [query]</CODEROUTINE></TERM>
+    <DESC>Enable plan mode and analyse the query.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>/skills</CODEROUTINE></TERM>
     <DESC>List available skills.</DESC>
   </ROW>
@@ -202,9 +206,6 @@ Slash commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>e
     <TERM><CODEROUTINE>/feedback</CODEROUTINE></TERM>
     <DESC>Submit feedback, report a bug, or share your conversation.</DESC>
   </ROW>
-</DEFINITIONTABLE>
-Commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>HTML</F></X>)
-<DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>/dataviz</CODEROUTINE></TERM>
     <DESC>Use this skill whenever you are about to create ANY chart, graph, plot, dashboard, or data visualisation, in ANY output medium — an HTML or React artefact, inline SVG, plotting code in any library (matplotlib, plotly, d3, Recharts, …), an image/PNG you will render and upload, or a chart shared into Slack. Read it BEFORE writing the first line of chart code, choosing chart colours, building a stat tile / meter / KPI row, or laying out a dashboard. Produces visualisations that read as one system — elegant, accessible, consistent in light and dark — using a brand-neutral placeholder palette you swap for your own. Teaches a design-system-agnostic method: a form heuristic, a colour formula with a runnable validator, mark specs, and interaction rules. A validated default palette is documented in `references/palette.md` — swap that file’s values for your brand’s. Triggers on: "chart", "graph", "plot", "data viz", "visualisation", "dashboard", "analytics", "visualise data", "categorical colours", "sequential / diverging palette", "stat tile", "sparkline", "heatmap", "legend", "axis", "tooltip", "chart colours", "colour by series".</DESC>

@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Devin</TITLE>
 <PATH>notes/devin.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>23</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE>
 <CONTENT>
 Command line
 <DEFINITIONTABLE>
@@ -11,6 +11,20 @@ Command line
     <TERM><CODEROUTINE>devin -p "prompt"</CODEROUTINE><BR/>
       <CODEROUTINE>devin -p -- prompt words here</CODEROUTINE></TERM>
     <DESC>Print response and exit.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>devin -c</CODEROUTINE><BR/>
+      <CODEROUTINE>devin --continue</CODEROUTINE></TERM>
+    <DESC>Continue the most recent session in the current directory.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>devin -r</CODEROUTINE><BR/>
+      <CODEROUTINE>devin --resume</CODEROUTINE></TERM>
+    <DESC>Pick from recent sessions.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>devin -r brisk-otter</CODEROUTINE></TERM>
+    <DESC>Resume a specific session by ID.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -23,6 +37,19 @@ Slash commands (<X><T>doc</T><A>https://docs.devin.ai/cli/essential-commands#sla
     <DESC>Exit the CLI.</DESC>
   </ROW>
 </DEFINITIONTABLE>
+<BR/>
+<BR/>
+Install zereight’s MCP server (check version at <X><T>https://github.com/zereight/gitlab-mcp/releases</T><A>https://github.com/zereight/gitlab-mcp/releases</A><L>en</L><F>HTML</F></X>, add a cooldown)
+<CODESAMPLE language="bash">export GITLAB_PERSONAL_ACCESS_TOKEN='glpat-REPLACE_WITH_YOUR_TOKEN'
+export GITLAB_API_URL='https://gitlab.com/api/v4'
+devin mcp add \
+  --scope local \
+  -e GITLAB_PERSONAL_ACCESS_TOKEN="$GITLAB_PERSONAL_ACCESS_TOKEN" \
+  -e GITLAB_API_URL="${GITLAB_API_URL}" \
+  -e GITLAB_PERMISSION_MODE=readonly \
+  -e GITLAB_TOOLSETS=projects,merge_requests,issues \
+  gitlab \
+  -- npx -y @zereight/mcp-gitlab@2.1.65</CODESAMPLE>
 </CONTENT>
 <X><T>links</T><A>../links/windsurf.html#devin-cli</A><L>en</L><F>HTML</F></X>
 </PAGE>

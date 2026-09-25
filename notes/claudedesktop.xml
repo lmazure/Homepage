@@ -22,13 +22,13 @@ Add my SquashTM MCP Server:
     }<BR/>
   },</CODESAMPLE>
 <BR/>
-Add GitLab MCP Server:
+Install zereight’s MCP server (check version at <X><T>https://github.com/zereight/gitlab-mcp/releases</T><A>https://github.com/zereight/gitlab-mcp/releases</A><L>en</L><F>HTML</F></X>, add a cooldown)
 <CODESAMPLE language="json">"mcpServers": {<BR/>
     "GitLab": {<BR/>
       "command": "npx",<BR/>
       "args": [<BR/>
         "-y",<BR/>
-        "@zereight/mcp-gitlab@latest"<BR/>
+        "@zereight/mcp-gitlab@2.1.65"<BR/>
       ],<BR/>
       "env": {<BR/>
         "GITLAB_PERSONAL_ACCESS_TOKEN": "glpat-EPeIOgONX2gtmxCdLX42OmM6MQpvOjEKdTo1YjYzeQ8.01.170aky38n"<BR/>
