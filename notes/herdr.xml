@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="../css/strict.xsl"?>
+<PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
+<TITLE>Herdr</TITLE>
+<PATH>notes/herdr.xml</PATH>
+<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE>
+<CONTENT>
+<BLIST>
+  <ITEM>Display the version
+    <CODESAMPLE language="bash">herdr --version</CODESAMPLE>
+  </ITEM>
+  <ITEM>UI
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="B"/></TERM>
+        <DESC>Toggle sidebar</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="?"/></TERM>
+        <DESC>Show all bindings</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="Q"/></TERM>
+        <DESC>Detach, leave everything running</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Workspace management
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Shift"/><KEY id="N"/></TERM>
+        <DESC>New workspace</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="W"/></TERM>
+        <DESC>Workspace picker</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Shift"/><KEY id="W"/></TERM>
+        <DESC>Rename workspace</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Shift"/><KEY id="D"/></TERM>
+        <DESC>Close workspace</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Tab management
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="C"/></TERM>
+        <DESC>New tab</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="N"/></TERM>
+        <DESC>Next tab</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="P"/></TERM>
+        <DESC>Previous tab</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="0"/><BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="1"/><BR/>
+          …<BR/>
+          <MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="9"/></TERM>
+        <DESC>Switch to tab by number</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Shift"/><KEY id="T"/></TERM>
+        <DESC>Rename tab</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><MODIFIERKEY id="Shift"/><KEY id="X"/></TERM>
+        <DESC>Close tab</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+  <ITEM>Pane management
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="V"/></TERM>
+        <DESC>Split right</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="-"/></TERM>
+        <DESC>Split down</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="X"/></TERM>
+        <DESC>Close pane</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="H"/></TERM>
+        <DESC>Focus left pane</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="J"/></TERM>
+        <DESC>Focus below pane</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="K"/></TERM>
+        <DESC>Focus above pane</DESC>
+      </ROW>
+      <ROW>
+        <TERM><MODIFIERKEY id="Ctrl"/><KEY id="B"/><KEY id="L"/></TERM>
+        <DESC>Focus right pane</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
+</BLIST>
+</CONTENT>
+<X><T>links</T><A>../links/linux.html#herdr</A><L>en</L><F>HTML</F></X>
+</PAGE>
