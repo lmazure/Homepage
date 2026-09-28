@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Design principles</TITLE>
 <PATH>links/principles.xml</PATH>
-<DATE><YEAR>2023</YEAR><MONTH>3</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -55,6 +55,7 @@
     <ITEM><BLIST><TITLE>YAGNI</TITLE>
       <ITEM><ARTICLE><X><T>Yagni</T><A>https://martinfowler.com/bliki/Yagni.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Fowler</LASTNAME></AUTHOR><DATE><YEAR>2015</YEAR><MONTH>5</MONTH><DAY>26</DAY></DATE><COMMENT>A rationale for applying YAGNI.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Code Health: Eliminate YAGNI Smells</T><A>https://testing.googleblog.com/2017/08/code-health-eliminate-yagni-smells.html</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Marc</FIRSTNAME><LASTNAME>Eaddy</LASTNAME></AUTHOR><DATE><YEAR>2017</YEAR><MONTH>8</MONTH><DAY>14</DAY></DATE><COMMENT>A very short and simple presentation of YAGNI.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>The Cost YAGNI Was Never About</T><ST>If you think YAGNI is about saving effort, cheap generation should retire it. It doesn't. Here's why.</ST><A>https://newsletter.kentbeck.com/p/the-cost-yagni-was-never-about</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Kent</FIRSTNAME><LASTNAME>Beck</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE><COMMENT>The cost of not applying YAGNI is not the time spent on the implementation, but the fact that you consume the option choice before knowing the real feature to implement and, in a analogy to net present value, the fact that you pay the price of the implementation, maintenance, added complexity… for a feature that will generate revenue later.</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Tell-Don’t-Ask</TITLE>
       <ITEM><ARTICLE><X status="dead"><T>Tell, Don't Ask</T><A>https://pragprog.com/articles/tell-dont-ask</A><L>en</L><F>HTML</F></X><COMMENT>The principle, its relation with the Law of Demeter, the Command/Query separation.</COMMENT></ARTICLE></ITEM>

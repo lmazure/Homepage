@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Devin</TITLE>
 <PATH>notes/devin.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 Command line
 <DEFINITIONTABLE>
@@ -25,6 +25,26 @@ Command line
   <ROW>
     <TERM><CODEROUTINE>devin -r brisk-otter</CODEROUTINE></TERM>
     <DESC>Resume a specific session by ID.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>devin skills list</CODEROUTINE></TERM>
+    <DESC>List all available skills.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>devin skills list --trigger user</CODEROUTINE></TERM>
+    <DESC>List all available user-triggerable skills (defined in the skill’s frontmatter).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>devin skills list --trigger model</CODEROUTINE></TERM>
+    <DESC>List all available model-triggerable skills (defined in the skill’s frontmatter).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>devin skills show &lt;name&gt;</CODEROUTINE></TERM>
+    <DESC>Show details for a specific skill.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>devin skills paths</CODEROUTINE></TERM>
+    <DESC>Show skill directory locations</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

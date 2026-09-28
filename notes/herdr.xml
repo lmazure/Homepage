@@ -3,11 +3,14 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Herdr</TITLE>
 <PATH>notes/herdr.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Display the version
-    <CODESAMPLE language="bash">herdr --version</CODESAMPLE>
+    <CODESAMPLE language="bash"><PROMPT/>herdr --version</CODESAMPLE>
+  </ITEM>
+  <ITEM>Shut down the Herdr server and end all running panes, shells, and agent processes.
+    <CODESAMPLE language="bash"><PROMPT/>herdr server stop</CODESAMPLE>
   </ITEM>
   <ITEM>UI
     <DEFINITIONTABLE>
