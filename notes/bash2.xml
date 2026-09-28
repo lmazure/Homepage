@@ -5,15 +5,59 @@
 <PATH>notes/bash2.xml</PATH>
 <DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
-<BLIST><TITLE><U><B>History</B></U></TITLE>
-  <ITEM><CODEROUTINE>!!</CODEROUTINE> repeat the last command.</ITEM>
-  <ITEM><CODEROUTINE>!$</CODEROUTINE> refer to the last argument of the previous command.</ITEM>
-  <ITEM><CODEROUTINE>!*</CODEROUTINE> refer to all arguments of the previous command.</ITEM>
-  <ITEM><CODEROUTINE>!-n</CODEROUTINE> refer to the nth last command. For example, !<CODEROUTINE>-2</CODEROUTINE> refers to the second last command.</ITEM>
-  <ITEM><CODEROUTINE>!string</CODEROUTINE> refer to the most recent command that starts with string. For example, !ls refers to the most recent command that starts with ls.</ITEM>
-  <ITEM><CODEROUTINE>!343:s/foo/bar/</CODEROUTINE> refer to the 343th command, replacing <CODEROUTINE>foo</CODEROUTINE> by <CODEROUTINE>bar</CODEROUTINE> in it.</ITEM>
-  <ITEM><CODEROUTINE>history 42</CODEROUTINE> return the 42 last commands.</ITEM>
-</BLIST>
+<U><B>History</B></U>
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>!!</CODEROUTINE></TERM>
+    <DESC>repeat the last command.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>!$</CODEROUTINE></TERM>
+    <DESC>refer to the last argument of the previous command.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>!*</CODEROUTINE></TERM>
+    <DESC>refer to all arguments of the previous command.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>!-n</CODEROUTINE></TERM>
+    <DESC>refer to the nth last command.<BR/>
+      For example, <CODEROUTINE>!-2</CODEROUTINE> refers to the second last command.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>!string</CODEROUTINE></TERM>
+    <DESC>refer to the most recent command that starts with string.<BR/>
+      For example, <CODEROUTINE>!ls</CODEROUTINE> refers to the most recent command that starts with ls.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>!343:s/foo/bar/</CODEROUTINE></TERM>
+    <DESC>refer to the 343th command, replacing <CODEROUTINE>foo</CODEROUTINE> by <CODEROUTINE>bar</CODEROUTINE> in it.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>history 42</CODEROUTINE></TERM>
+    <DESC>Return the 42 last commands</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>history -a</CODEROUTINE></TERM>
+    <DESC>Append this session’s new lines to the file</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>history -n</CODEROUTINE></TERM>
+    <DESC>Read lines added to the file since this session last read it</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>history -r</CODEROUTINE></TERM>
+    <DESC>Read the whole file into memory</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>history -w</CODEROUTINE></TERM>
+    <DESC>Write the full in-memory history to the file (overwrites it)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>history -c</CODEROUTINE></TERM>
+    <DESC>Clear this session’s in-memory history</DESC>
+  </ROW>
+</DEFINITIONTABLE>
 <BLIST><TITLE><U><B>Startup files</B></U></TITLE>
   <ITEM><BLIST><TITLE>For interactive shells or shells called with the <CODEROUTINE>--login</CODEROUTINE> option:</TITLE>
     <ITEM><BLIST><TITLE>At startup</TITLE>
