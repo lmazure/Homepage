@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>10</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -1123,7 +1123,7 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
     <DEFINITIONTABLE>
       <ROW>
         <TERM><CODEROUTINE>Dev Containers: Add Dev Container Configuration Files…</CODEROUTINE></TERM>
-          <DESC>Generate a <CODEFILENAME>devcontainer.json</CODEFILENAME> file by selecting from a list of pre-defined container configuration and a list of available feature.<BR/>
+          <DESC>Generate a <CODEFILENAME>devcontainer.json</CODEFILENAME> file by selecting from a list of predefined container configurations and available features.<BR/>
             See <X><T>doc</T><A>https://code.visualstudio.com/docs/devcontainers/create-dev-container#_automate-dev-container-creation</A><L>en</L><F>HTML</F></X>.</DESC>
       </ROW>
       <ROW>
@@ -1133,6 +1133,14 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
       <ROW>
         <TERM><CODEROUTINE>Dev Containers: Reopen in Container</CODEROUTINE></TERM>
         <DESC>Start the container and connect VS Code to it.</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>Dev Containers: Reopen Folder Locally</CODEROUTINE></TERM>
+        <DESC>Reopen the folder in Windows.</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>Dev Containers: Reopen Folder in WSL</CODEROUTINE></TERM>
+        <DESC>Reopen the folder in WSL.</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
