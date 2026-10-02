@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>VS Code</TITLE>
 <PATH>notes/vscode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>30</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>CLI</TITLE>
   <ITEM><SLIST><TITLE>Print command line help</TITLE>
@@ -295,6 +295,10 @@ Display
     <DESC>Toggle the zen mode</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>Preferences: Toggle between Light/Dark Themes</CODEROUTINE></TERM>
+    <DESC>Switch between light and dark modes</DESC>
+  </ROW>
+  <ROW>
     <TERM><MODIFIERKEY id="Ctrl"/><KEY id="Num +"/><BR/>
       <CODEROUTINE>View: Zoom In</CODEROUTINE></TERM>
     <DESC>Zoom in</DESC>
@@ -309,14 +313,12 @@ Display
       <CODEROUTINE>View: Reset Zoom</CODEROUTINE></TERM>
     <DESC>Reset zoom</DESC>
   </ROW>
-</DEFINITIONTABLE>
-<DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE>editor.inlayHints.enabled</CODEROUTINE></TERM>
+    <TERM>Preference: <CODEROUTINE>editor.inlayHints.enabled</CODEROUTINE></TERM>
     <DESC>Display/undisplay the inline parameter hints</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>editor.guides.indentation</CODEROUTINE></TERM>
+    <TERM>Preference: <CODEROUTINE>editor.guides.indentation</CODEROUTINE></TERM>
     <DESC>Display/undisplay the indentation guides (vertical lines)</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -1019,6 +1021,31 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
+  <ITEM>Dev Containers
+    <DEFINITIONTABLE>
+      <ROW>
+        <TERM><CODEROUTINE>Dev Containers: Add Dev Container Configuration Files…</CODEROUTINE></TERM>
+          <DESC>Generate a <CODEFILENAME>devcontainer.json</CODEFILENAME> file by selecting from a list of predefined container configurations and available features.<BR/>
+            See <X><T>doc</T><A>https://code.visualstudio.com/docs/devcontainers/create-dev-container#_automate-dev-container-creation</A><L>en</L><F>HTML</F></X>.</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>Dev Containers: Rebuild and Reopen in Container</CODEROUTINE></TERM>
+        <DESC>Rebuild the image, start the container, and connect VS Code to it.</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>Dev Containers: Reopen in Container</CODEROUTINE></TERM>
+        <DESC>Start the container and connect VS Code to it.</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>Dev Containers: Reopen Folder Locally</CODEROUTINE></TERM>
+        <DESC>Reopen the folder in Windows.</DESC>
+      </ROW>
+      <ROW>
+        <TERM><CODEROUTINE>Dev Containers: Reopen Folder in WSL</CODEROUTINE></TERM>
+        <DESC>Reopen the folder in WSL.</DESC>
+      </ROW>
+    </DEFINITIONTABLE>
+  </ITEM>
   <ITEM><X><T>Shades of Purple</T><A>https://marketplace.visualstudio.com/items?itemName=ahmadawais.shades-of-purple</A><L>en</L><F>HTML</F></X></ITEM>
 </BLIST>
 <BLIST><TITLE>Extensions not used anymore</TITLE>
@@ -1038,7 +1065,7 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
-  <ITEM><X><T>Codeium</T><A>https://marketplace.visualstudio.com/items?itemName=Codeium.codeium</A><L>en</L><F>HTML</F></X>
+  <ITEM>Codeium
     <DEFINITIONTABLE>
       <ROW>
         <TERM><CODEROUTINE>Codeium: Provide Authentication Token</CODEROUTINE></TERM>
@@ -1116,31 +1143,6 @@ To set Git bash as the default shell, define in <CODEFILENAME>settings.json</COD
       <ROW>
         <TERM><CODEROUTINE>GitLens: Toggle File Heatmap</CODEROUTINE></TERM>
         <DESC>Toggle the display of the heatmap</DESC>
-      </ROW>
-    </DEFINITIONTABLE>
-  </ITEM>
-  <ITEM>Dev Containers
-    <DEFINITIONTABLE>
-      <ROW>
-        <TERM><CODEROUTINE>Dev Containers: Add Dev Container Configuration Files…</CODEROUTINE></TERM>
-          <DESC>Generate a <CODEFILENAME>devcontainer.json</CODEFILENAME> file by selecting from a list of predefined container configurations and available features.<BR/>
-            See <X><T>doc</T><A>https://code.visualstudio.com/docs/devcontainers/create-dev-container#_automate-dev-container-creation</A><L>en</L><F>HTML</F></X>.</DESC>
-      </ROW>
-      <ROW>
-        <TERM><CODEROUTINE>Dev Containers: Rebuild and Reopen in Container</CODEROUTINE></TERM>
-        <DESC>Rebuild the image, start the container, and connect VS Code to it.</DESC>
-      </ROW>
-      <ROW>
-        <TERM><CODEROUTINE>Dev Containers: Reopen in Container</CODEROUTINE></TERM>
-        <DESC>Start the container and connect VS Code to it.</DESC>
-      </ROW>
-      <ROW>
-        <TERM><CODEROUTINE>Dev Containers: Reopen Folder Locally</CODEROUTINE></TERM>
-        <DESC>Reopen the folder in Windows.</DESC>
-      </ROW>
-      <ROW>
-        <TERM><CODEROUTINE>Dev Containers: Reopen Folder in WSL</CODEROUTINE></TERM>
-        <DESC>Reopen the folder in WSL.</DESC>
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
