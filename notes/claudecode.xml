@@ -243,20 +243,31 @@ Skills (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
-<BLIST><TITLE>To provide a screenshot to Claude Code running in a dev container:</TITLE>
-  <ITEM>copy the image in the directory accessed by the dev container</ITEM>
-  <ITEM>copy the full path of the file name</ITEM>
-  <ITEM>copy it in Claude Code</ITEM>
-</BLIST>
-<BLIST><TITLE>To use OAuth tokens:</TITLE>
-  <ITEM>get an OAuth token (valid for 1 year)
-    <CODESAMPLE language="bash"><PROMPT/>claude setup-token</CODESAMPLE>
-  </ITEM>
-  <ITEM>use it
-    <CODESAMPLE language="bash"><PROMPT/>export CLAUDE_CODE_OAUTH_TOKEN=your-token
-<PROMPT/>claude -p "..."</CODESAMPLE>
-  </ITEM>
-</BLIST>
-</CONTENT>
+<BLIST>
+  <ITEM><BLIST><TITLE>To provide a screenshot to Claude Code running in a dev container:</TITLE>
+    <ITEM>copy the image in the directory accessed by the dev container</ITEM>
+    <ITEM>copy the full path of the file name</ITEM>
+    <ITEM>copy it in Claude Code</ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>To use OAuth tokens:</TITLE>
+    <ITEM>get an OAuth token (valid for 1 year)
+      <CODESAMPLE language="bash"><PROMPT/>claude setup-token</CODESAMPLE>
+    </ITEM>
+    <ITEM>use it
+      <CODESAMPLE language="bash"><PROMPT/>export CLAUDE_CODE_OAUTH_TOKEN=your-token
+  <PROMPT/>claude -p "..."</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
+  <ITEM>To declare a MCP server
+    <CODESAMPLE language="bash">claude mcp add \
+  --scope local \
+  --transport stdio \
+  gitlab \
+  --env GITLAB_PERSONAL_ACCESS_TOKEN="$GITLAB_TOKEN" \
+  --env GITLAB_API_URL="https://gitlab.com" \
+  --env GITLAB_PERMISSION_MODE=readonly \
+  --env GITLAB_TOOLSETS=projects,merge_requests,issues \
+  -- npx -y @zereight/mcp-gitlab@2.1.65</CODESAMPLE></ITEM>
+</BLIST></CONTENT>
 <X><T>links</T><A>../links/aianthropic.html#claudecode</A><L>en</L><F>HTML</F></X>
 </PAGE>

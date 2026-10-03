@@ -5,6 +5,33 @@
 <PATH>notes/devin.xml</PATH>
 <DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
 <CONTENT>
+Installation
+<BLIST>
+  <ITEM><BLIST><TITLE>Devin Desktop</TITLE>
+    <ITEM><BLIST><TITLE>Executable / application files</TITLE>
+      <ITEM>User install (default): <CODEFILENAME>%LOCALAPPDATA%\Programs\Devin</CODEFILENAME> (i.e. <CODEFILENAME>C:\Users\&lt;Username&gt;\AppData\Local\Programs\Devin</CODEFILENAME>)</ITEM>
+      <ITEM>System-Wide install: <CODEFILENAME>C:\Program Files\Devin</CODEFILENAME></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>User data &amp; settings:</TITLE>
+      <ITEM><CODEFILENAME>%APPDATA%\Devin</CODEFILENAME> (i.e. <CODEFILENAME>C:\Users\&lt;Username&gt;\AppData\Roaming\Devin</CODEFILENAME>)</ITEM>
+      <ITEM>Global settings / cache: <CODEFILENAME>%USERPROFILE%\.devin</CODEFILENAME> (i.e. <CODEFILENAME>C:\Users\&lt;Username&gt;\.devin</CODEFILENAME>)</ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+  <ITEM><BLIST><TITLE>Devin CLI</TITLE>
+    <ITEM><BLIST><TITLE>Executable binary</TITLE>
+      <ITEM>Standalone / script installations place the binary in <CODEFILENAME>%LOCALAPPDATA%\devin\bin\</CODEFILENAME> or <CODEFILENAME>%USERPROFILE%\.devin\bin\</CODEFILENAME>.</ITEM>
+      <ITEM>If installed via a global package manager, it will reside in the package manager’s bin directory (e.g., <CODEFILENAME>%APPDATA%\npm\</CODEFILENAME> or <CODEFILENAME>%LOCALAPPDATA%\pnpm\</CODEFILENAME>).</ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Configuration Files:</TITLE>
+      <ITEM>User config: <CODEFILENAME>%APPDATA%\devin\config.json</CODEFILENAME> (i.e. <CODEFILENAME>C:\Users\&lt;Username&gt;\AppData\Roaming\devin\config.json</CODEFILENAME>)</ITEM>
+      <ITEM>MCP config <CODEFILENAME>%APPDATA%\devin\mcp_config.json</CODEFILENAME></ITEM>
+      <ITEM>Project-Level Config (per repository): <CODEFILENAME>&lt;project_root&gt;\.devin\config.json</CODEFILENAME> and <CODEFILENAME>&lt;project_root&gt;\.devin\mcp_config.json</CODEFILENAME></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Logs</TITLE>
+      <ITEM><CODEFILENAME>%APPDATA%\devin\cli\logs\</CODEFILENAME> (i.e. <CODEFILENAME>C:\Users\&lt;Username&gt;\AppData\Roaming\devin\cli\logs\</CODEFILENAME>)</ITEM>
+    </BLIST></ITEM>
+  </BLIST></ITEM>
+</BLIST>
 Command line
 <DEFINITIONTABLE>
   <ROW>
