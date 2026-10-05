@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>3</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -172,6 +172,7 @@
       <ITEM><ARTICLE><X><T>Taming Git complexity with Rust and Gitoxide -  FOSDEM 2026</T><A>https://www.youtube.com/watch?v=iSAMvE3yzfc</A><L>en</L><F>MP4</F><DURATION><MINUTE>17</MINUTE><SECOND>6</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Kiril</FIRSTNAME><LASTNAME>Videlov</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>16</DAY></DATE><COMMENT>A very short introduction to the Gitoxide library.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Grit: rewriting Git in Rust with agents</T><ST>We used agents to port all of Git to library-first, memory-safe Rust and it passes the entire C Git test suite.</ST><A>https://blog.gitbutler.com/true-grit</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>9</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR> describes his port of Git to Rust and to a library-based architecture.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Release: commit-rewriter 0.1</T><A>https://simonwillison.net/2026/Sep/14/commit-rewriter/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>14</DAY></DATE><COMMENT>Yet another vibecoded tool from <AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR>, this one is for rewriting commit messages.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Git 3.0's upcoming SHA-256 default will be a costly mistake</T><ST>Git 3.0 will make SHA-256 the new default content hashing algorithm and it will be an incomprehensibly expensive and ultimately valueless and avoidable global nightmare.</ST><A>https://blog.gitbutler.com/git-3-sha-256</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR> explains that SHA-1 clash is very difficult to exploit, that SHA-1 is not a security feature while the trustworthiness of the remote repository is what really matters, that changing the default hashing algorithm will generate a lot of problems, and that secure hashing could be added on top of the current Git.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Git Merge 2026 Talks are Up</T><ST>All ten talks from Git Merge 2026 in Lisbon are now on YouTube. Here is a quick rundown of each one.</ST><A>https://blog.gitbutler.com/git-merge-2026-talks</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>An index of the talks presented at Git Merge 2026.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>History</TITLE>
         <ITEM><BLIST><TITLE>2.6</TITLE>
@@ -324,6 +325,7 @@
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Jujutsu</TITLE>
         <ITEM><ARTICLE><X><T>Jujutsu | Ep. 5 Bits and Booze</T><A>https://www.youtube.com/watch?v=dwyMlLYIrPk</A><L>en</L><F>MP4</F><DURATION><MINUTE>22</MINUTE><SECOND>19</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Caleb</FIRSTNAME><LASTNAME>Owens</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE><COMMENT>An introduction to Jujutsu.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>JJ Con 2026 Talks are Up</T><ST>All the talks from JJ Con 2026 in Lisbon are now on YouTube. Here is a quick overview of each of them.</ST><A>https://blog.gitbutler.com/jj-con-2026-talks</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Scott</FIRSTNAME><LASTNAME>Chacon</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>An index of the talks presented at JJ Con 2026.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Mercurial</TITLE>

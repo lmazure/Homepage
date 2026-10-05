@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>5</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -78,6 +78,11 @@
       <CODEROUTINE>git init --initial-branch=&lt;branch&gt;</CODEROUTINE></TERM>
     <DESC>Define the initial branch name.<BR/>
       (The default is <CODEROUTINE>master</CODEROUTINE>, it will be <CODEROUTINE>main</CODEROUTINE> in Git 3.0.)</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git init --object-format=&lt;format&gt;</CODEROUTINE></TERM>
+    <DESC>Define the object format. <CODEROUTINE>&lt;format&gt;</CODEROUTINE> can be <CODEROUTINE>sha1</CODEROUTINE> or <CODEROUTINE>sha256</CODEROUTINE>.<BR/>
+      (The default is <CODEROUTINE>sha1</CODEROUTINE>, it will be <CODEROUTINE>sha256</CODEROUTINE> in Git 3.0.)</DESC>
   </ROW>
   <ROW>
     <TERM><CODESAMPLE language="bash">mkdir project.git
@@ -767,6 +772,17 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
+    <TERM><CODEROUTINE><X><T>git merge-base’s man page</T><A>https://git-scm.com/docs/git-merge-base</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <DESC>Find as good common ancestors as possible for a merge.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git merge-base &lt;commit&gt; &lt;commit&gt;</CODEROUTINE></TERM>
+    <DESC>Find the best common ancestor between two commits to use in a three-way merge.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+<DEFINITIONTABLE>
+  <ROW>
     <TERM><CODEROUTINE><X><T>git reflog’s man page</T><A>https://git-scm.com/docs/git-reflog</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
     <DESC>Manage reflog information</DESC>
   </ROW>
@@ -778,7 +794,7 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git reflog &lt;ref&gt;</CODEROUTINE><BR/>
         <CODEROUTINE>git reflog show &lt;ref&gt;</CODEROUTINE></TERM>
-    <DESC>Show the log of the reference &lt;ref&gt;.</DESC>
+    <DESC>Show the log of the reference <CODEROUTINE>&lt;ref&gt;</CODEROUTINE>.</DESC>
   </ROW>
 </DEFINITIONTABLE><BR/>
 <DEFINITIONTABLE>
@@ -963,9 +979,7 @@ cd `basename -s .git $REPO`
 git config set --global --append safe.directory `pwd`
 git sparse-checkout set $DIR
 git checkout
-
 …
-
 git config unset --global --value `pwd` safe.directory
 cd ..
 rm -rf `basename -s .git $REPO`</CODESAMPLE>
