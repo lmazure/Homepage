@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Devin</TITLE>
 <PATH>notes/devin.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE>
 <CONTENT>
 Installation
 <BLIST>
@@ -34,6 +34,15 @@ Installation
 </BLIST>
 Command line
 <DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>devin help</CODEROUTINE><BR/>
+      <CODEROUTINE>devin --help</CODEROUTINE></TERM>
+    <DESC>Display help.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>devin update</CODEROUTINE></TERM>
+    <DESC>Check for updates and optionally install them.</DESC>
+  </ROW>
   <ROW>
     <TERM><CODEROUTINE>devin -p "prompt"</CODEROUTINE><BR/>
       <CODEROUTINE>devin -p -- prompt words here</CODEROUTINE></TERM>
