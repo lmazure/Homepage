@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Claude Code</TITLE>
 <PATH>notes/claudecode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>17</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -91,14 +91,6 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
     <DESC>Disable session persistence so sessions are not saved to disk and cannot be resumed. Print mode only.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>claude mcp add …</CODEROUTINE></TERM>
-    <DESC>Add a MCP server.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>claude mcp remove …</CODEROUTINE></TERM>
-    <DESC>Remove a MCP server.</DESC>
-  </ROW>
-  <ROW>
     <TERM><CODEROUTINE>claude project purge &lt;path&gt;</CODEROUTINE></TERM>
     <DESC>Delete all local Claude Code state for a project: transcripts, task lists, debug logs, file-edit history, prompt history lines, and the project’s entry in <CODEFILENAME>~/.claude.json</CODEFILENAME>.<BR/>
       Omit <CODEROUTINE>&lt;path&gt;</CODEROUTINE> to pick from an interactive list.<BR/>
@@ -107,6 +99,26 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
       <CODEROUTINE>-y</CODEROUTINE>/<CODEROUTINE>--yes</CODEROUTINE> to skip confirmation<BR/>
       <CODEROUTINE>-i</CODEROUTINE>/<CODEROUTINE>--interactive</CODEROUTINE> to confirm each item<BR/>
       <CODEROUTINE>--all</CODEROUTINE> for every project.</DESC>
+  </ROW>
+</DEFINITIONTABLE>
+<BR/>
+MCP servers (<X><T>doc</T><A>https://code.claude.com/docs/en/mcp</A><L>en</L><F>HTML</F></X>)
+<DEFINITIONTABLE>
+  <ROW>
+    <TERM><CODEROUTINE>claude mcp add …</CODEROUTINE></TERM>
+    <DESC>Add a MCP server.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude mcp list</CODEROUTINE></TERM>
+    <DESC>List all configured servers</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude mcp get &lt;server name&gt;</CODEROUTINE></TERM>
+    <DESC>Get details for a specific server.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>claude mcp remove &lt;server name&gt;</CODEROUTINE></TERM>
+    <DESC>Remove a MCP server.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>

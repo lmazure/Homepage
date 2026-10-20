@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>AI integration</TITLE>
 <PATH>links/aiintegration.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>20</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -381,7 +381,6 @@
       <ITEM><ARTICLE><X><T>5 Types of AI Agents: Autonomous Functions &amp; Real-World Applications</T><A>https://www.youtube.com/watch?v=fXizBc03D7E</A><L>en</L><F>MP4</F><DURATION><MINUTE>10</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Keen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>4</MONTH><DAY>28</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Martin</FIRSTNAME><LASTNAME>Keen</LASTNAME></AUTHOR> proposes these categories: simple reflex, model-based reflex, goal-based, utility-based, and learning.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>Must Haves For Agents in Production</T><A>https://www.youtube.com/watch?v=aIy85-gIDzI</A><L>en</L><F>MP4</F><DURATION><MINUTE>15</MINUTE><SECOND>13</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>15</DAY></DATE><COMMENT>An advertisement for TrueFoundry: Model Control, Prompts, Guardrails, Budget Limiting, Tools, Monitoring and Tracing, and Evals.</COMMENT></ARTICLE></ITEM>
       <ITEM><ARTICLE><X><T>How to Build Autonomous, Long-Horizon AI Agents | Basis</T><A>https://www.youtube.com/watch?v=54pwkcp48Lg</A><L>en</L><F>MP4</F><DURATION><HOUR>1</HOUR><MINUTE>22</MINUTE><SECOND>59</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Mitch</FIRSTNAME><LASTNAME>Troyanovsky</LASTNAME></AUTHOR><AUTHOR><FIRSTNAME>Matt</FIRSTNAME><LASTNAME>Turck</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>8</MONTH><DAY>6</DAY></DATE><COMMENT>Some interesting thoughts about the impact of the LLM improvement on agents, specifying expected behaviours, providing the right ontology to the agent, the <X><T>Agent Behavior</T><A>https://www.agentbehavior.dev/</A><L>en</L><F>HTML</F></X> open-source project…</COMMENT></ARTICLE></ITEM>
-      <ITEM><ARTICLE><X><T>Pi Durable</T><A>https://earendil.com/posts/pi-durable/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>Earendil is releasing Pi Durable, a framework for building agentic applications.</COMMENT></ARTICLE></ITEM>
       <ITEM><BLIST><TITLE>LangGraph</TITLE>
         <ITEM><ARTICLE><X><T>AgentWrite with LangGraph</T><A>https://www.youtube.com/watch?v=nK9K8UPraXk</A><L>en</L><F>MP4</F><DURATION><MINUTE>19</MINUTE><SECOND>22</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>6</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR> describes how he set up a short LangGraph example to write long articles, similarly to LongWriter.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Building a LangGraph ReAct Mini Agent</T><A>https://www.youtube.com/watch?v=pEMhPBQMNjg</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>47</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2024</YEAR><MONTH>9</MONTH><DAY>17</DAY></DATE><COMMENT>A description of a simple Pattern in LangGraph: ReAct Function Calling.</COMMENT></ARTICLE></ITEM>
@@ -408,6 +407,10 @@
       <ITEM><BLIST><TITLE>smolagents</TITLE>
         <ITEM><ARTICLE><X><T>smolagents - HuggingFace's NEW Agent Framework</T><A>https://www.youtube.com/watch?v=c8EpB4zmXG0</A><L>en</L><F>MP4</F><DURATION><MINUTE>29</MINUTE><SECOND>10</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>6</DAY></DATE><COMMENT>Hugging Face has created yet another agent framework. <AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR> does his usual presentation and experimentation with it.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=c8EpB4zmXG0"><X><T>How to make Muilt-Agent Apps with smolagents</T><A>https://www.youtube.com/watch?v=XHijkFRd2TU</A><L>en</L><F>MP4</F><DURATION><MINUTE>22</MINUTE><SECOND>8</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>1</MONTH><DAY>8</DAY></DATE><COMMENT>More experimentation with smolagents, in particular with multiple agents configurations.</COMMENT></ARTICLE></ITEM>
+      </BLIST></ITEM>
+      <ITEM><BLIST><TITLE>Pi Durable</TITLE>
+        <ITEM><ARTICLE><X><T>Pi Durable</T><A>https://earendil.com/posts/pi-durable/</A><L>en</L><F>HTML</F></X><DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>1</DAY></DATE><COMMENT>Earendil is releasing Pi Durable, a framework for building agentic applications.</COMMENT></ARTICLE></ITEM>
+        <ITEM><ARTICLE><X><T>Pi Durable EXPLAINED: Build Always-On Agents with Local Models</T><A>https://www.youtube.com/watch?v=ti3vVYwzW4A</A><L>en</L><F>MP4</F><DURATION><MINUTE>30</MINUTE><SECOND>3</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Alejandro</FIRSTNAME><GIVENNAME>AO</GIVENNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>19</DAY></DATE><COMMENT>A presentation of Pi Durable.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Desktop agents</TITLE>
