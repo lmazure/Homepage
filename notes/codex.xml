@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Codex CLI</TITLE>
 <PATH>notes/codex.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>20</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://learn.chatgpt.com/docs/cli/reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -41,12 +41,21 @@ Slash commands (<X><T>doc</T><A>https://learn.chatgpt.com/docs/cli/slash-command
     <DESC>Choose what model and reasoning effort to use.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>/plugins</CODEROUTINE></TERM>
+    <DESC>Browse installed and discoverable plugins.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>/review</CODEROUTINE></TERM>
     <DESC>Review any changes and find issues.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/usage</CODEROUTINE></TERM>
     <DESC>View account token usage or use a rate-limit reset.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/side</CODEROUTINE><BR/>
+      <CODEROUTINE>/btw</CODEROUTINE></TERM>
+    <DESC>Start an ephemeral side chat.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 </CONTENT>
