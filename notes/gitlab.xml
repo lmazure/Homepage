@@ -99,6 +99,16 @@ git log
 }
 ```</CODESAMPLE>
   </ITEM>
+  <ITEM>Embedding code
+    <CODESAMPLE language="markdown">The external URL is configured here:
+
+https://gitlab.com/gitlab-org/gitlab/-/blob/d768310246d88433a5534576776939d81846f19e/config/gitlab.yml.example#L35-37</CODESAMPLE>
+    <BLIST><TITLE>It must</TITLE>
+      <ITEM>contain the full 40-character commit SHA, links that use a branch or tag name are not embedded</ITEM>
+      <ITEM>end with a line or line range anchor, like <CODEROUTINE>#L27</CODEROUTINE>  or <CODEROUTINE>#L27-30</CODEROUTINE></ITEM>
+      <ITEM>be the only content in its paragraph</ITEM>
+    </BLIST>
+  </ITEM>
   <ITEM><BLIST><TITLE>Alerts</TITLE>
     <ITEM>Note: information that users should take into account, even when skimming:
       <CODESAMPLE language="markdown">&gt; [!note]<BR/>
