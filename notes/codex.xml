@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Codex CLI</TITLE>
 <PATH>notes/codex.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>21</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>23</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://learn.chatgpt.com/docs/cli/reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -58,6 +58,16 @@ Slash commands (<X><T>doc</T><A>https://learn.chatgpt.com/docs/cli/slash-command
     <DESC>Start an ephemeral side chat.</DESC>
   </ROW>
 </DEFINITIONTABLE>
-</CONTENT>
+<BLIST>
+  <ITEM>To declare a global MCP server
+    <CODESAMPLE language="bash">codex mcp add \
+gitlab \
+--env GITLAB_PERSONAL_ACCESS_TOKEN="$GITLAB_TOKEN" \
+--env GITLAB_API_URL="https://gitlab.com" \
+--env GITLAB_PERMISSION_MODE=readonly \
+--env GITLAB_TOOLSETS=projects,merge_requests,issues \
+-- npx -y @zereight/mcp-gitlab@2.1.65</CODESAMPLE>
+      (Declaring a local server needs to modify <CODEFILENAME>.codex/config.toml</CODEFILENAME>.)</ITEM>
+</BLIST></CONTENT>
 <X><T>links</T><A>../links/aiopenai.html#codexcli</A><L>en</L><F>HTML</F></X>
 </PAGE>
