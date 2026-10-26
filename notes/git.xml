@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Git</TITLE>
 <PATH>notes/git.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>6</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <BLIST><TITLE>Places</TITLE>
   <ITEM>stash</ITEM>
@@ -259,6 +259,20 @@ git --bare init</CODESAMPLE></TERM>
       <CODEROUTINE>git add --interactive</CODEROUTINE></TERM>
     <DESC>Add modified contents in the working tree interactively to the index.<BR/>
       Optional path arguments may be supplied to limit operation to a subset of the working tree.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git add -u &lt;pathspec&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git add --update &lt;pathspec&gt;</CODEROUTINE></TERM>
+    <DESC>Update the index just where it already has an entry matching &lt;pathspec&gt;. This removes as well as modifies index entries to match the working tree, but adds no new files.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git add -A &lt;pathspec&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git add --all &lt;pathspec&gt;</CODEROUTINE></TERM>
+    <DESC>Update the index not only where the working tree has a file matching &lt;pathspec&gt; but also where the index already has an entry. This adds, modifies, and removes index entries to match the working tree.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git add --resolved &lt;pathspec&gt;</CODEROUTINE></TERM>
+    <DESC>Update the index for unmerged paths matching &lt;pathspec&gt; where no conflict markers remain in the working tree.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE><X><T>git stage’s man page</T><A>https://git-scm.com/docs/git-stage</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>

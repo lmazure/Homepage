@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Configuration management</TITLE>
 <PATH>links/scm.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>9</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>26</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -262,6 +262,7 @@
         </BLIST></ITEM>
         <ITEM><BLIST><TITLE>2.56</TITLE>
           <ITEM><ARTICLE><X><T>What's new in Git 2.56.0?</T><A>https://about.gitlab.com/blog/whats-new-in-git-2-56-0/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Karthik</FIRSTNAME><LASTNAME>Nayak</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE><COMMENT>The transition to Git 3.0, <CODEROUTINE>git history drop</CODEROUTINE> deletes a commit, <CODEROUTINE>git branch --forked</CODEROUTINE> filters branches on their upstream, <CODEROUTINE>git branch --delete-merged</CODEROUTINE> deletes branches that have been merged in the origin, improvements of <CODEROUTINE>git refs</CODEROUTINE>, some optimisations for partial clones, a new <CODEROUTINE>git repo</CODEROUTINE> command, <CODEROUTINE>git replay --linearize</CODEROUTINE> handles merge commits, and the continuation of decoupling the object database.</COMMENT></ARTICLE></ITEM>
+          <ITEM><ARTICLE><X><T>Highlights from Git 2.56</T><ST>The open source Git project just released Git 2.56. Here is GitHub’s look at some of the most interesting features and changes introduced since last time.</ST><A>https://github.blog/open-source/git/highlights-from-git-2-56/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Elijah</FIRSTNAME><LASTNAME>Newren</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE><COMMENT><CODEROUTINE>git add --resolved</CODEROUTINE> ensures that staged files contain no merge conflict, improved performance in common ancestor search, path-walk repacking improvement, <CODEROUTINE>git history drop</CODEROUTINE>, <CODEROUTINE>git refs</CODEROUTINE> improvements, <CODEROUTINE>git branch --delete-merged</CODEROUTINE>, <CODEROUTINE>git bisect run --reset-when-found=original</CODEROUTINE> returns to the commit checked out before the bisection, <CODEROUTINE>git replay --linearize</CODEROUTINE>, <CODEROUTINE>git repack -a --filter=blob:limit=&lt;max-size&gt; --drop-filtered</CODEROUTINE> discard blobs fetched on demand, <CODEROUTINE>git log --follow</CODEROUTINE> improvement, <CODEROUTINE>git log --graph</CODEROUTINE>’s display now differentiates multiple roots…</COMMENT></ARTICLE></ITEM>
         </BLIST></ITEM>
       </BLIST></ITEM>
       <ITEM><BLIST><TITLE>Bits and Booze</TITLE>
