@@ -18,7 +18,7 @@
     <DESC>Git.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git version’s man page</T><A>https://git-scm.com/docs/git-version</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git version’s man page</T><A>https://git-scm.com/docs/git-version</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Display version information about Git.</DESC>
   </ROW>
   <ROW>
@@ -44,7 +44,7 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git help’s man page</T><A>https://git-scm.com/docs/git-help</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git help’s man page</T><A>https://git-scm.com/docs/git-help</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Display help information about Git</DESC>
   </ROW>
   <ROW>
@@ -65,7 +65,7 @@
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git init’s man page</T><A>https://git-scm.com/docs/git-init</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git init’s man page</T><A>https://git-scm.com/docs/git-init</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Create an empty local repository.</DESC>
   </ROW>
   <ROW>
@@ -94,7 +94,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git clone’s man page</T><A>https://git-scm.com/docs/git-clone</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git clone’s man page</T><A>https://git-scm.com/docs/git-clone</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Clone a repository into a new directory.</DESC>
   </ROW>
   <ROW>
@@ -150,7 +150,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git remote’s man page</T><A>https://git-scm.com/docs/git-remote</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git remote’s man page</T><A>https://git-scm.com/docs/git-remote</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>List the upstream and downstream repositories.</DESC>
   </ROW>
   <ROW>
@@ -185,10 +185,6 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git remote get-url --all &lt;remotename&gt;</CODEROUTINE></TERM>
     <DESC>Get all fetch URLs of a remote.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git remote -v rm origin</CODEROUTINE></TERM>
-    <DESC>Remove the tracking of the remote "origin".</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote prune &lt;remotename&gt;</CODEROUTINE></TERM>
@@ -228,7 +224,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git ls-files’ man page</T><A>https://git-scm.com/docs/git-ls-files</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git ls-files’ man page</T><A>https://git-scm.com/docs/git-ls-files</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>List files which are in the workspace or in the index.</DESC>
   </ROW>
   <ROW>
@@ -243,7 +239,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git add’s man page</T><A>https://git-scm.com/docs/git-add</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git add’s man page</T><A>https://git-scm.com/docs/git-add</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Add file contents to the index.</DESC>
   </ROW>
   <ROW>
@@ -275,14 +271,14 @@ git --bare init</CODESAMPLE></TERM>
     <DESC>Update the index for unmerged paths matching &lt;pathspec&gt; where no conflict markers remain in the working tree.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git stage’s man page</T><A>https://git-scm.com/docs/git-stage</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git stage’s man page</T><A>https://git-scm.com/docs/git-stage</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC><CODEROUTINE>git stage</CODEROUTINE> is a synonym of <CODEROUTINE>git add</CODEROUTINE>.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git rm’s man page</T><A>https://git-scm.com/docs/git-rm</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git rm’s man page</T><A>https://git-scm.com/docs/git-rm</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Remove files from the working tree and from the index.</DESC>
   </ROW>
   <ROW>
@@ -297,14 +293,14 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git mv’s man page</T><A>https://git-scm.com/docs/git-mv</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git mv’s man page</T><A>https://git-scm.com/docs/git-mv</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Move or rename a file, a directory, or a symlink</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git status’ man page</T><A>https://git-scm.com/docs/git-status</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git status’ man page</T><A>https://git-scm.com/docs/git-status</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC><BLIST><TITLE>Display</TITLE>
         <ITEM>paths that have differences between the index file and the current HEAD commit</ITEM>
         <ITEM>paths that have differences between the working tree and the index file, and</ITEM>
@@ -315,7 +311,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git commit’s man page</T><A>https://git-scm.com/docs/git-commit</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git commit’s man page</T><A>https://git-scm.com/docs/git-commit</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Record changes to the repository.</DESC>
   </ROW>
   <ROW>
@@ -362,7 +358,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git history’s man page</T><A>https://git-scm.com/docs/git-history</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git history’s man page</T><A>https://git-scm.com/docs/git-history</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Rewrite history.</DESC>
   </ROW>
   <ROW>
@@ -385,7 +381,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git notes’ man page</T><A>https://git-scm.com/docs/git-notes</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git notes’ man page</T><A>https://git-scm.com/docs/git-notes</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Add or inspect object notes</DESC>
   </ROW>
   <ROW>
@@ -404,7 +400,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git diff’s man page</T><A>https://git-scm.com/docs/git-diff</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git diff’s man page</T><A>https://git-scm.com/docs/git-diff</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Display the differences between the workspace and the index.</DESC>
   </ROW>
   <ROW>
@@ -418,10 +414,6 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git diff --name-only</CODEROUTINE></TERM>
     <DESC>Display only the filenames.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git diff --stat</CODEROUTINE></TERM>
-    <DESC>Generate a diffstat.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff --stat</CODEROUTINE></TERM>
@@ -448,10 +440,10 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git diff --ignore-blank-lines</CODEROUTINE></TERM>
     <DESC>Ignore changes whose lines are all blank.</DESC>
-    </ROW>
-    <ROW>
-      <TERM><CODEROUTINE>git diff --ignore-matching-lines=&lt;regex&gt;</CODEROUTINE><BR/>
-        <CODEROUTINE>git diff -I&lt;regex&gt;</CODEROUTINE></TERM>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>git diff --ignore-matching-lines=&lt;regex&gt;</CODEROUTINE><BR/>
+      <CODEROUTINE>git diff -I&lt;regex&gt;</CODEROUTINE></TERM>
     <DESC>Ignore changes whose all lines match &lt;regex&gt;. This option may be specified more than once.</DESC>
   </ROW>
   <ROW>
@@ -476,26 +468,22 @@ git --bare init</CODESAMPLE></TERM>
     <DESC>Show a word diff.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git diff --ignore-cr-at-eol</CODEROUTINE></TERM>
-    <DESC>Ignore carriage-return at the end of line when doing a comparison.</DESC>
-  </ROW>
-  <ROW>
     <TERM><CODEROUTINE>git diff -U&lt;n&gt;</CODEROUTINE><BR/>
-    <CODEROUTINE>git diff --unified=&lt;n&gt;</CODEROUTINE></TERM>
+      <CODEROUTINE>git diff --unified=&lt;n&gt;</CODEROUTINE></TERM>
     <DESC>Generate diffs with &lt;n&gt; lines of context instead of the usual three.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git apply’s man page</T><A>https://git-scm.com/docs/git-apply</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git apply’s man page</T><A>https://git-scm.com/docs/git-apply</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>Apply a patch.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git log’s man page</T><A>https://git-scm.com/docs/git-log</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git log’s man page</T><A>https://git-scm.com/docs/git-log</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Show commit logs.</DESC>
   </ROW>
   <ROW>
@@ -518,10 +506,6 @@ git --bare init</CODESAMPLE></TERM>
       <CODEROUTINE>&lt;start&gt;</CODEROUTINE> and <CODEROUTINE>&lt;end&gt;</CODEROUTINE> are numbers or regexps.<BR/>
       <CODEROUTINE>&lt;end&gt;</CODEROUTINE> can be defined as an offset.<BR/>
       <CODEROUTINE>&lt;funcname&gt;</CODEROUTINE> is a regexp.</DESC>
-  </ROW>
-  <ROW>
-    <TERM><CODEROUTINE>git log --full-history</CODEROUTINE></TERM>
-    <DESC>Does not prune some history.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --full-history --simplify-merges</CODEROUTINE></TERM>
@@ -551,7 +535,7 @@ git --bare init</CODESAMPLE></TERM>
     <TERM><CODEROUTINE>git log --grep=&lt;regexp&gt;</CODEROUTINE></TERM>
     <DESC>Filter the commits to the ones with log message that matches the specified pattern (regular expression).<BR/>
       With more than one <CODEROUTINE>--grep=&lt;regexp&gt;</CODEROUTINE>, commits whose message matches any of the given patterns are chosen.<BR/>
-      With more than one <CODEROUTINE>--grep=&lt;regexp&gt;</CODEROUTINE> and <CODEROUTINE>---all-match</CODEROUTINE>, limit the commits output to ones that match all given regular expressions.</DESC>
+      With more than one <CODEROUTINE>--grep=&lt;regexp&gt;</CODEROUTINE> and <CODEROUTINE>--all-match</CODEROUTINE>, limit the commits output to ones that match all given regular expressions.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>--invert-grep</CODEROUTINE></TERM>
@@ -597,7 +581,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>--pickaxe-all</CODEROUTINE></TERM>
-    <DESC>When <CODEROUTINE>-S</CODEROUTINE> or -<CODEROUTINE>-G</CODEROUTINE> finds a change, show all the changes in that changeset, not just the files that contain the string/regexp.</DESC>
+    <DESC>When <CODEROUTINE>-S</CODEROUTINE> or <CODEROUTINE>-G</CODEROUTINE> finds a change, show all the changes in that changeset, not just the files that contain the string/regexp.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --pretty=&lt;format&gt;</CODEROUTINE></TERM>
@@ -635,16 +619,16 @@ git --bare init</CODESAMPLE></TERM>
     <DESC>Shorthand for <CODEROUTINE>--pretty=oneline --abbrev-commit</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git log decorate</CODEROUTINE><BR/>
-      <CODEROUTINE>git log decorate=short</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log --decorate</CODEROUTINE><BR/>
+      <CODEROUTINE>git log --decorate=short</CODEROUTINE></TERM>
     <DESC>Print out the ref names of any commits that are shown. The ref name prefixes <CODEROUTINE>refs/heads/</CODEROUTINE>, <CODEROUTINE>refs/tags/</CODEROUTINE>, and <CODEROUTINE>refs/remotes/</CODEROUTINE> are not printed.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git log decorate=long</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log --decorate=long</CODEROUTINE></TERM>
     <DESC>Print out the full ref names of any commits that are shown.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git log decorate=auto</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git log --decorate=auto</CODEROUTINE></TERM>
     <DESC>If the output is going to a terminal, the ref names are shown as if <CODEROUTINE>short</CODEROUTINE> was given, otherwise no ref names are shown.</DESC>
   </ROW>
   <ROW>
@@ -657,12 +641,12 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log -p</CODEROUTINE><BR/>
-          <CODEROUTINE>git log --patch</CODEROUTINE></TERM>
+      <CODEROUTINE>git log --patch</CODEROUTINE></TERM>
     <DESC>Show the code changes in each commit.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log -U&lt;n&gt;</CODEROUTINE><BR/>
-          <CODEROUTINE>git log --unified=&lt;n&gt;</CODEROUTINE></TERM>
+      <CODEROUTINE>git log --unified=&lt;n&gt;</CODEROUTINE></TERM>
     <DESC>Generate diffs with n lines of context instead of the usual 3. Implies <CODEROUTINE>-p</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
@@ -674,7 +658,7 @@ git --bare init</CODESAMPLE></TERM>
     <DESC>Output the commits chosen to be shown in reverse order.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git whatchanged’s man page</T><A>https://git-scm.com/docs/git-whatchanged</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git whatchanged’s man page</T><A>https://git-scm.com/docs/git-whatchanged</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Show logs with difference each commit introduces.</DESC>
   </ROW>
   <ROW>
@@ -682,22 +666,22 @@ git --bare init</CODESAMPLE></TERM>
     <DESC>List the last commits: hash, author, date, and list of impacted files.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git shortlog’s man page</T><A>https://git-scm.com/docs/git-shortlog</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git shortlog’s man page</T><A>https://git-scm.com/docs/git-shortlog</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Summarize <CODEROUTINE>git log</CODEROUTINE> output.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git shortlog -n</CODEROUTINE><BR/>
-          <CODEROUTINE>git shortlog --numbered</CODEROUTINE></TERM>
+      <CODEROUTINE>git shortlog --numbered</CODEROUTINE></TERM>
     <DESC>Sort output according to the number of commits per author instead of author alphabetic order.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git shortlog -s</CODEROUTINE><BR/>
-          <CODEROUTINE>git shortlog --summary</CODEROUTINE></TERM>
+      <CODEROUTINE>git shortlog --summary</CODEROUTINE></TERM>
     <DESC>Suppress commit description and provide a commit count summary only.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git shortlog -e</CODEROUTINE><BR/>
-          <CODEROUTINE>git shortlog --email</CODEROUTINE></TERM>
+      <CODEROUTINE>git shortlog --email</CODEROUTINE></TERM>
     <DESC>Show the email address of each author.</DESC>
   </ROW>
   <ROW>
@@ -708,7 +692,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git show’s man page</T><A>https://git-scm.com/docs/git-show</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git show’s man page</T><A>https://git-scm.com/docs/git-show</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Show changes between commits, commit and working tree…</DESC>
   </ROW>
   <ROW>
@@ -731,7 +715,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git blame’s man page</T><A>https://git-scm.com/docs/git-blame</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git blame’s man page</T><A>https://git-scm.com/docs/git-blame</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Show what revision and author last modified each line of a file.</DESC>
   </ROW>
   <ROW>
@@ -750,8 +734,8 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git blame -C</CODEROUTINE></TERM>
     <DESC>Detect lines moved or copied from other files that were modified in the same commit.<BR/>
-      When this option is given twice (<CODEMENU>-C -C</CODEMENU>), the command additionally looks for copies from other files in the commit that creates the file.<BR/>
-      When this option is given three times(<CODEMENU>-C -C -C</CODEMENU>), the command additionally looks for copies from other files in any commit.</DESC>
+      When this option is given twice (<CODEROUTINE>-C -C</CODEROUTINE>), the command additionally looks for copies from other files in the commit that creates the file.<BR/>
+      When this option is given three times (<CODEROUTINE>-C -C -C</CODEROUTINE>), the command additionally looks for copies from other files in any commit.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git blame -w</CODEROUTINE></TERM>
@@ -772,10 +756,10 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git blame -l</CODEROUTINE></TERM>
-    <DESC>indicate all (40) characters of the revision.</DESC>
+    <DESC>Indicate all (40) characters of the revision.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git annotate’s man page</T><A>https://git-scm.com/docs/git-annotate</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git annotate’s man page</T><A>https://git-scm.com/docs/git-annotate</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Annotate file lines with commit information.</DESC>
   </ROW>
   <ROW>
@@ -786,7 +770,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git merge-base’s man page</T><A>https://git-scm.com/docs/git-merge-base</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git merge-base’s man page</T><A>https://git-scm.com/docs/git-merge-base</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>Find as good common ancestors as possible for a merge.</DESC>
   </ROW>
   <ROW>
@@ -797,23 +781,23 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git reflog’s man page</T><A>https://git-scm.com/docs/git-reflog</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git reflog’s man page</T><A>https://git-scm.com/docs/git-reflog</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Manage reflog information</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reflog</CODEROUTINE><BR/>
-        <CODEROUTINE>git reflog show</CODEROUTINE></TERM>
+      <CODEROUTINE>git reflog show</CODEROUTINE></TERM>
     <DESC>Show the log of HEAD.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reflog &lt;ref&gt;</CODEROUTINE><BR/>
-        <CODEROUTINE>git reflog show &lt;ref&gt;</CODEROUTINE></TERM>
+      <CODEROUTINE>git reflog show &lt;ref&gt;</CODEROUTINE></TERM>
     <DESC>Show the log of the reference <CODEROUTINE>&lt;ref&gt;</CODEROUTINE>.</DESC>
   </ROW>
 </DEFINITIONTABLE><BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git stash’s man page</T><A>https://git-scm.com/docs/git-stash</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git stash’s man page</T><A>https://git-scm.com/docs/git-stash</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Stash the changes in a dirty working directory away.</DESC>
   </ROW>
   <ROW>
@@ -883,7 +867,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git worktree’s man page</T><A>https://git-scm.com/docs/git-worktree</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git worktree’s man page</T><A>https://git-scm.com/docs/git-worktree</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Manage multiple working trees.</DESC>
   </ROW>
   <ROW>
@@ -902,7 +886,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git reset’s man page</T><A>https://git-scm.com/docs/git-reset</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git reset’s man page</T><A>https://git-scm.com/docs/git-reset</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Reset current HEAD to the specified state.</DESC>
   </ROW>
   <ROW>
@@ -939,7 +923,7 @@ git --bare init</CODESAMPLE></TERM>
     <DESC>Delete the last two commits from the local repository.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git restore’s man page</T><A>https://git-scm.com/docs/git-restore</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git restore’s man page</T><A>https://git-scm.com/docs/git-restore</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Restore working tree files.</DESC>
   </ROW>
   <ROW>
@@ -951,7 +935,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git restore --staged &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>Remove the file will from staging, its modifications in the workspace remain untouched.</DESC>
+    <DESC>Remove the file from staging, its modifications in the workspace remain untouched.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git restore --source &lt;commit&gt; &lt;file&gt;</CODEROUTINE></TERM>
@@ -973,7 +957,7 @@ git --bare init</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git sparse-checkout’s man page</T><A>https://git-scm.com/docs/git-sparse-checkout</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git sparse-checkout’s man page</T><A>https://git-scm.com/docs/git-sparse-checkout</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Reduce your working tree to a subset of tracked files</DESC>
   </ROW>
   <ROW>
@@ -1000,7 +984,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git revert’s man page</T><A>https://git-scm.com/docs/git-revert</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git revert’s man page</T><A>https://git-scm.com/docs/git-revert</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Revert some existing commits.</DESC>
   </ROW>
   <ROW>
@@ -1011,14 +995,14 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git replace’s man page</T><A>https://git-scm.com/docs/git-replace</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git replace’s man page</T><A>https://git-scm.com/docs/git-replace</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Create, list, delete refs to replace objects.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git fetch’s man page</T><A>https://git-scm.com/docs/git-fetch</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git fetch’s man page</T><A>https://git-scm.com/docs/git-fetch</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Download objects and refs from another repository.</DESC>
   </ROW>
   <ROW>
@@ -1062,7 +1046,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git pull’s man page</T><A>https://git-scm.com/docs/git-pull</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git pull’s man page</T><A>https://git-scm.com/docs/git-pull</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Fetch from and integrate with another repository or a local branch.</DESC>
   </ROW>
   <ROW>
@@ -1085,7 +1069,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git push’s man page</T><A>https://git-scm.com/docs/git-push</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git push’s man page</T><A>https://git-scm.com/docs/git-push</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Update remote refs along with associated objects.</DESC>
   </ROW>
   <ROW>
@@ -1118,7 +1102,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git push --mirror</CODEROUTINE></TERM>
-    <DESC>All refs under <CODEROUTINE>refs/</CODEROUTINE> (which includes but is not limited to <CODEROUTINE>refs/heads/</CODEROUTINE>, <CODEROUTINE>refs/remotes/</CODEROUTINE>, and <CODEROUTINE>refs/tags/)</CODEROUTINE> are mirrored to the remote repository. Newly created local refs are pushed to the remote end, locally updated refs are force updated on the remote end, and deleted refs are removed from the remote end.</DESC>
+    <DESC>All refs under <CODEROUTINE>refs/</CODEROUTINE> (which includes but is not limited to <CODEROUTINE>refs/heads/</CODEROUTINE>, <CODEROUTINE>refs/remotes/</CODEROUTINE>, and <CODEROUTINE>refs/tags/</CODEROUTINE>) are mirrored to the remote repository. Newly created local refs are pushed to the remote end, locally updated refs are force updated on the remote end, and deleted refs are removed from the remote end.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git push --dry-run</CODEROUTINE><BR/>
@@ -1135,13 +1119,13 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git push -o &lt;option&gt;</CODEROUTINE><BR/>
-      <CODEROUTINE>git push ---push-option=&lt;option&gt;</CODEROUTINE></TERM>
+      <CODEROUTINE>git push --push-option=&lt;option&gt;</CODEROUTINE></TERM>
     <DESC>Transmit the given string to the server, which passes them to the pre-receive as well as the post-receive hook.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/><DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git clean’s man page</T><A>https://git-scm.com/docs/git-clean</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git clean’s man page</T><A>https://git-scm.com/docs/git-clean</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Delete untracked files from the working tree.</DESC>
   </ROW>
   <ROW>
@@ -1181,7 +1165,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git branch’s man page</T><A>https://git-scm.com/docs/git-branch</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git branch’s man page</T><A>https://git-scm.com/docs/git-branch</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>List, create, or delete branches.</DESC>
   </ROW>
   <ROW>
@@ -1258,11 +1242,11 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
     <DESC>Copy the current branch, with its config and reflog, even if a branch &lt;name&gt; already exists.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git switch’s man page</T><A>https://git-scm.com/docs/git-switch</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git switch’s man page</T><A>https://git-scm.com/docs/git-switch</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Switch branches.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git checkout’s man page</T><A>https://git-scm.com/docs/git-checkout</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git checkout’s man page</T><A>https://git-scm.com/docs/git-checkout</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Switch branches or restore working tree files.</DESC>
   </ROW>
   <ROW>
@@ -1335,7 +1319,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
     <DESC>Delete a branch in the remote repository.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git merge’s man page</T><A>https://git-scm.com/docs/git-merge</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git merge’s man page</T><A>https://git-scm.com/docs/git-merge</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Join two or more development histories together.</DESC>
   </ROW>
   <ROW>
@@ -1372,7 +1356,7 @@ git merge --continue</CODESAMPLE></TERM>
     <TERM><CODEROUTINE>git merge -m &lt;msg&gt;</CODEROUTINE></TERM>
     <DESC>Define the message of the merge commit.</DESC>
   </ROW><ROW>
-    <TERM><CODEROUTINE><X><T>git cherry-pick’s man page</T><A>https://git-scm.com/docs/git-cherry-pick</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git cherry-pick’s man page</T><A>https://git-scm.com/docs/git-cherry-pick</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Apply the changes introduced by some existing commits.</DESC>
   </ROW>
   <ROW>
@@ -1390,7 +1374,7 @@ git merge --continue</CODESAMPLE></TERM>
     <DESC>Cherry pick a commit, but does not commit it.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git mergetool’s man page</T><A>https://git-scm.com/docs/git-mergetool</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git mergetool’s man page</T><A>https://git-scm.com/docs/git-mergetool</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Run merge conflict resolution tools to resolve merge conflicts.</DESC>
   </ROW>
   <ROW>
@@ -1410,7 +1394,7 @@ git merge --continue</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git tag’s man page</T><A>https://git-scm.com/docs/git-tag</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git tag’s man page</T><A>https://git-scm.com/docs/git-tag</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Create, list, delete or verify a tag object signed with GPG.</DESC>
   </ROW>
   <ROW>
@@ -1463,28 +1447,28 @@ git merge --continue</CODESAMPLE></TERM>
     <DESC>Delete a tag on the remote.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git show -d &lt;tagname&gt;</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>git show --no-patch &lt;tagname&gt;</CODEROUTINE></TERM>
     <DESC>Display who and when a tag was created.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git bisect’s man page</T><A>https://git-scm.com/docs/git-bisect</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git bisect’s man page</T><A>https://git-scm.com/docs/git-bisect</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Use binary search to find the commit that introduced a bug.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git show-ref’s man page</T><A>https://git-scm.com/docs/git-show-ref</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git show-ref’s man page</T><A>https://git-scm.com/docs/git-show-ref</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>List the references in the local repository and their associated commits.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git hash-object’s man page</T><A>https://git-scm.com/docs/git-hash-object</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git hash-object’s man page</T><A>https://git-scm.com/docs/git-hash-object</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>Compute object ID and optionally create an object from a file.</DESC>
   </ROW>
   <ROW>
@@ -1507,7 +1491,7 @@ git merge --continue</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git cat-file’s man page</T><A>https://git-scm.com/docs/git-cat-file</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git cat-file’s man page</T><A>https://git-scm.com/docs/git-cat-file</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>Provide content or type and size information for repository objects.</DESC>
   </ROW>
   <ROW>
@@ -1522,21 +1506,21 @@ git merge --continue</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git count-objects’ man page</T><A>https://git-scm.com/docs/git-count-objects</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git count-objects’ man page</T><A>https://git-scm.com/docs/git-count-objects</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Display the number of unpacked object files and disk space consumed by them.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git grep’s man page</T><A>https://git-scm.com/docs/git-grep</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git grep’s man page</T><A>https://git-scm.com/docs/git-grep</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Print lines matching a pattern.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git update-ref’s man page</T><A>https://git-scm.com/docs/git-update-ref</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git update-ref’s man page</T><A>https://git-scm.com/docs/git-update-ref</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>Update the object name stored in a ref safely.</DESC>
   </ROW>
   <ROW>
@@ -1547,21 +1531,21 @@ git merge --continue</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git gc’s man page</T><A>https://git-scm.com/docs/git-gc</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git gc’s man page</T><A>https://git-scm.com/docs/git-gc</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Compress file revision and remove unreachable objects.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git fsck’s man page</T><A>https://git-scm.com/docs/git-fsck</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git fsck’s man page</T><A>https://git-scm.com/docs/git-fsck</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Verifies the connectivity and validity of the objects in the database.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git maintenance’s man page</T><A>https://git-scm.com/docs/git-maintenance</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git maintenance’s man page</T><A>https://git-scm.com/docs/git-maintenance</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Run tasks to optimise Git repository data.</DESC>
   </ROW>
   <ROW>
@@ -1576,7 +1560,7 @@ git merge --continue</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git submodule’s man page</T><A>https://git-scm.com/docs/git-submodule</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git submodule’s man page</T><A>https://git-scm.com/docs/git-submodule</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Initialize, update or inspect submodules.</DESC>
   </ROW>
   <ROW>
@@ -1587,7 +1571,7 @@ git merge --continue</CODESAMPLE></TERM>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git config’s man page</T><A>https://git-scm.com/docs/git-config</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git config’s man page</T><A>https://git-scm.com/docs/git-config</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Get and set repository or global options.<BR/>
       When reading, the values are read from the system, global, and repository local configuration files by default, and options <CODEROUTINE>--system</CODEROUTINE>, <CODEROUTINE>--global</CODEROUTINE>, <CODEROUTINE>--local</CODEROUTINE>, <CODEROUTINE>--worktree</CODEROUTINE>, and <CODEROUTINE>--file &lt;filename&gt;</CODEROUTINE> can be used to tell the command to read from only that location.<BR/>
       When writing, the new value is written to the repository local configuration file by default, and options <CODEROUTINE>--system</CODEROUTINE>, <CODEROUTINE>--global</CODEROUTINE>, <CODEROUTINE>--worktree</CODEROUTINE>, <CODEROUTINE>--file &lt;filename&gt;</CODEROUTINE> can be used to tell the command to write to that location (we can use <CODEROUTINE>--local</CODEROUTINE> but that is the default).</DESC>
@@ -1732,7 +1716,7 @@ To remove the last commit locally and on the remote repository (nobody should ha
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git rebase’s man page</T><A>https://git-scm.com/docs/git-rebase</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git rebase’s man page</T><A>https://git-scm.com/docs/git-rebase</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Reapply commits on top of another base tip.</DESC>
   </ROW>
   <ROW>
@@ -1759,20 +1743,20 @@ To remove the last commit locally and on the remote repository (nobody should ha
   <ROW>
     <TERM><CODEROUTINE>git rebase --exec &lt;cmd&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git rebase -x &lt;cmd&gt;</CODEROUTINE></TERM>
-    <DESC>Append <CODEFILENAME>exec &lt;cmd&gt;</CODEFILENAME> after each line creating a commit in the final history.</DESC>
+    <DESC>Append <CODEROUTINE>exec &lt;cmd&gt;</CODEROUTINE> after each line creating a commit in the final history.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git replay’s man page</T><A>https://git-scm.com/docs/git-replay</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git replay’s man page</T><A>https://git-scm.com/docs/git-replay</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>Replay commits on a new base, works with bare repos too.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git rerere’s man page</T><A>https://git-scm.com/docs/git-rerere</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git rerere’s man page</T><A>https://git-scm.com/docs/git-rerere</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC>Reuse recorded resolution of conflicted merges.<BR/>
       Must be enabled by <CODEROUTINE>git config --global rerere.enabled true</CODEROUTINE>.<BR/>
       <CODEROUTINE>git merge</CODEROUTINE> and <CODEROUTINE>git commit</CODEROUTINE> automatically invoke <CODEROUTINE>git rerere</CODEROUTINE>, so there is no need to call it directly.</DESC>
@@ -1781,7 +1765,7 @@ To remove the last commit locally and on the remote repository (nobody should ha
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git check-ignore’s man page</T><A>https://git-scm.com/docs/git-check-ignore</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git check-ignore’s man page</T><A>https://git-scm.com/docs/git-check-ignore</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>Debug gitignore / exclude files.</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -1806,19 +1790,19 @@ To remove the last commit locally and on the remote repository (nobody should ha
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git rebase --autosquash</CODEROUTINE></TERM>
-    <DESC>When the commit log message begins with <CODEROUTINE>squash! …​</CODEROUTINE> or <CODEROUTINE>fixup! …​</CODEROUTINE> or <CODEROUTINE>amend! …​</CODEROUTINE>, and there is already a commit in the todo list that matches the same <CODEROUTINE>…</CODEROUTINE>, automatically modify the todo list of <CODEROUTINE>rebase -i</CODEROUTINE>, so that the commit marked for squashing comes right after the commit to be modified, and change the action of the moved commit from <CODEROUTINE>pick</CODEROUTINE> to <CODEROUTINE>squash</CODEROUTINE> or <CODEROUTINE>fixup</CODEROUTINE> or <CODEROUTINE>fixup -C</CODEROUTINE> respectively.<BR/>
+    <DESC>When the commit log message begins with <CODEROUTINE>squash! …</CODEROUTINE> or <CODEROUTINE>fixup! …</CODEROUTINE> or <CODEROUTINE>amend! …</CODEROUTINE>, and there is already a commit in the todo list that matches the same <CODEROUTINE>…</CODEROUTINE>, automatically modify the todo list of <CODEROUTINE>rebase -i</CODEROUTINE>, so that the commit marked for squashing comes right after the commit to be modified, and change the action of the moved commit from <CODEROUTINE>pick</CODEROUTINE> to <CODEROUTINE>squash</CODEROUTINE> or <CODEROUTINE>fixup</CODEROUTINE> or <CODEROUTINE>fixup -C</CODEROUTINE> respectively.<BR/>
     A commit matches the <CODEROUTINE>…</CODEROUTINE> if the commit subject matches, or if the <CODEROUTINE>…</CODEROUTINE> refers to the commit’s hash. As a fall-back, partial matches of the commit subject work, too.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git credential’s man page</T><A>https://git-scm.com/docs/git-credential</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git credential’s man page</T><A>https://git-scm.com/docs/git-credential</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>Retrieve and store user credentials</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git credential fill</CODEROUTINE></TERM>
-    <DESC>retrieve the credentials
+    <DESC>Retrieve the credentials
       <CODESAMPLE language="bash"><PROMPT/>git credential fill &lt;&lt; EOF
 protocol=https
 host=github.com
@@ -1830,7 +1814,7 @@ password=gho_DHaifTZE9NtPIZE3iShEit8qpzbtCiI4I8boT</CODESAMPLE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git credential reject</CODEROUTINE></TERM>
-    <DESC>forget the credentials
+    <DESC>Forget the credentials
       <CODESAMPLE language="bash"><PROMPT/>git credential reject &lt;&lt; EOF
 protocol=https
 host=github.com
@@ -1838,21 +1822,19 @@ EOF</CODESAMPLE></DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git credential approve</CODEROUTINE></TERM>
-    <DESC>record credentials (the OS will display a mesage for login in)
-      <CODESAMPLE language="bash"><PROMPT/>git credential fill &lt;&lt; EOF
-protocol=https
-host=github.com
-EOF
+    <DESC>Record credentials
+      <CODESAMPLE language="bash"><PROMPT/>git credential approve &lt;&lt; EOF
 protocol=https
 host=github.com
 username=jane
-password=gho_WnwWimkTLgqiKJZEFr48dABX1nPous670DKaUw</CODESAMPLE></DESC>
+password=gho_WnwWimkTLgqiKJZEFr48dABX1nPous670DKaUw
+EOF</CODESAMPLE></DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
 <DEFINITIONTABLE>
   <ROW>
-    <TERM><CODEROUTINE><X><T>git column’s man page</T><A>https://git-scm.com/docs/git-column</A><L>en</L><F>HTML</F></X></CODEROUTINE></TERM>
+    <TERM><CODEROUTINE><X><T>git column’s man page</T><A>https://git-scm.com/docs/git-column</A><L>en</L><F>HTML</F></X></CODEROUTINE> (plumbing)</TERM>
     <DESC>Display data in columns.</DESC>
   </ROW>
 </DEFINITIONTABLE>
@@ -1899,7 +1881,7 @@ cd $source_project.git
 git show-ref | grep ' refs/merge-requests/' | cut -d' ' -f2 | xargs -n1 -r git update-ref -d # do not push merge-requests refs to GitLab, it will refuse them
 git push --mirror https://$target_repo/$target_project.git
 cd ..
-rm -fr $project.git</CODESAMPLE>
+rm -fr $source_project.git</CODESAMPLE>
 <BR/>
 Script to find the nearest version of a file (<CODEROUTINE>$1</CODEROUTINE>) compared to a local file (<CODEROUTINE>$2</CODEROUTINE>)
 <CODESAMPLE language="bash">#!/bin/bash
@@ -1918,13 +1900,13 @@ git checkout --quiet HEAD $1</CODESAMPLE>
 <BLIST><TITLE>Git on Windows</TITLE>
   <ITEM>Properly manage newlines
     <CODESAMPLE language="bash"><PROMPT/>git config --global core.autocrlf true</CODESAMPLE>
-    When checking out code, this convert line endings to <CODEROUTINE>\r\n</CODEROUTINE> if on Windows.<BR/>
+    When checking out code, this converts line endings to <CODEROUTINE>\r\n</CODEROUTINE> if on Windows.<BR/>
     When committing code, this converts line endings to Unix-style <CODEROUTINE>\n</CODEROUTINE>.<BR/>
     But I think this will be a problem when using Antigravity (which must be in Windows) on a repo in WSL2. In this case, the repo must be configured with
     <CODESAMPLE language="bash"><PROMPT/>git config set --local core.autocrlf false
 <PROMPT/>git config set --local core.eol lf</CODESAMPLE>
   </ITEM>
-  <ITEM><BLIST><TITLE>Install on an external SDD</TITLE>
+  <ITEM><BLIST><TITLE>Install on an external SSD</TITLE>
     <ITEM>download PortableGit-2.55.0-64-bit.7z.exe</ITEM>
     <ITEM>double click</ITEM>
     <ITEM>install in G:\Documents\tools\Git\2.55.0</ITEM>
