@@ -1853,7 +1853,7 @@ EOF</CODESAMPLE></DESC>
 </BLIST>
 <BR/>
 Commit while user and email are not defined
-  <ITEM></ITEM><CODESAMPLE language="bash"><PROMPT/>git -c user.name="Laurent" -c user.email="Laurent@gilgamesh" commit -m "blabla”</CODESAMPLE>
+<CODESAMPLE language="bash"><PROMPT/>git -c user.name="Laurent" -c user.email="Laurent@gilgamesh" commit -m "blabla”</CODESAMPLE>
 <BR/>
 <BLIST><TITLE>Recover a file deleted in a previous commit</TITLE>
   <ITEM>Find the commit that deleted the file:
