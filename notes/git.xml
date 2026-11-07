@@ -107,7 +107,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clone --single-branch</CODEROUTINE></TERM>
-    <DESC>Clone only the history leading to the tip of a single branch, either specified by the <CODEROUTINE>--branch</CODEROUTINE> option or the primary branch remote’s HEAD points at.</DESC>
+    <DESC>Clone only the history leading to the tip of a single branch, either specified by the <CODEROUTINE>--branch</CODEROUTINE> option or the primary branch remote’s <CODEROUTINE>HEAD</CODEROUTINE> points at.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clone --depth &lt;depth&gt;</CODEROUTINE></TERM>
@@ -135,12 +135,12 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git clone --no-checkout</CODEROUTINE><BR/>
       <CODEROUTINE>git clone -n</CODEROUTINE></TERM>
-    <DESC>No checkout of HEAD is performed after the clone is complete.</DESC>
+    <DESC>No checkout of <CODEROUTINE>HEAD</CODEROUTINE> is performed after the clone is complete.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clone --branch &lt;branch&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git clone -b &lt;branch&gt;</CODEROUTINE></TERM>
-    <DESC>Set the HEAD to the specified branch after the clone is complete and check out that branch.</DESC>
+    <DESC>Set the <CODEROUTINE>HEAD</CODEROUTINE> to the specified branch after the clone is complete and check out that branch.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -298,7 +298,7 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE><X><T>git status’ man page</T><A>https://git-scm.com/docs/git-status</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
     <DESC><BLIST><TITLE>Display</TITLE>
-        <ITEM>paths that have differences between the index file and the current HEAD commit</ITEM>
+        <ITEM>paths that have differences between the index file and the current <CODEROUTINE>HEAD</CODEROUTINE> commit</ITEM>
         <ITEM>paths that have differences between the working tree and the index file, and</ITEM>
         <ITEM>paths in the working tree that are not tracked by Git</ITEM>
       </BLIST></DESC>
@@ -382,15 +382,15 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git notes add -m &lt;message&gt;</CODEROUTINE></TERM>
-    <DESC>Add notes to the HEAD object.</DESC>
+    <DESC>Add notes to the <CODEROUTINE>HEAD</CODEROUTINE> object.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git notes add -f -m &lt;message&gt;</CODEROUTINE></TERM>
-    <DESC>Overwrite notes of the HEAD object.</DESC>
+    <DESC>Overwrite notes of the <CODEROUTINE>HEAD</CODEROUTINE> object.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git notes append -m &lt;message&gt;</CODEROUTINE></TERM>
-    <DESC>Append the message to the notes of the HEAD object. (If it has no notes, this will create them.)</DESC>
+    <DESC>Append the message to the notes of the <CODEROUTINE>HEAD</CODEROUTINE> object. (If it has no notes, this will create them.)</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -783,7 +783,7 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git reflog</CODEROUTINE><BR/>
       <CODEROUTINE>git reflog show</CODEROUTINE></TERM>
-    <DESC>Show the log of HEAD.</DESC>
+    <DESC>Show the log of <CODEROUTINE>HEAD</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reflog &lt;ref&gt;</CODEROUTINE><BR/>
@@ -799,7 +799,7 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git stash</CODEROUTINE><BR/>
       <CODEROUTINE>git stash push</CODEROUTINE></TERM>
-    <DESC>Save local modifications away and revert the working directory to match the HEAD commit (in the working tree and in the index).</DESC>
+    <DESC>Save local modifications away and revert the working directory to match the <CODEROUTINE>HEAD</CODEROUTINE> commit (in the working tree and in the index).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash push --message &lt;message&gt;</CODEROUTINE><BR/>
@@ -825,7 +825,7 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git stash push -p</CODEROUTINE><BR/>
       <CODEROUTINE>git stash push --patch</CODEROUTINE></TERM>
-    <DESC>Interactively select hunks from the diff between HEAD and the working tree to be stashed.</DESC>
+    <DESC>Interactively select hunks from the diff between <CODEROUTINE>HEAD</CODEROUTINE> and the working tree to be stashed.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash list</CODEROUTINE></TERM>
@@ -883,12 +883,12 @@ git --bare init</CODESAMPLE></TERM>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE><X><T>git reset’s man page</T><A>https://git-scm.com/docs/git-reset</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
-    <DESC>Reset current HEAD to the specified state.</DESC>
+    <DESC>Reset current <CODEROUTINE>HEAD</CODEROUTINE> to the specified state.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset &lt;commit&gt;</CODEROUTINE></TERM>
     <DESC>Reset the index entries for all paths to a previous commit<BR/>
-      If no commit is specified, the current HEAD is used.<BR/>
+      If no commit is specified, the current <CODEROUTINE>HEAD</CODEROUTINE> is used.<BR/>
       The local changes are not lost.</DESC>
   </ROW>
   <ROW>
@@ -898,7 +898,7 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git reset &lt;commit&gt; &lt;pathspec&gt;</CODEROUTINE></TERM>
     <DESC>Reset the index <CODEROUTINE>&lt;pathspec&gt;</CODEROUTINE> entry to a previous commit<BR/>
-      if no commit is specified, the current HEAD is used.<BR/>
+      if no commit is specified, the current <CODEROUTINE>HEAD</CODEROUTINE> is used.<BR/>
       This means that <CODEROUTINE>git reset &lt;pathspec&gt;</CODEROUTINE> is the opposite of <CODEROUTINE>git add &lt;pathspec&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
@@ -926,7 +926,7 @@ git --bare init</CODESAMPLE></TERM>
     <TERM><CODEROUTINE>git restore &lt;file&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git checkout &lt;file&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git checkout -- &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>Replace <CODEROUTINE>&lt;file&gt;</CODEROUTINE> in the working tree by its version in HEAD.<BR/>
+    <DESC>Replace <CODEROUTINE>&lt;file&gt;</CODEROUTINE> in the working tree by its version in <CODEROUTINE>HEAD</CODEROUTINE>.<BR/>
       <CODEROUTINE>git checkout &lt;file&gt;</CODEROUTINE> will not work if a branch is named <CODEROUTINE>&lt;file&gt;</CODEROUTINE>, this will checkout that branch.</DESC>
   </ROW>
   <ROW>
@@ -940,7 +940,7 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git restore --source HEAD@{10.minutes.ago} &lt;file&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git checkout HEAD@{10.minutes.ago} -- &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>Replace <CODEROUTINE>&lt;file&gt;</CODEROUTINE> in the working tree by its HEAD version as it was 10 minutes ago.</DESC>
+    <DESC>Replace <CODEROUTINE>&lt;file&gt;</CODEROUTINE> in the working tree by its <CODEROUTINE>HEAD</CODEROUTINE> version as it was 10 minutes ago.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git restore -p &lt;file&gt;</CODEROUTINE><BR/>
@@ -1048,7 +1048,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
   <ROW>
     <TERM><CODEROUTINE>git pull</CODEROUTINE></TERM>
     <DESC><BLIST><SUBTITLE>Incorporate changes of the remote repository into the current branch, it is the same as</SUBTITLE>
-        <ITEM><CODEROUTINE>git fetch</CODEROUTINE> scoped to the local branch that HEAD is pointed at</ITEM>
+        <ITEM><CODEROUTINE>git fetch</CODEROUTINE> scoped to the local branch that <CODEROUTINE>HEAD</CODEROUTINE> is pointed at</ITEM>
         <ITEM>followed by <CODEROUTINE>git merge FETCH_HEAD</CODEROUTINE>.</ITEM>
       </BLIST></DESC>
   </ROW>
@@ -1267,7 +1267,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
   <ROW>
     <TERM><CODEROUTINE>git checkout -f</CODEROUTINE><BR/>
       <CODEROUTINE>git checkout --force</CODEROUTINE></TERM>
-    <DESC>When switching branches, proceed even if the index or the working tree differs from HEAD, and even if there are untracked files in the way. This is used to throw away local changes and any untracked files or directories that are in the way.</DESC>
+    <DESC>When switching branches, proceed even if the index or the working tree differs from <CODEROUTINE>HEAD</CODEROUTINE>, and even if there are untracked files in the way. This is used to throw away local changes and any untracked files or directories that are in the way.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git switch -c &lt;branch&gt;</CODEROUTINE><BR/>
@@ -1726,11 +1726,11 @@ To remove the last commit locally and on the remote repository (nobody should ha
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git rebase --abort</CODEROUTINE></TERM>
-    <DESC>Abort the rebase operation and reset HEAD to the original branch.</DESC>
+    <DESC>Abort the rebase operation and reset <CODEROUTINE>HEAD</CODEROUTINE> to the original branch.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git rebase --quit</CODEROUTINE></TERM>
-    <DESC>Abort the rebase operation but HEAD is not reset back to the original branch.</DESC>
+    <DESC>Abort the rebase operation but <CODEROUTINE>HEAD</CODEROUTINE> is not reset back to the original branch.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git rebase --update-refs</CODEROUTINE></TERM>
