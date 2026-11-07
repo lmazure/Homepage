@@ -29,7 +29,7 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git -C &lt;path&gt; &lt;command&gt;</CODEROUTINE></TERM>
-    <DESC>Run as if git was started in &lt;path&gt; instead of the current working directory.</DESC>
+    <DESC>Run as if git was started in <CODEROUTINE>&lt;path&gt;</CODEROUTINE> instead of the current working directory.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git -P &lt;command&gt;</CODEROUTINE><BR/>
@@ -38,7 +38,7 @@
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git --attr-source=&lt;tree-ish&gt;</CODEROUTINE></TERM>
-    <DESC>Read gitattributes from &lt;tree-ish&gt; instead of the worktree.</DESC>
+    <DESC>Read gitattributes from <CODEROUTINE>&lt;tree-ish&gt;</CODEROUTINE> instead of the worktree.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -99,7 +99,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clone &lt;bare repository directory&gt; &lt;my directory name&gt;</CODEROUTINE></TERM>
-    <DESC>Create a repository with name &lt;my directory name&gt; which is the clone of a bare repository (if &lt;my directory name&gt; is not specified, the name of the remote repository is used).</DESC>
+    <DESC>Create a repository with name <CODEROUTINE>&lt;my directory name&gt;</CODEROUTINE> which is the clone of a bare repository (if <CODEROUTINE>&lt;my directory name&gt;</CODEROUTINE> is not specified, the name of the remote repository is used).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clone --bare &lt;path to directory containing .git&gt;</CODEROUTINE></TERM>
@@ -159,12 +159,12 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote add &lt;remotename&gt; &lt;url&gt;</CODEROUTINE></TERM>
-    <DESC>Add a remote named &lt;remotename&gt; for the repository at &lt;url&gt;.</DESC>
+    <DESC>Add a remote named <CODEROUTINE>&lt;remotename&gt;</CODEROUTINE> for the repository at <CODEROUTINE>&lt;url&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote remove &lt;remotename&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git remote rm &lt;remotename&gt;</CODEROUTINE></TERM>
-    <DESC>Remove the remote named &lt;remotename&gt;. All remote-tracking branches and configuration settings for the remote are removed.</DESC>
+    <DESC>Remove the remote named <CODEROUTINE>&lt;remotename&gt;</CODEROUTINE>. All remote-tracking branches and configuration settings for the remote are removed.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git config --get remote.origin.url</CODEROUTINE></TERM>
@@ -184,16 +184,16 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote prune &lt;remotename&gt;</CODEROUTINE></TERM>
-    <DESC>Delete stale references associated with &lt;remotename&gt;.</DESC>
+    <DESC>Delete stale references associated with <CODEROUTINE>&lt;remotename&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote update &lt;remotename&gt;</CODEROUTINE></TERM>
-    <DESC>Fetch update from &lt;remotename&gt;.</DESC>
+    <DESC>Fetch update from <CODEROUTINE>&lt;remotename&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git remote update --prune &lt;remotename&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git remote update -p &lt;remotename&gt;</CODEROUTINE></TERM>
-    <DESC>Fetch update from &lt;remotename&gt; and run pruning.</DESC>
+    <DESC>Fetch update from <CODEROUTINE>&lt;remotename&gt;</CODEROUTINE> and run pruning.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BLIST>
@@ -240,7 +240,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git add &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>Update &lt;file&gt; in the index using the current content found in the working tree.</DESC>
+    <DESC>Update <CODEROUTINE>&lt;file&gt;</CODEROUTINE> in the index using the current content found in the working tree.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git add .</CODEROUTINE></TERM>
@@ -255,16 +255,16 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git add -u &lt;pathspec&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git add --update &lt;pathspec&gt;</CODEROUTINE></TERM>
-    <DESC>Update the index just where it already has an entry matching &lt;pathspec&gt;. This removes as well as modifies index entries to match the working tree, but adds no new files.</DESC>
+    <DESC>Update the index just where it already has an entry matching <CODEROUTINE>&lt;pathspec&gt;</CODEROUTINE>. This removes as well as modifies index entries to match the working tree, but adds no new files.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git add -A &lt;pathspec&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git add --all &lt;pathspec&gt;</CODEROUTINE></TERM>
-    <DESC>Update the index not only where the working tree has a file matching &lt;pathspec&gt; but also where the index already has an entry. This adds, modifies, and removes index entries to match the working tree.</DESC>
+    <DESC>Update the index not only where the working tree has a file matching <CODEROUTINE>&lt;pathspec&gt;</CODEROUTINE> but also where the index already has an entry. This adds, modifies, and removes index entries to match the working tree.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git add --resolved &lt;pathspec&gt;</CODEROUTINE></TERM>
-    <DESC>Update the index for unmerged paths matching &lt;pathspec&gt; where no conflict markers remain in the working tree.</DESC>
+    <DESC>Update the index for unmerged paths matching <CODEROUTINE>&lt;pathspec&gt;</CODEROUTINE> where no conflict markers remain in the working tree.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE><X><T>git stage’s man page</T><A>https://git-scm.com/docs/git-stage</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
@@ -279,7 +279,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git rm &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>Remove &lt;file&gt; from the index, or from the working tree and the index.</DESC>
+    <DESC>Remove <CODEROUTINE>&lt;file&gt;</CODEROUTINE> from the index, or from the working tree and the index.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git rm --cached</CODEROUTINE></TERM>
@@ -312,7 +312,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit -m &lt;msg&gt;</CODEROUTINE></TERM>
-    <DESC>Store the current contents of the index in a new commit along with message &lt;msg&gt;.</DESC>
+    <DESC>Store the current contents of the index in a new commit along with message <CODEROUTINE>&lt;msg&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit -a</CODEROUTINE><BR/>
@@ -371,7 +371,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git history split &lt;commit&gt;</CODEROUTINE></TERM>
-    <DESC>Interactively split up &lt;commit&gt; into two commits by choosing hunks introduced by it that will be moved into the new split-out commit.</DESC>
+    <DESC>Interactively split up <CODEROUTINE>&lt;commit&gt;</CODEROUTINE> into two commits by choosing hunks introduced by it that will be moved into the new split-out commit.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -440,7 +440,7 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git diff --ignore-matching-lines=&lt;regex&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git diff -I&lt;regex&gt;</CODEROUTINE></TERM>
-    <DESC>Ignore changes whose all lines match &lt;regex&gt;. This option may be specified more than once.</DESC>
+    <DESC>Ignore changes whose all lines match <CODEROUTINE>&lt;regex&gt;</CODEROUTINE>. This option may be specified more than once.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git diff &lt;commit 1&gt; &lt;commit 2&gt; &lt;file&gt;</CODEROUTINE></TERM>
@@ -466,7 +466,7 @@ git --bare init</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git diff -U&lt;n&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git diff --unified=&lt;n&gt;</CODEROUTINE></TERM>
-    <DESC>Generate diffs with &lt;n&gt; lines of context instead of the usual three.</DESC>
+    <DESC>Generate diffs with <CODEROUTINE>&lt;n&gt;</CODEROUTINE> lines of context instead of the usual three.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -484,7 +484,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --all</CODEROUTINE></TERM>
-    <DESC>Pretend as if all the refs in <CODEROUTINE>refs/</CODEROUTINE>, along with <CODEROUTINE>HEAD</CODEROUTINE>, are listed on the command line as &lt;commit&gt;.</DESC>
+    <DESC>Pretend as if all the refs in <CODEROUTINE>refs/</CODEROUTINE>, along with <CODEROUTINE>HEAD</CODEROUTINE>, are listed on the command line as <CODEROUTINE>&lt;commit&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git log --full-history</CODEROUTINE></TERM>
@@ -837,7 +837,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash apply [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Restore the entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present). The entry is kept among the stashed entries.</DESC>
+    <DESC>Restore the entry <CODEROUTINE>&lt;stash&gt;</CODEROUTINE> (the last one if <CODEROUTINE>&lt;stash&gt;</CODEROUTINE> is not present). The entry is kept among the stashed entries.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash apply --index [&lt;stash&gt;]</CODEROUTINE></TERM>
@@ -845,15 +845,15 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash drop [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
+    <DESC>Remove the stash entry <CODEROUTINE>&lt;stash&gt;</CODEROUTINE> (the last one if <CODEROUTINE>&lt;stash&gt;</CODEROUTINE> is not present).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash pop [--index] [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Apply and remove the stash entry &lt;stash&gt; (the last one if &lt;stash&gt; is not present).</DESC>
+    <DESC>Apply and remove the stash entry <CODEROUTINE>&lt;stash&gt;</CODEROUTINE> (the last one if <CODEROUTINE>&lt;stash&gt;</CODEROUTINE> is not present).</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash branch &lt;branchname&gt; [&lt;stash&gt;]</CODEROUTINE></TERM>
-    <DESC>Create and check out a new branch &lt;branchname&gt; starting from the commit at which &lt;stash&gt; was created, apply the changes recorded in &lt;stash&gt; to the new working tree and index.</DESC>
+    <DESC>Create and check out a new branch <CODEROUTINE>&lt;branchname&gt;</CODEROUTINE> starting from the commit at which <CODEROUTINE>&lt;stash&gt;</CODEROUTINE> was created, apply the changes recorded in <CODEROUTINE>&lt;stash&gt;</CODEROUTINE> to the new working tree and index.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git stash clear</CODEROUTINE></TERM>
@@ -868,7 +868,7 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git worktree add &lt;path&gt; &lt;branchname&gt;</CODEROUTINE></TERM>
-    <DESC>Create a worktree in directory &lt;path&gt; for branch &lt;branchname&gt;.</DESC>
+    <DESC>Create a worktree in directory <CODEROUTINE>&lt;path&gt;</CODEROUTINE> for branch <CODEROUTINE>&lt;branchname&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git worktree list</CODEROUTINE></TERM>
@@ -897,13 +897,13 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset &lt;commit&gt; &lt;pathspec&gt;</CODEROUTINE></TERM>
-    <DESC>Reset the index &lt;pathspec&gt; entry to a previous commit<BR/>
+    <DESC>Reset the index <CODEROUTINE>&lt;pathspec&gt;</CODEROUTINE> entry to a previous commit<BR/>
       if no commit is specified, the current HEAD is used.<BR/>
       This means that <CODEROUTINE>git reset &lt;pathspec&gt;</CODEROUTINE> is the opposite of <CODEROUTINE>git add &lt;pathspec&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --soft &lt;commit&gt;</CODEROUTINE></TERM>
-    <DESC>Do not touch the index file or the working tree. Only resets the head to &lt;commit&gt;, just like all modes do.</DESC>
+    <DESC>Do not touch the index file or the working tree. Only resets the head to <CODEROUTINE>&lt;commit&gt;</CODEROUTINE>, just like all modes do.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git reset --mixed &lt;commit&gt;</CODEROUTINE></TERM>
@@ -926,8 +926,8 @@ git --bare init</CODESAMPLE></TERM>
     <TERM><CODEROUTINE>git restore &lt;file&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git checkout &lt;file&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git checkout -- &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>Replace &lt;file&gt; in the working tree by its version in HEAD.<BR/>
-      <CODEROUTINE>git checkout &lt;file&gt;</CODEROUTINE> will not work if a branch is named &lt;file&gt;, this will checkout that branch.</DESC>
+    <DESC>Replace <CODEROUTINE>&lt;file&gt;</CODEROUTINE> in the working tree by its version in HEAD.<BR/>
+      <CODEROUTINE>git checkout &lt;file&gt;</CODEROUTINE> will not work if a branch is named <CODEROUTINE>&lt;file&gt;</CODEROUTINE>, this will checkout that branch.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git restore --staged &lt;file&gt;</CODEROUTINE></TERM>
@@ -935,12 +935,12 @@ git --bare init</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git restore --source &lt;commit&gt; &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>Replace &lt;file&gt; in the working tree by its version in commit &lt;commit&gt;.</DESC>
+    <DESC>Replace <CODEROUTINE>&lt;file&gt;</CODEROUTINE> in the working tree by its version in commit <CODEROUTINE>&lt;commit&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git restore --source HEAD@{10.minutes.ago} &lt;file&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git checkout HEAD@{10.minutes.ago} -- &lt;file&gt;</CODEROUTINE></TERM>
-    <DESC>Replace &lt;file&gt; in the working tree by its HEAD version as it was 10 minutes ago.</DESC>
+    <DESC>Replace <CODEROUTINE>&lt;file&gt;</CODEROUTINE> in the working tree by its HEAD version as it was 10 minutes ago.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git restore -p &lt;file&gt;</CODEROUTINE><BR/>
@@ -1131,7 +1131,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
   <ROW>
     <TERM><CODEROUTINE>git clean -e &lt;pattern&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git clean --exclude=&lt;pattern&gt;</CODEROUTINE></TERM>
-    <DESC>Exclude the files/directories matching &lt;pattern&gt; in addition to the standard ignore rules.</DESC>
+    <DESC>Exclude the files/directories matching <CODEROUTINE>&lt;pattern&gt;</CODEROUTINE> in addition to the standard ignore rules.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git clean -x</CODEROUTINE></TERM>
@@ -1224,7 +1224,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
     <TERM><CODEROUTINE>git branch -m &lt;new name&gt; -f</CODEROUTINE><BR/>
       <CODEROUTINE>git branch --move &lt;new name&gt; --force</CODEROUTINE><BR/>
       <CODEROUTINE>git branch -M &lt;new name&gt;</CODEROUTINE></TERM>
-    <DESC>Rename the current branch, with its config and reflog, even if a branch &lt;new name&gt; already exists.</DESC>
+    <DESC>Rename the current branch, with its config and reflog, even if a branch <CODEROUTINE>&lt;new name&gt;</CODEROUTINE> already exists.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git branch -c &lt;name&gt;</CODEROUTINE><BR/>
@@ -1235,7 +1235,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
     <TERM><CODEROUTINE>git branch -c &lt;name&gt; -f</CODEROUTINE><BR/>
       <CODEROUTINE>git branch --copy &lt;name&gt; --force</CODEROUTINE><BR/>
       <CODEROUTINE>git branch -C &lt;name&gt;</CODEROUTINE></TERM>
-    <DESC>Copy the current branch, with its config and reflog, even if a branch &lt;name&gt; already exists.</DESC>
+    <DESC>Copy the current branch, with its config and reflog, even if a branch <CODEROUTINE>&lt;name&gt;</CODEROUTINE> already exists.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE><X><T>git switch’s man page</T><A>https://git-scm.com/docs/git-switch</A><L>en</L><F>HTML</F></X></CODEROUTINE> (porcelain)</TERM>
@@ -1279,7 +1279,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
     <TERM><CODEROUTINE>git switch -C &lt;branch&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git switch --force-create &lt;branch&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git checkout -B &lt;branch&gt;</CODEROUTINE></TERM>
-    <DESC>The same except that if &lt;branch&gt; already exists, it is reset to the current head.</DESC>
+    <DESC>The same except that if <CODEROUTINE>&lt;branch&gt;</CODEROUTINE> already exists, it is reset to the current head.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git switch -c &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE><BR/>
@@ -1291,7 +1291,7 @@ rm -rf `basename -s .git $REPO`</CODESAMPLE>
     <TERM><CODEROUTINE>git switch -C &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git switch --force-create &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git checkout -B &lt;branch&gt; &lt;starting point&gt;</CODEROUTINE></TERM>
-    <DESC>The same except that if &lt;branch&gt; already exists, it is reset to &lt;starting point&gt;.</DESC>
+    <DESC>The same except that if <CODEROUTINE>&lt;branch&gt;</CODEROUTINE> already exists, it is reset to <CODEROUTINE>&lt;starting point&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git switch -d &lt;commit&gt;</CODEROUTINE><BR/>
@@ -1384,7 +1384,7 @@ git merge --continue</CODESAMPLE></TERM>
   <ROW>
     <TERM><CODEROUTINE>git checkout --patch &lt;commit&gt; .</CODEROUTINE></TERM>
     <DESC>Does not change the current branch.<BR/>
-      Bring and manually accept the files of &lt;commit&gt; in the index.</DESC>
+      Bring and manually accept the files of <CODEROUTINE>&lt;commit&gt;</CODEROUTINE> in the index.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -1521,7 +1521,7 @@ git merge --continue</CODESAMPLE></TERM>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git update-ref -d &lt;ref&gt;</CODEROUTINE></TERM>
-    <DESC>Delete reference &lt;ref&gt; in the local repository.</DESC>
+    <DESC>Delete reference <CODEROUTINE>&lt;ref&gt;</CODEROUTINE> in the local repository.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -1769,16 +1769,16 @@ To remove the last commit locally and on the remote repository (nobody should ha
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>git commit --fixup=&lt;commit&gt;</CODEROUTINE></TERM>
-    <DESC>Create a <CODEROUTINE>fixup!</CODEROUTINE> commit which changes the content of &lt;commit&gt; but leaves its log message untouched.</DESC>
+    <DESC>Create a <CODEROUTINE>fixup!</CODEROUTINE> commit which changes the content of <CODEROUTINE>&lt;commit&gt;</CODEROUTINE> but leaves its log message untouched.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit --fixup=amend:&lt;commit&gt;</CODEROUTINE></TERM>
-    <DESC>Similar but create an <CODEROUTINE>amend!</CODEROUTINE> commit which also replaces the log message of &lt;commit&gt; with the log message of the <CODEROUTINE>amend!</CODEROUTINE> commit.</DESC>
+    <DESC>Similar but create an <CODEROUTINE>amend!</CODEROUTINE> commit which also replaces the log message of <CODEROUTINE>&lt;commit&gt;</CODEROUTINE> with the log message of the <CODEROUTINE>amend!</CODEROUTINE> commit.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit --fixup=reword:&lt;commit&gt;</CODEROUTINE><BR/>
       <CODEROUTINE>git commit --fixup=amend:&lt;commit&gt; --only</CODEROUTINE></TERM>
-    <DESC>Create an <CODEROUTINE>amend!</CODEROUTINE> commit which replaces the log message of &lt;commit&gt; with its own log message but makes no changes to the content of &lt;commit&gt;.</DESC>
+    <DESC>Create an <CODEROUTINE>amend!</CODEROUTINE> commit which replaces the log message of <CODEROUTINE>&lt;commit&gt;</CODEROUTINE> with its own log message but makes no changes to the content of <CODEROUTINE>&lt;commit&gt;</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>git commit --squash=&lt;commit&gt;</CODEROUTINE></TERM>
