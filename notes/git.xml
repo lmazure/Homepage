@@ -98,10 +98,6 @@ git --bare init</CODESAMPLE></TERM>
     <DESC>Clone a repository into a new directory.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>git clone &lt;bare repository directory&gt;</CODEROUTINE></TERM>
-    <DESC>Create a repository which is the clone of a bare repository.</DESC>
-  </ROW>
-  <ROW>
     <TERM><CODEROUTINE>git clone &lt;bare repository directory&gt; &lt;my directory name&gt;</CODEROUTINE></TERM>
     <DESC>Create a repository with name &lt;my directory name&gt; which is the clone of a bare repository (if &lt;my directory name&gt; is not specified, the name of the remote repository is used).</DESC>
   </ROW>
