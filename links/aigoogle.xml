@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Google’s AI</TITLE>
 <PATH>links/aigoogle.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>11</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>14</DAY></DATE>
 <CONTENT>
 <LLIST>
   <ITEM><SLIST>
@@ -169,13 +169,8 @@
         <ITEM><ARTICLE><X><T>Why Gemini 4 Carbon Won’t Live Up To The Hype</T><A>https://www.youtube.com/watch?v=IgF-aHymNv4</A><L>en</L><F>MP4</F><DURATION><MINUTE>8</MINUTE><SECOND>24</SECOND></DURATION></X><AUTHOR><GIVENNAME>BetterWay</GIVENNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>29</DAY></DATE><COMMENT><AUTHOR><GIVENNAME>BetterWay</GIVENNAME></AUTHOR> thinks that Gemini 4 Carbon may be as Gemini 4 Argon: the benchmark scores are better than the results on real tasks.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Release: llm-gemini 0.36</T><A>https://simonwillison.net/2026/Nov/10/llm-gemini/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>10</DAY></DATE><COMMENT>Some little experiments with Gemini 4 Carbon.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Gemini CLI</TITLE>
-        <ITEM><ARTICLE><X><T>Gemini CLI</T><A>https://simonwillison.net/2025/Jun/25/gemini-cli/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE><COMMENT>Some information about Google’s open-source AI agent.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE><X><T>Introducing Gemini CLI</T><A>https://www.youtube.com/watch?v=KUCZe1xBKFM</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>15</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR>’s usual announcement reading and short demo.</COMMENT></ARTICLE></ITEM>
-        <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=KUCZe1xBKFM"><X><T>GeminiCLI - The Deep Dive with MCPs</T><A>https://www.youtube.com/watch?v=feT7_wVmgv0</A><L>en</L><F>MP4</F><DURATION><MINUTE>27</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>Some experiments with Gemini CLI: generating code, configuring an MCP server, and using MCP. But the feedback is raw, <AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR> has not prepared it and does not master the subject.</COMMENT></ARTICLE></ITEM>
-      </BLIST></ITEM>
-      <ITEM><BLIST><TITLE>Gemini Interactions API</TITLE>
-        <ITEM><ARTICLE><X><T>The Gemini Interactions API</T><A>https://www.youtube.com/watch?v=aZgH_wnmedQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>23</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE><COMMENT>A description of the new Interactions API, an API that supports all the new API features: server side caching, multimodal generation, assigning tasks to agents…</COMMENT></ARTICLE></ITEM>
+      <ITEM><BLIST><TITLE>Gemini 4 Hydrogen</TITLE>
+        <ITEM><ARTICLE><X><T>Release: llm-gemini 0.37</T><A>https://simonwillison.net/2026/Nov/12/llm-gemini/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>12</DAY></DATE><COMMENT>Google released their new basic model, Gemini 4 Hydrogen, it is not so cheap.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Gemma</TITLE>
@@ -208,6 +203,14 @@
         <ITEM><ARTICLE><X><T>Google just casually disrupted the open-source AI narrative…</T><A>https://www.youtube.com/watch?v=-01ZCTt-CJw</A><L>en</L><F>MP4</F><DURATION><MINUTE>5</MINUTE><SECOND>15</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Jeff</FIRSTNAME><LASTNAME>Delaney</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>4</MONTH><DAY>8</DAY></DATE><COMMENT>A basic presentation of Gemma 4.</COMMENT></ARTICLE></ITEM>
         <ITEM><ARTICLE><X><T>Google’s new Gemma 4 12B model is designed to run on any laptop with 16GB of RAM</T><ST>Gemma 4 12B uses a new encoding scheme and token prediction to punch above its weight.</ST><A>https://arstechnica.com/google/2026/06/googles-new-gemma-4-open-ai-model-is-sized-for-your-laptop/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Ryan</FIRSTNAME><LASTNAME>Whitwam</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>3</DAY></DATE><COMMENT>The title says it all.</COMMENT></ARTICLE></ITEM>
       </BLIST></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Gemini CLI</TITLE>
+      <ITEM><ARTICLE><X><T>Gemini CLI</T><A>https://simonwillison.net/2025/Jun/25/gemini-cli/</A><L>en</L><F>HTML</F></X><AUTHOR><FIRSTNAME>Simon</FIRSTNAME><LASTNAME>Willison</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE><COMMENT>Some information about Google’s open-source AI agent.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE><X><T>Introducing Gemini CLI</T><A>https://www.youtube.com/watch?v=KUCZe1xBKFM</A><L>en</L><F>MP4</F><DURATION><MINUTE>14</MINUTE><SECOND>15</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>25</DAY></DATE><COMMENT><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR>’s usual announcement reading and short demo.</COMMENT></ARTICLE></ITEM>
+      <ITEM><ARTICLE predecessor="https://www.youtube.com/watch?v=KUCZe1xBKFM"><X><T>GeminiCLI - The Deep Dive with MCPs</T><A>https://www.youtube.com/watch?v=feT7_wVmgv0</A><L>en</L><F>MP4</F><DURATION><MINUTE>27</MINUTE><SECOND>18</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>6</MONTH><DAY>27</DAY></DATE><COMMENT>Some experiments with Gemini CLI: generating code, configuring an MCP server, and using MCP. But the feedback is raw, <AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR> has not prepared it and does not master the subject.</COMMENT></ARTICLE></ITEM>
+    </BLIST></ITEM>
+    <ITEM><BLIST><TITLE>Gemini Interactions API</TITLE>
+      <ITEM><ARTICLE><X><T>The Gemini Interactions API</T><A>https://www.youtube.com/watch?v=aZgH_wnmedQ</A><L>en</L><F>MP4</F><DURATION><MINUTE>23</MINUTE><SECOND>54</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2025</YEAR><MONTH>12</MONTH><DAY>16</DAY></DATE><COMMENT>A description of the new Interactions API, an API that supports all the new API features: server side caching, multimodal generation, assigning tasks to agents…</COMMENT></ARTICLE></ITEM>
     </BLIST></ITEM>
     <ITEM><BLIST><TITLE>Gemini Omni Flash</TITLE>
       <ITEM><ARTICLE><X><T>Introducing the Gemini Omni Flash API</T><A>https://www.youtube.com/watch?v=4v8ORjEmec4</A><L>en</L><F>MP4</F><DURATION><MINUTE>21</MINUTE><SECOND>56</SECOND></DURATION></X><AUTHOR><FIRSTNAME>Sam</FIRSTNAME><LASTNAME>Witteveen</LASTNAME></AUTHOR><DATE><YEAR>2026</YEAR><MONTH>6</MONTH><DAY>30</DAY></DATE><COMMENT>Generating and editing video via chat or via API.</COMMENT></ARTICLE></ITEM>
