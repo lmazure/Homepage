@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Claude Code</TITLE>
 <PATH>notes/claudecode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>10</MONTH><DAY>25</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>15</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -251,8 +251,8 @@ Slash commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>e
     <DESC>Send this session to the background and free the terminal.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>/run</CODEROUTINE></TERM>
-    <DESC>Launch and drive this project’s app to see a change working. Use when asked to run, start, or screenshot the app, or to confirm a change works in the real app (not just tests). First looks for a project skill that already covers launching the app; otherwise falls back to built-in patterns per project type (CLI, server, TUI, Electron, browser-driven, library).</DESC>
+    <TERM><CODEROUTINE>/autofix-pr [prompt]</CODEROUTINE></TERM>
+    <DESC>Spawn a cloud session that watches the current branch’s PR and pushes fixes when CI fails or reviewers leave comments.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/fork</CODEROUTINE></TERM>
@@ -280,7 +280,11 @@ Skills (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>
 <DEFINITIONTABLE>
   <ROW>
     <TERM><CODEROUTINE>/run</CODEROUTINE></TERM>
-    <DESC>Launch and drive your app to see a change working.</DESC>
+    <DESC>Launch and drive this project’s app to see a change working. Use when asked to run, start, or screenshot the app, or to confirm a change works in the real app (not just tests). First looks for a project skill that already covers launching the app; otherwise falls back to built-in patterns per project type (CLI, server, TUI, Electron, browser-driven, library).</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/code-review [low|medium|high|xhigh|max|ultra] [--fix] [--comment] [--max-findings n|all|default] [pr#|branch|path]</CODEROUTINE></TERM>
+    <DESC>Review the current diff, or a PR number, branch, or path you pass, for correctness bugs. Depending on your model and effort level, the review also covers cleanup opportunities. Pass <CODEROUTINE>--fix</CODEROUTINE> to have Claude apply the findings, <CODEROUTINE>--comment</CODEROUTINE> to post them on the GitHub PR or GitLab merge request, or ultra to run a deep cloud review. </DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/verify</CODEROUTINE></TERM>
