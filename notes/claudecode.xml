@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Claude Code</TITLE>
 <PATH>notes/claudecode.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>15</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>16</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -83,6 +83,10 @@ Command line (<X><T>doc</T><A>https://code.claude.com/docs/en/cli-reference</A><
       Authentication, model selection, built-in tools, and permissions work normally, which differs from <CODEROUTINE>--bare</CODEROUTINE>.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>claude --debug</CODEROUTINE></TERM>
+    <DESC>Enable debug mode with optional category filtering, such as <CODEROUTINE>--debug='mcp,startup'</CODEROUTINE> or <CODEROUTINE>--debug='!mcp'</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>claude --bare</CODEROUTINE></TERM>
     <DESC>Minimal mode: skip auto-discovery of hooks, skills, custom commands, subagents, plugins, MCP servers, auto memory, and CLAUDE.md so scripted calls start faster.</DESC>
   </ROW>
@@ -139,6 +143,10 @@ MCP servers (<X><T>doc</T><A>https://code.claude.com/docs/en/mcp</A><L>en</L><F>
   <ROW>
     <TERM><CODEROUTINE>claude mcp remove &lt;server name&gt;</CODEROUTINE></TERM>
     <DESC>Remove a MCP server.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/mcp [reconnect (&lt;server&gt;|all)|enable|disable [&lt;server&gt;|all]]</CODEROUTINE></TERM>
+    <DESC>Manage MCP server connections and OAuth authentication.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -215,7 +223,7 @@ Slash commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>e
     <DESC>Start a new session with empty context; previous session stays on disk (resumable with <CODEROUTINE>/resume</CODEROUTINE>).</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>/resume</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>/resume [session]</CODEROUTINE></TERM>
     <DESC>Resume a previous conversation</DESC>
   </ROW>
   <ROW>
@@ -233,6 +241,10 @@ Slash commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>e
   <ROW>
     <TERM><CODEROUTINE>/context</CODEROUTINE></TERM>
     <DESC>Visualise current context usage as a coloured grid</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/init</CODEROUTINE></TERM>
+    <DESC>Initialize project with a <CODEMENU>CLAUDE.md</CODEMENU> guide</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/memory</CODEROUTINE></TERM>
@@ -255,8 +267,34 @@ Slash commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>e
     <DESC>Spawn a cloud session that watches the current branch’s PR and pushes fixes when CI fails or reviewers leave comments.</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>/fork</CODEROUTINE></TERM>
+    <TERM><CODEROUTINE>/branch [name]</CODEROUTINE></TERM>
     <DESC>Spawn a background agent that inherits the full conversation.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/fork</CODEROUTINE></TERM>
+    <DESC>Create a branch of the current conversation at this point, so you can try a different direction without losing the conversation as it stands. Switches you into the branch and preserves the original, which you can return to with <CODEROUTINE>/resume</CODEROUTINE>.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/background [prompt]</CODEROUTINE></TERM>
+    <DESC>Detach the current session to run as a background agent and free this terminal. Pass a prompt to send one more instruction before detaching.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/tasks</CODEROUTINE><BR/>
+      <CODEROUTINE>/bashes</CODEROUTINE></TERM>
+    <DESC>View and manage background work in the current session, including subagents that have finished.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/agents</CODEROUTINE></TERM>
+    <DESC>Print a reminder to ask Claude to create or manage subagents, or to edit <CODEFILENAME>.claude/agents/</CODEFILENAME> or <CODEFILENAME>~/.claude/agents/</CODEFILENAME> directly.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/diff</CODEROUTINE></TERM>
+    <DESC>Review the changes in your working tree, including the edits Claude has made so far.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/remote-control</CODEROUTINE><BR/>
+      <CODEROUTINE>/re</CODEROUTINE></TERM>
+    <DESC>Make this session available for Remote Control from claude.ai.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/btw</CODEROUTINE></TERM>
@@ -267,8 +305,16 @@ Slash commands (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>e
     <DESC>Set the prompt bar colour for this session.</DESC>
   </ROW>
   <ROW>
+    <TERM><CODEROUTINE>/focus</CODEROUTINE></TERM>
+    <DESC>Toggle the focus view, which shows only your last prompt, a one-line tool-call summary with edit diffstats, and the final response.</DESC>
+  </ROW>
+  <ROW>
     <TERM><CODEROUTINE>/release-notes</CODEROUTINE></TERM>
     <DESC>View release notes.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/debug</CODEROUTINE></TERM>
+    <DESC>Enable debug logging for the current session and troubleshoot issues by reading the session debug log.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/feedback</CODEROUTINE></TERM>
@@ -283,8 +329,9 @@ Skills (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>
     <DESC>Launch and drive this project’s app to see a change working. Use when asked to run, start, or screenshot the app, or to confirm a change works in the real app (not just tests). First looks for a project skill that already covers launching the app; otherwise falls back to built-in patterns per project type (CLI, server, TUI, Electron, browser-driven, library).</DESC>
   </ROW>
   <ROW>
-    <TERM><CODEROUTINE>/code-review [low|medium|high|xhigh|max|ultra] [--fix] [--comment] [--max-findings n|all|default] [pr#|branch|path]</CODEROUTINE></TERM>
-    <DESC>Review the current diff, or a PR number, branch, or path you pass, for correctness bugs. Depending on your model and effort level, the review also covers cleanup opportunities. Pass <CODEROUTINE>--fix</CODEROUTINE> to have Claude apply the findings, <CODEROUTINE>--comment</CODEROUTINE> to post them on the GitHub PR or GitLab merge request, or ultra to run a deep cloud review. </DESC>
+    <TERM><CODEROUTINE>/code-review [low|medium|high|xhigh|max|ultra] [--fix] [--comment] [--max-findings n|all|default] [pr#|branch|path]</CODEROUTINE><BR/>
+      <CODEROUTINE>/review [low|medium|high|xhigh|max|ultra] [--fix] [--comment] [--max-findings n|all|default] [pr#|branch|path]</CODEROUTINE></TERM>
+    <DESC>Review the current diff, or a PR number, branch, or path you pass, for correctness bugs. Depending on your model and effort level, the review also covers cleanup opportunities. Pass <CODEROUTINE>--fix</CODEROUTINE> to have Claude apply the findings, <CODEROUTINE>--comment</CODEROUTINE> to post them on the GitHub PR or GitLab merge request, or ultra to run a deep cloud review.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/verify</CODEROUTINE></TERM>
@@ -293,6 +340,10 @@ Skills (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>
   <ROW>
     <TERM><CODEROUTINE>/run-skill-generator</CODEROUTINE></TERM>
     <DESC>Teach <CODEROUTINE>/run</CODEROUTINE> and <CODEROUTINE>/verify</CODEROUTINE> how to build and launch your project.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/doctor [prompt-audit [path]]</CODEROUTINE></TERM>
+    <DESC>Run a setup checkup that diagnoses installation, settings, extension, and <CODEFILENAME>CLAUDE.md</CODEFILENAME> problems and proposes fixes that Claude applies after you confirm.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/dataviz</CODEROUTINE></TERM>
@@ -304,6 +355,10 @@ Skills (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>
     <DESC>Run a prompt repeatedly while the session stays open.<BR/>
       Omit the interval and Claude self-paces between iterations.<BR/>
       Omit the prompt and Claude runs an autonomous maintenance check, or the prompt in <CODEFILENAME>.claude/loop.md</CODEFILENAME> if present.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/batch &lt;instruction&gt;</CODEROUTINE></TERM>
+    <DESC>Orchestrate large-scale changes across a codebase in parallel. Researches the codebase, decomposes the work into 5 to 30 independent units, and presents a plan. Once approved, spawns one background subagent per unit in an isolated worktree.</DESC>
   </ROW>
 </DEFINITIONTABLE>
 <BR/>
@@ -319,7 +374,7 @@ Skills (<X><T>doc</T><A>https://code.claude.com/docs/en/commands</A><L>en</L><F>
     </ITEM>
     <ITEM>use it
       <CODESAMPLE language="bash"><PROMPT/>export CLAUDE_CODE_OAUTH_TOKEN=your-token
-  <PROMPT/>claude -p "..."</CODESAMPLE>
+<PROMPT/>claude -p "..."</CODESAMPLE>
     </ITEM>
   </BLIST></ITEM>
   <ITEM>To declare a local MCP server
