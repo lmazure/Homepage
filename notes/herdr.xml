@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Herdr</TITLE>
 <PATH>notes/herdr.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>9</MONTH><DAY>28</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE>
 <CONTENT>
 <BLIST>
   <ITEM>Display the version
@@ -111,6 +111,13 @@
       </ROW>
     </DEFINITIONTABLE>
   </ITEM>
+  <ITEM><BLIST><TITLE>COnfiguration</TITLE>
+    <ITEM>The configuration file is <CODEFILENAME>~/.config/herdr/config.toml</CODEFILENAME>.</ITEM>
+    <ITEM> To distinguish blocked, working, done, idle, and unknown states by shape as well as colour:
+      <CODESAMPLE language="toml">[ui]
+status_indicators = "symbols"</CODESAMPLE>
+    </ITEM>
+  </BLIST></ITEM>
 </BLIST>
 </CONTENT>
 <X><T>links</T><A>../links/linux.html#herdr</A><L>en</L><F>HTML</F></X>
