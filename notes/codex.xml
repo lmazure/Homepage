@@ -3,7 +3,7 @@
 <PAGE xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../css/schema.xsd" xml:lang="en">
 <TITLE>Codex CLI</TITLE>
 <PATH>notes/codex.xml</PATH>
-<DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>18</DAY></DATE>
+<DATE><YEAR>2026</YEAR><MONTH>11</MONTH><DAY>24</DAY></DATE>
 <CONTENT>
 Command line (<X><T>doc</T><A>https://learn.chatgpt.com/docs/cli/reference</A><L>en</L><F>HTML</F></X>)
 <DEFINITIONTABLE>
@@ -31,6 +31,49 @@ Slash commands (<X><T>doc</T><A>https://learn.chatgpt.com/docs/cli/slash-command
   <ROW>
     <TERM><CODEROUTINE>/new</CODEROUTINE></TERM>
     <DESC>Start a new chat inside the same CLI session.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/resume</CODEROUTINE></TERM>
+    <DESC>Resume a saved chat.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/cd</CODEROUTINE></TERM>
+    <DESC>Change the session’s working directory.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/pwd</CODEROUTINE><BR/>
+      <CODEROUTINE>/cwd</CODEROUTINE></TERM>
+    <DESC>Show the working directory.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/compact</CODEROUTINE></TERM>
+    <DESC>Compact the chat.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/recap</CODEROUTINE></TERM>
+    <DESC>Generate a summary of the current conversation.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/export</CODEROUTINE></TERM>
+    <DESC>Export the conversation as Markdown.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/compact</CODEROUTINE></TERM>
+    <DESC>Compact the chat.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/rename</CODEROUTINE></TERM>
+    <DESC>Rename the current chat.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/archive</CODEROUTINE></TERM>
+    <DESC>Archive the current session.<BR/>
+      Remove the current session from active session lists without deleting its transcript.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/delete</CODEROUTINE></TERM>
+    <DESC>Permanently delete the current session.<BR/>
+      Remove the transcript and descendant sessions when archiving isn’t enough.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/init</CODEROUTINE></TERM>
