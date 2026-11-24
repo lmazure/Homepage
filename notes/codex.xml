@@ -15,6 +15,10 @@ Command line (<X><T>doc</T><A>https://learn.chatgpt.com/docs/cli/reference</A><L
     <TERM><CODEROUTINE>codex update</CODEROUTINE></TERM>
     <DESC>Check for and apply a Codex CLI update when the installed release supports self-update.</DESC>
   </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>codex app-server daemon update</CODEROUTINE></TERM>
+    <DESC>Update the background local server.</DESC>
+  </ROW>
 </DEFINITIONTABLE>
 <BR/>
 Slash commands (<X><T>doc</T><A>https://learn.chatgpt.com/docs/cli/slash-commands</A><L>en</L><F>HTML</F></X>)
@@ -51,6 +55,10 @@ Slash commands (<X><T>doc</T><A>https://learn.chatgpt.com/docs/cli/slash-command
   <ROW>
     <TERM><CODEROUTINE>/fast</CODEROUTINE></TERM>
     <DESC>Toggle a Fast service tier when the model catalogue exposes one.</DESC>
+  </ROW>
+  <ROW>
+    <TERM><CODEROUTINE>/daemon</CODEROUTINE></TERM>
+    <DESC>Manage the local background server.</DESC>
   </ROW>
   <ROW>
     <TERM><CODEROUTINE>/plugins</CODEROUTINE></TERM>
